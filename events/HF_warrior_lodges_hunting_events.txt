@@ -143,6 +143,18 @@ character_event = {
 		text = EVTDESCIHF25600
 	}
 	desc = {
+        trigger = {
+            has_character_flag = flag_hunting_wolf_celtic
+        }
+        text = hf.25600.desc.celtic
+    }
+    desc = {
+        trigger = {
+            has_character_flag = flag_hunting_lion_egyptian
+        }
+        text = hf.25600.desc.egyptian
+    }
+	desc = {
 		trigger = {
 			has_character_flag = flag_hunting_lion_zun
 			OR = {
@@ -158,18 +170,6 @@ character_event = {
 		}
 		text = EVTDESCJHF25600
 	}
-	desc = {
-        trigger = {
-            has_character_flag = flag_hunting_wolf_celtic
-        }
-        text = hf.25600.desc.celtic
-    }
-    desc = {
-        trigger = {
-            has_character_flag = flag_hunting_lion_egyptian
-        }
-        text = hf.25600.desc.egyptian
-    }
 	picture = { 
 		trigger = { 
 			OR = { 
@@ -331,11 +331,10 @@ character_event = {
                 }
                 set_character_flag = flag_hunting_wolf_celtic
             }
-            else_if = {
+            if = {
                 limit = { society_member_of = warrior_lodge_egyptian }
                 set_character_flag = flag_hunting_lion_egyptian
             }
-
 			random_list = { 
 				33 = { sound_effect = pagan_cheering_01 } 
 				33 = { sound_effect = pagan_cheering_02 } 

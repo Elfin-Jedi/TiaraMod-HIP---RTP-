@@ -494,7 +494,6 @@ province_event = {
 			OR = {
 				trait = beatified
 				NOT = { religion_group = christian }
-				has_religion_feature = religion_feature_egyptian
 			}
 			NOT = { has_character_flag = blessed_ancestor_prestige } # Already founded a bloodline based on Prestige
 		}

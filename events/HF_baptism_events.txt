@@ -8910,7 +8910,7 @@ character_event = {
 			show_scope_change = no 
 			add_province_modifier = { 
 				modifier = mass_baptism_capital_builders
-				duration = 1825
+				years = 5
 			}
 		}
 		hidden_tooltip = { 

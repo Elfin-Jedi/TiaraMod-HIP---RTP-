@@ -768,7 +768,7 @@ character_event = {
 	id = HF.23005
 	hide_window = yes
 	
-	trigger = { 
+	trigger = {
 		OR = {
 			emf_haruspicy_religion = yes
 			has_religion_feature = religion_feature_celtic
@@ -9980,7 +9980,7 @@ character_event = {
 }
 
 #Owner of province is notified of destruction of settlement.
-character_event = {
+province_event = {
 	id = HF.23211
 	desc = EVTDESCHF23211
 	picture = { 
@@ -9997,7 +9997,7 @@ character_event = {
 
 	option = {
 		name = EVTOPTAHF23211
-		opinion = { who = FROM modifier = blasphemous_pyromaniac years = 20 }
+		owner = { opinion = { who = FROM modifier = blasphemous_pyromaniac years = 20 } }
 	}
 }
 
@@ -11517,8 +11517,12 @@ narrative_event = {
 			has_character_modifier = astrology_very_bad_omen
 		}
 		OR = {
-			emf_haruspicy_religion = yes
-			has_religion_feature = religion_feature_celtic
+			AND = {
+				OR = {
+					emf_haruspicy_religion = yes
+					has_religion_feature = religion_feature_celtic
+				}
+			}
 		}
 		emf_astrology_religion = yes
 	}
@@ -11976,8 +11980,12 @@ narrative_event = {
 			}
 		}
 		OR = {
-			emf_haruspicy_religion = yes
-			has_religion_feature = religion_feature_celtic
+			AND = {
+				OR = {
+					emf_haruspicy_religion = yes
+					has_religion_feature = religion_feature_celtic
+				}
+			}
 		}
 		emf_astrology_religion = yes
 	}
@@ -12215,7 +12223,7 @@ character_event = {
 			}
 			is_incapable = no
 			emf_ritual_sacrifice_religion = yes
-			OR = {
+			OR = { 
 				emf_haruspicy_religion = yes
 				has_religion_feature = religion_feature_celtic
 			}
@@ -12954,10 +12962,7 @@ character_event = {
 				change_variable = { which = burned_hearts_points value = 1 }
 				if = { #And a divine child is even better.
 					limit = {
-						OR = {
-							has_religion_feature = religion_holy_family
-							has_religion_feature = religion_feature_egyptian
-						}
+						has_religion_feature = religion_holy_family
 						religion = ROOT
 						ROOT = {
 							mother_even_if_dead = {
@@ -17049,10 +17054,10 @@ character_event = {
 				limit = { has_religion_features = yes }
 				OR = {
 					has_religion_feature = religion_stable
+					has_religion_feature = religion_feature_egyptian
 					has_religion_feature = religion_feature_slavic
 					has_religion_feature = religion_feature_finnish
 					has_religion_feature = religion_syncretic_indian
-					has_religion_feature = religion_feature_egyptian
 				}
 			}
 			trigger_else = {
@@ -20066,23 +20071,23 @@ character_event = {
 	trigger = {
 		controls_religion = yes
 		religion_scope = {
-			OR = {
-				has_religion_feature = religion_holy_family
-				religion_openly_in_egyptian_subgroup_trigger = yes
-			}
+			has_religion_feature = religion_holy_family
 			has_religion_feature = religion_dogmatic
 			has_religion_feature = religion_temporal_head
+			OR = {
+				religion_openly_in_egyptian_subgroup_trigger = yes
+			}
 		}
-		# Appropriate gender to become the (high) god
-		OR = { 
-			AND = {
-				is_female = no
-				NOT = { has_religion_feature = religion_matriarchal }
-			}
-			AND = {
-				is_female = yes
-				NOT = { has_religion_feature = religion_patriarchal }
-			}
+	}
+	# Appropriate gender to become the (high) god
+	OR = { 
+		AND = {
+			is_female = no
+			NOT = { has_religion_feature = religion_matriarchal }
+		}
+		AND = {
+			is_female = yes
+			NOT = { has_religion_feature = religion_patriarchal }
 		}
 	}
 	
@@ -20104,23 +20109,21 @@ character_event = {
 	trigger = {
 		controls_religion = yes
 		religion_scope = {
-			OR = {
-				has_religion_feature = religion_holy_family
-				religion_openly_in_egyptian_subgroup_trigger = no
-			}
+			has_religion_feature = religion_holy_family
 			has_religion_feature = religion_dogmatic
 			has_religion_feature = religion_temporal_head
+			religion_openly_in_egyptian_subgroup_trigger = no
 		}
-		# Appropriate gender to become the (high) god
-		OR = { 
-			AND = {
-				is_female = no
-				NOT = { has_religion_feature = religion_matriarchal }
-			}
-			AND = {
-				is_female = yes
-				NOT = { has_religion_feature = religion_patriarchal }
-			}
+	}
+	# Appropriate gender to become the (high) god
+	OR = { 
+		AND = {
+			is_female = no
+			NOT = { has_religion_feature = religion_matriarchal }
+		}
+		AND = {
+			is_female = yes
+			NOT = { has_religion_feature = religion_patriarchal }
 		}
 	}
 	

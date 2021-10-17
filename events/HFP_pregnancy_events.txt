@@ -4709,7 +4709,7 @@ character_event = {
 		custom_tooltip = { text = EVTOOLTIPDHFP20501 }
 		hidden_tooltip = { FROM = { character_event = { id = HFP.20510 } } } #Notify woman
 		trigger = { 
-			is_organized_religion_trigger = no
+			is_organized_religion_trigger = no 
 			NOT = { FROM = { has_character_flag = pregnancy_shaman_comfort } }
 			NOT = { FROM = { has_character_flag = pregnancy_priest_comfort } }
 		}
@@ -5817,7 +5817,7 @@ character_event = {
 		#custom_tooltip = { text = EVTOOLTIPDHFP20520 }
 		trigger = { 
 			is_ruler = yes
-			is_organized_religion_trigger = no 
+			is_organized_religion_trigger = yes
 			NOT = { has_character_flag = pregnancy_shaman_comfort } #Already taken from the spouse/regent
 			NOT = { has_character_flag = pregnancy_priest_comfort }
 		}
