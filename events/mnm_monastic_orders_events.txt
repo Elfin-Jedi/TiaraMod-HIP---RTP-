@@ -1380,7 +1380,7 @@ character_event = {
 		if = {
 			limit = { 
 				OR = {
-					is_hellenic_monastic_order_member_trigger = yes  
+					is_hellenic_monastic_order_member_trigger = yes 
 					is_dharmic_monastic_member_trigger = yes 
 				}
 			}
@@ -5618,19 +5618,15 @@ character_event = {
 				set_character_flag = betrayed_monastic_order_stoics
 			}
 		}
-		if = {
-			limit = {
-				 society_member_of = monastic_order_skeptics
-			}
+		else_if = {
+			limit = { society_member_of = monastic_order_skeptics }
 			leave_society = yes
 			hidden_effect = {
 				set_character_flag = betrayed_monastic_order_skeptics
 			}
 		}
-		if = {
-			limit = {
-				 society_member_of = monastic_order_epicureans
-			}
+		else_if = {
+			limit = { society_member_of = monastic_order_epicureans }
 			leave_society = yes
 			hidden_effect = {
 				set_character_flag = betrayed_monastic_order_epicureans

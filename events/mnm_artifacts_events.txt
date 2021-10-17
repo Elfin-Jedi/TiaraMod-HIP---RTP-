@@ -470,6 +470,40 @@ character_event = {
 						has_artifact = famous_ancient_weapon
                     }
                 }
+				modifier = {
+                    factor = 0
+                    AND = {
+                        religion_openly_in_hellenic_subgroup_trigger = yes
+                        has_artifact = achilles_shield_piece
+                        has_artifact = corinthian_helm
+                        has_artifact = tongue_of_oracle
+                        has_artifact = silver_amphora
+						has_artifact = famous_head
+						has_artifact = famous_tongue
+						has_artifact = infamous_tongue
+						has_artifact = famous_hand
+						has_artifact = famous_arm
+						has_artifact = famous_foot
+						has_artifact = famous_ancient_weapon
+                    }
+                }
+                modifier = {
+                    factor = 0
+                    AND = {
+                        religion_openly_in_celtic_subgroup_trigger = yes
+                        has_artifact = torque_of_boudicca
+                        has_artifact = old_carnyx
+                        has_artifact = horned_helm
+                        has_artifact = battersea_shield
+						has_artifact = famous_head
+						has_artifact = famous_tongue
+						has_artifact = infamous_tongue
+						has_artifact = famous_hand
+						has_artifact = famous_arm
+						has_artifact = famous_foot
+						has_artifact = famous_ancient_weapon
+                    }
+                }
 				event_target:rumor_councillor = { character_event = { id = MNM.9003 } }
 			}
 			9000 = { #AI is less likely to find artifacts
@@ -1765,6 +1799,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = MNM.9607 } #Yada Tashy/Rain Stone
 				}
+				
 				# Celtic Artifacts
 				10 = {
 					modifier = { factor = 0 religion_openly_celtic_or_reformed_trigger = no }

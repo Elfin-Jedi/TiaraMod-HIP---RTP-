@@ -116,7 +116,6 @@ character_event = {
 				NOT = { emf_syncretized_religion_with_PREV = yes }
 			}
 		}
-
 		modifier = {
 			factor = 1.25
 			NOT = { learning = 2 }
@@ -559,7 +558,6 @@ character_event = {
 				}
 			}
 		}
-
 		modifier = {
 			factor = 1.25
 			NOT = { learning = 2 }
@@ -610,6 +608,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 3.0
+			religion_group = pagan_group
 			is_organized_religion_trigger = no
 		}
 	}
@@ -819,7 +818,6 @@ character_event = {
 				}
 			}
 		}
-
 		modifier = {
 			factor = 0.75
 			NOT = { learning = 2 }
@@ -1047,7 +1045,6 @@ character_event = {
 			factor = 1.5
 			has_religion_feature = religion_dogmatic
 		}
-		
 		modifier = {
 			factor = 1.25
 			NOT = { learning = 2 }
@@ -1345,6 +1342,10 @@ character_event = {
 		months = 240
 
 		modifier = {
+			factor = 1.25
+			has_religion_feature = religion_dogmatic
+		}
+		modifier = {
 			factor = 0.75
 			NOT = { learning = 2 }
 		}
@@ -1375,10 +1376,6 @@ character_event = {
 		modifier = {
 			factor = 1.25
 			learning = 13
-		}
-		modifier = {
-			factor = 1.25
-			has_religion_feature = religion_dogmatic
 		}
 		modifier = {
 			factor = 0.75
@@ -1546,6 +1543,7 @@ character_event = {
 				NOT = { character = ROOT }
 				NOT = { is_liege_of = ROOT }
 				NOT = { religion = { target = ROOT target_type = true } }
+				religion_group = pagan_group
 				is_organized_religion_trigger = no
 				NOT = { same_realm = ROOT }
 				controls_religion = no
@@ -1686,6 +1684,7 @@ character_event = {
 				NOT = { character = ROOT }
 				NOT = { is_liege_of = ROOT }
 				NOT = { religion = ROOT }
+				religion_group = pagan_group
 				is_organized_religion_trigger = no
 				NOT = { same_realm = ROOT }
 			}
@@ -2347,7 +2346,6 @@ character_event = {
 			factor = 2
 			has_religion_feature = religion_dogmatic
 		}
-		
 		modifier = {
 			factor = 1.25
 			NOT = { learning = 2 }
