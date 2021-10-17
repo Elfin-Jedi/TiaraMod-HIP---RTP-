@@ -1,0 +1,436 @@
+#####
+#Societies
+#####
+
+currency_name_rtp_intrigue;Prestige;;;;;;x
+currency_name_rtp_intrigue_norse;Prestige;;;;;;x
+currency_name_rtp_intrigue_tengri;Prestige;;;;;;x
+currency_name_rtp_intrigue_baltic;Prestige;;;;;;x
+currency_name_rtp_intrigue_slavic;Prestige;;;;;;x
+currency_name_rtp_intrigue_finnish;Prestige;;;;;;x
+currency_name_rtp_intrigue_west_african;Prestige;;;;;;x
+currency_name_rtp_intrigue_zun;Prestige;;;;;;x
+currency_name_rtp_intrigue_bon;Prestige;;;;;;x
+currency_name_rtp_intrigue_hellenic;Prestige;;;;;;x
+currency_name_rtp_intrigue_aztec;Prestige;;;;;;x
+currency_name_rtp_intrigue_christians;Prestige;;;;;;x
+currency_name_rtp_intrigue_muslim;Prestige;;;;;;x
+currency_name_rtp_intrigue_jewish;Prestige;;;;;;x
+currency_name_rtp_intrigue_zoroastrian;Prestige;;;;;;x
+currency_name_rtp_intrigue_eastern;Prestige;;;;;;x
+
+rtp_intrigue_norse;Brotherhood of the Rune;;;;;;x
+rtp_intrigue_norse_desc;While warriors tend to be more visible, the Brotherhood of the Rune thrives in the shadows. Members focus on the ways of intrigue rather than war, believing that subterfuge is as valuable as the sword when it comes to vanquishing one’s enemies. They favor use of sword, dagger, or axes for their work rather than poisons or strangling, believing that the letting of blood pleases the gods.;;;;;;x
+rtp_intrigue_norse_leader_desc;This is the society leader;;;;;;x
+rtp_intrigue_norse_rank_1_male;Adherent;;;;;;x
+rtp_intrigue_norse_rank_2_male;Companion;;;;;;x
+rtp_intrigue_norse_rank_3_male;Propagandist;;;;;;x
+rtp_intrigue_norse_rank_4_male;Grand Master;;;;;;x
+rtp_intrigue_norse_rank_1_female;Adherent;;;;;;x
+rtp_intrigue_norse_rank_2_female;Companion;;;;;;x
+rtp_intrigue_norse_rank_3_female;Propagandist;;;;;;x
+rtp_intrigue_norse_rank_4_female;Grand Mistress;;;;;;x
+
+rtp_intrigue_tengri;Karanlik Nehir;;;;;;x
+rtp_intrigue_tengri_desc;Source of primordial chaos and entrance of spirits into the world, water is the enemy of holy fire and yet the bringer of fertility and life.The Karanlik Nehir (“dark river”) believe the natural chaos of water is necessary in the world and make regular sacrifices on the banks of rivers and lakes. After a killing, members wash their faces as a symbolic “death” that they die along with the victim.;;;;;;x
+rtp_intrigue_tengri_leader_desc;This is the society leader;;;;;;x
+rtp_intrigue_tengri_rank_1_male;Adherent;;;;;;x
+rtp_intrigue_tengri_rank_2_male;Companion;;;;;;x
+rtp_intrigue_tengri_rank_3_male;Propagandist;;;;;;x
+rtp_intrigue_tengri_rank_4_male;Grand Master;;;;;;x
+rtp_intrigue_tengri_rank_1_female;Adherent;;;;;;x
+rtp_intrigue_tengri_rank_2_female;Companion;;;;;;x
+rtp_intrigue_tengri_rank_3_female;Propagandist;;;;;;x
+rtp_intrigue_tengri_rank_4_female;Grand Mistress;;;;;;x
+
+rtp_intrigue_baltic;Circle of Velnias;;;;;;x
+rtp_intrigue_baltic_desc;Members of the Circle take to heart the fickleness of Velnias’ appearance, encouraging membership from a wide range of ages and professions. They often focus on weakening victims by creating conflict and turning their allies against them before striking.;;;;;;x
+rtp_intrigue_baltic_leader_desc;This is the society leader;;;;;;x
+rtp_intrigue_baltic_rank_1_male;Adherent;;;;;;x
+rtp_intrigue_baltic_rank_2_male;Companion;;;;;;x
+rtp_intrigue_baltic_rank_3_male;Propagandist;;;;;;x
+rtp_intrigue_baltic_rank_4_male;Grand Master;;;;;;x
+rtp_intrigue_baltic_rank_1_female;Adherent;;;;;;x
+rtp_intrigue_baltic_rank_2_female;Companion;;;;;;x
+rtp_intrigue_baltic_rank_3_female;Propagandist;;;;;;x
+rtp_intrigue_baltic_rank_4_female;Grand Mistress;;;;;;x
+
+rtp_intrigue_slavic;Hand of Veles;;;;;;x
+rtp_intrigue_slavic_desc;Masters of intrigue, members of the Hand of Veles often carry a piece of willow bark in homage to the god. As Veles is closely linked with music, a popular old wives’ tale is that when a Hand is about to strike, the victim will hear soft humming in the darkness before their death.;;;;;;x
+rtp_intrigue_slavic_leader_desc;This is the society leader;;;;;;x
+rtp_intrigue_slavic_rank_1_male;Adherent;;;;;;x
+rtp_intrigue_slavic_rank_2_male;Companion;;;;;;x
+rtp_intrigue_slavic_rank_3_male;Propagandist;;;;;;x
+rtp_intrigue_slavic_rank_4_male;Grand Master;;;;;;x
+rtp_intrigue_slavic_rank_1_female;Adherent;;;;;;x
+rtp_intrigue_slavic_rank_2_female;Companion;;;;;;x
+rtp_intrigue_slavic_rank_3_female;Propagandist;;;;;;x
+rtp_intrigue_slavic_rank_4_female;Grand Mistress;;;;;;x
+
+rtp_intrigue_finnish;Brethren of the Fire;;;;;;x
+rtp_intrigue_finnish_desc;The Brethren seek the favor of the goddess Lempo, lady of fire, fertility, and shadow spirits. Prior to attacking a victim they will often steal a lock of the victim’s hair or another small momento and burn it in offering to Lempo, in hopes she will assist them.;;;;;;x
+rtp_intrigue_finnish_leader_desc;This is the society leader;;;;;;x
+rtp_intrigue_finnish_rank_1_male;Adherent;;;;;;x
+rtp_intrigue_finnish_rank_2_male;Companion;;;;;;x
+rtp_intrigue_finnish_rank_3_male;Propagandist;;;;;;x
+rtp_intrigue_finnish_rank_4_male;Grand Master;;;;;;x
+rtp_intrigue_finnish_rank_1_female;Adherent;;;;;;x
+rtp_intrigue_finnish_rank_2_female;Companion;;;;;;x
+rtp_intrigue_finnish_rank_3_female;Propagandist;;;;;;x
+rtp_intrigue_finnish_rank_4_female;Grand Mistress;;;;;;x
+
+rtp_intrigue_west_african;Anansi’s Web;;;;;;x
+rtp_intrigue_west_african_desc;Those who look to Anansi for guidance learn the intricacies of plotting against one’s enemies. Members have been known to serve from the greatest of kings to the lowliest of commoners, aiding those needing a quieter way of dispatching their enemy.;;;;;;x
+rtp_intrigue_west_african_leader_desc;This is the society leader;;;;;;x
+rtp_intrigue_west_african_rank_1_male;Adherent;;;;;;x
+rtp_intrigue_west_african_rank_2_male;Companion;;;;;;x
+rtp_intrigue_west_african_rank_3_male;Propagandist;;;;;;x
+rtp_intrigue_west_african_rank_4_male;Grand Master;;;;;;x
+rtp_intrigue_west_african_rank_1_female;Adherent;;;;;;x
+rtp_intrigue_west_african_rank_2_female;Companion;;;;;;x
+rtp_intrigue_west_african_rank_3_female;Propagandist;;;;;;x
+rtp_intrigue_west_african_rank_4_female;Grand Mistress;;;;;;x
+
+rtp_intrigue_zun;The Path of Moonlight;;;;;;x
+rtp_intrigue_zun_desc;Among people who worship the sun are those who also believe the light of the moon has great power. They believe the sunlight feeds the strength of warriors but that moonlight is the source of shadows, and that in shadow is where the power of intrigue lies.;;;;;;x
+rtp_intrigue_zun_leader_desc;This is the society leader;;;;;;x
+rtp_intrigue_zun_rank_1_male;Adherent;;;;;;x
+rtp_intrigue_zun_rank_2_male;Companion;;;;;;x
+rtp_intrigue_zun_rank_3_male;Propagandist;;;;;;x
+rtp_intrigue_zun_rank_4_male;Grand Master;;;;;;x
+rtp_intrigue_zun_rank_1_female;Adherent;;;;;;x
+rtp_intrigue_zun_rank_2_female;Companion;;;;;;x
+rtp_intrigue_zun_rank_3_female;Propagandist;;;;;;x
+rtp_intrigue_zun_rank_4_female;Grand Mistress;;;;;;x
+
+rtp_intrigue_bon;Children of Shinje;;;;;;x
+rtp_intrigue_bon_desc;Devoted to Shinje, the Lord of Death, members pledge to stay neutral in their dealings and never perform subterfuge based solely on personal emotion or ego. They believe chaos is a necessary force that helps move the circle of life and death, and that no life is exempt from Shinje’s claims.;;;;;;x
+rtp_intrigue_bon_leader_desc;This is the society leader;;;;;;x
+rtp_intrigue_bon_rank_1_male;Adherent;;;;;;x
+rtp_intrigue_bon_rank_2_male;Companion;;;;;;x
+rtp_intrigue_bon_rank_3_male;Propagandist;;;;;;x
+rtp_intrigue_bon_rank_4_male;Grand Master;;;;;;x
+rtp_intrigue_bon_rank_1_female;Adherent;;;;;;x
+rtp_intrigue_bon_rank_2_female;Companion;;;;;;x
+rtp_intrigue_bon_rank_3_female;Propagandist;;;;;;x
+rtp_intrigue_bon_rank_4_female;Grand Mistress;;;;;;x
+
+rtp_intrigue_hellenic;Tis Nyktas;;;;;;x
+rtp_intrigue_hellenic_desc;Members take their name from the goddess Nyx, personification of night. As she is the mother of many children embodying concepts such as Deceit, Retribution, Friendship, Strife, Blame, Destiny, and Death, so members of her cult are taught to think far ahead to the consequences of their actions, and never act without an understanding of what may come to pass.;;;;;;x
+rtp_intrigue_hellenic_leader_desc;This is the society leader;;;;;;x
+rtp_intrigue_hellenic_rank_1_male;Adherent;;;;;;x
+rtp_intrigue_hellenic_rank_2_male;Companion;;;;;;x
+rtp_intrigue_hellenic_rank_3_male;Propagandist;;;;;;x
+rtp_intrigue_hellenic_rank_4_male;Grand Master;;;;;;x
+rtp_intrigue_hellenic_rank_1_female;Adherent;;;;;;x
+rtp_intrigue_hellenic_rank_2_female;Companion;;;;;;x
+rtp_intrigue_hellenic_rank_3_female;Propagandist;;;;;;x
+rtp_intrigue_hellenic_rank_4_female;Grand Mistress;;;;;;x
+
+rtp_intrigue_aztec;Eagle Warriors;;;;;;x
+rtp_intrigue_aztec_desc;In a culture that prizes open battle and bloodshed, even the stealthiest among them are considered warriors. Eagles are an elite group trained to capture or assassinate important enemies on the battlefield -- thus, their peacetime training leans heavily towards learning to subdue and outmaneuver their opponents.They also act as civil “police”, punishing wrongs in society, and enforce the paying of tribute from conquered peoples.;;;;;;x
+rtp_intrigue_aztec_leader_desc;This is the society leader;;;;;;x
+rtp_intrigue_aztec_rank_1_male;Adherent;;;;;;x
+rtp_intrigue_aztec_rank_2_male;Companion;;;;;;x
+rtp_intrigue_aztec_rank_3_male;Propagandist;;;;;;x
+rtp_intrigue_aztec_rank_4_male;Grand Master;;;;;;x
+rtp_intrigue_aztec_rank_1_female;Adherent;;;;;;x
+rtp_intrigue_aztec_rank_2_female;Companion;;;;;;x
+rtp_intrigue_aztec_rank_3_female;Propagandist;;;;;;x
+rtp_intrigue_aztec_rank_4_female;Grand Mistress;;;;;;x
+
+rtp_intrigue_christians;Via Umbra;;;;;;x
+rtp_intrigue_christians_desc;Members of the feared Via Umbra tend to be less zealous than their warrior society counterparts, taking a much more pragmatic attitude towards their work. They are exceedingly careful with their activities and will very rarely act in a way that brings perceived dishonor to the society.;;;;;;x
+rtp_intrigue_christians_leader_desc;This is the society leader;;;;;;x
+rtp_intrigue_christians_rank_1_male;Adherent;;;;;;x
+rtp_intrigue_christians_rank_2_male;Companion;;;;;;x
+rtp_intrigue_christians_rank_3_male;Propagandist;;;;;;x
+rtp_intrigue_christians_rank_4_male;Grand Master;;;;;;x
+rtp_intrigue_christians_rank_1_female;Adherent;;;;;;x
+rtp_intrigue_christians_rank_2_female;Companion;;;;;;x
+rtp_intrigue_christians_rank_3_female;Propagandist;;;;;;x
+rtp_intrigue_christians_rank_4_female;Grand Mistress;;;;;;x
+
+rtp_intrigue_muslim;The Hashashin;;;;;;x
+rtp_intrigue_muslim_desc;The elusive Assassins consider themselves the true followers of Allah, and will do anything to further the advances of Islam and protect their fellow believers. Consisting of loyal warriors as well as competent spies, wielding manipulation and social skills as expertly as a dagger, they specialize in asymmetrical warfare, striking hard at the heart of their enemies.;;;;;;x
+rtp_intrigue_muslim_leader_desc;This is the society leader;;;;;;x
+rtp_intrigue_muslim_rank_1_male;Adherent;;;;;;x
+rtp_intrigue_muslim_rank_2_male;Companion;;;;;;x
+rtp_intrigue_muslim_rank_3_male;Propagandist;;;;;;x
+rtp_intrigue_muslim_rank_4_male;Grand Master;;;;;;x
+rtp_intrigue_muslim_rank_1_female;Adherent;;;;;;x
+rtp_intrigue_muslim_rank_2_female;Companion;;;;;;x
+rtp_intrigue_muslim_rank_3_female;Propagandist;;;;;;x
+rtp_intrigue_muslim_rank_4_female;Grand Mistress;;;;;;x
+
+rtp_intrigue_jewish;The Sicarii;;;;;;x
+rtp_intrigue_jewish_desc;The Sicarii are a shadowy group of zealots widely feared for their prowess at assassination with daggers. They have been known to kill a victim in the middle of a crowd  vanish without a trace afterwards. It is said they will accept contracts for the right amount of money or other payment, but are extremely discerning as to their clients.;;;;;;x
+rtp_intrigue_jewish_leader_desc;This is the society leader;;;;;;x
+rtp_intrigue_jewish_rank_1_male;Adherent;;;;;;x
+rtp_intrigue_jewish_rank_2_male;Companion;;;;;;x
+rtp_intrigue_jewish_rank_3_male;Propagandist;;;;;;x
+rtp_intrigue_jewish_rank_4_male;Grand Master;;;;;;x
+rtp_intrigue_jewish_rank_1_female;Adherent;;;;;;x
+rtp_intrigue_jewish_rank_2_female;Companion;;;;;;x
+rtp_intrigue_jewish_rank_3_female;Propagandist;;;;;;x
+rtp_intrigue_jewish_rank_4_female;Grand Mistress;;;;;;x
+
+rtp_intrigue_zoroastrian;Huvarshta;;;;;;x
+rtp_intrigue_zoroastrian_desc;Literally “Good Deeds”, the Huvarshta choose their targets wisely. They will not attack a victim for “evil” purposes, believing this to be a violation of Ahur Mazda -- the master plan.They will, however, readily commit acts against those they deem to be evil or who have committed evil acts against another. They have a heavy emphasis on moral choice and believe every action carries responsibility and consequence.;;;;;;x
+rtp_intrigue_zoroastrian_leader_desc;This is the society leader;;;;;;x
+rtp_intrigue_zoroastrian_rank_1_male;Adherent;;;;;;x
+rtp_intrigue_zoroastrian_rank_2_male;Companion;;;;;;x
+rtp_intrigue_zoroastrian_rank_3_male;Propagandist;;;;;;x
+rtp_intrigue_zoroastrian_rank_4_male;Grand Master;;;;;;x
+rtp_intrigue_zoroastrian_rank_1_female;Adherent;;;;;;x
+rtp_intrigue_zoroastrian_rank_2_female;Companion;;;;;;x
+rtp_intrigue_zoroastrian_rank_3_female;Propagandist;;;;;;x
+rtp_intrigue_zoroastrian_rank_4_female;Grand Mistress;;;;;;x
+
+rtp_intrigue_eastern;Sword of Kali;;;;;;x
+rtp_intrigue_eastern_desc;Members of the Sword of Kali usually attack victims by surprising them in the night and strangling them, then burying them with one hand in the palm-forward mudra saying "fear not" (abhayamudra). Robbing a victim after death is not considered dishonorable.;;;;;;x
+rtp_intrigue_eastern_leader_desc;This is the society leader;;;;;;x
+rtp_intrigue_eastern_rank_1_male;Adherent;;;;;;x
+rtp_intrigue_eastern_rank_2_male;Companion;;;;;;x
+rtp_intrigue_eastern_rank_3_male;Propagandist;;;;;;x
+rtp_intrigue_eastern_rank_4_male;Grand Master;;;;;;x
+rtp_intrigue_eastern_rank_1_female;Adherent;;;;;;x
+rtp_intrigue_eastern_rank_2_female;Companion;;;;;;x
+rtp_intrigue_eastern_rank_3_female;Propagandist;;;;;;x
+rtp_intrigue_eastern_rank_4_female;Grand Mistress;;;;;;x
+
+#####
+#Powers
+#####
+
+rtp_intrigue_p1_td;What is Yours Is Mine;;;;;;x
+rtp_intrigue_p1_td_named;What is Yours Is Mine;;;;;;;x
+rtp_intrigue_p1_td_desc;Those under the protection of my realm are so trusting. Surely they would not notice a few coins missing.;;;;;;x
+rtp_intrigue_p1_td_power_desc;Unlocks the §YTargeted Decision§! that allows you to steal ¤ from courtiers and vassals under your realm.;;;;;;x
+
+rtp_intrigue_p2_td;Words Have Power - First Target;;;;;;x
+rtp_intrigue_p2_td_named;Words Have Power - First Target;;;;;;x
+rtp_intrigue_p2_td_desc;Nothing is more fun than watching two people be at each other's throats.;;;;;;x
+rtp_intrigue_p2_td_power_desc;Unlocks the §YTargeted Decision§! that allows you to incite a §YRivalry§! between two characters in your realm.;;;;;;x
+
+rtp_intrigue_pp2_td;Words Have Power - Second Target;;;;;;x
+rtp_intrigue_pp2_td_named;Words Have Power - Second Target;;;;;;x
+rtp_intrigue_pp2_td_desc;Nothing is more fun than watching two people be at each other's throats.;;;;;;x
+rtp_intrigue_pp2_td_power_desc;Unlocks the §YTargeted Decision§! that allows you to incite a §YRivalry§! between two characters in your realm.;;;;;;x
+
+rtp_intrigue_p3_sd;Safehouse;;;;;;x
+rtp_intrigue_p3_sd_desc;[Root.Society.GetName] requires a base of operation in [Root.Liege.Capital.GetName] in order to effectively execute our work.;;;;;;x
+rtp_intrigue_p3_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to set up a base of operation increasing your §YPlot Power§!, §YDefensive Plot Power§!, and §YPlot Discovery Chance§! for 5 years.;;;;;;x
+
+rtp_intrigue_p4_sd;Vendetta;;;;;;x
+rtp_intrigue_p4_sd_desc;I have reached a level of skill in intrigue and trust with my fellow members where I know that some will help me in my...personal endeavours.;;;;;;x
+rtp_intrigue_p4_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to add your fellow [Root.Society.GetName] members to your current §YPlot§!.;;;;;;x
+
+rtp_intrigue_mercenary_sd;Switch to Mercenary;;;;;;x
+rtp_intrigue_mercenary_sd_desc;I bow to no one, and my laws are my own. This is the true way of mercenaries.;;;;;;x
+rtp_intrigue_mercenary_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to switch to the §YMercenary§! government.;;;;;;x
+
+rtp_intrigue_privateer_sd;Switch to Privateer;;;;;;x
+rtp_intrigue_privateer_sd_desc;§YThe sea is my home, and the gold that passes through her waters is mine for the taking. True freedom is commanding my fleet.§!;;;;;;x
+rtp_intrigue_privateer_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to switch to the §YPrivateer§! government.;;;;;;x
+
+#####
+#Tooltips
+#####
+
+rtp_choose_first_target_ct;Select the first target for the rivalry.;;;;;;x
+rtp_choose_second_target_ct;Select the second target for the rivalry.\nThere is a chance that this action may fail!;;;;;;x
+
+#####
+#Events
+#####
+
+RTPsociety.1.1_desc;We have been watching, little [Root.GetBrotherSister].\n\nMost who know of us cannot find our path in the shadows and yet, you have. Fear not -- even death, for it is our greatest gift to bring.\nMeet me outside at midnight, or else dream and think naught of this again.\n\nSigned, [rtp_society_leader.GetSocietyRank] [rtp_society_leader.GetFirstName];;;;;;x
+RTPsociety.1.1_1;At midnight, slip outside into the darkness.;;;;;;x
+RTPsociety.1_2;Better not get involved.;;;;;;x
+
+#####
+#Missions
+#####
+
+rtp_lambs_to_slaughter_intrigue_mission;Lambs To Slaughter;;;;;;x
+rtp_lambs_to_slaughter_intrigue_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_lambs_to_slaughter_intrigue_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me to help $TARGET$ frame a target.;;;;;;x
+rtp_lambs_to_slaughter_intrigue_mission_tooltip;Frame $TARGET$'s target;;;;;;x
+
+RTPisociety.1_desc;I have received a request from a fellow [Root.Society.GetName] [rtp_society_quest_target.GetBrotherSister]. The letter states that [rtp_society_quest_target.GetFirstName] needs to get rid of a...certain problem of [rtp_society_quest_target.GetHersHis]. You would not be the one taking care of that, instead, you need to find somebody to take the blame for the act.;;;;;;x
+RTPisociety.1_1;ACCEPT;;;;;;x
+RTPisociety.1_2;DECLINE;;;;;;x
+
+RTPisociety.2_title;Lambs To Slaughter;;;;;;x
+RTPisociety.2_desc;We have been watching [rtp_society_quest_target.GetFirstName] carefully for several weeks and noting the people around [rtp_society_quest_target.GetHerHim]. My brethren suggest pinning the job on [rtp_society_quest_target2.GetFirstName].;;;;;;x
+RTPisociety.2_1;[rtp_society_quest_target2.GetSheHeCap] looks like a good shill.;;;;;;x
+RTPisociety.2_2;How about [rtp_society_quest_target3.GetFirstName] instead?;;;;;;x
+
+RTPisociety.3_title;Lambs To Slaughter;;;;;;x
+RTPisociety.3_desc;I have been tasked with contriving to get [rtp_society_quest_target2.GetFirstName] into the right place at the right time. I’ve been studying [rtp_society_quest_target2.GetHerHis] movements carefully, and I think I now know what to do.;;;;;;x
+RTPisociety.3_1;Lure [rtp_society_quest_target2.GetFirstName] close to the murder scene.;;;;;;x
+RTPisociety.3_2;Notify the guard of [rtp_society_quest_target2.GetFirstName] suspicious behavior.;;;;;;x
+
+RTPisociety.4_title;Lambs To Slaughter;;;;;;x
+RTPisociety.4.1_desc;Success! [rtp_society_quest_target.GetFirstName]'s target is dead and I have drawn [rtp_society_quest_target2.GetFirstName] to the spot right as the guards discovered the body. [rtp_society_quest_target2.GetSheHe] has been hauled off for questioning and [rtp_society_quest_target.GetFirstName] is pleased indeed.;;;;;;x
+RTPisociety.4.2_desc;Curses! [rtp_society_quest_target2.GetFirstName] drank too much and did not want to move from [rtp_society_quest_target2.GetHerHis] spot. The guards are now looking for the actual murderer.;;;;;;x
+RTPisociety.4_1;Wrong place at the wrong time.;;;;;;x
+RTPisociety.4_2;Time to get out of here.;;;;;;x
+
+rtp_sticky_fingers_intrigue_mission;Sticky Fingers;;;;;;x
+rtp_sticky_fingers_intrigue_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_sticky_fingers_intrigue_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me to steal gold from $TARGET$.;;;;;;x
+rtp_sticky_fingers_intrigue_mission_tooltip;Steal gold from $TARGET$;;;;;;x
+
+RTPisociety.5_desc;I’ve got a job for you. We have been contracted to relieve a target of some of their burden of gold. I need you to break into [rtp_society_quest_target.GetFirstName]’s manor and handle this as quietly as you can.;;;;;;x
+RTPisociety.5_1;ACCEPT;;;;;;x
+RTPisociety.5_2;DECLINE;;;;;;x
+
+RTPisociety.6_title;Sticky Fingers;;;;;;x
+RTPisociety.6_desc;A job like this can’t be done alone. I can select someone to help me, but I’ll need to be discerning.;;;;;;x
+RTPisociety.6_1;Let us use diplomacy. [rtp_society_quest_helper.GetFirstName] you are in.;;;;;;x
+RTPisociety.6_2;Let us use martial. [rtp_society_quest_helper2.GetFirstName] you are in.;;;;;;x
+RTPisociety.6_3;Let us use intrigue. [rtp_society_quest_helper3.GetFirstName] you are in.;;;;;;x
+
+RTPisociety.7_title;Sticky Fingers;;;;;;x
+RTPisociety.7_desc;As we slip through the back of the manor kitchen, deftly avoiding the servants huddled asleep by the fire, the silence is shattered by a falling glass nearby. I curse inwardly as heavy footsteps trudge towards the corner, breaths away from where we cling to the wall…;;;;;;x
+RTPisociety.7_1;Send [rtp_society_quest_helper.GetFirstName] to feign a sleepy apology.;;;;;;x
+RTPisociety.7_2;Give the signal to quietly subdue the approaching guard.;;;;;;x
+RTPisociety.7_3;We both dart into the shadows, attempting to blend motionless.;;;;;;x
+
+RTPisociety.8_title;Sticky Fingers;;;;;;x
+RTPisociety.8.1_desc;[rtp_society_quest_helper.GetFirstName] licks [rtp_society_quest_helper.GetHerHis] lips and clears [rtp_society_quest_helper.GetHerHis] throat. “Oh beg yer pardon...just dropped me cup. I’ll be off now, then.” The guard grunts, not even bothering to peer closely at the face before him.;;;;;;x
+RTPisociety.8.2_desc;“Oh beg yer pardon…” my partner begins, but doesn’t finish. The guard peers at [rtp_society_quest_helper.GetHerHis] face shouting at [rtp_society_quest_helper.GetHerHim]: “Hey. Who the hell are you?!”;;;;;;x
+RTPisociety.8_1;Great job [rtp_society_quest_helper.GetFirstName]!;;;;;;x
+RTPisociety.8_2;[rtp_society_quest_helper.GetFirstName] you moron!;;;;;;x
+
+RTPisociety.9_title;Sticky Fingers;;;;;;x
+RTPisociety.9.1_desc;Floorboards creak as the guard moves towards us, making hairs stand up at the back of my neck. The lumbering figure passes me and I nod sharply to [rtp_society_quest_helper.GetFirstName] before slinging my garrote around the guard’s neck.;;;;;;x
+RTPisociety.9.2_desc;As the suspicious guard brushes past me, I give my partner a sharp nod. I whip my garrote from my pocket, slinging it about the guard’s throat and yanking backwards. Before [rtp_society_quest_helper.GetFirstName] can grab the man’s arms an elbow crashes into my ribs, knocking the wind out of me.;;;;;;x
+RTPisociety.9_1;Let us move.;;;;;;x
+RTPisociety.9_2;How big is this fucking guy?!;;;;;;x
+
+RTPisociety.10_title;Sticky Fingers;;;;;;x
+RTPisociety.10.1_desc;My heart slams in my chest as a guard rounds the corner, passing mere inches by my feet. He tiredly surveys the room, frowning, then turns and heads off to the next in search of the source of the noise.;;;;;;x
+RTPisociety.10.2_desc;The guard passes within inches of me as I hold my breath. He scratches his chin, turning as if to head into the next room...then suddenly our eyes lock.;;;;;;x
+RTPisociety.10_1;Close call.;;;;;;x
+RTPisociety.10_2;Ehm...catch!;;;;;;x
+
+RTPisociety.11_title;Sticky Fingers;;;;;;x
+RTPisociety.11.1_desc;We have found the prized gold, locked in a damp cellar keep. We take no more and no less than instructed. [Root.Society.GetTitledGrandMasterName] should be pleased.;;;;;;x
+RTPisociety.11.2_desc;This whole plan was doomed to fail from the start. If only [rtp_society_quest_helper.GetFirstName] was not such an incompetent mule.;;;;;;x
+RTPisociety.11_1;Thanks for the help [rtp_society_quest_helper.GetFirstName].;;;;;;x
+RTPisociety.11_2;This is on you [rtp_society_quest_helper.GetFirstName].;;;;;;x
+
+rtp_my_brothers_keeper_intrigue_mission;My Brother's Keeper;;;;;;x
+rtp_my_brothers_keeper_intrigue_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_my_brothers_keeper_intrigue_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me to free $TARGET$ from captivity.;;;;;;x
+rtp_my_brothers_keeper_intrigue_mission_tooltip;Free $TARGET$ from captivity;;;;;;x
+
+RTPisociety.12_desc;Listen up. One of your idiot [rtp_society_quest_target.GetBrotherSister] has been caught by the guards during a job, and the rest of us could be in danger. Get them out of that prison before the guards get a chance of questioning [rtp_society_quest_target.GetHerHim].;;;;;;x
+RTPisociety.12_1;ACCEPT;;;;;;x
+RTPisociety.12_2;DECLINE;;;;;;x
+
+RTPisociety.13_title;My Brother's Keeper;;;;;;x
+RTPisociety.13_desc;[Root.Society.GetTitledGrandMasterName] brings [rtp_society_quest_helper.GetFirstName] and I together and tells us we are responsible for freeing our [rtp_society_quest_target.GetBrotherSister]. We sit down and begin to discuss the plan.;;;;;;x
+RTPisociety.13_1;We should sneak in through a back way.;;;;;;x
+RTPisociety.13_2;One of us should run a distraction on the guards.;;;;;;x
+
+RTPisociety.14_title;My Brother's Keeper;;;;;;x
+RTPisociety.14_desc;[rtp_society_quest_helper.GetFirstName] and I wait until the cover of darkness and slip into the damp prison. Shadows cover us, the quiet drips of dank water masking our quiet steps.;;;;;;x
+RTPisociety.14_1;I hope nobody saw us.;;;;;;x
+
+RTPisociety.15_title;My Brother's Keeper;;;;;;x
+RTPisociety.15_desc;I crouch atop a beam high above the guards’ heads, watching their movements. When is spot a glint in thicket, the sign from [rtp_society_quest_helper.GetFirstName], I raise my bow and fire an arrow into the bushes. The noise startles the guards, who instantly begin searching the grounds.;;;;;;x
+RTPisociety.15_1;How dumb could they possibly be?;;;;;;x
+
+RTPisociety.16_title;My Brother's Keeper;;;;;;x
+RTPisociety.16.1_desc;We’ve done it! We made it back out of the prison before daybreak, our [rtp_society_quest_target.GetBrotherSister] in tow. We stay silent until we’re well away from the dungeon, making it back to our cellar before the cry is raised.;;;;;;x
+RTPisociety.16.2_desc;The minutes pass and we still haven’t found [rtp_society_quest_target.GetFirstName]. “This is the right cell, I swear it,” hisses [rtp_society_quest_helper.GetFirstName] as we come to an empty block. “They must have moved [rtp_society_quest_helper.GetHerHim]!”;;;;;;x
+RTPisociety.16_1;We better lay low now.;;;;;;x
+RTPisociety.16_2;Useless as always uh [rtp_society_quest_helper.GetFirstName]?;;;;;;x
+
+rtp_assassination_intrigue_mission;Assassination;;;;;;x
+rtp_assassination_intrigue_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_assassination_intrigue_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me to kill $TARGET$.;;;;;;x
+rtp_assassination_intrigue_mission_tooltip;Kill $TARGET$;;;;;;x
+
+RTPisociety.17_desc;I’ve got something for you. We have received a request to rid someone of a particularly pesky enemy, [rtp_society_quest_target.GetFirstName]. You’re up for a job, so take this and get moving.;;;;;;x
+RTPisociety.17_1;ACCEPT;;;;;;x
+RTPisociety.17_2;DECLINE;;;;;;x
+
+RTPisociety.18_title;Assassination;;;;;;x
+RTPisociety.18_desc;I have been tracking [rtp_society_quest_target.GetFirstName] for days, watching [rtp_society_quest_target.GetHerHis] routine and looking for an opening.;;;;;;x
+RTPisociety.18_1;Poison [rtp_society_quest_target.GetHerHis] wine.;;;;;;x
+RTPisociety.18_2;Assassination with a dagger.;;;;;;x
+RTPisociety.18_3;Lure [rtp_society_quest_target.GetFirstName] to a quiet place, then strangle [rtp_society_quest_target.GetHerHim].;;;;;;x
+RTPisociety.18_4;Seduce [rtp_society_quest_target.GetHerHim] and push [rtp_society_quest_target.GetHerHim] off a balcony.;;;;;;x
+
+RTPisociety.19_title;Assassination;;;;;;x
+RTPisociety.19_desc;I snuck into [rtp_society_quest_target.GetFirstName]’s kitchens posed as a server with the deadly poison stored in my ring... Now I wait for a dish to bring up to the table;;;;;;x
+RTPisociety.19_1;And the wine of course.;;;;;;x
+
+RTPisociety.20_title;Assassination;;;;;;x
+RTPisociety.20_desc;Blended into the crowd, I have an easy time following [rtp_society_quest_target.GetFirstName]. As [rtp_society_quest_target.GetSheHe] turns down the alley I glance around quickly then make my move.;;;;;;x
+RTPisociety.20_1;There you are.;;;;;;x
+
+RTPisociety.21_title;Assassination;;;;;;x
+RTPisociety.21_desc;In place in a narrow wedge between buildings, I wait until I spot my target about to walk by. “My [rtp_society_quest_target.GetLordLady]!” I pitch my voice up from the dark corner. “Please, please...I am wounded, would you help me?;;;;;;x
+RTPisociety.21_1;I do not have much longer.;;;;;;x
+
+RTPisociety.22_title;Assassination;;;;;;x
+RTPisociety.22_desc;Night has fallen and [rtp_society_quest_target.GetFirstName] is at [rtp_society_quest_target.GetHerHis] usual tavern. I have watched [rtp_society_quest_target.GetHerHim] go through several rounds of ale, and when the time is right I slip onto the bench beside [rtp_society_quest_target.GetHerHim], pulling my hood back to reveal my smile.;;;;;;x
+RTPisociety.22_1;I will take care of you my [rtp_society_quest_target.GetLordLady].;;;;;;x
+
+RTPisociety.23_title;Assassination;;;;;;x
+RTPisociety.23.1_desc;I watch from the balcony as [rtp_society_quest_target.GetFirstName] drinks the wine I’d slipped onto [rtp_society_quest_target.GetHerHis] server’s tray.;;;;;;x
+RTPisociety.23.2_desc;I grind my teeth as [rtp_society_quest_target.GetFirstName] doesn’t touch the wine the whole damn night!;;;;;;x
+RTPisociety.23.3_desc;My arm wrapped around [rtp_society_quest_target.GetFirstName]’s neck, hand closed around [rtp_society_quest_target.GetHerHis] mouth, and my dagger glints as I slip it deftly into [rtp_society_quest_target.GetHerHis] back.;;;;;;x
+RTPisociety.23.4_desc;As I grab for [rtp_society_quest_target.GetFirstName]’s mouth to hush them, an elbow cracks into my nose, sending my head flying back. A cry goes up and I turn, stumbling quickly away before I am caught.;;;;;;x
+RTPisociety.23.5_desc;[rtp_society_quest_target.GetFirstName] can’t resist the cries of the downtrodden. As [rtp_society_quest_target.GetSheHe] wanders into the alley calling for me, I silently slip behind [rtp_society_quest_target.GetHerHim], stringing the garrote across [rtp_society_quest_target.GetHerHis] throat until [rtp_society_quest_target.GetSheHe] has ceased twitching.;;;;;;x
+RTPisociety.23.6_desc;I watch, fists clenched as [rtp_society_quest_target.GetFirstName] peers into the alley way, then turns away without bothering to see where the pathetic voice has come from.;;;;;;x
+RTPisociety.23.7_desc;[rtp_society_quest_target.GetSheHeCap] can’t resist the lure of an easy body, and when we are alone at the top of the balcony I forcefully push [rtp_society_quest_target.GetHerHim] off.;;;;;;x
+RTPisociety.23.8_desc;Seems [rtp_society_quest_target.GetFirstName] is too drunk to even grasp what I am offering! I try to encourage [rtp_society_quest_target.GetHerHim] upstairs until even I am disgusted with watching [rtp_society_quest_target.GetFirstName] make a fool of [rtp_society_quest_target.GetHerselfHimself]. Eventually I am forced to give up.;;;;;;x
+RTPisociety.23_1;I need a bath.;;;;;;x
+RTPisociety.23_2;What a failure.;;;;;;x
+
+rtp_the_whispers_intrigue_mission;The Whispers;;;;;;x
+rtp_the_whispers_intrigue_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_the_whispers_intrigue_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me to spy on $TARGET$.;;;;;;x
+rtp_the_whispers_intrigue_mission_tooltip;Spy on $TARGET$;;;;;;x
+
+RTPisociety.24_desc;We received a request from [rtp_society_quest_target2.GetFirstName] informing us that [rtp_society_quest_target2.GetHerHis] spouse [rtp_society_quest_target.GetFirstName] is apparently sleeping with somebody else. I need you to go find out the truth.;;;;;;x
+RTPisociety.24_1;ACCEPT;;;;;;x
+RTPisociety.24_2;DECLINE;;;;;;x
+
+RTPisociety.25_title;The Whispers;;;;;;x
+RTPisociety.25_desc;I have arrived at the residence were [rtp_society_quest_target.GetFirstName] lives at. I could follow [rtp_society_quest_target.GetHerHim] around or stage a kidnapping in order to discover the truth.;;;;;;x
+RTPisociety.25_1;I could use the exercise.;;;;;;x
+RTPisociety.25_2;A rope and a sack should do.;;;;;;x
+
+RTPisociety.26_title;The Whispers;;;;;;x
+RTPisociety.26.1_desc;While following [rtp_society_quest_target.GetFirstName] through the streets of [rtp_society_quest_target.Liege.Capital.GetName], [rtp_society_quest_target.GetSheHe] suddenly turns into a dark alley and enters a shady residence.;;;;;;x
+RTPisociety.26.2_desc;While following [rtp_society_quest_target.GetFirstName] through the streets of [rtp_society_quest_target.Liege.Capital.GetName], [rtp_society_quest_target.GetSheHe] suddenly turns into a dark alley.;;;;;;x
+RTPisociety.26_1;That is bizarre.;;;;;;x
+RTPisociety.26_2;Perfect opportunity.;;;;;;x
+
+RTPisociety.27_title;The Whispers;;;;;;x
+RTPisociety.27.1_desc;I wait outside of the residence and it does not take long to begin hearing moaning noises coming from the bedroom.;;;;;;x
+RTPisociety.27.2_desc;[rtp_society_quest_target.GetFirstName] walks through the dark alley completely unaware of [rtp_society_quest_target.GetHerHis] surroundings. I quickly leap out of the shadows and throw the sack over [rtp_society_quest_target.GetHerHim].;;;;;;x
+RTPisociety.27_1;Well, well, well.;;;;;;x
+RTPisociety.27_2;Be quiet or I will gut ya like a fish.;;;;;;x
+
+RTPisociety.28_title;The Whispers;;;;;;x
+RTPisociety.28.1_desc;I reach for my notebook and write down the time of the occurence. Surely [rtp_society_quest_target2.GetFirstName] will be eager to catch [rtp_society_quest_target.GetFirstName] [rtp_society_quest_target2.GetHerselfHimself].;;;;;;x
+RTPisociety.28.2_desc;As I reach for my notebook, I feel a blade instead of my it. "Have not gotten any in quite some time uh?" says a tall man standing behind me. "Pretty pathetic if you ask me, but I am not here to judge. I am here to tell ya to keep your mouth shut about this whole affair.";;;;;;x
+RTPisociety.28.3_desc;It did not take much water in order to get [rtp_society_quest_target.GetFirstName] to confess regarding [rtp_society_quest_target.GetHerHis] affair.;;;;;;x
+RTPisociety.28.4_desc;I sit [rtp_society_quest_target.GetFirstName] on a stool and I begin walking towards the nearby stream in order to collect some water. Soon after, [rtp_society_quest_target.GetFirstName] frees [rtp_society_quest_target.GetHerselfHimself] and disappears without any trace.;;;;;;x
+RTPisociety.28_1;Time to collect.;;;;;;x
+RTPisociety.28_2;My lips are sealed.;;;;;;x
+RTPisociety.28_3;Lets get you home now.;;;;;;x
+RTPisociety.28_4;How?!;;;;;;x
+
+RTPisociety.29_title;Mission Failed;;;;;;x
+RTPisociety.29_desc;While on my way towards the target, an envoy informs me that the target is no longer with us.;;;;;;x
+RTPisociety.29_1;[Root.Society.GetTitledGrandMasterName] is not going to be happy.;;;;;;x

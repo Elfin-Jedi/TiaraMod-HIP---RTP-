@@ -1,0 +1,21 @@
+# -*- ck2.events -*-
+
+namespace = mta_artifacts
+
+# on_startup: Set global flag for compatibility with other mods
+character_event = {
+	id = mta_artifacts.0
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	ai = no
+	
+	trigger = {
+		NOT = { has_global_flag = mta_artifacts }
+	}
+	
+	immediate = {
+		set_global_flag = mta_artifacts
+	}
+}

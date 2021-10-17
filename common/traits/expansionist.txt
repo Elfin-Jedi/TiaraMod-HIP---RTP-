@@ -1,0 +1,30 @@
+expansionist = {
+ 
+	ruler_designer_cost = 20
+
+	random = yes 
+	personality = yes 
+
+	martial = 5
+	diplomacy = -5
+	
+	opposites = { 
+		temperate 
+		patient 
+		craven 
+		shy 
+		content 
+	}
+
+	monthly_character_prestige = 0.5
+	levy_size = 0.15
+	max_manpower_mult = 0.2
+
+
+	same_opinion_if_same_religion = 30
+	infidel_opinion = -50
+
+	ai_honor = -40
+	ai_zeal = 30
+	ai_ambition = 50
+}

@@ -1,0 +1,4278 @@
+#####
+#Martial Society
+#
+#Total = 21
+#####
+
+#####
+#PAGANS
+#####
+
+#Norse
+rtp_martial_norse = {
+	sound = warrior_lodge_ambient_01
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = norse_pagan
+			religion = norse_pagan_reformed
+			religion_group = pagan_group
+			religion_group = dark
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_norse
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = norse_pagan
+			religion = norse_pagan_reformed
+			religion_group = pagan_group
+			religion_group = dark
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = norse_pagan
+			religion = norse_pagan_reformed
+			religion_group = pagan_group
+			religion_group = dark
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+		}
+	}
+}
+
+#Tengri
+rtp_martial_tengri = {
+	sound = warrior_lodge_ambient_01
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = tengri_pagan
+			religion = tengri_pagan_reformed
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_tengri
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = tengri_pagan
+			religion = tengri_pagan_reformed
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = tengri_pagan
+			religion = tengri_pagan_reformed
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = tengri_pagan
+				religion = tengri_pagan_reformed
+			}
+		}
+	}
+}
+
+#Baltic
+rtp_martial_baltic = {
+	sound = warrior_lodge_ambient_01
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = baltic_pagan
+			religion = baltic_pagan_reformed
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_baltic
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = baltic_pagan
+			religion = baltic_pagan_reformed
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = baltic_pagan
+			religion = baltic_pagan_reformed
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = baltic_pagan
+				religion = baltic_pagan_reformed
+			}
+		}
+	}
+}
+
+#Finnish
+rtp_martial_finnish = {
+	sound = warrior_lodge_ambient_01
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = finnish_pagan
+			religion = finnish_pagan_reformed
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_finnish
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = finnish_pagan
+			religion = finnish_pagan_reformed
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = finnish_pagan
+			religion = finnish_pagan_reformed
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = finnish_pagan
+				religion = finnish_pagan_reformed
+			}
+		}
+	}
+}
+
+#Slavic
+rtp_martial_slavic = {
+	sound = warrior_lodge_ambient_01
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = slavic_pagan
+			religion = slavic_pagan_reformed
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_slavic
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = slavic_pagan
+			religion = slavic_pagan_reformed
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = slavic_pagan
+			religion = slavic_pagan_reformed
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+			}
+		}
+	}
+}
+
+#West African
+rtp_martial_west_african = {
+	sound = warrior_lodge_ambient_01
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = west_african_pagan
+			religion = west_african_pagan_reformed
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_west_african
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = west_african_pagan
+			religion = west_african_pagan_reformed
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = west_african_pagan
+			religion = west_african_pagan_reformed
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = west_african_pagan
+				religion = west_african_pagan_reformed
+			}
+		}
+	}
+}
+
+#Zun
+rtp_martial_zun = {
+	sound = warrior_lodge_ambient_01
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = zun_pagan
+			religion = zun_pagan_reformed
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_zun
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = zun_pagan
+			religion = zun_pagan_reformed
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = zun_pagan
+			religion = zun_pagan_reformed
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = zun_pagan
+				religion = zun_pagan_reformed
+			}
+		}
+	}
+}
+
+#Bon
+rtp_martial_bon = {
+	sound = warrior_lodge_ambient_01
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = bon
+			religion = bon_reformed
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_bon
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = bon
+			religion = bon_reformed
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = bon
+			religion = bon_reformed
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = bon
+				religion = bon_reformed
+			}
+		}
+	}
+}
+
+#Hellenic
+rtp_martial_hellenic = {
+	sound = warrior_lodge_ambient_01
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = hellenic_pagan
+			religion = hellenic_pagan_reformed
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_hellenic
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = hellenic_pagan
+			religion = hellenic_pagan_reformed
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = hellenic_pagan
+			religion = hellenic_pagan_reformed
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+			}
+		}
+	}
+}
+
+#Aztec
+rtp_martial_aztec = {
+	sound = warrior_lodge_ambient_01
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = aztec
+			religion = aztec_reformed
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_aztec
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = aztec
+			religion = aztec_reformed
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = aztec
+			religion = aztec_reformed
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = aztec
+				religion = aztec_reformed
+			}
+		}
+	}
+}
+
+#####
+#CHRISTIAN
+#####
+
+#Chalcedonian
+rtp_martial_chalcedonian = {
+	sound = warrior_lodge_ambient_02
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		has_global_flag = rtp_chalcedonian #Chalcedonian game
+		NOT = {
+			has_global_flag = rtp_schism #The schism happens
+		}
+	}
+
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = chalcedonian
+			religion = iconoclast
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_chalcedonian
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = chalcedonian
+			religion = iconoclast
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = chalcedonian
+			religion = iconoclast
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = chalcedonian
+				religion = iconoclast
+			}
+		}
+	}
+}
+
+#Catholic
+rtp_martial_catholic = {
+	sound = warrior_lodge_ambient_02
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		OR = {
+			NOT = {
+				has_global_flag = rtp_chalcedonian #Chalcedonian game
+			}
+			AND = {
+				has_global_flag = rtp_chalcedonian #Chalcedonian game
+				has_global_flag = rtp_schism #The schism happens
+			}
+		}
+	}
+
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = catholic
+			religion = cathar
+			religion = fraticelli
+			religion = waldensian
+			religion = lollard
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_catholic
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = catholic
+			religion = cathar
+			religion = fraticelli
+			religion = waldensian
+			religion = lollard
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = catholic
+			religion = cathar
+			religion = fraticelli
+			religion = waldensian
+			religion = lollard
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = catholic
+				religion = cathar
+				religion = fraticelli
+				religion = waldensian
+				religion = lollard
+			}
+		}
+	}
+}
+
+#Orthodox
+rtp_martial_orthodox = {
+	sound = warrior_lodge_ambient_02
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		OR = {
+			NOT = {
+				has_global_flag = rtp_chalcedonian #Chalcedonian game
+			}
+			AND = {
+				has_global_flag = rtp_chalcedonian #Chalcedonian game
+				has_global_flag = rtp_schism #The schism happens
+			}
+		}
+	}
+
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = orthodox
+			religion = bogomilist
+			religion = monothelite
+			religion = iconoclast
+			religion = paulician
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_orthodox
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = orthodox
+			religion = bogomilist
+			religion = monothelite
+			religion = iconoclast
+			religion = paulician
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = orthodox
+			religion = bogomilist
+			religion = monothelite
+			religion = iconoclast
+			religion = paulician
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = orthodox
+				religion = bogomilist
+				religion = monothelite
+				religion = iconoclast
+				religion = paulician
+			}
+		}
+	}
+}
+
+#Miaphysite
+rtp_martial_miaphysite = {
+	sound = warrior_lodge_ambient_02
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = miaphysite
+			religion = monophysite
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_miaphysite
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = miaphysite
+			religion = monophysite
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = miaphysite
+			religion = monophysite
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = miaphysite
+				religion = monophysite
+			}
+		}
+	}
+}
+
+#Nestorian
+rtp_martial_nestorian = {
+	sound = warrior_lodge_ambient_02
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = nestorian
+			religion = messalian
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_nestorian
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = nestorian
+			religion = messalian
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = nestorian
+			religion = messalian
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = nestorian
+				religion = messalian
+			}
+		}
+	}
+}
+
+#####
+#JEWISH
+#####
+
+#Jewish
+rtp_martial_jewish = {
+	sound = warrior_lodge_ambient_02
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		religion_group = jewish_group
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_jewish
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		religion_group = jewish_group
+	}
+
+	potential = {
+		lower_tier_than = KING
+		religion_group = jewish_group
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			religion_group = jewish_group
+		}
+	}
+}
+
+#####
+#MUSLIM
+#####
+
+#Sunni
+rtp_martial_sunni = {
+	sound = warrior_lodge_ambient_02
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		is_female = no
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = sunni
+			religion = zikri
+			religion = yazidi
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_sunni
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = sunni
+			religion = zikri
+			religion = yazidi
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = sunni
+			religion = zikri
+			religion = yazidi
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = sunni
+				religion = zikri
+				religion = yazidi
+			}
+		}
+	}
+}
+
+#Shia
+rtp_martial_shiite = {
+	sound = warrior_lodge_ambient_02
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		is_female = no
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = shiite
+			religion = druze
+			religion = hurufi
+			religion = qarmatian
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_shiite
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = shiite
+			religion = druze
+			religion = hurufi
+			religion = qarmatian
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = shiite
+			religion = druze
+			religion = hurufi
+			religion = qarmatian
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = shiite
+				religion = druze
+				religion = hurufi
+				religion = qarmatian
+			}
+		}
+	}
+}
+
+#Ibadi
+rtp_martial_ibadi = {
+	sound = warrior_lodge_ambient_02
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		is_female = no
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = ibadi
+			religion = kharijite
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_ibadi
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = ibadi
+			religion = kharijite
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = ibadi
+			religion = kharijite
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = ibadi
+				religion = kharijite
+			}
+		}
+	}
+}
+
+#####
+#ZOROASTRIAN
+#####
+
+#Zoroastrian
+rtp_martial_zoroastrian = {
+	sound = warrior_lodge_ambient_02
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		religion_group = zoroastrian_group
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_zoroastrian
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		religion_group = zoroastrian_group
+	}
+
+	potential = {
+		lower_tier_than = KING
+		religion_group = zoroastrian_group
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			religion_group = zoroastrian_group
+		}
+	}
+}
+
+#####
+#EASTERN
+#####
+
+#Eastern
+rtp_martial_eastern = {
+	sound = warrior_lodge_ambient_02
+	society_ranks_gfx = warriors_ranks
+	primary_attribute = martial
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		martial = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		religion_group = indian_group
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_martial_eastern
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		religion_group = indian_group
+	}
+
+	potential = {
+		lower_tier_than = KING
+		religion_group = indian_group
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			combat_rating = 5
+		}
+		powers = {
+			rtp_martial_p1_sd
+		}
+	}
+
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			combat_rating = 10
+			martial = 1
+			monthly_character_piety = -0.1
+		}
+		powers = {
+			rtp_martial_p2_sd
+		}
+	}
+
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			combat_rating = 15
+			martial = 2
+			monthly_character_piety = -0.1
+			health = -0.25
+		}
+		powers = {
+			rtp_martial_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			combat_rating = 20
+			martial = 3
+			monthly_character_piety = -0.1
+			health = -0.5
+		}
+		powers = {
+			rtp_martial_p4_td
+			rtp_martial_tribal_sd
+			rtp_martial_nomad_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_martial
+
+		per_attribute = {
+			name = martial
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+
+	startup_populate = {
+		trigger = {
+			ai = yes
+			martial = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			religion_group = indian_group
+		}
+	}
+}

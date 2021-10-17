@@ -1,0 +1,19 @@
+childhood_event_targets = {
+    name = "CHILDHOOD_TARGETS"
+    group = "RULE_GROUP_RICH_CHILDHOOD"
+    option = {                                                                                                   
+        name = dynasty
+        text = "RULE_CHILDHOOD_TARGETS_DYNASTY"
+        desc = "RULE_CHILDHOOD_TARGETS_DYNASTY_DESC"
+    }
+	option = {                                                                                                   
+        name = realm
+        text = "RULE_CHILDHOOD_TARGETS_REALM"
+        desc = "RULE_CHILDHOOD_TARGETS_REALM_DESC"
+    }
+	option = {                                                                                                   
+        name = all
+        text = "RULE_CHILDHOOD_TARGETS_ALL"
+        desc = "RULE_CHILDHOOD_TARGETS_ALL_DESC"
+    }
+}

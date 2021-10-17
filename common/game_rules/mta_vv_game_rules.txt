@@ -1,0 +1,89 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	group = "TEXT_KEY_FOR_GROUP"					# Used for filtering. A single rule can be in multiple groups 
+#	option = {										# please note that the first option is always the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		achievements = no							# by default achievements = yes, allows or disallows achievements
+#	}
+# }
+
+mta_rule_slavery = {
+	name = "MTA_RULE_SLAVERY_NAME"
+	group = "MTA_RULE_GROUP"
+	option = {
+		name = restricted
+		text = "MTA_RULE_SLAVERY_RESTRICTED"
+		desc = "MTA_RULE_SLAVERY_RESTRICTED_DESC"
+	}
+	option = {
+		name = unrestricted
+		text = "MTA_RULE_SLAVERY_UNRESTRICTED"
+		desc = "MTA_RULE_SLAVERY_UNRESTRICTED_DESC"
+	}
+	option = {
+		name = off
+		text = "MTA_RULE_SLAVERY_OFF"
+		desc = "MTA_RULE_SLAVERY_OFF_DESC"
+	}
+}
+
+mta_rule_enslavement_rate = {
+	name = "MTA_RULE_ENSLAVEMENT_RATE_NAME"
+	group = "MTA_RULE_GROUP"
+	option = {
+		name = default
+		text = "MTA_RULE_ENSLAVEMENT_RATE_DEFAULT"
+		desc = "MTA_RULE_ENSLAVEMENT_RATE_DEFAULT_DESC"
+	}
+	option = {
+		name = halved
+		text = "MTA_RULE_ENSLAVEMENT_RATE_HALVED"
+		desc = "MTA_RULE_ENSLAVEMENT_RATE_HALVED_DESC"
+	}
+	option = {
+		name = quartered
+		text = "MTA_RULE_ENSLAVEMENT_RATE_QUARTERED"
+		desc = "MTA_RULE_ENSLAVEMENT_RATE_QUARTERED_DESC"
+	}
+}
+
+mta_rule_rape = {
+	name = "MTA_RULE_RAPE_NAME"
+	group = "MTA_RULE_GROUP"
+	option = {
+		name = on
+		text = "MTA_RULE_RAPE_ON"
+		desc = "MTA_RULE_RAPE_ON_DESC"
+	}
+	option = {
+		name = off
+		text = "MTA_RULE_RAPE_OFF"
+		desc = "MTA_RULE_RAPE_OFF_DESC"
+	}
+}
+
+mta_rule_lowborn = {
+	name = "MTA_RULE_LOWBORN_NAME"
+	group = "MTA_RULE_GROUP"
+	option = {
+		name = on
+		text = "MTA_RULE_LOWBORN_ON"
+		desc = "MTA_RULE_LOWBORN_ON_DESC"
+	}
+	option = {
+		name = no_pardons
+		text = "MTA_RULE_LOWBORN_NO_PARDONS"
+		desc = "MTA_RULE_LOWBORN_NO_PARDONS_DESC"
+	}
+	option = {
+		name = off
+		text = "MTA_RULE_LOWBORN_OFF"
+		desc = "MTA_RULE_LOWBORN_OFF_DESC"
+	}
+}

@@ -1,0 +1,882 @@
+namespace = bornthisway_coming_out
+
+# Modified version of Conclave event ZE.13701 that adds the homosexual trait for adolescent or adult characters with the btw_born_this_way flag
+character_event = {
+	id = bornthisway_coming_out.0
+	picture = GFX_evt_lovers
+	desc = EVTDESC_bornthisway_coming_out.0
+
+	min_age = 12
+	only_capable = yes
+	has_character_flag = btw_born_this_way
+	
+	trigger = {
+		NOT = { trait = homosexual }							# No need to trigger an event if the character already has the trait
+		NOT = { has_character_flag = btw_back_in_the_closet }	# This is for characters coming out to themselves for the first time
+		any_host_courtier = { bornthisway_valid_gay_crush_target_trigger = yes }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {				# Modifiers are based on the ones for the vanilla events that turn teens gay
+			factor = 0.75
+			martial = 10
+			has_fair_trait_trigger = yes
+		}
+		modifier = {
+			factor = 0.75
+			trait = shy
+			learning = 10
+		}
+		modifier = {
+			factor = 0.75
+			any_host_courtier = {
+				OR = {
+					trait = homosexual
+					trait = bisexual
+				}
+				bornthisway_valid_gay_crush_target_trigger = yes
+				OR = {
+					reverse_opinion = { who = ROOT value = 25 }
+					has_pleasant_personality_trigger = yes
+					is_attractive_trigger = yes
+					has_at_least_3_traits_in_common_with_prev_trigger = yes
+					AND = {
+						trait = shieldmaiden
+						ROOT = { is_female = yes }
+					}
+				}
+			}		
+		}
+		modifier = {
+			factor = 0.8
+			any_host_courtier = {
+				bornthisway_valid_gay_crush_target_trigger = yes
+				OR = {
+					reverse_opinion = { who = ROOT value = 25 }
+					has_pleasant_personality_trigger = yes
+					is_attractive_trigger = yes
+					has_at_least_3_traits_in_common_with_prev_trigger = yes
+					AND = {
+						trait = shieldmaiden
+						ROOT = { is_female = yes }
+					}
+				}
+			}		
+		}
+		modifier = {
+			factor = 0.9
+			guardian = {
+				OR = {
+					trait = homosexual
+					trait = bisexual
+				}
+			}
+		}
+		modifier = {
+			factor = 0.7
+			father = {
+				OR = {
+					trait = homosexual
+					trait = bisexual
+				}
+			}
+		}
+		modifier = {
+			factor = 0.7
+			mother = {
+				OR = {
+					trait = homosexual
+					trait = bisexual
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			trait = lustful
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				trait = honest
+				trait = brave
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				trait = paranoid
+				trait = craven
+				trait = zealous
+			}
+		}
+	}
+	
+	immediate = {
+		random_host_courtier = {
+			limit = { bornthisway_valid_gay_crush_target_trigger = yes }		# TODO: figure out how to weight the random selection based on compatibility/attraction
+			save_event_target_as = bornthisway_gay_crush_target
+		}
+		opinion = {
+			who = event_target:bornthisway_gay_crush_target
+			modifier = opinion_btw_forbidden_desire
+			years = 4
+		}
+	}
+
+	option = {
+		name = EVTOPTA_bornthisway_coming_out.0		# What would it be like to hold her?
+		ai_chance = {
+			factor = 50
+		}
+		add_trait = homosexual
+	}
+
+	option = {
+		name = EVTOPTB_bornthisway_coming_out.0		# She is the one for me.
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 1.25
+				OR = {
+					trait = timid
+					trait = brooding
+					trait = indolent
+					trait = fussy
+				}
+			}
+			modifier = {
+				factor = 1.3
+				event_target:bornthisway_gay_crush_target = {
+					OR = {
+						has_unattractive_trait_trigger = yes
+						NOT = { trait = homosexual }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					trait = chaste
+					trait = zealous
+					trait = content
+				}
+			}
+			modifier = {
+				factor = 1.75
+				event_target:bornthisway_gay_crush_target = {
+					is_unattractive_trigger = yes
+					NOT = { trait = homosexual }
+				}
+			}
+			modifier = {
+				factor = 2
+				#OR = {
+					trait = eunuch
+				#}
+			}
+		}
+		add_trait = homosexual
+		if = {
+			limit = {
+				NOT = { trait = chaste }
+			}
+			add_trait = chaste
+		}
+	}
+
+	option = {
+		name = EVTOPTC_bornthisway_coming_out.0		# If I see her again we'll have some fun.
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 1.25
+				OR = {
+					trait = affectionate
+					trait = playful
+					trait = rowdy
+					trait = curious
+				}
+			}
+			modifier = {
+				factor = 1.3
+				event_target:bornthisway_gay_crush_target = {
+					OR = {
+						has_attractive_trait_trigger = yes
+						trait = homosexual
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					trait = ambitious
+					trait = brave
+					trait = gregarious
+				}
+			}
+			modifier = {
+				factor = 1.75
+				event_target:bornthisway_gay_crush_target = {
+					is_attractive_trigger = yes
+					trait = homosexual
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					trait = hedonist
+					trait = seducer
+					trait = seductress
+					trait = lustful
+				}
+			}
+		}
+		add_trait = homosexual
+		if = {
+			limit = {
+				trait = celibate
+			}
+			remove_trait = celibate
+		}
+		if = {
+			limit = {
+				NOT = { trait = lustful }
+			}
+			add_trait = lustful
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_bornthisway_coming_out.0		# I shouldn't. It's a sin.
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_bad_priest_trait_trigger = yes
+					trait = cynical
+					trait = lustful
+					trait = hedonist
+					trait = seducer
+					trait = seductress
+				}
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					trait = timid
+					trait = brooding
+					trait = indolent
+					trait = fussy
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					trait = chaste
+					trait = zealous
+					trait = paranoid
+					trait = craven
+				}
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					is_ascetic_trigger = yes
+					trait = celibate
+				}
+			}
+		}
+		prestige = -50
+		add_trait = depressed
+		set_character_flag = btw_back_in_the_closet
+	}
+}
+
+# A character who went back in the closet rediscovers their sexuality
+character_event = {
+	id = bornthisway_coming_out.1
+	picture = GFX_evt_stone_church
+	#desc = EVTDESC_bornthisway_coming_out.1
+	
+	desc = {
+		trigger = { is_female = no }
+		text = EVTDESC_bornthisway_coming_out.1
+		picture = GFX_evt_bad_news
+	}
+	
+	desc = {
+		trigger = { is_female = yes }
+		text = EVTDESC_bornthisway_coming_out.1
+		picture = GFX_evt_bad_news_female
+	}
+
+	min_age = 12
+	only_capable = yes
+	has_character_flag = btw_back_in_the_closet
+	
+	trigger = {
+		NOT = { trait = homosexual }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.75
+			any_host_courtier = {
+				trait = homosexual
+				bornthisway_valid_gay_crush_target_trigger = yes
+				OR = {
+					reverse_opinion = { who = ROOT value = 25 }
+					has_pleasant_personality_trigger = yes
+					is_attractive_trigger = yes
+					has_at_least_3_traits_in_common_with_prev_trigger = yes
+					AND = {
+						trait = shieldmaiden
+						ROOT = { is_female = yes }
+					}
+				}
+			}		
+		}
+		modifier = {
+			factor = 0.8
+			any_host_courtier = {
+				bornthisway_valid_gay_crush_target_trigger = yes
+				OR = {
+					reverse_opinion = { who = ROOT value = 25 }
+					has_pleasant_personality_trigger = yes
+					is_attractive_trigger = yes
+					has_at_least_3_traits_in_common_with_prev_trigger = yes
+					AND = {
+						trait = shieldmaiden
+						ROOT = { is_female = yes }
+					}
+				}
+			}		
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				trait = homosexual
+			}
+		}
+		modifier = {
+			factor = 0.7
+			any_friend = {
+				trait = homosexual
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				trait = celibate
+				trait = chaste
+				trait = zealous
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				trait = lustful
+				trait = hedonist
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				trait = honest
+				trait = brave
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				trait = paranoid
+				trait = craven
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_bornthisway_coming_out.1		# I love [Root.GetMenWomen]!
+		# name = {
+			# text = EVTOPTA_case1_bornthisway_coming_out.1		# I love men!
+			# trigger = {
+				# is_female = no
+			# }
+		# }
+		# name = {
+			# text = EVTOPTA_case2_bornthisway_coming_out.1		# I love women!
+			# trigger = {
+				# is_female = yes
+			# }
+		# }
+		
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 1.5
+				OR = {
+					trait = honest
+					trait = brave
+				}
+				NOT = { trait = celibate }
+			}
+		}
+		
+		add_trait = homosexual
+	}
+	
+	option = {
+		name = EVTOPTB_bornthisway_coming_out.1		# I renounce my vow of celibacy!
+		
+		trigger = {
+			trait = celibate
+		}
+		
+		tooltip_info = celibate
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 4
+				trait = lustful
+			}
+			modifier = {
+				factor = 0.5
+				trait = chaste
+			}
+			modifier = {
+				factor = 0.1
+				is_ascetic_trigger = yes
+			}
+		}
+		
+		add_trait = homosexual
+		remove_trait = celibate
+	}
+	
+	option = {
+		name = EVTOPTC_bornthisway_coming_out.1		# No! I must resist these urges!
+		
+		custom_tooltip = { text = EVTOPTC_bornthisway_coming_out_1_TOOLTIP }
+		
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1.5
+				trait = chaste
+			}
+			modifier = {
+				factor = 1.5
+				trait = celibate
+			}
+			modifier = {
+				factor = 1.5
+				is_ascetic_trigger = yes
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					trait = paranoid
+					trait = craven
+					trait = stubborn
+				}
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					religion_group = christian
+					religion_group = muslim
+				}
+				is_alternate_start = no
+				trait = zealous
+			}
+			modifier = {
+				factor = 1.1
+				religion_group = jewish_group
+				is_alternate_start = no
+				trait = zealous
+			}
+			modifier = {
+				factor = 0.5
+				trait = lustful
+			}
+			modifier = {
+				factor = 0.1
+				trait = hedonist
+			}
+		}
+		
+		if = {
+			limit = {
+				NOT = { trait = stressed }
+			}
+			add_trait = stressed
+			character_event = {
+				id = 38282	# Notification
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { trait = depressed }
+			}
+			add_trait = depressed
+			character_event = {
+				id = 38288	# Notification
+			}
+		}
+		else = {
+			character_event = {
+				id = bornthisway_coming_out.100		# Random effect from mental strain of staying in the closet
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = chaste }
+			}
+			add_trait = chaste
+		}
+	}
+}
+
+# Determines the toll that staying in the closet takes on the character's psyche
+character_event = {
+	id = bornthisway_coming_out.100
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 0
+					trait = drunkard
+				}
+				add_trait = drunkard
+				character_event = {
+					id = 38286	# Notification
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					trait = gluttonous
+				}
+				add_trait = gluttonous
+				character_event = {
+					id = 38277	# Notification
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					trait = slothful
+				}
+				add_trait = slothful
+				character_event = {
+					id = 38251	# Notification
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					trait = wroth
+				}
+				modifier = {
+					factor = 1.5
+					trait = cruel
+				}
+				add_trait = wroth
+				character_event = {
+					id = 38254	# Notification
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					trait = content
+				}
+				add_trait = content
+				character_event = {
+					id = 38279	# Notification
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					trait = craven
+				}
+				add_trait = craven
+				character_event = {
+					id = 38257	# Notification
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					trait = cruel
+				}
+				modifier = {
+					factor = 1.5
+					trait = wroth
+				}
+				add_trait = cruel
+				character_event = {
+					id = 38259	# Notification
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					trait = cynical
+				}
+				modifier = {
+					factor = 0.1
+					trait = zealous
+				}
+				add_trait = cynical
+				character_event = {
+					id = 38258	# Notification
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					trait = deceitful
+				}
+				add_trait = deceitful
+				character_event = {
+					id = 38255	# Notification
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					trait = paranoid
+				}
+				add_trait = paranoid
+				character_event = {
+					id = 38275	# Notification
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					trait = shy
+				}
+				add_trait = shy
+				character_event = {
+					id = 38263	# Notification
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					trait = zealous
+				}
+				modifier = {
+					factor = 0.1
+					trait = cynical
+				}
+				add_trait = zealous
+				character_event = {
+					id = 38269	# Notification
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					trait = lunatic
+				}
+				add_trait = lunatic
+				character_event = {
+					id = 38304	# Notification
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						trait = celibate
+						NOT = { trait = chaste }
+					}
+				}
+				add_trait = celibate
+				character_event = {
+					id = 38285	# Notification
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					NOT = { trait = lunatic }
+				}
+				modifier = {
+					factor = 0
+					trait = eunuch
+				}
+				modifier = {
+					factor = 0
+					is_female = yes
+				}
+				modifier = {
+					factor = 2
+					trait = zealous
+				}
+				modifier = {
+					factor = 2
+					trait = celibate
+				}
+				character_event = {
+					id = bornthisway_coming_out.101		# Self-castration
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					NOT = { trait = lunatic }
+				}
+				modifier = {
+					factor = 0
+					trait = blinded
+				}
+				modifier = {
+					factor = 2
+					trait = zealous
+				}
+				modifier = {
+					factor = 2
+					trait = celibate
+				}
+				character_event = {
+					id = bornthisway_coming_out.102		# Self-blinding
+				}
+			}
+			# TODO: Add a chance for a character from a monastic religion to take the vows
+		}
+	}
+}
+
+# A character castrates himself rather than accept his sexuality
+character_event = {
+	id = bornthisway_coming_out.101
+	desc = EVTDESC_bornthisway_coming_out.101
+	picture = GFX_evt_bloody_man
+	
+	only_men = yes
+	
+	is_triggered_only = yes
+	#hide_from = yes
+	
+	option = {
+		name = EVTOPTA_bornthisway_coming_out.101		# AAAAAGH!
+		
+		add_trait = eunuch
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+			}
+			add_trait = severely_injured
+		}
+		else = {
+			add_trait = wounded
+		}
+		
+		hidden_tooltip = {
+			random_list = {
+				10 = {
+					sound_effect = impaling_male_01
+				}
+				10 = {
+					sound_effect = impaling_male_02
+				}
+				10 = {
+					sound_effect = impaling_male_03
+				}
+			}
+		}
+	}
+}
+
+# A character blinds themself rather than accept their sexuality
+character_event = {
+	id = bornthisway_coming_out.102
+	desc = EVTDESC_bornthisway_coming_out.102
+	picture = GFX_evt_illness
+	
+	is_triggered_only = yes
+	#hide_from = yes
+	
+	option = {
+		name = EVTOPTA_bornthisway_coming_out.102		# AAAAAGH!
+		
+		if = {
+			limit = {
+				trait = one_eyed
+			}
+			remove_trait = one_eyed
+		}
+		add_trait = blinded
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+			}
+			add_trait = severely_injured
+		}
+		else = {
+			add_trait = wounded
+		}
+		
+		hidden_tooltip = {
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 0
+						is_female = yes
+					}
+					sound_effect = impaling_male_01
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						is_female = yes
+					}
+					sound_effect = impaling_male_02
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						is_female = yes
+					}
+					sound_effect = impaling_male_03
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						is_female = no
+					}
+					sound_effect = impaling_female_01
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						is_female = no
+					}
+					sound_effect = impaling_female_02
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						is_female = no
+					}
+					sound_effect = impaling_female_03
+				}
+			}
+		}
+	}
+}
+
+# TODO: Add more gay crush events

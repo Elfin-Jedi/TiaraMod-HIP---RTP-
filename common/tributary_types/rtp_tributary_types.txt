@@ -1,0 +1,42 @@
+#####
+#Tributary Types
+#
+#Total = 1
+#####
+
+rtp_confederation_tt = {
+	icon = 10
+	tributary_name = "rtp_confederation"
+	tributary_plural = "rtp_confederation_plural"
+	suzerain_name = "rtp_confederation_suzerain"
+	tribute_name = "rtp_confederation_tribute"
+	suzerain_must_defend = yes
+	suzerain_can_be_called = no
+	tributary_can_be_summoned = no
+	tributaries_can_infight = no
+	tributaries_can_unite = no
+
+	income_tribute_percentage = {
+		value = 0
+	}
+
+	reinforce_tribute_percentage = {
+		value = 0.2
+	}
+
+	prestige_to_suzerain = {
+		value = 0
+	}
+
+	prestige_to_tributary = {
+		value = 0
+	}
+
+	piety_to_suzerain = {
+		value = 0
+	}
+
+	piety_to_tributary = {
+		value = 0
+	}
+}

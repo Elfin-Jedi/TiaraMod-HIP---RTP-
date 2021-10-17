@@ -1,0 +1,407 @@
+####################
+#### QUALITY 5  ####
+####################
+
+dragon_scale = {
+	max_amount = 3
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = tengri_pagan
+				religion = tengri_pagan_reformed
+			}
+			is_landed = yes
+		}
+		additive_modifier = {
+			value = 100
+			religion = tengri_pagan
+			is_landed = yes
+      only_playable = true
+		}
+	}
+
+	artifacts = {
+		dragon_scale = {
+			value = 1
+		}
+	}
+}
+
+firebird_plumage = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+			}
+			is_landed = yes
+		}
+		additive_modifier = {
+			value = 100
+			religion = slavic_pagan
+			is_landed = yes
+      only_playable = true
+		}
+	}
+
+	artifacts = {
+		firebird_plumage = {
+			value = 1
+		}
+	}
+}
+
+baba_yaga_pestle_mortar = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+			}
+			is_landed = yes
+      only_playable = true
+		}
+		additive_modifier = {
+			value = 100
+			religion = slavic_pagan
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		baba_yaga_pestle_mortar = {
+			value = 1
+		}
+	}
+}
+
+yadachy_cloak = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = tengri_pagan
+				religion = tengri_pagan_reformed
+			}
+			is_landed = yes
+		}
+		additive_modifier = {
+			value = 100
+			religion = tengri_pagan
+			is_landed = yes
+      only_playable = true
+		}
+	}
+
+	artifacts = {
+		yadachy_cloak = {
+			value = 1
+		}
+	}
+}
+
+sacred_amber = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = baltic_pagan
+				religion = baltic_pagan_reformed
+			}
+			is_landed = yes
+		}
+		additive_modifier = {
+			value = 100
+			religion = baltic_pagan
+			is_landed = yes
+      is_playable = yes
+		}
+	}
+
+	artifacts = {
+		sacred_amber = {
+			value = 1
+		}
+	}
+}
+
+ekwensu_mask = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = west_african_pagan
+				religion = west_african_pagan_reformed
+			}
+			is_landed = yes
+		}
+		additive_modifier = {
+			value = 100
+			religion = west_african_pagan
+			is_landed = yes
+      is_playable = yes
+		}
+	}
+
+	artifacts = {
+		ekwensu_mask = {
+			value = 1
+		}
+	}
+}
+
+shango_staff = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = west_african_pagan
+				religion = west_african_pagan_reformed
+			}
+			is_landed = yes
+		}
+		additive_modifier = {
+			value = 100
+			religion = west_african_pagan
+			is_landed = yes
+      is_playable = yes
+		}
+	}
+
+	artifacts = {
+		shango_staff = {
+			value = 1
+		}
+	}
+}
+
+ukonvasara = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = finnish_pagan
+				religion = finnish_pagan_reformed
+			}
+			is_landed = yes
+		}
+		additive_modifier = {
+			value = 100
+			religion = finnish_pagan
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		ukonvasara = {
+			value = 1
+		}
+	}
+}
+
+magic_kantele = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = finnish_pagan
+				religion = finnish_pagan_reformed
+			}
+			is_landed = yes
+		}
+		additive_modifier = {
+			value = 100
+			religion = finnish_pagan
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		magic_kantele = {
+			value = 1
+		}
+	}
+}
+
+eye_of_ra = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = zun_pagan
+				religion = zun_pagan_reformed
+			}
+			is_landed = yes
+		}
+		additive_modifier = {
+			value = 100
+			religion = zun_pagan
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		eye_of_ra = {
+			value = 1
+		}
+	}
+}
+
+
+helios_chariot = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = zun_pagan
+				religion = zun_pagan_reformed
+			}
+			is_landed = yes
+		}
+		additive_modifier = {
+			value = 100
+			religion = zun_pagan
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		helios_chariot = {
+			value = 1
+		}
+	}
+}

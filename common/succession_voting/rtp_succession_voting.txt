@@ -1,0 +1,1812 @@
+#####
+#Succession Voting
+#
+#Total = 6
+#####
+
+#Struggle
+rtp_lowborn_v = {
+	#ROOT = Voter, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Title owner's candidate
+	elector_selection = {
+		days = 0
+		#max_amount = 9
+		additive_modifier = { #Parents get to vote
+			value = 2
+			
+			FROMFROM = {
+				holder_scope = {
+					OR = {
+						character = ROOT
+						spouse = {
+							character = ROOT
+						}
+					}
+				}
+			}
+		}
+		additive_modifier = { #Kids of the ruler get to vote
+			value = 1
+			
+			FROMFROM = {
+				holder_scope = {
+					ROOT = {
+						is_child_of = PREV
+						is_adult = yes
+					}
+				}
+			}
+		}
+	}
+	
+	#ROOT = Voter, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Title owner's candidate
+	elector_vote_strength = {
+		days = 1
+	}
+
+	#ROOT = Voter, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Title owner's candidate
+	candidate_vote_score = {
+		days = 0
+
+		additive_modifier = {
+			value = 3
+			localisation_key = rtp_tooltip_lowborn_vote_myself
+			FROM = {
+				character = ROOT
+			}
+		}
+		additive_modifier = {
+			value = -5
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -90
+				who = FROM
+			}
+		}
+		additive_modifier = {
+			value = -4
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -80
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value <= -90
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = -3
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -70
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value <= -80
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = -2
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -60
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value <= -70
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = -1
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -50
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value <= -60
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 50
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value = 60
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 2
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 60
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value = 70
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 3
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 70
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value = 80
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 4
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 80
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value = 90
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 5
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 90
+				who = FROM
+			}
+		}
+	}
+
+	#ROOT = Current Title holder, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Null
+	candidate_trigger = {
+		FROM = {
+			is_child_of = ROOT
+			is_landed = no
+		}
+	}
+}
+
+#Head of the Family
+rtp_family_election_v = {
+	#ROOT = Voter, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Title owner's candidate
+	elector_selection = {
+		days = 0
+		max_amount = 1
+		additive_modifier = { #Ruler is who chooses
+			value = 1
+
+			ai = no
+		}
+	}
+	
+	#ROOT = Voter, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Title owner's candidate
+	elector_vote_strength = {
+		days = 1
+	}
+
+	#ROOT = Voter, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Title owner's candidate
+	candidate_vote_score = {
+		days = 0
+	}
+
+	#ROOT = Current Title holder, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Null
+	candidate_trigger = {
+		FROM = {
+			is_child_of = ROOT
+			is_landed = no
+		}
+	}
+}
+
+#Democratic Election
+rtp_republic_election_v = {
+	#ROOT = Voter, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Title owner's candidate
+	elector_selection = {
+		days = 0
+		max_amount = 100
+		additive_modifier = { #The people get to vote
+			value = 1
+			OR = {
+				has_landed_title = FROMFROM
+				liege = {
+					has_landed_title = FROMFROM
+					ROOT = {
+						vassal_of = PREV
+					}
+				}
+			}
+			is_adult = yes
+		}
+	}
+	
+	#ROOT = Voter, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Title owner's candidate
+	elector_vote_strength = {
+		days = 1
+		additive_modifier = { #The current ruler has an important vote
+			value = 3
+			has_landed_title = FROMFROM
+		}
+		additive_modifier = { #Councillors are "elected" representants of the people
+			value = 2
+			OR = {
+				has_job_title = job_chancellor
+				has_job_title = job_marshal
+				has_job_title = job_treasurer
+				has_job_title = job_spymaster
+				has_job_title = job_spiritual
+			}
+		}
+	}
+
+	#ROOT = Voter, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Title owner's candidate
+	candidate_vote_score = {
+		days = 0
+		additive_modifier = {
+			value = -5
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -90
+				who = FROM
+			}
+		}
+		additive_modifier = {
+			value = -4
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -80
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value <= -90
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = -3
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -70
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value <= -80
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = -2
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -60
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value <= -70
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = -1
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -50
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value <= -60
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 50
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value = 60
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 2
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 60
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value = 70
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 3
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 70
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value = 80
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 4
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 80
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value = 90
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 5
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 90
+				who = FROM
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_republic_vote_councillor
+			FROM = {
+				character = ROOT
+			}
+		}
+		additive_modifier = {
+			value = 2
+			localisation_key = rtp_tooltip_republic_vote_steward
+			FROM = {
+				has_job_title = job_treasurer
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_republic_vote_greedy
+			FROM = {
+				trait = greedy
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = -1
+			localisation_key = rtp_tooltip_republic_vote_charitable
+			FROM = {
+				trait = charitable
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_republic_vote_stewardship
+			FROM = {
+				stewardship = 5
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 2
+			localisation_key = rtp_tooltip_republic_vote_stewardship
+			FROM = {
+				stewardship = 10
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 3
+			localisation_key = rtp_tooltip_republic_vote_stewardship
+			FROM = {
+				stewardship = 15
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 4
+			localisation_key = rtp_tooltip_republic_vote_stewardship
+			FROM = {
+				stewardship = 20
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 5
+			localisation_key = rtp_tooltip_republic_vote_stewardship
+			FROM = {
+				stewardship = 25
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_republic_vote_money
+			FROM = {
+				wealth = 100
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 2
+			localisation_key = rtp_tooltip_republic_vote_money
+			FROM = {
+				wealth = 200
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 3
+			localisation_key = rtp_tooltip_republic_vote_money
+			FROM = {
+				wealth = 300
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 4
+			localisation_key = rtp_tooltip_republic_vote_money
+			FROM = {
+				wealth = 400
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 5
+			localisation_key = rtp_tooltip_republic_vote_money
+			FROM = {
+				wealth = 500
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+	}
+
+	#ROOT = Current Title holder, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Null
+	candidate_trigger = {
+		FROM = {
+			is_adult = yes
+			vassal_of = ROOT
+			OR = {
+				has_job_title = job_chancellor
+				has_job_title = job_marshal
+				has_job_title = job_treasurer
+				has_job_title = job_spymaster
+				has_job_title = job_spiritual
+			}
+		}
+	}
+}
+
+#Mandate of Heaven
+rtp_theocracy_election_v = {
+	#ROOT = Voter, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Title owner's candidate
+	elector_selection = {
+		days = 0
+		max_amount = 30
+		additive_modifier = { #Liege gets to choose
+			value = 3
+			is_liege_of = FROMFROM
+		}
+		additive_modifier = { #Ruler gets to choose
+			value = 2
+			has_landed_title = FROMFROM
+		}
+		additive_modifier = { #Any landed priest gets to choose
+			value = 1
+			is_landed = yes
+			liege = {
+				ROOT = {
+					vassal_of = PREV
+				}
+			}
+			religion = ROOT
+			OR = {
+				government = theocracy_government
+				government = rtp_baron_theocracy_g
+				government = rtp_theocracy_g
+			}
+		}
+	}
+	
+	#ROOT = Voter, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Title owner's candidate
+	elector_vote_strength = {
+		days = 1
+	}
+
+	#ROOT = Voter, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Title owner's candidate
+	candidate_vote_score = {
+		days = 0
+		additive_modifier = {
+			value = -5
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -90
+				who = FROM
+			}
+		}
+		additive_modifier = {
+			value = -4
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -80
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value <= -90
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = -3
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -70
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value <= -80
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = -2
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -60
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value <= -70
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = -1
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -50
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value <= -60
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 50
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value = 60
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 2
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 60
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value = 70
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 3
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 70
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value = 80
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 4
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 80
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value = 90
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 5
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 90
+				who = FROM
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_theocracy_vote_chaste
+			FROM = {
+				trait = chaste
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_theocracy_vote_temperate
+			FROM = {
+				trait = temperate
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_theocracy_vote_charitable
+			FROM = {
+				trait = charitable
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_theocracy_vote_diligent
+			FROM = {
+				trait = diligent
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_theocracy_vote_patient
+			FROM = {
+				trait = patient
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_theocracy_vote_kind
+			FROM = {
+				trait = kind
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_theocracy_vote_humble
+			FROM = {
+				trait = humble
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = -1
+			localisation_key = rtp_tooltip_theocracy_vote_lustful
+			FROM = {
+				trait = lustful
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = -1
+			localisation_key = rtp_tooltip_theocracy_vote_gluttonous
+			FROM = {
+				trait = gluttonous
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = -1
+			localisation_key = rtp_tooltip_theocracy_vote_greedy
+			FROM = {
+				trait = greedy
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = -1
+			localisation_key = rtp_tooltip_theocracy_vote_slothful
+			FROM = {
+				trait = slothful
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = -1
+			localisation_key = rtp_tooltip_theocracy_vote_wroth
+			FROM = {
+				trait = wroth
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = -1
+			localisation_key = rtp_tooltip_theocracy_vote_envious
+			FROM = {
+				trait = envious
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = -1
+			localisation_key = rtp_tooltip_theocracy_vote_proud
+			FROM = {
+				trait = proud
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_theocracy_vote_learning
+			FROM = {
+				learning = 5
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 2
+			localisation_key = rtp_tooltip_theocracy_vote_learning
+			FROM = {
+				learning = 10
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 3
+			localisation_key = rtp_tooltip_theocracy_vote_learning
+			FROM = {
+				learning = 15
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 4
+			localisation_key = rtp_tooltip_theocracy_vote_learning
+			FROM = {
+				learning = 20
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 5
+			localisation_key = rtp_tooltip_theocracy_vote_learning
+			FROM = {
+				learning = 25
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_theocracy_vote_piety
+			FROM = {
+				piety = 100
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 2
+			localisation_key = rtp_tooltip_theocracy_vote_piety
+			FROM = {
+				piety = 200
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 3
+			localisation_key = rtp_tooltip_theocracy_vote_piety
+			FROM = {
+				piety = 300
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 4
+			localisation_key = rtp_tooltip_theocracy_vote_piety
+			FROM = {
+				piety = 400
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 5
+			localisation_key = rtp_tooltip_theocracy_vote_piety
+			FROM = {
+				piety = 500
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+	}
+
+	#ROOT = Current Title holder, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Null
+	candidate_trigger = {
+		FROM = {
+			is_adult = yes
+			vassal_of = ROOT
+			religion = ROOT
+			OR = {
+				AND = {
+					is_landed = yes
+					OR = {
+						government = theocracy_government
+						government = rtp_baron_theocracy_g
+						government = rtp_theocracy_g
+					}
+				}
+				has_job_title = job_spiritual
+			}
+		}
+	}
+}
+
+#Law of the Strongest
+rtp_mercenary_election_v = {
+	#ROOT = Voter, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Title owner's candidate
+	elector_selection = {
+		days = 0
+		max_amount = 9
+		additive_modifier = { #The ruler gets to vote
+			value = 3
+			has_landed_title = FROMFROM
+		}
+		additive_modifier = { #The marshal also gets to vote
+			value = 2
+			has_job_title = job_marshal
+			liege = {
+				has_landed_title = FROMFROM
+				ROOT = {
+					vassal_of = PREV
+				}
+			}
+		}
+		additive_modifier = { #Finally the commanders get to vote
+			value = 1
+			has_minor_title = title_commander
+			liege = {
+				has_landed_title = FROMFROM
+				ROOT = {
+					vassal_of = PREV
+				}
+			}
+		}
+	}
+	
+	#ROOT = Voter, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Title owner's candidate
+	elector_vote_strength = {
+		days = 1
+		additive_modifier = { #The ruler gets to vote
+			value = 5
+			has_landed_title = FROMFROM
+		}
+		additive_modifier = { #The marshal also gets to vote
+			value = 3
+			has_job_title = job_marshal
+			liege = {
+				has_landed_title = FROMFROM
+				ROOT = {
+					vassal_of = PREV
+				}
+			}
+		}
+	}
+
+	#ROOT = Voter, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Title owner's candidate
+	candidate_vote_score = {
+		days = 0
+		additive_modifier = {
+			value = -5
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -90
+				who = FROM
+			}
+		}
+		additive_modifier = {
+			value = -4
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -80
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value <= -90
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = -3
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -70
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value <= -80
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = -2
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -60
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value <= -70
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = -1
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -50
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value <= -60
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 50
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value = 60
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 2
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 60
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value = 70
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 3
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 70
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value = 80
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 4
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 80
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value = 90
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 5
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 90
+				who = FROM
+			}
+		}
+		additive_modifier = {
+			value = 2
+			localisation_key = rtp_tooltip_mercenary_vote_marshal
+			FROM = {
+				has_job_title = job_marshal
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_mercenary_vote_strong
+			FROM = {
+				trait = strong
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = -1
+			localisation_key = rtp_tooltip_mercenary_vote_weak
+			FROM = {
+				trait = weak
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_mercenary_vote_martial
+			FROM = {
+				martial = 5
+				martial < 10
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 2
+			localisation_key = rtp_tooltip_mercenary_vote_martial
+			FROM = {
+				martial = 10
+				martial < 15
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 3
+			localisation_key = rtp_tooltip_mercenary_vote_martial
+			FROM = {
+				martial = 15
+				martial < 20
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 4
+			localisation_key = rtp_tooltip_mercenary_vote_martial
+			FROM = {
+				martial = 20
+				martial < 25
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 5
+			localisation_key = rtp_tooltip_mercenary_vote_martial
+			FROM = {
+				martial = 25
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_mercenary_vote_combat_skill
+			FROM = {
+				combat_rating = 10
+				combat_rating < 20
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 2
+			localisation_key = rtp_tooltip_mercenary_vote_combat_skill
+			FROM = {
+				combat_rating = 20
+				combat_rating < 30
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 3
+			localisation_key = rtp_tooltip_mercenary_vote_combat_skill
+			FROM = {
+				combat_rating = 30
+				combat_rating < 40
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 4
+			localisation_key = rtp_tooltip_mercenary_vote_combat_skill
+			FROM = {
+				combat_rating = 40
+				combat_rating < 50
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 5
+			localisation_key = rtp_tooltip_mercenary_vote_combat_skill
+			FROM = {
+				combat_rating = 50
+				combat_rating < 60
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 6
+			localisation_key = rtp_tooltip_mercenary_vote_combat_skill
+			FROM = {
+				combat_rating = 60
+				combat_rating < 70
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 7
+			localisation_key = rtp_tooltip_mercenary_vote_combat_skill
+			FROM = {
+				combat_rating = 70
+				combat_rating < 80
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 8
+			localisation_key = rtp_tooltip_mercenary_vote_combat_skill
+			FROM = {
+				combat_rating = 80
+				combat_rating < 90
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 9
+			localisation_key = rtp_tooltip_mercenary_vote_combat_skill
+			FROM = {
+				combat_rating = 90
+				combat_rating < 100
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+		additive_modifier = {
+			value = 10
+			localisation_key = rtp_tooltip_mercenary_vote_combat_skill
+			FROM = {
+				combat_rating = 100
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+	}
+
+	#ROOT = Current Title holder, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Null
+	candidate_trigger = {
+		FROM = {
+			is_adult = yes
+			vassal_of = ROOT
+			OR = {
+				has_job_title = job_marshal
+				has_minor_title = title_commander
+			}
+		}
+	}
+}
+
+#Parley
+rtp_confederation_election_v = {
+	#ROOT = Voter, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Title owner's candidate
+	elector_selection = {
+		days = 0
+		max_amount = 20
+		additive_modifier = { #The ruler gets to vote
+			value = 3
+			has_landed_title = FROMFROM
+		}
+		additive_modifier = { #The members also get a vote
+			value = 2
+			is_tributary = yes
+			FROMFROM = {
+				holder_scope = {
+					ROOT = {
+						is_tributary = {
+							type = rtp_confederation_tt
+							suzerain = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	#ROOT = Voter, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Title owner's candidate
+	elector_vote_strength = {
+		days = 1
+		additive_modifier = { #The ruler gets to vote
+			value = 1
+			has_landed_title = FROMFROM
+		}
+		additive_modifier = { #The members get to vote
+			value = 1
+			is_tributary = yes
+			FROMFROM = {
+				holder_scope = {
+					ROOT = {
+						is_tributary = {
+							type = rtp_confederation_tt
+							suzerain = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#ROOT = Voter, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Title owner's candidate
+	candidate_vote_score = {
+		days = 0
+		additive_modifier = {
+			value = -5
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -90
+				who = FROM
+			}
+		}
+		additive_modifier = {
+			value = -4
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -80
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value <= -90
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = -3
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -70
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value <= -80
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = -2
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -60
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value <= -70
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = -1
+			localisation_key = rtp_tooltip_vote_dislike
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value <= -50
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value <= -60
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 1
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 50
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value = 60
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 2
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 60
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value = 70
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 3
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 70
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value = 80
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 4
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 80
+				who = FROM
+			}
+			NOT = {
+				opinion = {
+					value = 90
+					who = FROM
+				}
+			}
+		}
+		additive_modifier = {
+			value = 5
+			localisation_key = rtp_tooltip_vote_like
+			FROM = {
+				NOT = {
+					character = ROOT
+				}
+			}
+			opinion = {
+				value = 90
+				who = FROM
+			}
+		}
+	}
+
+	#ROOT = Current Title holder, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Null
+	candidate_trigger = {
+		FROM = {
+			is_child_of = ROOT
+		}
+	}
+}

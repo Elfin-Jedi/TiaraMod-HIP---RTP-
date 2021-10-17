@@ -1,0 +1,252 @@
+dark = {
+	has_coa_on_barony_only = yes
+	graphical_culture = westerngfx
+	playable = yes
+	hostile_within_group = yes
+	
+	ai_convert_same_group = 2
+	ai_convert_other_group = 0
+	ai_fabricate_claims = no
+	
+	color = { 0.0 0.0 0.0 }
+	
+	interface_skin = { pagan_interface }
+	
+	luciferian = {
+		graphical_culture = norsegfx
+		secondary_event_pictures = norse_pagan
+
+		icon = 75
+		heresy_icon = 75
+		
+		ai_convert_other_group = 2
+	
+		color = { 255.0 215.0 0.0 }
+		
+		high_god_name = lucifer
+	
+		god_names = {
+			lucifer samael the_morning_star lightbringer devil satan abaddon belial prince_of_darkness beelzebub dark_lord brightest-of-all-god's_angels lord_of_hell king_of_hell king_of_hellfire king_of_evil prince_of_lies
+		}
+		evil_god_names = {
+			father heavenly_father the_almighty mother_of_angels goddess_of_all_creation supreme_goddess divine_goddess amenadiel gabriel uriel azrael remiel castiel
+		}
+		
+		crusade_name = the_hounds_of_hells_firey_rain
+		scripture_name = church_of_lucifer
+		priest_title = high_priest
+		priests_can_marry = yes
+		
+		can_call_crusade = yes		
+		join_crusade_if_bordering_hostile = yes
+
+		allow_looting = yes
+		#allow_rivermovement = yes
+		female_temple_holders = yes
+		#allow_viking_invasion = yes
+		#seafarer = yes
+		
+		investiture = yes
+		can_excommunicate = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_retire_to_monastery = yes
+		priests_can_inherit = yes
+		rel_head_defense = yes
+		women_can_take_consorts = yes
+		men_can_take_consorts = yes
+		hard_to_convert = yes
+		has_heir_designation = yes
+		
+		short_reign_opinion_year_mult = 1.5
+		
+		aggression = 1.5
+		
+		feminist = yes
+		
+		max_consorts = 9
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		
+		allow_in_ruler_designer = yes
+		
+		intermarry = chthonic
+		intermarry = osirisian
+		intermarry = satanism
+
+	}
+	
+	chthonic = {
+		graphical_culture = norsegfx
+		secondary_event_pictures = norse_pagan
+
+		icon = 50
+		heresy_icon = 50
+		
+		ai_convert_other_group = 2
+	
+		color = { 255.0 215.0 0.0 }
+		
+		high_god_name = hades
+	
+		god_names = {
+			hades persephone hecate
+		}
+		evil_god_names = {
+			cronus hercules gaia echidna atlas zeus poseidon
+		}
+		
+		crusade_name = the_furies
+		scripture_name = realm_of_hades
+		priest_title = high_priest
+		priests_can_marry = yes
+		
+		can_call_crusade = yes		
+		join_crusade_if_bordering_hostile = yes
+
+		allow_looting = no
+		#allow_rivermovement = yes
+		female_temple_holders = yes
+		#allow_viking_invasion = yes
+		#seafarer = yes
+		
+		investiture = yes
+		can_excommunicate = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_retire_to_monastery = yes
+		priests_can_inherit = yes
+		rel_head_defense = yes
+		women_can_take_consorts = yes
+		men_can_take_consorts = yes
+		hard_to_convert = yes
+		has_heir_designation = yes
+		bs_marriage = yes
+		pc_marriage = yes
+		psc_marriage = yes
+		cousin_marriage = yes
+		
+		short_reign_opinion_year_mult = 1.5
+		
+		aggression = 1.5
+		
+		divine_blood = yes
+		
+		feminist = yes
+		
+		max_consorts = 9
+		
+		religious_clothing_head = 6
+		religious_clothing_priest = 6
+		
+		allow_in_ruler_designer = yes
+		
+		intermarry = luciferian
+		intermarry = osirisian
+		intermarry = satanism
+	}
+	
+	osirisian = {
+		graphical_culture = norsegfx
+		secondary_event_pictures = norse_pagan
+
+		icon = 50
+		heresy_icon = 50
+		
+		ai_convert_other_group = 2
+	
+		color = { 255.0 215.0 0.0 }
+		
+		high_god_name = osiris
+	
+		god_names = {
+			osiris horus isis nephthys anubis
+		}
+		evil_god_names = {
+			set
+		}
+		
+		crusade_name = army_of_the_dead
+		scripture_name = the_book_of_the_dead
+		priest_title = high_priest
+		priests_can_marry = yes
+		
+		can_call_crusade = yes		
+		join_crusade_if_bordering_hostile = yes
+
+		allow_looting = no
+		#allow_rivermovement = yes
+		female_temple_holders = yes
+		#allow_viking_invasion = yes
+		#seafarer = yes
+		
+		investiture = yes
+		can_excommunicate = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_retire_to_monastery = yes
+		priests_can_inherit = yes
+		rel_head_defense = yes
+		women_can_take_consorts = yes
+		men_can_take_consorts = yes
+		hard_to_convert = yes
+		has_heir_designation = yes
+		
+		short_reign_opinion_year_mult = 1.5
+		
+		aggression = 1.5
+		
+		divine_blood = no
+		
+		feminist = yes
+		
+		max_consorts = 9
+		
+		religious_clothing_head = 6
+		religious_clothing_priest = 6
+		
+		allow_in_ruler_designer = yes
+		
+		intermarry = luciferian
+		intermarry = chthonic
+		intermarry = satanism
+	}
+	
+	satanism = {
+		graphical_culture = westerngfx
+		icon = 75 ###################
+		color = { 0.9 0.1 0.1 } ###################### change this
+		crusade_name = BLACKCRUSADE
+		scripture_name = SATANTEXT
+		priest_title = UNHOLYPRIEST
+		high_god_name = LUCIFERHIGH
+		god_names = {
+			LUCIFERHIGH
+		}
+		evil_god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_THE_BLESSED_VIRGIN
+		}
+		priests_can_marry = yes
+		can_call_crusade = yes
+		priests_can_inherit = yes
+		allow_looting = yes
+		female_temple_holders = yes
+		women_can_take_consorts = yes
+		men_can_take_consorts = yes
+		max_consorts = 20
+		aggression = 1.5
+		feminist = yes
+		allow_in_ruler_designer = no ##########
+		pc_marriage = yes
+		bs_marriage = yes
+		character_modifier = {
+			christian_opinion = -15
+			muslim_opinion = -15
+			jewish_group_opinion = -15
+		}
+		
+		religious_clothing_head = 3 ###################
+		religious_clothing_priest = 3 ##################
+	}
+}

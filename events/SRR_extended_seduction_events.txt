@@ -1,0 +1,463 @@
+##################################
+# ID = space SRR.4000 - SRR.4999
+# Extended Seduction events
+##################################
+
+namespace = SRR
+
+#seduction event chain sex seducer with ED
+character_event = {
+	id = SRR.4000
+	desc = SRR4000_desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = seducer_ED
+	}
+	
+	option = {
+		#fess up to ED
+		name = SRR4000OPTA
+		
+		FROM = { 
+			character_event = { id = SRR.4005 days = 1 }
+		}
+		
+		ai_chance = {
+			factor = 33
+			
+			modifier = {
+				factor = 2
+				trait = honest
+			}
+			modifier = {
+				factor = 0.5
+				trait = deceitful
+			}
+		}
+	}
+	
+	option = {
+		#storm off
+		name = SRR4000OPTB
+		
+		character_event = { id = SRR.4002 days = 1 }
+		
+		set_character_flag = seducer_fled_seduction
+		
+		FROM = { character_event = { id = 4003 days = 1 } }
+		
+		ai_chance = {
+			factor = 33
+			
+			modifier = {
+				factor = 2 
+				trait = craven
+			}
+			modifier = {
+				factor = 0.5
+				trait = brave
+			}
+		}
+	}
+	option = {
+		#please them in another way
+		name = SRR4000OPTC
+			
+		event_target:target_seducer = { 
+			character_event = { id = SRR.4008 days = 1}
+		}
+		event_target:target_seduced = { 
+			character_event = { id = SRR.4009 days = 1}
+		}
+		
+		ai_chance = {
+			factor = 33
+		
+			modifier = {
+				factor = 2
+				trait = seducer
+			}
+			modifier = {
+				factor = 1.5
+				trait = lustful
+			}
+		}
+	}
+}
+
+#seduced has ED
+character_event = {
+	id = SRR.4001
+	desc = SRR4001_desc
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = seduced_ED
+	}
+	
+	option = {
+		#fess up to ED
+		name = SRR4000OPTA
+		
+		FROMFROM = { 
+			character_event = { id = SRR.4005 days = 1 } 
+		}
+		
+		ai_chance = {
+			factor = 33
+			
+			modifier = {
+				factor = 2
+				trait = honest
+			}
+			modifier = {
+				factor = 0.5
+				trait = deceitful
+			}
+		}
+	}
+	
+	option = {
+		#storm off
+		name = SRRO4000OPTB
+		
+		character_event = { id = SRR.4002 days = 1 }
+		
+		set_character_flag = seduced_fled_seduction
+		
+		FROMFROM = { character_event = { id = 4004 days = 1 } }
+		
+		ai_chance = {
+			factor = 33
+			
+			modifier = {
+				factor = 2 
+				trait = craven
+			}
+			modifier = {
+				factor = 0.5
+				trait = brave
+			}
+		}
+	}
+	option = {
+		#please them in another way
+		name = SRR4000OPTC
+		
+		ai_chance = {
+			factor = 33
+			
+			event_target:target_seducer = { 
+				character_event = { id = SRR.4008 days = 1 }
+			}
+			event_target:target_seduced = { 
+				character_event = { id = SRR.4009 days = 1 }
+			}
+			
+			modifier = {
+				factor = 2
+				trait = seducer
+			}
+			modifier = {
+				factor = 1.5
+				trait = lustful
+			}
+		}
+	}
+}
+
+#Seduction Ends 
+character_event = {
+	id = SRR.4002
+	
+	desc = {
+		text = SRR4002_desc
+		trigger = { has_character_flag = seduced_fled_seduction }
+	}
+	desc = {
+		text = SRR4002_descA
+		trigger = { has_character_flag = seducer_fled_seduction }
+	}
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = SRR4002OPTA
+		tooltip = { text = SRR4002OPTA_tip }
+		
+		character_event = { id = WoL.118 }
+		
+		ROOT = {
+			opinion = {
+				modifier = SRR_embarrassed
+				who = FROMFROM
+			}
+		}
+		trigger = {
+			ROOT = { has_character_flag = seducer_fled_seduction }
+		}
+	}
+	option = {
+		name = SRR4002OPTB
+		
+		ROOT = {
+			opinion = {
+				modifier = SRR_embarrassed
+				who = FROMFROM
+			}
+		}
+		
+		trigger = {
+			ROOT = { has_character_flag = seduced_fled_seduction }
+		}
+	}
+}
+#Seduced informed of seducer running off
+character_event = {
+	id = SRR.4003
+	desc = SRR4003_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR4003OPTA
+	}
+}
+#seducer reacts to seduced running off
+character_event = {
+	id = SRR.4004
+	desc = SRR4004_desc
+	
+	is_triggered_only = yes 
+	
+	option = {
+		#end it
+		name = SRR4004OPTA
+		
+		event_target:target_seducer = {
+			character_event = { id = WoL.118 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		#keep trying
+		name = SRR404OPTA
+		ROOT = {
+			character_event = { id = WoL.110 days = 30 }
+		}
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+#Seduced informed of ED
+character_event = {
+	id = SRR.4005
+	desc = SRR4005_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		#sex in another way
+		name = SRR4005OPTA
+		
+		FROM = { character_event = { id = SRR.4007 days = 1} }
+		
+		ai_chance = {
+			factor = 1
+		}
+		
+	}
+	option = {
+		#leave
+		name = SRR4005OPTB
+		
+		FROM = { character_event = { id = SRR.4006 days = 1 } }
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+character_event = {
+	id = SRR.4006
+	desc = SRR4006_desc
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = SRR4006OPTA
+		
+		event_target:target_seducer = { 
+			character_event = { id = WoL.118 }
+		}
+		ROOT = {
+			opinion = {
+				modifier = SRR_embarrassed
+				who = FROM
+			}
+		}
+	}
+}
+character_event = {
+	id = SRR.4007
+	desc = SRR4007_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR4007OPTA
+		
+		event_target:target_seducer = { 
+			character_event = { id = SRR.4008 days = 1 }
+			set_character_flag = known_ED
+		}
+		event_target:target_seduced = { 
+			character_event = { id = SRR.4009 days = 1 }
+			set_character_flag = known_ED
+		}
+	}
+}
+#success: seducer
+character_event = {
+	id = SRR.4008
+	desc = {
+		text = SRR4008_descED
+		trigger = {
+			trait = impotent
+		}
+	}
+	desc = {
+		text = SRR4008_desc
+		trigger = {
+			NOT = { trait = impotent }
+			has_character_flag = known_ED
+		}
+	}
+	desc = {
+		text = SRR4008_descB
+		trigger = {
+			NOT = { trait = impotent }
+			NOT = { has_character_flag = known_ED }
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		# Chance of levelling up Seduction skill
+		character_event = { id = WoL.96 } 
+	
+		# End the Seduction
+		character_event = { id = WoL.118 }
+		
+		# Scandal check
+		FROM = { character_event = { id = WoL.50 } }
+		
+		# Casanova achievement check event
+		hidden_tooltip = { character_event = { id = 718 } }
+		
+		if = {
+			limit = {
+			has_character_flag = known_ED
+			}
+			set_character_flag = platonic_love
+		}
+
+	}
+	
+	option = {
+		#one night stand
+		name = SRR4008OPTA
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.1
+				NOT = { num_of_lovers = 1 }
+			}
+			modifier = {
+				factor = 0.5
+				trait = kind
+			}
+			modifier = {
+				factor = 10
+				num_of_lovers = 1
+			}
+			modifier = {
+				factor = 10
+				num_of_lovers = 2
+			}
+			modifier = {
+				factor = 10
+				num_of_lovers = 3
+			}
+			modifier = {
+				factor = 10
+				num_of_lovers = 4
+			}
+			modifier = {
+				factor = 10
+				trait = cruel
+			}
+			modifier = {
+				factor = 2
+				trait = arbitrary
+			}
+		}
+	}
+	
+	option = {
+		#add lover
+		name = SRR4008OPTB
+		
+		add_lover = event_target:target_seduced
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+#success: seduced
+character_event = {
+	id = SRR.4009
+	desc = {
+		text = SRR4009_descED
+		trigger = {
+			has_character_flag = seduced_ED
+		}
+	}
+	desc = {
+		text = SRR4009_desc
+		trigger = {
+			NOT = { has_character_flag = seduced_ED }
+			has_character_flag = known_ED
+		}
+	}
+	desc = {
+		text = SRR4008_descB
+		trigger = {
+			NOT = { has_character_flag = seduced_ED }
+			NOT = { has_character_flag = known_ED }
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR4009OPTA
+		if = {
+			limit = {
+			has_character_flag = known_ED
+			}
+			set_character_flag = platonic_love
+		}
+	}
+}

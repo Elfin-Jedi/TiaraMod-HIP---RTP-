@@ -1,0 +1,9 @@
+spriteTypes = {
+	spriteType = {
+	name = "GFX_trait_offensive"
+	texturefile = "gfx/traits/offensive.tga" 
+	noOfFrames = 1
+	norefcount = yes
+	effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

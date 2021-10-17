@@ -1,0 +1,39 @@
+bisexual = {
+	vassal_opinion = -5
+	
+	ruler_designer_cost = 0
+	
+	opposites = {
+		homosexual
+	}
+}
+impotent = {
+	potential = {
+		has_dlc = "Reapers"
+		age = 50
+		is_female = no
+	}
+	is_health = yes 
+	fertility = -0.50
+	spouse_opinion = -15
+	is_visible  = {
+		OR = {
+			is_spouse = FROM
+			is_consort = FROM 
+			is_lover =  FROM 
+			character = FROM
+		}
+	}
+	customizer = no	
+}
+sober = {
+	health = 0.5
+	christian_opinion = 5
+	muslim_opinion = 5
+	opposite_opinion = -10
+	
+	opposites = {
+		drunkard
+		hedonist
+	}
+}

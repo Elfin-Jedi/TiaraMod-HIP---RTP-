@@ -1,0 +1,414 @@
+#####
+#Diplomatic Society
+#
+#Total = 2
+#####
+
+#Civilized
+rtp_diplomacy_civilized = {
+	sound = diplomacy_society
+	society_ranks_gfx = secret_ranks
+	primary_attribute = diplomacy
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		diplomacy = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_diplomacy_civilized
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_diplomacy_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion_group = christian
+			religion_group = muslim
+			religion_group = jewish_group
+			religion_group = zoroastrian_group
+			religion_group = indian_group
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion_group = christian
+			religion_group = muslim
+			religion_group = jewish_group
+			religion_group = zoroastrian_group
+			religion_group = indian_group
+		}
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			general_opinion = 5
+		}
+		decisions = {
+			rtp_diplomacy_p1_td
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			general_opinion = 10
+			diplomacy = 1
+			global_levy_size = -0.1
+		}
+		decisions = {
+			rtp_diplomacy_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			general_opinion = 15
+			diplomacy = 2
+			global_levy_size = -0.1
+			build_cost_modifier = 0.05
+			build_time_modifier = 0.05
+		}
+		decisions = {
+			rtp_diplomacy_p3_td
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			general_opinion = 20
+			diplomacy = 3
+			global_levy_size = -0.1
+			build_cost_modifier = 0.1
+			build_time_modifier = 0.1
+		}
+		decisions = {
+			rtp_diplomacy_p4_td
+			rtp_diplomacy_pp4_td
+			rtp_diplomacy_feudal_sd
+			rtp_diplomacy_confederation_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_diplomacy
+		
+		per_attribute = {
+			name = diplomacy
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			diplomacy = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+				religion_group = jewish_group
+				religion_group = zoroastrian_group
+				religion_group = indian_group
+			}
+		}
+	}
+}
+
+#Pagan
+rtp_diplomacy_pagan = {
+	sound = diplomacy_society
+	society_ranks_gfx = secret_ranks
+	primary_attribute = diplomacy
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		diplomacy = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_diplomacy_pagan
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_diplomacy_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion_group = pagan
+			religion_group = dark
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion_group = pagan
+			religion_group = dark
+		}
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			general_opinion = 5
+		}
+		decisions = {
+			rtp_diplomacy_p1_td
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			general_opinion = 10
+			diplomacy = 1
+			global_levy_size = -0.1
+		}
+		decisions = {
+			rtp_diplomacy_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			general_opinion = 15
+			diplomacy = 2
+			global_levy_size = -0.1
+			build_cost_modifier = 0.05
+			build_time_modifier = 0.05
+		}
+		decisions = {
+			rtp_diplomacy_p3_td
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			general_opinion = 20
+			diplomacy = 3
+			global_levy_size = -0.1
+			build_cost_modifier = 0.1
+			build_time_modifier = 0.1
+		}
+		decisions = {
+			rtp_diplomacy_p4_td
+			rtp_diplomacy_pp4_td
+			rtp_diplomacy_feudal_sd
+			rtp_diplomacy_confederation_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_diplomacy
+		
+		per_attribute = {
+			name = diplomacy
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			diplomacy = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion_group = pagan_group
+				religion_group = dark
+			}
+		}
+	}
+}

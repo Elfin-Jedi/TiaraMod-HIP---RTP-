@@ -1,0 +1,4064 @@
+###################################################
+#
+# ANCIENT RELIGIONS
+# - Egyptian events
+#
+# Event ID egyptian.0 - egyptian.9 Decision Events
+# Event ID egyptian.10 - egyptian.19 Sed festival
+# Event ID egyptian.100 - egyptian.149 Nile Flooding
+# Event ID egyptian.150 - egyptian.199 Egyptian flavor
+# Event ID egyptian.200 - egyptian.399 Kemetic Revival
+# Event ID egyptian.401 - egyptian.499 Greater Egypt
+# Event ID egyptian.500 - egyptian.699 Isiac Order
+###################################################
+
+namespace = egyptian
+
+# Luxor Restoration Part 1
+province_event = {
+	id = egyptian.0
+	title = egyptian.0.title
+	desc = egyptian.0.desc
+	picture = GFX_persepolis_ruin
+
+	is_triggered_only = yes
+	
+	immediate = {
+		795 = { set_province_flag = reb_luxor_1 }
+	}	
+
+	option = {
+		name = egyptian.0.a # Make it the greatest temple there ever was!
+	}
+}
+
+# Luxor Restoration Part 2 - Add Asyut bonus modifier ~8 years
+province_event = {
+	id = egyptian.1
+	title = egyptian.1.title
+	desc = egyptian.1.desc
+	picture = GFX_evt_temple_egyptian_pagan
+	
+	has_global_flag = luxor_restoring
+
+	trigger = {
+		province_id = 795 # Asyut
+		NOT = { has_global_flag = luxor_restored }
+		had_province_flag = { flag = reb_luxor_1 days = 1075 }
+		NOT = { has_province_flag = reb_luxor_2 }
+	}
+
+	immediate = {
+		set_province_flag = reb_luxor_2
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = egyptian.1.a # Library
+		795 = {
+			add_province_modifier = { name = luxor_library duration = -1 }
+		}
+	}
+	option = {
+		name = egyptian.1.b # Promote Fanaticism
+		795 = {
+			add_province_modifier = { name = luxor_fanaticism duration = -1 }
+		}
+	}
+	option = {
+		name = egyptian.1.c # Promote Tax Collection
+		795 = {
+			add_province_modifier = { name = luxor_admin duration = -1 }
+		}
+	}
+}
+
+# Luxor Restoration Part 3 ~2 years
+province_event = {
+	id = egyptian.2
+	title = egyptian.2.title
+	desc = egyptian.2.desc
+	picture = GFX_evt_temple_egyptian_pagan
+	
+	has_global_flag = luxor_restoring
+	
+	trigger = {
+		province_id = 795 # Asyut
+		NOT = { has_global_flag = luxor_restored }
+		has_province_flag = reb_luxor_1
+		had_province_flag = { flag = reb_luxor_2 days = 546 }		
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		clr_global_flag = luxor_restoring
+		set_global_flag = luxor_restored
+		clr_province_flag = reb_luxor_1
+		clr_province_flag = reb_luxor_2
+	}
+
+	option = {
+		name = egyptian.2.a
+		owner = {
+			795 = {
+				build_holding = {
+				   title = b_luxor
+				   type = temple
+				   holder = PREV
+				}
+			}
+		}
+		owner = {
+			prestige = 500
+			religion_authority = {
+				modifier = luxor_restored
+				years = 30
+			}
+		}
+		hidden_tooltip = {
+			owner = {
+				set_character_flag = event_ancrel4003
+				narrative_event = { id = egyptian.3 days = 7 }
+			}
+			increase_prosperity_effect = yes
+		}
+	}
+}
+
+# News spread about Luxor
+narrative_event = {
+	id = egyptian.3
+	title = egyptian.3.title
+	desc = egyptian.3.desc
+	picture = GFX_evt_temple_egyptian_pagan
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	only_rulers = yes
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			OR = {
+				has_character_flag = event_ancrel4003
+				religion = egyptian_pagan
+				religion = aten_pagan
+			}
+		}
+		if = {
+			limit = { has_character_flag = event_ancrel4003 }
+			clr_character_flag = event_ancrel4003
+		}
+		name = OK
+	}
+	
+	option = {
+		trigger = {
+			NOT = { has_character_flag = event_ancrel4003 }
+		}
+		name = egyptian.3.a
+	}
+}
+
+# Pharaoh wants to build a Pyramid
+character_event = {
+	id = egyptian.4
+	desc = egyptian.4.desc
+	picture = GFX_evt_boatcoast
+
+	is_triggered_only = yes
+	
+	immediate = {
+		capital_scope = { set_province_flag = pyramid_building_prov }
+	}	
+
+	option = {
+		name = egyptian.4.a # Make it the greatest pyramid there ever was!
+		wealth = -600
+	}
+}
+
+# The Pyramid is done!
+province_event = {
+	id = egyptian.5
+	desc = egyptian.5.desc
+	picture = GFX_evt_pyramid
+
+	trigger = {
+		had_province_flag = { flag = pyramid_building_prov days = 3650 }
+		owner = { 
+			NOT = { has_character_flag = pyramid_built}
+		}
+	}
+
+	immediate = {
+		clr_province_flag = pyramid_building_prov
+		if = {
+			limit = { capital_holding = { holding_type = castle } }
+			capital_holding = { add_building = ca_kemetic_pyramid }
+		}
+		if = {
+			limit = { capital_holding = { holding_type = city } }
+			capital_holding = { add_building = ct_kemetic_pyramid }
+		}
+		if = {
+			limit = { capital_holding = { holding_type = temple } }
+			capital_holding = { add_building = tp_kemetic_pyramid }
+		}
+		if = {
+			limit = { capital_holding = { holding_type = tribal } }
+			capital_holding = { add_building = tb_kemetic_pyramid }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 5
+	}
+	
+	option = {
+		name = egyptian.5.a # My pyramid is done!
+
+		trigger = { owner = { has_character_flag = pyramid_building_char}}
+		owner = {
+			clr_character_flag = pyramid_building_char
+			set_character_flag = pyramid_built
+			prestige = 500
+		}
+	}
+	option = {
+		name = egyptian.5.b # My predecessor's pyramid is done
+
+		trigger = { 
+			owner = {
+				NOT = { 
+					has_character_flag = pyramid_building_char
+				}
+				true_religion_in_egyptian_subgroup_trigger = yes
+			}
+		}
+		owner = {
+			prestige = 100
+		}
+	}
+	option = {
+		name = egyptian.5.c # Pagan Garbage!
+
+		trigger = { 
+			owner = {
+				NOT = {
+					has_character_flag = pyramid_building_char
+					true_religion_in_egyptian_subgroup_trigger = yes
+				}
+			}
+		}		
+	}
+
+	after = {
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+			}
+			custom_tooltip = {
+				text = province_prospers_custom_tooltip
+				hidden_tooltip = {
+					ROOT = {
+						change_variable = { which = prosperity_value value = 8 }
+					}
+				}
+			}
+		}
+	}
+}
+
+# Anubis Guard founded
+narrative_event = {
+	id = egyptian.7
+	title = egyptian.7.title
+	desc = egyptian.7.desc
+	picture = GFX_evt_anubis
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	only_rulers = yes
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			has_character_flag = event_ancrel4007
+		}
+		clr_character_flag = event_ancrel4007
+		name = OK
+	}
+	
+	option = {
+		trigger = {
+			NOT = { has_character_flag = event_ancrel4007 }
+		}
+		name = egyptian.7.a
+	}
+}
+
+# Horusian Guard Founded
+narrative_event = {
+	id = egyptian.8
+	title = egyptian.8.title
+	desc = egyptian.8.desc
+	picture = GFX_evt_horus
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	only_rulers = yes
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			has_character_flag = event_ancrel4008
+		}
+		clr_character_flag = event_ancrel4008
+		name = OK
+	}
+	
+	option = {
+		trigger = {
+			NOT = { has_character_flag = event_ancrel4008 }
+		}
+		name = egyptian.8.a
+	}
+}
+
+#######################
+# Sed Festival events #
+#######################
+
+#Sed festival 1st day: the offerings
+character_event = {
+	id = egyptian.10
+	desc = egyptian.10.desc
+	picture = GFX_evt_temple_egyptian_pagan
+	
+	is_triggered_only = yes
+
+	option = {
+		name = egyptian.10.a # OK
+		hidden_tooltip = {
+			random_list = {
+				95 = {
+					character_event = { id = egyptian.11 days = 1 }
+				}
+				5 = {
+					modifier = {
+						factor = 3
+						trait = drunkard
+					}
+					modifier = {
+						factor = 3
+						trait = gluttonous 
+					}
+					modifier = {
+						factor = 0.3
+						trait = zealous
+					}
+					modifier = {
+						factor = 0.3
+						trait = patient
+					}
+					character_event = { id = egyptian.14 days = 1 }
+				}
+			}
+		}
+	}
+}
+
+#Sed festival 2nd day: the race
+character_event = {
+	id = egyptian.11
+	desc = egyptian.11.desc
+	picture = GFX_evt_temple_egyptian_pagan
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = egyptian.11.a # OK
+		hidden_tooltip = {
+			random_list = {
+				95 = {
+					character_event = { id = egyptian.12 days = 1 }
+				}
+				5 = {
+					modifier = {
+						factor = 3
+						trait = gluttonous
+					}
+					modifier = {
+						factor = 2
+						NOT = { health = 2 }
+					}
+					modifier = {
+						factor = 5
+						NOT = { health = 1 }
+					}
+					modifier = {
+						factor = 10
+						NOT = { health = 0 }
+					}
+					character_event = { id = egyptian.15 days = 1 }
+				}
+			}
+		}
+	}
+}
+
+#Sed festival last day: bow & arrow
+character_event = {
+	id = egyptian.12
+	desc = egyptian.12.desc
+	picture = GFX_evt_temple_egyptian_pagan
+	
+	is_triggered_only = yes
+
+	option = {
+		name = egyptian.12.a # OK
+		hidden_tooltip = {
+			random_list = {
+				95 = {
+					character_event = { id = egyptian.13 days = 1 }
+				}
+				5 = {
+					modifier = {
+						factor = 10
+						NOT = { combat_rating = -5 }
+					}
+					modifier = {
+						factor = 10
+						NOT = { combat_rating = -10 }
+					}
+					modifier = {
+						factor = 2
+						trait = cruel
+					}
+					modifier = {
+						factor = 0.1
+						combat_rating = 5
+					}
+					modifier = {
+						factor = 0.1
+						trait = hunter
+					}
+					character_event = { id = egyptian.16 days = 1 }
+				}
+			}
+		}
+	}
+}
+
+#Sed festival successful conclusion 
+character_event = {
+	id = egyptian.13
+	desc = egyptian.13.desc
+	picture = GFX_evt_temple_egyptian_pagan
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = holding_sed_festival
+	}	
+
+	option = {
+		name = egyptian.13.a # OK
+		
+		hidden_tooltip = {
+			# Calculate piety gain = 200 + nb_sed_festivals * 50
+			# set_variable = { which = gain which = nb_sed_festivals }
+			# multiply_variable = { which = gain value = 50 }
+			# change_variable = { which = gain value = 200 }
+			# piety = gain # variable
+
+			if = {
+				limit = {
+					is_variable_equal = { which = nb_sed_festivals value = 1 }
+				}
+				piety = 200
+			}
+			if = {
+				limit = {
+					is_variable_equal = { which = nb_sed_festivals value = 2 }
+				}
+				piety = 300
+			}
+			if = {
+				limit = {
+					is_variable_equal = { which = nb_sed_festivals value = 3 }
+				}
+				piety = 400
+			}
+			if = {
+				limit = {
+					is_variable_equal = { which = nb_sed_festivals value = 4 }
+				}
+				piety = 500
+			}
+			if = {
+				limit = {
+					is_variable_equal = { which = nb_sed_festivals value = 5 }
+				}
+				piety = 600
+			}
+			if = {
+				limit = {
+					is_variable_equal = { which = nb_sed_festivals value = 6 }
+				}
+				piety = 700
+			}
+			if = {
+				limit = {
+					is_variable_equal = { which = nb_sed_festivals value = 7 }
+				}
+				piety = 800
+			}
+			if = {
+				limit = {
+					is_variable_equal = { which = nb_sed_festivals value = 8 }
+				}
+				piety = 900
+			}
+			if = {
+				limit = {
+					check_variable = { which = nb_sed_festivals value = 9 }
+				}
+				piety = 1000
+			}
+		}
+		add_character_modifier = {
+			name = held_sed_festival
+			duration = 365
+		}
+
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+			}
+			custom_tooltip = {
+				text = capital_prospers_custom_tooltip
+				hidden_tooltip = {
+					capital_scope = {
+						change_variable = { which = prosperity_value value = 6 }
+					}
+				}
+			}
+		}
+	}
+}
+
+#Sed festival 1st day failure: fallen asleep
+character_event = {
+	id = egyptian.14
+	desc = egyptian.14.desc
+	picture = GFX_evt_temple_egyptian_pagan
+	
+	is_triggered_only = yes
+
+	option = {
+		name = egyptian.14.a # OK
+		hidden_tooltip = {
+			character_event = { id = egyptian.17 days = 1 }
+		}
+	}
+}
+
+#Sed festival 2nd day failure: unable to finish the race
+character_event = {
+	id = egyptian.15
+	desc = egyptian.15.desc
+	picture = GFX_evt_temple_egyptian_pagan
+	
+	is_triggered_only = yes
+
+	option = {
+		name = egyptian.15.a # OK
+		hidden_tooltip = {
+			character_event = { id = egyptian.17 days = 1 }
+		}
+	}
+}
+
+#Sed festival last day failure: shoot someone in the crowd
+character_event = {
+	id = egyptian.16
+	desc = egyptian.16.desc
+	picture = GFX_evt_temple_egyptian_pagan
+	
+	is_triggered_only = yes
+
+	option = {
+		name = egyptian.16.a # OK
+		hidden_tooltip = {
+			character_event = { id = egyptian.17 days = 1 }
+		}
+	}
+}
+
+#Sed festival failed conclusion
+character_event = {
+	id = egyptian.17
+	desc = egyptian.17.desc
+	picture = GFX_evt_temple_egyptian_pagan
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = holding_sed_festival
+	}
+
+	option = {
+		name = egyptian.17.a # Depressed
+
+		add_trait = depressed
+		piety = -200
+	}
+	
+	option = {
+		name = egyptian.17.b # Who cares ?
+		
+		add_trait = cynical
+		piety = -200
+		prestige = -200
+	}
+	
+	option = {
+		name = egyptian.17.c # Punishment
+		
+		add_trait = arbitrary
+		add_trait = paranoid
+		prestige = -200
+	}
+
+	after = {
+		add_character_modifier = {
+			name = held_failed_sed_festival
+			duration = 365
+		}
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+			}
+			custom_tooltip = {
+				text = province_declines_custom_tooltip
+				hidden_tooltip = {
+					capital_scope = {
+						subtract_variable = { which = prosperity_value value = 6 }
+					}
+				}
+			}
+		}
+	}
+}
+
+###################################
+# Ancient Religions
+# - Nile Flooding
+#
+# Author: Cybrxkhan
+# NOTE TO SELF: CONNECT TO SOME EGYPTIAN DECISION THINGY
+###################################
+
+#Flood calculator
+character_event = {
+	id = egyptian.100	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	religion = catholic
+	
+	trigger = {
+		controls_religion = yes # Let it happen for the Pope. He's always around.
+	}
+	
+	immediate = {
+		#choose Nile flood for the year
+		random_list = {
+			500 = { #normal flood
+				any_province = {
+					limit = {
+						is_on_nile_trigger = yes
+					}
+					clear_nile_flooding_effect = yes
+					add_province_modifier = {
+						name = VIET_nile_flood_good
+						duration = 365
+					}
+					if = {
+						limit = {
+							has_dlc = "Reapers"
+						}
+						change_variable = { which = prosperity_value value = 2 }
+					}
+				}
+				any_player = {
+					limit = {
+						any_realm_province = {
+							is_on_nile_trigger = yes
+						}
+					}
+					character_event = { id = egyptian.101 }
+				}
+			}
+			100 = { #great flood
+				any_province = {
+					limit = {
+						is_on_nile_trigger = yes
+					}
+					clear_nile_flooding_effect = yes
+					add_province_modifier = {
+						name = VIET_nile_flood_great
+						duration = 365
+					}
+					if = {
+						limit = {
+							has_dlc = "Reapers"
+						}
+						change_variable = { which = prosperity_value value = 4 }
+					}
+				}
+				any_player = {
+					limit = {
+						any_realm_province = {
+							is_on_nile_trigger = yes
+						}
+					}
+					character_event = { id = egyptian.102 }
+				}
+			}
+			100 = { #overflow flood
+				any_province = {
+					limit = {
+						is_on_nile_trigger = yes
+					}
+					clear_nile_flooding_effect = yes
+					add_province_modifier = {
+						name = VIET_nile_flood_overflow
+						duration = 365
+					}
+					if = {
+						limit = {
+							has_dlc = "Reapers"
+						}
+						subtract_variable = { which = prosperity_value value = 4 }
+					}
+				}
+				any_player = {
+					limit = {
+						any_realm_province = {
+							is_on_nile_trigger = yes
+						}
+					}
+					character_event = { id = egyptian.103 }
+				}
+			}
+			200 = { #poor flood
+				any_province = {
+					limit = {
+						is_on_nile_trigger = yes
+					}
+					clear_nile_flooding_effect = yes
+					add_province_modifier = {
+						name = VIET_nile_flood_poor
+						duration = 365
+					}
+					if = {
+						limit = {
+							has_dlc = "Reapers"
+						}
+						subtract_variable = { which = prosperity_value value = 2 }
+					}
+				}
+				any_player = {
+					limit = {
+						any_realm_province = {
+							is_on_nile_trigger = yes
+						}
+					}
+					character_event = { id = egyptian.104 }
+				}
+			}
+		}
+	}
+}
+
+character_event = { #good
+	id = egyptian.101
+	desc = egyptian.101.desc
+	picture = GFX_evt_small_town_egyptian_pagan
+
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+	}
+}
+character_event = { #great
+	id = egyptian.102
+	desc = egyptian.102.desc
+	picture = GFX_evt_small_town_egyptian_pagan
+
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+	}
+}
+character_event = { #overflow
+	id = egyptian.103
+	desc = egyptian.103.desc
+	picture = GFX_evt_small_town_egyptian_pagan
+
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+	}
+}
+character_event = { #poor
+	id = egyptian.104
+	desc = egyptian.104.desc
+	picture = GFX_evt_small_town_egyptian_pagan
+
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+	}
+}
+
+###################################
+#
+# Ancient Religions
+# - Egyptian Flavor Events
+#
+# egyptian.150 - egyptian.199 Flavor Events
+#
+# Author: Cybrxkhan
+#
+###################################
+
+# Mmm garlic bby
+character_event = {
+	id = egyptian.150
+	desc = egyptian.150.desc
+	picture = GFX_evt_small_town_egyptian_pagan
+
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	war = no
+	
+	trigger = {
+		in_command = no
+		is_abroad = no
+		true_religion_in_egyptian_subgroup_trigger = yes
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.2
+			trait = gluttonous
+		}
+		modifier = {
+			factor = 0.8
+			trait = temperate
+		}
+		modifier = {
+			factor = 1.2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.8
+			trait = cynical
+		}
+		modifier = {
+			factor = 1.2
+			trait = charitable
+		}
+		modifier = {
+			factor = 0.8
+			trait = greedy
+		}
+		modifier = {
+			factor = 1.2
+			trait = just
+		}
+		modifier = {
+			factor = 0.8
+			trait = arbitrary
+		}
+	}
+
+	option = { #Distribute garlic
+		name = egyptian.150.a
+		wealth = -10
+		piety = 10
+		add_character_modifier = {
+			name = VIET_garlic_distribution
+			duration = 730
+		}
+
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+			}
+			custom_tooltip = {
+				text = capital_prospers_custom_tooltip
+				hidden_tooltip = {
+					capital_scope = {
+						change_variable = { which = prosperity_value value = 3 }
+					}
+				}
+			}
+		}
+	}
+
+	option = { #Don't distribute
+		name = egyptian.150.b
+		random_list = {
+			70 = {}
+			20 = { add_trait = greedy }
+			10 = { add_trait = cynical }
+		}
+	}
+}
+
+# Palm tree planting
+character_event = {
+	id = egyptian.151
+	desc = egyptian.151.desc
+	picture = GFX_evt_castle_tower_egyptian_pagan
+
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	war = no
+	
+	trigger = {
+		in_command = no
+		is_abroad = no
+		true_religion_in_egyptian_subgroup_trigger = yes
+		NOT = {
+			capital_scope = {
+				has_province_modifier = VIET_planted_palm_trees
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.2
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.8
+			trait = content
+		}
+		modifier = {
+			factor = 1.2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.8
+			trait = cynical
+		}
+		modifier = {
+			factor = 1.2
+			trait = proud
+		}
+		modifier = {
+			factor = 0.8
+			trait = humble
+		}
+		modifier = {
+			factor = 1.2
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.8
+			trait = shy
+		}
+	}
+
+	option = { # Add 'em
+		name = egyptian.151.a
+		wealth = -20
+		prestige = 10
+		random = {
+			add_trait = proud
+			chance = 10
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = VIET_planted_palm_trees
+				duration = 3650
+			}
+			if = {
+				limit = {
+					has_dlc = "Reapers"
+				}
+				custom_tooltip = {
+					text = capital_prospers_custom_tooltip
+					hidden_tooltip = {
+						change_variable = { which = prosperity_value value = 2 }
+					}
+				}
+			}
+		}
+	}
+
+	option = { # No bro
+		name = egyptian.151.b
+		piety = 10
+		random_list = {
+			50 = {}
+			20 = { add_trait = humble }
+			10 = { add_trait = content }
+			10 = { add_trait = patient }
+		}
+	}
+}
+
+# Khnum Amulet
+character_event = {
+	id = egyptian.152
+	desc = egyptian.152.desc
+	picture = GFX_evt_cathedral_soa_egyptian_pagan
+
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	war = no
+	
+	trigger = {
+		in_command = no
+		is_abroad = no
+		true_religion_in_egyptian_subgroup_trigger = yes
+		NOT = { has_character_modifier = VIET_khnum_amulet }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.2
+			trait = kind
+		}
+		modifier = {
+			factor = 0.8
+			trait = envious
+		}
+		modifier = {
+			factor = 1.2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.8
+			trait = cynical
+		}
+		modifier = {
+			factor = 1.2
+			trait = just
+		}
+		modifier = {
+			factor = 0.8
+			trait = arbitrary
+		}
+		modifier = {
+			factor = 1.2
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.8
+			trait = shy
+		}
+	}
+
+	option = { # Add 'em
+		name = egyptian.152.a
+		add_character_modifier = {
+			name = VIET_khnum_amulet
+			duration = -1
+		}
+	}
+}
+
+# Desecrated Tombs
+province_event = {
+	id = egyptian.153
+	desc = egyptian.153.desc
+	picture = GFX_evt_pyramid
+	
+	trigger = {
+		NOT = { has_province_modifier = VIET_province_desecrated_egyptian_tombs }
+		owner = { true_religion_in_egyptian_subgroup_trigger = yes }
+		county = { is_on_nile_trigger = yes }
+	}
+	
+	mean_time_to_happen = {
+		months = 5000
+		modifier = {
+			factor = 1.2
+			owner = {
+				has_character_flag = VIET_descrated_egyptian_tombs_happened
+			}
+		}
+	}
+
+	option = { # Do nothing
+		name = egyptian.153.a
+		owner = {
+			set_character_flag = VIET_descrated_egyptian_tombs_happened
+			prestige = -20
+		}
+		random_list = {
+			5 = {
+				add_province_modifier = {
+					name = VIET_province_desecrated_egyptian_tombs
+					duration = 7300
+				}				
+			}
+			70 = {
+				add_province_modifier = {
+					name = VIET_province_desecrated_egyptian_tombs
+					duration = 3650
+				}				
+			}
+			15 = {
+				add_province_modifier = {
+					name = VIET_province_desecrated_egyptian_tombs
+					duration = 1825
+				}				
+			}
+			5 = {
+				add_province_modifier = {
+					name = VIET_province_desecrated_egyptian_tombs
+					duration = 1095
+				}				
+			}
+		}
+
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+			}
+			custom_tooltip = {
+				text = province_prospers_custom_tooltip
+				hidden_tooltip = {
+					ROOT = {
+						change_variable = { which = prosperity_value value = -4 }
+					}
+				}
+			}
+		}
+	}
+
+	option = { # Send in security
+		name = egyptian.153.b
+		owner = {
+			set_character_flag = VIET_descrated_egyptian_tombs_happened
+			wealth = -40
+			prestige = -10
+		}
+		random_list = {
+			33 = {
+				add_province_modifier = {
+					name = VIET_province_desecrated_egyptian_tombs
+					duration = 3650
+				}				
+			}
+			33 = {
+				add_province_modifier = {
+					name = VIET_province_desecrated_egyptian_tombs
+					duration = 1825
+				}				
+			}
+			33 = {
+				add_province_modifier = {
+					name = VIET_province_desecrated_egyptian_tombs
+					duration = 1095
+				}				
+			}
+		}
+
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+			}
+			custom_tooltip = {
+				text = province_declines_custom_tooltip
+				hidden_tooltip = {
+					ROOT = {
+						change_variable = { which = prosperity_value value = -2 }
+					}
+				}
+			}
+		}
+	}
+}
+
+# Bes protects from nightmare
+character_event = {
+	id = egyptian.154
+	desc = egyptian.154.desc
+	picture = GFX_evt_nightmare
+
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	war = no
+	
+	trigger = {
+		in_command = no
+		#is_abroad = no
+		true_religion_in_egyptian_subgroup_trigger = yes
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.2
+			trait = depressed
+		}
+		modifier = {
+			factor = 1.2
+			trait = stressed
+		}
+		modifier = {
+			factor = 1.2
+			trait = wroth
+		}
+		modifier = {
+			factor = 0.8
+			trait = patient
+		}
+		modifier = {
+			factor = 1.2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.8
+			trait = cynical
+		}
+		modifier = {
+			factor = 1.2
+			trait = paranoid
+		}
+		modifier = {
+			factor = 0.8
+			trait = trusting
+		}
+		modifier = {
+			factor = 1.2
+			trait = craven
+		}
+		modifier = {
+			factor = 0.8
+			trait = brave
+		}
+	}
+
+	option = { # Add 'em
+		name = egyptian.154.a
+		piety = 5
+	}
+}
+
+# Expel evil
+character_event = {
+	id = egyptian.155
+	desc = egyptian.155.desc
+	picture = GFX_evt_tuscan_Country_egyptian_pagan
+
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	war = no
+	
+	trigger = {
+		in_command = no
+		is_abroad = no
+		true_religion_in_egyptian_subgroup_trigger = yes
+		OR = {
+			trait = lustful
+			trait = envious
+			trait = slothful
+			trait = greedy
+			trait = proud
+			trait = wroth
+			trait = gluttonous
+			trait = cruel
+			trait = deceitful
+		}
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.8
+			trait = cynical
+		}
+		modifier = {
+			factor = 1.2
+			trait = just
+		}
+		modifier = {
+			factor = 0.8
+			trait = arbitrary
+		}
+		modifier = {
+			factor = 1.2
+			trait = paranoid
+		}
+		modifier = {
+			factor = 0.8
+			trait = trusting
+		}
+	}
+
+	option = { # Shake the devil out!
+		name = egyptian.155.a
+		wealth = -10
+		character_event = { id = egyptian.156 tooltip = egyptian.156.tooltip }
+	}
+
+	option = { # Pff... yeah right
+		name = egyptian.155.b
+		piety = -5
+		if = {
+			limit = {
+				NOT = { trait = proud }
+			}
+			random = {
+				add_trait = proud
+				chance = 20
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = cynical }
+			}
+			random = {
+				add_trait = cynical
+				chance = 40
+			}
+		}
+		if = {
+			limit = {
+				trait = zealous
+			}
+			remove_trait = zealous
+		}
+	}
+}
+
+# Expel evil, pt 2
+character_event = {
+	id = egyptian.156
+	title = egyptian.156.title
+	desc = egyptian.156.desc
+	picture = GFX_evt_temple_egyptian_pagan
+
+	is_triggered_only = yes
+
+	option = { # Expel!
+		name = egyptian.156.a
+		piety = 20
+		if = {
+			limit = {
+				trait = lustful
+			}
+			random = {
+				remove_trait = lustful
+				chance = 33
+			}
+		}
+		if = {
+			limit = {
+				trait = greedy
+			}
+			random = {
+				remove_trait = greedy
+				chance = 33
+			}
+		}
+		if = {
+			limit = {
+				trait = envious
+			}
+			random = {
+				remove_trait = envious
+				chance = 33
+			}
+		}
+		if = {
+			limit = {
+				trait = slothful
+			}
+			random = {
+				remove_trait = slothful
+				chance = 33
+			}
+		}
+		if = {
+			limit = {
+				trait = gluttonous
+			}
+			random = {
+				remove_trait = gluttonous
+				chance = 33
+			}
+		}
+		if = {
+			limit = {
+				trait = proud
+			}
+			random = {
+				remove_trait = proud
+				chance = 33
+			}
+		}
+		if = {
+			limit = {
+				trait = wroth
+			}
+			random = {
+				remove_trait = wroth
+				chance = 33
+			}
+		}
+		if = {
+			limit = {
+				trait = cruel
+			}
+			random = {
+				remove_trait = cruel
+				chance = 33
+			}
+		}
+		if = {
+			limit = {
+				trait = deceitful
+			}
+			random = {
+				remove_trait = deceitful
+				chance = 33
+			}
+		}
+	}
+}
+
+# Upholding le Ma'at
+character_event = {
+	id = egyptian.157
+	desc = egyptian.157.desc
+	picture = GFX_evt_tuscan_Country_egyptian_pagan
+
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		true_religion_in_egyptian_subgroup_trigger = yes
+		OR = {
+			trait = kind
+			trait = just
+			trait = charitable
+			trait = humble
+		}
+		NOT = { trait = cruel }
+		NOT = { trait = arbitrary }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.8
+			trait = cynical
+		}
+		modifier = {
+			factor = 1.2
+			trait = just
+		}
+		modifier = {
+			factor = 0.8
+			trait = arbitrary
+		}
+		modifier = {
+			factor = 1.2
+			trait = kind
+		}
+		modifier = {
+			factor = 0.8
+			trait = cruel
+		}
+		modifier = {
+			factor = 1.2
+			trait = charitable
+		}
+		modifier = {
+			factor = 0.8
+			trait = greedy
+		}
+	}
+
+	option = { # Yeah, i'm pretty great
+		name = egyptian.157.a
+		prestige = 10
+		piety = 10
+
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+			}
+			custom_tooltip = {
+				text = capital_prospers_custom_tooltip
+				hidden_tooltip = {
+					capital_scope = {
+						change_variable = { which = prosperity_value value = 6 }
+					}
+				}
+			}
+		}
+	}
+}
+
+# Not Upholding le Ma'at
+character_event = {
+	id = egyptian.158
+	desc = egyptian.158.desc
+	picture = GFX_evt_tuscan_Country_egyptian_pagan
+
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	#war = no
+	
+	trigger = {
+		#in_command = no
+		#is_abroad = no
+		true_religion_in_egyptian_subgroup_trigger = yes
+		OR = {
+			trait = cruel
+			trait = arbitrary
+			trait = greedy
+			trait = wroth
+		}
+		NOR = { 
+			trait = kind
+			trait = charitable
+			trait = just
+		}
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 0.8
+			trait = zealous
+		}
+		modifier = {
+			factor = 1.2
+			trait = cynical
+		}
+		modifier = {
+			factor = 0.8
+			trait = just
+		}
+		modifier = {
+			factor = 1.2
+			trait = arbitrary
+		}
+		modifier = {
+			factor = 0.8
+			trait = kind
+		}
+		modifier = {
+			factor = 1.2
+			trait = cruel
+		}
+		modifier = {
+			factor = 0.8
+			trait = charitable
+		}
+		modifier = {
+			factor = 1.2
+			trait = greedy
+		}
+	}
+
+	option = { # Well, that's no good...
+		name = egyptian.158.a
+		prestige = -10
+		piety = -10
+		add_character_modifier = {
+			name = VIET_not_upholding_maat
+			duration = 1095
+		}
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+			}
+			custom_tooltip = {
+				text = province_declines_custom_tooltip
+				hidden_tooltip = {
+					capital_scope = {
+						change_variable = { which = prosperity_value value = 6 }
+					}
+				}
+			}
+		}
+	}
+}
+
+# Pussycat
+character_event = {
+	id = egyptian.159
+	desc = egyptian.159.desc
+	picture = GFX_evt_maiden_egyptian_pagan
+
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	only_men = yes
+	war = no
+	
+	trigger = {
+		in_command = no
+		is_abroad = no
+		any_spouse = {
+			is_adult = yes
+			NOR = {
+				age = 40
+				trait = incapable
+				trait = inbred
+				trait = celibate
+			}
+			OR = {
+				is_lover = PREV
+				is_friend = PREV
+				opinion = { who = ROOT value = 25 }
+				trait = lustful
+			}
+			is_female = yes
+			religion = ROOT
+		}
+		true_religion_in_egyptian_subgroup_trigger = yes
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.2
+			trait = lustful
+		}
+		modifier = {
+			factor = 0.8
+			trait = chaste
+		}
+		modifier = {
+			factor = 1.2
+			trait = slothful
+		}
+		modifier = {
+			factor = 0.8
+			trait = diligent
+		}
+		modifier = {
+			factor = 1.2
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.8
+			trait = shy
+		}
+		modifier = {
+			factor = 1.2
+			trait = kind
+		}
+		modifier = {
+			factor = 0.8
+			trait = cruel
+		}
+	}
+
+	option = {
+		name = egyptian.159.a
+		random_spouse = {
+			limit = {
+				is_adult = yes
+				NOT = { age = 40 }
+				NOT = { trait = incapable }
+				NOT = { trait = inbred }
+				NOT = { trait = celibate }
+				OR = {
+					is_lover = PREV
+					is_friend = PREV
+					opinion = { who = ROOT value = 25 }
+					trait = lustful
+				}
+				is_female = yes
+				religion = ROOT
+			}
+			random = {
+				add_lover = ROOT
+				chance = 25
+			}
+			random = {			
+				impregnate = ROOT
+				chance = 25
+			}
+			opinion = {
+				modifier = opinion_egyptian_sexytimes
+				who = ROOT
+				years = 1
+			}	
+			reverse_opinion = {
+				modifier = opinion_egyptian_sexytimes
+				who = ROOT
+				years = 1
+			}			
+		}
+	}
+}
+
+# A criminal has killed a cat, a heinous crime!
+character_event = {
+	id = egyptian.160
+	desc = egyptian.160.desc
+	picture = GFX_evt_cathedral_soa_egyptian_pagan
+
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	only_men = yes
+	war = no
+	
+	trigger = {
+		in_command = no
+		is_abroad = no
+		true_religion_in_egyptian_subgroup_trigger = yes
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.8
+			trait = cynical
+		}
+		modifier = {
+			factor = 1.2
+			trait = diligent
+		}
+		modifier = {
+			factor = 0.8
+			trait = slothful
+		}
+		modifier = {
+			factor = 1.2
+			trait = just
+		}
+		modifier = {
+			factor = 0.8
+			trait = arbitrary
+		}
+	}
+
+	option = { # Punish him
+		name = egyptian.160.a
+		piety = 10
+		custom_tooltip = { text = VIET_stupid_cat_lovers_boooo }
+	}
+
+	option = { # it's just a cat
+		name = egyptian.160.b
+		prestige = 10
+		piety = -10
+		random = {
+			chance = 20
+
+			add_trait = cynical
+		}
+	}
+}
+
+# be nice to grills
+character_event = {
+	id = egyptian.161
+	desc = egyptian.161.desc
+	picture = GFX_evt_maiden_egyptian_pagan
+
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	only_men = yes
+	war = no
+	
+	trigger = {
+		in_command = no
+		is_abroad = no
+		true_religion_in_egyptian_subgroup_trigger = yes
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.8
+			trait = cynical
+		}
+		modifier = {
+			factor = 1.2
+			trait = kind
+		}
+		modifier = {
+			factor = 0.8
+			trait = cruel
+		}
+		modifier = {
+			factor = 1.2
+			trait = just
+		}
+		modifier = {
+			factor = 0.8
+			trait = arbitrary
+		}
+	}
+
+	option = { # Be a feminazi
+		name = egyptian.161.a
+		piety = 10
+		prestige = -10
+		any_courtier = {
+			limit = {
+				is_female = yes
+				is_adult = yes
+			}
+			opinion = {
+				modifier = opinion_egyptian_respects_women
+				who = ROOT
+				years = 5
+			}
+		}
+		any_courtier = {
+			limit = {
+				is_female = no
+				is_adult = yes
+				NOR = {
+					trait = kind
+					trait = zealous
+					trait = just
+					trait = humble
+				}
+			}
+			opinion = {
+				modifier = opinion_egyptian_stop_being_feminazi
+				who = ROOT
+				years = 5
+			}
+		}
+	}
+	option = { # Be a MRA jerk
+		name = egyptian.161.b
+		piety = -10
+		prestige = 10
+		any_courtier = {
+			limit = {
+				is_female = yes
+				is_adult = yes
+			}
+			opinion = {
+				modifier = opinion_egyptian_disrespects_women
+				who = ROOT
+				years = 5
+			}
+		}
+	}
+}
+
+# Senet game - start
+character_event = {
+	id = egyptian.162
+	desc = egyptian.162.desc
+	picture = GFX_evt_tuscan_Country_egyptian_pagan
+
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	war = no
+	
+	trigger = {
+		in_command = no
+		is_abroad = no
+		any_courtier = {
+			is_adult = yes
+			NOT = { trait = incapable }
+			religion = ROOT
+			ai = yes
+		}
+		true_religion_in_egyptian_subgroup_trigger = yes
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 3
+			trait = gamer
+		}
+		modifier = {
+			factor = 1.2
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.8
+			trait = shy
+		}
+		modifier = {
+			factor = 1.2
+			trait = kind
+		}
+		modifier = {
+			factor = 0.8
+			trait = cruel
+		}
+		modifier = {
+			factor = 1.2
+			trait = humble
+		}
+		modifier = {
+			factor = 0.8
+			trait = proud
+		}
+	}
+
+	option = {
+		name = egyptian.162.a
+		random_courtier = {
+			limit = {
+				is_adult = yes
+				NOT = { trait = incapable }
+				religion = ROOT
+				ai = yes
+			}
+			character_event = { id = egyptian.163 tooltip = egyptian.163.tooltip }
+		}
+	}
+}
+
+# Senet game - courtier event
+character_event = {
+	id = egyptian.163
+	desc = egyptian.163.desc
+	picture = GFX_evt_tuscan_Country_egyptian_pagan
+
+	is_triggered_only = yes
+
+	option = { # Ok!
+		name = egyptian.163.a
+		FROM = {
+			random_list = {
+				50 = { character_event = { id = egyptian.164 tooltip = egyptian.164.tooltip } }
+				50 = { character_event = { id = egyptian.165 tooltip = egyptian.165.tooltip } }
+			}
+		}
+	}
+}
+
+# Senet game - courtier wins
+character_event = {
+	id = egyptian.164
+	desc = egyptian.164.desc
+	picture = GFX_evt_tuscan_Country_egyptian_pagan
+
+	is_triggered_only = yes
+
+	option = { # Ok!
+		name = egyptian.164.a
+		random = {
+			add_trait = humble
+			chance = 20
+		}
+		FROM = {
+			opinion = {
+				modifier = opinion_egyptian_senet_game
+				who = ROOT
+				years = 1
+			}
+			reverse_opinion = {
+				modifier = opinion_egyptian_senet_game
+				who = ROOT
+				years = 1
+			}		
+		}
+	}
+	option = { # Ok!
+		name = egyptian.164.b
+		random = {
+			add_trait = wroth
+			chance = 20
+		}
+		FROM = {
+			opinion = {
+				modifier = opinion_egyptian_sore_loser
+				who = ROOT
+				years = 1
+			}
+			reverse_opinion = {
+				modifier = opinion_egyptian_lost_senet_game
+				who = ROOT
+				years = 1
+			}		
+		}
+	}
+}
+
+# Senet game - liege wins
+character_event = {
+	id = egyptian.165
+	desc = egyptian.165.desc
+	picture = GFX_evt_tuscan_Country_egyptian_pagan
+
+	is_triggered_only = yes
+
+	option = { # Ok!
+		name = egyptian.165.a
+		piety = 5
+		FROM = {
+			opinion = {
+				modifier = opinion_egyptian_senet_game
+				who = ROOT
+				years = 1
+			}
+			reverse_opinion = {
+				modifier = opinion_egyptian_senet_game
+				who = ROOT
+				years = 1
+			}		
+		}
+	}
+	option = { # Ok!
+		name = egyptian.165.b
+		prestige = 5
+		FROM = {
+			opinion = {
+				modifier = opinion_egyptian_smug_winner
+				who = ROOT
+				years = 1
+			}
+			reverse_opinion = {
+				modifier = opinion_egyptian_pathetic_senet_player
+				who = ROOT
+				years = 1
+			}		
+		}
+	}
+}
+
+# Ghost of Akhenaten?
+character_event = {
+	id = egyptian.166
+	desc = egyptian.166.desc
+	picture = GFX_evt_desert
+
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	war = no
+	
+	trigger = {
+		in_command = no
+		is_abroad = no
+		any_courtier = {
+			is_adult = yes
+			NOT = { trait = incapable }
+			religion = ROOT
+			ai = yes
+		}
+		religion = egyptian_pagan
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.2
+			trait = cynical
+		}
+		modifier = {
+			factor = 0.8
+			trait = zealous
+		}
+		modifier = {
+			factor = 1.2
+			trait = paranoid
+		}
+		modifier = {
+			factor = 0.8
+			trait = trusting
+		}
+		modifier = {
+			factor = 1.2
+			trait = arbitrary
+		}
+		modifier = {
+			factor = 0.8
+			trait = just
+		}
+	}
+
+	option = { # Ok!
+		name = egyptian.166.a
+		random_courtier = {
+			limit = {
+				is_adult = yes
+				NOT = { trait = incapable }
+				religion = ROOT
+				ai = yes			
+			}
+			random_list = {
+				80 = {}
+				15 = { add_trait = ill }
+				4 = { add_trait = pneumonic }
+				1 = {
+					death = { death_reason = death_natural }
+				}
+			}
+		}
+	}
+}
+
+# Shezmu execution
+character_event = {
+	id = egyptian.167
+	desc = egyptian.167.desc
+	picture = GFX_evt_small_town_egyptian_pagan
+
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	war = no
+	
+	trigger = {
+		in_command = no
+		is_abroad = no
+		any_courtier = {
+			is_adult = yes
+			NOT = { trait = incapable }
+			religion = ROOT
+			ai = yes
+		}
+		true_religion_in_egyptian_subgroup_trigger = yes
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.2
+			trait = just
+		}
+		modifier = {
+			factor = 0.8
+			trait = arbitrary
+		}
+		modifier = {
+			factor = 1.2
+			trait = wroth
+		}
+		modifier = {
+			factor = 0.8
+			trait = patient
+		}
+		modifier = {
+			factor = 1.2
+			trait = cruel
+		}
+		modifier = {
+			factor = 0.8
+			trait = kind
+		}
+		modifier = {
+			factor = 1.2
+			trait = impaler
+		}
+		modifier = {
+			factor = 0.8
+			trait = craven
+		}
+	}
+
+	option = { # Ok!
+		name = egyptian.167.a
+		prestige = 5
+	}
+}
+
+
+# Nefertum
+character_event = {
+	id = egyptian.168
+	desc = egyptian.168.desc
+	picture = GFX_evt_tuscan_Country_egyptian_pagan
+
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	war = no
+	
+	trigger = {
+		in_command = no
+		is_abroad = no
+		true_religion_in_egyptian_subgroup_trigger = yes
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.2
+			trait = just
+		}
+		modifier = {
+			factor = 0.8
+			trait = arbitrary
+		}
+		modifier = {
+			factor = 1.2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.8
+			trait = cynical
+		}
+		modifier = {
+			factor = 1.2
+			trait = kind
+		}
+		modifier = {
+			factor = 0.8
+			trait = envious
+		}
+		modifier = {
+			factor = 1.2
+			trait = content
+		}
+		modifier = {
+			factor = 0.8
+			trait = ambitious
+		}
+	}
+
+	option = { # Ok!
+		name = egyptian.168.a
+		piety = 5
+	}
+}
+
+
+# Constellation of Sah
+character_event = {
+	id = egyptian.169
+	desc = egyptian.169.desc
+	picture = GFX_evt_comet
+
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	war = no
+	
+	trigger = {
+		in_command = no
+		is_abroad = no
+		true_religion_in_egyptian_subgroup_trigger = yes
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.2
+			trait = just
+		}
+		modifier = {
+			factor = 0.8
+			trait = arbitrary
+		}
+		modifier = {
+			factor = 1.2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.8
+			trait = cynical
+		}
+		modifier = {
+			factor = 1.2
+			trait = kind
+		}
+		modifier = {
+			factor = 0.8
+			trait = envious
+		}
+		modifier = {
+			factor = 1.2
+			trait = content
+		}
+		modifier = {
+			factor = 0.8
+			trait = ambitious
+		}
+	}
+
+	option = { # Ok!
+		name = egyptian.169.a
+		random_list = {
+			50 = { piety = 5 }
+			50 = { prestige = 5 }
+		}
+	}
+}
+
+
+# Servant asks Shed for help
+character_event = {
+	id = egyptian.170
+	desc = egyptian.170.desc
+	picture = GFX_evt_tuscan_Country_egyptian_pagan
+
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	war = no
+	
+	trigger = {
+		in_command = no
+		is_abroad = no
+		true_religion_in_egyptian_subgroup_trigger = yes
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.2
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.8
+			trait = shy
+		}
+		modifier = {
+			factor = 1.2
+			trait = humble
+		}
+		modifier = {
+			factor = 0.8
+			trait = proud
+		}
+		modifier = {
+			factor = 1.2
+			trait = kind
+		}
+		modifier = {
+			factor = 0.8
+			trait = envious
+		}
+		modifier = {
+			factor = 1.2
+			trait = slothful
+		}
+		modifier = {
+			factor = 0.8
+			trait = diligent
+		}
+	}
+
+	option = { # Sometimes people need help
+		name = egyptian.170.a
+		random_list = {
+			15 = { add_trait = content }
+			15 = { add_trait = patient }
+			70 = { piety = 5 }
+		}
+	}
+	option = { # Don't trouble the gods like that!
+		name = egyptian.170.b
+		piety = 5		
+	}
+	option = { # Don't use Shed's name in vain
+		name = egyptian.170.c
+		random_list = {
+			15 = { add_trait = zealous }
+			15 = { add_trait = proud }
+			70 = { prestige = 5 }
+		}		
+	}
+	option = { # Not my concern
+		name = egyptian.170.c
+		random_list = {
+			15 = { add_trait = content }
+			15 = { add_trait = slothful }
+			70 = { prestige = 5 }
+		}		
+	}
+}
+
+
+# Visited the Egyptian underworld
+character_event = {
+	id = egyptian.171
+	desc = egyptian.171.desc
+	picture = GFX_evt_nightmare
+
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	war = no
+	
+	trigger = {
+		in_command = no
+		is_abroad = no
+		true_religion_in_egyptian_subgroup_trigger = yes
+		OR = {
+			has_vice_trigger = yes
+			has_evil_trait_trigger = yes
+			trait = deceitful
+			trait = cynical
+			trait = stubborn
+		}
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.8
+			trait = cynical
+		}
+		modifier = {
+			factor = 1.2
+			trait = humble
+		}
+		modifier = {
+			factor = 0.8
+			trait = proud
+		}
+		modifier = {
+			factor = 1.2
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.8
+			trait = content
+		}
+		modifier = {
+			factor = 1.2
+			trait = diligent
+		}
+		modifier = {
+			factor = 0.8
+			trait = slothful
+		}
+	}
+
+	option = { # Will reform self
+		name = egyptian.171.a
+		if = {
+			limit = {
+				trait = slothful
+			}
+			random = {
+				remove_trait = slothful
+				chance = 33
+			}
+		}
+		if = {
+			limit = {
+				trait = wroth
+			}
+			random = {
+				remove_trait = wroth
+				chance = 33
+			}
+		}
+		if = {
+			limit = {
+				trait = proud
+			}
+			random = {
+				remove_trait = proud
+				chance = 33
+			}
+		}
+		if = {
+			limit = {
+				trait = greedy
+			}
+			random = {
+				remove_trait = greedy
+				chance = 33
+			}
+		}
+		if = {
+			limit = {
+				trait = lustful
+			}
+			random = {
+				remove_trait = lustful
+				chance = 33
+			}
+		}
+		if = {
+			limit = {
+				trait = envious
+			}
+			random = {
+				remove_trait = envious
+				chance = 33
+			}
+		}
+		if = {
+			limit = {
+				trait = gluttonous
+			}
+			random = {
+				remove_trait = gluttonous
+				chance = 33
+			}
+		}
+		if = {
+			limit = {
+				trait = cynical
+			}
+			random = {
+				remove_trait = cynical
+				chance = 33
+			}
+		}
+		if = {
+			limit = {
+				trait = stubborn
+			}
+			random = {
+				remove_trait = stubborn
+				chance = 33
+			}
+		}
+		if = {
+			limit = {
+				trait = deceitful
+			}
+			random = {
+				remove_trait = deceitful
+				chance = 33
+			}
+		}
+		if = {
+			limit = {
+				trait = arbitrary
+			}
+			random = {
+				remove_trait = arbitrary
+				chance = 33
+			}
+		}
+		if = {
+			limit = {
+				trait = cruel
+			}
+			random = {
+				remove_trait = cruel
+				chance = 33
+			}
+		}
+	}
+	option = { # Nah
+		name = egyptian.171.b
+		piety = -5
+		prestige = 5
+	}
+}
+
+
+# A simple Egyptian meal
+character_event = {
+	id = egyptian.172
+	desc = egyptian.172.desc
+	picture = GFX_evt_tuscan_Country_egyptian_pagan
+
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	war = no
+	
+	trigger = {
+		in_command = no
+		is_abroad = no
+		true_religion_in_egyptian_subgroup_trigger = yes
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.2
+			trait = gluttonous
+		}
+		modifier = {
+			factor = 0.8
+			trait = temperate
+		}
+		modifier = {
+			factor = 1.2
+			trait = humble
+		}
+		modifier = {
+			factor = 0.8
+			trait = proud
+		}
+		modifier = {
+			factor = 1.2
+			trait = content
+		}
+		modifier = {
+			factor = 0.8
+			trait = ambitious
+		}
+		modifier = {
+			factor = 1.2
+			trait = patient
+		}
+		modifier = {
+			factor = 0.8
+			trait = wroth
+		}
+	}
+
+	option = { # Onion
+		name = egyptian.172.a
+		add_character_modifier = {
+			name = VIET_egypt_meal_horny_onion
+			duration = 730
+		}
+	}
+	option = { # Beans
+		name = egyptian.172.b
+		add_character_modifier = {
+			name = VIET_egypt_meal_clean_beans
+			duration = 730
+		}
+	}
+	option = { # Garlic
+		name = egyptian.172.c
+		add_character_modifier = {
+			name = VIET_egypt_meal_sacred_garlic
+			duration = 730
+		}
+	}
+}
+
+
+# Fruit offering to temple
+character_event = {
+	id = egyptian.173
+	desc = egyptian.173.desc
+	picture = GFX_evt_pomegranate
+	
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	war = no
+	
+	trigger = {
+		in_command = no
+		is_abroad = no
+		true_religion_in_egyptian_subgroup_trigger = yes
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.8
+			trait = cynical
+		}
+		modifier = {
+			factor = 1.2
+			trait = diligent
+		}
+		modifier = {
+			factor = 0.8
+			trait = slothful
+		}
+		modifier = {
+			factor = 1.2
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.8
+			trait = shy
+		}
+		modifier = {
+			factor = 1.2
+			trait = trusting
+		}
+		modifier = {
+			factor = 0.8
+			trait = paranoid
+		}
+	}
+
+	option = { # Grapes and raisins
+		name = egyptian.173.a
+		random_list = {
+			75 = { piety = 5 }
+			25 = { prestige = 5 }
+		}
+	}
+	option = { # Pomegranates
+		name = egyptian.173.b
+		random_list = {
+			25 = { piety = 5 }
+			75 = { prestige = 5 }
+		}
+	}
+	option = { # Dates
+		name = egyptian.173.c
+		random_list = {
+			50 = { piety = 5 }
+			50 = { prestige = 5 }
+		}
+	}
+	option = { # Figs
+		name = egyptian.173.d
+		random_list = {
+			50 = { piety = 5 }
+			50 = { prestige = 5 }
+		}
+	}
+}
+
+
+# Field of reeds
+character_event = {
+	id = egyptian.174
+	desc = egyptian.174.desc
+	picture = GFX_evt_tuscan_Country_egyptian_pagan
+	
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	war = no
+	
+	trigger = {
+		in_command = no
+		is_abroad = no
+		true_religion_in_egyptian_subgroup_trigger = yes
+		OR = {
+			has_virtue_trigger = yes
+			trait = zealous
+			trait = just
+		}
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.8
+			trait = cynical
+		}
+		modifier = {
+			factor = 1.2
+			trait = just
+		}
+		modifier = {
+			factor = 0.8
+			trait = arbitrary
+		}
+		modifier = {
+			factor = 1.2
+			trait = kind
+		}
+		modifier = {
+			factor = 0.8
+			trait = cruel
+		}
+		modifier = {
+			factor = 1.2
+			trait = humble
+		}
+		modifier = {
+			factor = 0.8
+			trait = proud
+		}
+	}
+
+	option = { # Kewl
+		name = egyptian.174.a
+		add_character_modifier = {
+			name = VIET_vision_of_field_of_reeds
+			duration = 1453
+		}
+	}
+}
+
+
+# Creepy courtier tries to bang maid by using dark magic
+character_event = {
+	id = egyptian.175
+	desc = egyptian.175.desc
+	picture = GFX_evt_maiden_egyptian_pagan
+	
+	is_triggered_only = yes
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	war = no
+	only_men = yes
+	
+	trigger = {
+		in_command = no
+		is_abroad = no
+		true_religion_in_egyptian_subgroup_trigger = yes
+		NOT = { has_character_flag = VIET_creepy_courtier_dark_magic_event }
+		OR = { #in case you choose the right choice and the maid falls in love with you
+			is_attractive_trigger = yes
+			AND = {
+				OR = {
+					has_virtue_trigger = yes
+					has_pleasant_trait_trigger = yes
+					has_benevolent_trait_trigger = yes
+				}
+				NOT = { age = 50 }
+				has_unattractive_trait_trigger = no
+			}
+		}
+		any_courtier = {
+			true_religion_in_egyptian_subgroup_trigger = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			is_blood_relative_of_root_trigger = no
+			is_female = no
+			OR = {
+				trait = lustful
+				trait = hedonist
+				trait = cruel
+				trait = possessed
+			}
+			NOT = { trait = chaste }
+			NOT = { trait = celibate }
+			NOT = { trait = eunuch }
+			NOT = { trait = homosexual }
+			NOT = { trait = cynical }
+			NOT = { trait = slothful }
+			NOT = { trait = just }
+			NOT = { trait = kind }
+		}
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.8
+			trait = cynical
+		}
+		modifier = {
+			factor = 1.2
+			trait = just
+		}
+		modifier = {
+			factor = 0.8
+			trait = arbitrary
+		}
+		modifier = {
+			factor = 1.2
+			trait = kind
+		}
+		modifier = {
+			factor = 0.8
+			trait = cruel
+		}
+		modifier = {
+			factor = 1.2
+			trait = humble
+		}
+		modifier = {
+			factor = 0.8
+			trait = proud
+		}
+	}
+	
+	immediate = {
+		set_character_flag = VIET_creepy_courtier_dark_magic_event
+		random_courtier = {
+			limit = {
+				true_religion_in_egyptian_subgroup_trigger = yes
+				is_adult = yes
+				NOT = { trait = incapable }
+				is_blood_relative_of_root_trigger = no
+				is_female = no
+				OR = {
+					trait = lustful
+					trait = hedonist
+					trait = cruel
+					trait = possessed
+				}
+				NOT = { trait = chaste }
+				NOT = { trait = celibate }
+				NOT = { trait = eunuch }
+				NOT = { trait = homosexual }
+				NOT = { trait = cynical }
+				NOT = { trait = slothful }
+				NOT = { trait = just }
+				NOT = { trait = kind }
+			}
+			save_event_target_as = target_creepy_egyptian_courtier
+		}	
+	}
+
+	option = { # Imprison
+		name = egyptian.175.a
+		custom_tooltip = { text = VIET_creepy_courtier_imprison }
+		event_target:target_creepy_egyptian_courtier = {
+			imprison = yes
+			opinion = {
+				modifier = VIET_creepy_courtier_caught
+				who = ROOT
+				years = 100
+			}
+			add_character_modifier = {
+				name = VIET_egyptian_dark_magic
+				duration = -1
+			}
+		}
+		hidden_tooltip = {
+			character_event = { id = egyptian.177 days = 5 random = 5 }
+		}
+	}
+	option = { # Publically humiliate
+		name = egyptian.175.b
+		custom_tooltip = { text = VIET_creepy_courtier_humiliate }
+		event_target:target_creepy_egyptian_courtier = {
+			opinion = {
+				modifier = VIET_creepy_courtier_publically_humiliated
+				who = ROOT
+				years = 100
+			}
+			add_character_modifier = {
+				name = VIET_egyptian_dark_magic
+				duration = -1
+			}
+		}
+		hidden_tooltip = {
+			character_event = { id = egyptian.177 days = 5 random = 5 }
+		}
+	}
+	option = { # Got bribed
+		name = egyptian.175.c
+		custom_tooltip = { text = VIET_creepy_courtier_bribe }
+		wealth = 20
+		event_target:target_creepy_egyptian_courtier = {
+			opinion = {
+				modifier = VIET_creepy_courtier_successful_bribe
+				who = ROOT
+				years = 100
+			}
+			add_character_modifier = {
+				name = VIET_egyptian_dark_magic
+				duration = -1
+			}
+		}
+		hidden_tooltip = {
+			character_event = { id = egyptian.176 days = 5 random = 5 }
+		}
+	}
+	option = { # Ignore
+		name = egyptian.175.d
+		custom_tooltip = { text = VIET_creepy_courtier_ignore }
+		event_target:target_creepy_egyptian_courtier = {
+			opinion = {
+				modifier = VIET_creepy_courtier_successful_ignore
+				who = ROOT
+				years = 100
+			}
+			add_character_modifier = {
+				name = VIET_egyptian_dark_magic
+				duration = -1
+			}
+		}
+		hidden_tooltip = {
+			character_event = { id = egyptian.176 days = 5 random = 5 }
+		}
+	}
+}
+
+
+# Creepy courtier tries to bang maid by using dark magic - and something bad happened
+character_event = {
+	id = egyptian.176
+	desc = egyptian.176.desc
+	picture = GFX_evt_lunatic
+	
+	is_triggered_only = yes
+
+	option = { # Whoops
+		name = egyptian.176.a
+		prestige = -20
+		add_character_modifier = {
+			name = VIET_creepy_courtier_failure
+			duration = -1
+		}
+	}
+}
+
+
+# Creepy courtier tries to bang maid by using dark magic - and it turns out the maid is in love with you
+narrative_event = {
+	id = egyptian.177	
+	title = egyptian.177.title
+	desc = egyptian.177.desc
+	picture = GFX_evt_maiden_egyptian_pagan
+	
+	is_triggered_only = yes
+
+	option = { # Treat her nicely
+		name = egyptian.177.a
+		piety = 10
+	}
+	option = { # Begone!
+		name = egyptian.177.b
+		random_list = {
+			30 = {}
+			40 = { add_trait = paranoid }
+			15 = { add_trait = zealous }
+			15 = { add_trait = craven }
+		}
+	}
+	option = { # Make her my lover
+		name = egyptian.177.c
+		custom_tooltip = { text = VIET_creepy_courtier_maid_lover }
+		hidden_tooltip = {			
+			create_character = {
+				age = 18
+				dynasty = none
+				religion = ROOT
+				culture = ROOT
+				female = yes
+				health = 5
+				random_traits = no
+				historical = yes
+			}
+			new_character = {
+				#Basic stuff
+				set_character_flag = ai_flag_refuse_concubinage
+				set_character_flag = ai_flag_refuse_marriage
+				set_character_flag = VIET_egypt_maid
+				random_list = {
+					33 = { add_random_education_trait = diplomacy }
+					33 = { add_random_education_trait = stewardship }
+					33 = { add_random_education_trait = intrigue }
+				}
+				reverse_opinion = { 
+					who = ROOT
+					modifier = VIET_opinion_egypt_maid
+					years = 100
+				}
+				set_character_flag = no_court_invites
+				#Guaranteed Traits
+				add_trait = fair
+				add_trait = kind
+				add_trait = content
+				#Flavor
+				random_list = {
+					80 = { } #Nothing
+					20 = { add_scarred_tiered_effect = yes }
+				}
+				opinion = {
+					who = ROOT
+					modifier = VIET_opinion_egypt_maid_loyal
+					years = 100
+				}
+				#Does she have a hobby?
+				if = {
+					limit = { has_dlc = "Way of Life" }
+					random_list = {
+						10 = { add_trait = socializer }
+						10 = { add_trait = mystic }
+						10 = { add_trait = gardener }
+						10 = { add_trait = poet }
+						69 = {}
+					}
+				}
+				#Personality Archetypes
+				random_list = {
+					20 = { # Sassy girl
+						set_character_flag = VIET_maid_sassy
+						add_trait = cynical
+						add_trait = erudite
+						add_trait = stubborn
+					}
+					20 = { # Social climber
+						set_character_flag = VIET_maid_ambitions
+						add_trait = proud
+						add_trait = greedy
+						add_trait = ambitious
+					}
+					20 = { # Wallflower
+						set_character_flag = VIET_maid_wallflower
+						add_trait = shy
+						add_trait = humble
+						add_trait = slothful
+					}
+					20 = { # tomboy
+						set_character_flag = VIET_maid_tomboy
+						add_trait = brave
+						add_trait = gregarious
+						add_trait = wroth
+					}
+					20 = { # religious
+						set_character_flag = VIET_maid_pious
+						add_trait = zealous
+						add_trait = just
+						add_trait = charitable
+					}
+					20 = { # Party Animal
+						set_character_flag = VIET_maid_partier
+						add_trait = gregarious
+						add_trait = lustful
+						add_trait = gluttonous
+						add_trait = drunkard
+					}
+					20 = { # Workaholic
+						set_character_flag = VIET_maid_workaholic
+						add_trait = diligent
+						add_trait = patient
+						add_trait = stubborn
+					}
+					20 = { # Crazy
+						set_character_flag = VIET_maid_crazy
+						add_trait = deceitful
+						add_trait = arbitrary
+						add_trait = trusting
+						add_trait = lunatic
+					}
+				}
+				add_lover = ROOT
+				if = {
+					limit = {
+						NOT = { ROOT = { num_of_consorts = 3 } }
+					}
+					add_spouse = ROOT
+				}
+			}
+		}
+	}
+}
+
+###################################
+#
+# Ancient Religions
+# - Kemetic Revival Events
+#
+# egyptian.200 - egyptian.399 Flavor Events
+#
+# Author: theStormWeaver/xirsoi
+#
+###################################
+
+###################
+## Desert Nomads ##
+###################
+# you are on pilgrimage/hajj and get caught in a sandstorm
+character_event = {
+	id = egyptian.200
+	desc = egyptian.200.desc
+	picture = GFX_evt_sand_desert
+
+	only_playable = yes
+	min_age = 16
+	only_capable = yes
+
+	trigger = {
+		NOR = { 
+			has_global_flag = egyptian_reformation
+			has_character_flag = lost_in_sandstorm
+			has_character_flag = awaiting_the_tribes
+			primary_title = { is_landless_type_title = yes }
+		}
+		OR = {
+			trait = on_hajj
+			AND = {
+				trait = on_pilgrimage
+				OR = {
+					has_character_flag = pilgrimage_to_jerusalem
+					has_character_flag = pilgrimage_to_antioch
+					has_character_flag = pilgrimage_to_axum
+				}
+			}
+		}
+		OR = {
+			NOT = {
+				has_game_rule = {
+					name = acr_ai_revival
+					value = off
+				}
+			}
+			ai = no
+		}
+	}
+
+	immediate = {
+		set_character_flag = lost_in_sandstorm
+	}
+
+	mean_time_to_happen = {
+		days = 365 # should be quite uncommon, since pilgrimages/hajj only lasts about 30 days
+
+		modifier = {
+			factor = 5
+			ai = yes  # even less common for ai
+		}
+		modifier = { # assured if a player in debug mode
+			factor = 0.01
+			ai = no
+			has_global_flag = ancrel_debug
+		}
+		modifier = {
+			factor = 10
+			ai = yes
+			has_game_rule = {
+				name = acr_ai_revival
+				value = reduced
+			}
+		}
+	}
+
+	option = { # may <god> guide me
+		name = egyptian.200.a
+		hidden_tooltip = {
+			character_event = { id = egyptian.201 }
+		}
+	}
+}
+
+# seperated from the caravan, you spot a shadow that looks like a building
+character_event = {
+	id = egyptian.201
+	desc = egyptian.201.desc
+	picture = GFX_evt_sand_desert
+
+	is_triggered_only = yes
+
+	option = {
+		name = egyptian.201.a
+		custom_tooltip = {
+			text = egyptian.201.a.tt
+			hidden_tooltip = {
+				random_list = {
+					20 = { character_event = { id = egyptian.202 } }
+					10 = {
+						character_event = { id = egyptian.203 }
+						modifier = {
+							factor = 0
+							ai = no
+							has_global_flag = ancrel_debug
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# the shadow is a temple that hums with ancient power
+character_event = {
+	id = egyptian.202
+	desc = egyptian.202.desc
+	picture = GFX_evt_sand_desert
+
+	is_triggered_only = yes
+
+	option = { # move on
+		name = egyptian.202.a
+		custom_tooltip = {
+			text = egyptian.202.a.tt
+			hidden_tooltip = {
+				random_list = {
+					90 = { character_event = { id = egyptian.209 } }
+					10 = {
+						clr_character_flag = lost_in_sandstorm
+						death = { death_reason = death_lost_desert }
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 50
+
+			modifier = {
+				factor = 1.2
+				trait = craven
+			}
+			modifier = {
+				factor = 1.2
+				trait = zealous
+			}
+			modifier = {
+				factor = 1.2
+				trait = paranoid
+			}
+			modifier = {
+				factor = 1.2
+				trait = slothful
+			}
+		}
+	}
+
+	option = { # take shelter
+		name = egyptian.202.b
+		custom_tooltip = {
+			text = egyptian.202.b.tt
+			hidden_tooltip = {
+				character_event = { id = egyptian.204}
+			}
+		}
+
+		ai_chance = {
+			factor = 50
+
+			modifier = {
+				factor = 1.2
+				trait = brave
+			}
+			modifier = {
+				factor = 1.2
+				trait = cynical
+			}
+			modifier = {
+				factor = 1.2
+				trait = trusting
+			}
+			modifier = {
+				factor = 1.2
+				trait = diligent
+			}
+		}
+	}
+}
+
+# the building is an inn on the pilgrim's highway, you're saved!
+character_event = {
+	id = egyptian.203
+	desc = egyptian.203.desc
+	picture = GFX_evt_small_town_aten_pagan
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_character_flag = lost_in_sandstorm
+	}
+
+	option = {
+		name = egyptian.203.a
+	}
+}
+
+# as the storm rages on an old man enters the temple
+character_event = {
+	id = egyptian.204
+	desc = egyptian.204.desc
+	picture = GFX_evt_sand_desert
+
+	is_triggered_only = yes
+
+	option = {
+		name = egyptian.204.a
+		custom_tooltip = {
+			text = egyptian.204.a.tt
+			hidden_tooltip = { character_event = { id = egyptian.205 days = 1 } }
+		}
+	}
+}
+
+# you learn the old man is from one of many tribes in the desert
+# that still worship the old gods
+character_event = {
+	id = egyptian.205
+	desc = egyptian.205.desc
+	picture = GFX_evt_recovery
+
+	is_triggered_only = yes
+
+	option = {
+		name = egyptian.205.a
+		custom_tooltip = {
+			text = egyptian.205.a.tt
+			hidden_tooltip = { character_event = { id = egyptian.206 days = 1 } }
+		}
+	}
+}
+
+# the old man implies that "old man Set" has guided you here,
+# it is your destiny to find this temple
+long_character_event = {
+	id = egyptian.206
+	desc = egyptian.206.desc
+	picture = GFX_evt_nomad_camp
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_character_flag = lost_in_sandstorm
+	}
+
+	option = { # accept the ways of the old gods as your own
+		name = egyptian.206.a
+		custom_tooltip = {
+			text = egyptian.206.a.tt
+			hidden_tooltip = {
+				character_event = { id = egyptian.207 }
+			}
+		}
+
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 1.2
+				trait = proud
+			}
+			modifier = {
+				factor = 1.2
+				trait = cynical
+			}
+			modifier = {
+				factor = 1.2
+				trait = brave
+			}
+			modifier = {
+				factor = 1.2
+				trait = arbitrary
+			}
+			modifier = {
+				factor = 1.2
+				trait = ambitious
+			}
+		}
+	}
+
+	option = { # reject the pagans and continue on your journey
+		name = egyptian.206.b
+		custom_tooltip = {
+			text = egyptian.206.b.tt
+			hidden_tooltip = {
+				character_event = { id = egyptian.208 }
+			}
+		}
+
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 1.2
+				trait = humble
+			}
+			modifier = {
+				factor = 1.2
+				trait = zealous
+			}
+			modifier = {
+				factor = 1.2
+				trait = craven
+			}
+			modifier = {
+				factor = 1.2
+				trait = content
+			}
+		}
+	}
+}
+
+# finish the hajj/pilgrimage (cause it can't be stopped), then convert
+character_event = {
+	id = egyptian.207
+	desc = egyptian.207.desc
+	picture = GFX_evt_nomad_camp
+
+	is_triggered_only = yes
+
+	option = {
+		name = egyptian.207.a
+		custom_tooltip = {
+			text = egyptian.207.a.tt
+			hidden_tooltip = {
+				character_event = { id = egyptian.210 days = 60 }
+			}
+		}
+	}
+}
+
+# you reject their ways, and return to your people
+character_event = {
+	id = egyptian.208
+	desc = egyptian.208.desc
+	picture = GFX_evt_nomad_camp
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_character_flag = lost_in_sandstorm
+	}
+
+	option = {
+		name = egyptian.208.a
+		random = {
+			chance = 20
+			add_trait = zealous
+		}
+	}
+}
+
+# after avoiding the temple, you find your caravan and continue the journey
+character_event = {
+	id = egyptian.209
+	desc = egyptian.209.desc
+	picture = GFX_evt_desert
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_character_flag = lost_in_sandstorm
+	}
+
+	option = {
+		name = egyptian.209.a
+	}
+}
+
+# the tribes come to your banner (event troops) and you finally convert
+character_event = {
+	id = egyptian.210
+	desc = egyptian.210.desc
+	picture = GFX_evt_warrior_banners
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_character_flag = lost_in_sandstorm
+	}
+
+	option = {
+		name = egyptian.210.a
+		any_demesne_title = {
+			limit = {
+				controls_religion = yes
+			}
+			destroy_landed_title = THIS
+		}
+
+		religion = egyptian_pagan
+		
+		capital_scope = {
+			# tribal chief 1
+			create_character = {
+				name = "Menkhaf"
+				female = no
+				age = 42
+				culture = bedouin_arabic
+				religion = egyptian_pagan
+				attributes = {
+				    martial = 12
+				    diplomacy = 6
+				    stewardship = 9
+				    intrigue = 8
+				    learning = 6
+				}
+				trait = zealous
+				trait = cavalry_leader
+				trait = holy_warrior
+				trait = mystic
+				trait = skilled_tactician
+			}
+			new_character = {
+				spawn_unit = {
+				  owner = ROOT
+				  province = PREV
+				  home = PREV
+				  leader = THIS
+				  troops = {
+				    light_cavalry = { 600 600 }
+				    horse_archers = { 400 400 }
+				  }
+				  attrition = 0
+				  disband_on_peace = no
+				  cannot_inherit = yes
+				  maintenance_multiplier = 0.5
+				}
+			}
+			# tribal chief 2
+			create_character = {
+				name = "Sihathor"
+				female = no
+				age = 32
+				culture = bedouin_arabic
+				religion = egyptian_pagan
+				attributes = {
+					martial = 12
+					diplomacy = 6
+					stewardship = 6
+					intrigue = 12
+					learning = 8
+				}
+				trait = zealous
+				trait = cavalry_leader
+				trait = desert_terrain_leader
+				trait = tough_soldier
+			}
+			new_character = {
+				spawn_unit = {
+				  owner = ROOT
+				  province = PREV
+				  home = PREV
+				  leader = THIS
+				  troops = {
+				    light_cavalry = { 600 600 }
+				    horse_archers = { 400 400 }
+				  }
+				  attrition = 0
+				  disband_on_peace = no
+				  cannot_inherit = yes
+				  maintenance_multiplier = 0.5
+				}
+			}
+			# tribal chief 3
+			create_character = {
+				name = "Wenishesmu"
+				female = no
+				age = 29
+				culture = bedouin_arabic
+				religion = egyptian_pagan
+				attributes = {
+					martial = 9
+					diplomacy = 8
+					stewardship = 6
+					intrigue = 8
+					learning = 12
+				}
+				trait = zealous
+				trait = cavalry_leader
+				trait = rough_terrain_leader
+				trait = tough_soldier
+				trait = impaler
+			}
+			new_character = {
+				spawn_unit = {
+				  owner = ROOT
+				  province = PREV
+				  home = PREV
+				  leader = THIS
+				  troops = {
+				    light_cavalry = { 600 600 }
+				    horse_archers = { 400 400 }
+				  }
+				  attrition = 0
+				  disband_on_peace = no
+				  cannot_inherit = yes
+				  maintenance_multiplier = 0.5
+				}
+			}
+			# the old man
+			create_character = {
+				name = "Merptah"
+				has_nickname = nick_the_old
+				female = no
+				age = 55
+				culture = bedouin_arabic
+				religion = egyptian_pagan
+				attributes = {
+					martial = 3
+					diplomacy = 8
+					stewardship = 5
+					intrigue = 7
+					learning = 10
+				}
+				trait = zealous
+				trait = mastermind_theologian
+				trait = mystic
+				trait = kind
+			}
+		}
+	}
+}
+
+#########################
+## Surveying a Pyramid ##
+#########################
+
+# a servant informs you that a previously unknown entrance
+# to a pyramid has been uncovered
+# [on_bi_yearly_pulse]
+character_event = {
+	id = egyptian.215
+	desc = egyptian.215.desc
+	picture = GFX_evt_pyramid
+
+	only_rulers = yes
+	min_age = 16
+	only_capable = yes
+	prisoner = no
+
+	is_triggered_only = yes
+
+	weight_multiplier = {
+		days = 10
+		modifier = {
+			factor = 0
+			is_on_nile_trigger = no
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_game_rule = {
+					name = acr_ai_revival
+					value = off
+				}
+				ai = yes
+			}
+		}
+		modifier = {
+			factor = 0.1
+			has_game_rule = {
+				name = acr_ai_revival
+				value = reduced
+			}
+		}
+	}
+
+	option = { # survey the pyramid
+		name = egyptian.215.a
+		custom_tooltip = {
+			text = egyptian.215.a.tt
+			hidden_tooltip = {
+				character_event = { id = egyptian.216 days = 3 }
+			}
+		}
+	}
+
+	option = { # don't survey the pyramid
+		name = egyptian.215.b
+	}
+}
+
+# you and your entourage arrive at the entrance to the pyramid
+character_event = {
+	id = egyptian.216
+	desc = egyptian.216.desc
+	picture = GFX_evt_pyramid
+
+	is_triggered_only = yes
+
+	option = {
+		name = egyptian.216.b
+		custom_tooltip = {
+			text = egyptian.216.b.tt
+			hidden_tooltip = {
+				character_event = { id = egyptian.217 days = 0 }
+			}
+		}
+	}
+}
+
+# you and your men have reached a fork in the tunnel, which way do you go?
+character_event = {
+	id = egyptian.217
+	desc = egyptian.217.desc
+	picture = GFX_evt_pyramid
+
+	is_triggered_only = yes
+
+	option = { # left?
+		
+	}
+
+	option = { # right?
+
+	}
+
+	option = { # back?
+		trigger = {
+			trait = craven
+		}
+		tooltip_info = craven
+
+		name = egyptian.216.a
+	}
+}
+
+############################
+## Lost Heir of Cleopatra ##
+############################
+
+#Egyptian Warrior Lodge has been recreated.
+#Players notified.
+narrative_event = {
+	id = egyptian.400
+	title = egyptian.400.title
+	desc = egyptian.400.desc
+	hide_from = yes
+	hide_new = yes
+
+	picture = GFX_evt_celtic_warriors
+	
+	only_playable = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = egyptian.400.a
+		trigger = {
+			OR = { 
+				society_member_of = warrior_lodge_egyptian
+				religion_openly_egyptian_or_reformed_trigger = yes
+				religion_secretly_egyptian_or_reformed_trigger = yes
+				can_join_society = warrior_lodge_egyptian
+			}
+		}
+		if = {
+			limit = { 
+				NOT = { society_member_of = warrior_lodge_egyptian }
+				can_join_society = warrior_lodge_egyptian
+			}
+			join_society = warrior_lodge_egyptian
+		}
+	}
+	option = {
+		name = egyptian.400.b
+		trigger = {
+			NOR = { 
+				society_member_of = warrior_lodge_egyptian
+				can_join_society = warrior_lodge_egyptian
+			}
+		}
+	}
+}
+
+##################################
+## Restoration of Greater Egypt ##
+##################################
+
+## Greater Egypt Restored!
+
+# The Declaration of Greater Egypt
+narrative_event = {
+	id = egyptian.401
+	title = egyptian.401.title
+	desc = egyptian.401.desc
+	
+	picture = GFX_evt_pyramid
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = egyptian.401.a
+		hidden_tooltip = {
+			any_demesne_title = {
+				limit = {
+					tier = KING
+					ROOT = {
+						completely_controls = PREV
+					}
+				}
+				de_jure_liege = e_greater_egypt
+			}
+		}
+		e_greater_egypt = {
+			show_scope_change = no
+			grant_title = ROOT
+			hidden_tooltip = { make_primary_title = yes }
+			copy_title_laws = k_egypt
+		}
+		hidden_tooltip = {
+			any_playable_ruler = {
+				limit = {
+					NOT = { has_landed_title = k_egypt }
+					ai = no
+				}
+				narrative_event = { id = egyptian.402 }
+			}
+		}
+		give_nickname = nick_the_glorious
+	}
+}
+
+# Informed about the Declaration of Greater Egypt
+narrative_event = {
+	id = egyptian.402
+	title = egyptian.402.title
+	desc = egyptian.402.desc
+	
+	picture = GFX_evt_pyramid
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = egyptian.402.a
+		trigger = {
+			true_religion = FROM
+		}
+	}
+
+	option = {
+		name = egyptian.402.b
+		trigger = {
+			NOT = {
+				true_religion = FROM
+			}
+		}
+	}
+}
+
+####################################
+## Restoration of the Isiac Order ##
+####################################
+
+narrative_event = {
+	id = egyptian.500
+	title = egyptian.500.title
+	desc = egyptian.500.desc
+	hide_from = yes
+	hide_new = yes
+
+	picture = GFX_evt_temple_egyptian_pagan
+	
+	only_playable = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = egyptian.500.a
+		trigger = {
+			OR = { 
+				society_member_of = monastic_order_isis
+				religion_openly_egyptian_or_reformed_trigger = yes
+				religion_secretly_egyptian_or_reformed_trigger = yes
+				can_join_society = monastic_order_isis
+			}
+		}
+		if = {
+			limit = { 
+				NOT = { society_member_of = monastic_order_isis }
+				can_join_society = monastic_order_isis
+			}
+			join_society = monastic_order_isis
+		}
+	}
+	option = {
+		name = egyptian.500.b
+		trigger = {
+			NOR = { 
+				society_member_of = monastic_order_isis
+				can_join_society = monastic_order_isis
+			}
+		}
+	}
+}

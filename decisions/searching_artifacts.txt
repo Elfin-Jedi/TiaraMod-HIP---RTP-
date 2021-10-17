@@ -1,0 +1,66 @@
+decisions = {
+	searching_artifacts = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			has_dlc = "Mystics"
+			age = 13
+			any_courtier_or_vassal = {
+				NOT = { trait = incapable }
+				prisoner = no
+				opinion = { who = ROOT value = 20 }
+				is_councillor = yes
+				ai = yes
+			}
+			is_landed = yes
+			prisoner = no
+			mercenary = no
+			holy_order = no
+			OR = {
+				higher_tier_than = COUNT
+				ai = no
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			NOT = { has_character_flag = searching_artifacts_delay }
+		}
+		allow = {
+			NOR = {
+				has_character_modifier = relic_rumor_major
+				has_character_modifier = relic_rumor_medium
+				has_character_modifier = relic_rumor_minor
+			}
+			wealth = 1500
+			prestige = 1000
+			piety = 1000
+		}
+		effect = {
+			set_character_flag = searching_artifacts_delay
+			wealth = -1500
+			prestige = -1000
+			piety = -1000
+			hidden_tooltip = { character_event = { id = MA.0 days = 10 } }
+			custom_tooltip = {
+				text = search_now
+				hidden_tooltip = { character_event = { id = MNM.9000 } }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0.1
+			modifier = {
+				factor = 0
+				NOR = {
+					has_character_modifier = relic_rumor_major
+					has_character_modifier = relic_rumor_medium
+					has_character_modifier = relic_rumor_minor
+				}
+			}
+		}
+	}
+}

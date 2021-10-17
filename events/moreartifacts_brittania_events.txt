@@ -1,0 +1,198 @@
+#######################################
+#
+# British Isles Events
+#
+# 
+#
+#######################################
+
+# Written by Cody Spring
+
+namespace = hafa
+
+character_event = { # Curtana
+	id = hafa.006
+	desc = "EVTDESChafa.006"
+	prisoner = no
+	min_age = 16
+	only_playable = yes
+	only_independent = yes
+	capable_only = yes
+	
+	trigger = { # sword not found yet?
+		OR = {
+			culture_group = celtic
+			culture_group = west_germanic
+		}
+		NOT = { has_global_flag = found_curtana }
+		has_landed_title = k_england
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+		
+		modifier = { # player gets more fun
+			factor = 1.75
+			ai = yes
+		}
+		modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.5
+			prestige = 2500
+		}
+	}
+		
+	immediate = {
+		hidden_tooltip = {
+			set_global_flag = found_curtana
+		}
+	}
+	
+	option = {
+		name = "EVTOPTAhafa.006"
+		prestige = 150
+		add_artifact = curtana
+	}
+}
+
+character_event = { # Drynwyn - supernatural only
+	id = hafa.101
+	desc = "EVTDESChafa.101"
+	picture = GFX_evt_pagan
+	prisoner = no
+	min_age = 16
+	ai = no
+	
+	trigger = { # sword not found yet?
+		NOT = { has_global_flag = found_drynwyn }
+		OR = {
+			culture_group = celtic
+			culture_group = west_germanic
+		}
+		OR = {
+			AND = {
+				trait = kind
+				trait = just
+				NOT = { trait = wroth }
+				NOT = { trait = greedy }
+			}
+			prestige = 5000
+			piety = 2500
+		}
+		OR = { # fantasy?
+			has_game_rule = {
+				name = supernatural_events
+				value = unrestricted
+			}
+			has_game_rule = {
+				name = supernatural_events
+				value = on
+			}
+		}
+		has_focus = focus_hunting
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+		
+	immediate = {
+		hidden_tooltip = {
+			set_global_flag = found_drynwyn
+		}
+	}
+	
+	option = { #What is that sword
+		name = "EVTOPTAhafa.101"
+		character_event = { id = hafa.102 }
+	}
+	option = { #Just passing through the area
+		name = "EVTOPTBhafa.101"
+		break = yes
+	}
+	option = { #Kill him and take what he owns
+		name = "EVTOPTChafa.101"
+		gold = 13
+		add_trait = wroth
+		add_artifact = drynwyn
+	}
+}
+character_event = { 
+	id = hafa.102
+	desc = "EVTDESChafa.102"
+	is_triggered_only = yes
+	picture = GFX_evt_pagan
+	option = { #May I have it
+		name = "EVTOPTAhafa.102"
+		character_event = { id = hafa.103 }
+	}
+	option = { #buy it
+		name = "EVTOPTBhafa.102"
+		add_artifact = drynwyn
+		scaled_wealth = -1
+		}
+	option = { #very cool, we must be off
+		name = "EVTOPTChafa.102"
+		break = yes
+		}
+}
+character_event = { 
+	id = hafa.103
+	desc = "EVTDESChafa.103"
+	is_triggered_only = yes
+	picture = GFX_evt_pagan	
+	option = {
+		name = "EVTOPTAhafa.103"
+		add_artifact = drynwyn
+		character_event = { id = hafa.104 }
+		}
+}
+character_event = {
+	id = hafa.104
+	desc = "EVTDESChafa.104"
+	is_triggered_only = yes
+	picture = GFX_evt_pagan
+	option = {
+		name = "EVTOPTAhafa.104"
+		break = yes
+	}
+}
+
+character_event = { # Magic Wand - supernatural only
+	id = hafa.105
+	desc = "EVTDESChafa.105"
+	picture = GFX_evt_fishing
+	prisoner = no
+	min_age = 16
+	focus = hunting
+	ai = no
+	
+	trigger = {
+		OR = {
+			culture_group = celtic
+			culture_group = west_germanic
+		}
+		OR = { # fantasy?
+			has_game_rule = {
+				name = supernatural_events
+				value = unrestricted
+			}
+			has_game_rule = {
+				name = supernatural_events
+				value = on
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+	}
+			
+	option = { #A memory comes before me
+		name = "EVTOPTAhafa.105"
+		add_artifact = magic_wand
+	}
+}

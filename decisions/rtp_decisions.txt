@@ -1,0 +1,1055 @@
+
+
+#####
+#Decisions
+#
+#Total = 18
+#####
+
+decisions = {
+	### Player
+	
+	#Claim Nobility
+	rtp_claim_nobility_d = {
+		is_high_prio = yes
+		ai = no
+
+		potential = {
+			dynasty = 19930
+			NOT = {
+				trait = bastard
+			}
+		}
+
+		allow = {
+			prestige = 400
+			rtp_is_capable_adult = yes
+			custom_tooltip = {
+				text = rtp_can_read_ct
+				has_character_flag = rtp_can_read #You can now read
+			}
+		}
+
+		effect = {
+			prestige = -400
+			rtp_flush_buildings = yes
+			clr_global_flag = rtp_owns_estate #I own an estate lvl 1
+
+			hidden_tooltip = {
+				any_dynasty_member_even_if_dead = {
+					limit = {
+						dynasty = 19930
+					}
+					dynasty = 19931
+				}
+				dynasty = 19931
+			}
+
+			if = {
+				limit = {
+					has_landed_title = c_landless_t
+				}
+				hidden_tooltip = {
+					set_government_type = rtp_noble_g
+					primary_title = {
+						gender_succ = true_cognatic
+						add_law = {
+							law = rtp_family_election_succ
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#Abandon Titles
+	rtp_abandon_titles_d = {
+		ai = no
+
+		potential = {
+			rtp_is_landless = no
+		}
+
+		allow = {
+			always = yes
+		}
+
+		effect = {
+			prestige = -200
+	
+			hidden_tooltip = {
+				create_character = {
+					age = 20
+					random_traits = yes
+					religion = ROOT
+					culture = ROOT
+					dynasty = random
+				}
+				new_character = {
+					save_event_target_as = rtp_new_homie #The guy taking your stuff
+				}
+
+				clr_character_flag = rtp_confederation #This guy is a confederation
+				clr_character_flag = rtp_theocracy #This guy is a theocracy
+				clr_character_flag = rtp_republic #This guy is a republic
+				clr_character_flag = rtp_holy_order #This guy is a holy order
+				clr_character_flag = rtp_mercenary #This guy is a mercenary
+				imprison = no
+				set_defacto_liege = THIS
+				
+				grant_title_no_opinion = c_landless_t
+
+				add_trait = cannot_marry
+				any_dynasty_member_even_if_dead = {
+					limit = {
+						is_landed = no
+					}
+					add_trait = cannot_marry
+				}
+
+				any_demesne_title = {
+					limit = {
+						NOT = {
+							title = c_landless_t
+						}
+					}
+					grant_title_no_opinion = event_target:rtp_new_homie #The guy taking your stuff
+				}
+	
+				if = {
+					limit = {
+						dynasty = 19930
+					}
+					set_government_type = rtp_lowborn_g
+					primary_title = {
+						gender_succ = true_cognatic
+						add_law = {
+							law = rtp_lowborn_succ
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+				}
+				else = {
+					set_government_type = rtp_noble_g
+					primary_title = {
+						gender_succ = true_cognatic
+						add_law = {
+							law = rtp_family_election_succ
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#Raise Volunteers
+	rtp_raise_volunteers_d = {
+		ai = no
+
+		potential = {
+			has_landed_title = c_landless_t
+			check_variable = {
+				which = rtp_volunteers
+				value > 0
+			}
+		}
+
+		allow = {
+			check_variable = {
+				which = rtp_volunteers
+				value >= 250
+			}
+			check_variable = {
+				which = rtp_volunteers
+				value <= 2000
+			}
+		}
+
+		effect = {
+			rtp_raise_volunteers_landless_se = yes
+			hidden_tooltip = {
+				set_variable = {
+					which = rtp_volunteers
+					value = 0
+				}
+			}
+		}
+	}
+
+	#Raise Zealouts
+	rtp_raise_zealouts_d = {
+		ai = no
+
+		potential = {
+			has_landed_title = c_landless_t
+			independent = no
+			check_variable = {
+				which = rtp_zealouts
+				value > 0
+			}
+		}
+
+		allow = {
+			OR = {
+				NOT = {
+					religion = top_liege
+				}
+				has_secret_religion = yes
+			}
+			check_variable = {
+				which = rtp_zealouts
+				value <= 4
+			}
+		}
+
+		effect = {
+			top_liege = {
+				save_event_target_as = rtp_liege #Your liege
+			}
+			add_trait = heresiarch
+			if = {
+				limit = {
+					check_variable = {
+						which = rtp_zealouts
+						value == 1
+					}
+				}
+				spawn_unit = {
+					province = location
+					home = location
+					owner = ROOT
+					match_character = top_liege
+					match_mult = 0.25
+					cannot_inherit = no
+					disband_on_peace = yes
+					attrition = 0
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = rtp_zealouts
+						value == 2
+					}
+				}
+				spawn_unit = {
+					province = location
+					home = location
+					owner = ROOT
+					match_character = top_liege
+					match_mult = 0.5
+					cannot_inherit = no
+					disband_on_peace = yes
+					attrition = 0
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = rtp_zealouts
+						value == 3
+					}
+				}
+				spawn_unit = {
+					province = location
+					home = location
+					owner = ROOT
+					match_character = top_liege
+					match_mult = 0.75
+					cannot_inherit = no
+					disband_on_peace = yes
+					attrition = 0
+				}
+			}
+			else = {
+				spawn_unit = {
+					province = location
+					home = location
+					owner = ROOT
+					match_character = top_liege
+					match_mult = 1
+					cannot_inherit = no
+					disband_on_peace = yes
+					attrition = 0
+				}
+			}
+
+			set_variable = {
+				which = rtp_zealouts
+				value = 0
+			}
+			set_defacto_liege = THIS
+
+			if = {
+				limit = {
+					is_heresy_of = event_target:rtp_liege #Your liege
+				}
+				set_character_flag = heretic_revolter
+				war = {
+					target = event_target:rtp_liege #Your liege
+					casus_belli = heretic_revolt
+				}
+			}
+			else = {
+				set_character_flag = religious_revolter
+				war = {
+					target = event_target:rtp_liege #Your liege
+					casus_belli = religious_revolt
+				}
+			}
+		}
+	}
+
+	#Raise Patriots
+	rtp_raise_patriots_d = {
+		ai = no
+
+		potential = {
+			has_landed_title = c_landless_t
+			independent = no
+			check_variable = {
+				which = rtp_patriots
+				value > 0
+			}
+		}
+
+		allow = {
+			NOT = {
+				culture = top_liege
+			}
+			check_variable = {
+				which = rtp_patriots
+				value <= 4
+			}
+		}
+
+		effect = {
+			top_liege = {
+				save_event_target_as = rtp_liege #Your liege
+			}
+
+			if = {
+				limit = {
+					check_variable = {
+						which = rtp_patriots
+						value == 1
+					}
+				}
+				spawn_unit = {
+					province = location
+					home = location
+					owner = ROOT
+					match_character = top_liege
+					match_mult = 0.25
+					cannot_inherit = no
+					disband_on_peace = yes
+					attrition = 0
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = rtp_patriots
+						value == 2
+					}
+				}
+				spawn_unit = {
+					province = location
+					home = location
+					owner = ROOT
+					match_character = top_liege
+					match_mult = 0.5
+					cannot_inherit = no
+					disband_on_peace = yes
+					attrition = 0
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = rtp_patriots
+						value == 3
+					}
+				}
+				spawn_unit = {
+					province = location
+					home = location
+					owner = ROOT
+					match_character = top_liege
+					match_mult = 0.75
+					cannot_inherit = no
+					disband_on_peace = yes
+					attrition = 0
+				}
+			}
+			else = {
+				spawn_unit = {
+					province = location
+					home = location
+					owner = ROOT
+					match_character = top_liege
+					match_mult = 1
+					cannot_inherit = no
+					disband_on_peace = yes
+					attrition = 0
+				}
+			}
+
+			set_variable = {
+				which = rtp_patriots
+				value = 0
+			}
+			set_defacto_liege = THIS
+
+			set_character_flag = nationalist_rebel
+			war = {
+				target = event_target:rtp_liege #Your liege
+				casus_belli = rtp_liberation_revolt_c
+			}
+		}
+	}
+
+	#Found Trade Company
+	rtp_found_trade_company_d = {
+		ai = no
+		is_high_prio = yes
+
+		potential = {
+			NOT = {
+				dynasty = 19930
+			}
+			has_landed_title = c_landless_t
+			liege = {
+				is_merchant_republic = yes
+			}
+			rtp_is_mercenary = no
+			rtp_is_holy_order = no
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 400
+		}
+
+		effect = {
+			sound_effect = overtake_trade_company
+			wealth = -400
+			custom_tooltip = {
+				text = "rtp_become_patrician_ct"
+				
+				liege = {
+					save_event_target_as = rtp_new_liege #My new liege
+					random_vassal = {
+						limit = {
+							is_patrician = yes
+						}
+						any_demesne_title = {
+							limit = {
+								holding_type = family_palace
+							}
+							grant_title_no_opinion = ROOT
+						}
+						ROOT = {
+							set_defacto_liege = event_target:rtp_new_liege #My new liege
+						}
+					}
+					if = {
+						limit = {
+							government = merchant_republic_government
+						}
+						ROOT = {
+							set_government_type = merchant_republic_government
+						}
+					}
+					else = {
+						ROOT = {
+							set_government_type = rtp_privateer_g
+						}
+					}
+				}
+
+				rtp_flush_jobs = yes
+				rtp_flush_buildings = yes
+			}
+		}
+	}
+
+	#Found Mercenary Company
+	rtp_found_mercenary_company_d = {
+		ai = no
+		is_high_prio = yes
+
+		potential = {
+			has_landed_title = c_landless_t
+			OR = {
+				trait = adventurer
+				trait = gladiator
+			}
+			NOR = {
+				has_character_flag = rtp_holy_order #This guy is a holy order
+				has_character_flag = rtp_mercenary #This guy is a mercenary
+			}
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 200
+			prestige = 200
+		}
+
+		effect = {
+			sound_effect = create_mercenary
+			wealth = -200
+			prestige = -200
+			custom_tooltip = {
+				text = "rtp_become_mercenary_ct"
+				set_character_flag = rtp_mercenary #This guy is a mercenary
+
+				set_government_type = rtp_landless_mercenary_g
+				primary_title = {
+					gender_succ = true_cognatic
+					add_law = {
+						law = rtp_family_election_succ
+						cooldown = no
+						opinion_effect = no
+					}
+				}
+
+				rtp_flush_buildings = yes
+			}
+		}
+	}
+
+	#Found Holy Order
+	rtp_found_holy_order_d = {
+		ai = no
+		is_high_prio = yes
+
+		potential = {
+			has_landed_title = c_landless_t
+			OR = {
+				rtp_has_holy_warrior_trait_st = yes
+				trait = zealous
+			}
+			NOR = {
+				has_character_flag = rtp_holy_order #This guy is a holy order
+				has_character_flag = rtp_mercenary #This guy is a mercenary
+			}
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 200
+			piety = 200
+		}
+
+		effect = {
+			sound_effect = create_holy_order
+			wealth = -200
+			piety = -200
+			custom_tooltip = {
+				text = "rtp_become_holy_order_ct"
+				set_character_flag = rtp_holy_order #This guy is a holy order
+
+				set_government_type = rtp_landless_order_g
+				primary_title = {
+					gender_succ = true_cognatic
+					add_law = {
+						law = rtp_family_election_succ
+						cooldown = no
+						opinion_effect = no
+					}
+				}
+
+				rtp_flush_buildings = yes
+			}
+		}
+	}
+
+	#Gamble
+	rtp_gamble_d = {
+		ai = no
+
+		potential = {
+			independent = no
+			has_landed_title = c_landless_t
+		}
+
+		allow = {
+			wealth = 60
+			rtp_is_capable_adult = yes
+			custom_tooltip = {
+				text = "rtp_not_gambled_ct"
+
+				NOT = {
+					has_character_modifier = rtp_gambled_em
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				character_event = {
+					id = RTPlandless.7 #Gamble
+				}
+			}
+		}
+	}
+
+	#Arena
+	rtp_arena_d = {
+		ai = no
+
+		potential = {
+			independent = no
+			has_landed_title = c_landless_t
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			custom_tooltip = {
+				text = "rtp_not_fought_in_arena_ct"
+
+				NOT = {
+					has_character_modifier = rtp_arena_timer_em
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				add_character_modifier = {
+					modifier = rtp_arena_timer_em
+					years = 5
+					hidden = yes
+				}
+				character_event = {
+					id = RTPlandless.22 #Arena
+				}
+			}
+		}
+	}
+
+	#Quit Job
+	rtp_quit_job_d = {
+		ai = no
+
+		potential = {
+			rtp_has_job_st = yes
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				rtp_flush_jobs = yes
+			}
+		}
+	}
+
+	#Find Spouse
+	rtp_find_spouse_d = {
+		ai = no
+
+		potential = {
+			is_married = no
+			NOT = {
+				has_character_modifier = rtp_spouse_timer_em
+			}
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+		}
+
+		effect = {
+			hidden_tooltip = {
+				add_character_modifier = {
+					modifier = rtp_spouse_timer_em
+					years = 3
+				}
+				character_event = {
+					id = RTPlandless.24 #Random Spouse Event
+				}
+			}
+		}
+	}
+
+	#Visit Doctor
+	rtp_visit_doctor_d = {
+		ai = no
+		is_high_prio = yes
+
+		potential = {
+			has_landed_title = c_landless_t
+			NOR = {
+				dynasty = 19930
+				has_character_modifier = symptom_treatment_1
+				has_character_modifier = symptom_treatment_2
+				has_character_modifier = symptom_treatment_3
+				has_character_modifier = symptom_treatment_4
+			}
+			is_ill = yes
+			is_adult = yes
+		}
+
+		allow = {
+			wealth = 1
+		}
+
+		effect = {
+			wealth = -1
+
+			hidden_tooltip = {
+				if = {
+					limit = {
+						is_ill = yes
+					}
+					random_list = {
+						25 = {
+							add_character_modifier = {
+								modifier = symptom_treatment_1
+								years = 1
+							}
+						}
+						25 = {
+							add_character_modifier = {
+								modifier = symptom_treatment_2
+								years = 1
+							}
+						}
+						25 = {
+							add_character_modifier = {
+								modifier = symptom_treatment_3
+								years = 1
+							}
+						}
+						25 = {
+							add_character_modifier = {
+								modifier = symptom_treatment_4
+								years = 1
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	### AI + Player
+
+	#Pray
+	rtp_pray_d = {
+		ai_check_interval = 12
+
+		potential = {
+			NOR = {
+				has_character_modifier = rtp_diplomacy_prayer_em
+				has_character_modifier = rtp_martial_prayer_em
+				has_character_modifier = rtp_stewardship_prayer_em
+				has_character_modifier = rtp_intrigue_prayer_em
+				has_character_modifier = rtp_learning_prayer_em
+				has_character_modifier = rtp_wealth_prayer_em
+				has_character_modifier = rtp_piety_prayer_em
+				has_character_modifier = rtp_prestige_prayer_em
+				has_character_modifier = rtp_fertility_prayer_em
+				has_character_modifier = rtp_health_prayer_em
+				has_character_modifier = rtp_null_prayer_em
+				trait = cynical
+			}
+		}
+
+		allow = {
+			piety = 10
+		}
+
+		effect = {
+			piety = -10
+
+			hidden_tooltip = {
+				random_list = {
+					5 = {
+						add_character_modifier = {
+							modifier = rtp_diplomacy_prayer_em
+							years = 5
+						}
+					}
+					5 = {
+						add_character_modifier = {
+							modifier = rtp_martial_prayer_em
+							years = 5
+						}
+					}
+					5 = {
+						add_character_modifier = {
+							modifier = rtp_stewardship_prayer_em
+							years = 5
+						}
+					}
+					5 = {
+						add_character_modifier = {
+							modifier = rtp_intrigue_prayer_em
+							years = 5
+						}
+					}
+					5 = {
+						add_character_modifier = {
+							modifier = rtp_learning_prayer_em
+							years = 5
+						}
+					}
+					5 = {
+						add_character_modifier = {
+							modifier = rtp_wealth_prayer_em
+							years = 5
+						}
+					}
+					5 = {
+						add_character_modifier = {
+							modifier = rtp_piety_prayer_em
+							years = 5
+						}
+					}
+					5 = {
+						add_character_modifier = {
+							modifier = rtp_prestige_prayer_em
+							years = 5
+						}
+					}
+					5 = {
+						add_character_modifier = {
+							modifier = rtp_fertility_prayer_em
+							years = 5
+						}
+					}
+					5 = {
+						add_character_modifier = {
+							modifier = rtp_health_prayer_em
+							years = 5
+						}
+					}
+					50 = {
+						add_character_modifier = {
+							modifier = rtp_null_prayer_em
+							years = 5
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				num_of_holy_sites = 3
+				is_reformed_religion = no
+			}
+		}
+	}
+
+	#Raise Troops
+	rtp_raise_troops_d = {
+		potential = {
+			OR = {
+				rtp_is_mercenary = yes
+				rtp_is_holy_order = yes
+			}
+			check_variable = {
+				which = rtp_troops
+				value > 0
+			}
+		}
+
+		allow = {
+			check_variable = {
+				which = rtp_troops
+				value >= 250
+			}
+			check_variable = {
+				which = rtp_troops
+				value <= 2000
+			}
+		}
+
+		effect = {
+			rtp_raise_troops_mercenary_self_se = yes
+			hidden_tooltip = {
+				set_variable = {
+					which = rtp_troops
+					value = 0
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				war = no
+			}
+		}
+	}
+
+	#Enable Piracy
+	rtp_enable_piracy_d = {
+		potential = {
+			government = rtp_privateer_g
+			NOT = {
+				has_character_modifier = rtp_piracy_timer_em
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			any_demesne_province = {
+				limit = {
+					port = yes
+				}
+				any_neighbor_province = {
+					limit = {
+						port = yes
+						NOT = {
+							has_province_modifier = marauding_pirates
+						}
+						holder_scope = {
+							NOR = {
+								character = ROOT
+								has_non_aggression_pact_with = ROOT
+								is_allied_with = ROOT
+							}
+						}
+					}
+					holder_scope = {
+						opinion = {
+							who = ROOT
+							modifier = opinion_looted
+							years = 5
+						}
+					}
+					add_province_modifier = {
+						modifier = marauding_pirates
+						years = 5
+					}
+					ROOT = {
+						random_list = {
+							20 = {
+								wealth = 25
+							}
+							20 = {
+								wealth = 20
+							}
+							20 = {
+								wealth = 15
+							}
+							20 = {
+								wealth = 10
+							}
+							20 = {
+								wealth = 5
+							}
+						}
+					}
+				}
+			}
+
+			hidden_tooltip = {
+				add_character_modifier = {
+					modifier = rtp_piracy_timer_em
+					years = 10
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Seek Members
+	rtp_seek_members_d = {
+		is_high_prio = yes
+
+		potential = {
+			government = rtp_confederation_g
+			NOT = {
+				has_character_flag = rtp_seeked_members
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_neighbor_independent_ruler = {
+					limit = {
+						is_nomadic = no
+						OR = {
+							lower_real_tier_than = ROOT
+							real_tier = ROOT
+						}
+						NOT = {
+							has_character_flag = rtp_confederation_membership_offer
+						}
+					}
+					set_character_flag = rtp_confederation_membership_offer
+					letter_event = {
+						id = RTPglobal.2 #Confederation Invite
+					}
+				}
+				set_character_flag = rtp_seeked_members
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Visit Marketplace
+	rtp_visit_marketplace_d = {
+		ai_check_interval = 12
+		only_rulers = yes
+
+		potential = {
+			NOT = {
+				has_character_modifier = rtp_visited_marketplace_timer_em
+			}
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+		}
+
+		effect = {
+			hidden_tooltip = {
+				character_event = {
+					id = RTPglobal.4 #Visit Marketplace
+				}
+				add_character_modifier = {
+					modifier = rtp_visited_marketplace_timer_em
+					years = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	### AI
+}

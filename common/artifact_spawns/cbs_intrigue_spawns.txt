@@ -1,0 +1,332 @@
+# Caesar's Books by CaesarTheRoman
+
+cbs_taktik = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = { 
+				region = world_asia_minor
+			}	
+		}
+	}
+	
+	artifacts = {
+		cbs_taktik = {
+			value = 1
+		}
+	}
+}
+
+cbs_suda = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = { 
+				region = world_asia_minor
+			}	
+		}
+	}
+	
+	artifacts = {
+		cbs_suda = {
+			value = 1
+		}
+	}
+}
+
+cbs_ratna = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = { 
+				region = world_india
+			}	
+		}
+	}
+	
+	artifacts = {
+		cbs_ratna = {
+			value = 1
+		}
+	}
+}
+
+cbs_kadam = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = { 
+				region = world_india
+			}	
+		}
+	}
+	
+	artifacts = {
+		cbs_kadam = {
+			value = 1
+		}
+	}
+}
+
+cbs_emmae = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = { 
+				region = world_europe_west
+			}
+
+		}
+	}
+	
+	artifacts = {
+		cbs_emmae = {
+			value = 1
+		}
+	}
+}
+
+cbs_apok = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = { 
+				region = world_asia_minor
+			}	
+		}
+	}
+	
+	artifacts = {
+		cbs_apok = {
+			value = 1
+		}
+	}
+}
+
+cbs_huon = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = { 
+				region = world_europe_west
+			}
+
+		}
+	}
+	
+	artifacts = {
+		cbs_huon = {
+			value = 1
+		}
+	}
+}
+
+cbs_seven = {
+	max_amount = 6
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = { 
+				OR = {
+					region = world_persia
+					region = world_asia_minor
+					region = world_middle_east
+					region = world_africa_north
+					region = world_europe_south
+					region = world_europe_west
+				}
+			}	
+		}
+	}
+	
+	artifacts = {
+		cbs_seven = {
+			value = 1
+		}
+	}
+}
+
+cbs_reyna = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = { 
+				region = world_europe_west
+			}
+
+		}
+	}
+	
+	artifacts = {
+		cbs_reyna = {
+			value = 1
+		}
+	}
+}
+
+cbs_njals = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = { 
+				region = world_europe_north
+			}
+
+		}
+	}
+	
+	artifacts = {
+		cbs_njals = {
+			value = 1
+		}
+	}
+}
+
+cbs_zhouli = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = { 
+				OR = {
+					region = custom_eastern_edge_of_map
+					region = custom_eastern_access
+					region = custom_chinese_invasion_target_region
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_zhouli = {
+			value = 1
+		}
+	}
+}
+
+cbs_xunzi = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = { 
+				OR = {
+					region = custom_chinese_invasion_target_region
+					region = custom_eastern_access
+					region = custom_eastern_edge_of_map
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_xunzi = {
+			value = 1
+		}
+	}
+}

@@ -1,0 +1,90 @@
+#####
+#Game Rules
+#
+#Total = 5
+#####
+
+rtp_start_r = {
+	name = "rtp_start_r"
+	group = rtp_start_r
+	option = {
+		name = default
+		text = "rtp_start_default"
+		desc = "rtp_start_default_desc"
+	}
+	option = {
+		name = noble
+		text = "rtp_start_noble"
+		desc = "rtp_start_noble_desc"
+	}
+	option = {
+		name = lowborn
+		text = "rtp_start_lowborn"
+		desc = "rtp_start_lowborn_desc"
+	}
+	option = {
+		name = bastard
+		text = "rtp_start_bastard"
+		desc = "rtp_start_bastard_desc"
+	}
+}
+
+rtp_chalcedonian_r = {
+	name = "rtp_chalcedonian_r"
+	group = rtp_chalcedonian_r
+	option = {
+		name = split
+		text = "rtp_chalcedonian_split"
+		desc = "rtp_chalcedonian_split_desc"
+	}
+	option = {
+		name = united
+		text = "rtp_chalcedonian_united"
+		desc = "rtp_chalcedonian_united_desc"
+	}
+}
+
+rtp_beasts_r = {
+	name = "rtp_beasts_r"
+	group = rtp_beasts_r
+	option = {
+		name = no
+		text = "rtp_beasts_no"
+		desc = "rtp_beasts_no_desc"
+	}
+	option = {
+		name = yes
+		text = "rtp_beasts_yes"
+		desc = "rtp_beasts_yes_desc"
+	}
+}
+
+rtp_ambient_sounds_r = {
+	name = "rtp_ambient_sounds_r"
+	group = rtp_ambient_sounds_r
+	option = {
+		name = no
+		text = "rtp_ambient_sounds_no"
+		desc = "rtp_ambient_sounds_no_desc"
+	}
+	option = {
+		name = yes
+		text = "rtp_ambient_sounds_yes"
+		desc = "rtp_ambient_sounds_yes_desc"
+	}
+}
+
+rtp_tutorial_r = {
+	name = "rtp_tutorial_r"
+	group = rtp_tutorial_r
+	option = {
+		name = yes
+		text = "rtp_tutorial_yes"
+		desc = "rtp_tutorial_yes_desc"
+	}
+	option = {
+		name = no
+		text = "rtp_tutorial_no"
+		desc = "rtp_tutorial_no_desc"
+	}
+}

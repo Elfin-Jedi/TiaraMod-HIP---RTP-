@@ -1,0 +1,32 @@
+EB_ai_create_bloodlines_name;Enable the AI to create Extra Bloodlines;;;;;;;;;;;;x
+
+
+EB_game_rules_name;Extra Bloodlines Options;;;;;;;;;;;;x
+
+EB_ai_create_bloodlines_yes_name;Enable;;;;;;;;;;;;x
+EB_ai_create_bloodlines_yes_name_desc;AI can create Extra Bloodlines.;;;;;;;;;;;;x
+
+EB_ai_create_bloodlines_no_name;Disable;;;;;;;;;;;;x
+EB_ai_create_bloodlines_no_name_desc;AI can't create Extra Bloodlines.;;;;;;;;;;;;x
+
+
+Allow;Allow;;;;;;;;;;;;x
+Dissallow;Dissallow;;;;;;;;;;;;x
+
+
+EB_gender_specific_inheritance_name;Gender Specific Inheritance;;;;;;;;;;;;x
+
+EB_gender_specific_inheritance_yes_name;Enable;;;;;;;;;;;;x
+EB_gender_specific_inheritance_yes_name_desc;Inheritance now depends on bloodline founder : matrilineal inheritance for female founders and patrilineal for male founders.;;;;;;;;;;;;x
+
+EB_gender_specific_inheritance_no_name;Disable;;;;;;;;;;;;x
+EB_gender_specific_inheritance_no_name_desc;Bloodlines are inhereted by every offsping ( conditions apply for bastards).;;;;;;;;;;;;x
+
+
+EB_harder_bloodline_creation_name;Set the difficulty for creating attribute-related bloodlines;;;;;;;;;;;;x
+
+EB_harder_bloodline_creation_yes_name;Hard;;;;;;;;;;;;x
+EB_harder_bloodline_creation_yes_name_desc;This setting is recommended for players who want bloodlines to be rarer, and would like more of a challenge.;;;;;;;;;;;;x
+
+EB_harder_bloodline_creation_no_name;Easy;;;;;;;;;;;;x
+EB_harder_bloodline_creation_no_name_desc;This setting recommended for players who like having an easier time creating bloodlines (default setting).;;;;;;;;;;;;x

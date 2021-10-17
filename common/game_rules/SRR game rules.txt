@@ -1,0 +1,19 @@
+queer_characters = {
+	name = "queer_characters"
+	group = "SRR_rules"
+	option = {
+		name = default
+		text = "default_queer"
+		desc = "default_queer_desc"
+	}
+	option = {
+		name = more_queer
+		text = "more_queer"
+		desc = "more_queer_desc"
+	}
+	option = {
+		name = ultra_queer
+		text = "ultra_queer"
+		desc = "ultra_queer_desc"
+	}
+}

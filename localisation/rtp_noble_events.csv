@@ -1,0 +1,12 @@
+RTPnoble_1_title;Land Opportunity;;;;;;x
+RTPnoble_1_desc;Long have I awaited for someone to notice my great deeds and to entrust me with a landed title. [From.GetTitledName] has blessed me with a letter extending an offer related to such. [From.GetSheHeCap] offers me the fief of [rtp_new_title.GetName] in exchange for [From.Culture.GetName] cultural integration and religion conversion to the [From.Religion.GetName] faith. My undivided loyalty to [From.GetHerHim] is also expected.;;;;;;x
+RTPnoble.1_1;Accept the offer.;;;;;;x
+RTPnoble.1_2;Accept the offer but keep practicing your faith in secrect.;;;;;;x
+RTPnoble.1_3;Decline the offer.;;;;;;x
+
+RTPnoble_3_title;A Place to Call Home;;;;;;x
+RTPnoble_3_desc;A new holding can be built in [rtp_selected_province.GetName]. I can choose to build a castle, city, or temple.;;;;;;x
+RTPnoble.3_1;A castle.;;;;;;x
+RTPnoble.3_2;A city.;;;;;;x
+RTPnoble.3_3;A temple.;;;;;;x
+RTPnoble.3_4;Forget it.;;;;;;x

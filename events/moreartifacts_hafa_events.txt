@@ -1,0 +1,176 @@
+##OTHER
+
+namespace = hafa
+
+character_event = { # Eckesachs, giant fight
+	id = hafa.003
+	desc = "EVTDESChafa.003"
+	prisoner = no
+	picture = GFX_evt_pagan1
+	min_age = 16
+	
+	trigger = { # sword not found yet?
+		religion_openly_norse_or_reformed_trigger = yes
+		OR = { # fantasy?
+			has_game_rule = {
+				name = supernatural_events
+				value = unrestricted
+			}
+			has_game_rule = {
+				name = supernatural_events
+				value = on
+			}
+		}
+		num_of_king_titles = 1
+		NOT = { has_global_flag = found_eckesachs }
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		
+		modifier = { # player gets more fun
+			factor = 1.25
+			ai = yes
+		}
+		modifier = {
+			factor = 0.8
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.50
+			prestige = 2000
+		}
+		modifier = {
+			factor = 0.8
+			trait = brave
+		}
+	}
+	
+	option = { # fight the giant
+		name = "EVTOPTBhafa.003"
+		prestige = 200
+		add_trait = brave
+		random_list = {
+				50 = {
+				}
+				30 = {
+					add_trait = wounded
+					opinion = {
+						modifier = opinion_unhappy
+						who = ROOT
+						years = 8
+					}
+				}
+				5 = {
+					death = {
+						death_reason = death_accident
+					}
+				}
+			}
+		add_artifact = eckesachs
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+		hidden_tooltip = {
+			set_global_flag = found_eckesachs
+		}
+	}
+	option = { # run away
+		name = "EVTOPTAhafa.003"
+		prestige = -10
+		remove_trait = brave
+	}
+}
+
+character_event = { # Szczerbiec
+	id = hafa.007
+	desc = "EVTDESChafa.007"
+	prisoner = no
+	min_age = 16
+	only_playable = yes
+	only_independent = yes
+	capable_only = yes
+	
+	trigger = { # sword not found yet?
+		NOT = { has_global_flag = found_szczerbiec }
+		has_landed_title = k_poland
+		religion_group = christian
+		culture_group = west_slavic
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+		
+		modifier = { # player gets more fun
+			factor = 1.75
+			ai = yes
+		}
+		modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.5
+			prestige = 2500
+		}
+	}
+		
+	immediate = {
+		hidden_tooltip = {
+			set_global_flag = found_szczerbiec
+		}
+	}
+	
+	option = {
+		name = "EVTOPTAhafa.007"
+		prestige = 150
+		add_artifact = szczerbiec
+	}
+}
+
+character_event = { # Holy Crown Hungary
+	id = hafa.008
+	desc = "EVTDESChafa.008"
+	prisoner = no
+	min_age = 16
+	only_playable = yes
+	only_independent = yes
+	capable_only = yes
+	
+	trigger = { # crown made yet?
+		NOT = { has_global_flag = found_holy_crown_of_hungary }
+		has_landed_title = k_hungary
+		religion_group = christian
+		culture_group = magyar
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+		
+		modifier = { # player gets more fun
+			factor = 1.75
+			ai = yes
+		}
+		modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.5hah
+			prestige = 2500
+		}
+	}
+		
+	immediate = {
+		hidden_tooltip = {
+			set_global_flag = found_holy_crown_of_hungary
+		}
+	}
+	
+	option = {
+		name = "EVTOPTAhafa.008"
+		prestige = 150
+		add_artifact = holy_crown_of_hungary
+	}
+}
+

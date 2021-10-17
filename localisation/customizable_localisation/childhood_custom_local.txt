@@ -1,0 +1,130 @@
+defined_text = {
+	name = GetSocietyCurrency #use [Root.Society.GetCurrency] or [From.Society.GetCurrency] to refere to any society currency in your localization
+
+	text = {
+		localisation_key = military_knights_currency #the currency name seen in the society and localization file
+		trigger = { society_member_of = military_knights }
+	}
+}
+
+defined_text = {
+	name = GetKnightlyRankUpTooltip #if you change the rank up requirement, these are the tooltips you need to change, this is the "common" part
+
+	text = {
+		trigger = {  society_rank == 1 }
+		localisation_key = GetKnightlyRankUpTooltip1 #these are the individual requirements
+	}
+	text = {
+		trigger = { society_rank == 2 }
+		localisation_key = GetKnightlyRankUpTooltip2
+	}
+}
+
+defined_text = { #the various ranks names, use [From.GetSocietyRank] or [Root.GetSocietyRank]
+	name = GetSocietyRank
+
+	text = {
+		localisation_key = military_knights_rank_1 #all of these need to be the sames as the code rank names in localization
+		trigger = { society_rank = { society = military_knights rank == 1 } }
+	}
+	text = {
+		localisation_key = military_knights_rank_2
+		trigger = { society_rank = { society = military_knights rank == 2 } }
+	}
+	text = {
+		localisation_key = military_knights_rank_3
+		trigger = { society_rank = { society = military_knights rank == 3 } }
+	}
+	text = {
+		localisation_key = military_knights_rank_4
+		trigger = { society_rank = { society = military_knights rank == 4 } }
+	}
+}
+
+defined_text = {
+	name = GetSocietyName 
+	text = {
+		localisation_key = military_knights 
+		trigger = { society_member_of = military_knights }
+	}
+	text = {
+		localisation_key = military_knights1
+		trigger = { society_member_of = military_knights1 }
+	}
+	text = {
+		localisation_key = military_knights2
+		trigger = { society_member_of = military_knights2 }
+	}
+}
+
+defined_text = {
+	name = GetSin
+	text = {
+		localisation_key = lust
+		trigger = { has_character_flag = forgive_lust }
+	}
+	text = {
+		localisation_key = greed
+		trigger = { has_character_flag = forgive_greed }
+	}
+	text = {
+		localisation_key = wrath
+		trigger = { has_character_flag = forgive_wrath }
+	}
+	text = {
+		localisation_key = sloth
+		trigger = { has_character_flag = forgive_sloth }
+	}
+	text = {
+		localisation_key = posession
+		trigger = { has_character_flag = forgive_posession }
+	}
+	text = {
+		localisation_key = envy
+		trigger = { has_character_flag = forgive_envy }
+	}
+	text = {
+		localisation_key = pride
+		trigger = { has_character_flag = forgive_pride }
+	}
+	text = {
+		localisation_key = love_for_torture
+		trigger = { has_character_flag = forgive_impaler }
+	}
+	text = {
+		localisation_key = cruelty
+		trigger = { has_character_flag = forgive_cruelty }
+	}
+	text = {
+		localisation_key = monstrous_appetite
+		trigger = { has_character_flag = forgive_cannibal }
+	}
+}
+
+defined_text = {
+	name = GetBeast
+	text = {
+		localisation_key = boar
+		trigger = { has_character_flag = boar_hunt }
+	}
+	text = {
+		localisation_key = bear
+		trigger = { has_character_flag = bear_hunt }
+	}
+	text = {
+		localisation_key = lion
+		trigger = { has_character_flag = lion_hunt }
+	}
+	text = {
+		localisation_key = wolf_hunt
+		trigger = { has_character_flag = wolf_hunt }
+	}
+	text = {
+		localisation_key = bull
+		trigger = { has_character_flag = bull_hunt }
+	}
+	text = {
+		localisation_key = rabbit
+		trigger = { has_character_flag = rabbit_hunt }
+	}
+}

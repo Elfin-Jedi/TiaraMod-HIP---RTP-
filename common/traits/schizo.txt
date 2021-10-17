@@ -1,0 +1,27 @@
+schizo = {
+
+      ruler_designer_cost = -15
+
+potential = {
+     age = 16
+}
+
+
+inherit_chance = 10
+both_parent_has_trait_inherit_chance = 40
+random = yes
+birth = 25
+  
+  diplomacy = -3
+  intrigue = -2
+  learning = -2
+  
+  same_opinion = 20
+  vassal_opinion = -10
+  general_opinion = -25
+  church_opinion = -30
+  sex_appeal_opinion = -10
+  ai_rationality = -10
+  ai_honor = -10
+
+}

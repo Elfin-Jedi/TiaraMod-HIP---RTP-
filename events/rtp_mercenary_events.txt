@@ -1,0 +1,327 @@
+#####
+#Mercenary Events
+#
+#Total = 4
+#####
+
+namespace = RTPmercenary
+
+#Main Events
+#####
+
+#1
+
+#Mercenary Contract
+character_event = {
+	id = RTPmercenary.2
+	title = "RTPmercenary_2_title"
+	desc = "RTPmercenary_2_desc"
+	picture = GFX_evt_vikings_arriving_oldgods
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = {
+			rtp_assign_troops_hiree_se = yes
+		}
+	}
+
+	option = {
+		name = "RTPmercenary.2_1"
+
+		prestige = 5
+		wealth = global_rtp_mercenary_pay
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			FROM = {
+				multiply_variable = {
+					which = global_rtp_mercenary_pay
+					value = -1
+				}
+				wealth = global_rtp_mercenary_pay
+				if = {
+					limit = {
+						is_primary_war_attacker = yes
+					}
+					ROOT = {
+						join_attacker_wars = FROM
+					}
+				}
+				else = {
+					ROOT = {
+						join_defender_wars = FROM
+					}
+				}
+				rtp_raise_troops_hiree_se = yes
+			}
+			subtract_variable = {
+				which = rtp_troops
+				which = global_rtp_mercenary_men
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "RTPmercenary.2_2"
+
+		prestige = -10
+	}
+
+	after = {
+		hidden_tooltip = {
+			FROM = {
+				clr_character_flag = rtp_payx8
+				clr_character_flag = rtp_payx7
+				clr_character_flag = rtp_payx6
+				clr_character_flag = rtp_payx5
+				clr_character_flag = rtp_payx4
+				clr_character_flag = rtp_payx3
+				clr_character_flag = rtp_payx2
+				clr_character_flag = rtp_payx1
+				set_variable = {
+					which = global_rtp_mercenary_pay
+					value = 0
+				}
+				set_variable = {
+					which = global_rtp_mercenary_men
+					value = 0
+				}
+			}
+		}
+	}
+}
+
+#Holy Order Contract
+character_event = {
+	id = RTPmercenary.3
+	title = "RTPmercenary_3_title"
+	desc = "RTPmercenary_3_desc"
+	picture = GFX_evt_crusaders
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = {
+			rtp_assign_troops_hiree_se = yes
+		}
+	}
+
+	option = {
+		name = "RTPmercenary.3_1"
+
+		prestige = 5
+		piety = global_rtp_mercenary_pay
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			FROM = {
+				multiply_variable = {
+					which = global_rtp_mercenary_pay
+					value = -1
+				}
+				piety = global_rtp_mercenary_pay
+				if = {
+					limit = {
+						is_primary_war_attacker = yes
+					}
+					ROOT = {
+						join_attacker_wars = FROM
+					}
+				}
+				else = {
+					ROOT = {
+						join_defender_wars = FROM
+					}
+				}
+				rtp_raise_troops_hiree_se = yes
+			}
+			subtract_variable = {
+				which = rtp_troops
+				which = global_rtp_mercenary_men
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "RTPmercenary.3_2"
+
+		piety = -10
+	}
+
+	after = {
+		hidden_tooltip = {
+			FROM = {
+				clr_character_flag = rtp_payx8
+				clr_character_flag = rtp_payx7
+				clr_character_flag = rtp_payx6
+				clr_character_flag = rtp_payx5
+				clr_character_flag = rtp_payx4
+				clr_character_flag = rtp_payx3
+				clr_character_flag = rtp_payx2
+				clr_character_flag = rtp_payx1
+				set_variable = {
+					which = global_rtp_mercenary_pay
+					value = 0
+				}
+				set_variable = {
+					which = global_rtp_mercenary_men
+					value = 0
+				}
+			}
+		}
+	}
+}
+
+#Ping Events
+#####
+
+#100
+
+#101
+
+#102
+
+#Ping for Hiring Contract
+character_event = {
+	id = RTPmercenary.103
+	is_triggered_only = yes
+	hide_window = yes
+	ai = yes
+	only_playable = yes
+	war = yes
+	
+	trigger = {
+		any_player = {
+			war = no
+			rtp_is_capable_adult = yes
+			NOT = {
+				has_character_flag = rtp_already_hired
+			}
+			liege = {
+				OR = {
+					character = ROOT
+					is_within_diplo_range = ROOT
+				}
+			}
+			OR = {
+				AND = {
+					ROOT = {
+						wealth = 50
+					}
+					rtp_is_mercenary = yes
+				}
+				AND = {
+					ROOT = {
+						piety = 50
+						any_current_enemy = {
+							NOT = {
+								religion = ROOT
+							}
+						}
+					}
+					religion = ROOT
+					rtp_is_holy_order = yes
+				}
+			}
+			check_variable = {
+				which = rtp_troops
+				value >= 250
+			}
+		}
+	}
+
+	immediate = {
+		any_player = {
+			if = {
+				limit = {
+					rtp_is_mercenary = yes
+				}
+				character_event = {
+					id = RTPmercenary.2 #Mercenary Contract
+				}
+			}
+			else = {
+				character_event = {
+					id = RTPmercenary.3 #Holy Order Contract
+				}
+			}
+		}
+	}
+}
+
+#Ping for Automated Hiring
+character_event = {
+	id = RTPmercenary.104
+	is_triggered_only = yes
+	hide_window = yes
+	only_playable = yes
+	
+	trigger = {
+		OR = {
+			rtp_is_mercenary = yes
+			rtp_is_holy_order = yes
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				rtp_is_landless = yes
+				check_variable = {
+					which = rtp_troops
+					value <= 500
+				}
+			}
+			rtp_give_troops_se = yes
+			character_event = {
+				id = RTPnotification.2 #Gained New Troops
+			}
+		}
+		else_if = {
+			limit = {
+				rtp_is_baron = yes
+				check_variable = {
+					which = rtp_troops
+					value <= 1000
+				}
+			}
+			rtp_give_troops_se = yes
+			character_event = {
+				id = RTPnotification.2 #Gained New Troops
+			}
+		}
+		else_if = {
+			limit = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				tier = COUNT
+				check_variable = {
+					which = rtp_troops
+					value <= 1500
+				}
+			}
+			rtp_give_troops_se = yes
+			character_event = {
+				id = RTPnotification.2 #Gained New Troops
+			}
+		}
+		else_if = {
+			limit = {
+				tier = DUKE
+				check_variable = {
+					which = rtp_troops
+					value <= 2000
+				}
+			}
+			rtp_give_troops_se = yes
+			character_event = {
+				id = RTPnotification.2 #Gained New Troops
+			}
+		}
+	}
+}

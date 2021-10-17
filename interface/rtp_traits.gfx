@@ -1,0 +1,244 @@
+spriteTypes = {
+  #Maharathi
+  spriteType = {
+    name = "GFX_trait_rtp_maharathi_tr"
+    texturefile = "gfx/traits/trait_maharathi.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Bloodied
+  spriteType = {
+    name = "GFX_trait_aztec_leader"
+    texturefile = "gfx/traits/trait_leader_aztec.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Knight
+  spriteType = {
+    name = "GFX_trait_christian_leader"
+    texturefile = "gfx/traits/trait_leader_christian.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Warden
+  spriteType = {
+    name = "GFX_trait_jewish_leader"
+    texturefile = "gfx/traits/trait_leader_jewish.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Mamluke
+  spriteType = {
+    name = "GFX_trait_muslim_leader"
+    texturefile = "gfx/traits/trait_leader_muslim.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Immortal
+  spriteType = {
+    name = "GFX_trait_zoroastrian_leader"
+    texturefile = "gfx/traits/trait_leader_zoroastrian.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Equilizer
+  spriteType = {
+    name = "GFX_trait_eastern_leader"
+    texturefile = "gfx/traits/trait_leader_india.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Squire
+  spriteType = {
+    name = "GFX_trait_rtp_squire_tr"
+    texturefile = "gfx/traits/trait_squire.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Martial Lady
+  spriteType = {
+    name = "GFX_trait_rtp_martial_lady_tr"
+    texturefile = "gfx/traits/trait_martial_lady.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Admiral
+  spriteType = {
+    name = "GFX_trait_rtp_admiral_tr"
+    texturefile = "gfx/traits/trait_admiral.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Chef
+  spriteType = {
+    name = "GFX_trait_rtp_chef_tr"
+    texturefile = "gfx/traits/trait_chef.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Naval Expert
+  spriteType = {
+    name = "GFX_trait_rtp_naval_expert_tr"
+    texturefile = "gfx/traits/trait_leader_ship.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Sanguinare Vampiris
+  spriteType = {
+    name = "GFX_trait_rtp_sanguinare_vampiris_tr"
+    texturefile = "gfx/traits/trait_sanguinare_vampiris.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Feral Vampire
+  spriteType = {
+    name = "GFX_trait_rtp_feral_vampire_tr"
+    texturefile = "gfx/traits/trait_feral_vampire.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Vampire
+  spriteType = {
+    name = "GFX_trait_rtp_vampire_tr"
+    texturefile = "gfx/traits/trait_vampire.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Sanies Lupinus
+  spriteType = {
+    name = "GFX_trait_rtp_sanies_lupinus_tr"
+    texturefile = "gfx/traits/trait_sanies_lupinus.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Feral Werewolf
+  spriteType = {
+    name = "GFX_trait_rtp_feral_werewolf_tr"
+    texturefile = "gfx/traits/trait_feral_werewolf.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Werewolf
+  spriteType = {
+    name = "GFX_trait_rtp_werewolf_tr"
+    texturefile = "gfx/traits/trait_werewolf.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Corruption
+  spriteType = {
+    name = "GFX_trait_rtp_corruption_tr"
+    texturefile = "gfx/traits/trait_corruption.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Cursed
+  spriteType = {
+    name = "GFX_trait_rtp_cursed_tr"
+    texturefile = "gfx/traits/trait_cursed.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Gifted
+  spriteType = {
+    name = "GFX_trait_rtp_gifted_tr"
+    texturefile = "gfx/traits/trait_gifted.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Mana Poisoning
+  spriteType = {
+    name = "GFX_trait_rtp_mana_poisoning_tr"
+    texturefile = "gfx/traits/trait_mana_poisoning.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Mage
+  spriteType = {
+    name = "GFX_trait_rtp_mage_tr"
+    texturefile = "gfx/traits/trait_mage.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Sage
+  spriteType = {
+    name = "GFX_trait_rtp_sage_tr"
+    texturefile = "gfx/traits/trait_sage.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Symphony
+  spriteType = {
+    name = "GFX_trait_rtp_symphony_tr"
+    texturefile = "gfx/traits/trait_symphony.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Shapeshifter
+  spriteType = {
+    name = "GFX_trait_rtp_shapeshifter_tr"
+    texturefile = "gfx/traits/trait_shapeshifter.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+
+  #Druid
+  spriteType = {
+    name = "GFX_trait_rtp_druid_tr"
+    texturefile = "gfx/traits/trait_druid.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+  }
+}

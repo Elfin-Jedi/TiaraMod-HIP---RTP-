@@ -1,0 +1,838 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_society_satanist_male_clothing_behind"
+		textureFile = "gfx/characters/societies/mom_satanist_male_clothing_behind.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_society_satanist_male_clothing_front"
+		textureFile = "gfx/characters/societies/mom_satanist_male_clothing_front.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_society_satanist_male_headgear_mid"
+		textureFile = "gfx/characters/societies/mom_satanist_male_headgear_mid.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_society_satanist_male_headgear_front"
+		textureFile = "gfx/characters/societies/mom_satanist_male_headgear_front.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_society_satanist_male_headgear_behind"
+		textureFile = "gfx/characters/societies/mom_satanist_male_headgear_behind.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_society_satanist_female_clothing_behind"
+		textureFile = "gfx/characters/societies/mom_satanist_female_clothing_behind.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_society_satanist_female_clothing_front"
+		textureFile = "gfx/characters/societies/mom_satanist_female_clothing_front.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_society_satanist_female_headgear_front"
+		textureFile = "gfx/characters/societies/mom_satanist_female_headgear_front.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_society_satanist_female_headgear_behind"
+		textureFile = "gfx/characters/societies/mom_satanist_female_headgear_behind.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = {
+		name = "PORTRAIT_society_intrigue_clothing_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_clothing = yes
+				has_dlc = "Mystics"
+				OR = {
+					portrait_society = rtp_intrigue_christians
+					portrait_society = rtp_intrigue_hellenic
+				}
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_society_rank = 4
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				OR = {
+					portrait_in_command = no
+					portrait_government = theocracy_government
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+					portrait_government = rtp_landless_theocracy_g
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = {
+			"GFX_society_satanist_female_headgear_behind:c1"
+			"GFX_society_satanist_female_headgear_front:c5"
+			"GFX_empty:c3"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				3 = { portrait_tier = baron }
+				4 = { portrait_tier = baron }
+				5 = { portrait_tier = baron }
+				6 = { NOT = { portrait_tier = baron } }
+				7 = { NOT = { portrait_tier = baron } }
+				8 = { NOT = { portrait_tier = baron } }
+				9 = { always = yes }
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					OR = {
+						portrait_society_rank = 3
+						AND = {
+							portrait_society_rank = 4
+							portrait_has_trait = i_used_to_be_a_player
+						}
+					}
+				}
+				3 = {
+					portrait_society_rank = 4
+					NOT = { portrait_has_trait = i_used_to_be_a_player }
+				}
+			}
+			19 = {
+				0 = { always = yes }
+			}
+			31 = {
+				0 = { always = yes }
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+
+		headgear_that_hides_hair = { 0 1 2 3 }
+	}
+
+	spriteType = {
+		name = "GFX_society_shaytanist_male_headgear_front"
+		textureFile = "gfx/characters/societies/shaytanist_male_headgear_front.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_society_shaytanist_male_headgear_behind"
+		textureFile = "gfx/characters/societies/shaytanist_male_headgear_behind.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = {
+		name = "PORTRAIT_society_intrigue_muslim_clothing_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				OR = {
+					portrait_society = rtp_intrigue_muslim
+					portrait_society = rtp_intrigue_eastern
+				}
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_society_rank = 4
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				OR = {
+					portrait_in_command = no
+					portrait_government = theocracy_government
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+					portrait_government = rtp_landless_theocracy_g
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = {
+			"GFX_society_satanist_male_clothing_behind:c0"
+			"GFX_society_satanist_male_clothing_front:c2"
+			"GFX_empty:c3"
+			"GFX_society_shaytanist_male_headgear_front:c5"
+			"GFX_society_shaytanist_male_headgear_behind:c1"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				1 = {
+					portrait_society_rank = 1
+				}
+				2 = {
+					portrait_society_rank = 2
+				}
+				3 = {
+					OR = {
+						portrait_society_rank = 3
+						portrait_society_rank = 4
+					}
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			19 = {
+				0 = { always = yes }
+			}
+			31 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_shaytanist_female_headgear_front"
+		textureFile = "gfx/characters/societies/shaytanist_female_headgear_front.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_society_shaytanist_female_headgear_behind"
+		textureFile = "gfx/characters/societies/shaytanist_female_headgear_behind.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = {
+		name = "PORTRAIT_society_intrigue_muslim_clothing_female"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				OR = {
+					portrait_society = rtp_intrigue_muslim
+					portrait_society = rtp_intrigue_eastern
+				}
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_society_rank = 4
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				OR = {
+					portrait_in_command = no
+					portrait_government = theocracy_government
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+					portrait_government = rtp_landless_theocracy_g
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = {
+			"GFX_society_satanist_female_clothing_behind:c0"
+			"GFX_society_satanist_female_clothing_front:c2"
+			"GFX_empty:c3"
+			"GFX_society_shaytanist_female_headgear_front:c5"
+			"GFX_society_shaytanist_female_headgear_behind:c1"
+			"GFX_empty:c7"
+		}
+
+		# No hair, correct rank
+		allow_property_values = {
+			3 = {
+				1 = {
+					portrait_society_rank = 1
+				}
+				2 = {
+					portrait_society_rank = 2
+				}
+				3 = {
+					OR = {
+						portrait_society_rank = 3
+						portrait_society_rank = 4
+					}
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			19 = {
+				0 = { always = yes }
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	portraitType = {
+		name = "PORTRAIT_society_intrigue_eastern_clothing_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_clothing = yes
+				has_dlc = "Mystics"
+				OR = {
+					portrait_society = rtp_intrigue_jewish
+					portrait_society = rtp_intrigue_zoroastrian
+					portrait_society = rtp_intrigue_zun
+					portrait_society = rtp_intrigue_bon
+				}
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_society_rank = 4
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = {
+			"GFX_society_warrior_lodge_african_male_clothes_behind:c0"
+			"GFX_society_satanist_male_clothing_front:c2"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				1 = {
+					portrait_society_rank = 1
+				}
+				2 = {
+					portrait_society_rank = 2
+				}
+				3 = {
+					OR = {
+						portrait_society_rank = 3
+						portrait_society_rank = 4
+					}
+				}
+			}
+		}
+	}
+
+	portraitType = {
+		name = "PORTRAIT_society_intrigue_norse_clothing_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 11000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				has_dlc = "Mystics"
+				portrait_society = rtp_intrigue_norse
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_society_rank = 4
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				OR = {
+					portrait_in_command = no
+					portrait_government = theocracy_government
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+					portrait_government = rtp_landless_theocracy_g
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = {
+			"GFX_society_warrior_lodge_norse_male_clothes_behind:p3:c0"
+			"GFX_society_satanist_female_headgear_behind:c1"
+			"GFX_society_warrior_lodge_norse_male_clothes:p3:c2"
+			"GFX_empty:c3"
+			"GFX_society_satanist_female_headgear_front:c5"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					OR = {
+						portrait_society_rank = 1
+						portrait_society_rank = 2
+					}
+				}
+				2 = {
+					portrait_society_rank = 4
+				}
+				3 = {
+					portrait_society_rank = 3
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					OR = {
+						portrait_society_rank = 3
+						AND = {
+							portrait_society_rank = 4
+							portrait_has_trait = i_used_to_be_a_player
+						}
+					}
+				}
+				3 = {
+					portrait_society_rank = 4
+					NOT = { portrait_has_trait = i_used_to_be_a_player }
+				}
+			}
+			19 = {
+				0 = { always = yes }
+			}
+			31 = {
+				0 = { always = yes }
+			}
+		}
+
+		headgear_that_hides_hair = { 0 1 2 3 }
+	}
+
+	portraitType = {
+		name = "PORTRAIT_society_intrigue_pagan_clothing_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_clothing = yes
+				has_dlc = "Mystics"
+				OR = {
+					portrait_society = rtp_intrigue_norse
+					portrait_society = rtp_intrigue_baltic
+					portrait_society = rtp_intrigue_slavic
+					portrait_society = rtp_intrigue_finnish
+					portrait_society = rtp_intrigue_zun
+					portrait_society = rtp_intrigue_bon
+					portrait_society = rtp_intrigue_aztec
+				}
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_society_rank = 4
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				OR = {
+					portrait_in_command = no
+					portrait_government = theocracy_government
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+					portrait_government = rtp_landless_theocracy_g
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = {
+			"GFX_society_vodoun_male_clothing_behind:p3:c0"
+			"GFX_society_satanist_female_headgear_behind:c1"
+			"GFX_society_vodoun_male_clothing_front:p3:c2"
+			"GFX_empty:c3"
+			"GFX_society_satanist_female_headgear_front:c5"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					OR = {
+						portrait_society_rank = 3
+						AND = {
+							portrait_society_rank = 4
+							portrait_has_trait = i_used_to_be_a_player
+						}
+					}
+				}
+				3 = {
+					portrait_society_rank = 4
+					NOT = { portrait_has_trait = i_used_to_be_a_player }
+				}
+			}
+			19 = {
+				0 = { always = yes }
+			}
+			31 = {
+				0 = { always = yes }
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+
+		headgear_that_hides_hair = { 0 1 2 3 }
+	}
+
+	portraitType = {
+		name = "PORTRAIT_society_intrigue_tengri_clothing_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_clothing = yes
+				has_dlc = "Mystics"
+				portrait_society = rtp_intrigue_tengri
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_society_rank = 4
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				OR = {
+					portrait_in_command = no
+					portrait_government = theocracy_government
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+					portrait_government = rtp_landless_theocracy_g
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = {
+			"GFX_society_vodoun_male_clothing_behind:c0"
+			"GFX_society_vodoun_male_clothing_front:c2"
+			"GFX_empty:c3"
+			"GFX_society_satanist_male_headgear_front:c5"
+			"GFX_society_satanist_male_headgear_behind:c1"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					OR = {
+						portrait_society_rank = 3
+						AND = {
+							portrait_society_rank = 4
+							portrait_has_trait = i_used_to_be_a_player
+						}
+					}
+				}
+				3 = {
+					portrait_society_rank = 4
+					NOT = { portrait_has_trait = i_used_to_be_a_player }
+				}
+			}
+			19 = {
+				0 = { always = yes }
+			}
+			31 = {
+				0 = { always = yes }
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_vodoun_male_clothing_behind"
+		textureFile = "gfx/characters/societies/mom_vodoun_male_clothing_behind.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_society_vodoun_male_clothing_front"
+		textureFile = "gfx/characters/societies/mom_vodoun_male_clothing_front.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_society_vodoun_male_headgear_front"
+		textureFile = "gfx/characters/societies/mom_vodoun_male_headgear_front.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_society_vodoun_male_headgear_behind"
+		textureFile = "gfx/characters/societies/mom_vodoun_male_headgear_behind.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = {
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_intrigue_west_african_clothing_male"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				has_dlc = "Mystics"
+				portrait_society = rtp_intrigue_west_african
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_society_rank = 4
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				OR = {
+					portrait_in_command = no
+					portrait_government = theocracy_government
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+					portrait_government = rtp_landless_theocracy_g
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_vodoun_male_clothing_behind:c0"
+			"GFX_society_vodoun_male_clothing_front:c2"
+			"GFX_empty:c3"
+			"GFX_society_vodoun_male_headgear_front:c5"
+			"GFX_society_vodoun_male_headgear_behind:c1"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			31 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_vodoun_female_clothing_behind"
+		textureFile = "gfx/characters/societies/mom_vodoun_female_clothing_behind.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_society_vodoun_female_clothing_front"
+		textureFile = "gfx/characters/societies/mom_vodoun_female_clothing_front.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = {
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_intrigue_west_african_clothing_female"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				has_dlc = "Mystics"
+				portrait_society = rtp_intrigue_west_african
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_society_rank = 4
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				OR = {
+					portrait_in_command = no
+					portrait_government = theocracy_government
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+					portrait_government = rtp_landless_theocracy_g
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_vodoun_female_clothing_behind:c0"
+			"GFX_society_vodoun_female_clothing_front:c2"
+			"GFX_empty:c3"
+			"GFX_society_vodoun_male_headgear_front:c5"
+			"GFX_society_vodoun_male_headgear_behind:c1"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+	}
+}

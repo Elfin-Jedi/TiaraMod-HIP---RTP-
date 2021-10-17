@@ -1,0 +1,27 @@
+e_northsea = {
+	color = { 247 77 54 } 
+	allow = {
+		ai = no
+	}
+}
+
+e_swedenempire = {
+	color = { 55 112 170 } 
+	allow = {
+		ai = no
+	}
+}
+
+e_greater_norway = {
+	color = { 170 170 210 } 
+	allow = {
+		ai = no
+	}
+}
+
+e_magnaceltica = {
+	color = { 85 107  47 } 
+	allow = {
+		ai = no
+	}
+}

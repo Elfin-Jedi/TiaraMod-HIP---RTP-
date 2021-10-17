@@ -1,0 +1,1361 @@
+namespace = SATT
+narrative_event = {
+	id = SATT.666
+	title = "SATAN_FORMED_TITLE"
+	desc = "SATAN_FORMED_DESC"
+	picture = GFX_evt_dark_prayer ###########
+	border = GFX_event_narrative_frame_war ##########
+	major = yes
+	ai = no
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_global_flag = satanism_formed
+		}
+	}
+	immediate = {
+		set_global_flag = satanism_formed
+	}
+	
+	option = {
+		name = "SATAN_FORMED_OP1"
+		trigger = {
+			OR = {
+				religion = satanism
+				society_member_of = the_satanists
+			}
+		}
+	}
+	option = {
+		name = "SATAN_FORMED_OP2"
+		trigger = {
+			NOT = {
+				religion = satanism
+				society_member_of = the_satanists
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = SATT.668
+	title = "SATAN_CRUSADE_TITLE"
+	desc = {
+		trigger = {
+			OR = {
+				religion = satanism
+				society_member_of = the_satanists
+			}
+		}
+		text = "SATANIC_CRUSADE_SATAN"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				religion = satanism
+				society_member_of = the_satanists
+			}
+		}
+		text = "SATANIC_CRUSADE_NOTSAT"
+	}
+	picture = GFX_evt_danse_macabre
+	border = GFX_event_narrative_frame_war
+	
+	major = yes
+	is_triggered_only = yes
+	show_root = yes
+	
+	trigger = {
+		ROOT = { religion = satanism }
+	}
+	
+	option = {
+		name = "SATANIC_CRUSADE_OP1"
+		trigger = {
+			religion = satanism
+			NOT = { society_member_of = the_satanists }
+		}
+	}
+	option = {
+		name = "SATANIC_CRUSADE_OP1"
+		trigger = {
+			religion = satanism
+			society_member_of = the_satanists
+		}
+	}
+	option = {
+		name = "SATANIC_CRUSADE_OP2"
+		trigger = {
+			society_member_of = the_satanists
+			NOT = { religion = satanism }
+		}
+	}
+	option = {
+		name = "SATANIC_CRUSADE_OP3"
+		trigger = {
+			NOT = {
+				religion = satanism
+				society_member_of = the_satanists
+			}
+		}
+	}
+}
+
+character_event = {
+	id = SATT.667
+	desc = "SATAN_SIN_WROTH_DESC"
+	picture = GFX_evt_dark_prayer ###########
+	is_triggered_only = yes
+	prisoner = no
+	capable_only = yes
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		religion = satanism
+		trait = wroth
+		OR = {
+			had_character_flag = { flag = satan_wroth_flag days = 1000 }
+			NOT = {
+				has_character_flag = satan_wroth_flag
+			}
+		}
+	}
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 0.9
+			trait = weak
+		}
+		modifier = {
+			factor = 0.5
+			trait = craven
+		}
+		modifier = {
+			factor = 2
+			trait = strong
+		}
+		modifier = {
+			factor = 2
+			trait = arbitrary
+		}
+		modifier = {
+			factor = 2
+			trait = cruel
+		}
+	}
+	
+	immediate = {
+		set_character_flag = satan_wroth_flag
+	}
+	
+	option = {
+		name = "SATAN_WROTH_OP1"
+		random_courtier = {
+			limit = {
+				age = 16
+				NOT = {
+					family = PREV
+				}
+			}
+			character_event = { id = SATT.670 days = 0 }
+			death = {
+				death_reason = death_murder
+				killer = FROM
+			}
+		}
+		prestige = -100
+		piety = 25
+		add_character_modifier = {
+			modifier = cowardly_brutalised_subject
+			duration = 150
+		}
+	}
+	
+	option = {
+		name = "SATAN_WROTH_OP2"
+		random_courtier = {
+			limit = {
+				age = 16
+				NOT = {
+					family = PREV
+				}
+			}
+			random_list = {
+				50 = {
+					add_trait = maimed
+					character_event = { id = SATT.671 days = 0 }
+				}
+				50 = {
+					death = {
+						death_reason = death_murder
+						killer = FROM
+					}
+					character_event = { id = SATT.672 days = 0 }
+				}
+			}
+		}
+		prestige = 100
+		piety = 50
+		add_character_modifier = {
+			modifier = brave_brutalised_subject
+			duration = 150
+		}
+	}
+}
+
+narrative_event = {
+	id = SATT.669
+	title = "SATAN_EMPIRE_FORMED"
+	desc = {
+		trigger = {
+			OR = {
+				religion = satanism
+				society_member_of = the_satanists
+			}
+		}
+		text = "SATAN_EMPIRE_FORMED_DESC1"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				religion = satanism
+				society_member_of = the_satanists
+			}
+		}
+		text = "SATAN_EMPIRE_FORMED_DESC2"
+	}
+	picture = GFX_evt_magic_ritual
+	border = GFX_event_narrative_frame_intrigue
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = {
+			add_character_modifier = {
+				modifier = satanic_empire_liege
+				duration = 15000
+			}
+		}
+	}
+	
+	option = {
+		name = "SATAN_EMPIRE_FORMED_OP1"
+		trigger = {
+			religion = satanism
+			independent = yes
+			NOT = {
+				character = FROM
+				society_member_of = the_satanists
+				tier = emperor
+			}
+		}
+		set_defacto_liege = e_satan_empire
+	}
+	
+	option = {
+		name = "SATAN_EMPIRE_FORMED_OP1"
+		trigger = {
+			society_member_of = the_satanists
+			NOT = {
+				religion = satanism
+				tier = emperor
+			}
+		}
+		religion = satanism
+		set_defacto_liege = FROM
+		set_defacto_liege = e_satan_empire
+	}
+	
+	option = {
+		name = "SATAN_EMPIRE_FORMED_OP1"
+		trigger = {
+			religion = satanism
+			society_member_of = the_satanists
+			NOT = {
+				character = FROM
+			}
+		}
+	}
+	
+	option = {
+		name = "SATAN_EMPIRE_FORMED_OP1"
+		trigger = {
+			character = FROM
+		}
+	}
+	
+	option = {
+		name = "SATAN_EMPIRE_FORMED_OP2"
+		trigger = {
+			NOT = {
+				religion = satanism
+				society_member_of = the_satanists
+			}
+		}
+	}
+}
+
+character_event = {
+	id = SATT.670
+	desc = "SATAN_SIN_WROTH_DESC2"
+	picture = GFX_evt_dark_prayer
+	is_triggered_only = yes
+	
+	option = {
+		name = "SATAN_WROTH_OP3"
+	}
+}
+
+character_event = {
+	id = SATT.671
+	desc = "SATAN_SIN_WROTH_DESC3"
+	picture = GFX_evt_dark_prayer
+	is_triggered_only = yes
+	
+	immediate = {
+		opinion = {
+			modifier = wroth_maimed
+			who = FROM
+			years = 10
+		}
+	}
+	
+	option = {
+		name = "SATAN_WROTH_OP4"
+	}
+}
+
+character_event = {
+	id = SATT.672
+	desc = "SATAN_SIN_WROTH_DESC4"
+	picture = GFX_evt_dark_prayer
+	is_triggered_only = yes
+	
+	option = {
+		name = "SATAN_WROTH_OP5"
+	}
+}
+
+narrative_event = {
+	id = SATT.673
+	title = "SATAN_DEMON_SUMMON_TITLE"
+	desc = "SATAN_DEMON_SUMMON_DESC"
+	picture = GFX_evt_satdemon_summoning
+	border = GFX_event_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = "DEMON_SUMMON_OP1"
+		trigger = {
+			trait = wroth
+		}
+		narrative_event = { id = SATT.674 days = 1 }
+	}
+	
+	option = {
+		name = "DEMON_SUMMON_OP2"
+		trigger = {
+			trait = gluttonous
+		}
+		narrative_event = { id = SATT.675 days = 1 }
+	}
+	
+	option = {
+		name = "DEMON_SUMMON_OP3"
+		trigger = {
+			trait = envious
+		}
+		narrative_event = { id = SATT.676 days = 1 }
+	}
+	
+	option = {
+		name = "NEXT_EVT"
+		trigger = {
+			OR = {
+				trait = proud
+				trait = greedy
+				trait = slothful
+				trait = lustful
+			}
+		}
+		narrative_event = { id = SATT.685 days = 0 }
+	}
+}
+
+narrative_event = {
+	id = SATT.674
+	title = "SATAN_WROTH_DEMSUM"
+	desc = "SATAN_WROTH_DEMSUM_DESC"
+	picture = GFX_evt_satdemon_summoning
+	border = GFX_event_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = "SATAN_WROTH_DEMSUM_OP"
+		add_trait = abaddon
+		random_courtier = {
+			limit = { prisoner = yes }
+			death = {
+				death_reason = death_murder
+				killer = FROM
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = SATT.675
+	title = "SATAN_GLUT_DEMSUM"
+	desc = "SATAN_GLUT_DEMSUM_DESC"
+	picture = GFX_evt_satdemon_summoning
+	border = GFX_event_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = "SATAN_GLUT_DEMSUM_OP"
+		add_trait = beelzebub
+		random_courtier = {
+			limit = { prisoner = yes }
+			death = {
+				death_reason = death_murder
+				killer = FROM
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = SATT.676
+	title = "SATAN_ENVY_DEMSUM"
+	desc = "SATAN_ENVY_DEMSUM_DESC"
+	picture = GFX_evt_satdemon_summoning
+	border = GFX_event_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = "SATAN_ENVY_DEMSUM_OP"
+		add_trait = leviathon
+		random_courtier = {
+			limit = { prisoner = yes }
+			death = {
+				death_reason = death_murder
+				killer = FROM
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = SATT.677
+	title = "SATAN_PRIDE_DEMSUM"
+	desc = "SATAN_PRIDE_DEMSUM_DESC"
+	picture = GFX_evt_satdemon_summoning
+	border = GFX_event_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = "SATAN_PRIDE_DEMSUM_OP"
+		add_trait = adramelech
+		random_courtier = {
+			limit = { prisoner = yes }
+			death = {
+				death_reason = death_murder
+				killer = FROM
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = SATT.678
+	title = "SATAN_GREED_DEMSUM"
+	desc = "SATAN_GREED_DEMSUM_DESC"
+	picture = GFX_evt_satdemon_summoning
+	border = GFX_event_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = "SATAN_GREED_DEMSUM_OP"
+		add_trait = mammon
+		random_courtier = {
+			limit = { prisoner = yes }
+			death = {
+				death_reason = death_murder
+				killer = FROM
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = SATT.679
+	title = "SATAN_SLOTH_DEMSUM"
+	desc = "SATAN_SLOTH_DEMSUM_DESC"
+	picture = GFX_evt_satdemon_summoning
+	border = GFX_event_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = "SATAN_SLOTH_DEMSUM_OP"
+		add_trait = belphegor
+		random_courtier = {
+			limit = { prisoner = yes }
+			death = {
+				death_reason = death_murder
+				killer = FROM
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = SATT.680
+	title = "SATAN_LUST_DEMSUM"
+	desc = "SATAN_LUST_DEMSUM_DESC"
+	picture = GFX_evt_satdemon_summoning
+	border = GFX_event_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = "SATAN_LUST_DEMSUM_OP"
+		add_trait = asmodeus
+		random_courtier = {
+			limit = { prisoner = yes }
+			death = {
+				death_reason = death_murder
+				killer = FROM
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = SATT.681
+	title = "SATAN_AAMON_DEMSUM"
+	desc = "SATAN_AAMON_DEMSUM_DESC"
+	picture = GFX_evt_satdemon_summoning
+	border = GFX_event_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = "SATAN_AAMON_DEMSUM_OP"
+		add_trait = aamon
+		random_courtier = {
+			limit = { prisoner = yes }
+			death = {
+				death_reason = death_murder
+				killer = FROM
+			}
+		}
+	}
+}
+
+character_event = {
+	id = SATT.682
+	desc = "CONVERT_TO_SATAN_DESC"
+	picture = GFX_evt_dark_prayer
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		ROOT = {
+			religion = satanism
+			OR = {
+				trait = wroth
+				trait = lustful
+				trait = gluttonous
+				trait = greedy
+				trait = slothful
+				trait = envious
+				trait = proud
+				trait = chaste
+				trait = temperate
+				trait = charitable
+				trait = diligent
+				trait = kind
+				trait = patient
+				trait = humble
+				any_demesne_province = {
+					has_province_modifier = secret_satan_convert
+				}
+				any_courtier_or_vassal = {
+					NOT = { religion = satanism }
+					society_member_of = the_satanists
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = { 
+				any_demesne_province = {
+					has_province_modifier = secret_satan_convert
+				}
+			}
+			any_demesne_province = {
+				limit = {
+					has_province_modifier = secret_satan_convert
+				}
+				religion = satanism
+				remove_province_modifier = secret_satan_convert
+			}
+		}
+		if = {
+			limit = {
+				any_realm_character = {
+					society_member_of = the_satanists
+				}
+			}
+			any_realm_character = {
+				limit = {
+					society_member_of = the_satanists
+				}
+				religion = satanism
+			}
+		}
+	}
+	
+	option = {
+		name = "CONVERT_TO_SATAN_OP"
+	}
+}
+
+character_event = {
+	id = SATT.683
+	desc = "SATANISE_PROVINCE_EVT_DESC"
+	picture = GFX_evt_magic_ritual
+	is_triggered_only = yes
+	
+	option = {
+		name = "SATANISE_PROVINCE_EVT_OP1"
+		random_demesne_province = {
+			limit = {
+				NOT = { has_province_modifier = secret_satan_convert }
+				NOT = { religion = satanism }
+			}
+			add_province_modifier = {
+				modifier = secret_satan_convert
+				duration = 10000
+			}
+		}
+	}
+}
+
+character_event = {
+	id = SATT.684
+	desc = "SAT_INHERIT_DEMON_DESC"
+	picture = GFX_evt_satdemon_summoning
+	is_triggered_only = yes
+	only_playable = yes
+	religion = satanism
+	
+	trigger = {
+		OR = {
+			trait = abaddon
+			trait = beelzebub
+			trait = leviathon
+			trait = adramelech
+			trait = mammon
+			trait = belphegor
+			trait = asmodeus
+			trait = aamon
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				trait = abaddon
+			}
+			current_heir = { add_trait = abaddon }
+		}
+		if = {
+			limit = {
+				trait = beelzebub
+			}
+			current_heir = { add_trait = beelzebub }
+		}
+		if = {
+			limit = {
+				trait = leviathon
+			}
+			current_heir = { add_trait = leviathon }
+		}
+		if = {
+			limit = {
+				trait = adramelech
+			}
+			current_heir = { add_trait = adramelech }
+		}
+		if = {
+			limit = {
+				trait = mammon
+			}
+			current_heir = { add_trait = mammon }
+		}
+		if = {
+			limit = {
+				trait = belphegor
+			}
+			current_heir = { add_trait = belphegor }
+		}
+		if = {
+			limit = {
+				trait = asmodeus
+			}
+			current_heir = { add_trait = asmodeus }
+		}
+		if = {
+			limit = {
+				trait = aamon
+			}
+			current_heir = { add_trait = aamon }
+		}
+	}
+	
+	option = {
+		name = "SAT_INHERIT_DEMON_OP"
+	}
+}
+
+narrative_event = {
+	id = SATT.685
+	title = "SATAN_DEMON_SUMMON_TITLE"
+	desc = "SATAN_DEMON_SUMMON_DESC"
+	picture = GFX_evt_satdemon_summoning
+	border = GFX_event_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = "DEMON_SUMMON_OP4"
+		trigger = {
+			trait = proud
+		}
+		narrative_event = { id = SATT.677 days = 1 }
+	}
+	
+	option = {
+		name = "DEMON_SUMMON_OP5"
+		trigger = {
+			trait = greedy
+		}
+		narrative_event = { id = SATT.678 days = 1 }
+	}
+	
+	option = {
+		name = "PREV_EVT"
+		narrative_event = { id = SATT.673 days = 0 }
+	}
+	
+	option = {
+		name = "NEXT_EVT"
+		trigger = {
+			OR = {
+				trait = lustful
+				trait = slothful
+			}
+		}
+		narrative_event = { id = SATT.686 days = 0 }
+	}
+}
+
+narrative_event = {
+	id = SATT.686
+	title = "SATAN_DEMON_SUMMON_TITLE"
+	desc = "SATAN_DEMON_SUMMON_DESC"
+	picture = GFX_evt_satdemon_summoning
+	border = GFX_event_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = "DEMON_SUMMON_OP6"
+		trigger = {
+			trait = slothful
+		}
+		narrative_event = { id = SATT.679 days = 1 }
+	}
+	
+	option = {
+		name = "DEMON_SUMMON_OP7"
+		trigger = {
+			trait = lustful
+		}
+		narrative_event = { id = SATT.680 days = 1 }
+	}
+	
+	option = {
+		name = "DEMON_SUMMON_OP8"
+		trigger = {
+			trait = lustful
+			trait = slothful
+			trait = greedy
+			trait = proud
+			trait = envious
+			trait = gluttonous
+			trait = wroth
+		}
+		narrative_event = { id = SATT.681 days = 1 }
+	}
+	
+	option = {
+		name = "PREV_EVT"
+		narrative_event = { id = SATT.685 days = 0 }
+	}
+}
+
+character_event = {
+	id = SATT.687
+	desc = "SAT_NECRO_TRAIT_EVT"
+	picture = GFX_evt_magic_ritual
+	is_triggered_only = yes
+	religion = satanism
+	
+	trigger = {
+		has_character_flag = new_necromancer
+		has_minor_title = title_court_necromancer
+		NOT = { trait = lich }
+	}
+	
+	option = {
+		name = "SAT_NECRO_TRAIT_OP"
+		add_trait = necromancer
+		clr_character_flag = new_necromancer
+		piety = 100
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "SAT_NECRO_TRAIT_OP2"
+		prestige = -100
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+character_event = {
+	id = SATT.688
+	desc = "SAT_WITCH_TRAIT_EVT"
+	picture = GFX_evt_magic_ritual
+	is_triggered_only = yes
+	religion = satanism
+	
+	trigger = {
+		has_character_flag = new_court_witch
+		has_minor_title = title_court_witch
+	}
+	
+	option = {
+		name = "SAT_WITCH_TRAIT_OP"
+		add_trait = witch
+		clr_character_flag = new_court_witch
+		piety = 50
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = "SAT_WITCH_TRAIT_OP2"
+		prestige = -50
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+narrative_event = {
+	id = SATT.689
+	title = "SAT_LICHIFIC_EVT_TIT"
+	desc = "SAT_LICHIFIC_EVT_DESC"
+	picture = GFX_evt_magic_ritual
+	border = GFX_event_narrative_frame_intrigue
+	is_triggered_only = yes
+	religion = satanism
+	min_age = 16
+	capable_only = yes
+	
+	trigger = {
+		has_minor_title = title_court_necromancer
+		trait = necromancer
+		prestige = 250
+		piety = 25
+	}
+	
+	option = {
+		name = "SAT_LICHIFIC_EVT_OP1"
+		add_trait = lich
+		remove_trait = necromancer
+		liege = {
+			narrative_event = { id = SATT.690 days = 1 }
+		}
+		ai_chance = {
+			factor = 3
+		}
+	}
+	
+	option = {
+		name = "SAT_LICHIFIC_EVT_OP2"
+		prestige = -25
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+narrative_event = {
+	id = SATT.690
+	title = "SAT_LIEGELICH_EVT_TIT"
+	desc = "SAT_LIEGELICH_EVT_DESC"
+	picture = GFX_evt_magic_ritual
+	border = GFX_event_narrative_frame_intrigue
+	is_triggered_only = yes
+	religion = satanism
+	
+	option = {
+		name = "SAT_LIEGELICH_EVT_OP1"
+	}
+}
+
+narrative_event = {
+	id = SATT.691
+	title = "SAT_RAISEDEAD_EVT_TIT"
+	desc = "SAT_RAISEDEAD_EVT_DESC"
+	picture = GFX_evt_satdemon_summoning
+	border = GFX_event_narrative_frame_intrigue
+	is_triggered_only = yes
+	religion = satanism
+	
+	option = {
+		name = "SAT_RAISEDEAD_EVT_OP1"
+		capital_scope = {
+			ROOT = {
+				spawn_unit = {
+					owner = THIS
+					province = PREV
+					home = PREV
+					troops = {
+						light_infantry = { 30000 30000 }
+					}
+					attrition = 0
+					maintanence_multiplier = 0
+					can_toggle_looting = yes
+				}
+			}
+		}
+		prestige = 1000
+		ai_chance = {
+			factor = 2
+		}
+	}
+	option = {
+		name = "SAT_RAISEDEAD_EVT_OP2"
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+character_event = {
+	id = SATT.692
+	desc = "SAT_BURNCATHOLIC_EVTDESC"
+	picture = GFX_evt_burning_house
+	is_triggered_only = yes
+	religion = satanism
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		any_courtier = {
+			religion = catholic
+		}
+		OR = {
+			trait = wroth
+			trait = proud
+			trait = envious
+			trait = zealous
+		}
+	}
+	
+	option = {
+		name = "SAT_BURNCATHOLIC_OP1"
+		trigger = {
+			any_courtier = {
+				religion = catholic
+				NOT = { family = ROOT }
+			}
+		}
+		character_event = { id = SATT.693 days = 0 }
+	}
+	
+	option = {
+		name = "SAT_BURNCATHOLIC_OP2"
+		trigger = {
+			any_courtier = {
+				religion = catholic
+				is_landed = no
+				NOT = { family = ROOT }
+			}
+		}
+		random_courtier = {
+			limit = {
+				religion = catholic
+				is_landed = no
+				NOT = { family = ROOT }
+			}
+			banish = yes
+		}
+		any_courtier = {
+			limit = { 
+				religion = catholic
+			}
+			opinion = {
+				modifier = satcatholic_persecuted
+				who = FROM
+				years = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "SAT_BURNCATHOLIC_OP3"
+		random_courtier = {
+			limit = { religion = catholic }
+			opinion = {
+				modifier = satcatholic_persecuted
+				who = FROM
+				years = 5
+			}
+		}
+	}
+}
+
+character_event = {
+	id = SATT.693
+	desc = "SAT_BURNCATHOLICTWO_EVTDESC"
+	picture = GFX_evt_burning_house
+	is_triggered_only = yes
+	religion = satanism
+	
+	option = {
+		name = "BURNCATHOLICATSTAKE"
+		random_courtier = {
+			limit = {
+				religion = catholic
+				NOT = { family = ROOT }
+			}
+			death = {
+				death_reason = death_murder
+				killer = FROM
+			}
+		}
+		any_courtier = {
+			limit = { religion = catholic }
+			opinion = {
+				modifier = satcatholic_persecuted
+				who = FROM
+				years = 5
+			}
+		}
+	}
+}
+
+character_event = {
+	id = SATT.694
+	desc = "SAT_REMOVEPROVINCEMODS"
+	picture = GFX_evt_magic_ritual
+	is_triggered_only = yes
+	only_playable = yes
+	hide_window = yes
+	
+	trigger = {
+		NOT = { religion = satanism }
+		FROM = { religion = satanism }
+	}
+	
+	immediate = {
+		any_demesne_province = {
+			limit = {
+				OR = {
+					has_province_modifier = satan_freedoms_enacted
+					has_province_modifier = satan_slavery_enacted
+				}
+			}
+			remove_province_modifier = satan_freedoms_enacted
+			remove_province_modifier = satan_slavery_enacted
+			clr_character_flag = satan_free_lands
+			clr_character_flag = satan_slave_lands
+		}
+	}
+	option = {
+		name = "DUMMYSATANOPTION"
+	}
+}
+
+character_event = {
+	id = SATT.695
+	desc = "SAT_PROVFREEDOM"
+	picture = GFX_evt_magic_ritual
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		any_realm_province = {
+			limit = {
+				religion = satanism
+			}
+			add_province_modifier = {
+				name = satan_freedoms_enacted
+				duration = 999999
+			}
+		}
+		set_character_flag = satan_free_lands
+	}
+	option = {
+		name = "SAT_PROVFREEDOM_OP"
+	}
+}
+
+character_event = {
+	id = SATT.696
+	desc = "SAT_PROVNEUTRAL"
+	picture = GFX_evt_magic_ritual
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_character_flag = satan_free_lands
+			}
+			any_realm_province = {
+				limit = { religion = satanism }
+				remove_province_modifier = satan_freedoms_enacted
+			}
+			clr_character_flag = satan_free_lands
+		}
+		if = {
+			limit = {
+				has_character_flag = satan_slave_lands
+			}
+			any_demesne_province = {
+				limit = { religion = satanism }
+				remove_province_modifier = satan_slavery_enacted
+			}
+			clr_character_flag = satan_slave_lands
+		}
+	}
+	
+	option = {
+		name = "SAT_PROVNEUTRAL_OP"
+	}
+}
+
+character_event = {
+	id = SATT.697
+	desc = "SAT_PROVSLAVERY"
+	picture = GFX_evt_magic_ritual
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		any_realm_province = {
+			limit = {
+				religion = satanism
+			}
+			add_province_modifier = {
+				name = satan_slavery_enacted
+				duration = 999999
+			}
+		}
+		set_character_flag = satan_slave_lands
+	}
+	option = {
+		name = "SAT_PROVSLAVERY_OP"
+	}
+}
+
+character_event = {
+	id = SATT.699
+	desc = "SAT_INHERITFREEDOMFLAG"
+	picture = GFX_evt_magic_ritual
+	is_triggered_only = yes
+	religion = satanism
+	only_playable = yes
+	hide_window = yes
+	
+	trigger = {
+		OR = {
+			has_character_flag = satan_free_lands
+			has_character_flag = satan_slave_lands
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = { has_character_flag = satan_free_lands }
+			current_heir = { set_character_flag = satan_free_lands }
+		}
+		if = {
+			limit = { has_character_flag = satan_slave_lands }
+			current_heir = { set_character_flag = satan_slave_lands }
+		}
+	}
+	option = {
+		name = "dummyoption"
+	}
+}
+
+character_event = {
+	id = SATT.700
+	desc = "PROVINCEREMOVESATANCRAP"
+	picture = GFX_evt_magic_ritual
+	is_triggered_only = yes
+	religion = satanism
+	only_playable = yes
+	hide_window = yes
+	
+	trigger = {
+		religion = satanism
+		has_character_flag = satan_free_lands
+	}
+	immediate = {
+		any_demesne_province = {
+			limit = { religion = satanism }
+			remove_province_modifier = satan_slavery_enacted
+			add_province_modifier = {
+				name = satan_freedoms_enacted
+				duration = 999999
+			}
+		}
+	}
+	option = {
+		name = "DYMMY"
+	}
+}
+
+character_event = {
+	id = SATT.701
+	desc = "PROVINCEREMOVESATANCRAP"
+	picture = GFX_evt_magic_ritual
+	is_triggered_only = yes
+	only_playable = yes
+	hide_window = yes
+	
+	trigger = {
+		NOT = { religion = satanism }
+	}
+	immediate = {
+		any_demesne_province = {
+			limit = { religion = satanism }
+			remove_province_modifier = satan_freedoms_enacted
+			remove_province_modifier = satan_slavery_enacted
+		}
+	}
+	option = {
+		name = "DYMMY"
+	}
+}
+
+character_event = {
+	id = SATT.702
+	desc = "PROVINCEREMOVESATANCRAP"
+	picture = GFX_evt_magic_ritual
+	is_triggered_only = yes
+	religion = satanism
+	only_playable = yes
+	hide_window = yes
+	
+	trigger = {
+		religion = satanism
+		has_character_flag = satan_slave_lands
+	}
+	immediate = {
+		any_demesne_province = {
+			limit = { religion = satanism }
+			remove_province_modifier = satan_freedoms_enacted
+			add_province_modifier = {
+				name = satan_slavery_enacted
+				duration = 999999
+			}
+		}
+	}
+	option = {
+		name = "DYMMY"
+	}
+}
+
+character_event = {
+	id = SATT.703
+	desc = "PROVINCEREMOVESATANCRAP"
+	picture = GFX_evt_magic_ritual
+	is_triggered_only = yes
+	religion = satanism
+	only_playable = yes
+	hide_window = yes
+	
+	trigger = {
+		religion = satanism
+		NOR = {
+			has_character_flag = satan_free_lands
+			has_character_flag = satan_slave_lands
+		}
+	}
+	immediate = {
+		any_demesne_province = {
+			limit = { religion = satanism }
+			remove_province_modifier = satan_freedoms_enacted
+			remove_province_modifier = satan_slavery_enacted
+		}
+	}
+	option = {
+		name = "DYMMY"
+	}
+}
+
+character_event  = {
+	id = SATT.704
+	desc = "DUMMY"
+	picture = GFX_evt_magic_ritual
+	is_triggered_only = yes
+	religion = satanism
+	hide_window = yes
+	
+	trigger = {
+		OR = {
+			has_character_modifier = voice_of_satan
+			has_character_modifier = suspected_demon_spawn
+			has_character_modifier = suspected_witch
+			has_character_modifier = known_witch
+			has_character_modifier = known_satanist
+			has_character_modifier = adulterer
+			has_character_modifier = adulteress
+			has_character_modifier = incestuous_adulterer
+			has_character_modifier = incestuous_adulteress
+			has_character_modifier = adulterous_priest
+			has_character_modifier = under_suspicion
+			has_character_modifier = highly_suspect
+			has_character_modifier = known_murderer
+		}
+	}
+	immediate = {
+		remove_character_modifier = voice_of_satan
+		remove_character_modifier = suspected_demon_spawn
+		remove_character_modifier = suspected_witch
+		remove_character_modifier = known_witch
+		remove_character_modifier = known_satanist
+		remove_character_modifier = adulterer
+		remove_character_modifier = adulteress
+		remove_character_modifier = incestuous_adulterer
+		remove_character_modifier = incestuous_adulteress
+		remove_character_modifier = adulterous_priest
+		remove_character_modifier = under_suspicion
+		remove_character_modifier = highly_suspect
+		remove_character_modifier = known_murderer
+	}
+	option = {
+		name = "OPDUMMY"
+	}
+}

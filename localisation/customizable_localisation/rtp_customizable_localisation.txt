@@ -1,0 +1,103 @@
+#AVIALABLE CUSTOM LOCALISATION KEYS
+#When adding new custom loc keys, add them to the appropriate category (or add a new one) and describe them. Name the strings "String_X" where x is its content.
+# To not display anything, you can use 'localisation_key = ""'
+# To have the first valid text be used, rather than a random valid text, use "use_first_valid = yes"
+
+defined_text = {
+	name = GetMilitaryCampaignTitle
+	use_first_valid = yes
+
+	text = {
+		localisation_key = String_PeasantRebel
+		
+		trigger = {
+			has_character_flag = rtp_temporary_soldier #You serve as a levy now
+			liege = {
+				rebel = yes
+				has_character_flag = rtp_peasant_rebellion_war #Peasant Rebellion
+			}
+		}
+	}
+	text = {
+		localisation_key = String_ZealousRebel
+		
+		trigger = {
+			has_character_flag = rtp_temporary_soldier #You serve as a levy now
+			liege = {
+				rebel = yes
+				has_character_flag = rtp_religious_uprising_war #Religious Uprising
+			}
+		}
+	}
+	text = {
+		localisation_key = String_Invader
+		
+		trigger = {
+			has_character_flag = rtp_temporary_mercenary #You serve as a mercenary now
+			liege = {
+				has_character_flag = rtp_invasion_war #Invasion
+			}
+		}
+	}
+	text = {
+		localisation_key = String_HolyWarrior
+		
+		trigger = {
+			has_character_flag = rtp_temporary_crusader #You serve as a crusader now
+			liege = {
+				has_character_flag = rtp_crusade_war #Crusade
+			}
+		}
+	}
+	text = {
+		localisation_key = String_PatriotRebel
+		
+		trigger = {
+			has_character_flag = rtp_temporary_soldier #You serve as a levy now
+			liege = {
+				has_character_flag = rtp_culture_uprising_war #Culture Uprising
+			}
+		}
+	}
+	text = {
+		localisation_key = String_Levy
+		
+		trigger = {
+			dynasty = 19930
+			has_character_flag = rtp_temporary_soldier #You serve as a levy now
+		}
+	}
+	text = {
+		localisation_key = String_TSoldier
+		
+		trigger = {
+			NOT = {
+				dynasty = 19930
+			}
+			has_character_flag = rtp_temporary_soldier #You serve as a levy now
+		}
+	}
+	text = {
+		localisation_key = String_MMercenary
+
+		trigger = {
+			has_character_flag = rtp_temporary_mercenary #You serve as a mercenary now
+			is_female = no
+		}
+	}
+	text = {
+		localisation_key = String_FMercenary
+
+		trigger = {
+			has_character_flag = rtp_temporary_mercenary #You serve as a mercenary now
+			is_female = yes
+		}
+	}
+	text = {
+		localisation_key = ""
+
+		trigger = {
+			always = yes
+		}
+	}
+}

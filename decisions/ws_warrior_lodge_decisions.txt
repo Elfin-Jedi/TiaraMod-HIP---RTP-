@@ -1,0 +1,545 @@
+# Warrior Lodge decisions
+decisions = {
+	# Create Mazdan (Zoroastrian) Warrior Lodge - Non-existent at start.
+	create_warrior_lodge_ws_mazdan = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 120 #check only once every 120 months.
+		
+		potential = {
+			NOT = {
+				has_global_flag = flag_started_warrior_lodge_ws_mazdan
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			has_dlc = "Holy Fury"
+			NOT = { has_religion_feature = religion_peaceful }
+			religion_group = zoroastrian_group
+			NOT = { 
+				warrior_lodge_ws_mazdan = {
+					society_has_members = yes								
+				}
+			}
+			OR = {
+				has_game_rule = { name = ws_mazdan_rule value = on }
+				has_game_rule = { name = ws_mazdan_rule value = ws_exists }
+				AND = {
+					ai = no
+					has_game_rule = { name = ws_mazdan_rule value = ws_player }
+				}
+			}
+		}
+		
+		allow = {
+			is_in_society = no
+			NOT = { trait = incapable }
+			has_education_martial_trigger = yes
+			higher_tier_than = COUNT
+			martial = 12
+			is_adult = yes
+			is_inaccessible_trigger = no
+			scaled_wealth = 0.75
+			prestige = 1500
+			OR = {
+				religion = zoroastrian
+				religion = mazdaki
+				religion = zurvanist
+				religion = khurmazta
+			}
+			is_heretic = no
+			OR = {
+				has_game_rule = { name = ws_mazdan_rule value = on }
+				has_game_rule = { name = ws_mazdan_rule value = ws_exists }
+				AND = {
+					ai = no
+					has_game_rule = { name = ws_mazdan_rule value = ws_player }
+				}
+			}
+		}
+		
+		effect = {
+			scaled_wealth = -0.75
+			# prestige = -1500
+			custom_tooltip = { text = create_warrior_lodge_ws_mazdan_tooltip }
+			hidden_tooltip = {
+				set_global_flag = flag_started_warrior_lodge_ws_mazdan 
+				join_society = warrior_lodge_ws_mazdan
+				set_society_grandmaster = yes # Set character as Grand Master
+				add_society_currency_massive_effect = yes
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_mazdan }
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_mazdan }
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_mazdan }
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_mazdan }
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_mazdan }
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_mazdan }
+				any_vassal = {
+					limit = {
+						ai = yes
+						can_join_society = warrior_lodge_ws_mazdan
+					}
+					random = { chance = 75 join_society = warrior_lodge_ws_mazdan }
+				}
+				any_neighbor_independent_ruler = {
+					limit = {
+						ai = yes
+						can_join_society = warrior_lodge_ws_mazdan
+					}
+					random = { chance = 35 join_society = warrior_lodge_ws_mazdan }
+				}
+				any_player = {
+					limit = {
+						OR = {
+							religion_group = zoroastrian_group
+							is_within_diplo_range = ROOT
+						}
+					}
+					narrative_event = { id = WS.00001 }
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# Create Eastern (Indian/Taoist) Warrior Lodge - Non-existent at start.
+	create_warrior_lodge_ws_eastern = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 120 #check only once every 120 months.
+		
+		potential = {
+			NOT = {
+				has_global_flag = flag_started_warrior_lodge_ws_eastern
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			has_dlc = "Holy Fury"
+			NOT = { has_religion_feature = religion_peaceful }
+			religion_group = indian_group
+			NOT = { 
+				warrior_lodge_ws_eastern = {
+					society_has_members = yes								
+				}
+			}
+			OR = {
+				has_game_rule = { name = ws_eastern_rule value = on }
+				has_game_rule = { name = ws_eastern_rule value = ws_exists }
+				AND = {
+					ai = no
+					has_game_rule = { name = ws_eastern_rule value = ws_player }
+				}
+			}
+		}
+		
+		allow = {
+			is_in_society = no
+			NOT = { trait = incapable }
+			has_education_martial_trigger = yes
+			OR = {
+				has_lifestyle_martial_trigger = yes
+				martial = 22
+			}
+			higher_tier_than = DUKE
+			martial = 18
+			is_adult = yes
+			is_inaccessible_trigger = no
+			scaled_wealth = 0.75
+			prestige = 1500
+			OR = {
+				has_game_rule = { name = ws_eastern_rule value = on }
+				has_game_rule = { name = ws_eastern_rule value = ws_exists }
+				AND = {
+					ai = no
+					has_game_rule = { name = ws_eastern_rule value = ws_player }
+				}
+			}
+		}
+		
+		effect = {
+			scaled_wealth = -0.75
+			# prestige = -1500
+			custom_tooltip = { text = create_warrior_lodge_ws_eastern_tooltip }
+			hidden_tooltip = {
+				set_global_flag = flag_started_warrior_lodge_ws_eastern 
+				join_society = warrior_lodge_ws_eastern
+				set_society_grandmaster = yes # Set character as Grand Master
+				add_society_currency_massive_effect = yes
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_eastern }
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_eastern }
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_eastern }
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_eastern }
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_eastern }
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_eastern }
+				any_vassal = {
+					limit = {
+						ai = yes
+						can_join_society = warrior_lodge_ws_eastern
+					}
+					random = { chance = 75 join_society = warrior_lodge_ws_eastern }
+				}
+				any_neighbor_independent_ruler = {
+					limit = {
+						ai = yes
+						can_join_society = warrior_lodge_ws_eastern
+					}
+					random = { chance = 35 join_society = warrior_lodge_ws_eastern }
+				}
+				any_player = {
+					limit = {
+						OR = {
+							religion_group = indian_group
+							is_within_diplo_range = ROOT
+						}
+					}
+					narrative_event = { id = WS.00002 }
+				}
+			}
+		}
+			
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# # Create Aztec (Pagan) Warrior Lodge - Non-existent at start.
+	# create_warrior_lodge_ws_aztec = { # ALREADY EXISTS IN HIP
+		# only_playable = yes
+		# is_high_prio = yes
+		# ai_check_interval = 120 #check only once every 120 months.
+		
+		# potential = {
+			# NOT = { 
+				# has_global_flag = flag_aztec_post_arrival_warrior_lodge_ws_aztec
+			# }
+			# has_global_flag = aztec_arrival
+			# NOT = {
+				# has_alternate_start_parameter = { key = religion_names value = random }
+			# }
+			# has_dlc = "Holy Fury"
+			# NOT = { has_religion_feature = religion_peaceful }
+			# religion_openly_aztec_or_reformed_trigger = yes
+			# NOT = { 
+				# warrior_lodge_ws_aztec = {
+					# society_has_members = yes								
+				# }
+			# }
+			# OR = {
+				# has_game_rule = { name = ws_aztec_rule value = on }
+				# AND = {
+					# ai = no
+					# has_game_rule = { name = ws_aztec_rule value = ws_player }
+				# }
+			# }
+		# }
+		
+		# allow = {
+			# is_in_society = no
+			# NOT = { trait = incapable }
+			# has_education_martial_trigger = yes
+			# OR = {
+				# has_lifestyle_martial_trigger = yes
+				# martial = 20
+			# }
+			# higher_tier_than = DUKE
+			# martial = 15
+			# is_adult = yes
+			# is_inaccessible_trigger = no
+			# scaled_wealth = 0.75
+			# prestige = 1500
+			# OR = {
+				# has_game_rule = { name = ws_aztec_rule value = on }
+				# AND = {
+					# ai = no
+					# has_game_rule = { name = ws_aztec_rule value = ws_player }
+				# }
+			# }
+		# }
+		
+		# effect = {
+			# scaled_wealth = -0.75
+			# # prestige = -1500
+			# custom_tooltip = { text = create_warrior_lodge_ws_aztec_tooltip }
+			# hidden_tooltip = {
+				# set_global_flag = flag_aztec_post_arrival_warrior_lodge_ws_aztec 
+				# join_society = warrior_lodge_ws_aztec
+				# set_society_grandmaster = yes # Set character as Grand Master
+				# add_society_currency_massive_effect = yes
+					# spawn_good_commander_effect = yes
+					# new_character = { join_society = warrior_lodge_ws_aztec }
+					# spawn_good_commander_effect = yes
+					# new_character = { join_society = warrior_lodge_ws_aztec }
+					# spawn_good_commander_effect = yes
+					# new_character = { join_society = warrior_lodge_ws_aztec }
+					# spawn_good_commander_effect = yes
+					# new_character = { join_society = warrior_lodge_ws_aztec }
+					# spawn_good_commander_effect = yes
+					# new_character = { join_society = warrior_lodge_ws_aztec }
+					# spawn_good_commander_effect = yes
+					# new_character = { join_society = warrior_lodge_ws_aztec }
+				# any_vassal = {
+					# limit = {
+						# ai = yes
+						# can_join_society = warrior_lodge_ws_aztec
+					# }
+					# random = { chance = 75 join_society = warrior_lodge_ws_aztec }
+				# }
+				# any_neighbor_independent_ruler = {
+					# limit = {
+						# ai = yes
+						# can_join_society = warrior_lodge_ws_aztec
+					# }
+					# random = { chance = 35 join_society = warrior_lodge_ws_aztec }
+				# }
+				# any_player = {
+					# limit = {
+						# OR = {
+							# religion_openly_aztec_or_reformed_trigger = yes
+							# is_within_diplo_range = ROOT
+						# }
+					# }
+					# narrative_event = { id = WS.00003 }
+				# }
+			# }
+		# }
+		
+		# revoke_allowed = {
+			# always = no
+		# }
+		
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	
+	# Create Muslim (Islam) Warrior Lodge - Non-existent at start.
+	create_warrior_lodge_ws_muslim = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 120 #check only once every 120 months.
+		
+		potential = {
+			NOT = {
+				has_global_flag = flag_started_warrior_lodge_ws_muslim
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			has_dlc = "Holy Fury"
+			NOT = { has_religion_feature = religion_peaceful }
+			religion_group = muslim
+			NOT = { 
+				warrior_lodge_ws_muslim = {
+					society_has_members = yes								
+				}
+			}
+			OR = {
+				has_game_rule = { name = ws_muslim_rule value = on }
+				has_game_rule = { name = ws_muslim_rule value = ws_exists }
+				AND = {
+					ai = no
+					has_game_rule = { name = ws_muslim_rule value = ws_player }
+				}
+			}
+		}
+		
+		allow = {
+			is_in_society = no
+			NOT = { trait = incapable }
+			has_education_martial_trigger = yes
+			OR = {
+				has_lifestyle_martial_trigger = yes
+				martial = 22
+			}
+			higher_tier_than = DUKE
+			martial = 18
+			is_adult = yes
+			is_inaccessible_trigger = no
+			scaled_wealth = 0.75
+			prestige = 1500
+			is_heretic = no
+			OR = {
+				has_game_rule = { name = ws_muslim_rule value = on }
+				has_game_rule = { name = ws_muslim_rule value = ws_exists }
+				AND = {
+					ai = no
+					has_game_rule = { name = ws_muslim_rule value = ws_player }
+				}
+			}
+		}
+		
+		effect = {
+			scaled_wealth = -0.75
+			# prestige = -1500
+			custom_tooltip = { text = create_warrior_lodge_ws_muslim_tooltip }
+			hidden_tooltip = {
+				set_global_flag = flag_started_warrior_lodge_ws_muslim 
+				join_society = warrior_lodge_ws_muslim
+				set_society_grandmaster = yes # Set character as Grand Master
+				add_society_currency_massive_effect = yes
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_muslim }
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_muslim }
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_muslim }
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_muslim }
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_muslim }
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_muslim }
+				any_vassal = {
+					limit = {
+						ai = yes
+						can_join_society = warrior_lodge_ws_muslim
+					}
+					random = { chance = 75 join_society = warrior_lodge_ws_muslim }
+				}
+				any_neighbor_independent_ruler = {
+					limit = {
+						ai = yes
+						can_join_society = warrior_lodge_ws_muslim
+					}
+					random = { chance = 35 join_society = warrior_lodge_ws_muslim }
+				}
+				any_player = {
+					limit = {
+						OR = {
+							religion_group = muslim
+							is_within_diplo_range = ROOT
+						}
+					}
+					narrative_event = { id = WS.00004 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# Create Jewish Warrior Lodge - Non-existent at start.
+	create_warrior_lodge_ws_jewish = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 120 #check only once every 120 months.
+		
+		potential = {
+			NOT = {
+				has_global_flag = flag_started_warrior_lodge_ws_jewish
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			has_dlc = "Holy Fury"
+			NOT = { has_religion_feature = religion_peaceful }
+			religion_group = jewish_group
+			NOT = { 
+				warrior_lodge_ws_jewish = {
+					society_has_members = yes								
+				}
+			}
+			OR = {
+				has_game_rule = { name = ws_jewish_rule value = on }
+				has_game_rule = { name = ws_jewish_rule value = ws_exists }
+				AND = {
+					ai = no
+					has_game_rule = { name = ws_jewish_rule value = ws_player }
+				}
+			}
+		}
+		
+		allow = {
+			is_in_society = no
+			NOT = { trait = incapable }
+			has_education_martial_trigger = yes
+			OR = {
+				has_lifestyle_martial_trigger = yes
+				martial = 16
+			}
+			higher_tier_than = DUKE
+			martial = 14
+			is_adult = yes
+			is_inaccessible_trigger = no
+			scaled_wealth = 0.75
+			prestige = 1500
+			is_heretic = no
+			OR = {
+				has_game_rule = { name = ws_jewish_rule value = on }
+				has_game_rule = { name = ws_jewish_rule value = ws_exists }
+				AND = {
+					ai = no
+					has_game_rule = { name = ws_jewish_rule value = ws_player }
+				}
+			}
+		}
+		
+		effect = {
+			scaled_wealth = -0.75
+			# prestige = -1500
+			custom_tooltip = { text = create_warrior_lodge_ws_jewish_tooltip }
+			hidden_tooltip = {
+				set_global_flag = flag_started_warrior_lodge_ws_jewish 
+				join_society = warrior_lodge_ws_jewish
+				set_society_grandmaster = yes # Set character as Grand Master
+				add_society_currency_massive_effect = yes
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_jewish }
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_jewish }
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_jewish }
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_jewish }
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_jewish }
+					spawn_good_commander_effect = yes
+					new_character = { join_society = warrior_lodge_ws_jewish }
+				any_vassal = {
+					limit = {
+						ai = yes
+						can_join_society = warrior_lodge_ws_jewish
+					}
+					random = { chance = 75 join_society = warrior_lodge_ws_jewish }
+				}
+				any_neighbor_independent_ruler = {
+					limit = {
+						ai = yes
+						can_join_society = warrior_lodge_ws_jewish
+					}
+					random = { chance = 35 join_society = warrior_lodge_ws_jewish }
+				}
+				any_player = {
+					limit = {
+						OR = {
+							religion_group = jewish_group
+							is_within_diplo_range = ROOT
+						}
+					}
+					narrative_event = { id = WS.00005 }
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

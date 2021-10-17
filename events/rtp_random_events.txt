@@ -1,0 +1,748 @@
+#####
+#Random Events
+#
+#Total = 8
+#####
+
+namespace = RTPrandom
+
+#Main Events
+#####
+
+#Caravaneer Event - Start
+character_event = {
+	id = RTPrandom.1
+	title = "RTPrandom.1_title"
+	desc = "RTPrandom.1_desc"
+	picture = GFX_evt_merchant_caravan
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		rtp_is_capable_adult = yes
+		has_landed_title = c_landless_t
+	}
+
+	immediate = {
+		liege = {
+			random_courtier = {
+				limit= {
+					is_landed = no
+					is_adult = yes
+					prisoner = no
+				}
+				save_event_target_as = rtp_employer #Person offering you a job
+			}
+		}
+
+		random_neighbor_independent_ruler = {
+			limit = {
+				primary_title = {
+					is_landless_type_title = no
+				}
+				higher_tier_than = COUNT
+			}
+			save_event_target_as = rtp_new_liege2 #You serve him/her now
+		}
+		random_independent_ruler = {
+			limit = {
+				primary_title = {
+					is_landless_type_title = no
+				}
+				higher_tier_than = COUNT
+			}
+			save_event_target_as = rtp_new_liege1 #You serve him/her now
+		}
+
+		if = {
+			limit = {
+				event_target:rtp_new_liege2 = {
+					higher_tier_than = COUNT
+				}
+			}
+			event_target:rtp_new_liege2 = {
+				save_event_target_as = rtp_new_liege #You serve him/her now
+				random_courtier = {
+					limit= {
+						is_landed = no
+						is_adult = yes
+						prisoner = no
+					}
+					save_event_target_as = rtp_receiver #Person receiving the goods
+				}
+			}
+			set_character_flag = rtp_short_trip #Just a short trip
+		}
+		else = {
+			event_target:rtp_new_liege1 = {
+				save_event_target_as = rtp_new_liege #You serve him/her now
+				random_courtier = {
+					limit= {
+						is_landed = no
+						is_adult = yes
+						prisoner = no
+					}
+					save_event_target_as = rtp_receiver #Person receiving the goods
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPrandom.1_1"
+
+		event_target:rtp_receiver = {
+			save_event_target_as = rtp_receiver #Person receiving the goods
+		}
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			rtp_flush_buildings = yes
+			rtp_flush_jobs = yes
+		}
+
+		if = {
+			limit = {
+				has_character_flag = rtp_short_trip #Just a short trip
+			}
+
+			rtp_give_medium_gold_se = yes
+
+			character_event = {
+				id = RTPrandom.100 #Ping for Caravaneer Event - End
+				years = 1
+			}
+		}
+		else = {
+
+			rtp_give_big_gold_se = yes
+
+			character_event = {
+				id = RTPrandom.100 #Ping for Caravaneer Event - End
+				years = 2
+			}
+		}
+		set_defacto_liege = event_target:rtp_new_liege #You serve him/her now
+		event_target:rtp_new_liege = {
+			capital_holding = {
+				c_landless_t = {
+					set_name = PREV
+					set_preferred_capital = PREV
+					save_persistent_event_target = {
+						name = rtp_home_capital
+						scope = PREV
+					}
+				}
+			}
+		}
+		clr_character_flag = rtp_short_trip #Just a short trip
+	}
+
+	option = {
+		name = "RTPrandom.1_2"
+
+		clr_character_flag = rtp_short_trip #Just a short trip
+	}
+}
+
+#Treasure Hunter - Start
+character_event = {
+	id = RTPrandom.2
+	title = "RTPrandom.2_title"
+	desc = "RTPrandom.2_desc"
+	picture = GFX_evt_aztec_explorers
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		rtp_is_capable_adult = yes
+		has_landed_title = c_landless_t
+	}
+
+	immediate = {
+		liege = {
+			random_courtier = {
+				limit= {
+					is_landed = no
+					rtp_is_capable_adult = yes
+				}
+				save_event_target_as = rtp_employer #Person offering you a job
+			}
+		}
+	}
+
+	option = {
+		name = "RTPrandom.2_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					set_character_flag = rtp_reward #You get a reward
+				}
+				30 = {
+					set_character_flag = rtp_scar #You get a scar
+				}
+				15 = {
+					set_character_flag = rtp_injury #You get an injury
+				}
+				5 = {
+					set_character_flag = rtp_death #You die
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPrandom.3 #Treasure Hunter
+			years = 1
+		}
+	}
+
+	option = {
+		name = "RTPrandom.2_2"
+	}
+}
+
+#Treasure Hunter - End
+character_event = {
+	id = RTPrandom.3
+	title = "RTPrandom.3_title"
+	desc = "RTPrandom.3_desc"
+	picture = GFX_evt_pagan_artifacts
+	is_triggered_only = yes
+	hide_from = yes
+	ai = no
+	
+	trigger = {
+		OR = {
+			has_character_flag = rtp_reward #You get a reward
+			has_character_flag = rtp_scar #You get a scar
+			has_character_flag = rtp_injury #You get an injury
+			has_character_flag = rtp_death #You die
+		}
+	}
+
+	option = {
+		name = "RTPrandom.3_1"
+
+		trigger = {
+			has_character_flag = rtp_reward #You get a reward
+		}
+
+		random_list = {
+			20 = {
+				custom_tooltip = {
+					text = "rtp_receive_artifact_ct"
+
+					rtp_give_random_artifact_se = yes
+				}
+			}
+			20 = {
+				wealth = 25
+			}
+			20 = {
+				prestige = 25
+			}
+			20 = {
+				piety = 25
+			}
+		}
+	}
+
+	option = {
+		name = "RTPrandom.3_2"
+
+		trigger = {
+			has_character_flag = rtp_scar #You get a scar
+		}
+
+		random_list = {
+			50 = {
+				if = {
+					limit = {
+						NOR = {
+							trait = scarred
+							trait = scarred_mid
+							trait = scarred_high
+						}
+					}
+					add_trait = scarred
+				}
+			}
+			30 = {
+				if = {
+					limit = {
+						NOR = {
+							trait = scarred_mid
+							trait = scarred_high
+						}
+					}
+					add_trait = scarred_mid
+				}
+			}
+			20 = {
+				if = {
+					limit = {
+						NOT = {
+							trait = scarred_high
+						}
+					}
+					add_trait = scarred_high
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPrandom.3_3"
+
+		trigger = {
+			has_character_flag = rtp_injury #You get an injury
+		}
+
+		random_list = {
+			20 = {
+				add_trait = disfigured
+			}
+			20 = {
+				add_trait = one_eyed
+			}
+			20 = {
+				add_trait = one_handed
+			}
+			20 = {
+				add_trait = one_legged
+			}
+			10 = {
+				add_trait = mangled
+			}
+			10 = {
+				add_trait = severely_injured
+			}
+		}
+	}
+
+	option = {
+		name = "RTPrandom.3_4"
+
+		trigger = {
+			has_character_flag = rtp_death #You die
+		}
+
+		hidden_tooltip = {
+			random_list = {
+				20 = {
+					death = {
+						death_reason = death_accident_arrow
+					}
+				}
+				20 = {
+					death = {
+						death_reason = death_accident_generic_beast
+					}	
+				}
+				20 = {
+					death = {
+						death_reason = death_accident_drowning
+					}
+				}
+				20 = {
+					death = {
+						death_reason = death_accident_fall
+					}	
+				}
+				20 = {
+					death = {
+						death_reason = death_accident_wonder_traps
+					}
+				}
+			}
+		}
+	}
+
+	after = {
+		remove_trait = travelling
+		clr_character_flag = rtp_reward #You get a reward
+		clr_character_flag = rtp_scar #You get a scar
+		clr_character_flag = rtp_injury #You get an injury
+		clr_character_flag = rtp_death #You die
+	}
+}
+
+#Random Encounter - Bandits/Start
+character_event = {
+	id = RTPrandom.4
+	title = "RTPrandom.4_title"
+	desc = "RTPrandom.4_desc"
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+		has_landed_title = c_landless_t
+	}
+
+	immediate = {
+		remove_character_modifier = recent_duel_victory
+
+		rtp_bandits_sounds_se = yes
+
+		save_event_target_as = combatant_1 #the person issuing the duel...
+		create_character = {
+			age = 26
+			female = no
+			random_traits = yes
+			religion = ROOT
+			culture = ROOT
+			dynasty = none
+		}
+		new_character = {
+			save_event_target_as = combatant_2 #the receiving the duel...
+		}
+	}
+
+	option = {
+		name = "RTPrandom.4_1"
+
+		event_target:combatant_2 = {
+			save_event_target_as = combatant_2 #the target of the duel...
+		}
+
+		hidden_tooltip = {
+			add_character_modifier = {
+				modifier = rtp_arena_timer_em
+				years = 5
+				hidden = yes
+			}
+			
+			character_event = {
+				id = HFP.10100
+			}
+
+			character_event = {
+				id = RTPrandom.5 #Random Encounter - Bandits/End
+				days = 7
+			}
+		}
+	}
+
+	option = {
+		name = "RTPrandom.4_2"
+
+		event_target:combatant_2 = {
+			save_event_target_as = combatant_2 #the target of the duel...
+		}
+
+		random_list = {
+			20 = {
+				wealth = -5
+			}
+			20 = {
+				wealth = -10
+			}
+			20 = {
+				wealth = -15
+			}
+			20 = {
+				wealth = -20
+			}
+		}
+	}
+}
+
+#Random Encounter - Bandits/End
+character_event = {
+	id = RTPrandom.5
+	title = "RTPrandom.5_title"
+	desc = {
+		trigger = {
+			has_character_modifier = recent_duel_victory
+		}
+		text = "RTPrandom.5.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_modifier = recent_duel_victory
+			}
+		}
+		text = "RTPrandom.5.2_desc"
+	}
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_tooltip = {
+			event_target:combatant_2 = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPrandom.5_1"
+
+		trigger = {
+			has_character_modifier = recent_duel_victory
+		}
+
+		rtp_give_big_gold_se = yes
+
+		event_target:combatant_2 = {
+			death = {
+				death_reason = death_duel
+				killer = ROOT
+			}
+		}
+	}
+
+	option = {
+		name = "RTPrandom.5_2"
+
+		trigger = {
+			NOT = {
+				has_character_modifier = recent_duel_victory
+			}
+		}
+
+		hidden_tooltip = {
+			event_target:combatant_2 = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+
+		random_list = {
+			10 = {
+				wealth = -20
+			}
+			15 = {
+				wealth = -15
+			}
+			25 = {
+				wealth = -10
+			}
+			50 = {
+				wealth = -5
+			}
+		}
+	}
+}
+
+#Random Encounter - Farmers
+character_event = {
+	id = RTPrandom.6
+	title = "RTPrandom.6_title"
+	desc = "RTPrandom.6_desc"
+	picture = GFX_evt_market
+	is_triggered_only = yes
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+		has_landed_title = c_landless_t
+	}
+
+	immediate = {
+		rtp_farmers_sounds_se = yes
+
+		top_liege = {
+			create_character = {
+				age = 37
+				female = no
+				random_traits = yes
+				religion = ROOT
+				culture = ROOT
+				health = 10
+				dynasty = none
+			}
+			new_character = {
+				save_event_target_as = rtp_peasant #Just a peasant
+			}
+		}
+	}
+
+	option = {
+		name = "RTPrandom.6_1"
+
+		event_target:rtp_peasant = {
+			save_event_target_as = rtp_peasant #Just a peasant
+		}
+
+		piety = 5
+	}
+
+	option = {
+		name = "RTPrandom.6_2"
+
+		event_target:rtp_peasant = {
+			save_event_target_as = rtp_peasant #Just a peasant
+		}
+
+		prestige = 5
+	}
+
+	option = {
+		name = "RTPrandom.6_3"
+
+		event_target:rtp_peasant = {
+			save_event_target_as = rtp_peasant #Just a peasant
+		}
+
+		rtp_give_small_gold_se = yes
+
+		hidden_tooltip = {
+			random = {
+				chance = 50
+	
+				top_liege = {
+					any_realm_character = {
+						opinion = {
+							modifier = rtp_thief_om
+							who = ROOT
+							years = 5
+						}
+					}
+				}
+			}
+		}
+	}
+
+	after = {
+		hidden_tooltip = {
+			event_target:rtp_peasant = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+}
+
+#Random Encounter - Nobles
+character_event = {
+	id = RTPrandom.7
+	title = "RTPrandom.7_title"
+	desc = {
+		trigger = {
+			NOT = {
+				dynasty = 19930
+			}
+		}
+		text = "RTPrandom.7.1_desc"
+	}
+	desc = {
+		trigger = {
+			dynasty = 19930
+		}
+		text = "RTPrandom.7.2_desc"
+	}
+	picture = GFX_evt_noble_haughty_talking_to_peasants
+	is_triggered_only = yes
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+		has_landed_title = c_landless_t
+	}
+
+	immediate = {
+		rtp_nobles_sounds_se = yes
+
+		top_liege = {
+			create_character = {
+				age = 33
+				female = no
+				random_traits = yes
+				religion = ROOT
+				culture = ROOT
+				health = 10
+				dynasty = none
+			}
+			new_character = {
+				save_event_target_as = rtp_noble #Just a noble
+			}
+		}
+	}
+
+	option = {
+		name = "RTPrandom.7_1"
+
+		event_target:rtp_noble = {
+			save_event_target_as = rtp_noble #Just a noble
+		}
+
+		piety = 5
+	}
+
+	option = {
+		name = "RTPrandom.7_2"
+
+		trigger = {
+			NOT = {
+				dynasty = 19930
+			}
+		}
+
+		event_target:rtp_noble = {
+			save_event_target_as = rtp_noble #Just a noble
+		}
+
+		prestige = 5
+	}
+
+	option = {
+		name = "RTPrandom.7_3"
+
+		trigger = {
+			dynasty = 19930
+		}
+
+		event_target:rtp_noble = {
+			save_event_target_as = rtp_noble #Just a noble
+		}
+
+		rtp_give_big_gold_se = yes
+
+		hidden_tooltip = {
+			random = {
+				chance = 30
+	
+				liege = {
+					reverse_imprison = ROOT
+				}
+			}
+		}
+	}
+
+	after = {
+		hidden_tooltip = {
+			event_target:rtp_noble = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+}
+
+#Ping Events
+#####
+
+#Ping for Caravaneer Event - End
+character_event = {
+	id = RTPrandom.100
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+
+	immediate = {
+		remove_trait = travelling
+	}
+}
+
+#MTTH Events
+#####

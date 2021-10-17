@@ -1,0 +1,534 @@
+namespace = childbearing_events
+character_event = {
+	id = childbearing_events.0
+	desc = EVTDESCchildbearing_events.0
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAchildbearing_events.0
+		ai_chance = {
+			factor = 100
+		}
+		hidden_tooltip = {
+			FROMFROM = { character_event = { id = childbearing_events.2 } }
+		}
+	}
+	option = {
+		name = EVTOPTBchildbearing_events.0
+		ai_chance = {
+			factor = 0
+		}
+		hidden_tooltip = {
+			FROMFROM = { character_event = { id = childbearing_events.1 days = 1 random = 1 } }
+		}
+	}
+}
+character_event = {
+	id = childbearing_events.1
+	desc = EVTDESCchildbearing_events.1
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+	option = {
+		name = EVTOPTAchildbearing_events.1
+		hidden_tooltip = {
+			opinion = { modifier = opinion_furious who = FROM years = 2 }
+		}
+	}
+	option = {
+		name = EVTOPTBchildbearing_events.1
+		hidden_tooltip = {
+			FROM = { character_event = { id = childbearing_events.3 } }
+		}
+		character_event = { id = childbearing_events.2 }
+	}
+}
+character_event = {
+	id = childbearing_events.2
+	desc = EVTDESCchildbearing_events.2
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAchildbearing_events.2
+		trigger = {
+			ROOT = { is_female = no }
+			any_friend = {
+				NOT = { age = 40 }
+				is_female = yes
+				is_married = no
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		random_friend = {
+			limit = {
+				is_female = yes
+				is_married = no
+			}
+			character_event = { id = childbearing_events.10 }
+		}
+	}
+
+	option = {
+		name = EVTOPTAchildbearing_events.2
+		trigger = {
+			ROOT = { is_female = yes }
+			any_friend = { is_female = no }
+		}
+		ai_chance = {
+			factor = 100
+		}
+		random_friend = {
+			limit = {
+				is_female = no
+				is_married = no
+			}
+			character_event = { id = childbearing_events.10 }
+		}
+	}
+
+	option = {
+		name = EVTOPTBchildbearing_events.2
+		ai_chance = {
+			factor = 0
+		}
+		set_character_flag = body_parent
+	}
+
+	option = {
+		name = EVTOPTCchildbearing_events.2
+		trigger = { ROOT = { is_female = no } }
+		ai_chance = {
+			factor = 100
+		}
+		create_character = {
+			dynasty = NONE
+			religion = ROOT
+			culture = ROOT
+			race = ROOT
+			female = yes
+			age = 20
+			health = 5
+			fertility = 0.55
+		}
+		new_character = {
+			impregnate = ROOT
+		}
+		set_character_flag = surrogated_parent
+	}
+
+	option = {
+		name = EVTOPTCchildbearing_events.2
+		trigger = { ROOT = { is_female = yes } }
+		ai_chance = {
+			factor = 100
+		}
+		create_character = {
+			dynasty = NONE
+			religion = ROOT
+			culture = ROOT
+			race = ROOT
+			female = no
+			age = 20
+			health = 5
+			fertility = 0.55
+		}
+		new_character = {
+			ROOT = { impregnate = PREV }
+		}
+		set_character_flag = surrogated_parent
+	}
+
+	option = {
+		name = EVTOPTDchildbearing_events.2
+		trigger = {
+			FROMFROM = { NOT = { has_opinion_modifier = { modifier = opinion_furious who = ROOT } } }
+			any_realm_character = {
+				NOT = { age = 10 }
+				is_ruler = no
+				is_primary_heir = no
+				father = { is_alive = no }
+				mother = { is_alive = no }
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+		character_event = { id = childbearing_events.5 }
+	}
+}
+character_event = {
+	id = childbearing_events.3
+	desc = EVTDESCchildbearing_events.3
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+	option = {
+		name = EVTOPTAchildbearing_events.3
+		opinion = { modifier = opinion_furious who = FROM years = 2 }
+	}
+}
+character_event = {
+	id = childbearing_events.4
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		FROM = { character_event = { id = childbearing_events.10 } }
+	}
+}
+character_event = {
+	id = childbearing_events.5
+	desc = EVTDESCchildbearing_events.5
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+
+	immediate = {
+		random_realm_character = {
+			limit = {
+				is_female = no
+				NOT = { age = 10 }
+				is_ruler = no
+				is_primary_heir = no
+				father = { is_alive = no }
+				mother = { is_alive = no }
+				NOR = {
+					has_character_flag = boy_1
+					has_character_flag = boy_2
+					has_character_flag = boy_3
+				}
+			}
+			set_character_flag = boy_1
+			save_event_target_as = boy_1
+		}
+		random_realm_character = {
+			limit = {
+				is_female = no
+				NOT = { age = 10 }
+				is_ruler = no
+				is_primary_heir = no
+				father = { is_alive = no }
+				mother = { is_alive = no }
+				NOR = {
+					has_character_flag = boy_1
+					has_character_flag = boy_2
+					has_character_flag = boy_3
+				}
+			}
+			set_character_flag = boy_2
+			save_event_target_as = boy_2
+		}
+		random_realm_character = {
+			limit = {
+				is_female = no
+				NOT = { age = 10 }
+				is_ruler = no
+				is_primary_heir = no
+				father = { is_alive = no }
+				mother = { is_alive = no }
+				NOR = {
+					has_character_flag = boy_1
+					has_character_flag = boy_2
+					has_character_flag = boy_3
+				}
+			}
+			set_character_flag = boy_3
+			save_event_target_as = boy_3
+		}
+	}
+
+	option = {
+		name = EVTOPTAchildbearing_events.5
+		event_target:boy_1 = {
+			IF = {
+				limit = { ROOT = { is_female = no } }
+				set_father = ROOT
+			}
+			IF = {
+				limit = { ROOT = { is_female = yes } }
+				set_mother = ROOT
+			}
+			dynasty = ROOT
+			move_character = ROOT
+		}
+		hidden_tooltip = {
+			any_realm_character = {
+				limit = { has_character_flag = boy_1 }
+				clr_character_flag = boy_1
+			}
+			any_realm_character = {
+				limit = { has_character_flag = boy_2 }
+				clr_character_flag = boy_2
+			}
+			any_realm_character = {
+				limit = { has_character_flag = boy_3 }
+				clr_character_flag = boy_3
+			}
+		}
+	}
+	option = {
+		name = EVTOPTBchildbearing_events.5
+		event_target:boy_2 = {
+			IF = {
+				limit = { ROOT = { is_female = no } }
+				set_father = ROOT
+			}
+			IF = {
+				limit = { ROOT = { is_female = yes } }
+				set_mother = ROOT
+			}
+			dynasty = ROOT
+			move_character = ROOT
+		}
+		hidden_tooltip = {
+			any_realm_character = {
+				limit = { has_character_flag = boy_1 }
+				clr_character_flag = boy_1
+			}
+			any_realm_character = {
+				limit = { has_character_flag = boy_2 }
+				clr_character_flag = boy_2
+			}
+			any_realm_character = {
+				limit = { has_character_flag = boy_3 }
+				clr_character_flag = boy_3
+			}
+		}
+	}
+	option = {
+		name = EVTOPTCchildbearing_events.5
+		event_target:boy_3 = {
+			IF = {
+				limit = { ROOT = { is_female = no } }
+				set_father = ROOT
+			}
+			IF = {
+				limit = { ROOT = { is_female = yes } }
+				set_mother = ROOT
+			}
+			dynasty = ROOT
+			move_character = ROOT
+		}
+		hidden_tooltip = {
+			any_realm_character = {
+				limit = { has_character_flag = boy_1 }
+				clr_character_flag = boy_1
+			}
+			any_realm_character = {
+				limit = { has_character_flag = boy_2 }
+				clr_character_flag = boy_2
+			}
+			any_realm_character = {
+				limit = { has_character_flag = boy_3 }
+				clr_character_flag = boy_3
+			}
+		}
+	}
+	option = {
+		name = EVTOPTDchildbearing_events.5
+		character_event = { id = childbearing_events.6 }
+	}
+}
+character_event = {
+	id = childbearing_events.6
+	desc = EVTDESCchildbearing_events.6
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+
+	immediate = {
+		random_realm_character = {
+			limit = {
+				is_female = yes
+				NOT = { age = 10 }
+				is_ruler = no
+				is_primary_heir = no
+				father = { is_alive = no }
+				mother = { is_alive = no }
+				NOR = {
+					has_character_flag = girl_1
+					has_character_flag = girl_2
+					has_character_flag = girl_3
+				}
+			}
+			set_character_flag = girl_1
+			save_event_target_as = girl_1
+		}
+		random_realm_character = {
+			limit = {
+				is_female = yes
+				NOT = { age = 10 }
+				is_ruler = no
+				is_primary_heir = no
+				father = { is_alive = no }
+				mother = { is_alive = no }
+				NOR = {
+					has_character_flag = girl_1
+					has_character_flag = girl_2
+					has_character_flag = girl_3
+				}
+			}
+			set_character_flag = girl_2
+			save_event_target_as = girl_2
+		}
+		random_realm_character = {
+			limit = {
+				is_female = yes
+				NOT = { age = 10 }
+				is_ruler = no
+				is_primary_heir = no
+				father = { is_alive = no }
+				mother = { is_alive = no }
+				NOR = {
+					has_character_flag = girl_1
+					has_character_flag = girl_2
+					has_character_flag = girl_3
+				}
+			}
+			set_character_flag = girl_3
+			save_event_target_as = girl_3
+		}
+	}
+
+	option = {
+		name = EVTOPTAchildbearing_events.5
+		event_target:girl_1 = {
+			IF = {
+				limit = { ROOT = { is_female = no } }
+				set_father = ROOT
+			}
+			IF = {
+				limit = { ROOT = { is_female = yes } }
+				set_mother = ROOT
+			}
+			dynasty = ROOT
+			move_character = ROOT
+		}
+		hidden_tooltip = {
+			any_realm_character = {
+				limit = { has_character_flag = girl_1 }
+				clr_character_flag = girl_1
+			}
+			any_realm_character = {
+				limit = { has_character_flag = girl_2 }
+				clr_character_flag = girl_2
+			}
+			any_realm_character = {
+				limit = { has_character_flag = girl_3 }
+				clr_character_flag = girl_3
+			}
+		}
+	}
+	option = {
+		name = EVTOPTBchildbearing_events.5
+		event_target:girl_2 = {
+			IF = {
+				limit = { ROOT = { is_female = no } }
+				set_father = ROOT
+			}
+			IF = {
+				limit = { ROOT = { is_female = yes } }
+				set_mother = ROOT
+			}
+			dynasty = ROOT
+			move_character = ROOT
+		}
+		hidden_tooltip = {
+			any_realm_character = {
+				limit = { has_character_flag = girl_1 }
+				clr_character_flag = girl_1
+			}
+			any_realm_character = {
+				limit = { has_character_flag = girl_2 }
+				clr_character_flag = girl_2
+			}
+			any_realm_character = {
+				limit = { has_character_flag = girl_3 }
+				clr_character_flag = girl_3
+			}
+		}
+	}
+	option = {
+		name = EVTOPTCchildbearing_events.5
+		event_target:girl_3 = {
+			IF = {
+				limit = { ROOT = { is_female = no } }
+				set_father = ROOT
+			}
+			IF = {
+				limit = { ROOT = { is_female = yes } }
+				set_mother = ROOT
+			}
+			dynasty = ROOT
+			move_character = ROOT
+		}
+		hidden_tooltip = {
+			any_realm_character = {
+				limit = { has_character_flag = girl_1 }
+				clr_character_flag = girl_1
+			}
+			any_realm_character = {
+				limit = { has_character_flag = girl_2 }
+				clr_character_flag = girl_2
+			}
+			any_realm_character = {
+				limit = { has_character_flag = girl_3 }
+				clr_character_flag = girl_3
+			}
+		}
+	}
+	option = {
+		name = EVTOPTDchildbearing_events.6
+		character_event = { id = childbearing_events.5 }
+	}
+}
+character_event = {
+	id = childbearing_events.10
+	desc = EVTDESCchildbearing_events.10
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAchildbearing_events.10
+		trigger = {
+			ROOT = { is_female = yes }
+			FROM = { is_female = no }
+		}
+		ai_chance = {
+			factor = 100
+		}
+		impregnate = FROM
+		FROM = { set_character_flag = surrogated_parent }
+	}
+
+	option = {
+		name = EVTOPTAchildbearing_events.10
+		trigger = {
+			ROOT = { is_female = no }
+			FROM = { is_female = yes }
+		}
+		ai_chance = {
+			factor = 100
+		}
+		FROM = { impregnate = ROOT }
+		FROM = { set_character_flag = surrogated_parent }
+	}
+
+	option = {
+		name = EVTOPTBchildbearing_events.10
+		ai_chance = {
+			factor = 0
+		}
+		FROM = { character_event = { id = childbearing_events.11 } }
+	}
+}
+character_event = {
+	id = childbearing_events.11
+	desc = EVTDESCchildbearing_events.11
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+	option = {
+		name = EVTOPTAchildbearing_events.11
+		opinion = { modifier = opinion_furious who = FROM years = 2 }
+		clr_character_flag = have_child_same_sex
+	}
+}

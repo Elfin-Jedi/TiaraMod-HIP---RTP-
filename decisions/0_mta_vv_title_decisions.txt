@@ -1,0 +1,182 @@
+########################################################################
+#
+#SPECIAL SETTLEMENT DECISIONS RELATED TO PROVINCE'S CULTURE
+#
+########################################################################
+#
+# Settlement decisions are possible vs _all_ settlements and are shown in the Settlement Diplomacy View, not the Intrigue View. The taker is in the FROM scope.
+#
+# filter = [capital/owned/vassal_owned/sub_realm_owned/realm_owned/dynasty_owned/all]
+# ai_target_filter = [capital/owned/vassal_owned/sub_realm_owned/realm_owned/dynasty_owned/all] (which settlements for which the AI evaluates the decision.)
+#	owned: all settlements owned by the AI
+#	vassal_owned: all settlements owned by direct vassal rulers of the AI's employer
+#	sub_realm_owned: all settlements below the AI's employer
+#	realm_owned: all settlements in the same top realm as the AI
+#	dynasty_owned: all settlements owned by members of the same dynasty
+#	all: all settlements (Avoid if possible. VERY CPU-HEAVY!)
+#	 
+
+
+title_decisions = {
+	
+	mta_invite_a_slave = {
+		ai = no
+		only_playable = yes
+		diplomacy_icon = GFX_slavery_decision
+		
+		filter = all
+		ai_target_filter = realm_owned
+        ai_check_interval = 30
+	
+		from_potential = {
+			ai = no
+			OR = {
+				has_game_rule = { 
+					name = mta_rule_lowborn 
+					value = on 
+				}
+				has_game_rule = { 
+					name = mta_rule_lowborn 
+					value = no_pardons 
+				}
+			}
+			is_playable = yes
+			slavery_enabled = yes
+			prisoner = no
+			in_seclusion = no
+		}
+		
+		potential = {
+			OR = {
+				holder_scope = { character = FROM }
+				holder_scope = { is_vassal_or_below_of = FROM }
+				AND = {
+					has_trade_post = yes
+					trade_post_owner = {
+						character = FROM
+					}
+				}
+				FROM = { ai = no } # Show player the allow conditions instead
+			}
+			tier = COUNT
+		}
+		
+		allow = {
+			FROM = {
+				scaled_wealth = { value = 0.10 min = 10 max = 100 }
+				custom_tooltip = { text = mta_NEEDS_25_PRESTIGE_COST hidden_tooltip = { prestige = 25 } }
+				custom_tooltip = {
+					text = mta_NOT_RECRUITED_COURTIER_TWO_WEEKS
+					hidden_tooltip = {
+						NOT = { has_character_modifier = mta_employ_slave_timer }
+					}
+				}
+			}
+			ROOT = {
+				conditional_tooltip = {
+					trigger = { 
+						FROM = { culture = han }
+						has_game_rule = {
+							name = mta_rule_slavery
+							value = restricted
+						}
+					}
+					location = {
+						show_scope_change = no
+						custom_tooltip = {
+							text = mta_slave_same_culture_county_TT
+							NOT = { culture = han }
+						}
+					}
+				}
+				conditional_tooltip = {
+					trigger = { 
+						FROM = { religion_group = christian }
+						has_game_rule = {
+							name = mta_rule_slavery
+							value = restricted
+						}
+					}
+					location = {
+						show_scope_change = no
+						NOT = { religion_group = christian }
+					}
+				}
+				conditional_tooltip = {
+					trigger = { 
+						FROM = { religion_group = jewish_group }
+						has_game_rule = {
+							name = mta_rule_slavery
+							value = restricted
+						}
+					}
+					location = {
+						show_scope_change = no
+						NOT = { religion_group = jewish_group }
+					}
+				}
+				OR = {
+					custom_tooltip = {
+						text = mta_is_in_from_realm_TT
+						hidden_tooltip = {
+							OR = {
+								holder_scope = { character = FROM }
+								holder_scope = { is_vassal_or_below_of = FROM }
+							}
+						}
+					}
+					conditional_tooltip = {
+						trigger = { holder_scope = { independent = yes } }
+						custom_tooltip = {
+							text = mta_is_tributary_TT
+							hidden_tooltip = {
+								holder_scope = {
+									is_tributary = { suzerain = FROM } 
+								}
+							}
+						}
+					}
+					conditional_tooltip = {
+						trigger = { holder_scope = { independent = no } }
+						custom_tooltip = {
+							text = mta_is_tributary_top_liege_TT
+							hidden_tooltip = {
+								holder_scope = {
+									top_liege = {
+										is_tributary = { suzerain = FROM } 
+									}
+								}
+							}
+						}
+					}
+					custom_tooltip = {
+						text = mta_has_trade_post_TT
+						hidden_tooltip = {
+							AND = {
+								has_trade_post = yes
+								trade_post_owner = {
+									character = FROM
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			ROOT = {
+				location = { save_event_target_as = mta_settlement_root }
+			}
+			FROM = {
+				save_event_target_as = slaver
+				add_character_modifier = { name = mta_employ_slave_timer days = 14 hidden = yes }
+				character_event = { id = mta.150 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

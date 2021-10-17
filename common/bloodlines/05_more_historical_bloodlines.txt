@@ -1,0 +1,187 @@
+paradox = {
+	picture = GFX_bloodlines_symbol_paradox
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_prestige = 0.15
+	monthly_character_piety = 0.15
+	global_revolt_risk = -0.02
+	vassal_opinion = 10
+	flags = { historical_bloodline bloodline_paradox }
+}
+
+beowulf = {
+	picture = GFX_bloodlines_symbol_beowulf
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_prestige = 0.2
+	norse_opinion = 5
+	bloodline_effect_joining_warrior_lodge = 1
+	command_modifier = {
+		heavy_infantry = 0.15
+	}
+	flags = { historical_bloodline bloodline_beowulf }
+}
+
+habsburg = {
+	picture = GFX_bloodlines_symbol_habsburg
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_prestige = 0.1
+	diplomacy = 2
+	general_opinion = 5
+	dynasty_opinion = 5
+	flags = { historical_bloodline bloodline_habsburg }
+}
+
+capet = {
+	picture = GFX_bloodlines_symbol_fleur_de_lis_gold
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_prestige = 0.2
+	frankish_opinion = 5
+	old_frankish_opinion = 5
+	flags = { historical_bloodline bloodline_capet }
+}
+
+hohenzollern = {
+	picture = GFX_bloodlines_symbol_hohenzollern
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_prestige = 0.1
+	central_germanic_opinion = 5
+	bloodline_effect_faster_claims = 1
+	bloodline_effect_faster_dissent = 1
+	flags = { historical_bloodline bloodline_hohenzollern }
+}
+
+#New Patch 1.4
+
+abbasid = {
+	picture = GFX_bloodlines_symbol_sunni
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_prestige = 0.25
+	monthly_character_piety = 0.1
+	muslim_opinion = 5
+	muslim_church_opinion = 5
+	flags = { historical_bloodline bloodline_abbasid }
+}
+
+alfred = {
+	picture = GFX_bloodlines_symbol_alfred
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_prestige = 0.25
+	west_germanic_opinion = 10
+	combat_rating = 10
+	flags = { historical_bloodline bloodline_alfred }
+}
+
+asturias = {
+	picture = GFX_bloodlines_symbol_asturias
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_prestige = 0.2
+	iberian_opinion = 10
+	flags = { historical_bloodline bloodline_asturias }
+}
+
+robert = {
+	picture = GFX_bloodlines_symbol_robert
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_prestige = 0.1
+	command_modifier = {
+		center = 0.1
+	}
+	flags = { historical_bloodline bloodline_robert_guiscard }
+}
+
+salian = {
+	picture = GFX_bloodlines_symbol_salian
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_prestige = 0.2
+	central_germanic_opinion = 5
+	flags = { historical_bloodline bloodline_salian }
+}
+
+#New Patch 1.5
+
+croatia = {
+	picture = GFX_bloodlines_symbol_croatia
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_prestige = 0.2
+	croatian_opinion = 5
+	flags = { historical_bloodline bloodline_croatia }
+}
+
+lithuania = {
+	picture = GFX_bloodlines_symbol_lithuania
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_prestige = 0.25
+	dynasty_opinion = 5
+	flags = { historical_bloodline bloodline_lithuania }
+}
+
+santso = {
+	picture = GFX_bloodlines_symbol_santso
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_prestige = 0.15
+	iberian_opinion = 5
+	frankish_opinion = 5
+	old_frankish_opinion = 5
+	flags = { historical_bloodline bloodline_santso }
+}
+
+tamari = {
+	picture = GFX_bloodlines_symbol_cross_orthodox
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_prestige = 0.2
+	georgian_opinion = 5
+	flags = { historical_bloodline bloodline_tamari }
+}
+
+#Patch 1.6
+
+wuffa = {
+	picture = GFX_bloodlines_symbol_wuffa
+	inheritance = patrilineal
+	allow_bastards = yes
+	combat_rating = 5
+	monthly_character_prestige = 0.2
+	saxon_opinion = 5
+	flags = { historical_bloodline bloodline_wuffa }
+}
+
+icel = {
+	picture = GFX_bloodlines_symbol_icel
+	inheritance = patrilineal
+	allow_bastards = yes
+	combat_rating = 5
+	monthly_character_prestige = 0.2
+	saxon_opinion = 5
+	flags = { historical_bloodline bloodline_icel }
+}
+
+cinaed = {
+	picture = GFX_bloodlines_symbol_cinaed
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_prestige = 0.25
+	scottish_opinion = 5
+	flags = { historical_bloodline bloodline_cinaed }
+}
+
+rhodri = {
+	picture = GFX_bloodlines_symbol_generic_pagan
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_prestige = 0.25
+	welsh_opinion = 5
+	flags = { historical_bloodline bloodline_rhodri }
+}

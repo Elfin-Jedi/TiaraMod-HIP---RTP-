@@ -1,0 +1,1996 @@
+spriteTypes = {
+	###Diplomatic Societies
+
+	#Civilized
+	spriteType = {
+		name = "GFX_society_main_background_rtp_diplomacy_civilized"
+		texturefile = "gfx\\interface\\societies\\diplomacy\\society_bg_diplomacy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_diplomacy_civilized"
+		texturefile = "gfx\\interface\\societies\\diplomacy\\society_exp_bg_diplomacy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_diplomacy_civilized"
+		texturefile = "gfx\\interface\\societies\\diplomacy\\symbol_small_diplomacy.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_diplomacy_civilized"
+		texturefile = "gfx\\interface\\societies\\diplomacy\\portrait_ring_diplomacy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_diplomacy_civilized"
+		texturefile = "gfx\\interface\\societies\\diplomacy\\portrait_ring_small_diplomacy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_diplomacy_civilized"
+		texturefile = "gfx\\interface\\societies\\diplomacy\\society_currency_diplomacy.dds"
+	}
+
+	#Pagans
+	spriteType = {
+		name = "GFX_society_main_background_rtp_diplomacy_pagan"
+		texturefile = "gfx\\interface\\societies\\diplomacy\\society_bg_diplomacy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_diplomacy_pagan"
+		texturefile = "gfx\\interface\\societies\\diplomacy\\society_exp_bg_diplomacy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_diplomacy_pagan"
+		texturefile = "gfx\\interface\\societies\\diplomacy\\symbol_small_diplomacy.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_diplomacy_pagan"
+		texturefile = "gfx\\interface\\societies\\diplomacy\\portrait_ring_diplomacy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_diplomacy_pagan"
+		texturefile = "gfx\\interface\\societies\\diplomacy\\portrait_ring_small_diplomacy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_diplomacy_pagan"
+		texturefile = "gfx\\interface\\societies\\diplomacy\\society_currency_diplomacy.dds"
+	}
+
+	###Stewardship Societies
+
+	#Europe
+	spriteType = {
+		name = "GFX_society_main_background_rtp_stewardship_europe"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_bg_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_stewardship_europe"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_exp_bg_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_stewardship_europe"
+		texturefile = "gfx\\interface\\societies\\stewardship\\symbol_small_stewardship.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_stewardship_europe"
+		texturefile = "gfx\\interface\\societies\\stewardship\\portrait_ring_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_stewardship_europe"
+		texturefile = "gfx\\interface\\societies\\stewardship\\portrait_ring_small_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_stewardship_europe"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_currency_stewardship.dds"
+	}
+
+	#Africa
+	spriteType = {
+		name = "GFX_society_main_background_rtp_stewardship_africa"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_bg_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_stewardship_africa"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_exp_bg_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_stewardship_africa"
+		texturefile = "gfx\\interface\\societies\\stewardship\\symbol_small_stewardship.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_stewardship_africa"
+		texturefile = "gfx\\interface\\societies\\stewardship\\portrait_ring_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_stewardship_africa"
+		texturefile = "gfx\\interface\\societies\\stewardship\\portrait_ring_small_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_stewardship_africa"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_currency_stewardship.dds"
+	}
+
+	#Asia Minor
+	spriteType = {
+		name = "GFX_society_main_background_rtp_stewardship_asia_minor"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_bg_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_stewardship_asia_minor"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_exp_bg_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_stewardship_asia_minor"
+		texturefile = "gfx\\interface\\societies\\stewardship\\symbol_small_stewardship.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_stewardship_asia_minor"
+		texturefile = "gfx\\interface\\societies\\stewardship\\portrait_ring_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_stewardship_asia_minor"
+		texturefile = "gfx\\interface\\societies\\stewardship\\portrait_ring_small_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_stewardship_asia_minor"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_currency_stewardship.dds"
+	}
+
+	#India
+	spriteType = {
+		name = "GFX_society_main_background_rtp_stewardship_india"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_bg_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_stewardship_india"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_exp_bg_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_stewardship_india"
+		texturefile = "gfx\\interface\\societies\\stewardship\\symbol_small_stewardship.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_stewardship_india"
+		texturefile = "gfx\\interface\\societies\\stewardship\\portrait_ring_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_stewardship_india"
+		texturefile = "gfx\\interface\\societies\\stewardship\\portrait_ring_small_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_stewardship_india"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_currency_stewardship.dds"
+	}
+
+	#Persia
+	spriteType = {
+		name = "GFX_society_main_background_rtp_stewardship_persia"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_bg_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_stewardship_persia"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_exp_bg_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_stewardship_persia"
+		texturefile = "gfx\\interface\\societies\\stewardship\\symbol_small_stewardship.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_stewardship_persia"
+		texturefile = "gfx\\interface\\societies\\stewardship\\portrait_ring_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_stewardship_persia"
+		texturefile = "gfx\\interface\\societies\\stewardship\\portrait_ring_small_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_stewardship_persia"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_currency_stewardship.dds"
+	}
+
+	#Middle East
+	spriteType = {
+		name = "GFX_society_main_background_rtp_stewardship_middle_east"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_bg_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_stewardship_middle_east"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_exp_bg_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_stewardship_middle_east"
+		texturefile = "gfx\\interface\\societies\\stewardship\\symbol_small_stewardship.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_stewardship_middle_east"
+		texturefile = "gfx\\interface\\societies\\stewardship\\portrait_ring_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_stewardship_middle_east"
+		texturefile = "gfx\\interface\\societies\\stewardship\\portrait_ring_small_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_stewardship_middle_east"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_currency_stewardship.dds"
+	}
+
+	#Steppes
+	spriteType = {
+		name = "GFX_society_main_background_rtp_stewardship_steppe"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_bg_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_stewardship_steppe"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_exp_bg_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_stewardship_steppe"
+		texturefile = "gfx\\interface\\societies\\stewardship\\symbol_small_stewardship.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_stewardship_steppe"
+		texturefile = "gfx\\interface\\societies\\stewardship\\portrait_ring_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_stewardship_steppe"
+		texturefile = "gfx\\interface\\societies\\stewardship\\portrait_ring_small_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_stewardship_steppe"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_currency_stewardship.dds"
+	}
+
+	#Himalayas
+	spriteType = {
+		name = "GFX_society_main_background_rtp_stewardship_himalayas"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_bg_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_stewardship_himalayas"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_exp_bg_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_stewardship_himalayas"
+		texturefile = "gfx\\interface\\societies\\stewardship\\symbol_small_stewardship.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_stewardship_himalayas"
+		texturefile = "gfx\\interface\\societies\\stewardship\\portrait_ring_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_stewardship_himalayas"
+		texturefile = "gfx\\interface\\societies\\stewardship\\portrait_ring_small_stewardship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_stewardship_himalayas"
+		texturefile = "gfx\\interface\\societies\\stewardship\\society_currency_stewardship.dds"
+	}
+
+	###Martial Societies
+
+	#Norse
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_norse"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_norse"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_norse"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_norse"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_norse"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_norse"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	#Tengri
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_tengri"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_tengri"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_tengri"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_tengri"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_tengri"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_tengri"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	#Baltic
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_baltic"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_baltic"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_baltic"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_baltic"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_baltic"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_baltic"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	#Finnish
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_finnish"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_finnish"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_finnish"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_finnish"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_finnish"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_finnish"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	#Slavic
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_slavic"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_slavic"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_slavic"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_slavic"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_slavic"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_slavic"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	#West African
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_west_african"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_west_african"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_west_african"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_west_african"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_west_african"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_west_african"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	#Zun
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_zun"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_zun"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_zun"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_zun"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_zun"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_zun"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	#Bon
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_bon"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_bon"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_bon"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_bon"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_bon"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_bon"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	#Hellenic
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_hellenic"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_hellenic"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_hellenic"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_hellenic"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_hellenic"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_hellenic"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	######
+	#Aztec
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_aztec"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_aztec"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_aztec"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_aztec"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_aztec"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_aztec"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	#Chalcedonian
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_chalcedonian"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_chalcedonian"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_chalcedonian"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_chalcedonian"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_chalcedonian"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_chalcedonian"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	#Catholic
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_catholic"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_catholic"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_catholic"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_catholic"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_catholic"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_catholic"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	#Orthodox
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_orthodox"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_orthodox"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_orthodox"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_orthodox"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_orthodox"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_orthodox"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	#Miaphysite
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_miaphysite"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_miaphysite"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_miaphysite"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_miaphysite"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_miaphysite"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_miaphysite"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	#Nestorian
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_nestorian"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_nestorian"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_nestorian"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_nestorian"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_nestorian"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_nestorian"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	#Jewish
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_jewish"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_jewish"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_jewish"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_jewish"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_jewish"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_jewish"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	#Sunni
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_sunni"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_sunni"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_sunni"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_sunni"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_sunni"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_sunni"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	#Shia
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_shiite"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_shiite"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_shiite"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_shiite"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_shiite"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_shiite"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	#Ibadi
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_ibadi"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_ibadi"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_ibadi"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_ibadi"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_ibadi"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_ibadi"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	#Zoroastrian
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_zoroastrian"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_zoroastrian"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_zoroastrian"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_zoroastrian"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_zoroastrian"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_zoroastrian"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	#Eastern
+	spriteType = {
+		name = "GFX_society_main_background_rtp_martial_eastern"
+		texturefile = "gfx\\interface\\societies\\martial\\society_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_martial_eastern"
+		texturefile = "gfx\\interface\\societies\\martial\\society_exp_bg_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_rtp_martial_eastern"
+		texturefile = "gfx\\interface\\societies\\martial\\symbol_small_martial.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_martial_eastern"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_martial_eastern"
+		texturefile = "gfx\\interface\\societies\\martial\\portrait_ring_small_martial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_martial_eastern"
+		texturefile = "gfx\\interface\\societies\\martial\\society_currency_martial.dds"
+	}
+
+	###Intrigue Societies
+
+	#Norse
+	spriteType = {
+		name = "GFX_society_main_background_rtp_intrigue_norse"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_intrigue_norse"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_exp_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_intrigue_norse"
+		texturefile = "gfx\\interface\\societies\\intrigue\\symbol_small_intrigue.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_intrigue_norse"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_intrigue_norse"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_small_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_intrigue_norse"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_currency_intrigue.dds"
+	}
+
+	#Tengri
+	spriteType = {
+		name = "GFX_society_main_background_rtp_intrigue_tengri"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_intrigue_tengri"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_exp_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_intrigue_tengri"
+		texturefile = "gfx\\interface\\societies\\intrigue\\symbol_small_intrigue.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_intrigue_tengri"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_intrigue_tengri"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_small_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_intrigue_tengri"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_currency_intrigue.dds"
+	}
+
+	#Baltic
+	spriteType = {
+		name = "GFX_society_main_background_rtp_intrigue_baltic"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_intrigue_baltic"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_exp_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_intrigue_baltic"
+		texturefile = "gfx\\interface\\societies\\intrigue\\symbol_small_intrigue.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_intrigue_baltic"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_intrigue_baltic"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_small_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_intrigue_baltic"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_currency_intrigue.dds"
+	}
+
+	#Slavic
+	spriteType = {
+		name = "GFX_society_main_background_rtp_intrigue_slavic"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_intrigue_slavic"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_exp_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_intrigue_slavic"
+		texturefile = "gfx\\interface\\societies\\intrigue\\symbol_small_intrigue.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_intrigue_slavic"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_intrigue_slavic"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_small_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_intrigue_slavic"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_currency_intrigue.dds"
+	}
+
+	#Finnish
+	spriteType = {
+		name = "GFX_society_main_background_rtp_intrigue_finnish"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_intrigue_finnish"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_exp_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_intrigue_finnish"
+		texturefile = "gfx\\interface\\societies\\intrigue\\symbol_small_intrigue.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_intrigue_finnish"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_intrigue_finnish"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_small_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_intrigue_finnish"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_currency_intrigue.dds"
+	}
+
+	#West African
+	spriteType = {
+		name = "GFX_society_main_background_rtp_intrigue_west_african"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_intrigue_west_african"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_exp_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_intrigue_west_african"
+		texturefile = "gfx\\interface\\societies\\intrigue\\symbol_small_intrigue.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_intrigue_west_african"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_intrigue_west_african"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_small_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_intrigue_west_african"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_currency_intrigue.dds"
+	}
+
+	#Zun
+	spriteType = {
+		name = "GFX_society_main_background_rtp_intrigue_zun"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_intrigue_zun"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_exp_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_intrigue_zun"
+		texturefile = "gfx\\interface\\societies\\intrigue\\symbol_small_intrigue.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_intrigue_zun"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_intrigue_zun"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_small_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_intrigue_zun"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_currency_intrigue.dds"
+	}
+
+	#Bon
+	spriteType = {
+		name = "GFX_society_main_background_rtp_intrigue_bon"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_intrigue_bon"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_exp_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_intrigue_bon"
+		texturefile = "gfx\\interface\\societies\\intrigue\\symbol_small_intrigue.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_intrigue_bon"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_intrigue_bon"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_small_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_intrigue_bon"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_currency_intrigue.dds"
+	}
+
+	#Hellenic
+	spriteType = {
+		name = "GFX_society_main_background_rtp_intrigue_hellenic"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_intrigue_hellenic"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_exp_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_intrigue_hellenic"
+		texturefile = "gfx\\interface\\societies\\intrigue\\symbol_small_intrigue.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_intrigue_hellenic"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_intrigue_hellenic"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_small_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_intrigue_hellenic"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_currency_intrigue.dds"
+	}
+
+	#Aztecs
+	spriteType = {
+		name = "GFX_society_main_background_rtp_intrigue_aztec"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_intrigue_aztec"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_exp_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_intrigue_aztec"
+		texturefile = "gfx\\interface\\societies\\intrigue\\symbol_small_intrigue.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_intrigue_aztec"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_intrigue_aztec"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_small_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_intrigue_aztec"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_currency_intrigue.dds"
+	}
+
+	#Christians
+	spriteType = {
+		name = "GFX_society_main_background_rtp_intrigue_christians"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_intrigue_christians"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_exp_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_intrigue_christians"
+		texturefile = "gfx\\interface\\societies\\intrigue\\symbol_small_intrigue.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_intrigue_christians"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_intrigue_christians"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_small_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_intrigue_christians"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_currency_intrigue.dds"
+	}
+
+	#Muslims
+	spriteType = {
+		name = "GFX_society_main_background_rtp_intrigue_muslim"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_intrigue_muslim"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_exp_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_intrigue_muslim"
+		texturefile = "gfx\\interface\\societies\\intrigue\\symbol_small_intrigue.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_intrigue_muslim"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_intrigue_muslim"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_small_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_intrigue_muslim"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_currency_intrigue.dds"
+	}
+
+	#Jewish
+	spriteType = {
+		name = "GFX_society_main_background_rtp_intrigue_jewish"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_intrigue_jewish"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_exp_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_intrigue_jewish"
+		texturefile = "gfx\\interface\\societies\\intrigue\\symbol_small_intrigue.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_intrigue_jewish"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_intrigue_jewish"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_small_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_intrigue_jewish"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_currency_intrigue.dds"
+	}
+
+	#Zoroastrian
+	spriteType = {
+		name = "GFX_society_main_background_rtp_intrigue_zoroastrian"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_intrigue_zoroastrian"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_exp_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_intrigue_zoroastrian"
+		texturefile = "gfx\\interface\\societies\\intrigue\\symbol_small_intrigue.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_intrigue_zoroastrian"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_intrigue_zoroastrian"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_small_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_intrigue_zoroastrian"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_currency_intrigue.dds"
+	}
+
+	#Eastern
+	spriteType = {
+		name = "GFX_society_main_background_rtp_intrigue_eastern"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_intrigue_eastern"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_exp_bg_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_intrigue_eastern"
+		texturefile = "gfx\\interface\\societies\\intrigue\\symbol_small_intrigue.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_intrigue_eastern"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_intrigue_eastern"
+		texturefile = "gfx\\interface\\societies\\intrigue\\portrait_ring_small_intrigue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_intrigue_eastern"
+		texturefile = "gfx\\interface\\societies\\intrigue\\society_currency_intrigue.dds"
+	}
+
+	###Learning Societies
+
+	#Reformed Pagan
+	spriteType = {
+		name = "GFX_society_main_background_rtp_learning_reformed_pagan"
+		texturefile = "gfx\\interface\\societies\\learning\\society_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_learning_reformed_pagan"
+		texturefile = "gfx\\interface\\societies\\learning\\society_exp_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_learning_reformed_pagan"
+		texturefile = "gfx\\interface\\societies\\learning\\symbol_small_learning.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_learning_reformed_pagan"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_learning_reformed_pagan"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_small_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_learning_reformed_pagan"
+		texturefile = "gfx\\interface\\societies\\learningy\\society_currency_learning.dds"
+	}
+
+	#Pagan
+	spriteType = {
+		name = "GFX_society_main_background_rtp_learning_pagan"
+		texturefile = "gfx\\interface\\societies\\learning\\society_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_learning_pagan"
+		texturefile = "gfx\\interface\\societies\\learning\\society_exp_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_learning_pagan"
+		texturefile = "gfx\\interface\\societies\\learning\\symbol_small_learning.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_learning_pagan"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_learning_pagan"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_small_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_learning_pagan"
+		texturefile = "gfx\\interface\\societies\\learningy\\society_currency_learning.dds"
+	}
+
+	#Chalcedonian
+	spriteType = {
+		name = "GFX_society_main_background_rtp_learning_chalcedonian"
+		texturefile = "gfx\\interface\\societies\\learning\\society_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_learning_chalcedonian"
+		texturefile = "gfx\\interface\\societies\\learning\\society_exp_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_learning_chalcedonian"
+		texturefile = "gfx\\interface\\societies\\learning\\symbol_small_learning.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_learning_chalcedonian"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_learning_chalcedonian"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_small_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_learning_chalcedonian"
+		texturefile = "gfx\\interface\\societies\\learningy\\society_currency_learning.dds"
+	}
+
+	#Catholic
+	spriteType = {
+		name = "GFX_society_main_background_rtp_learning_catholic"
+		texturefile = "gfx\\interface\\societies\\learning\\society_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_learning_catholic"
+		texturefile = "gfx\\interface\\societies\\learning\\society_exp_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_learning_catholic"
+		texturefile = "gfx\\interface\\societies\\learning\\symbol_small_learning.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_learning_catholic"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_learning_catholic"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_small_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_learning_catholic"
+		texturefile = "gfx\\interface\\societies\\learningy\\society_currency_learning.dds"
+	}
+
+	#Orthodox
+	spriteType = {
+		name = "GFX_society_main_background_rtp_learning_orthodox"
+		texturefile = "gfx\\interface\\societies\\learning\\society_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_learning_orthodox"
+		texturefile = "gfx\\interface\\societies\\learning\\society_exp_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_learning_orthodox"
+		texturefile = "gfx\\interface\\societies\\learning\\symbol_small_learning.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_learning_orthodox"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_learning_orthodox"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_small_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_learning_orthodox"
+		texturefile = "gfx\\interface\\societies\\learningy\\society_currency_learning.dds"
+	}
+
+	#Nestorian
+	spriteType = {
+		name = "GFX_society_main_background_rtp_learning_nestorian"
+		texturefile = "gfx\\interface\\societies\\learning\\society_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_learning_nestorian"
+		texturefile = "gfx\\interface\\societies\\learning\\society_exp_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_learning_nestorian"
+		texturefile = "gfx\\interface\\societies\\learning\\symbol_small_learning.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_learning_nestorian"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_learning_nestorian"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_small_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_learning_nestorian"
+		texturefile = "gfx\\interface\\societies\\learningy\\society_currency_learning.dds"
+	}
+
+	#Monophysite
+	spriteType = {
+		name = "GFX_society_main_background_rtp_learning_monophysite"
+		texturefile = "gfx\\interface\\societies\\learning\\society_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_learning_monophysite"
+		texturefile = "gfx\\interface\\societies\\learning\\society_exp_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_learning_monophysite"
+		texturefile = "gfx\\interface\\societies\\learning\\symbol_small_learning.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_learning_monophysite"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_learning_monophysite"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_small_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_learning_monophysite"
+		texturefile = "gfx\\interface\\societies\\learningy\\society_currency_learning.dds"
+	}
+
+	#Sunni
+	spriteType = {
+		name = "GFX_society_main_background_rtp_learning_sunni"
+		texturefile = "gfx\\interface\\societies\\learning\\society_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_learning_sunni"
+		texturefile = "gfx\\interface\\societies\\learning\\society_exp_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_learning_sunni"
+		texturefile = "gfx\\interface\\societies\\learning\\symbol_small_learning.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_learning_sunni"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_learning_sunni"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_small_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_learning_sunni"
+		texturefile = "gfx\\interface\\societies\\learningy\\society_currency_learning.dds"
+	}
+
+	#Shia
+	spriteType = {
+		name = "GFX_society_main_background_rtp_learning_shiite"
+		texturefile = "gfx\\interface\\societies\\learning\\society_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_learning_shiite"
+		texturefile = "gfx\\interface\\societies\\learning\\society_exp_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_learning_shiite"
+		texturefile = "gfx\\interface\\societies\\learning\\symbol_small_learning.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_learning_shiite"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_learning_shiite"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_small_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_learning_shiite"
+		texturefile = "gfx\\interface\\societies\\learningy\\society_currency_learning.dds"
+	}
+
+	#Ibadi
+	spriteType = {
+		name = "GFX_society_main_background_rtp_learning_ibadi"
+		texturefile = "gfx\\interface\\societies\\learning\\society_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_learning_ibadi"
+		texturefile = "gfx\\interface\\societies\\learning\\society_exp_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_learning_ibadi"
+		texturefile = "gfx\\interface\\societies\\learning\\symbol_small_learning.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_learning_ibadi"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_learning_ibadi"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_small_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_learning_ibadi"
+		texturefile = "gfx\\interface\\societies\\learningy\\society_currency_learning.dds"
+	}
+
+	#Jewsih
+	spriteType = {
+		name = "GFX_society_main_background_rtp_learning_jewish"
+		texturefile = "gfx\\interface\\societies\\learning\\society_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_learning_jewish"
+		texturefile = "gfx\\interface\\societies\\learning\\society_exp_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_learning_jewish"
+		texturefile = "gfx\\interface\\societies\\learning\\symbol_small_learning.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_learning_jewish"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_learning_jewish"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_small_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_learning_jewish"
+		texturefile = "gfx\\interface\\societies\\learningy\\society_currency_learning.dds"
+	}
+
+	#Zoroastrian
+	spriteType = {
+		name = "GFX_society_main_background_rtp_learning_zoroastrian"
+		texturefile = "gfx\\interface\\societies\\learning\\society_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_learning_zoroastrian"
+		texturefile = "gfx\\interface\\societies\\learning\\society_exp_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_learning_zoroastrian"
+		texturefile = "gfx\\interface\\societies\\learning\\symbol_small_learning.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_learning_zoroastrian"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_learning_zoroastrian"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_small_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_learning_zoroastrian"
+		texturefile = "gfx\\interface\\societies\\learningy\\society_currency_learning.dds"
+	}
+
+	#Hindu
+	spriteType = {
+		name = "GFX_society_main_background_rtp_learning_hindu"
+		texturefile = "gfx\\interface\\societies\\learning\\society_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_learning_hindu"
+		texturefile = "gfx\\interface\\societies\\learning\\society_exp_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_learning_hindu"
+		texturefile = "gfx\\interface\\societies\\learning\\symbol_small_learning.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_learning_hindu"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_learning_hindu"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_small_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_learning_hindu"
+		texturefile = "gfx\\interface\\societies\\learningy\\society_currency_learning.dds"
+	}
+
+	#Buddhist
+	spriteType = {
+		name = "GFX_society_main_background_rtp_learning_buddhist"
+		texturefile = "gfx\\interface\\societies\\learning\\society_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_learning_buddhist"
+		texturefile = "gfx\\interface\\societies\\learning\\society_exp_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_learning_buddhist"
+		texturefile = "gfx\\interface\\societies\\learning\\symbol_small_learning.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_learning_buddhist"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_learning_buddhist"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_small_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_learning_buddhist"
+		texturefile = "gfx\\interface\\societies\\learningy\\society_currency_learning.dds"
+	}
+
+	#Jain
+	spriteType = {
+		name = "GFX_society_main_background_rtp_learning_jain"
+		texturefile = "gfx\\interface\\societies\\learning\\society_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_learning_jain"
+		texturefile = "gfx\\interface\\societies\\learning\\society_exp_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_learning_jain"
+		texturefile = "gfx\\interface\\societies\\learning\\symbol_small_learning.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_learning_jain"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_learning_jain"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_small_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_learning_jain"
+		texturefile = "gfx\\interface\\societies\\learningy\\society_currency_learning.dds"
+	}
+
+	#Taoist
+	spriteType = {
+		name = "GFX_society_main_background_rtp_learning_taoist"
+		texturefile = "gfx\\interface\\societies\\learning\\society_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_expansion_background_rtp_learning_taoist"
+		texturefile = "gfx\\interface\\societies\\learning\\society_exp_bg_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_small_rtp_learning_taoist"
+		texturefile = "gfx\\interface\\societies\\learning\\symbol_small_learning.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_rtp_learning_taoist"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_rtp_learning_taoist"
+		texturefile = "gfx\\interface\\societies\\learning\\portrait_ring_small_learning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_society_currency_society_rtp_learning_taoist"
+		texturefile = "gfx\\interface\\societies\\learningy\\society_currency_learning.dds"
+	}
+}

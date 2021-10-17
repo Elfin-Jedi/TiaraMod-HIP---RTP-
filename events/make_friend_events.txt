@@ -1,0 +1,108 @@
+namespace = make_friend
+character_event = {
+	id = make_friend.0
+	desc = EVTDESCmake_friend.0
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+
+	immediate = {
+		FROMFROM = { set_character_flag = recent_friend }
+	}
+
+	option = {						#Option 1: Accept Friendship "Lets be Friends"
+		name = EVTOPTAmake_friend.0
+		ai_chance = {
+			factor = 0.9
+			modifier = {
+				factor = 0
+				trait = possessed
+			}
+			modifier = {
+				factor = 0.33
+				trait = wroth
+			}
+			modifier = {
+				factor = 3
+				trait = honest
+			}
+			modifier = {
+				factor = 10
+				trait = gregarious
+			}
+			modifier = {
+				factor = 0
+				NOT = { opinion = { who = FROMFROM value = 0 } }
+			}
+			modifier = {
+				factor = 8
+				opinion = { who = FROMFROM value = 40 }
+			}
+		}
+		hidden_tooltip = {
+			FROMFROM = { character_event = { id = make_friend.1 days = 1 } }
+		}
+	}
+
+	option = {						#Option 2: Deny Friendship "I can't be your friend."
+		name = EVTOPTBmake_friend.0
+		ai_chance = {
+			factor = 0.1
+			modifier = {
+				factor = 3
+				trait = wroth
+			}
+			modifier = {
+				factor = 3
+				trait = possessed
+			}
+			modifier = {
+				factor = 0.33
+				trait = honest
+			}
+			modifier = {
+				factor = 0
+				trait = gregarious
+			}
+			modifier = {
+				factor = 10
+				NOT = { opinion = { who = FROMFROM value = 0 } }
+			}
+			modifier = {
+				factor = 0
+				opinion = { who = FROMFROM value = 75 }
+			}
+		}
+	}
+}
+character_event = {					#Become good friends
+	id = make_friend.1
+	desc = EVTDESCmake_friend.1
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAmake_friend.1
+		add_character_modifier = { name = recent_friend days = 360 }
+		FROMFROM = { add_character_modifier = { name = recent_friend days = 360 } }
+		hidden_tooltip = { clr_character_flag = recent_friend }
+		
+		prestige = 10		
+		add_friend = FROM
+	}
+}
+character_event = {					#Failure
+	id = make_friend.2
+	desc = EVTDESCmake_friend.2
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAmake_friend.2
+		opinion = { modifier = friend_rejected who = FROMFROM days = 360 }
+		add_character_modifier = { name = recent_friend days = 180 }
+		FROMFROM = { add_character_modifier = { name = recent_friend days = 180 } }
+		hidden_tooltip = { clr_character_flag = recent_friend }
+		
+		prestige = -50
+	}
+}

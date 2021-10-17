@@ -1,0 +1,342 @@
+#####
+#Noble Events
+#
+#Total = 3
+#####
+
+namespace = RTPnoble
+
+#Main Events
+#####
+
+#Landed Opportunity
+narrative_event = {
+	id = RTPnoble.1
+	title = "RTPnoble_1_title"
+	desc = "RTPnoble_1_desc"
+	picture = GFX_evt_knight_kneeling
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		prestige = 750
+		has_landed_title = c_landless_t
+		rtp_is_capable_adult = yes
+		NOR = {
+			dynasty = 19930
+			has_character_flag = rtp_refused_barony #You will never hear from this person again
+		}
+		liege = {
+			is_within_diplo_range = FROM
+		}
+	}
+
+	option = {
+		name = "RTPnoble.1_1"
+
+		prestige = -750
+
+		hidden_tooltip = {
+			remove_trait = cannot_marry
+			any_dynasty_member_even_if_dead = {
+				remove_trait = cannot_marry
+			}
+
+			set_defacto_liege = FROM
+			religion = FROM
+			culture = FROM
+			
+			any_child = {
+				religion = FROM
+				culture = FROM
+			}
+	
+			event_target:rtp_new_title = {
+				grant_title = ROOT
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnoble.1_2"
+
+		prestige = -500
+
+		hidden_tooltip = {
+			remove_trait = cannot_marry
+			any_dynasty_member_even_if_dead = {
+				remove_trait = cannot_marry
+			}
+
+			set_defacto_liege = FROM
+			religion_scope = {
+				save_event_target_as = rtp_actual_religion #The actual religion
+			}
+			religion = FROM
+			set_secret_religion = event_target:rtp_actual_religion #The actual religion
+			culture = FROM
+			
+			any_child = {
+				religion = FROM
+				set_secret_religion = event_target:rtp_actual_religion #The actual religion
+				culture = FROM
+			}
+	
+			event_target:rtp_new_title = {
+				grant_title = ROOT
+				c_baron_t = {
+					set_name = PREV
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnoble.1_3"
+
+		set_character_flag = rtp_refused_barony #You will never hear from this person again
+	}
+}
+
+#2
+
+#Purchase Holding
+character_event = {
+	id = RTPnoble.3
+	title = "RTPnoble_3_title"
+	desc = "RTPnoble_3_desc"
+	picture = GFX_evt_construction_site
+	is_triggered_only = yes
+	ai = no
+
+	option = {
+		name = "RTPnoble.3_1"
+
+		if = {
+			limit = {
+				rtp_is_mercenary = yes
+				event_target:rtp_selected_province = {
+					holder_scope = {
+						owes_favor_to = FROM
+					}
+				}
+			}
+			wealth = -350
+		}
+		else_if = {
+			limit = {
+				rtp_is_mercenary = yes
+			}
+			wealth = -700
+		}
+		else_if = {
+			limit = {
+				rtp_is_holy_order = yes
+				event_target:rtp_selected_province = {
+					holder_scope = {
+						owes_favor_to = FROM
+					}
+				}
+			}
+			wealth = -250
+		}
+		else_if = {
+			limit = {
+				rtp_is_holy_order = yes
+			}
+			wealth = -500
+		}
+		else_if = {
+			limit = {
+				rtp_is_holy_order = no
+				rtp_is_mercenary = no
+				event_target:rtp_selected_province = {
+					holder_scope = {
+						owes_favor_to = FROM
+					}
+				}
+			}
+			wealth = -300
+		}
+		else = {
+			wealth = -600
+		}
+
+		liege = {
+			set_truce = {
+				who = ROOT
+				years = 50
+			}
+		}
+
+		hidden_tooltip = {
+			remove_trait = cannot_marry
+			any_dynasty_member_even_if_dead = {
+				remove_trait = cannot_marry
+			}
+
+			event_target:rtp_selected_province = {
+				hidden_tooltip = {
+					holder_scope = {
+						reverse_remove_favor = ROOT
+					}
+				}
+				build_holding = {
+					type = castle
+					holder = ROOT
+				}
+				any_province_holding = {
+					limit = {
+						holder_scope = {
+							character = ROOT
+						}
+					}
+					c_baron_t = {
+						set_name = PREV
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnoble.3_2"
+
+		trigger = {
+			rtp_is_mercenary = no
+			rtp_is_holy_order = no
+		}
+
+		wealth = -600
+
+		liege = {
+			set_truce = {
+				who = ROOT
+				years = 50
+			}
+		}
+
+		hidden_tooltip = {
+			remove_trait = cannot_marry
+			any_dynasty_member_even_if_dead = {
+				remove_trait = cannot_marry
+			}
+
+			set_character_flag = rtp_republic #This guy is a republic
+
+			event_target:rtp_selected_province = {
+				build_holding = {
+					type = city
+					holder = ROOT
+				}
+				any_province_holding = {
+					limit = {
+						holder_scope = {
+							character = ROOT
+						}
+					}
+					c_baron_t = {
+						set_name = PREV
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnoble.3_3"
+
+		trigger = {
+			rtp_is_mercenary = no
+			rtp_is_holy_order = no
+		}
+
+		wealth = -600
+
+		liege = {
+			set_truce = {
+				who = ROOT
+				years = 50
+			}
+		}
+		
+		hidden_tooltip = {
+			remove_trait = cannot_marry
+			any_dynasty_member_even_if_dead = {
+				remove_trait = cannot_marry
+			}
+			
+			set_character_flag = rtp_theocracy #This guy is a theocracy
+
+			event_target:rtp_selected_province = {
+				build_holding = {
+					type = temple
+					holder = ROOT
+				}
+				any_province_holding = {
+					limit = {
+						holder_scope = {
+							character = ROOT
+						}
+					}
+					c_baron_t = {
+						set_name = PREV
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnoble.3_4"
+	}
+}
+
+#4
+
+#5
+
+#Ping Events
+#####
+
+#Ping for Landed Opportunity
+character_event = {
+	id = RTPnoble.100
+	is_triggered_only = yes
+	hide_window = yes
+	only_playable = yes
+	capable_only = yes
+	war = no
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+		NOT = {
+			government = confucian_bureaucracy
+		}
+		higher_tier_than = COUNT
+		over_max_demesne_size = 0
+	}
+
+	immediate = {
+		random_demesne_province = {
+			random_province_holding = {
+				limit = {
+					is_capital = no
+					OR = {
+						holding_type = castle
+						holding_type = city
+						holding_type = temple
+					}
+				}
+				save_event_target_as = rtp_new_title #The new landed title you will gain
+				ROOT = {
+					any_player = {
+						narrative_event = {
+							id = RTPnoble.1 #Landed Opportunity
+						}
+					}
+				}
+			}
+		}
+	}
+}

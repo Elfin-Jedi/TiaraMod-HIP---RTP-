@@ -1,0 +1,28 @@
+surpoids = {
+
+      ruler_designer_cost = -10
+
+inherit_chance = 15
+both_parent_has_trait_inherit_chance = 90
+health = -1.5
+random = yes
+birth = 50
+  
+  diplomacy = -2
+  martial = 1
+  
+  opposites = {
+			maigre
+            anorexique
+            weak
+            feeble
+            temperate                                  
+  }
+  
+  opposite_opinion = -5
+  same_opinion = 10
+  vassal_opinion = -5
+  sex_appeal_opinion = -10
+  combat_rating = -2
+
+}

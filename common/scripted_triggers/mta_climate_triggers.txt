@@ -1,0 +1,45 @@
+# -*- ck2.scripted_triggers -*-
+
+mta_capital_has_harsh_climate = {
+	custom_tooltip = {
+		text = mta_winter_climate_TT
+		OR = {
+			AND = {
+				is_landed = false
+				OR = {
+					liege = { capital_scope = { climate = normal_winter } }
+					liege = { capital_scope = { climate = severe_winter } }
+				}
+			}
+			capital_scope = { climate = normal_winter }
+			capital_scope = { climate = severe_winter }
+		}
+	}
+}
+
+mta_capital_has_temperate_climate = {
+	custom_tooltip = {
+		text = mta_temperate_climate_TT
+		OR = {
+			AND = {
+				is_landed = false
+				liege = {
+					capital_scope = {
+						NOR = {
+							climate = mild_winter
+							climate = normal_winter
+							climate = severe_winter
+						}
+					}
+				}
+			}
+			capital_scope = {
+				NOR = {
+					climate = mild_winter
+					climate = normal_winter
+					climate = severe_winter
+				}
+			}
+		}
+	}
+}

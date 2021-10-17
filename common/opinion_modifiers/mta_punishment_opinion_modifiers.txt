@@ -1,0 +1,28 @@
+opinion_executed_close_kin = {
+	opinion = -10
+	years = 20
+}
+
+opinion_executed_kin = {
+	opinion = -10
+	years = 10
+}
+
+opinion_executed_close_kin_unjust = {
+	opinion = -100
+	years = 100
+	crime = yes
+	prison_reason = yes
+	banish_reason = yes
+	execute_reason = yes
+}
+
+opinion_executed_kin_unjust = {
+	opinion = -10
+	years = 20
+}
+
+opinion_executing_me = {
+	opinion = -100
+	years = 100
+}

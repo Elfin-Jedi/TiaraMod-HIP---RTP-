@@ -1,0 +1,88 @@
+RTPglobal.1_title;The New Republic;;;;;;x
+RTPglobal.1_desc;I have now reached an important status as the leader of the [Root.PrimaryTitle.GetFullBaseName]. I have set a foothold near a coastal province and perhaps I can become a different type of Republic.;;;;;;x
+RTPglobal.1_1;Focus on the people.;;;;;;x
+RTPglobal.1_2;Focus on trade.;;;;;;x
+RTPglobal.1_3;Focus on piracy.;;;;;;x
+
+RTPglobal.2_desc;Dear [Root.GetTitledName],\n\nI extend you the official offer for you to join our confederation. United we stand, divided we fall.\n\nSincerely,\n[From.GetTitledName].;;;;;;x
+RTPglobal.2_1;I accept your offer.;;;;;;x
+RTPglobal.2_2;I rather not.;;;;;;x
+
+RTPglobal.3_1_desc;Dear [Root.GetTitledName],\n\nThank you for your kind invitation and we agree to your proposal.\nWe will join the confederation right away!\n\nSincerely,\n[From.GetTitledName].;;;;;;x
+RTPglobal.3_2_desc;Dear [Root.GetTitledName],\n\nThank you for your kind invitation, but we rather stick on our own for now.\n\nSincerely,\n[From.GetTitledName].;;;;;;x
+RTPglobal.3_1;Welcome!;;;;;;x
+RTPglobal.3_2;Your loss.;;;;;;x
+
+RTPglobal.4_title;Shopping;;;;;;x
+RTPglobal.4_desc;[Root.Location.Capital.GetName] is a great place to buy or sell items. I can spend this time looking at the available merchandise or set up my own stall.;;;;;;x
+RTPglobal.4_1;Visit the weaponsmith.;;;;;;x
+RTPglobal.4_2;Visit the armorsmith.;;;;;;x
+RTPglobal.4_3;Visit the local peddlers.;;;;;;x
+RTPglobal.4_4;Set up my own stall.;;;;;;x
+
+RTPglobal.5_title;Weapon Shopping;;;;;;x
+RTPglobal.5_desc;The local weaponsmith offers many different type of weapons ranging from little daggers to huge polearms.;;;;;;x
+RTPglobal.5_1;This one.;;;;;;x
+RTPglobal.5_2;How about that one?;;;;;;x
+RTPglobal.5_3;Give me that one.;;;;;;x
+RTPglobal.5_4;This stuff is too expensive.;;;;;;x
+
+RTPglobal.6_title;Armor Shopping;;;;;;x
+RTPglobal.6_desc;The local armorsmith offers many different type of armors ranging from clothes to heavy plated armors.;;;;;;x
+RTPglobal.6_1;This one.;;;;;;x
+RTPglobal.6_2;How about that one?;;;;;;x
+RTPglobal.6_3;Give me that one.;;;;;;x
+RTPglobal.6_4;This stuff is too expensive.;;;;;;x
+
+RTPglobal.7_title;General Shopping;;;;;;x
+RTPglobal.7_desc;The local peddlers offer many different type of goods ranging from trinkets to exotic mounts.;;;;;;x
+RTPglobal.7_1;This one.;;;;;;x
+RTPglobal.7_2;How about that one?;;;;;;x
+RTPglobal.7_3;Give me that one.;;;;;;x
+RTPglobal.7_4;This stuff is too expensive.;;;;;;x
+
+RTPglobal.8_title;Set up Shop;;;;;;x
+RTPglobal.8_1_desc;I spent all day trying to find a customer to purchase some of my goods and finally a [rtp_merchant.GetManWoman] by the name of [rtp_merchant.GetFirstName] approaches the stand.;;;;;;x
+RTPglobal.8_2_desc;I spent all day trying to find a customer to purchase some of my goods and at the end of the day I decided to head back home.;;;;;;x
+RTPglobal.8_1;Would this work for you?;;;;;;x
+RTPglobal.8_2;My goods are worth more.;;;;;;x
+RTPglobal.8_3;Waste of a day.;;;;;;x
+
+RTPglobal.9_title;Workshop Construction;;;;;;x
+RTPglobal.9_desc;A wealthy Jewish noble by the name of [rtp_workshop_owner.GetFirstName] is willing to build a workshop in [rtp_province1.GetName] for free as long as you allow them to preach their religion. They also would like to reside in your court.;;;;;;x
+RTPglobal.9_1;Welcome!;;;;;;x
+RTPglobal.9_2;Absolutely not.;;;;;;x
+
+RTPglobal.10_title;Workshop Destruction;;;;;;x
+RTPglobal.10_desc;Local bandits have destroyed the workshop located in [rtp_province2.GetName]!;;;;;;x
+RTPglobal.10_1; ;;;;;;x
+
+RTPglobal.11_title;Bandit Hideout;;;;;;x
+RTPglobal.11_desc;Bandits have established a hideout in [rtp_province3.GetName]!;;;;;;x
+RTPglobal.11_1; ;;;;;;x
+
+RTPglobal.12_title;Building Destroyed;;;;;;x
+RTPglobal.12_desc;Bandits have raided and destroyed a building in [rtp_province4.GetName]!;;;;;;x
+RTPglobal.12_1; ;;;;;;x
+
+RTPglobal.13_title;Great Cook;;;;;;x
+RTPglobal.13_desc;Since I received the book [rtp_artifact.GetName] I have been practicing my cooking skills on the daily. I have now reached a point where I may be considered a Chef.;;;;;;x
+RTPglobal.13_1;Voila!;;;;;;x
+RTPglobal.13_2;I am not THAT good.;;;;;;x
+
+#####
+#Tooltips
+#####
+
+rtp_lvl1_price_ct;This item usually sells for ¤2;;;;;;x
+rtp_lvl2_price_ct;This item usually sells for ¤4;;;;;;x
+rtp_lvl3_price_ct;This item usually sells for ¤6;;;;;;x
+rtp_lvl4_price_ct;This item usually sells for ¤8;;;;;;x
+rtp_lvl5_price_ct;This item usually sells for ¤10;;;;;;x
+rtp_lvl0_price_ct;This item usually sells for ¤20;;;;;;x
+rtp_lose_gold_ct;You §RLOSE§! the below amount!;;;;;;x
+rtp_weaponsmith_ct;§YOffers§!:\n\nOne-Handed Weapons\nTwo-Handed Weapons\nRanged Weapons;;;;;;x
+rtp_armorsmith_ct;§YOffers§!:\n\nHeadgears\nTorso Pieces\nShields;;;;;;x
+rtp_peddlers_ct;§YOffers§!:\n\nMounts\nInventory Items\nStorage Goods;;;;;;x
+rtp_set_up_shop_ct;Gives you the chance of selling a random trade goods of yours;;;;;;x
+rtp_accept_workshop_ct;Builds a random workshop in [rtp_province1.GetName];;;;;;x

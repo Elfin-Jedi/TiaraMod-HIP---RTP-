@@ -1,0 +1,49 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+### WS Misc. ###;;;;;;;;;;;;;;;
+EVTDESCHFWS25006;As the [Root.Religion.GetName] mystics surround me, preparing my body and mind for the ritual, one of them asks me what do I wish to do with the power bestowed to me by [Root.Religion.GetHighGodName].;;;;;;;;;;;;;x;
+EVTOPTAHFWS25025;May [Root.Religion.GetHighGodName] protect me and my Fellowship!;;;;;;;;;;;;;x
+warrior_lodge_ws_battle_trance;Enter Battle Trance;;;;;;;;;;;;;x;
+warrior_lodge_ws_battle_trance_power_desc;Enables a decision in the §YIntrigue§! menu for §YLodge§! rulers to enter a battle trance for a limited time, increasing their military skills.;;;;;;;;;;;;;x;
+string_WL_cws_christian_religion;§Y[christian.GetName]§! religion;;;;;;;;;;;;;x;
+string_WL_ws_mazdan_religion;§Y[zoroastrian_group.GetName]§! religion;;;;;;;;;;;;;x;
+string_WL_ws_eastern_religion;§Y[indian_group.GetName]§! religion;;;;;;;;;;;;;x;
+string_WL_ws_aztec_religion;§Y[aztec_reformed.GetName]§! religion;;;;;;;;;;;;;x;
+string_WL_ws_muslim_religion;§Y[muslim.GetName]§! religion;;;;;;;;;;;;;x;
+string_WL_ws_jewish_religion;§Y[jewish_group.GetName]§! religion;;;;;;;;;;;;;x;
+ws_aztec_arrival_tt;The Aztecs must have invaded;;;;;;;;;;;;;x;
+is_member_of_non_pagan_warrior_lodge_tt;Is member of a non-Pagan Warrior Lodge;;;;;;;;;;;;;x;
+;;;;;;;;;;;;;;;
+### WS Game Rules ###;;;;;;;;;;;;;;;
+RULE_GROUP_WS;WS (Warrior Societies);;;;;;;;;;;;;x;
+RULE_OPTION_WS_PLAYER;Players only;;;;;;;;;;;;;;x
+RULE_OPTION_WS_EXISTS;Preexisting;;;;;;;;;;;;;;x
+RULE_WS_CHRISTIAN;§ZWS:§! Christian Warrior Lodge;;;;;;;;;;;;;;x
+RULE_WS_CHRISTIAN_PLAYER;Only players can form the §BChristian§! Warrior Society.;;;;;;;;;;;;;;x
+RULE_WS_CHRISTIAN_ON;Both players and the AI can form the §BChristian§! Warrior Society.;;;;;;;;;;;;;;x
+RULE_WS_CHRISTIAN_OFF;Neither players nor the AI can form the §BChristian§! Warrior Society.;;;;;;;;;;;;;;x
+RULE_WS_CHRISTIAN_EXISTS;§BChristian§! Warrior Society is already active at game start, as long as non-heretic §BChristians§! are present at start date.;;;;;;;;;;;;;;x
+RULE_WS_MAZDAN;§ZWS:§! Mazdan Warrior Lodge;;;;;;;;;;;;;;x
+RULE_WS_MAZDAN_PLAYER;Only players can form the §BMazdan§! Warrior Society.;;;;;;;;;;;;;;x
+RULE_WS_MAZDAN_ON;Both players and the AI can form the §BMazdan§! Warrior Society.;;;;;;;;;;;;;;x
+RULE_WS_MAZDAN_OFF;Neither players nor the AI can form the §BMazdan§! Warrior Society.;;;;;;;;;;;;;;x
+RULE_WS_MAZDAN_EXISTS;§BMazdan§! Warrior Society is already active at game start, as long as non-heretic §BMazdans§! are present at start date.;;;;;;;;;;;;;;x
+RULE_WS_EASTERN;§ZWS:§! Eastern Warrior Lodge;;;;;;;;;;;;;;x
+RULE_WS_EASTERN_PLAYER;Only players can form the §BEastern§! Warrior Society.;;;;;;;;;;;;;;x
+RULE_WS_EASTERN_ON;Both players and the AI can form the §BEastern§! Warrior Society.;;;;;;;;;;;;;;x
+RULE_WS_EASTERN_OFF;Neither players nor the AI can form the §BEastern§! Warrior Society.;;;;;;;;;;;;;;x
+RULE_WS_EASTERN_EXISTS;§BEastern§! Warrior Society is already active at game start, as long as followers of the §BEastern§! religious group are present at start date.;;;;;;;;;;;;;;x
+RULE_WS_AZTEC;§ZWS:§! Aztec Warrior Lodge;;;;;;;;;;;;;;x 
+RULE_WS_AZTEC_PLAYER;Only players can form the §BAztec§! Warrior Society.;;;;;;;;;;;;;;x
+RULE_WS_AZTEC_ON;Both players and the AI can form the §BAztec§! Warrior Society.;;;;;;;;;;;;;;x
+RULE_WS_AZTEC_OFF;Neither players nor the AI can form the §BAztec§! Warrior Society.;;;;;;;;;;;;;;x
+RULE_WS_AZTEC_EXISTS;§BAztec§! Warrior Society is already active at game start, as long as followers of the §BAztec§! religion are present at start date.;;;;;;;;;;;;;;x
+RULE_WS_MUSLIM;§ZWS:§! Muslim Warrior Lodge;;;;;;;;;;;;;;x
+RULE_WS_MUSLIM_PLAYER;Only players can form the §BMuslim§! Warrior Society.;;;;;;;;;;;;;;x
+RULE_WS_MUSLIM_ON;Both players and the AI can form the §BMuslim§! Warrior Society.;;;;;;;;;;;;;;x
+RULE_WS_MUSLIM_OFF;Neither players nor the AI can form the §BMuslim§! Warrior Society.;;;;;;;;;;;;;;x
+RULE_WS_MUSLIM_EXISTS;§BMuslim§! Warrior Society is already active at game start, as long as non-heretic §BMuslims§! are present at start date.;;;;;;;;;;;;;;x
+RULE_WS_JEWISH;§ZWS:§! Jewish Warrior Lodge;;;;;;;;;;;;;;x
+RULE_WS_JEWISH_PLAYER;Only players can form the §BJewish§! Warrior Society.;;;;;;;;;;;;;;x
+RULE_WS_JEWISH_ON;Both players and the AI can form the §BJewish§! Warrior Society.;;;;;;;;;;;;;;x
+RULE_WS_JEWISH_OFF;Neither players nor the AI can form the §BJewish§! Warrior Society.;;;;;;;;;;;;;;x
+RULE_WS_JEWISH_EXISTS;§BJewish§! Warrior Society is already active at game start, as long as non-heretic §BJews§! are present at start date.;;;;;;;;;;;;;;x

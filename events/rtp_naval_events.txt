@@ -1,0 +1,551 @@
+#####
+#Naval Events
+#
+#Total = 6
+#####
+
+namespace = RTPnaval
+
+#Main Events
+#####
+
+#Hostile Admiral Spotted - Attacker
+character_event = {
+	id = RTPnaval.1
+	title = "RTPnaval_1_title"
+	desc = "RTPnaval_1_desc"
+	picture = GFX_evt_longships_at_sea_oldgods
+	sound = bell
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPnaval.1_1"
+
+		trigger = {
+			war_with = event_target:rtp_defending_admiral #The defending admiral
+		}
+
+		rtp_ram_end_sounds_se = yes
+		rtp_assign_naval_outcome1_se = yes
+
+		event_target:rtp_defending_admiral = {
+			save_event_target_as = rtp_defending_admiral #The defending admiral
+		}
+
+		character_event = {
+			id = RTPnaval.2 #Begin Naval Battle - Attacker
+		}
+
+		ai_chance = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				martial < event_target:rtp_defending_admiral #The defending admiral
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnaval.1_2"
+
+		trigger = {
+			NOT = {
+				war_with = event_target:rtp_defending_admiral #The defending admiral
+			}
+		}
+
+		rtp_ram_end_sounds_se = yes
+		rtp_assign_naval_outcome1_se = yes
+
+		if = {
+			limit = {
+				NOR = {
+					trait = viking
+					trait = pirate
+					trait = ravager
+					trait = seaking
+					trait = sea_queen
+				}
+			}
+			random = {
+				chance = 20
+
+				if = {
+					limit = {
+						OR = {
+							religion = norse_pagan
+							religion = norse_pagan_reformed
+						}
+					}
+					add_trait = viking
+				}
+				else = {
+					add_trait = pirate
+				}
+			}
+		}
+
+		reverse_opinion = {
+			who = event_target:rtp_defending_admiral #The defending admiral
+			modifier = opinion_looted
+		}
+
+		event_target:rtp_defending_admiral = {
+			save_event_target_as = rtp_defending_admiral #The defending admiral
+		}
+
+		character_event = {
+			id = RTPnaval.2 #Begin Naval Battle - Attacker
+		}
+
+		ai_chance = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				martial < event_target:rtp_defending_admiral #The defending admiral
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnaval.1_3"
+
+		event_target:rtp_defending_admiral = {
+			character_event = {
+				id = RTPnaval.4 #Hostile Admiral Spotted - Defender
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				martial = event_target:rtp_defending_admiral #The defending admiral
+			}
+		}
+	}
+}
+
+#Begin Naval Battle - Attacker
+character_event = {
+	id = RTPnaval.2
+	title = "RTPnaval_2_title"
+	desc = "RTPnaval.2_desc"
+	picture = GFX_evt_longships_at_sea_oldgods
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPnaval.2_1"
+
+		trigger = {
+			has_character_flag = rtp_naval_victor
+		}
+
+		event_target:rtp_defending_liege = {
+			show_scope_change = no
+			any_realm_province = {
+				show_scope_change = no
+				add_province_modifier = {
+					modifier = rtp_naval_supplies_em
+					years = 10
+					stacking = yes
+				}
+			}
+		}
+
+		rtp_victory_sounds_se = yes
+		rtp_naval_outcome1_se = yes
+	}
+
+	option = {
+		name = "RTPnaval.2_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_naval_victor
+			}
+		}
+
+		event_target:rtp_attacking_liege = {
+			show_scope_change = no
+			any_realm_province = {
+				show_scope_change = no
+				add_province_modifier = {
+					modifier = rtp_naval_supplies_em
+					years = 10
+					stacking = yes
+				}
+			}
+		}
+
+		rtp_loss_sounds_se = yes
+		event_target:rtp_defending_admiral = {
+			show_scope_change = no
+			rtp_naval_outcome2_se = yes
+		}
+	}
+
+	after = {
+		event_target:rtp_defending_liege = {
+			character_event = {
+				id = RTPnaval.3 #Inform opponent of the attack
+			}
+		}
+	}
+}
+
+#Inform opponent of the attack
+character_event = {
+	id = RTPnaval.3
+	title = "RTPnaval.3_title"
+	desc = "RTPnaval.3_desc"
+	picture = GFX_evt_longships_at_sea_oldgods
+	is_triggered_only = yes
+	sound = bell
+	hide_from = yes
+
+	option = {
+		name = "RTPnaval.3_1"
+
+		trigger = {
+			FROM = {
+				NOT = {
+					has_character_flag = rtp_naval_victor
+				}
+			}
+		}
+
+		event_target:rtp_defending_admiral = {
+			save_event_target_as = rtp_defending_admiral #The defending admiral
+		}
+		event_target:rtp_attacking_admiral = {
+			save_event_target_as = rtp_attacking_admiral #The attacking admiral
+		}
+	}
+
+	option = {
+		name = "RTPnaval.3_2"
+
+		trigger = {
+			FROM = {
+				has_character_flag = rtp_naval_victor
+			}
+		}
+
+		FROM = {
+			clr_character_flag = rtp_naval_victor
+		}
+
+		event_target:rtp_defending_admiral = {
+			save_event_target_as = rtp_defending_admiral #The defending admiral
+		}
+		event_target:rtp_attacking_admiral = {
+			save_event_target_as = rtp_attacking_admiral #The attacking admiral
+		}
+	}
+}
+
+#Hostile Admiral Spotted - Defender
+character_event = {
+	id = RTPnaval.4
+	title = "RTPnaval_4_title"
+	desc = "RTPnaval_4_desc"
+	picture = GFX_evt_longships_at_sea_oldgods
+	sound = bell
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPnaval.4_1"
+
+		rtp_ram_end_sounds_se = yes
+		rtp_assign_naval_outcome1_se = yes
+
+		event_target:rtp_attacking_admiral = {
+			save_event_target_as = rtp_attacking_admiral #The attacking admiral
+		}
+
+		character_event = {
+			id = RTPnaval.5 #Begin Naval Battle - Defender
+		}
+
+		ai_chance = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				martial < event_target:rtp_attacking_admiral #The attacking admiral
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnaval.4_2"
+
+		event_target:rtp_attacking_admiral = {
+			save_event_target_as = rtp_attacking_admiral #The attacking admiral
+		}
+
+		ai_chance = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				martial = event_target:rtp_attacking_admiral #The attacking admiral
+			}
+		}
+	}
+}
+
+#Begin Naval Battle - Defender
+character_event = {
+	id = RTPnaval.5
+	title = "RTPnaval.5_title"
+	desc = "RTPnaval.5_desc"
+	picture = GFX_evt_longships_at_sea_oldgods
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPnaval.5_1"
+
+		trigger = {
+			has_character_flag = rtp_naval_victor
+		}
+
+		event_target:rtp_attacking_liege = {
+			show_scope_change = no
+			any_realm_province = {
+				show_scope_change = no
+				add_province_modifier = {
+					modifier = rtp_naval_supplies_em
+					years = 10
+					stacking = yes
+				}
+			}
+		}
+
+		rtp_victory_sounds_se = yes
+		rtp_naval_outcome2_se = yes
+	}
+
+	option = {
+		name = "RTPnaval.5_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_naval_victor
+			}
+		}
+
+		event_target:rtp_defending_liege = {
+			show_scope_change = no
+			any_realm_province = {
+				show_scope_change = no
+				add_province_modifier = {
+					modifier = rtp_naval_supplies_em
+					years = 10
+					stacking = yes
+				}
+			}
+		}
+
+		rtp_loss_sounds_se = yes
+		event_target:rtp_attacking_admiral = {
+			show_scope_change = no
+			rtp_naval_outcome1_se = yes
+		}
+	}
+
+	after = {
+		event_target:rtp_attacking_liege = {
+			character_event = {
+				id = RTPnaval.3 #Inform opponent of the attack
+			}
+		}
+	}
+}
+
+#Ping Events
+#####
+
+#Ping for Admiral Spotted - Attacker
+character_event = {
+	id = RTPnaval.100
+	is_triggered_only = yes
+	hide_window = yes
+	in_command = yes
+	
+	trigger = {
+		is_at_sea = yes
+	}
+
+	after = {
+		if = {
+			limit = {
+				OR = {
+					government = rtp_privateer_g
+					trait = viking
+					trait = pirate
+					trait = ravager
+					trait = sea_queen
+					trait = seaking
+				}
+			}
+			random_character = {
+				limit = {
+					in_command = yes
+					rebel = no
+					at_location = ROOT
+					NOT = {
+						same_realm = ROOT
+					}
+				}
+				if = {
+					limit = {
+						top_liege = {
+							any_current_enemy = {
+								character = ROOT
+							}
+						}
+					}
+					top_liege = {
+						save_event_target_as = rtp_defending_liege #The defending liege
+					}
+				}
+				else_if = {
+					limit = {
+						liege = {
+							any_current_enemy = {
+								character = ROOT
+							}
+						}
+					}
+					liege = {
+						save_event_target_as = rtp_defending_liege #The defending liege
+					}
+				}
+				else = {
+					save_event_target_as = rtp_defending_liege #The defending liege
+				}
+				save_event_target_as = rtp_defending_admiral #The defending admiral
+	
+				ROOT = {
+					if = {
+						limit = {
+							top_liege = {
+								any_current_enemy = {
+									character = event_target:rtp_defending_liege #The defending liege
+								}
+							}
+						}
+						top_liege = {
+							save_event_target_as = rtp_attacking_liege #The attacking liege
+						}
+					}
+					else_if = {
+						limit = {
+							liege = {
+								any_current_enemy = {
+									character = event_target:rtp_defending_liege #The defending liege
+								}
+							}
+						}
+						liege = {
+							save_event_target_as = rtp_attacking_liege #The attacking liege
+						}
+					}
+					else = {
+						save_event_target_as = rtp_attacking_liege #The attacking liege
+					}
+					save_event_target_as = rtp_attacking_admiral #The attacking admiral
+					
+					character_event = {
+						id = RTPnaval.1 #Hostile Admiral Spotted - Attacker
+					}
+				}
+			}
+		}
+		else = {
+			random_character = {
+				limit = {
+					in_command = yes
+					rebel = no
+					war_with = ROOT
+					at_location = ROOT
+				}
+				if = {
+					limit = {
+						top_liege = {
+							any_current_enemy = {
+								character = ROOT
+							}
+						}
+					}
+					top_liege = {
+						save_event_target_as = rtp_defending_liege #The defending liege
+					}
+				}
+				else_if = {
+					limit = {
+						liege = {
+							any_current_enemy = {
+								character = ROOT
+							}
+						}
+					}
+					liege = {
+						save_event_target_as = rtp_defending_liege #The defending liege
+					}
+				}
+				else = {
+					save_event_target_as = rtp_defending_liege #The defending liege
+				}
+				save_event_target_as = rtp_defending_admiral #The defending admiral
+	
+				ROOT = {
+					if = {
+						limit = {
+							top_liege = {
+								any_current_enemy = {
+									character = event_target:rtp_defending_liege #The defending liege
+								}
+							}
+						}
+						top_liege = {
+							save_event_target_as = rtp_attacking_liege #The attacking liege
+						}
+					}
+					else_if = {
+						limit = {
+							liege = {
+								any_current_enemy = {
+									character = event_target:rtp_defending_liege #The defending liege
+								}
+							}
+						}
+						liege = {
+							save_event_target_as = rtp_attacking_liege #The attacking liege
+						}
+					}
+					else = {
+						save_event_target_as = rtp_attacking_liege #The attacking liege
+					}
+					save_event_target_as = rtp_attacking_admiral #The attacking admiral
+					
+					character_event = {
+						id = RTPnaval.1 #Hostile Admiral Spotted - Attacker
+					}
+				}
+			}
+		}
+	}
+}

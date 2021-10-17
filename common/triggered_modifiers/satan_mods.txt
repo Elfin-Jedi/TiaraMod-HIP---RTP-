@@ -1,0 +1,222 @@
+satan_wroth = {
+	potential = {
+		religion = satanism
+	}
+	trigger = {
+		trait = wroth
+		religion = satanism
+	}
+	
+	monthly_character_piety = 0.25
+	satanic_church_opinion = 5
+	
+	icon = 19
+	active = yes
+}
+
+satan_lustful = {
+	potential = {
+		religion = satanism
+	}
+	trigger = {
+		trait = lustful
+		religion = satanism
+	}
+	
+	monthly_character_piety = 0.5
+	satanic_church_opinion = 10
+	
+	icon = 40
+	active = yes
+}
+
+satan_gluttonous = {
+	potential = {
+		religion = satanism
+	}
+	trigger = {
+		trait = gluttonous
+		religion = satanism
+	}
+	
+	monthly_character_piety = 0.25
+	satanic_church_opinion = 10
+	
+	icon = 60
+	active = yes
+}
+
+satan_greedy = {
+	potential = {
+		religion = satanism
+	}
+	trigger = {
+		trait = greedy
+		religion = satanism
+	}
+	
+	monthly_character_piety = 0.25
+	satanic_church_opinion = 5
+	
+	icon = 22
+	active = yes
+}
+
+satan_slothful = {
+	potential = {
+		religion = satanism
+	}
+	trigger = {
+		trait = slothful
+		religion = satanism
+	}
+	
+	monthly_character_piety = 0.25
+	satanic_church_opinion = 5
+	
+	icon = 70
+	active = yes
+}
+
+satan_envious = {
+	potential = {
+		religion = satanism
+	}
+	trigger = {
+		trait = envious
+		religion = satanism
+	}
+	
+	monthly_character_piety = 0.25
+	satanic_church_opinion = 5
+	
+	icon = 82
+	active = yes
+}
+
+satan_proud = {
+	potential = {
+		religion = satanism
+	}
+	trigger = {
+		trait = proud
+		religion = satanism
+	}
+	
+	monthly_character_piety = 0.5
+	satanic_church_opinion = 10
+	
+	icon = 27
+	active = yes
+}
+
+satan_chaste = {
+	potential = {
+		religion = satanism
+	}
+	trigger = {
+		trait = chaste
+		religion = satanism
+	}
+	
+	monthly_character_piety = -0.75
+	satanic_church_opinion = -5
+	
+	icon = 39
+	active = yes
+}
+
+satan_temperate = {
+	potential = {
+		religion = satanism
+	}
+	trigger = {
+		trait = temperate
+		religion = satanism
+	}
+	
+	monthly_character_piety = -0.25
+	satanic_church_opinion = -5
+	
+	icon = 59
+	active = yes
+}
+
+satan_charitable = {
+	potential = {
+		religion = satanism
+	}
+	trigger = {
+		trait = charitable
+		religion = satanism
+	}
+	
+	monthly_character_piety = -0.25
+	satanic_church_opinion = -10
+	
+	icon = 6
+	active = yes
+}
+
+satan_diligent = {
+	potential = {
+		religion = satanism
+	}
+	trigger = {
+		trait = diligent
+		religion = satanism
+	}
+	
+	monthly_character_piety = -0.25
+	satanic_church_opinion = -5
+	
+	icon = 12
+	active = yes
+}
+
+satan_kind = {
+	potential = {
+		religion = satanism
+	}
+	trigger = {
+		trait = kind
+		religion = satanism
+	}
+	
+	monthly_character_piety = -0.25
+	satanic_church_opinion = -5
+	
+	icon = 18
+	active = yes
+}
+
+satan_patient = {
+	potential = {
+		religion = satanism
+	}
+	trigger = {
+		trait = patient
+		religion = satanism
+	}
+	
+	monthly_character_piety = -0.25
+	
+	icon = 11
+	active = yes
+}
+
+satan_humble = {
+	potential = {
+		religion = satanism
+	}
+	trigger = {
+		trait = humble
+		religion = satanism
+	}
+	
+	monthly_character_piety = -0.25
+	satanic_church_opinion = -5
+	
+	icon = 87
+	active = yes
+}

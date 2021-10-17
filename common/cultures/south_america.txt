@@ -1,0 +1,201 @@
+maranon = {
+	graphical_cultures = { mesoamericangfx mongolgfx muslimgfx }
+	
+	jivaro = {
+	
+		graphical_cultures = { mesoamericangfx mongolgfx muslimgfx }
+		
+		color = { 0.34 0.57 0.89 }	
+		
+		male_names = {
+			Anquimarca Atoc Sopa Cayo Topa Coyllas Cusichaca Guaritopa Huachuri Huaypalcon Luyes Marcavilca 
+			Cuyuchi Orco Varanca Pascac Pomaguala Pumi Quispe Titu Ruminavi Sahuaraura Surandaman Taraque 
+			Tucuycuyche Usca Curiatao Villac Umu Yamqui Mayta Yupanqui Zambiza Zopahua Ninan
+		}
+		female_names = {
+			Axomamma Cavillaca Chia China Kantuta Nina Ana Maiara
+		}
+
+		from_dynasty_prefix = ""
+
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+
+		pat_grf_name_chance = 50
+
+		mat_grf_name_chance = 0
+		
+        father_name_chance = 0
+
+
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+
+		pat_grm_name_chance = 20
+		mat_grm_name_chance = 20
+
+		mother_name_chance = 0
+
+
+		modifier = default_culture_modifier
+		
+	}
+}
+
+araucanian = {
+	graphical_cultures = { mesoamericangfx mongolgfx muslimgfx }
+	
+	mapuche = {
+	
+		graphical_cultures = { mesoamericangfx mongolgfx muslimgfx }
+		
+		color = { 0.84 0.67 0.39 }	
+		
+		male_names = {
+			Ancamilla Nampai Coñoepán Nahueltripai Millarapue Millalelmo Lautaro Paillamachu Huenecura 
+			Aillavilu Catrileo Ñanco Melín Caupolicán Illangulién Pinolevi Purrán Mañil Quilapán
+			Pelantaro
+		}
+		female_names = {
+			Suyai Yaima Collipal Curipan Cuyen Calfuray Cayfutray Ilchahueque Ipi Kuyen Lefitray Leflay Llanquipan 
+			Llanquiray Manque Millaray Peyeche Piro Pitrel Quetroman Quimey Quintruy Quintuqueo Rayen Saqui Somoche
+		}
+
+		from_dynasty_prefix = ""
+
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+
+		pat_grf_name_chance = 50
+
+		mat_grf_name_chance = 0
+		
+        father_name_chance = 0
+
+
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+
+		pat_grm_name_chance = 20
+		mat_grm_name_chance = 20
+
+		mother_name_chance = 0
+
+
+		modifier = default_culture_modifier
+		
+	}
+}
+
+tupi = {
+	graphical_cultures = { mesoamericangfx mongolgfx muslimgfx }
+	
+	tupinamba = {
+	
+		graphical_cultures = { mesoamericangfx mongolgfx muslimgfx }
+		
+		color = { 0.47 0.81 0.52 }	
+		
+		male_names = {
+			Tibiriçá Piquerobi Caiubi Ramalho Italo Arah Pirijá Arata Toruí Mbicy
+		}
+		female_names = {
+			Bartira Potira Porasy Jougousa Azelene
+		}
+
+		from_dynasty_prefix = ""
+
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+
+		pat_grf_name_chance = 50
+
+		mat_grf_name_chance = 0
+		
+        father_name_chance = 0
+
+
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+
+		pat_grm_name_chance = 20
+		mat_grm_name_chance = 20
+
+		mother_name_chance = 0
+
+
+		modifier = default_culture_modifier
+		
+	}
+	guarani = {
+	
+		graphical_cultures = { mesoamericangfx mongolgfx muslimgfx }
+		
+		color = { 0.27 0.48 0.18 }	
+		
+		male_names = {
+			Angatupyry Apytere Arandu Araresa Amaru Amapytu Amangy Aravera Arasunu Aratiri Chavuku Jakaira Karai 
+			Katupyry Kuarahy Kuarahyrese Maitei Mba'ehory Mbarakapu Namandu Tajy Tatarendy Tatajyva Tatapytu 
+			Tuvicha Ygary Tekokatu
+		}
+		female_names = {
+			Bartira Potira Porasy Jougousa Azelene
+		}
+
+		from_dynasty_prefix = ""
+
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+
+		pat_grf_name_chance = 50
+
+		mat_grf_name_chance = 0
+		
+        father_name_chance = 0
+
+
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+
+		pat_grm_name_chance = 20
+		mat_grm_name_chance = 20
+
+		mother_name_chance = 0
+
+
+		modifier = default_culture_modifier
+		
+	}	
+}
+
+je = {
+	graphical_cultures = { mesoamericangfx mongolgfx muslimgfx }
+	
+	ge = {
+	
+		graphical_cultures = { mesoamericangfx mongolgfx muslimgfx }
+		
+		color = { 0.38 0.53 0.67 }	
+		
+		male_names = {
+			Jandui Raoni Janduwy Caracara Kerioukeiou Karupoto
+		}
+		female_names = {
+			Bartira Potira Porasy Jougousa Azelene
+		}
+
+		from_dynasty_prefix = ""
+
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+
+		pat_grf_name_chance = 50
+
+		mat_grf_name_chance = 0
+		
+        father_name_chance = 0
+
+
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+
+		pat_grm_name_chance = 20
+		mat_grm_name_chance = 20
+
+		mother_name_chance = 0
+
+
+		modifier = default_culture_modifier
+		
+	}
+}

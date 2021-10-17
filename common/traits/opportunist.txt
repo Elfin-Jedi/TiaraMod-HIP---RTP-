@@ -1,0 +1,15 @@
+opportunist = {
+
+	ruler_designer_cost = 10 
+	random = yes 
+	personality = yes
+	
+	intrigue = 4
+
+	plot_power_modifier = 0.10
+
+	ambition_opinion = -15
+
+	ai_honor = -30
+	ai_rationality = 10
+}

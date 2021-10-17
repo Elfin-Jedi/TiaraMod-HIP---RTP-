@@ -1,0 +1,1365 @@
+namespace = EB_bte
+
+
+####################################################### Incomplete Event: A
+################# Extra Bloodlines List ############### Incomplete Localisation: B
+####################################################### Not defined modifier: C
+## 1-3  EB_perfect_bloodline                         ## B might not work
+##  4   EB_zealot_bloodline                          ## 
+##  5   EB_greedy_bloodline                          ## 
+##  6   EB_honor_bloodline                           ## 
+##  7   EB_cynical_bloodline                         ## 
+##      EB_great_dynasty_bloodline                   ## -
+##      EB_great_diplomat_bloodline                  ## -
+## 8-10 EB_great_commander_bloodline                 ## 
+##      EB_great_steward_bloodline                   ## -
+##      EB_great_spymaster_bloodline                 ## -
+##      EB_great_philosopher_bloodline               ## -
+##      EB_mastermind_bloodline                      ## -
+##  11  EB_charitable_bloodline                      ## 
+##  12  EB_deceitful_bloodline                       ## 
+##  13  EB_slothful_bloodline                        ## 
+##  14  EB_possessed_bloodline                       ## 
+##  15  EB_ambitious_bloodline                       ## 
+##  16  EB_rational_bloodline                        ## 
+##  14  EB_sinner_bloodline                          ## 
+##      EB_virtue_bloodline                          ## -
+##17-19 EB_western_europe_conqueror_bloodline        ## 
+##17-19 EB_northern_europe_conqueror_bloodline       ##  
+##17-19 EB_eastern_europe_conqueror_bloodline        ##  
+##17-19 EB_southern_europe_conqueror_bloodline       ##  
+##17-19 EB_western_steppes_conqueror_bloodline       ##  
+##17-19 EB_north_africa_conqueror_bloodline          ##  
+##17-19 EB_south_africa_conqueror_bloodline          ##  
+##17-19 EB_middle_east_conqueror_bloodline           ##  
+##17-19 EB_central_asia_conqueror_bloodline          ##  
+##17-19 EB_india_conqueror_bloodline                 ##  
+##20-22 EB_africa_great_conqueror_bloodline          ##  
+##20-22 EB_europe_great_conqueror_bloodline          ##  
+##20-22 EB_steppe_great_conqueror_bloodline          ##  
+##20-22 EB_central_asia_great_conqueror_bloodline    ##  
+##20-22 EB_middle_east_great_conqueror_bloodline     ##  
+#######################################################
+################### More to Come!! ####################
+#######################################################
+
+
+#1
+character_event = {
+	id = EB_bte.0001
+	desc = EB_bte_perfect_0001
+	only_playable = yes
+	max_age = 16
+	mean_time_to_happen = {
+		months = 12
+	}
+	trigger = {
+		OR = {
+			trait = clubfooted
+			trait = dwarf
+			trait = harelip
+			trait = hunchback
+		}
+		any_owned_bloodline = {
+			has_bloodline_flag = EB_bloodline_effect_remove_negatives_flag
+		}
+		NOT = { has_character_modifier = EB_recently_removed_negative_trait_timer }
+	}
+	option = {
+		name = EB_bte_perfect_0001_A
+		trigger = { trait = clubfooted }
+		remove_trait = clubfooted
+		add_character_modifier = {
+			name = EB_recently_removed_negative_trait_timer
+			duration = 365
+			hidden = yes
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_perfect_0001_B
+		trigger = { trait = dwarf }
+		remove_trait = dwarf
+		add_character_modifier = {
+			name = EB_recently_removed_negative_trait_timer
+			duration = 365
+			hidden = yes
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_perfect_0001_C
+		trigger = { trait = harelip }
+		remove_trait = harelip
+		add_character_modifier = {
+			name = EB_recently_removed_negative_trait_timer
+			duration = 365
+			hidden = yes
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_perfect_0001_D
+		trigger = { trait = hunchback }
+		remove_trait = hunchback
+		add_character_modifier = {
+			name = EB_recently_removed_negative_trait_timer
+			duration = 365
+			hidden = yes
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}			
+}
+
+
+
+
+#2
+character_event = {
+	id = EB_bte.0002
+	desc = EB_bte_perfect_0002
+	only_playable = yes
+	max_age = 16
+	mean_time_to_happen = {
+		months = 36
+	}
+	trigger = {
+		OR = {
+			trait = imbecile
+			trait = inbred
+			trait = ugly
+			trait = slow
+		}
+		any_owned_bloodline = {
+			has_bloodline_flag = EB_bloodline_effect_remove_negatives_flag
+		}
+		NOT = { has_character_modifier = EB_recently_removed_negative_trait_timer }
+	}
+	option = {
+		name = EB_bte_perfect_0002_A
+		trigger = { trait = imbecile }
+		remove_trait = imbecile
+		add_character_modifier = {
+			name = EB_recently_removed_negative_trait_timer
+			duration = 365
+			hidden = yes
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+	option = {
+		name = EB_bte_perfect_0002_B
+		trigger = { trait = inbred }
+		remove_trait = inbred
+		add_character_modifier = {
+			name = EB_recently_removed_negative_trait_timer
+			duration = 365
+			hidden = yes
+		}
+		ai_chance = {
+			factor = 60
+		}
+	}			
+	option = {
+		name = EB_bte_perfect_0002_C
+		trigger = { trait = ugly }
+		remove_trait = ugly
+		add_character_modifier = {
+			name = EB_recently_removed_negative_trait_timer
+			duration = 365
+			hidden = yes
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}			
+	option = {
+		name = EB_bte_perfect_0002_D
+		trigger = { trait = slow }
+		remove_trait = slow
+		add_character_modifier = {
+			name = EB_recently_removed_negative_trait_timer
+			duration = 365
+			hidden = yes
+		}
+		ai_chance = {
+			factor = 10
+		}	
+	}
+}
+
+
+
+
+#3
+character_event = {
+	id = EB_bte.0003
+	desc = EB_bte_perfect_0003
+	only_playable = yes
+	max_age = 16
+	mean_time_to_happen = {
+		months = 24
+	}
+	trigger = {
+		OR = {
+			trait = stutter
+			trait = lisp
+			trait = weak
+		}
+		any_owned_bloodline = {
+			has_bloodline_flag = EB_bloodline_effect_remove_negatives_flag
+		}
+		NOT = { has_character_modifier = EB_recently_removed_negative_trait_timer }
+	}				
+	option = {
+		name = EB_bte_perfect_0003_A
+		trigger = { trait = stutter }
+		remove_trait = stutter
+		add_character_modifier = {
+			name = EB_recently_removed_negative_trait_timer
+			duration = 365
+			hidden = yes
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+	option = {
+		name = EB_bte_perfect_0003_B
+		trigger = { trait = lisp }
+		remove_trait = lisp
+		add_character_modifier = {
+			name = EB_recently_removed_negative_trait_timer
+			duration = 365
+			hidden = yes
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+	option = {
+		name = EB_bte_perfect_0003_C
+		trigger = { trait = weak }
+		remove_trait = weak
+		add_character_modifier = {
+			name = EB_recently_removed_negative_trait_timer
+			duration = 365
+			hidden = yes
+		}
+		ai_chance = {
+			factor = 60
+		}
+	}			
+}
+
+
+
+
+#4
+character_event = {
+	id = EB_bte.0004
+	desc = EB_bte_zealot_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		any_owned_bloodline = {
+			has_bloodline_flag = EB_bloodline_effect_become_zealous_flag
+		}
+		NOT = { 
+			has_character_flag = EB_bloodline_effect_become_zealous_event
+			trait = zealous
+		}
+	}
+	option = {
+		name = EB_bte_zealot_0001_A
+		add_trait = zealous
+		ROOT = { set_character_flag = EB_bloodline_effect_become_zealous_event }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = EB_bte_zealot_0001_B
+		ROOT = { set_character_flag = EB_bloodline_effect_become_zealous_event }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+
+
+
+#5
+character_event = {
+	id = EB_bte.0005
+	desc = EB_bte_greedy_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		any_owned_bloodline = {
+			has_bloodline_flag = EB_bloodline_effect_become_greedy_flag
+		}
+		NOT = { 
+			has_character_flag = EB_bloodline_effect_become_greedy_event
+			trait = greedy
+		}
+	}
+	option = {
+		name = EB_bte_greedy_0001_A
+		add_trait = greedy
+		ROOT = { set_character_flag = EB_bloodline_effect_become_greedy_event }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = EB_bte_greedy_0001_B
+		ROOT = { set_character_flag = EB_bloodline_effect_become_greedy_event }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+
+
+
+#6
+character_event = {
+	id = EB_bte.0006
+	desc = EB_bte_honor_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		any_owned_bloodline = {
+			has_bloodline_flag = EB_bloodline_effect_become_honest_flag
+		}
+		NOT = { 
+			has_character_flag = EB_bloodline_effect_become_honest_event
+			trait = honest
+		}
+	}
+	option = {
+		name = EB_bte_honor_0001_A
+		add_trait = honest
+		ROOT = { set_character_flag = EB_bloodline_effect_become_honest_event }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = EB_bte_honor_0001_B
+		ROOT = { set_character_flag = EB_bloodline_effect_become_honest_event }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+
+
+
+
+#7
+character_event = {
+	id = EB_bte.0007
+	desc = EB_bte_cynical_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		any_owned_bloodline = {
+			has_bloodline_flag = EB_bloodline_effect_become_cynical_flag
+		}
+		NOT = { 
+			has_character_flag = EB_bloodline_effect_become_cynical_event
+			trait = cynical
+		}
+	}
+	option = {
+		name = EB_bte_cynical_0001_A
+		add_trait = cynical
+		ROOT = { set_character_flag = EB_bloodline_effect_become_cynical_event }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = EB_bte_cynical_0001_B
+		ROOT = { set_character_flag = EB_bloodline_effect_become_cynical_event }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+
+
+
+#8
+character_event = {
+	id = EB_bte.0008
+	desc = EB_bte_leadership_trait_0001
+	only_playable = yes
+	min_age = 16
+	mean_time_to_happen = {
+		years = 1
+	}
+	trigger = {
+		calc_true_if = {
+			amount >= 2
+			trait = aggressive_leader
+			trait = narrow_flank_leader
+			trait = defensive_leader
+			trait = experimenter
+			trait = flanker
+			trait = holy_warrior
+			trait = inspiring_leader
+			trait = organizer
+			trait = siege_leader
+			trait = trickster
+			trait = unyielding_leader
+			trait = winter_soldier
+			trait = cavalry_leader
+			trait = heavy_infantry_leader
+			trait = light_foot_leader
+			trait = war_elephant_leader
+			trait = desert_terrain_leader
+			trait = flat_terrain_leader
+			trait = jungle_terrain_leader
+			trait = mountain_terrain_leader
+			trait = rough_terrain_leader
+			trait = logistics_expert
+			trait = master_of_flame
+			trait = sapper
+			trait = levy_coordinator
+			trait = norse_leader
+			trait = tengri_leader
+			trait = baltic_leader
+			trait = finnish_leader
+			trait = slavic_leader
+			trait = west_african_leader
+			trait = zun_leader
+			trait = bon_leader
+			trait = hellenic_leader
+		}
+		any_owned_bloodline = {
+			has_bloodline_flag = EB_bloodline_effect_add_leadership_trait_A_flag
+		}
+		NOT = { 
+			has_character_flag = EB_bloodline_effect_add_leadership_trait_A_event
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0001_A
+		trigger = {
+			NOT = {
+				trait = experimenter 
+			}
+		}
+		add_trait = experimenter
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_A_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0001_B
+		trigger = {
+			NOT = {
+				trait = flanker 
+			}
+		}
+		add_trait = flanker
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_A_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0001_C
+		trigger = {
+			NOT = {
+				trait = inspiring_leader 
+			}
+		}
+		add_trait = inspiring_leader
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_A_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0001_D
+		ROOT = {
+			character_event = {
+				id = EB_bte.0009
+				tooltip = EB_bte_leadership_trait_0001_E
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+
+
+
+#9
+character_event = {
+	id = EB_bte.0009
+	desc = EB_bte_leadership_trait_0002
+	only_playable = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { 
+			has_character_flag = EB_bloodline_effect_add_leadership_trait_A_event
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0002_A
+		trigger = {
+			NOT = {
+				trait = organizer 
+			}
+		}
+		add_trait = organizer
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_A_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0002_B
+		trigger = {
+			NOT = {
+				trait = siege_leader 
+			}
+		}
+		add_trait = siege_leader
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_A_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0002_C
+		trigger = {
+			NOT = {
+				trait = trickster 
+			}
+		}
+		add_trait = trickster
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_A_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0001_D
+		ROOT = {
+			character_event = {
+				id = EB_bte.0010
+				tooltip = EB_bte_leadership_trait_0001_E
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+
+
+
+#10
+character_event = {
+	id = EB_bte.0010
+	desc = EB_bte_leadership_trait_0003
+	only_playable = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { 
+			has_character_flag = EB_bloodline_effect_add_leadership_trait_A_event
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0003_A
+		trigger = {
+			NOT = {
+				trait = aggressive_leader 
+			}
+		}
+		add_trait = aggressive_leader
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_A_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0003_B
+		trigger = {
+			NOT = {
+				trait = defensive_leader 
+			}
+		}
+		add_trait = defensive_leader
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_A_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0003_C
+		trigger = {
+			NOT = {
+				trait = unyielding_leader 
+			}
+		}
+		add_trait = unyielding_leader
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_A_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0001_D
+		ROOT = {
+			character_event = {
+				id = EB_bte.0008
+				tooltip = EB_bte_leadership_trait_0001_E
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+
+
+
+#11
+character_event = {
+	id = EB_bte.0011
+	desc = EB_bte_charitable_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		any_owned_bloodline = {
+			has_bloodline_flag = EB_bloodline_effect_become_charitable_flag
+		}
+		NOT = { 
+			has_character_flag = EB_bloodline_effect_become_charitable_event
+			trait = charitable
+		}
+	}
+	option = {
+		name = EB_bte_charitable_0001_A
+		add_trait = charitable
+		ROOT = { set_character_flag = EB_bloodline_effect_become_charitable_event }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = EB_bte_charitable_0001_B
+		ROOT = { set_character_flag = EB_bloodline_effect_become_charitable_event }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+
+
+
+#12
+character_event = {
+	id = EB_bte.0012
+	desc = EB_bte_deceitful_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		any_owned_bloodline = {
+			has_bloodline_flag = EB_bloodline_effect_become_deceitful
+		}
+		NOT = { 
+			has_character_flag = EB_bloodline_effect_become_deceitful_flag
+			trait = deceitful
+		}
+	}
+	option = {
+		name = EB_bte_deceitful_0001_A
+		add_trait = deceitful
+		ROOT = { set_character_flag = EB_bloodline_effect_become_deceitful_flag }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = EB_bte_deceitful_0001_B
+		ROOT = { set_character_flag = EB_bloodline_effect_become_deceitful_flag }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+
+
+
+#13
+character_event = {
+	id = EB_bte.0013
+	desc = EB_bte_slothful_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		any_owned_bloodline = {
+			has_bloodline_flag = EB_bloodline_effect_become_slothful_flag
+		}
+		NOT = { 
+			has_character_flag = EB_bloodline_effect_become_slothful_event
+			trait = slothful
+		}
+	}
+	option = {
+		name = EB_bte_slothful_0001_A
+		add_trait = slothful
+		ROOT = { set_character_flag = EB_bloodline_effect_become_slothful_event }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = EB_bte_slothful_0001_B
+		ROOT = { set_character_flag = EB_bloodline_effect_become_slothful_event }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+
+
+
+#14
+character_event = {
+	id = EB_bte.0014
+	desc = EB_bte_possessed_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		any_owned_bloodline = {
+			has_bloodline_flag = EB_bloodline_effect_become_possessed_flag
+		}
+		NOT = { 
+			has_character_flag = EB_bloodline_effect_become_possessed_event
+			trait = possessed
+		}
+	}
+	option = {
+		name = EB_bte_possessed_0001_A
+		add_trait = possessed
+		ROOT = { set_character_flag = EB_bloodline_effect_become_possessed_event }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = EB_bte_possessed_0001_B
+		ROOT = { set_character_flag = EB_bloodline_effect_become_possessed_event }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+
+
+
+#15
+character_event = {
+	id = EB_bte.0015
+	desc = EB_bte_ambitious_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		any_owned_bloodline = {
+			has_bloodline_flag = EB_bloodline_effect_become_ambitious_flag
+		}
+		NOT = { 
+			has_character_flag = EB_bloodline_effect_become_ambitious_event
+			trait = ambitious
+		}
+	}
+	option = {
+		name = EB_bte_ambitious_0001_A
+		add_trait = ambitious
+		ROOT = { set_character_flag = EB_bloodline_effect_become_ambitious_event }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = EB_bte_ambitious_0001_B
+		ROOT = { set_character_flag = EB_bloodline_effect_become_ambitious_flag }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+
+
+
+#16
+character_event = {
+	id = EB_bte.0016
+	desc = EB_bte_rational_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		any_owned_bloodline = {
+			has_bloodline_flag = EB_bloodline_effect_become_just_flag
+		}
+		NOT = { 
+			has_character_flag = EB_bloodline_effect_become_just_event
+			trait = just
+		}
+	}
+	option = {
+		name = EB_bte_rational_0001_A
+		add_trait = just
+		ROOT = { set_character_flag = EB_bloodline_effect_become_just_event }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = EB_bte_rational_0001_B
+		ROOT = { set_character_flag = EB_bloodline_effect_become_just_event }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+
+
+
+#17
+character_event = {
+	id = EB_bte.0017
+	desc = EB_bte_leadership_trait_0001
+	only_playable = yes
+	min_age = 16
+	mean_time_to_happen = {
+		months = 15
+	}
+	trigger = {
+		calc_true_if = {
+			amount >= 2
+			trait = aggressive_leader
+			trait = narrow_flank_leader
+			trait = defensive_leader
+			trait = experimenter
+			trait = flanker
+			trait = holy_warrior
+			trait = inspiring_leader
+			trait = organizer
+			trait = siege_leader
+			trait = trickster
+			trait = unyielding_leader
+			trait = winter_soldier
+			trait = cavalry_leader
+			trait = heavy_infantry_leader
+			trait = light_foot_leader
+			trait = war_elephant_leader
+			trait = desert_terrain_leader
+			trait = flat_terrain_leader
+			trait = jungle_terrain_leader
+			trait = mountain_terrain_leader
+			trait = rough_terrain_leader
+			trait = logistics_expert
+			trait = master_of_flame
+			trait = sapper
+			trait = levy_coordinator
+			trait = norse_leader
+			trait = tengri_leader
+			trait = baltic_leader
+			trait = finnish_leader
+			trait = slavic_leader
+			trait = west_african_leader
+			trait = zun_leader
+			trait = bon_leader
+			trait = hellenic_leader
+		}
+		any_owned_bloodline = {
+			has_bloodline_flag = EB_bloodline_effect_add_leadership_trait_B_flag
+		}
+		NOT = { 
+			has_character_flag = EB_bloodline_effect_add_leadership_trait_B_event
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0001_A
+		trigger = {
+			NOT = {
+				trait = experimenter 
+			}
+		}
+		add_trait = experimenter
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_B_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0001_B
+		trigger = {
+			NOT = {
+				trait = flanker 
+			}
+		}
+		add_trait = flanker
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_B_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0001_C
+		trigger = {
+			NOT = {
+				trait = inspiring_leader 
+			}
+		}
+		add_trait = inspiring_leader
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_B_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0001_D
+		ROOT = {
+			character_event = {
+				id = EB_bte.0018
+				tooltip = EB_bte_leadership_trait_0001_E
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+
+
+
+#18
+character_event = {
+	id = EB_bte.0018
+	desc = EB_bte_leadership_trait_0002
+	only_playable = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { 
+			has_character_flag = EB_bloodline_effect_add_leadership_trait_B_event
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0002_A
+		trigger = {
+			NOT = {
+				trait = organizer 
+			}
+		}
+		add_trait = organizer
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_B_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0002_B
+		trigger = {
+			NOT = {
+				trait = siege_leader 
+			}
+		}
+		add_trait = siege_leader
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_B_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0001_C
+		trigger = {
+			NOT = {
+				trait = trickster 
+			}
+		}
+		add_trait = trickster
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_B_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0001_D
+		ROOT = {
+			character_event = {
+				id = EB_bte.0019
+				tooltip = EB_bte_leadership_trait_0001_E
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+
+
+
+#19
+character_event = {
+	id = EB_bte.0019
+	desc = EB_bte_leadership_trait_0003
+	only_playable = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { 
+			has_character_flag = EB_bloodline_effect_add_leadership_trait_B_event
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0003_A
+		trigger = {
+			NOT = {
+				trait = aggressive_leader 
+			}
+		}
+		add_trait = aggressive_leader
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_B_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0003_B
+		trigger = {
+			NOT = {
+				trait = defensive_leader 
+			}
+		}
+		add_trait = defensive_leader
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_B_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0003_C
+		trigger = {
+			NOT = {
+				trait = unyielding_leader 
+			}
+		}
+		add_trait = unyielding_leader
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_B_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0001_D
+		ROOT = {
+			character_event = {
+				id = EB_bte.0017
+				tooltip = EB_bte_leadership_trait_0001_E
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+
+
+
+#20
+character_event = {
+	id = EB_bte.0020
+	desc = EB_bte_leadership_trait_0001
+	only_playable = yes
+	min_age = 16
+	mean_time_to_happen = {
+		months = 18
+	}
+	trigger = {
+		calc_true_if = {
+			amount >= 2
+			trait = aggressive_leader
+			trait = narrow_flank_leader
+			trait = defensive_leader
+			trait = experimenter
+			trait = flanker
+			trait = holy_warrior
+			trait = inspiring_leader
+			trait = organizer
+			trait = siege_leader
+			trait = trickster
+			trait = unyielding_leader
+			trait = winter_soldier
+			trait = cavalry_leader
+			trait = heavy_infantry_leader
+			trait = light_foot_leader
+			trait = war_elephant_leader
+			trait = desert_terrain_leader
+			trait = flat_terrain_leader
+			trait = jungle_terrain_leader
+			trait = mountain_terrain_leader
+			trait = rough_terrain_leader
+			trait = logistics_expert
+			trait = master_of_flame
+			trait = sapper
+			trait = levy_coordinator
+			trait = norse_leader
+			trait = tengri_leader
+			trait = baltic_leader
+			trait = finnish_leader
+			trait = slavic_leader
+			trait = west_african_leader
+			trait = zun_leader
+			trait = bon_leader
+			trait = hellenic_leader
+		}
+		any_owned_bloodline = {
+			has_bloodline_flag = EB_bloodline_effect_add_leadership_trait_C_flag
+		}
+		NOT = { 
+			has_character_flag = EB_bloodline_effect_add_leadership_trait_C_event
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0001_A
+		trigger = {
+			NOT = {
+				trait = experimenter 
+			}
+		}
+		add_trait = experimenter
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_C_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0001_B
+		trigger = {
+			NOT = {
+				trait = flanker 
+			}
+		}
+		add_trait = flanker
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_C_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0001_C
+		trigger = {
+			NOT = {
+				trait = inspiring_leader 
+			}
+		}
+		add_trait = inspiring_leader
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_C_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0001_D
+		ROOT = {
+			character_event = {
+				id = EB_bte.0021
+				tooltip = EB_bte_leadership_trait_0001_E
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+
+
+
+#21
+character_event = {
+	id = EB_bte.0021
+	desc = EB_bte_leadership_trait_0002
+	only_playable = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { 
+			has_character_flag = EB_bloodline_effect_add_leadership_trait_C_event
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0002_A
+		trigger = {
+			NOT = {
+				trait = organizer 
+			}
+		}
+		add_trait = organizer
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_C_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0002_B
+		trigger = {
+			NOT = {
+				trait = siege_leader 
+			}
+		}
+		add_trait = siege_leader
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_C_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0002_C
+		trigger = {
+			NOT = {
+				trait = trickster 
+			}
+		}
+		add_trait = trickster
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_C_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0001_D
+		ROOT = {
+			character_event = {
+				id = EB_bte.0022
+				tooltip = EB_bte_leadership_trait_0001_E
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+
+
+
+#22
+character_event = {
+	id = EB_bte.0022
+	desc = EB_bte_leadership_trait_0003
+	only_playable = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { 
+			has_character_flag = EB_bloodline_effect_add_leadership_trait_C_event
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0003_A
+		trigger = {
+			NOT = {
+				trait = aggressive_leader 
+			}
+		}
+		add_trait = aggressive_leader
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_C_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0003_B
+		trigger = {
+			NOT = {
+				trait = defensive_leader 
+			}
+		}
+		add_trait = defensive_leader
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_C_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0003_C
+		trigger = {
+			NOT = {
+				trait = unyielding_leader 
+			}
+		}
+		add_trait = unyielding_leader
+		ROOT = { set_character_flag = EB_bloodline_effect_add_leadership_trait_C_event }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = EB_bte_leadership_trait_0001_D
+		ROOT = {
+			character_event = {
+				id = EB_bte.0020
+				tooltip = EB_bte_leadership_trait_0001_E
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+}

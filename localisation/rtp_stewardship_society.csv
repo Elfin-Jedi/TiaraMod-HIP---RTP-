@@ -1,0 +1,345 @@
+#####
+#Societies
+#####
+
+currency_name_rtp_stewardship;Influence;;;;;;x
+currency_name_rtp_stewardship_europe;Influence;;;;;;x
+currency_name_rtp_stewardship_africa;Influence;;;;;;x
+currency_name_rtp_stewardship_asia_minor;Influence;;;;;;x
+currency_name_rtp_stewardship_india;Influence;;;;;;x
+currency_name_rtp_stewardship_persia;Influence;;;;;;x
+currency_name_rtp_stewardship_middle_east;Influence;;;;;;x
+currency_name_rtp_stewardship_steppe;Influence;;;;;;x
+currency_name_rtp_stewardship_himalayas;Influence;;;;;;x
+
+rtp_stewardship_europe;Quod Nostra;;;;;;x
+rtp_stewardship_europe_desc;Literally “That Which is Ours”, Quod Nostra is a large, loose fraternity of tradesmen, merchants, seamen, and landowners united in search of wealth. Known for frequent attempts to standardize product quality and trade treatises, they also have a hand in local improvements such as roads...all to better trade, of course.;;;;;;x
+rtp_stewardship_europe_leader_desc;This is the society leader.;;;;;;x
+rtp_stewardship_europe_rank_1_male;Peddler;;;;;;x
+rtp_stewardship_europe_rank_2_male;Trader;;;;;;x
+rtp_stewardship_europe_rank_3_male;Merchant;;;;;;x
+rtp_stewardship_europe_rank_4_male;Guild Master;;;;;;x
+rtp_stewardship_europe_rank_1_female;Peddler;;;;;;x
+rtp_stewardship_europe_rank_2_female;Trader;;;;;;x
+rtp_stewardship_europe_rank_3_female;Merchant;;;;;;x
+rtp_stewardship_europe_rank_4_female;Guild Master;;;;;;x
+
+rtp_stewardship_africa;The Golden Hands;;;;;;x
+rtp_stewardship_africa_desc;Well known as shrewd and often cutthroat traders, the Golden Hands are active in the exchange of gold, ebony, ivory, and slaves from southern African regions for salt and copper from the north. They have a reputation for ruthlessness, though whether truly deserved or not is hard to say for sure.;;;;;;x
+rtp_stewardship_africa_leader_desc;This is the society leader.;;;;;;x
+rtp_stewardship_africa_rank_1_male;Peddler;;;;;;x
+rtp_stewardship_africa_rank_2_male;Trader;;;;;;x
+rtp_stewardship_africa_rank_3_male;Merchant;;;;;;x
+rtp_stewardship_africa_rank_4_male;Guild Master;;;;;;x
+rtp_stewardship_africa_rank_1_female;Peddler;;;;;;x
+rtp_stewardship_africa_rank_2_female;Trader;;;;;;x
+rtp_stewardship_africa_rank_3_female;Merchant;;;;;;x
+rtp_stewardship_africa_rank_4_female;Guild Master;;;;;;x
+
+rtp_stewardship_asia_minor;Brotherhood of Spice;;;;;;x
+rtp_stewardship_asia_minor_desc;Although their region is better known for metallurgic exports, the Brotherhood of Spice are said to have somewhat of a flair for the dramatic, hence their name. Members are highly knowledgeable about a very wide variety of goods and their worth, and have a reputation for traveling fancifully far to reach those interested in buying or selling.;;;;;;x
+rtp_stewardship_asia_minor_leader_desc;This is the society leader.;;;;;;x
+rtp_stewardship_asia_minor_rank_1_male;Peddler;;;;;;x
+rtp_stewardship_asia_minor_rank_2_male;Trader;;;;;;x
+rtp_stewardship_asia_minor_rank_3_male;Merchant;;;;;;x
+rtp_stewardship_asia_minor_rank_4_male;Guild Master;;;;;;x
+rtp_stewardship_asia_minor_rank_1_female;Peddler;;;;;;x
+rtp_stewardship_asia_minor_rank_2_female;Trader;;;;;;x
+rtp_stewardship_asia_minor_rank_3_female;Merchant;;;;;;x
+rtp_stewardship_asia_minor_rank_4_female;Guild Master;;;;;;x
+
+rtp_stewardship_india;The Gemstone Knights;;;;;;x
+rtp_stewardship_india_desc;The Gemstone Knights have humble beginnings, their very name a sort of jest at their eschewing of war and other more “noble” pursuits. However, they are now a formidable presence. Having mastered the use of land routes via camel and coveted Indian Ocean routes by ship, the Knights control a large set of routes stretching from eastern Africa to Japan.;;;;;;x
+rtp_stewardship_india_leader_desc;This is the society leader.;;;;;;x
+rtp_stewardship_india_rank_1_male;Peddler;;;;;;x
+rtp_stewardship_india_rank_2_male;Trader;;;;;;x
+rtp_stewardship_india_rank_3_male;Merchant;;;;;;x
+rtp_stewardship_india_rank_4_male;Guild Master;;;;;;x
+rtp_stewardship_india_rank_1_female;Peddler;;;;;;x
+rtp_stewardship_india_rank_2_female;Trader;;;;;;x
+rtp_stewardship_india_rank_3_female;Merchant;;;;;;x
+rtp_stewardship_india_rank_4_female;Guild Master;;;;;;x
+
+rtp_stewardship_persia;Guardians of the Road;;;;;;x
+rtp_stewardship_persia_desc; At a crossroads of the great Silk Road, Persia grows wealthy on the trade going back and forth between Europe, Africa, and Asia. The Guardians are a very old and very strong group whose tireless work is said to power Persia’s generation of wealth. For safety, merchants travel in large bands called caravans, and the society is known to have set up hundreds, if not thousands, of safehouses accessible only to society members.;;;;;;x
+rtp_stewardship_persia_leader_desc;This is the society leader.;;;;;;x
+rtp_stewardship_persia_rank_1_male;Peddler;;;;;;x
+rtp_stewardship_persia_rank_2_male;Trader;;;;;;x
+rtp_stewardship_persia_rank_3_male;Merchant;;;;;;x
+rtp_stewardship_persia_rank_4_male;Guild Master;;;;;;x
+rtp_stewardship_persia_rank_1_female;Peddler;;;;;;x
+rtp_stewardship_persia_rank_2_female;Trader;;;;;;x
+rtp_stewardship_persia_rank_3_female;Merchant;;;;;;x
+rtp_stewardship_persia_rank_4_female;Guild Master;;;;;;x
+
+rtp_stewardship_middle_east;The Karimis;;;;;;x
+rtp_stewardship_middle_east_desc;Cities of the Islamic world need food and raw materials, while palaces, mosques, and aristocrats demand luxuries for displays of wealth and power. The Karimis, a large collective of merchant families and their trusted associates, are more than ready to supply. Traders in more than just material goods, they both import and export books, inventions, religion, language, and philosophy. Highly regarded (though not always trusted), their reach is vast in the Arab world and they are known for their development of the idea of banking and investment.;;;;;;x
+rtp_stewardship_middle_east_leader_desc;This is the society leader.;;;;;;x
+rtp_stewardship_middle_east_rank_1_male;Peddler;;;;;;x
+rtp_stewardship_middle_east_rank_2_male;Trader;;;;;;x
+rtp_stewardship_middle_east_rank_3_male;Merchant;;;;;;x
+rtp_stewardship_middle_east_rank_4_male;Guild Master;;;;;;x
+rtp_stewardship_middle_east_rank_1_female;Peddler;;;;;;x
+rtp_stewardship_middle_east_rank_2_female;Trader;;;;;;x
+rtp_stewardship_middle_east_rank_3_female;Merchant;;;;;;x
+rtp_stewardship_middle_east_rank_4_female;Guild Master;;;;;;x
+
+rtp_stewardship_steppe;The Great Riders;;;;;;x
+rtp_stewardship_steppe_desc;Originally breeders and sellers of horses, the Riders became more of a force in trade with the rise of demand for goods from China in the Middle East and Europe. Extremely loosely organized but highly territorial, they control a vast area of land and charge for both protection and for their consent of passing traders’ horses to graze. Sometimes they will strike a bargain with traders to carry goods in a sort of relay from rider to rider across the steppes, delivering the goods to a waiting hand in the cities. Of course, they charge dearly for this service as well.;;;;;;x
+rtp_stewardship_steppe_leader_desc;This is the society leader.;;;;;;x
+rtp_stewardship_steppe_rank_1_male;Peddler;;;;;;x
+rtp_stewardship_steppe_rank_2_male;Trader;;;;;;x
+rtp_stewardship_steppe_rank_3_male;Merchant;;;;;;x
+rtp_stewardship_steppe_rank_4_male;Guild Master;;;;;;x
+rtp_stewardship_steppe_rank_1_female;Peddler;;;;;;x
+rtp_stewardship_steppe_rank_2_female;Trader;;;;;;x
+rtp_stewardship_steppe_rank_3_female;Merchant;;;;;;x
+rtp_stewardship_steppe_rank_4_female;Guild Master;;;;;;x
+
+rtp_stewardship_himalayas;The Silver Sea;;;;;;x
+rtp_stewardship_himalayas_desc;Members of the Silver Sea are known to be devoted equally to their pay and to the people of their region, investing much time in ensuring the transport of salt, rice, and other food up into the more mountainous areas. They consider it their duty to ensure that all have enough food and other necessary items, and will exact harsh sanctions on those they consider to be cheating in trade practices.;;;;;;x
+rtp_stewardship_himalayas_leader_desc;This is the society leader.;;;;;;x
+rtp_stewardship_himalayas_rank_1_male;Peddler;;;;;;x
+rtp_stewardship_himalayas_rank_2_male;Trader;;;;;;x
+rtp_stewardship_himalayas_rank_3_male;Merchant;;;;;;x
+rtp_stewardship_himalayas_rank_4_male;Guild Master;;;;;;x
+rtp_stewardship_himalayas_rank_1_female;Peddler;;;;;;x
+rtp_stewardship_himalayas_rank_2_female;Trader;;;;;;x
+rtp_stewardship_himalayas_rank_3_female;Merchant;;;;;;x
+rtp_stewardship_himalayas_rank_4_female;Guild Master;;;;;;x
+
+#####
+#Powers
+#####
+
+rtp_stewardship_p1_sd;Take Out A Loan;;;;;;x
+rtp_stewardship_p1_sd_desc;My status in the society means people are more willing to lend me a few coins, provided I assure them they’ll get their money back.;;;;;;x
+rtp_stewardship_p1_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to take out a §YLoan§!.;;;;;;x
+
+rtp_stewardship_pp1_d;Pay Off Loan;;;;;;x
+rtp_stewardship_pp1_d_desc;I should pay off my debt.;;;;;;x
+
+rtp_stewardship_p2_sd;Open Business;;;;;;x
+rtp_stewardship_p2_sd_desc;Limiting oneself to the familiar only bars the road to wealth. I must devote some time to understanding the “foreign” in order to deal with as many people as I can.;;;;;;x
+rtp_stewardship_p2_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to gain §GShrewd§!, gain a random §YSympathy§!, or gain §YCulture§! and §YReligion§! flexibility.;;;;;;x
+
+rtp_stewardship_p3_sd;Time Is Money;;;;;;x
+rtp_stewardship_p3_sd_desc;As my skill with money grows, I have learned the power of investing a few coins here and there, which come back to me in multiples.;;;;;;x
+rtp_stewardship_p3_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to set up a §YToll Booth§! giving you ¤.;;;;;;x
+
+rtp_stewardship_p4_sd;Death And Taxes;;;;;;x
+rtp_stewardship_p4_sd_desc;Trust is power. I have reached a level of trade mastery where even my society brothers trust me enough to give me their coin to invest.;;;;;;x
+rtp_stewardship_p4_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to gain 5¤ from each of your [Root.Society.GetName] members.;;;;;;x
+
+rtp_stewardship_republic_sd;Switch to Republic;;;;;;x
+rtp_stewardship_republic_sd_desc;Money is the true source of strength, and as a republic we will build a glorious empire.;;;;;;x
+rtp_stewardship_republic_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to switch to the §YRepublic§! government.;;;;;;x
+
+rtp_stewardship_merchant_republic_sd;Switch to Merchant Republic;;;;;;x
+rtp_stewardship_merchant_republic_sd_desc;Let the deluded have their castles. Real power is knowing how trade moves the world.;;;;;;x
+rtp_stewardship_merchant_republic_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to switch to the §YMerchant Republic§! government.;;;;;;x
+
+#####
+#Events
+#####
+
+RTPsociety.1.4_desc;Dear [Root.GetTitledFirstName]!\n\nSo you wish to learn the way of trade and coin.\nThis is not an easy path, but the rewards...the rewards are some of the sweetest that men can dream of!\nWe will teach you what you need to know, and in turn you will help us grow ever stronger. A fair deal, if you ask me.\n\nSigned, [rtp_society_leader.GetSocietyRank] [rtp_society_leader.GetFirstName];;;;;;x
+RTPsociety.1.4_1;Wealth and fame is within my grasp!;;;;;;x
+
+#####
+#Missions
+#####
+
+rtp_stall_warning_stewardship_mission;Stall Warning;;;;;;x
+rtp_stall_warning_stewardship_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_stall_warning_stewardship_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me to resolve the masons situation for $TARGET$.;;;;;;x
+rtp_stall_warning_stewardship_mission_tooltip;Get the masons back to work;;;;;;x
+
+RTPssociety.1_desc;[rtp_society_quest_target2.GetFirstName] is having trouble with the local masons. [rtp_society_quest_target.GetTitledName] wants repairs to his castle and the masons have been stalling for months. Go meet with [rtp_society_quest_target2.GetFirstName] and figure out what is going on.;;;;;;x
+RTPssociety.1_1;ACCEPT;;;;;;x
+RTPssociety.1_2;DECLINE;;;;;;x
+
+RTPssociety.2_title;Stall Warning;;;;;;x
+RTPssociety.2_desc;After a lengthy journey, I meet with [rtp_society_quest_target2.GetFirstName] at a local inn. “They will not agree to the pay,” [rtp_society_quest_target2.GetFirstName] tells me, sounding frustrated. “We negotiated their fee months ago! They agreed and now they are claiming I lied to them to try and get more out of me. It is outrageous!”;;;;;;x
+RTPssociety.2_1;Indeed it is.;;;;;;x
+
+RTPssociety.3_title;Stall Warning;;;;;;x
+RTPssociety.3_desc;The next day I pay a visit to the head mason, [rtp_society_quest_target3.GetFirstName]. “Surely you are joking. [rtp_society_quest_target2.GetFirstName] lied to US! [rtp_society_quest_target2.GetSheHeCap] agreed on a fee and now that it is time to start work [rtp_society_quest_target2.GetSheHeCap] claims that [rtp_society_quest_target2.GetSheHeCap] promised us half that fee. Half! We will not work for scraps!”;;;;;;x
+RTPssociety.3_1;A fair point.;;;;;;x
+
+RTPssociety.4_title;Stall Warning;;;;;;x
+RTPssociety.4_desc;Having heard both sides, now I must attempt to get one side or the other to agree with new terms.;;;;;;x
+RTPssociety.4_1;The steward is right.;;;;;;x
+RTPssociety.4_2;The masons are right.;;;;;;x
+RTPssociety.4_3;Try to compromise.;;;;;;x
+
+RTPssociety.5_title;Stall Warning;;;;;;x
+RTPssociety.5_desc;The next day I return to [rtp_society_quest_target3.GetFirstName], and sit him down. He is as obstinate as ever, and I know I must tread carefully.;;;;;;x
+RTPssociety.5_1;Come on. It is a tiny job, is it not?;;;;;;x
+
+RTPssociety.6_title;Stall Warning;;;;;;x
+RTPssociety.6_desc;I return to [rtp_society_quest_target2.GetFirstName] in the morning. [rtp_society_quest_target2.GetSheHeCap] seems nervous, eager to get the building underway before [rtp_society_quest_target.GetTitledName] gets even more angry.;;;;;;x
+RTPssociety.6_1;These are men just trying to feed their families.;;;;;;x
+
+RTPssociety.7_title;Stall Warning;;;;;;x
+RTPssociety.7_desc;I spend most of the night at the inn drafting new terms for the steward and the masons. Three drafts later and with the sun rising in the east, I think I have hedged the original deal enough to satisfy both.;;;;;;x
+RTPssociety.7_1;This should work.;;;;;;x
+
+RTPssociety.8_title;Stolen Goods;;;;;;x
+RTPssociety.8.1_desc;I breathe a sigh of relief as [rtp_society_quest_target2.GetFirstName] and [rtp_society_quest_target3.GetFirstName] seem to agree, finally. [rtp_society_quest_target.GetTitledName] will have his damned repairs done.;;;;;;x
+RTPssociety.8.2_desc;I grit my teeth as the masons still refuse to work despite my efforts. I make a note to be sure and spread the word of their stubbornness on my way home.;;;;;;x
+RTPssociety.8.3_desc;[rtp_society_quest_target2.GetFirstName] must be the most stubborn man I have ever met. No matter what I try to negotiate, he just will not hear a word I say. There is no way the masons will pick up work now.;;;;;;x
+RTPssociety.8.4_desc;Neither of the two parties will settle for an equal outcome. Each of them want their way or the roadway.;;;;;;x
+RTPssociety.8_1;Great!;;;;;;x
+RTPssociety.8_2;Stubborn mules.;;;;;;x
+
+rtp_fair_play_stewardship_mission;Fair Play;;;;;;x
+rtp_fair_play_stewardship_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_fair_play_stewardship_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me to invite merchants to the fair.;;;;;;x
+rtp_fair_play_stewardship_mission_tooltip;Invite merchants to the fair;;;;;;x
+
+RTPssociety.9_desc;We are holding a trade fair this summer, and I want you to handle negotiation of taxes for merchants coming in. Remember the higher the tax the more we will get, but the merchants may refuse to attend. And nobody likes an empty fair.;;;;;;x
+RTPssociety.9_1;ACCEPT;;;;;;x
+RTPssociety.9_2;DECLINE;;;;;;x
+
+RTPssociety.10_title;Fair Play;;;;;;x
+RTPssociety.10_desc;The first merchant who comes to the table represents a circle of traders bringing expensive spices and silks from the East. [rtp_society_quest_target.GetSheHeCap] smiles as [rtp_society_quest_target.GetSheHe] eyes me, drumming [rtp_society_quest_target.GetHerHis] fingers on the table eagerly.;;;;;;x
+RTPssociety.10_1;Charge [rtp_society_quest_target.GetHerHim] a fair price.;;;;;;x
+RTPssociety.10_2;Charge [rtp_society_quest_target.GetHerHim] extra.;;;;;;x
+RTPssociety.10_3;Charge [rtp_society_quest_target.GetHerHim] less.;;;;;;x
+
+RTPssociety.11_title;Fair Play;;;;;;x
+RTPssociety.11_desc;The second merchant has a large caravan transporting furs and wood from the far north. [rtp_society_quest_target2.GetSheHeCap] seems wary of me, folding [rtp_society_quest_target2.GetHerHis] arms as I speak.;;;;;;x
+RTPssociety.11_1;Charge [rtp_society_quest_target2.GetHerHim] a fair price.;;;;;;x
+RTPssociety.11_2;Charge [rtp_society_quest_target2.GetHerHim] extra.;;;;;;x
+RTPssociety.11_3;Charge [rtp_society_quest_target2.GetHerHim] less.;;;;;;x
+
+RTPssociety.12_title;Fair Play;;;;;;x
+RTPssociety.12_desc;The third merchant has come from far south, his group laden with wines and delicious exotic foods. [rtp_society_quest_target3.GetSheHeCap] is all business, talking quickly and wanting to get on with it.;;;;;;x
+RTPssociety.12_1;Charge [rtp_society_quest_target3.GetHerHim] a fair price.;;;;;;x
+RTPssociety.12_2;Charge [rtp_society_quest_target3.GetHerHim] extra.;;;;;;x
+RTPssociety.12_3;Charge [rtp_society_quest_target3.GetHerHim] less.;;;;;;x
+
+RTPssociety.13_title;Fair Play;;;;;;x
+RTPssociety.13_desc;A fourth [rtp_society_quest_target4.GetManWoman] comes to the table saying [rtp_society_quest_target4.GetSheHeCap] is bringing...entertainment. Jugglers and fools, dancing bears, magicians, musicians -- and, I hear them implying, whores.;;;;;;x
+RTPssociety.13_1;Charge [rtp_society_quest_target4.GetHerHim] a fair price.;;;;;;x
+RTPssociety.13_2;Charge [rtp_society_quest_target4.GetHerHim] extra.;;;;;;x
+RTPssociety.13_3;Charge [rtp_society_quest_target4.GetHerHim] less.;;;;;;x
+
+RTPssociety.14_title;Fair Play;;;;;;x
+RTPssociety.14_desc;Negotiations take quite a while but finally I have settled the financial matters. I take my leave and hand the merchant roster to [Root.Society.GetTitledGrandMasterName] before heading back home.;;;;;;x
+RTPssociety.14_1;About time.;;;;;;x
+
+RTPssociety.15_title;Fair Play;;;;;;x
+RTPssociety.15.1_desc;[Root.Society.GetTitledGrandMasterName] tells me that [Root.Society.GrandMaster.GetSheHe] was very pleased with how I handled things! The fair will be a great success, I have no doubt.;;;;;;x
+RTPssociety.15.2_desc;[Root.Society.GetTitledGrandMasterName] says [Root.Society.GrandMaster.GetSheHe] is furious at the taxes I charged. Apparently too many traders decided not to show and the fair was woefully empty.;;;;;;x
+RTPssociety.15_1;Of course it will be.;;;;;;x
+RTPssociety.15_2;Cheap merchants.;;;;;;x
+
+rtp_open_to_offers_stewardship_mission;Open to Offers;;;;;;x
+rtp_open_to_offers_stewardship_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_open_to_offers_stewardship_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me to help $TARGET$ get out of debt.;;;;;;x
+rtp_open_to_offers_stewardship_mission_tooltip;Help $TARGET$ get out of debt;;;;;;x
+
+RTPssociety.16_desc;I need you to settle an issue in [rtp_society_quest_target.Realm.GetName]. A noble's manor there produces some kind of rare flower, and [rtp_society_quest_target.GetSheHe] has two bidders for the entire year's crop. Figure out what is going on and advise [rtp_society_quest_target.GetFirstName].;;;;;;x
+RTPssociety.16_1;ACCEPT;;;;;;x
+RTPssociety.16_2;DECLINE;;;;;;x
+
+RTPssociety.17_title;Open to Offers;;;;;;x
+RTPssociety.17_desc;I arrive at [rtp_society_quest_target.GetFirstName]'s manor after a long journey. [rtp_society_quest_target.GetSheHeCap] shows me one of the beautiful deep red flowers. “I did not even realize they were worth much. I do not care who I sell to, just get me the most money for them. The more I get, the more you get.”;;;;;;x
+RTPssociety.17_1;I will handle it for you.;;;;;;x
+
+RTPssociety.18_title;Open to Offers;;;;;;x
+RTPssociety.18_desc;I visit the first bidder, a [rtp_society_quest_target2.Religion.GetName] holy man. “Ah yes, those flowers. One of our brothers found that we can use them to make a salve that seems to help infections. Imagine how many lives we could save! We can only offer 100 gold but please, we could do much with them.”;;;;;;x
+RTPssociety.18_1;Indeed you could!;;;;;;x
+
+RTPssociety.19_title;Open to Offers;;;;;;x
+RTPssociety.19_desc;The second bidder is a wealthy merchant who serves me expensive wine. “You have seen the color of those flowers. I have someone who can make dye from them, for clothing befitting kings. We would make a fortune! I will pay 300 for the lot.”;;;;;;x
+RTPssociety.19_1;A tempting offer.;;;;;;x
+
+RTPssociety.20_title;Open to Offers;;;;;;x
+RTPssociety.20_desc;As night falls, I consider this carefully. If I favor the holy man, I will make much less but lives will be saved. If I favor the merchant, some emperor will have a useless blue sash but I will go home with more pay.;;;;;;x
+RTPssociety.20_1;You should sell to [rtp_society_quest_target2.GetFirstName].;;;;;;x
+RTPssociety.20_2;You should sell to [rtp_society_quest_target3.GetFirstName].;;;;;;x
+
+rtp_game_of_loans_stewardship_mission;Game of Loans;;;;;;x
+rtp_game_of_loans_stewardshipp_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_game_of_loans_stewardship_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me help $TARGET$ sell a rare flower.;;;;;;x
+rtp_game_of_loans_stewardship_mission_tooltip;Sell the rare flower;;;;;;x
+
+RTPssociety.21_desc;[rtp_society_quest_target.GetTitledName] has gotten [rtp_society_quest_target.GetHerselfHimself] in trouble over a debt. 2000 gold, to a [rtp_society_quest_target2.GetTitle] no less! Pay [rtp_society_quest_target.GetHerHim] a visit and see if you can figure out how [rtp_society_quest_target.GetSheHe] managed to get in this deep.;;;;;;x
+RTPssociety.21_1;ACCEPT;;;;;;x
+RTPssociety.21_2;DECLINE;;;;;;x
+
+RTPssociety.22_title;Game of Loans;;;;;;x
+RTPssociety.22_desc;When I arrive at [rtp_society_quest_target.GetFirstName]'s manor, I am immediately told the tale. “I owed my cousin 200 gold,” [rtp_society_quest_target.GetFirstName] tells me. “And I gave him a debt note for the amount. Apparently he went and gave the note to a different person in payment for a debt that my cousin owed, himself.;;;;;;x
+RTPssociety.22_1;Ok.;;;;;;x
+
+RTPssociety.23_title;Game of Loans;;;;;;x
+RTPssociety.23_desc;[rtp_society_quest_target.GetFirstName] sighs and goes on, “So that person sold that debt to some money lender and the damned cur never told me. The lender put 60% interest on it! 60%! And now it has build up to 2080 gold.”;;;;;;x
+RTPssociety.23_1;Ouch.;;;;;;x
+
+RTPssociety.24_title;Game of Loans;;;;;;x
+RTPssociety.24_desc;[rtp_society_quest_target.GetFirstName] rubs [rtp_society_quest_target.GetHerHis] face. “Apparently the lender sold the debt to [rtp_society_quest_target2.GetTitledName], who is now demanding all 2080 gold. I do not have it! But if I do not pay I will surely be condemned! I need help!;;;;;;x
+RTPssociety.24_1;I will figure it out.;;;;;;x
+
+RTPssociety.25_title;Game of Loans;;;;;;x
+RTPssociety.25_desc;[rtp_society_quest_target.GetFirstName] gives me a place to sleep for the night, and the next afternoon I seek out the [rtp_society_quest_target2.GetTitle]. [rtp_society_quest_target2.GetSheHeCap] receives me cordially, but stops me before I even have the chance to speak. “This is about [rtp_society_quest_target.GetFirstName], is it not?”;;;;;;x
+RTPssociety.25_1;[rtp_society_quest_target.GetFirstName] simply cannot pay.;;;;;;x
+RTPssociety.25_2;[rtp_society_quest_target.GetFirstName] can pay half.;;;;;;x
+RTPssociety.25_3;[rtp_society_quest_target.GetFirstName] can pay the original debt.;;;;;;x
+
+RTPssociety.26_title;Game of Loans;;;;;;x
+RTPssociety.26.1_desc;The [rtp_society_quest_target2.GetTitle] agrees to my plan, and inwardly I breathe a sigh of relief. Now I must inform [rtp_society_quest_target.GetFirstName] on the morrow.;;;;;;x
+RTPssociety.26.2_desc;The holy [rtp_society_quest_target2.GetManWoman] seems irritated with my attempts. “A debt is a debt,” [rtp_society_quest_target2.GetSheHe] insists. “Tell [rtp_society_quest_target.GetFirstName] that [rtp_society_quest_target.GetSheHe] can arrange with you to pay some each month, but this is what [rtp_society_quest_target.GetSheHe] owes and that is final!”;;;;;;x
+RTPssociety.26_1;Thank you [rtp_society_quest_target2.GetTitledName].;;;;;;x
+RTPssociety.26_2;I will inform [rtp_society_quest_target.GetFirstName] right away.;;;;;;x
+
+RTPssociety.27_title;Game of Loans;;;;;;x
+RTPssociety.27.1_desc;I send the new debt contract to [rtp_society_quest_target.GetFirstName] and return home. Some months later I receive word from [Root.Society.GetTitledGrandMasterName] informing me of a job well done.;;;;;;x
+RTPssociety.27.2_desc;I send the new debt contract to [rtp_society_quest_target.GetFirstName] and return home. Some months later I receive word from [Root.Society.GetTitledGrandMasterName] expressing [Root.Society.GrandMaster.GetHerHis] disappointment.;;;;;;x
+RTPssociety.27_1;Now my pay.;;;;;;x
+RTPssociety.27_2;Alright.;;;;;;x
+
+rtp_forged_in_fire_stewardship_mission;Forged in Fire;;;;;;x
+rtp_forged_in_fire_stewardship_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_forged_in_fire_stewardship_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me judge $TARGET$'s work.;;;;;;x
+rtp_forged_in_fire_stewardship_mission_tooltip;Judge $TARGET$'s work;;;;;;x
+
+RTPssociety.28_desc;A master of the Smithing's Guild is putting one of his journeymen through the Master's trial. They require our help in judging the man’s work. Go and give an opinion on the piece’s work, and whether this journeyman deserves the title of Master.;;;;;;x
+RTPssociety.28_1;ACCEPT;;;;;;x
+RTPssociety.28_2;DECLINE;;;;;;x
+
+RTPssociety.29_title;Forged in Fire;;;;;;x
+RTPssociety.29_desc;It is a long journey through rough weather, but finally I arrive in [rtp_society_quest_target.Realm.GetName]. [rtp_society_quest_target.GetFirstName] greets me warmly and offers me a place to sleep in his home.;;;;;;x
+RTPssociety.29_1;Accept gratefully.;;;;;;x
+RTPssociety.29_2;Politely decline.;;;;;;x
+
+RTPssociety.30_title;Forged in Fire;;;;;;x
+RTPssociety.30_desc;In the morning I am summoned to the guild hall, where several Masters and the young journeyman await. “Young [rtp_society_quest_target.GetFirstName] here will forge us a sword as we observe. I will have some wine brought.”;;;;;;x
+RTPssociety.30_1;Begin!;;;;;;x
+
+RTPssociety.31_title;Forged in Fire;;;;;;x
+RTPssociety.31_desc;It takes several days, all spent at the forge while [rtp_society_quest_target.GetFirstName] toils away under the hawkish eyes of the Masters. One evening as I am about to leave for the night, [rtp_society_quest_target.GetFirstName] is waiting outside for me in the shadows.;;;;;;x
+RTPssociety.31_1;What is it?;;;;;;x
+
+RTPssociety.32_title;Forged in Fire;;;;;;x
+RTPssociety.32_desc;“I am an excellent crafter,” the young man says, after a nervous glance around. “One of the best. But I…” He sighs. “I was supposed to provide my own material for the forging. But I gambled most of it away last week. Stupid, I know. I had to buy inferior material to craft with. I had no choice!;;;;;;x
+RTPssociety.32_1;I see.;;;;;;x
+
+RTPssociety.33_title;Forged in Fire;;;;;;x
+RTPssociety.33_desc;I have done my absolute best with them. The pieces look fantastic. But I know someone with an eye like yours would be able to tell they are not worth what they should be. I want to make you a deal.;;;;;;x
+RTPssociety.33_1;You have my curiosity.;;;;;;x
+
+RTPssociety.34_title;Forged in Fire;;;;;;x
+RTPssociety.34_desc;Tell them the pieces are good -- they are worth just what they would be if I would used the right material. You will get paid just the same from them, and I will pay you something extra.”;;;;;;x
+RTPssociety.34_1;I will have to think about this.;;;;;;x
+
+RTPssociety.35_title;Forged in Fire;;;;;;x
+RTPssociety.35_desc;The day of judgment arrives. [rtp_society_quest_target.GetFirstName] avoids my eyes as he brings the finished piece out and lays it down upon a rich cloth for the Masters to inspect. One by one they walk up and have their look, silent for now, then all attention is on me when it is my turn.;;;;;;x
+RTPssociety.35_1;The sword will not kill.;;;;;;x
+RTPssociety.35_2;The sword will kill.;;;;;;x
+
+RTPssociety.36_title;Mission Failed;;;;;;x
+RTPssociety.36_desc;While on my way towards the target, an envoy informs me that the target is no longer with us.;;;;;;x
+RTPssociety.36_1;[Root.Society.GetTitledGrandMasterName] is not going to be happy.;;;;;;x

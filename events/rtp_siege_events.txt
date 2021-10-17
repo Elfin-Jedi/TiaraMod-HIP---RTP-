@@ -1,0 +1,574 @@
+#####
+#Siege Events
+#
+#Total = 18
+#####
+
+namespace = RTPsiege
+
+#Main Events
+#####
+
+#Siege Check - Ping
+character_event = {
+	id = RTPsiege.1
+	is_triggered_only = yes
+	hide_window = yes
+	in_command = yes
+
+	trigger = {
+		siege = {
+			is_attacker = yes
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				location = {
+					has_fort = no
+					any_province_holding = {
+						OR = {
+							holder_scope = {
+								OR = {
+									war_with = ROOT
+									ROOT = {
+										liege = {
+											war_with = PREVPREV
+										}
+									}
+								}
+							}
+							is_occupied = yes
+						}
+					}
+				}
+			}
+			character_event = {
+				id = RTPsiege.2 #Siege Fort - Construction
+				days = 30
+				random = 7
+			}
+		}
+		else_if = {
+			limit = {
+				location = {
+					has_fort = yes
+					fort_has_building = rtp_trebuchet_b
+				}
+			}
+			character_event = {
+				id = RTPsiege.10 #Siege Fort - Cannon
+				days = 14
+				random = 7
+			}
+		}
+		else_if = {
+			limit = {
+				location = {
+					has_fort = yes
+					fort_has_building = rtp_ballistas_b
+				}
+			}
+			character_event = {
+				id = RTPsiege.9 #Siege Fort - Trebuchet
+				days = 14
+				random = 7
+			}
+		}
+		else_if = {
+			limit = {
+				location = {
+					has_fort = yes
+					fort_has_building = rtp_siege_towers_b
+				}
+			}
+			character_event = {
+				id = RTPsiege.8 #Siege Fort - Ballistas
+				days = 14
+				random = 7
+			}
+		}
+		else_if = {
+			limit = {
+				location = {
+					has_fort = yes
+					fort_has_building = rtp_bricole_b
+				}
+			}
+			character_event = {
+				id = RTPsiege.7 #Siege Fort - Tower
+				days = 14
+				random = 7
+			}
+		}
+		else_if = {
+			limit = {
+				location = {
+					has_fort = yes
+					fort_has_building = rtp_battering_ram_b
+				}
+			}
+			character_event = {
+				id = RTPsiege.6 #Siege Fort - Bricole
+				days = 14
+				random = 7
+			}
+		}
+		else_if = {
+			limit = {
+				location = {
+					has_fort = yes
+					fort_has_building = rtp_catapult_b
+				}
+			}
+			character_event = {
+				id = RTPsiege.5 #Siege Fort - Ram
+				days = 14
+				random = 7
+			}
+		}
+		else_if = {
+			limit = {
+				location = {
+					has_fort = yes
+					fort_has_building = rtp_ladders_b
+				}
+			}
+			character_event = {
+				id = RTPsiege.4 #Siege Fort - Catapult
+				days = 14
+				random = 7
+			}
+		}
+		else = {
+			character_event = {
+				id = RTPsiege.3 #Siege Fort - Ladders
+				days = 14
+				random = 7
+			}
+		}
+	}
+}
+
+#Siege Fort - Construction
+character_event = {
+	id = RTPsiege.2
+	is_triggered_only = yes
+	hide_window = yes
+	in_command = yes
+
+	trigger = {
+		in_siege = yes
+		location = {
+			has_fort = no
+		}
+	}
+
+	immediate = {
+		location = {
+			ROOT = {
+				if = {
+					limit = {
+						is_landed = yes
+					}
+					create_fort = PREV
+					character_event = {
+						id = RTPnotification.3 #Siege Encampment Ready
+					}
+				}
+				else = {
+					liege = {
+						create_fort = PREVPREV
+						character_event = {
+							id = RTPnotification.3 #Siege Encampment Ready
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Siege Fort - Ladders
+character_event = {
+	id = RTPsiege.3
+	is_triggered_only = yes
+	hide_window = yes
+	in_command = yes
+
+	trigger = {
+		in_siege = yes
+		capital_scope = {
+			TECH_SIEGE_EQUIPMENT = 1
+		}
+		location = {
+			has_fort = yes
+			NOT = {
+				fort_has_building = rtp_ladders_b
+			}
+		}
+	}
+
+	immediate = {
+		location = {
+			add_to_extra_holding = {
+				type = fort
+				building = rtp_ladders_b
+			}
+		}
+	}
+}
+
+#Siege Fort - Catapult
+character_event = {
+	id = RTPsiege.4
+	is_triggered_only = yes
+	hide_window = yes
+	in_command = yes
+
+	trigger = {
+		in_siege = yes
+		capital_scope = {
+			TECH_SIEGE_EQUIPMENT = 2
+		}
+		location = {
+			has_fort = yes
+			NOT = {
+				fort_has_building = rtp_catapult_b
+			}
+		}
+	}
+
+	immediate = {
+		location = {
+			add_to_extra_holding = {
+				type = fort
+				building = rtp_catapult_b
+			}
+		}
+	}
+}
+
+#Siege Fort - Ram
+character_event = {
+	id = RTPsiege.5
+	is_triggered_only = yes
+	hide_window = yes
+	in_command = yes
+
+	trigger = {
+		in_siege = yes
+		capital_scope = {
+			TECH_SIEGE_EQUIPMENT = 3
+		}
+		location = {
+			has_fort = yes
+			NOT = {
+				fort_has_building = rtp_battering_ram_b
+			}
+		}
+	}
+
+	immediate = {
+		location = {
+			add_to_extra_holding = {
+				type = fort
+				building = rtp_battering_ram_b
+			}
+		}
+	}
+}
+
+#Siege Fort - Bricole
+character_event = {
+	id = RTPsiege.6
+	is_triggered_only = yes
+	hide_window = yes
+	in_command = yes
+
+	trigger = {
+		in_siege = yes
+		capital_scope = {
+			TECH_SIEGE_EQUIPMENT = 4
+		}
+		location = {
+			has_fort = yes
+			NOT = {
+				fort_has_building = rtp_bricole_b
+			}
+		}
+	}
+
+	immediate = {
+		location = {
+			add_to_extra_holding = {
+				type = fort
+				building = rtp_bricole_b
+			}
+		}
+	}
+}
+
+#Siege Fort - Tower
+character_event = {
+	id = RTPsiege.7
+	is_triggered_only = yes
+	hide_window = yes
+	in_command = yes
+
+	trigger = {
+		in_siege = yes
+		capital_scope = {
+			TECH_SIEGE_EQUIPMENT = 5
+		}
+		location = {
+			has_fort = yes
+			NOT = {
+				fort_has_building = rtp_siege_towers_b
+			}
+		}
+	}
+
+	immediate = {
+		location = {
+			add_to_extra_holding = {
+				type = fort
+				building = rtp_siege_towers_b
+			}
+		}
+	}
+}
+
+#Siege Fort - Ballistas
+character_event = {
+	id = RTPsiege.8
+	is_triggered_only = yes
+	hide_window = yes
+	in_command = yes
+
+	trigger = {
+		in_siege = yes
+		capital_scope = {
+			TECH_SIEGE_EQUIPMENT = 6
+		}
+		location = {
+			has_fort = yes
+			NOT = {
+				fort_has_building = rtp_ballistas_b
+			}
+		}
+	}
+
+	immediate = {
+		location = {
+			add_to_extra_holding = {
+				type = fort
+				building = rtp_ballistas_b
+			}
+		}
+	}
+}
+
+#Siege Fort - Trebuchet
+character_event = {
+	id = RTPsiege.9
+	is_triggered_only = yes
+	hide_window = yes
+	in_command = yes
+
+	trigger = {
+		in_siege = yes
+		capital_scope = {
+			TECH_SIEGE_EQUIPMENT = 7
+		}
+		location = {
+			has_fort = yes
+			NOT = {
+				fort_has_building = rtp_trebuchet_b
+			}
+		}
+	}
+
+	immediate = {
+		location = {
+			add_to_extra_holding = {
+				type = fort
+				building = rtp_trebuchet_b
+			}
+		}
+	}
+}
+
+#Siege Fort - Cannon
+character_event = {
+	id = RTPsiege.10
+	is_triggered_only = yes
+	hide_window = yes
+	in_command = yes
+
+	trigger = {
+		in_siege = yes
+		capital_scope = {
+			TECH_SIEGE_EQUIPMENT = 8
+		}
+		location = {
+			has_fort = yes
+			NOT = {
+				fort_has_building = rtp_bombard_b
+			}
+		}
+	}
+
+	immediate = {
+		location = {
+			add_to_extra_holding = {
+				type = fort
+				building = rtp_bombard_b
+			}
+		}
+	}
+}
+
+#Siege Sounds - Catapults End
+character_event = {
+	id = RTPsiege.11
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		rtp_catapult_end_sounds_se = yes
+		character_event = {
+			id = RTPsiege.100 #Siege Sounds - Wall Hit
+			days = 2
+		}
+	}
+}
+
+#Siege Sounds - Ram End
+character_event = {
+	id = RTPsiege.12
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		rtp_ram_end_sounds_se = yes
+		character_event = {
+			id = RTPsiege.101 #Siege Sounds - Archer Shot
+			days = 1
+		}
+	}
+}
+
+#Siege Sounds - Bricole End
+character_event = {
+	id = RTPsiege.13
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		sound_effect = bricole_end
+		character_event = {
+			id = RTPsiege.100 #Siege Sounds - Wall Hit
+			days = 2
+		}
+	}
+}
+
+#Siege Sounds - Tower End
+character_event = {
+	id = RTPsiege.14
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		rtp_tower_end_sounds_se = yes
+		character_event = {
+			id = RTPsiege.101 #Siege Sounds - Archer Shot
+			days = 1
+		}
+	}
+}
+
+#Siege Sounds - Ballista End
+character_event = {
+	id = RTPsiege.15
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		rtp_ballista_end_sounds_se = yes
+		rtp_loss_sounds_se = yes
+	}
+}
+
+#Siege Sounds - Wall Hit
+character_event = {
+	id = RTPsiege.100
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		rtp_wall_hit_sounds_se = yes
+	}
+}
+
+#Siege Sounds - Archer Shot
+character_event = {
+	id = RTPsiege.101
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		sound_effect = arrow_hit_body
+		rtp_loss_sounds_se = yes
+	}
+}
+
+#Siege Camp Decommission
+character_event = {
+	id = RTPsiege.102
+	is_triggered_only = yes
+	hide_window = yes
+	war = no
+	only_rulers = yes
+
+	option = {
+		if = {
+			limit = {
+				independent = no
+				any_liege = {
+					war = no
+				}
+			}
+			any_demesne_province = {
+				destroy_fort = THIS
+			}
+		}
+		else_if = {
+			limit = {
+				independent = yes
+			}
+			any_demesne_province = {
+				destroy_fort = THIS
+			}
+		}
+	}
+}
+
+#Siege losses
+character_event = {
+	id = RTPsiege.103
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		siege = {
+			is_attacker = no
+		}
+	}
+
+	immediate = {
+		rtp_siege_casualties_se = yes
+	}
+}

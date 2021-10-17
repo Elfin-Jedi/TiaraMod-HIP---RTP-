@@ -1,0 +1,8 @@
+# -*- ck2.on_actions -*-
+
+#FROM orders execution, ROOT is being executed
+on_executed = {
+	events = {
+		 mta.4 #on_executed opinion penalties
+	 }
+}

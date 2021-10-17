@@ -1,0 +1,119 @@
+tsartrait = {
+	ruler_designer_cost = 0
+	random = no
+	agnatic = yes
+	health = 1
+	vassal_opinion = 5
+	monthly_character_prestige = 0.5
+}
+
+druzhina_expert = {
+	leader = yes
+	random = no
+	
+	command_modifier = {
+		heavy_infantry = 0.35
+		defence = 0.20
+	}
+}
+
+ard_rí = {
+	ruler_designer_cost = 0
+	random = no
+	agnatic = yes
+	diplomacy = 1
+	irish_opinion = 10
+	monthly_character_prestige = 0.5
+}
+
+gallowglass_expert = {
+	leader = yes
+	random = no
+	
+	command_modifier = {
+		heavy_infantry = 0.30
+		damage = 0.20
+	}
+}
+	
+britannicus = {
+	ruler_designer_cost = 0
+	random = no
+	agnatic = yes
+	vassal_opinion = 5
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.25
+}
+
+king_of_scots = {
+	ruler_designer_cost = 0
+	random = no
+	agnatic = yes
+	diplomacy = 1
+	scottish_opinion = 10
+	pictish_opinion = 10
+	monthly_character_prestige = 0.5
+}
+
+schilitron_expert = {
+	leader = yes
+	random = no
+	
+	command_modifier = {
+		pikemen = 0.30
+		archers = 0.20
+	}
+}
+
+king_of_wales = {
+	ruler_designer_cost = 0
+	random = no
+	agnatic = yes
+	diplomacy = 1
+	welsh_opinion = 10
+	monthly_character_prestige = 0.5
+}
+
+king_of_brittany = {
+	ruler_designer_cost = 0
+	random = no
+	agnatic = yes
+	diplomacy = 1
+	welsh_opinion = 10
+	monthly_character_prestige = 0.5
+}
+
+bretonknight_expert = {
+	leader = yes
+	random = no
+	
+	command_modifier = {
+		cavalry = 0.30
+		damage = 0.20
+	}
+}
+
+kalmar_land = {
+	ruler_designer_cost = 0
+	random = no
+	agnatic = yes
+	diplomacy = 1
+	vassal_opinion = 5
+	monthly_character_prestige = 0.25
+}
+
+huscarl_captain = {
+	leader = yes
+	random = no
+	
+	command_modifier = {
+		heavy_infantry = 0.40
+		damage = 0.10
+	}
+}
+
+
+
+
+
+

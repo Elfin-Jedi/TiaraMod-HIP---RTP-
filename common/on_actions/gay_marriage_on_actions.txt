@@ -1,0 +1,21 @@
+on_startup = {
+	events = {
+		#gay_pride_events.0
+	}
+}
+on_chronicle_start = {
+	events = {
+		#gay_pride_events.0
+	}
+}
+on_birth = {
+	events = {
+		gay_marriage_events.3
+		GMM_events.0
+	}
+}
+yearly_pulse = {
+	random_events = {
+		10 = GMM_events.2
+	}
+}

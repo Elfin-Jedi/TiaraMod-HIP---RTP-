@@ -1,0 +1,219 @@
+settlement_decisions = { 
+	upgrade_cow_wonder = {
+		filter = realm_owned
+		ai = no
+		is_high_prio = no
+		only_independent = yes
+		# ai_check_interval = 3000
+		
+		from_potential = {
+			is_playable = yes
+			ai = no
+		}
+		
+		potential = {
+			ROOT = {
+				location = {
+					AND = { 
+						has_wonder = yes
+						NOT = { has_city_of_wonders_trigger = yes }
+					}
+				}
+			}
+		}
+
+		allow = {
+			FROM = {
+				wealth = 2000
+				prestige = 10000
+				independent = yes
+				OR = {
+					realm_size = 200
+					real_tier = emperor
+					government = merchant_republic_government 
+				}
+				NOR = {
+					is_tribal = yes
+					is_nomadic = yes
+				}
+				custom_tooltip = { # Custom tooltip to better explain the in-game tooltip
+					text = CANNOT_HAVE_MORE_THAN_ONE_COW
+					hidden_tooltip = {
+						NOT = { has_custom_city_of_wonders_trigger = yes }
+					}
+				}
+			}
+			ROOT = {
+				location = {
+					owner = { same_realm = FROM }
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = { # Custom tooltip to explain what actually happens
+				text = GREAT_WORK_REPLACED_WITH_COW
+				hidden_tooltip = {
+					ROOT = {
+						location = {
+							cow_wonder_upgrade_decision_effect = yes
+							# cow_wonder_stage_decision_effect = yes
+							destroy_wonder = yes
+							if = {
+								limit = { 
+									AND = {
+										has_wonder = no
+										FROM = { is_feudal = yes }
+									}
+								}
+								add_wonder = wonder_city_of_wonders
+								wonder = {
+									# cow_post_wonder_stage_decision_effect = yes
+									cow_post_wonder_upgrade_decision_effect = yes
+								}
+							}
+							else_if = {
+								limit = { 
+									AND = {
+										has_wonder = no
+										FROM = { government = merchant_republic_government }
+									}
+								}
+								add_wonder = wonder_city_of_wonders_rep
+								wonder = {
+									# cow_post_wonder_stage_decision_effect = yes
+									cow_post_wonder_upgrade_decision_effect = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			FROM = { 
+				wealth = -2000 
+				# event = COW.WIP
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	upgrade_historical_cow_wonder = {
+		filter = realm_owned
+		ai = no
+		is_high_prio = no
+		only_independent = yes
+		# ai_check_interval = 3000
+		
+		from_potential = {
+			is_playable = yes
+			ai = no
+		}
+		
+		potential = {
+			ROOT = {
+				location = {
+					AND = { 
+						has_wonder = yes
+						NOT = { has_city_of_wonders_trigger = yes }
+						is_historical_cow_province_id_trigger = yes
+					}
+				}
+			}
+		}
+
+		allow = {
+			FROM = {
+				wealth = 2000
+				prestige = 10000
+				independent = yes
+				OR = {
+					realm_size = 200
+					real_tier = emperor
+					government = merchant_republic_government 
+				}
+				NOR = {
+					is_tribal = yes
+					is_nomadic = yes
+				}
+			}
+			ROOT = {
+				location = {
+					owner = { same_realm = FROM }
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = { # Custom tooltip to explain what actually happens
+				text = GREAT_WORK_REPLACED_WITH_HIST_COW
+				hidden_tooltip = {
+					ROOT = {
+						location = {
+							cow_wonder_upgrade_decision_effect = yes
+							# cow_wonder_stage_decision_effect = yes
+							destroy_wonder = yes
+							cow_historical_wonder_upgrade_decision_effect = yes
+						}
+					}
+				}
+			}
+			FROM = { 
+				wealth = -2000 
+				# event = COW.WIP
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+# title_decisions = {
+	# cow_upgrade_wonder_test = {
+		# filter = realm_owned
+		# ai = no
+		# is_high_prio = no
+		# only_independent = yes
+		# # ai_check_interval = 1200 #check only once every 1200 months.
+		
+		# from_potential = {
+			# is_playable = yes
+			# OR = {
+				# realm_size = 200
+				# real_tier = emperor
+			# }
+			# NOR = {
+				# is_tribal = yes
+				# is_nomadic = yes
+			# }
+		# }
+		
+		# potential = {
+			# capital_scope = { has_wonder = yes }
+		# }
+		
+		# allow = {
+			# capital_scope = { has_wonder = yes }
+			# NOR = { 
+				# has_wonder = wonder_city_of_wonders
+				# has_wonder = wonder_city_of_wonders_rep
+			# }
+		# }
+		
+		# effect = {
+			# ROOT = {
+				# location = {
+					# destroy_wonder = yes
+				# } 
+			# }
+		# }
+		
+		# ai_will_do = {
+			# factor = 0
+		# }
+	# }
+# }

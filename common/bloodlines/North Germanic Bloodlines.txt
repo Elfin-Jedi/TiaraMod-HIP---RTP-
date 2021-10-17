@@ -1,0 +1,213 @@
+norse_bloodline_00 = {
+	norse_opinion = 5
+	monthly_character_prestige = 0.25
+	martial = 2
+	combat_rating = 5
+	bloodline_effect_reaver = 1
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_norse_bloodline_00
+	flags = { new_norse_bloodlines }
+}
+
+norse_bloodline_01 = {
+	norse_pagan_reformed_opinion = 10
+	monthly_character_prestige = 0.15
+	monthly_character_piety = 0.25
+	martial = 1
+	saintly_inquisitional_bloodline = 1
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_norse_bloodline_01
+	flags = { new_norse_bloodlines }
+}
+
+norse_bloodline_02 = {
+	vassal_opinion = 6
+	monthly_character_prestige = 0.30
+	martial = 1
+	stewardship = 2
+	combat_rating = 10
+	bloodline_effect_great_heroes_appear = 1
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_benevolent
+	flags = { new_norse_bloodlines }
+}
+
+norse_bloodline_03 = {
+	danish_opinion = 5
+	monthly_character_prestige = 0.20
+	monthly_character_piety = 0.10
+	martial = 2
+	combat_rating = 7
+	saintly_inquisitional_bloodline = 1
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_norse_bloodline_03
+	flags = { new_norse_bloodlines }
+}
+
+norse_bloodline_04 = {
+	vassal_opinion = 8
+	monthly_character_prestige = 0.30
+	monthly_character_piety = 0.15
+	stewardship = 3
+	diplomacy = 2
+	combat_rating = 15
+	global_tax_modifier = 0.08
+	build_time_modifier = -0.5
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_norse_bloodline_04
+	flags = { new_norse_bloodlines }
+}
+
+norse_bloodline_05 = {
+	danish_opinion = 3
+	monthly_character_prestige = 0.20
+	stewardship = 2
+	combat_rating = 5
+	days_of_supply = 50
+	command_modifier = {
+		speed = 0.20
+	}
+	
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_placeholder_symbol_2
+	flags = { new_norse_bloodlines }
+}
+
+norse_bloodline_06 = {
+	swedish_opinion = 5
+	monthly_character_prestige = 0.20
+	monthly_character_piety = 0.10
+	martial = 1
+	intrigue = 1
+	combat_rating = 7
+	bloodline_effect_battle_survivor = 1
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_norse_bloodline_06
+	flags = { new_norse_bloodlines }
+}
+
+norse_bloodline_07 = {
+	vassal_opinion = 6
+	monthly_character_prestige = 0.30
+	monthly_character_piety = 0.10
+	diplomacy = 3
+	stewardship = 1
+	combat_rating = 15
+	saintly_cultural_bloodline = 1
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_norse_bloodline_07
+	flags = { new_norse_bloodlines }
+}
+
+norse_bloodline_08 = {
+	swedish_opinion = 3
+	monthly_character_prestige = 0.15
+	intrigue = 1
+	stewardship = 1
+	combat_rating = 5
+	levy_reinforce_rate = 0.20
+	command_modifier = {
+		morale_attack = 0.20
+	}
+	
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_placeholder_symbol
+	flags = { new_norse_bloodlines }
+}
+
+norse_bloodline_09 = {
+	norwegian_opinion = 5
+	monthly_character_prestige = 0.20
+	monthly_character_piety = 0.10
+	martial = 1
+	diplomacy = 1
+	combat_rating = 7
+	bloodline_effect_faster_claims = 1
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_norse_bloodline_09
+	flags = { new_norse_bloodlines }
+}
+
+norse_bloodline_10 = {
+	vassal_opinion = 8
+	monthly_character_prestige = 0.35
+	monthly_character_piety = 0.10
+	martial = 3
+	diplomacy = 3
+	combat_rating = 12
+	bloodline_effect_fearsome = 1
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_norse_bloodline_10
+	flags = { new_norse_bloodlines }
+}
+
+norse_bloodline_11 = {
+	norwegian_opinion = 5
+	monthly_character_prestige = 0.20
+	stewardship = 2
+	combat_rating = 5
+	global_tax_modifier = 0.03
+	command_modifier = {
+		religious_enemy = 0.20
+	}
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_cross_crusader
+	flags = { new_norse_bloodlines }
+}
+
+norse_bloodline_12 = {
+	greek_opinion = -5
+	vassal_opinion = 5
+	monthly_character_prestige = 0.25
+	intrigue = 2
+	martial = 1
+	combat_rating = 5
+	plot_power_modifier = 0.35
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_longship
+	flags = { new_norse_bloodlines }
+}
+
+
+
+
+

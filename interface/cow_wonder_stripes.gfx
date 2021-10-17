@@ -1,0 +1,74 @@
+spriteTypes = {
+	#Grand Walls
+	spriteType = {
+		name = "GFX_wonder_strip_cow_grand_walls_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_cow_grand_walls_large.dds"
+		noOfFrames = 11
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_cow_grand_walls_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_cow_grand_walls_medium.dds"
+		noOfFrames = 11
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_cow_grand_walls_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_cow_grand_walls_small.dds"
+		noOfFrames = 11
+	}
+	#Lighthouse (Pharos)
+	spriteType = {
+		name = "GFX_wonder_strip_cow_alexandria_pharos_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_cow_alexandria_pharos_large.dds"
+		noOfFrames = 11
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_cow_alexandria_pharos_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_cow_alexandria_pharos_medium.dds"
+		noOfFrames = 11
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_cow_alexandria_pharos_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_cow_alexandria_pharos_small.dds"
+		noOfFrames = 11
+	}
+	#Constantinople (Hagia Sophia)
+	spriteType = {
+		name = "GFX_wonder_strip_cow_constantinople_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_cow_constantinople_large.dds"
+		noOfFrames = 11
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_cow_constantinople_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_cow_constantinople_medium.dds"
+		noOfFrames = 11
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_cow_constantinople_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_cow_constantinople_small.dds"
+		noOfFrames = 11
+	}
+	#Roma (Colosseum)
+	spriteType = {
+		name = "GFX_wonder_strip_cow_roma_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_cow_roma_large.dds"
+		noOfFrames = 11
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_cow_roma_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_cow_roma_medium.dds"
+		noOfFrames = 11
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_cow_roma_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_cow_roma_small.dds"
+		noOfFrames = 11
+	}
+}

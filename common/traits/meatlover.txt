@@ -1,0 +1,20 @@
+meatlover = {
+
+      ruler_designer_cost = 3
+
+potential = {
+     age = 16
+}
+
+personality = yes
+random = yes
+birth = 100
+  
+  opposites = {
+			vegetarien
+  }
+  
+  opposite_opinion = -10
+  same_opinion = 10
+  health = 0.5
+}

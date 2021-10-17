@@ -1,0 +1,229 @@
+#####
+#Baron Events
+#
+#Total = 3
+#####
+
+namespace = RTPbaron
+
+#Main Events
+#####
+
+#Landed Opportunity - Baron -> Count
+narrative_event = {
+	id = RTPbaron.1
+	title = "RTPbaron_1_title"
+	desc = "RTPbaron_1_desc"
+	picture = GFX_evt_knight_kneeling
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		prestige = 1000
+		has_landed_title = c_baron_t
+		rtp_is_capable_adult = yes
+		NOR = {
+			dynasty = 19930
+			has_character_flag = rtp_refused_county #You will never hear from this person again
+		}
+		liege = {
+			is_within_diplo_range = FROM
+		}
+	}
+
+	immediate = {
+		liege = {
+			save_event_target_as = rtp_previous_liege #Your previous liege
+		}
+	}
+
+	option = {
+		name = "RTPbaron.1_1"
+
+		prestige = -1000
+		
+		hidden_tooltip = {
+			FROM = {
+				set_truce = {
+					who = ROOT
+					years = 50
+				}
+			}
+
+			remove_trait = cannot_marry
+			any_dynasty_member_even_if_dead = {
+				remove_trait = cannot_marry
+			}
+
+			set_defacto_liege = FROM
+			religion = FROM
+			culture = FROM
+			
+			any_child = {
+				religion = FROM
+				culture = FROM
+			}
+
+			event_target:rtp_new_title = {
+				grant_title = ROOT
+				rtp_assign_count_laws = yes
+				ROOT = {
+					capital = PREV
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPbaron.1_2"
+
+		prestige = -1000
+		
+		hidden_tooltip = {
+			FROM = {
+				set_truce = {
+					who = ROOT
+					years = 50
+				}
+			}
+
+			set_defacto_liege = FROM
+			religion_scope = {
+				save_event_target_as = rtp_actual_religion #The actual religion
+			}
+			religion = FROM
+			set_secret_religion = event_target:rtp_actual_religion #The actual religion
+			culture = FROM
+			
+			any_child = {
+				religion = FROM
+				set_secret_religion = event_target:rtp_actual_religion #The actual religion
+				culture = FROM
+			}
+
+			event_target:rtp_new_title = {
+				grant_title = ROOT
+				rtp_assign_count_laws = yes
+				ROOT = {
+					capital = PREV
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPbaron.1_3"
+
+		set_character_flag = rtp_refused_county #You will never hear from this person again
+	}
+}
+
+#Purchase Count Title
+character_event = {
+	id = RTPbaron.2
+	title = "RTPbaron_2_title"
+	desc = "RTPbaron_2_desc"
+	picture = GFX_evt_powerful_ruler
+	is_triggered_only = yes
+	ai = no
+
+	option = {
+		name = "RTPbaron.2_1"
+
+		if = {
+			limit = {
+				event_target:rtp_selected_province = {
+					holder_scope = {
+						owes_favor_to = FROM
+					}
+				}
+			}
+			wealth = -500
+		}
+		else = {
+			wealth = -1000
+		}
+
+		hidden_tooltip = {
+			remove_trait = cannot_marry
+			any_dynasty_member_even_if_dead = {
+				remove_trait = cannot_marry
+			}
+			
+			liege = {
+				set_truce = {
+					who = ROOT
+					years = 50
+				}
+			}
+
+			event_target:rtp_selected_province = {
+				random_province_holding = {
+					limit = {
+						holder_scope = {
+							character = ROOT
+						}
+					}
+					county = {
+						grant_title = ROOT
+					}
+					make_capital_holding = yes
+					rtp_assign_count_laws = yes
+					ROOT = {
+						capital = PREV
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPbaron.2_2"
+	}
+}
+
+#Ping Events
+#####
+
+#Ping for Landed Opportunity - Baron -> Count
+character_event = {
+	id = RTPbaron.100
+	is_triggered_only = yes
+	hide_window = yes
+	only_playable = yes
+	capable_only = yes
+	war = no
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+		NOT = {
+			government = confucian_bureaucracy
+		}
+		higher_tier_than = COUNT
+		over_max_demesne_size = 0
+	}
+
+	immediate = {
+		random_demesne_province = {
+			limit = {
+				is_capital = no
+				OR = {
+					holding_type = castle
+					holding_type = city
+					holding_type = temple
+					holding_type = tribal
+				}
+			}
+			county = {
+				save_event_target_as = rtp_new_title #The new landed title you will gain
+			}
+			ROOT = {
+				any_player = {
+					narrative_event = {
+						id = RTPbaron.1 #Landed Opportunity - Baron
+					}
+				}
+			}
+		}
+	}
+}

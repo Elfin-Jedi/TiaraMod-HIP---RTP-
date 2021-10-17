@@ -1,0 +1,41 @@
+rtp_lowborn_v;Struggle;;;;;;x
+rtp_family_election_v;Head of the Family;;;;;;x
+rtp_republic_election_v;Democratic Election;;;;;;x
+rtp_theocracy_election_v;Mandate of Heaven;;;;;;x
+rtp_mercenary_election_v;Law of the Strongest;;;;;;x
+rtp_confederation_election_v;Parley;;;;;;x
+
+rtp_tooltip_vote_dislike;I don't like [From.GetHerHim];;;;;;x
+rtp_tooltip_vote_like;I like [From.GetHerHim];;;;;;x
+
+rtp_tooltip_lowborn_vote_myself;I want to rule;;;;;;x
+
+rtp_tooltip_republic_vote_councillor;I want to rule;;;;;;x
+rtp_tooltip_republic_vote_stewardship;[From.GetSheHeCap] has high §YStewardship§!;;;;;;x
+rtp_tooltip_republic_vote_steward;[From.GetSheHeCap] is the §YSteward§!;;;;;;x
+rtp_tooltip_republic_vote_money;[From.GetSheHeCap] is wealthy;;;;;;x
+rtp_tooltip_republic_vote_greedy;[From.GetSheHeCap] is §YGreedy§!;;;;;;x
+rtp_tooltip_republic_vote_charitable;[From.GetSheHeCap] is §YCharitable§!;;;;;;x
+
+rtp_tooltip_theocracy_vote_chaste;[From.GetSheHeCap] is §YChaste§!;;;;;;x
+rtp_tooltip_theocracy_vote_temperate;[From.GetSheHeCap] is §YTemperate§!;;;;;;x
+rtp_tooltip_theocracy_vote_charitable;[From.GetSheHeCap] is §YCharitable§!;;;;;;x
+rtp_tooltip_theocracy_vote_diligent;[From.GetSheHeCap] is §YDiligent§!;;;;;;x
+rtp_tooltip_theocracy_vote_patient;[From.GetSheHeCap] is §YPatient§!;;;;;;x
+rtp_tooltip_theocracy_vote_kind;[From.GetSheHeCap] is §YKind§!;;;;;;x
+rtp_tooltip_theocracy_vote_humble;[From.GetSheHeCap] is §YHumble§!;;;;;;x
+rtp_tooltip_theocracy_vote_lustful;[From.GetSheHeCap] is §YLustful§!;;;;;;x
+rtp_tooltip_theocracy_vote_gluttonous;[From.GetSheHeCap] is §YGluttonous§!;;;;;;x
+rtp_tooltip_theocracy_vote_greedy;[From.GetSheHeCap] is §YGreedy§!;;;;;;x
+rtp_tooltip_theocracy_vote_slothful;[From.GetSheHeCap] is §YSlothful§!;;;;;;x
+rtp_tooltip_theocracy_vote_wroth;[From.GetSheHeCap] is §YWroth§!;;;;;;x
+rtp_tooltip_theocracy_vote_envious;[From.GetSheHeCap] is §YEnvious§!;;;;;;x
+rtp_tooltip_theocracy_vote_proud;[From.GetSheHeCap] is §YProud§!;;;;;;x
+rtp_tooltip_theocracy_vote_learning;[From.GetSheHeCap] has high §YLearning§!;;;;;;x
+rtp_tooltip_theocracy_vote_piety;[From.GetSheHeCap] has high §YPiety§!;;;;;;x
+
+rtp_tooltip_mercenary_vote_martial;[From.GetSheHeCap] has high §YMartial§!;;;;;;x
+rtp_tooltip_mercenary_vote_marshal;[From.GetSheHeCap] is the §YMarshal§!;;;;;;x
+rtp_tooltip_mercenary_vote_combat_skill;[From.GetSheHeCap] is a good fighter;;;;;;x
+rtp_tooltip_mercenary_vote_strong;[From.GetSheHeCap] is §YStrong§!;;;;;;x
+rtp_tooltip_mercenary_vote_weak;[From.GetSheHeCap] is §YWeak§!;;;;;;x

@@ -1,0 +1,26 @@
+nympho = {
+	potential = {
+		is_female = yes
+		age = 16
+	}
+
+	ruler_designer_cost = 5 
+	random = yes 
+	personality = yes
+
+	diplomacy = 1
+	intrigue = 2
+
+	opposites = { 
+		chaste 
+		celibate 
+		temperate
+	}
+
+	fertility = 0.4	
+	sex_appeal_opinion = 30
+
+	monthly_character_piety = -0.5
+	church_opinion = -20
+
+}

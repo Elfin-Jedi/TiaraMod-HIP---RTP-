@@ -1,0 +1,15 @@
+grandesoreilles = {
+
+      ruler_designer_cost = -4
+
+inherit_chance = 15
+both_parent_has_trait_inherit_chance = 90
+random = yes
+birth = 100
+  
+  diplomacy = -2
+  intrigue = 2
+  
+  same_opinion = 10
+  sex_appeal_opinion = -5  
+}

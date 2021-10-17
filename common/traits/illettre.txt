@@ -1,0 +1,32 @@
+illettre = {
+
+      ruler_designer_cost = -80
+
+potential = {
+     age = 16
+}
+
+random = yes
+birth = 50
+  
+  diplomacy = -8
+  learning = -8
+  stewardship = -8
+  
+  opposites = {
+			quick
+            scholar
+            administrator
+            architect
+            poet            
+            erudite  
+  }
+  
+  opposite_opinion = -30
+  same_opinion = 30
+  vassal_opinion = -10
+  general_opinion = -30
+  sex_appeal_opinion = -30
+  monthly_character_prestige = -0.4
+
+}

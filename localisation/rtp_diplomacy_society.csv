@@ -1,0 +1,243 @@
+#####
+#Societies
+#####
+
+currency_name_rtp_diplomacy;Influence;;;;;;x
+currency_name_rtp_diplomacy_civilized;Influence;;;;;;x
+currency_name_rtp_diplomacy_pagan;Influence;;;;;;x
+
+rtp_diplomacy_civilized;The Court of Brothers;;;;;;x
+rtp_diplomacy_civilized_desc;So named because their members include nobility and commoners alike, the Court focuses on training its followers in the art of diplomacy and negotiation. They are employed by a range of rulers from Emperors to local magistrates to resolve disputes, give legal counsel, smooth over tensions.;;;;;;x
+rtp_diplomacy_civilized_leader_desc;This is the society leader.;;;;;;x
+rtp_diplomacy_civilized_rank_1_male;Listener;;;;;;x
+rtp_diplomacy_civilized_rank_2_male;Speaker;;;;;;x
+rtp_diplomacy_civilized_rank_3_male;Ambassador;;;;;;x
+rtp_diplomacy_civilized_rank_4_male;Grand Chancellor;;;;;;x
+rtp_diplomacy_civilized_rank_1_female;Listener;;;;;;x
+rtp_diplomacy_civilized_rank_2_female;Speaker;;;;;;x
+rtp_diplomacy_civilized_rank_3_female;Ambassador;;;;;;x
+rtp_diplomacy_civilized_rank_4_female;Grand Chancellor;;;;;;x
+
+rtp_diplomacy_pagan;The White Thorns;;;;;;x
+rtp_diplomacy_pagan_desc;The White Thorns are a circle of pagans from many branches who embrace the difficult task of settling disputes both locally and in wider circles. So named to acknowledge the sometimes prickly nature of diplomacy, the White Thorns teach the use of a firm hand and gentle words.;;;;;;x
+rtp_diplomacy_pagan_leader_desc;This is the society leader.;;;;;;x
+rtp_diplomacy_pagan_rank_1_male;Listener;;;;;;x
+rtp_diplomacy_pagan_rank_2_male;Speaker;;;;;;x
+rtp_diplomacy_pagan_rank_3_male;Elder;;;;;;x
+rtp_diplomacy_pagan_rank_4_male;Great One;;;;;;x
+rtp_diplomacy_pagan_rank_1_female;Listener;;;;;;x
+rtp_diplomacy_pagan_rank_2_female;Speaker;;;;;;x
+rtp_diplomacy_pagan_rank_3_female;Elder;;;;;;x
+rtp_diplomacy_pagan_rank_4_female;Great One;;;;;;x
+
+#####
+#Powers
+#####
+
+rtp_diplomacy_p1_td;Truth Sets Us Free;;;;;;x
+rtp_diplomacy_p1_td_named;Truth Sets Us Free;;;;;;x
+rtp_diplomacy_p1_td_desc;Words are powerful, though with the aid of a carefully distilled herb they are even more so.;;;;;;x
+rtp_diplomacy_p1_td_power_desc;Unlocks the §YTargeted Decision§! that allows a person in your realm to gain a 50 §YOpinion§! boost towards you for 3 years.;;;;;;x
+
+rtp_diplomacy_p2_sd;The Good Side;;;;;;x
+rtp_diplomacy_p2_sd_desc;Words are hardly the only means to win someone over. To make the best impression I must take care how I look.;;;;;;x
+rtp_diplomacy_p2_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows to you to gain §GGroomed§!, §GPoet§!, or §YGeneral Opinion§!.;;;;;;x
+
+rtp_diplomacy_p3_td;Solace;;;;;;x
+rtp_diplomacy_p3_td_named;Solace;;;;;;x
+rtp_diplomacy_p3_td_desc;It is not easy, but I have found certain ways of convincing people to set aside their greatest woes. Whoever said words don’t have power?;;;;;;x
+rtp_diplomacy_p3_td_power_desc;Unlocks the §YTargeted Decision§! that allows a person in your realm to lose §RDepressed§! or §RStressed§!.;;;;;;x
+
+rtp_diplomacy_p4_td;We Are All Friends Here - Independent;;;;;;x
+rtp_diplomacy_p4_td_named;We Are All Friends Here - Independent;;;;;;x
+rtp_diplomacy_p4_td_desc;[Root.GetTitledFirstName] could be a potential threat in my future endeavours. I should try negotiating a temporary non-aggression pact with [Root.GetHerHim].;;;;;;x
+rtp_diplomacy_p4_td_power_desc;Unlocks the §YTargeted Decision§! that allows you to gain a §YNon-Aggression Pact§! with another independent ruler for 25 years.;;;;;;x
+
+rtp_diplomacy_pp4_td;Innocent Until Proven Guilty - Vassal;;;;;;x
+rtp_diplomacy_pp4_td_named;Innocent Until Proven Guilty - Vassal;;;;;;x
+rtp_diplomacy_pp4_td_desc;I did nothing wrong to deserve any punishment...now I just need to convince my liege of so.;;;;;;x
+rtp_diplomacy_pp4_td_power_desc;Unlocks the §YTargeted Decision§! that allows your liege to forget all of your §YCrimes§!.;;;;;;x
+
+rtp_diplomacy_feudal_sd;Switch to Feudal;;;;;;x
+rtp_diplomacy_feudal_sd_desc;I have decided to embrace the great ways of dukes and kings, and adopt the laws of feudalism.;;;;;;x
+rtp_diplomacy_feudal_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to switch to the §YFeudal§! government.;;;;;;x
+
+rtp_diplomacy_confederation_sd;Switch to Confederation;;;;;;x
+rtp_diplomacy_confederation_sd_desc;If we have power alone, then together we are even stronger. I believe we can pursue our own goals and not interfere, but come together in times of need.;;;;;;x
+rtp_diplomacy_confederation_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to switch to the §YConfederation§! government.;;;;;;x
+
+#####
+#Events
+#####
+
+RTPsociety.1.3_desc;Greetings [Root.GetTitledFirstName]!\n\nWe are delighted to learn that you have taken your first step towards enlightenment. The art of diplomacy may be obscured to you now, but in time you may come to understand it as I have.\nKeep practicing and you will be a great diplomat one day!\n\nSigned, [rtp_society_leader.GetSocietyRank] [rtp_society_leader.GetFirstName];;;;;;x
+RTPsociety.1.3_1;It is my honor.;;;;;;x
+
+#####
+#Missions
+#####
+
+rtp_the_eulogy_diplomacy_mission;The Eulogy;;;;;;x
+rtp_the_eulogy_diplomacy_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_the_eulogy_diplomacy_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me to deliver a polished eulogy to $TARGET$.;;;;;;x
+rtp_the_eulogy_diplomacy_mission_tooltip;Deliver the eulogy to $TARGET$;;;;;;x
+
+RTPdsociety.1_desc;One of our most prominent nobles, [rtp_society_quest_target.GetFirstName] wants us to deliver a polished eulogy for [rtp_society_quest_target.GetHerHis] deceased [rtp_society_quest_dead_child.GetSonDaughter] [rtp_society_quest_dead_child.GetFirstName]. I would like for you to handle this.;;;;;;x
+RTPdsociety.1_1;ACCEPT;;;;;;x
+RTPdsociety.1_2;DECLINE;;;;;;x
+
+RTPdsociety.2_title;The Eulogy;;;;;;x
+RTPdsociety.2_desc;I have arrived at the family manor, and I am greeted somewhat coldly. Even the servants are curt as they bring me into the great hall.;;;;;;x
+RTPdsociety.2_1;I know that the death is likely hanging over the family.;;;;;;x
+RTPdsociety.2_2;Their attitude irks me, honestly. Did they not ask us to do this?;;;;;;x
+
+RTPdsociety.3_title;The Eulogy;;;;;;x
+RTPdsociety.3_desc;I sit with [rtp_society_quest_target.GetFirstName] for a while, talking gently about the dead. They were not the kindest person in the realm, but the family asks me to make them sound much better than I feel like they were.;;;;;;x
+RTPdsociety.3_1;Agree, there is no point in speaking ill of the deceased ;;;;;;x
+RTPdsociety.3_2;Agree privately, but write the eulogy more honestly than they may like…;;;;;;x
+
+RTPdsociety.4_title;The Eulogy;;;;;;x
+RTPdsociety.4_desc;The day of the funeral arrives, and I take my place. Clearing my throat, I begin to read my work to the gathered.;;;;;;x
+RTPdsociety.4_1;Thank you everybody for being here...;;;;;;x
+
+RTPdsociety.5_title;The Eulogy;;;;;;x
+RTPdsociety.5.1_desc;I see a few confused looks passing between family members at what I have written, but on the end I have moved some to tears.;;;;;;x
+RTPdsociety.5.2_desc;The glances being exchanged are quite obvious...nobody believes this utter nonsense, even as polished as I have made it sound.;;;;;;x
+RTPdsociety.5.3_desc;[rtp_society_quest_target.GetFirstName] looks most displeased, fidgeting in [rtp_society_quest_target.GetHerHis] seat, but the rest of the gathered nod appreciatively at what I have written.;;;;;;x
+RTPdsociety.5.4_desc;Not only does [rtp_society_quest_target.GetFirstName] seem more and more displeased as I speak, the family also looks mortified!;;;;;;x
+RTPdsociety.5_1;Time to head home.;;;;;;x
+RTPdsociety.5_2;Oh shit.;;;;;;x
+
+rtp_the_gift_diplomacy_mission;The Gift;;;;;;x
+rtp_the_gift_diplomacy_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_the_gift_diplomacy_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me to help $TARGET$ getting a gift.;;;;;;x
+rtp_the_gift_diplomacy_mission_tooltip;Help $TARGET$ get the perfect gift;;;;;;x
+
+RTPdsociety.6_desc;[rtp_society_quest_target.GetFirstName] is losing [rtp_society_quest_target.GetHerHis] mind over some sort of gift [rtp_society_quest_target.GetSheHe] is supposed to get [rtp_society_quest_target.GetHerHis] liege. Go give [rtp_society_quest_target.GetHerHim] a hand would ya?;;;;;;x
+RTPdsociety.6_1;ACCEPT;;;;;;x
+RTPdsociety.6_2;DECLINE;;;;;;x
+
+RTPdsociety.7_title;The Gift;;;;;;x
+RTPdsociety.7_desc;“You have just got to help me! I was supposed to find a gift to be presented to [rtp_society_quest_target.Liege.GetTitledFirstName] at court tomorrow and I have nearly run out of time to find something! Please, you have got to come with me to market!”.;;;;;;x
+RTPdsociety.7_1;*Sigh* Getting wet had better be worth the coin.;;;;;;x
+RTPdsociety.7_2;You had me rushing here just for that?!;;;;;;x
+
+RTPdsociety.8_title;The Gift;;;;;;x
+RTPdsociety.8_desc;[rtp_society_quest_target.GetFirstName] and I trudge through the rain to the market and split up. I can see why [rtp_society_quest_target.GetSheHe] was having such trouble...in the poor weather half the vendors have already given up and returned home. I search for over an hour before I am forced to make a quick decision.;;;;;;x
+RTPdsociety.8_1;A fresh, enormous bouquet of lovely flowers.;;;;;;x
+RTPdsociety.8_2;Some exotic spices I find from a trader from far off lands.;;;;;;x
+RTPdsociety.8_3;A beautiful gold-laced map of all our known lands.;;;;;;x
+RTPdsociety.8_4;A text exploring the wonders of prayer.;;;;;;x
+
+RTPdsociety.9_title;The Gift;;;;;;x
+RTPdsociety.9_desc;Once I have purchased the item I run through the market in search of [rtp_society_quest_target.GetFirstName]. “Here,” I declare, pushing the package into [rtp_society_quest_target.GetHerHis] arms. “That ought to do it.” [rtp_society_quest_target.GetSheHeCap] thanks me breathlessly and runs off, and it is only later that it occurs to me I should have told [rtp_society_quest_target.GetHerHim] what was in the parcel.;;;;;;x
+RTPdsociety.9_1;Oh well.;;;;;;x
+
+RTPdsociety.10_title;The Gift;;;;;;x
+RTPdsociety.10_desc;The next evening, as I am preparing to return home, [rtp_society_quest_target.GetFirstName] strides up to me.;;;;;;x
+RTPdsociety.10_1;What is it [rtp_society_quest_target.GetFirstName].;;;;;;x
+
+RTPdsociety.11_title;The Gift;;;;;;x
+RTPdsociety.11.1_desc;“I do not know how you did it, but you are a wonder,” [rtp_society_quest_target.GetFirstName] says, clasping my hand to press coin into my palm. “Thank you, thank you.”;;;;;;x
+RTPdsociety.11.2_desc;“What were you thinking?” [rtp_society_quest_target.GetFirstName] nearly shouts at me the moment [rtp_society_quest_target.GetSheHe] is close enough to be heard. [rtp_society_quest_target.GetHerHisCap] face is still red -- apparently from embarrassment at court. “Now I have got such a mess to clean up, you cannot even imagine! Here...for all your “trouble”!”;;;;;;x
+RTPdsociety.11_1;It was nothing really.;;;;;;x
+RTPdsociety.11_2;Ungrateful bitch.;;;;;;x
+
+rtp_do_as_i_do_diplomacy_mission;Do As I Do;;;;;;x
+rtp_do_as_i_do_diplomacy_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_do_as_i_do_diplomacy_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me to help $TARGET$ getting ready for a court day.;;;;;;x
+rtp_do_as_i_do_diplomacy_mission_tooltip;Help $TARGET$ be presentable for court;;;;;;x
+
+RTPdsociety.12_desc;Yet another request has arrived from a fellow [Root.Society.GetName] member. *sigh* [rtp_society_quest_target.GetFirstName] needs help...dressing [rtp_society_quest_target.GetHerHim]self up! No it is not a joke either, go help [rtp_society_quest_target.GetHerHim] out before I lose my patience.;;;;;;x
+RTPdsociety.12_1;ACCEPT;;;;;;x
+RTPdsociety.12_2;DECLINE;;;;;;x
+
+RTPdsociety.13_title;Do As I Do;;;;;;x
+RTPdsociety.13_desc;“Hey [Root.GetBrotherSister]! I’ve got to present myself at court next week and I do not know what to do! I will never get anywhere if I cannot look good in front of my liege. Surely you have picked up some tricks? A few coins for your time?”;;;;;;x
+RTPdsociety.13_1;Of course [Root.GetBrotherSister]!;;;;;;x
+RTPdsociety.13_2;Oh I will make sure you look splending alright.;;;;;;x
+
+RTPdsociety.14_title;Do As I Do;;;;;;x
+RTPdsociety.14_desc;The next morning, I call [rtp_society_quest_target.GetFirstName] in after breakfast. “You are thinking much too hard,” I tell [rtp_society_quest_target.GetHerHim]. “Once you have actually done it, it will feel more natural. Let us go over everything a few times first.”;;;;;;x
+RTPdsociety.14_1;[Root.Religion.GetHighGodNameCap] help [rtp_society_quest_target.GetHerHim].;;;;;;x
+
+RTPdsociety.15_title;Do As I Do;;;;;;x
+RTPdsociety.15.1_desc;[rtp_society_quest_target.GetFirstName] finally stops fretting enough to pay attention, and we work all day and into the evening. By nightfall [rtp_society_quest_target.GetSheHe] is already looking more confident. “Again tomorrow, then?” [rtp_society_quest_target.GetSheHe] asks, gladly handing me a few coins.;;;;;;x
+RTPdsociety.15.2_desc;The sun sinks on the horizon as [rtp_society_quest_target.GetFirstName] and I practice courtesies again and again, to the point where even I begin to tire of it. I have tried my best, but the [rtp_society_quest_target.GetManWoman] just will not listen to a thing I say!;;;;;;x
+RTPdsociety.15_1;A promising student indeed!;;;;;;x
+RTPdsociety.15_2;And [rtp_society_quest_target.GetSheHe] has the gall to blame my poor teaching!;;;;;;x
+
+rtp_the_accused_diplomacy_mission;The Accused;;;;;;x
+rtp_the_accused_diplomacy_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_the_accused_diplomacy_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me to pass judgement on $TARGET$.;;;;;;x
+rtp_the_accused_diplomacy_mission_tooltip;Decide the fate of $TARGET$;;;;;;x
+
+RTPdsociety.16_desc;The local magistrate tells me that [rtp_society_quest_target.GetFirstName] has been accused of murder. I know the word is already out all over town, but they want our help making a judgement. Take care of this.;;;;;;x
+RTPdsociety.16_1;ACCEPT;;;;;;x
+RTPdsociety.16_2;DECLINE;;;;;;x
+
+RTPdsociety.17_title;The Accused;;;;;;x
+RTPdsociety.17_desc;I have arrived in [rtp_society_quest_target.Liege.Capital.GetName] were [rtp_society_quest_target.GetFirstName] is residing in order to help settle this legal matter. Instantly I am bombarded by people trying to shout their version of the matter at me.;;;;;;x
+RTPdsociety.17_1;I shall talk to the accused straightaway.;;;;;;x
+RTPdsociety.17_2;I will talk to [rtp_society_quest_target.GetHerHis] accuser first.;;;;;;x
+
+RTPdsociety.18_title;The Accused;;;;;;x
+RTPdsociety.18_desc;A stool is brought to me in the dark prison cell, and I sit across from [rtp_society_quest_target.GetFirstName]. Firmly, I implore [rtp_society_quest_target.GetHerHim] to tell me [rtp_society_quest_target.GetHerHis] story. [rtp_society_quest_target.GetFirstName] weeps as [rtp_society_quest_target.GetSheHe] tells me of the wrongful accusation.;;;;;;x
+RTPdsociety.18_1;I will talk to [rtp_society_quest_target2.GetFirstName].;;;;;;x
+RTPdsociety.18_2;Clearly this [rtp_society_quest_target.GetManWoman] is innocent.;;;;;;x
+RTPdsociety.18_3;Time to decide.;;;;;;x
+
+RTPdsociety.19_title;The Accused;;;;;;x
+RTPdsociety.19_desc;The great hall echoes with our footsteps as I enter with [rtp_society_quest_target2.GetFirstName]. We sit, sharing wine as we discuss what has happened.;;;;;;x
+RTPdsociety.19_1;I will talk to [rtp_society_quest_target.GetFirstName].;;;;;;x
+RTPdsociety.19_2;Clearly [rtp_society_quest_target.GetFirstName] is guilty.;;;;;;x
+RTPdsociety.19_3;Time to decide.;;;;;;x
+
+RTPdsociety.20_title;The Accused;;;;;;x
+RTPdsociety.20_desc;I have heard both sides now and the magistrate is impatient for my judgment. I pace the hall all night, turning things over in my head. At the light of daybreak, I am summoned back to the hall to give my answer.;;;;;;x
+RTPdsociety.20_1;[rtp_society_quest_target.GetFirstName] is guilty as charged and shall be put to death.;;;;;;x
+RTPdsociety.20_2;[rtp_society_quest_target.GetFirstName] is innocent and shall be set free.;;;;;;x
+RTPdsociety.20_3;I shall declare trial by combat, and let [Root.Religion.GetHighGodNameCap] sort it out.;;;;;;x
+
+RTPdsociety.21_title;The Accused;;;;;;x
+RTPdsociety.21.1_desc;Halfway home I receive an envoy from the magistrate notifying me that I made the right decision regarding [rtp_society_quest_target.GetFirstName].;;;;;;x
+RTPdsociety.21.2_desc;Halfway home I receive an envoy from the magistrate notifying me that I made the wrong decision regarding [rtp_society_quest_target.GetFirstName].;;;;;;x
+RTPdsociety.21_1;Ah! I knew it!;;;;;;x
+RTPdsociety.21_2;Oh dear [Root.Religion.GetHighGodNameCap] what have I done.;;;;;;x
+
+rtp_boundaries_diplomacy_mission;Boundaries;;;;;;x
+rtp_boundaries_diplomacy_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_boundaries_diplomacy_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me to settle a dispute.;;;;;;x
+rtp_boundaries_diplomacy_mission_tooltip;Settle a dispute;;;;;;x
+
+RTPdsociety.22_desc;We have a dispute on our hands. Seems like [rtp_society_quest_target.GetTitledFirstName] and [rtp_society_quest_target2.GetTitledFirstName] cannot see eye to eye about the borders of their land, and it threatens to become violent. Pay them both a visit and settle this matter.;;;;;;x
+RTPdsociety.22_1;ACCEPT;;;;;;x
+RTPdsociety.22_2;DECLINE;;;;;;x
+
+RTPdsociety.23_title;Boundaries;;;;;;x
+RTPdsociety.23_desc;This dispute has already given me quite the headache, and I have barely started. I have chosen to meet with [rtp_society_quest_target.GetTitledFirstName] to hear [rtp_society_quest_target.GetHerHis] side of the story.;;;;;;x
+RTPdsociety.23_1;Greetings my [rtp_society_quest_target.GetLordLady].;;;;;;x
+
+RTPdsociety.24_title;Boundaries;;;;;;x
+RTPdsociety.24_desc;[rtp_society_quest_target.GetTitledFirstName] bids me sit by the fire and immediately launches into [rtp_society_quest_target.GetHerHis] tale. “Our borders have been this way for years!” [rtp_society_quest_target.GetSheHe] exclaims. “And [rtp_society_quest_target2.GetTitledFirstName] thinks [rtp_society_quest_target2.GetSheHe] can just do whatever [rtp_society_quest_target2.GetSheHe] wants? Madness, don't you think?”;;;;;;x
+RTPdsociety.24_1;I nod, with an inward sigh.;;;;;;x
+
+RTPdsociety.25_title;Boundaries;;;;;;x
+RTPdsociety.25_desc;The next day I meet with [rtp_society_quest_target2.GetTitledFirstName], a short ride away. “The line was never right here,” insists [rtp_society_quest_target2.GetTitledFirstName], making a gesture with [rtp_society_quest_target2.GetHerHis] hands. “Never! [rtp_society_quest_target.GetTitledFirstName] can barely remember the names of [rtp_society_quest_target.GetHerHis] own parents, let alone these hills [rtp_society_quest_target.GetSheHe] barely ever even seen for [rtp_society_quest_target.GetHerHim]self!”;;;;;;x
+RTPdsociety.25_1;Of course my [rtp_society_quest_target2.GetLordLady].;;;;;;x
+
+RTPdsociety.26_title;Boundaries;;;;;;x
+RTPdsociety.26_desc;As the sun begins to set, I reach our society hall and toss off my cloak onto a bench. I must decide how to handle this.;;;;;;x
+RTPdsociety.26_1;Rule in favor of [rtp_society_quest_target.GetTitledFirstName].;;;;;;x
+RTPdsociety.26_2;Rule in favor of [rtp_society_quest_target2.GetTitledFirstName].;;;;;;x
+RTPdsociety.26_3;Draw new, fair lines between the two lands.;;;;;;x
+
+RTPdsociety.27_title;Boundaries;;;;;;x
+RTPdsociety.27.1_desc;Halfway home I receive an envoy notifying me that [Root.Society.GetTitledGrandMasterName] was pleased with my decision.;;;;;;x
+RTPdsociety.27.2_desc;Halfway home I receive an envoy notifying me that [Root.Society.GetTitledGrandMasterName] was not pleased with my decision.;;;;;;x
+RTPdsociety.27_1;Great minds think alike!;;;;;;x
+RTPdsociety.27_2;Damnation!;;;;;;x
+
+RTPdsociety.28_title;Mission Failed;;;;;;x
+RTPdsociety.28_desc;While on my way towards the target, an envoy informs me that the target is no longer with us.;;;;;;x
+RTPdsociety.28_1;[Root.Society.GetTitledGrandMasterName] is not going to be happy.;;;;;;x

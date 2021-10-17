@@ -1,0 +1,59 @@
+obj_diplomacy_title;Diplomatic Interest;;;;;;x
+obj_diplomacy_desc;[This.GetTitledName] has a burning passion for anything related to diplomacy.\n;;;;;;x
+
+obj_martial_title;Martial Interest;;;;;;x
+obj_martial_desc;[This.GetTitledName] has a burning passion for anything related to martial.\n;;;;;;x
+
+obj_stewardship_title;Stewardship Interest;;;;;;x
+obj_stewardship_desc;[This.GetTitledName] has a burning passion for anything related to stewardship.\n;;;;;;x
+
+obj_intrigue_title;Intrigue Interest;;;;;;x
+obj_intrigue_desc;[This.GetTitledName] has a burning passion for anything related to intrigue.\n;;;;;;x
+
+obj_learning_title;Learning Interest;;;;;;x
+obj_learning_desc;[This.GetTitledName] has a burning passion for anything related to learning.\n;;;;;;x
+
+obj_health_title;Health Interest;;;;;;x
+obj_health_desc;[This.GetTitledName] has a burning passion for anything related to good health.\n;;;;;;x
+
+obj_fertility_title;Procreation Interest;;;;;;x
+obj_fertility_desc;[This.GetTitledName] has a burning passion for anything related to procreation.\n;;;;;;x
+
+obj_m_money_title;Wealth Interest;;;;;;x
+obj_m_money_desc;[This.GetTitledName] has a burning passion for anything related to wealth.\n;;;;;;x
+
+obj_m_prestige_title;Fame Interest;;;;;;x
+obj_m_prestige_desc;[This.GetTitledName] has a burning passion for anything related to fame.\n;;;;;;x
+
+obj_m_piety_title;Religion Interest;;;;;;x
+obj_m_piety_desc;[This.GetTitledName] has a burning passion for anything related to religion.\n;;;;;;x
+
+obj_combat_title;Combat Interest;;;;;;x
+obj_combat_desc;[This.GetTitledName] has a burning passion for anything related to combat.\n;;;;;;x
+
+obj_social_title;Social Interest;;;;;;x
+obj_social_desc;[This.GetTitledName] has a burning passion for anything related to socialization.\n;;;;;;x
+
+obj_beauty_title;Beauty Interest;;;;;;x
+obj_beauty_desc;[This.GetTitledName] has a burning passion for anything related to beauty.\n;;;;;;x
+
+obj_legacy_title;Legacy Interest;;;;;;x
+obj_legacy_desc;[This.GetTitledName] has a burning passion for anything related to [This.GetHerHis] dynasty.\n;;;;;;x
+
+###Tooltips
+
+rtp_obj_permanent_ct;Permanent;;;;;;x
+rtp_obj_diplomacy_ct;§Y+1§! Diplomacy;;;;;;x
+rtp_obj_martial_ct;§Y+1§! Martial;;;;;;x
+rtp_obj_stewardship_ct;§Y+1§! Stewardship;;;;;;x
+rtp_obj_intrigue_ct;§Y+1§! Intrigue;;;;;;x
+rtp_obj_learning_ct;§Y+1§! Learning;;;;;;x
+rtp_obj_health_ct;§Y+0.25§! Health;;;;;;x
+rtp_obj_fertility_ct;§Y+5%§! Fertility;;;;;;x
+rtp_obj_m_money_ct;§Y+0.1§! Monthly Income;;;;;;x
+rtp_obj_m_prestige_ct;§Y+0.1§! Monthly Prestige;;;;;;x
+rtp_obj_m_piety_ct;§Y+0.1§! Monthly Piety;;;;;;x
+rtp_obj_combat_ct;§Y+5§! Personal Combat Rating;;;;;;x
+rtp_obj_social_ct;§Y+5§! General Opinion;;;;;;x
+rtp_obj_beauty_ct;§Y+10§! Sex Appeal;;;;;;x
+rtp_obj_legacy_ct;§Y+15§! Dynasty Opinion;;;;;;x

@@ -1,0 +1,36 @@
+
+horse_archers = {
+	base_type = light_cavalry
+	maintenance = 1.5
+	morale = 1
+	phase_skirmish_attack = 5
+	phase_skirmish_defense = 2
+	phase_melee_attack = 0.5
+	phase_melee_defense = 0.5
+	phase_pursue_attack = 3
+	phase_pursue_defense = 3
+}
+
+camel_cavalry = {
+	base_type = light_cavalry
+	maintenance = 2
+	morale = 5
+	phase_skirmish_attack = 2
+	phase_skirmish_defense = 2
+	phase_melee_attack = 4
+	phase_melee_defense = 3
+	phase_pursue_attack = 2
+	phase_pursue_defense = 2
+}
+
+war_elephants = {
+	base_type = heavy_cavalry
+	maintenance = 3
+	morale = 6
+	phase_skirmish_attack = 2
+	phase_skirmish_defense = 0.5
+	phase_melee_attack = 10
+	phase_melee_defense = 10
+	phase_pursue_attack = 1
+	phase_pursue_defense = 0.5
+}

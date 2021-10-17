@@ -1,0 +1,1452 @@
+#####
+#Disease Events
+#
+#Total = 20
+#####
+
+namespace = RTPdisease
+
+#Main Events
+#####
+
+##1
+
+#Sanguinare Vampiris - Start
+character_event = {
+	id = RTPdisease.2
+	desc = "RTPdisease.2_desc"
+	picture = GFX_evt_illness
+	border = GFX_event_normal_frame_religion
+	hide_from = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "RTPdisease.2_1"
+
+		add_trait = rtp_sanguinare_vampiris_tr
+		remove_trait = malaise
+		remove_trait = headache
+
+		character_event = {
+			id = RTPdisease.3 #Sanguinare Vampiris - End
+
+			days = 365
+			random = 365
+		}
+	}
+}
+
+#Sanguinare Vampiris - End
+character_event = {
+	id = RTPdisease.3
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_is_vampire
+			}
+		}
+		text = "RTPdisease.3.1_desc"
+	}
+	desc = {
+		trigger = {
+			has_character_flag = rtp_is_vampire
+		}
+		text = "RTPdisease.3.2_desc"
+	}
+	picture = GFX_evt_illness
+	border = GFX_event_normal_frame_religion
+	hide_from = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random = {
+			chance = 20
+
+			set_character_flag = rtp_is_vampire
+		}
+	}
+	
+	option = {
+		name = "RTPdisease.3_1"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_is_vampire
+			}
+		}
+
+		remove_trait = rtp_sanguinare_vampiris_tr
+	}
+
+	option = {
+		name = "RTPdisease.3_2"
+
+		trigger = {
+			has_character_flag = rtp_is_vampire
+		}
+
+		sound_effect = sanguinare_vampiris
+
+		add_trait = rtp_feral_vampire_tr
+		remove_trait = rtp_sanguinare_vampiris_tr
+		clr_character_flag = rtp_is_vampire
+	}
+}
+
+#Seeking Blood
+character_event = {
+	id = RTPdisease.4
+	desc = {
+		trigger = {
+			has_character_flag = rtp_successful
+		}
+		text = "RTPdisease.4.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_successful
+			}
+		}
+		text = "RTPdisease.4.2_desc"
+	}
+	picture = GFX_evt_bleeding_from_neck_hf
+	hide_from = yes
+	is_triggered_only = yes
+
+	trigger = {
+		top_liege = {
+			any_realm_character = {
+				NOT = {
+					dynasty = none
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				trait = rtp_feral_vampire_tr
+			}
+			random = {
+				chance = 50
+	
+				set_character_flag = rtp_successful
+			}
+		}
+		else = {
+			random = {
+				chance = 75
+	
+				set_character_flag = rtp_successful
+			}
+		}
+
+		top_liege = {
+			random_realm_character = {
+				limit = {
+					NOT = {
+						dynasty = none
+					}
+				}
+				save_event_target_as = rtp_victim #The victim
+			}
+		}
+	}
+	
+	option = {
+		name = "RTPdisease.4_1"
+
+		trigger = {
+			has_character_flag = rtp_successful
+		}
+
+		event_target:rtp_victim = {
+			save_event_target_as = rtp_victim #The victim
+		}
+
+		sound_effect = sanguinare_vampiris
+		event_target:rtp_victim = {
+			sound_effect = sanguinare_vampiris
+			
+			random_list = {
+				99 = {
+					if = {
+						limit = {
+							NOR = {
+								trait = rtp_sanguinare_vampiris_tr
+								trait = rtp_feral_vampire_tr
+								trait = rtp_vampire_tr
+								trait = rtp_sanies_lupinus_tr
+								trait = rtp_feral_werewolf_tr
+								trait = rtp_werewolf_tr
+								trait = rtp_corruption_tr
+								trait = rtp_cursed_tr
+								trait = rtp_gifted_tr
+								trait = rtp_mana_poisoning_tr
+								trait = rtp_mage_tr
+								trait = rtp_sage_tr
+								trait = rtp_symphony_tr
+								trait = rtp_shapeshifter_tr
+								trait = rtp_druid_tr
+							}
+						}
+						character_event = {
+							id = RTPdisease.101 #Ping for Sanguinare Vampiris
+						}
+					}
+				}
+				1 = {
+					death = {
+						death_reason = death_murder_unknown_butchered
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPdisease.4_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_successful
+			}
+		}
+
+		event_target:rtp_victim = {
+			save_event_target_as = rtp_victim #The victim
+		}
+
+		custom_tooltip = {
+			text = "rtp_known_abomination_ct"
+
+			any_character = {
+				opinion = {
+					modifier = rtp_abomination_om
+					who = ROOT
+					years = 100
+				}
+			}
+		}
+
+		random_list = {
+			90 = {
+			}
+			9 = {
+				imprison = event_target:rtp_victim
+			}
+			1 = {
+				death = {
+					death_reason = death_battle
+					killer = event_target:rtp_victim
+				}
+			}
+		}
+	}
+
+	after = {
+		clr_character_flag = rtp_successful
+	}
+}
+
+#Sanies Lupinus - Start
+character_event = {
+	id = RTPdisease.5
+	desc = "RTPdisease.5_desc"
+	picture = GFX_evt_illness
+	border = GFX_event_normal_frame_religion
+	hide_from = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "RTPdisease.5_1"
+
+		add_trait = rtp_sanies_lupinus_tr
+		remove_trait = abdominal_pain
+		remove_trait = chest_pain
+
+		character_event = {
+			id = RTPdisease.6 #Sanies Lupinus - End
+
+			days = 365
+			random = 365
+		}
+	}
+}
+
+#Sanies Lupinus - End
+character_event = {
+	id = RTPdisease.6
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_is_werewolf
+			}
+		}
+		text = "RTPdisease.6.1_desc"
+	}
+	desc = {
+		trigger = {
+			has_character_flag = rtp_is_werewolf
+		}
+		text = "RTPdisease.6.2_desc"
+	}
+	picture = GFX_evt_illness
+	border = GFX_event_normal_frame_religion
+	hide_from = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random = {
+			chance = 20
+
+			set_character_flag = rtp_is_werewolf
+		}
+	}
+	
+	option = {
+		name = "RTPdisease.6_1"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_is_werewolf
+			}
+		}
+
+		remove_trait = rtp_sanies_lupinus_tr
+	}
+
+	option = {
+		name = "RTPdisease.6_2"
+
+		trigger = {
+			has_character_flag = rtp_is_werewolf
+		}
+
+		sound_effect = sanies_lupinus
+
+		add_trait = rtp_feral_werewolf_tr
+		remove_trait = rtp_sanies_lupinus_tr
+		clr_character_flag = rtp_is_werewolf
+	}
+}
+
+#The Hunt Calls
+character_event = {
+	id = RTPdisease.7
+	desc = {
+		trigger = {
+			has_character_flag = rtp_successful
+		}
+		text = "RTPdisease.7.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_successful
+			}
+		}
+		text = "RTPdisease.7.2_desc"
+	}
+	picture = GFX_evt_bloody_man
+	hide_from = yes
+	is_triggered_only = yes
+
+	trigger = {
+		top_liege = {
+			any_realm_character = {
+				NOT = {
+					dynasty = none
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				trait = rtp_feral_werewolf_tr
+			}
+			random = {
+				chance = 50
+	
+				set_character_flag = rtp_successful
+			}
+		}
+		else = {
+			random = {
+				chance = 75
+	
+				set_character_flag = rtp_successful
+			}
+		}
+
+		top_liege = {
+			random_realm_character = {
+				limit = {
+					NOT = {
+						dynasty = none
+					}
+				}
+				save_event_target_as = rtp_victim #The victim
+			}
+		}
+	}
+	
+	option = {
+		name = "RTPdisease.7_1"
+
+		trigger = {
+			has_character_flag = rtp_successful
+		}
+
+		event_target:rtp_victim = {
+			save_event_target_as = rtp_victim #The victim
+		}
+
+		sound_effect = sanies_lupinus
+		event_target:rtp_victim = {
+			sound_effect = sanies_lupinus
+
+			random_list = {
+				99 = {
+					if = {
+						limit = {
+							NOR = {
+								trait = rtp_sanguinare_vampiris_tr
+								trait = rtp_feral_vampire_tr
+								trait = rtp_vampire_tr
+								trait = rtp_sanies_lupinus_tr
+								trait = rtp_feral_werewolf_tr
+								trait = rtp_werewolf_tr
+								trait = rtp_corruption_tr
+								trait = rtp_cursed_tr
+								trait = rtp_gifted_tr
+								trait = rtp_mana_poisoning_tr
+								trait = rtp_mage_tr
+								trait = rtp_sage_tr
+								trait = rtp_symphony_tr
+								trait = rtp_shapeshifter_tr
+								trait = rtp_druid_tr
+							}
+						}
+						character_event = {
+							id = RTPdisease.102 #Ping for Sanies Lupinus
+						}
+					}
+				}
+				1 = {
+					death = {
+						death_reason = death_murder_unknown_butchered
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPdisease.7_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_successful
+			}
+		}
+
+		event_target:rtp_victim = {
+			save_event_target_as = rtp_victim #The victim
+		}
+
+		custom_tooltip = {
+			text = "rtp_known_abomination_ct"
+
+			any_character = {
+				opinion = {
+					modifier = rtp_abomination_om
+					who = ROOT
+					years = 100
+				}
+			}
+		}
+
+		random_list = {
+			90 = {
+			}
+			9 = {
+				imprison = event_target:rtp_victim
+			}
+			1 = {
+				death = {
+					death_reason = death_battle
+					killer = event_target:rtp_victim
+				}
+			}
+		}
+	}
+
+	after = {
+		clr_character_flag = rtp_successful
+	}
+}
+
+#Corruption - Start
+character_event = {
+	id = RTPdisease.8
+	desc = "RTPdisease.8_desc"
+	picture = GFX_evt_illness
+	border = GFX_event_normal_frame_religion
+	hide_from = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "RTPdisease.8_1"
+
+		add_trait = rtp_corruption_tr
+		remove_trait = headache
+		remove_trait = malaise
+
+		character_event = {
+			id = RTPdisease.9 #Corruption - End
+
+			days = 365
+			random = 365
+		}
+	}
+}
+
+#Corruption - End
+character_event = {
+	id = RTPdisease.9
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_is_cursed
+			}
+		}
+		text = "RTPdisease.9.1_desc"
+	}
+	desc = {
+		trigger = {
+			has_character_flag = rtp_is_cursed
+		}
+		text = "RTPdisease.9.2_desc"
+	}
+	picture = GFX_evt_illness
+	border = GFX_event_normal_frame_religion
+	hide_from = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random = {
+			chance = 20
+
+			set_character_flag = rtp_is_cursed
+		}
+	}
+	
+	option = {
+		name = "RTPdisease.9_1"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_is_cursed
+			}
+		}
+
+		remove_trait = rtp_corruption_tr
+	}
+
+	option = {
+		name = "RTPdisease.9_2"
+
+		trigger = {
+			has_character_flag = rtp_is_cursed
+		}
+
+		sound_effect = corruption
+
+		add_trait = rtp_cursed_tr
+		remove_trait = rtp_corruption_tr
+		clr_character_flag = rtp_is_cursed
+	}
+}
+
+#The Rite
+character_event = {
+	id = RTPdisease.10
+	desc = {
+		trigger = {
+			has_character_flag = rtp_successful
+		}
+		text = "RTPdisease.10.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_successful
+			}
+		}
+		text = "RTPdisease.10.2_desc"
+	}
+	picture = GFX_evt_sacrifice
+	hide_from = yes
+	is_triggered_only = yes
+
+	trigger = {
+		top_liege = {
+			any_realm_character = {
+				NOT = {
+					dynasty = none
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				trait = rtp_cursed_tr
+			}
+			random = {
+				chance = 50
+	
+				set_character_flag = rtp_successful
+			}
+		}
+		else = {
+			random = {
+				chance = 75
+	
+				set_character_flag = rtp_successful
+			}
+		}
+
+		top_liege = {
+			random_realm_character = {
+				limit = {
+					NOT = {
+						dynasty = none
+					}
+				}
+				save_event_target_as = rtp_victim #The victim
+			}
+		}
+	}
+	
+	option = {
+		name = "RTPdisease.10_1"
+
+		trigger = {
+			has_character_flag = rtp_successful
+		}
+
+		event_target:rtp_victim = {
+			save_event_target_as = rtp_victim #The victim
+		}
+
+		sound_effect = corruption
+		event_target:rtp_victim = {
+			sound_effect = corruption
+
+			random_list = {
+				99 = {
+					if = {
+						limit = {
+							NOR = {
+								trait = rtp_sanguinare_vampiris_tr
+								trait = rtp_feral_vampire_tr
+								trait = rtp_vampire_tr
+								trait = rtp_sanies_lupinus_tr
+								trait = rtp_feral_werewolf_tr
+								trait = rtp_werewolf_tr
+								trait = rtp_corruption_tr
+								trait = rtp_cursed_tr
+								trait = rtp_gifted_tr
+								trait = rtp_mana_poisoning_tr
+								trait = rtp_mage_tr
+								trait = rtp_sage_tr
+								trait = rtp_symphony_tr
+								trait = rtp_shapeshifter_tr
+								trait = rtp_druid_tr
+							}
+						}
+						character_event = {
+							id = RTPdisease.103 #Ping for Corruption
+						}
+					}
+				}
+				1 = {
+					death = {
+						death_reason = death_murder_unknown_butchered
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPdisease.10_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_successful
+			}
+		}
+
+		event_target:rtp_victim = {
+			save_event_target_as = rtp_victim #The victim
+		}
+
+		custom_tooltip = {
+			text = "rtp_known_abomination_ct"
+
+			any_character = {
+				opinion = {
+					modifier = rtp_abomination_om
+					who = ROOT
+					years = 100
+				}
+			}
+		}
+
+		random_list = {
+			90 = {
+			}
+			9 = {
+				imprison = event_target:rtp_victim
+			}
+			1 = {
+				death = {
+					death_reason = death_battle
+					killer = event_target:rtp_victim
+				}
+			}
+		}
+	}
+
+	after = {
+		clr_character_flag = rtp_successful
+	}
+}
+
+#Mana Poisoning - Start
+character_event = {
+	id = RTPdisease.11
+	desc = "RTPdisease.11_desc"
+	picture = GFX_evt_illness
+	border = GFX_event_normal_frame_religion
+	hide_from = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "RTPdisease.11_1"
+
+		add_trait = rtp_mana_poisoning_tr
+		remove_trait = fatigue
+		remove_trait = vomiting
+
+		character_event = {
+			id = RTPdisease.12 #Mana Poisoning - End
+
+			days = 365
+			random = 365
+		}
+	}
+}
+
+#Mana Poisoning - End
+character_event = {
+	id = RTPdisease.12
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_is_mage
+			}
+		}
+		text = "RTPdisease.12.1_desc"
+	}
+	desc = {
+		trigger = {
+			has_character_flag = rtp_is_mage
+		}
+		text = "RTPdisease.12.2_desc"
+	}
+	picture = GFX_evt_illness
+	border = GFX_event_normal_frame_religion
+	hide_from = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random = {
+			chance = 20
+
+			set_character_flag = rtp_is_mage
+		}
+	}
+	
+	option = {
+		name = "RTPdisease.12_1"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_is_mage
+			}
+		}
+
+		remove_trait = rtp_mana_poisoning_tr
+	}
+
+	option = {
+		name = "RTPdisease.12_2"
+
+		trigger = {
+			has_character_flag = rtp_is_mage
+		}
+
+		sound_effect = mana_poisoning
+
+		add_trait = rtp_mage_tr
+		remove_trait = rtp_mana_poisoning_tr
+		clr_character_flag = rtp_is_mage
+	}
+}
+
+#Recharge
+character_event = {
+	id = RTPdisease.13
+	desc = {
+		trigger = {
+			has_character_flag = rtp_successful
+		}
+		text = "RTPdisease.13.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_successful
+			}
+		}
+		text = "RTPdisease.13.2_desc"
+	}
+	picture = GFX_evt_hooded_figure_hf
+	hide_from = yes
+	is_triggered_only = yes
+
+	trigger = {
+		top_liege = {
+			any_realm_character = {
+				NOT = {
+					dynasty = none
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				trait = rtp_mage_tr
+			}
+			random = {
+				chance = 50
+	
+				set_character_flag = rtp_successful
+			}
+		}
+		else = {
+			random = {
+				chance = 75
+	
+				set_character_flag = rtp_successful
+			}
+		}
+
+		top_liege = {
+			random_realm_character = {
+				limit = {
+					NOT = {
+						dynasty = none
+					}
+				}
+				save_event_target_as = rtp_victim #The victim
+			}
+		}
+	}
+	
+	option = {
+		name = "RTPdisease.13_1"
+
+		trigger = {
+			has_character_flag = rtp_successful
+		}
+
+		event_target:rtp_victim = {
+			save_event_target_as = rtp_victim #The victim
+		}
+
+		sound_effect = mana_poisoning
+		event_target:rtp_victim = {
+			sound_effect = mana_poisoning
+
+			random_list = {
+				99 = {
+					if = {
+						limit = {
+							NOR = {
+								trait = rtp_sanguinare_vampiris_tr
+								trait = rtp_feral_vampire_tr
+								trait = rtp_vampire_tr
+								trait = rtp_sanies_lupinus_tr
+								trait = rtp_feral_werewolf_tr
+								trait = rtp_werewolf_tr
+								trait = rtp_corruption_tr
+								trait = rtp_cursed_tr
+								trait = rtp_gifted_tr
+								trait = rtp_mana_poisoning_tr
+								trait = rtp_mage_tr
+								trait = rtp_sage_tr
+								trait = rtp_symphony_tr
+								trait = rtp_shapeshifter_tr
+								trait = rtp_druid_tr
+							}
+						}
+						character_event = {
+							id = RTPdisease.104 #Ping for Mana Poisoning
+						}
+					}
+				}
+				1 = {
+					death = {
+						death_reason = death_murder_unknown_butchered
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPdisease.13_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_successful
+			}
+		}
+
+		event_target:rtp_victim = {
+			save_event_target_as = rtp_victim #The victim
+		}
+
+		custom_tooltip = {
+			text = "rtp_known_abomination_ct"
+
+			any_character = {
+				opinion = {
+					modifier = rtp_abomination_om
+					who = ROOT
+					years = 100
+				}
+			}
+		}
+
+		random_list = {
+			90 = {
+			}
+			9 = {
+				imprison = event_target:rtp_victim
+			}
+			1 = {
+				death = {
+					death_reason = death_battle
+					killer = event_target:rtp_victim
+				}
+			}
+		}
+	}
+
+	after = {
+		clr_character_flag = rtp_successful
+	}
+}
+
+#Symphony - Start
+character_event = {
+	id = RTPdisease.14
+	desc = "RTPdisease.14_desc"
+	picture = GFX_evt_illness
+	border = GFX_event_normal_frame_religion
+	hide_from = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "RTPdisease.14_1"
+
+		add_trait = rtp_symphony_tr
+		remove_trait = vomiting
+		remove_trait = headache
+
+		character_event = {
+			id = RTPdisease.15 #Symphony - End
+
+			days = 365
+			random = 365
+		}
+	}
+}
+
+#Symphony - End
+character_event = {
+	id = RTPdisease.15
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_is_druid
+			}
+		}
+		text = "RTPdisease.15.1_desc"
+	}
+	desc = {
+		trigger = {
+			has_character_flag = rtp_is_druid
+		}
+		text = "RTPdisease.15.2_desc"
+	}
+	picture = GFX_evt_illness
+	border = GFX_event_normal_frame_religion
+	hide_from = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random = {
+			chance = 20
+
+			set_character_flag = rtp_is_druid
+		}
+	}
+	
+	option = {
+		name = "RTPdisease.15_1"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_is_druid
+			}
+		}
+
+		remove_trait = rtp_symphony_tr
+	}
+
+	option = {
+		name = "RTPdisease.15_2"
+
+		trigger = {
+			has_character_flag = rtp_is_druid
+		}
+
+		sound_effect = symphony
+
+		add_trait = rtp_shapeshifter_tr
+		remove_trait = rtp_symphony_tr
+		clr_character_flag = rtp_is_druid
+	}
+}
+
+#Steal Memories
+character_event = {
+	id = RTPdisease.16
+	desc = {
+		trigger = {
+			has_character_flag = rtp_successful
+		}
+		text = "RTPdisease.16.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_successful
+			}
+		}
+		text = "RTPdisease.16.2_desc"
+	}
+	picture = GFX_evt_library
+	hide_from = yes
+	is_triggered_only = yes
+
+	trigger = {
+		top_liege = {
+			any_realm_character = {
+				NOT = {
+					dynasty = none
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				trait = rtp_shapeshifter_tr
+			}
+			random = {
+				chance = 50
+	
+				set_character_flag = rtp_successful
+			}
+		}
+		else = {
+			random = {
+				chance = 75
+	
+				set_character_flag = rtp_successful
+			}
+		}
+
+		top_liege = {
+			random_realm_character = {
+				limit = {
+					NOT = {
+						dynasty = none
+					}
+				}
+				save_event_target_as = rtp_victim #The victim
+			}
+		}
+	}
+	
+	option = {
+		name = "RTPdisease.16_1"
+
+		trigger = {
+			has_character_flag = rtp_successful
+		}
+
+		event_target:rtp_victim = {
+			save_event_target_as = rtp_victim #The victim
+		}
+
+		sound_effect = symphony
+		event_target:rtp_victim = {
+			sound_effect = symphony
+
+			random_list = {
+				99 = {
+					if = {
+						limit = {
+							NOR = {
+								trait = rtp_sanguinare_vampiris_tr
+								trait = rtp_feral_vampire_tr
+								trait = rtp_vampire_tr
+								trait = rtp_sanies_lupinus_tr
+								trait = rtp_feral_werewolf_tr
+								trait = rtp_werewolf_tr
+								trait = rtp_corruption_tr
+								trait = rtp_cursed_tr
+								trait = rtp_gifted_tr
+								trait = rtp_mana_poisoning_tr
+								trait = rtp_mage_tr
+								trait = rtp_sage_tr
+								trait = rtp_symphony_tr
+								trait = rtp_shapeshifter_tr
+								trait = rtp_druid_tr
+							}
+						}
+						character_event = {
+							id = RTPdisease.105 #Ping for Symphony
+						}
+					}
+				}
+				1 = {
+					death = {
+						death_reason = death_murder_unknown_butchered
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPdisease.16_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_successful
+			}
+		}
+
+		event_target:rtp_victim = {
+			save_event_target_as = rtp_victim #The victim
+		}
+
+		custom_tooltip = {
+			text = "rtp_known_abomination_ct"
+
+			any_character = {
+				opinion = {
+					modifier = rtp_abomination_om
+					who = ROOT
+					years = 100
+				}
+			}
+		}
+
+		random_list = {
+			90 = {
+			}
+			9 = {
+				imprison = event_target:rtp_victim
+			}
+			1 = {
+				death = {
+					death_reason = death_battle
+					killer = event_target:rtp_victim
+				}
+			}
+		}
+	}
+
+	after = {
+		clr_character_flag = rtp_successful
+	}
+}
+
+#Ping Events
+#####
+
+#Ping for Beast Accidents
+character_event = {
+	id = RTPdisease.100
+	hide_window = yes
+	is_triggered_only = yes
+	min_age = 10
+	
+	trigger = {
+		rtp_is_capable = yes
+		OR = {
+			trait = rtp_feral_vampire_tr
+			trait = rtp_vampire_tr
+			trait = rtp_feral_werewolf_tr
+			trait = rtp_werewolf_tr
+			trait = rtp_cursed_tr
+			trait = rtp_gifted_tr
+			trait = rtp_mage_tr
+			trait = rtp_sage_tr
+			trait = rtp_shapeshifter_tr
+			trait = rtp_druid_tr
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				trait = rtp_feral_vampire_tr
+			}
+			random = {
+				chance = 20
+
+				character_event = {
+					id = RTPdisease.4 #Seeking Blood
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				trait = rtp_vampire_tr
+			}
+			random = {
+				chance = 5
+
+				character_event = {
+					id = RTPdisease.4 #Seeking Blood
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				trait = rtp_feral_werewolf_tr
+			}
+			random = {
+				chance = 20
+
+				character_event = {
+					id = RTPdisease.7 #The Hunt Calls
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				trait = rtp_werewolf_tr
+			}
+			random = {
+				chance = 5
+
+				character_event = {
+					id = RTPdisease.7 #The Hunt Calls
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				trait = rtp_cursed_tr
+			}
+			random = {
+				chance = 20
+
+				character_event = {
+					id = RTPdisease.10 #The Rite
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				trait = rtp_gifted_tr
+			}
+			random = {
+				chance = 5
+
+				character_event = {
+					id = RTPdisease.10 #The Rite
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				trait = rtp_mage_tr
+			}
+			random = {
+				chance = 20
+
+				character_event = {
+					id = RTPdisease.13 #Recharge
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				trait = rtp_sage_tr
+			}
+			random = {
+				chance = 5
+
+				character_event = {
+					id = RTPdisease.13 #Recharge
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				trait = rtp_shapeshifter_tr
+			}
+			random = {
+				chance = 20
+
+				character_event = {
+					id = RTPdisease.16 #Steal Memories
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				trait = rtp_druid_tr
+			}
+			random = {
+				chance = 5
+
+				character_event = {
+					id = RTPdisease.16 #Steal Memories
+				}
+			}
+		}
+	}
+}
+
+#Ping for Sanguinare Vampiris
+character_event = {
+	id = RTPdisease.101
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		add_trait = malaise
+		add_trait = headache
+
+		character_event = {
+			id = RTPdisease.2 #Sanguinare Vampiris - Start
+			days = 20
+			random = 20
+		}
+	}
+}
+
+#Ping for Sanies Lupinus
+character_event = {
+	id = RTPdisease.102
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		add_trait = abdominal_pain
+		add_trait = chest_pain
+
+		character_event = {
+			id = RTPdisease.5 #Sanies Lupinus - Start
+			days = 20
+			random = 20
+		}
+	}
+}
+
+#Ping for Corruption
+character_event = {
+	id = RTPdisease.103
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		add_trait = headache
+		add_trait = malaise
+
+		character_event = {
+			id = RTPdisease.8 #Corruption - Start
+			days = 20
+			random = 20
+		}
+	}
+}
+
+#Ping for Mana Poisoning
+character_event = {
+	id = RTPdisease.104
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		add_trait = fatigue
+		add_trait = vomiting
+
+		character_event = {
+			id = RTPdisease.11 #Mana Poisoning - Start
+			days = 20
+			random = 20
+		}
+	}
+}
+
+#Ping for Symphony
+character_event = {
+	id = RTPdisease.105
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		add_trait = headache
+		add_trait = vomiting
+
+		character_event = {
+			id = RTPdisease.14 #Symphony - Start
+			days = 20
+			random = 20
+		}
+	}
+}

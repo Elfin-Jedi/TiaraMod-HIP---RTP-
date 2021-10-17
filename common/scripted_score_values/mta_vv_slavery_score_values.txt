@@ -1,0 +1,863 @@
+mta_calculate_slave_price = {
+	### RED TEXT ###
+	additive_modifier = {
+		value = -100
+		FROMFROM = { 
+			culture = han 
+			NOT = { has_character_modifier = known_murderer }
+		}
+		FROM = { culture = han }
+		has_game_rule = { name = mta_rule_slavery value = restricted }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Same_Culture
+	}
+	additive_modifier = {
+		value = -100
+		FROMFROM = { 
+			OR = {
+				trait = brahmin
+				trait = kshatriya
+			}
+		}
+		FROM = { religion = hindu }
+		has_game_rule = { name = mta_rule_slavery value = restricted }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Caste
+	}
+	additive_modifier = {
+		value = -100
+		FROMFROM = { religion_group = christian }
+		FROM = { religion_group = christian }
+		has_game_rule = { name = mta_rule_slavery value = restricted }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Same_Religion_Group
+	}
+	additive_modifier = {
+		value = -100
+		FROMFROM = { religion_group = jewish_group }
+		FROM = { religion_group = jewish_group }
+		has_game_rule = { name = mta_rule_slavery value = restricted }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Same_Religion_Group
+	}
+	additive_modifier = {
+		value = -50
+		FROMFROM = { has_disease_trigger = yes }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Carries_Disease
+	}
+	additive_modifier = {
+		value = -50
+		FROMFROM = { 
+			trait = deaf 
+			NOT = { has_character_modifier = lip_reader }
+		}
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Deaf
+	}
+	additive_modifier = {
+		value = -50
+		FROMFROM = { is_incapable = yes }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Incapable
+	}
+	additive_modifier = {
+		value = -50
+		FROMFROM = { trait = infirm }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Infirm
+	}
+	additive_modifier = {
+		value = -50
+		FROMFROM = { trait = imbecile }
+		localisation_key = "MTA_AIReason_Modifier_FROMFROM_Is_Imbecile"
+	}
+	### CULTURAL FEATURES ###
+	additive_modifier = {
+		value = 3
+		FROMFROM = { mta_is_greco_roman = no }
+		FROM = { 
+			has_religion_feature = religion_feature_hellenic
+		}
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Barbarian
+	}
+	additive_modifier = {
+		value = 3
+		FROMFROM = { mta_is_african_culture = yes }
+		FROM = { mta_is_arabic_culture = yes }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Culture_Group
+	}
+	additive_modifier = {
+		value = 3
+		FROMFROM = { is_female = yes }
+		FROM = { 
+			OR = {
+				has_religion_feature = religion_patriarchal 
+				AND = {
+					religion_group = muslim
+					has_law = agnatic_succession
+				}
+			}
+		}
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Patriarchal
+	}
+	additive_modifier = {
+		value = 3
+		FROMFROM = { is_female = no }
+		FROM = { has_religion_feature = religion_matriarchal }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Matriarchal
+	}
+	additive_modifier = {
+		value = 3
+		FROMFROM = { has_education_martial_trigger = yes }
+		FROM = { government = muslim_government }
+		OR = {
+			FROMFROM = { is_female = no }
+			FROM = { NOT = { has_law = agnatic_succession } }
+		}
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Martial_Gov
+	}
+	additive_modifier = {
+		value = 3
+		FROMFROM = { has_education_stewardship_trigger = yes }
+		FROM = { government = muslim_government }
+		OR = {
+			FROMFROM = { is_female = no }
+			FROM = { NOT = { has_law = agnatic_succession } }
+		}
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Stewardship_Gov
+	}
+	### EDUCATION ###
+	#Diplomacy Education
+	additive_modifier = {
+		value = 8
+		FROMFROM = { trait = grey_eminence }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Grey_Eminence
+	}
+	additive_modifier = {
+		value = 6
+		FROMFROM = { trait = charismatic_negotiator }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Charismatic_Negotiator
+	}
+	additive_modifier = {
+		value = 4
+		FROMFROM = { trait = underhanded_rogue }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Underhanded_Rogue
+	}
+	additive_modifier = {
+		value = 2
+		FROMFROM = { trait = naive_appeaser }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Naive_Appeaser
+	}
+	#Martial Education
+	additive_modifier = {
+		value = 8
+		FROMFROM = { trait = brilliant_strategist }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Brilliant_Strategist
+	}
+	additive_modifier = {
+		value = 6
+		FROMFROM = { trait = skilled_tactician }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Skilled_Tactician
+	}
+	additive_modifier = {
+		value = 4
+		FROMFROM = { trait = tough_soldier }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Tough_Soldier
+	}
+	additive_modifier = {
+		value = 2
+		FROMFROM = { trait = misguided_warrior }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Misguided_Warrior
+	}
+	#Stewardship Education
+	additive_modifier = {
+		value = 8
+		FROMFROM = { trait = midas_touched }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Midas_Touched
+	}
+	additive_modifier = {
+		value = 6
+		FROMFROM = { trait = fortune_builder }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Fortune_Builder
+	}
+	additive_modifier = {
+		value = 4
+		FROMFROM = { trait = thrifty_clerk }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Thrifty_Clerk
+	}
+	additive_modifier = {
+		value = 2
+		FROMFROM = { trait = indulgent_wastrel }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Indulgent_Wastrel
+	}
+	#Intrigue Education
+	additive_modifier = {
+		value = 8
+		FROMFROM = { trait = elusive_shadow }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Elusive_Shadow
+	}
+	additive_modifier = {
+		value = 6
+		FROMFROM = { trait = intricate_webweaver }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Intricate_Webweaver
+	}
+	additive_modifier = {
+		value = 4
+		FROMFROM = { trait = flamboyant_schemer }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Flamboyant_Schemer
+	}
+	additive_modifier = {
+		value = 2
+		FROMFROM = { trait = amateurish_plotter }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Amateurish_Plotter
+	}
+	#Learning Education
+	additive_modifier = {
+		value = 8
+		FROMFROM = { trait = mastermind_theologian }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Mastermind_Theologian
+	}
+	additive_modifier = {
+		value = 6
+		FROMFROM = { trait = scholarly_theologian }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Scholarly_Theologian
+	}
+	additive_modifier = {
+		value = 4
+		FROMFROM = { trait = martial_cleric }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Dutiful_Cleric
+	}
+	additive_modifier = {
+		value = 2
+		FROMFROM = { trait = detached_priest }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Edu_Detached_Priest
+	}
+	### ATTRIBUTES ###
+	#Tiered diplomacy
+	additive_modifier = {
+		value = -4
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Diplomacy
+		FROMFROM = { 
+			NOT = { diplomacy = 5 }
+		}
+	}
+	additive_modifier = {
+		value = 2
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Diplomacy
+		FROMFROM = { 
+			diplomacy = 5
+			NOT = { diplomacy = 8 }
+		}
+	}
+	additive_modifier = {
+		value = 4
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Diplomacy
+		FROMFROM = { 
+			diplomacy = 8
+			NOT = { diplomacy = 12 }
+		}
+	}
+	additive_modifier = {
+		value = 6
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Diplomacy
+		FROMFROM = { 
+			diplomacy = 12
+			NOT = { diplomacy = 16 }
+		}
+	}
+	additive_modifier = {
+		value = 8
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Diplomacy
+		FROMFROM = { 
+			diplomacy = 16
+		}
+	}
+	#Tiered martial
+	additive_modifier = {
+		value = -4
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Martial
+		FROMFROM = { 
+			NOT = { martial = 5 }
+		}
+	}
+	additive_modifier = {
+		value = 2
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Martial
+		FROMFROM = { 
+			martial = 5
+			NOT = { martial = 8 }
+		}
+	}
+	additive_modifier = {
+		value = 4
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Martial
+		FROMFROM = { 
+			martial = 8
+			NOT = { martial = 12 }
+		}
+	}
+	additive_modifier = {
+		value = 6
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Martial
+		FROMFROM = { 
+			martial = 12
+			NOT = { martial = 16 }
+		}
+	}
+	additive_modifier = {
+		value = 8
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Martial
+		FROMFROM = { 
+			martial = 16
+		}
+	}
+	#Tiered stewardship
+	additive_modifier = {
+		value = -4
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Stewardship
+		FROMFROM = { 
+			NOT = { stewardship = 5 }
+		}
+	}
+	additive_modifier = {
+		value = 2
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Stewardship
+		FROMFROM = { 
+			stewardship = 5
+			NOT = { stewardship = 8 }
+		}
+	}
+	additive_modifier = {
+		value = 4
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Stewardship
+		FROMFROM = { 
+			stewardship = 8
+			NOT = { stewardship = 12 }
+		}
+	}
+	additive_modifier = {
+		value = 6
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Stewardship
+		FROMFROM = { 
+			stewardship = 12
+			NOT = { stewardship = 16 }
+		}
+	}
+	additive_modifier = {
+		value = 8
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Stewardship
+		FROMFROM = { 
+			stewardship = 16
+		}
+	}
+	#Tiered intrigue
+	additive_modifier = {
+		value = -4
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Intrigue
+		FROMFROM = { 
+			NOT = { intrigue = 5 }
+		}
+	}
+	additive_modifier = {
+		value = 2
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Intrigue
+		FROMFROM = { 
+			intrigue = 5
+			NOT = { intrigue = 8 }
+		}
+	}
+	additive_modifier = {
+		value = 4
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Intrigue
+		FROMFROM = { 
+			intrigue = 8
+			NOT = { intrigue = 12 }
+		}
+	}
+	additive_modifier = {
+		value = 6
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Intrigue
+		FROMFROM = { 
+			intrigue = 12
+			NOT = { intrigue = 16 }
+		}
+	}
+	additive_modifier = {
+		value = 8
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Intrigue
+		FROMFROM = { 
+			intrigue = 16
+		}
+	}
+	#Tiered learning
+	additive_modifier = {
+		value = -4
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Learning
+		FROMFROM = { 
+			NOT = { learning = 5 }
+		}
+	}
+	additive_modifier = {
+		value = 2
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Learning
+		FROMFROM = { 
+			learning = 5
+			NOT = { learning = 8 }
+		}
+	}
+	additive_modifier = {
+		value = 4
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Learning
+		FROMFROM = { 
+			learning = 8
+			NOT = { learning = 12 }
+		}
+	}
+	additive_modifier = {
+		value = 6
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Learning
+		FROMFROM = { 
+			learning = 12
+			NOT = { learning = 16 }
+		}
+	}
+	additive_modifier = {
+		value = 8
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Learning
+		FROMFROM = { 
+			learning = 16
+		}
+	}
+	### YEARS ENSLAVED ###
+	additive_modifier = {
+		value = 1
+		FROMFROM = { check_variable = { which = slave_year_count value == 1 } }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Years_Enslaved
+	}
+	additive_modifier = {
+		value = 2
+		FROMFROM = { check_variable = { which = slave_year_count value == 2 } }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Years_Enslaved
+	}
+	additive_modifier = {
+		value = 3
+		FROMFROM = { check_variable = { which = slave_year_count value == 3 } }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Years_Enslaved
+	}
+	additive_modifier = {
+		value = 4
+		FROMFROM = { check_variable = { which = slave_year_count value == 4 } }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Years_Enslaved
+	}
+	additive_modifier = {
+		value = 5
+		FROMFROM = { check_variable = { which = slave_year_count value == 5 } }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Years_Enslaved
+	}
+	additive_modifier = {
+		value = 6
+		FROMFROM = { check_variable = { which = slave_year_count value == 6 } }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Years_Enslaved
+	}
+	additive_modifier = {
+		value = 7
+		FROMFROM = { check_variable = { which = slave_year_count value == 7 } }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Years_Enslaved
+	}
+	additive_modifier = {
+		value = 8
+		FROMFROM = { check_variable = { which = slave_year_count value == 8 } }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Years_Enslaved
+	}
+	additive_modifier = {
+		value = 9
+		FROMFROM = { check_variable = { which = slave_year_count value == 9 } }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Years_Enslaved
+	}
+	additive_modifier = {
+		value = 10
+		FROMFROM = { check_variable = { which = slave_year_count value == 10 } }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Years_Enslaved
+	}
+	additive_modifier = {
+		value = 11
+		FROMFROM = { check_variable = { which = slave_year_count value == 11 } }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Years_Enslaved
+	}
+	additive_modifier = {
+		value = 12
+		FROMFROM = { check_variable = { which = slave_year_count value == 12 } }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Years_Enslaved
+	}
+	additive_modifier = {
+		value = 13
+		FROMFROM = { check_variable = { which = slave_year_count value == 13 } }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Years_Enslaved
+	}
+	additive_modifier = {
+		value = 14
+		FROMFROM = { check_variable = { which = slave_year_count value == 14 } }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Years_Enslaved
+	}
+	additive_modifier = {
+		value = 15
+		FROMFROM = { check_variable = { which = slave_year_count value == 15 } }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Years_Enslaved
+	}
+	additive_modifier = {
+		value = 15
+		FROMFROM = { check_variable = { which = slave_year_count value > 15 } }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Years_Enslaved
+	}
+	#Mental disabilities
+	additive_modifier = {
+		value = -15
+		FROMFROM = { trait = slow }
+		localisation_key = "MTA_AIReason_Modifier_FROMFROM_Is_Slow"
+	}
+	additive_modifier = {
+		value = -15
+		FROMFROM = { trait = inbred }
+		localisation_key = "MTA_AIReason_Modifier_FROMFROM_Is_Inbred"
+	}
+	#Physical disabilities
+	additive_modifier = {
+		value = -50
+		FROMFROM = { trait = mangled }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Mangled
+	}
+	additive_modifier = {
+		value = -50
+		FROMFROM = { trait = blinded }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Blind
+	}
+	additive_modifier = {
+		value = -15
+		FROMFROM = { trait = disfigured }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Disfigured
+	}
+	additive_modifier = {
+		value = -10
+		FROMFROM = { trait = one_eyed }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_One_Eyed
+	}
+	additive_modifier = {
+		value = -15
+		FROMFROM = { trait = one_handed }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_One_Handed
+	}
+	additive_modifier = {
+		value = -15
+		FROMFROM = { trait = one_legged }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_One_Legged
+	}
+	#Terrible congenital traits
+	additive_modifier = {
+		value = -10
+		FROMFROM = { trait = weak }
+		localisation_key = "MTA_AIReason_Modifier_FROMFROM_Is_Weak"
+	}
+	additive_modifier = {
+		value = -10
+		FROMFROM = { trait = ugly }
+		localisation_key = "MTA_AIReason_Modifier_FROMFROM_Is_Ugly"
+	}
+	additive_modifier = {
+		value = -8
+		FROMFROM = { trait = harelip }
+		localisation_key = "MTA_AIReason_Modifier_FROMFROM_Is_Harelip"
+	}
+	additive_modifier = {
+		value = -8
+		FROMFROM = { trait = clubfooted }
+		localisation_key = "MTA_AIReason_Modifier_FROMFROM_Is_Clubfooted"
+	}
+	additive_modifier = {
+		value = -8
+		FROMFROM = { trait = wrymouth }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Has_Wrymouth
+	}
+	#Bad congenital traits
+	additive_modifier = {
+		value = -4
+		FROMFROM = { trait = absentminded }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Absent_Minded
+	}
+	additive_modifier = {
+		value = -4
+		FROMFROM = { trait = delicate }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Delicate
+	}
+	additive_modifier = {
+		value = -4
+		FROMFROM = { trait = homely }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Homely
+	}
+	additive_modifier = {
+		value = -4
+		FROMFROM = { trait = dim }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Dim
+	}
+	#Mental health
+	additive_modifier = {
+		value = -8
+		FROMFROM = { trait = lunatic }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Lunatic
+	}
+	additive_modifier = {
+		value = -8
+		FROMFROM = { trait = possessed }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Possessed
+	}
+	additive_modifier = {
+		value = -6
+		FROMFROM = { trait = depressed }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Depressed
+	}
+	#Good congenital traits
+	additive_modifier = {
+		value = 10
+		FROMFROM = { trait = strong }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Strong
+	}
+	additive_modifier = {
+		value = 10
+		FROMFROM = { trait = fair }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Attractive
+	}
+	additive_modifier = {
+		value = 10
+		FROMFROM = { trait = genius }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Genius
+	}
+	additive_modifier = {
+		value = 10
+		FROMFROM = { trait = quick }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Quick
+	}
+	#Decent congenital traits
+	additive_modifier = {
+		value = 3
+		FROMFROM = { trait = burly }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Burly
+	}
+	additive_modifier = {
+		value = 3
+		FROMFROM = { trait = comely }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Comely
+	}
+	additive_modifier = {
+		value = 3
+		FROMFROM = { trait = bright }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Bright
+	}
+	additive_modifier = {
+		value = 3
+		FROMFROM = { trait = agile }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Agile
+	}
+	additive_modifier = {
+		value = 3
+		FROMFROM = { trait = melodious_voice }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Melodious_Voice
+	}
+	additive_modifier = {
+		value = 3
+		FROMFROM = { trait = powerful_voice }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Powerful_Voice
+	}
+	additive_modifier = {
+		value = 3
+		FROMFROM = { trait = calm_voice }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Calm_Voice
+	}
+	#Non-congenital equivalent traits
+	additive_modifier = {
+		value = 6
+		FROMFROM = { trait = robust }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Brawny
+	}
+	additive_modifier = {
+		value = -6
+		FROMFROM = { trait = feeble }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Frail
+	}
+	additive_modifier = {
+		value = 6
+		FROMFROM = { trait = shrewd }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Shrewd
+	}
+	additive_modifier = {
+		value = -6
+		FROMFROM = { trait = dull }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Dull
+	}
+	#Height traits
+	additive_modifier = {
+		value = 8
+		FROMFROM = { trait = giant }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Giant
+	}
+	additive_modifier = {
+		value = 4
+		FROMFROM = { trait = tall }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Tall
+	}
+	additive_modifier = {
+		value = -4
+		FROMFROM = { trait = short }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Short
+	}
+	additive_modifier = {
+		value = -8
+		FROMFROM = { trait = tiny }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Tiny
+	}
+	additive_modifier = {
+		value = -10
+		FROMFROM = { trait = dwarf }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Dwarf
+	}
+	#Dominant hand
+	additive_modifier = {
+		value = -3
+		FROMFROM = { trait = lefthanded }
+		FROM = { religion_group = muslim }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Lefthanded
+	}
+	#Lifestyle and profession traits
+	additive_modifier = {
+		value = 8
+		FROMFROM = { trait = physician }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Renowned_Physician
+	}
+	additive_modifier = {
+		value = 4
+		FROMFROM = { trait = administrator }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Administrator
+	}
+	additive_modifier = {
+		value = 4
+		FROMFROM = { trait = architect }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Architect
+	}
+	additive_modifier = {
+		value = 4
+		FROMFROM = { trait = gardener }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Gardener
+	}
+	additive_modifier = {
+		value = 4
+		FROMFROM = { trait = poet }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Poet
+	}
+	additive_modifier = {
+		value = 4
+		FROMFROM = { trait = strategist }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Strategist
+	}
+	#Personality and misc traits
+	additive_modifier = {
+		value = 4
+		FROMFROM = { trait = diligent }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Diligent
+	}
+	additive_modifier = {
+		value = -8
+		FROMFROM = { trait = slothful }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Slothful
+	}
+	additive_modifier = {
+		value = 4
+		FROMFROM = { trait = patient }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Patient
+	}
+	additive_modifier = {
+		value = -8
+		FROMFROM = { trait = wroth }
+		localisation_key = "MTA_AIReason_Modifier_FROMFROM_Is_Wroth"
+	}
+	additive_modifier = {
+		value = 4
+		FROMFROM = { trait = temperate }
+		localisation_key = "MTA_AIReason_Modifier_FROMFROM_Is_Temperate"
+	}
+	additive_modifier = {
+		value = -8
+		FROMFROM = { trait = gluttonous }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Gluttonous
+	}
+	additive_modifier = {
+		value = 4
+		FROMFROM = { trait = content }
+		localisation_key = "MTA_AIReason_Modifier_FROMFROM_Is_Content"
+	}
+	additive_modifier = {
+		value = -8
+		FROMFROM = { trait = ambitious }
+		localisation_key = "MTA_AIReason_Modifier_FROMFROM_Is_Ambitious"
+	}
+	additive_modifier = {
+		value = -4
+		FROMFROM = { trait = stubborn }
+		localisation_key = "MTA_AIReason_Modifier_FROMFROM_Is_Stubborn"
+	}
+	additive_modifier = {
+		value = -4
+		FROMFROM = { trait = envious }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Envious
+	}
+	additive_modifier = {
+		value = 4
+		FROMFROM = { trait = honest }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Honest
+	}
+	additive_modifier = {
+		value = -4
+		FROMFROM = { trait = deceitful }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Deceitful
+	}
+	additive_modifier = {
+		value = -3
+		FROMFROM = { trait = paranoid }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Paranoid
+	}
+	additive_modifier = {
+		value = -2
+		FROMFROM = { 
+			trait = zealous 
+			NOT = { religion = FROM }
+		}
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Is_Zealous
+	}
+	#Ageism
+	additive_modifier = {
+		value = 2
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Young_Child
+		FROMFROM = { is_young_child_age_trigger = yes }
+	}
+	additive_modifier = {
+		value = 4
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Child
+		FROMFROM = { is_child_age_trigger = yes }
+	}
+	additive_modifier = {
+		value = 4
+		FROMFROM = { is_teenager_age_trigger = yes }
+		localisation_key = MTA_AIReason_Modifier_FROMFROM_Teenager
+	}
+	additive_modifier = {
+		value = -10
+		FROMFROM = { is_senior_age_trigger = yes }
+		localisation_key = "MTA_AIReason_Modifier_FROMFROM_Old"
+	}
+}
+
+mta_check_castration_score = {
+	modifier = {
+		factor = 0.25
+		FROM = { mta_is_greco_roman = yes }
+	}
+	modifier = {
+		factor = 4
+		OR = {
+			government = roman_imperial_government
+			has_landed_title = e_byzantium # Compatibility for mods not using roman_imperial_government
+			has_landed_title = e_roman_empire # Compatibility for mods not using roman_imperial_government
+		}
+		slave_castration_culture = yes
+	}
+}

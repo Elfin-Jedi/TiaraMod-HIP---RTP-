@@ -1,0 +1,60 @@
+character_event = {
+	id = 999999
+	desc = scriped_trigger_tester
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = like_gays
+		trigger = {
+			SRR_gay_accepting = yes
+		}
+	}
+	option = {
+		name = dislike_gays
+		trigger = {
+			SRR_gay_accepting = no
+		}
+	}
+	
+	option = {
+		name = like_women
+		trigger = {
+			SRR_attracted_to_women = yes
+		}
+	}
+	option = {
+		name = dislike_women
+		trigger = {
+			SRR_attracted_to_women = no
+		}
+	}
+	
+	option = {
+		name = like_men
+		trigger = {
+			SRR_attracted_to_men = yes
+		}
+	}
+	option = {
+		name = dislike_men
+		trigger = {
+			SRR_attracted_to_men = no
+		}
+	}
+	
+	option = {
+		name = accepts_incest 
+		trigger = {
+			SRR_incest_accepting = yes
+		}
+	}
+	option = {
+		name = rejects_incest 
+		trigger = {
+			SRR_incest_accepting = no
+		}
+	}
+}
+
+

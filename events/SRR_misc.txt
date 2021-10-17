@@ -1,0 +1,765 @@
+##################################
+# ID = space SRR.2000 - SRR.3999
+# Misc Events
+#
+# SRR2000-2019 Peasant Seductress Chain
+# SRR2020-2049 Mistress Chain
+# SRR2050 Spouse Seduction
+# SRR2051
+##################################
+
+namespace = SRR
+character_event = {
+	id = SRR.3999
+	desc = tester
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = attracted_to_men
+		
+		trigger = {
+			SRR_attracted_to_men = yes
+		}
+	}
+	option = {
+		name = attracted_to_women
+		
+		trigger = {
+			SRR_attracted_to_women = yes
+		}
+	}
+	option = {
+		name = you_failed
+		
+		trigger = {
+			AND = {
+				SRR_attracted_to_men = no
+				SRR_attracted_to_women = no
+			}
+		}
+	}
+	option = {
+		name = double_failure
+	}
+}
+character_event = {
+	id = SRR.2000
+	desc = SRR2000_desc
+	
+	only_men = yes
+	only_capable = yes
+	min_age = 16
+	ai = no
+	
+	trigger = {
+		NOT = { trait = homosexual }
+		OR = {
+			trait = seducer
+			has_focus = focus_seduction
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+	}
+	
+	immediate = {
+		create_character = {
+			random_traits = no
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 20
+			attributes = {
+				martial = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+			}
+			health = 6
+			fertility = 0.8
+			trait = grey_eminence
+			trait = genius
+			trait = fair
+			trait = lustful
+			trait = lunatic
+		}
+	}
+	option = {
+		name = SRR2000OPTA
+		
+		ROOT = {
+			character_event = { id = SRR.2001 }
+		}
+	}
+	
+	option = {
+		name = SRR2000OPTB
+		
+		hidden_effect = {
+			new_character = {
+				leave_court_and_die_effect = yes
+			}
+		}
+	}
+}
+#bondage?
+character_event = {
+	id = SRR.2001
+	desc = SRR2001_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR2001OPTA
+		#yes
+		if = {
+			limit = {
+				ROOT = { trait = impotent }
+			}
+			ROOT = { character_event = { id = SRR.2009 } }
+		}
+		if = {
+			limit = {
+				ROOT = { NOT = { trait = impotent } }
+			}
+			ROOT = { character_event = { id = SRR.2005 } }
+		}
+		
+	}
+	option = {
+		name = SRR2001OPTB
+		#no
+		ROOT = { character_event = { id = SRR.2002 } }
+	
+	}
+}
+#reject bondage
+character_event = {
+	id = SRR.2002
+	desc = SRR2002_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR2002OPTA
+		#my way
+		
+		ROOT = { character_event = { id =  SRR.2003 } }
+		
+	}
+	
+ 	option = {
+		name = SRR2002OPTB
+		#her way
+		if = {
+			limit = {
+				ROOT = { trait = impotent }
+			}
+			ROOT = { character_event = { id = SRR.2009 } }
+		}
+		if = {
+			limit = {
+				ROOT = { NOT = { trait = impotent } }
+			}
+			ROOT = { character_event = { id = SRR.2005 } }
+		}
+	}
+	
+	option = {
+		name = SRR2002OPTC
+		
+		hidden_effect = {
+			new_character = {
+				leave_court_and_die_effect = yes
+			}
+		}
+	}
+}
+character_event = {
+	id = SRR.2003
+	desc = SRR2003_desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		new_character = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_rapist
+				months = 1200
+			}
+		}
+	}
+	
+	option = {
+		name = SRR2003OPTA
+		
+		hidden_effect = {
+			ROOT = { character_event = { id = SRR.2004 } }
+		}
+	}
+}
+character_event = {
+	id = SRR.2004
+	desc = SRR2004_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR2004OPTA
+		
+		ROOT = {
+			 	death = { death_reason = death_duel killer = new_character } 
+		}
+		hidden_effect = {
+			new_character = {
+				leave_court_and_die_effect = yes
+			}
+		}
+	}
+}
+#accept bondage
+character_event = {
+	id = SRR.2005
+	desc = SRR2005_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR2005OPTA
+		
+		hidden_effect = {
+			random_list = {
+				95 = {
+					ROOT = { character_event = { id = SRR.2006 } }
+				}
+				5 = {
+					ROOT = { character_event = { id = SRR.2007 } }
+			
+				}
+			}
+		}
+	}
+}
+character_event = {
+	id = SRR.2006
+	desc = SRR2006_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR2006OPTA
+		
+		ROOT = {
+			add_trait = eunuch
+			character_event = { id = SRR.2008 }
+		}
+	}
+}
+character_event = {
+	id = SRR.2007
+	desc = SRR2007_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR2007OPTA
+		
+		ROOT = {
+			add_lover = new_character
+		}
+	}
+}
+character_event = {
+	id = SRR.2008
+	desc = SRR2008_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR2008OPTA
+		
+		ROOT = { add_trait = wroth }
+		
+		hidden_effect = {
+			new_character = {
+				leave_court_and_die_effect = yes
+			}
+		}
+	}
+}
+#boner failure
+character_event = {
+	id = SRR.2009
+	desc = SRR2009_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR2009OPTA
+		
+		ROOT = {
+			prestige = -100
+		}
+		
+		hidden_effect = {
+			new_character = {
+				leave_court_and_die_effect = yes
+			}
+		}
+	}
+}
+#Clear Mistress upon death
+character_event = {
+	id = SRR.2020
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	
+	immediate = {
+		any_courtier_or_vassal = {
+			limit = {
+				has_minor_title = title_mistress
+			}
+			remove_title = title_mistress
+		}
+	}
+}
+
+character_event = {
+	id = SRR.2021
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		
+		ROOT = { 
+			spouse = { character_event = { id = SRR.2022 } }
+			set_character_flag = appointed_mistress
+		}
+		FROM = { set_character_flag = mistress }
+	}
+}
+
+#wife's reaction to taking mistress
+character_event = {
+	id = SRR.2022
+	desc = SRR2022_desc
+	
+	is_triggered_only = yes
+	
+	#angry wife
+	option = {
+		name = SRR2022OPTA
+			
+		opinion = {
+			who = FROMFROM
+			modifier = slut_seductress 	
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_unfaithful_husband 
+		}
+		
+		random = {
+			chance = 10
+			
+			add_trait = depressed
+		}
+		
+		FROM = {
+			character_event = { id = SRR.2023 }
+		}
+		
+		ai_chance = {
+			factor = 60
+		}
+	}
+	#very angry wife
+	option = {
+		name = SRR2022OPTB
+		
+		add_rival = FROM
+		add_rival = FROMFROM
+		opinion = {
+			who = FROMFROM
+			modifier = slut_seductress 	
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_unfaithful_husband 
+		}
+		
+		FROM = {
+			character_event = { id = SRR.2024 } 
+		}
+		
+		FROMFROM = {
+			save_event_target_as = target_mistress
+		}
+		random = {
+			chance = 10
+			
+			add_trait = wroth
+		}
+		
+		ai_chance = {
+			factor = 10
+			
+			modifier = {
+				factor = 0
+				
+				NOR = {
+					trait = wroth
+					trait = cruel
+					trait = berserker
+					trait = impaler
+				}
+			}
+		}
+	}
+	#depressed wife
+	option = {
+		name = SRR2022OPTC
+		
+		opinion = {
+			who = FROMFROM
+			modifier = slut_seductress 	
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_unfaithful_husband 
+		}
+		FROM = {
+			character_event = { id = SRR.2024 } 
+		}
+		
+		random = {
+			chance = 10
+			
+			add_trait = depressed
+		}
+		
+		ai_chance = {
+			factor = 30
+			
+			modifier = {
+				factor = 1.5
+				
+				trait = drunkard
+			}
+			modifier = {
+				factor = 0
+				
+				trait = sober
+			}
+		}
+	}
+}
+character_event = {
+	id = SRR.2023
+	desc = SRR2023_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR2023OPTA
+		
+	}
+}
+character_event = {
+	id = SRR.2024
+	desc = SRR2024_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR2024OPTA
+		
+	}
+}
+character_event = {
+	id = SRR.2025
+	desc = SRR2025_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR2025OPTA
+	}
+}
+
+###########################################
+# Seduction of a Concubine or Spouse
+character_event = {
+	id = SRR.2050
+	desc = EVTDESC_SRR50
+	picture = GFX_evt_sultan
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = {
+			save_event_target_as = target_consort
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_SRR50
+		event_target:target_consort = {
+			character_event = { id = WoL.591 days = 1 }
+			reverse_opinion = {
+				who = ROOT
+				modifier = opinion_seducing_concubine
+				months = 1200
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_SRR50
+	}
+}
+
+#Childless homosexual
+character_event = {
+	id = SRR.2051
+	
+	desc = { 
+		text = SRR2051_descM
+		trigger = { is_female = no }
+	}
+	desc = { 
+		text = SRR2051_descF
+		trigger = { is_female = yes }
+	}
+	
+	only_playable = yes
+	only_capable = yes
+	prisoner = no
+	min_age = 25
+	
+	trigger = {
+		trait = homosexual
+		is_married = yes
+		NOR = {
+			AND = {
+				has_law = agnatic_succession
+				num_of_sons = 1
+			}
+			AND = {
+				has_law = enatic_succession
+				num_of_daughters = 1
+			}
+			AND = {
+				NOR = {
+					has_law = enatic_succession
+					has_law = agnatic_succession
+				}
+				num_of_children = 1
+			}
+		}
+		NAND = {
+			trait = pregnant
+			any_spouse = {
+				trait = pregnant
+			}
+		}
+		if = {
+			limit = {
+				female = yes
+			}
+			NOT = { age = 40 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		modifier = {
+			factor = 0.75
+			age = 30
+		}
+		modifier = {
+			factor = 0.75
+			age = 40
+		}
+		modifier = {
+			factor = 0.75
+			age = 50
+		}
+	}
+	
+	option = {
+		name = SRR2051OPTA
+		
+		add_character_modifier = {
+			name = gay_fertility_boost
+			years = 5
+		}
+		hidden_effect = {
+			random = {
+				chance = 10
+				character_event = { id = SRR.2052 days = 90 }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = SRR.2052
+	desc = SRR2052_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR2053OPTA
+		
+		add_trait = stressed
+		remove_character_modifier = gay_fertility_boost 
+		if = {
+			limit = {
+				AND = {
+					has_dlc = "Reapers"
+					is_female = no
+				}
+			}
+			random = {
+				chance = 5
+				add_trait = impotent
+				set_character_flag = stress_impotence
+			}
+		}
+	}
+}
+character_event = {
+	id = SRR.2053
+	desc = SRR2053_desc
+	
+	only_playable = yes
+	only_capable = yes
+	prisoner = no
+	min_age = 25
+	
+	trigger = {
+		trait = homosexual
+		is_married = yes
+		OR = {
+			AND = {
+				has_law = agnatic_succession
+				num_of_sons = 2
+			}
+			AND = {
+				has_law = enatic_succession
+				num_of_daughters = 2
+			}
+			AND = {
+				NOR = {
+					has_law = enatic_succession
+					has_law = agnatic_succession
+				}
+				num_of_children = 2
+			}
+		}
+		if = {
+			limit = {
+				female = yes
+			}
+			NOT = { age = 40 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		modifier = {
+			factor = 0.75
+			num_of_children = 4
+		}
+		modifier = {
+			factor = 0.75
+			num_of_children = 6
+		}
+	}
+	
+	option = {
+		name = SRR2053OPTA
+		
+		ROOT = {
+			spouse = {
+				opinion = { 
+					modifier = opinion_neglected_spouse 
+					who = ROOT 
+					years = 5 
+				} 
+			}
+			add_character_modifier = {
+				name = stopped_trying
+				duration = -1
+			}
+			remove_character_modifier = gay_fertility_boost 
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = SRR2053OPTB
+		
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+character_event = {
+	id = SRR.2054
+	desc = SRR2054_desc
+	
+	min_age = 16
+	only_capable = yes
+	prisoner = no
+	
+	trigger = {
+		NOR = {
+			trait = drunkard
+			trait = hedonist
+			trait = gluttonous
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2400
+	}
+	
+	option = {
+		name = SRR2054OPTA
+		
+		add_trait = sober
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 1.25
+				trait = temperate
+			}
+		}
+	}
+	
+	option = {
+		name = SRR2054OPTB
+		
+		ai_chance = {
+			factor = 50
+			
+		}
+	}
+}

@@ -1,0 +1,26 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_create_warrior_lodge_cws_christian" 
+		texturefile = "gfx\\interface\\decision_icon_convert_to_spouse_catholic.dds"
+	}
+	spriteType = {
+		name = "GFX_create_warrior_lodge_ws_mazdan" 
+		texturefile = "gfx\\interface\\decision_icon_hold_nomad_wargames.dds"
+	}
+	spriteType = {
+		name = "GFX_create_warrior_lodge_ws_eastern" 
+		texturefile = "gfx\\interface\\decision_icon_go_on_indian_pilgrimage.dds"
+	}
+	spriteType = {
+		name = "GFX_create_warrior_lodge_ws_aztec" 
+		texturefile = "gfx\\interface\\decision_icon_warrior_lodge_war_sacrifice.dds"
+	}
+	spriteType = {
+		name = "GFX_create_warrior_lodge_ws_muslim" 
+		texturefile = "gfx\\interface\\decision_icon_convert_to_spouse_sunni.dds"
+	}
+	spriteType = {
+		name = "GFX_create_warrior_lodge_ws_jewish" 
+		texturefile = "gfx\\interface\\decision_icon_convert_to_spouse_jewish.dds"
+	}
+}

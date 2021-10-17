@@ -1,0 +1,9 @@
+spriteTypes = {
+	spriteType = {
+	name = "GFX_trait_meager"
+	texturefile = "gfx/traits/meager.tga" 
+	noOfFrames = 1
+	norefcount = yes
+	effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

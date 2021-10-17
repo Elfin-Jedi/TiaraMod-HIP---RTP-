@@ -1,0 +1,1489 @@
+#####
+#Job Events
+#
+#Total = 20
+#####
+
+namespace = RTPjob
+
+#Main Events
+#####
+
+##### LEVEL 1
+### DIPLOMACY
+# Server
+character_event = {
+	id = RTPjob.1
+	title = "RTPjob_1_title"
+	desc = "RTPjob_1_desc"
+	picture = GFX_evt_outside_tavern_hf
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+	ai = no
+
+	option = {
+		name = "RTPjob.1_1"
+
+		tooltip_info = diplomacy
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = server_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.1_2"
+	}
+}
+
+### MARTIAL
+# Guard
+character_event = {
+	id = RTPjob.2
+	title = "RTPjob_2_title"
+	desc = "RTPjob_2_desc"
+	picture = GFX_evt_armory
+	border = GFX_event_normal_frame_war
+	is_triggered_only = yes
+	ai = no
+
+	option = {
+		name = "RTPjob.2_1"
+
+		tooltip_info = martial
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = guard_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.2_2"
+	}
+}
+
+### STEWARDSHIP
+# Barterer
+character_event = {
+	id = RTPjob.3
+	title = "RTPjob_3_title"
+	desc = "RTPjob_3_desc"
+	picture = GFX_evt_courtiers_talking
+	border = GFX_event_normal_frame_economy
+	is_triggered_only = yes
+	ai = no
+
+	option = {
+		name = "RTPjob.3_1"
+
+		tooltip_info = stewardship
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = barterer_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.3_2"
+	}
+}
+
+### INTRIGUE
+# Beggar
+character_event = {
+	id = RTPjob.4
+	title = "RTPjob_4_title"
+	desc = "RTPjob_4_desc"
+	picture = GFX_evt_child_bully
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
+	ai = no
+
+	option = {
+		name = "RTPjob.4_1"
+
+		tooltip_info = intrigue
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = beggar_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.4_2"
+	}
+}
+
+### LEARNING
+# Postulant
+character_event = {
+	id = RTPjob.5
+	title = "RTPjob_5_title"
+	desc = "RTPjob_5_desc"
+	picture = GFX_evt_monastery_monks
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	ai = no
+
+	option = {
+		name = "RTPjob.5_1"
+
+		tooltip_info = learning
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = postulant_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.5_2"
+	}
+}
+
+##### LEVEL 2
+### DIPLOMACY
+# Minstrel
+character_event = {
+	id = RTPjob.6
+	title = "RTPjob_6_title"
+	desc = "RTPjob_6_desc"
+	picture = GFX_evt_dancing
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		prestige = 100
+	}
+
+	immediate = {
+		liege = {
+			create_character = {
+				age = 40
+				dynasty = none
+				female = 20
+				culture = PREV
+				religion = PREV
+				random_traits = yes
+				health = 10
+			}
+			new_character = {
+				save_event_target_as = rtp_employer #Person offering you a job
+			}
+		}
+	}
+
+	option = {
+		name = "RTPjob.6_1"
+
+		tooltip_info = diplomacy
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = minstrel_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.6_2"
+	}
+
+	after = {
+		hidden_tooltip = {
+			event_target:rtp_employer = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+}
+
+### MARTIAL
+# Veteran
+character_event = {
+	id = RTPjob.7
+	title = "RTPjob_7_title"
+	desc = "RTPjob_7_desc"
+	picture = GFX_evt_battle
+	border = GFX_event_normal_frame_war
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		prestige = 100
+	}
+
+	immediate = {
+		liege = {
+			create_character = {
+				age = 40
+				dynasty = none
+				female = 20
+				culture = PREV
+				religion = PREV
+				random_traits = yes
+				health = 10
+			}
+			new_character = {
+				save_event_target_as = rtp_employer #Person offering you a job
+			}
+		}
+	}
+
+	option = {
+		name = "RTPjob.7_1"
+
+		tooltip_info = martial
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = veteran_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.7_2"
+	}
+
+	after = {
+		hidden_tooltip = {
+			event_target:rtp_employer = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+}
+
+### STEWARDSHIP
+# Shop Assistant
+character_event = {
+	id = RTPjob.8
+	title = "RTPjob_8_title"
+	desc = "RTPjob_8_desc"
+	picture = GFX_evt_construction_site
+	border = GFX_event_normal_frame_economy
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		prestige = 100
+	}
+
+	immediate = {
+		liege = {
+			create_character = {
+				age = 40
+				dynasty = none
+				female = 20
+				culture = PREV
+				religion = PREV
+				random_traits = yes
+				health = 10
+			}
+			new_character = {
+				save_event_target_as = rtp_employer #Person offering you a job
+			}
+		}
+	}
+
+	option = {
+		name = "RTPjob.8_1"
+
+		tooltip_info = stewardship
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = shop_assistant_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.8_2"
+	}
+
+	after = {
+		hidden_tooltip = {
+			event_target:rtp_employer = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+}
+
+### INTRIGUE
+# Pickpocket
+character_event = {
+	id = RTPjob.9
+	title = "RTPjob_9_title"
+	desc = "RTPjob_9_desc"
+	picture = GFX_evt_hooded_figure_hf
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		prestige = 100
+	}
+
+	immediate = {
+		liege = {
+			create_character = {
+				age = 40
+				dynasty = none
+				female = 20
+				culture = PREV
+				religion = PREV
+				random_traits = yes
+				health = 10
+			}
+			new_character = {
+				save_event_target_as = rtp_employer #Person offering you a job
+			}
+		}
+	}
+
+	option = {
+		name = "RTPjob.9_1"
+
+		tooltip_info = intrigue
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = pickpocket_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.9_2"
+	}
+
+	after = {
+		hidden_tooltip = {
+			event_target:rtp_employer = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+}
+
+### LEARNING
+# Preacher
+character_event = {
+	id = RTPjob.10
+	title = "RTPjob_10_title"
+	desc = "RTPjob_10_desc"
+	picture = GFX_evt_bishop
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		prestige = 100
+	}
+
+	immediate = {
+		liege = {
+			create_character = {
+				age = 40
+				dynasty = none
+				female = 20
+				culture = PREV
+				religion = PREV
+				random_traits = yes
+				health = 10
+			}
+			new_character = {
+				save_event_target_as = rtp_employer #Person offering you a job
+			}
+		}
+	}
+
+	option = {
+		name = "RTPjob.10_1"
+
+		tooltip_info = learning
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = preacher_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.10_2"
+	}
+
+	after = {
+		hidden_tooltip = {
+			event_target:rtp_employer = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+}
+
+##### LEVEL 3
+### DIPLOMACY
+# Town Crier
+character_event = {
+	id = RTPjob.11
+	title = "RTPjob_11_title"
+	desc = "RTPjob_11_desc"
+	picture = GFX_evt_beatification
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		diplomacy = 5
+		prestige = 200
+		has_minor_title = minstrel_mt
+		OR = {
+			AND = {
+				dynasty = 19930
+				has_character_flag = rtp_can_read #You can now read
+			}
+			NOT = {
+				dynasty = 19930
+			}
+		}
+	}
+
+	immediate = {
+		liege = {
+			create_character = {
+				age = 40
+				dynasty = random
+				female = 20
+				culture = PREV
+				religion = PREV
+				random_traits = yes
+				health = 10
+			}
+			new_character = {
+				save_event_target_as = rtp_employer #Person offering you a job
+			}
+		}
+	}
+
+	option = {
+		name = "RTPjob.11_1"
+
+		tooltip_info = diplomacy
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = town_crier_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.11_2"
+	}
+
+	after = {
+		hidden_tooltip = {
+			event_target:rtp_employer = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+}
+
+### MARTIAL
+# Bailif
+character_event = {
+	id = RTPjob.12
+	title = "RTPjob_12_title"
+	desc = "RTPjob_12_desc"
+	picture = GFX_evt_camaraderie
+	border = GFX_event_normal_frame_war
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		martial = 5
+		prestige = 200
+		has_minor_title = veteran_mt
+		OR = {
+			AND = {
+				dynasty = 19930
+				has_character_flag = rtp_can_read #You can now read
+			}
+			NOT = {
+				dynasty = 19930
+			}
+		}
+	}
+
+	immediate = {
+		liege = {
+			create_character = {
+				age = 40
+				dynasty = random
+				female = 20
+				culture = PREV
+				religion = PREV
+				random_traits = yes
+				health = 10
+			}
+			new_character = {
+				save_event_target_as = rtp_employer #Person offering you a job
+			}
+		}
+	}
+
+	option = {
+		name = "RTPjob.12_1"
+
+		tooltip_info = martial
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = bailif_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.12_2"
+	}
+
+	after = {
+		hidden_tooltip = {
+			event_target:rtp_employer = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+}
+
+### STEWARDSHIP
+# Peddler
+character_event = {
+	id = RTPjob.13
+	title = "RTPjob_13_title"
+	desc = "RTPjob_13_desc"
+	picture = GFX_evt_market
+	border = GFX_event_normal_frame_economy
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		stewardship = 5
+		prestige = 200
+		has_minor_title = shop_assistant_mt
+		OR = {
+			AND = {
+				dynasty = 19930
+				has_character_flag = rtp_can_read #You can now read
+			}
+			NOT = {
+				dynasty = 19930
+			}
+		}
+	}
+
+	immediate = {
+		liege = {
+			create_character = {
+				age = 40
+				dynasty = random
+				female = 20
+				culture = PREV
+				religion = PREV
+				random_traits = yes
+				health = 10
+			}
+			new_character = {
+				save_event_target_as = rtp_employer #Person offering you a job
+			}
+		}
+	}
+
+	option = {
+		name = "RTPjob.13_1"
+
+		tooltip_info = stewardship
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = peddler_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.13_2"
+	}
+
+	after = {
+		hidden_tooltip = {
+			event_target:rtp_employer = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+}
+
+### INTRIGUE
+# Poacher
+character_event = {
+	id = RTPjob.14
+	title = "RTPjob_14_title"
+	desc = "RTPjob_14_desc"
+	picture = GFX_evt_hunt
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		intrigue = 5
+		prestige = 200
+		has_minor_title = pickpocket_mt
+		OR = {
+			AND = {
+				dynasty = 19930
+				has_character_flag = rtp_can_read #You can now read
+			}
+			NOT = {
+				dynasty = 19930
+			}
+		}
+	}
+
+	immediate = {
+		liege = {
+			create_character = {
+				age = 40
+				dynasty = random
+				female = 20
+				culture = PREV
+				religion = PREV
+				random_traits = yes
+				health = 10
+			}
+			new_character = {
+				save_event_target_as = rtp_employer #Person offering you a job
+			}
+		}
+	}
+
+	option = {
+		name = "RTPjob.14_1"
+
+		tooltip_info = intrigue
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = poacher_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.14_2"
+	}
+
+	after = {
+		hidden_tooltip = {
+			event_target:rtp_employer = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+}
+
+### LEARNING
+# Scribe
+character_event = {
+	id = RTPjob.15
+	title = "RTPjob_15_title"
+	desc = "RTPjob_15_desc"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		learning = 5
+		prestige = 200
+		has_minor_title = preacher_mt
+		OR = {
+			AND = {
+				dynasty = 19930
+				has_character_flag = rtp_can_read #You can now read
+			}
+			NOT = {
+				dynasty = 19930
+			}
+		}
+	}
+
+	immediate = {
+		liege = {
+			create_character = {
+				age = 40
+				dynasty = random
+				female = 20
+				culture = PREV
+				religion = PREV
+				random_traits = yes
+				health = 10
+			}
+			new_character = {
+				save_event_target_as = rtp_employer #Person offering you a job
+			}
+		}
+	}
+
+	option = {
+		name = "RTPjob.15_1"
+
+		tooltip_info = learning
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = scribe_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.15_2"
+	}
+
+	after = {
+		hidden_tooltip = {
+			event_target:rtp_employer = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+}
+
+##### LEVEL 4
+### DIPLOMACY
+# Diplomat
+character_event = {
+	id = RTPjob.16
+	title = "RTPjob_16_title"
+	desc = "RTPjob_16_desc"
+	picture = GFX_evt_diplomat_hf
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		diplomacy = 10
+		prestige = 300
+		has_minor_title = town_crier_mt
+	}
+
+	immediate = {
+		capital_scope = {
+			random_province_lord = {
+				save_event_target_as = rtp_employer #Person offering you a job
+			}
+		}
+	}
+
+	option = {
+		name = "RTPjob.16_1"
+
+		tooltip_info = diplomacy
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = diplomat_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.16_2"
+	}
+}
+
+### MARTIAL
+# Officer
+character_event = {
+	id = RTPjob.17
+	title = "RTPjob_17_title"
+	desc = "RTPjob_17_desc"
+	picture = GFX_evt_china_expansionist
+	border = GFX_event_normal_frame_war
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		martial = 10
+		prestige = 300
+		has_minor_title = bailif_mt
+	}
+
+	immediate = {
+		capital_scope = {
+			random_province_lord = {
+				save_event_target_as = rtp_employer #Person offering you a job
+			}
+		}
+	}
+
+	option = {
+		name = "RTPjob.17_1"
+		
+		tooltip_info = martial
+
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = officer_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.17_2"
+	}
+}
+
+### STEWARDSHIP
+# Shop Keeper
+character_event = {
+	id = RTPjob.18
+	title = "RTPjob_18_title"
+	desc = "RTPjob_18_desc"
+	picture = GFX_evt_relaxed_ruler
+	border = GFX_event_normal_frame_economy
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		stewardship = 10
+		prestige = 300
+		has_minor_title = peddler_mt
+	}
+
+	immediate = {
+		capital_scope = {
+			random_province_lord = {
+				save_event_target_as = rtp_employer #Person offering you a job
+			}
+		}
+	}
+
+	option = {
+		name = "RTPjob.18_1"
+
+		tooltip_info = stewardship
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = shop_keeper_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.18_2"
+	}
+}
+
+### INTRIGUE
+# Brigand
+character_event = {
+	id = RTPjob.19
+	title = "RTPjob_19_title"
+	desc = "RTPjob_19_desc"
+	picture = GFX_evt_bandits
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		intrigue = 10
+		prestige = 300
+		has_minor_title = poacher_mt
+	}
+
+	immediate = {
+		capital_scope = {
+			random_province_lord = {
+				save_event_target_as = rtp_employer #Person offering you a job
+			}
+		}
+	}
+
+	option = {
+		name = "RTPjob.19_1"
+
+		tooltip_info = intrigue
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = brigand_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.19_2"
+	}
+}
+
+### LEARNING
+# Librarian
+character_event = {
+	id = RTPjob.20
+	title = "RTPjob_20_title"
+	desc = "RTPjob_20_desc"
+	picture = GFX_evt_library
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		learning = 10
+		prestige = 300
+		has_minor_title = scribe_mt
+	}
+
+	immediate = {
+		capital_scope = {
+			random_province_lord = {
+				save_event_target_as = rtp_employer #Person offering you a job
+			}
+		}
+	}
+
+	option = {
+		name = "RTPjob.20_1"
+
+		tooltip_info = learning
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = librarian_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.20_2"
+	}
+}
+
+##### SPECIAL
+# Mercenary
+character_event = {
+	id = RTPjob.21
+	title = "RTPjob_21_title"
+	desc = "RTPjob_21_desc"
+	picture = GFX_evt_steppe_mercenaries
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+	}
+
+	option = {
+		name = "RTPjob.21_1"
+
+		random_list = {
+			10 = {
+				wealth = 15
+			}
+			20 = {
+				wealth = 10
+			}
+			30 = {
+				wealth = 5
+			}
+			50 = {
+				wealth = 0
+			}
+		}
+
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = sellsword_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.21_2"
+	}
+}
+
+# Holy Warrior
+character_event = {
+	id = RTPjob.22
+	title = "RTPjob_22_title"
+	desc = "RTPjob_22_desc"
+	picture = GFX_evt_crusaders
+	is_triggered_only = yes
+	ai = no
+
+	immediate = {
+		liege = {
+			create_character = {
+				age = 40
+				dynasty = random
+				female = 20
+				culture = PREV
+				religion = PREV
+				random_traits = yes
+				health = 10
+			}
+			new_character = {
+				save_event_target_as = rtp_employer #Person offering you a job
+			}
+		}
+	}
+
+	option = {
+		name = "RTPjob.22_1"
+
+		random_list = {
+			10 = {
+				wealth = 15
+			}
+			20 = {
+				wealth = 10
+			}
+			30 = {
+				wealth = 5
+			}
+			50 = {
+				wealth = 0
+			}
+		}
+
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			give_minor_title = holy_warrior_mt
+		}
+	}
+
+	option = {
+		name = "RTPjob.22_2"
+	}
+
+	after = {
+		hidden_tooltip = {
+			event_target:rtp_employer = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+}
+
+# Job Knowledge
+character_event = {
+	id = RTPjob.30
+	title = "RTPjob_30_title"
+	desc = "RTPjob_30_desc"
+	picture = GFX_evt_relaxed_ruler
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		rtp_has_job_st = yes
+		OR = {
+			AND = {
+				diplomacy < 10
+				OR = {
+					has_minor_title = server_mt
+					has_minor_title = minstrel_mt
+					has_minor_title = town_crier_mt
+					has_minor_title = diplomat_mt
+				}
+			}
+			AND = {
+				martial < 10
+				OR = {
+					has_minor_title = guard_mt
+					has_minor_title = veteran_mt
+					has_minor_title = bailif_mt
+					has_minor_title = officer_mt
+				}
+			}
+			AND = {
+				stewardship < 10
+				OR = {
+					has_minor_title = barterer_mt
+					has_minor_title = shop_assistant_mt
+					has_minor_title = peddler_mt
+					has_minor_title = shop_keeper_mt
+				}
+			}
+			AND = {
+				intrigue < 10
+				OR = {
+					has_minor_title = beggar_mt
+					has_minor_title = pickpocket_mt
+					has_minor_title = poacher_mt
+					has_minor_title = brigand_mt
+				}
+			}
+			AND = {
+				learning < 10
+				OR = {
+					has_minor_title = postulant_mt
+					has_minor_title = preacher_mt
+					has_minor_title = scribe_mt
+					has_minor_title = librarian_mt
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPjob.30_1"
+
+		if = {
+			limit = {
+				diplomacy < 10
+				OR = {
+					has_minor_title = server_mt
+					has_minor_title = minstrel_mt
+					has_minor_title = town_crier_mt
+					has_minor_title = diplomat_mt
+				}
+			}
+			change_diplomacy = 1
+		}
+		else_if = {
+			limit = {
+				martial < 10
+				OR = {
+					has_minor_title = guard_mt
+					has_minor_title = veteran_mt
+					has_minor_title = bailif_mt
+					has_minor_title = officer_mt
+				}
+			}
+			change_martial = 1
+		}
+		else_if = {
+			limit = {
+				stewardship < 10
+				OR = {
+					has_minor_title = barterer_mt
+					has_minor_title = shop_assistant_mt
+					has_minor_title = peddler_mt
+					has_minor_title = shop_keeper_mt
+				}
+			}
+			change_stewardship = 1
+		}
+		else_if = {
+			limit = {
+				intrigue < 10
+				OR = {
+					has_minor_title = beggar_mt
+					has_minor_title = pickpocket_mt
+					has_minor_title = poacher_mt
+					has_minor_title = brigand_mt
+				}
+			}
+			change_intrigue = 1
+		}
+		else_if = {
+			limit = {
+				learning < 10
+				OR = {
+					has_minor_title = postulant_mt
+					has_minor_title = preacher_mt
+					has_minor_title = scribe_mt
+					has_minor_title = librarian_mt
+				}
+			}
+			change_learning = 1
+		}
+	}
+}
+
+#Ping Events
+#####
+
+#Ping for Employment Opportunity - Level 1
+character_event = {
+	id = RTPjob.100
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+	
+	trigger = {
+		age = 8
+		rtp_is_capable = yes
+		rtp_has_job_st = no
+		independent = no
+		dynasty = 19930
+		has_landed_title = c_landless_t
+	}
+
+	immediate = {
+		random_list = {
+			20 = {
+				set_character_flag = rtp_diplomacy_job #Learning based job offer
+			}
+			20 = {
+				set_character_flag = rtp_martial_job #Martial based job offer
+			}
+			20 = {
+				set_character_flag = rtp_stewardship_job #Stewardship based job offer
+			}
+			20 = {
+				set_character_flag = rtp_intrigue_job #Intrigue based job offer
+			}
+			20 = {
+				set_character_flag = rtp_learning_job #Learning based job offer
+			}
+		}
+	}
+
+	option = {
+		if = {
+			limit = {
+				has_character_flag = rtp_diplomacy_job #Learning based job offer
+			}
+			character_event = {
+				id = RTPjob.1 #Server
+			}
+		}
+		else_if = {
+			limit = {
+				has_character_flag = rtp_martial_job #Martial based job offer
+			}
+			character_event = {
+				id = RTPjob.2 #Guard
+			}
+		}
+		else_if = {
+			limit = {
+				has_character_flag = rtp_stewardship_job #Stewardship based job offer
+			}
+			character_event = {
+				id = RTPjob.3 #Barterer
+			}
+		}
+		else_if = {
+			limit = {
+				has_character_flag = rtp_intrigue_job #Intrigue based job offer
+			}
+			character_event = {
+				id = RTPjob.4 #Beggar
+			}
+		}
+		else_if = {
+			limit = {
+				has_character_flag = rtp_learning_job #Learning based job offer
+			}
+			character_event = {
+				id = RTPjob.5 #Postulant
+			}
+		}
+	}
+
+	after = {
+		clr_character_flag = rtp_diplomacy_job #Learning based job offer
+		clr_character_flag = rtp_martial_job #Martial based job offer
+		clr_character_flag = rtp_stewardship_job #Stewardship based job offer
+		clr_character_flag = rtp_intrigue_job #Intrigue based job offer
+		clr_character_flag = rtp_learning_job #Learning based job offer
+
+		character_event = {
+			id = RTPcheck.100 #Job Pay Check
+			days = 2
+		}
+	}
+}
+
+#Ping for Employment Opportunity - Level 2
+character_event = {
+	id = RTPjob.101
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+		OR = {
+			AND = {
+				rtp_has_level_1_job_st = yes
+				dynasty = 19930
+			}
+			NOR = {
+				dynasty = 19930
+				rtp_has_level_3_job_st = yes
+				rtp_has_level_4_job_st = yes
+			}
+		}
+		rtp_has_level_2_job_st = no
+		independent = no
+		has_landed_title = c_landless_t
+	}
+
+	immediate = {
+		random_list = {
+			20 = {
+				set_character_flag = rtp_diplomacy_job #Learning based job offer
+			}
+			20 = {
+				set_character_flag = rtp_martial_job #Martial based job offer
+			}
+			20 = {
+				set_character_flag = rtp_stewardship_job #Stewardship based job offer
+			}
+			20 = {
+				set_character_flag = rtp_intrigue_job #Intrigue based job offer
+			}
+			20 = {
+				set_character_flag = rtp_learning_job #Learning based job offer
+			}
+		}
+	}
+
+	option = {
+		if = {
+			limit = {
+				has_character_flag = rtp_diplomacy_job #Learning based job offer
+			}
+			character_event = {
+				id = RTPjob.6 #Minstrel
+			}
+		}
+		else_if = {
+			limit = {
+				has_character_flag = rtp_martial_job #Martial based job offer
+			}
+			character_event = {
+				id = RTPjob.7 #Veteran
+			}
+		}
+		else_if = {
+			limit = {
+				has_character_flag = rtp_stewardship_job #Stewardship based job offer
+			}
+			character_event = {
+				id = RTPjob.8 #Shop Assistant
+			}
+		}
+		else_if = {
+			limit = {
+				has_character_flag = rtp_intrigue_job #Intrigue based job offer
+			}
+			character_event = {
+				id = RTPjob.9 #Pickpocket
+			}
+		}
+		else_if = {
+			limit = {
+				has_character_flag = rtp_learning_job #Learning based job offer
+			}
+			character_event = {
+				id = RTPjob.10 #Preacher
+			}
+		}
+	}
+
+	after = {
+		clr_character_flag = rtp_diplomacy_job #Learning based job offer
+		clr_character_flag = rtp_martial_job #Martial based job offer
+		clr_character_flag = rtp_stewardship_job #Stewardship based job offer
+		clr_character_flag = rtp_intrigue_job #Intrigue based job offer
+		clr_character_flag = rtp_learning_job #Learning based job offer
+
+		character_event = {
+			id = RTPcheck.100 #Job Pay Check
+			days = 2
+		}
+	}
+}
+
+#Ping for Employment Opportunity - Level 3
+character_event = {
+	id = RTPjob.102
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+		rtp_has_level_2_job_st = yes
+		rtp_has_level_3_job_st = no
+		independent = no
+	}
+
+	immediate = {
+		trigger_switch = {
+			on_trigger = has_minor_title
+			minstrel_mt = 			{ character_event = { id = RTPjob.11 } } #Town Crier
+			veteran_mt = 			{ character_event = { id = RTPjob.12 } } #Bailif
+			shop_assistant_mt = 	{ character_event = { id = RTPjob.13 } } #Peddler
+			pickpocket_mt = 		{ character_event = { id = RTPjob.14 } } #Poacher
+			preacher_mt = 			{ character_event = { id = RTPjob.15 } } #Scribe
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPcheck.100 #Job Pay Check
+			days = 2
+		}
+	}
+}
+
+#Ping for Employment Opportunity - Level 4
+character_event = {
+	id = RTPjob.103
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+		rtp_has_level_3_job_st = yes
+		rtp_has_level_4_job_st = no
+		independent = no
+	}
+
+	immediate = {
+		trigger_switch = {
+			on_trigger = has_minor_title
+			town_crier_mt = 	{ character_event = { id = RTPjob.16 } } #Diplomat
+			bailif_mt = 		{ character_event = { id = RTPjob.17 } } #Officer
+			peddler_mt = 		{ character_event = { id = RTPjob.18 } } #Shop Keeper
+			poacher_mt = 		{ character_event = { id = RTPjob.19 } } #Brigand
+			scribe_mt = 		{ character_event = { id = RTPjob.20 } } #Librarian
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPcheck.100 #Job Pay Check
+			days = 2
+		}
+	}
+}
+
+#MTTH Events
+#####

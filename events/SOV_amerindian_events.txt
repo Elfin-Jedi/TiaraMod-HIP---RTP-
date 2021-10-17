@@ -1,0 +1,642 @@
+namespace = SOV
+#Inuksuk Raising
+character_event = {
+	id = SOV.500
+	desc = EVTDESCSOV.500
+	picture = GFX_evt_inuksuk
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes 
+	
+	hide_from = yes
+
+	option = {
+		name = "EVTOPT_SOV_501"
+			prestige = 100
+		add_character_modifier = {
+			name = raised_inuksuk
+			duration = 730
+					}
+			}
+	}
+#Tobacco
+character_event = {
+	id = SOV.002
+	desc = EVTDESCSOV.002
+	picture = GFX_evt_tobacco
+	
+	is_triggered_only = no
+	
+	trigger = {
+		government = amerindian_tribal_government
+	}
+
+	mean_time_to_happen = {
+		months = 960
+	}
+	
+	option = {
+		name = EVTOPT_SOV_C
+		prestige = 15
+		add_province_modifier = {
+			name = restricted_tobacco_use
+			duration = 730
+					}
+			
+		}
+	option = {
+		name = EVTOPT_SOV_D
+		prestige = -15
+		add_province_modifier = {
+			name = encouraged_tobacco_use
+			duration = 730
+					}
+		}
+}
+#Counting Coup
+character_event = {
+	id = SOV.001
+	desc = EVTDESCSOV.001
+	picture = GFX_evt_NAwarriors
+	
+	is_triggered_only = no
+	
+	trigger = {
+		government = amerindian_tribal_government
+	}
+
+	mean_time_to_happen = {
+		months = 480
+	}
+	
+	immediate = {
+		set_character_flag = counting_coup
+		years = 100
+	}
+	
+	option = {
+		name = EVTOPT_SOV_A
+		add_character_modifier = {
+			name = counting_coup
+			duration = 730
+					}
+		}
+	option = {
+		name = EVTOPT_SOV_B
+		add_province_modifier = {
+			name = elders_unheeded
+			duration = 730
+					}
+		}
+	}
+#Band Split
+character_event = {
+	id = SOV.003
+	desc = EVTDESCSOV.003
+	picture = GFX_evt_migrationSOV
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = no 
+	
+	trigger = {
+		government = amerindian_tribal_government
+	}
+
+	mean_time_to_happen = {
+		months = 1200
+	}
+
+	option = {
+		name = EVTOPT_SOV_E
+		prestige = 15	
+		add_province_modifier = {
+			name = peasant_unrest
+			duration = 730
+					}
+		}
+	option = {
+		name = EVTOPT_SOV_F
+		add_province_modifier = {
+			name = band_split
+			duration = 730
+					}
+		}
+	}
+#Vision Quest
+character_event = {
+	id = SOV.004
+	desc = EVTDESC_vision_1
+	picture = GFX_evt_vision
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		months = 480
+	}
+
+	option = {
+		name = EVTOPT_vision_1
+		hidden_tooltip = { character_event = { id = SOV.005 days = 4 } }
+	}
+}
+
+character_event = {
+	id = SOV.005
+	desc = EVTDESC_vision_2
+	picture = GFX_evt_vision
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPT_vision_1
+		hidden_tooltip = { character_event = { id = SOV.006 days = 7 } }
+	}
+}
+
+character_event = {
+	id = SOV.006
+	desc = EVTDESC_vision_3
+	picture = GFX_evt_vision
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPT_vision_2
+		add_character_modifier = {
+			name = undertook_vision_quest
+			duration = 1900
+					}
+	}
+}
+#Nordsetur
+character_event = {
+	id = SOV.007
+	desc = EVTDESCSOV.007
+	picture = GFX_evt_igloo
+	
+	is_triggered_only = no
+	
+	trigger = {
+		OR = {
+			has_landed_title = c_qeqqata
+			has_landed_title = d_kujalleq
+			has_landed_title = c_sermersooq
+			has_landed_title = c_kujalleg
+			has_landed_title = c_ivittuut
+		}
+		OR = {
+			culture_group = north_germanic
+			culture = norse
+		}
+		NOR = {
+			culture = tuniq
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 960
+	}
+	
+	option = {
+		name = EVTOPT_SOV_G
+		prestige = 15
+		wealth = 50
+		}
+}
+#Vinland
+character_event = {
+	id = SOV.008
+	desc = EVTDESCSOV.008
+	picture = GFX_evt_tradeSOV
+	
+	is_triggered_only = no
+	
+	trigger = {
+		OR = {
+			has_landed_title = c_wampanoag
+			has_landed_title = c_maqtukwek
+			has_landed_title = c_kespukwitk
+			has_landed_title = c_unamakik
+			has_landed_title = c_wabana
+		}
+		OR = {
+			culture_group = north_germanic
+			culture = norse
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 480
+	}
+	
+	option = {
+		name = EVTOPT_SOV_G
+		prestige = 5
+		wealth = 15
+		}
+}
+# Give away for migration
+character_event = {
+	id = SOV.14
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		any_realm_province = {
+			county = {
+				create_character = {
+					random_traits = yes
+					dynasty = none
+					religion = PREV
+					culture = PREV
+					female = no
+					age = 25
+					trait = peasant_leader
+				}
+				new_character = {
+					usurp_title_plus_barony_if_unlanded = PREV
+					set_defacto_liege = THIS
+					set_truce = {
+						who = ROOT
+						years = 10
+					}
+					ROOT = {
+						set_truce = {
+							who = PREV
+							years = 10
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = OK
+	}
+}
+# Tuniq province converts to Inuit
+province_event = {
+	id = SOV.010
+	desc = EVTDESCSOV.010
+	picture = GFX_evt_NAwarriors
+
+	trigger = {
+		should_evolve_cultures_trigger = yes
+		culture = tuniq
+		OR = {
+			region = world_america
+		}
+		NOT = {
+			owner = { 
+				religion_head = { culture = tuniq }
+			}
+		}
+		year = 1300
+	}
+	
+	mean_time_to_happen = {
+		months = 3600
+		modifier = {
+			factor = 0.5
+			owner = {
+				culture = inuit
+			}
+		}
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPT_SOV_H
+		culture = inuit
+	}
+}
+#Selecting deity, High Arctic pagans
+character_event = {
+	id = SOV.011
+	desc = EVTDESC_SOV_7400
+	border = GFX_event_normal_frame_religion
+	picture = GFX_evt_tribal_shrine
+
+	is_triggered_only = yes
+
+	immediate = { 
+		#Assigns a god to all adults of the same religion at court
+		if = {
+			limit = { is_playable = yes }
+			any_courtier = {
+				limit = {
+					prisoner = no 
+					religion = ROOT
+					age = 16
+					has_minor_deity_trigger = no
+				}
+				character_event = { id = SOV.011 days = 1 }
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTA_SOV_7400
+
+		add_character_modifier = {
+			name = follower_of_sila
+			duration = -1
+		}
+
+		hidden_tooltip = { character_event = { id = SOV.7401 } }
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_education_diplomacy_trigger = yes
+				factor = 2
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_SOV_7400
+
+		add_character_modifier = {
+			name = follower_of_tornarssuk
+			duration = -1
+		}
+
+		hidden_tooltip = { character_event = { id = SOV.7402 } }
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_education_intrigue_trigger = yes
+				factor = 2
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_SOV_7400
+
+		add_character_modifier = {
+			name = follower_of_sedna
+			duration = -1
+		}
+
+		hidden_tooltip = { character_event = { id = SOV.7403 } }
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_education_martial_trigger = yes
+				factor = 2
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_SOV_7400
+
+		add_character_modifier = {
+			name = follower_of_nunam
+			duration = -1
+		}
+
+		hidden_tooltip = { character_event = { id = SOV.7404 } }
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_education_stewardship_trigger = yes
+				factor = 2
+			}
+		}
+	}
+}
+
+#You picked Sila
+character_event = {
+	id = SOV.7401
+	desc = EVTDESC_SOV_7401
+	border = GFX_event_normal_frame_diplomacy
+	picture = GFX_evt_viking_throneroom_oldgods
+
+	is_triggered_only = yes
+
+	#OK
+	option = {
+		name = EVTOPTA_TOG_7111
+	}
+}
+
+#You picked Tornarssuk
+character_event = {
+	id = SOV.7402
+	border = GFX_event_normal_frame_intrigue
+	desc = EVTDESC_SOV_7402
+	picture = GFX_evt_death
+
+	is_triggered_only = yes
+
+	#OK
+	option = {
+		name = EVTOPTA_TOG_7111
+	}
+}
+
+#You picked Sedna
+character_event = {
+	id = SOV.7403
+	desc = EVTDESC_SOV_7403
+	border = GFX_event_normal_frame_war
+	picture = GFX_evt_kraken
+
+	is_triggered_only = yes
+
+	#OK
+	option = {
+		name = EVTOPTA_TOG_7111
+	}
+}
+
+#You picked Nunam
+character_event = {
+	id = SOV.7404
+	desc = EVTDESC_SOV_7404
+	border = GFX_event_normal_frame_economy
+	picture = GFX_evt_tribal_lands
+
+	is_triggered_only = yes
+
+	#OK
+	option = {
+		name = EVTOPTA_TOG_7111
+	}
+}
+#Selecting deity, Manitou pagans
+character_event = {
+	id = SOV.012
+	desc = EVTDESC_SOV_7300
+	border = GFX_event_normal_frame_religion
+	picture = GFX_evt_tribal_shrine
+
+	is_triggered_only = yes
+
+	immediate = { 
+		#Assigns a god to all adults of the same religion at court
+		if = {
+			limit = { is_playable = yes }
+			any_courtier = {
+				limit = {
+					prisoner = no 
+					religion = ROOT
+					age = 16
+					has_minor_deity_trigger = no
+				}
+				character_event = { id = SOV.012 days = 1 }
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTA_SOV_7300
+
+		add_character_modifier = {
+			name = follower_of_glooscap
+			duration = -1
+		}
+
+		hidden_tooltip = { character_event = { id = SOV.7301 } }
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_education_intrigue_trigger = yes
+				factor = 2
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_SOV_7300
+
+		add_character_modifier = {
+			name = follower_of_katipeninitak
+			duration = -1
+		}
+
+		hidden_tooltip = { character_event = { id = SOV.7302 } }
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_education_stewardship_trigger = yes
+				factor = 2
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_SOV_7300
+
+		add_character_modifier = {
+			name = follower_of_padogiyik
+			duration = -1
+		}
+
+		hidden_tooltip = { character_event = { id = SOV.7303 } }
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_education_martial_trigger = yes
+				factor = 2
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_SOV_7300
+
+		add_character_modifier = {
+			name = follower_of_mateguas
+			duration = -1
+		}
+
+		hidden_tooltip = { character_event = { id = SOV.7304 } }
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_education_intrigue_trigger = yes
+				factor = 2
+			}
+		}
+	}
+}
+
+#You picked Glooscap
+character_event = {
+	id = SOV.7301
+	desc = EVTDESC_SOV_7301
+	border = GFX_event_normal_frame_intrigue
+	picture = GFX_evt_whispers
+
+	is_triggered_only = yes
+
+	#OK
+	option = {
+		name = EVTOPTA_TOG_7111
+	}
+}
+
+#You picked Katipeninitak
+character_event = {
+	id = SOV.7302
+	border = GFX_event_normal_frame_intrigue
+	desc = EVTDESC_SOV_7302
+	picture = "GFX_evt_hunt"
+
+	is_triggered_only = yes
+
+	#OK
+	option = {
+		name = EVTOPTA_TOG_7111
+	}
+}
+
+#You picked Padogiyik
+character_event = {
+	id = SOV.7303
+	desc = EVTDESC_SOV_7303
+	border = GFX_event_normal_frame_war
+   	 picture = GFX_evt_melee
+
+	is_triggered_only = yes
+
+	#OK
+	option = {
+		name = EVTOPTA_TOG_7111
+	}
+}
+
+#You picked Mateguas
+character_event = {
+	id = SOV.7304
+	desc = EVTDESC_SOV_7304
+	border = GFX_event_normal_frame_economy
+	picture = GFX_evt_death
+
+	is_triggered_only = yes
+
+	#OK
+	option = {
+		name = EVTOPTA_TOG_7111
+	}
+}

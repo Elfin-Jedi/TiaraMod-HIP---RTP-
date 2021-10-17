@@ -1,0 +1,2983 @@
+#####
+#Intrigue Society
+#
+#Total = 15
+#####
+
+#Norse
+rtp_intrigue_norse = {
+	sound = assassins_interface
+	society_ranks_gfx = devil_ranks
+	primary_attribute = intrigue
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		intrigue = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = norse_pagan
+			religion = norse_pagan_reformed
+			religion_group = pagan_group
+			religion_group = dark
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_intrigue_norse
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_intrigue_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = norse_pagan
+			religion = norse_pagan_reformed
+			religion_group = pagan_group
+			religion_group = dark
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = norse_pagan
+			religion = norse_pagan_reformed
+			religion_group = pagan_group
+			religion_group = dark
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.05
+		}
+		decisions = {
+			rtp_intrigue_p1_td
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.1
+			intrigue = 1
+			monthly_character_prestige = -0.1
+		}
+		decisions = {
+			rtp_intrigue_p2_td
+			rtp_intrigue_pp2_td
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			murder_plot_power_modifier = 0.15
+			intrigue = 2
+			monthly_character_prestige = -0.1
+			general_opinion = -5
+		}
+		decisions = {
+			rtp_intrigue_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			murder_plot_power_modifier = 0.2
+			intrigue = 3
+			monthly_character_prestige = -0.1
+			general_opinion = -10
+		}
+		decisions = {
+			rtp_intrigue_p4_sd
+			rtp_intrigue_mercenary_sd
+			rtp_intrigue_privateer_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_intrigue
+
+		per_attribute = {
+			name = intrigue
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			intrigue = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+				religion_group = pagan_group
+				religion_group = dark
+			}
+		}
+	}
+}
+
+#Tengri
+rtp_intrigue_tengri = {
+	sound = assassins_interface
+	society_ranks_gfx = devil_ranks
+	primary_attribute = intrigue
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		intrigue = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = tengri_pagan
+			religion = tengri_pagan_reformed
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_intrigue_tengri
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_intrigue_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = tengri_pagan
+			religion = tengri_pagan_reformed
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = tengri_pagan
+			religion = tengri_pagan_reformed
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.05
+		}
+		decisions = {
+			rtp_intrigue_p1_td
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.1
+			intrigue = 1
+			monthly_character_prestige = -0.1
+		}
+		decisions = {
+			rtp_intrigue_p2_td
+			rtp_intrigue_pp2_td
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			murder_plot_power_modifier = 0.15
+			intrigue = 2
+			monthly_character_prestige = -0.1
+			general_opinion = -5
+		}
+		decisions = {
+			rtp_intrigue_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			murder_plot_power_modifier = 0.2
+			intrigue = 3
+			monthly_character_prestige = -0.1
+			general_opinion = -10
+		}
+		decisions = {
+			rtp_intrigue_p4_sd
+			rtp_intrigue_mercenary_sd
+			rtp_intrigue_privateer_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_intrigue
+
+		per_attribute = {
+			name = intrigue
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			intrigue = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = tengri_pagan
+				religion = tengri_pagan_reformed
+			}
+		}
+	}
+}
+
+#Baltic
+rtp_intrigue_baltic = {
+	sound = assassins_interface
+	society_ranks_gfx = devil_ranks
+	primary_attribute = intrigue
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		intrigue = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = baltic_pagan
+			religion = baltic_pagan_reformed
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_intrigue_baltic
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_intrigue_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = baltic_pagan
+			religion = baltic_pagan_reformed
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = baltic_pagan
+			religion = baltic_pagan_reformed
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.05
+		}
+		decisions = {
+			rtp_intrigue_p1_td
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.1
+			intrigue = 1
+			monthly_character_prestige = -0.1
+		}
+		decisions = {
+			rtp_intrigue_p2_td
+			rtp_intrigue_pp2_td
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			murder_plot_power_modifier = 0.15
+			intrigue = 2
+			monthly_character_prestige = -0.1
+			general_opinion = -5
+		}
+		decisions = {
+			rtp_intrigue_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			murder_plot_power_modifier = 0.2
+			intrigue = 3
+			monthly_character_prestige = -0.1
+			general_opinion = -10
+		}
+		decisions = {
+			rtp_intrigue_p4_sd
+			rtp_intrigue_mercenary_sd
+			rtp_intrigue_privateer_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_intrigue
+
+		per_attribute = {
+			name = intrigue
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			intrigue = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = baltic_pagan
+				religion = baltic_pagan_reformed
+			}
+		}
+	}
+}
+
+#Slavic
+rtp_intrigue_slavic = {
+	sound = assassins_interface
+	society_ranks_gfx = devil_ranks
+	primary_attribute = intrigue
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		intrigue = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = slavic_pagan
+			religion = slavic_pagan_reformed
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_intrigue_slavic
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_intrigue_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = slavic_pagan
+			religion = slavic_pagan_reformed
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = slavic_pagan
+			religion = slavic_pagan_reformed
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.05
+		}
+		decisions = {
+			rtp_intrigue_p1_td
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.1
+			intrigue = 1
+			monthly_character_prestige = -0.1
+		}
+		decisions = {
+			rtp_intrigue_p2_td
+			rtp_intrigue_pp2_td
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			murder_plot_power_modifier = 0.15
+			intrigue = 2
+			monthly_character_prestige = -0.1
+			general_opinion = -5
+		}
+		decisions = {
+			rtp_intrigue_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			murder_plot_power_modifier = 0.2
+			intrigue = 3
+			monthly_character_prestige = -0.1
+			general_opinion = -10
+		}
+		decisions = {
+			rtp_intrigue_p4_sd
+			rtp_intrigue_mercenary_sd
+			rtp_intrigue_privateer_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_intrigue
+
+		per_attribute = {
+			name = intrigue
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			intrigue = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+			}
+		}
+	}
+}
+
+#Finnish
+rtp_intrigue_finnish = {
+	sound = assassins_interface
+	society_ranks_gfx = devil_ranks
+	primary_attribute = intrigue
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		intrigue = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = finnish_pagan
+			religion = finnish_pagan_reformed
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_intrigue_finnish
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_intrigue_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = finnish_pagan
+			religion = finnish_pagan_reformed
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = finnish_pagan
+			religion = finnish_pagan_reformed
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.05
+		}
+		decisions = {
+			rtp_intrigue_p1_td
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.1
+			intrigue = 1
+			monthly_character_prestige = -0.1
+		}
+		decisions = {
+			rtp_intrigue_p2_td
+			rtp_intrigue_pp2_td
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			murder_plot_power_modifier = 0.15
+			intrigue = 2
+			monthly_character_prestige = -0.1
+			general_opinion = -5
+		}
+		decisions = {
+			rtp_intrigue_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			murder_plot_power_modifier = 0.2
+			intrigue = 3
+			monthly_character_prestige = -0.1
+			general_opinion = -10
+		}
+		decisions = {
+			rtp_intrigue_p4_sd
+			rtp_intrigue_mercenary_sd
+			rtp_intrigue_privateer_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_intrigue
+
+		per_attribute = {
+			name = intrigue
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			intrigue = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = finnish_pagan
+				religion = finnish_pagan_reformed
+			}
+		}
+	}
+}
+
+#West African
+rtp_intrigue_west_african = {
+	sound = assassins_interface
+	society_ranks_gfx = devil_ranks
+	primary_attribute = intrigue
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		intrigue = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = west_african_pagan
+			religion = west_african_pagan_reformed
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_intrigue_west_african
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_intrigue_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = west_african_pagan
+			religion = west_african_pagan_reformed
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = west_african_pagan
+			religion = west_african_pagan_reformed
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.05
+		}
+		decisions = {
+			rtp_intrigue_p1_td
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.1
+			intrigue = 1
+			monthly_character_prestige = -0.1
+		}
+		decisions = {
+			rtp_intrigue_p2_td
+			rtp_intrigue_pp2_td
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			murder_plot_power_modifier = 0.15
+			intrigue = 2
+			monthly_character_prestige = -0.1
+			general_opinion = -5
+		}
+		decisions = {
+			rtp_intrigue_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			murder_plot_power_modifier = 0.2
+			intrigue = 3
+			monthly_character_prestige = -0.1
+			general_opinion = -10
+		}
+		decisions = {
+			rtp_intrigue_p4_sd
+			rtp_intrigue_mercenary_sd
+			rtp_intrigue_privateer_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_intrigue
+    
+		per_attribute = {
+			name = intrigue
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			intrigue = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = west_african_pagan
+				religion = west_african_pagan_reformed
+			}
+		}
+	}
+}
+
+#Zun
+rtp_intrigue_zun = {
+	sound = assassins_interface
+	society_ranks_gfx = devil_ranks
+	primary_attribute = intrigue
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		intrigue = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = zun_pagan
+			religion = zun_pagan_reformed
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_intrigue_zun
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_intrigue_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = zun_pagan
+			religion = zun_pagan_reformed
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = zun_pagan
+			religion = zun_pagan_reformed
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.05
+		}
+		decisions = {
+			rtp_intrigue_p1_td
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.1
+			intrigue = 1
+			monthly_character_prestige = -0.1
+		}
+		decisions = {
+			rtp_intrigue_p2_td
+			rtp_intrigue_pp2_td
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			murder_plot_power_modifier = 0.15
+			intrigue = 2
+			monthly_character_prestige = -0.1
+			general_opinion = -5
+		}
+		decisions = {
+			rtp_intrigue_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			murder_plot_power_modifier = 0.2
+			intrigue = 3
+			monthly_character_prestige = -0.1
+			general_opinion = -10
+		}
+		decisions = {
+			rtp_intrigue_p4_sd
+			rtp_intrigue_mercenary_sd
+			rtp_intrigue_privateer_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_intrigue
+    
+		per_attribute = {
+			name = intrigue
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			intrigue = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = zun_pagan
+				religion = zun_pagan_reformed
+			}
+		}
+	}
+}
+
+#Bon
+rtp_intrigue_bon = {
+	sound = assassins_interface
+	society_ranks_gfx = devil_ranks
+	primary_attribute = intrigue
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		intrigue = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = bon
+			religion = bon_reformed
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_intrigue_bon
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_intrigue_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = bon
+			religion = bon_reformed
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = bon
+			religion = bon_reformed
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.05
+		}
+		decisions = {
+			rtp_intrigue_p1_td
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.1
+			intrigue = 1
+			monthly_character_prestige = -0.1
+		}
+		decisions = {
+			rtp_intrigue_p2_td
+			rtp_intrigue_pp2_td
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			murder_plot_power_modifier = 0.15
+			intrigue = 2
+			monthly_character_prestige = -0.1
+			general_opinion = -5
+		}
+		decisions = {
+			rtp_intrigue_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			murder_plot_power_modifier = 0.2
+			intrigue = 3
+			monthly_character_prestige = -0.1
+			general_opinion = -10
+		}
+		decisions = {
+			rtp_intrigue_p4_sd
+			rtp_intrigue_mercenary_sd
+			rtp_intrigue_privateer_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_intrigue
+    
+		per_attribute = {
+			name = intrigue
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			intrigue = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = bon
+				religion = bon_reformed
+			}
+		}
+	}
+}
+
+#Hellenic
+rtp_intrigue_hellenic = {
+	sound = assassins_interface
+	society_ranks_gfx = devil_ranks
+	primary_attribute = intrigue
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		intrigue = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = hellenic_pagan
+			religion = hellenic_pagan_reformed
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_intrigue_hellenic
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_intrigue_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = hellenic_pagan
+			religion = hellenic_pagan_reformed
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = hellenic_pagan
+			religion = hellenic_pagan_reformed
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.05
+		}
+		decisions = {
+			rtp_intrigue_p1_td
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.1
+			intrigue = 1
+			monthly_character_prestige = -0.1
+		}
+		decisions = {
+			rtp_intrigue_p2_td
+			rtp_intrigue_pp2_td
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			murder_plot_power_modifier = 0.15
+			intrigue = 2
+			monthly_character_prestige = -0.1
+			general_opinion = -5
+		}
+		decisions = {
+			rtp_intrigue_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			murder_plot_power_modifier = 0.2
+			intrigue = 3
+			monthly_character_prestige = -0.1
+			general_opinion = -10
+		}
+		decisions = {
+			rtp_intrigue_p4_sd
+			rtp_intrigue_mercenary_sd
+			rtp_intrigue_privateer_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_intrigue
+    
+		per_attribute = {
+			name = intrigue
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			intrigue = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+			}
+		}
+	}
+}
+
+#Aztec
+rtp_intrigue_aztec = {
+	sound = assassins_interface
+	society_ranks_gfx = devil_ranks
+	primary_attribute = intrigue
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		has_global_flag = aztec_explorers
+	}
+
+	can_join_society = {
+		intrigue = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = aztec
+			religion = aztec_reformed
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_intrigue_aztec
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_intrigue_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = aztec
+			religion = aztec_reformed
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = aztec
+			religion = aztec_reformed
+		}
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.05
+		}
+		decisions = {
+			rtp_intrigue_p1_td
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.1
+			intrigue = 1
+			monthly_character_prestige = -0.1
+		}
+		decisions = {
+			rtp_intrigue_p2_td
+			rtp_intrigue_pp2_td
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			murder_plot_power_modifier = 0.15
+			intrigue = 2
+			monthly_character_prestige = -0.1
+			general_opinion = -5
+		}
+		decisions = {
+			rtp_intrigue_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			murder_plot_power_modifier = 0.2
+			intrigue = 3
+			monthly_character_prestige = -0.1
+			general_opinion = -10
+		}
+		decisions = {
+			rtp_intrigue_p4_sd
+			rtp_intrigue_mercenary_sd
+			rtp_intrigue_privateer_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_intrigue
+    
+		per_attribute = {
+			name = intrigue
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			intrigue = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = aztec
+				religion = aztec_reformed
+			}
+		}
+	}
+}
+
+#Christians
+rtp_intrigue_christians = {
+	sound = assassins_interface
+	society_ranks_gfx = devil_ranks
+	primary_attribute = intrigue
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		intrigue = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		religion_group = christian
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_intrigue_christians
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_intrigue_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		religion_group = christian
+	}
+
+	potential = {
+		lower_tier_than = KING
+		religion_group = christian
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.05
+		}
+		decisions = {
+			rtp_intrigue_p1_td
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.1
+			intrigue = 1
+			monthly_character_prestige = -0.1
+		}
+		decisions = {
+			rtp_intrigue_p2_td
+			rtp_intrigue_pp2_td
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			murder_plot_power_modifier = 0.15
+			intrigue = 2
+			monthly_character_prestige = -0.1
+			general_opinion = -5
+		}
+		decisions = {
+			rtp_intrigue_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			murder_plot_power_modifier = 0.2
+			intrigue = 3
+			monthly_character_prestige = -0.1
+			general_opinion = -10
+		}
+		decisions = {
+			rtp_intrigue_p4_sd
+			rtp_intrigue_mercenary_sd
+			rtp_intrigue_privateer_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_intrigue
+    
+		per_attribute = {
+			name = intrigue
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			intrigue = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			religion_group = christian
+		}
+	}
+}
+
+#Muslims
+rtp_intrigue_muslim = {
+	sound = assassins_interface
+	society_ranks_gfx = devil_ranks
+	primary_attribute = intrigue
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		intrigue = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		religion_group = muslim
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_intrigue_muslim
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_intrigue_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		religion_group = muslim
+	}
+
+	potential = {
+		lower_tier_than = KING
+		religion_group = muslim
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.05
+		}
+		decisions = {
+			rtp_intrigue_p1_td
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.1
+			intrigue = 1
+			monthly_character_prestige = -0.1
+		}
+		decisions = {
+			rtp_intrigue_p2_td
+			rtp_intrigue_pp2_td
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			murder_plot_power_modifier = 0.15
+			intrigue = 2
+			monthly_character_prestige = -0.1
+			general_opinion = -5
+		}
+		decisions = {
+			rtp_intrigue_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			murder_plot_power_modifier = 0.2
+			intrigue = 3
+			monthly_character_prestige = -0.1
+			general_opinion = -10
+		}
+		decisions = {
+			rtp_intrigue_p4_sd
+			rtp_intrigue_mercenary_sd
+			rtp_intrigue_privateer_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_intrigue
+    
+		per_attribute = {
+			name = intrigue
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			intrigue = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			religion_group = muslim
+		}
+	}
+}
+
+#Jewish
+rtp_intrigue_jewish = {
+	sound = assassins_interface
+	society_ranks_gfx = devil_ranks
+	primary_attribute = intrigue
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		intrigue = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		religion_group = jewish_group
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_intrigue_jewish
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_intrigue_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		religion_group = jewish_group
+	}
+
+	potential = {
+		lower_tier_than = KING
+		religion_group = jewish_group
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.05
+		}
+		decisions = {
+			rtp_intrigue_p1_td
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.1
+			intrigue = 1
+			monthly_character_prestige = -0.1
+		}
+		decisions = {
+			rtp_intrigue_p2_td
+			rtp_intrigue_pp2_td
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			murder_plot_power_modifier = 0.15
+			intrigue = 2
+			monthly_character_prestige = -0.1
+			general_opinion = -5
+		}
+		decisions = {
+			rtp_intrigue_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			murder_plot_power_modifier = 0.2
+			intrigue = 3
+			monthly_character_prestige = -0.1
+			general_opinion = -10
+		}
+		decisions = {
+			rtp_intrigue_p4_sd
+			rtp_intrigue_mercenary_sd
+			rtp_intrigue_privateer_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_intrigue
+    
+		per_attribute = {
+			name = intrigue
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			intrigue = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			religion_group = jewish_group
+		}
+	}
+}
+
+#Zoroastrian
+rtp_intrigue_zoroastrian = {
+	sound = assassins_interface
+	society_ranks_gfx = devil_ranks
+	primary_attribute = intrigue
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		intrigue = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		religion_group = zoroastrian_group
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_intrigue_zoroastrian
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_intrigue_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		religion_group = zoroastrian_group
+	}
+
+	potential = {
+		lower_tier_than = KING
+		religion_group = zoroastrian_group
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.05
+		}
+		decisions = {
+			rtp_intrigue_p1_td
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.1
+			intrigue = 1
+			monthly_character_prestige = -0.1
+		}
+		decisions = {
+			rtp_intrigue_p2_td
+			rtp_intrigue_pp2_td
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			murder_plot_power_modifier = 0.15
+			intrigue = 2
+			monthly_character_prestige = -0.1
+			general_opinion = -5
+		}
+		decisions = {
+			rtp_intrigue_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			murder_plot_power_modifier = 0.2
+			intrigue = 3
+			monthly_character_prestige = -0.1
+			general_opinion = -10
+		}
+		decisions = {
+			rtp_intrigue_p4_sd
+			rtp_intrigue_mercenary_sd
+			rtp_intrigue_privateer_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_intrigue
+    
+		per_attribute = {
+			name = intrigue
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			intrigue = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			religion_group = zoroastrian_group
+		}
+	}
+}
+
+#Eastern
+rtp_intrigue_eastern = {
+	sound = assassins_interface
+	society_ranks_gfx = devil_ranks
+	primary_attribute = intrigue
+	indestructible = yes
+	society_influence = no
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+
+	can_join_society = {
+		intrigue = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		religion_group = indian_group
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_intrigue_eastern
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_intrigue_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		religion_group = indian_group
+	}
+
+	potential = {
+		lower_tier_than = KING
+		religion_group = indian_group
+	}
+
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.05
+		}
+		decisions = {
+			rtp_intrigue_p1_td
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			murder_plot_power_modifier = 0.1
+			intrigue = 1
+			monthly_character_prestige = -0.1
+		}
+		decisions = {
+			rtp_intrigue_p2_td
+			rtp_intrigue_pp2_td
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			murder_plot_power_modifier = 0.15
+			intrigue = 2
+			monthly_character_prestige = -0.1
+			general_opinion = -5
+		}
+		decisions = {
+			rtp_intrigue_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			murder_plot_power_modifier = 0.2
+			intrigue = 3
+			monthly_character_prestige = -0.1
+			general_opinion = -10
+		}
+		decisions = {
+			rtp_intrigue_p4_sd
+			rtp_intrigue_mercenary_sd
+			rtp_intrigue_privateer_sd
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_rtp_intrigue
+    
+		per_attribute = {
+			name = intrigue
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			intrigue = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			religion_group = indian_group
+		}
+	}
+}

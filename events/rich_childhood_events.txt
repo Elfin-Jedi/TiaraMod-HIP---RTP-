@@ -1,0 +1,5348 @@
+namespace = puer
+
+#Event tombola
+character_event = {
+    id = puer.1000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { age = 16 }
+		OR = {
+			ai = no
+			any_dynasty_member = {
+				ai = no
+			}
+			AND = {
+				has_game_rule = {
+					name = childhood_event_targets
+					value = realm
+				}
+				OR = {
+					liege = {
+						ai = no
+					}
+					any_realm_character = {
+						ai = no
+					}
+				}
+			}
+			has_game_rule = {
+				name = childhood_event_targets
+				value = all
+			}
+		}
+		NOT = { has_character_modifier = the_oubliette }
+		NOT = { has_character_modifier = the_dungeon }
+	}
+
+	immediate = {
+		random_list = {
+			125 = {
+				modifier = {
+					factor = 4.5
+					ai = yes
+				}
+				modifier = {
+					factor = 0
+					NOT = { num_of_traits = 3 }
+					ai = yes
+				}
+				modifier = {
+					factor = 0
+					NOT = { num_of_traits = 4 }
+					ai = no
+				}
+				modifier = {
+					factor = 1.5
+					num_of_traits = 5 
+				}
+				modifier = {
+					factor = 1.33
+					num_of_traits = 6 
+				}
+				modifier = {
+					factor = 1.5
+					num_of_traits = 7 
+				}
+				modifier = {
+					factor = 1.33
+					num_of_traits = 8 
+				}
+				modifier = {
+					factor = 10
+					num_of_traits = 9 
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					NOT = { age = 12 }
+				}
+				modifier = {
+					factor = 0
+					trait = homosexual
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+				character_event = { id = puer.1001 } #Childhood romance
+			}
+			10 = { 
+				modifier = {
+					factor = 0
+					NOT = { age = 8 }
+				}
+				modifier = {
+					factor = 0
+					age = 12 
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = dyslexia
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = reading_skill
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 6
+				}
+				character_event = { id = puer.1003 } #Dyslexia
+			}
+			10 = { 
+				modifier = {
+					factor = 0
+					NOT = { age = 8 }
+				}
+				modifier = {
+					factor = 0
+					age = 12 
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = reading_skill
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = dyslexia
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 6
+				}
+				character_event = { id = puer.1004 } #Reading skill
+			}
+			10 = { 
+				modifier = {
+					factor = 0
+					NOT = { age = 3  }
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 6
+				}
+				character_event = { id = puer.1005 } #Play war
+			}
+			10 = { 
+				modifier = {
+					factor = 0
+					NOT = { age = 8 }
+				}
+				modifier = {
+					factor = 0
+					age = 12 
+				}
+				modifier = {
+					factor = 0
+					trait = homosexual
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+				character_event = { id = puer.1006 } #Play physician
+			}
+			10 = { 
+				character_event = { id = puer.1007 } #Death of friend
+				modifier = {
+					factor = 0
+					NOT = { age = 3  }
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 6
+				}
+			}
+			#10 = { 
+			#	character_event = { id = puer.1008 } #Childhood illness
+			#	modifier = {
+			#		factor = 0
+			#		has_character_flag = childhood_illness
+			#	}
+			#	modifier = {
+			#		factor = 0
+			#		num_of_traits = 6
+			#	}
+			#}
+			10 = { 
+				character_event = { id = puer.1009 } #Childhood idol
+				modifier = {
+					factor = 0
+					NOT = { age = 3  }
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = childhood_idol
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1010 } #Play lord
+				modifier = {
+					factor = 0
+					NOT = { age = 3  }
+				}
+				modifier = {
+					factor = 0
+					age = 12 
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 6
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1011 } #Childhood pet 
+				modifier = {
+					factor = 0
+					has_character_flag = childhood_pet
+				}
+				modifier = {
+					factor = 0
+					NOT = { age = 3  }
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1013 } #Is bully
+				modifier = {
+					factor = 0
+					NOT = { age = 3  }
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = is_bully
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 6
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1014 } #Has bully
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 6
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1015 } #Regent teaches governance
+				modifier = {
+					factor = 0
+					NOT = { age = 12 }
+				}
+				modifier = {
+					factor = 0
+					is_ruler = false
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = regent_governance
+				}
+				modifier = {
+					factor = 0
+					any_courtier_or_vassal = {
+						has_minor_title = title_regent
+						NOT = {
+							opinion = {
+								who = ROOT
+								value = 0
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1016 } #Regent keeps you from learning 
+				modifier = {
+					factor = 0
+					has_character_flag = regent_stop_learning
+				}
+				modifier = {
+					factor = 0
+					NOT = { age = 12 }
+				}
+				modifier = {
+					factor = 0
+					is_ruler = false
+				}
+				modifier = {
+					factor = 0
+					any_courtier_or_vassal = {
+						has_minor_title = title_regent
+						opinion = {
+							who = ROOT
+							value = 0
+						}
+					}
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1017 } #Regent attempts to betrothe daughter
+				modifier = {
+					factor = 0
+					NOT = { age = 12 }
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = regent_betrothe_child
+				}
+				modifier = {
+					factor = 0
+					is_ruler = false
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						any_courtier_or_vassal = {
+							has_minor_title = title_regent
+							NOT = { trait = content }
+							any_child = {
+								age = 8
+								NOT = { age = 40 }
+								is_incapable = no
+								is_female = yes
+								is_married = no
+								NOT = { is_close_relative = ROOT }
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1018 } #Regent marries mother or sister
+				modifier = {
+					factor = 0
+					NOT = { age = 3  }
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = regent_marry_mother
+				}
+				modifier = {
+					factor = 0
+					is_ruler = false
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						any_courtier_or_vassal = {
+							has_minor_title = title_regent
+							NOT = { trait = content }
+							is_incapable = no
+							is_female = no
+							is_married = no
+						}
+						any_courtier = {
+							OR = {
+								is_mother = ROOT
+								AND = {
+									sibling = ROOT
+									is_female = yes
+								}
+							}
+							is_married = no
+							age = 12
+							NOT = { age = 40 }
+							is_incapable = no
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					any_courtier_or_vassal = {
+						has_minor_title = title_regent
+						is_female = yes
+					}
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1019 } #Learn how to ride
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = learn_ride
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 6
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1020 } #Interest in local culture
+				modifier = {
+					factor = 0
+					NOT = { age = 8 }
+				}
+				modifier = {
+					factor = 0
+					capital_scope = {
+						culture = ROOT 
+					}
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = learn_local_culture
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1021 } #Interest in local religion
+				modifier = {
+					factor = 0
+					NOT = { age = 12 }
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = learn_local_religion
+				}
+				modifier = {
+					factor = 0
+					capital_scope = {
+						religion = ROOT 
+					}
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1022 } #Trouble making friends
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					trait = gregarious
+				}
+				modifier = {
+					factor = 2
+					trait = shy
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = friend_trouble
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 6
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1023 } #Dealing with loneliness
+				modifier = {
+					factor = 0
+					NOT = { age = 8 }
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = loneliness_trouble
+				}
+				modifier = {
+					factor = 0
+					trait = gregarious
+				}
+				modifier = {
+					factor = 2
+					trait = shy
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 6
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1024 } #Start asserting authority
+				modifier = {
+					factor = 0
+					NOT = { age = 12 }
+				}
+				modifier = {
+					factor = 0
+					is_ruler = false
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = assert_authority
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1025 } #Curb regent's power
+				modifier = {
+					factor = 0
+					NOT = { age = 12 }
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = curb_regent
+				}
+				modifier = {
+					factor = 0
+					is_ruler = false
+				}
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "Zeus" }
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1026 } #Ask for oaths of fealty
+				modifier = {
+					factor = 0
+					NOT = { age = 12 }
+				}
+				modifier = {
+					factor = 0
+					is_ruler = false
+				}
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "Zeus" }
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1027 } #Confront people's poverty
+				modifier = {
+					factor = 0
+					NOT = { age = 8 }
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = confront_poverty
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 6
+				}
+			}
+			10 = {
+				character_event = { id = puer.1028 } #Regent asks for title
+				modifier = {
+					factor = 0
+					NOT = { age = 8 }
+				}
+				modifier = {
+					factor = 0
+					is_ruler = false
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = regent_title
+				}
+				modifier = {
+					factor = 0
+					any_courtier_or_vassal = {
+						has_minor_title = title_regent
+						is_landed = yes
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						num_of_count_titles = 2
+					}
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}			
+			10 = { 
+				character_event = { id = puer.1029 } #Spoiled brat
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = spoiled_brat
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 6
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1030 } #Sibling rivalry
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						any_sibling = {
+							OR = {
+								NOT = { is_rival = ROOT }
+								NOT = { is_friend = ROOT }
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1031 } #Sibling friendship
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						any_sibling = {
+							OR = {
+								NOT = { is_rival = ROOT }
+								NOT = { is_friend = ROOT }
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1032 } #Bastard sibling
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						any_sibling = {
+							OR = {
+								trait = legit_bastard
+								trait = bastard
+							}
+							OR = {
+								NOT = { is_rival = ROOT }
+								NOT = { is_friend = ROOT }
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1033 } #Sibling affectionate
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						any_sibling = {
+							trait = affectionate
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "Zeus" }
+				}
+				modifier = {
+					factor = 0
+					trait = affectionate
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 7
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1034 } #Sibling playful
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						any_sibling = {
+							trait = playful
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "Zeus" }
+				}
+				modifier = {
+					factor = 0
+					trait = playful
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 7
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1035 } #Sibling haughty
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						any_sibling = {
+							trait = haughty
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "Zeus" }
+				}
+				modifier = {
+					factor = 0
+					trait = haughty
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 7
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1036 } #Sibling rowdy
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						any_sibling = {
+							trait = rowdy
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = rowdy
+				}
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "Zeus" }
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 7
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1037 } #Sibling conscientious
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						any_sibling = {
+							trait = conscientious
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = conscientious
+				}
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "Zeus" }
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 7
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1038 } #Sibling fussy
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						any_sibling = {
+							trait = fussy
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = fussy
+				}
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "Zeus" }
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 7
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1039 } #Sibling brooding
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						any_sibling = {
+							trait = brooding
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = brooding
+				}
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "Zeus" }
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 7
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1040 } #Sibling indolent
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						any_sibling = {
+							trait = indolent
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = indolent
+				}
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "Zeus" }
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 7
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1041 } #Sibling willful
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						any_sibling = {
+							trait = willful
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = willful
+				}
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "Zeus" }
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 7
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1042 } #Sibling curious
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						any_sibling = {
+							trait = curious
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = curious
+				}
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "Zeus" }
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 7
+				}
+			}
+			10 = { 
+				character_event = { id = puer.1043 } #Sibling idolizer
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						any_sibling = {
+							trait = idolizer
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = idolizer
+				}
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "Zeus" }
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 7
+				}
+			}
+			10 = {
+				character_event = { id = puer.1044 } #Sibling timid
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						any_sibling = {
+							trait = timid
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = timid
+				}
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "Zeus" }
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 7
+				}
+			}
+			10 = {
+				character_event = { id = puer.1045 } #Carnival events
+				modifier = {
+					factor = 0
+					NOT = { age = 8 }
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = child_carnival
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 6
+				}
+				modifier = {
+					factor = 0
+					ai = yes
+				}
+			}
+			10 = {
+				character_event = { id = puer.1046 } #Really rule?
+				modifier = {
+					factor = 0
+					NOT = { age = 12 }
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = really_rule
+				}
+				modifier = {
+					factor = 0
+					trait = ambitious
+				}
+				modifier = {
+					factor = 0
+					is_ruler = false
+				}
+				modifier = {
+					factor = 2
+					trait = content
+				}
+				modifier = {
+					factor = 0
+					ai = yes
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}
+			10 = {
+				character_event = { id = puer.1047 } #No grow
+				modifier = {
+					factor = 0
+					NOT = { age = 12 }
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = no_grow
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 6
+				}
+			}
+			10 = {
+				character_event = { id = puer.1048 } #Imaginary friend
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					age = 12
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = imaginary_friend
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 6
+				}
+			}
+			10 = {
+				character_event = { id = puer.1049 } #Teddy bear
+				modifier = {
+					factor = 0
+					NOT = { age = 8 }
+				}
+				modifier = {
+					factor = 0
+					age = 12
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = teddy_bear
+				}
+				modifier = {
+					factor = 0
+					num_of_traits = 6
+				}
+			}
+			10 = {
+				character_event = { id = puer.1050 } #Friendship to love
+				modifier = {
+					factor = 0
+					NOT = { age = 12 }
+				}
+				modifier = {
+					factor = 0
+					NOT = { 
+						any_courtier = {
+							is_friend = ROOT
+							NOT = { is_lover = ROOT }
+							age = 12
+							NOT = { age = 16 }
+							NOT = { sibling = ROOT }
+						}
+					}
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}
+			10 = {
+				character_event = { id = puer.1051 } #Dealing with deformity
+				modifier = {
+					factor = 0
+					NOT = { age = 3 }
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = dealing_deformity
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						OR = {
+							trait = clubfooted
+							trait = dwarf
+							trait = harelip
+							trait = hunchback
+							trait = lisp
+							trait = stutter
+							trait = ugly
+							trait = weak
+						}
+					}
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}
+			10 = {
+				character_event = { id = puer.1052 } #Dealing with mental impairment
+				modifier = {
+					factor = 0
+					NOT = { age = 8 }
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = dealing_deficiency
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						OR = {
+							trait = imbecile
+							trait = slow
+						}
+					}
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}
+			10 = {
+				character_event = { id = puer.1053 } #Dealing with fairness
+				modifier = {
+					factor = 0
+					NOT = { age = 12 }
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = dealing_fairness
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						OR = {
+							trait = fair
+							trait = strong
+						}
+					}
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}
+			10 = {
+				character_event = { id = puer.1054 } #Dealing with talent
+				modifier = {
+					factor = 0
+					NOT = { age = 12 }
+				}
+				modifier = {
+					factor = 0
+					has_character_flag = dealing_talent
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						OR = {
+							trait = quick
+							trait = genius
+						}
+					}
+				}
+				modifier = {
+					factor = 2.3
+					num_of_traits = 6 
+					NOT = { num_of_traits = 7 }
+				}
+				modifier = {
+					factor = 38
+					num_of_traits = 7 
+					NOT = { num_of_traits = 8 }
+				}
+				modifier = {
+					factor = 50
+					num_of_traits = 8 
+					NOT = { num_of_traits = 9 }
+				}
+			}
+		}
+		if = {
+			limit = { has_character_flag = new_puer_cycle }
+			clr_character_flag = new_puer_cycle
+			set_character_flag = puer_cycle
+		}		
+		if = {
+			limit = { 
+				age = 12
+				NOT = { has_character_flag = puer_cycle }
+				ai = no
+			}
+			random_list = {
+				10 = { 
+					character_event = { id = puer.1000 months = 12 random = 6 }
+					set_character_flag = new_puer_cycle
+				}
+				10 = {}
+			}
+		}
+		if = {
+			limit = {
+				age = 8
+				NOT = { age = 12 }
+				NOT = { has_character_flag = puer_cycle }
+				ai = no
+			}
+			random_list = {
+				10 = { 
+					character_event = { id = puer.1000 months = 12 random = 6 }
+					set_character_flag = new_puer_cycle
+				}
+				20 = {}
+			}
+		}
+		if = {
+			limit = {
+				age = 3
+				NOT = { age = 8 }
+				NOT = { has_character_flag = puer_cycle }
+				ai = no
+			}
+			random_list = {
+				10 = { 
+					character_event = { id = puer.1000 months = 12 random = 6 }
+					set_character_flag = new_puer_cycle
+				}
+				30 = {}
+			}
+		}
+		clr_character_flag = puer_cycle
+	}
+}
+
+#Childhood romance
+character_event = {
+    id = puer.1001
+    desc = EVTDESC_puer.1001
+    picture = "GFX_evt_lovers"
+
+    is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			1 = { 
+				modifier = {
+					factor = 0
+					NOT = { culture = irish }
+				}
+				modifier = {
+					factor = 0
+					is_female = yes
+				}
+				set_character_flag = child_cassie
+			}
+			99 = {}
+		}
+		if = {
+			limit = {
+				any_courtier = {
+					is_opposite_sex = ROOT
+					age = 12
+					NOT = { age = 16 }
+					NOT = { sibling = ROOT }
+				}
+			}
+			random_courtier = {
+				limit = {
+					is_opposite_sex = ROOT
+					age = 12
+					NOT = { age = 16 }
+					NOT = { sibling = ROOT }
+				}
+				save_event_target_as = chosen_child
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_courtier = {
+						is_opposite_sex = ROOT
+						age = 12
+						NOT = { age = 16 }
+						NOT = { sibling = ROOT }
+					}
+				}
+			}
+			if = { 
+				limit = { 
+					ROOT = { is_female = no }
+					NOT = { has_character_flag = child_cassie }
+				}
+				create_character = {
+					age = 12
+					random_traits = yes
+					female = yes
+					trait = fair
+				}
+			}
+			if = { 
+				limit = { 
+					ROOT = { is_female = no }
+					has_character_flag = child_cassie
+				}
+				create_character = {
+					age = 12
+					female = yes
+					name = Cassie
+					attributes = {
+						diplomacy = 2 
+						martial = 11
+						stewardship = 10 
+						learning = 5
+					}
+					trait = lustful
+					trait = diligent
+					trait = gregarious
+					trait = fair
+					culture = irish
+					dynasty = 123456790
+					dna="aehc00ccfb0"
+				}
+				clr_character_flag = child_cassie
+			}
+			if = { 
+				limit = { ROOT = { is_female = yes }}
+				create_character = {
+					age = 15
+					random_traits = yes
+					female = no
+					trait = fair
+				}
+			}
+			new_character = { 
+				save_event_target_as = chosen_child
+				set_character_flag = was_created
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1001 #I want to marry him/her
+		event_target:chosen_child = {
+			add_betrothal = ROOT #Check, apparently it's buggy
+		}
+		random_list = {
+			60 = {
+				add_trait = honest
+			}
+			40 = {
+				add_trait = kind
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1001 #We can meet in secret
+		event_target:chosen_child = {
+			add_lover = ROOT
+		}
+		random_list = {
+			60 = {
+				add_trait = deceitful
+			}
+			40 = {
+				add_trait = lustful
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_puer.1001 #I'm sorry, I can't
+		hidden_tooltip = {
+			event_target:chosen_child = { 
+				character_event = { id = puer.1002 }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = honest
+			}
+			40 = {
+				add_trait = proud
+			}
+		}
+	}
+}
+
+#Unwanted death
+character_event = {
+	id = puer.1002
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_character_flag = was_created
+	}
+	immediate = {
+		death = {
+			death_reason = death_missing
+		}
+	}
+}
+
+#Dyslexia
+character_event = {
+    id = puer.1003
+    desc = EVTDESC_puer.1003
+    picture = "GFX_evt_child_reading"
+
+    is_triggered_only = yes
+	immediate = { set_character_flag = dyslexia }
+	option = {
+		name = EVTOPTA_puer.1003 #I really want to read
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+			ai = no
+		}
+		random_list = {
+			60 = {
+				add_trait = curious
+			}
+			40 = {
+				add_trait = feeble
+			}
+		}
+		change_learning = -1
+	}
+	option = {
+		name = EVTOPTB_puer.1003 #I don't care enough to try
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = fussy
+			}
+			40 = {
+				add_trait = indolent
+			}
+		}
+		change_learning = -1
+	}
+	option = {
+		name = EVTOPTA_puer.1003 #I really want to read
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+			ai = no
+		}
+		random_list = {
+			60 = {
+				add_trait = erudite
+			}
+			40 = {
+				add_trait = feeble
+			}
+		}
+		change_learning = -1
+	}
+	option = {
+		name = EVTOPTB_puer.1003 #I don't care enough to try
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = stubborn
+			}
+			40 = {
+				add_trait = slothful
+			}
+		}
+		change_learning = -1
+	}
+}
+
+#Reading skill
+character_event = {
+    id = puer.1004
+    desc = EVTDESC_puer.1004
+    picture = "GFX_evt_child_reading"
+
+    is_triggered_only = yes
+	immediate = { set_character_flag = reading_skill }
+	option = {
+		name = EVTOPTA_puer.1004 #I wanna read all day
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = curious
+			}
+			40 = {
+				add_trait = idolizer
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1004 #It's nice but I'd rather play outside
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = playful
+			}
+			40 = {
+				add_trait = rowdy
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1004 #I wanna read all day
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = erudite
+			}
+			40 = {
+				add_trait = chaste
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1004 #It's nice but I'd rather play outside
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = gregarious
+			}
+			40 = {
+				add_trait = lustful
+			}
+		}
+	}
+}
+
+#Play war
+character_event = {
+    id = puer.1005
+    desc = EVTDESC_puer.1005
+    picture = "GFX_evt_child_sword"
+
+    is_triggered_only = yes
+	immediate = { set_character_flag = reading_skill }
+	option = {
+		name = EVTOPTA_puer.1005 #This is fun!
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		add_trait = playful
+	}
+	option = {
+		name = EVTOPTB_puer.1005 #I'll show everyone who is boss
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = rowdy
+			}
+			40 = {
+				add_trait = haughty
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1005 #This is fun!
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = kind
+			}
+			40 = {
+				add_trait = gregarious
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1005 #I'll show everyone who is boss
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = proud
+			}
+			40 = {
+				add_trait = cruel
+			}
+		}
+	}
+}
+
+#Play physician
+character_event = {
+    id = puer.1006
+    desc = EVTDESC_puer.1006
+    picture = "GFX_evt_children_talking"
+
+    is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				any_courtier = {
+					is_opposite_sex = ROOT
+					age = 8
+					NOT = { age = 12 }
+				}
+			}
+			random_courtier = {
+				limit = {
+					is_opposite_sex = ROOT
+					age = 8
+					NOT = { age = 12 }
+				}
+				save_event_target_as = chosen_child
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_courtier = {
+						is_opposite_sex = ROOT
+						age = 8
+						NOT = { age = 12 }
+					}
+				}
+			}
+			if = { 
+				limit = { ROOT = { is_female = no }}
+				create_character = {
+					age = 8
+					random_traits = yes
+					female = yes
+					trait = fair
+				}
+			}
+			if = { 
+				limit = { ROOT = { is_female = yes }}
+				create_character = {
+					age = 10
+					random_traits = yes
+					female = no
+					trait = fair
+				}
+			}
+			new_character = { 
+				save_event_target_as = chosen_child
+				set_character_flag = was_created
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1006 #Oh that's interesting
+		trigger = {
+			has_dlc = "Zeus"
+		}
+		event_target:chosen_child = {
+			add_friend = ROOT 
+		}
+		add_trait = curious
+	}
+	option = {
+		name = EVTOPTB_puer.1006 #Nope nope
+		trigger = {
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = timid
+			}
+			40 = {
+				add_trait = homosexual
+			}
+		}
+		hidden_tooltip = {
+			event_target:chosen_child = { 
+				character_event = { id = puer.1002 }
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1006 #Oh that's interesting
+		trigger = {
+			NOT = { has_dlc = "Zeus" }
+		}
+		event_target:chosen_child = {
+			add_friend = ROOT 
+		}
+		random_list = {
+			60 = {
+				add_trait = lustful
+			}
+			40 = {
+				add_trait = gregarious
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1006 #Nope nope
+		trigger = {
+			NOT = { has_dlc = "Zeus" }
+		}
+		random_list = {
+			60 = {
+				add_trait = shy
+			}
+			40 = {
+				add_trait = homosexual
+			}
+		}
+		hidden_tooltip = {
+			event_target:chosen_child = { 
+				character_event = { id = puer.1002 }
+			}
+		}
+	}
+}
+
+#Death of friend
+character_event = {
+    id = puer.1007
+    desc = EVTDESC_puer.1007
+    picture = "GFX_evt_death"
+
+    is_triggered_only = yes
+	option = {
+		name = EVTOPTA_puer.1007 #Everything is terrible
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		add_trait = brooding
+	}
+	option = {
+		name = EVTOPTB_puer.1007 #I'm sure they're in a better place
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		add_trait = idolizer
+	}
+	option = {
+		name = EVTOPTA_puer.1007 #Everything is terrible
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = cynical
+			}
+			40 = {
+				add_trait = wroth
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1007 #I'm sure they're in a better place
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = zealous
+			}
+			40 = {
+				add_trait = content
+			}
+		}
+	}
+}
+
+#Childhood illness
+character_event = {
+    id = puer.1008
+    desc = EVTDESC_puer.1008
+    picture = "GFX_evt_illness"
+
+    is_triggered_only = yes
+	immediate = {
+		set_character_flag = childhood_illness
+	}
+	option = {
+		name = EVTOPTA_puer.1008 #Stay inside and recover
+		trigger = {
+			ai = no
+		}
+		random_list = {
+			30 = {
+				add_trait = feeble
+			}
+			70 = {
+				health = -1
+			}
+		}
+		
+	}
+	option = {
+		name = EVTOPTB_puer.1008 #Try get out and about
+		random_list = {
+			50 = {
+				
+			}
+			50 = {
+				health = -2
+			}
+		}
+	}
+}
+
+#Childhood idol
+character_event = {
+    id = puer.1009
+    desc = EVTDESC_puer.1009
+    picture = "GFX_evt_child_reading"
+
+    is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = childhood_idol
+	}
+	option = {
+		name = EVTOPTA_puer.1009 #Great statesman
+		change_diplomacy = 1
+		change_stewardship = 1
+		
+	}
+	option = {
+		name = EVTOPTB_puer.1009 #Great conqueror
+		change_martial = 2
+	}
+	option = {
+		name = EVTOPTC_puer.1009 #Great philosopher
+		change_learning = 2
+	}
+	option = {
+		name = EVTOPTD_puer.1009 #Great lover
+		change_intrigue = 2
+	}
+}
+
+#Play lord
+character_event = {
+    id = puer.1010
+    desc = EVTDESC_puer.1010
+    picture = "GFX_evt_children_talking"
+
+    is_triggered_only = yes
+	option = {
+		name = EVTOPTA_puer.1010 #Punish him
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = conscientious
+			}
+			40 = {
+				add_trait = fussy
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1010 #Let him off
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = affectionate
+			}
+			40 = {
+				add_trait = indolent
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1010 #Punish him
+		trigger = {
+			NOT = { has_dlc = "Zeus" }
+		}
+		random_list = {
+			60 = {
+				add_trait = just
+			}
+			40 = {
+				add_trait = stubborn
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1010 #Let him off
+		trigger = {
+			NOT = { has_dlc = "Zeus" }
+		}
+		random_list = {
+			60 = {
+				add_trait = kind
+			}
+			40 = {
+				add_trait = arbitrary
+			}
+		}
+	}
+}
+
+#Childhood pet
+character_event = {
+    id = puer.1011
+    desc = EVTDESC_puer.1011
+    picture = "GFX_evt_child_play"
+
+    is_triggered_only = yes
+	immediate = {
+		set_character_flag = childhood_pet
+	}
+	option = {
+		name = EVTOPTA_puer.1011 #Cat
+		add_character_modifier = { modifier = child_cat duration = -1 } #Modifiers don't have right icon for ck2+, see what happens
+		character_event = { id = puer.1012 years = 12 random = 6 }
+	}
+	option = {
+		name = EVTOPTB_puer.1011 #Dog
+		add_character_modifier = { modifier = child_dog duration = -1 } #Check if modifiers have indefinite length and if so then do the same for tutors
+		character_event = { id = puer.1012 years = 10 random = 5 }
+	}
+	option = {
+		name = EVTOPTC_puer.1011 #Songbird
+		add_character_modifier = { modifier = child_songbird duration = -1 }
+		character_event = { id = puer.1012 years = 5 random = 2 }
+	}
+}
+
+#Childhood pet dies
+character_event = {
+    id = puer.1012
+    desc = EVTDESC_puer.1012
+    picture = "GFX_evt_children_talking"
+    is_triggered_only = yes
+	
+	immediate = {
+		remove_character_modifier = child_cat
+		remove_character_modifier = child_dog
+		remove_character_modifier = child_songbird
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1012 #Sigh
+	}
+}
+
+#Is bully
+character_event = {
+    id = puer.1013
+    desc = EVTDESC_puer.1013
+    picture = "GFX_evt_child_bully"
+    is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = is_bully
+	}
+	option = {
+		name = EVTOPTA_puer.1013 #I'm king of the playground!
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = rowdy
+			}
+			40 = {
+				add_trait = willful
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1013 #Should I be doing this?
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = affectionate
+			}
+			40 = {
+				add_trait = conscientious
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1013 #I'm king of the playground!
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = proud
+			}
+			40 = {
+				add_trait = robust
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1013 #Should I be doing this?
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = kind
+			}
+			40 = {
+				add_trait = temperate
+			}
+		}
+	}
+}
+
+#Has bully
+character_event = {
+    id = puer.1014
+    desc = EVTDESC_puer.1014
+    picture = "GFX_evt_child_bully"
+    is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				any_courtier = {
+					age = 8
+					NOT = { age = 16 }
+					NOT = { trait = kind }
+					NOT = { trait = affectionate }
+				}
+			}
+			random_courtier = {
+				limit = {
+					age = 8
+					NOT = { age = 16 }
+					NOT = { trait = kind }
+					NOT = { trait = affectionate }
+				}
+				save_event_target_as = chosen_child
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_courtier = {
+						age = 8
+						NOT = { age = 16 }
+						NOT = { trait = kind }
+						NOT = { trait = affectionate }
+					}
+				}
+			}
+			create_character = {
+				age = 12
+				random_traits = yes
+				female = no
+			}
+			new_character = { 
+				save_event_target_as = chosen_child
+				set_character_flag = was_created
+				remove_trait = kind
+				remove_trait = affectionate
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1014 #Fight back
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		add_rival = event_target:chosen_child 
+		random_list = {
+			60 = {
+				add_trait = willful
+			}
+			40 = {
+				add_trait = wounded
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1014 #No, it's dangerous
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		add_rival = event_target:chosen_child 
+		random_list = {
+			60 = {
+				add_trait = timid
+			}
+			40 = {
+				add_trait = brooding
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1014  #Fight back
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		add_rival = event_target:chosen_child 
+		random_list = {
+			60 = {
+				add_trait = brave
+			}
+			40 = {
+				add_trait = wounded
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1014 #No, it's dangerous
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		add_rival = event_target:chosen_child 
+		random_list = {
+			60 = {
+				add_trait = shy
+			}
+			40 = {
+				add_trait = craven
+			}
+		}
+	}
+}
+
+#Regent teaches governance
+character_event = {
+    id = puer.1015
+    desc = EVTDESC_puer.1015
+    picture = "GFX_evt_guardian"
+
+    is_triggered_only = yes
+	immediate = {
+		set_character_flag = regent_governance
+	}
+	option = {
+		name = EVTOPTA_puer.1015 #Interesting
+		random_list = {
+			45 = {
+				add_trait = temperate
+			}
+			30 = {
+				add_trait = shy
+			}
+			25 = {
+				add_trait = patient
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1015 #I'd rather do something outside
+		random_list = {
+			45 = {
+				add_trait = gregarious
+			}
+			30 = {
+				add_trait = brave
+			}
+			25 = {
+				add_trait = content
+			}
+		}
+	}
+}
+
+#Regent stops from learning governance
+character_event = {
+    id = puer.1016
+    desc = EVTDESC_puer.1016
+    picture = "GFX_evt_guardian"
+
+    is_triggered_only = yes
+	immediate = {
+		set_character_flag = regent_stop_learning
+	}
+	option = {
+		name = EVTOPTA_puer.1016 #Ok, I'll just do other things
+		random_list = {
+			45 = {
+				add_trait = gregarious
+			}
+			30 = {
+				add_trait = arbitrary
+			}
+			25 = {
+				add_trait = robust
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1016 #I'll study hidden
+		random_list = {
+			45 = {
+				add_trait = deceitful
+			}
+			30 = {
+				add_trait = temperate
+			}
+			25 = {
+				add_trait = shy
+			}
+		}
+	}
+}
+
+#Regent attempts to betrothe daughter
+character_event = {
+    id = puer.1017
+    desc = EVTDESC_puer.1017
+    picture = "GFX_evt_guardian"
+
+    is_triggered_only = yes
+	immediate = {
+		set_character_flag = regent_betrothe_child
+		random_courtier_or_vassal = {
+			limit = { has_minor_title = title_regent }
+			random_child = {
+				limit = {
+					age = 8
+					NOT = { age = 40 }
+					is_incapable = no
+					is_female = yes
+					is_married = no
+					NOT = { is_close_relative = ROOT }
+				}
+				save_event_target_as = betrothed_regent
+			}
+			save_event_target_as = regent_parent
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1017 #Sure, they seem nice
+		event_target:betrothed_regent = {
+			add_betrothal = ROOT #Check, apparently it's buggy
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1017 #You're not the boss of me 
+		hidden_tooltip = {
+			random_list = {
+				70 = {
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						has_dlc = "Reapers"
+					}
+					modifier = {
+						factor = 2
+						event_target:regent_parent = {
+							OR = {
+								trait = deceitful
+								trait = cruel
+								trait = wroth
+								trait = impaler
+								trait = greedy
+								trait = envious
+								trait = arbitrary
+								trait = paranoid
+							}
+						}
+					}
+					modifier = {
+						factor = 0.5
+						event_target:regent_parent = {
+							OR = {
+								trait = honest
+								trait = kind
+								trait = trusting
+								trait = just
+								trait = charitable
+							}
+						}
+					}
+					add_trait = food_poisoning
+				}	
+				30 = {
+					modifier = {
+						factor = 0
+						NOT = { has_dlc = "Reapers" }
+					}
+					modifier = {
+						factor = 2
+						event_target:regent_parent = {
+							OR = {
+								trait = deceitful
+								trait = cruel
+								trait = wroth
+								trait = impaler
+								trait = greedy
+								trait = envious
+								trait = arbitrary
+								trait = paranoid
+							}
+						}
+					}
+					modifier = {
+						factor = 0.5
+						event_target:regent_parent = {
+							OR = {
+								trait = honest
+								trait = kind
+								trait = trusting
+								trait = just
+								trait = charitable
+							}
+						}
+					} 
+					set_character_flag = got_food_poisoning
+					character_event = { id = RIP.5023 days = 6 random = 6 }
+				}
+			}
+		}
+		event_target:regent_parent = {
+			opinion = {
+				modifier = insulted
+				who = ROOT
+				years = 5
+			}		
+		}
+	}
+}
+
+#Regent attempts to marry mother or sister
+character_event = {
+    id = puer.1018
+    desc = EVTDESC_puer.1018
+    picture = "GFX_evt_guardian"
+
+    is_triggered_only = yes
+	immediate = {
+		set_character_flag = regent_marry_mother
+		random_courtier_or_vassal = {
+			limit = { has_minor_title = title_regent }
+			save_event_target_as = regent_spouse
+		}
+		random_courtier = {
+			limit = {
+				OR = {
+					is_mother = ROOT
+					AND = {
+						sibling = ROOT
+						is_female = yes
+					}
+				}
+				is_married = no
+				age = 12
+				NOT = { age = 40 }
+				is_incapable = no
+			}
+			save_event_target_as = relative_spouse
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1018 #A fine union
+		event_target:relative_spouse = {
+			add_betrothal = event_target:regent_spouse
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1018 #You're not the boss of me 
+		hidden_tooltip = {
+			random_list = {
+				70 = {
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						has_dlc = "Reapers"
+					}
+					modifier = {
+						factor = 2
+						event_target:regent_spouse = {
+							OR = {
+								trait = deceitful
+								trait = cruel
+								trait = wroth
+								trait = impaler
+								trait = greedy
+								trait = envious
+								trait = arbitrary
+								trait = paranoid
+							}
+						}
+					}
+					modifier = {
+						factor = 0.5
+						event_target:regent_spouse = {
+							OR = {
+								trait = honest
+								trait = kind
+								trait = trusting
+								trait = just
+								trait = charitable
+							}
+						}
+					}
+					add_trait = food_poisoning
+				}	
+				30 = {
+					modifier = {
+						factor = 0
+						NOT = { has_dlc = "Reapers" }
+					}
+					modifier = {
+						factor = 2
+						event_target:regent_spouse = {
+							OR = {
+								trait = deceitful
+								trait = cruel
+								trait = wroth
+								trait = impaler
+								trait = greedy
+								trait = envious
+								trait = arbitrary
+								trait = paranoid
+							}
+						}
+					}
+					modifier = {
+						factor = 0.5
+						event_target:regent_spouse = {
+							OR = {
+								trait = honest
+								trait = kind
+								trait = trusting
+								trait = just
+								trait = charitable
+							}
+						}
+					}
+					set_character_flag = got_food_poisoning
+					character_event = { id = RIP.5023 days = 6 random = 6 }
+				}
+			}
+		}
+		event_target:regent_spouse = {
+			opinion = {
+				modifier = insulted
+				who = ROOT
+				years = 5
+			}		
+		}
+	}
+}
+
+#Learn to ride
+character_event = {
+    id = puer.1019
+    desc = EVTDESC_puer.1019
+    picture = "GFX_evt_guardian"
+
+    is_triggered_only = yes
+	immediate = {
+		set_character_flag = learn_ride
+	}
+	option = {
+		name = EVTOPTA_puer.1019 #I wanna go real fast
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = playful
+			}
+			30 = {
+				add_trait = rowdy
+			}
+			10 = {
+				add_trait = wounded
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1019 #Slow and steady
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = conscientious
+			}
+			40 = {
+				add_trait = timid
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1019  #I wanna go real fast
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = brave
+			}
+			30 = {
+				add_trait = proud
+			}
+			10 = {
+				add_trait = wounded
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1019 #Slow and steady
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = temperate
+			}
+			40 = {
+				add_trait = craven
+			}
+		}
+	}
+}
+
+#Interest in local culture
+character_event = {
+    id = puer.1020
+    desc = EVTDESC_puer.1020
+    picture = "GFX_evt_guardian"
+
+    is_triggered_only = yes
+	immediate = {
+		set_character_flag = learn_local_culture
+	}
+	option = {
+		name = EVTOPTA_puer.1020 #I like these customs
+		culture = capital_scope
+	}
+	option = {
+		name = EVTOPTB_puer.1020 #Mine are better
+	}
+}
+
+#Interest in local religon
+character_event = {
+    id = puer.1021
+    desc = EVTDESC_puer.1021
+    picture = "GFX_evt_guardian"
+
+    is_triggered_only = yes
+	immediate = {
+		set_character_flag = learn_local_religion
+	}
+	option = {
+		name = EVTOPTA_puer.1021 #I like these customs
+		religion = capital_scope
+	}
+	option = {
+		name = EVTOPTB_puer.1021 #Mine are better
+	}
+}
+
+#Trouble making friends
+character_event = {
+    id = puer.1022
+    desc = EVTDESC_puer.1022
+    picture = "GFX_evt_child_bully"
+
+    is_triggered_only = yes
+	immediate = {
+		set_character_flag = friend_trouble
+	}
+	option = {
+		name = EVTOPTA_puer.1022 #Who needs them anyway
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = haughty
+			}
+			40 = {
+				add_trait = brooding
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1022 #I'll try push through it 
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = affectionate
+			}
+			40 = {
+				add_trait = playful
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1022  #Who needs them anyway
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = proud
+			}
+			40 = {
+				add_trait = paranoid
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1022 #I'll try push through it 
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = trusting
+			}
+			40 = {
+				add_trait = gregarious
+			}
+		}
+	}
+}
+
+
+#Dealing with loneliness
+character_event = {
+    id = puer.1023
+    desc = EVTDESC_puer.1023
+    picture = "GFX_evt_child_bully"
+
+    is_triggered_only = yes
+	immediate = {
+		set_character_flag = loneliness_trouble
+	}
+	option = {
+		name = EVTOPTA_puer.1023 #Close in
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = brooding
+			}
+			40 = {
+				add_trait = timid
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1023 #Reach out
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = willful
+			}
+			40 = {
+				add_trait = affectionate
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1023  #Close in
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = erudite
+			}
+			40 = {
+				add_trait = shy
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1023 #Reach out
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = gregarious
+			}
+			40 = {
+				add_trait = trusting
+			}
+		}
+	}
+}
+
+
+#Start asserting authority
+character_event = {
+    id = puer.1024
+    desc = EVTDESC_puer.1024
+    picture = "GFX_evt_guardian"
+    is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = assert_authority
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1024 #I will charm them 
+		random_list = {
+			60 = {
+				add_trait = gregarious
+			}
+			40 = {
+				add_trait = proud
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1024 #I need more preparation
+		random_list = {
+			60 = {
+				add_trait = just
+			}
+			40 = {
+				add_trait = humble
+			}
+		}
+	}
+}
+
+#Curb regent's power
+character_event = {
+    id = puer.1025
+    desc = EVTDESC_puer.1025
+    picture = "GFX_evt_guardian"
+
+    is_triggered_only = yes
+	immediate = {
+		set_character_flag = curb_regent
+		random_courtier_or_vassal = {
+			limit = {
+				has_minor_title = title_regent
+			}
+			save_event_target_as = curbed_regent
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1025 #I rule now
+		random_list = {
+			60 = {
+				add_trait = proud
+			}
+			40 = {
+				add_trait = arbitrary
+			}
+		}
+		event_target:curbed_regent = {
+			reverse_add_favor = ROOT #Check if it's given to the correct person
+			opinion = {
+				modifier = insulted
+				who = ROOT
+				years = 5
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1025 #You've actually been doing a good job
+		random_list = {
+			60 = {
+				add_trait = just
+			}
+			40 = {
+				add_trait = humble
+			}
+		}
+		event_target:curbed_regent = {
+			opinion = {
+				modifier = opinion_grateful
+				who = ROOT
+				years = 5
+			}
+		}
+	}
+}
+
+
+#Curb lords' power
+character_event = {
+    id = puer.1026
+    desc = EVTDESC_puer.1026
+    picture = "GFX_evt_guardian"
+
+    is_triggered_only = yes
+	immediate = {
+		random_vassal = {
+			limit = {
+				is_powerful_vassal = yes
+			}
+			save_event_target_as = curbed_vassal
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1026 #I rule now
+		random_list = {
+			60 = {
+				add_trait = proud
+			}
+			40 = {
+				add_trait = arbitrary
+			}
+		}
+		event_target:curbed_vassal = {
+			reverse_add_favor = ROOT #Check if it's given to the correct person
+			opinion = {
+				modifier = insulted
+				who = ROOT
+				years = 5
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1026 #You've actually been doing a good job
+		random_list = {
+			60 = {
+				add_trait = just
+			}
+			40 = {
+				add_trait = humble
+			}
+		}
+		event_target:curbed_vassal = {
+			opinion = {
+				modifier = opinion_grateful
+				who = ROOT
+				years = 5
+			}
+		}
+	}
+}
+
+#Dealing with poverty
+character_event = {
+    id = puer.1027
+    desc = EVTDESC_puer.1027
+    picture = "GFX_evt_child_bully"
+
+    is_triggered_only = yes
+	immediate = {
+		set_character_flag = confront_poverty
+	}
+	option = {
+		name = EVTOPTA_puer.1027 #Help them
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = affectionate
+			}
+			40 = {
+				add_trait = conscientious
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1027 #It's their fault they're poor
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = haughty
+			}
+			40 = {
+				add_trait = fussy
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1027  #Help them
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = charitable
+			}
+			40 = {
+				add_trait = content
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1027 #It's their fault they're poor
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = cynical
+			}
+			40 = {
+				add_trait = greedy
+			}
+		}
+	}
+}
+
+
+#Regent asks for title
+character_event = {
+    id = puer.1028
+    desc = EVTDESC_puer.1028
+    picture = "GFX_evt_guardian"
+
+    is_triggered_only = yes
+	immediate = {
+		set_character_flag = regent_title
+		random_courtier_or_vassal = { 
+			limit = { has_minor_title = title_regent }
+			save_event_target_as = title_regent
+		}
+		ROOT = {
+			random_demesne_title = {
+				limit = { can_be_given_away = yes }
+				save_event_target_as = target_province 
+			}
+		}			
+	}
+	option = {
+		name = EVTOPTA_puer.1028 #Sure!
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = affectionate
+			}
+			40 = {
+				add_trait = timid
+			}
+		}
+		event_target:target_province = {
+			grant_title = event_target:title_regent
+		}
+		event_target:title_regent = {
+			opinion = {
+				modifier = opinion_grateful
+				who = ROOT
+				years = 5
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1028 #No!
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = willful
+			}
+			40 = {
+				add_trait = haughty
+			}
+		}
+		event_target:title_regent = {
+			opinion = {
+				modifier = insulted
+				who = ROOT
+				years = 5
+			}
+		}
+	}	
+	option = {
+		name = EVTOPTA_puer.1028 #Sure!
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = charitable
+			}
+			40 = {
+				add_trait = humble
+			}
+		}
+		event_target:target_province = {
+			grant_title = event_target:title_regent
+		}
+		event_target:title_regent = {
+			opinion = {
+				modifier = opinion_grateful
+				who = ROOT
+				years = 5
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1028 #No!
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = proud
+			}
+			40 = {
+				add_trait = greedy
+			}
+		}
+		event_target:title_regent = {
+			opinion = {
+				modifier = insulted
+				who = ROOT
+				years = 5
+			}
+		}
+	}	
+}
+
+#Spoiled brat
+character_event = {
+    id = puer.1029
+    desc = EVTDESC_puer.1029
+    picture = "GFX_evt_child_bully"
+
+    is_triggered_only = yes
+	immediate = {
+		set_character_flag = spoiled_brat
+	}
+	option = {
+		name = EVTOPTA_puer.1029 #It's all mine
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = haughty
+			}
+			40 = {
+				add_trait = willful
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1029 #Alright, we can share
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = affectionate
+			}
+			40 = {
+				add_trait = timid
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1029 #It's all mine
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = cynical
+			}
+			40 = {
+				add_trait = greedy
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1029 #Alright, we can share
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = kind
+			}
+			40 = {
+				add_trait = charitable
+			}
+		}
+	}
+}
+
+#Sibling rivalry
+character_event = {
+    id = puer.1030
+    desc = EVTDESC_puer.1030
+    picture = "GFX_evt_child_bully"
+
+    is_triggered_only = yes
+	
+	immediate = {
+		random_sibling = {
+			limit = {
+				NOT = { is_rival = ROOT }
+				NOT = { is_friend = ROOT }
+			}
+			save_event_target_as = sibling_rival 
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1030 #Fight me
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = haughty
+			}
+			40 = {
+				add_trait = rowdy
+			}
+		}
+		add_rival = event_target:sibling_rival
+	}
+	option = {
+		name = EVTOPTB_puer.1030 #We can be friends
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = timid
+			}
+			40 = {
+				add_trait = affectionate
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1030 #Fight me
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = wroth
+			}
+			40 = {
+				add_trait = proud
+			}
+		}
+		add_rival = event_target:sibling_rival
+	}
+	option = {
+		name = EVTOPTB_puer.1030 #We can be friends
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = kind
+			}
+			40 = {
+				add_trait = humble
+			}
+		}
+	}
+}
+
+#Sibling friendship
+character_event = {
+    id = puer.1031
+    desc = EVTDESC_puer.1031
+    picture = "GFX_evt_children_talking"
+
+    is_triggered_only = yes
+	
+	immediate = {
+		random_sibling = {
+			limit = {
+				NOT = { is_rival = ROOT }
+				NOT = { is_friend = ROOT }
+			}
+			save_event_target_as = sibling_friend
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1031 #Let's be friends
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = affectionate
+			}
+			40 = {
+				add_trait = playful
+			}
+		}
+		add_friend = event_target:sibling_friend
+	}
+	option = {
+		name = EVTOPTB_puer.1031 #Nah
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = haughty
+			}
+			40 = {
+				add_trait = fussy
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1031 #Let's be friends
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = gregarious
+			}
+			40 = {
+				add_trait = trusting
+			}
+		}
+		add_friend = event_target:sibling_friend
+	}
+	option = {
+		name = EVTOPTB_puer.1031 #Nah
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = proud
+			}
+			40 = {
+				add_trait = paranoid
+			}
+		}
+	}
+}
+
+
+#Bastard sibling
+character_event = {
+    id = puer.1032
+    desc = EVTDESC_puer.1032
+    picture = "GFX_evt_children_talking"
+
+    is_triggered_only = yes
+	
+	immediate = {
+		random_sibling = {
+			limit = {
+				NOT = { is_rival = ROOT }
+				NOT = { is_friend = ROOT }
+				OR = {
+					trait = bastard
+					trait = legit_bastard
+				}
+			}
+			save_event_target_as = bastard_sibling
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1032 #Let's be friends
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = affectionate
+			}
+			40 = {
+				add_trait = playful
+			}
+		}
+		random_list = {
+			50 = { add_friend = event_target:bastard_sibling }
+			50 = {}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1032 #I don't like you
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = haughty
+			}
+			40 = {
+				add_trait = rowdy
+			}
+		}
+		random_list = {
+			50 = { add_rival = event_target:bastard_sibling }
+			50 = {}
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1032 #Let's be friends
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = gregarious
+			}
+			40 = {
+				add_trait = trusting
+			}
+		}
+		random_list = {
+			50 = { add_friend = event_target:bastard_sibling }
+			50 = {}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1032 #Nah
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = wroth
+			}
+			40 = {
+				add_trait = proud
+			}
+		}
+		random_list = {
+			50 = { add_rival = event_target:bastard_sibling }
+			50 = {}
+		}
+	}
+}
+
+
+#Affectionate sibling
+character_event = {
+    id = puer.1033
+    desc = EVTDESC_puer.1033
+    picture = "GFX_evt_children_talking"
+
+    is_triggered_only = yes
+	
+	immediate = {
+		random_sibling = {
+			limit = {
+				trait = affectionate
+			}
+			save_event_target_as = compare_sibling
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1033 #That sounds enjoyable
+		add_trait = affectionate
+		random_list = {
+			10 = { add_friend = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1033 #I don't like this side of you
+		random_list = {
+			10 = {
+				add_trait = brooding
+			}
+			10 = {
+				add_trait = haughty
+			}
+			10 = {
+				add_trait = fussy
+			}
+			10 = {
+				add_trait = willful
+			}
+		}
+		random_list = {
+			10 = { add_rival = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+}
+
+
+#Playful sibling
+character_event = {
+    id = puer.1034
+    desc = EVTDESC_puer.1034
+    picture = "GFX_evt_children_talking"
+
+    is_triggered_only = yes
+	
+	immediate = {
+		random_sibling = {
+			limit = {
+				trait = playful
+			}
+			save_event_target_as = compare_sibling
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1033 #That sounds enjoyable
+		add_trait = playful
+		random_list = {
+			10 = { add_friend = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1033 #I don't like this side of you
+		random_list = {
+			10 = {
+				add_trait = rowdy
+			}
+			10 = {
+				add_trait = timid
+			}
+		}
+		random_list = {
+			10 = { add_rival = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+}
+
+
+#Haughty sibling
+character_event = {
+    id = puer.1035
+    desc = EVTDESC_puer.1035
+    picture = "GFX_evt_children_talking"
+
+    is_triggered_only = yes
+	
+	immediate = {
+		random_sibling = {
+			limit = {
+				trait = haughty
+			}
+			save_event_target_as = compare_sibling
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1033 #That sounds enjoyable
+		add_trait = haughty
+		random_list = {
+			10 = { add_friend = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1033 #I don't like this side of you
+		random_list = {
+			10 = {
+				add_trait = affectionate
+			}
+			10 = {
+				add_trait = brooding
+			}
+			10 = {
+				add_trait = timid
+			}
+		}
+		random_list = {
+			10 = { add_rival = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+}
+
+#Rowdy sibling
+character_event = {
+    id = puer.1036
+    desc = EVTDESC_puer.1036
+    picture = "GFX_evt_children_talking"
+
+    is_triggered_only = yes
+	
+	immediate = {
+		random_sibling = {
+			limit = {
+				trait = rowdy
+			}
+			save_event_target_as = compare_sibling
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1033 #That sounds enjoyable
+		add_trait = rowdy
+		random_list = {
+			10 = { add_friend = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1033 #I don't like this side of you
+		random_list = {
+			10 = {
+				add_trait = playful
+			}
+			10 = {
+				add_trait = curious
+			}
+			10 = {
+				add_trait = idolizer
+			}
+		}
+		random_list = {
+			10 = { add_rival = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+}
+
+#Conscientious sibling
+character_event = {
+    id = puer.1037
+    desc = EVTDESC_puer.1037
+    picture = "GFX_evt_children_talking"
+
+    is_triggered_only = yes
+	
+	immediate = {
+		random_sibling = {
+			limit = {
+				trait = conscientious
+			}
+			save_event_target_as = compare_sibling
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1033 #That sounds enjoyable
+		add_trait = rowdy
+		random_list = {
+			10 = { add_friend = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1033 #I don't like this side of you
+		add_trait = indolent
+		random_list = {
+			10 = { add_rival = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+}
+
+#Fussy sibling
+character_event = {
+    id = puer.1038
+    desc = EVTDESC_puer.1038
+    picture = "GFX_evt_children_talking"
+
+    is_triggered_only = yes
+	
+	immediate = {
+		random_sibling = {
+			limit = {
+				trait = fussy
+			}
+			save_event_target_as = compare_sibling
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1033 #That sounds enjoyable
+		add_trait = fussy
+		random_list = {
+			10 = { add_friend = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1033 #I don't like this side of you
+		random_list = {
+			10 = {
+				add_trait = affectionate
+			}
+			10 = {
+				add_trait = brooding
+			}
+		}
+		random_list = {
+			10 = { add_rival = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+}
+
+#Brooding sibling
+character_event = {
+    id = puer.1039
+    desc = EVTDESC_puer.1039
+    picture = "GFX_evt_children_talking"
+
+    is_triggered_only = yes
+	
+	immediate = {
+		random_sibling = {
+			limit = {
+				trait = brooding
+			}
+			save_event_target_as = compare_sibling
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1033 #That sounds enjoyable
+		add_trait = brooding
+		random_list = {
+			10 = { add_friend = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1033 #I don't like this side of you
+		random_list = {
+			10 = {
+				add_trait = affectionate
+			}
+			10 = {
+				add_trait = haughty
+			}
+			10 = {
+				add_trait = fussy
+			}
+		}
+		random_list = {
+			10 = { add_rival = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+}
+
+#Indolent sibling
+character_event = {
+    id = puer.1040
+    desc = EVTDESC_puer.1040
+    picture = "GFX_evt_children_talking"
+
+    is_triggered_only = yes
+	
+	immediate = {
+		random_sibling = {
+			limit = {
+				trait = indolent
+			}
+			save_event_target_as = compare_sibling
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1033 #That sounds enjoyable
+		add_trait = indolent
+		random_list = {
+			10 = { add_friend = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1033 #I don't like this side of you
+		random_list = {
+			10 = {
+				add_trait = conscientious
+			}
+			10 = {
+				add_trait = fussy
+			}
+		}
+		random_list = {
+			10 = { add_rival = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+}
+
+#Willful sibling
+character_event = {
+    id = puer.1041
+    desc = EVTDESC_puer.1041
+    picture = "GFX_evt_children_talking"
+
+    is_triggered_only = yes
+	
+	immediate = {
+		random_sibling = {
+			limit = {
+				trait = willful
+			}
+			save_event_target_as = compare_sibling
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1033 #That sounds enjoyable
+		add_trait = willful
+		random_list = {
+			10 = { add_friend = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1033 #I don't like this side of you
+		random_list = {
+			10 = {
+				add_trait = affectionate
+			}
+			10 = {
+				add_trait = timid
+			}
+		}
+		random_list = {
+			10 = { add_rival = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+}
+
+#Curious sibling
+character_event = {
+    id = puer.1042
+    desc = EVTDESC_puer.1042
+    picture = "GFX_evt_children_talking"
+
+    is_triggered_only = yes
+	
+	immediate = {
+		random_sibling = {
+			limit = {
+				trait = curious
+			}
+			save_event_target_as = compare_sibling
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1033 #That sounds enjoyable
+		add_trait = curious
+		random_list = {
+			10 = { add_friend = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1033 #I don't like this side of you
+		random_list = {
+			10 = {
+				add_trait = rowdy
+			}
+			10 = {
+				add_trait = idolizer
+			}
+		}
+		random_list = {
+			10 = { add_rival = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+}
+
+#Idolizer sibling
+character_event = {
+    id = puer.1043
+    desc = EVTDESC_puer.1043
+    picture = "GFX_evt_children_talking"
+
+    is_triggered_only = yes
+	
+	immediate = {
+		random_sibling = {
+			limit = {
+				trait = idolizer
+			}
+			save_event_target_as = compare_sibling
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1033 #That sounds enjoyable
+		add_trait = idolizer
+		random_list = {
+			10 = { add_friend = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1033 #I don't like this side of you
+		random_list = {
+			10 = {
+				add_trait = curious
+			}
+			10 = {
+				add_trait = rowdy
+			}
+		}
+		random_list = {
+			10 = { add_rival = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+}
+
+#Timid sibling
+character_event = {
+    id = puer.1044
+    desc = EVTDESC_puer.1044
+    picture = "GFX_evt_children_talking"
+
+    is_triggered_only = yes
+	
+	immediate = {
+		random_sibling = {
+			limit = {
+				trait = timid
+			}
+			save_event_target_as = compare_sibling
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1033 #That sounds enjoyable
+		add_trait = timid
+		random_list = {
+			10 = { add_friend = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1033 #I don't like this side of you
+		random_list = {
+			10 = {
+				add_trait = haughty
+			}
+			10 = {
+				add_trait = playful
+			}
+			10 = {
+				add_trait = willful
+			}
+		}
+		random_list = {
+			10 = { add_rival = event_target:compare_sibling }
+			90 = {}
+		}
+	}
+}
+
+
+#Carnival event
+character_event = {
+    id = puer.1045
+    desc = EVTDESC_puer.1045
+    picture = "GFX_evt_jugglers"
+
+    is_triggered_only = yes
+	immediate = {
+		set_character_flag = child_carnival
+	}
+	option = {
+		name = EVTOPTA_puer.1045 #Woo carnival
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = playful
+			}
+			40 = {
+				add_trait = curious
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1045 #This is dumb
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = brooding
+			}
+			40 = {
+				add_trait = timid
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1045 #Woo carnival
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = gregarious
+			}
+			40 = {
+				add_trait = gluttonous
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1045 #This is dumb
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = cynical
+			}
+			40 = {
+				add_trait = shy
+			}
+		}
+	}
+}
+
+
+#Really rule?
+character_event = {
+    id = puer.1046
+    desc = EVTDESC_puer.1046
+    picture = "GFX_evt_recovery"
+
+    is_triggered_only = yes
+	immediate = {
+		set_character_flag = really_rule
+	}
+	option = {
+		name = EVTOPTA_puer.1046 #It's my duty
+		random_list = {
+			50 = {
+				add_trait = stressed
+			}
+			30 = {
+				add_trait = just
+			}
+			20 = {
+				add_trait = patient
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1046 #I can still enjoy this
+		random_list = {
+			50 = {
+				add_trait = gluttonous
+			}
+			30 = {
+				add_trait = diligent
+			}
+			20 = {
+				add_trait = arbitrary
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_puer.1046 #Ruling means I'm free
+		random_list = {
+			45 = {
+				add_trait = arbitrary
+			}
+			30 = {
+				add_trait = ambitious
+			}
+			25 = {
+				add_trait = slothful
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_puer.1046 #Abdicate
+		abdicate = yes
+	}
+}
+
+
+#No grow
+character_event = {
+    id = puer.1047
+    desc = EVTDESC_puer.1047
+    picture = "GFX_evt_recovery"
+
+    is_triggered_only = yes
+	immediate = {
+		set_character_flag = no_grow
+	}
+	option = {
+		name = EVTOPTA_puer.1047 #I'll try be a child as much as I can
+		random_list = {
+			50 = {
+				add_trait = patient
+			}
+			30 = {
+				add_trait = arbitrary
+			}
+			20 = {
+				add_trait = content
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1047 #I will fight to be all I can
+		random_list = {
+			50 = {
+				add_trait = stressed
+			}
+			25 = {
+				add_trait = ambitious
+			}
+			25 = {
+				add_trait = depressed
+			}
+		}
+	}
+}
+
+
+#Imaginary friend
+character_event = {
+    id = puer.1048
+    desc = EVTDESC_puer.1048
+    picture = "GFX_evt_child_play"
+
+    is_triggered_only = yes
+	immediate = {
+		set_character_flag = imaginary_friend
+	}
+	option = {
+		name = EVTOPTA_puer.1048 #Let's go on adventures
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = playful
+			}
+			40 = {
+				add_trait = idolizer
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1048 #I'm better off with real people
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = affectionate
+			}
+			40 = {
+				add_trait = fussy
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1048  #Let's go on adventures
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = brave
+			}
+			40 = {
+				add_trait = robust
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1048 #I'm better off with real people
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = gregarious
+			}
+			40 = {
+				add_trait = cynical
+			}
+		}
+	}
+}
+
+#Teddy bear
+character_event = {
+    id = puer.1049
+    desc = EVTDESC_puer.1049
+    picture = "GFX_evt_child_play"
+
+    is_triggered_only = yes
+	immediate = {
+		set_character_flag = teddy_bear
+	}
+	option = {
+		name = EVTOPTA_puer.1049 #Keep
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = affectionate
+			}
+			40 = {
+				add_trait = timid
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1049 #Keep hidden
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = fussy
+			}
+			40 = {
+				add_trait = affectionate
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_puer.1049 #I'm big now
+		trigger = {
+			NOT = { age = 12 }
+			has_dlc = "Zeus"
+		}
+		random_list = {
+			60 = {
+				add_trait = conscientious
+			}
+			40 = {
+				add_trait = haughty
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_puer.1049  #Keep
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = kind
+			}
+			40 = {
+				add_trait = shy
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1049 #Keep hidden
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = paranoid
+			}
+			40 = {
+				add_trait = kind
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_puer.1049 #I'm big now
+		trigger = {
+			OR = {
+				age = 12
+				NOT = { has_dlc = "Zeus" }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = cynical
+			}
+			40 = {
+				add_trait = proud
+			}
+		}
+	}
+}
+
+
+#Friend to Lover
+character_event = {
+    id = puer.1050
+    desc = EVTDESC_puer.1050
+    picture = "GFX_evt_lovers"
+
+    is_triggered_only = yes
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_friend = ROOT
+				NOT = { is_lover = ROOT }
+				age = 12
+				NOT = { age = 16 }
+				NOT = { sibling = ROOT }
+			}
+			save_event_target_as = chosen_child
+		}
+		new_character = { 
+			save_event_target_as = chosen_child
+			set_character_flag = was_created
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1050 #Can you feel...
+		trigger = { 
+			event_target:chosen_child = { same_sex = ROOT }
+		}
+		event_target:chosen_child = {
+			add_lover = ROOT
+			add_trait = homosexual
+		}
+		add_trait = homosexual
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1050 #Can you feel...
+		trigger = { 
+			NOT = { event_target:chosen_child = { same_sex = ROOT }}
+		}
+		event_target:chosen_child = {
+			add_lover = ROOT
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_puer.1050 #Eeew no
+	}
+}
+
+
+#Dealing with deformity
+character_event = {
+    id = puer.1051
+    desc = EVTDESC_puer.1051
+    picture = "GFX_evt_child_bully"
+
+    is_triggered_only = yes
+	hide_new = yes
+
+	immediate = {
+		set_character_flag = dealing_deformity
+		if = {
+			limit = {
+				any_courtier = {
+					age = 3
+					NOT = { age = 16 }
+					OR = {
+						trait = clubfooted
+						trait = dwarf
+						trait = harelip
+						trait = hunchback
+						trait = lisp
+						trait = stutter
+						trait = ugly
+						trait = weak
+					}
+				}
+			}
+			random_courtier = {
+				limit = {
+					age = 3
+					NOT = { age = 16 }
+					OR = {
+						trait = clubfooted
+						trait = dwarf
+						trait = harelip
+						trait = hunchback
+						trait = lisp
+						trait = stutter
+						trait = ugly
+						trait = weak
+					}
+				}
+				save_event_target_as = chosen_child
+			}
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+					any_courtier = {
+						age = 3
+						NOT = { age = 16 }
+						OR = {
+							trait = clubfooted
+							trait = dwarf
+							trait = harelip
+							trait = hunchback
+							trait = lisp
+							trait = stutter
+							trait = ugly
+							trait = weak
+						}
+					}
+				}
+			}
+			if = {
+				limit = { trait = clubfooted }
+				create_character = {
+					age = 8
+					random_traits = yes
+					trait = clubfooted
+				}
+			}
+			if = {
+				limit = { trait = dwarf }
+				create_character = {
+					age = 8
+					random_traits = yes
+					trait = dwarf
+				}
+			}
+			if = {
+				limit = { trait = harelip }
+				create_character = {
+					age = 8
+					random_traits = yes
+					trait = harelip
+				}
+			}
+			if = {
+				limit = { trait = hunchback }
+				create_character = {
+					age = 8
+					random_traits = yes
+					trait = hunchback
+				}
+			}
+			if = {
+				limit = { trait = lisp }
+				create_character = {
+					age = 8
+					random_traits = yes
+					trait = lisp
+				}
+			}
+			if = {
+				limit = { trait = stutter }
+				create_character = {
+					age = 8
+					random_traits = yes
+					trait = stutter
+				}
+			}
+			if = {
+				limit = { trait = ugly }
+				create_character = {
+					age = 8
+					random_traits = yes
+					trait = ugly
+				}
+			}
+			if = {
+				limit = { trait = weak }
+				create_character = {
+					age = 8
+					random_traits = yes
+					trait = weak
+				}
+			}
+			new_character = { 
+				save_event_target_as = chosen_child
+				set_character_flag = was_created
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1051 #Try to disguise/fix
+		hidden_tooltip = {
+			event_target:chosen_child = { 
+				character_event = { id = puer.1002 }
+			}
+		}
+		random_list = {
+			60 = {
+				change_diplomacy = 1
+			}
+			40 = {
+				add_trait = gregarious
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1051 #Give no fucks
+		hidden_tooltip = {
+			event_target:chosen_child = { 
+				character_event = { id = puer.1002 }
+			}
+		}
+		random_list = {
+			60 = {
+				change_intrigue = 1 
+			}
+			40 = {
+				add_trait = cynical
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_puer.1051 #Look for similar people
+		event_target:chosen_child = { 
+			add_friend = ROOT
+		}
+	}
+}
+
+#Dealing with mental impairment
+character_event = {
+    id = puer.1052
+    desc = EVTDESC_puer.1052
+    picture = "GFX_evt_child_bully"
+
+    is_triggered_only = yes
+	hide_new = yes
+
+	immediate = {
+		set_character_flag = dealing_deficiency
+		if = {
+			limit = {
+				any_courtier = {
+					age = 8
+					NOT = { age = 16 }
+					OR = {
+						trait = imbecile
+						trait = slow
+					}
+				}
+			}
+			random_courtier = {
+				limit = {
+					age = 8
+					NOT = { age = 16 }
+					OR = {
+						trait = imbecile
+						trait = slow
+					}
+				}
+				save_event_target_as = chosen_child
+			}
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+					any_courtier = {
+						age = 8
+						NOT = { age = 16 }
+						OR = {
+							trait = imbecile
+							trait = slow
+						}
+					}
+				}
+			}
+			if = {
+				limit = { trait = imbecile }
+				create_character = {
+					age = 12
+					random_traits = yes
+					trait = imbecile
+				}
+			}
+			if = {
+				limit = { trait = slow }
+				create_character = {
+					age = 12
+					random_traits = yes
+					trait = slow
+				}
+			}
+			new_character = { 
+				save_event_target_as = chosen_child
+				set_character_flag = was_created
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1052 #Try to disguise/fix
+		hidden_tooltip = {
+			event_target:chosen_child = { 
+				character_event = { id = puer.1002 }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = gregarious
+			}
+			40 = {
+				add_trait = patient
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1052 #Give no fucks
+		hidden_tooltip = {
+			event_target:chosen_child = { 
+				character_event = { id = puer.1002 }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = humble 
+			}
+			40 = {
+				add_trait = content
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_puer.1052 #Look for similar people
+		event_target:chosen_child = { 
+			add_friend = ROOT
+		}
+	}
+}
+
+#Dealing with fairness
+character_event = {
+    id = puer.1053
+    desc = EVTDESC_puer.1053
+    picture = "GFX_evt_children_talking"
+
+    is_triggered_only = yes
+	hide_new = yes
+
+	immediate = {
+		set_character_flag = dealing_fairness
+		if = {
+			limit = {
+				any_courtier = {
+					age = 12
+					NOT = { age = 16 }
+					OR = {
+						trait = fair
+						trait = strong
+					}
+				}
+			}
+			random_courtier = {
+				limit = {
+					age = 12
+					NOT = { age = 16 }
+					OR = {
+						trait = fair
+						trait = strong
+					}
+				}
+				save_event_target_as = chosen_child
+			}
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+					any_courtier = {
+						age = 12
+						NOT = { age = 16 }
+						OR = {
+							trait = fair
+							trait = strong
+						}
+					}
+				}
+			}
+			if = {
+				limit = { trait = fair }
+				create_character = {
+					age = 14
+					random_traits = yes
+					trait = fair
+				}
+			}
+			if = {
+				limit = { trait = strong }
+				create_character = {
+					age = 14
+					random_traits = yes
+					trait = strong
+				}
+			}
+			new_character = { 
+				save_event_target_as = chosen_child
+				set_character_flag = was_created
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1053 #Take advantage
+		hidden_tooltip = {
+			event_target:chosen_child = { 
+				character_event = { id = puer.1002 }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = deceitful
+			}
+			40 = {
+				add_trait = cynical
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1053 #Use ethically
+		hidden_tooltip = {
+			event_target:chosen_child = { 
+				character_event = { id = puer.1002 }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = gregarious 
+			}
+			40 = {
+				add_trait = honest
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_puer.1053 #Look for similar people
+		event_target:chosen_child = { 
+			add_friend = ROOT
+		}
+	}
+}
+
+
+#Dealing with talent
+character_event = {
+    id = puer.1054
+    desc = EVTDESC_puer.1054
+    picture = "GFX_evt_child_reading"
+
+    is_triggered_only = yes
+	hide_new = yes
+
+	immediate = {
+		set_character_flag = dealing_talent
+		if = {
+			limit = {
+				any_courtier = {
+					age = 12
+					NOT = { age = 16 }
+					OR = {
+						trait = quick
+						trait = genius
+					}
+				}
+			}
+			random_courtier = {
+				limit = {
+					age = 12
+					NOT = { age = 16 }
+					OR = {
+						trait = quick
+						trait = genius
+					}
+				}
+				save_event_target_as = chosen_child
+			}
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+					any_courtier = {
+						age = 12
+						NOT = { age = 16 }
+						OR = {
+							trait = quick
+							trait = genius
+						}
+					}
+				}
+			}
+			if = {
+				limit = { trait = quick }
+				create_character = {
+					age = 14
+					random_traits = yes
+					trait = quick
+				}
+			}
+			if = {
+				limit = { trait = genius }
+				create_character = {
+					age = 14
+					random_traits = yes
+					trait = genius
+				}
+			}
+			new_character = { 
+				save_event_target_as = chosen_child
+				set_character_flag = was_created
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_puer.1054 #Take advantage
+		hidden_tooltip = {
+			event_target:chosen_child = { 
+				character_event = { id = puer.1002 }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = deceitful
+			}
+			40 = {
+				add_trait = cynical
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_puer.1054 #Use ethically
+		hidden_tooltip = {
+			event_target:chosen_child = { 
+				character_event = { id = puer.1002 }
+			}
+		}
+		random_list = {
+			60 = {
+				add_trait = erudite 
+			}
+			40 = {
+				add_trait = honest
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_puer.1054 #Look for similar people
+		event_target:chosen_child = { 
+			add_friend = ROOT
+		}
+	}
+}
+
+
+
+#Clearing flags
+character_event = {
+    id = puer.1055
+
+    is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		clr_character_flag = dyslexia
+		clr_character_flag = reading_skill
+		clr_character_flag = childhood_idol
+		clr_character_flag = childhood_pet
+		clr_character_flag = is_bully
+		clr_character_flag = regent_governance
+		clr_character_flag = regent_stop_learning
+		clr_character_flag = regent_betrothe_child
+		clr_character_flag = regent_marry_mother
+		clr_character_flag = learn_ride
+		clr_character_flag = learn_local_culture
+		clr_character_flag = learn_local_religion
+		clr_character_flag = friend_trouble
+		clr_character_flag = loneliness_trouble
+		clr_character_flag = assert_authority
+		clr_character_flag = curb_regent
+		clr_character_flag = confront_poverty
+		clr_character_flag = regent_title
+		clr_character_flag = spoiled_brat
+		clr_character_flag = child_carnival
+		clr_character_flag = really_rule
+		clr_character_flag = no_grow
+		clr_character_flag = teddy_bear
+		clr_character_flag = dealing_deformity
+		clr_character_flag = dealing_deficiency
+		clr_character_flag = dealing_fairness
+		clr_character_flag = dealing_talent
+	}
+}

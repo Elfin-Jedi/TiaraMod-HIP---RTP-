@@ -1,0 +1,52 @@
+opinion_dishonored_me = {
+	opinion = -100
+	months = 1200	# For life
+	prison_reason = yes
+	execute_reason = yes
+	banish_reason = yes
+	crime = yes
+}
+
+opinion_dishonored_close_kin = {
+	opinion = -100
+	months = 1200	# For life
+	prison_reason = yes
+	execute_reason = yes
+	banish_reason = yes
+	crime = yes
+}
+
+opinion_dishonored_kin = {
+	opinion = -10
+	months = 240
+}
+
+opinion_eager_lowborn = {
+	opinion = 10
+	decay = yes
+}
+
+opinion_eager_lowborn_temp = {
+	opinion = 20
+	decay = yes
+}
+
+opinion_my_owner = {
+	opinion = -10
+	years = 100
+	crime = yes
+	obedient = yes
+	stacking = no
+}
+
+opinion_sold_kin_into_slavery = {
+	opinion = -25
+	years = 100
+	prison_reason = yes
+	crime = yes
+}
+
+opinion_received_slave = {
+	opinion = 15
+	months = 12
+}

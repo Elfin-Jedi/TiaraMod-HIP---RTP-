@@ -1,0 +1,96 @@
+namespace = bornthisway_flag
+
+# Adds a character flag to any character with the btw_born_this_way flag and the homosexual trait, so that they can be given the btw_back_in_the_closet flag if they ever lose the trait
+character_event = {
+	id = bornthisway_flag.0
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	has_character_flag = btw_born_this_way
+	
+	trigger = {
+		trait = homosexual
+	}
+	
+	immediate = {
+		set_character_flag = btw_came_out
+	}
+}
+
+# Adds the btw_back_in_the_closet flag when characters with btw_came_out lose the homosexual trait
+character_event = {
+	id = bornthisway_flag.1
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	has_character_flag = btw_came_out
+	
+	trigger = {
+		NOT = { trait = homosexual }
+		NOT = { has_character_flag = btw_back_in_the_closet }
+	}
+	
+	immediate = {
+		set_character_flag = btw_back_in_the_closet
+	}
+}
+
+# Adds a character flag to some characters without the btw_born_this_way flag but with the homosexual trait, so that they can be given the btw_back_in_the_closet flag if they ever lose the trait
+# Triggers are stricter for the sake of efficiency
+character_event = {
+	id = bornthisway_flag.2
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	#only_rulers = yes
+	min_age = 12
+	only_capable = yes
+	
+	trigger = {
+		trait = homosexual
+		NOT = { has_character_flag = btw_born_this_way }
+		NOT = { has_character_flag = btw_came_out }
+		NOT = { has_character_flag = btw_back_in_the_closet }
+		OR = {
+			is_ruler = yes
+			#is_immune_to_pruning = yes		# Disabled because Validator threw up an error and I don't know why - this might be a new condition as of 3.0, but I'm not risking it
+			any_close_relative = { is_ruler = yes }
+			any_spouse = { is_ruler = yes }
+			betrothed = { is_ruler = yes }
+			any_consort = { is_ruler = yes }
+			any_lover = { is_ruler = yes }
+		}
+	}
+	
+	immediate = {
+		random = {			# Randomness is to account for characters who were just experimenting with their sexuality - they don't get the flag
+			chance = 70
+			modifier = {
+				factor = 0.8
+				OR = {
+					trait = lunatic
+					trait = arbitrary
+					trait = hedonist
+					trait = seducer
+					trait = seductress
+				}
+			}
+			modifier = {
+				factor = 1.2
+				OR = {
+					trait = honest
+					any_close_relative = { trait = homosexual }
+					true_father_even_if_dead = { trait = homosexual }
+					any_lover = {
+						trait = homosexual
+						same_sex = ROOT
+					}
+				}
+			}
+			set_character_flag = btw_came_out
+		}
+	}
+}

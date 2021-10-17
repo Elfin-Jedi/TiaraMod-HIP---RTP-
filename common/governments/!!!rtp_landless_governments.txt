@@ -1,0 +1,346 @@
+#####
+#Landless Governments
+#
+#Total = 6
+#####
+
+feudal_governments = {
+	#Landless - Lowborn
+	rtp_lowborn_g = {
+		potential = {
+			ai = no
+			is_patrician = no
+			rtp_is_landless = yes
+			dynasty = 19930
+			NOR = {
+				is_government_potential = rtp_baron_order_g
+				is_government_potential = rtp_landless_order_g
+			}
+		}
+
+		preferred_holdings = {
+			CASTLE
+		}
+
+		allowed_holdings = {
+			CASTLE
+		}
+
+		accepts_liege_governments = {
+			feudal_government
+			muslim_government
+			theocratic_feudal_government
+			order_government
+			rtp_mercenary_g
+
+			merchant_republic_government
+			republic_government
+			rtp_republic_g
+			rtp_privateer_g
+
+			theocracy_government
+			rtp_theocracy_g
+
+			tribal_government
+
+			nomadic_government
+		}
+
+		color = { 0 0 255 }
+
+		court_size_modifier = -15
+		commander_limit = -3
+
+		frame_suffix = "_lowborn"
+		allow_looting = yes
+		free_levies_in_offensive_war = yes
+		allows_matrilineal_marriage = yes
+		uses_bride_price = yes
+		can_create_kingdoms = no
+		can_usurp_kingdoms_and_empires = no
+		can_build_holdings = no
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+		can_demand_religious_conversion = no
+		can_inherit = no
+	}
+
+	#Landless - Noble
+	rtp_noble_g = {
+		potential = {
+			ai = no
+			is_patrician = no
+			rtp_is_landless = yes
+			NOR = {
+				dynasty = 19930
+				is_government_potential = rtp_baron_order_g
+				is_government_potential = rtp_landless_order_g
+			}
+		}
+
+		preferred_holdings = {
+			CASTLE
+		}
+
+		allowed_holdings = {
+			CASTLE
+		}
+
+		accepts_liege_governments = {
+			feudal_government
+			muslim_government
+			theocratic_feudal_government
+			order_government
+			rtp_mercenary_g
+
+			merchant_republic_government
+			republic_government
+			rtp_republic_g
+			rtp_privateer_g
+
+			theocracy_government
+			rtp_theocracy_g
+
+			tribal_government
+
+			nomadic_government
+		}
+		
+		color = { 0 0 255 }
+
+		court_size_modifier = -10
+		commander_limit = -2
+
+		frame_suffix = "_noble"
+		allow_looting = yes
+		free_levies_in_offensive_war = yes
+		allows_matrilineal_marriage = yes
+		uses_bride_price = yes
+		can_create_kingdoms = no
+		can_usurp_kingdoms_and_empires = no
+		can_build_holdings = no
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+		can_demand_religious_conversion = no
+	}
+
+	#Landless - Mercenary
+	rtp_landless_mercenary_g = {
+		potential = {
+			is_patrician = no
+			rtp_is_landless = yes
+			OR = {
+				mercenary = yes
+				rtp_is_mercenary = yes
+			}
+		}
+
+		preferred_holdings = {
+			CASTLE
+		}
+
+		allowed_holdings = {
+			FAMILY_PALACE
+		}
+
+		accepts_liege_governments = {
+			feudal_government
+			muslim_government
+			theocratic_feudal_government
+			order_government
+			rtp_mercenary_g
+
+			merchant_republic_government
+			republic_government
+			rtp_republic_g
+			rtp_privateer_g
+
+			theocracy_government
+			rtp_theocracy_g
+
+			tribal_government
+
+			nomadic_government
+		}
+		
+		color = { 0 0 255 }
+
+		frame_suffix = "_landlessmercenary"
+		title_prefix = "mercenary_"
+		allow_looting = yes
+		free_levies_in_offensive_war = yes
+		court_size_modifier = -10
+		allows_matrilineal_marriage = yes
+		marriage_ignore_religion = yes
+		uses_bride_price = yes
+		can_create_kingdoms = no
+		can_usurp_kingdoms_and_empires = no
+		can_build_holdings = no
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+		can_demand_religious_conversion = no
+		can_inherit = no
+
+		character_modifier = {
+			intrigue = 1
+
+			stewardship = -1
+		}
+
+		commander_limit = -2
+	}
+
+	#Landless - Holy Order
+	rtp_landless_order_g = {
+		potential = {
+			is_patrician = no
+			rtp_is_landless = yes
+			OR = {
+				holy_order = yes
+				rtp_is_holy_order = yes
+			}
+		}
+
+		preferred_holdings = {
+			CASTLE
+		}
+
+		allowed_holdings = {
+			CASTLE
+			FORT
+			HOSPITAL
+		}
+
+		accepts_liege_governments = {
+			feudal_government
+			muslim_government
+			theocratic_feudal_government
+			order_government
+			rtp_mercenary_g
+			rtp_confederation_g
+
+			merchant_republic_government
+			republic_government
+			rtp_republic_g
+			rtp_privateer_g
+
+			theocracy_government
+			rtp_theocracy_g
+
+			tribal_government
+
+			nomadic_government
+		}
+		
+		color = { 169 169 169 }
+
+		frame_suffix = "_landlessorder"
+		title_prefix = "order_"
+		allow_looting = yes
+		free_levies_in_offensive_war = yes
+		allows_matrilineal_marriage = yes
+		uses_bride_price = yes
+		can_create_kingdoms = no
+		can_usurp_kingdoms_and_empires = no
+		can_build_holdings = no
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+		can_demand_religious_conversion = no
+		can_inherit = no
+
+		character_modifier = {
+			learning = 1
+
+			diplomacy = -1
+		}
+		
+		court_size_modifier = -10
+		commander_limit = -2
+	}
+
+	#Landless - Adventurer
+	rtp_landless_adventurer_g = {
+		potential = {
+			ai = yes
+			has_game_started = yes
+			is_ruler = yes
+			is_landed = no
+			is_alive = yes
+			is_patrician = no
+			controls_religion = no
+			NOR = {
+				is_government_potential = rtp_baron_order_g
+				is_government_potential = rtp_landless_order_g
+			}
+		}
+
+		preferred_holdings = {
+			CASTLE
+		}
+
+		allowed_holdings = {
+			CASTLE
+		}
+
+		color = { 91 133 207 }
+		frame_suffix = "_landlessadventurer"
+		capital_move_delay = 600
+	}
+}
+
+theocracy_governments = {
+	#Landless - Theocracy
+	rtp_landless_theocracy_g = {
+		potential = {
+			ai = yes
+			has_game_started = yes
+			is_patrician = no
+			is_ruler = yes
+			is_landed = no
+			controls_religion = yes
+			NOR = {
+				religion_group = muslim
+				is_government_potential = rtp_baron_order_g
+				is_government_potential = rtp_landless_order_g
+			}
+			OR = {
+				is_female = no
+				religion_allows_female_temple_holders = yes
+			}
+			OR = {
+				is_female = yes
+				religion_allows_male_temple_holders = yes
+			}
+		}
+
+		preferred_holdings = {
+			TEMPLE
+		}
+
+		allowed_holdings = {
+			TEMPLE
+		}
+
+		accepts_liege_governments_religion = {
+			feudal_government
+			muslim_government
+			theocratic_feudal_government
+			order_government
+
+			merchant_republic_government
+			republic_government
+			rtp_republic_g
+
+			rtp_theocracy_g
+
+			tribal_government
+
+			nomadic_government
+		}
+
+		color = { 220 220 220 }
+		frame_suffix = "_landlesstheocracy"
+		title_prefix = "temple_"
+		capital_move_delay = 600
+		aggression = 0.75
+		
+		have_gender_laws = no
+		men_can_take_consorts = no
+	}
+}

@@ -1,0 +1,36 @@
+soifdesang = {
+
+      ruler_designer_cost = 25
+
+potential = {
+     age = 16
+}
+personality = yes
+random = yes
+birth = 100
+  
+  diplomacy = -5
+  martial = 5
+  intrigue = 3
+  combat_rating = 4
+  
+  opposites = {
+			kind
+            nonviolent
+            craven           
+  }
+  
+  opposite_opinion = -30
+  general_opinion = -30
+  same_opinion = 30
+  global_revolt_risk = -0.20
+  assassinate_chance_modifier = 0.10
+  ai_rationality = 10
+  ai_zeal = 50
+  ai_greed = 10
+  ai_honor = -20
+
+command_modifier = {
+	morale_offence = 0.20
+    }
+}

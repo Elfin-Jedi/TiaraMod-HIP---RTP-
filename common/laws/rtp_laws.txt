@@ -1,0 +1,2650 @@
+#####
+#Laws
+#
+#Total = 9
+#####
+
+law_groups = {
+	rtp_slavery_lg = {
+		law_type = realm
+	}
+	rtp_trade_lg = {
+		law_type = realm
+	}
+	rtp_resettlement_lg = {
+		law_type = realm
+	}
+	rtp_welfare_lg = {
+		law_type = realm
+	}
+	rtp_production_lg = {
+		law_type = realm
+	}
+	rtp_property_lg = {
+		law_type = realm
+	}
+	rtp_banking_lg = {
+		law_type = realm
+	}
+	rtp_holidays_lg = {
+		law_type = realm
+	}
+
+	rtp_role_lg = {
+		law_type = realm
+	}
+	rtp_consecrated_grounds_lg = {
+		law_type = realm
+	}
+	rtp_membership_lg = {
+		law_type = realm
+	}
+	rtp_sanctuary_lg = {
+		law_type = realm
+	}
+	rtp_tithe_lg = {
+		law_type = realm
+	}
+	rtp_attendance_lg = {
+		law_type = realm
+	}
+	rtp_glossolalia_lg = {
+		law_type = realm
+	}
+}
+
+laws = {
+	###Popular Customs
+	#Full Slavery
+	rtp_slavery_0_l = {
+		group = rtp_slavery_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 1
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_slavery_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_slavery_0_l
+							has_law = rtp_slavery_1_l
+							has_law = rtp_slavery_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_slavery_1_l
+				revoke_law = rtp_slavery_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_chaotic_evil2_ssv = yes
+		}
+	}
+
+	#Limited Slavery
+	rtp_slavery_1_l = {
+		group = rtp_slavery_lg
+		default = yes
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 1
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_slavery_0_l
+					has_law = rtp_slavery_2_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_slavery_0_l
+							has_law = rtp_slavery_1_l
+							has_law = rtp_slavery_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_slavery_0_l
+				revoke_law = rtp_slavery_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_lawful_evil2_ssv = yes
+		}
+	}
+
+	#No Slavery
+	rtp_slavery_2_l = {
+		group = rtp_slavery_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 1
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_slavery_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_slavery_0_l
+							has_law = rtp_slavery_1_l
+							has_law = rtp_slavery_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_slavery_1_l
+				revoke_law = rtp_slavery_0_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_lawful_good2_ssv = yes
+		}
+	}
+
+
+	#Closed Market
+	rtp_trade_0_l = {
+		group = rtp_trade_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 2
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_trade_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_trade_0_l
+							has_law = rtp_trade_1_l
+							has_law = rtp_trade_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_trade_1_l
+				revoke_law = rtp_trade_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_lawful_neutral2_ssv = yes
+		}
+	}
+
+	#Mixed Market
+	rtp_trade_1_l = {
+		group = rtp_trade_lg
+		default = yes
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 2
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_trade_0_l
+					has_law = rtp_trade_2_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_trade_0_l
+							has_law = rtp_trade_1_l
+							has_law = rtp_trade_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_trade_0_l
+				revoke_law = rtp_trade_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_neutral2_ssv = yes
+		}
+	}
+
+	#Open Market
+	rtp_trade_2_l = {
+		group = rtp_trade_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 2
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_trade_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_trade_0_l
+							has_law = rtp_trade_1_l
+							has_law = rtp_trade_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_trade_1_l
+				revoke_law = rtp_trade_0_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_chaotic_neutral2_ssv = yes
+		}
+	}
+
+
+	#Allowed Resettlement
+	rtp_resettlement_0_l = {
+		group = rtp_resettlement_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 3
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_resettlement_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_resettlement_0_l
+							has_law = rtp_resettlement_1_l
+							has_law = rtp_resettlement_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_resettlement_1_l
+				revoke_law = rtp_resettlement_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_lawful_evil2_ssv = yes
+		}
+	}
+
+	#Limited Resettlement
+	rtp_resettlement_1_l = {
+		group = rtp_resettlement_lg
+		default = yes
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 3
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_resettlement_0_l
+					has_law = rtp_resettlement_2_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_resettlement_0_l
+							has_law = rtp_resettlement_1_l
+							has_law = rtp_resettlement_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_resettlement_0_l
+				revoke_law = rtp_resettlement_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_lawful_neutral2_ssv = yes
+		}
+	}
+
+	#Banned Resettlement
+	rtp_resettlement_2_l = {
+		group = rtp_resettlement_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 3
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_resettlement_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_resettlement_0_l
+							has_law = rtp_resettlement_1_l
+							has_law = rtp_resettlement_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_resettlement_1_l
+				revoke_law = rtp_resettlement_0_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_lawful_good2_ssv = yes
+		}
+	}
+
+
+	#No Welfare
+	rtp_welfare_0_l = {
+		group = rtp_welfare_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 4
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_welfare_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_welfare_0_l
+							has_law = rtp_welfare_1_l
+							has_law = rtp_welfare_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_welfare_1_l
+				revoke_law = rtp_welfare_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_neutral2_ssv = yes
+		}
+	}
+
+	#Limited Welfare
+	rtp_welfare_1_l = {
+		group = rtp_welfare_lg
+		default = yes
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 4
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_welfare_0_l
+					has_law = rtp_welfare_2_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_welfare_0_l
+							has_law = rtp_welfare_1_l
+							has_law = rtp_welfare_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_welfare_0_l
+				revoke_law = rtp_welfare_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_chaotic_good2_ssv = yes
+		}
+	}
+
+	#Full Welfare
+	rtp_welfare_2_l = {
+		group = rtp_welfare_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 4
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_welfare_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_welfare_0_l
+							has_law = rtp_welfare_1_l
+							has_law = rtp_welfare_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_welfare_1_l
+				revoke_law = rtp_welfare_0_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_lawful_good2_ssv = yes
+		}
+	}
+
+
+	#Local Goods
+	rtp_production_0_l = {
+		group = rtp_production_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 5
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_production_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_production_0_l
+							has_law = rtp_production_1_l
+							has_law = rtp_production_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_production_1_l
+				revoke_law = rtp_production_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_lawful_neutral2_ssv = yes
+		}
+	}
+
+	#Mixed Goods
+	rtp_production_1_l = {
+		group = rtp_production_lg
+		default = yes
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 5
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_production_0_l
+					has_law = rtp_production_2_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_production_0_l
+							has_law = rtp_production_1_l
+							has_law = rtp_production_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_production_0_l
+				revoke_law = rtp_production_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_neutral2_ssv = yes
+		}
+	}
+
+	#Imported Goods
+	rtp_production_2_l = {
+		group = rtp_production_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 5
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_production_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_production_0_l
+							has_law = rtp_production_1_l
+							has_law = rtp_production_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_production_1_l
+				revoke_law = rtp_production_0_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_chaotic_neutral2_ssv = yes
+		}
+	}
+
+
+	#No Businesses
+	rtp_property_0_l = {
+		group = rtp_property_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 6
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_property_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_property_0_l
+							has_law = rtp_property_1_l
+							has_law = rtp_property_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_property_1_l
+				revoke_law = rtp_property_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_neutral_evil2_ssv = yes
+		}
+	}
+
+	#Limited Businesses
+	rtp_property_1_l = {
+		group = rtp_property_lg
+		default = yes
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 6
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_property_0_l
+					has_law = rtp_property_2_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_property_0_l
+							has_law = rtp_property_1_l
+							has_law = rtp_property_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_property_0_l
+				revoke_law = rtp_property_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_lawful_evil2_ssv = yes
+		}
+	}
+
+	#Open Businesses
+	rtp_property_2_l = {
+		group = rtp_property_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 6
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_property_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_property_0_l
+							has_law = rtp_property_1_l
+							has_law = rtp_property_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_property_1_l
+				revoke_law = rtp_property_0_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_lawful_neutral2_ssv = yes
+		}
+	}
+
+
+	#Loan Shark Banking
+	rtp_banking_0_l = {
+		group = rtp_banking_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 6
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_banking_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_banking_0_l
+							has_law = rtp_banking_1_l
+							has_law = rtp_banking_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_banking_1_l
+				revoke_law = rtp_banking_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_chaotic_evil2_ssv = yes
+		}
+	}
+
+	#Competitive Banking
+	rtp_banking_1_l = {
+		group = rtp_banking_lg
+		default = yes
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 6
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_banking_0_l
+					has_law = rtp_banking_2_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_banking_0_l
+							has_law = rtp_banking_1_l
+							has_law = rtp_banking_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_banking_0_l
+				revoke_law = rtp_banking_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_chaotic_neutral2_ssv = yes
+		}
+	}
+
+	#Regulated Banking
+	rtp_banking_2_l = {
+		group = rtp_banking_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 6
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_banking_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_banking_0_l
+							has_law = rtp_banking_1_l
+							has_law = rtp_banking_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_banking_1_l
+				revoke_law = rtp_banking_0_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_neutral_good2_ssv = yes
+		}
+	}
+
+
+	#No Paid Holidays
+	rtp_holidays_0_l = {
+		group = rtp_holidays_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 8
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_holidays_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_holidays_0_l
+							has_law = rtp_holidays_1_l
+							has_law = rtp_holidays_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_holidays_1_l
+				revoke_law = rtp_holidays_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_neutral_evil2_ssv = yes
+		}
+	}
+
+	#Partial Paid Holidays
+	rtp_holidays_1_l = {
+		group = rtp_holidays_lg
+		default = yes
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 8
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_holidays_0_l
+					has_law = rtp_holidays_2_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_holidays_0_l
+							has_law = rtp_holidays_1_l
+							has_law = rtp_holidays_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_holidays_0_l
+				revoke_law = rtp_holidays_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_lawful_neutral2_ssv = yes
+		}
+	}
+
+	#Paid Holidays
+	rtp_holidays_2_l = {
+		group = rtp_holidays_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_POPULAR_CUSTOMS = 8
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_holidays_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_holidays_0_l
+							has_law = rtp_holidays_1_l
+							has_law = rtp_holidays_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_holidays_1_l
+				revoke_law = rtp_holidays_0_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_neutral_good2_ssv = yes
+		}
+	}
+
+
+
+	###Religious Customs
+	#Militaristic Role
+	rtp_role_0_l = {
+		group = rtp_role_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 1
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_role_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_role_0_l
+							has_law = rtp_role_1_l
+							has_law = rtp_role_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_role_1_l
+				revoke_law = rtp_role_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_chaotic_good2_ssv = yes
+		}
+	}
+
+	#Balanced Role
+	rtp_role_1_l = {
+		group = rtp_role_lg
+		default = yes
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 1
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_role_0_l
+					has_law = rtp_role_2_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_role_0_l
+							has_law = rtp_role_1_l
+							has_law = rtp_role_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_role_0_l
+				revoke_law = rtp_role_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_neutral_good2_ssv = yes
+		}
+	}
+
+	#Pacifist Role
+	rtp_role_2_l = {
+		group = rtp_role_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 1
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_role_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_role_0_l
+							has_law = rtp_role_1_l
+							has_law = rtp_role_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_role_1_l
+				revoke_law = rtp_role_0_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_lawful_good2_ssv = yes
+		}
+	}
+
+
+	#No Consecrated Grounds
+	rtp_consecrated_grounds_0_l = {
+		group = rtp_consecrated_grounds_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 2
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_consecrated_grounds_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_consecrated_grounds_0_l
+							has_law = rtp_consecrated_grounds_1_l
+							has_law = rtp_consecrated_grounds_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_consecrated_grounds_1_l
+				revoke_law = rtp_consecrated_grounds_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_chaotic_neutral2_ssv = yes
+		}
+	}
+
+	#Limited Consecrated Grounds
+	rtp_consecrated_grounds_1_l = {
+		group = rtp_consecrated_grounds_lg
+		default = yes
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 2
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_consecrated_grounds_0_l
+					has_law = rtp_consecrated_grounds_2_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_consecrated_grounds_0_l
+							has_law = rtp_consecrated_grounds_1_l
+							has_law = rtp_consecrated_grounds_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_consecrated_grounds_0_l
+				revoke_law = rtp_consecrated_grounds_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_lawful_neutral2_ssv = yes
+		}
+	}
+
+	#Full Consecrated Grounds
+	rtp_consecrated_grounds_2_l = {
+		group = rtp_consecrated_grounds_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 2
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_consecrated_grounds_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_consecrated_grounds_0_l
+							has_law = rtp_consecrated_grounds_1_l
+							has_law = rtp_consecrated_grounds_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_consecrated_grounds_1_l
+				revoke_law = rtp_consecrated_grounds_0_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_lawful_good2_ssv = yes
+		}
+	}
+
+
+	#Closed Membership
+	rtp_membership_0_l = {
+		group = rtp_membership_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 3
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_membership_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_membership_0_l
+							has_law = rtp_membership_1_l
+							has_law = rtp_membership_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_membership_1_l
+				revoke_law = rtp_membership_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_lawful_evil2_ssv = yes
+		}
+	}
+
+	#Limited Membership
+	rtp_membership_1_l = {
+		group = rtp_membership_lg
+		default = yes
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 3
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_membership_0_l
+					has_law = rtp_membership_2_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_membership_0_l
+							has_law = rtp_membership_1_l
+							has_law = rtp_membership_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_membership_0_l
+				revoke_law = rtp_membership_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_lawful_neutral2_ssv = yes
+		}
+	}
+
+	#Open Membership
+	rtp_membership_2_l = {
+		group = rtp_membership_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 3
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_membership_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_membership_0_l
+							has_law = rtp_membership_1_l
+							has_law = rtp_membership_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_membership_1_l
+				revoke_law = rtp_membership_0_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_neutral_good2_ssv = yes
+		}
+	}
+
+
+	#No Sanctuary
+	rtp_sanctuary_0_l = {
+		group = rtp_sanctuary_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 4
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_sanctuary_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_sanctuary_0_l
+							has_law = rtp_sanctuary_1_l
+							has_law = rtp_sanctuary_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_sanctuary_1_l
+				revoke_law = rtp_sanctuary_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_neutral_evil2_ssv = yes
+		}
+	}
+
+	#Limited Sanctuary
+	rtp_sanctuary_1_l = {
+		group = rtp_sanctuary_lg
+		default = yes
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 4
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_sanctuary_0_l
+					has_law = rtp_sanctuary_2_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_sanctuary_0_l
+							has_law = rtp_sanctuary_1_l
+							has_law = rtp_sanctuary_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_sanctuary_0_l
+				revoke_law = rtp_sanctuary_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_neutral2_ssv = yes
+		}
+	}
+
+	#Open Sanctuary
+	rtp_sanctuary_2_l = {
+		group = rtp_sanctuary_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 4
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_sanctuary_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_sanctuary_0_l
+							has_law = rtp_sanctuary_1_l
+							has_law = rtp_sanctuary_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_sanctuary_1_l
+				revoke_law = rtp_sanctuary_0_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_neutral_good2_ssv = yes
+		}
+	}
+
+
+	#Mandatory Tithe
+	rtp_tithe_0_l = {
+		group = rtp_tithe_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 5
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_tithe_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_tithe_0_l
+							has_law = rtp_tithe_1_l
+							has_law = rtp_tithe_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_tithe_1_l
+				revoke_law = rtp_tithe_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_neutral_evil2_ssv = yes
+		}
+	}
+
+	#Voluntary Tithe
+	rtp_tithe_1_l = {
+		group = rtp_tithe_lg
+		default = yes
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 5
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_tithe_0_l
+					has_law = rtp_tithe_2_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_tithe_0_l
+							has_law = rtp_tithe_1_l
+							has_law = rtp_tithe_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_tithe_0_l
+				revoke_law = rtp_tithe_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_neutral_good2_ssv = yes
+		}
+	}
+
+	#Reversed Tithe
+	rtp_tithe_2_l = {
+		group = rtp_tithe_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 5
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_tithe_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_tithe_0_l
+							has_law = rtp_tithe_1_l
+							has_law = rtp_tithe_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_tithe_1_l
+				revoke_law = rtp_tithe_0_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_chaotic_good2_ssv = yes
+		}
+	}
+
+
+	#Mandatory Attendance
+	rtp_attendance_0_l = {
+		group = rtp_attendance_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 6
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_attendance_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_attendance_0_l
+							has_law = rtp_attendance_1_l
+							has_law = rtp_attendance_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_attendance_1_l
+				revoke_law = rtp_attendance_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_neutral_evil2_ssv = yes
+		}
+	}
+
+	#Voluntary Attendance
+	rtp_attendance_1_l = {
+		group = rtp_attendance_lg
+		default = yes
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 6
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_attendance_0_l
+					has_law = rtp_attendance_2_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_attendance_0_l
+							has_law = rtp_attendance_1_l
+							has_law = rtp_attendance_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_attendance_0_l
+				revoke_law = rtp_attendance_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_neutral_good2_ssv = yes
+		}
+	}
+
+	#No Attendance
+	rtp_attendance_2_l = {
+		group = rtp_attendance_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 6
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_attendance_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_attendance_0_l
+							has_law = rtp_attendance_1_l
+							has_law = rtp_attendance_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_attendance_1_l
+				revoke_law = rtp_attendance_0_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_chaotic_good2_ssv = yes
+		}
+	}
+
+
+	#Banned Glossolalia
+	rtp_glossolalia_0_l = {
+		group = rtp_glossolalia_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 7
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_glossolalia_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_glossolalia_0_l
+							has_law = rtp_glossolalia_1_l
+							has_law = rtp_glossolalia_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_glossolalia_1_l
+				revoke_law = rtp_glossolalia_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_chaotic_good2_ssv = yes
+		}
+	}
+
+	#Clergy Glossolalia
+	rtp_glossolalia_1_l = {
+		group = rtp_glossolalia_lg
+		default = yes
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 7
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_glossolalia_0_l
+					has_law = rtp_glossolalia_2_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_glossolalia_0_l
+							has_law = rtp_glossolalia_1_l
+							has_law = rtp_glossolalia_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_glossolalia_0_l
+				revoke_law = rtp_glossolalia_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_lawful_evil2_ssv = yes
+		}
+	}
+
+	#Allowed Glossolalia
+	rtp_glossolalia_2_l = {
+		group = rtp_glossolalia_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 7
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_glossolalia_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_glossolalia_0_l
+							has_law = rtp_glossolalia_1_l
+							has_law = rtp_glossolalia_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_glossolalia_1_l
+				revoke_law = rtp_glossolalia_0_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_chaotic_neutral2_ssv = yes
+		}
+	}
+
+
+	#Forced Conversion
+	rtp_conversion_0_l = {
+		group = rtp_conversion_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 8
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_conversion_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_conversion_0_l
+							has_law = rtp_conversion_1_l
+							has_law = rtp_conversion_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_conversion_1_l
+				revoke_law = rtp_conversion_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_lawful_evil2_ssv = yes
+		}
+	}
+
+	#Encouraged Conversion
+	rtp_conversion_1_l = {
+		group = rtp_conversion_lg
+		default = yes
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 8
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_conversion_0_l
+					has_law = rtp_conversion_2_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_conversion_0_l
+							has_law = rtp_conversion_1_l
+							has_law = rtp_conversion_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_conversion_0_l
+				revoke_law = rtp_conversion_2_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_lawful_good2_ssv = yes
+		}
+	}
+
+	#No Forced Conversion
+	rtp_conversion_2_l = {
+		group = rtp_conversion_lg
+
+		potential = {
+			holder_scope = {
+				rtp_is_landless = no
+				rtp_is_baron = no
+				capital_scope = {
+					TECH_RELIGIOUS_CUSTOMS = 8
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				show_scope_change = no
+				OR = {
+					has_law = rtp_conversion_1_l
+					hidden_tooltip = {
+						NOR = {
+							has_law = rtp_conversion_0_l
+							has_law = rtp_conversion_1_l
+							has_law = rtp_conversion_2_l
+						}
+					}
+				}
+			}
+		}
+
+		pass_effect = {
+			holder_scope = {
+				character_event = {
+					id = RTPcheck.118 #Law Modifiers
+					days = 1
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				revoke_law = rtp_conversion_1_l
+				revoke_law = rtp_conversion_0_l
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			rtp_chaotic_neutral2_ssv = yes
+		}
+	}
+}

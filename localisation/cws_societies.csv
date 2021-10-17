@@ -1,0 +1,51 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+warrior_lodge_cws_christian;The Champions of Christ;;;;;;;;;;;;;x
+warrior_lodge_cws_christian_desc;The Champions of Christ (Latin: Athletae Christi) train hard and maintain an expert physique, not only for the purpose of battle, but also for martial games of sport – participating is both prestigious and pious, and the most skillful of their community are adored by everyone, commoner and noble alike.;;;;;;;;;;;;;x
+warrior_lodge_cws_christian_leader_desc;[GetSocietyLeaderDesc];[GetSocietyLeaderDesc];[GetSocietyLeaderDesc];;[GetSocietyLeaderDesc];;;;;;;;;x
+create_warrior_lodge_cws_christian;Create Champions of Christ;;;;;;;;;;;;;x
+create_warrior_lodge_cws_christian_desc;The Champions of Christ (Latin: Athletae Christi) train hard and maintain an expert physique, not only for the purpose of battle, but also for martial games of sport – participating is both prestigious and pious, and the most skillful of their community are adored by everyone, commoner and noble alike.;;;;;;;;;;;;;x
+create_warrior_lodge_cws_christian_tooltip;Establish the §YWarrior Society§! of the §YChampions of Christ§!;;;;;;;;;;;;;x
+warrior_lodge_christian_fortifications;Fortifications of Christ;;;;;;;;;;x;;;
+warrior_lodge_christian_fortifications_desc;Use the resources and expertise of §Y[Root.Society.GetName]§! to improve the fortifications of this province.;;;;;;;;;;x;;;
+warrior_lodge_christian_fortifications_power_desc;Enables §Gright-clicking§! on a holding for §Y[christian.GetName]§! rulers to request help from the Warrior Lodge to fortify their §YCastle§! and §YTribal§! holdings.;;;;;;;;;;x;;;
+has_liege_vassal_or_neighbor_of_christian_religion_tt;Has a §YLiege§!, §YVassal§!, or a §Yneighboring ruler§! who follows the §YChristian§! faith\n;;;;;;;;;;;;;x
+warrior_lodge_cws_christian_rank_1_female;Initiate;;;;;;;;;;;;;x
+warrior_lodge_cws_christian_rank_2_female;Adept;;;;;;;;;;;;;x
+warrior_lodge_cws_christian_rank_3_female;Mistress;;;;;;;;;;;;;x
+warrior_lodge_cws_christian_rank_4_female;Grand Mistress;;;;;;;;;;;;;x
+warrior_lodge_cws_christian_rank_1_male;Initiate;;;;;;;;;;;;;x
+warrior_lodge_cws_christian_rank_2_male;Adept;;;;;;;;;;;;;x
+warrior_lodge_cws_christian_rank_3_male;Master;;;;;;;;;;;;;x
+warrior_lodge_cws_christian_rank_4_male;Grand Master;;;;;;;;;;;;;x
+currency_name_warrior_lodge_cws_christian;Renown;;;;;;;;;;;;;x
+cws_christian_leader;Aeneator;;;;;;;;;;;;;x
+cws_christian_leader_desc;This character is a source of morale for [GetHerHis] troops, bringing them singing into battle.;;;;;;;;;;;;;x
+string_christian_training;"softly humming the tune I just finished singing, before clearing [fellow_member.GetHerHis] throat. "It's just something I made up, while we were marching" I say, dismissively. "You should keep it up, friend!", the [fellow_member.GetManWoman] argues. "It's good for morale, for the troops, you know".";;;;;;;;;;;;;x
+glorious_cws_christian_tactic;Quincunx Tactic;;;;;;;;;;;;;x
+glorious_cws_christian_cavalry_tactic;Charge of God's Fury;;;;;;;;;;;;;x
+string_christian_symbol;the savior;;;;;;;;;;;;;x
+string_christian_symbol_short;savior;;;;;;;;;;;;;x
+string_christian_symbol_short_cap;Jesus;;;;;;;;;;;;;x
+string_battle_nick_christian_symbol;the White Knight;;;;;;;;;;;;;x
+### Warrior Lodge Events ###;;;;;;;;;;;;;;
+EVTDESCCHFCWS25600;Tonight, the mead hall has been inflamed by rumors of a rabid werewolf wandering through the forests near [Root.Capital.GetName]. The man who spotted the beast claims that it is without a doubt one of Cain's descendants, hiding during daylight in human form and hunting under the moonlight. The older members of the Lodge agree that it is my duty to track down and slay this beast.;;;;;;;;;;;;x;
+EVTDESCAHFCWS25021;I must show my devotion to [Root.Religion.GetHighGodName] if I wish for divine favor in battle. The greater my piety the greater will be the reward that [Root.Religion.GetHighGodName] shall grant me in the wars to come.;;;;;;;;;;;;;x
+EVTOPTDHFCWS25021;I will offer food and gold to the poor and needy.;;;;;;;;;;;;;x
+EVTDESCAHFCWS25025;My fellow Champions accompany me into the poor district of [Root.Capital.GetName], helping me carry my generous offerings to the needy. While a priest chants, invoking the saints and martyrs of the Lodge to bestow me their protection, one of my fellow Champions inscribes a few symbols on my armor.;;;;;;;;;;;;;x
+EVTOPTAHFCWS25025;May [Root.Religion.GetHighGodName] protect me and my fellow Champions!;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;
+EVTOPTDHF25228_CHRISTIAN;I bet on Michael!;;;;;;;;;;;;;x
+EVTOPTCHF25228_CHRISTIAN;I bet on Gabriel!;;;;;;;;;;;;;x
+EVTOPTBHF25228_CHRISTIAN;I bet on Raphael!;;;;;;;;;;;;;x
+EVTOPTAHF25228_CHRISTIAN;I bet on Uriel!;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+# warrior_lodge_hellenic_olympian_forts;Olympian Forts;;;;;;;;;;;;;x
+# warrior_lodge_hellenic_olympian_forts_desc;Use the resources and expertise of §Y[Root.Society.GetName]§! to improve the fortifications of this province.;;;;;;;;;;;;;x
+# warrior_lodge_hellenic_olympian_forts_power_desc;Enables §Gright-clicking§! on a holding for §Y[hellenic_pagan_reformed.GetName]§! rulers to request help from the Warrior Lodge to fortify their §YCastle§! and §YTribal§! holdings.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;
+# EVTTITLECWS25026;Athletae Christi;;;;;;;;;;;;;x
+EVTTITLECWS25026;The Champions of Christ;;;;;;;;;;;;;x
+EVTDESCCWS25026;[From.GetTitledFirstName] has organized several outstanding athletes and warriors under [From.GetHerHis] employ to form the Academy of the Champions of Christ (Latin: Academia Athletae Christi), a society dedicated to the pursuit of martial excellence through rigid instructions and phyiscal exercises.\n\nAlthough this society is based for the most part on pure Christian values, its doors are open to any heathen that shows [From.GetHerHis] willingness to learn discipline and follow the teachings of the school's masters.;;;;;;;;;;;;;x
+EVTOPTACWS25026;Sounds noble!;;;;;;;;;;;;;x
+EVTOPTBCWS25026;Bah! This looks suspicious...;;;;;;;;;;;;;x

@@ -1,0 +1,16 @@
+ED_curse_cooldown_timer = { icon = 1 }
+
+gay_fertility_boost = {
+	fertility = 0.15
+	icon = 39
+}
+
+stopped_trying = {
+	fertility = -1
+	icon = 40
+}
+
+repressed_homosexual_urges = {
+	fertility = -0.15
+	icon = 40
+}

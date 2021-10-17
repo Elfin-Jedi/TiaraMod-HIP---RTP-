@@ -1,0 +1,61 @@
+EVTDESC_SOV_7400;There are many deities whom you may choose to honor. Shall it be Sila, Spirit of the Wind, and the breath of life? Or perhaps you favor Tornarssuk, Lord of the Caverns? Beneath the waves lies the domain of Sedna, Master of the Sea and its denizens. If you seek fertility, then Nunam, the Spirit of the Earth may heed your call.;;;;;;;;;;;;;x
+EVTDESC_SOV_7300;There are many deities whom you may choose to honor. There is the Wise Warrior, Glooscap, who taught the arts to mankind and his brother Mateguas, the rabbit spirit of underworld. In the woods there is Katipenimitak, the Master of the Caribou while in the heavens are the seven Padogiyik, the golden-skinned brothers of lightning and thunder.;;;;;;;;;;;;;x
+EVTOPTA_SOV_7300;I hope to emulate Glooscap, the Great Hero.;;;;;;;;;;;;;x
+EVTOPTB_SOV_7300;May Katipenimitak guide my arrows.;;;;;;;;;;;;;x
+EVTOPTC_SOV_7300;I offer my kills to the Padogiyik.;;;;;;;;;;;;;x
+EVTOPTD_SOV_7300;I shall listen for the whispers of Mateguas.;;;;;;;;;;;;;x
+EVTDESC_SOV_7301;Glooscap was a great figure. He was a powerful shapeshifter who created valleys and hills and taught men the arts of civilization. May he grant me wisdom.;;;;;;;;;;;;;x
+EVTDESC_SOV_7302;In the old days, Katipenimitak went to live with the caribou, and became one himself. He is their master and leads them to the people for us to find. May he teach me to be as selfless as him.;;;;;;;;;;;;;x
+EVTDESC_SOV_7303;At times one can see the Thunders, the war-like spirits of thunder and lightning on the shores of the Pitawbagok. The Padogiyik teach their followers of the ways of war.;;;;;;;;;;;;;x
+EVTDESC_SOV_7304;Mateguas is the Trickster, and the elder brother of Glooscap. He is the lord of the underworld and whispers the secrets of the dead to those he deems worthy enough to listen.;;;;;;;;;;;;;x
+EVTOPTA_SOV_7400;May the breath of Sila give me life.;;;;;;;;;;;;;x
+EVTOPTB_SOV_7400;Oh Tornarssuk, teach me the wisdom of the arcane!.;;;;;;;;;;;;;x
+EVTOPTC_SOV_7400;May Sedna guide my canoe through the icy waters.;;;;;;;;;;;;;x
+EVTOPTD_SOV_7400;Mighty Nunam, bless me and my lands with your bounty.;;;;;;;;;;;;;x
+EVTDESC_SOV_7401;Sila is the mighty wind and the breath of life. He permeates all the world and gives life to all. His followers gain his power and the respect accorded to him.;;;;;;;;;;;;;x
+EVTDESC_SOV_7402;Tornarssuk is the master of whales and seals. He brings his initiates into the ethereal realm and his mere touch is deadly. Beware his followers.;;;;;;;;;;;;;x
+EVTDESC_SOV_7403;Sedna is the goddess of the sea, mother of the sea's bounty and the lady of the underworld. Her followers are blessed with bountiful fish and other fruits of the sea.;;;;;;;;;;;;;x
+EVTDESC_SOV_7404;Nunam is the wife of Sila, and in the beginning children sprung up like flowers from her body. From her came much of the Earth's bounty. Her followers are blessed with her fertility.;;;;;;;;;;;;;x
+follower_of_sila;Follower of Sila;;;;;;;;;;;;;x
+follower_of_tornarssuk;Follower of Tornarssuk;;;;;;;;;;;;;x
+follower_of_sedna;Follower of Sedna;;;;;;;;;;;;;x
+follower_of_nunam;Follower of Nunam;;;;;;;;;;;;;x
+follower_of_glooscap;Follower of Glooscap;;;;;;;;;;;;;x
+follower_of_katipeninitak;Follower of Katipenimitak;;;;;;;;;;;;;x
+follower_of_padogiyik;Follower of the Padogiyik;;;;;;;;;;;;;x
+follower_of_mateguas;Follower of Mateguas;;;;;;;;;;;;;x
+EVTOPT_SOV_E;The son stays. He should know better.;;;;;;;;;;;;;x
+EVTOPT_SOV_F;Bands should be flexible. The split should be allowed.;;;;;;;;;;;;;x
+EVTDESCSOV.003;Bands forming and splitting up is a fairly common occurrence and does not normally generate serious disputes, but a recent case has required our intervention. A son is leaving his father's band with a large group of followers against the will of his parents. The father requests we intervene on his behalf to keep the band together and avoid weakening his authority in the tribe.;;;;;;;;;;;;;x
+EVTOPT_SOV_A;The elders are right. More than the spirit of courage, we need results.;;;;;;;;;;;;;x
+EVTDESCSOV.001;Bravery is a valued trait among our warriors, and this is reflected in many of our traditions. One such is counting coups, recording acts of courage in battle, which serve to mark our greatest soldiers. The elders have been calling into question this practice, calling for the military to focus on more practical goals and efficiency in killing our enemies.;;;;;;;;;;;;;x
+EVTOPT_SOV_B;The elders are fools.;;;;;;;;;;;;;x
+EVTOPTASOV.009;It is great that these foreigners are starting to adopt our customs.;;;;;;;;;;;;;x
+EVTDESCSOV.009;Ever since these foreigners fell under our domain, they have slowly adopted our customs and have taken native wives for themselves. Now it seems that their native tongue has been enriched by ours and they consider themselves neither foreign nor native.;;;;;;;;;;;;;x
+counting_coup;Counting Coup;;;;;;;;;;;;;x
+band_split;Band Split;;;;;;;;;;;;;x
+restricted_tobacco_use;Restricted Tobacco Use;;;;;;;;;;;;;x
+encouraged_tobacco_use;Encouraged Tobacco Use;;;;;;;;;;;;;x
+elders_unheeded;Elders Unheeded;;;;;;;;;;;;;x
+commission_inuksuk;Commission Inuksuk;;;;;;;;;;;;;x
+commission_inuksuk_desc;Commission an inuksuk to aid travellers in travelling the frozen wastes. This can be done only once in a lifetime, but others will look more favorably on you for a time.;;;;;;;;;;;;;x
+EVTOPT_SOV_501;May the cairns guide our people for ages to come.;;;;;;;;;;;;;x
+EVTDESCSOV.500;The cairn rises high over the snow, a welcoming sight amidst the frozen wasteland. Future travelers will look upon it and feel relief upon seeing the rough stone waypoint.;;;;;;;;;;;;;x
+raised_inuksuk;Raised Inuksuk;;;;;;;;;;;;;x
+EVTOPT_SOV_C;A reasonable suggestion.;;;;;;;;;;;;;x
+EVTOPT_SOV_D;Let the youths use it as they like.;;;;;;;;;;;;;x
+EVTDESCSOV.002;Tobacco has always been of use to our tribe. Some view the plant as medicine, some as something sacred, while others simply find inhalation of the smoke relaxing. However, the recreational use of it has caused the elders to declare that the use of tobacco be restricted to ceremonies where the plant is essential, to prevent youths from listlessly wasting it.;;;;;;;;;;;;;x
+on_vision_quest;Vision Quest;;;;;;;;;;;;;x
+vision_quest;Undertake Vision Quest;;;;;;;;;;;;;x
+undertook_vision_quest;Undertook Vision Quest;;;;;;;;;;;;;x
+vision_quest_desc;Retreat into the tribe's sweat lodge and undertake a Vision Quest.;;;;;;;;;;;;;x
+EVTDESC_vision_1;A queer feeling wells up in your stomach as you decide to visit the sweat lodge and partake in the rituals of your forebears, hoping to see visions of what may and may not be. Hopefully the spirits will guide you in your quest.;;;;;;;;;;;;;x
+EVTDESC_vision_2;A strange warmth envelops you and a thick mist creeps all over you, filling you with vigor and unbridled ecstasy. The hot flames roar before you and the crackling of wood is as loud as thunder.;;;;;;;;;;;;;x
+EVTDESC_vision_3;A spirit-being goes before you and shows you all manner of things, filling you with awe and a feeling of oneness with the world around you. You feel strengthened by the encounter, and you have a new vigor about you.;;;;;;;;;;;;;x
+EVTOPT_vision_1;Spirits walk with me!;;;;;;;;;;;;;x
+EVTOPT_vision_2;I feel humbled before the spirits.;;;;;;;;;;;;;x
+EVTDESCSOV.007;Some of your subjects have returned from Nordsetur with bear skins, walrus tusks, and strange Skraeling artifacts. They say the Skraelings were wary to trade, but were won over at the sight of iron tools and weapons.;;;;;;;;;;;;;x
+EVTOPT_SOV_G;What wonderful news!;;;;;;;;;;;;;x
+EVTOPT_SOV_H;What a strange people!;;;;;;;;;;;;;x
+EVTDESCSOV.010;Some pale-skinned men calling themselves the 'Inuit' have showed up at camp, bearing whale-bone harpoons and sleds led by wolves. They ask about iron and bountiful hunting grounds, offering up ivory and sealskins as gifts for settling in your lands.;;;;;;;;;;;;;x
+EVTDESCSOV.008;Some of the Skraelings have overcome their fear of us and have come to trade, offering up animal pelts in exchange for milk.;;;;;;;;;;;;;x

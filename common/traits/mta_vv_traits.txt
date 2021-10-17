@@ -1,0 +1,13 @@
+slave = {
+	health = -0.25
+	general_opinion = -10
+	same_opinion = 15
+	
+	ai_greed = 10
+	ai_honor = -10
+
+	cannot_inherit = yes
+	caste_tier = 0
+	random = no
+	customizer = no
+}

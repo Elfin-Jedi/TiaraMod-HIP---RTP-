@@ -1,0 +1,47 @@
+namespace = CWS
+
+##################################################################
+#Christian Warrior Society/Lodge has been created.
+#Players notified.
+narrative_event = {
+	id = CWS.25026
+	title = EVTTITLECWS25026
+	desc = EVTDESCCWS25026
+	hide_from = yes
+	hide_new = yes
+
+	picture = GFX_evt_hippodrome_byzantine
+	
+	only_playable = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTACWS25026
+		trigger = {
+			OR = { 
+				society_member_of = warrior_lodge_cws_christian 
+				religion_group = christian
+				secret_religion_group = christian
+				can_join_society = warrior_lodge_cws_christian
+			}
+		}
+		if = {
+			limit = { 
+				NOT = { society_member_of = warrior_lodge_cws_christian }
+				can_join_society = warrior_lodge_cws_christian
+			}
+			join_society = warrior_lodge_cws_christian
+		}
+	}
+	option = {
+		name = EVTOPTBCWS25026
+		trigger = {
+			NOR = { 
+				society_member_of = warrior_lodge_cws_christian 
+				religion_group = christian
+				secret_religion_group = christian
+			}
+		}
+	}
+}

@@ -1,0 +1,573 @@
+# -*- ck2 -*-
+
+TECH_GROUP_MILITARY = {
+	TECH_INFANTRY = {
+		modifier = {
+			light_infantry_offensive = 0.48
+			light_infantry_defensive = 0.48
+			archers_offensive = 0.48
+			archers_defensive = 0.48
+			pikemen_offensive = 0.48
+			pikemen_defensive = 0.48
+			heavy_infantry_offensive = 0.48
+			heavy_infantry_defensive = 0.48
+		}
+	}
+	TECH_CAVALRY = {
+		modifier = {
+			light_cavalry_offensive = 0.48
+			light_cavalry_defensive = 0.48
+			knights_offensive = 0.48
+			knights_defensive = 0.48
+			horse_archers_offensive = 0.48
+			horse_archers_defensive = 0.48
+			camel_cavalry_offensive = 0.48
+			camel_cavalry_defensive = 0.48
+			war_elephants_offensive = 0.48
+			war_elephants_defensive = 0.48
+		}
+	}
+	TECH_SKIRMISH = {
+		modifier = {
+			light_cavalry_morale = 0.4
+			horse_archers_morale = 0.4
+			archers_morale = 0.4
+			light_infantry_morale = 0.4
+			camel_cavalry_morale = 0.4
+			custom_modifier_text = better_skirmisher_tactics_custom_modifier_tt
+		}
+	}
+	TECH_MELEE = {
+		modifier = {
+			knights_morale = 0.4
+			pikemen_morale = 0.4
+			heavy_infantry_morale = 0.4
+			war_elephants_morale = 0.4
+			custom_modifier_text = better_melee_tactics_custom_modifier_tt
+		}
+	}
+	TECH_SIEGE_EQUIPMENT = {
+		modifier = {
+			siege_speed = 1.0
+			siege_defence = 1.0
+			custom_modifier_text = rtp_siege_equipment_tech_ct
+		}
+		1 = {
+			add_building = rtp_ladders_b
+		}
+		2 = {
+			add_building = rtp_catapult_b
+		}
+		3 = {
+			add_building = rtp_battering_ram_b
+		}
+		4 = {
+			add_building = rtp_bricole_b
+		}
+		5 = {
+			add_building = rtp_siege_towers_b
+		}
+		6 = {
+			add_building = rtp_ballistas_b
+		}
+		7 = {
+			add_building = rtp_trebuchet_b
+		}
+		8 = {
+			add_building = rtp_bombard_b
+		}
+	}
+	TECH_RECRUITMENT = {
+		modifier = {
+			global_supply_limit = 1.0
+			land_morale = 0.2
+			land_organisation = 0.8
+		}
+	}
+}
+
+TECH_GROUP_ECONOMY = {
+	TECH_CASTLE_CONSTRUCTION = { #castle buildings
+		modifier = {
+			castle_tax_modifier = 0.32
+			court_size_modifier = 24
+			court_size_maintenance_cost_modifier = -0.24
+		}
+		1 = {
+			add_building = ca_town_2
+			add_building = ca_barracks_2
+			add_building = ca_stable_2
+			add_building = "<CULTURE>1"
+			add_building = tb_hillfort_3
+			add_building = tb_hillfort_4
+			add_building = no_horse_breeder_3
+			add_building = no_horse_breeder_4
+		}
+		2 = {
+			add_building = ca_barracks_3
+			add_building = ca_militia_barracks_2
+			add_building = "<CULTURE>2"
+			add_building = no_horse_breeder_5
+			add_building = no_horse_breeder_6
+		}
+		3 = {
+			add_building = ca_stable_3
+			add_building = ca_training_grounds_2
+			add_building = ca_town_3
+			add_building = "<CULTURE>3"
+			add_building = no_horse_breeder_7
+			add_building = no_horse_breeder_8
+		}
+		4 = {
+			add_building = ca_barracks_4
+			add_building = "<CULTURE>4"
+		}
+		5 = {
+			add_building = ca_militia_barracks_3
+			add_building = ca_stable_4
+			add_building = ca_town_4
+		}
+		6 = {
+			add_building = ca_barracks_5
+			add_building = ca_training_grounds_3
+			add_building = "<CULTURE>5"
+		}
+		7 = {
+			add_building = ca_militia_barracks_4
+			add_building = ca_stable_5
+			add_building = ca_town_5
+		}
+		8 = {
+			add_building = ca_barracks_6
+			add_building = ca_stable_6
+		}
+	}
+	TECH_CITY_CONSTRUCTION = { #city buildings
+		modifier = {
+			city_tax_modifier = 0.32
+			temple_tax_modifier = 0.32
+		}
+		1 = {
+			add_building = ct_marketplace_2
+			add_building = ct_barracks_2
+			add_building = tb_market_town_3
+			add_building = tb_market_town_4
+			add_building = tp_monastery_2
+			add_building = tp_barracks_2
+			add_building = tp_elite_barracks_2
+			add_building = tp_town_3
+			add_building = no_gathering_hall_3
+			add_building = no_gathering_hall_4
+			add_building = no_wagon_train_3
+			add_building = no_wagon_train_4
+			add_building = no_craftsmens_quarter_3
+			add_building = no_craftsmens_quarter_4
+		}
+		2 = {
+			add_building = ct_guard_2
+			add_building = ct_barracks_3
+			add_building = ct_marketplace_3
+			add_building = tp_monastery_3
+			add_building = tp_elite_barracks_3
+			add_building = tp_barracks_3
+			add_building = no_gathering_hall_5
+			add_building = no_gathering_hall_6
+			add_building = no_wagon_train_5
+			add_building = no_wagon_train_6
+			add_building = no_craftsmens_quarter_5
+			add_building = no_craftsmens_quarter_6
+		}
+		3 = {
+			add_building = ct_university_1
+			add_building = ct_marketplace_4
+			add_building = tp_town_4
+			add_building = tp_school_1
+			add_building = no_gathering_hall_7
+			add_building = no_gathering_hall_8
+			add_building = no_wagon_train_7
+			add_building = no_wagon_train_8
+			add_building = no_craftsmens_quarter_7
+			add_building = no_craftsmens_quarter_8
+		}
+		4 = {
+			add_building = ct_guard_3
+			add_building = ct_barracks_4
+			add_building = tp_monastery_4
+			add_building = tp_elite_barracks_4
+			add_building = tp_barracks_4
+		}
+		5 = {
+			add_building = ct_university_2
+			add_building = ct_marketplace_5
+			add_building = tp_town_5
+		}
+		6 = {
+			add_building = ct_guard_4
+			add_building = ct_barracks_5
+			add_building = tp_monastery_5
+			add_building = tp_elite_barracks_5
+			add_building = tp_school_2
+			add_building = tp_barracks_5
+		}
+		7 = {
+			add_building = ct_university_3
+			add_building = ct_marketplace_6
+			add_building = tp_town_6
+		}
+		8 = {
+			add_building = ct_guard_5
+			add_building = ct_barracks_6
+			add_building = tp_monastery_6
+			add_building = tp_elite_barracks_6
+			add_building = tp_barracks_6
+		}
+	}
+	TECH_FORTIFICATIONS_CONSTRUCTION = { # walls and levy buildings
+		modifier = {
+			SIEGE_DEFENCE = 0.24
+			custom_modifier_text = rtp_improved_keeps_tech_ct
+		}
+		1 = {
+			add_building = ca_keep_2
+			add_building = ct_training_grounds_2
+			add_building = ca_wall_q_2
+			add_building = ct_wall_q_2
+			add_building = tp_wall_q_2
+			add_building = tb_defensive_fortifications_3
+			add_building = tb_defensive_fortifications_4
+			add_building = no_camp_fortifications_3
+			add_building = no_camp_fortifications_4
+		}
+		2 = {
+			add_building = ca_keep_3
+			add_building = ct_training_grounds_3
+			add_building = ca_wall_2
+			add_building = ct_wall_2
+			add_building = tp_wall_2
+			add_building = no_camp_fortifications_5
+			add_building = no_camp_fortifications_6
+		}
+		3 = {
+			add_building = ca_wall_q_3
+			add_building = ct_wall_q_3
+			add_building = tp_wall_q_3
+			add_building = no_camp_fortifications_7
+			add_building = no_camp_fortifications_8
+		}
+		4 = {
+			add_building = ca_keep_4
+			add_building = ct_training_grounds_4
+			add_building = ca_wall_3
+			add_building = ct_wall_3
+			add_building = tp_wall_3
+		}
+		5 = {
+			add_building = ca_wall_q_4
+			add_building = ct_wall_q_4
+			add_building = tp_wall_q_4
+		}
+		6 = {
+			add_building = ca_keep_5
+			add_building = ct_training_grounds_5
+			add_building = ca_wall_4
+			add_building = ct_wall_4
+			add_building = tp_wall_4
+		}
+		7 = {
+			add_building = ca_wall_q_5
+			add_building = ct_wall_q_5
+			add_building = tp_wall_q_5
+		}
+		8 = {
+			add_building = ca_keep_6
+			add_building = ct_training_grounds_6
+			add_building = ca_wall_5
+			add_building = ct_wall_5
+			add_building = tp_wall_5
+		}
+	}
+	TECH_TRADE_PRACTICES = {
+		modifier = {
+			tradevalue_mult = 0.6
+		}
+		1 = {
+			add_building = ct_port_1
+			add_building = no_messenger_system_1
+			add_building = no_messenger_system_2
+		}
+		2 = {
+			add_building = ct_port_2
+			add_building = no_messenger_system_3
+			add_building = no_messenger_system_4
+		}
+		3 = {
+			add_building = no_messenger_system_5
+			add_building = no_messenger_system_6
+		}
+		4 = {
+			add_building = ct_port_3
+			add_building = no_messenger_system_7
+			add_building = no_messenger_system_8
+		}
+		5 = {
+			add_building = ct_port_4
+		}
+		6 = {
+			add_building = ct_port_5
+		}
+	}
+	TECH_CONSTRUCTION = { #improved construction of all buildings
+		modifier = {
+			local_build_time_modifier = -0.24
+			local_build_cost_modifier = -0.24
+			wonder_build_time_modifier = -0.24
+			wonder_build_cost_modifier = -0.24
+		}
+		1 = {}
+		2 = {
+			add_building = hospital_building_1
+			add_building = leper_colony_1
+			add_building = soup_kitchen_1
+		}
+		3 = {
+			add_building = hospital_building_2
+			add_building = chapel_1
+			add_building = translation_house_1
+			add_building = pilgrims_inn_1
+			add_building = library_1
+
+		}
+		4 = {
+			add_building = hospital_building_3
+			add_building = pharmacology_laboratory_1
+			add_building = medical_academy_1
+			add_building = observatory_1
+		}
+		5 = {
+			add_building = hospital_building_4
+		}
+		6 = {
+			add_building = hospital_building_5
+		}
+	}
+	TECH_NAVAL = {
+		modifier = {
+			galleys_perc = 0.8
+		}
+		1 = {
+			add_building = ca_shipyard_1
+			add_building = ct_shipyard_1
+			add_building = tp_shipyard_1
+			add_building = tb_shipyard_1
+			add_building = no_harbor_1
+			add_building = no_harbor_2
+		}
+		2 = {
+			add_building = ca_shipyard_2
+			add_building = ct_shipyard_2
+			add_building = tp_shipyard_2
+			add_building = tb_shipyard_2
+			add_building = no_harbor_3
+			add_building = no_harbor_4
+		}
+		3 = {
+			add_building = ca_shipyard_3
+			add_building = ct_shipyard_3
+			add_building = tp_shipyard_3
+			add_building = tb_shipyard_3
+			add_building = no_harbor_5
+			add_building = no_harbor_6
+		}
+		4 = {
+			add_building = ca_shipyard_4
+			add_building = ct_shipyard_4
+			add_building = tp_shipyard_4
+			add_building = tb_shipyard_4
+			add_building = no_harbor_7
+			add_building = no_harbor_8
+		}
+	}
+}
+
+TECH_GROUP_CULTURE = {
+	TECH_NOBLE_CUSTOMS = {
+		modifier = {
+			castle_opinion = 16
+		}
+	}
+	TECH_POPULAR_CUSTOMS = {
+		modifier = {
+			town_opinion = 16
+		}
+		1 = {
+			add_decision = rtp_slavery_0_l
+			add_decision = rtp_slavery_1_l
+			add_decision = rtp_slavery_2_l
+		}
+		2 = {
+			add_decision = rtp_trade_0_l
+			add_decision = rtp_trade_1_l
+			add_decision = rtp_trade_2_l
+		}
+		3 = {
+			add_decision = rtp_resettlement_0_l
+			add_decision = rtp_resettlement_1_l
+			add_decision = rtp_resettlement_2_l
+		}
+		4 = {
+			add_decision = rtp_welfare_0_l
+			add_decision = rtp_welfare_1_l
+			add_decision = rtp_welfare_2_l
+		}
+		5 = {
+			add_decision = rtp_production_0_l
+			add_decision = rtp_production_1_l
+			add_decision = rtp_production_2_l
+		}
+		6 = {
+			add_decision = rtp_property_0_l
+			add_decision = rtp_property_1_l
+			add_decision = rtp_property_2_l
+		}
+		7 = {
+			add_decision = rtp_banking_0_l
+			add_decision = rtp_banking_1_l
+			add_decision = rtp_banking_2_l
+		}
+		8 = {
+			add_decision = rtp_holidays_0_l
+			add_decision = rtp_holidays_1_l
+			add_decision = rtp_holidays_2_l
+		}
+	}
+	TECH_RELIGIOUS_CUSTOMS = {
+		modifier = {
+			church_opinion = 16
+		}
+		1 = {
+			add_decision = rtp_role_0_l
+			add_decision = rtp_role_1_l
+			add_decision = rtp_role_2_l
+		}
+		2 = {
+			add_decision = rtp_consecrated_grounds_0_l
+			add_decision = rtp_consecrated_grounds_1_l
+			add_decision = rtp_consecrated_grounds_2_l
+		}
+		3 = {
+			add_decision = rtp_membership_0_l
+			add_decision = rtp_membership_1_l
+			add_decision = rtp_membership_2_l
+		}
+		4 = {
+			add_decision = rtp_sanctuary_0_l
+			add_decision = rtp_sanctuary_1_l
+			add_decision = rtp_sanctuary_2_l
+		}
+		5 = {
+			add_decision = rtp_tithe_0_l
+			add_decision = rtp_tithe_1_l
+			add_decision = rtp_tithe_2_l
+		}
+		6 = {
+			add_decision = rtp_attendance_0_l
+			add_decision = rtp_attendance_1_l
+			add_decision = rtp_attendance_2_l
+		}
+		7 = {
+			add_decision = rtp_glossolalia_0_l
+			add_decision = rtp_glossolalia_1_l
+			add_decision = rtp_glossolalia_2_l
+		}
+		8 = {
+			add_decision = rtp_conversion_0_l
+			add_decision = rtp_conversion_1_l
+			add_decision = rtp_conversion_2_l
+		}
+	}
+	TECH_MAJESTY = {
+		modifier = {
+			short_reign_length = -4
+			add_prestige_modifier = 0.5
+			add_piety_modifier = 0.5
+			court_size_maintenance_cost_modifier = -0.1
+			court_size_modifier = 30
+		}
+		1 = {}
+		2 = {}
+		3 = {
+			add_decision = administration_1
+		}
+		4 = {}
+		5 = {
+			add_decision = administration_2
+		}
+	}
+	TECH_CULTURE_FLEX = {
+		modifier = {
+			culture_flex = -0.5
+			religion_flex = -0.5
+		}
+		1 = {}
+		2 = {}
+		3 = { add_decision = status_of_women_1 }
+		4 = { add_decision = status_of_women_2 }
+		5 = { add_decision = status_of_women_3 }
+		6 = { add_decision = status_of_women_4 }
+		7 = {}
+		8 = {}
+	}
+	TECH_LEGALISM = {
+		modifier = {
+			SHORT_REIGN_LENGTH = -24
+			GLOBAL_SUPPLY_LIMIT = 0.24
+			custom_modifier_text = rtp_legalism_tech_ct
+		}
+		1 = {
+			add_decision = crown_authority_1
+			add_decision = revokation_1
+			add_decision = ze_revokation_1
+			add_decision = centralization_1
+		}
+		2 = {
+			add_decision = crown_authority_2
+			add_decision = revokation_2
+			add_decision = ze_revokation_2
+			add_decision = centralization_2
+		}
+		3 = {
+			add_decision = crown_authority_3
+			add_decision = inheritance_1
+			add_decision = centralization_3
+			add_decision = tribal_obligations_3
+		}
+		4 = {
+			add_decision = crown_authority_4
+			add_decision = king_peace_1
+			add_decision = feudal_obligations_2
+			add_decision = temple_obligations_2
+			add_decision = city_obligations_2
+			add_decision = iqta_obligations_2
+		}
+		5 = {
+			add_decision = feudal_obligations_3
+			add_decision = temple_obligations_3
+			add_decision = city_obligations_3
+			add_decision = iqta_obligations_3
+			add_decision = tribal_obligations_4
+		}
+		6 = {
+			add_decision = king_peace_2
+		}
+		7 = {
+			add_decision = feudal_obligations_4
+			add_decision = temple_obligations_4
+			add_decision = city_obligations_4
+			add_decision = iqta_obligations_4
+		}
+		8 = {
+			add_decision = centralization_4
+		}
+	}
+}
+

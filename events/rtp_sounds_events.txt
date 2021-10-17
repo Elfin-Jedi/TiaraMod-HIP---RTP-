@@ -1,0 +1,1114 @@
+#####
+#Sounds Events
+#
+#Total = 7
+#####
+
+namespace = RTPsounds
+
+#Main Events
+#####
+
+#Sounds Startup
+character_event = {
+	id = RTPsounds.1
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+
+	trigger = {
+		has_game_rule = {
+			name = rtp_ambient_sounds_r
+			value = yes
+		}
+		OR = {
+			is_alive = no
+			NOT = {
+				has_character_flag = rtp_sounds
+			}
+		}
+	}
+
+	immediate = {
+		set_character_flag = rtp_sounds
+		current_heir = {
+			set_character_flag = rtp_sounds
+		}
+
+		character_event = {
+			id = RTPsounds.2 #Sounds Tombola
+		}
+	}
+}
+
+#Sounds Tombola
+character_event = {
+	id = RTPsounds.2
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+
+	immediate = {
+		clr_character_flag = rtp_sounds_night
+		clr_character_flag = rtp_sounds_medium_rain
+		clr_character_flag = rtp_sounds_heavy_rain
+		clr_character_flag = rtp_sounds_snowstorm
+		clr_character_flag = rtp_sounds_prisoner
+		clr_character_flag = rtp_sounds_outbreak
+
+		##Night?
+		random = {
+			chance = 50
+
+			sound_effect = night
+			set_character_flag = rtp_sounds_night
+		}
+
+		##Raining?
+		if = {
+			limit = {
+				location = {
+					NOR = {
+						terrain = desert
+						terrain = steppe
+					}
+				}
+			}
+			random = {
+				chance = 20
+	
+				modifier = {
+					factor = 1.5
+	
+					location = {
+						OR = {
+							terrain = jungle
+							terrain = marsh
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+	
+					location = {
+						OR = {
+							terrain = mountain
+							terrain = arctic
+						}
+					}
+				}
+	
+				random_list = {
+					#Light Rain
+					30 = {
+						sound_effect = rain_light
+					}
+					#Medium Rain
+					20 = {
+						sound_effect = rain_medium
+						set_character_flag = rtp_sounds_medium_rain
+					}
+					#Heavy Rain
+					10 = {
+						sound_effect = rain_heavy
+						set_character_flag = rtp_sounds_heavy_rain
+					}
+				}
+				random_list = {
+					40 = {
+					}
+					#Sever Storm
+					10 = {
+						sound_effect = thunder
+					}
+				}
+			}
+		}
+
+		#Snowstorm?
+		if = {
+			limit = {
+				location = {
+					NOR = {
+						terrain = forest
+						terrain = jungle
+						terrain = plains
+						terrain = farmlands
+						terrain = marsh
+					}
+				}
+			}
+			random = {
+				chance = 10
+	
+				modifier = {
+					factor = 1.5
+
+					location = {
+						OR = {
+							terrain = mountain
+							terrain = arctic
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+
+					OR = {
+						is_at_sea = yes
+						location = {
+							OR = {
+								terrain = hills
+								terrain = steppe
+							}
+						}
+					}
+				}
+	
+				sound_effect = snowstorm
+				set_character_flag = rtp_sounds_snowstorm
+			}
+		}
+
+		##Terrain?
+		random_list = {
+			#Sea
+			50 = {
+				trigger = {
+					is_at_sea = yes
+				}
+
+				sound_effect = sea
+			}
+			#River
+			50 = {
+				trigger = {
+					location = {
+						borders_major_river = yes
+					}
+				}
+
+				sound_effect = river
+			}
+			#Lake
+			50 = {
+				trigger = {
+					location = {
+						borders_lake = yes
+					}
+				}
+
+				sound_effect = lake
+			}
+			#Coast
+			50 = {
+				trigger = {
+					location = {
+						port = yes
+					}
+				}
+
+				sound_effect = coast
+			}
+			#Forest
+			50 = {
+				trigger = {
+					location = {
+						terrain = forest
+					}
+				}
+
+				sound_effect = forest
+			}
+			#Jungle
+			50 = {
+				trigger = {
+					location = {
+						terrain = jungle
+					}
+				}
+
+				sound_effect = jungle
+			}
+			#Plains
+			50 = {
+				trigger = {
+					location = {
+						terrain = plains
+					}
+				}
+
+				sound_effect = plains
+			}
+			#Farmlands
+			50 = {
+				trigger = {
+					location = {
+						terrain = farmlands
+					}
+				}
+
+				sound_effect = farmlands
+			}
+			#Hills
+			50 = {
+				trigger = {
+					location = {
+						terrain = hills
+					}
+				}
+
+				sound_effect = hills
+			}
+			#Mountain
+			50 = {
+				trigger = {
+					location = {
+						terrain = mountain
+					}
+				}
+
+				sound_effect = mountain
+			}
+			#Desert
+			50 = {
+				trigger = {
+					location = {
+						terrain = desert
+					}
+				}
+
+				sound_effect = desert
+			}
+			#Steppe
+			50 = {
+				trigger = {
+					location = {
+						terrain = steppe
+					}
+				}
+
+				sound_effect = steppe
+			}
+			#Marsh
+			50 = {
+				trigger = {
+					location = {
+						terrain = marsh
+					}
+				}
+
+				sound_effect = marsh
+			}
+			#Artic
+			50 = {
+				trigger = {
+					location = {
+						terrain = arctic
+					}
+				}
+
+				sound_effect = arctic
+			}
+		}
+
+		##Prisoner?
+		if = {
+			limit = {
+				prisoner = yes
+			}
+			
+			sound_effect = prison
+			set_character_flag = rtp_sounds_prisoner
+		}
+
+		##Wars?
+		if = {
+			limit = {
+				location = {
+					units_in_province = 1
+				}
+				is_at_sea = no
+			}
+			if = {
+				limit = {
+					location = {
+						any_character = {
+							at_location = PREV
+							OR = {
+								in_battle = yes
+								is_looting_in = PREV
+							}
+						}
+					}
+				}
+				#Battle?
+				if = {
+					limit = {
+						location = {
+							any_character = {
+								at_location = PREV
+								in_battle = yes
+							}
+						}
+					}
+					sound_effect = battle
+				}
+				#Looting?
+				else = {
+					sound_effect = looting
+				}
+			}
+			#Siege?
+			else_if = {
+				limit = {
+					location = {
+						any_province_holding = {
+							has_siege = yes
+						}
+					}
+				}
+				sound_effect = siege
+
+				if = {
+					limit = {
+						location = {
+							has_fort = yes
+							fort_has_building = rtp_bombard_b
+						}
+					}
+					random_list = {
+						80 = {
+							sound_effect = cannon_start
+							character_event = {
+								id = RTPsiege.100 #Siege Sounds - Wall Hit
+								days = 2
+							}
+						}
+						70 = {
+							rtp_trebuchet_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.100 #Siege Sounds - Wall Hit
+								days = 3
+							}
+						}
+						60 = {
+							rtp_ballista_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.15 #Siege Sounds - Ballista End
+								days = 2
+							}
+						}
+						50 = {
+							rtp_tower_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.14 #Siege Sounds - Tower End
+								days = 1
+							}
+						}
+						40 = {
+							sound_effect = bricole_start
+							character_event = {
+								id = RTPsiege.13 #Siege Sounds - Bricole End
+								days = 3
+							}
+						}
+						30 = {
+							rtp_ram_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.12 #Siege Sounds - Ram End
+								days = 2
+							}
+						}
+						20 = {
+							rtp_catapult_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.11 #Siege Sounds - Catapults End
+								days = 3
+							}
+						}
+						10 = {
+							rtp_ladder_sounds_se = yes
+							character_event = {
+								id = RTPsiege.101 #Siege Sounds - Archer Shot
+								days = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						location = {
+							has_fort = yes
+							fort_has_building = rtp_trebuchet_b
+						}
+					}
+					random_list = {
+						70 = {
+							rtp_trebuchet_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.100 #Siege Sounds - Wall Hit
+								days = 3
+							}
+						}
+						60 = {
+							rtp_ballista_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.15 #Siege Sounds - Ballista End
+								days = 2
+							}
+						}
+						50 = {
+							rtp_tower_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.14 #Siege Sounds - Tower End
+								days = 1
+							}
+						}
+						40 = {
+							sound_effect = bricole_start
+							character_event = {
+								id = RTPsiege.13 #Siege Sounds - Bricole End
+								days = 3
+							}
+						}
+						30 = {
+							rtp_ram_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.12 #Siege Sounds - Ram End
+								days = 2
+							}
+						}
+						20 = {
+							rtp_catapult_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.11 #Siege Sounds - Catapults End
+								days = 3
+							}
+						}
+						10 = {
+							rtp_ladder_sounds_se = yes
+							character_event = {
+								id = RTPsiege.101 #Siege Sounds - Archer Shot
+								days = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						location = {
+							has_fort = yes
+							fort_has_building = rtp_ballistas_b
+						}
+					}
+					random_list = {
+						60 = {
+							rtp_ballista_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.15 #Siege Sounds - Ballista End
+								days = 2
+							}
+						}
+						50 = {
+							rtp_tower_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.14 #Siege Sounds - Tower End
+								days = 1
+							}
+						}
+						40 = {
+							sound_effect = bricole_start
+							character_event = {
+								id = RTPsiege.13 #Siege Sounds - Bricole End
+								days = 3
+							}
+						}
+						30 = {
+							rtp_ram_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.12 #Siege Sounds - Ram End
+								days = 2
+							}
+						}
+						20 = {
+							rtp_catapult_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.11 #Siege Sounds - Catapults End
+								days = 3
+							}
+						}
+						10 = {
+							rtp_ladder_sounds_se = yes
+							character_event = {
+								id = RTPsiege.101 #Siege Sounds - Archer Shot
+								days = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						location = {
+							has_fort = yes
+							fort_has_building = rtp_siege_towers_b
+						}
+					}
+					random_list = {
+						50 = {
+							rtp_tower_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.14 #Siege Sounds - Tower End
+								days = 1
+							}
+						}
+						40 = {
+							sound_effect = bricole_start
+							character_event = {
+								id = RTPsiege.13 #Siege Sounds - Bricole End
+								days = 3
+							}
+						}
+						30 = {
+							rtp_ram_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.12 #Siege Sounds - Ram End
+								days = 2
+							}
+						}
+						20 = {
+							rtp_catapult_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.11 #Siege Sounds - Catapults End
+								days = 3
+							}
+						}
+						10 = {
+							rtp_ladder_sounds_se = yes
+							character_event = {
+								id = RTPsiege.101 #Siege Sounds - Archer Shot
+								days = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						location = {
+							has_fort = yes
+							fort_has_building = rtp_bricole_b
+						}
+					}
+					random_list = {
+						40 = {
+							sound_effect = bricole_start
+							character_event = {
+								id = RTPsiege.13 #Siege Sounds - Bricole End
+								days = 3
+							}
+						}
+						30 = {
+							rtp_ram_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.12 #Siege Sounds - Ram End
+								days = 2
+							}
+						}
+						20 = {
+							rtp_catapult_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.11 #Siege Sounds - Catapults End
+								days = 3
+							}
+						}
+						10 = {
+							rtp_ladder_sounds_se = yes
+							character_event = {
+								id = RTPsiege.101 #Siege Sounds - Archer Shot
+								days = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						location = {
+							has_fort = yes
+							fort_has_building = rtp_battering_ram_b
+						}
+					}
+					random_list = {
+						30 = {
+							rtp_ram_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.12 #Siege Sounds - Ram End
+								days = 2
+							}
+						}
+						20 = {
+							rtp_catapult_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.11 #Siege Sounds - Catapults End
+								days = 3
+							}
+						}
+						10 = {
+							rtp_ladder_sounds_se = yes
+							character_event = {
+								id = RTPsiege.101 #Siege Sounds - Archer Shot
+								days = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						location = {
+							has_fort = yes
+							fort_has_building = rtp_catapult_b
+						}
+					}
+					random_list = {
+						20 = {
+							rtp_catapult_start_sounds_se = yes
+							character_event = {
+								id = RTPsiege.11 #Siege Sounds - Catapults Fire
+								days = 2
+							}
+						}
+						10 = {
+							rtp_ladder_sounds_se = yes
+							character_event = {
+								id = RTPsiege.101 #Siege Sounds - Archer Shot
+								days = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						location = {
+							has_fort = yes
+							fort_has_building = rtp_ladders_b
+						}
+					}
+					rtp_ladder_sounds_se = yes
+					character_event = {
+						id = RTPsiege.101 #Siege Sounds - Archer Shot
+						days = 1
+					}
+				}
+				else = {
+					sound_effect = construction
+				}
+			}
+			#Troops
+			else = {
+				sound_effect = troops
+			}
+
+			character_event = {
+				id = RTPsounds.2 #Sounds Tombola
+				days = 6
+			}
+			break = yes
+		}
+
+		##Outbreak?
+		if = {
+			limit = {
+				location = {
+					has_disease = yes
+				}
+			}
+			sound_effect = outbreak
+			set_character_flag = rtp_sounds_outbreak
+		}
+
+		##Location?
+		random_list = {
+			#Nothing
+			50 = {
+			}
+			#Castle
+			50 = {
+				trigger = {
+					location = {
+						any_province_holding = {
+							holding_type = castle
+						}
+					}
+					NOR = {
+						has_character_flag = rtp_sounds_night
+						has_character_flag = rtp_sounds_medium_rain
+						has_character_flag = rtp_sounds_heavy_rain
+						has_character_flag = rtp_sounds_snowstorm
+						has_character_flag = rtp_sounds_prisoner
+						has_character_flag = rtp_sounds_outbreak
+					}
+				}
+
+				sound_effect = castle
+			}
+			#City
+			50 = {
+				trigger = {
+					location = {
+						any_province_holding = {
+							holding_type = city
+						}
+					}
+					NOR = {
+						has_character_flag = rtp_sounds_night
+						has_character_flag = rtp_sounds_medium_rain
+						has_character_flag = rtp_sounds_heavy_rain
+						has_character_flag = rtp_sounds_snowstorm
+						has_character_flag = rtp_sounds_prisoner
+						has_character_flag = rtp_sounds_outbreak
+					}
+				}
+
+				sound_effect = city
+			}
+			#Temple
+			50 = {
+				trigger = {
+					location = {
+						any_province_holding = {
+							holding_type = temple
+						}
+					}
+					NOR = {
+						has_character_flag = rtp_sounds_night
+						has_character_flag = rtp_sounds_medium_rain
+						has_character_flag = rtp_sounds_heavy_rain
+						has_character_flag = rtp_sounds_snowstorm
+						has_character_flag = rtp_sounds_prisoner
+						has_character_flag = rtp_sounds_outbreak
+					}
+				}
+
+				sound_effect = temple
+			}
+			#Tribal
+			50 = {
+				trigger = {
+					location = {
+						any_province_holding = {
+							holding_type = tribal
+						}
+					}
+					NOR = {
+						has_character_flag = rtp_sounds_night
+						has_character_flag = rtp_sounds_medium_rain
+						has_character_flag = rtp_sounds_heavy_rain
+						has_character_flag = rtp_sounds_snowstorm
+						has_character_flag = rtp_sounds_prisoner
+						has_character_flag = rtp_sounds_outbreak
+					}
+				}
+
+				sound_effect = tribal
+			}
+			#Nomad
+			50 = {
+				trigger = {
+					location = {
+						any_province_holding = {
+							holding_type = nomad
+						}
+					}
+					NOR = {
+						has_character_flag = rtp_sounds_night
+						has_character_flag = rtp_sounds_medium_rain
+						has_character_flag = rtp_sounds_heavy_rain
+						has_character_flag = rtp_sounds_snowstorm
+						has_character_flag = rtp_sounds_prisoner
+						has_character_flag = rtp_sounds_outbreak
+					}
+				}
+
+				sound_effect = nomad
+			}
+			#Family Palace
+			# 50 = {
+			# 	trigger = {
+			# 		location = {
+			# 			any_province_holding = {
+			# 				holding_type = family_palace
+			# 			}
+			# 		}
+			# 	}
+
+			# 	sound_effect = hospital
+			# }
+			#Tavern - Future Fort?
+			50 = {
+				trigger = {
+					has_character_flag = rtp_sounds_night
+					NOR = {
+						has_character_flag = rtp_sounds_prisoner
+						has_character_flag = rtp_sounds_outbreak
+					}
+				}
+
+				sound_effect = tavern
+			}
+			#Hospital
+			50 = {
+				trigger = {
+					location = {
+						has_hospital = yes
+					}
+					NOR = {
+						has_character_flag = rtp_sounds_night
+						has_character_flag = rtp_sounds_medium_rain
+						has_character_flag = rtp_sounds_heavy_rain
+						has_character_flag = rtp_sounds_snowstorm
+						has_character_flag = rtp_sounds_prisoner
+						has_character_flag = rtp_sounds_outbreak
+					}
+				}
+
+				sound_effect = hospital
+			}
+			#Trade Post
+			50 = {
+				trigger = {
+					location = {
+						has_trade_post = yes
+					}
+					NOR = {
+						has_character_flag = rtp_sounds_night
+						has_character_flag = rtp_sounds_medium_rain
+						has_character_flag = rtp_sounds_heavy_rain
+						has_character_flag = rtp_sounds_snowstorm
+						has_character_flag = rtp_sounds_prisoner
+						has_character_flag = rtp_sounds_outbreak
+					}
+				}
+
+				sound_effect = trade
+			}
+			#Wonder
+			50 = {
+				trigger = {
+					location = {
+						has_wonder = yes
+					}
+					NOR = {
+						has_character_flag = rtp_sounds_night
+						has_character_flag = rtp_sounds_medium_rain
+						has_character_flag = rtp_sounds_heavy_rain
+						has_character_flag = rtp_sounds_snowstorm
+						has_character_flag = rtp_sounds_prisoner
+						has_character_flag = rtp_sounds_outbreak
+					}
+				}
+
+				sound_effect = wonder
+			}
+			#Construction
+			50 = {
+				trigger = {
+					location = {
+						has_settlement_construction = yes
+					}
+					NOR = {
+						has_character_flag = rtp_sounds_night
+						has_character_flag = rtp_sounds_medium_rain
+						has_character_flag = rtp_sounds_heavy_rain
+						has_character_flag = rtp_sounds_snowstorm
+						has_character_flag = rtp_sounds_prisoner
+						has_character_flag = rtp_sounds_outbreak
+					}
+				}
+
+				sound_effect = construction
+			}
+			#Cattle
+			50 = {
+				trigger = {
+					NOR = {
+						has_character_flag = rtp_sounds_night
+						has_character_flag = rtp_sounds_heavy_rain
+						has_character_flag = rtp_sounds_snowstorm
+						has_character_flag = rtp_sounds_prisoner
+						has_character_flag = rtp_sounds_outbreak
+					}
+				}
+
+				sound_effect = cattle
+			}
+			#Farm
+			50 = {
+				trigger = {
+					NOR = {
+						has_character_flag = rtp_sounds_night
+						has_character_flag = rtp_sounds_heavy_rain
+						has_character_flag = rtp_sounds_snowstorm
+						has_character_flag = rtp_sounds_prisoner
+						has_character_flag = rtp_sounds_outbreak
+					}
+				}
+
+				sound_effect = farm
+			}
+			#Lumbermill
+			50 = {
+				trigger = {
+					NOR = {
+						has_character_flag = rtp_sounds_night
+						has_character_flag = rtp_sounds_heavy_rain
+						has_character_flag = rtp_sounds_snowstorm
+						has_character_flag = rtp_sounds_prisoner
+						has_character_flag = rtp_sounds_outbreak
+					}
+				}
+
+				sound_effect = lumbermill
+			}
+			#Mines
+			50 = {
+				trigger = {
+					NOR = {
+						has_character_flag = rtp_sounds_night
+						has_character_flag = rtp_sounds_heavy_rain
+						has_character_flag = rtp_sounds_snowstorm
+						has_character_flag = rtp_sounds_prisoner
+						has_character_flag = rtp_sounds_outbreak
+					}
+				}
+
+				sound_effect = mines
+			}
+			#Sheep
+			50 = {
+				trigger = {
+					NOR = {
+						has_character_flag = rtp_sounds_night
+						has_character_flag = rtp_sounds_heavy_rain
+						has_character_flag = rtp_sounds_snowstorm
+						has_character_flag = rtp_sounds_prisoner
+						has_character_flag = rtp_sounds_outbreak
+					}
+				}
+	
+				sound_effect = sheep
+			}
+			#Stables
+			50 = {
+				trigger = {
+					NOR = {
+						has_character_flag = rtp_sounds_night
+						has_character_flag = rtp_sounds_heavy_rain
+						has_character_flag = rtp_sounds_snowstorm
+						has_character_flag = rtp_sounds_prisoner
+						has_character_flag = rtp_sounds_outbreak
+					}
+				}
+
+				sound_effect = stables
+			}
+		}
+
+		character_event = {
+			id = RTPsounds.2 #Sounds Tombola
+			days = 6
+		}
+	}
+}
+
+#Starting Battle Sounds
+character_event = {
+	id = RTPsounds.3
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+
+	immediate = {
+		rtp_war_sounds_se = yes
+	}
+}
+
+#Siege Won Sounds
+character_event = {
+	id = RTPsounds.4
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+
+	immediate = {
+		sound_effect = battle_won
+	}
+}
+
+#Siege Loss Sounds
+character_event = {
+	id = RTPsounds.5
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+
+	immediate = {
+		sound_effect = battle_lost
+	}
+}
+
+#Battle Won Sounds
+character_event = {
+	id = RTPsounds.6
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+
+	immediate = {
+		sound_effect = regular_battle_won
+	}
+}
+
+#Battle Loss Sounds
+character_event = {
+	id = RTPsounds.7
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+
+	immediate = {
+		sound_effect = regular_battle_loss
+	}
+}
+
+#New Province Land Sounds
+character_event = {
+	id = RTPsounds.8
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+
+	trigger = {
+		in_command = yes
+		is_at_sea = no
+	}
+
+	immediate = {
+		sound_effect = soldier_move
+	}
+}
+
+#New Province Sea Sounds
+character_event = {
+	id = RTPsounds.9
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+
+	trigger = {
+		in_command = yes
+		is_at_sea = yes
+	}
+
+	immediate = {
+		sound_effect = sea_move
+	}
+}

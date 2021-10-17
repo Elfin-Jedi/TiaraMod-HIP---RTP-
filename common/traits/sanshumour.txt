@@ -1,0 +1,25 @@
+sanshumour = {
+
+      ruler_designer_cost = -7
+
+potential = {
+     age = 16
+}
+personality = yes
+random = yes
+birth = 100
+  
+  diplomacy = -2
+  
+  opposites = {
+			unfunny
+            funny
+            humournoir
+            
+  }
+  
+  opposite_opinion = -10
+  same_opinion = 10
+  sex_appeal_opinion = -10
+
+}

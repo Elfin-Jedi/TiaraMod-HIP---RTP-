@@ -1,0 +1,183 @@
+################################################;;;;;;;;;;;;;;x
+# Japanese Culture & Shinto MOD;;;;;;;;;;;;;;x
+################################################;;;;;;;;;;;;;;x
+# Culture
+japanese_group;Japanese;;;;;;;;;;;;;x
+japanese;Japanese;;;;;;;;;;;;;x
+ca_culture_japanese_1;Ashigaru Longhouse;;;;;;;;;;;;x
+ca_culture_japanese_2;Ashigaru Longhouse;;;;;;;;;;;;x
+ca_culture_japanese_3;Ashigaru Longhouse;;;;;;;;;;;;x
+ca_culture_japanese_4;Ashigaru Longhouse;;;;;;;;;;;;x
+ca_culture_japanese_1_desc;Ashigaru is a foot soldier employed by samurai in feudal Japan. ;;;;;;;;;;;;x
+RETTYPE_CUL_JPN;Samurai;;;;;;;;;;;;;x
+# Cultural titles
+emperor_japanese;Shogun;;;;;;;;;;;;;x
+emperor_female_japanese;Shogun;;;;;;;;;;;;;x
+empire_japanese;Shogunate;;;;Shogunato;;;;;;;;;x
+empire_of_japanese;Shogunate;;;;Shogunato;;;;;;;;;x
+king_japanese;Tandai;;;;;;;;;;;;;x
+king_female_japanese;Tandai;;;;;;;;;;;;;x
+kingdom_japanese;Domain;;;;Dominio;;;;;;;;;x
+kingdom_of_japanese;Domain of;;;;Dominio de;;;;;;;;;x
+duke_japanese;Daimyo;;;;;;;;;;;;;x
+duke_female_japanese;Daimyo;;;;;;;;;;;;;x
+duchy_japanese;Kuni;;;;;;;;;;;;;x
+duchy_of_japanese;Kuni of;;;;;;;;;;;;;x
+count_japanese;Kokujin;;;;;;;;;;;;;x
+count_female_japanese;Kokujin;;;;;;;;;;;;;x
+county_japanese;Kori;;;;;;;;;;;;;x
+county_of_japanese;Kori of;;;;Kori de;;;;;;;;;x
+baron_japanese;Joshu;;;;;;;;;;;;;x
+baron_female_japanese;Joshu;;;;;;;;;;;;;x
+barony_japanese;Shiro;;;;;;;;;;;;;x
+barony_of_japanese;Shiro of;;;;Shiro de;;;;;;;;;x
+title_queen_mother_japanese;Okatadono;;;;;;;;;;;;;x
+emperor_title_queen_mother_japanese;Okatadono;;;;;;;;;;;;;x
+title_prince_japanese;Wakagimi;;;;;;;;;;;;;x
+title_prince_female_japanese;Himegimi;;;;;;;;;;;;;x
+title_tanist_japanese;Wakatono;;;;;;;;;;;;;x
+vice_royalty_duke_japanese;Shugodai;;;;;;;;;;;;;x
+vice_royalty_duke_female_japanese;Shugodai;;;;;;;;;;;;;x
+vice_royalty_king_japanese;Kanrei;;;;;;;;;;;;;x
+vice_royalty_king_female_japanese;Kanrei;;;;;;;;;;;;;x
+job_chancellor_japanese;Yuhitsu;;;;;;;;;;;;;x
+job_marshal_japanese;Gun Bugyo;;;;;;;;;;;;;x
+job_treasurer_japanese;Kasai;;;;;;;;;;;;;x
+job_spymaster_japanese;Metsuke;;;;;;;;;;;;;x
+job_spiritual_japanese;Kannushi;;;;;;;;;;;;;x
+city_emperor_japanese;President;;;;Presidente;;;;;;;;;x
+city_emperor_female_japanese;President;;;;Presidenta;;;;;;;;;x
+city_empire_japanese;Government;;;;Gobierno;;;;;;;;;x
+city_empire_of_japanese;Government of;;;;Gobierno de;;;;;;;;;x
+city_king_japanese;Toryo;;;;;;;;;;;;;x
+city_king_female_japanese;Toryo;;;;;;;;;;;;;x
+city_kingdom_japanese;Domain;;;;Dominio;;;;;;;;;x
+city_kingdom_of_japanese;Domain of;;;;Dominio de;;;;;;;;;x
+city_duke_japanese;Odoshiyori;;;;;;;;;;;;;x
+city_duke_female_japanese;Odoshiyori;;;;;;;;;;;;;x
+city_duchy_japanese;Kuni;;;;;;;;;;;;;x
+city_duchy_of_japanese;Kuni of;;;;Kuni de;;;;;;;;;x
+city_count_japanese;Toshiyori;;;;;;;;;;;;;x
+city_count_female_japanese;Toshiyori;;;;;;;;;;;;;x
+city_county_japanese;Machi;;;;;;;;;;;;;x
+city_county_of_japanese;Machi of;;;;Machi de;;;;;;;;;x
+city_baron_japanese;Toshiyori;;;;;;;;;;;;;x
+city_baron_female_japanese;Toshiyori;;;;;;;;;;;;;x
+city_barony_japanese;Machi;;;;;;;;;;;;;x
+city_barony_of_japanese;Machi of;;;;Machi de;;;;;;;;;x
+city_job_chancellor_japanese;Monokaki;;;;;;;;;;;;;x
+city_job_marshal_japanese;So Tsuibushi;;;;;;;;;;;;;x
+city_job_treasurer_japanese;Mandokoro;;;;;;;;;;;;;x
+city_job_spymaster_japanese;Tedai;;;;;;;;;;;;;x
+city_job_spiritual_japanese;Kannushi;;;;;;;;;;;;;x
+tribal_emperor_japanese;O Kimi;;;;;;;;;;;;;x
+tribal_emperor_female_japanese;O Kimi;;;;;;;;;;;;;x
+tribal_empire_japanese;Empire;;;;;;;;;;;;;x
+tribal_empire_of_japanese;Empire of;;;;;;;;;;;;;x
+tribal_king_japanese;Kimi;;;;;;;;;;;;;x
+tribal_king_female_japanese;Kimi;;;;;;;;;;;;;x
+tribal_kingdom_japanese;Kingdom;;;;;;;;;;;;;x
+tribal_kingdom_of_japanese;Kingdom of;;;;;;;;;;;;;x
+# Religion
+shinto;Shinto;;;;;;;;;;;;;x
+shinto_DESC;Shinto is traditional religion of Japanese. It is polytheistic and revolves around the Kami ("gods" or "spirits"), supernatural entities believed to inhabit all things.;;;;;;;;;;;;;x
+THE_RIKKOKUSHI;The Rikkokushi;;;;;;;;;;;;;x
+GOD_KAMI;Kami;;;;;;;;;;;;;x
+AMATSUKAMI;Amatsu Kami;;;;;;;;;;;;;x
+AMATERASU;Amaterasu;;;;;;;;;;;;;x
+ONI;Oni;;;;;;;;;;;;;x
+MAGATSUKAMI;Magatsu Kami;;;;;;;;;;;;;x
+KIKI;Nihon Shoki and Kojiki;;;;;;;;;;;;;x
+KANNUSHI;Kannushi;;;;;;;;;;;;;x
+TOKU;Toku;;;;;;;;;;;;;x
+STAT_PIETY_TOKU;Toku;;;;;;;;;;;;;x
+STAT_PIETY_MENU_TOKU;Toku;;;;;;;;;;;;;x
+STAT_PIETY_DESC_TOKU;Toku is moral and religious virtue in medieval Japan. People believe that Gods protect person with high Toku.;;;;;;;;;;;;;x
+# Religious titles
+temple_emperor_shinto;Dai Saishu;;;;;;;;;;;;;x
+temple_emperor_female_shinto;Dai Saishu;;;;;;;;;;;;;x
+temple_empire_shinto;Empire;;;;;;;;;;;;;x
+temple_empire_shinto_of;Empire of;;;;;;;;;;;;;x
+temple_king_shinto;Saishu;;;;;;;;;;;;;x
+temple_king_female_shinto;Saishu;;;;;;;;;;;;;x
+temple_kingdom_shinto;Domain;;;;Dominio;;;;;;;;;x
+temple_kingdom_of_shinto;Domain of;;;;Dominio de;;;;;;;;;x
+temple_duke_shinto;Kuni no Miyatsuko;;;;;;;;;;;;;x
+temple_duke_female_shinto;Kuni no Miyatsuko;;;;;;;;;;;;;x
+temple_duchy_shinto;Kuni;;;;;;;;;;;;;x
+temple_duchy_of_shinto;Kuni of;;;;;;;;;;;;;x
+temple_count_shinto;Dai Guji;;;;;;;;;;;;;x
+temple_count_female_shinto;Dai Guji;;;;;;;;;;;;;x
+temple_county_shinto;Taisha;;;;;;;;;;;;;x
+temple_county_of_shinto;Taisha of;;;;Taisha de;;;;;;;;;x
+temple_baron_shinto;Guji;;;;;;;;;;;;;x
+temple_baron_female_shinto;Guji;;;;;;;;;;;;;x
+temple_barony_shinto;Jinja;;;;;;;;;;;;;x
+temple_barony_of_shinto;Jinja of;;;;Jinja de;;;;;;;;;x
+job_spiritual_shinto;Kannushi;;;;;;;;;;;;;x
+job_spiritual_female_shinto;Miko;;;;;;;;;;;;;x
+# Honorary titles
+title_JPC_master_of_strategy;Master of Strategy;;;;;;;;;;;;;x
+title_JPC_master_of_strategy_desc;Master of Strategy;;;;;;;;;;;;;x
+title_JPC_master_of_swordmanship;Master of Swordmanship;;;;;;;;;;;;;x
+title_JPC_master_of_swordmanship_desc;Master of Swordmanship;;;;;;;;;;;;;x
+title_JPC_master_of_poetry;Master of Poetry;;;;;;;;;;;;;x
+title_JPC_master_of_poetry_desc;Master of Poetry;;;;;;;;;;;;;x
+# Trait
+ninja;Ninja;;;;;;;;;;;;;x
+ninja_desc;This character trained as a Ninja.;;;;;;;;;;;;;x
+swordmaster;Swordmaster;;;;;;;;;;;;;x
+swordmaster_desc;This character is a master of swordmanship.;;;;;;;;;;;;;x
+# Decisions
+jpc_invite_ronin;Invite Ronin;;;;;;;;;;;;;x
+jpc_invite_ronin_desc;Invite Ronin;;;;;;;;;;;;;x
+jpc_invite_ninja;Invite Ninja;;;;;;;;;;;;;x
+jpc_invite_ninja_desc;Invite Ninja;;;;;;;;;;;;;x
+jpc_invite_shinto_priestess;Invite Shinto Priestess;;;;;;;;;;;;;x
+jpc_invite_shinto_priestess_desc;Invite Shinto Priestess;;;;;;;;;;;;;x
+jpc_reconstruct_annan;Reconstruct the Annan Protectorate;;;;;;;;;;;;;x
+jpc_reconstruct_annan_desc;Abe no Nakamaro, a compatriot of mine, was once appointed to the protectorate general of Annan. But, many years have passed since the Annan Protectorate declined. Reconstructing the Annan Protectorate will require a fair amount of prestige and money.;;;;;;;;;;;;;x
+jpc_create_new_chrysanthemum_throne;Create the New Chrysanthemum Throne;;;;;;;;;;;;;x
+jpc_create_new_chrysanthemum_throne_desc;I have heard that our ancestors once swore allegiance to the emperor of "the Land of the Rising Sun". However, this has nothing to do with me, because I was born in "the Continent" and have never seen "the Homeland". What kind of problem does exist if I become myself the emperor of my empire?;;;;;;;;;;;;;x
+newemperor_bloodline;Blood of Emperor Jintoku;;;;;;;;;;;;;x
+EVTDESCJPC.90;I create the new Chrysanthemum throne now. This should be the time of begin the my bloodline.;;;;;;;;;;;;;x
+EVTOPTAJPC.90;I am a MIKADO!;;;;;;;;;;;;;x
+# CB
+minor_sengoku_conquest_desc;This CB allows warlords to expand his territory further into his neighborhood.;;;;;;;;;;;;;;x
+CB_NAME_GEKOKUJO;Conquest of [Title.GetBaseName];;;;;;;;;;;;;;x
+WAR_NAME_GEKOKUJO;$ORDER$$FIRST_ADJ$ Conquest of $OTHER_TITLE$;;;;;;;;;;;;;;x
+sengoku_invasion_desc;This CB allows warlords to expand his territory further in the region.;;;;;;;;;;;;;;x
+CB_NAME_SENGOKU_INVASION;Invasion of [Title.GetBaseName];;;;;;;;;;;;;;x
+WAR_SENGOKU_INVASION;$ORDER$$FIRST_ADJ$ Invasion of $OTHER_TITLE$;;;;;;;;;;;;;;x
+# Other
+ninja_culture;Ninja;;;;;;;;;;;;;x
+d_ronin_company;Ronin Company;;;;;;;;;;;;;x
+d_sohei_monks;Sohei Monks;;;;;;;;;;;;;x
+d_wokou_ships;Wokou Ships;;;;;;;;;;;;;x
+JPC_HEAD;Head;;;;;;;;;;;;;x
+JPC_HEAD_FOA;Head;;;;;;;;;;;;;x
+e_annan_protectorate;Annan Protectorate;;;;;;;;;;;;;x
+e_annan_protectorate_adj;Annan;;;;;;;;;;;;;x
+k_nanman;Nanman;;;;;;;;;;;;;x
+k_nanman_Adj;Nanman;;;;;;;;;;;;;x
+JIEDUSHI;Jiedushi;;;;;;;;;;;;;x
+e_newkamakura;New Kamakura;;;;;;;;;;;;;x
+e_newkamakura_adj;Japanese;;;;;;;;;;;;;x
+NEWKAMAKURA;New Kamakura;;;;;;;;;;;;;x
+e_newjapan;New Japan;;;;;;;;;;;;;x
+e_newjapan_adj;Japanese;;;;;;;;;;;;;x
+NEWEMPEROR;Emperor;;;;;;;;;;;;;x
+NEWEMPRESS;Empress;;;;;;;;;;;;;x
+ERA_CHAR_NAME_204500;Henry II;;;;;;;;;;;;;x
+ERA_CHAR_NAME_205506;Philippe II;;;;;;;;;;;;;x
+ERA_CHAR_NAME_212501;Friedrich I;;;;;;;;;;;;;x
+ERA_CHAR_NAME_215500;Isaakios II;;;;;;;;;;;;;x
+ERA_CHAR_NAME_7001000;Abe no Nakamaro;;;;;;;;;;;;;x
+ERA_CHAR_NAME_7001400;Minamoto no Yoshitsune;;;;;;;;;;;;;x
+ERA_CHAR_INFO_204500;Henry II was King of England from 1154 to 1189, and the father of Richard the Lionheart and John Lackland.;;;;;;;;;;;;;x
+ERA_CHAR_INFO_205506;Philippe II, byname Philip Augustus, was King of France from 1180 to 1223.;;;;;;;;;;;;;x
+ERA_CHAR_INFO_212501;Friedrich I, also known as Friedrich Barbarossa, was the Holy Roman Emperor from 1155 to 1190.;;;;;;;;;;;;;x
+ERA_CHAR_INFO_215500;Isaakios II Angelos was the Byzantine Emperor from 1185 to 1195, and again from 1203 to 1204.;;;;;;;;;;;;;x
+ERA_CHAR_INFO_226000;An-Nasir Salah ad-Din Yusuf ibn Ayyub, known as Salah ad-Din or Saladin, was the founder of the Ayyubid dynasty.;;;;;;;;;;;;;x
+ERA_CHAR_INFO_7001000;Abe no Nakamaro (698-770), also known as Chao Heng in Chinese name, was a Japanese bureaucrat. In 717-718, he was a member of the Japanese mission to China (Kentoshi). In China, he served Tang-dynasty China as a bureaucrat, and finaly rose to the position of the Protectorate General of the Annan Protectorate.;;;;;;;;;;;;;x
+ERA_CHAR_INFO_7001400;Minamoto no Yoshitsune (1159-1189) was a military commander of the Minamoto clan of Japan. As a brother of Yoritomo (the First Shogun of Kamakura), he led a series of battles which toppled the Taira clan (the Genpei War). As Yoritomo became suspicious of him, Yoshitsune fled and died in Mutsu province. However, it is also said that he had survived and successfully escaped abroad.;;;;;;;;;;;;;x

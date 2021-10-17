@@ -1,0 +1,161 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+### Wonders
+
+wonder_mbw_aqueduct;Grand Aqueduct;Grand Aqueduc;Toller Aquädukt;;Gran Acueducto;;;;;;;;;x
+wonder_mbw_aqueduct_desc;This aqueduct supplies public baths, latrines, fountains, mines, mills, farms, gardens and private households.;;;;;;;;;;;;;x
+wonder_mbw_aqueduct_construction_desc;Aqueducts bring water from outside sources into cities and towns. A clean source of water can help §YResist Disease§! and benefit one's §YHealth§!.;;;;;;;;;;;;;x
+
+wonder_mbw_arch;Triumphal Arch;Arc de Triomphe;Triumphbogen;;Arco Triunfal;;;;;;;;;x
+wonder_mbw_arch_desc;A style pioneered by the Ancient Romans, this arch stands tribute to the military might of its builder.;;;;;;;;;;;;;x
+wonder_mbw_arch_construction_desc;Used to commemorate §YPrestigious§! leaders or events such as the founding of new colonies, a death in a noble family or the accession of a new liege.;;;;;;;;;;;;;x
+
+wonder_mbw_bridge;River Bridge;Pont sur la Rivière;Flussbrücke;;Puente Fluvial;;;;;;;;;x
+wonder_mbw_bridge_desc;This grandiose bridge makes an easier crossing of the great river.;;;;;;;;;;;;;x
+wonder_mbw_bridge_construction_desc;A fine example of civil engineering, a bridge greatly improves §YMovement Speed§! and can help people cross previously unsurmountable terrain.;;;;;;;;;;;;;x
+
+wonder_mbw_colossus;Harbour Colossus;Colosse de Port;Hafenkoloss;;Coloso de Puetro;;;;;;;;;x
+wonder_mbw_colossus_desc;This gigantic colossus stands guard over the harbour mouth, overseeing all who come and go.;;;;;;;;;;;;;x
+wonder_mbw_colossus_construction_desc;Patterned after the fabled guardian of Rhodes, this gigantic statue defends its charge against §YSieges§!.;;;;;;;;;;;;;x
+
+wonder_mbw_market;Market Cross;Marché Croisé;Marktkreuz;;Cruz de Mercado;;;;;;;;;x
+wonder_mbw_market_desc;This market cross defines a market square in towns, where historically the right to hold a regular market or fair was granted by the monarch, a bishop or a baron.;;;;;;;;;;;;;x
+wonder_mbw_market_construction_desc;A market cross is a structure used to denote a market square in towns. These markets increase §YLocal Tax§! and greatly aid the §YEconomy§Y.;;;;;;;;;;;;;x
+
+wonder_mbw_obelisk;Imposing Obelisk;Imposant Obélisque;Imposanter Obelisk;;Obelisco Imponente;;;;;;;;;x
+wonder_mbw_obelisk_desc;This ominous monolith stands watch over nobles and commoners alike.;;;;;;;;;;;;;x
+wonder_mbw_obelisk_construction_desc;A §YFearful§! black obelisk of foreign design that serves as a reminder of the builders power and §YPrestige§!.;;;;;;;;;;;;;x
+
+### Grand Aqueduct
+
+upgrade_mbw_irrigation_channels;Irrigation Channels;Canaux d'irrigation;Bewässerungskanäle;;Canales de Irrigación;;;;;;;;;x
+upgrade_mbw_irrigation_channels_desc;Subterranean pipes and deep channels that feed the irrigation ditches in adjacent farmland.;;;;;;;;;;;;;x
+
+upgrade_mbw_silver_lined_waterways;Silver-lined Waterways;Voies Navigables Bordées D'argent;Silber gesäumte Wasserstraßen;;Canales recubiertos de plata;;;;;;;;;x
+upgrade_mbw_silver_lined_waterways_desc;Scholars say that silver has anti-miasmatic properties and can halt the spread of certain diseases.;;;;;;;;;;;;;x
+
+upgrade_mbw_private_plumbing;Private Plumbing;Plomberie Privée;Private Sanitär;;Fontanería Privada;;;;;;;;;x
+upgrade_mbw_private_plumbing_desc;Running water supply for noble and common households, for a price.;;;;;;;;;;;;;x
+
+upgrade_mbw_inspector_of_the_waters;Inspector of the Waters;Inspecteur des Eaux;Inspektor der Gewässer;;Inspector de las Aguas;;;;;;;;;x
+upgrade_mbw_inspector_of_the_waters_desc;Responsible for maintaining the supply and quality of the water, from source to city.;;;;;;;;;;;;;x
+
+mbw_inspector_waters_custom_modifier_tt;Unlocks the §YInspector of the Waters§! minor title;;;;;;;;;;;;;x
+
+### Triumphal Arch
+
+upgrade_mbw_sculpted_reliefs;Sculpted Reliefs;Reliefs Sculptés;Gemeißelte Reliefs;;Relieves Esculpidos;;;;;;;;;x
+upgrade_mbw_sculpted_reliefs_desc;A beautiful carved mural depicting the heroic efforts and the bloody battles that led to the erection of this monument.;;;;;;;;;;;;;x
+
+upgrade_mbw_dedication;Re-dedication Plaque;Plaque;Plakette;;Placa;;;;;;;;;x
+upgrade_mbw_dedication_desc;New inscriptions that rededicate the arch to yourself and your dynasty.;;;;;;;;;;;;;x
+
+upgrade_mbw_statuery;Religious Statuary;Statuaire Religieux;Religiöse Statuen;;Estatuario Religioso;;;;;;;;;x
+upgrade_mbw_statuery_desc;These statues adorn the top of the arch. They are of a distinctly [Root.Religion.GetName] character.;;;;;;;;;;;;;x
+
+upgrade_mbw_statuery_2;Cultural Statuary;Statuaire Culturel;Kulturelle Statuen;;Estatuas Culturales;;;;;;;;;x
+upgrade_mbw_statuery_2_desc;These statues adorn the top of the arch. They are of a distinctly [Root.Culture.GetName] character.;;;;;;;;;;;;;x
+
+### Magnificent Bridge
+
+upgrade_mbw_bridge_roads;Road Network;Réseau Routier;Straßennetz;;Red de Carreteras;;;;;;;;;x
+upgrade_mbw_bridge_roads_desc;The surrounding roads are refurbished to a high standard so as to properly serve the bridge and the populace.;;;;;;;;;;;;;x
+
+upgrade_mbw_bridge_tolls;Toll Gates;Barrières de Péage;Mautstellen;;Puertas de Peaje;;;;;;;;;x
+upgrade_mbw_bridge_tolls_desc;Construction and maintenance of a bridge such as this is not a cheap endeavor. Those who wish to cross must pay to do so.;;;;;;;;;;;;;x
+
+upgrade_mbw_master_of_the_crossing;Master of the Crossing;Maître de la Traversée;Meister der Überfahrt;;Maestro del Puente;;;;;;;;;x
+upgrade_mbw_master_of_the_crossing_desc;Appointed as the one responsible for the maintenance of the bridge and the safety of those who cross it.;;;;;;;;;;;;;x
+
+mbw_master_crossing_custom_modifier_tt;Unlocks the §YMaster of the Crossing§! minor title;;;;;;;;;;;;;x
+
+### Harbour Colossus
+
+upgrade_mbw_sea_tolls;Tariffs and Tolls;Tarifs et Péages;Tarife und Mautgebühren;;Tarifas y Peajes;;;;;;;;;x
+upgrade_mbw_sea_tolls_desc;Ships must pay a harbour fee, as well taxes on the goods they are transporting.;;;;;;;;;;;;;x
+
+upgrade_mbw_murderholes;Murder Holes;Trous de Meurtre;Mordlöcher;;Agujeros de Asesinato;;;;;;;;;x
+upgrade_mbw_murderholes_desc;Specifically placed openings in the underside of the great work that allow hot oil and lethal projectiles to be loosed on attackers.;;;;;;;;;;;;;x
+
+upgrade_mbw_great_chain;Great Chain;Grande Chaîne;Große Kette;;Cadena grande;;;;;;;;;x
+upgrade_mbw_great_chain_desc;A massive underwater chain that sits at the bottom of the harbor, waiting to be raised as a blockade in times of war and pestilence.;;;;;;;;;;;;;x
+
+### Market Cross
+
+upgrade_mbw_market_hall;Market Hall;Les Halles;Markthalle;;Sala de Mercado;;;;;;;;;x
+upgrade_mbw_market_hall_desc;A covered market hall of a modern design, allowing trade to continue no matter the weather.;;;;;;;;;;;;;x
+
+upgrade_mbw_office_weights_measures;Office of Weights & Measures;Bureau des Poids & Mesures;Büro für Maße und Gewichte;;Oficina de Pesas y Medidas;;;;;;;;;x
+upgrade_mbw_office_weights_measures_desc;An establishment of learned men dedicated to furthering and publishing standard weights and measures, to ensure fair trade for all.;;;;;;;;;;;;;x
+
+upgrade_mbw_market_bailiff;Market Bailiff;Huissier de Marché;Markt Gerichtsvollzieher;;Alguacil del Mercado;;;;;;;;;x
+upgrade_mbw_market_bailiff_desc;The Bailiff is powerful position, responsible for ensuring the smooth operation of the market, adjudication of trade disputes and the orderly conduct of buyers and sellers.;;;;;;;;;;;;;x
+
+mbw_market_bailiff_custom_modifier_tt;Unlocks the §YMarket Bailiff§! minor title;;;;;;;;;;;;;x
+
+
+### Imposing Obelisk
+
+upgrade_mbw_vault;Secret Vault;Voûte Secrète;Geheimes Gewölbe;;Bóveda Secreta;;;;;;;;;x
+upgrade_mbw_vault_desc;A hidden hollow, buried deep within the obelisk itself.;;;;;;;;;;;;;x
+
+upgrade_mbw_gilded_capstone;Gilded Capstone;Pierre Dorée;Vergoldeter Deckstein;;Piedra Dorada;;;;;;;;;x
+upgrade_mbw_gilded_capstone_desc;This golden capstone glitters in the sunlight and can been seen for miles, like an ever watchful eye.;;;;;;;;;;;;;x
+
+upgrade_mbw_decorative_carvings;Intimidating Carvings;Sculptures Intimidantes;Einschüchternde Schnitzereien;;Esculturas Intimidantes;;;;;;;;;x
+upgrade_mbw_decorative_carvings_desc;Spiraling stonework that depicts the suffering of traitors and enemies in increasing brutal fashions.;;;;;;;;;;;;;x
+
+### Minor Titles
+
+title_mbw_inspector_of_the_waters;Inspector of the Waters;Inspecteur des Eaux;Inspektor der Gewässer;;Inspector de las Aguas;;;;;;;;;x
+title_mbw_inspector_of_the_waters_desc;Responsible for maintaining the supply and quality of the water, from source to city.;;;;;;;;;;;;;x
+
+title_mbw_master_of_the_crossing;Master of the Crossing;Maître de la Traversée;Meister der Überfahrt;;Maestro del Puente;;;;;;;;;x
+title_mbw_master_of_the_crossing_desc;Appointed as the one responsible for the maintenance of the bridge and the safety of those who cross it.;;;;;;;;;;;;;x
+
+title_mbw_market_bailiff;Market Bailiff;Huissier de Marché;Markt Gerichtsvollzieher;;Alguacil del Mercado;;;;;;;;;x
+title_mbw_market_bailiff_desc;The Bailiff is powerful position, responsible for ensuring the smooth operation of the market, adjudication of trade disputes and the orderly conduct of buyers and sellers.;;;;;;;;;;;;;x
+
+### Artifacts
+
+mbw_artifact_colossus_head;Colossus Head;Tête de Colosse;Kolosskopf;;Cabeza de Coloso;;;;;;;;;x
+looted_mbw_artifact_colossus_head_rename;Head of [target_wonder.Location.GetName];Tête de [target_wonder.Location.GetName];Leiter von [target_wonder.Location.GetName];;Jefe de [target_wonder.Location.GetName];;;;;;;;;x
+looted_mbw_artifact_colossus_head_desc;The gigantic statue head was brought back as a trophy when the defenses of [target_wonder.Location.GetName] were razed.;;;;;;;;;;;;;x
+
+mbw_artifact_capstone;Obelisk Capstone;Obélisque en Pierre;Obelisk Deckstein;;Piedra del Obelisco;;;;;;;;;x
+looted_mbw_artifact_capstone_rename;Capstone of the [target_wonder.Location.GetName];Pierre de la [target_wonder.Location.GetName];Stein der [target_wonder.Location.GetName];;Piedra de la [target_wonder.Location.GetName];;;;;;;;;x
+looted_mbw_artifact_capstone_desc;This gleaming capstone is all that remains of the [target_wonder.Location.GetName].;;;;;;;;;;;;;x
+
+mbw_artifact_ledgers;Market Ledgers;Ledgers de Marché;Marktbücher;;Libros de Mercado;;;;;;;;;x
+looted_mbw_artifact_ledgers_rename;Ledgers from [target_wonder.Location.GetName];Ledgers de [target_wonder.Location.GetName];Hauptbücher von [target_wonder.Location.GetName];;Libros de [target_wonder.Location.GetName];;;;;;;;;x
+looted_mbw_artifact_ledgers_desc;This useful collection of ledgers, contracts, registers and logbooks was recovered from the rubble of the [target_wonder.Location.GetName].;;;;;;;;;;;;;x
+
+mbw_wonder_loot;More Wonder Loot;Plus de Butin;Mehr Beute;;Más botín;;;;;;;;;x
+
+### Custom Localization
+
+String_mbw_Aqueduct;Aqueduct;Aqueduc;Aquädukt;;Acueducto;;;;;;;;;x
+String_mbw_Arch;Arch;Arc;Bogen;;Arco;;;;;;;;;x
+String_mbw_River_Bridge;River Bridge;Pont sur la Rivière;Flussbrücke;;Puente Fluvial;;;;;;;;;x
+String_mbw_Colossus;Harbour Colossus;Colosse de Port;Hafenkoloss;;Coloso de Puetro;;;;;;;;;x
+String_mbw_Market;Market;Marché;Markt;;Mercado;;;;;;;;;x
+String_mbw_Obelisk;Obelisk;Obélisque;Obelisk;;Obelisco;;;;;;;;;x
+
+String_mbw_aqueduct;aqueduct;aqueduc;aquädukt;;acueducto;;;;;;;;;x
+String_mbw_arch;arch;arc;bogen;;arco;;;;;;;;;x
+String_mbw_river_bridge;river bridge;pont sur la rivière;flussbrücke;;puente fluvial;;;;;;;;;x
+String_mbw_colossus;colossus;colosse;hafenkoloss;;coloso;;;;;;;;;x
+String_mbw_market;market cross;marché croisé;marktkreuz;;cruz de mercado;;;;;;;;;x
+String_mbw_obelisk;obelisk;obélisque;obelisk;;obelisco;;;;;;;;;x
+
+String_encouraged_fear_1;stirred fear in both commoner and noble alike;suscité la peur chez le roturier et le noble;weckte angst im bürgerlichen und im edlen;;Despertó miedo tanto en los plebeyos como en los nobles;;;;;;;;;x
+
+String_encouraged_fear_2;inspired terror in all those who gaze upon it;terreur inspirée par tous ceux qui la contemplent;terror inspiriert von allen, die darüber nachdenken;;terror inspirado en todos los que lo miran;;;;;;;;;x
+
+String_mbw_colossus_custom_1;The Colossus of [target_province.GetName];Le Colosse de [target_province.GetName];Der Koloss von [target_province.GetName];;El Coloso de [target_province.GetName];;;;;;;;;x
+
+String_mbw_colossus_custom_2;The [This.GetWonderAdjCap] Colossus of [target_province.GetName];Le [This.GetWonderAdjCap] Colosse de [target_province.GetName];Der [This.GetWonderAdjCap] Koloss von [target_province.GetName];;El [This.GetWonderAdjCap] Coloso de [target_province.GetName];;;;;;;;;x
+
+String_mbw_arch_custom_1;Arch of [wonder_owner_original.GetTitledFirstName];Arc de [wonder_owner_original.GetTitledFirstName];Bogen von [wonder_owner_original.GetTitledFirstName];;Arco de [wonder_owner_original.GetTitledFirstName];;;;;;;;;x
+
+String_mbw_arch_custom_2;[This.GetWonderAdjCap] Arch of [wonder_owner_original.GetTitledFirstName];[This.GetWonderAdjCap] Arc de [wonder_owner_original.GetTitledFirstName];[This.GetWonderAdjCap] Bogen von [wonder_owner_original.GetTitledFirstName];;[This.GetWonderAdjCap] El Arco de [wonder_owner_original.GetTitledFirstName];;;;;;;;;x

@@ -1,0 +1,23 @@
+autiste = {
+
+      ruler_designer_cost = -10
+
+potential = {
+     age = 2
+}
+
+random = yes
+birth = 25
+  
+  diplomacy = -8
+  intrigue = -8
+  learning = 5
+  stewardship = 2
+  
+  same_opinion = 20
+  vassal_opinion = -10
+  general_opinion = -10
+  sex_appeal_opinion = -10
+  ai_rationality = -10
+
+}

@@ -1,0 +1,10 @@
+RTPbaron_1_title;Land Opportunity;;;;;;x
+RTPbaron_1_desc;Long have I awaited for someone to notice my great deeds and to entrust me with a province.  [From.GetTitledName] has blessed me with a letter extending an offer related to such.  [From.GetSheHeCap] offers me the fief of [rtp_new_title.GetName] in exchange for [From.Culture.GetName] cultural integration and religion conversion to the [From.Religion.GetName] faith. This would mean abbandoning any previously owned land.;;;;;;x
+RTPbaron.1_1;Accept the offer.;;;;;;x
+RTPbaron.1_2;Accept the offer but keep practicing your faith in secrect.;;;;;;x
+RTPbaron.1_3;Decline the offer.;;;;;;x
+
+RTPbaron_2_title;A Place to Call Home;;;;;;x
+RTPbaron_2_desc;[Root.Liege.GetTitledName] is willing to grant me the county of [rtp_new_title.GetName] for a fair amount of coin.;;;;;;x
+RTPbaron.2_1;My own province.;;;;;;x
+RTPbaron.2_2;Forget it.;;;;;;x

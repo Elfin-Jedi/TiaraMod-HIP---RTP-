@@ -1,0 +1,8 @@
+spriteTypes = {
+	
+	# Decision icons
+	spriteType = {
+		name = "GFX_paganify_the_world"
+		texturefile = "gfx\\interface\decision_icon_convert_to_local_religion.dds" #Placeholder
+	}
+}

@@ -1,0 +1,361 @@
+rtp_bandit_hideout_em;Bandit Hideout;;;;;;x
+rtp_bandit_hideout_em_desc;A bandit hideout has been enstablished in this province.;;;;;;x
+
+rtp_job_stipend1_em;Stipend;;;;;;x
+rtp_job_stipend1_em_desc;This character is collecting a stipend from [From.GetHerHis] job.\nPay scale for this job is §YLow§!.;;;;;;x
+
+rtp_job_stipend2_em;Stipend;;;;;;x
+rtp_job_stipend2_em_desc;This character is collecting a stipend from [From.GetHerHis] job.\nPay scale for this job is §YMedium§!.;;;;;;x
+
+rtp_job_stipend3_em;Stipend;;;;;;x
+rtp_job_stipend3_em_desc;This character is collecting a stipend from [From.GetHerHis] job.\nPay scale for this job is §YHigh§!.;;;;;;x
+
+rtp_job_stipend4_em;Stipend;;;;;;x
+rtp_job_stipend4_em_desc;This character is collecting a stipend from [From.GetHerHis] job.\nPay scale for this job is the §YHighest§!.;;;;;;x
+
+rtp_naval_supplies_em;Naval Supplies;;;;;;x
+rtp_naval_supplies_em_desc;Many cargo ships have been sunk during a naval battle and supplies have been reduced for this province.;;;;;;x
+
+rtp_diplomacy_prayer_em;Diplomatic Favor;;;;;;x
+rtp_diplomacy_prayer_em_desc;[From.Religion.GetHighGodNameCap] has blessed this character.;;;;;;x
+
+rtp_martial_prayer_em;Martial Favor;;;;;;x
+rtp_martial_prayer_em_desc;[From.Religion.GetHighGodNameCap] has blessed this character.;;;;;;x
+
+rtp_stewardship_prayer_em;Stewarship Favor;;;;;;x
+rtp_stewardship_prayer_em_desc;[From.Religion.GetHighGodNameCap] has blessed this character.;;;;;;x
+
+rtp_intrigue_prayer_em;Intrigue Favor;;;;;;x
+rtp_intrigue_prayer_em_desc;[From.Religion.GetHighGodNameCap] has blessed this character.;;;;;;x
+
+rtp_learning_prayer_em;Learning Favor;;;;;;x
+rtp_learning_prayer_em_desc;[From.Religion.GetHighGodNameCap] has blessed this character.;;;;;;x
+
+rtp_wealth_prayer_em;Wealth Favor;;;;;;x
+rtp_wealth_prayer_em_desc;[From.Religion.GetHighGodNameCap] has blessed this character.;;;;;;x
+
+rtp_piety_prayer_em;Piety Favor;;;;;;x
+rtp_piety_prayer_em_desc;[From.Religion.GetHighGodNameCap] has blessed this character.;;;;;;x
+
+rtp_prestige_prayer_em;Prestige Favor;;;;;;x
+rtp_prestige_prayer_em_desc;[From.Religion.GetHighGodNameCap] has blessed this character.;;;;;;x
+
+rtp_fertility_prayer_em;Fertility Favor;;;;;;x
+rtp_fertility_prayer_em_desc;[From.Religion.GetHighGodNameCap] has blessed this character.;;;;;;x
+
+rtp_health_prayer_em;Health Favor;;;;;;x
+rtp_health_prayer_em_desc;[From.Religion.GetHighGodNameCap] has blessed this character.;;;;;;x
+
+rtp_null_prayer_em;No Favor;;;;;;x
+rtp_null_prayer_em_desc;[From.Religion.GetHighGodNameCap] has not blessed this character.;;;;;;x
+
+rtp_gambled_em;Gambled;;;;;;x
+rtp_gambled_em_desc;This character has recently gambled.;;;;;;x
+
+rtp_training_em;Training;;;;;;x
+rtp_training_em_desc;This character has received combat training.;;;;;;x
+
+rtp_battle_roar_em;Battle Roar;;;;;;x
+rtp_battle_roar_em_desc;This character has unleashed a powerful Battle Roar.;;;;;;x
+
+rtp_safehouse_em;Safehouse;;;;;;x
+rtp_safehouse_em_desc;This character has set up a safehouse for [From.Society.GetName].;;;;;;x
+
+rtp_loan_stewarship1_em;[Root.Society.GetName] Loan;;;;;;x
+rtp_loan_stewarship1_em_desc;This character has taken out a loan from [From.Society.GetName].;;;;;;x
+
+rtp_loan_stewarship2_em;[Root.Society.GetName] Loan;;;;;;x
+rtp_loan_stewarship2_em_desc;This character has taken out a loan from [From.Society.GetName].;;;;;;x
+
+rtp_loan_stewarship3_em;[Root.Society.GetName] Loan;;;;;;x
+rtp_loan_stewarship3_em_desc;This character has taken out a loan from [From.Society.GetName].;;;;;;x
+
+rtp_loan_stewarship4_em;[Root.Society.GetName] Loan;;;;;;x
+rtp_loan_stewarship4_em_desc;This character has taken out a loan from [From.Society.GetName].;;;;;;x
+
+rtp_toll_booth_em;Toll Booth;;;;;;x
+rtp_toll_booth_em_desc;This character has set up a toll booth in [From.TopLiege.Capital.GetName].;;;;;;x
+
+rtp_tolerance_em;Tolerant;;;;;;x
+rtp_tollerance_em_desc;This character tries understanding the different cultures and religions.;;;;;;x
+
+rtp_polite_em;Polite;;;;;;x
+rtp_polite_em_desc;This character is very polite.;;;;;;x
+
+
+rtp_slavery_0_em;Full Slavery;;;;;;x
+rtp_slavery_0_em_desc; ;;;;;;x
+
+rtp_slavery_2_em;No Slavery;;;;;;x
+rtp_slavery_2_em_desc; ;;;;;;x
+
+rtp_trade_0_em;Closed Market;;;;;;x
+rtp_trade_0_em_desc; ;;;;;;x
+
+rtp_trade_2_em;Open Market;;;;;;x
+rtp_trade_2_em_desc; ;;;;;;x
+
+rtp_resettlement_0_em;Allowed Resettlement;;;;;;x
+rtp_resettlement_0_em_desc; ;;;;;;x
+
+rtp_resettlement_2_em;Banned Resettlement;;;;;;x
+rtp_resettlement_2_em_desc; ;;;;;;x
+
+rtp_welfare_0_em;No Welfare;;;;;;x
+rtp_welfare_0_em_desc; ;;;;;;x
+
+rtp_welfare_2_em;Full Welfare;;;;;;x
+rtp_welfare_2_em_desc; ;;;;;;x
+
+rtp_production_0_em;Local Goods;;;;;;x
+rtp_production_0_em_desc; ;;;;;;x
+
+rtp_production_2_em;Imported Goods;;;;;;x
+rtp_production_2_em_desc; ;;;;;;x
+
+rtp_property_0_em;No Businesses;;;;;;x
+rtp_property_0_em_desc; ;;;;;;x
+
+rtp_property_2_em;Open Businesses;;;;;;x
+rtp_property_2_em_desc; ;;;;;;x
+
+rtp_banking_0_em;Loan Shark Banking;;;;;;x
+rtp_banking_0_em_desc; ;;;;;;x
+
+rtp_banking_2_em;Regulated Banking;;;;;;x
+rtp_banking_2_em_desc; ;;;;;;x
+
+rtp_holidays_0_em;No Paid Holidays;;;;;;x
+rtp_holidays_0_em_desc; ;;;;;;x
+
+rtp_holidays_2_em;Paid Holidays;;;;;;x
+rtp_holidays_2_em_desc; ;;;;;;x
+
+rtp_role_0_em;Militaristic Role;;;;;;x
+rtp_role_0_em_desc; ;;;;;;x
+
+rtp_role_2_em;Pacifist Role;;;;;;x
+rtp_role_2_em_em_desc; ;;;;;;x
+
+rtp_consecrated_grounds_0_em;No Consecrated Grounds;;;;;;x
+rtp_consecrated_grounds_0_em_desc; ;;;;;;x
+
+rtp_consecrated_grounds_2_em;Full Consecrated Grounds;;;;;;x
+rtp_consecrated_grounds_2_em_em_desc; ;;;;;;x
+
+rtp_membership_0_em;Closed Membership;;;;;;x
+rtp_membership_0_em_desc; ;;;;;;x
+
+rtp_membership_2_em;Open Membership;;;;;;x
+rtp_membership_2_em_em_desc; ;;;;;;x
+
+rtp_sanctuary_0_em;No Sanctuary;;;;;;x
+rtp_sanctuary_0_em_desc; ;;;;;;x
+
+rtp_sanctuary_2_em;Open Sanctuary;;;;;;x
+rtp_sanctuary_2_em_em_desc; ;;;;;;x
+
+rtp_tithe_0_em;Mandatory Tithe;;;;;;x
+rtp_tithe_0_em_desc; ;;;;;;x
+
+rtp_tithe_2_em;Reversed Tithe;;;;;;x
+rtp_tithe_2_em_em_desc; ;;;;;;x
+
+rtp_attendance_0_em;Mandatory Attendance;;;;;;x
+rtp_attendance_0_em_desc; ;;;;;;x
+
+rtp_attendance_2_em;No Attendance;;;;;;x
+rtp_attendance_2_em_em_desc; ;;;;;;x
+
+rtp_glossolalia_0_em;Banned Glossolalia;;;;;;x
+rtp_glossolalia_0_em_desc; ;;;;;;x
+
+rtp_glossolalia_2_em;Allowed Glossolalia;;;;;;x
+rtp_glossolalia_2_em_em_desc; ;;;;;;x
+
+rtp_conversion_0_em;Forced Conversion;;;;;;x
+rtp_conversion_0_em_desc; ;;;;;;x
+
+rtp_conversion_2_em;No Forced Conversion;;;;;;x
+rtp_conversion_2_em_em_desc; ;;;;;;x
+
+
+rtp_corruption1_em;Overstretched;;;;;;x
+rtp_corruption1_em_desc;This ruler's realm is too overstretched and the vassals are growing weary.;;;;;;x
+
+rtp_corruption2_em;Overstretched;;;;;;x
+rtp_corruption2_em_desc;This ruler's realm is too overstretched and the vassals are growing weary.;;;;;;x
+
+rtp_corruption3_em;Overstretched;;;;;;x
+rtp_corruption3_em_desc;This ruler's realm is too overstretched and the vassals are growing weary.;;;;;;x
+
+rtp_corruption4_em;Overstretched;;;;;;x
+rtp_corruption4_em_desc;This ruler's realm is too overstretched and the vassals are growing weary.;;;;;;x
+
+rtp_corruption5_em;Overstretched;;;;;;x
+rtp_corruption5_em_desc;This ruler's realm is too overstretched and the vassals are growing weary.;;;;;;x
+
+rtp_corruption6_em;Overstretched;;;;;;x
+rtp_corruption6_em_desc;This ruler's realm is too overstretched and the vassals are growing weary.;;;;;;x
+
+rtp_corruption7_em;Overstretched;;;;;;x
+rtp_corruption7_em_desc;This ruler's realm is too overstretched and the vassals are growing weary.;;;;;;x
+
+rtp_corruption8_em;Overstretched;;;;;;x
+rtp_corruption8_em_desc;This ruler's realm is too overstretched and the vassals are growing weary.;;;;;;x
+
+rtp_corruption9_em;Overstretched;;;;;;x
+rtp_corruption9_em_desc;This ruler's realm is too overstretched and the vassals are growing weary.;;;;;;x
+
+rtp_corruption10_em;Overstretched;;;;;;x
+rtp_corruption10_em_desc;This ruler's realm is too overstretched and the vassals are growing weary.;;;;;;x
+
+rtp_corruption11_em;Overstretched;;;;;;x
+rtp_corruption11_em_desc;This ruler's realm is too overstretched and the vassals are growing weary.;;;;;;x
+
+rtp_corruption12_em;Overstretched;;;;;;x
+rtp_corruption12_em_desc;This ruler's realm is too overstretched and the vassals are growing weary.;;;;;;x
+
+rtp_corruption13_em;Overstretched;;;;;;x
+rtp_corruption13_em_desc;This ruler's realm is too overstretched and the vassals are growing weary.;;;;;;x
+
+rtp_corruption14_em;Overstretched;;;;;;x
+rtp_corruption14_em_desc;This ruler's realm is too overstretched and the vassals are growing weary.;;;;;;x
+
+rtp_corruption15_em;Overstretched;;;;;;x
+rtp_corruption15_em_desc;This ruler's realm is too overstretched and the vassals are growing weary.;;;;;;x
+
+rtp_corruption16_em;Overstretched;;;;;;x
+rtp_corruption16_em_desc;This ruler's realm is too overstretched and the vassals are growing weary.;;;;;;x
+
+rtp_corruption17_em;Overstretched;;;;;;x
+rtp_corruption17_em_desc;This ruler's realm is too overstretched and the vassals are growing weary.;;;;;;x
+
+rtp_corruption18_em;Overstretched;;;;;;x
+rtp_corruption18_em_desc;This ruler's realm is too overstretched and the vassals are growing weary.;;;;;;x
+
+rtp_corruption19_em;Overstretched;;;;;;x
+rtp_corruption19_em_desc;This ruler's realm is too overstretched and the vassals are growing weary.;;;;;;x
+
+rtp_corruption20_em;Overstretched;;;;;;x
+rtp_corruption20_em_desc;This ruler's realm is too overstretched and the vassals are growing weary.;;;;;;x
+
+rtp_visited_marketplace_timer_em; ;;;;;;x
+rtp_visited_marketplace_timer_em_desc; ;;;;;;x
+
+rtp_arena_timer_em; ;;;;;;x
+rtp_arena_timer_em_desc; ;;;;;;x
+
+rtp_used_p1_timer_em; ;;;;;;x
+rtp_used_p1_timer_em_desc; ;;;;;;x
+
+rtp_used_p2_timer_em; ;;;;;;x
+rtp_used_p2_timer_em_desc; ;;;;;;x
+
+rtp_used_p3_timer_em; ;;;;;;x
+rtp_used_p3_timer_em_desc; ;;;;;;x
+
+rtp_used_p4_timer_em; ;;;;;;x
+rtp_used_p4_timer_em_desc; ;;;;;;x
+
+rtp_hiding_timer_em; ;;;;;;x
+rtp_hiding_timer_em_desc; ;;;;;;x
+
+rtp_piracy_timer_em; ;;;;;;x
+rtp_piracy_timer_em_desc; ;;;;;;x
+
+rtp_spouse_timer_em; ;;;;;;x
+rtp_spouse_timer_em_desc; ;;;;;;x
+
+rtp_recruited_timer_em;Out of Volunteers;;;;;;x
+rtp_recruited_timer_em_desc;This county has no more volunteers.;;;;;;x
+
+rtp_recruited_zealouts_timer_em;Recruited Zealouts;;;;;;x
+rtp_recruited_zealouts_timer_em_desc;The majority of this county's population has pledged support to a religious cause.;;;;;;x
+
+rtp_recruited_patriots_timer_em;Recruited Patriots;;;;;;x
+rtp_recruited_patriots_timer_em_desc;The majority of this county's population has pledged support to a liberation cause.;;;;;;x
+
+rtp_not_for_hire_timer_em; ;;;;;;x
+rtp_not_for_hire_timer_em_desc; ;;;;;;x
+
+rtp_game_over_timer_em; ;;;;;;x
+rtp_game_over_timer_em_desc; ;;;;;;x
+
+rtp_gems_em;Gems;;;;;;x
+rtp_gems_em_desc;This province produces gems.;;;;;;x
+
+rtp_amber_em;Amber;;;;;;x
+rtp_amber_em_desc;This province produces amber.;;;;;;x
+
+rtp_beer_em;Beer;;;;;;x
+rtp_beer_em_desc;This province produces beer.;;;;;;x
+
+rtp_berries_em;Berries;;;;;;x
+rtp_berries_em_desc;This province produces berries.;;;;;;x
+
+rtp_bread_em;Bread;;;;;;x
+rtp_bread_em_desc;This province produces bread.;;;;;;x
+
+rtp_bricks_em;Bricks;;;;;;x
+rtp_bricks_em_desc;This province produces bricks.;;;;;;x
+
+rtp_cheese_em;Cheese;;;;;;x
+rtp_cheese_em_desc;This province produces cheese.;;;;;;x
+
+rtp_cloth_em;Cloth;;;;;;x
+rtp_cloth_em_desc;This province produces cloth.;;;;;;x
+
+rtp_copper_em;Copper;;;;;;x
+rtp_copper_em_desc;This province produces copper.;;;;;;x
+
+rtp_driedfruits_em;Dried Fruits;;;;;;x
+rtp_driedfruits_em_desc;This province produces dried fruits.;;;;;;x
+
+rtp_dyes_em;Dyes;;;;;;x
+rtp_dyes_em_desc;This province produces dyes.;;;;;;x
+
+rtp_fish_em;Fish;;;;;;x
+rtp_fish_em_desc;This province produces fish.;;;;;;x
+
+rtp_furs_em;Furs;;;;;;x
+rtp_furs_em_desc;This province produces furs.;;;;;;x
+
+rtp_grain_em;Grain;;;;;;x
+rtp_grain_em_desc;This province produces grain.;;;;;;x
+
+rtp_ham_em;Ham;;;;;;x
+rtp_ham_em_desc;This province produces ham.;;;;;;x
+
+rtp_mushrooms_em;Mushrooms;;;;;;x
+rtp_mushrooms_em_desc;This province produces mushrooms.;;;;;;x
+
+rtp_porkribs_em;Pork Ribs;;;;;;x
+rtp_porkribs_em_desc;This province produces pork ribs.;;;;;;x
+
+rtp_salt_em;Salt;;;;;;x
+rtp_salt_em_desc;This province produces salt.;;;;;;x
+
+rtp_spirits_em;Spirits;;;;;;x
+rtp_spirits_em_desc;This province produces spirits.;;;;;;x
+
+rtp_venison_em;Venison;;;;;;x
+rtp_venison_em_desc;This province produces venison.;;;;;;x
+
+rtp_wine_em;Wine;;;;;;x
+rtp_wine_em_desc;This province produces wine.;;;;;;x
+
+rtp_wood_em;Wood;;;;;;x
+rtp_wood_em_desc;This province produces wood.;;;;;;x
+
+rtp_warded_em;Warded;;;;;;x
+rtp_warded_em_desc;This character is warded against bad omens.;;;;;;x
+
+#####
+#Tooltips
+#####
+
+rtp_is_not_busy_ct;Is NOT busy;;;;;;x
+rtp_no_loans_ct;Does NOT have any loans;;;;;;x
+rtp_can_use_power_ct;Has NOT used this power recently.;;;;;;x
+rtp_can_be_hired_ct;Has NOT decided to not be for hire recently.;;;;;;x

@@ -1,0 +1,109 @@
+targetted_decisions = {
+
+######################################
+####### Demander un prisonnier #######
+######################################
+
+	request_prisoner = {
+		filter = all
+		ai_target_filter = none
+		diplomacy_icon = GFX_send_prisoner_icon
+		
+		third_party_filter = all
+        third_party = ROOT
+		
+        third_party_potential = {
+            FROMFROM = {
+			    host = { character = ROOT }
+                prisoner = yes
+			}
+        }
+		
+		potential = {
+		    prisoner = no
+			is_ruler = yes
+		}
+		
+		allow = {
+		    FROM = {prisoner = no}
+            any_courtier = {
+			    prisoner = yes
+				hidden_tooltip = { FROMFROM = { NOT = { has_character_modifier = mark_prisoner_tag } } }
+			}
+    	}
+		
+        effect = {
+		    hidden_tooltip = {
+		        FROMFROM = {
+			    	add_character_modifier  = {
+			    		name = mark_prisoner_tag
+			    		duration = 360
+			    	}
+			    }
+			    FROM = { character_event = { id = send.1 days = 3 } }
+		    }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+    }
+
+#####################################
+####### Envoyer un prisonnier #######
+#####################################
+
+	send_prisoner = {
+		filter = all
+		ai_target_filter = none
+		diplomacy_icon = GFX_send_prisoner_icon
+		
+		third_party_filter = all
+        third_party = FROM
+		
+        third_party_potential = {
+            FROMFROM = {
+			    host = { character = FROMFROM }
+                prisoner = yes
+				NOT = { has_character_modifier = mark_prisoner_tag }
+			}
+        }
+		
+		from_potential = {
+		    prisoner = no
+			is_ruler = yes
+			NOT = { any_courtier = { has_character_modifier = mark_prisoner_tag } }
+				    
+		}
+		
+		potential = {
+		    prisoner = no
+			is_ruler = yes
+		}
+		
+		allow = {
+            FROM = {
+			    prisoner = no
+			    any_courtier = {
+			        prisoner = yes
+			    }
+			}
+    	}
+		
+        effect = {
+		    hidden_tooltip = {
+		        FROMFROM = {
+			    	add_character_modifier  = {
+			    		name = mark_prisoner_tag
+			    		duration = 360
+			    	}
+			    }
+			    FROM = { character_event = { id = send.10 days = 3 } }
+		    }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+    }
+}

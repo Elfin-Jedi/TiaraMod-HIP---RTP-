@@ -1,0 +1,436 @@
+on_startup = {
+	events = {
+		RTPstartup.1 #Startup Event
+
+		RTPsounds.1 #Sounds Startup
+
+		RTPdestiny.100 #Ping Charlemagne - Start
+		RTPdestiny.1000 #Nuking Iceland
+
+		RTPcheck.104 #Capital Check
+		RTPcheck.111 #Ambition Check
+		RTPcheck.116 #Focus Prestige Hit
+		RTPcheck.128 #Assign Trade Goods Check
+
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		RTPglobal.1 #Switch to a new Republic
+
+		RTPjob.100 #Ping for Employment Opportunity - Level 1
+		RTPjob.101 #Ping for Employment Opportunity - Level 2
+		RTPjob.102 #Ping for Employment Opportunity - Level 3
+		RTPjob.103 #Ping for Employment Opportunity - Level 4
+
+		RTPreligion.101 #Ping for Schism
+
+		RTPdisease.100 #Ping for Beast Accidents
+
+		RTPsiege.102 #Siege Camp Decommission
+
+		RTPsounds.1 #Sounds Startup
+
+		RTPtutorial.1 #Move to a new realm - Warning
+
+		RTPcheck.100 #Job Pay Check
+		RTPcheck.104 #Capital Check
+		RTPcheck.106 #No Marriages Check
+		RTPcheck.107 #Marriage Status Check
+		RTPcheck.109 #Property Flag Check
+		RTPcheck.111 #Ambition Check
+		RTPcheck.113 #Plot Check
+		RTPcheck.118 #Law Modifiers
+		RTPcheck.119 #Cardinal Check
+		RTPcheck.121 #Auto WoL Check
+		RTPcheck.123 #Too Many Bloodlines Check
+		RTPcheck.124 #Bloodlines Check
+		RTPcheck.129 #Give Trade Goods Check
+		RTPcheck.131 #Better artifacts Check
+		RTPcheck.132 #Ping Overstretched Check
+	}
+
+	random_events = {
+		300 = RTPglobal.13
+
+		tutorials = {
+			10000 = RTPtutorial.101 #Move to a new realm - Tutorial
+			10000 = RTPtutorial.102 #Buy weapons and armors - Tutorial
+			10000 = RTPtutorial.103 #Trading - Tutorial
+			10000 = RTPtutorial.104 #Opening Workshops - Tutorial
+			10000 = RTPtutorial.105 #Preaching Religion - Tutorial
+			10000 = RTPtutorial.106 #Recruit Volunteers - Tutorial
+			10000 = RTPtutorial.107 #Recruit Patriots - Tutorial
+			10000 = RTPtutorial.108 #Recruit Zealots - Tutorial
+			10000 = RTPtutorial.109 #Mercenary Government - Tutorial
+			10000 = RTPtutorial.110 #Privateer Government - Tutorial
+
+			10000 = RTPtutorial.1001 #Gladiator Trait - Tips
+			10000 = RTPtutorial.1002 #Adventurer Trait - Tips
+			10000 = RTPtutorial.1003 #Holy Warrior Trait - Tips
+			10000 = RTPtutorial.1004 #No House/Manor - Tips
+			10000 = RTPtutorial.1005 #Naval Battles - Tips
+			10000 = RTPtutorial.1006 #Terrains - Tips
+			10000 = RTPtutorial.1007 #Non-Dynastic Heir - Tips
+		}
+	}
+}
+
+on_bi_yearly_pulse = {
+	events = {
+		RTPlowborn.5 #Read Event
+		RTPlowborn.100 #Ping for Adoption Event
+		RTPlowborn.102 #Ping for Read Event - Child
+
+		RTPnoble.100 #Ping for Landed Opportunity
+
+		RTPbaron.100 #Ping for Landed Opportunity - Baron -> Count
+
+		RTPlandless.101 #Ping for Settle Tribe
+
+		RTPmercenary.104 #Ping for Automated Hiring
+
+		RTPcheck.110 #Society Check
+	}
+
+	random_events = {
+		100 = RTPjob.30 #Job Knowledge
+	}
+}
+
+on_five_year_pulse = {
+	events = {
+		RTPdestiny.105 #Ping Settling Iceland - Start
+	}
+
+	random_events = {
+		50 = RTPrandom.1 #Caravaneer Event - Start
+		50 = RTPrandom.2 #Treasure Hunter - Start
+		50 = RTPrandom.4 #Random Encounter - Bandits/Start
+		50 = RTPrandom.6 #Random Encounter - Farmers
+		50 = RTPrandom.7 #Random Encounter - Nobles
+	}
+}
+
+on_decade_pulse = {
+	events = {
+		RTPglobal.101 #Melting Pot
+	}
+
+	random_events = {
+		25 = RTPglobal.9 #Workshop Offer
+		20 = RTPglobal.10 #Workshop Destruction
+		15 = RTPglobal.11 #Bandit Hideout
+		10 = RTPglobal.12 #Building Destroyed
+	}
+}
+
+on_pregnancy = {
+	events = {
+		RTPcheck.130 #Stillborn Check
+	}
+}
+
+on_birth = {
+	events = {
+		RTPcheck.105 #Lowrank Check
+	}
+}
+
+on_adulthood = {
+	events = {
+		RTPcheck.111 #Ambition Check
+		RTPcheck.127 #Random Spouse Check
+	}
+}
+
+on_death = {
+	events = {
+		RTPcheck.101 #Ping For Non-Dynastic Game Over
+		RTPcheck.108 #Player Death Check
+		RTPcheck.114 #Government Check
+		RTPcheck.115 #War Leader Death Check
+		RTPcheck.120 #Player Pope Check
+
+		RTPsounds.1 #Sounds Startup
+	}
+}
+
+on_artifact_inheritance = {
+	events = {
+		RTPcheck.131 #Better artifacts Check
+	}
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder = {
+	events = {
+		RTPdestiny.101 #Ping Charlemagne - Lotharingia Conquest
+		RTPdestiny.102 #Ping Charlemagne - Saxony Conquest
+		RTPdestiny.103 #Ping Charlemagne - Bavaria Conquest
+		RTPdestiny.104 #Ping Charlemagne - Italy Conquest
+
+		RTPcheck.103 #Laws Check
+	}
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder_inheritance = {
+	events = {
+		RTPdestiny.101 #Ping Charlemagne - Lotharingia Conquest
+		RTPdestiny.102 #Ping Charlemagne - Saxony Conquest
+		RTPdestiny.103 #Ping Charlemagne - Bavaria Conquest
+		RTPdestiny.104 #Ping Charlemagne - Italy Conquest
+
+		RTPcheck.103 #Laws Check
+	}
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder_usurpation = {
+	events = {
+		RTPdestiny.101 #Ping Charlemagne - Lotharingia Conquest
+		RTPdestiny.102 #Ping Charlemagne - Saxony Conquest
+		RTPdestiny.103 #Ping Charlemagne - Bavaria Conquest
+		RTPdestiny.104 #Ping Charlemagne - Italy Conquest
+
+		RTPcheck.103 #Laws Check
+	}
+}
+
+on_create_title = {
+	events = {
+	}
+}
+
+on_character_ask_to_join_society = {
+	events = {
+		RTPsociety.100 #Ping for Society Leader Receives Request to Join Society
+	}
+}
+
+on_character_leave_society = {
+	events = {
+		RTPdsociety.101 #Ping For Cleaning Out Missions - Diplomacy Mission
+
+		RTPisociety.101 #Ping For Cleaning Out Missions - Intrigue Mission
+
+		RTPmsociety.101 #Ping For Cleaning Out Missions - Martial Mission
+
+		RTPssociety.101 #Ping For Cleaning Out Missions - Stewardship Mission
+
+		RTPlsociety.101 #Ping For Cleaning Out Missions - Learning Mission
+	}
+}
+
+on_society_bi_yearly_pulse = {
+	events = {
+		RTPdsociety.100 #Ping for Society Leader Hands Out Missions - Diplomacy Mission
+
+		RTPisociety.100 #Ping for Society Leader Hands Out Missions - Intrigue Mission
+
+		RTPmsociety.100 #Ping for Society Leader Hands Out Missions - Martial Mission
+
+		RTPssociety.100 #Ping for Society Leader Hands Out Missions - Stewardship Mission
+
+		RTPlsociety.100 #Ping for Society Leader Hands Out Missions - Learning Mission
+	}
+}
+
+on_quest_success = {
+}
+
+on_quest_failure = {
+	events = {
+		RTPdsociety.102 #Ping For Cancelling Mission - Diplomacy Mission
+
+		RTPisociety.102 #Ping For Cancelling Mission - Intrigue Mission
+
+		RTPmsociety.102 #Ping For Cancelling Mission - Martial Mission
+
+		RTPssociety.102 #Ping For Cancelling Mission - Stewardship Mission
+
+		RTPlsociety.102 #Ping For Cancelling Mission - Learning Mission
+	}
+}
+
+on_war_started = {
+	events = {
+		RTPmercenary.103 #Ping for Hiring Contract
+
+		RTPconflicts.100 #Ping for Peasant Rebellion - Start
+		RTPconflicts.102 #Ping for Religious Uprising Event - Start
+		RTPconflicts.104 #Ping for Invasion Event - Start
+		RTPconflicts.106 #Ping for Crusade Event - Start
+		RTPconflicts.108 #Ping for Culture Uprising Event - Start
+		RTPconflicts.110 #Ping for Temporary Soldier Event - Start
+		RTPconflicts.112 #Ping for Rebellion Event - Start
+
+		RTPcheck.132 #Ping Overstretched Check
+	}
+}
+
+on_war_ended_victory = {
+	events = {
+		RTPconflicts.101 #Ping for Peasant Rebellion - End
+		RTPconflicts.103 #Ping for Religious Uprising Event - End
+		RTPconflicts.105 #Ping for Invasion Event - End
+		RTPconflicts.107 #Ping for Crusade Event - End
+		RTPconflicts.109 #Ping for Culture Uprising Event - End
+		RTPconflicts.111 #Ping for Temporary Soldier Event - End
+		RTPconflicts.113 #Ping for Rebellion Event - End
+
+		RTPcheck.132 #Ping Overstretched Check
+	}
+}
+
+on_war_ended_invalid = {
+	events = {
+		RTPcheck.112 #War Flag Check
+		RTPcheck.132 #Ping Overstretched Check
+	}
+}
+
+on_war_ended_whitepeace = {
+	events = {
+		RTPcheck.112 #War Flag Check
+		RTPcheck.132 #Ping Overstretched Check
+	}
+}
+
+on_war_ended_defeat = {
+	events = {
+		RTPconflicts.101 #Ping for Peasant Rebellion - End
+		RTPconflicts.103 #Ping for Religious Uprising Event - Start
+		RTPconflicts.105 #Ping for Invasion Event - End
+		RTPconflicts.107 #Ping for Crusade Event - End
+		RTPconflicts.109 #Ping for Culture Uprising Event - End
+		RTPconflicts.111 #Ping for Temporary Soldier Event - End
+		RTPconflicts.113 #Ping for Rebellion Event - End
+
+		RTPcheck.132 #Ping Overstretched Check
+	}
+}
+
+on_mercenary_hired = {
+	events = {
+		RTPconflicts.114 #Ping for Mercenary Event - Start
+	}
+}
+
+on_mercenary_dismissed = {
+	events = {
+		RTPconflicts.115 #Ping for Mercenary Event - End
+	}
+}
+
+# Triggers for all characters in a unit (leading a flank or subunit) when it enters a province
+# Root = the affected character
+on_unit_entering_province = {
+	events = {
+		RTPnaval.100 #Ping for Admiral Spotted - Attacker
+
+		RTPsounds.8 #New Province Land Sounds
+		RTPsounds.9 #New Province Sea Sounds
+	}
+}
+
+on_siege_pulse = {
+	events = {
+		RTPsiege.1 #Siege - Ping
+	}
+
+	random_events = {
+		10000 = RTPnotification.4 #Successful Ladder Scaling - Attacker
+		10000 = RTPnotification.5 #Successful Catapult Breach - Attacker
+		10000 = RTPnotification.6 #Successful Gate Breach - Attacker
+		10000 = RTPnotification.7 #Successful Bricole Breach - Attacker
+		10000 = RTPnotification.8 #Successful Tower Scaling - Attacker
+		10000 = RTPnotification.9 #Successful Ballistas Kill - Attacker
+		10000 = RTPnotification.10 #Successful Trebuchet Breach - Attacker
+		10000 = RTPnotification.11 #Successful Cannon Kill - Attacker
+
+		5000 = RTPnotification.12 #Successful Cannon Break - Defender
+		5000 = RTPnotification.13 #Successful Trebuchet Break - Defender
+		5000 = RTPnotification.14 #Successful Ballistas Break - Defender
+		5000 = RTPnotification.15 #Successful Tower Break - Defender
+		5000 = RTPnotification.16 #Successful Bricole Break - Defender
+		5000 = RTPnotification.17 #Successful Ram Break - Defender
+		5000 = RTPnotification.18 #Successful Catapult Break - Defender
+		5000 = RTPnotification.19 #Successful Ladders Break - Defender
+
+		2500 = RTPsiege.103 #Siege losses
+	}
+}
+
+# The taken Holding title is in FROM.
+on_siege_won_leader = {
+	events = {
+		RTPsounds.4 #Siege Won Sounds
+	}
+}
+
+# The taken Holding title is in FROM.
+on_siege_lost_leader = {
+	events = {
+		RTPsounds.5 #Siege Loss Sounds
+	}
+}
+
+#FROM is the character who is the commander of the opposing side
+#FROMFROM is the character who is the LIEGE of the commander of the opposing side
+on_combat_pulse = {
+	events = {
+		RTPsounds.3 #Starting Battle Sounds
+	}
+}
+
+# Winning army leader is ROOT - opponent army leader is FROM
+on_battle_won_leader = {
+	events = {
+		RTPsounds.6 #Battle Won Sounds
+	}
+}
+
+# Winning army leader is ROOT - opponent army leader is FROM
+on_major_battle_won_leader = {
+	events = {
+		RTPsounds.6 #Battle Won Sounds
+	}
+}
+
+# Any leader in battle on losing side (except the leader) is ROOT - opponent army leader is FROM
+on_battle_lost = {
+	events = {
+		RTPsounds.7 #Battle Loss Sounds
+	}
+}
+
+# Any leader in battle on losing side (except the leader) is ROOT - opponent army leader is FROM
+on_major_battle_lost = {
+	events = {
+		RTPsounds.7 #Battle Loss Sounds
+	}
+}
+
+#FROM is the character who is the commander of the opposing side
+#FROMFROM is the character who is the LIEGE of the commander of the opposing side
+on_combat_starting = {
+	events = {
+		RTPsounds.3 #Starting Battle Sounds
+	}
+}
+
+# Root = the affected character
+on_command_unit = {
+	events = {
+	}
+}
+
+# Triggers for character when they are put in command of a subunit
+# Root = the affected character
+on_command_sub_unit = {
+	events = {
+	}
+}

@@ -1,0 +1,22 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+EVTDESC_bornthisway_coming_out.0;Oh it's just something about [bornthisway_gay_crush_target.GetFirstName] that I can't get off my mind. [bornthisway_gay_crush_target.GetHerHisCap] hair, the way [bornthisway_gay_crush_target.GetSheHe] moves. I'm getting all worked up just thinking about [bornthisway_gay_crush_target.GetHerHim] again.;;;;;;;;;;;;;x
+EVTOPTA_bornthisway_coming_out.0;What would it be like to hold [bornthisway_gay_crush_target.GetHerHim]?;;;;;;;;;;;;;;x
+EVTOPTB_bornthisway_coming_out.0;[bornthisway_gay_crush_target.GetSheHeCap] is the one for me.;;;;;;;;;;;;;x
+EVTOPTC_bornthisway_coming_out.0;If I see [bornthisway_gay_crush_target.GetHerHim] again we'll have some fun.;;;;;;;;;;;;;x
+EVTOPTD_bornthisway_coming_out.0;I shouldn't. It's a sin.;;;;;;;;;;;;;x
+#EVTDESC_bornthisway_coming_out.1;I've struggled to hide my desires, but I just can't do it anymore. I have to stop lying to myself.;;;;;;;;;;;;;x
+#EVTDESC_case1_bornthisway_coming_out.1;I've struggled to hide my desires for other men, but I can't seem to rid myself of them. Maybe I should just accept that this is who I am.;;;;;;;;;;;;;x
+#EVTDESC_case2_bornthisway_coming_out.1;I've struggled to hide my desires for other women, but I can't seem to rid myself of them. Maybe I should just accept that this is who I am.;;;;;;;;;;;;;x
+EVTDESC_bornthisway_coming_out.1;I've struggled to hide my desires for other [Root.GetMenWomen], but I can't seem to rid myself of them. Maybe I should just accept that this is who I am.;;;;;;;;;;;;;x
+#EVTOPTA_case1_bornthisway_coming_out.1;I love men!;;;;;;;;;;;;;;x
+#EVTOPTA_case2_bornthisway_coming_out.1;I love women!;;;;;;;;;;;;;;x
+EVTOPTA_bornthisway_coming_out.1;I love [Root.GetMenWomen]!;;;;;;;;;;;;;;x
+EVTOPTB_bornthisway_coming_out.1;I renounce my vow of celibacy!;;;;;;;;;;;;;x
+EVTOPTC_bornthisway_coming_out.1;No! I must resist these urges!;;;;;;;;;;;;;x
+EVTOPTC_bornthisway_coming_out_1_TOOLTIP;The mental strain will take its toll...;;;;;;;;;;;;;x
+EVTDESC_bornthisway_coming_out.101;As hard as I've tried, I have not been able to control my unnatural lust for [Root.GetMenWomen]. There's only one way to rid myself of it for good...;;;;;;;;;;;;;x
+EVTOPTA_bornthisway_coming_out.101;AAAAAGH!;;;;;;;;;;;;;x
+#EVTDESC_case1_bornthisway_coming_out.102;I must control this unnatural lust, but I cannot resist the beauty of men...\n\n"And if thine eye offend thee, pluck it out.";;;;;;;;;;;;;x
+#EVTDESC_case2_bornthisway_coming_out.102;I must control this unnatural lust, but I cannot resist the beauty of women...\n\n"And if thine eye offend thee, pluck it out.";;;;;;;;;;;;;x
+EVTDESC_bornthisway_coming_out.102;I must control this unnatural lust, but I cannot resist the beauty of [Root.GetMenWomen]...\n\n"And if thine eye offend thee, pluck it out.";;;;;;;;;;;;;x
+EVTOPTA_bornthisway_coming_out.102;AAAAAGH!;;;;;;;;;;;;;x

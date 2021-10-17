@@ -1,0 +1,26 @@
+#####
+#Events
+#####
+
+RTPsociety.2_1_desc;Dear [Root.GetTitledName],\n\nAfter your recent...undesirable performance we have decided that you are not fit to remain in [Root.Society.GetName]\n\nSincerely,\n[From.GetTitledName].;;;;;;x
+RTPsociety.2_2_desc;Dear [Root.GetTitledName],\n\nAfter your recent...undesirable performance we have decided that you are not fit to hold your current rank of [Root.GetSocietyRank].\n\nSincerely,\n[From.GetTitledName].;;;;;;x
+RTPsociety.2_3_desc;Dear [Root.GetTitledName],\n\nYour recent performance has tainted the reputation of [Root.Society.GetName]...don't let it happen again.\n\nSincerely,\n[From.GetTitledName].;;;;;;x
+RTPsociety.2_1;Curses!;;;;;;x
+RTPsociety.2_2;Curses!;;;;;;x
+RTPsociety.2_3;Curses!;;;;;;x
+
+RTPsociety.3_desc;Dear [Root.GetTitledName],\n\nAfter your recent outstanding performance we have decided that you are ready to procede unto the next rank of [Root.Society.GetName]\n\nSincerely,\n[rtp_society_leader.GetTitledName].;;;;;;x
+RTPsociety.3_1;You do me honor.;;;;;;x
+RTPsociety.3_2;I will rank up when ready.;;;;;;x
+
+#####
+#Tooltips
+#####
+
+rtp_may_be_kicked_ct;You may receive a warning, lose a rank, or be kicked out from the society!;;;;;;x
+rtp_got_kicked_ct;Did NOT get kicked out from this society.;;;;;;x
+
+rtp_is_a_noble_ct;Landless Noble;;;;;;x
+rtp_is_a_baron_ct;Baron;;;;;;x
+rtp_is_a_count_ct;Count;;;;;;x
+rtp_is_a_duke_ct;Duke;;;;;;x

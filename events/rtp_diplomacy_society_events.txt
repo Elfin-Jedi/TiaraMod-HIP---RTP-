@@ -1,0 +1,1764 @@
+#####
+#Diplomacy Society Events
+#
+#Total = 31
+#####
+
+namespace = RTPdsociety
+
+#Main Events
+#####
+
+#The Eulogy - Diplomacy Mission Start
+society_quest_event = {
+	id = RTPdsociety.1
+	desc = "RTPdsociety.1_desc"
+	is_triggered_only = yes
+
+	immediate = {
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1825
+		}
+
+		random_character = {
+			limit = {
+				rtp_is_capable_adult = yes
+				any_child_even_if_dead = {
+					is_alive = no
+				}
+				NOT = {
+					dynasty = none
+				}
+			}
+			preferred_limit = {
+				ROOT = {
+					top_liege = {
+						is_within_diplo_range = PREVPREV
+					}
+				}
+			}
+			save_event_target_as = rtp_society_quest_target #The target of the quest
+			random_child_even_if_dead = {
+				limit = {
+					is_alive = no
+				}
+				save_event_target_as = rtp_society_quest_dead_child #The dead child
+			}
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.1_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			event_target:rtp_society_quest_target = {
+				show_scope_change = no
+				set_quest_target = {
+					id = rtp_the_eulogy_diplomacy_mission
+					holder = ROOT
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPdsociety.2
+			days = 90
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.1_2"
+
+		custom_tooltip = {
+			text = "rtp_may_be_kicked_ct"
+
+			random = {
+				chance = 25
+	
+				society = {
+					leader = {
+						ROOT = {
+							letter_event = {
+								id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#The Eulogy - Diplomacy Mission Part 1
+character_event = {
+	id = RTPdsociety.2
+	title = "RTPdsociety.2_title"
+	desc = "RTPdsociety.2_desc"
+	picture = GFX_evt_throne_room
+	is_triggered_only = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPdsociety.28 #Failed To Reach Target In Time
+		}
+	}
+
+	trigger = {
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.2_1"
+
+		random = {
+			chance = 20
+
+			add_trait = humble
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.2_2"
+
+		random = {
+			chance = 20
+
+			add_trait = proud
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPdsociety.3 #The Eulogy - Diplomacy Mission Part 2
+		}
+	}
+}
+
+#The Eulogy - Diplomacy Mission Part 2
+character_event = {
+	id = RTPdsociety.3
+	title = "RTPdsociety.3_title"
+	desc = "RTPdsociety.3_desc"
+	picture = GFX_evt_courtiers_talking
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPdsociety.3_1"
+
+		set_character_flag = rtp_lie #You decide to lie
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.3_2"
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPdsociety.4 #The Eulogy - Diplomacy Mission Part 3
+			days = 7
+		}
+	}
+}
+
+#The Eulogy - Diplomacy Mission Part 3
+character_event = {
+	id = RTPdsociety.4
+	title = "RTPdsociety.4_title"
+	desc = "RTPdsociety.4_desc"
+	picture = GFX_evt_died_funeral
+	is_triggered_only = yes
+
+	immediate = {
+		random = {
+			chance = 50
+
+			set_character_flag = rtp_success #You succeed
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.4_1"
+	}
+
+	after = {
+		character_event = {
+			id = RTPdsociety.5 #The Eulogy - Diplomacy Mission End
+		}
+	}
+}
+
+#The Eulogy - Diplomacy Mission End
+character_event = {
+	id = RTPdsociety.5
+	title = "RTPdsociety.5_title"
+	desc = {
+		trigger = {
+			has_character_flag = rtp_lie #You decide to lie
+			has_character_flag = rtp_success #You succeed
+		}
+		text = "RTPdsociety.5.1_desc"
+	}
+	desc = {
+		trigger = {
+			has_character_flag = rtp_lie #You decide to lie
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPdsociety.5.2_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_lie #You decide to lie
+			}
+			has_character_flag = rtp_success #You succeed
+		}
+		text = "RTPdsociety.5.3_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_lie #You decide to lie
+			}
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPdsociety.5.4_desc"
+	}
+	picture = GFX_evt_died_funeral
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPdsociety.5_1"
+
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_the_eulogy_diplomacy_mission
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_medium_currency_se = yes
+	}
+
+	option = {
+		name = "RTPdsociety.5_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_the_eulogy_diplomacy_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPdsociety.101 #Ping For Cleaning Out Missions - Diplomacy Mission
+			days = 90
+		}
+	}
+}
+
+#The Gift - Diplomacy Mission Start
+society_quest_event = {
+	id = RTPdsociety.6
+	desc = "RTPdsociety.6_desc"
+	is_triggered_only = yes
+
+	immediate = {
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1825
+		}
+
+		random_society_member = {
+			limit = {
+				rtp_is_capable_adult = yes
+				independent = no
+			}
+			preferred_limit = {
+				ROOT = {
+					top_liege = {
+						is_within_diplo_range = PREVPREV
+					}
+				}
+			}
+			save_event_target_as = rtp_society_quest_target #The target of the quest
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.6_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			event_target:rtp_society_quest_target = {
+				show_scope_change = no
+				set_quest_target = {
+					id = rtp_the_gift_diplomacy_mission
+					holder = ROOT
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPdsociety.7 #The Gift - Diplomacy Mission Part 1
+			days = 90
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.6_2"
+
+		custom_tooltip = {
+			text = "rtp_may_be_kicked_ct"
+
+			random = {
+				chance = 25
+	
+				society = {
+					leader = {
+						ROOT = {
+							letter_event = {
+								id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#The Gift - Diplomacy Mission Part 1
+character_event = {
+	id = RTPdsociety.7
+	title = "RTPdsociety.7_title"
+	desc = "RTPdsociety.7_desc"
+	picture = GFX_evt_stressed_ruler
+	is_triggered_only = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPdsociety.28 #Failed To Reach Target In Time
+		}
+	}
+
+	trigger = {
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.7_1"
+
+		random = {
+			chance = 20
+
+			add_trait = patient
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.7_2"
+
+		random = {
+			chance = 20
+
+			add_trait = wroth
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPdsociety.8 #The Gift - Diplomacy Mission Part 2
+		}
+	}
+}
+
+#The Gift - Diplomacy Mission Part 2
+character_event = {
+	id = RTPdsociety.8
+	title = "RTPdsociety.8_title"
+	desc = "RTPdsociety.8_desc"
+	picture = GFX_evt_market
+	is_triggered_only = yes
+
+	immediate = {
+		random = {
+			chance = 50
+
+			set_character_flag = rtp_success #You succeed
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.8_1"
+
+		ai_chance = {
+			factor = 0.25
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.8_2"
+
+		ai_chance = {
+			factor = 0.25
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.8_3"
+
+		ai_chance = {
+			factor = 0.25
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.8_4"
+
+		ai_chance = {
+			factor = 0.25
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPdsociety.9 #The Gift - Diplomacy Mission Part 3
+		}
+	}
+}
+
+#The Gift - Diplomacy Mission Part 3
+character_event = {
+	id = RTPdsociety.9
+	title = "RTPdsociety.9_title"
+	desc = "RTPdsociety.9_desc"
+	picture = GFX_evt_market
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPdsociety.9_1"
+	}
+
+	after = {
+		character_event = {
+			id = RTPdsociety.10 #The Gift - Diplomacy Mission Part 4
+			days = 1
+		}
+	}
+}
+
+#The Gift - Diplomacy Mission Part 4
+character_event = {
+	id = RTPdsociety.10
+	title = "RTPdsociety.10_title"
+	desc = "RTPdsociety.10_desc"
+	picture = GFX_evt_carriage
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPdsociety.10_1"
+	}
+
+	after = {
+		character_event = {
+			id = RTPdsociety.11 #The Gift - Diplomacy Mission End
+		}
+	}
+}
+
+#The Gift - Diplomacy Mission End
+character_event = {
+	id = RTPdsociety.11
+	title = "RTPdsociety.11_title"
+	desc = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		text = "RTPdsociety.11.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPdsociety.11.2_desc"
+	}
+	picture = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		picture = GFX_evt_carriage
+	}
+	picture = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		picture = GFX_evt_poke_king_in_chest
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPdsociety.11_1"
+
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_the_gift_diplomacy_mission
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_medium_currency_se = yes
+	}
+
+	option = {
+		name = "RTPdsociety.11_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_the_gift_diplomacy_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPdsociety.101 #Ping For Cleaning Out Missions - Diplomacy Mission
+			days = 90
+		}
+	}
+}
+
+#Do As I Do - Diplomacy Mission Start
+society_quest_event = {
+	id = RTPdsociety.12
+	desc = "RTPdsociety.12_desc"
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1825
+		}
+
+		random_society_member = {
+			limit = {
+				rtp_is_capable_adult = yes
+				independent = no
+			}
+			preferred_limit = {
+				ROOT = {
+					top_liege = {
+						is_within_diplo_range = PREVPREV
+					}
+				}
+				society_rank == 1
+			}
+			preferred_limit = {
+				ROOT = {
+					top_liege = {
+						is_within_diplo_range = PREVPREV
+					}
+				}
+				society_rank == 2
+			}
+			preferred_limit = {
+				ROOT = {
+					top_liege = {
+						is_within_diplo_range = PREVPREV
+					}
+				}
+				society_rank == 3
+			}
+			save_event_target_as = rtp_society_quest_target #The target of the quest
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.12_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			event_target:rtp_society_quest_target = {
+				show_scope_change = no
+				set_quest_target = {
+					id = rtp_do_as_i_do_diplomacy_mission
+					holder = ROOT
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPdsociety.13 #Do As I Do - Diplomacy Mission Part 1
+			days = 90
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.12_2"
+
+		custom_tooltip = {
+			text = "rtp_may_be_kicked_ct"
+
+			random = {
+				chance = 25
+	
+				society = {
+					leader = {
+						ROOT = {
+							letter_event = {
+								id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Do As I Do - Diplomacy Mission Part 1
+character_event = {
+	id = RTPdsociety.13
+	title = "RTPdsociety.13_title"
+	desc = "RTPdsociety.13_desc"
+	picture = GFX_evt_diplomat_hf
+	is_triggered_only = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPdsociety.28 #Failed To Reach Target In Time
+		}
+	}
+
+	trigger = {
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.13_1"
+
+		random = {
+			chance = 20
+
+			add_trait = kind
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.13_2"
+
+		random = {
+			chance = 20
+
+			add_trait = envious
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPdsociety.14 #The Gift - Diplomacy Mission Part 2
+			days = 1
+		}
+	}
+}
+
+#Do As I Do - Diplomacy Mission Part 2
+character_event = {
+	id = RTPdsociety.14
+	title = "RTPdsociety.14_title"
+	desc = "RTPdsociety.14_desc"
+	picture = GFX_evt_diplomat_hf
+	is_triggered_only = yes
+
+	immediate = {
+		random = {
+			chance = 50
+
+			set_character_flag = rtp_success #You succeed
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.14_1"
+	}
+
+	after = {
+		character_event = {
+			id = RTPdsociety.15 #The Gift - Diplomacy Mission End
+		}
+	}
+}
+
+#Do As I Do - Diplomacy Mission End
+character_event = {
+	id = RTPdsociety.15
+	title = "RTPdsociety.15_title"
+	desc = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		text = "RTPdsociety.15.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPdsociety.15.2_desc"
+	}
+	picture = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		picture = GFX_evt_diplomatic_greeting
+	}
+	picture = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		picture = GFX_evt_poke_king_in_chest
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPdsociety.15_1"
+
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_do_as_i_do_diplomacy_mission
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_medium_currency_se = yes
+	}
+
+	option = {
+		name = "RTPdsociety.15_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_do_as_i_do_diplomacy_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPdsociety.101 #Ping For Cleaning Out Missions - Diplomacy Mission
+			days = 90
+		}
+	}
+}
+
+#The Accused - Diplomacy Mission Start
+society_quest_event = {
+	id = RTPdsociety.16
+	desc = "RTPdsociety.16_desc"
+	is_triggered_only = yes
+
+	immediate = {
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1825
+		}
+
+		top_liege = {
+			create_character = {
+				age = 30
+				random_traits = yes
+				culture = PREV
+				religion = PREV
+				dynasty = none
+				health = 10
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target #The first target of the quest
+				imprison = PREV
+			}
+			create_character = {
+				age = 35
+				random_traits = yes
+				culture = PREV
+				religion = PREV
+				dynasty = random
+				health = 10
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+			}
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.16_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			event_target:rtp_society_quest_target = {
+				show_scope_change = no
+				set_quest_target = {
+					id = rtp_the_accused_diplomacy_mission
+					holder = ROOT
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPdsociety.17 #The Accused - Diplomacy Mission Part 1
+			days = 90
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.16_2"
+
+		custom_tooltip = {
+			text = "rtp_may_be_kicked_ct"
+
+			random = {
+				chance = 25
+	
+				society = {
+					leader = {
+						ROOT = {
+							letter_event = {
+								id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#The Accused - Diplomacy Mission Part 1
+character_event = {
+	id = RTPdsociety.17
+	title = "RTPdsociety.17_title"
+	desc = "RTPdsociety.17_desc"
+	picture = GFX_evt_accused
+	is_triggered_only = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPdsociety.28 #Failed To Reach Target In Time
+		}
+	}
+
+	trigger = {
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+		event_target:rtp_society_quest_target2 = {
+			is_alive = yes
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.17_1"
+
+		random = {
+			chance = 20
+
+			add_trait = humble
+		}
+
+		character_event = {
+			id = RTPdsociety.18 #The Accused - Diplomacy Mission Part 2-1
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.17_2"
+
+		random = {
+			chance = 20
+
+			add_trait = proud
+		}
+
+		character_event = {
+			id = RTPdsociety.19 #The Accused - Diplomacy Mission Part 2-2
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+}
+
+#The Accused - Diplomacy Mission Part 2-1
+character_event = {
+	id = RTPdsociety.18
+	title = "RTPdsociety.18_title"
+	desc = "RTPdsociety.18_desc"
+	picture = GFX_evt_prisoner_hf
+	is_triggered_only = yes
+
+	immediate = {
+		set_character_flag = rtp_talked_to_accused #I talked to the accused
+	}
+
+	option = {
+		name = "RTPdsociety.18_1"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_talked_to_accuser #I talked to the accuser
+			}
+		}
+
+		random = {
+			chance = 10
+
+			add_trait = just
+		}
+
+		character_event = {
+			id = RTPdsociety.19 #The Accused - Diplomacy Mission Part 2-2
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.18_2"
+
+		trigger = {
+			NAND = {
+				has_character_flag = rtp_talked_to_accused #I talked to the accused
+				has_character_flag = rtp_talked_to_accuser #I talked to the accuser
+			}
+		}
+
+		random = {
+			chance = 10
+
+			add_trait = arbitrary
+		}
+
+		character_event = {
+			id = RTPdsociety.20 #The Accused - Diplomacy Mission Part 3
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.18_3"
+
+		trigger = {
+			has_character_flag = rtp_talked_to_accused #I talked to the accused
+			has_character_flag = rtp_talked_to_accuser #I talked to the accuser
+		}
+
+		character_event = {
+			id = RTPdsociety.20 #The Accused - Diplomacy Mission Part 3
+		}
+	}
+}
+
+#The Accused - Diplomacy Mission Part 2-2
+character_event = {
+	id = RTPdsociety.19
+	title = "RTPdsociety.19_title"
+	desc = "RTPdsociety.19_desc"
+	picture = GFX_evt_judged_by_ruler
+	is_triggered_only = yes
+
+	immediate = {
+		set_character_flag = rtp_talked_to_accuser #I talked to the accuser
+	}
+
+	option = {
+		name = "RTPdsociety.19_1"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_talked_to_accused #I talked to the accused
+			}
+		}
+
+		random = {
+			chance = 10
+
+			add_trait = just
+		}
+
+		character_event = {
+			id = RTPdsociety.18 #The Accused - Diplomacy Mission Part 2-1
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.19_2"
+
+		trigger = {
+			NAND = {
+				has_character_flag = rtp_talked_to_accused #I talked to the accused
+				has_character_flag = rtp_talked_to_accuser #I talked to the accuser
+			}
+		}
+
+		random = {
+			chance = 10
+
+			add_trait = arbitrary
+		}
+
+		character_event = {
+			id = RTPdsociety.20 #The Accused - Diplomacy Mission Part 3
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.19_3"
+
+		trigger = {
+			has_character_flag = rtp_talked_to_accused #I talked to the accused
+			has_character_flag = rtp_talked_to_accuser #I talked to the accuser
+		}
+
+		character_event = {
+			id = RTPdsociety.20 #The Accused - Diplomacy Mission Part 3
+		}
+	}
+}
+
+#The Accused - Diplomacy Mission Part 3
+character_event = {
+	id = RTPdsociety.20
+	title = "RTPdsociety.20_title"
+	desc = "RTPdsociety.20_desc"
+	picture = GFX_evt_accused
+	is_triggered_only = yes
+
+	immediate = {
+		random = {
+			chance = 50
+
+			set_character_flag = rtp_success #You succeed
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.20_1"
+
+		event_target:rtp_society_quest_target = {
+			death = {
+				death_reason = death_execution
+			}
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.20_2"
+
+		event_target:rtp_society_quest_target = {
+			imprison = no
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.20_3"
+
+		hidden_tooltip = {
+			event_target:rtp_society_quest_target2 = {
+				save_event_target_as = combatant_2 #the target of the duel...
+			}
+			event_target:rtp_society_quest_target = {
+				save_event_target_as = combatant_1 #the person issuing the duel...
+				set_character_flag = deadly_duel@event_target:combatant_2
+				character_event = {
+					id = HFP.10100
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPdsociety.21 #The Accused - Diplomacy Mission Part End
+			days = 45
+		}
+		character_event = {
+			id = RTPdsociety.101 #Ping For Cleaning Out Missions - Diplomacy Mission
+			days = 90
+		}
+	}
+}
+
+#The Accused - Diplomacy Mission Part End
+character_event = {
+	id = RTPdsociety.21
+	title = "RTPdsociety.21_title"
+	desc = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		text = "RTPdsociety.21.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPdsociety.21.2_desc"
+	}
+	picture = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		picture = GFX_evt_relaxed_ruler
+	}
+	picture = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		picture = GFX_evt_stressed_ruler
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPdsociety.21_1"
+
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_the_accused_diplomacy_mission
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_medium_currency_se = yes
+	}
+
+	option = {
+		name = "RTPdsociety.21_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_the_accused_diplomacy_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPisociety.101 #Ping For Cleaning Out Missions - Intrigue Mission
+			days = 90
+		}
+	}
+}
+
+#Boundaries - Diplomacy Mission Start
+society_quest_event = {
+	id = RTPdsociety.22
+	desc = "RTPdsociety.22_desc"
+	is_triggered_only = yes
+
+	immediate = {
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1825
+		}
+
+		top_liege = {
+			create_character = {
+				age = 30
+				random_traits = yes
+				culture = PREV
+				religion = PREV
+				dynasty = random
+				health = 10
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target #The first target of the quest
+			}
+			create_character = {
+				age = 35
+				random_traits = yes
+				culture = PREV
+				religion = PREV
+				dynasty = random
+				health = 10
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+			}
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.22_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			event_target:rtp_society_quest_target = {
+				show_scope_change = no
+				set_quest_target = {
+					id = rtp_boundaries_diplomacy_mission
+					holder = ROOT
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPdsociety.23 #Boundaries - Diplomacy Mission Part 1
+			days = 90
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.22_2"
+
+		custom_tooltip = {
+			text = "rtp_may_be_kicked_ct"
+
+			random = {
+				chance = 25
+	
+				society = {
+					leader = {
+						ROOT = {
+							letter_event = {
+								id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Boundaries - Diplomacy Mission Part 1
+character_event = {
+	id = RTPdsociety.23
+	title = "RTPdsociety.23_title"
+	desc = "RTPdsociety.23_desc"
+	picture = GFX_evt_emissary
+	hide_from = yes
+	is_triggered_only = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPdsociety.28 #Failed To Reach Target In Time
+		}
+	}
+
+	trigger = {
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+		event_target:rtp_society_quest_target2 = {
+			is_alive = yes
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.23_1"
+
+		character_event = {
+			id = RTPdsociety.24 #Boundaries - Diplomacy Mission Part 2
+		}
+	}
+}
+
+#Boundaries - Diplomacy Mission Part 2
+character_event = {
+	id = RTPdsociety.24
+	title = "RTPdsociety.24_title"
+	desc = "RTPdsociety.24_desc"
+	picture = GFX_evt_emissary
+	hide_from = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPdsociety.24_1"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target
+		}
+
+		character_event = {
+			id = RTPdsociety.25 #Boundaries - Diplomacy Mission Part 3
+			days = 1
+		}
+	}
+}
+
+#Boundaries - Diplomacy Mission Part 3
+character_event = {
+	id = RTPdsociety.25
+	title = "RTPdsociety.25_title"
+	desc = "RTPdsociety.25_desc"
+	picture = GFX_evt_emissary
+	hide_from = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPdsociety.25_1"
+
+		event_target:rtp_society_quest_target2 = {
+			save_event_target_as = rtp_society_quest_target2
+		}
+
+		character_event = {
+			id = RTPdsociety.26 #Boundaries - Diplomacy Mission Part 4
+		}
+	}
+}
+
+#Boundaries - Diplomacy Mission Part 4
+character_event = {
+	id = RTPdsociety.26
+	title = "RTPdsociety.26_title"
+	desc = "RTPdsociety.26_desc"
+	picture = GFX_evt_emissary
+	hide_from = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random = {
+			chance = 50
+		
+			set_character_flag = rtp_success #You succeed
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.26_1"
+
+		random = {
+			chance = 20
+
+			add_trait = kind
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.26_2"
+
+		random = {
+			chance = 20
+
+			add_trait = envious
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = "RTPdsociety.26_3"
+
+		random = {
+			chance = 10
+
+			add_trait = just
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPdsociety.27 ##Boundaries - Diplomacy Mission Part End
+			days = 45
+		}
+		character_event = {
+			id = RTPdsociety.101 #Ping For Cleaning Out Missions - Diplomacy Mission
+			days = 90
+		}
+	}
+}
+
+#Boundaries - Diplomacy Mission Part End
+character_event = {
+	id = RTPdsociety.27
+	title = "RTPdsociety.27_title"
+	desc = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		text = "RTPdsociety.27.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPdsociety.27.2_desc"
+	}
+	picture = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		picture = GFX_evt_prospering_province
+	}
+	picture = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		picture = GFX_evt_experiments_failed
+	}
+	hide_from = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPdsociety.27_1"
+
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_boundaries_diplomacy_mission
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_medium_currency_se = yes
+	}
+
+	option = {
+		name = "RTPdsociety.27_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_boundaries_diplomacy_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+}
+
+#Failed To Reach Target In Time
+character_event = {
+	id = RTPdsociety.28
+	title = "RTPdsociety.28_title"
+	desc = "RTPdsociety.28_desc"
+	picture = GFX_evt_bad_news
+	hide_from = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPdsociety.28_1"
+
+		character_event = {
+			id = RTPdsociety.101 #Ping For Cleaning Out Missions - Diplomacy Mission
+		}
+	}
+}
+
+#Ping Events
+#####
+
+#Ping for Society Leader Hands Out Missions - Diplomacy Mission
+character_event = {
+	id = RTPdsociety.100
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		rtp_is_in_diplomacy_society_st = yes
+		is_society_grandmaster = yes
+	}
+
+	immediate = {
+		society = {
+			random_society_member = {
+				limit = {
+					has_any_quest = no
+					is_society_grandmaster = no
+					rtp_is_capable_adult = yes
+					NOT = {
+						has_character_modifier = quest_cooldown_timer
+					}
+				}
+				preferred_limit = {
+					ai = no
+				}
+				random_list = {
+					20 = {
+						society_quest_event = {
+							id = RTPdsociety.1 #The Eulogy - Diplomacy Mission Start
+						}
+					}
+					20 = {
+						society_quest_event = {
+							id = RTPdsociety.6 #The Gift - Diplomacy Mission Start
+						}
+					}
+					20 = {
+						society_quest_event = {
+							id = RTPdsociety.12 #Do As I Do - Diplomacy Mission Start
+						}
+					}
+					20 = {
+						society_quest_event = {
+							id = RTPdsociety.16 #The Accused - Diplomacy Mission Start
+						}
+					}
+					20 = {
+						society_quest_event = {
+							id = RTPdsociety.22 #Boundaries - Diplomacy Mission Start
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Ping For Cleaning Out Missions - Diplomacy Mission
+character_event = {
+	id = RTPdsociety.101
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		remove_trait = travelling
+		
+		clr_quest = {
+			id = rtp_the_eulogy_diplomacy_mission
+			failure = yes
+		}
+		clr_quest = {
+			id = rtp_the_gift_diplomacy_mission
+			failure = yes
+		}
+		clr_quest = {
+			id = rtp_do_as_i_do_diplomacy_mission
+			failure = yes
+		}
+		clr_quest = {
+			id = rtp_the_accused_diplomacy_mission
+			failure = yes
+		}
+		clr_quest = {
+			id = rtp_boundaries_diplomacy_mission
+			failure = yes
+		}
+
+		event_target:rtp_society_quest_target = {
+			if = {
+				limit = {
+					has_character_flag = rtp_trash #Just delete this dude
+				}
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+		event_target:rtp_society_quest_target2 = {
+			if = {
+				limit = {
+					has_character_flag = rtp_trash #Just delete this dude
+				}
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+
+		clr_character_flag = rtp_lie #You decide to lie
+		clr_character_flag = rtp_success #You succeed
+		clr_character_flag = rtp_talked_to_accused #I talked to the accused
+		clr_character_flag = rtp_talked_to_accuser #I talked to the accuser
+	}
+}
+
+#Ping For Cancelling Mission - Diplomacy Mission
+character_event = {
+	id = RTPdsociety.102
+	hide_window = yes
+	is_triggered_only = yes
+	sound = quest_failed
+
+	immediate = {
+		random = {
+			chance = 5
+
+			society = {
+				leader = {
+					ROOT = {
+						letter_event = {
+							id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#MTTH Events
+#####

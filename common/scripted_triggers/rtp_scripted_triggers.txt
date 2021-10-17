@@ -1,0 +1,952 @@
+#####
+#Scripted Triggers
+#
+#Total = 29
+#####
+
+#Checks if the character's rank is lower than baron
+rtp_is_lower_baron = {
+	OR = {
+		government = rtp_lowborn_g
+		government = rtp_noble_g
+		government = rtp_landless_mercenary_g
+		government = rtp_landless_order_g
+		government = rtp_landless_adventurer_g
+		government = rtp_landless_theocracy_g 
+		government = rtp_baron_g
+		government = rtp_baron_iqta_g
+		government = rtp_baron_monastic_g
+		government = rtp_baron_republic_g
+		government = rtp_baron_theocracy_g
+		government = rtp_baron_mercenary_g
+		government = rtp_baron_order_g
+	}
+}
+
+#Checks if the character is a baron
+rtp_is_baron = {
+	ai = no
+	is_landed = yes
+	capital_holding = {
+		is_capital = no
+	}
+}
+
+#Checks if the character is landless
+rtp_is_landless = {
+	is_ruler = yes
+	is_landed = no
+	higher_tier_than = BARON
+}
+
+#Checks if the player is a mercenary
+rtp_is_mercenary = {
+	has_character_flag = rtp_mercenary #This guy is a mercenary
+}
+
+#Checks if the player is a holy order
+rtp_is_holy_order = {
+	has_character_flag = rtp_holy_order #This guy is a holy order
+}
+
+#Checks if the player is a republic
+rtp_is_republic = {
+	has_character_flag = rtp_republic #This guy is a republic
+}
+
+#Checks if the player is a theocracy
+rtp_is_theocracy = {
+	has_character_flag = rtp_theocracy #This guy is a theocracy
+}
+
+#Checks if the player is a confederation
+rtp_is_confederation = {
+	has_character_flag = rtp_confederation #This guy is a confederation
+}
+
+#Checks if the character has any job
+rtp_has_job_st = {
+	OR = {
+		has_minor_title = server_mt
+		has_minor_title = guard_mt
+		has_minor_title = barterer_mt
+		has_minor_title = beggar_mt
+		has_minor_title = postulant_mt
+
+		has_minor_title = minstrel_mt
+		has_minor_title = veteran_mt
+		has_minor_title = shop_assistant_mt
+		has_minor_title = pickpocket_mt
+		has_minor_title = preacher_mt
+
+		has_minor_title = town_crier_mt
+		has_minor_title = bailif_mt
+		has_minor_title = peddler_mt
+		has_minor_title = poacher_mt
+		has_minor_title = scribe_mt
+
+		has_minor_title = diplomat_mt
+		has_minor_title = officer_mt
+		has_minor_title = shop_keeper_mt
+		has_minor_title = brigand_mt
+		has_minor_title = librarian_mt
+
+		has_minor_title = sellsword_mt
+		has_minor_title = holy_warrior_mt
+	}
+}
+
+#Checks if the character has a level 1 job
+rtp_has_level_1_job_st = {
+	OR = {
+		has_minor_title = server_mt
+		has_minor_title = guard_mt
+		has_minor_title = barterer_mt
+		has_minor_title = beggar_mt
+		has_minor_title = postulant_mt
+		has_minor_title = sellsword_mt
+		has_minor_title = holy_warrior_mt
+		has_minor_title = bandit_mt
+	}
+}
+
+#Checks if the character has a level 2 job
+rtp_has_level_2_job_st = {
+	OR = {
+		has_minor_title = minstrel_mt
+		has_minor_title = veteran_mt
+		has_minor_title = shop_assistant_mt
+		has_minor_title = pickpocket_mt
+		has_minor_title = preacher_mt
+		has_minor_title = sellsword_mt
+		has_minor_title = holy_warrior_mt
+		has_minor_title = bandit_mt
+	}
+}
+
+#Checks if the character has a level 3 job
+rtp_has_level_3_job_st = {
+	OR = {
+		has_minor_title = town_crier_mt
+		has_minor_title = bailif_mt
+		has_minor_title = peddler_mt
+		has_minor_title = poacher_mt
+		has_minor_title = scribe_mt
+		has_minor_title = sellsword_mt
+		has_minor_title = holy_warrior_mt
+		has_minor_title = bandit_mt
+	}
+}
+
+#Checks if the character has a level 4 job
+rtp_has_level_4_job_st = {
+	OR = {
+		has_minor_title = diplomat_mt
+		has_minor_title = officer_mt
+		has_minor_title = shop_keeper_mt
+		has_minor_title = brigand_mt
+		has_minor_title = librarian_mt
+		has_minor_title = sellsword_mt
+		has_minor_title = holy_warrior_mt
+		has_minor_title = bandit_mt
+	}
+}
+
+#Checks if the character has a special job
+rtp_has_special_job_st = {
+	OR = {
+		has_minor_title = sellsword_mt
+		has_minor_title = holy_warrior_mt
+		has_minor_title = bandit_mt
+	}
+}
+
+#Checks if the player has any RTP title
+rtp_has_title = {
+	OR = {
+		has_landed_title = c_landless_t
+		has_landed_title = c_baron_t
+	}
+}
+
+#Scopes to all RTP titles
+rtp_title = {
+	OR = {
+		title = c_landless_t
+		title = c_baron_t
+	}
+}
+
+#Makes sure you are healthy
+rtp_is_capable = {
+	is_ill = no
+	is_pregnant = no
+	prisoner = no
+	custom_tooltip = {
+		text = "rtp_is_not_busy_ct"
+		hidden_tooltip = {
+			NOR = {
+				has_character_flag = do_not_disturb
+				has_job_title = job_commander
+			}
+		}
+	}
+	NOR = {
+		trait = travelling
+		trait = on_pilgrimage
+		trait = on_hajj
+	}
+}
+
+#Makes sure you are healthy - Adult only
+rtp_is_capable_adult = {
+	is_adult = yes
+	is_ill = no
+	is_pregnant = no
+	prisoner = no
+	in_command = no
+	custom_tooltip = {
+		text = "rtp_is_not_busy_ct"
+		hidden_tooltip = {
+			NOR = {
+				has_character_flag = do_not_disturb
+				has_job_title = job_commander
+			}
+		}
+	}
+	has_regent = no
+	NOR = {
+		trait = travelling
+		trait = on_pilgrimage
+		trait = on_hajj
+	}
+}
+
+#Makes sure character doesn't have any loans
+rtp_no_loans_st = {
+	custom_tooltip = {
+		text = "rtp_no_loans_ct"
+		hidden_tooltip = {
+			NOR = {
+				has_character_modifier = borrowed_from_jews
+				has_character_modifier = rtp_loan_stewarship1_em
+				has_character_modifier = rtp_loan_stewarship2_em
+				has_character_modifier = rtp_loan_stewarship3_em
+				has_character_modifier = rtp_loan_stewarship4_em
+			}
+		}
+	}
+}
+
+#Checks if the character can join a Society
+rtp_can_join_society_st = {
+	OR = {
+		#Martial
+		can_join_society = rtp_martial_norse
+		can_join_society = rtp_martial_tengri
+		can_join_society = rtp_martial_baltic
+		can_join_society = rtp_martial_finnish
+		can_join_society = rtp_martial_slavic
+		can_join_society = rtp_martial_west_african
+		can_join_society = rtp_martial_zun
+		can_join_society = rtp_martial_bon
+		can_join_society = rtp_martial_hellenic
+		can_join_society = rtp_martial_aztec
+		can_join_society = rtp_martial_catholic
+		can_join_society = rtp_martial_chalcedonian
+		can_join_society = rtp_martial_orthodox
+		can_join_society = rtp_martial_miaphysite
+		can_join_society = rtp_martial_nestorian
+		can_join_society = rtp_martial_jewish
+		can_join_society = rtp_martial_sunni
+		can_join_society = rtp_martial_shiite
+		can_join_society = rtp_martial_ibadi
+		can_join_society = rtp_martial_zoroastrian
+		can_join_society = rtp_martial_eastern
+		#Learning
+		can_join_society = rtp_learning_reformed_pagan
+		can_join_society = rtp_learning_pagan
+		can_join_society = rtp_learning_chalcedonian
+		can_join_society = rtp_learning_catholic
+		can_join_society = rtp_learning_orthodox
+		can_join_society = rtp_learning_nestorian
+		can_join_society = rtp_learning_monophysite
+		can_join_society = rtp_learning_sunni
+		can_join_society = rtp_learning_shiite
+		can_join_society = rtp_learning_ibadi
+		can_join_society = rtp_learning_jewish
+		can_join_society = rtp_learning_zoroastrian
+		can_join_society = rtp_learning_hindu
+		can_join_society = rtp_learning_buddhist
+		can_join_society = rtp_learning_jain
+		can_join_society = rtp_learning_taoist
+		#Intrigue
+		can_join_society = rtp_intrigue_norse
+		can_join_society = rtp_intrigue_tengri
+		can_join_society = rtp_intrigue_baltic
+		can_join_society = rtp_intrigue_slavic
+		can_join_society = rtp_intrigue_finnish
+		can_join_society = rtp_intrigue_west_african
+		can_join_society = rtp_intrigue_zun
+		can_join_society = rtp_intrigue_bon
+		can_join_society = rtp_intrigue_hellenic
+		can_join_society = rtp_intrigue_aztec
+		can_join_society = rtp_intrigue_christians
+		can_join_society = rtp_intrigue_muslim
+		can_join_society = rtp_intrigue_jewish
+		can_join_society = rtp_intrigue_zoroastrian
+		can_join_society = rtp_intrigue_eastern
+		#Stewardship
+		can_join_society = rtp_stewardship_europe
+		can_join_society = rtp_stewardship_africa
+		can_join_society = rtp_stewardship_asia_minor
+		can_join_society = rtp_stewardship_india
+		can_join_society = rtp_stewardship_persia
+		can_join_society = rtp_stewardship_middle_east
+		can_join_society = rtp_stewardship_steppe
+		can_join_society = rtp_stewardship_himalayas
+		#Diplomacy
+		can_join_society = rtp_diplomacy_civilized
+		can_join_society = rtp_diplomacy_pagan
+	}
+}
+
+#Checks if the character is member of a diplomacy society
+rtp_is_in_diplomacy_society_st = {
+	OR = {
+		society_member_of = rtp_diplomacy_civilized
+		society_member_of = rtp_diplomacy_pagan
+	}
+}
+
+#Checks if the character is member of a stewardship society
+rtp_is_in_stewardship_society_st = {
+	OR = {
+		society_member_of = rtp_stewardship_europe
+		society_member_of = rtp_stewardship_africa
+		society_member_of = rtp_stewardship_asia_minor
+		society_member_of = rtp_stewardship_india
+		society_member_of = rtp_stewardship_persia
+		society_member_of = rtp_stewardship_middle_east
+		society_member_of = rtp_stewardship_steppe
+		society_member_of = rtp_stewardship_himalayas
+	}
+}
+
+#Checks if the character is member of an intrigue society
+rtp_is_in_intrigue_society_st = {
+	OR = {
+		society_member_of = rtp_intrigue_norse
+		society_member_of = rtp_intrigue_tengri
+		society_member_of = rtp_intrigue_baltic
+		society_member_of = rtp_intrigue_slavic
+		society_member_of = rtp_intrigue_finnish
+		society_member_of = rtp_intrigue_west_african
+		society_member_of = rtp_intrigue_zun
+		society_member_of = rtp_intrigue_bon
+		society_member_of = rtp_intrigue_hellenic
+		society_member_of = rtp_intrigue_aztec
+		society_member_of = rtp_intrigue_muslim
+		society_member_of = rtp_intrigue_christians
+		society_member_of = rtp_intrigue_jewish
+		society_member_of = rtp_intrigue_zoroastrian
+		society_member_of = rtp_intrigue_eastern
+	}
+}
+
+#Checks if the character is member of a martial society
+rtp_is_in_martial_society_st = {
+	OR = {
+		society_member_of = rtp_martial_norse
+		society_member_of = rtp_martial_tengri
+		society_member_of = rtp_martial_baltic
+		society_member_of = rtp_martial_finnish
+		society_member_of = rtp_martial_slavic
+		society_member_of = rtp_martial_west_african
+		society_member_of = rtp_martial_zun
+		society_member_of = rtp_martial_bon
+		society_member_of = rtp_martial_hellenic
+		society_member_of = rtp_martial_aztec
+		society_member_of = rtp_martial_chalcedonian
+		society_member_of = rtp_martial_catholic
+		society_member_of = rtp_martial_orthodox
+		society_member_of = rtp_martial_miaphysite
+		society_member_of = rtp_martial_nestorian
+		society_member_of = rtp_martial_jewish
+		society_member_of = rtp_martial_sunni
+		society_member_of = rtp_martial_shiite
+		society_member_of = rtp_martial_ibadi
+		society_member_of = rtp_martial_zoroastrian
+		society_member_of = rtp_martial_eastern
+	}
+}
+
+#Checks if the character is member of a learning society
+rtp_is_in_learning_society_st = {
+	OR = {
+		society_member_of = rtp_learning_reformed_pagan
+		society_member_of = rtp_learning_pagan
+		society_member_of = rtp_learning_chalcedonian
+		society_member_of = rtp_learning_catholic
+		society_member_of = rtp_learning_orthodox
+		society_member_of = rtp_learning_nestorian
+		society_member_of = rtp_learning_monophysite
+		society_member_of = rtp_learning_sunni
+		society_member_of = rtp_learning_shiite
+		society_member_of = rtp_learning_ibadi
+		society_member_of = rtp_learning_jewish
+		society_member_of = rtp_learning_zoroastrian
+		society_member_of = rtp_learning_hindu
+		society_member_of = rtp_learning_buddhist
+		society_member_of = rtp_learning_jain
+		society_member_of = rtp_learning_taoist
+	}
+}
+
+#Makes sure society member hasn't used a level 1 power recently
+rtp_can_use_p1_st = {
+	custom_tooltip = {
+		text = "rtp_can_use_power_ct"
+		hidden_tooltip = {
+			NOT = {
+				has_character_modifier = rtp_used_p1_timer_em
+			}
+		}
+	}
+}
+
+#Makes sure society member hasn't used a level 2 power recently
+rtp_can_use_p2_st = {
+	custom_tooltip = {
+		text = "rtp_can_use_power_ct"
+		hidden_tooltip = {
+			NOT = {
+				has_character_modifier = rtp_used_p2_timer_em
+			}
+		}
+	}
+}
+
+#Makes sure society member hasn't used a level 3 power recently
+rtp_can_use_p3_st = {
+	custom_tooltip = {
+		text = "rtp_can_use_power_ct"
+		hidden_tooltip = {
+			NOT = {
+				has_character_modifier = rtp_used_p3_timer_em
+			}
+		}
+	}
+}
+
+#Makes sure society member hasn't used a level 4 power recently
+rtp_can_use_p4_st = {
+	custom_tooltip = {
+		text = "rtp_can_use_power_ct"
+		hidden_tooltip = {
+			NOT = {
+				has_character_modifier = rtp_used_p4_timer_em
+			}
+		}
+	}
+}
+
+#Makes sure society character doesn't have a Holy Warrior trait
+rtp_has_holy_warrior_trait_st = {
+	OR = {
+		trait = crusader
+		trait = mujahid
+		trait = shaddai
+		trait = gondi_shahansha
+		trait = rtp_maharathi_tr
+		trait = valhalla_bound
+		trait = eagle_warrior
+		trait = sun_warrior
+		trait = ukkos_shield
+		trait = nyames_shield
+		trait = peruns_chosen
+		trait = romuvas_own
+		trait = ares_own
+		trait = tengri_warrior
+		trait = kailash_guardian
+	}
+}
+
+#Makes sure society character doesn't have a Martial Society trait
+rtp_has_martial_society_trait_st = {
+	OR = {
+		trait = norse_leader
+		trait = tengri_leader
+		trait = baltic_leader
+		trait = finnish_leader
+		trait = slavic_leader
+		trait = west_african_leader
+		trait = zun_leader
+		trait = bon_leader
+		trait = hellenic_leader
+		trait = aztec_leader
+		trait = christian_leader
+		trait = jewish_leader
+		trait = muslim_leader
+		trait = zoroastrian_leader
+		trait = eastern_leader
+	}
+}
+
+#Checks if a characters has any plots
+rtp_has_plot_st = {
+	OR = {
+		has_plot = plot_gain_title
+		has_plot = plot_gain_vassal_title
+		has_plot = plot_kill_character
+		has_plot = plot_kill_spouse
+		has_plot = plot_weaken_fellow_vassal
+		has_plot = plot_gain_liege_title
+		has_plot = plot_gain_fellow_vassal_title
+		has_plot = plot_seize_trade_post
+	}
+}
+
+#####
+#Government Checks
+#####
+
+#Checks if the player is of a landless government
+rtp_is_landless_government = {
+	OR = {
+		government = rtp_lowborn_g
+		government = rtp_noble_g
+		government = rtp_landless_order_g
+		government = rtp_landless_mercenary_g
+		government = rtp_landless_theocracy_g
+		government = rtp_landless_adventurer_g
+	}
+}
+
+#Checks if the player is of a feudal government
+rtp_is_feudal_government = {
+	OR = {
+		government = rtp_baron_g
+		government = rtp_baron_iqta_g
+		government = rtp_baron_monastic_g
+		government = feudal_government
+		government = muslim_government
+		government = theocratic_feudal_government
+	}
+}
+
+#Checks if the player is of a republic government
+rtp_is_republic_government = {
+	OR = {
+		government = rtp_baron_republic_g
+		government = rtp_republic_g
+		government = republic_government
+	}
+}
+
+#Checks if the player is of a theocracy government
+rtp_is_theocracy_government = {
+	OR = {
+		government = rtp_baron_theocracy_g
+		government = rtp_theocracy_g
+		government = theocracy_government
+	}
+}
+
+#Checks if the player is of a empire government
+rtp_is_empire_government = {
+	OR = {
+		government = roman_imperial_government
+		government = chinese_imperial_government
+		government = confucian_bureaucracy
+		government = rtp_confederation_g
+	}
+}
+
+#Checks if the player is of a mercenary government
+rtp_is_merc_government = {
+	OR = {
+		government = rtp_landless_mercenary_g
+		government = rtp_baron_mercenary_g
+		government = rtp_mercenary_g
+	}
+}
+
+#Checks if the player is of a holy order government
+rtp_is_order_government = {
+	OR = {
+		government = rtp_landless_order_g
+		government = rtp_baron_order_g
+		government = order_government
+	}
+}
+
+#####
+#Wealth Check
+#####
+
+#Checks if the character should start saving
+rtp_stop_spending_st = {
+	holder_scope = {
+		OR = {
+			AND = {
+				tier = BARON
+				OR = {
+					AND = {
+						rtp_is_empire_government = yes
+						monthly_income < 1.75
+					}
+					AND = {
+						rtp_is_republic_government = yes
+						monthly_income < 1.5
+					}
+					AND = {
+						rtp_is_theocracy_government = yes
+						monthly_income < 1.25
+					}
+					AND = {
+						rtp_is_feudal_government = yes
+						monthly_income < 1
+					}
+					AND = {
+						OR = {
+							rtp_is_merc_government = yes
+							rtp_is_order_government = yes
+						}
+						monthly_income < 0.75
+					}
+					AND = {
+						OR = {
+							is_tribal = yes
+							is_nomadic = yes
+						}
+						monthly_income < 0.5
+					}
+				}
+			}
+			AND = {
+				tier = COUNT
+				OR = {
+					AND = {
+						rtp_is_empire_government = yes
+						monthly_income < 3.5
+					}
+					AND = {
+						rtp_is_republic_government = yes
+						monthly_income < 3
+					}
+					AND = {
+						rtp_is_theocracy_government = yes
+						monthly_income < 2.5
+					}
+					AND = {
+						rtp_is_feudal_government = yes
+						monthly_income < 2
+					}
+					AND = {
+						OR = {
+							rtp_is_merc_government = yes
+							rtp_is_order_government = yes
+						}
+						monthly_income < 1.5
+					}
+					AND = {
+						OR = {
+							is_tribal = yes
+							is_nomadic = yes
+						}
+						monthly_income < 1
+					}
+				}
+			}
+			AND = {
+				tier = DUKE
+				OR = {
+					AND = {
+						rtp_is_empire_government = yes
+						monthly_income < 7
+					}
+					AND = {
+						rtp_is_republic_government = yes
+						monthly_income < 6
+					}
+					AND = {
+						rtp_is_theocracy_government = yes
+						monthly_income < 5
+					}
+					AND = {
+						rtp_is_feudal_government = yes
+						monthly_income < 4
+					}
+					AND = {
+						OR = {
+							rtp_is_merc_government = yes
+							rtp_is_order_government = yes
+						}
+						monthly_income < 3
+					}
+					AND = {
+						OR = {
+							is_tribal = yes
+							is_nomadic = yes
+						}
+						monthly_income < 2
+					}
+				}
+			}
+			AND = {
+				tier = KING
+				OR = {
+					AND = {
+						rtp_is_empire_government = yes
+						monthly_income < 14
+					}
+					AND = {
+						rtp_is_republic_government = yes
+						monthly_income < 12
+					}
+					AND = {
+						rtp_is_theocracy_government = yes
+						monthly_income < 10
+					}
+					AND = {
+						rtp_is_feudal_government = yes
+						monthly_income < 8
+					}
+					AND = {
+						OR = {
+							rtp_is_merc_government = yes
+							rtp_is_order_government = yes
+						}
+						monthly_income < 6
+					}
+					AND = {
+						OR = {
+							is_tribal = yes
+							is_nomadic = yes
+						}
+						monthly_income < 4
+					}
+				}
+			}
+			AND = {
+				tier = EMPEROR
+				OR = {
+					AND = {
+						rtp_is_empire_government = yes
+						monthly_income < 28
+					}
+					AND = {
+						rtp_is_republic_government = yes
+						monthly_income < 24
+					}
+					AND = {
+						rtp_is_theocracy_government = yes
+						monthly_income < 20
+					}
+					AND = {
+						rtp_is_feudal_government = yes
+						monthly_income < 16
+					}
+					AND = {
+						OR = {
+							rtp_is_merc_government = yes
+							rtp_is_order_government = yes
+						}
+						monthly_income < 12
+					}
+					AND = {
+						OR = {
+							is_tribal = yes
+							is_nomadic = yes
+						}
+						monthly_income < 8
+					}
+				}
+			}
+		}
+	}
+}
+
+#Checks if the character should stop saving
+rtp_start_spending_st = {
+	holder_scope = {
+		OR = {
+			AND = {
+				tier = BARON
+				OR = {
+					AND = {
+						rtp_is_empire_government = yes
+						monthly_income >= 1.75
+					}
+					AND = {
+						rtp_is_republic_government = yes
+						monthly_income >= 1.5
+					}
+					AND = {
+						rtp_is_theocracy_government = yes
+						monthly_income >= 1.25
+					}
+					AND = {
+						rtp_is_feudal_government = yes
+						monthly_income >= 1
+					}
+					AND = {
+						OR = {
+							rtp_is_merc_government = yes
+							rtp_is_order_government = yes
+						}
+						monthly_income >= 0.75
+					}
+					AND = {
+						OR = {
+							is_tribal = yes
+							is_nomadic = yes
+						}
+						monthly_income >= 0.5
+					}
+				}
+			}
+			AND = {
+				tier = COUNT
+				OR = {
+					AND = {
+						rtp_is_empire_government = yes
+						monthly_income >= 3.5
+					}
+					AND = {
+						rtp_is_republic_government = yes
+						monthly_income >= 3
+					}
+					AND = {
+						rtp_is_theocracy_government = yes
+						monthly_income >= 2.5
+					}
+					AND = {
+						rtp_is_feudal_government = yes
+						monthly_income >= 2
+					}
+					AND = {
+						OR = {
+							rtp_is_merc_government = yes
+							rtp_is_order_government = yes
+						}
+						monthly_income >= 1.5
+					}
+					AND = {
+						OR = {
+							is_tribal = yes
+							is_nomadic = yes
+						}
+						monthly_income >= 1
+					}
+				}
+			}
+			AND = {
+				tier = DUKE
+				OR = {
+					AND = {
+						rtp_is_empire_government = yes
+						monthly_income >= 7
+					}
+					AND = {
+						rtp_is_republic_government = yes
+						monthly_income >= 6
+					}
+					AND = {
+						rtp_is_theocracy_government = yes
+						monthly_income >= 5
+					}
+					AND = {
+						rtp_is_feudal_government = yes
+						monthly_income >= 4
+					}
+					AND = {
+						OR = {
+							rtp_is_merc_government = yes
+							rtp_is_order_government = yes
+						}
+						monthly_income >= 3
+					}
+					AND = {
+						OR = {
+							is_tribal = yes
+							is_nomadic = yes
+						}
+						monthly_income >= 2
+					}
+				}
+			}
+			AND = {
+				tier = KING
+				OR = {
+					AND = {
+						rtp_is_empire_government = yes
+						monthly_income >= 14
+					}
+					AND = {
+						rtp_is_republic_government = yes
+						monthly_income >= 12
+					}
+					AND = {
+						rtp_is_theocracy_government = yes
+						monthly_income >= 10
+					}
+					AND = {
+						rtp_is_feudal_government = yes
+						monthly_income >= 8
+					}
+					AND = {
+						OR = {
+							rtp_is_merc_government = yes
+							rtp_is_order_government = yes
+						}
+						monthly_income >= 6
+					}
+					AND = {
+						OR = {
+							is_tribal = yes
+							is_nomadic = yes
+						}
+						monthly_income >= 4
+					}
+				}
+			}
+			AND = {
+				tier = EMPEROR
+				OR = {
+					AND = {
+						rtp_is_empire_government = yes
+						monthly_income >= 28
+					}
+					AND = {
+						rtp_is_republic_government = yes
+						monthly_income >= 24
+					}
+					AND = {
+						rtp_is_theocracy_government = yes
+						monthly_income >= 20
+					}
+					AND = {
+						rtp_is_feudal_government = yes
+						monthly_income >= 16
+					}
+					AND = {
+						OR = {
+							rtp_is_merc_government = yes
+							rtp_is_order_government = yes
+						}
+						monthly_income >= 12
+					}
+					AND = {
+						OR = {
+							is_tribal = yes
+							is_nomadic = yes
+						}
+						monthly_income >= 8
+					}
+				}
+			}
+		}
+	}
+}

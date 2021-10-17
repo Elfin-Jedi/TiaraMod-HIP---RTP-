@@ -1,0 +1,293 @@
+namespace = WS
+
+##################################################################
+#Mazdan Warrior Society/Lodge has been created.
+#Players notified.
+narrative_event = {
+	id = WS.00001
+	title = EVTTITLEWS00001
+	desc = EVTDESCWS00001
+	hide_from = yes
+	hide_new = yes
+
+	picture = GFX_evt_joust_arabic
+	
+	only_playable = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				is_heretic = no
+				NOT = { is_title_active = d_immortals }
+			}
+			activate_title = { title = d_immortals status = yes }
+			create_character = {
+				random_traits = no
+				dynasty = random
+				religion = ROOT
+				culture = persian
+				female = no
+				age = 27
+				attributes = {
+					diplomacy = 3
+					learning = 3
+					stewardship = 3
+					intrigue = 3
+					martial = 9
+				}
+				trait = brilliant_strategist
+				trait = zealous
+				trait = humble
+				trait = ambitious
+				trait = strategist
+				trait = holy_warrior
+			}
+			new_character = {
+				wealth = 500
+				d_immortals = {
+					grant_title = PREV
+					religion = PREV
+				}
+				set_government_type = order_government
+				join_society = warrior_lodge_ws_mazdan
+				spawn_great_commander_effect = yes
+				new_character = { join_society = warrior_lodge_ws_mazdan }
+				spawn_great_commander_effect = yes
+				new_character = { join_society = warrior_lodge_ws_mazdan }
+				spawn_great_commander_effect = yes
+				new_character = { join_society = warrior_lodge_ws_mazdan }
+				spawn_great_commander_effect = yes
+				new_character = { join_society = warrior_lodge_ws_mazdan }
+				spawn_good_commander_effect = yes
+				new_character = { join_society = warrior_lodge_ws_mazdan }
+				spawn_good_commander_effect = yes
+				new_character = { join_society = warrior_lodge_ws_mazdan }
+				spawn_good_commander_effect = yes
+				new_character = { join_society = warrior_lodge_ws_mazdan }
+				spawn_good_commander_effect = yes
+				new_character = { join_society = warrior_lodge_ws_mazdan }
+				spawn_good_commander_effect = yes
+				new_character = { join_society = warrior_lodge_ws_mazdan }
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTAWS00001
+		trigger = {
+			OR = { 
+				society_member_of = warrior_lodge_ws_mazdan 
+				religion_group = zoroastrian_group
+				secret_religion_group = zoroastrian_group
+				can_join_society = warrior_lodge_ws_mazdan
+			}
+		}
+		if = {
+			limit = { 
+				NOT = { society_member_of = warrior_lodge_ws_mazdan }
+				can_join_society = warrior_lodge_ws_mazdan
+			}
+			join_society = warrior_lodge_ws_mazdan
+		}
+		d_immortals = {
+			holder_scope = { save_event_target_as = ws_immortals_temp_grandmaster }
+		}
+	}
+	option = {
+		name = EVTOPTBWS00001
+		trigger = {
+			NOR = { 
+				society_member_of = warrior_lodge_ws_mazdan 
+				religion_group = zoroastrian_group
+				secret_religion_group = zoroastrian_group
+			}
+		}
+	}
+}
+
+#Eastern Warrior Society/Lodge has been created.
+#Players notified.
+narrative_event = {
+	id = WS.00002
+	title = EVTTITLEWS00002
+	desc = EVTDESCWS00002
+	hide_from = yes
+	hide_new = yes
+
+	picture = GFX_evt_battle_indo_aryan_group
+	# picture = GFX_evt_hindu_temple_interior
+	
+	only_playable = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAWS00002
+		trigger = {
+			OR = { 
+				society_member_of = warrior_lodge_ws_eastern 
+				religion_group = indian_group
+				secret_religion_group = indian_group
+				can_join_society = warrior_lodge_ws_eastern
+			}
+		}
+		if = {
+			limit = { 
+				NOT = { society_member_of = warrior_lodge_ws_eastern }
+				can_join_society = warrior_lodge_ws_eastern
+			}
+			join_society = warrior_lodge_ws_eastern
+		}
+	}
+	option = {
+		name = EVTOPTBWS00002
+		trigger = {
+			NOR = { 
+				society_member_of = warrior_lodge_ws_eastern 
+				religion_group = indian_group
+				secret_religion_group = warrior_lodge_ws_eastern
+			}
+		}
+	}
+}
+
+# #Aztec Warrior Society/Lodge has been created.
+# #Players notified.
+# narrative_event = {
+	# id = WS.00003
+	# title = EVTTITLEWS00003
+	# desc = EVTDESCWS00003
+	# hide_from = yes
+	# hide_new = yes
+
+	# picture = GFX_evt_battle_mesoamerican
+	
+	# only_playable = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+		# name = EVTOPTAWS00003
+		# trigger = {
+			# OR = { 
+				# society_member_of = warrior_lodge_ws_aztec 
+				# religion = aztec
+				# religion = aztec_reformed
+				# secret_religion = aztec
+				# secret_religion = aztec_reformed
+				# can_join_society = warrior_lodge_ws_aztec
+			# }
+		# }
+		# if = {
+			# limit = { 
+				# NOT = { society_member_of = warrior_lodge_ws_aztec }
+				# can_join_society = warrior_lodge_ws_aztec
+			# }
+			# join_society = warrior_lodge_ws_aztec
+		# }
+	# }
+	# option = {
+		# name = EVTOPTBWS00003
+		# trigger = {
+			# NOR = { 
+				# society_member_of = warrior_lodge_ws_aztec 
+				# religion = aztec
+				# religion = aztec_reformed
+				# secret_religion = aztec
+				# secret_religion = aztec_reformed
+			# }
+		# }
+	# }
+# }
+
+#Muslim Warrior Society/Lodge has been created.
+#Players notified.
+narrative_event = {
+	id = WS.00004
+	title = EVTTITLEWS00004
+	desc = EVTDESCWS00004
+	hide_from = yes
+	hide_new = yes
+
+	picture = GFX_evt_battle
+	
+	only_playable = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAWS00004
+		trigger = {
+			OR = { 
+				society_member_of = warrior_lodge_ws_muslim 
+				religion_group = muslim
+				secret_religion_group = muslim
+				can_join_society = warrior_lodge_ws_muslim
+			}
+		}
+		if = {
+			limit = { 
+				NOT = { society_member_of = warrior_lodge_ws_muslim }
+				can_join_society = warrior_lodge_ws_muslim
+			}
+			join_society = warrior_lodge_ws_muslim
+		}
+	}
+	option = {
+		name = EVTOPTBWS00004
+		trigger = {
+			NOR = { 
+				society_member_of = warrior_lodge_ws_muslim 
+				religion_group = muslim
+				secret_religion_group = muslim
+			}
+		}
+	}
+}
+
+#Jewish Warrior Society/Lodge has been created.
+#Players notified.
+narrative_event = {
+	id = WS.00005
+	title = EVTTITLEWS00005
+	desc = EVTDESCWS00005
+	hide_from = yes
+	hide_new = yes
+
+	picture = GFX_evt_synagogue
+	
+	only_playable = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAWS00005
+		trigger = {
+			OR = { 
+				society_member_of = warrior_lodge_ws_jewish 
+				religion_group = jewish_group
+				secret_religion_group = jewish_group
+				can_join_society = warrior_lodge_ws_jewish
+			}
+		}
+		if = {
+			limit = { 
+				NOT = { society_member_of = warrior_lodge_ws_jewish }
+				can_join_society = warrior_lodge_ws_jewish
+			}
+			join_society = warrior_lodge_ws_jewish
+		}
+	}
+	option = {
+		name = EVTOPTBWS00005
+		trigger = {
+			NOR = { 
+				society_member_of = warrior_lodge_ws_jewish 
+				religion_group = jewish_group
+				secret_religion_group = jewish_group
+			}
+		}
+	}
+}

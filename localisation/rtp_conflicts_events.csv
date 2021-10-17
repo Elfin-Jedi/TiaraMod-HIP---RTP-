@@ -1,0 +1,78 @@
+#####
+#Events
+#####
+
+RTPconflicts.1_title;Peasant Rebellion;;;;;;x
+RTPconflicts.1_desc;It has been no easy task, but after years of searching for support and manpower, [rtp_attacker.GetFirstName] is ready to gather the militia and march against [rtp_defender.GetTitledName]. The rebellion will begin with the torching of [rtp_defender.GetTitledName]'s stables at midnight and by morning it will a full-scale march across the countryside.;;;;;;x
+RTPconflicts.1_1;No taxation without representation.;;;;;;x
+RTPconflicts.1_2;No, I will stand with my liege.;;;;;;x
+RTPconflicts.1_3;This is a terrible idea.;;;;;;x
+
+RTPconflicts.2_title;Peasant Rebellion;;;;;;x
+RTPconflicts.2_desc;Desperate times and desperate measures both. Through bloody battle we have fought, starved, and died to throw off the yoke of this horrendous tyrant. Though worse-equipped and mostly poorly trained, we are numerous and we are fierce. Finally at one dawn we hear the blasts of trumpets from inside [rtp_defender.GetTitledName]'s besieged hold -- we have won!;;;;;;x
+RTPconflicts.2_1;First amongst equals.;;;;;;x
+RTPconflicts.2_2;I only did it for justice.;;;;;;x
+
+RTPconflicts.3_title;Religious Liberation;;;;;;x
+RTPconflicts.3_desc;Tension has been high among [rtp_attacker.Religion.GetName] believers, whispers of brewing violence in the air. Today someone pulls me roughly aside and tells me [rtp_attacker.GetFirstName] has gathered troops and incited a rebellion in the name of [rtp_attacker.Religion.GetHighGodNameCap]! It will no doubt be bloody, as the most zealous bend no knee to heretics.;;;;;;x
+RTPconflicts.3_1;Proudly join [rtp_attacker.GetFirstName] in their rebellion.;;;;;;x
+RTPconflicts.3_2;This is a terrible idea.;;;;;;x
+
+RTPconflicts.4_title;Religious Liberation;;;;;;x
+RTPconflicts.4_desc;The land weeps blood for our faith, her forests ablaze and rivers jammed with the rotting dead. For months my shallow sleep echoed with the brazen blasts of warhorns, anguished screams, the crackling of fire, and the singing of steel. We have won! Exhausted, I and a few others are solemnly presented parchment with [rtp_attacker.GetTitledName]'s seal, offering us land in exchange for our unyielding service.;;;;;;x
+RTPconflicts.4_1;[From.Religion.GetHighGodNameCap] guide me, I have earned the title!;;;;;;x
+RTPconflicts.4_2;I fought in service to [From.Religion.GetHighGodNameCap] alone, not for reward.;;;;;;x
+
+RTPconflicts.5_title;Invasion;;;;;;x
+RTPconflicts.5_desc;I overheard a group of soldiers excitedly discussing an invasion being organized by [rtp_attacker.GetTitledName] against [rtp_defender.GetTitledName]. Some are planning on joining the invading force, and some the defending. All are convinced they'll impress their new lieges in battle, and perhaps be handsomely rewarded with money or even a fief. I could join either side tonight, but it would mean I will need to swear allegiance to their lord regardless of the invasion outcome.;;;;;;x
+RTPconflicts.5_1;Join the war under the banner of [rtp_attacker.GetTitledName].;;;;;;x
+RTPconflicts.5_2;Join the war under the banner of [rtp_defender.GetTitledName].;;;;;;x
+RTPconflicts.5_3;Not for me.;;;;;;x
+
+RTPconflicts.6_title;Invasion;;;;;;x
+RTPconflicts.6_desc;The fighting raged for many days, leaving scores of sons and daughters dead on its bloody battlefields. Today it has been declared that [rtp_winner.GetTitledName] has defeated [rtp_loser.GetTitledName], banners flown high.;;;;;;x
+RTPconflicts.6_1;We've done it! Glory to us! Glory to [rtp_winner.GetTitledName]!;;;;;;x
+RTPconflicts.6_2;The shame is great for myself and [rtp_loser.GetTitledName]'s men.;;;;;;x
+
+RTPconflicts.7_title;Great Holy War;;;;;;x
+RTPconflicts.7_desc1;The streets and taverns are abuzz with news that [rtp_attacker.GetTitledName] has declared a [rtp_attacker.Religion.GetCrusadeName] on the heathen [rtp_defender.GetTitledName]. Many are flocking eagerly to [rtp_attacker.GetTitledName]'s banner to vanquish the heathens, to prove themselves in battle, or to hopefully gain coin or even a fief. [rtp_attacker.GetTitledName] demands that all who join the war swear allegiance to [rtp_attacker.GetHerHim], but claims they will be rewarded at war's end...;;;;;;x
+RTPconflicts.7_desc2;There is talk on the streets that the heathen [rtp_attacker.GetTitledName] has declared a Great Holy War on [rtp_defender.GetTitledName]. People here have been flocking to the defense of [rtp_defender.GetTitledName], many out of pious zeal and some with thinly veiled ambitions for money or land. My liege has promised all who join the war may return to their homes here once the fighting is done.;;;;;;x
+RTPconflicts.7_1;In the name of [rtp_attacker.Religion.GetHighGodNameCap]!;;;;;;x
+RTPconflicts.7_2;I will defend my faith!;;;;;;x
+RTPconflicts.7_3;Not for me.;;;;;;x
+
+RTPconflicts.8_title;Great Holy War;;;;;;x
+RTPconflicts.8_desc;For many days battle has raged fiercely amidst the cacophany of voices and the shrill ring of steel. Just as I was beginning to think it would never end, a hear a cry across the encampments that the [rtp_winner.Religion.GetName] faith has been declared triumphant!;;;;;;x
+RTPconflicts.8_1;Praise [rtp_winner.Religion.GetHighGodNameCap], we've won! We've driven back the heathens!;;;;;;x
+RTPconflicts.8_2;Despite our prayers and shed blood, we have failed [rtp_loser.Religion.GetHighGodNameCap]! How can this be?;;;;;;x
+
+RTPconflicts.9_title;Culture Liberation;;;;;;x
+RTPconflicts.9_desc;Slow, simmering, spiteful -- that is how a rebellion begins. Ever since [rtp_defender.GetTitledName] came to power there have been murmurs, angry that a [rtp_defender.Culture.GetName] could think it right to rule over [rtp_attacker.Culture.GetName] people. [rtp_defender.GetSheHeCap] has never understood our ways and never will. I and many others can feel things about to boil over, the strong current of emotion about to tip over into violence. The question is, where do I stand?;;;;;;x
+RTPconflicts.9_1;We should be ruled by our own.;;;;;;x
+RTPconflicts.9_2;Rebellion is treason!;;;;;;x
+
+RTPconflicts.10_title;Culture Liberation;;;;;;x
+RTPconflicts.10_desc;There are many days I could swear our ragtag armor was being held together by zeal alone. New ballads have been sung of even the smallest triumphs, heroes raised from rags, pride swelled to bursting even as we are cut down. We swore we would not fall and now -- now as fire rages through [rtp_defender.GetTitledName]'s lands and war cries turn victorious, I am so drunk on triumph that I am dizzy. We have won, they cry. We have won!;;;;;;x
+RTPconflicts.10_1;I will rule the [Root.Culture.GetName] people.;;;;;;x
+RTPconflicts.10_2;I fought in order to see our culture prosper, not for reward.;;;;;;x
+
+RTPconflicts.11_title;Call to Arms;;;;;;x
+RTPconflicts.11_desc;War has broken out and [rtp_liege.GetTitledName] is requesting that all levies report to the nearest armory in order to be outfitted for the conflict.;;;;;;x
+RTPconflicts.11_1;For the [rtp_liege.PrimaryTitle.GetFullBaseName]!;;;;;;x
+RTPconflicts.11_2;Not for me.;;;;;;x
+
+RTPconflicts.12_title;Rebellion!;;;;;;x
+RTPconflicts.12_desc;A fierce civil war has broken out in our lands, pitting brothers against brothers. Scores of soldiers have been marching through town on their way to the front, and the fires of war have been spotted not far away. It is only a matter of time before the violence reaches us.;;;;;;x
+RTPconflicts.12_1;Join the local garrison and stand with my liege.;;;;;;x
+RTPconflicts.12_2;Finally! Time to rebel against this tyrant!;;;;;;x
+RTPconflicts.12_3;Flee to [rtp_new_liege.GetTitledName]'s realm.;;;;;;x
+RTPconflicts.12_4;Barricade the doors and defend my home and family.;;;;;;x
+
+RTPconflicts.13_title;Mercenary;;;;;;x
+RTPconflicts.13_desc;While taking a stroll in [Root.Liege.Capital.GetName], a [From.GetManWoman] by the name of [From.GetFirstName] approaches you and offers you a temporary job with the mercenary band [From.PrimaryTitle.GetName].;;;;;;x
+RTPconflicts.13_1;Where do I sign?;;;;;;x
+RTPconflicts.13_2;Not for me.;;;;;;x
+
+#####
+#Tooltips
+#####

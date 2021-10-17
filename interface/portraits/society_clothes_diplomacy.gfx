@@ -1,0 +1,314 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_society_hermetic_male_headgear_behind"
+		textureFile = "gfx/characters/societies/mom_hermetic_male_headgear_behind.dds"
+		noOfFrames = 9
+	}
+
+	spriteType = {
+		name = "GFX_society_hermetic_male_headgear_front"
+		textureFile = "gfx/characters/societies/mom_hermetic_male_headgear_front.dds"
+		noOfFrames = 9
+	}
+
+	portraitType = {
+		name = "PORTRAIT_society_diplomacy_clothing_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				has_dlc = "Mystics"
+				OR = {
+					portrait_society = rtp_diplomacy_civilized
+					portrait_society = rtp_diplomacy_pagan
+				}
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_society_rank = 4
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				OR = {
+					portrait_in_command = no
+					portrait_government = theocracy_government
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+					portrait_government = rtp_landless_theocracy_g
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = {
+			#"GFX_society_hermetic_male_clothing_behind:c0"
+			#"GFX_society_hermetic_male_clothing_front:c2"
+			"GFX_society_hermetic_male_headgear_behind:c1"
+			"GFX_society_hermetic_male_headgear_front:c5"
+			"GFX_empty:c3"
+			#"GFX_empty:c4"
+		}
+
+		# Appropriate clothing
+		allow_property_values = {
+			3 = {
+				3 = { always = yes }
+				4 = { always = yes }
+				5 = { always = yes }
+			}
+			5 = {
+				0 = { # Western
+					OR = {
+						portrait_religion = catholic
+						portrait_religion = cathar
+						portrait_religion = fraticelli
+						portrait_religion = waldensian
+						portrait_religion = lollard
+						portrait_religion = orthodox
+						portrait_religion = miaphysite
+						portrait_religion = monophysite
+						portrait_religion = bogomilist
+						portrait_religion = monothelite
+						portrait_religion = iconoclast
+						portrait_religion = paulician
+						portrait_religion = nestorian
+						portrait_religion = messalian
+						portrait_religion = chalcedonian
+					}
+				}
+				2 = { # Baltic/Slavic
+					OR = {
+						portrait_religion = norse_pagan
+						portrait_religion = finnish_pagan
+						portrait_religion = slavic_pagan
+						portrait_religion = baltic_pagan
+						portrait_religion = norse_pagan_reformed
+						portrait_religion = finnish_pagan_reformed
+						portrait_religion = slavic_pagan_reformed
+						portrait_religion = baltic_pagan_reformed
+					}
+				}
+				3 = { # Muslim
+					OR = {
+						portrait_religion = sunni
+						portrait_religion = zikri
+						portrait_religion = yazidi
+						portrait_religion = ibadi
+						portrait_religion = kharijite
+						portrait_religion = shiite
+						portrait_religion = druze
+						portrait_religion = hurufi
+						portrait_religion = qarmatian
+					}
+				}
+				4 = { # Indian
+					OR = {
+						portrait_religion = hindu
+						portrait_religion = buddhist
+						portrait_religion = jain
+					}
+				}
+				5 = { # Central Asian
+					OR = {
+						portrait_religion = tengri_pagan
+						portrait_religion = tengri_pagan_reformed
+						portrait_religion = bon
+						portrait_religion = bon_reformed
+					}
+				}
+				6 = { # West African
+					OR = {
+						portrait_religion = west_african_pagan
+						portrait_religion = west_african_pagan_reformed
+					}
+				}
+				7 = { # East African
+					OR = {
+						portrait_religion = zoroastrian
+						portrait_religion = mazdaki
+						portrait_religion = manichean
+						portrait_religion = khurmazta
+						portrait_religion = zun_pagan
+						portrait_religion = zun_pagan_reformed
+						portrait_religion = aztec_reformed
+						portrait_religion = aztec
+					}
+				}
+				8 = { # Byzantine
+					OR = {
+						portrait_religion = jewish
+						portrait_religion = samaritan
+						portrait_religion = karaite
+						portrait_religion = taoist
+						portrait_religion = hellenic_pagan
+						portrait_religion = hellenic_pagan_reformed
+					}
+				}
+			}
+			31 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_hermetic_female_headgear_behind"
+		textureFile = "gfx/characters/societies/mom_hermetic_female_headgear_behind.dds"
+		noOfFrames = 9
+	}
+
+	spriteType = {
+		name = "GFX_society_hermetic_female_headgear_front"
+		textureFile = "gfx/characters/societies/mom_hermetic_female_headgear_front.dds"
+		noOfFrames = 9
+	}
+
+	portraitType = {
+		name = "PORTRAIT_society_diplomacy_clothing_female"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				has_dlc = "Mystics"
+				OR = {
+					portrait_society = rtp_diplomacy_civilized
+					portrait_society = rtp_diplomacy_pagan
+				}
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_society_rank = 4
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				OR = {
+					portrait_in_command = no
+					portrait_government = theocracy_government
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+					portrait_government = rtp_landless_theocracy_g
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = {
+			"GFX_society_hermetic_female_headgear_behind:c1"
+			"GFX_society_hermetic_female_headgear_front:c5"
+			"GFX_empty:c3"
+		}
+
+		allow_property_values = {
+			3 = {
+				3 = { always = yes }
+				4 = { always = yes }
+				5 = { always = yes }
+			}
+			5 = {
+				0 = { # Western
+					OR = {
+						portrait_religion = catholic
+						portrait_religion = cathar
+						portrait_religion = fraticelli
+						portrait_religion = waldensian
+						portrait_religion = lollard
+						portrait_religion = orthodox
+						portrait_religion = miaphysite
+						portrait_religion = monophysite
+						portrait_religion = bogomilist
+						portrait_religion = monothelite
+						portrait_religion = iconoclast
+						portrait_religion = paulician
+						portrait_religion = nestorian
+						portrait_religion = messalian
+						portrait_religion = chalcedonian
+					}
+				}
+				2 = { # Baltic/Slavic
+					OR = {
+						portrait_religion = norse_pagan
+						portrait_religion = finnish_pagan
+						portrait_religion = slavic_pagan
+						portrait_religion = baltic_pagan
+						portrait_religion = norse_pagan_reformed
+						portrait_religion = finnish_pagan_reformed
+						portrait_religion = slavic_pagan_reformed
+						portrait_religion = baltic_pagan_reformed
+					}
+				}
+				3 = { # Muslim
+					OR = {
+						portrait_religion = sunni
+						portrait_religion = zikri
+						portrait_religion = yazidi
+						portrait_religion = ibadi
+						portrait_religion = kharijite
+						portrait_religion = shiite
+						portrait_religion = druze
+						portrait_religion = hurufi
+						portrait_religion = qarmatian
+					}
+				}
+				4 = { # Indian
+					OR = {
+						portrait_religion = hindu
+						portrait_religion = buddhist
+						portrait_religion = jain
+					}
+				}
+				5 = { # Central Asian
+					OR = {
+						portrait_religion = tengri_pagan
+						portrait_religion = tengri_pagan_reformed
+						portrait_religion = bon
+						portrait_religion = bon_reformed
+					}
+				}
+				6 = { # West African
+					OR = {
+						portrait_religion = west_african_pagan
+						portrait_religion = west_african_pagan_reformed
+					}
+				}
+				7 = { # East African
+					OR = {
+						portrait_religion = zoroastrian
+						portrait_religion = mazdaki
+						portrait_religion = manichean
+						portrait_religion = khurmazta
+						portrait_religion = zun_pagan
+						portrait_religion = zun_pagan_reformed
+						portrait_religion = aztec_reformed
+						portrait_religion = aztec
+					}
+				}
+				8 = { # Byzantine
+					OR = {
+						portrait_religion = jewish
+						portrait_religion = samaritan
+						portrait_religion = karaite
+						portrait_religion = taoist
+						portrait_religion = hellenic_pagan
+						portrait_religion = hellenic_pagan_reformed
+					}
+				}
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+
+		# Hide hair on 3rd, 4th, and 9th slot ( slavic, muslim, byzantine )
+		headgear_that_hides_hair = { 2 3 8 }
+	}
+}

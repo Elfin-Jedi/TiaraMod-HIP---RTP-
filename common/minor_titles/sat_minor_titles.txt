@@ -1,0 +1,173 @@
+title_court_necromancer = {
+	dignity = 0.05
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	monthly_salary = 0.05
+	monthly_prestige = 0.5
+	is_high_prio = yes
+	is_unique = yes
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		is_adult = yes
+		religion = satanism
+		intrigue = 10
+		learning = 10
+		NOT = { trait = incapable }
+	}
+	
+	allowed_to_grant = {
+		AND = {
+			religion = satanism
+			OR = {
+				is_feudal = yes
+				is_tribal = yes
+				is_theocracy = yes
+				is_nomadic = yes
+			}
+			OR = {
+				tier = duke
+				tier = king
+				tier = emperor
+			}
+		}
+	}
+	gain_effect = {
+		set_character_flag = new_necromancer
+	}
+	lose_effect = {
+		clr_character_flag = new_necromancer
+	}
+	message = yes
+}
+
+title_court_minion = {
+	dignity = 0.01
+	realm_in_name = no
+	grant_limit = 5
+	opinion_effect = 5
+	monthly_salary = 0.01
+	monthly_prestige = 0.01
+	
+	allowed_to_hold = {
+		NOT = {
+			primary_title = { temporary = yes } 
+		}
+		is_adult = yes
+		religion = satanism
+	}
+	
+	allowed_to_grant = {
+		AND = {
+			religion = satanism
+			OR = {
+				is_feudal = yes
+				is_tribal = yes
+				is_theocracy = yes
+				is_nomadic = yes
+			}
+			OR = {
+				tier = count
+				tier = duke
+				tier = king
+				tier = emperor
+			}
+		}
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+	message = yes
+}
+
+title_court_witch = {
+	dignity = 0.05
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	monthly_salary = 0.05
+	monthly_prestige = 0.25
+	is_high_prio = yes
+	is_unique = yes
+	
+	allowed_to_hold = {
+		NOT = {
+			primary_title = { temporary = yes }
+		}
+		is_adult = yes
+		is_female = yes
+		religion = satanism
+		NOT = { trait = incapable }
+	}
+	
+	allowed_to_grant = {
+		AND = {
+			religion = satanism
+			OR = {
+				is_feudal = yes
+				is_tribal = yes
+				is_theocracy = yes
+				is_nomadic = yes
+			}
+			OR = {
+				tier = duke
+				tier = king
+				tier = emperor
+			}
+		}
+	}
+	gain_effect = {
+		set_character_flag = new_court_witch
+	}
+	lose_effect = {
+		clr_character_flag = new_court_witch
+	}
+	message = yes
+}
+
+title_court_medium = {
+	dignity = 0.05
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	monthly_salary = 0.05
+	monthly_prestige = 0.05
+	is_unique = yes
+	
+	allowed_to_hold = {
+		NOT = {
+			primary_title = { temporary = yes }
+		}
+		is_adult = yes
+		religion = satanism
+		NOT = { trait = incapable }
+	}
+	
+	allowed_to_grant = {
+		AND = {
+			religion = satanism
+			OR = {
+				is_feudal = yes
+				is_tribal = yes
+				is_theocracy = yes
+				is_nomadic = yes
+			}
+			OR = {
+				tier = count
+				tier = duke
+				tier = king
+				tier = emperor
+			}
+		}
+	}
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+	message = yes
+}

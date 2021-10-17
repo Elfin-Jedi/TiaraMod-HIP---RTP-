@@ -1,0 +1,28 @@
+charismatique = {
+
+      ruler_designer_cost = 30
+
+potential = {
+     age = 16
+}
+
+personality = yes
+random = yes
+birth = 100
+  
+  diplomacy = 5
+  intrigue = 5
+
+  opposites = {
+			imbecile
+  }
+  
+  opposite_opinion = -10
+  same_opinion = 20
+  vassal_opinion = 30
+  general_opinion = 30
+  sex_appeal_opinion = 50
+  fertility = 0.1
+  monthly_character_prestige = 0.1
+
+}

@@ -1,0 +1,809 @@
+cloak_fur_linen = {
+	max_amount = 10
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			is_landed = yes
+			NOR = {
+				culture_group = north_germanic
+				culture_group = finno_ugric
+				culture_group = baltic
+				capital_scope = { climate = normal_winter }
+				capital_scope = { climate = severe_winter }
+			}
+			NAND = {
+				religion_group = christian
+				is_theocracy = yes
+			}
+			capital_scope = {
+				climate = mild_winter
+				region = world_europe
+			}
+			NOT = { any_artifact = { has_artifact_flag = accessory } }
+		}
+	}
+	
+	artifacts = {
+		cloak_fur_tier_1 = {
+			value = 1
+		}
+	}
+}
+
+cloak_fur_common = {
+	max_amount = 30
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			is_landed = yes
+			OR = {
+				culture_group = north_germanic
+				culture_group = finno_ugric
+				culture_group = baltic
+				culture = scottish
+				culture = norsegaelic
+				capital_scope = { climate = normal_winter }
+				capital_scope = { climate = severe_winter }
+			}
+			NOT = { any_artifact = { has_artifact_flag = accessory } }
+		}
+	}
+	
+	artifacts = {
+		cloak_fur_tier_1 = {
+			value = 1
+		}
+		cloak_fur_tier_2 = {
+			value = 1
+		}
+	}
+}
+
+cloak_fur_rare = {
+	max_amount = 20
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 9999
+			is_child_of = 163109
+			year = 867
+			NOT = { year = 868 }
+			NOT = { character = 163112 }
+			NOT = { character = 163119 }
+			NOT = { any_artifact = { has_artifact_flag = accessory } }
+		}
+		additive_modifier = {
+			value = 1
+			is_landed = yes
+			OR = {
+				culture_group = north_germanic
+				culture_group = finno_ugric
+				culture_group = baltic
+				culture = norsegaelic
+				capital_scope = { climate = severe_winter }
+			}
+			NOT = { any_artifact = { has_artifact_flag = accessory } }
+		}
+	}
+	
+	artifacts = {
+		cloak_fur_tier_3 = {
+			value = 1
+		}
+	}
+}
+
+cloak_fur_very_rare = {
+	max_amount = 8
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			is_landed = yes
+			capital_scope = { terrain = arctic }
+			NOT = { any_artifact = { has_artifact_flag = accessory } }
+		}
+	}
+	
+	artifacts = {
+		cloak_fur_tier_4 = {
+			value = 1
+		}
+	}
+}
+
+cloak_imperial = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			primary_title = { title = e_byzantium }
+			NOT = { has_artifact = cloak_imperial }
+		}
+	}
+	
+	artifacts = {
+		cloak_imperial = {
+			value = 1
+		}
+	}
+}
+
+tagelmust_common = {
+	max_amount = 20
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			is_landed = yes
+			OR = {
+				AND = { 
+					culture_group = north_african
+					lower_tier_than = duke
+					NAND = {
+						is_female = yes
+						religion_group = muslim
+					}
+				}
+				AND = {
+					NOR = {
+						culture_group = north_african
+						tier = emperor
+					}
+					capital_scope = {
+						NOR = {
+							climate = mild_winter
+							climate = normal_winter
+							climate = severe_winter
+						}
+						OR = {
+							region = world_africa
+							region = world_middle_east
+						}
+					}
+					NAND = {
+						is_female = yes
+						religion_group = muslim
+					}
+				}
+			}
+			NOT = { any_artifact = { has_artifact_flag = accessory } }
+		}
+	}
+	
+	artifacts = {
+		berber_veil_tier_1 = {
+			value = 1
+		}
+	}
+}
+
+tagelmust_uncommon = {
+	max_amount = 15
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			is_landed = yes
+			OR = {
+				AND = {
+					culture_group = north_african
+					higher_tier_than = baron
+					lower_tier_than = king
+					NAND = {
+						is_female = yes
+						religion_group = muslim
+					}
+				}
+				AND = {
+					NOR = {
+						culture_group = north_african
+						tier = emperor
+					}
+					capital_scope = {
+						NOR = {
+							climate = mild_winter
+							climate = normal_winter
+							climate = severe_winter
+						}
+						OR = {
+							region = world_africa
+							region = world_middle_east
+						}
+					}
+					NAND = {
+						is_female = yes
+						religion_group = muslim
+					}
+				}
+			}
+			NOT = { any_artifact = { has_artifact_flag = accessory } }
+		}
+	}
+	
+	artifacts = {
+		berber_veil_tier_2 = {
+			value = 1
+		}
+	}
+}
+
+tagelmust_rare = {
+	max_amount = 15
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			is_landed = yes
+			OR = {
+				AND = {
+					culture_group = north_african
+					higher_tier_than = count
+					NAND = {
+						is_female = yes
+						religion_group = muslim
+					}
+				}
+				AND = {
+					NOR = {
+						culture_group = north_african
+						lower_tier_than = count
+						tier = emperor
+					}
+					capital_scope = {
+						NOR = {
+							climate = mild_winter
+							climate = normal_winter
+							climate = severe_winter
+						}
+						OR = {
+							region = world_africa
+							region = world_middle_east
+						}
+					}
+					NAND = {
+						is_female = yes
+						religion_group = muslim
+					}
+				}
+			}
+			NOT = { any_artifact = { has_artifact_flag = accessory } }
+		}
+	}
+	
+	artifacts = {
+		berber_veil_tier_3 = {
+			value = 1
+		}
+	}
+}
+
+litham_black_abbasid = {
+	max_amount = 15
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		additive_modifier = {
+			value = -100
+			e_arabia = { #Abbasids must be in power
+				holder_scope = { NOT = { dynasty = 101727 } }
+			}
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 9999
+			primary_title = { title = e_arabia }
+		}
+		additive_modifier = {
+			value = 1
+			is_landed = yes
+			higher_tier_than = baron
+			top_liege = { primary_title = { title = e_arabia } }
+			NOT = {	primary_title = { title = e_arabia } }
+			NOT = { any_artifact = { has_artifact_flag = accessory } }
+		}
+	}
+	
+	artifacts = {
+		litham_black = {
+			value = 1
+		}
+	}
+}
+
+litham_black_sunni = {
+	max_amount = 15
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		additive_modifier = {
+			value = 100
+			e_arabia = { #Abbasids must NOT be in power
+				holder_scope = { NOT = { dynasty = 101727 } }
+			}
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 9999
+			primary_title = { title = d_sunni }
+			religion = sunni
+			dynasty = 101727
+		}
+		additive_modifier = {
+			value = 1
+			is_landed = yes
+			higher_tier_than = baron
+			religion = sunni
+			NOT = { any_artifact = { has_artifact_flag = accessory } }
+		}
+	}
+	
+	artifacts = {
+		litham_black = {
+			value = 1
+		}
+	}
+}
+
+litham_white_abbasid = {
+	max_amount = 15
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		additive_modifier = {
+			value = -100
+			e_arabia = { #Abbasids must be in power
+				holder_scope = { NOT = { dynasty = 101727 } }
+			}
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			is_landed = yes
+			higher_tier_than = baron
+			religion_group = muslim
+			NOT = { top_liege = { primary_title = { title = e_arabia } } }
+			NOT = {	primary_title = { title = e_arabia } }
+			NOT = { any_artifact = { has_artifact_flag = accessory } }
+		}
+	}
+	
+	artifacts = {
+		litham_white = {
+			value = 1
+		}
+	}
+}
+
+litham_white = {
+	max_amount = 15
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		additive_modifier = {
+			value = 100
+			e_arabia = { #Abbasids must NOT be in power
+				holder_scope = { NOT = { dynasty = 101727 } }
+			}
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			is_landed = yes
+			higher_tier_than = baron
+			religion_group = muslim
+			NOT = { any_artifact = { has_artifact_flag = accessory } }
+		}
+	}
+	
+	artifacts = {
+		litham_white = {
+			value = 1
+		}
+	}
+}
+
+litham_green = {
+	max_amount = 15
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 9999
+			is_ruler = yes
+			OR = { 
+				religion = ismaili
+				religion = shia
+			}
+			year = 867
+			NOT = { year = 868 }
+			NOT = { any_artifact = { has_artifact_flag = accessory } }
+		}
+		additive_modifier = {
+			value = 1
+			is_landed = yes
+			religion_group = muslim
+			NOT = { religion = sunni }
+			year = 867
+			NOT = { year = 868 }
+			NOT = { any_artifact = { has_artifact_flag = accessory } }
+		}
+		additive_modifier = {
+			value = 9999
+			primary_title = { title = e_egypt }
+			religion = ismaili
+			year = 868
+			NOT = { any_artifact = { has_artifact_flag = accessory } }
+		}
+		additive_modifier = {
+			value = 80
+			is_landed = yes
+			higher_tier_than = baron
+			religion = ismaili
+			year = 868
+			NOT = { any_artifact = { has_artifact_flag = accessory } }
+		}
+	}
+	
+	artifacts = {
+		litham_green = {
+			value = 1
+		}
+	}
+}
+
+anazah = {
+	max_amount = 5
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			religion_group = muslim
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		anazah = {
+			value = 1
+		}
+	}
+}
+
+digenes_akrites = {
+	max_amount = 3
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 9999
+			primary_title = { title = e_byzantium }
+			NOT = { religion_group = muslim }
+			NOT = { has_artifact = digenes_akrites }
+		}
+		additive_modifier = {
+			value = 1
+			is_landed = yes
+			culture_group = byzantine
+			NOT = { religion_group = muslim }
+			NOT = { has_artifact = digenes_akrites }
+		}
+	}
+	
+	artifacts = {
+		digenes_akrites = {
+			value = 1
+		}
+	}
+}
+
+the_circle = {
+	max_amount = 6
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 9999
+			primary_title = { title = e_byzantium }
+			NOT = { religion_group = muslim }
+			NOT = { has_artifact = the_circle }
+		}
+		additive_modifier = {
+			value = 1
+			is_landed = yes
+			culture = greek
+			NOT = { religion_group = muslim }
+			NOT = { has_artifact = the_circle }
+		}
+	}
+	
+	artifacts = {
+		the_circle = {
+			value = 1
+		}
+	}
+}
+
+sirat_delhemma = {
+	max_amount = 3
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 9999
+			OR = {
+				primary_title = { title = e_arabia }
+				primary_title = { title = e_egypt }
+			}
+			NOT = { religion_group = christian }
+			NOT = { has_artifact = sirat_delhemma }
+		}
+		additive_modifier = {
+			value = 1
+			is_landed = yes
+			culture_group = arabic
+			NOT = { religion_group = christian }
+			NOT = { has_artifact = sirat_delhemma }
+		}
+	}
+	
+	artifacts = {
+		sirat_delhemma = {
+			value = 1
+		}
+	}
+}
+
+song_of_roland = {
+	max_amount = 3
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			is_landed = yes
+			higher_tier_than = count
+			culture_group = latin
+			NOT = { religion_group = muslim }
+			NOT = { has_artifact = song_of_roland }
+		}
+	}
+	
+	artifacts = {
+		song_of_roland = {
+			value = 1
+		}
+	}
+}
+
+gungnir = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			is_landed = yes
+		}
+		additive_modifier = {
+			value = 100
+			religion = norse_pagan
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		gungnir = {
+			value = 1
+		}
+	}
+}
+
+kalevanmiekka = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = finnish_pagan
+				religion = finnish_pagan_reformed
+			}
+			is_landed = yes
+			capital_scope = { region = custom_eastern_baltic }
+		}
+		additive_modifier = {
+			value = 100
+			religion = finnish_pagan
+			is_landed = yes
+			capital_scope = { region = custom_eastern_baltic }
+		}
+	}
+
+	artifacts = {
+		kalevanmiekka = {
+			value = 1
+		}
+	}
+}

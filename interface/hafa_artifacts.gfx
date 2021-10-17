@@ -1,0 +1,574 @@
+spriteTypes = {
+
+## BRITISH ISLES
+
+	#Excalibur
+	spriteType = {
+		name = "GFX_excalibur"
+		texturefile = "gfx/interface/inventory/artifacts/excalibur.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_excalibur_small"
+		texturefile = "gfx/interface/inventory/artifacts/excalibur_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	#curtana
+	spriteType = {
+		name = "GFX_curtana"
+		texturefile = "gfx/interface/inventory/artifacts/curtana.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_curtana_small"
+		texturefile = "gfx/interface/inventory/artifacts/curtana_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#claidheamh_soluis
+	spriteType = {
+		name = "GFX_claidheamh_soluis"
+		texturefile = "gfx/interface/inventory/artifacts/claidheamh_soluis.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_claidheamh_soluis_small"
+		texturefile = "gfx/interface/inventory/artifacts/claidheamh_soluis_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#cruadh_chosgarach
+	spriteType = {
+		name = "GFX_cruadh_chosgarach"
+		texturefile = "gfx/interface/inventory/artifacts/cruadh_chosgarach.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_cruadh_chosgarach_small"
+		texturefile = "gfx/interface/inventory/artifacts/cruadh_chosgarach_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#cosgarach_mhor
+	spriteType = {
+		name = "GFX_cosgarach_mhor"
+		texturefile = "gfx/interface/inventory/artifacts/cosgarach_mhor.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_cosgarach_mhor_small"
+		texturefile = "gfx/interface/inventory/artifacts/cosgarach_mhor_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#drynwyn
+	spriteType = {
+		name = "GFX_drynwyn"
+		texturefile = "gfx/interface/inventory/artifacts/drynwyn.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_drynwyn_small"
+		texturefile = "gfx/interface/inventory/artifacts/drynwyn_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#singing_sword
+	spriteType = {
+		name = "GFX_singing_sword"
+		texturefile = "gfx/interface/inventory/artifacts/singing_sword.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_singing_sword_small"
+		texturefile = "gfx/interface/inventory/artifacts/singing_sword_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#egeking
+	spriteType = {
+		name = "GFX_egeking"
+		texturefile = "gfx/interface/inventory/artifacts/egeking.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_egeking_small"
+		texturefile = "gfx/interface/inventory/artifacts/egeking_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#hrunting
+	spriteType = {
+		name = "GFX_hrunting"
+		texturefile = "gfx/interface/inventory/artifacts/hrunting.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_hrunting_small"
+		texturefile = "gfx/interface/inventory/artifacts/hrunting_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#arondight
+	spriteType = {
+		name = "GFX_arondight"
+		texturefile = "gfx/interface/inventory/artifacts/arondight.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_arondight_small"
+		texturefile = "gfx/interface/inventory/artifacts/arondight_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#grail_sword
+	spriteType = {
+		name = "GFX_grail_sword"
+		texturefile = "gfx/interface/inventory/artifacts/grail_sword.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_grail_sword_small"
+		texturefile = "gfx/interface/inventory/artifacts/grail_sword_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#clarent
+	spriteType = {
+		name = "GFX_clarent"
+		texturefile = "gfx/interface/inventory/artifacts/clarent.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_clarent_small"
+		texturefile = "gfx/interface/inventory/artifacts/clarent_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#naegling
+	spriteType = {
+		name = "GFX_naegling"
+		texturefile = "gfx/interface/inventory/artifacts/naegling.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_naegling_small"
+		texturefile = "gfx/interface/inventory/artifacts/naegling_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#fragarach
+	spriteType = {
+		name = "GFX_fragarach"
+		texturefile = "gfx/interface/inventory/artifacts/fragarach.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_fragarach_small"
+		texturefile = "gfx/interface/inventory/artifacts/fragarach_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#ceard_nan_gallan
+	spriteType = {
+		name = "GFX_ceard_nan_gallan"
+		texturefile = "gfx/interface/inventory/artifacts/ceard_nan_gallan.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_ceard_nan_gallan_small"
+		texturefile = "gfx/interface/inventory/artifacts/ceard_nan_gallan_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#magic_wand
+	spriteType = {
+		name = "GFX_magic_wand"
+		texturefile = "gfx/interface/inventory/artifacts/magic_wand.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_magic_wand_small"
+		texturefile = "gfx/interface/inventory/artifacts/magic_wand_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#cohuleen_druith
+	spriteType = {
+		name = "GFX_cohuleen_druith"
+		texturefile = "gfx/interface/inventory/artifacts/cohuleen_druith.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_cohuleen_druith_small"
+		texturefile = "gfx/interface/inventory/artifacts/cohuleen_druith_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#ring_of_dispel
+	spriteType = {
+		name = "GFX_ring_of_dispel"
+		texturefile = "gfx/interface/inventory/artifacts/ring_of_dispel.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_ring_of_dispel_small"
+		texturefile = "gfx/interface/inventory/artifacts/ring_of_dispel_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#necklace_lady_of_the_lake
+	spriteType = {
+		name = "GFX_necklace_lady_of_the_lake"
+		texturefile = "gfx/interface/inventory/artifacts/necklace_lady_of_the_lake.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_necklace_lady_of_the_lake_small"
+		texturefile = "gfx/interface/inventory/artifacts/necklace_lady_of_the_lake_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#mantle_of_arthur
+	spriteType = {
+		name = "GFX_mantle_of_arthur"
+		texturefile = "gfx/interface/inventory/artifacts/mantle_of_arthur.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_mantle_of_arthur_small"
+		texturefile = "gfx/interface/inventory/artifacts/mantle_of_arthur_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#mantle_of_tegau_gold_breast
+	spriteType = {
+		name = "GFX_mantle_of_tegau_gold_breast"
+		texturefile = "gfx/interface/inventory/artifacts/mantle_of_tegau_gold_breast.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_mantle_of_tegau_gold_breast_small"
+		texturefile = "gfx/interface/inventory/artifacts/mantle_of_tegau_gold_breast_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#stone_and_ring_of_eluned_the_fortunate
+	spriteType = {
+		name = "GFX_stone_and_ring_of_eluned_the_fortunate"
+		texturefile = "gfx/interface/inventory/artifacts/stone_and_ring_of_eluned_the_fortunate.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_stone_and_ring_of_eluned_the_fortunate_small"
+		texturefile = "gfx/interface/inventory/artifacts/stone_and_ring_of_eluned_the_fortunate_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#hamper_of_gwyddno_garanhir
+	spriteType = {
+		name = "GFX_hamper_of_gwyddno_garanhir"
+		texturefile = "gfx/interface/inventory/artifacts/hamper_of_gwyddno_garanhir.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_hamper_of_gwyddno_garanhir_small"
+		texturefile = "gfx/interface/inventory/artifacts/hamper_of_gwyddno_garanhir_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#whetstone_of_tudwal_tudglyd
+	spriteType = {
+		name = "GFX_whetstone_of_tudwal_tudglyd"
+		texturefile = "gfx/interface/inventory/artifacts/whetstone_of_tudwal_tudglyd.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_whetstone_of_tudwal_tudglyd_small"
+		texturefile = "gfx/interface/inventory/artifacts/whetstone_of_tudwal_tudglyd_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#adder_stone
+	spriteType = {
+		name = "GFX_adder_stone"
+		texturefile = "gfx/interface/inventory/artifacts/adder_stone.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_adder_stone_small"
+		texturefile = "gfx/interface/inventory/artifacts/adder_stone_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#gae bulg
+	spriteType = {
+		name = "GFX_gae_bulg"
+		texturefile = "gfx/interface/inventory/artifacts/gae_bulg.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_gae_bulg_small"
+		texturefile = "gfx/interface/inventory/artifacts/gae_bulg_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+## OTHER
+	
+	#Rosetta Stone
+	spriteType = {
+		name = "GFX_rosetta_stone"
+		texturefile = "gfx/interface/inventory/artifacts/rosetta_stone.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_rosetta_stone_small"
+		texturefile = "gfx/interface/inventory/artifacts/rosetta_stone_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#Tut Mask
+	spriteType = {
+		name = "GFX_tutankhamun_death_mask"
+		texturefile = "gfx/interface/inventory/artifacts/tutankhamun_death_mask.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_tutankhamun_death_mask_small"
+		texturefile = "gfx/interface/inventory/artifacts/tutankhamun_death_mask_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#Mask of Agamemnon
+	spriteType = {
+		name = "GFX_mask_of_agamemnon"
+		texturefile = "gfx/interface/inventory/artifacts/mask_of_agamemnon.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_mask_of_agamemnon_small"
+		texturefile = "gfx/interface/inventory/artifacts/mask_of_agamemnon_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#Dead sea scrolls
+	spriteType = {
+		name = "GFX_dead_sea_scrolls"
+		texturefile = "gfx/interface/inventory/artifacts/dead_sea_scrolls.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_dead_sea_scrolls_small"
+		texturefile = "gfx/interface/inventory/artifacts/dead_sea_scrolls_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#Nefertiti Bust
+	spriteType = {
+		name = "GFX_nefertiti_bust"
+		texturefile = "gfx/interface/inventory/artifacts/nefertiti_bust.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_nefertiti_bust_small"
+		texturefile = "gfx/interface/inventory/artifacts/nefertiti_bust_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#Spear of Lugh
+	spriteType = {
+		name = "GFX_spear_of_lugh"
+		texturefile = "gfx/interface/inventory/artifacts/spear_of_lugh.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_spear_of_lugh_small"
+		texturefile = "gfx/interface/inventory/artifacts/spear_of_lugh_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#sword of attila
+	spriteType = {
+		name = "GFX_sword_of_attila"
+		texturefile = "gfx/interface/inventory/artifacts/sword_of_attila.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_sword_of_attila_small"
+		texturefile = "gfx/interface/inventory/artifacts/sword_of_attila_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#gramr
+	spriteType = {
+		name = "GFX_gramr"
+		texturefile = "gfx/interface/inventory/artifacts/gramr.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_gramr_small"
+		texturefile = "gfx/interface/inventory/artifacts/gramr_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#colada
+	spriteType = {
+		name = "GFX_colada"
+		texturefile = "gfx/interface/inventory/artifacts/colada.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_colada_small"
+		texturefile = "gfx/interface/inventory/artifacts/colada_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#tizona
+	spriteType = {
+		name = "GFX_tizona"
+		texturefile = "gfx/interface/inventory/artifacts/tizona.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_tizona_small"
+		texturefile = "gfx/interface/inventory/artifacts/tizona_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#durendal
+	spriteType = {
+		name = "GFX_durendal"
+		texturefile = "gfx/interface/inventory/artifacts/durendal.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_durendal_small"
+		texturefile = "gfx/interface/inventory/artifacts/durendal_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#joyeuse
+	spriteType = {
+		name = "GFX_joyeuse"
+		texturefile = "gfx/interface/inventory/artifacts/joyeuse.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_joyeuse_small"
+		texturefile = "gfx/interface/inventory/artifacts/joyeuse_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#legbiter
+	spriteType = {
+		name = "GFX_legbiter"
+		texturefile = "gfx/interface/inventory/artifacts/legbiter.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_legbiter_small"
+		texturefile = "gfx/interface/inventory/artifacts/legbiter_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#zulfiqar
+	spriteType = {
+		name = "GFX_zulfiqar"
+		texturefile = "gfx/interface/inventory/artifacts/zulfiqar.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_zulfiqar_small"
+		texturefile = "gfx/interface/inventory/artifacts/zulfiqar_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_curtana_small"
+		texturefile = "gfx/interface/inventory/artifacts/curtana_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#nefertiti_bust
+	spriteType = {
+		name = "GFX_neferiti_bust"
+		texturefile = "gfx/interface/inventory/artifacts/neferiti_bust.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_neferiti_bust_small"
+		texturefile = "gfx/interface/inventory/artifacts/neferiti_bust_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#szczerbiec
+	spriteType = {
+		name = "GFX_szczerbiec"
+		texturefile = "gfx/interface/inventory/artifacts/szczerbiec.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_szczerbiec_small"
+		texturefile = "gfx/interface/inventory/artifacts/szczerbiec_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	#holy crown of hungary
+	spriteType = {
+		name = "GFX_holy_crown_of_hungary"
+		texturefile = "gfx/interface/inventory/artifacts/holy_crown_of_hungary.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_holy_crown_of_hungary_small"
+		texturefile = "gfx/interface/inventory/artifacts/holy_crown_of_hungary_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+}

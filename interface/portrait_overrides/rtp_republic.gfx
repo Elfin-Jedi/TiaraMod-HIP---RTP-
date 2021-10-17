@@ -1,0 +1,762 @@
+spriteTypes = {
+
+	#Catholic - Male
+	portraitType = {
+		name = "PORTRAIT_rtp_republic_catholic_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 15000
+				portrait_clothing = yes
+				portrait_is_female = no
+				portrait_age > child
+				has_dlc = "The Republic"
+				portrait_tier = COUNT
+				portrait_in_command = no
+				OR = {
+					portrait_government = republic_government
+					portrait_government = rtp_republic_g
+					portrait_government = rtp_baron_republic_g
+				}
+				OR = {
+					portrait_religion = catholic
+					portrait_religion = cathar
+					portrait_religion = fraticelli
+					portrait_religion = waldensian
+					portrait_religion = lollard
+					portrait_religion = chalcedonian
+				}
+			}
+		}
+
+		layer = {
+			"GFX_merchant_male_clothes_behind:c0"
+			"GFX_merchant_male_headgear_behind:c1"
+			"GFX_merchant_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_merchant_male_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				3 = {
+					portrait_tier = KING
+				}
+				4 = {
+					portrait_tier = DUKE
+					NOT = { portrait_tier = KING }
+				}
+				5 = {
+					NOT = { portrait_tier = DUKE }
+				}
+			}
+			5 = { #Headgear
+				3 = {
+					portrait_tier = KING
+				}
+				4 = {
+					portrait_tier = DUKE
+					NOT = { portrait_tier = KING }
+				}
+				5 = {
+					NOT = { portrait_tier = DUKE }
+				}
+			}
+		}
+
+		headgear_that_hides_hair = {}
+	}
+
+	#Catholic - Female
+	portraitType = {
+		name = "PORTRAIT_rtp_republic_catholic_female"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 15000
+				portrait_clothing = yes
+				portrait_is_female = yes
+				portrait_age > child
+				has_dlc = "The Republic"
+				portrait_tier = COUNT
+				portrait_in_command = no
+				OR = {
+					portrait_government = republic_government
+					portrait_government = rtp_republic_g
+					portrait_government = rtp_baron_republic_g
+				}
+				OR = {
+					portrait_religion = catholic
+					portrait_religion = cathar
+					portrait_religion = fraticelli
+					portrait_religion = waldensian
+					portrait_religion = lollard
+					portrait_religion = chalcedonian
+				}
+			}
+		}
+
+		layer = {
+			"GFX_merchant_female_clothes_behind:c0"
+			"GFX_merchant_female_headgear_behind:c1"
+			"GFX_merchant_female_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_merchant_female_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				3 = {
+					portrait_tier = KING
+				}
+				4 = {
+					portrait_tier = DUKE
+					NOT = { portrait_tier = KING }
+				}
+				5 = {
+					NOT = { portrait_tier = DUKE }
+				}
+			}
+			5 = { #Headgear
+				3 = {
+					portrait_tier = KING
+				}
+				4 = {
+					portrait_tier = DUKE
+					NOT = { portrait_tier = KING }
+				}
+				5 = {
+					NOT = { portrait_tier = DUKE }
+				}
+			}
+		}
+
+		headgear_that_hides_hair = {}
+	}
+
+	#Orthodox - Male
+	portraitType = {
+		name = "PORTRAIT_rtp_republic_orthodox_king_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 15000
+				portrait_clothing = yes
+				portrait_is_female = no
+				portrait_age > child
+				has_dlc = "The Republic"
+				portrait_tier = COUNT
+				portrait_in_command = no
+				OR = {
+					portrait_government = republic_government
+					portrait_government = rtp_republic_g
+					portrait_government = rtp_baron_republic_g
+				}
+				OR = {
+					portrait_religion = orthodox
+					portrait_religion = miaphysite
+					portrait_religion = monophysite
+					portrait_religion = bogomilist
+					portrait_religion = monothelite
+					portrait_religion = iconoclast
+					portrait_religion = paulician
+					portrait_religion = nestorian
+					portrait_religion = messalian
+				}
+			}
+		}
+
+		layer = {
+			"GFX_merchant_male_clothes_behind:c0"
+			"GFX_merchant_male_headgear_behind:c1"
+			"GFX_merchant_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_merchant_male_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				0 = {
+					portrait_tier = KING
+				}
+				1 = {
+					portrait_tier = DUKE
+					NOT = { portrait_tier = KING }
+				}
+				2 = {
+					NOT = { portrait_tier = DUKE }
+				}
+			}
+			5 = { #Headgear
+				0 = {
+					portrait_tier = KING
+				}
+				1 = {
+					portrait_tier = DUKE
+					NOT = { portrait_tier = KING }
+				}
+				2 = {
+					NOT = { portrait_tier = DUKE }
+				}
+			}
+		}
+
+		headgear_that_hides_hair = {}
+	}
+
+	#Orthodox - Female
+	portraitType = {
+		name = "PORTRAIT_rtp_republic_orthodox_king_female"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 15000
+				portrait_clothing = yes
+				portrait_is_female = yes
+				portrait_age > child
+				has_dlc = "The Republic"
+				portrait_tier = COUNT
+				portrait_in_command = no
+				OR = {
+					portrait_government = republic_government
+					portrait_government = rtp_republic_g
+					portrait_government = rtp_baron_republic_g
+				}
+				OR = {
+					portrait_religion = orthodox
+					portrait_religion = miaphysite
+					portrait_religion = monophysite
+					portrait_religion = bogomilist
+					portrait_religion = monothelite
+					portrait_religion = iconoclast
+					portrait_religion = paulician
+					portrait_religion = nestorian
+					portrait_religion = messalian
+				}
+			}
+		}
+
+		layer = {
+			"GFX_merchant_female_clothes_behind:c0"
+			"GFX_merchant_female_headgear_behind:c1"
+			"GFX_merchant_female_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_merchant_female_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				0 = {
+					portrait_tier = KING
+				}
+				1 = {
+					portrait_tier = DUKE
+					NOT = { portrait_tier = KING }
+				}
+				2 = {
+					NOT = { portrait_tier = DUKE }
+				}
+			}
+			5 = { #Headgear
+				0 = {
+					portrait_tier = KING
+				}
+				1 = {
+					portrait_tier = DUKE
+					NOT = { portrait_tier = KING }
+				}
+				2 = {
+					NOT = { portrait_tier = DUKE }
+				}
+			}
+		}
+
+		headgear_that_hides_hair = {}
+	}
+
+	#Muslim - Male
+	portraitType = {
+		name = "PORTRAIT_rtp_republic_muslim_king_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 15000
+				portrait_clothing = yes
+				portrait_is_female = no
+				portrait_age > child
+				has_dlc = "The Republic"
+				portrait_tier = COUNT
+				portrait_in_command = no
+				OR = {
+					portrait_government = republic_government
+					portrait_government = rtp_republic_g
+					portrait_government = rtp_baron_republic_g
+				}
+				OR = {
+					portrait_religion = sunni
+					portrait_religion = zikri
+					portrait_religion = yazidi
+					portrait_religion = ibadi
+					portrait_religion = kharijite
+					portrait_religion = shiite
+					portrait_religion = druze
+					portrait_religion = hurufi
+					portrait_religion = qarmatian
+				}
+			}
+		}
+
+		layer = {
+			"GFX_merchant_male_clothes_behind:c0"
+			"GFX_merchant_male_headgear_behind:c1"
+			"GFX_merchant_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_merchant_male_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				12 = {
+					portrait_tier = KING
+				}
+				13 = {
+					portrait_tier = DUKE
+					NOT = { portrait_tier = KING }
+				}
+				14 = {
+					NOT = { portrait_tier = DUKE }
+				}
+			}
+			5 = { #Headgear
+				12 = {
+					portrait_tier = KING
+				}
+				13 = {
+					portrait_tier = DUKE
+					NOT = { portrait_tier = KING }
+				}
+				14 = {
+					NOT = { portrait_tier = DUKE }
+				}
+			}
+		}
+
+		headgear_that_hides_hair = {}
+	}
+
+	#Muslim - Female
+	portraitType = {
+		name = "PORTRAIT_rtp_republic_muslim_king_female"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 15000
+				portrait_clothing = yes
+				portrait_is_female = yes
+				portrait_age > child
+				has_dlc = "The Republic"
+				portrait_tier = COUNT
+				portrait_in_command = no
+				OR = {
+					portrait_government = republic_government
+					portrait_government = rtp_republic_g
+					portrait_government = rtp_baron_republic_g
+				}
+				OR = {
+					portrait_religion = sunni
+					portrait_religion = zikri
+					portrait_religion = yazidi
+					portrait_religion = ibadi
+					portrait_religion = kharijite
+					portrait_religion = shiite
+					portrait_religion = druze
+					portrait_religion = hurufi
+					portrait_religion = qarmatian
+				}
+			}
+		}
+
+		layer = {
+			"GFX_merchant_female_clothes_behind:c0"
+			"GFX_merchant_female_headgear_behind:c1"
+			"GFX_merchant_female_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_merchant_female_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				12 = {
+					portrait_tier = KING
+				}
+				13 = {
+					portrait_tier = DUKE
+					NOT = { portrait_tier = KING }
+				}
+				14 = {
+					NOT = { portrait_tier = DUKE }
+				}
+			}
+			5 = { #Headgear
+				12 = {
+					portrait_tier = KING
+				}
+				13 = {
+					portrait_tier = DUKE
+					NOT = { portrait_tier = KING }
+				}
+				14 = {
+					NOT = { portrait_tier = DUKE }
+				}
+			}
+		}
+
+		headgear_that_hides_hair = {}
+	}
+
+	#Pagan - Male
+	portraitType = {
+		name = "PORTRAIT_rtp_republic_pagan_king_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 15000
+				portrait_clothing = yes
+				portrait_is_female = no
+				portrait_age > child
+				has_dlc = "The Republic"
+				portrait_tier = COUNT
+				portrait_in_command = no
+				OR = {
+					portrait_government = republic_government
+					portrait_government = rtp_republic_g
+					portrait_government = rtp_baron_republic_g
+				}
+				OR = {
+					portrait_religion = norse_pagan
+					portrait_religion = norse_pagan_reformed
+					portrait_religion = tengri_pagan
+					portrait_religion = tengri_pagan_reformed
+					portrait_religion = baltic_pagan
+					portrait_religion = baltic_pagan_reformed
+					portrait_religion = finnish_pagan
+					portrait_religion = finnish_pagan_reformed
+					portrait_religion = aztec
+					portrait_religion = aztec_reformed
+					portrait_religion = slavic_pagan
+					portrait_religion = slavic_pagan_reformed
+					portrait_religion = west_african_pagan
+					portrait_religion = west_african_pagan_reformed
+					portrait_religion = zun_pagan
+					portrait_religion = zun_pagan_reformed
+					portrait_religion = hellenic_pagan
+					portrait_religion = hellenic_pagan_reformed
+					portrait_religion = bon
+					portrait_religion = bon_reformed
+				}
+			}
+		}
+
+		layer = {
+			"GFX_merchant_male_clothes_behind:c0"
+			"GFX_merchant_male_headgear_behind:c1"
+			"GFX_merchant_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_merchant_male_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				9 = {
+					portrait_tier = KING
+				}
+				10 = {
+					portrait_tier = DUKE
+					NOT = { portrait_tier = KING }
+				}
+				11 = {
+					NOT = { portrait_tier = DUKE }
+				}
+			}
+			5 = { #Headgear
+				9 = {
+					portrait_tier = KING
+				}
+				10 = {
+					portrait_tier = DUKE
+					NOT = { portrait_tier = KING }
+				}
+				11 = {
+					NOT = { portrait_tier = DUKE }
+				}
+			}
+		}
+
+		headgear_that_hides_hair = {}
+	}
+
+	#Pagan - Female
+	portraitType = {
+		name = "PORTRAIT_rtp_republic_pagan_king_female"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 15000
+				portrait_clothing = yes
+				portrait_is_female = yes
+				portrait_age > child
+				has_dlc = "The Republic"
+				portrait_tier = COUNT
+				portrait_in_command = no
+				OR = {
+					portrait_government = republic_government
+					portrait_government = rtp_republic_g
+					portrait_government = rtp_baron_republic_g
+				}
+				OR = {
+					portrait_religion = norse_pagan
+					portrait_religion = norse_pagan_reformed
+					portrait_religion = tengri_pagan
+					portrait_religion = tengri_pagan_reformed
+					portrait_religion = baltic_pagan
+					portrait_religion = baltic_pagan_reformed
+					portrait_religion = finnish_pagan
+					portrait_religion = finnish_pagan_reformed
+					portrait_religion = aztec
+					portrait_religion = aztec_reformed
+					portrait_religion = slavic_pagan
+					portrait_religion = slavic_pagan_reformed
+					portrait_religion = west_african_pagan
+					portrait_religion = west_african_pagan_reformed
+					portrait_religion = zun_pagan
+					portrait_religion = zun_pagan_reformed
+					portrait_religion = hellenic_pagan
+					portrait_religion = hellenic_pagan_reformed
+					portrait_religion = bon
+					portrait_religion = bon_reformed
+				}
+			}
+		}
+
+		layer = {
+			"GFX_merchant_female_clothes_behind:c0"
+			"GFX_merchant_female_headgear_behind:c1"
+			"GFX_merchant_female_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_merchant_female_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				9 = {
+					portrait_tier = KING
+				}
+				10 = {
+					portrait_tier = DUKE
+					NOT = { portrait_tier = KING }
+				}
+				11 = {
+					NOT = { portrait_tier = DUKE }
+				}
+			}
+			5 = { #Headgear
+				9 = {
+					portrait_tier = KING
+				}
+				10 = {
+					portrait_tier = DUKE
+					NOT = { portrait_tier = KING }
+				}
+				11 = {
+					NOT = { portrait_tier = DUKE }
+				}
+			}
+		}
+
+		headgear_that_hides_hair = {}
+	}
+
+	#Eastern - Male
+	portraitType = {
+		name = "PORTRAIT_rtp_republic_eastern_king_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 15000
+				portrait_clothing = yes
+				portrait_is_female = no
+				portrait_age > child
+				has_dlc = "The Republic"
+				portrait_tier = COUNT
+				portrait_in_command = no
+				OR = {
+					portrait_government = republic_government
+					portrait_government = rtp_republic_g
+					portrait_government = rtp_baron_republic_g
+				}
+				OR = {
+					portrait_religion = zoroastrian
+					portrait_religion = mazdaki
+					portrait_religion = manichean
+					portrait_religion = khurmazta
+					portrait_religion = jewish
+					portrait_religion = samaritan
+					portrait_religion = karaite
+					portrait_religion = hindu
+					portrait_religion = buddhist
+					portrait_religion = jain
+					portrait_religion = taoist
+				}
+			}
+		}
+
+		layer = {
+			"GFX_merchant_male_clothes_behind:c0"
+			"GFX_merchant_male_headgear_behind:c1"
+			"GFX_merchant_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_merchant_male_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				6 = {
+					portrait_tier = KING
+				}
+				7 = {
+					portrait_tier = DUKE
+					NOT = { portrait_tier = KING }
+				}
+				8 = {
+					NOT = { portrait_tier = DUKE }
+				}
+			}
+			5 = { #Headgear
+				6 = {
+					portrait_tier = KING
+				}
+				7 = {
+					portrait_tier = DUKE
+					NOT = { portrait_tier = KING }
+				}
+				8 = {
+					NOT = { portrait_tier = DUKE }
+				}
+			}
+		}
+
+		headgear_that_hides_hair = {}
+	}
+
+	#Eastern - Female
+	portraitType = {
+		name = "PORTRAIT_rtp_republic_eastern_king_female"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 15000
+				portrait_clothing = yes
+				portrait_is_female = yes
+				portrait_age > child
+				has_dlc = "The Republic"
+				portrait_tier = COUNT
+				portrait_in_command = no
+				OR = {
+					portrait_government = republic_government
+					portrait_government = rtp_republic_g
+					portrait_government = rtp_baron_republic_g
+				}
+				OR = {
+					portrait_religion = zoroastrian
+					portrait_religion = mazdaki
+					portrait_religion = manichean
+					portrait_religion = khurmazta
+					portrait_religion = jewish
+					portrait_religion = samaritan
+					portrait_religion = karaite
+					portrait_religion = hindu
+					portrait_religion = buddhist
+					portrait_religion = jain
+					portrait_religion = taoist
+				}
+			}
+		}
+
+		layer = {
+			"GFX_merchant_female_clothes_behind:c0"
+			"GFX_merchant_female_headgear_behind:c1"
+			"GFX_merchant_female_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_merchant_female_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				6 = {
+					portrait_tier = KING
+				}
+				7 = {
+					portrait_tier = DUKE
+					NOT = { portrait_tier = KING }
+				}
+				8 = {
+					NOT = { portrait_tier = DUKE }
+				}
+			}
+			5 = { #Headgear
+				6 = {
+					portrait_tier = KING
+				}
+				7 = {
+					portrait_tier = DUKE
+					NOT = { portrait_tier = KING }
+				}
+				8 = {
+					NOT = { portrait_tier = DUKE }
+				}
+			}
+		}
+
+		headgear_that_hides_hair = {}
+	}
+}

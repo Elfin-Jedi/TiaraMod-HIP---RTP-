@@ -1,0 +1,831 @@
+#####
+#Landless Events
+#
+#Total = 10
+#####
+
+namespace = RTPlandless
+
+#Main Events
+#####
+
+#Tribal Challenge
+character_event = {
+	id = RTPlandless.1
+	title = "RTPlandless_1_title"
+	desc = {
+		trigger = {
+			has_character_modifier = recent_duel_victory
+		}
+		text = "RTPlandless_1.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_modifier = recent_duel_victory
+			}
+		}
+		text = "RTPlandless_1.2_desc"
+	}
+	picture = GFX_evt_duel_scene
+	is_triggered_only = yes
+	ai = no
+
+	option = {
+		name = "RTPlandless.1_1"
+		
+		trigger = {
+			has_character_modifier = recent_duel_victory
+		}
+
+		hidden_tooltip = {
+			set_defacto_liege = THIS
+
+			event_target:rtp_new_title = {
+				grant_title_no_opinion = ROOT
+
+				ROOT = {
+					religion = PREV
+					culture = PREV
+					any_courtier = {
+						religion = PREVPREV
+						culture = PREVPREV
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPlandless.1_2"
+
+		trigger = {
+			NOT = {
+				has_character_modifier = recent_duel_victory
+			}
+		}
+	}
+}
+
+#2
+
+#Settle Tribe
+character_event = {
+	id = RTPlandless.3
+	title = "RTPlandless_3_title"
+	desc = "RTPlandless_3_desc"
+	picture = GFX_evt_tribal_lands
+	is_triggered_only = yes
+	ai = no
+	
+	trigger = {
+		liege = {
+			is_within_diplo_range = FROM
+		}
+		NOT = {
+			has_character_flag = rtp_refused_settle_tribe #Refused tribe
+		}
+		has_landed_title = c_landless_t
+		rtp_is_capable_adult = yes
+		wealth = 300
+	}
+
+	option = {
+		name = "RTPlandless.3_1"
+
+		wealth = -300
+		
+		hidden_tooltip = {
+			FROM = {
+				set_truce = {
+					who = ROOT
+					years = 50
+				}
+			}
+			
+			FROM = {
+				random_demesne_title = {
+					limit = {
+						is_capital = no
+						tier = COUNT
+						NOR = {
+							holding_type = castle
+							holding_type = city
+							holding_type = temple
+							holding_type = tribal
+							holding_type = nomad
+						}
+					}
+					location = {
+						build_holding = {
+							type = tribal
+							holder = ROOT
+						}
+						religion = ROOT
+						culture = ROOT
+						county = {
+							grant_title = ROOT
+							set_defacto_liege = FROM
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPlandless.3_2"
+
+		set_character_flag = rtp_refused_settle_tribe #Refused tribe
+	}
+}
+
+#4
+
+#5
+
+#6
+
+#Gamble
+character_event = {
+	id = RTPlandless.7
+	title = "RTPlandless_7_title"
+	desc = "RTPlandless_7_desc"
+	picture = GFX_evt_leaving_table_angrily
+	is_triggered_only = yes
+
+	immediate = {
+		liege = {
+			random_courtier = {
+				limit = {
+					rtp_is_capable_adult = yes
+				}
+				save_event_target_as = rtp_gambler #The gambler
+			}
+		}
+	}
+
+	option = {
+		name = "RTPlandless.7_1"
+
+		trigger = {
+			wealth = 60
+			NOT = {
+				government = rtp_lowborn_g
+			}
+		}
+
+		random_list = {
+			10 = {
+				wealth = 60
+			}
+			10 = {
+				wealth = 55
+			}
+			10 = {
+				wealth = 50
+			}
+			10 = {
+				wealth = 45
+			}
+			20 = {
+			}
+			10 = {
+				wealth = -45
+			}
+			10 = {
+				wealth = -50
+			}
+			10 = {
+				wealth = -55
+			}
+			10 = {
+				wealth = -60
+			}
+		}
+
+		hidden_tooltip = {
+			add_character_modifier = {
+				modifier = rtp_gambled_em
+				years = 1
+			}
+		}
+	}
+
+	option = {
+		name = "RTPlandless.7_2"
+
+		trigger = {
+			wealth = 40
+		}
+
+		random_list = {
+			10 = {
+				wealth = 40
+			}
+			10 = {
+				wealth = 35
+			}
+			10 = {
+				wealth = 30
+			}
+			10 = {
+				wealth = 25
+			}
+			20 = {
+			}
+			10 = {
+				wealth = -25
+			}
+			10 = {
+				wealth = -30
+			}
+			10 = {
+				wealth = -35
+			}
+			10 = {
+				wealth = -40
+			}
+		}
+
+		hidden_tooltip = {
+			add_character_modifier = {
+				modifier = rtp_gambled_em
+				years = 1
+			}
+		}
+	}
+
+	option = {
+		name = "RTPlandless.7_3"
+
+		trigger = {
+			wealth = 20
+		}
+
+		random_list = {
+			10 = {
+				wealth = 20
+			}
+			10 = {
+				wealth = 15
+			}
+			10 = {
+				wealth = 10
+			}
+			10 = {
+				wealth = 5
+			}
+			20 = {
+			}
+			10 = {
+				wealth = -5
+			}
+			10 = {
+				wealth = -10
+			}
+			10 = {
+				wealth = -15
+			}
+			10 = {
+				wealth = -20
+			}
+		}
+
+		hidden_tooltip = {
+			add_character_modifier = {
+				modifier = rtp_gambled_em
+				years = 1
+			}
+		}
+	}
+
+	option = {
+		name = "RTPlandless.7_4"
+	}
+}
+
+#8
+
+#9
+
+#10
+
+#11
+
+#12
+
+#13
+
+#14
+
+#15
+
+#16
+
+#17
+
+#18
+
+#19
+
+#20
+
+#21
+
+#Arena
+character_event = {
+	id = RTPlandless.22
+	title = "RTPlandless_22_title"
+	desc = "RTPlandless_22_desc"
+	picture = GFX_evt_duel_team
+	is_triggered_only = yes
+
+	immediate = {
+		save_event_target_as = combatant_1 #the person issuing the duel...
+
+		rtp_arena_sounds_se= yes
+		
+		hidden_tooltip = {
+			liege = {
+				create_character = {
+					age = 21
+					dynasty = none
+					religion = PREV
+					culture = PREV
+					female = no
+					trait = gladiator
+					random_traits = yes
+				}
+				new_character = {
+					save_event_target_as = combatant_2 #the target of the duel...
+
+					rtp_give_random_weapon_artifact_se = yes
+					rtp_give_random_weapon_artifact_se = yes
+					rtp_give_random_armor_artifact_se = yes
+					rtp_give_random_armor_artifact_se = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPlandless.22_1"
+
+		event_target:combatant_2 = {
+			save_event_target_as = combatant_2 #the target of the duel...
+		}
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_gladiator_points_se = yes
+		increase_duel_exp_modifier_effect = yes
+
+		hidden_tooltip = {
+			
+			character_event = {
+				id = HFP.10100
+
+				days = 7
+			}
+		}
+	}
+
+	option = {
+		name = "RTPlandless.22_2"
+
+		add_trait = craven
+
+		prestige = -50
+
+		hidden_tooltip = {
+			event_target:combatant_2 = {
+				set_father = 0
+				set_mother = 0
+				death = {
+					death_reason = death_vanished
+				}
+			}
+			add_character_modifier = {
+				modifier = rtp_arena_timer_em
+				years = 5
+				hidden = yes
+			}
+		}
+	}
+
+	after = {
+		event_target:combatant_2 = {
+			character_event = {
+				id = RTPlandless.100 #Ping for Deleting the Arena Opponent
+				days = 60
+			}
+		}
+	}
+}
+
+#23
+
+#Random Spouse Event
+character_event = {
+	id = RTPlandless.24
+	title = "RTPlandless_24_title"
+	desc = "RTPlandless_24_desc"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				dynasty = 19930
+			}
+			if = {
+				limit = {
+					is_female = no
+				}
+				create_character = {
+					age = 20
+					female = yes
+					random_traits = yes
+					religion = location
+					culture = location
+					dynasty = none
+				}
+			}
+			else = {
+				create_character = {
+					age = 20
+					female = no
+					random_traits = yes
+					religion = location
+					culture = location
+					dynasty = none
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					is_female = no
+				}
+				create_character = {
+					age = 20
+					female = yes
+					random_traits = yes
+					religion = location
+					culture = location
+					dynasty = random
+				}
+			}
+			else = {
+				create_character = {
+					age = 20
+					female = no
+					random_traits = yes
+					religion = location
+					culture = location
+					dynasty = random
+				}
+			}
+		}
+
+		new_character = {
+			save_event_target_as = rtp_potential_spouse #Potential Spouse
+		}
+
+		random = {
+			chance = 90
+
+			set_character_flag = rtp_success #You smooth talker you
+		}
+	}
+
+	option = {
+		name = "RTPlandless.24_1"
+
+		trigger = {
+			has_character_flag = rtp_success #You smooth talker you
+		}
+
+		if = {
+			limit = {
+				dynasty = 19930
+			}
+			if = {
+				limit = {
+					is_female = no
+				}
+				add_spouse = event_target:rtp_potential_spouse #Potential Spouse
+				hidden_tooltip = {
+					prestige = 100
+				}
+			}
+			else = {
+				add_spouse_matrilineal = event_target:rtp_potential_spouse #Potential Spouse
+				hidden_tooltip = {
+					prestige = 100
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					is_female = no
+				}
+				add_spouse = event_target:rtp_potential_spouse #Potential Spouse
+				hidden_tooltip = {
+					prestige = 100
+				}
+			}
+			else = {
+				add_spouse_matrilineal = event_target:rtp_potential_spouse #Potential Spouse
+				hidden_tooltip = {
+					prestige = 100
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPlandless.24_2"
+
+		trigger = {
+			has_character_flag = rtp_success #You smooth talker you
+		}
+
+		hidden_tooltip = {
+			event_target:rtp_potential_spouse = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPlandless.24_3"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You smooth talker you
+			}
+		}
+
+		random_list = {
+			80 = {
+			}
+			10 = {
+				add_trait = stressed
+			}
+			10 = {
+				add_trait = depressed
+			}
+		}
+
+		hidden_tooltip = {
+			event_target:rtp_potential_spouse = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+
+	after = {
+		clr_character_flag = rtp_success #You smooth talker you
+	}
+}
+
+#25
+
+#Recruit Patriots
+character_event = {
+	id = RTPlandless.26
+	title = "RTPlandless.26_title"
+	desc = "RTPlandless.26_desc"
+	picture = GFX_evt_culture_change
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+
+	option = {
+		name = "RTPlandless.26_1"
+
+		change_variable = {
+			which = rtp_patriots
+			value = 1
+		}
+
+		event_target:rtp_selected_province = {
+			add_province_modifier = {
+				modifier = rtp_recruited_patriots_timer_em
+				years = 20
+			}
+		}
+	}
+}
+
+#Invasion Barony/Land
+character_event = {
+	id = RTPlandless.27
+	title = "RTPlandless.27_title"
+	desc = "RTPlandless.27_desc"
+	picture = GFX_evt_tribal_lands
+	is_triggered_only = yes
+	hide_from = yes
+
+	immediate = {
+		set_defacto_liege = event_target:rtp_winner
+
+		if = {
+			limit = {
+				has_character_flag = rtp_invasion_barony #Do it for a barony
+			}
+			event_target:rtp_winner = {
+				random_demesne_province = {
+					limit = {
+						has_empty_holding = yes
+					}
+					random_province_holding = {
+						limit = {
+							is_capital = no
+							OR = {
+								holding_type = castle
+								holding_type = city
+								holding_type = temple
+							}
+						}
+						save_event_target_as = rtp_new_title #The new landed title you will gain
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_character_flag = rtp_invasion_county #Do it for a county
+			}
+			event_target:rtp_winner = {
+				random_demesne_province = {
+					limit = {
+						is_capital = no
+					}
+					county = {
+						save_event_target_as = rtp_new_title #The new landed title you will gain
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPlandless.27_1"
+
+		if = {
+			limit = {
+				has_character_flag = rtp_invasion_barony #Do it for a barony
+			}
+	
+			event_target:rtp_new_title = {
+				grant_title = ROOT
+			}
+		}
+		else = {
+			event_target:rtp_new_title = {
+				grant_title = ROOT
+			}
+		}
+	}
+
+	option = {
+		name = "RTPlandless.27_2"
+
+		piety = 25
+	}
+}
+
+#Recruit Volunteers
+character_event = {
+	id = RTPlandless.28
+	title = "RTPlandless.28_title"
+	desc = "RTPlandless.28_desc"
+	picture = GFX_evt_steppe_mercenaries
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+
+	immediate = {
+		event_target:rtp_selected_holding = {
+			rtp_assign_volunteers_se = yes
+			add_province_modifier = {
+				modifier = rtp_recruited_timer_em
+				years = 1
+			}
+		}
+	}
+
+	option = {
+		name = "RTPlandless.28_1"
+
+		wealth = global_rtp_potential_volunteers_cost
+		change_variable = {
+			which = rtp_volunteers
+			which = global_rtp_potential_volunteers
+		}
+	}
+
+	after = {
+		hidden_tooltip = {
+			set_variable = {
+				which = global_rtp_potential_volunteers
+				value = 0
+			}
+			set_variable = {
+				which = global_rtp_potential_volunteers_cost
+				value = 0
+			}
+		}
+	}
+}
+
+#Recruit Zealouts
+character_event = {
+	id = RTPlandless.29
+	title = "RTPlandless.29_title"
+	desc = "RTPlandless.29_desc"
+	picture = GFX_evt_mass_baptism
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+
+	option = {
+		name = "RTPlandless.29_1"
+
+		change_variable = {
+			which = rtp_zealouts
+			value = 1
+		}
+
+		event_target:rtp_selected_province = {
+			add_province_modifier = {
+				modifier = rtp_recruited_zealouts_timer_em
+				years = 20
+			}
+		}
+	}
+}
+
+#Ping Events
+#####
+
+#Ping for Deleting the Arena Opponent
+character_event = {
+	id = RTPlandless.100
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		any_artifact = {
+			unsafe_destroy_artifact = yes
+		}
+
+		death = {
+			death_reason = death_vanished
+		}
+	}
+}
+
+#Ping for Settle Tribe
+character_event = {
+	id = RTPlandless.101
+	is_triggered_only = yes
+	hide_window = yes
+	ai = yes
+	only_playable = yes
+	capable_only = yes
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+		is_nomadic = yes
+		num_of_count_titles >= 2
+		any_demesne_title = {
+			is_capital = no
+			NOR = {
+				holding_type = castle
+				holding_type = city
+				holding_type = temple
+				holding_type = tribal
+				holding_type = nomad
+			}
+		}
+	}
+
+	immediate = {
+		any_player = {
+			character_event = {
+				id = RTPlandless.3 #Landless Succession Check
+			}
+		}
+	}
+}
+
+#MTTH Events
+#####

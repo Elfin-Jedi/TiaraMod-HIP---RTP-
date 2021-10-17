@@ -1,0 +1,29 @@
+concentre = {
+
+      ruler_designer_cost = 5
+
+potential = {
+     age = 5
+}
+
+personality = yes
+random = yes
+birth = 100
+  
+  diplomacy = 1
+  intrigue = 2
+  stewardship = 3
+  learning = 3
+  
+  opposites = {
+			etourdi
+            imbecile
+            slow   
+                  
+ }
+  
+  vassal_opinion = 5
+  opposite_opinion = -5
+  same_opinion = 10
+
+}

@@ -1,0 +1,26 @@
+gigantisme = {
+	
+   ruler_designer_cost = 10
+
+potential = {
+     age = 16
+}
+
+
+random = yes
+birth = 25
+inherit_chance = 10
+both_parent_has_trait_inherit_chance = 20
+sex_appeal_opinion = -5
+        
+        intrigue = -3
+        martial = 3
+        combat_rating = 2
+
+    opposites = {
+			short
+            dwarf
+            tall           
+  }
+
+}

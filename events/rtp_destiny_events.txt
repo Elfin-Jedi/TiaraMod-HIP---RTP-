@@ -1,0 +1,806 @@
+#####
+#Destiny Events
+#
+#Total = 13
+#####
+
+namespace = RTPdestiny
+
+#Main Events
+#####
+
+#Charlemagne - Start
+letter_event = {
+	id = RTPdestiny.1
+	desc = "RTPdestiny.1_desc"
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPdestiny.1_1"
+
+		spawn_unit = {
+			province = location
+			home = location
+			owner = ROOT
+			troops = {
+				light_infantry = { 800 800 }
+				heavy_infantry = { 200 200 }
+				archers = { 500 500 }
+				light_cavalry = { 300 300 }
+				knights = { 200 200 }
+			}
+			cannot_inherit = yes
+			is_looter = no
+			attrition = 0
+		}
+
+		prestige = 200
+	}
+}
+
+#Charlemagne - Lotharingia Conquest
+letter_event = {
+	id = RTPdestiny.2
+	desc = "RTPdestiny.2_desc"
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPdestiny.2_1"
+
+		spawn_unit = {
+			province = location
+			home = location
+			owner = ROOT
+			troops = {
+				light_infantry = { 800 800 }
+				heavy_infantry = { 200 200 }
+				archers = { 500 500 }
+				light_cavalry = { 300 300 }
+				knights = { 200 200 }
+			}
+			cannot_inherit = yes
+			is_looter = no
+			attrition = 0
+		}
+
+		hidden_tooltip = {
+			change_infamy = {
+				localisation = "rtp_conqueror_loc"
+				value = -100
+			}
+			prestige = 200
+		}
+	}
+}
+
+#Charlemagne - Saxony Conquest
+letter_event = {
+	id = RTPdestiny.3
+	desc = "RTPdestiny.3_desc"
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPdestiny.3_1"
+
+		spawn_unit = {
+			province = location
+			home = location
+			owner = ROOT
+			troops = {
+				light_infantry = { 800 800 }
+				heavy_infantry = { 200 200 }
+				archers = { 500 500 }
+				light_cavalry = { 300 300 }
+				knights = { 200 200 }
+			}
+			cannot_inherit = yes
+			is_looter = no
+			attrition = 0
+		}
+
+		hidden_tooltip = {
+			change_infamy = {
+				localisation = "rtp_conqueror_loc"
+				value = -100
+			}
+			prestige = 200
+		}
+	}
+}
+
+#Charlemagne - Bavaria Conquest
+letter_event = {
+	id = RTPdestiny.4
+	desc = "RTPdestiny.4_desc"
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPdestiny.4_1"
+
+		spawn_unit = {
+			province = location
+			home = location
+			owner = ROOT
+			troops = {
+				light_infantry = { 800 800 }
+				heavy_infantry = { 200 200 }
+				archers = { 500 500 }
+				light_cavalry = { 300 300 }
+				knights = { 200 200 }
+			}
+			cannot_inherit = yes
+			is_looter = no
+			attrition = 0
+		}
+
+		hidden_tooltip = {
+			change_infamy = {
+				localisation = "rtp_conqueror_loc"
+				value = -100
+			}
+			prestige = 200
+		}
+	}
+}
+
+#Charlemagne - Italy Conquest
+letter_event = {
+	id = RTPdestiny.5
+	desc = "RTPdestiny.5_desc"
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPdestiny.5_1"
+
+		spawn_unit = {
+			province = location
+			home = location
+			owner = ROOT
+			troops = {
+				light_infantry = { 800 800 }
+				heavy_infantry = { 200 200 }
+				archers = { 500 500 }
+				light_cavalry = { 300 300 }
+				knights = { 200 200 }
+			}
+			cannot_inherit = yes
+			is_looter = no
+			attrition = 0
+		}
+
+		hidden_tooltip = {
+			change_infamy = {
+				localisation = "rtp_conqueror_loc"
+				value = -100
+			}
+			prestige = 200
+		}
+	}
+}
+
+#Settling Iceland - Start
+narrative_event = {
+	id = RTPdestiny.6
+	title = "RTPdestiny.6_title"
+	desc = "RTPdestiny.6_desc"
+	picture = GFX_evt_longships_at_sea_oldgods
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPdestiny.6_1"
+
+		trigger = {
+			event_target:rtp_iceland_settler1 = {
+				ai = no
+			}
+		}
+
+		hidden_tooltip = {
+			c_austisland = {
+				location = {
+					build_holding = {
+						type = tribal
+						holder = event_target:rtp_iceland_settler1 #You are the first settler
+					}
+					religion = event_target:rtp_iceland_settler1 #You are the first settler
+					culture = event_target:rtp_iceland_settler1 #You are the first settler
+				}
+				grant_title_no_opinion = event_target:rtp_iceland_settler1 #You are the first settler
+			}
+			c_sunnlendingafjordungur = {
+				location = {
+					build_holding = {
+						type = tribal
+						holder = event_target:rtp_iceland_ai_settler2 #You are the second settler
+					}
+					religion = event_target:rtp_iceland_ai_settler2 #You are the second settler
+					culture = event_target:rtp_iceland_ai_settler2 #You are the second settler
+				}
+				grant_title_no_opinion = event_target:rtp_iceland_ai_settler2 #You are the second settler
+			}
+			c_nordlendingafjordungur = {
+				location = {
+					build_holding = {
+						type = tribal
+						holder = event_target:rtp_iceland_ai_settler3 #You are the third settler
+					}
+					religion = event_target:rtp_iceland_ai_settler3 #You are the third settler
+					culture = event_target:rtp_iceland_ai_settler3 #You are the third settler
+				}
+				grant_title_no_opinion = event_target:rtp_iceland_ai_settler3 #You are the third settler
+			}
+			c_vestisland = {
+				location = {
+					build_holding = {
+						type = tribal
+						holder = event_target:rtp_iceland_ai_settler4 #You are the fourth settler
+					}
+					religion = event_target:rtp_iceland_ai_settler4 #You are the fourth settler
+					culture = event_target:rtp_iceland_ai_settler4 #You are the fourth settler
+				}
+				grant_title_no_opinion = event_target:rtp_iceland_ai_settler4 #You are the fourth settler
+			}
+
+			event_target:rtp_iceland_settler1 = {
+				set_defacto_liege = THIS
+				set_government_type = tribal_government
+				any_demesne_title = {
+					gender_succ = agnatic
+					add_law = {
+						law = succ_elective_gavelkind
+						cooldown = no
+						opinion_effect = no
+					}
+				}
+				add_trait = travelling
+				recalc_succession = yes
+				narrative_event = {
+					id = RTPdestiny.7 #Settling Iceland - End
+					years = 5
+				}
+			}
+			event_target:rtp_iceland_ai_settler2 = {
+				set_defacto_liege = THIS
+				set_government_type = tribal_government
+				any_demesne_title = {
+					gender_succ = agnatic
+					add_law = {
+						law = succ_elective_gavelkind
+						cooldown = no
+						opinion_effect = no
+					}
+				}
+				add_trait = travelling
+				recalc_succession = yes
+				narrative_event = {
+					id = RTPdestiny.7 #Settling Iceland - End
+					years = 5
+				}
+			}
+			event_target:rtp_iceland_ai_settler3 = {
+				set_defacto_liege = THIS
+				set_government_type = tribal_government
+				any_demesne_title = {
+					gender_succ = agnatic
+					add_law = {
+						law = succ_elective_gavelkind
+						cooldown = no
+						opinion_effect = no
+					}
+				}
+				add_trait = travelling
+				recalc_succession = yes
+				narrative_event = {
+					id = RTPdestiny.7 #Settling Iceland - End
+					years = 5
+				}
+			}
+			event_target:rtp_iceland_ai_settler4 = {
+				set_defacto_liege = THIS
+				set_government_type = tribal_government
+				any_demesne_title = {
+					gender_succ = agnatic
+					add_law = {
+						law = succ_elective_gavelkind
+						cooldown = no
+						opinion_effect = no
+					}
+				}
+				add_trait = travelling
+				recalc_succession = yes
+				narrative_event = {
+					id = RTPdestiny.7 #Settling Iceland - End
+					years = 5
+				}
+			}
+
+			e_china_west_governor = {
+				holder_scope = {
+					grant_title_no_opinion = c_landless_t
+					grant_title_no_opinion = c_baron_t
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPdestiny.6_2"
+
+		hidden_tooltip = {
+			c_austisland = {
+				location = {
+					build_holding = {
+						type = tribal
+						holder = event_target:rtp_iceland_ai_settler1 #You are the first settler
+					}
+					religion = event_target:rtp_iceland_ai_settler1 #You are the first settler
+					culture = event_target:rtp_iceland_ai_settler1 #You are the first settler
+				}
+				grant_title_no_opinion = event_target:rtp_iceland_ai_settler1 #You are the first settler
+			}
+			c_sunnlendingafjordungur = {
+				location = {
+					build_holding = {
+						type = tribal
+						holder = event_target:rtp_iceland_ai_settler2 #You are the second settler
+					}
+					religion = event_target:rtp_iceland_ai_settler2 #You are the second settler
+					culture = event_target:rtp_iceland_ai_settler2 #You are the second settler
+				}
+				grant_title_no_opinion = event_target:rtp_iceland_ai_settler2 #You are the second settler
+			}
+			c_nordlendingafjordungur = {
+				location = {
+					build_holding = {
+						type = tribal
+						holder = event_target:rtp_iceland_ai_settler3 #You are the third settler
+					}
+					religion = event_target:rtp_iceland_ai_settler3 #You are the third settler
+					culture = event_target:rtp_iceland_ai_settler3 #You are the third settler
+				}
+				grant_title_no_opinion = event_target:rtp_iceland_ai_settler3 #You are the third settler
+			}
+			c_vestisland = {
+				location = {
+					build_holding = {
+						type = tribal
+						holder = event_target:rtp_iceland_ai_settler4 #You are the fourth settler
+					}
+					religion = event_target:rtp_iceland_ai_settler4 #You are the fourth settler
+					culture = event_target:rtp_iceland_ai_settler4 #You are the fourth settler
+				}
+				grant_title_no_opinion = event_target:rtp_iceland_ai_settler4 #You are the fourth settler
+			}
+
+			event_target:rtp_iceland_ai_settler1 = {
+				set_defacto_liege = THIS
+				set_government_type = tribal_government
+				any_demesne_title = {
+					gender_succ = agnatic
+					add_law = {
+						law = succ_elective_gavelkind
+						cooldown = no
+						opinion_effect = no
+					}
+				}
+				add_trait = travelling
+				recalc_succession = yes
+				narrative_event = {
+					id = RTPdestiny.7 #Settling Iceland - End
+					years = 5
+				}
+			}
+			event_target:rtp_iceland_ai_settler2 = {
+				set_defacto_liege = THIS
+				set_government_type = tribal_government
+				any_demesne_title = {
+					gender_succ = agnatic
+					add_law = {
+						law = succ_elective_gavelkind
+						cooldown = no
+						opinion_effect = no
+					}
+				}
+				add_trait = travelling
+				recalc_succession = yes
+				narrative_event = {
+					id = RTPdestiny.7 #Settling Iceland - End
+					years = 5
+				}
+			}
+			event_target:rtp_iceland_ai_settler3 = {
+				set_defacto_liege = THIS
+				set_government_type = tribal_government
+				any_demesne_title = {
+					gender_succ = agnatic
+					add_law = {
+						law = succ_elective_gavelkind
+						cooldown = no
+						opinion_effect = no
+					}
+				}
+				add_trait = travelling
+				recalc_succession = yes
+				narrative_event = {
+					id = RTPdestiny.7 #Settling Iceland - End
+					years = 5
+				}
+			}
+			event_target:rtp_iceland_ai_settler4 = {
+				set_defacto_liege = THIS
+				set_government_type = tribal_government
+				any_demesne_title = {
+					gender_succ = agnatic
+					add_law = {
+						law = succ_elective_gavelkind
+						cooldown = no
+						opinion_effect = no
+					}
+				}
+				add_trait = travelling
+				recalc_succession = yes
+				narrative_event = {
+					id = RTPdestiny.7 #Settling Iceland - End
+					years = 5
+				}
+			}
+		}
+	}
+}
+
+#Settling Iceland - End
+narrative_event = {
+	id = RTPdestiny.7
+	title = "RTPdestiny.7_title"
+	desc = "RTPdestiny.7_desc"
+	picture = GFX_evt_longships_at_sea_oldgods
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPdestiny.7_1"
+
+		remove_trait = travelling
+		add_trait = rtp_admiral_tr
+		add_trait = rtp_naval_expert_tr
+
+		random = {
+			chance = 50
+
+			add_trait = scurvy
+		}
+		random = {
+			chance = 20
+
+			add_trait = lunatic
+		}
+	}
+}
+
+#Ping Events
+#####
+
+#Ping Charlemagne - Start
+character_event = {
+	id = RTPdestiny.100
+	hide_window = yes
+	is_triggered_only = yes
+	has_character_flag = is_charlemagne
+
+	immediate = {
+		create_character = {
+			age = 30
+			trait = brilliant_strategist
+			trait = inspiring_leader
+			random_traits = yes
+			culture = ROOT
+			religion = ROOT
+			dynasty = random
+		}
+		new_character = {
+			save_event_target_as = rtp_captain #The captain giving troops
+			ROOT = {
+				letter_event = {
+					id = RTPdestiny.1 #Charlemagne - Start
+				}
+			}
+			force_host = ROOT
+		}
+	}
+}
+
+#Ping Charlemagne - Lotharingia Conquest
+character_event = {
+	id = RTPdestiny.101
+	hide_window = yes
+	is_triggered_only = yes
+	has_character_flag = is_charlemagne
+
+	trigger = {
+		FROM = {
+			title = k_lotharingia
+		}
+		NOT = {
+			has_character_flag = rtp_charlemage_lotharingia_conquest
+		}
+	}
+
+	immediate = {
+		set_character_flag = rtp_charlemage_lotharingia_conquest
+
+		FROMFROM = {
+			create_character = {
+				age = 30
+				trait = brilliant_strategist
+				trait = defensive_leader
+				random_traits = yes
+				culture = PREV
+				religion = PREV
+				dynasty = random
+			}
+			new_character = {
+				save_event_target_as = rtp_captain #The captain giving troops
+				ROOT = {
+					letter_event = {
+						id = RTPdestiny.2 #Charlemagne - Lotharingia Conquest
+					}
+				}
+				force_host = ROOT
+			}
+		}
+	}
+}
+
+#Ping Charlemagne - Saxony Conquest
+character_event = {
+	id = RTPdestiny.102
+	hide_window = yes
+	is_triggered_only = yes
+	has_character_flag = is_charlemagne
+
+	trigger = {
+		FROM = {
+			title = k_saxony
+		}
+		NOT = {
+			has_character_flag = rtp_charlemage_saxony_conquest
+		}
+	}
+
+	immediate = {
+		set_character_flag = rtp_charlemage_saxony_conquest
+
+		FROMFROM = {
+			create_character = {
+				age = 30
+				trait = brilliant_strategist
+				trait = aggressive_leader
+				random_traits = yes
+				culture = PREV
+				religion = PREV
+				dynasty = random
+			}
+			new_character = {
+				save_event_target_as = rtp_captain #The captain giving troops
+				ROOT = {
+					letter_event = {
+						id = RTPdestiny.3 #Charlemagne - Saxony Conquest
+					}
+				}
+				force_host = ROOT
+			}
+		}
+	}
+}
+
+#Ping Charlemagne - Bavaria Conquest
+character_event = {
+	id = RTPdestiny.103
+	hide_window = yes
+	is_triggered_only = yes
+	has_character_flag = is_charlemagne
+
+	trigger = {
+		FROM = {
+			title = k_bavaria
+		}
+		NOT = {
+			has_character_flag = rtp_charlemage_bavaria_conquest
+		}
+	}
+
+	immediate = {
+		set_character_flag = rtp_charlemage_bavaria_conquest
+
+		FROMFROM = {
+			create_character = {
+				age = 30
+				trait = brilliant_strategist
+				trait = unyielding_leader
+				random_traits = yes
+				culture = PREV
+				religion = PREV
+				dynasty = random
+			}
+			new_character = {
+				save_event_target_as = rtp_captain #The captain giving troops
+				ROOT = {
+					letter_event = {
+						id = RTPdestiny.4 #Charlemagne - Bavaria Conquest
+					}
+				}
+				force_host = ROOT
+			}
+		}
+	}
+}
+
+#Ping Charlemagne - Italy Conquest
+character_event = {
+	id = RTPdestiny.104
+	hide_window = yes
+	is_triggered_only = yes
+	has_character_flag = is_charlemagne
+
+	trigger = {
+		FROM = {
+			title = k_italy
+		}
+		NOT = {
+			has_character_flag = rtp_charlemage_italy_conquest
+		}
+	}
+
+	immediate = {
+		set_character_flag = rtp_charlemage_italy_conquest
+
+		FROMFROM = {
+			create_character = {
+				age = 30
+				trait = brilliant_strategist
+				trait = flanker
+				random_traits = yes
+				culture = PREV
+				religion = PREV
+				dynasty = random
+			}
+			new_character = {
+				save_event_target_as = rtp_captain #The captain giving troops
+				ROOT = {
+					letter_event = {
+						id = RTPdestiny.5 #Charlemagne - Italy Conquest
+					}
+				}
+				force_host = ROOT
+			}
+		}
+	}
+}
+
+#Ping Settling Iceland - Start
+character_event = {
+	id = RTPdestiny.105
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		year = 800
+		year <= 850
+		NOT = {
+			has_global_flag = rtp_iceland_settled
+		}
+	}
+
+	immediate = {
+		set_global_flag = rtp_iceland_settled
+
+		if = {
+			limit = {
+				any_player = {
+					has_landed_title = c_landless_t
+					OR = {
+						religion = norse_pagan
+						religion = norse_pagan_reformed
+						culture = norse
+					}
+				}
+			}
+			any_player = {
+				save_event_target_as = rtp_iceland_settler1 #You are the first settler
+			}
+		}
+
+		random_independent_ruler = {
+			limit = {
+				OR = {
+					religion = norse_pagan
+					religion = norse_pagan_reformed
+				}
+			}
+			preferred_limit = {
+				culture = norse
+			}
+			create_character = {
+				age = 20
+				random_traits = yes
+				culture = norse
+				religion = norse_pagan
+				dynasty = random
+			}
+			new_character = {
+				save_event_target_as = rtp_iceland_ai_settler1 #You are the first settler
+			}
+			create_character = {
+				age = 21
+				random_traits = yes
+				culture = norse
+				religion = norse_pagan
+				dynasty = random
+			}
+			new_character = {
+				save_event_target_as = rtp_iceland_ai_settler2 #You are the second settler
+			}
+			create_character = {
+				age = 22
+				random_traits = yes
+				culture = norse
+				religion = norse_pagan
+				dynasty = random
+			}
+			new_character = {
+				save_event_target_as = rtp_iceland_ai_settler3 #You are the third settler
+			}
+			create_character = {
+				age = 23
+				random_traits = yes
+				culture = norse
+				religion = norse_pagan
+				dynasty = random
+			}
+			new_character = {
+				save_event_target_as = rtp_iceland_ai_settler4 #You are the fourth settler
+			}
+		}
+
+		any_player = {
+			narrative_event = {
+				id = RTPdestiny.6
+			}
+		}
+	}
+}
+
+#Invisible Events
+#####
+
+#Nuking Iceland
+character_event = {
+	id = RTPdestiny.1000
+	hide_window = yes
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		year < 850
+		NOT = {
+			has_global_flag = rtp_iceland_settled
+		}
+	}
+
+	immediate = {
+		any_title = {
+			limit = {
+				OR = {
+					title = c_austisland
+					title = c_sunnlendingafjordungur
+					title = c_nordlendingafjordungur
+					title = c_vestisland
+				}
+			}
+			location = {
+				any_province_holding = {
+					destroy_settlement = THIS
+				}
+			}
+		}
+	}
+}

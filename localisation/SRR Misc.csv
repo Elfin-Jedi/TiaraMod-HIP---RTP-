@@ -1,0 +1,96 @@
+opinion_rapist;Raped me;;;;;;;;;;;;;x
+opinion_neglected_spouse;Feeling neglected;;;;;;;;;;;;;x
+title_mistress;Mistress;;;;;;;;;;;;;x
+title_mistress_desc;[From.GetTitledName]'s Mistress;;;;;;;;;;;;;x
+title_paramour;Paramour;;;;;;;;;;;;;x
+title_paramour_desc;[From.GetTitledName]'s Lover;;;;;;;;;;;;;x
+seduce_spouse;Seduce [This.GetFirstName];Séduction;Verführung;;Seducir;;;;;;;;;x
+seduce_spouse_desc;Focus your seduction efforts on your spouse, [This.GetTitledFirstName].;;;;;;;;;;x
+sober;Sober;;;;;;;;;;x
+sober_desc;This character will not let a drop of alcohol touch their lips.;;;;;;;;;;x
+stopped_trying;Stopped Trying;;;;;;;;;;;;;x
+stopped_trying_desc;This character has decided that they have enough children and has stopped trying to be intimate with their spouse.;;;;;;;;;;;;;x
+gay_fertility_boost;Attempting to Conceive;;;;;;;;;;;;;x
+gay_fertility_boost_desc;This character is putting extra effort into conceiving a child;;;;;;;;;;;;;x
+repressed_homosexual_urges;Repressed Urges;;;;;;;;;;;;;x
+repressed_homosexual_urges_desc;This character is trying to pray the gay away.;;;;;;;;;;;;;x
+##############
+SRR_rules;SRR;;;;;;;;;;x
+queer_characters;Queer Characters;;;;;;;;;;x
+default_queer;Default;;;;;;;;;;x
+default_queer_desc;Default amount of queer characters;;;;;;;;;;x
+more_queer;More Queer Characters;;;;;;;;;;x
+more_queer_desc;Events that add homo/bisexual traits are twice as likely to fire;;;;;;;;;;x
+ultra_queer;Ultra Queer;;;;;;;;;;x
+ultra_queer_desc;Homo/bisexual traits even more likely. Also unlocks lesbian mistresses and gay paramours.;;;;;;;;;;x
+##############
+EVTDESC_SRR50;My [GetFromRelation], [target_consort.GetTitledFirstNameNoRegnal], does not love me. While love is not exactly necessary, I'd still like to see [From.GetHerHis] beautiful face light up with smiles and laughter... so I've decided to romance [From.GetHerHim]!;Ma [GetFromRelation], [target_consort.Get_only_le_Title][target_consort.GetTitledFirstNameNoRegnal], ne m'aime guère. Bien que l'amour ne soit pas nécessaire, j'aimerais voir son visage s'éclairer de bonheur et de bonne humeur... c'est pourquoi j'ai décidé de lui faire la cour !;Meine Konkubine, [target_consort.GetTitledFirstNameNoRegnal], hat nicht viel für mich übrig. Obwohl Liebesgefühle nicht zwingend notwendig sind, würde ich ihr hübsches Gesicht gerne lächeln und lachen sehen... da[From.GetHerHim] habe ich beschlossen, ihr meine romantische Seite zu zeigen!;;No gusto mucho a mi concubina, [target_consort.GetTitledFirstNameNoRegnal]. Aunque el amor no es necesario, me gustaría ver su bello rostro iluminado con sonrisas y risas... ¡así que he decidido enamorarla!;;;;;;;;;x
+EVTOPTA_SRR50;Turn on the charm.;Se servir de mon charme;Charme spielen lassen;;Enciende el encanto;;;;;;;;;x
+EVTOPTB_SRR50;[From.GetSheHeCap] is my [GetFromRelation], there is no need for love.;;;;;;;;;;;;;x
+EVTDESC_WOL_590M;My Concubine, [target_consort.GetTitledFirstNameNoRegnal], does not love me. While love is not exactly necessary, I'd still like to see [target_consort.GetHerHis] beautiful face light up with smiles and laughter... so I've decided to romance [target_consort.GetHerHim]!;Ma [GetFromRelation], [target_consort.Get_only_le_Title][target_consort.GetTitledFirstNameNoRegnal], ne m'aime guère. Bien que l'amour ne soit pas nécessaire, j'aimerais voir son visage s'éclairer de bonheur et de bonne humeur... c'est pourquoi j'ai décidé de lui faire la cour !;Meine Konkubine, [target_consort.GetTitledFirstNameNoRegnal], hat nicht viel für mich übrig. Obwohl Liebesgefühle nicht zwingend notwendig sind, würde ich ihr hübsches Gesicht gerne lächeln und lachen sehen... da[From.GetHerHim] habe ich beschlossen, ihr meine romantische Seite zu zeigen!;;No gusto mucho a mi concubina, [target_consort.GetTitledFirstNameNoRegnal]. Aunque el amor no es necesario, me gustaría ver su bello rostro iluminado con sonrisas y risas... ¡así que he decidido enamorarla!;;;;;;;;;x
+EVTDESC_WOL_590F;My Consort, [target_consort.GetTitledFirstNameNoRegnal], does not love me. While love is not exactly necessary, I'd still like to see [target_consort.GetHerHis] beautiful face light up with smiles and laughter... so I've decided to romance [target_consort.GetHerHim]!;;;;;;;;;;;;;x
+EVTOPTA_WOL_590;Turn on the charm.;Se servir de mon charme;Charme spielen lassen;;Enciende el encanto;;;;;;;;;x
+EVTOPTB_WOL_590M;She is my Concubine, there is no need for love.;;;;;;;;;;;;;x
+EVTOPTB_WOL_590F;He is my Consort, there is no need for love.;;;;;;;;;;;;;x
+EVTTOOLTIP_WoL_591;The seduction of [This.GetFirstName] begins;La séduction de [This.GetFirstName] commence;Die Verführung von [This.GetFirstName] beginnt;;La seducción de [This.GetFirstName] comienza;;;;;;;;;x
+EVTDESC_WOL_592;I did get my [GetFromRelation] [From.GetFirstName] to laugh today, as I told [From.GetHerHim] a silly joke about two squirrels. I think [From.GetHeShe] is warming up to me...;Aujourd'hui, je suis parvenu à faire rire ma [GetFromRelation] [From.GetFirstName] en lui racontant une blague niaise à propos de deux écureuils. Je pense qu'elle se rapproche de moi...;Ich habe es heute geschafft, meine [GetFromRelation] [From.GetFirstName] zum Lachen zu bringen, indem ich ihr einen dummen Witz über zwei Eichhörnchen erzählte. Ich glaube, sie taut langsam auf...;;Conseguí que mi [GetFromRelation] [From.GetFirstName] se riese hoy, contándole una broma sobre dos ardillas. Creo que me estoy ganando su afecto...;;;;;;;;;x
+EVTDESC_WOL_592_B;I can tell my [GetFromRelation] [From.GetFirstName] is finally falling in love with me. [From.GetSheHeCap] snuggled up to me as we watched the sunset toget[From.GetHerHim] from the roof of the great tower.;Je peux voir que ma [GetFromRelation] [From.GetFirstName] est enfin sur le point de tomber pour moi. Elle s'est blottie contre moi pendant que nous admirions le couc[From.GetHerHim] de soleil depuis le toit de la grande tour.;Ich erkenne deutlich, dass meine [GetFromRelation] [From.GetFirstName] sich endlich in mich verliebt. Sie schmiegte sich an mich, als wir gemeinsam den Sonnenuntergang vom Dach des großen Turms aus betrachteten.;;Puedo decir que a mi [GetFromRelation] [From.GetFirstName] finalmente se está enamorando de mí. Se acurruca a mí, mientras mirábamos la puesta del sol juntos desde tejado de la gran torre.;;;;;;;;;x
+EVTOPTA_WOL_592;Good, that gladdens me!;Très bien, cela me fait plaisir !;Gut, das freut mich!;;¡Bien, eso me alegra!;;;;;;;;;x
+EVTDESC_WOL_593;Thanks to my romantic efforts, sweet [From.GetFirstName], my [GetFromRelation], has also become my lover. It feels great to be rid of the cold awkwardness around [From.GetHerHim]!;Grâce à mes efforts romantiques, [From.GetFirstName], ma [GetFromRelation], est également devenue ma bien-aimée. Je suis enfin débarrassé du sentiment d'embarras qui pesait sur notre relation !;Dank meiner romantischen Bemühungen ist die liebliche [From.GetFirstName], meine [GetFromRelation], nun auch meine Liebhaberin. Die Tatsache, dass ihre kühle Verklemmtheit nun der Vergangenheit angehört, verschafft mir ein großartiges Gefühl!;;Gracias a mis esfuerzos románticos, la dulce [From.GetFirstName], mi [GetFromRelation], también se ha convertido en mi amante. ¡Es tan agradable haberse librado de la torpeza entorno a ella!;;;;;;;;;x
+EVTOPTA_WOL_593;Finally!;Enfin !;Endlich!;;¡Por fin!;;;;;;;;;x
+EVTDESC_WOL_594;Today, [From.GetFirstName], my [GetFromRelation], confessed that [From.GetSheHe] has forgiven me for [From.GetHerHim] abduction. [From.GetSheHeCap] has grown to like [From.GetHerHim] new life in [Root.Capital.Capital.GetName]... and me.;Aujourd'hui, [From.GetFirstName], ma [GetFromRelation], a confessé sa volonté de me pardonner pour son enlèvement. Elle affirme s'être habituée à sa nouvelle vie à [Root.Capital.Capital.GetName]... et avec moi.;Heute vertraute [From.GetFirstName], meine [GetFromRelation], mir an, dass sie mir für ihre Entführung vergeben hat. Sie hat mittlerweile an ihrem neuen Leben in [Root.Capital.Capital.GetName] Gefallen gefunden... und auch an mir.;;Hoy, [From.GetFirstName], mi [GetFromRelation], admitió que me ha perdonado por su secuestro. Ha llegado a amar su nueva vida en [Root.Capital.Capital.GetName]. .. y a mí.;;;;;;;;;x
+EVTOPTA_WOL_594;I am relieved!;Quel soulagement !;Ich bin erleichtert!;;¡Me siento aliviado!;;;;;;;;;x
+EVTDESC_WOL_595;My [GetFromRelation] [From.GetFirstName] is not warming up to me at all. [From.GetSheHeCap] laughs at my jokes, true, but not because [From.GetSheHe] finds them funny, but with scorn. [From.GetSheHeCap] told me outright that [From.GetSheHe] despises me!;Ma [GetFromRelation] [From.GetFirstName] ne se rapproche pas du tout de moi. Elle rit à mes blagues, c'est bien vrai, mais non pas car elle y voit de l'humour, plutôt par mépris. Elle a même été jusqu'à me dire qu'elle me détestait !;Ich kann meine [GetFromRelation] [From.GetFirstName] einfach nicht für mich einnehmen. Sie lacht über meine Witze, das stimmt, aber nicht, weil sie sie lustig findet, sondern aus Verachtung. Sie sagte mir ins Gesicht, dass sie mich verabscheut!;;Mi [GetFromRelation] [From.GetFirstName] no me está cogiendo cariño. Cierto, se ríe con mis chistes, pero no porque los encuentre graciosos, sino con desprecio. ¡Me ha dicho directamente que me desprecia!;;;;;;;;;x
+EVTOPTA_WOL_595;I'll just have to keep at it!;Je devrai persévérer !;Trotzdem darf ich nicht lockerlassen!;;¡Sólo tengo que seguir intentándolo!;;;;;;;;;x
+EVTOPTB_WOL_595;I give up.;J'abandonne. Peut-être devrais-je la mettre de côté...;Ich gebe auf. ;;Me rindo. Quizás debería dejarla de lado...;;;;;;;;;x
+ZE13705_desc;Discovering my feelings for [Root.GetBoyGirl]s has been exhilarating.;;;;;;;;;;;;;x
+ZE13705OPTA;I love [Root.GetBoyGirs]s now!;;;;;;;;;;;;;x
+ZE13705OPTB;I still like [Root.GetBoyGirlOpp]s too.;;;;;;;;;;;;;x
+##############
+SRR2000_desc;I'm traveling through the countryside when I see a beautiful young woman. She seems very attracted to me.;;;;;;;;;;;;;x
+SRR2000OPTA;Approach her and strike up a conversation.;;;;;;;;;;;;;x
+SRR2000OPTB;I have more important things to attend to.;;;;;;;;;;;;;x
+SRR2001_desc;I strike up a conversation and she leads me back to her hovel. When I enter, she confesses to...unusual tastes. She wants to tie me up and have her way with me.;;;;;;;;;;;;;x
+SRR2001OPTA;If that's what she likes.;;;;;;;;;;;;;x
+SRR2001OPTB;This is beneath me. I refuse.;;;;;;;;;;;;;x
+SRR2002_desc;She firmly explains that either I will be tied to the bed, or there will be nothing will happen.;;;;;;;;;;;;;x
+SRR2002OPTA;Grab her and force her to do it my way.;;;;;;;;;;;;;x
+SRR2002OPTB;Reluctantly agree.;;;;;;;;;;;;;x
+SRR2002OPTC;Just leave.;;;;;;;;;;;;;x
+SRR2003_desc;I pin her down and show her my sexual tastes.;;;;;;;;;;;;;x
+SRR2003OPTA;Leave her.;;;;;;;;;;;;;x
+SRR2004_desc;As I turn around and prepare to leave, she grabs a hidden dagger and slits my throat before I can react.;;;;;;;;;;;;;x
+SRR2004OPTA;What?;;;;;;;;;;;;;x 
+SRR2005_desc;She ties me up in her bed and rides me until we both climax.;;;;;;;;;;;;;x
+SRR2005OPTA;That was surprisingly good.;;;;;;;;;;;;;x
+SRR2006_desc;She stands up and fetches a dagger. Why would she cut the rope? This place doesn't look like it belongs to somebody who can afford to cut some rope every time she gets a bit horny. I then realize she isn't reaching for the rope. She grabs me by my nether regions, and with one swift motion leaves me naked, bleeding profusely and a shell of the man I once was.;;;;;;;;;;;;;x
+SRR2006OPTA;WHY?;;;;;;;;;;;;;x
+SRR2007_desc;She unties me, lies down beside me and gazes into my eyes. I stroke her hair. Perhaps this is love?;;;;;;;;;;;;;x
+SRR2007OPTA;Bring her home with you.;;;;;;;;;;;;;x
+SRR2008_desc;My men eventually find me and bring me back home. I send out a search party and attempt to arrest her. After a few days of no results I'm forced to admit that she probably won't be found.;;;;;;;;;;;;;x
+SRR2008OPTA;How could they be stupid enough not to find a bloody, naked woman!?;;;;;;;;;;;;;x
+SRR2009_desc;She ties me up in her bed and starts to kiss me, moving her hands downwards. After a while, she asks "Why is nothing happening? It's normally hard by now." I begin to stutter a response when she says, "You can't get it up! I have no use for you." She grabs her clothes and storms out of the house.;;;;;;;;;;;;;x
+SRR2009OPTA;Could you at least untie me?;;;;;;;;;;;;;x
+##############
+SRR2022_desc;My [GetFromRelation] has declared [FromFrom.GetFirstName] [From.GetHersHis] mistress. [From.GetSheHeCap] has given that harlot a stipend and parades her about court for all to see.;;;;;;;;;;;;;x
+SRR2022OPTA;Woe is me;;;;;;;;;;;;;x
+SRR2022OPTB;I will not stand for this humiliation;;;;;;;;;;;;;x
+SRR2022OPTC;Time for another glass of wine...Or maybe another bottle.;;;;;;;;;;;;;x
+SRR2023_desc;Dear [Root.GetFirstName], your decision to appoint [FromFromFrom.GetFirstName] your mistress has greatly disappointed me. I hope you will soon come to your senses and leave her.;;;;;;;;;;;;;x
+SRR2023OPTA;That won't be happening;;;;;;;;;;;;;x
+SRR2024_desc;Dear [Root.GetFirstName], I am furious that you have declared that whore, [FromFromFrom.GetFirstName] your mistress and humiliated me in front of the entire court. You will regret that decision.;;;;;;;;;;;;;x
+SRR2024OPTA;How, exactly, will I regret this?;;;;;;;;;;;;;x
+SRR2025_desc;When I visit my [GetFromRelation], [From.GetSheHe] is very drunk. I can barely understand what [From.GetSheHe] says, but she is obviously very angry and ranting about [FromFromFrom.GetFirstName].;;;;;;;;;;;;;x
+SRR2025OPTA;Perhaps I should just leave.;;;;;;;;;;;;;x
+##############
+SRR2051_descM;I have been childless for too long. Rumors are starting to spread. Most are completely wrong, but some are whispering that I'm too busy frolicking with other men too sire an heir.;;;;;;;;;;;;;x 
+SRR2051_descF;I have been childless for too long. Rumors are starting to spread. Most are completely wrong, but some are whispering that I'm too busy frolicking with other women too bear any children.;;;;;;;;;;;;;x 
+SRR2051OPTA;I must try harder to conceive, for the good of the realm.;;;;;;;;;;;;;x
+SRR2052_desc;Forcing myself to lie with my [From.GetHusbandWifeOpp] more often has caused more stress than I'd anticipated.;;;;;;;;;;;;;x
+SRR2052OPTA;Damn;;;;;;;;;;;;;x
+SRR2053_desc;Now that I have enough children to secure the succession, I realized I no longer need to lie with my [Root.GetHusbandWifeOpp].;;;;;;;;;;;;;x
+SRR2053OPTA;It feels so freeing!;;;;;;;;;;;;;x
+SRR2053OPTB;I don't want to upset [From.GetHerHimOpp], though.;;;;;;;;;;;;;x
+SRR2054_desc;Lately I have been less inclined to drink wine or beer.;;;;;;;;;;;;;x
+SRR2054OPTA;I never liked them that much.;;;;;;;;;;;;;x
+SRR2054OPTB;I still like having them on occasion.;;;;;;;;;;;;;x

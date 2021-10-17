@@ -1,0 +1,9 @@
+RTPmercenary_2_title;Mercenary Contract;;;;;;x
+RTPmercenary_2_desc;[From.GetTitledName] would like to hire some of my men for [From.GetHerHis] current war. [From.GetSheHeCap] offers me [From.global_rtp_mercenary_pay.GetValue] gold for [From.global_rtp_mercenary_men.GetValue] men.;;;;;;x
+RTPmercenary.2_1;A fair offer.;;;;;;x
+RTPmercenary.2_2;We are worth more than that.;;;;;;x
+
+RTPmercenary_3_title;Holy Contract;;;;;;x
+RTPmercenary_3_desc;[From.GetTitledName] would like to hire some of my men for [From.GetHerHis] current war against a different religion. I would gain [From.global_rtp_mercenary_pay.GetValue] piety for sending [From.global_rtp_mercenary_men.GetValue] men to [From.GetHerHis] aid.;;;;;;x
+RTPmercenary.3_1;We must defend our faith!;;;;;;x
+RTPmercenary.3_2;Send them thoughts and prayers.;;;;;;x

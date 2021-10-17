@@ -1,0 +1,54 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+arthur;Blood of King Arthur;;;;;;;;;;;;;x
+arthur_desc;King Arthur is a legendary figure in Celtic mythology. Their peculiar religious practice has disappeared, but many people know their legends.;;;;;;;;;;;;;x
+guan_yu;Blood of Guan Yu;;;;;;;;;;;;;x
+guan_yu_desc;Guan Yu became a great man to be revered as a god in China. No one was able to transcend his martial arts.;;;;;;;;;;;;;x
+trajan;Blood of Trajan;;;;;;;;;;;;;x
+trajan_desc;Trajan is one of five good Caesars. During the reign of Trajan, the Roman Empire was at its peak.;;;;;;;;;;;;;x
+leif_erikson;Blood of Leif Erikson;;;;;;;;;;;;;x
+leif_erikson_desc;The first European to explore the Americas. This shows the Viking's excellent naval capability.;;;;;;;;;;;;;x
+#New Patch 1.3
+paradox;Blood of Paradox Interactive;;;;;;;;;;;;;x
+paradox_desc;Johan Andersson is a Swedish game designer possessing unmatched ethics, and is considered a role model for all Swedes.;;;;;;;;;;;;;x
+beowulf;Blood of Beowulf;;;;;;;;;;;;;x
+beowulf_desc;The Ulfingas is an old tribe, highly regarded for their bravery and immortalized in the Beowulf saga.;;;;;;;;;;;;;x
+habsburg;Blood of the Habsburgs;;;;;;;;;;;;;x
+habsburg_desc;A House of ancient lineage, it derived from the Eberhard branch of the Etichonids, founded by Eticho, his real name Adalrik, in the 7th century AD.;;;;;;;;;;;;;x
+capet;Blood of Capet;;;;;;;;;;;;;x
+capet_desc;The Capets descends from Robert the Strong, who gave birth to two kings.;;;;;;;;;;;;;x
+hohenzollern;Blood of Hohenzollern;;;;;;;;;;;;;x
+hohenzollern_desc;Descendants of the Hunfridings, a House of Alemannic origin. Buchard is considered the first well-documented ancestor of the Hohenzollern dynasty.;;;;;;;;;;;;;x
+#New Patch 1.4
+joan_of_arc;Blood of [This.GetFirstName];;;;;;;;;;;;;x
+joan_of_arc_desc;A young woman declared that the Lord had spoken to her and instructed her to deliver us from the enemies of our land.;;;;;;;;;;;;;x
+abbasid;Blood of [This.GetFirstName];;;;;;;;;;;;;x
+abbasid_desc;Al-Rashid ruled during the peak of the Islamic Golden Age. Islamic art and music flourished significantly during his reign.;;;;;;;;;;;;;x
+alfred;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
+alfred_desc;Alfred the Great had a reputation as a learned and gracious man who put his people first, prioritizing the well being of the English over the demands of the Holy See.;;;;;;;;;;;;;x
+asturias;Blood of Asturias;;;;;;;;;;;;;x
+asturias_desc;The Line of Asturias was essential in the formation of Spain. Pelagius rose against the Muslims, beginning the Reconquista.;;;;;;;;;;;;;x
+robert;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
+robert_desc;Robert Guiscard was a Norman adventurer remembered for the conquest of southern Italy and Sicily.;;;;;;;;;;;;;x
+salian;Blood of Salian;;;;;;;;;;;;;x
+salian_desc;The Salian dynasty is a House that continually provides great men who can rise far in whichever ladder they choose to ascend.;;;;;;;;;;;;;x
+#New Patch 1.5
+hre_male;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
+hre_female;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
+bloodline_desc_hre;The glorious [This.Founder.GetManWoman] who formed the Holy Roman Empire.;;;;;;;;;;;;;x
+croatia;Blood of [This.GetFirstName];;;;;;;;;;;;;x
+croatia_desc;Tomislav was beloved ruler and the first Croatian king and the founder of a united Croatian state. As he sired no offspring he passed on his ways to his brother.;;;;;;;;;;;;;x
+lithuania;Blood of [This.GetFirstName];;;;;;;;;;;;;x
+lithuania_desc;Gediminas, renowned for being a staunch pagan who cast away the traitorous Christian rulers to follow the old ways like his people.;;;;;;;;;;;;;x
+santso;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
+santso_desc;Sancho the Great, the King of Navarra who succeeded in vastly increasing his territory, through means of conquest and diplomacy.;;;;;;;;;;;;;x
+tamari;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
+tamari_desc;Tamar reigned as the Queen of Georgia, presiding over the apex of the Georgian Golden Age.;;;;;;;;;;;;;x
+#New Patch 1.6
+wuffa;Blood of Wuffa;;;;;;;;;;;;;x
+wuffa_desc;The Wuffingas, descendants of Wuffa, blood of Geats and Ynglings. They are renowned for their lineage, attested in great works such as the saga of Beowulf.;;;;;;;;;;;;;x
+icel;Blood of [This.GetFirstName];;;;;;;;;;;;;x
+icel_desc;The descendants of Icel became great kings of Mercia. They stem from the renowned Anglian King of Jutland, Offa, who became a legend for his martial skill and honor.;;;;;;;;;;;;;x
+cinaed;Blood of Cinaed;;;;;;;;;;;;;x
+cinaed_desc;Cinaed, also written as Kenneth, was the first Pictish king of Alba from the Ailpin dynasty, and regarded as the first King of the Scots.;;;;;;;;;;;;;x
+rhodri;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
+rhodri_desc;He is called "King of the Britons" by the Annals of Ulster. In some later histories, he is referred to as "King of Wales".;;;;;;;;;;;;;x

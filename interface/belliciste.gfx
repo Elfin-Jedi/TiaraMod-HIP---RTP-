@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+	name = "GFX_trait_belliciste"
+	texturefile = "gfx/traits/belliciste.tga" 
+	noOfFrames = 1
+	norefcount = yes
+	effectFile = "gfx/FX/buttonstate.lua"
+	}
+}
+
+
+
+
+

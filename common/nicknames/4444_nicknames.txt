@@ -1,0 +1,1175 @@
+#Some Interesting Nicknames
+#By Soul Veit(SoulV078)
+###################################################################
+
+###The Crimson King        ####Ko no Diavolo da!!!
+nick_the_crimson_king = {
+	allow = {
+		age = 20
+		ruled_years = 15
+		martial = 16
+		intrigue = 25
+		is_female = no
+		trait = wroth
+		trait = proud
+		trait = arbitrary
+		trait = ambitious
+		trait = cruel
+		trait = deceitful
+		OR = {
+			tier = emperor
+			tier = king
+		}
+
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			intrigue = 20
+		}
+
+	}
+
+}
+
+
+###The Crimson Queen
+nick_the_crimson_queen = {
+	allow = {
+		age = 20
+		ruled_years = 15
+		martial = 16
+		intrigue = 25
+		is_female = yes
+		trait = wroth
+		trait = proud
+		trait = arbitrary
+		trait = ambitious
+		trait = cruel
+		trait = deceitful
+		OR = {
+			tier = emperor
+			tier = king
+		}
+
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			intrigue = 20
+		}
+
+	}
+
+}
+
+
+###The Rock Golem
+nick_the_rock_golem = {
+	allow = {
+		age = 30
+		martial = 16
+		combat_rating = 50
+		OR = {
+			trait = giant
+			trait = strong
+			trait = robust
+		}
+
+	}
+	chance = {
+		factor = 1
+	}
+}
+
+
+
+###The Winter Wolf
+nick_the_winter_wolf = {
+	allow = {
+		age = 20
+		martial = 16
+		combat_rating = 50
+		trait = strong
+		OR = {
+			trait = shrewd
+			trait = hunter
+			trait = brave
+		}
+
+	
+	}
+	chance = {
+		factor = 1
+		modifier = {
+		factor = 1.5
+		trait = brave
+		}
+		modifier = {
+		factor = 1.5
+		trait = shrewd
+		}
+	}
+}
+
+
+###The impotent
+nick_the_impotent = {
+	allow = {
+		age = 16
+		trait = incapable
+	}
+	chance = {
+		factor = 5
+	}
+}
+
+###The dying
+nick_the_dying = {
+	allow = {
+		age = 60
+		OR = {
+			trait = incapable
+			trait = infirm
+			trait = mangled
+			trait = severely_injured
+		}
+	}
+	chance = {
+		factor = 2
+		modifier = {
+		factor = 2
+		trait = incapable
+		}
+		modifier = {
+		factor = 1.5
+		trait = infirm
+		}
+		modifier = {
+		factor = 1.5
+		trait = mangled
+		}
+	
+	}
+}
+
+
+###The Holy Lord
+nick_the_holy_lord = {
+	allow = {
+		age = 20
+		trait = zealous
+		is_female = no
+		piety = 2000
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2.0
+			piety = 4000
+		}
+		modifier = {
+			factor = 2.0
+			piety = 8000
+		}
+		modifier = {
+			factor = 5.0
+			piety = 15000
+		}
+	}
+
+}
+
+###The Holy Lady
+nick_the_holy_lady = {
+	allow = {
+		age = 20
+		trait = zealous
+		is_female = yes
+		piety = 2000
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2.0
+			piety = 4000
+		}
+		modifier = {
+			factor = 2.0
+			piety = 8000
+		}
+		modifier = {
+			factor = 5.0
+			piety = 15000
+		}
+	}
+
+}
+
+
+###The Clear sky
+nick_the_clear_sky = {
+	allow = {
+		age = 12
+		trait = honest
+		OR = {
+			trait = trusting
+			trait = kind
+			trait = temperate
+		}
+	}
+	chance = {
+		factor = 1
+	}
+}
+
+
+###The SwordMaster
+nick_the_swordmaster = {
+	allow = {
+		combat_rating = 75
+		martial = 20
+		trait = brilliant_strategist
+		trait = duelist
+		NOT = { trait = incapable }
+	}
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 2.5
+			trait = strong
+		}
+	}
+}
+
+
+
+###############Stellaris eggs nicknames 
+
+
+###The Jingoistic Reclaimers
+nick_the_jingoistic_reclaimers = {
+	allow = {
+		age = 30
+		trait = brilliant_strategist
+		trait = wroth
+		trait = proud
+		trait = arbitrary
+		trait = stubborn
+		martial = 20
+		OR = {
+			trait = cruel
+			trait = ambitious
+		}
+		NOT = { trait = sympathy_christendom }
+		NOT = { trait = sympathy_indian }
+		NOT = { trait = sympathy_islam }
+		NOT = { trait = sympathy_judaism }
+		NOT = { trait = sympathy_pagans }
+		NOT = { trait = sympathy_zoroastrianism }
+		NOT = { trait = kind }
+		NOT = { trait = humble }
+		NOT = { trait = incapable }
+	}
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 2
+			trait = cruel
+		}
+		modifier = {
+			factor = 3
+			trait = possessed
+		}
+		modifier = {
+			factor = 3
+			trait = lunatic
+		}
+	}
+}
+
+
+###The Doctrinal Enforcers
+nick_the_doctrinal_enforcers = {
+	allow = {
+		age = 20
+		trait = zealous
+		trait = cruel
+		trait = proud
+		trait = wroth
+		martial = 20
+		piety = 3000
+		OR = {
+			trait = mastermind_theologian
+			trait = brilliant_strategist
+		}
+		NOT = { trait = sympathy_christendom }
+		NOT = { trait = sympathy_indian }
+		NOT = { trait = sympathy_islam }
+		NOT = { trait = sympathy_judaism }
+		NOT = { trait = sympathy_pagans }
+		NOT = { trait = sympathy_zoroastrianism }
+		NOT = { trait = cynical }
+		NOT = { trait = kind }
+		NOT = { trait = humble }
+		NOT = { trait = possessed }
+		NOT = { trait = incapable }
+	}
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 2
+			trait = mastermind_theologian
+		}
+		modifier = {
+			factor = 1.5
+			piety = 4000
+		}
+		modifier = {
+			factor = 2
+			piety = 6000
+		}
+		modifier = {
+			factor = 2.5
+			piety = 8000
+		}
+	}
+}
+#########################################################
+
+
+
+###The Nice kid
+nick_the_nice_kid = {
+	allow = {
+		age = 3
+		NOT = { age = 14 }
+		NOT = { trait = haughty }
+		NOT = { trait = fussy }
+		NOT = { trait = indolent }
+		OR ={
+			trait = brooding
+			trait = affectionate
+			trait = conscientious
+			trait = curious
+			trait = temperate
+			trait = charitable
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = brave
+			trait = just
+			trait = gregarious
+			trait = honest
+		}
+	}
+	chance = {
+		factor = 3
+		}
+	
+}
+###The Iron Griffin
+nick_the_iron_griffin = {
+	allow = {
+		age = 16
+		martial = 25
+		combat_rating = 60
+		trait = just
+		trait = brave
+		NOT = { trait = incapable }
+		OR = {
+			trait = strong
+			trait = robust
+			trait = duelist
+		}
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			trait = strong
+		}
+		modifier = {
+			factor = 1.5
+			trait = robust
+		}
+		modifier = {
+			factor = 0.5
+			trait = wroth
+		}
+	}
+}
+
+
+
+###The Champion idiot
+nick_the_champion_idiot = {
+	allow = {
+		OR = {
+			trait = imbecile
+			trait = inbred
+		}
+	}
+	chance = {
+		factor = 5
+	}
+}
+
+###The Fool
+nick_the_fool = {
+	allow = {
+		OR = {
+			trait = slow
+			trait = dull
+		}
+	}
+	chance = {
+		factor = 3
+	}
+}
+
+####################################
+###The Phoenix
+nick_the_phoenix = {}
+####################################
+
+
+###The Golden eyes
+nick_the_golden_eyes = {
+	allow = {
+		age = 16
+		wealth = 6000
+		stewardship = 20
+		OR = {
+		trait = administrator
+		trait = architect
+		trait = midas_touched
+		}
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			wealth = 8000
+		}
+		modifier = {
+			factor = 2
+			wealth = 10000
+		}
+		modifier = {
+			factor = 3
+			wealth = 15000
+		}
+	}
+}
+###The Leviathan
+nick_the_leviathan = {
+	allow = {
+		age = 16
+		is_female = no
+		trait = seaking
+		martial = 18
+		combat_rating = 75
+		trait = brilliant_strategist
+		OR = {
+			trait = strong
+			trait = robust
+			trait = brave
+			trait = cruel
+			trait = wroth
+		}
+	}
+	chance = {
+		factor = 3
+	}
+}
+
+
+###The Sword of revolt
+nick_the_sword_of_revolt = {
+	allow = {
+		age = 20
+		trait = cynical
+		trait = ambitious
+		NOT = { piety = 2000 }
+		martial = 15
+		combat_rating = 50
+	}
+	chance = {
+		factor = 2
+	}
+}
+
+
+###The Morning Star
+nick_the_morning_star = {
+	allow = {
+		age = 16
+		trait = just
+		NOT = { trait = deceitful }
+		NOT = { trait = cruel }
+		NOT = { trait = craven }
+		NOT = { trait = paranoid }
+		NOT = { trait = possessed }
+		NOT = { trait = lunatic }
+		OR = {
+			trait = chaste
+			trait = temperate
+			trait = charitable
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = humble
+			trait = brave
+			trait = honest
+			diplomacy = 15
+			martial = 15
+			stewardship = 15
+			learning = 15
+		}
+	}
+	chance = {
+		factor = 2.5
+	}
+}
+###The Cunning fox
+nick_the_cunning_fox = {
+	allow = {
+		age = 25
+		trait = deceitful
+		intrigue = 18
+		OR = {
+			trait = intricate_webweaver
+			trait = elusive_shadow
+		}
+
+	}
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 2
+			trait = shrewd
+		}
+		modifier = {
+			factor = 1.5
+			trait = elusive_shadow
+		}
+		modifier = {
+			factor = 1.5
+			trait = quick
+		}
+		modifier = {
+			factor = 2
+			trait = genius
+		}
+	}
+}
+
+
+
+###The miser
+nick_the_miser = {
+	allow = {
+		age = 20
+		trait = greedy
+		trait = arbitrary
+		wealth = 2000
+	}
+	chance = {
+		factor = 2
+	}
+}
+
+
+###The Reassurance
+nick_the_reassurance = {
+	allow = {
+		trait = content
+		trait = honest
+	}
+	chance = {
+		factor = 1.5
+	}
+}
+
+
+###The Devourer
+nick_the_devourer = {
+	allow = {
+		age = 16
+		trait = wroth
+		martial = 15
+		combat_rating = 40
+		OR = {
+			trait = cruel
+			trait = cannibal_trait
+		}
+	}
+	chance = {
+		factor = 3
+	}
+}
+
+
+###The Skeleton
+nick_the_skeleton = {
+	allow = {
+		age = 12
+		OR = {
+			trait = weak
+			trait = feeble
+			trait = is_malnourished
+		}
+	}
+	chance = {
+		factor = 1.5
+		modifier = {
+			trait = weak
+			factor = 2
+			}
+		modifier = {
+			trait = feeble
+			factor = 2
+			}
+	}
+}
+
+
+###The Insulter
+nick_the_insulter = {
+	allow = {
+		age = 12
+		OR = {
+			trait = proud
+			trait = cynical
+			trait = wroth
+			trait = envious
+		}
+	}
+	chance = {
+		factor = 2
+	}
+}
+
+
+
+###The Religion power crusher
+nick_the_religion_power_crusher = {
+	allow = {
+		age = 16
+		OR = {
+			trait = crowned_by_myself
+			trait = cynical
+		}
+		realm_size = 180
+		tier = emperor
+		prestige = 3000
+
+	}
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			prestige = 4000
+		}
+		modifier = {
+			factor = 2
+			prestige = 6000
+		}
+		modifier = {
+			factor = 3
+			prestige = 10000
+		}
+	}
+}
+
+
+###The ant
+nick_the_ant = {
+	allow = {
+		age = 12
+		trait = dwarf
+	}
+	chance = {
+		factor = 1
+	}
+}
+
+
+###The Demon
+nick_the_demon = {
+	allow = {
+		age = 16
+		OR = {
+			trait = possessed
+			trait = cannibal_trait
+			trait = excommunicated
+			trait = lefthanded
+		}
+		NOT = { piety = 500 }
+	}
+	chance = {
+		factor = 1.5
+	}
+}
+
+
+###The Holy Fury(just nickname)
+nick_the_holy_fury = {
+	allow = {
+		age = 16
+		trait = wroth
+		trait = proud
+		trait = zealous
+		piety = 3000
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			trait = crusader
+		}
+		modifier = {
+			factor = 2
+			trait = crusader_king
+		}
+		modifier = {
+			factor = 2
+			trait = crusader_queen
+		}
+	}
+}
+
+
+###The Iceberg Beauty
+nick_the_iceberg_beauty = {
+	allow = {
+		age = 16
+		trait = fair
+		trait = groomed
+		trait = cynical
+		OR = {
+			trait = genius
+			trait = quick
+			trait = shrewd
+		}
+	}
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			trait = shrewd
+		}
+		modifier = {
+			factor = 2
+			trait = quick
+		}
+		modifier = {
+			factor = 3
+			trait = genius
+		}
+	}
+}
+
+
+
+###The Quibble
+nick_the_quibble = {
+	allow = {
+		age = 16
+		intrigue = 16
+		OR = {
+			trait = deceitful
+			trait = paranoid
+			trait = schemer
+		}
+	}
+	chance = {
+		factor = 1.5
+	}
+}
+
+
+
+###The Popular
+nick_the_popular = {
+	allow = {
+		age = 16
+		diplomacy = 25
+		OR = {
+			trait = grey_eminence
+			trait = charismatic_negotiator
+			trait = socializer
+			trait = gamer
+		}
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			trait = grey_eminence
+		}
+		modifier = {
+			factor = 1.5
+			trait = socializer
+		}
+		modifier = {
+			factor = 1.5
+			trait = gamer
+		}
+	}
+}
+
+
+
+###The Joker
+nick_the_joker = {
+	allow = {
+		age = 16
+		OR = {
+			trait = lunatic
+			trait = ugly
+			trait = possessed
+		}
+	}
+	chance = {
+		factor = 1
+	}
+}
+
+
+
+###The Big mouth
+nick_the_big_mouth = {
+	allow = {
+		age = 16
+		trait = gregarious
+		trait = envious
+	}
+	chance = {
+		factor = 3
+	}
+}
+
+
+
+###The Pig
+nick_the_pig = {
+	allow = {
+		age = 16
+		trait = is_fat
+		trait = gluttonous
+		trait = slothful
+	}
+	chance = {
+		factor = 1
+	}
+}
+
+
+
+###The Storm
+nick_the_storm = {
+	allow = {
+		age = 16
+		trait = brave
+		trait = ambitious
+		OR = {
+			martial = 18
+			intrigue = 18
+		}
+		OR = {
+			trait = strong
+			trait = robust
+			trait = shrewd
+			trait = quick
+			trait = genius
+		}
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			trait = strong
+		}
+		modifier = {
+			factor = 1.5
+			trait = quick
+		}
+		modifier = {
+			factor = 3
+			trait = genius
+		}
+	}
+}
+
+
+
+###The Fang
+nick_the_fang = {
+	allow = {
+		age = 16
+		trait = duelist
+		trait = brave
+		trait = deceitful   ###The snake have some fang!
+		martial = 15
+		combat_rating = 60
+	}
+	chance = {
+		factor = 1.5
+	}
+}
+
+
+
+##############################Kenshi egg nickname (Mad catlon to Mad Cat XD)
+###The Mad Cat
+nick_the_mad_cat = {
+	allow = {
+		age = 40
+		trait = lunatic
+		trait = rabies ###Mad dog?Mad cat? XD
+		combat_rating = 70
+	}
+	chance = {
+		factor = 5
+	}
+}
+#################################################################################
+
+
+
+###The Evil One-Eyed
+nick_the_evil_one_eyed = {
+	allow = {
+		age = 16
+		trait = one_eyed
+		OR = {
+			trait = possessed
+			trait = excommunicated
+			trait = lefthanded
+			NOT = { piety = 1000 }
+		}
+		combat_rating = 50
+	}
+	chance = {
+		factor = 2
+	}
+}
+
+
+
+###The Noble King (Sure, this noble is an adj. after all, the king was a noble)
+nick_the_noble_king = {
+	allow = {
+		age = 25
+		is_female = no
+		OR = {
+			tier = king
+			tier = emperor
+		}
+		wealth = 20000
+		prestige = 8000
+		OR = {
+			trait = proud
+			trait = ambitious
+		}
+		OR = {
+			diplomacy = 18
+			martial = 18
+			stewardship = 18
+		}
+	}
+	chance = {
+		factor = 3
+	}
+}
+
+
+
+###The Diamond Queen
+nick_the_diamond_queen = {
+	allow = {
+		age = 25
+		is_female = yes
+		OR = {
+			tier = king
+			tier = emperor
+		}
+		wealth = 20000
+		prestige = 8000
+		OR = {
+			trait = proud
+			trait = ambitious
+		}
+		OR = {
+			diplomacy = 18
+			martial = 18
+			stewardship = 18
+		}
+	}
+	chance = {
+		factor = 3
+	}
+}
+
+
+
+###The Frosty Night Bow
+nick_the_frosty_night_bow = {
+	allow = {
+		age = 16
+		intrigue = 22
+		trait = hunter
+		trait = deceitful
+		trait = brave
+		trait = cruel
+	}
+	chance = {
+		factor = 2
+	}
+}
+
+
+
+###The Desert
+nick_the_desert = {
+	allow = {
+		age = 50
+		OR = {
+			trait = syphilitic
+			trait = has_aztec_disease
+		}
+	}
+	chance = {
+		factor = 3
+	}
+}
+
+
+
+###The cute
+nick_the_cute = {
+	allow = {
+		age = 6
+		NOT = {	age = 16 }
+		trait = fair
+	}
+	chance = {
+		factor = 1.5
+	}
+}
+
+
+
+###The Porphyrogenitos
+nick_the_porphyrogenitos = {
+	allow = {
+		trait = born_in_the_purple
+		prestige = 250
+	}
+	chance = {
+		factor = 1
+	}
+}
+
+
+
+###The Slut
+nick_the_slut = {
+	allow = {
+		is_female = yes
+		trait = lustful
+		trait = seductress
+	}
+	chance = {
+		factor = 2
+	}
+}
+
+
+
+
+###The Gorilla
+nick_the_gorilla = {
+	allow = {
+		OR = {
+			trait = strong
+			trait = robust
+		}
+		trait = wroth
+		trait = giant
+	}
+	chance = {
+		factor = 1
+	}
+}
+
+
+
+###The cage
+nick_the_cage = {
+	allow = {
+		trait = impaler
+		trait = cruel
+		trait = wroth
+	}
+	chance = {
+		factor = 1.5
+	}
+}
+
+
+
+###The Sharp sword
+nick_the_sharp_sword = {
+	allow = {
+		combat_rating = 50
+		martial = 20
+		trait = brave
+		trait = wroth
+	}
+	chance = {
+		factor = 1
+	}
+}
+
+
+
+###The Relations Knitter
+nick_the_relations_knitter = {
+	allow = {
+		diplomacy = 25
+		trait = grey_eminence
+		trait = socializer
+		OR = {
+			trait = genius
+			trait = quick
+			trait = shrewd
+		}
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			trait = genius
+		}
+		modifier = {
+			factor = 1.5
+			trait = quick
+		}
+	}
+}
+##################Version 1.0.0####################
+
+##      ####       ####
+##     #    #     #    #
+##     #    #     #    #
+##     #    #     #    #
+##     #    #     #    #
+##     #    #     #    #
+##     #    #     #    #
+##     #    #     #    #
+##  #   ####   #   ####

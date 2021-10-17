@@ -1,0 +1,24 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+friend_rejected;Friendship Spurned;Pas Friend;;;;;;;;;;;;x
+make_friend;Befriend [Root.GetFirstName];Friend de [Root.GetFirstName];;;;;;;;;;;;x
+make_friend_desc;You can attempt to make friends with [Root.GetFirstName].;Vous friend de [Root.GetFirstName].;;;;;;;;;;;;x
+recent_friend;Made a friend recently;Chambre visitée récemment;;;;;;;;;;;;x
+recent_friend_desc;You recently made friends with someone.;Chambre visitée récemment avec quelqu'un d'autre;;;;;;;;;;;;x
+EVTDESCmake_friend.0;You recently visit [FromFrom.GetFirstName] and hang out. You find you enjoy the company [FromFrom.GetFirstName] and enjoy spending time with them.;You befriend [FromFrom.GetFirstName].;;;;;;;;;;;;x
+EVTOPTAmake_friend.0;Lets be friends;Bon, avec de friends.;;;;;;;;;;;;x
+EVTOPTBmake_friend.0;I can't be your friend.;Je ne peux pas !;;;;;;;;;;;;x
+EVTDESCmake_friend.1;You hung out with [From.GetFirstName] all night and became good friends.;Vous aller [From.GetFirstName] vous a tout montré.;;;;;;;;;;;;x
+EVTOPTAmake_friend.1;I've become friends with [From.GetFirstName]!;C'est friends de [From.GetFirstName]!;;;;;;;;;;;;x
+EVTDESCmake_friend.2;[From.GetFirstName] said goodbye and didn't want to become friends.;[From.GetFirstName] vous montre la porte, pas friend.;;;;;;;;;;;;x
+EVTOPTAmake_friend.2;That is disappointing.;Ces pas bon.;;;;;;;;;;;;x
+make_rival;Declare rival;rival de [Root.GetFirstName];;;;;;;;;;;;x
+make_rival_desc;You declare [Root.GetFirstName] your rival.;Vous rival de [Root.GetFirstName].;;;;;;;;;;;;x
+recent_rival;Made a rival recently;Chambre visitée récemment;;;;;;;;;;;;x
+recent_rival_desc;You recently became rivals with someone.;Chambre visitée récemment avec quelqu'un d'autre;;;;;;;;;;;;x
+EVTDESCmake_rival.0;You have declared [FromFrom.GetFirstName] your rival. You despise [FromFrom.GetFirstName].;You rival [FromFrom.GetFirstName].;;;;;;;;;;;;x
+EVTOPTAmake_rival.0;Declare rivals;Bon, avec de rivals.;;;;;;;;;;;;x
+EVTOPTBmake_rival.0;Dismiss.;Je ne peux pas !;;;;;;;;;;;;x
+EVTDESCmake_rival.1;It has come to your attention that [From.GetFirstName] has declared you his rival.;Vous aller [From.GetFirstName] vous a tout montré.;;;;;;;;;;;;x
+EVTOPTAmake_rival.1;I have a mutual rivalry with [From.GetFirstName]. The game is afoot!;C'est rivals de [From.GetFirstName]!;;;;;;;;;;;;x
+EVTDESCmake_rival.2;[From.GetFirstName] has dismissed my rival threat; we remain rivals.;[From.GetFirstName] vous montre la porte, pas rival.;;;;;;;;;;;;x
+EVTOPTAmake_rival.2;That is disappointing.;Ces pas bon.;;;;;;;;;;;;x

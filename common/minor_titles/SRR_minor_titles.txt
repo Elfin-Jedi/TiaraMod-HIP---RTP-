@@ -1,0 +1,159 @@
+title_mistress = {
+	dignity = 0.01
+	grant_limit = 1
+	opinion_effect = 10
+	show_as_title = yes
+	
+	monthly_salary = 0.1
+    monthly_prestige = 0.01
+	
+	allowed_to_hold = {
+		is_female = yes
+		is_lover = FROM
+		is_married = no
+		is_consort = no
+		is_landed = no
+	}
+	
+	allowed_to_grant = {
+		is_landed = yes
+		OR = {
+			AND = {
+				is_female = no
+				NOR = {
+					has_concubinage = yes
+					has_polygamy = yes
+					has_religion_feature = religion_matriarchal
+				}
+			}
+			AND = {
+				is_female = yes
+				SRR_gay_accepting = yes
+				OR = {
+					has_religion_feature = religion_equal
+					has_religion_feature = religion_matriarchal
+					has_game_rule = {
+						name = gender
+						value = all
+					}
+					primary_title = { has_law = status_of_women_4 }
+				}
+			}
+		}
+		
+	}
+	
+	gain_effect = {
+		ROOT = { 
+			add_character_modifier = {
+				modifier = will_not_marry
+				duration = -1
+			}	
+			add_trait = cannot_marry
+			fertility = 0.1
+		}
+		if = {
+			limit = {
+				AND = {
+					FROM = { is_married = yes }
+					ROOT = { NOT = { has_character_flag = mistress } }
+				}
+			}
+			FROM = {
+				character_event = { id = SRR.2021 days = 10 }	
+			}
+		}
+	}
+	lose_effect = {
+		ROOT = { 
+			remove_character_modifier = will_not_marry 
+			remove_trait = cannot_marry 
+		} 
+	}
+	revoke_trigger = {
+		OR = {
+			ROOT = { NOT = { is_lover = FROM } }
+			ROOT = { is_landed = yes }
+		}
+	}
+}
+title_paramour = {
+	dignity = 0.01
+	grant_limit = 1
+	opinion_effect = 10
+	show_as_title = yes
+	
+	monthly_salary = 0.1
+    monthly_prestige = 0.01
+	
+	allowed_to_hold = {
+		is_female = no
+		is_lover = FROM
+		is_married = no
+		is_consort = no
+		is_landed = no
+	}
+	
+	allowed_to_grant = {
+		is_landed = yes
+		OR = {
+			AND = {
+				is_female = yes
+				OR = {
+					has_religion_feature = religion_equal
+					has_religion_feature = religion_matriarchal
+					has_game_rule = {
+						name = gender
+						value = all
+					}
+					primary_title = { has_law = status_of_women_4 }
+				}
+				NOR = {
+					has_concubinage = yes
+					has_polygamy = yes
+				}
+			}	
+			AND	= {
+				SRR_gay_accepting = yes
+				is_female = no
+				NOT = { has_religion_feature = religion_matriarchal }
+			}
+		}
+		
+		
+	}
+	
+	gain_effect = {
+		ROOT = { 
+			add_character_modifier = {
+				modifier = will_not_marry
+				duration = -1
+			}	
+			add_trait = cannot_marry
+			fertility = 0.1
+		}
+		if = {
+			limit = {
+				AND = {
+					FROM = { is_married = yes }
+					ROOT = { NOT = { has_character_flag = mistress } }
+				}
+			}
+			FROM = {
+				character_event = { id = SRR.2021 days = 10 }	
+			}
+		}
+	}
+	lose_effect = {
+		ROOT = { 
+			remove_character_modifier = will_not_marry 
+			remove_trait = cannot_marry 
+		} 
+	}
+	revoke_trigger = {
+		OR = {
+			ROOT = { NOT = { is_lover = FROM } }
+			ROOT = { is_landed = yes }
+		}
+	}
+}

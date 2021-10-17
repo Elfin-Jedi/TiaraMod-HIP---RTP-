@@ -1,0 +1,69 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_bloodlines_symbol_paradox"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_paradox.dds"
+	}
+	spriteType = {
+		name = "GFX_bloodlines_symbol_beowulf"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_beowulf.dds"
+	}
+	spriteType = {
+		name = "GFX_bloodlines_symbol_habsburg"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_habsburg.dds"
+	}
+	spriteType = {
+		name = "GFX_bloodlines_symbol_hohenzollern"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_hohenzollern.dds"
+	}
+	#New Patch 1.4
+	spriteType = {
+		name = "GFX_bloodlines_symbol_joan_of_arc"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_joan_of_arc.dds"
+	}
+	spriteType = {
+		name = "GFX_bloodlines_symbol_asturias"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_asturias.dds"
+	}
+	spriteType = {
+		name = "GFX_bloodlines_symbol_robert"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_robert.dds"
+	}
+	spriteType = {
+		name = "GFX_bloodlines_symbol_salian"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_salian.dds"
+	}
+	spriteType = {
+		name = "GFX_bloodlines_symbol_alfred"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_alfred.dds"
+	}
+	#New Patch 1.5
+	spriteType = {
+		name = "GFX_bloodlines_symbol_croatia"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_croatia.dds"
+	}
+	spriteType = {
+		name = "GFX_bloodlines_symbol_lithuania"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_lithuania.dds"
+	}
+	spriteType = {
+		name = "GFX_bloodlines_symbol_santso"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_santso.dds"
+	}
+	spriteType = {
+		name = "GFX_bloodlines_symbol_yaroslav"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_yaroslav.dds"
+	}
+	#New Patch 1.6
+	spriteType = {
+		name = "GFX_bloodlines_symbol_cinaed"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_cinaed.dds"
+	}
+	spriteType = {
+		name = "GFX_bloodlines_symbol_icel"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_icel.dds"
+	}
+	spriteType = {
+		name = "GFX_bloodlines_symbol_wuffa"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_wuffa.dds"
+	}
+}

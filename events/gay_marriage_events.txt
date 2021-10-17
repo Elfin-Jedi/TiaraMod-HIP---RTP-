@@ -1,0 +1,116 @@
+namespace = gay_marriage_events
+character_event = {
+	id = gay_marriage_events.0
+	desc = EVTDESCgay_marriage_events.0
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAgay_marriage_events.0
+		ai_chance = {
+			factor = 100
+		}
+		FROMFROM = { character_event = { id = gay_marriage_events.1 } }
+	}
+	option = {
+		name = EVTOPTBgay_marriage_events.0
+		ai_chance = {
+			factor = 0
+		}
+		FROMFROM = { character_event = { id = gay_marriage_events.2 } }
+	}
+}
+character_event = {
+	id = gay_marriage_events.1
+	desc = EVTDESCgay_marriage_events.1
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAgay_marriage_events.1
+		trigger = {
+			FROM = {
+				OR = {
+					ROOT = { ai = no }
+					NOT = { higher_real_tier_than = ROOT }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+		FROM = {
+			add_spouse = ROOT
+			any_realm_lord = {
+				IF = {
+					limit = {
+						trait = zealous
+					}
+					opinion = { modifier = opinion_heretic who = FROM years = 50 }
+					opinion = { modifier = opinion_heretic who = ROOT years = 50 }
+				}
+			}
+		}
+		clr_character_flag = proposed_gay_marriage
+	}
+}
+character_event = {
+	id = gay_marriage_events.2
+	desc = EVTDESCgay_marriage_events.2
+	picture = GFX_evt_quarrel
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAgay_marriage_events.2
+		FROM = { remove_lover = ROOT }
+		clr_character_flag = proposed_gay_marriage
+	}
+}
+character_event = {
+	id = gay_marriage_events.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger= {
+		OR = {
+			AND = {
+				real_father = { is_female = no }
+				mother_even_if_dead = { is_female = no }
+			}
+			AND = {
+				real_father = { is_female = yes }
+				mother_even_if_dead = { is_female = yes }
+			}
+		}
+	}
+
+	immediate = {
+		IF = {
+			limit = {
+				real_father = { is_female = no }
+				mother_even_if_dead = { is_female = no }
+			}
+			real_father = {
+				ROOT = {
+					set_father = PREV
+					dynasty = PREV
+					set_mother = 0
+				}
+			}
+		}
+		IF = {
+			limit = {
+				real_father = { is_female = yes }
+				mother_even_if_dead = { is_female = yes }
+			}
+			mother_even_if_dead = {
+				ROOT = {
+					set_mother = PREV
+					dynasty = PREV
+					set_father = 0
+					set_real_father = 0
+				}
+			}
+		}
+	}
+}

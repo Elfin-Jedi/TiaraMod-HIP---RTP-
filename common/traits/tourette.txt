@@ -1,0 +1,22 @@
+tourette = {
+
+      ruler_designer_cost = -20
+
+potential = {
+     age = 6
+}
+
+random = yes
+birth = 50
+inherit_chance = 50
+both_parent_has_trait_inherit_chance = 99
+
+  
+  diplomacy = -6
+  
+  same_opinion = 20
+  vassal_opinion = -10
+  general_opinion = -10
+  sex_appeal_opinion = -20
+
+}

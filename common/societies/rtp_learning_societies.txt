@@ -1,0 +1,3224 @@
+#####
+#Learning Society
+#
+#Total = 16
+#####
+
+#####
+#PAGANS
+#####
+
+#Reformed Pagan
+rtp_learning_reformed_pagan = {
+	sound = monastic_orders_interface
+	society_ranks_gfx = monk_ranks
+	primary_attribute = learning
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		learning = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_learning_reformed_pagan
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_learning_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = hellenic_pagan_reformed
+			religion = hellenic_pagan
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = hellenic_pagan_reformed
+			religion = hellenic_pagan
+		}
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			health = 0.25
+		}
+		decisions = {
+			rtp_learning_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			health = 0.5
+			learning = 1
+			global_tax_modifier = -0.1
+		}
+		decisions = {
+			rtp_learning_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			health = 0.75
+			learning = 2
+			global_tax_modifier = -0.1
+			fertility = -0.1
+		}
+		decisions = {
+			rtp_learning_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			health = 1
+			learning = 3
+			global_tax_modifier = -0.1
+			fertility = -0.2
+		}
+		decisions = {
+			rtp_learning_p4_td
+			rtp_learning_theocracy_sd
+			rtp_learning_holy_order_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_learning
+		
+		per_attribute = {
+			name = learning
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			learning = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = norse_pagan_reformed
+				religion = aztec_reformed
+				religion = zun_pagan_reformed
+				religion = finnish_pagan_reformed
+				religion = west_african_pagan_reformed
+				religion = slavic_pagan_reformed
+				religion = baltic_pagan_reformed
+				religion = hellenic_pagan_reformed
+				religion = tengri_pagan_reformed
+				religion = bon_reformed
+			}
+		}
+	}
+}
+
+#Pagan
+rtp_learning_pagan = {
+	sound = hermetic_society_interface
+	society_ranks_gfx = monk_ranks
+	primary_attribute = learning
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		learning = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_learning_pagan
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_learning_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion_group = pagan_group
+			religion_group = dark
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion_group = pagan_group
+			religion_group = dark
+		}
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			health = 0.25
+		}
+		decisions = {
+			rtp_learning_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			health = 0.5
+			learning = 1
+			global_tax_modifier = -0.1
+		}
+		decisions = {
+			rtp_learning_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			health = 0.75
+			learning = 2
+			global_tax_modifier = -0.1
+			fertility = -0.1
+		}
+		decisions = {
+			rtp_learning_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			health = 1
+			learning = 3
+			global_tax_modifier = -0.1
+			fertility = -0.2
+		}
+		decisions = {
+			rtp_learning_p4_td
+			rtp_learning_theocracy_sd
+			rtp_learning_holy_order_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_learning
+		
+		per_attribute = {
+			name = learning
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			learning = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion_group = pagan_group
+				religion_group = dark
+			}
+		}
+	}
+}
+
+#####
+#CHRISTIAN
+#####
+
+#Chalcedonian
+rtp_learning_chalcedonian = {
+	sound = monastic_orders_interface
+	society_ranks_gfx = monk_ranks
+	primary_attribute = learning
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		has_global_flag = rtp_chalcedonian #Chalcedonian game
+		NOT = {
+			has_global_flag = rtp_schism #The schism happens
+		}
+	}
+	
+	can_join_society = {
+		learning = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_learning_chalcedonian
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_learning_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = chalcedonian
+			religion = iconoclast
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = chalcedonian
+			religion = iconoclast
+		}
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			health = 0.25
+		}
+		decisions = {
+			rtp_learning_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			health = 0.5
+			learning = 1
+			global_tax_modifier = -0.1
+		}
+		decisions = {
+			rtp_learning_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			health = 0.75
+			learning = 2
+			global_tax_modifier = -0.1
+			fertility = -0.1
+		}
+		decisions = {
+			rtp_learning_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			health = 1
+			learning = 3
+			global_tax_modifier = -0.1
+			fertility = -0.2
+		}
+		decisions = {
+			rtp_learning_p4_td
+			rtp_learning_theocracy_sd
+			rtp_learning_holy_order_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_learning
+		
+		per_attribute = {
+			name = learning
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			learning = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = chalcedonian
+				religion = iconoclast
+			}
+		}
+	}
+}
+
+#Catholic
+rtp_learning_catholic = {
+	sound = monastic_orders_interface
+	society_ranks_gfx = monk_ranks
+	primary_attribute = learning
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		OR = {
+			NOT = {
+				has_global_flag = rtp_chalcedonian #Chalcedonian game
+			}
+			AND = {
+				has_global_flag = rtp_chalcedonian #Chalcedonian game
+				has_global_flag = rtp_schism #The schism happens
+			}
+		}
+	}
+	
+	can_join_society = {
+		learning = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = catholic
+			religion = cathar
+			religion = fraticelli
+			religion = waldensian
+			religion = lollard
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_learning_catholic
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_learning_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = catholic
+			religion = cathar
+			religion = fraticelli
+			religion = waldensian
+			religion = lollard
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = catholic
+			religion = cathar
+			religion = fraticelli
+			religion = waldensian
+			religion = lollard
+		}
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			health = 0.25
+		}
+		decisions = {
+			rtp_learning_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			health = 0.5
+			learning = 1
+			global_tax_modifier = -0.1
+		}
+		decisions = {
+			rtp_learning_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			health = 0.75
+			learning = 2
+			global_tax_modifier = -0.1
+			fertility = -0.1
+		}
+		decisions = {
+			rtp_learning_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			health = 1
+			learning = 3
+			global_tax_modifier = -0.1
+			fertility = -0.2
+		}
+		decisions = {
+			rtp_learning_p4_td
+			rtp_learning_theocracy_sd
+			rtp_learning_holy_order_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_learning
+		
+		per_attribute = {
+			name = learning
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			learning = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = catholic
+				religion = cathar
+				religion = fraticelli
+				religion = waldensian
+				religion = lollard
+			}
+		}
+	}
+}
+
+#Orthodox
+rtp_learning_orthodox = {
+	sound = monastic_orders_interface
+	society_ranks_gfx = monk_ranks
+	primary_attribute = learning
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		OR = {
+			NOT = {
+				has_global_flag = rtp_chalcedonian #Chalcedonian game
+			}
+			AND = {
+				has_global_flag = rtp_chalcedonian #Chalcedonian game
+				has_global_flag = rtp_schism #The schism happens
+			}
+		}
+	}
+	
+	can_join_society = {
+		learning = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = orthodox
+			religion = bogomilist
+			religion = monothelite
+			religion = iconoclast
+			religion = paulician
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_learning_orthodox
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_learning_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = orthodox
+			religion = bogomilist
+			religion = monothelite
+			religion = iconoclast
+			religion = paulician
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = orthodox
+			religion = bogomilist
+			religion = monothelite
+			religion = iconoclast
+			religion = paulician
+		}
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			health = 0.25
+		}
+		decisions = {
+			rtp_learning_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			health = 0.5
+			learning = 1
+			global_tax_modifier = -0.1
+		}
+		decisions = {
+			rtp_learning_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			health = 0.75
+			learning = 2
+			global_tax_modifier = -0.1
+			fertility = -0.1
+		}
+		decisions = {
+			rtp_learning_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			health = 1
+			learning = 3
+			global_tax_modifier = -0.1
+			fertility = -0.2
+		}
+		decisions = {
+			rtp_learning_p4_td
+			rtp_learning_theocracy_sd
+			rtp_learning_holy_order_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_learning
+		
+		per_attribute = {
+			name = learning
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			learning = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = orthodox
+				religion = bogomilist
+				religion = monothelite
+				religion = iconoclast
+				religion = paulician
+			}
+		}
+	}
+}
+
+#Nestorian
+rtp_learning_nestorian = {
+	sound = monastic_orders_interface
+	society_ranks_gfx = monk_ranks
+	primary_attribute = learning
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		learning = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = nestorian
+			religion = messalian
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_learning_nestorian
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_learning_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = nestorian
+			religion = messalian
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = nestorian
+			religion = messalian
+		}
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			health = 0.25
+		}
+		decisions = {
+			rtp_learning_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			health = 0.5
+			learning = 1
+			global_tax_modifier = -0.1
+		}
+		decisions = {
+			rtp_learning_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			health = 0.75
+			learning = 2
+			global_tax_modifier = -0.1
+			fertility = -0.1
+		}
+		decisions = {
+			rtp_learning_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			health = 1
+			learning = 3
+			global_tax_modifier = -0.1
+			fertility = -0.2
+		}
+		decisions = {
+			rtp_learning_p4_td
+			rtp_learning_theocracy_sd
+			rtp_learning_holy_order_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_learning
+		
+		per_attribute = {
+			name = learning
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			learning = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = nestorian
+				religion = messalian
+			}
+		}
+	}
+}
+
+#Monophysite
+rtp_learning_monophysite = {
+	sound = monastic_orders_interface
+	society_ranks_gfx = monk_ranks
+	primary_attribute = learning
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		learning = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = miaphysite
+			religion = monophysite
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_learning_monophysite
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_learning_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = miaphysite
+			religion = monophysite
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = miaphysite
+			religion = monophysite
+		}
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			health = 0.25
+		}
+		decisions = {
+			rtp_learning_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			health = 0.5
+			learning = 1
+			global_tax_modifier = -0.1
+		}
+		decisions = {
+			rtp_learning_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			health = 0.75
+			learning = 2
+			global_tax_modifier = -0.1
+			fertility = -0.1
+		}
+		decisions = {
+			rtp_learning_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			health = 1
+			learning = 3
+			global_tax_modifier = -0.1
+			fertility = -0.2
+		}
+		decisions = {
+			rtp_learning_p4_td
+			rtp_learning_theocracy_sd
+			rtp_learning_holy_order_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_learning
+		
+		per_attribute = {
+			name = learning
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			learning = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = miaphysite
+				religion = monophysite
+			}
+		}
+	}
+}
+
+#####
+#MUSLIM
+#####
+
+#Sunni
+rtp_learning_sunni = {
+	sound = monastic_orders_indian_interface
+	society_ranks_gfx = monk_ranks
+	primary_attribute = learning
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		learning = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = sunni
+			religion = zikri
+			religion = yazidi
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_learning_sunni
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_learning_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = sunni
+			religion = zikri
+			religion = yazidi
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = sunni
+			religion = zikri
+			religion = yazidi
+		}
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			health = 0.25
+		}
+		decisions = {
+			rtp_learning_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			health = 0.5
+			learning = 1
+			global_tax_modifier = -0.1
+		}
+		decisions = {
+			rtp_learning_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			health = 0.75
+			learning = 2
+			global_tax_modifier = -0.1
+			fertility = -0.1
+		}
+		decisions = {
+			rtp_learning_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			health = 1
+			learning = 3
+			global_tax_modifier = -0.1
+			fertility = -0.2
+		}
+		decisions = {
+			rtp_learning_p4_td
+			rtp_learning_theocracy_sd
+			rtp_learning_holy_order_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_learning
+		
+		per_attribute = {
+			name = learning
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			learning = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = sunni
+				religion = zikri
+				religion = yazidi
+			}
+		}
+	}
+}
+
+#Shia
+rtp_learning_shiite = {
+	sound = monastic_orders_indian_interface
+	society_ranks_gfx = monk_ranks
+	primary_attribute = learning
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		learning = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = shiite
+			religion = druze
+			religion = hurufi
+			religion = qarmatian
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_learning_shiite
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_learning_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = shiite
+			religion = druze
+			religion = hurufi
+			religion = qarmatian
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = shiite
+			religion = druze
+			religion = hurufi
+			religion = qarmatian
+		}
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			health = 0.25
+		}
+		decisions = {
+			rtp_learning_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			health = 0.5
+			learning = 1
+			global_tax_modifier = -0.1
+		}
+		decisions = {
+			rtp_learning_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			health = 0.75
+			learning = 2
+			global_tax_modifier = -0.1
+			fertility = -0.1
+		}
+		decisions = {
+			rtp_learning_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			health = 1
+			learning = 3
+			global_tax_modifier = -0.1
+			fertility = -0.2
+		}
+		decisions = {
+			rtp_learning_p4_td
+			rtp_learning_theocracy_sd
+			rtp_learning_holy_order_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_learning
+		
+		per_attribute = {
+			name = learning
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			learning = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = shiite
+				religion = druze
+				religion = hurufi
+				religion = qarmatian
+			}
+		}
+	}
+}
+
+#Ibadi
+rtp_learning_ibadi = {
+	sound = monastic_orders_indian_interface
+	society_ranks_gfx = monk_ranks
+	primary_attribute = learning
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		learning = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		OR = {
+			religion = ibadi
+			religion = kharijite
+		}
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_learning_ibadi
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_learning_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = ibadi
+			religion = kharijite
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+		OR = {
+			religion = ibadi
+			religion = kharijite
+		}
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			health = 0.25
+		}
+		decisions = {
+			rtp_learning_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			health = 0.5
+			learning = 1
+			global_tax_modifier = -0.1
+		}
+		decisions = {
+			rtp_learning_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			health = 0.75
+			learning = 2
+			global_tax_modifier = -0.1
+			fertility = -0.1
+		}
+		decisions = {
+			rtp_learning_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			health = 1
+			learning = 3
+			global_tax_modifier = -0.1
+			fertility = -0.2
+		}
+		decisions = {
+			rtp_learning_p4_td
+			rtp_learning_theocracy_sd
+			rtp_learning_holy_order_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_learning
+		
+		per_attribute = {
+			name = learning
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			learning = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			OR = {
+				religion = ibadi
+				religion = kharijite
+			}
+		}
+	}
+}
+
+#####
+#JEWISH
+#####
+
+#Jewish
+rtp_learning_jewish = {
+	sound = monastic_orders_interface
+	society_ranks_gfx = monk_ranks
+	primary_attribute = learning
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		learning = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		religion_group = jewish_group
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_learning_jewish
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_learning_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		religion_group = jewish_group
+	}
+
+	potential = {
+		lower_tier_than = KING
+		religion_group = jewish_group
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			health = 0.25
+		}
+		decisions = {
+			rtp_learning_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			health = 0.5
+			learning = 1
+			global_tax_modifier = -0.1
+		}
+		decisions = {
+			rtp_learning_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			health = 0.75
+			learning = 2
+			global_tax_modifier = -0.1
+			fertility = -0.1
+		}
+		decisions = {
+			rtp_learning_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			health = 1
+			learning = 3
+			global_tax_modifier = -0.1
+			fertility = -0.2
+		}
+		decisions = {
+			rtp_learning_p4_td
+			rtp_learning_theocracy_sd
+			rtp_learning_holy_order_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_learning
+		
+		per_attribute = {
+			name = learning
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			learning = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			religion_group = jewish_group
+		}
+	}
+}
+
+#####
+#ZOROASTRIAN
+#####
+
+#Zoroastrian
+rtp_learning_zoroastrian = {
+	sound = monastic_orders_indian_interface
+	society_ranks_gfx = monk_ranks
+	primary_attribute = learning
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		learning = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		religion_group = zoroastrian_group
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_learning_zoroastrian
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_learning_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		religion_group = zoroastrian_group
+	}
+
+	potential = {
+		lower_tier_than = KING
+		religion_group = zoroastrian_group
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			health = 0.25
+		}
+		decisions = {
+			rtp_learning_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			health = 0.5
+			learning = 1
+			global_tax_modifier = -0.1
+		}
+		decisions = {
+			rtp_learning_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			health = 0.75
+			learning = 2
+			global_tax_modifier = -0.1
+			fertility = -0.1
+		}
+		decisions = {
+			rtp_learning_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			health = 1
+			learning = 3
+			global_tax_modifier = -0.1
+			fertility = -0.2
+		}
+		decisions = {
+			rtp_learning_p4_td
+			rtp_learning_theocracy_sd
+			rtp_learning_holy_order_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_learning
+		
+		per_attribute = {
+			name = learning
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			learning = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			religion_group = zoroastrian_group
+		}
+	}
+}
+
+#####
+#EASTERN
+#####
+
+#Hindu
+rtp_learning_hindu = {
+	sound = monastic_orders_indian_interface
+	society_ranks_gfx = monk_ranks
+	primary_attribute = learning
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		learning = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		religion = hindu
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_learning_hindu
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_learning_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		religion = hindu
+	}
+
+	potential = {
+		lower_tier_than = KING
+		religion = hindu
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			health = 0.25
+		}
+		decisions = {
+			rtp_learning_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			health = 0.5
+			learning = 1
+			global_tax_modifier = -0.1
+		}
+		decisions = {
+			rtp_learning_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			health = 0.75
+			learning = 2
+			global_tax_modifier = -0.1
+			fertility = -0.1
+		}
+		decisions = {
+			rtp_learning_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			health = 1
+			learning = 3
+			global_tax_modifier = -0.1
+			fertility = -0.2
+		}
+		decisions = {
+			rtp_learning_p4_td
+			rtp_learning_theocracy_sd
+			rtp_learning_holy_order_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_learning
+		
+		per_attribute = {
+			name = learning
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			learning = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			religion = hindu
+		}
+	}
+}
+
+#Buddhist
+rtp_learning_buddhist = {
+	sound = monastic_orders_indian_interface
+	society_ranks_gfx = monk_ranks
+	primary_attribute = learning
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		learning = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		religion = buddhist
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_learning_buddhist
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_learning_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		religion = buddhist
+	}
+
+	potential = {
+		lower_tier_than = KING
+		religion = buddhist
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			health = 0.25
+		}
+		decisions = {
+			rtp_learning_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			health = 0.5
+			learning = 1
+			global_tax_modifier = -0.1
+		}
+		decisions = {
+			rtp_learning_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			health = 0.75
+			learning = 2
+			global_tax_modifier = -0.1
+			fertility = -0.1
+		}
+		decisions = {
+			rtp_learning_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			health = 1
+			learning = 3
+			global_tax_modifier = -0.1
+			fertility = -0.2
+		}
+		decisions = {
+			rtp_learning_p4_td
+			rtp_learning_theocracy_sd
+			rtp_learning_holy_order_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_learning
+		
+		per_attribute = {
+			name = learning
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			learning = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			religion = buddhist
+		}
+	}
+}
+
+#Jain
+rtp_learning_jain = {
+	sound = monastic_orders_indian_interface
+	society_ranks_gfx = monk_ranks
+	primary_attribute = learning
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		learning = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		religion = jain
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_learning_jain
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_learning_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		religion = jain
+	}
+
+	potential = {
+		lower_tier_than = KING
+		religion = jain
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			health = 0.25
+		}
+		decisions = {
+			rtp_learning_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			health = 0.5
+			learning = 1
+			global_tax_modifier = -0.1
+		}
+		decisions = {
+			rtp_learning_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			health = 0.75
+			learning = 2
+			global_tax_modifier = -0.1
+			fertility = -0.1
+		}
+		decisions = {
+			rtp_learning_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			health = 1
+			learning = 3
+			global_tax_modifier = -0.1
+			fertility = -0.2
+		}
+		decisions = {
+			rtp_learning_p4_td
+			rtp_learning_theocracy_sd
+			rtp_learning_holy_order_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_learning
+		
+		per_attribute = {
+			name = learning
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			learning = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			religion = jain
+		}
+	}
+}
+
+#Taoist
+rtp_learning_taoist = {
+	sound = monastic_orders_indian_interface
+	society_ranks_gfx = monk_ranks
+	primary_attribute = learning
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		learning = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		religion = taoist
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_learning_taoist
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_learning_society #Bye Felicia!
+			}
+		}
+	}
+
+	show_society = {
+		religion = taoist
+	}
+
+	potential = {
+		lower_tier_than = KING
+		religion = taoist
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			health = 0.25
+		}
+		decisions = {
+			rtp_learning_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			health = 0.5
+			learning = 1
+			global_tax_modifier = -0.1
+		}
+		decisions = {
+			rtp_learning_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			health = 0.75
+			learning = 2
+			global_tax_modifier = -0.1
+			fertility = -0.1
+		}
+		decisions = {
+			rtp_learning_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			health = 1
+			learning = 3
+			global_tax_modifier = -0.1
+			fertility = -0.2
+		}
+		decisions = {
+			rtp_learning_p4_td
+			rtp_learning_theocracy_sd
+			rtp_learning_holy_order_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_learning
+		
+		per_attribute = {
+			name = learning
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			learning = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			religion = taoist
+		}
+	}
+}

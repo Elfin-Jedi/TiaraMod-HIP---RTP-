@@ -1,0 +1,56 @@
+#####
+#Events
+#####
+
+RTPlandless_1_title;Tribal Challenge;;;;;;x
+RTPlandless_1.1_desc;The duel against [rtp_tribal_ruler.GetTitledName] is complete and I walk away victorious. I am now their new chief.;;;;;;x
+RTPlandless_1.2_desc;The duel against [rtp_tribal_ruler.GetTitledName] is complete and I walk away defeated. The wounds will take time to fully heal.;;;;;;x
+RTPlandless.1_1;Now I can claim my throne.;;;;;;x
+RTPlandless.1_2;Damn coward.;;;;;;x
+
+RTPlandless_3_title;Settle Tribe;;;;;;x
+RTPlandless_3_desc;A message pinned on the town center originating from [From.GetTitledName] states that [From.GetSheHe] is willing to offer brave pioneers land in exchange for 300 gold pieces.;;;;;;x
+RTPlandless.3_1;This could be a great opportunity!;;;;;;x
+RTPlandless.3_2;I won't become a savage.;;;;;;x
+
+RTPlandless_7_title;Gambling;;;;;;x
+RTPlandless_7_desc;Sitting accross the table I see [rtp_gambler.GetFirstName] getting ready for a friendly wager.;;;;;;x
+RTPlandless.7_1;All in!.;;;;;;x
+RTPlandless.7_2;I have a few coins to spare.;;;;;;x
+RTPlandless.7_3;This is all I have.;;;;;;x
+RTPlandless.7_4;On a second thought...forget it.;;;;;;x
+
+RTPlandless_22_title;Arena Fight;;;;;;x
+RTPlandless_22_desc;I decided to test my mettle in the arena. My opponent is a young [combatant_2.GetManWoman] by the name of [combatant_2.GetFirstName].;;;;;;x
+RTPlandless.22_1;Bring it on scrub!;;;;;;x
+RTPlandless.22_2;You know what?  Fuck this.;;;;;;x
+
+RTPlandless_24_title;In Search of Love;;;;;;x
+RTPlandless_24_desc;I am at a local fair, which comes alive in the mid afternoon. The bustling square smells of perfumes and sweat, fruits ripe to bursting, the earthiness of ale and hay. I stop to gaze idly on bolts of rich cloth that I cannot afford, not even daring to touch. As I turn away I catch sight of an enthralling [rtp_potential_spouse.GetManWoman] nearby, laughing at a jest I did not hear. I see nothing that suggests [rtp_potential_spouse.GetSheHe] is married, but perhaps today I am lucky, and [rtp_potential_spouse.GetSheHe] would like to be.;;;;;;x
+RTPlandless.24_1;Nice day my [rtp_potential_spouse.GetLordLady].;;;;;;x
+RTPlandless.24_2;[rtp_potential_spouse.GetSheHeCap] isn't my type.;;;;;;x
+RTPlandless.24_3;[rtp_potential_spouse.GetSheHeCap] was not interested.;;;;;;x
+
+RTPlandless.26_title;Recruit Patriots;;;;;;x
+RTPlandless.26_desc;Most of the [Root.Location.Culture.GetName] population in [rtp_selected_province.GetName] is willing to revolt.;;;;;;x
+RTPlandless.26_1; ;;;;;;x
+
+RTPlandless.27_title;A Fief For The Taking;;;;;;x
+RTPlandless.27_desc;With the recent success of the conquest, [rtp_winner.GetTitledName] is now offering me the fief of [rtp_new_title.GetName] for my outstanding performance in the battlefield.;;;;;;x
+RTPlandless.27_1;Thank you my [rtp_winner.GetLordLady].;;;;;;x
+RTPlandless.27_2;It is an honor, but I cannot accept.;;;;;;x
+
+RTPlandless.28_title;Recruit Volunteers;;;;;;x
+RTPlandless.28_desc;Recruited some [Root.Location.Culture.GetName] volunteers in [rtp_selected_holding.GetName].;;;;;;x
+RTPlandless.28_1; ;;;;;;x
+
+RTPlandless.29_title;Recruit Zealots;;;;;;x
+RTPlandless.29_desc;Most of the [Root.Location.Religion.GetName] population in [rtp_selected_province.GetName] is willing to revolt.;;;;;;x
+RTPlandless.29_1; ;;;;;;x
+
+#####
+#Tooltips
+#####
+
+rtp_not_gambled_ct;Did NOT previously gamble.;;;;;;x
+rtp_not_fought_in_arena_ct;Did NOT previously fight in the arena.;;;;;;x

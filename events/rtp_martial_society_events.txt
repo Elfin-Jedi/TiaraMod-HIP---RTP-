@@ -1,0 +1,2175 @@
+#####
+#Martial Society Events
+#
+#Total = 34
+#####
+
+namespace = RTPmsociety
+
+#Main Events
+#####
+
+#Stolen Goods - Martial Mission Start
+society_quest_event = {
+	id = RTPmsociety.1
+	desc = "RTPmsociety.1_desc"
+	is_triggered_only = yes
+
+	immediate = {
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1825
+		}
+
+		liege = {
+			create_character = {
+				age = 35
+				random_traits = yes
+				religion = PREV
+				culture = PREV
+				dynasty = none
+				health = 10
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target #The first target of the quest
+			}
+		}
+
+		society = {
+			random_society_member = {
+				limit = {
+					rtp_is_capable_adult = yes
+				}
+				preferred_limit = {
+					ROOT = {
+						top_liege = {
+							is_within_diplo_range = PREVPREV
+						}
+					}
+				}
+				save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+			}
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.1_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			event_target:rtp_society_quest_target = {
+				show_scope_change = no
+				set_quest_target = {
+					id = rtp_stolen_goods_martial_mission
+					holder = ROOT
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPmsociety.2 #Stolen Goods - Martial Mission Part 1
+			days = 90
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.1_2"
+
+		custom_tooltip = {
+			text = "rtp_may_be_kicked_ct"
+
+			random = {
+				chance = 25
+	
+				society = {
+					leader = {
+						ROOT = {
+							letter_event = {
+								id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Stolen Goods - Martial Mission Part 1
+character_event = {
+	id = RTPmsociety.2
+	title = "RTPmsociety.2_title"
+	desc = "RTPmsociety.2_desc"
+	picture = GFX_evt_hunting_scene
+	is_triggered_only = yes
+	hide_from = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPmsociety.31 #Failed To Reach Target In Time
+		}
+	}
+
+	trigger = {
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+		event_target:rtp_society_quest_target2 = {
+			is_alive = yes
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.2_1"
+
+		random = {
+			chance = 20
+
+			add_trait = proud
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.2_2"
+
+		event_target:rtp_society_quest_target2 = {
+			save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+		}
+
+		random = {
+			chance = 20
+
+			add_trait = humble
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPmsociety.3 #Stolen Goods - Martial Mission Part 2
+			days = 1
+		}
+	}
+}
+
+#Stolen Goods - Martial Mission Part 2
+character_event = {
+	id = RTPmsociety.3
+	title = "RTPmsociety.3_title"
+	desc = "RTPmsociety.3_desc"
+	picture = GFX_evt_longbowman
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPmsociety.3_1"
+
+		event_target:rtp_society_quest_target2 = {
+			save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPmsociety.4 #Stolen Goods - Martial Mission Part 3
+		}
+	}
+}
+
+#Stolen Goods - Martial Mission Part 3
+character_event = {
+	id = RTPmsociety.4
+	title = "RTPmsociety.4_title"
+	desc = "RTPmsociety.4_desc"
+	picture = GFX_evt_duel_scene
+	is_triggered_only = yes
+	hide_from = yes
+
+	immediate = {
+		create_character = {
+			age = 30
+			random_traits = yes
+			religion = event_target:rtp_society_quest_target
+			culture = event_target:rtp_society_quest_target
+			dynasty = none
+		}
+		new_character = {
+			set_character_flag = rtp_trash #Just delete this dude
+			save_event_target_as = combatant_2 #the target of the duel...
+			save_event_target_as = rtp_society_quest_bandit #The first bandit
+		}
+		save_event_target_as = combatant_1 #the person issuing the duel...
+	}
+
+	option = {
+		name = "RTPmsociety.4_1"
+
+		event_target:rtp_society_quest_bandit = {
+			save_event_target_as = rtp_society_quest_bandit #The first bandit
+		}
+
+		character_event = {
+			id = HFP.10100
+		}
+
+		hidden_tooltip = {
+			random_list = {
+				75 = {
+					character_event = {
+						id = RTPmsociety.5 #Stolen Goods - Martial Mission Part 4
+						days = 7
+					}
+				}
+				25 = {
+					set_character_flag = rtp_success #You succeed
+					character_event = {
+						id = RTPmsociety.7 #Stolen Goods - Martial Mission End
+						days = 7
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.4_2"
+
+		character_event = {
+			id = RTPmsociety.7 #Stolen Goods - Martial Mission End
+		}
+	}
+}
+
+#Stolen Goods - Martial Mission Part 4
+character_event = {
+	id = RTPmsociety.5
+	title = "RTPmsociety.5_title"
+	desc = "RTPmsociety.5_desc"
+	picture = GFX_evt_duel_scene
+	is_triggered_only = yes
+	hide_from = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPmsociety.7 #Stolen Goods - Martial Mission End
+		}
+		character_event = {
+			id = RTPmsociety.101 #Ping For Cleaning Out Missions - Martial Mission
+			days = 90
+		}
+	}
+
+	trigger = {
+		has_character_modifier = recent_duel_victory
+		is_alive = yes
+	}
+
+	immediate = {
+		remove_character_modifier = recent_duel_victory
+		create_character = {
+			age = 25
+			random_traits = yes
+			religion = event_target:rtp_society_quest_target
+			culture = event_target:rtp_society_quest_target
+			dynasty = none
+		}
+		new_character = {
+			save_event_target_as = combatant_2 #the target of the duel...
+			set_character_flag = rtp_trash #Just delete this dude
+			save_event_target_as = rtp_society_quest_bandit2 #The first bandit
+		}
+		save_event_target_as = combatant_1 #the person issuing the duel...
+	}
+
+	option = {
+		name = "RTPmsociety.5_1"
+
+		event_target:rtp_society_quest_bandit2 = {
+			save_event_target_as = rtp_society_quest_bandit2 #The second bandit
+		}
+
+		random = {
+			chance = 20
+
+			add_trait = brave
+		}
+
+		character_event = {
+			id = HFP.10100
+		}
+
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					character_event = {
+						id = RTPmsociety.6 #Stolen Goods - Martial Mission Part 5
+						days = 7
+					}
+				}
+				50 = {
+					set_character_flag = rtp_success #You succeed
+					character_event = {
+						id = RTPmsociety.7 #Stolen Goods - Martial Mission End
+						days = 7
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.5_2"
+
+		character_event = {
+			id = RTPmsociety.7 #Stolen Goods - Martial Mission End
+		}
+	}
+}
+
+#Stolen Goods - Martial Mission Part 5
+character_event = {
+	id = RTPmsociety.6
+	title = "RTPmsociety.6_title"
+	desc = "RTPmsociety.6_desc"
+	picture = GFX_evt_duel_scene
+	is_triggered_only = yes
+	hide_from = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPmsociety.7 #Stolen Goods - Martial Mission End
+		}
+		character_event = {
+			id = RTPmsociety.101 #Ping For Cleaning Out Missions - Martial Mission
+			days = 90
+		}
+	}
+
+	trigger = {
+		has_character_modifier = recent_duel_victory
+		is_alive = yes
+	}
+
+	immediate = {
+		remove_character_modifier = recent_duel_victory
+		create_character = {
+			age = 20
+			random_traits = yes
+			religion = event_target:rtp_society_quest_target
+			culture = event_target:rtp_society_quest_target
+			dynasty = none
+		}
+		new_character = {
+			set_character_flag = rtp_trash #Just delete this dude
+			save_event_target_as = combatant_2 #the target of the duel...
+			save_event_target_as = rtp_society_quest_bandit3 #The first bandit
+		}
+		save_event_target_as = combatant_1 #the person issuing the duel...
+	}
+
+	option = {
+		name = "RTPmsociety.6_1"
+
+		event_target:rtp_society_quest_bandit3 = {
+			save_event_target_as = rtp_society_quest_bandit3 #The third bandit
+		}
+
+		set_character_flag = rtp_success #You succeed
+
+		random = {
+			chance = 20
+
+			add_trait = brave
+		}
+
+		character_event = {
+			id = RTPmsociety.7 #Stolen Goods - Martial Mission End
+			days = 7
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.6_2"
+
+		character_event = {
+			id = RTPmsociety.7 #Stolen Goods - Martial Mission End
+		}
+	}
+}
+
+#Stolen Goods - Martial Mission End
+character_event = {
+	id = RTPmsociety.7
+	title = "RTPmsociety.7_title"
+	desc = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		text = "RTPmsociety.7.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPmsociety.7.2_desc"
+	}
+	picture = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		picture = GFX_evt_feast_hf
+	}
+	picture = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		picture = GFX_evt_bloody_man
+	}
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = "RTPmsociety.7_1"
+
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_stolen_goods_martial_mission
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_medium_currency_se = yes
+	}
+
+	option = {
+		name = "RTPmsociety.7_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_stolen_goods_martial_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPmsociety.101 #Ping For Cleaning Out Missions - Martial Mission
+			days = 90
+		}
+	}
+}
+
+#Safe Passage - Martial Mission Start
+society_quest_event = {
+	id = RTPmsociety.8
+	desc = "RTPmsociety.8_desc"
+	is_triggered_only = yes
+
+	immediate = {
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1825
+		}
+
+		liege = {
+			create_character = {
+				age = 17
+				random_traits = yes
+				religion = ROOT
+				culture = ROOT
+				dynasty = none
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target #The target of the quest
+			}
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.8_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			event_target:rtp_society_quest_target = {
+				show_scope_change = no
+				set_quest_target = {
+					id = rtp_safe_passage_martial_mission
+					holder = ROOT
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPmsociety.9 #Safe Passage - Martial Mission Part 1
+			days = 90
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.8_2"
+
+		custom_tooltip = {
+			text = "rtp_may_be_kicked_ct"
+
+			random = {
+				chance = 25
+	
+				society = {
+					leader = {
+						ROOT = {
+							letter_event = {
+								id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Safe Passage - Martial Mission Part 1
+character_event = {
+	id = RTPmsociety.9
+	title = "RTPmsociety.9_title"
+	desc = "RTPmsociety.9_desc"
+	picture = GFX_evt_carriage
+	is_triggered_only = yes
+	hide_from = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPmsociety.31 #Failed To Reach Target In Time
+		}
+	}
+
+	trigger = {
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.9_1"
+
+		hidden_tooltip = {
+			random_list = {
+				75 = {
+					set_character_flag = rtp_success #You succeed
+					character_event = {
+						id = RTPmsociety.14 #Safe Passage - Martial Mission End
+						days = 7
+					}
+				}
+				25 = {
+					character_event = {
+						id = RTPmsociety.10 #Safe Passage - Martial Mission Part 2
+					}
+				}
+			}
+		}
+	}
+}
+
+#Safe Passage - Martial Mission Part 2
+character_event = {
+	id = RTPmsociety.10
+	title = "RTPmsociety.10_title"
+	desc = "RTPmsociety.10_desc"
+	picture = GFX_evt_longbowman
+	is_triggered_only = yes
+	hide_from = yes
+
+	immediate = {
+		create_character = {
+			age = 30
+			random_traits = yes
+			religion = event_target:rtp_society_quest_target
+			culture = event_target:rtp_society_quest_target
+			dynasty = none
+		}
+		new_character = {
+			set_character_flag = rtp_trash #Just delete this dude
+			save_event_target_as = combatant_2 #the target of the duel...
+			save_event_target_as = rtp_society_quest_bandit #The first bandit
+		}
+		save_event_target_as = combatant_1 #the person issuing the duel...
+	}
+
+	option = {
+		name = "RTPmsociety.10_1"
+
+		event_target:rtp_society_quest_bandit = {
+			save_event_target_as = rtp_society_quest_bandit #The first bandit
+		}
+
+		random = {
+			chance = 20
+
+			add_trait = brave
+		}
+
+		character_event = {
+			id = HFP.10100
+		}
+
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					character_event = {
+						id = RTPmsociety.11 #Safe Passage - Martial Mission Part 4
+						days = 7
+					}
+				}
+				50 = {
+					set_character_flag = rtp_success #You succeed
+					character_event = {
+						id = RTPmsociety.14 #Stolen Goods - Martial Mission End
+						days = 7
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.10_2"
+
+		event_target:rtp_society_quest_bandit = {
+			save_event_target_as = rtp_society_quest_bandit #The first bandit
+		}
+
+		character_event = {
+			id = HFP.10100
+		}
+
+		character_event = {
+			id = RTPmsociety.7 #Stolen Goods - Martial Mission End
+			days = 7
+		}
+	}
+}
+
+#Safe Passage - Martial Mission Part 3
+character_event = {
+	id = RTPmsociety.11
+	title = "RTPmsociety.11_title"
+	desc = "RTPmsociety.11_desc"
+	picture = GFX_evt_carriage
+	is_triggered_only = yes
+	hide_from = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPmsociety.14 #Safe Passage - Martial
+		}
+		character_event = {
+			id = RTPmsociety.101 #Ping For Cleaning Out Missions - Martial Mission
+			days = 90
+		}
+	}
+
+	trigger = {
+		has_character_modifier = recent_duel_victory
+		is_alive = yes
+	}
+
+	option = {
+		name = "RTPmsociety.11_1"
+
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					character_event = {
+						id = RTPmsociety.12 #Safe Passage - Martial Mission Part 4
+						days = 7
+					}
+				}
+				50 = {
+					set_character_flag = rtp_success #You succeed
+					character_event = {
+						id = RTPmsociety.14 #Stolen Goods - Martial Mission End
+						days = 7
+					}
+				}
+			}
+		}
+	}
+}
+
+#Safe Passage - Martial Mission Part 4
+character_event = {
+	id = RTPmsociety.12
+	title = "RTPmsociety.12_title"
+	desc = "RTPmsociety.12_desc"
+	picture = GFX_evt_carriage
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPmsociety.12_1"
+
+		character_event = {
+			id = RTPmsociety.13 #Safe Passage - Martial Mission Part 5
+			days = 7
+		}
+	}
+}
+
+#Safe Passage - Martial Mission Part 5
+character_event = {
+	id = RTPmsociety.13
+	title = "RTPmsociety.13_title"
+	desc = "RTPmsociety.13_desc"
+	picture = GFX_evt_duel_scene
+	is_triggered_only = yes
+	hide_from = yes
+
+	immediate = {
+		create_character = {
+			age = 25
+			random_traits = yes
+			religion = event_target:rtp_society_quest_target
+			culture = event_target:rtp_society_quest_target
+			dynasty = none
+		}
+		new_character = {
+			set_character_flag = rtp_trash #Just delete this dude
+			save_event_target_as = combatant_2 #the target of the duel...
+			save_event_target_as = rtp_society_quest_bandit2 #The second bandit
+		}
+		save_event_target_as = combatant_1 #the person issuing the duel...
+	}
+
+	option = {
+		name = "RTPmsociety.13_1"
+
+		event_target:rtp_society_quest_bandit2 = {
+			save_event_target_as = rtp_society_quest_bandit2 #The second bandit
+		}
+
+		random = {
+			chance = 20
+
+			add_trait = brave
+		}
+
+		character_event = {
+			id = HFP.10100
+		}
+
+		character_event = {
+			id = RTPmsociety.14 #Safe Passage - Martial Mission End
+			days = 7
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.13_2"
+
+		event_target:rtp_society_quest_bandit = {
+			save_event_target_as = rtp_society_quest_bandit #The first bandit
+		}
+
+		character_event = {
+			id = HFP.10100
+		}
+
+		character_event = {
+			id = RTPmsociety.14 #Stolen Goods - Martial Mission End
+			days = 7
+		}
+	}
+}
+
+#Safe Passage - Martial Mission End
+character_event = {
+	id = RTPmsociety.14
+	title = "RTPmsociety.14_title"
+	desc = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		text = "RTPmsociety.14.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPmsociety.14.2_desc"
+	}
+	picture = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		picture = GFX_evt_carriage
+	}
+	picture = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		picture = GFX_evt_bloody_man
+	}
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_character_modifier = recent_duel_victory
+				is_alive = yes
+			}
+			set_character_flag = rtp_success #You succeed
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.14_1"
+
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_safe_passage_martial_mission
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_medium_currency_se = yes
+	}
+
+	option = {
+		name = "RTPmsociety.14_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_safe_passage_martial_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPmsociety.101 #Ping For Cleaning Out Missions - Martial Mission
+			days = 90
+		}
+	}
+}
+
+#Late Fees - Martial Mission Start
+society_quest_event = {
+	id = RTPmsociety.15
+	desc = "RTPmsociety.15_desc"
+	is_triggered_only = yes
+
+	immediate = {
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1825
+		}
+
+		liege = {
+			create_character = {
+				age = 20
+				random_traits = yes
+				religion = ROOT
+				culture = ROOT
+				dynasty = random
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target #The target of the quest
+			}
+		}
+
+		event_target:rtp_society_quest_target = {
+			create_character = {
+				age = 30
+				random_traits = yes
+				religion = event_target:rtp_society_quest_target
+				culture = event_target:rtp_society_quest_target
+				dynasty = none
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+			}
+		}
+
+		society = {
+			random_society_member = {
+				limit = {
+					rtp_is_capable_adult = yes
+				}
+				preferred_limit = {
+					ROOT = {
+						top_liege = {
+							is_within_diplo_range = PREVPREV
+						}
+					}
+				}
+				save_event_target_as = rtp_society_quest_target3 #The third target of the quest
+			}
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.15_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			event_target:rtp_society_quest_target = {
+				show_scope_change = no
+				set_quest_target = {
+					id = rtp_late_fees_martial_mission
+					holder = ROOT
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPmsociety.16 #Late Fees - Martial Mission Mission Part 1
+			days = 90
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.15_2"
+
+		custom_tooltip = {
+			text = "rtp_may_be_kicked_ct"
+
+			random = {
+				chance = 25
+	
+				society = {
+					leader = {
+						ROOT = {
+							letter_event = {
+								id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Late Fees - Martial Mission Part 1
+character_event = {
+	id = RTPmsociety.16
+	title = "RTPmsociety.16_title"
+	desc = "RTPmsociety.16_desc"
+	picture = GFX_evt_riders_night_hf
+	is_triggered_only = yes
+	hide_from = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPmsociety.31 #Failed To Reach Target In Time
+		}
+	}
+
+	trigger = {
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+		event_target:rtp_society_quest_target2 = {
+			is_alive = yes
+		}
+		event_target:rtp_society_quest_target3 = {
+			is_alive = yes
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.16_1"
+
+		character_event = {
+			id = RTPmsociety.17 #Late Fees - Martial Mission Part 2-1
+		}
+	}
+}
+
+#Late Fees - Martial Mission Part 2
+character_event = {
+	id = RTPmsociety.17
+	title = "RTPmsociety.17_title"
+	desc = "RTPmsociety.17_desc"
+	picture = GFX_evt_group_hf
+	is_triggered_only = yes
+	hide_from = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = "RTPmsociety.17_1"
+
+		random = {
+			chance = 20
+
+			add_trait = patient
+		}
+
+		random_list = {
+			50 = {
+				set_character_flag = rtp_success #You succeed
+				character_event = {
+					id = RTPmsociety.19 #Late Fees - Martial Mission End-1
+				}
+			}
+			25 = {
+				character_event = {
+					id = RTPmsociety.19 #Late Fees - Martial Mission End-1
+				}
+			}
+			25 = {
+				character_event = {
+					id = RTPmsociety.18 #Late Fees - Martial Mission Part 3
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.17_2"
+
+		random = {
+			chance = 20
+
+			add_trait = wroth
+		}
+
+		random_list = {
+			50 = {
+				set_character_flag = rtp_success #You succeed
+				character_event = {
+					id = RTPmsociety.20 #Late Fees - Martial Mission End-2
+				}
+			}
+			25 = {
+				character_event = {
+					id = RTPmsociety.20 #Late Fees - Martial Mission End-2
+				}
+			}
+			25 = {
+				character_event = {
+					id = RTPmsociety.18 #Late Fees - Martial Mission Part 3
+				}
+			}
+		}
+	}
+}
+
+#Late Fees - Martial Mission Part 3
+character_event = {
+	id = RTPmsociety.18
+	title = "RTPmsociety.18_title"
+	desc = "RTPmsociety.18_desc"
+	picture = GFX_evt_pale_rider
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPmsociety.18_1"
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_late_fees_martial_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPmsociety.101 #Ping For Cleaning Out Missions - Martial Mission
+			days = 90
+		}
+	}
+}
+
+#Late Fees - Martial Mission End/1
+character_event = {
+	id = RTPmsociety.19
+	title = "RTPmsociety.19_title"
+	desc = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		text = "RTPmsociety.19.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPmsociety.19.2_desc"
+	}
+	picture = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		picture = GFX_evt_stressed_ruler
+	}
+	picture = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		picture = GFX_evt_scandal
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPmsociety.19_1"
+
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_late_fees_martial_mission
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_medium_currency_se = yes
+	}
+
+	option = {
+		name = "RTPmsociety.19_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_late_fees_martial_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPmsociety.101 #Ping For Cleaning Out Missions - Intrigue Mission
+			days = 90
+		}
+	}
+}
+
+#Late Fees - Martial Mission End/2
+character_event = {
+	id = RTPmsociety.20
+	title = "RTPmsociety.20_title"
+	desc = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		text = "RTPmsociety.20.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPmsociety.20.2_desc"
+	}
+	picture = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		picture = GFX_evt_bloody_tools
+	}
+	picture = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		picture = GFX_evt_bloody_man
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPmsociety.20_1"
+
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_late_fees_martial_mission
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_medium_currency_se = yes
+	}
+
+	option = {
+		name = "RTPmsociety.20_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_late_fees_martial_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPmsociety.101 #Ping For Cleaning Out Missions - Intrigue Mission
+			days = 90
+		}
+	}
+}
+
+#The Champion - Martial Mission Start
+society_quest_event = {
+	id = RTPmsociety.21
+	desc = "RTPmsociety.21_desc"
+	is_triggered_only = yes
+
+	immediate = {
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1825
+		}
+
+		top_liege = {
+			create_character = {
+				age = 30
+				female = no
+				random_traits = yes
+				dynasty = random
+				religion = PREV
+				culture = PREV
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target #The target of the quest
+				trigger_switch = {
+					on_trigger = religion_group
+					christian = 			{ add_trait = christian_leader }
+					muslim = 				{ add_trait = muslim_leader }
+					zoroastrian_group = 	{ add_trait = zoroastrian_leader }
+					jewish_group = 			{ add_trait = jewish_leader }
+					indian_group = 			{ add_trait = eastern_leader }
+				}
+
+				trigger_switch = {
+					on_trigger = religion
+					norse_pagan = 						{ add_trait = norse_leader }
+					norse_pagan_reformed = 				{ add_trait = norse_leader }
+					aztec = 							{ add_trait = aztec_leader }
+					aztec_reformed = 					{ add_trait = aztec_leader }
+					zun_pagan = 						{ add_trait = zun_leader }
+					zun_pagan_reformed = 				{ add_trait = zun_leader }
+					finnish_pagan = 					{ add_trait = finnish_leader }
+					finnish_pagan_reformed = 			{ add_trait = finnish_leader }
+					west_african_pagan = 				{ add_trait = west_african_leader }
+					west_african_pagan_reformed = 		{ add_trait = west_african_leader }
+					slavic_pagan = 						{ add_trait = slavic_leader }
+					slavic_pagan_reformed = 			{ add_trait = slavic_leader }
+					baltic_pagan = 						{ add_trait = baltic_leader }
+					baltic_pagan_reformed = 			{ add_trait = baltic_leader }
+					hellenic_pagan = 					{ add_trait = hellenic_leader }
+					hellenic_pagan_reformed = 			{ add_trait = hellenic_leader }
+					tengri_pagan = 						{ add_trait = tengri_leader }
+					tengri_pagan_reformed = 			{ add_trait = tengri_leader }
+					bon = 								{ add_trait = bon_leader }
+					bon_reformed = 						{ add_trait = bon_leader }
+				}
+			}
+		}
+		top_liege = {
+			create_character = {
+				age = 22
+				female = no
+				random_traits = yes
+				dynasty = random
+				religion = PREV
+				culture = PREV
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+			}
+		}
+		top_liege = {
+			create_character = {
+				age = 22
+				female = yes
+				random_traits = yes
+				dynasty = random
+				religion = PREV
+				culture = PREV
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target3 #The third target of the quest
+			}
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.21_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			event_target:rtp_society_quest_target = {
+				show_scope_change = no
+				set_quest_target = {
+					id = rtp_the_champion_martial_mission
+					holder = ROOT
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPmsociety.22 #The Champion - Martial Mission Part 1
+			days = 90
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.21_2"
+
+		custom_tooltip = {
+			text = "rtp_may_be_kicked_ct"
+
+			random = {
+				chance = 25
+	
+				society = {
+					leader = {
+						ROOT = {
+							letter_event = {
+								id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#The Champion - Martial Mission Part 1
+character_event = {
+	id = RTPmsociety.22
+	title = "RTPmsociety.22_title"
+	desc = "RTPmsociety.22_desc"
+	picture = GFX_evt_bad_news
+	is_triggered_only = yes
+	hide_from = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPmsociety.31 #Failed To Reach Target In Time
+		}
+	}
+
+	trigger = {
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+		event_target:rtp_society_quest_target2 = {
+			is_alive = yes
+		}
+		event_target:rtp_society_quest_target3 = {
+			is_alive = yes
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.22_1"
+
+		character_event = {
+			id = RTPmsociety.23 #Late Fees - Martial Mission Part 2
+			days = 1
+		}
+	}
+}
+
+#The Champion - Martial Mission Part 2
+character_event = {
+	id = RTPmsociety.23
+	title = "RTPmsociety.23_title"
+	desc = "RTPmsociety.23_desc"
+	picture = GFX_evt_group_hf
+	is_triggered_only = yes
+	hide_from = yes
+
+	immediate = {
+		remove_character_modifier = recent_duel_victory
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = combatant_2 #the target of the duel...
+		}
+		save_event_target_as = combatant_1 #the person issuing the duel...
+	}
+
+	option = {
+		name = "RTPmsociety.23_1"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The target of the quest
+		}
+
+		random = {
+			chance = 10
+
+			add_trait = brave
+		}
+
+		character_event = {
+			id = HFP.10100
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.23_2"
+
+		random = {
+			chance = 10
+
+			add_trait = craven
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPmsociety.24 #The Champion - Martial Mission End
+			days = 7
+		}
+	}
+}
+
+#The Champion - Martial Mission End
+character_event = {
+	id = RTPmsociety.24
+	title = "RTPmsociety.24_title"
+	desc = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		text = "RTPmsociety.24.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPmsociety.24.2_desc"
+	}
+	picture = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		picture = GFX_evt_feast
+	}
+	picture = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		picture = GFX_evt_cornered_duel_hf
+	}
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_character_modifier = recent_duel_victory
+				is_alive = yes
+			}
+			set_character_flag = rtp_success #You succeed
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.14_1"
+
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_the_champion_martial_mission
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_medium_currency_se = yes
+	}
+
+	option = {
+		name = "RTPmsociety.14_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_the_champion_martial_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPmsociety.101 #Ping For Cleaning Out Missions - Martial Mission
+			days = 90
+		}
+	}
+}
+
+#Bounty Hunter - Martial Mission Start
+society_quest_event = {
+	id = RTPmsociety.25
+	desc = "RTPmsociety.25_desc"
+	is_triggered_only = yes
+
+	immediate = {
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1825
+		}
+
+		top_liege = {
+			create_character = {
+				age = 30
+				female = 20
+				random_traits = yes
+				dynasty = none
+				religion = PREV
+				culture = PREV
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target #The target of the quest
+			}
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.25_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			event_target:rtp_society_quest_target = {
+				show_scope_change = no
+				set_quest_target = {
+					id = rtp_bounty_hunter_martial_mission
+					holder = ROOT
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPmsociety.26 #Bounty Hunter - Martial Mission Part 1
+			days = 90
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.25_2"
+
+		custom_tooltip = {
+			text = "rtp_may_be_kicked_ct"
+
+			random = {
+				chance = 25
+	
+				society = {
+					leader = {
+						ROOT = {
+							letter_event = {
+								id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Bounty Hunter - Martial Mission Part 1
+character_event = {
+	id = RTPmsociety.26
+	title = "RTPmsociety.26_title"
+	desc = "RTPmsociety.26_desc"
+	picture = GFX_evt_death_hashshashin
+	hide_from = yes
+	is_triggered_only = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPmsociety.31 #Failed To Reach Target In Time
+		}
+	}
+
+	trigger = {
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+	}
+
+	immediate = {
+		remove_character_modifier = recent_duel_victory
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = combatant_2 #the target of the duel...
+		}
+		save_event_target_as = combatant_1 #the person issuing the duel...
+	}
+
+	option = {
+		name = "RTPmsociety.26_1"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The target of the quest
+		}
+
+		character_event = {
+			id = HFP.10100
+		}
+
+		character_event = {
+			id = RTPmsociety.27 #Bounty Hunter - Martial Mission Part 2-1
+			days = 7
+		}
+		character_event = {
+			id = RTPmsociety.29 #Bounty Hunter - Martial Mission Part 2-2
+			days = 10
+		}
+
+		random = {
+			chance = 10
+
+			add_trait = brave
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.26_2"
+
+		random = {
+			chance = 10
+
+			add_trait = craven
+		}
+
+		clr_quest = {
+			id = rtp_bounty_hunter_martial_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+}
+
+#Bounty Hunter - Martial Mission Part 2-1
+character_event = {
+	id = RTPmsociety.27
+	title = "RTPmsociety.27_title"
+	desc = "RTPmsociety.27_desc"
+	picture = GFX_evt_bloody_man
+	is_triggered_only = yes
+	hide_from = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPmsociety.101 #Ping For Cleaning Out Missions - Martial Mission
+			days = 90
+		}
+	}
+
+	trigger = {
+		has_character_modifier = recent_duel_victory
+		is_alive = yes
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.27_1"
+
+		character_event = {
+			id = RTPmsociety.28 #Bounty Hunter - Martial Mission Part 3-1
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.27_2"
+
+		set_character_flag = rtp_success #You succeed
+
+		character_event = {
+			id = RTPmsociety.30 #Bounty Hunter - Martial Mission End
+			days = 7
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+}
+
+#Bounty Hunter - Martial Mission Part 3-1
+character_event = {
+	id = RTPmsociety.28
+	title = "RTPmsociety.28_title"
+	desc = "RTPmsociety.28_desc"
+	picture = GFX_evt_bribe_accepted
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPmsociety.27_1"
+
+		clr_quest = {
+			id = rtp_bounty_hunter_martial_mission
+			failure = yes
+		}
+
+		rtp_give_big_gold_se = yes
+		rtp_give_big_currency_se = yes
+
+		character_event = {
+			id = RTPmsociety.101 #Ping For Cleaning Out Missions - Martial Mission
+			days = 90
+		}
+	}
+}
+
+#Bounty Hunter - Martial Mission Part 2-2
+character_event = {
+	id = RTPmsociety.29
+	title = "RTPmsociety.29_title"
+	desc = "RTPmsociety.29_desc"
+	picture = GFX_evt_death_duel
+	is_triggered_only = yes
+	hide_from = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPmsociety.101 #Ping For Cleaning Out Missions - Martial Mission
+			days = 90
+		}
+	}
+
+	trigger = {
+		has_character_modifier = recent_duel_victory
+		is_alive = yes
+		event_target:rtp_society_quest_target = {
+			is_alive = no
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.29_1"
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_the_champion_martial_mission
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_medium_currency_se = yes
+
+		character_event = {
+			id = RTPmsociety.101 #Ping For Cleaning Out Missions - Martial Mission
+			days = 90
+		}
+	}
+}
+
+#Bounty Hunter - Martial Mission End
+character_event = {
+	id = RTPmsociety.30
+	title = "RTPmsociety.30_title"
+	desc = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		text = "RTPmsociety.30.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPmsociety.30.2_desc"
+	}
+	picture = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		picture = GFX_evt_rider_adventure
+	}
+	picture = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		picture = GFX_evt_monk
+	}
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_character_flag = rtp_got_beatup #Got his teeth knocked out
+		}
+	}
+
+	immediate = {
+		set_character_flag = rtp_got_beatup #Got his teeth knocked out
+		if = {
+			limit = {
+				has_character_modifier = recent_duel_victory
+				is_alive = yes
+			}
+			set_character_flag = rtp_success #You succeed
+		}
+	}
+
+	option = {
+		name = "RTPmsociety.30_1"
+
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_bounty_hunter_martial_mission
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_medium_currency_se = yes
+	}
+
+	option = {
+		name = "RTPmsociety.30_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_bounty_hunter_martial_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPmsociety.101 #Ping For Cleaning Out Missions - Martial Mission
+			days = 90
+		}
+	}
+}
+
+#Failed To Reach Target In Time
+character_event = {
+	id = RTPmsociety.31
+	title = "RTPmsociety.31_title"
+	desc = "RTPmsociety.31_desc"
+	picture = GFX_evt_bad_news
+	hide_from = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPmsociety.31_1"
+
+		character_event = {
+			id = RTPmsociety.101 #Ping For Cleaning Out Missions - Martial Mission
+		}
+	}
+}
+
+#Ping Events
+#####
+
+#Ping for Society Leader Hands Out Missions - Martial Mission
+character_event = {
+	id = RTPmsociety.100
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		rtp_is_in_martial_society_st = yes
+		is_society_grandmaster = yes
+	}
+
+	immediate = {
+		society = {
+			random_society_member = {
+				limit = {
+					has_any_quest = no
+					is_society_grandmaster = no
+					rtp_is_capable_adult = yes
+					NOT = {
+						has_character_modifier = quest_cooldown_timer
+					}
+				}
+				preferred_limit = {
+					ai = no
+				}
+				random_list = {
+					20 = {
+						society_quest_event = {
+							id = RTPmsociety.1 #Stolen Goods - Martial Mission Start
+						}
+					}
+					20 = {
+						society_quest_event = {
+							id = RTPmsociety.8 #Safe Passage - Martial Mission Start
+						}
+					}
+					20 = {
+						society_quest_event = {
+							id = RTPmsociety.15 #Late Fees - Martial Mission Start
+						}
+					}
+					20 = {
+						society_quest_event = {
+							id = RTPmsociety.21 #The Champion - Martial Mission Start
+						}
+					}
+					20 = {
+						society_quest_event = {
+							id = RTPmsociety.25 #Bounty Hunter - Martial Mission Start
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Ping For Cleaning Out Missions - Martial Mission
+character_event = {
+	id = RTPmsociety.101
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		remove_trait = travelling
+		
+		clr_quest = {
+			id = rtp_stolen_goods_martial_mission
+			failure = yes
+		}
+		clr_quest = {
+			id = rtp_safe_passage_martial_mission
+			failure = yes
+		}
+		clr_quest = {
+			id = rtp_late_fees_martial_mission
+			failure = yes
+		}
+		clr_quest = {
+			id = rtp_the_champion_martial_mission
+			failure = yes
+		}
+		clr_quest = {
+			id = rtp_bounty_hunter_martial_mission
+			failure = yes
+		}
+
+		clr_character_flag = rtp_success #You succeed
+		clr_character_flag = rtp_got_beatup #Got his teeth knocked out
+
+		event_target:rtp_society_quest_bandit = {
+			death = {
+				death_reason = death_vanished
+			}
+		}
+		event_target:rtp_society_quest_bandit2 = {
+			death = {
+				death_reason = death_vanished
+			}
+		}
+		event_target:rtp_society_quest_bandit3 = {
+			death = {
+				death_reason = death_vanished
+			}
+		}
+		event_target:rtp_society_quest_target = {
+			if = {
+				limit = {
+					has_character_flag = rtp_trash #Just delete this dude
+				}
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+		event_target:rtp_society_quest_target2 = {
+			if = {
+				limit = {
+					has_character_flag = rtp_trash #Just delete this dude
+				}
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+		event_target:rtp_society_quest_target3 = {
+			if = {
+				limit = {
+					has_character_flag = rtp_trash #Just delete this dude
+				}
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+}
+
+#Ping For Cancelling Mission - Martial Mission
+character_event = {
+	id = RTPmsociety.102
+	hide_window = yes
+	is_triggered_only = yes
+	sound = quest_failed
+	
+	trigger = {
+	}
+
+	immediate = {
+		random = {
+			chance = 5
+
+			society = {
+				leader = {
+					ROOT = {
+						letter_event = {
+							id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#MTTH Events
+#####

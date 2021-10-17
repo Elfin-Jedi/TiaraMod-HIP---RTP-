@@ -1,0 +1,179 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+EVTDESCWSEAST25600;Tonight, the mead hall has been inflamed by rumors of a great lion terrorizing the plains of [Root.Capital.GetName]. The warrior who spotted the beast claims that it is a demon sent by [Root.Religion.GetRandomEvilGodName] to torment us. The older members of the Lodge agree that, as the [Root.GetLordLady] of [Root.Capital.GetName], it is my duty to track down and slay this beast.;;;;;;;;;;;;x;;
+EVTDESCWSAZTEC25600;Tonight, the mead hall has been inflamed by rumors of a great eagle terrorizing the farmlands of [Root.Capital.GetName]. The man who spotted the beast claims that it is without a doubt one of [Root.Religion.GetHighGodName]'s children, driven mad after tasting human flesh. The older members of the Lodge agree that, as the [Root.GetLordLady] of [Root.Capital.GetName], it is my duty to track down and slay this beast.;;;;;;;;;;;;x;;
+###Mazdan###;;;;;;;;;;;;;;;
+warrior_lodge_ws_mazdan;The Immortals;;;;;;;;;;;;;x;
+warrior_lodge_ws_mazdan_desc;The Immortals (Old Persian: Anaosa) named after the ancient Persian warrior elite described by Herodotus, are intent on carrying on the martial traditions of their legendary predecessors.;;;;;;;;;;;;;x
+warrior_lodge_ws_mazdan_leader_desc;[GetSocietyLeaderDesc];[GetSocietyLeaderDesc];[GetSocietyLeaderDesc];;[GetSocietyLeaderDesc];;;;;;;;;x;
+create_warrior_lodge_ws_mazdan;Reform the Immortals;;;;;;;;;;;;;x;
+create_warrior_lodge_ws_mazdan_desc;The Immortals (Old Persian: Anaosa) named after the ancient Persian warrior elite described by Herodotus, are intent on carrying on the martial traditions of their legendary predecessors.\n\nIf the order is formed, it will swear to fight against all who would threaten the legacy of Zoroaster, and to never again allow Zoroastrianism to suffer the reverses it did in the wake of the Arab conquests of the 7th century.;;;;;;;;;;;;;x
+create_warrior_lodge_ws_mazdan_tooltip;Establish the §YWarrior Society§! of the §YImmortals§!;;;;;;;;;;;;;x;
+has_liege_vassal_or_neighbor_of_zoroastrian_group_religion_tt;Has a §YLiege§!, §YVassal§!, or a §Yneighboring ruler§! who follows the §YMazdan§! faith\n;;;;;;;;;;;;;x;
+warrior_lodge_ws_mazdan_rank_1_female;Kurtash;;;;;;;;;;;;;x;
+warrior_lodge_ws_mazdan_rank_2_female;Arstibara;;;;;;;;;;;;;x;
+warrior_lodge_ws_mazdan_rank_3_female;Vacabara;;;;;;;;;;;;;x;
+warrior_lodge_ws_mazdan_rank_4_female;Hazarapatish;;;;;;;;;;;;;x;
+warrior_lodge_ws_mazdan_rank_1_male;Kurtash;;;;;;;;;;;;;x;
+warrior_lodge_ws_mazdan_rank_2_male;Arstibara;;;;;;;;;;;;;x;
+warrior_lodge_ws_mazdan_rank_3_male;Vacabara;;;;;;;;;;;;;x;
+warrior_lodge_ws_mazdan_rank_4_male;Hazarapatish;;;;;;;;;;;;;x;
+currency_name_warrior_lodge_ws_mazdan;Renown;;;;;;;;;;;;;x;
+ws_mazdan_leader;Scorcher;;;;;;;;;;;;;x;
+ws_mazdan_leader_desc;This character works well with siege weapons and is fast on [GetHerHis] feet, easily traversing both mountain and desert.;;;;;;;;;;;;;;x
+string_mazdan_training;"challenging me to keep up with [fellow_member.GetHerHim]. We have been out chasing a [Root.GetRegionalBigAnimal] for hours, but I am starting to wonder whether the animal even exists, and if [fellow_member.GetFirstName] was not simply looking for company. "It's rare, you know", [fellow_member.GetSheHe] says. "Someone with talent, as well as wits.";;;;;;;;;;;;;x;
+glorious_ws_mazdan_tactic;Sunburst Tactic;;;;;;;;;;;;x;;
+string_mazdan_symbol;the savior;;;;;;;;;;;;;x;
+string_mazdan_symbol_short;savior;;;;;;;;;;;;;x;
+string_mazdan_symbol_short_cap;Saoshyant;;;;;;;;;;;;;x;
+string_battle_nick_mazdan_symbol;the Immortal;;;;;;;;;;;;;x;
+### Warrior Lodge Events ###;;;;;;;;;;;;;;;
+EVTDESCAHFWSMAZ25021;I must show my devotion to [Root.Religion.GetHighGodName] if I wish for him to favor me in battle. The greater my sacrifice the greater will be the reward that [Root.Religion.GetHighGodName] shall grant me in the wars to come.;;;;;;;;;;;;;x;
+EVTOPTDHFWSMAZ25021;I will offer food and gold to the poor and needy.;;;;;;;;;;;;;x;
+EVTDESCAHFWSMAZ25025;My fellow Immortals accompany me into the poor district of [Root.Capital.GetName], helping me carry my generous offering to the needy. While a herbad chants, invoking the martyrs of the Lodge to bestow me their protection, one of my fellow Immortals inscribes a few symbols on my armor.;;;;;;;;;;;;;x;
+EVTOPTAHFWSMAZ25025;May [Root.Religion.GetHighGodName] protect me and my fellow Immortals!;;;;;;;;;;;;;x;
+;;;;;;;;;;;;;;;
+EVTTITLEWS00001;The Immortals;;;;;;;;;;;;;x;
+EVTDESCWS00001;[From.GetTitledFirstName] has taken it upon [From.GetHerselfHimself] to reform the Immortals to better safeguard the [From.Religion.GetName] faith. The Immortals shall contain [From.Religion.GetGroupName]'s finest warriors, and it's newly admitted members seem intent on carrying on the martial traditions of their legendary predecessors.\n\nThis militant order has sworn to fight against all who would threaten the legacy of Zoroaster, and to never again allow Zoroastrianism to suffer the reverses it did in the wake of the Arab conquests of the 7th century.;;;;;;;;;;;;;x
+EVTOPTAWS00001;Sounds noble!;;;;;;;;;;;;;x;
+EVTOPTBWS00001;Bah! This looks suspicious...;;;;;;;;;;;;;x;
+###Eastern###;;;;;;;;;;;;;;;
+warrior_lodge_ws_eastern;The Disciples of the Shaolin;;;;;;;;;;;;;x;
+warrior_lodge_ws_eastern_desc;The Disciples of the Shaolin orginated from the martial arts taught in the Shaolin Monastery in China. When the techniques reached the west the original forms was readapted with a much more important focus on the Blade. Still, the philosophy and discipline taught by the Disciples remains true to the heart.;;;;;;;;;;;;;x
+warrior_lodge_ws_eastern_leader_desc;[GetSocietyLeaderDesc];[GetSocietyLeaderDesc];[GetSocietyLeaderDesc];;[GetSocietyLeaderDesc];;;;;;;;;x;
+create_warrior_lodge_ws_eastern;Reform the Shaolin;;;;;;;;;;;;;x;
+create_warrior_lodge_ws_eastern_desc;The Disciples of the Shaolin teachings orginated from the martial arts taught in the Shaolin Monastery in China. When the techniques reached the west the original forms was readapted with a much more important focus on the Blade. Still, the philosophy and discipline taught by the Disciples remains true to the heart.;;;;;;;;;;;;;x
+create_warrior_lodge_ws_eastern_tooltip;Establish the §YWarrior Society§! of the §YDisciples of the Shaolin§!;;;;;;;;;;;;;x;
+has_liege_vassal_or_neighbor_of_indian_group_religion_tt;Has a §YLiege§!, §YVassal§!, or a §Yneighboring ruler§! who follows the §YEastern§! faith\n;;;;;;;;;;;;;x;
+warrior_lodge_ws_eastern_rank_1_female;Initiate;;;;;;;;;;;;;x;
+warrior_lodge_ws_eastern_rank_2_female;Disciple;;;;;;;;;;;;;x;
+warrior_lodge_ws_eastern_rank_3_female;Mistress;;;;;;;;;;;;;x;
+warrior_lodge_ws_eastern_rank_4_female;Grand Mistress;;;;;;;;;;;;;x;
+warrior_lodge_ws_eastern_rank_1_male;Initiate;;;;;;;;;;;;;x;
+warrior_lodge_ws_eastern_rank_2_male;Disciple;;;;;;;;;;;;;x;
+warrior_lodge_ws_eastern_rank_3_male;Master;;;;;;;;;;;;;x;
+warrior_lodge_ws_eastern_rank_4_male;Grand Master;;;;;;;;;;;;;x;
+currency_name_warrior_lodge_ws_eastern;Renown;;;;;;;;;;;;;x;
+ws_eastern_leader;Mountain Guardian;;;;;;;;;;;;;x;
+ws_eastern_leader_desc;This character can move hastily through the hills and plateaus of any mountain range. Especially when leading troops of archers.;;;;;;;;;;;;;;x
+string_eastern_training;nodding approvingly at my lightly packed horse. We are returning from an exercise in the mountains, and we are well ahead of schedule. "It is an honor training with you, [Root.GetFirstName]", the [fellow_member.GetManWoman] says, squeezing my shoulder briefly.;;;;;;;;;;;;;x;
+glorious_ws_eastern_tactic;Charge of the Elephants;;;;;;;;;;;;x;;
+string_eastern_symbol;the peace;;;;;;;;;;;;;x;
+string_eastern_symbol_short;peace;;;;;;;;;;;;;x;
+string_eastern_symbol_short_cap;Tranquillity;;;;;;;;;;;;;x;
+string_battle_nick_eastern_symbol;the Enlightened One;;;;;;;;;;;;;x;
+### Warrior Lodge Events ###;;;;;;;;;;;;;;;
+EVTDESCAHFWSEAS25021;I must show my devotion to [Root.Religion.GetHighGodName] if I wish for him to favor me in battle. The greater my sacrifice the greater will be the reward that [Root.Religion.GetHighGodName] shall grant me in the wars to come.;;;;;;;;;;;;;x;
+EVTOPTDHFWSEAS25021;I will offer food and gold to the poor and needy.;;;;;;;;;;;;;x;
+EVTDESCAHFWSEAS25025;My fellow Disciples accompany me into the poor district of [Root.Capital.GetName], helping me carry my generous offering to the needy. While a monk chants, invoking the wise spirits of the Lodge to bestow me their protection, one of my fellow Disciples inscribes a few symbols on my outfit.;;;;;;;;;;;;;x;
+EVTOPTAHFWSEAS25025;May [Root.Religion.GetHighGodName] protect me and my fellow Disciples!;;;;;;;;;;;;;x;
+;;;;;;;;;;;;;;;
+EVTTITLEWS00002;The Disciples of the Shaolin;;;;;;;;;;;;;x;
+EVTDESCWS00002;[From.GetTitledFirstName] was so inspired from a recent pilgrimage to the Shaolin Monastery in China, that [From.GetSheHe] has formed a new school of martial arts called Disciples of the Shaolin, which will embody the teachings of the Shaolin from a Western perspective. A key divergence from the original teachings is that Disciples will focus more on the Sword rather than any other forms, still everything from discipline to philosophy shall remain true to heart.\n\nAlthough this society is based for the most part on pure Eastern values, its doors are open to any sceptic that shows [From.GetHerHis] willingness to learn discipline and follow the teachings of the school's masters.;;;;;;;;;;;;;x;
+EVTOPTAWS00002;Sounds noble!;;;;;;;;;;;;;x;
+EVTOPTBWS00002;Bah! This looks suspicious...;;;;;;;;;;;;;x;
+###Aztec###;;;;;;;;;;;;;;;
+# warrior_lodge_ws_aztec;The Knights of the Eagle;;;;;;;;;;;;;x;
+# warrior_lodge_ws_aztec_desc;The Knights of the Eagle (Nahuatl: Cuauhmeh) train hard, not only for the purpose of battle, but also for games of blood sport – participating is both prestigious and pious, and the most skillful of their community are adored by everyone, commoner and noble alike.;;;;;;;;;;;;;x
+# warrior_lodge_ws_aztec_leader_desc;[GetSocietyLeaderDesc];[GetSocietyLeaderDesc];[GetSocietyLeaderDesc];;[GetSocietyLeaderDesc];;;;;;;;;x;
+# create_warrior_lodge_ws_aztec;Form the Knights of the Eagle;;;;;;;;;;;;;x;
+# create_warrior_lodge_ws_aztec_desc;The Knights of the Eagle (Nahuatl: Cuauhmeh) train hard, not only for the purpose of battle, but also for games of blood sport – participating is both prestigious and pious, and the most skillful of their community are adored by everyone, commoner and noble alike.;;;;;;;;;;;;;x
+# create_warrior_lodge_ws_aztec_tooltip;Establish the §YWarrior Society§! of the §YKnights of the Eagle§!;;;;;;;;;;;;;x;
+# has_liege_vassal_or_neighbor_of_aztec_religion_tt;Has a §YLiege§!, §YVassal§!, or a §Yneighboring ruler§! who follows the §YAztec§! faith\n;;;;;;;;;;;;;x;
+# warrior_lodge_ws_aztec_rank_1_female;Fledgling;;;;;;;;;;;;;x;
+# warrior_lodge_ws_aztec_rank_2_female;Warrior;;;;;;;;;;;;;x;
+# warrior_lodge_ws_aztec_rank_3_female;Veteran;;;;;;;;;;;;;x;
+# warrior_lodge_ws_aztec_rank_4_female;Heroine;;;;;;;;;;;;;x;
+# warrior_lodge_ws_aztec_rank_1_male;Fledgling;;;;;;;;;;;;;x;
+# warrior_lodge_ws_aztec_rank_2_male;Warrior;;;;;;;;;;;;;x;
+# warrior_lodge_ws_aztec_rank_3_male;Veteran;;;;;;;;;;;;;x;
+# warrior_lodge_ws_aztec_rank_4_male;Hero;;;;;;;;;;;;;x;
+# currency_name_warrior_lodge_ws_aztec;Renown;;;;;;;;;;;;;x;
+# ws_aztec_leader;Eaglet;;;;;;;;;;;;;x;
+# ws_aztec_leader_desc;;This character stands firmly amongst mountains, an inspiring figure for [GetHerHis] troops.;;;;;;;;;;;;;x
+# string_aztec_training;;washing [fellow_member.GetHerHis] face. We have been sparring for hours, and the water of the river is a welcome reward. "I hope you know you have a talent for these things", my companion says, nodding at the spear in my hand.;;;;;;;;;;;;;x;
+# glorious_ws_aztec_tactic;Eagles' Last Stand;;;;;;;;;;;;x;;
+# string_aztec_symbol;the eagle;;;;;;;;;;;;;x;
+# string_aztec_symbol_short;eagle;;;;;;;;;;;;;x;
+# string_aztec_symbol_short_cap;Huitzilopochtli;;;;;;;;;;;;;x;
+# string_battle_nick_aztec_symbol;the Eagle Knight;;;;;;;;;;;;;x;
+# ### Warrior Lodge Events ###;;;;;;;;;;;;;;;
+# EVTDESCAHFWSAZT25021;I must show my devotion to [Root.Religion.GetHighGodName] if I wish for him to favor me in battle. The greater my sacrifice the greater will be the reward that [Root.Religion.GetHighGodName] shall grant me in the wars to come.;;;;;;;;;;;;;x;
+# EVTOPTDHFWSAZT25021;I will offer food and gold to the poor and needy.;;;;;;;;;;;;;x;
+# EVTDESCAHFWSAZT25025;My fellow Eagle Knights accompany me into the poor district of [Root.Capital.GetName], helping me to carry my generous offering to the needy. While a priest chants, invoking the spirits of the Lodge to bestow me their protection, one of my fellow Eagle Knights inscribes a few symbols on my armor.;;;;;;;;;;;;;x;
+# EVTOPTAHFWSAZT25025;May [Root.Religion.GetHighGodName] protect me and my fellow Eagle Knights!;;;;;;;;;;;;;x;
+# ;;;;;;;;;;;;;;;
+# EVTTITLEWS00003;The Knights of the Eagle;;;;;;;;;;;;;x;
+# EVTDESCWS00003;The Eagle Warriors has always hold a special place in the society of the Aztecs. Now, [From.GetTitledFirstName] inspired by the Eastern barbarians, has organized several prominent Eagle Warriors under [From.GetHerHis] employ to form the Knights of the Eagle, a society dedicated to the pure pursuit of martial excellence through discipline and sacrifices.\n\nAlthough this society is based for the most part on Aztec values, its doors are open to any barbarian that shows [From.GetHerHis] willingness to learn discipline and follow the teachings of the Eagle Knights's masters.;;;;;;;;;;;;;x;
+# EVTOPTAWS00003;Sounds noble!;;;;;;;;;;;;;x;
+# EVTOPTBWS00003;Bah! This looks suspicious...;;;;;;;;;;;;;x;
+###Muslim###;;;;;;;;;;;;;;;
+warrior_lodge_ws_muslim;The Futuwwa Brotherhood;;;;;;;;;;;;;x;
+# warrior_lodge_ws_muslim;The Crescent Moon Warriors;;;;;;;;;;;;;x;
+warrior_lodge_ws_muslim_desc;The Futuwwa Brotherhood train hard, not only for the purpose of battle, but to also spiritually follow in the Prophet's footsteps – membership is both prestigious and pious, and the most devoted of their community are adored by everyone, commoner and noble alike.;;;;;;;;;;;;;x
+warrior_lodge_ws_muslim_leader_desc;[GetSocietyLeaderDesc];[GetSocietyLeaderDesc];[GetSocietyLeaderDesc];;[GetSocietyLeaderDesc];;;;;;;;;x;
+create_warrior_lodge_ws_muslim;Form the Futuwwa Brotherhood;;;;;;;;;;;;;x;
+create_warrior_lodge_ws_muslim_desc;The Futuwwa Brotherhood train hard, not only for the purpose of battle, but to also spiritually follow in the Prophet's footsteps – membership is both prestigious and pious, and the most devoted of their community are adored by everyone, commoner and noble alike.;;;;;;;;;;;;;x
+create_warrior_lodge_ws_muslim_tooltip;Establish the §YWarrior Society§! of the §YFutuwwa Brotherhood§!;;;;;;;;;;;;;x;
+has_liege_vassal_or_neighbor_of_muslim_religion_tt;Has a §YLiege§!, §YVassal§!, or a §Yneighboring ruler§! who follows the §YMuslim§! faith\n;;;;;;;;;;;;;x;
+warrior_lodge_ws_muslim_rank_1_female;Adherent;;;;;;;;;;;;;x;
+warrior_lodge_ws_muslim_rank_2_female;Companion;;;;;;;;;;;;;x;
+warrior_lodge_ws_muslim_rank_3_female;Devoted;;;;;;;;;;;;;x;
+warrior_lodge_ws_muslim_rank_4_female;Grand Mistress;;;;;;;;;;;;;x;
+warrior_lodge_ws_muslim_rank_1_male;Adherent;;;;;;;;;;;;;x;
+warrior_lodge_ws_muslim_rank_2_male;Companion;;;;;;;;;;;;;x;
+warrior_lodge_ws_muslim_rank_3_male;Devoted;;;;;;;;;;;;;x;
+warrior_lodge_ws_muslim_rank_4_male;Grand Master;;;;;;;;;;;;;x;
+currency_name_warrior_lodge_ws_muslim;Renown;;;;;;;;;;;;;x;
+ws_muslim_leader;Scorcher;;;;;;;;;;;;;x;
+ws_muslim_leader_desc;;This character works well with siege weapons and is fast on [GetHerHis] feet, easily traversing both mountain and desert.;;;;;;;;;;;;;x
+string_muslim_training;"challenging me to keep up with [fellow_member.GetHerHim]. We have been out chasing a [Root.GetRegionalBigAnimal] for hours, but I am starting to wonder whether the animal even exists, and if [fellow_member.GetFirstName] was not simply looking for company. "It's rare, you know", [fellow_member.GetSheHe] says. "Someone with talent, as well as wits.";;;;;;;;;;;;;x;
+glorious_ws_muslim_tactic;Futuwwa Ambush;;;;;;;;;;;;x;;
+string_muslim_symbol;the prophet;;;;;;;;;;;;;x;
+string_muslim_symbol_short;prophet;;;;;;;;;;;;;x;
+string_muslim_symbol_short_cap;Allah;;;;;;;;;;;;;x;
+string_battle_nick_muslim_symbol;the Moon Warrior;;;;;;;;;;;;;x; #TODO
+### Warrior Lodge Events ###;;;;;;;;;;;;;;;
+EVTDESCAHFWSMUS25021;I must show my devotion to [Root.Religion.GetHighGodName] if I wish for him to favor me in battle. The greater my sacrifice the greater will be the reward that [Root.Religion.GetHighGodName] shall grant me in the wars to come.;;;;;;;;;;;;;x;
+EVTOPTDHFWSMUS25021;I will offer food and gold to the poor and needy.;;;;;;;;;;;;;x;
+EVTDESCAHFWSMUS25025;My fellow Brothers accompany me into the poor district of [Root.Capital.GetName], helping me carry my generous offering to the needy. While a imam chants, invoking the holy men of the Lodge to bestow me their guidance, one of my Brothers inscribes a few symbols on my armor.;;;;;;;;;;;;;x;
+EVTOPTAHFWSMUS25025;May [Root.Religion.GetHighGodName] protect me and my fellow Brothers!;;;;;;;;;;;;;x;
+;;;;;;;;;;;;;;;
+EVTTITLEWS00004;The Futuwwa Brotherhood;;;;;;;;;;;;;x;
+EVTDESCWS00004;[From.GetTitledFirstName] has organized several devoted warriors under [From.GetHerHis] employ to form the Futuwwa Brotherhood, a society dedicated to the pursuit of martial excellence through discipline and phyiscal exercises.\n\nAlthough this society is based for the most part on pure Islamic values, its doors are open to any heathen that shows [From.GetHerHis] willingness to learn discipline and follow the teachings of the Masters.;;;;;;;;;;;;;x;
+EVTOPTAWS00004;Sounds pious!;;;;;;;;;;;;;x;
+EVTOPTBWS00004;Bah! This looks suspicious...;;;;;;;;;;;;;x;
+###Jewish###;;;;;;;;;;;;;;;
+warrior_lodge_ws_jewish;Bar Kokhba's Chosen;;;;;;;;;;;;;x;
+warrior_lodge_ws_jewish_desc;The Bar Kokhba's Chosen train hard, not only for the purpose of battle, but to also follow in the Bar Kokhba footsteps – to ensure that Jews everywhere always shall have the means to defend themselves against injustice. Membership is both prestigious and pious, and the most devoted of their community are adored by everyone, commoner and noble alike.;;;;;;;;;;;;;x
+warrior_lodge_ws_jewish_leader_desc;[GetSocietyLeaderDesc];[GetSocietyLeaderDesc];[GetSocietyLeaderDesc];;[GetSocietyLeaderDesc];;;;;;;;;x;
+create_warrior_lodge_ws_jewish;Form the Bar Kokhba's Chosen;;;;;;;;;;;;;x;
+create_warrior_lodge_ws_jewish_desc;The Bar Kokhba's Chosen train hard, not only for the purpose of battle, but to also follow in the Bar Kokhba footsteps – to ensure that Jews everywhere always shall have the means to defend themselves against injustice. Membership is both prestigious and pious, and the most devoted of their community are adored by everyone, commoner and noble alike.;;;;;;;;;;;;;x
+create_warrior_lodge_ws_jewish_tooltip;Establish the §YWarrior Society§! of the §YBar Kokhba's Chosen§!;;;;;;;;;;;;;x;
+has_liege_vassal_or_neighbor_of_jewish_religion_tt;Has a §YLiege§!, §YVassal§!, or a §Yneighboring ruler§! who follows the §YJewish§! faith\n;;;;;;;;;;;;;x;
+warrior_lodge_ws_jewish_rank_1_female;Adherent;;;;;;;;;;;;;x;
+warrior_lodge_ws_jewish_rank_2_female;Companion;;;;;;;;;;;;;x;
+warrior_lodge_ws_jewish_rank_3_female;Devoted;;;;;;;;;;;;;x;
+warrior_lodge_ws_jewish_rank_4_female;Grand Mistress;;;;;;;;;;;;;x;
+warrior_lodge_ws_jewish_rank_1_male;Adherent;;;;;;;;;;;;;x;
+warrior_lodge_ws_jewish_rank_2_male;Companion;;;;;;;;;;;;;x;
+warrior_lodge_ws_jewish_rank_3_male;Devoted;;;;;;;;;;;;;x;
+warrior_lodge_ws_jewish_rank_4_male;Grand Master;;;;;;;;;;;;;x;
+currency_name_warrior_lodge_ws_jewish;Renown;;;;;;;;;;;;;x;
+ws_jewish_leader;Scorcher;;;;;;;;;;;;;x;
+ws_jewish_leader_desc;;This character works well with siege weapons and is fast on [GetHerHis] feet, easily traversing both mountain and desert.;;;;;;;;;;;;;x
+string_jewish_training;"challenging me to keep up with [fellow_member.GetHerHim]. We have been out chasing a [Root.GetRegionalBigAnimal] for hours, but I am starting to wonder whether the animal even exists, and if [fellow_member.GetFirstName] was not simply looking for company. "It's rare, you know", [fellow_member.GetSheHe] says. "Someone with talent, as well as wits.";;;;;;;;;;;;;x;
+glorious_ws_jewish_tactic;Crescent Ambush;;;;;;;;;;;;x;;
+string_jewish_symbol;the messiah;;;;;;;;;;;;;x;
+string_jewish_symbol_short;messiah;;;;;;;;;;;;;x;
+string_jewish_symbol_short_cap;Yahweh;;;;;;;;;;;;;x;
+string_battle_nick_jewish_symbol;the Zealot;;;;;;;;;;;;;x;
+### Warrior Lodge Events ###;;;;;;;;;;;;;;;
+EVTDESCAHFWSJEW25021;I must show my devotion to [Root.Religion.GetHighGodName] if I wish for him to favor me in battle. The greater my sacrifice the greater will be the reward that [Root.Religion.GetHighGodName] shall grant me in the wars to come.;;;;;;;;;;;;;x;
+EVTOPTDHFWSJEW25021;I will offer food and gold to the poor and needy.;;;;;;;;;;;;;x;
+EVTDESCAHFWSJEW25025;My fellow Chosen accompany me into the poor district of [Root.Capital.GetName], helping me carry my generous offering to the needy. While a rabbi chants, invoking the martyrs of the Lodge to bestow me their protection, one of my fellow Chosen inscribes a few symbols on my armor.;;;;;;;;;;;;;x;
+EVTOPTAHFWSJEW25025;May [Root.Religion.GetHighGodName] protect me and my fellow Chosen!;;;;;;;;;;;;;x;
+;;;;;;;;;;;;;;;
+EVTTITLEWS00005;Bar Kokhba's Chosen;;;;;;;;;;;;;x;
+EVTDESCWS00005;[From.GetTitledFirstName] has organized several devoted warriors under [From.GetHerHis] employ to form the Bar Kokhba's Chosen, a society dedicated to the pursuit of martial excellence through discipline and phyiscal exercises.\n\nAlthough this society is based for the most part on pure Jewish values, its doors are open to any heathen that shows [From.GetHerHis] willingness to learn discipline and follow the teachings of the Elders.;;;;;;;;;;;;;x;
+EVTOPTAWS00005;Sounds pious!;;;;;;;;;;;;;x;
+EVTOPTBWS00005;Bah! This looks suspicious...;;;;;;;;;;;;;x;

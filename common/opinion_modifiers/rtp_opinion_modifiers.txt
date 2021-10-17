@@ -1,0 +1,41 @@
+#####
+#Opinion Modifiers
+#
+#Total = 6
+#####
+
+#Healed Me
+rtp_healed_om = {
+	opinion = 30
+}
+
+#Soothed Me
+rtp_soothed_om = {
+	opinion = 50
+}
+
+#Standing Down
+rtp_standing_down_om = {
+	opinion = 5
+	non_aggression_pact = yes
+}
+
+#Thief
+rtp_thief_om = {
+	opinion = -30
+	crime = yes
+}
+
+#Abomination
+rtp_abomination_om = {
+	opinion = -100
+	crime = yes
+	execute_reason = yes
+	banish_reason = yes
+	prison_reason = yes
+}
+
+#Displayed Dragon Amulet
+rtp_displayed_dragon_amulet_om = {
+	opinion = 50
+}

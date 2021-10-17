@@ -1,0 +1,1788 @@
+# Caesar's Books by CaesarTheRoman
+
+cbs_fixed = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				region = world_middle_east
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_fixed = {
+			value = 1
+		}
+	}
+}
+
+cbs_pahnut = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				region = world_europe_west
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_pahnut = {
+			value = 1
+		}
+	}
+}
+
+cbs_sefer = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_asia_minor
+					region = world_middle_east
+					region = world_europe_south
+					region = world_europe_west
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_sefer = {
+			value = 1
+		}
+	}
+}
+
+cbs_thorsdr = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				region = world_europe_north
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_thorsdr = {
+			value = 1
+		}
+	}
+}
+
+cbs_shahna = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_persia
+					region = world_middle_east
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_shahna = {
+			value = 1
+		}
+	}
+}
+
+cbs_aghani = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				region = world_middle_east
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_aghani = {
+			value = 1
+		}
+	}
+}
+
+cbs_aethel = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				region = world_europe_west
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_aethel = {
+			value = 1
+		}
+	}
+}
+
+cbs_vamsa = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				region = world_india
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_vamsa = {
+			value = 1
+		}
+	}
+}
+
+cbs_actibus = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_asia_minor
+					region = world_europe_south
+					region = world_europe_west
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_actibus = {
+			value = 1
+		}
+	}
+}
+
+cbs_eccles = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_asia_minor
+					region = world_europe_west
+					region = world_europe_south
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_eccles = {
+			value = 1
+		}
+	}
+}
+
+cbs_gentis = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_asia_minor
+					region = world_europe_west
+					region = world_europe_south
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_gentis = {
+			value = 1
+		}
+	}
+}
+
+cbs_kitab = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				region = world_middle_east
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_kitab = {
+			value = 1
+		}
+	}
+}
+
+cbs_sponsus = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+					region = world_europe_west
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_sponsus = {
+			value = 1
+		}
+	}
+}
+
+cbs_elucid = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+					region = world_europe_west
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_elucid = {
+			value = 1
+		}
+	}
+}
+
+cbs_tahafut = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				region = world_persia
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_tahafut = {
+			value = 1
+		}
+	}
+}
+
+cbs_dunelm = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+					region = world_europe_west_brittania
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_dunelm = {
+			value = 1
+		}
+	}
+}
+
+cbs_ormulum = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+					region = world_europe_west
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_ormulum = {
+			value = 1
+		}
+	}
+}
+
+cbs_roskil = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+					region = world_europe_north
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_roskil = {
+			value = 1
+		}
+	}
+}
+
+cbs_lejrek = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+					region = world_europe_north
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_lejrek = {
+			value = 1
+		}
+	}
+}
+
+cbs_sic = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+					region = world_europe_west
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_sic = {
+			value = 1
+		}
+	}
+}
+
+cbs_hortus = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+					region = world_europe_west
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_hortus = {
+			value = 1
+		}
+	}
+}
+
+cbs_enide = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+					region = world_europe_west
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_enide = {
+			value = 1
+		}
+	}
+}
+
+cbs_cliges = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+					region = world_europe_west
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_cliges = {
+			value = 1
+		}
+	}
+}
+
+cbs_lion = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+					region = world_europe_west
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_lion = {
+			value = 1
+		}
+	}
+}
+
+cbs_lancelot = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+					region = world_europe_west
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_lancelot = {
+			value = 1
+		}
+	}
+}
+
+cbs_perceval = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+					region = world_europe_west
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_perceval = {
+			value = 1
+		}
+	}
+}
+
+cbs_khosrow = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				region = world_persia
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_khosrow = {
+			value = 1
+		}
+	}
+}
+
+cbs_otia = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+					region = world_europe_west
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_otia = {
+			value = 1
+		}
+	}
+}
+
+cbs_mundi = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_europe_south
+					region = world_europe_west
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_mundi = {
+			value = 1
+		}
+	}
+}
+
+cbs_musica = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_europe_south
+					region = world_europe_west
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_musica = {
+			value = 1
+		}
+	}
+}
+
+cbs_caerf = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+					region = world_europe_west_brittania
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_caerf = {
+			value = 1
+		}
+	}
+}
+
+cbs_talie = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+					region = world_europe_west_brittania
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_talie = {
+			value = 1
+		}
+	}
+}
+
+cbs_aneir = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+					region = world_europe_west_brittania
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_aneir = {
+			value = 1
+		}
+	}
+}
+
+cbs_hergest = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+					region = world_europe_west_brittania
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_hergest = {
+			value = 1
+		}
+	}
+}
+
+cbs_pancha = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				region = world_india
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_pancha = {
+			value = 1
+		}
+	}
+}
+
+cbs_nasiri = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				region = world_middle_east
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_nasiri = {
+			value = 1
+		}
+	}
+}
+
+cbs_autodid = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				region = world_middle_east
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_autodid = {
+			value = 1
+		}
+	}
+}
+
+cbs_anon = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_europe_south
+					region = world_europe_west
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_anon = {
+			value = 1
+		}
+	}
+}
+
+cbs_dnyane = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				region = world_india
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_dnyane = {
+			value = 1
+		}
+	}
+}
+
+cbs_cursor = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_asia_minor
+					region = world_europe_south
+					region = world_europe_west
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_mundi = {
+			value = 1
+		}
+	}
+}
+
+cbs_lament = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_europe_south
+					region = world_europe_west
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_lament = {
+			value = 1
+		}
+	}
+}
+
+cbs_riming = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+					region = world_europe_west
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_riming = {
+			value = 1
+		}
+	}
+}
+
+cbs_moralia = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_asia_minor
+					region = world_europe_south
+					region = world_europe_west
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_moralia = {
+			value = 1
+		}
+	}
+}
+
+cbs_poimen = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_asia_minor
+					region = world_europe_south
+					region = world_europe_west
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_poimen = {
+			value = 1
+		}
+	}
+}
+
+cbs_adversus = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_asia_minor
+					region = world_europe_south
+					region = world_europe_west
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_adversus = {
+			value = 1
+		}
+	}
+}
+
+cbs_vita = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_europe_south
+					region = world_europe_west
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_vita = {
+			value = 1
+		}
+	}
+}
+
+cbs_consola = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_asia_minor
+					region = world_europe_south
+					region = world_europe_west
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_consola = {
+			value = 1
+		}
+	}
+}
+
+cbs_august = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_europe_west
+					region = world_europe_south
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_august = {
+			value = 1
+		}
+	}
+}
+
+cbs_elien = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_europe_south
+					region = world_europe_west
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_elien = {
+			value = 1
+		}
+	}
+}
+
+cbs_visio = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_europe_west
+					region = world_europe_south
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_visio = {
+			value = 1
+		}
+	}
+}
+
+cbs_morale = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_europe_south
+					region = world_europe_west
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_morale = {
+			value = 1
+		}
+	}
+}
+
+cbs_patric = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_europe_west
+					region = world_europe_south
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_patric = {
+			value = 1
+		}
+	}
+}
+
+cbs_virtutum = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_europe_south
+					region = world_europe_west
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_virtutum = {
+			value = 1
+		}
+	}
+}
+
+cbs_arme = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_europe_west
+					region = world_europe_south
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_arme = {
+			value = 1
+		}
+	}
+}
+
+cbs_gregor = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_europe_south
+					region = world_europe_west
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_gregor = {
+			value = 1
+		}
+	}
+}
+
+cbs_wisse = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_europe_west
+					region = world_europe_south
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_wisse = {
+			value = 1
+		}
+	}
+}
+
+cbs_mantiq = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				region = world_middle_east
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_mantiq = {
+			value = 1
+		}
+	}
+}
+
+cbs_masnavi = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				region = world_middle_east
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_masnavi = {
+			value = 1
+		}
+	}
+}
+
+cbs_bustan = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				region = world_persia
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_bustan = {
+			value = 1
+		}
+	}
+}
+
+cbs_qissa = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				region = world_persia
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_qissa = {
+			value = 1
+		}
+	}
+}
+
+cbs_owl = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = world_europe_west
+					region = world_europe_south
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_owl = {
+			value = 1
+		}
+	}
+}
+
+cbs_lunyu = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = custom_eastern_access
+					region = custom_chinese_invasion_target_region
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_lunyu = {
+			value = 1
+		}
+	}
+}
+
+cbs_erya = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = custom_eastern_edge_of_map
+					region = custom_chinese_invasion_target_region
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_erya = {
+			value = 1
+		}
+	}
+}
+
+cbs_iching = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = custom_eastern_edge_of_map
+					region = custom_eastern_access
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_iching = {
+			value = 1
+		}
+	}
+}
+
+cbs_shijing = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			higher_tier_than = BARON
+			capital_scope = {
+				OR = {
+					region = custom_eastern_edge_of_map
+					region = custom_chinese_invasion_target_region
+				}
+			}
+		}
+	}
+	
+	artifacts = {
+		cbs_shijing = {
+			value = 1
+		}
+	}
+}

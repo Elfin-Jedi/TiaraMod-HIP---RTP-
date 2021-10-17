@@ -1,0 +1,55 @@
+is_sufi_member_trigger = {
+	OR = {
+		society_member_of = monastic_order_sunni
+		society_member_of = monastic_order_shiite
+		society_member_of = monastic_order_ibadi
+	}
+}
+
+has_sufi_societies_religion_sunni = {
+	hidden_tooltip = {
+		is_heretic = no
+		OR = {
+			religion = sunni
+			religion = zikri
+			trigger_if = {
+				limit = { NOT = { has_global_flag = HIPEMF_ACTIVE } }
+				religion = yazidi #PLUS, HIP made it stand-alone
+			}
+			religion = mahdiyya #HIP
+			religion = nabawiyya #HIP
+			religion = quranist #PLUS
+			religion = arab_pagan #PLUS
+		}
+	}
+}
+
+has_sufi_societies_religion_ibadi = {
+	hidden_tooltip = {
+		is_heretic = no
+		OR = {
+			religion = ibadi
+			religion = kharijite
+			religion = haruri #HIP
+		}
+	}
+}
+
+has_sufi_societies_religion_shiite = {
+	hidden_tooltip = { #no vanilla order in my mod
+		is_heretic = no
+		OR = {
+			religion = shiite
+			religion = waqifi #HIP
+			religion = hurufi #HIP+PLUS
+			religion = ismaili #HIP
+			religion = qarmatian #HIP+PLUS
+			religion = bektashi #PLUS
+			trigger_if = {
+				limit = { NOT = { has_global_flag = HIPEMF_ACTIVE } }
+				religion = druze #PLUS, HIP made it stand-alone
+			}
+			# religion = zaydi #HIP, unused
+		}
+	}
+}

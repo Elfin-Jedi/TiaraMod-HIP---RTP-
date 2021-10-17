@@ -1,0 +1,1572 @@
+spriteTypes = {
+	###Headgear
+
+	##Cloth
+	#Mouthpiece
+	spriteType = {
+		name = "GFX_rtp_mouthpiece_a"
+		texturefile = "gfx\\artifacts\\head\\cloth\\mouthpiece.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_mouthpiece_a_small"
+		texturefile = "gfx\\artifacts\\head\\cloth\\mouthpiece_small.dds"
+	}
+	#Headscarf
+	spriteType = {
+		name = "GFX_rtp_headscarf_a"
+		texturefile = "gfx\\artifacts\\head\\cloth\\headscarf.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_headscarf_a_small"
+		texturefile = "gfx\\artifacts\\head\\cloth\\headscarf_small.dds"
+	}
+	#Leather Headband
+	spriteType = {
+		name = "GFX_rtp_leatherheadband_a"
+		texturefile = "gfx\\artifacts\\head\\cloth\\leatherheadband.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_leatherheadband_a_small"
+		texturefile = "gfx\\artifacts\\head\\cloth\\leatherheadband_small.dds"
+	}
+	#Hood
+	spriteType = {
+		name = "GFX_rtp_hood_a"
+		texturefile = "gfx\\artifacts\\head\\cloth\\hood.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_hood_a_small"
+		texturefile = "gfx\\artifacts\\head\\cloth\\hood_small.dds"
+	}
+	#Hunter's Hat
+	spriteType = {
+		name = "GFX_rtp_hunterhat_a"
+		texturefile = "gfx\\artifacts\\head\\cloth\\hunterhat.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_hunterhat_a_small"
+		texturefile = "gfx\\artifacts\\head\\cloth\\hunterhat_small.dds"
+	}
+	#Straw Hat
+	spriteType = {
+		name = "GFX_rtp_strawhat_a"
+		texturefile = "gfx\\artifacts\\head\\cloth\\strawhat.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_strawhat_a_small"
+		texturefile = "gfx\\artifacts\\head\\cloth\\strawhat_small.dds"
+	}
+	#Feathered Hat
+	spriteType = {
+		name = "GFX_rtp_featheredhat_a"
+		texturefile = "gfx\\artifacts\\head\\cloth\\featheredhat.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_featheredhat_a_small"
+		texturefile = "gfx\\artifacts\\head\\cloth\\featheredhat_small.dds"
+	}
+	#Witchhunter's Hat
+	spriteType = {
+		name = "GFX_rtp_withchunterhat_a"
+		texturefile = "gfx\\artifacts\\head\\cloth\\withchunterhat.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_withchunterhat_a_small"
+		texturefile = "gfx\\artifacts\\head\\cloth\\withchunterhat_small.dds"
+	}
+
+	##Light
+	#Full Leather Cap
+	spriteType = {
+		name = "GFX_rtp_fullleathercap_a"
+		texturefile = "gfx\\artifacts\\head\\light\\fullleathercap.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_fullleathercap_a_small"
+		texturefile = "gfx\\artifacts\\head\\light\\fullleathercap_small.dds"
+	}
+	#Aketon Cap
+	spriteType = {
+		name = "GFX_rtp_aketoncap_a"
+		texturefile = "gfx\\artifacts\\head\\light\\aketoncap.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_aketoncap_a_small"
+		texturefile = "gfx\\artifacts\\head\\light\\aketoncap_small.dds"
+	}
+	#Bear Headpiece
+	spriteType = {
+		name = "GFX_rtp_bearheadpiece_a"
+		texturefile = "gfx\\artifacts\\head\\light\\bearheadpiece.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_bearheadpiece_a_small"
+		texturefile = "gfx\\artifacts\\head\\light\\bearheadpiece_small.dds"
+	}
+	#Leather Helmet
+	spriteType = {
+		name = "GFX_rtp_leatherhelmet_a"
+		texturefile = "gfx\\artifacts\\head\\light\\leatherhelmet.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_leatherhelmet_a_small"
+		texturefile = "gfx\\artifacts\\head\\light\\leatherhelmet_small.dds"
+	}
+	#Open Leather Cap
+	spriteType = {
+		name = "GFX_rtp_openleathercap_a"
+		texturefile = "gfx\\artifacts\\head\\light\\openleathercap.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_openleathercap_a_small"
+		texturefile = "gfx\\artifacts\\head\\light\\openleathercap_small.dds"
+	}
+	#Beastmaster's Headpiece
+	spriteType = {
+		name = "GFX_rtp_beastmasterheadpiece_a"
+		texturefile = "gfx\\artifacts\\head\\light\\beastmasterheadpiece.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_beastmasterheadpiece_a_small"
+		texturefile = "gfx\\artifacts\\head\\light\\beastmasterheadpiece_small.dds"
+	}
+	#Leather Hood
+	spriteType = {
+		name = "GFX_rtp_leatherhood_a"
+		texturefile = "gfx\\artifacts\\head\\light\\leatherhood.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_leatherhood_a_small"
+		texturefile = "gfx\\artifacts\\head\\light\\leatherhood_small.dds"
+	}
+	#Duelist's Hat
+	spriteType = {
+		name = "GFX_rtp_duelisthat_a"
+		texturefile = "gfx\\artifacts\\head\\light\\duelisthat.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_duelisthat_a_small"
+		texturefile = "gfx\\artifacts\\head\\light\\duelisthat_small.dds"
+	}
+
+	##Medium
+	#Padded Nasal Helmet
+	spriteType = {
+		name = "GFX_rtp_paddednasalhelmet_a"
+		texturefile = "gfx\\artifacts\\head\\medium\\paddednasalhelmet.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_paddednasalhelmet_a_small"
+		texturefile = "gfx\\artifacts\\head\\medium\\paddednasalhelmet_small.dds"
+	}
+	#Kettle Hat
+	spriteType = {
+		name = "GFX_rtp_kettlehat_a"
+		texturefile = "gfx\\artifacts\\head\\medium\\kettlehat.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_kettlehat_a_small"
+		texturefile = "gfx\\artifacts\\head\\medium\\kettlehat_small.dds"
+	}
+	#Padded Flat Top Helmet
+	spriteType = {
+		name = "GFX_rtp_paddedflattophelmet_a"
+		texturefile = "gfx\\artifacts\\head\\medium\\paddedflattophelmet.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_paddedflattophelmet_a_small"
+		texturefile = "gfx\\artifacts\\head\\medium\\paddedflattophelmet_small.dds"
+	}
+	#Nordic Helmet
+	spriteType = {
+		name = "GFX_rtp_nordichelmet_a"
+		texturefile = "gfx\\artifacts\\head\\medium\\nordichelmet.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_nordichelmet_a_small"
+		texturefile = "gfx\\artifacts\\head\\medium\\nordichelmet_small.dds"
+	}
+	#Padded Dented Nasal Helmet
+	spriteType = {
+		name = "GFX_rtp_paddeddentednasalhelmet_a"
+		texturefile = "gfx\\artifacts\\head\\medium\\paddeddentednasalhelmet.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_paddeddentednasalhelmet_a_small"
+		texturefile = "gfx\\artifacts\\head\\medium\\paddeddentednasalhelmet_small.dds"
+	}
+	#Sallet Helmet
+	spriteType = {
+		name = "GFX_rtp_sallethelmet_a"
+		texturefile = "gfx\\artifacts\\head\\medium\\sallethelmet.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_sallethelmet_a_small"
+		texturefile = "gfx\\artifacts\\head\\medium\\sallethelmet_small.dds"
+	}
+	#Flat Top Helmet
+	spriteType = {
+		name = "GFX_rtp_flattophelmet_a"
+		texturefile = "gfx\\artifacts\\head\\medium\\flattophelmet.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_flattophelmet_a_small"
+		texturefile = "gfx\\artifacts\\head\\medium\\flattophelmet_small.dds"
+	}
+	#Padded Kettle Hat
+	spriteType = {
+		name = "GFX_rtp_paddedkettlehat_a"
+		texturefile = "gfx\\artifacts\\head\\medium\\paddedkettlehat.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_paddedkettlehat_a_small"
+		texturefile = "gfx\\artifacts\\head\\medium\\paddedkettlehat_small.dds"
+	}
+
+	##Heavy
+	#Mail Coif
+	spriteType = {
+		name = "GFX_rtp_mailcoif_a"
+		texturefile = "gfx\\artifacts\\head\\heavy\\mailcoif.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_mailcoif_a_small"
+		texturefile = "gfx\\artifacts\\head\\heavy\\mailcoif_small.dds"
+	}
+	#Steppe Helmet with Mail
+	spriteType = {
+		name = "GFX_rtp_steppehelmetwithmail_a"
+		texturefile = "gfx\\artifacts\\head\\heavy\\steppehelmetwithmail.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_steppehelmetwithmail_a_small"
+		texturefile = "gfx\\artifacts\\head\\heavy\\steppehelmetwithmail_small.dds"
+	}
+	#Nasal Helmet with Rusty Mail
+	spriteType = {
+		name = "GFX_rtp_nasalhelmetwithrustymail_a"
+		texturefile = "gfx\\artifacts\\head\\heavy\\nasalhelmetwithrustymail.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_nasalhelmetwithrustymail_a_small"
+		texturefile = "gfx\\artifacts\\head\\heavy\\nasalhelmetwithrustymail_small.dds"
+	}
+	#Bascinet with Mail
+	spriteType = {
+		name = "GFX_rtp_bascinetwithmail_a"
+		texturefile = "gfx\\artifacts\\head\\heavy\\bascinetwithmail.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_bascinetwithmail_a_small"
+		texturefile = "gfx\\artifacts\\head\\heavy\\bascinetwithmail_small.dds"
+	}
+	#Kettle Hat with Mail
+	spriteType = {
+		name = "GFX_rtp_kettlehatwithmail_a"
+		texturefile = "gfx\\artifacts\\head\\heavy\\kettlehatwithmail.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_kettlehatwithmail_a_small"
+		texturefile = "gfx\\artifacts\\head\\heavy\\kettlehatwithmail_small.dds"
+	}
+	#Nasal Helmet with Mail
+	spriteType = {
+		name = "GFX_rtp_nasalhelmetwithmail_a"
+		texturefile = "gfx\\artifacts\\head\\heavy\\nasalhelmetwithmail.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_nasalhelmetwithmail_a_small"
+		texturefile = "gfx\\artifacts\\head\\heavy\\nasalhelmetwithmail_small.dds"
+	}
+	#Nasal Helmet with Closed Mail
+	spriteType = {
+		name = "GFX_rtp_nasalhelmetwithclosedmail_a"
+		texturefile = "gfx\\artifacts\\head\\heavy\\nasalhelmetwithclosedmail.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_nasalhelmetwithclosedmail_a_small"
+		texturefile = "gfx\\artifacts\\head\\heavy\\nasalhelmetwithclosedmail_small.dds"
+	}
+	#Closed Mail Coif
+	spriteType = {
+		name = "GFX_rtp_closedmailcoif_a"
+		texturefile = "gfx\\artifacts\\head\\heavy\\closedmailcoif.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_closedmailcoif_a_small"
+		texturefile = "gfx\\artifacts\\head\\heavy\\closedmailcoif_small.dds"
+	}
+
+	##Plate
+	#Full Helm
+	spriteType = {
+		name = "GFX_rtp_fullhelm_a"
+		texturefile = "gfx\\artifacts\\head\\plate\\fullhelm.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_fullhelm_a_small"
+		texturefile = "gfx\\artifacts\\head\\plate\\fullhelm_small.dds"
+	}
+	#Barbute Helmet
+	spriteType = {
+		name = "GFX_rtp_barbutehelmet_a"
+		texturefile = "gfx\\artifacts\\head\\plate\\barbutehelmet.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_barbutehelmet_a_small"
+		texturefile = "gfx\\artifacts\\head\\plate\\barbutehelmet_small.dds"
+	}
+	#Conic Helmet with Closed Mail
+	spriteType = {
+		name = "GFX_rtp_conichelmetwithclosedmail_a"
+		texturefile = "gfx\\artifacts\\head\\plate\\conichelmetwithclosedmail.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_conichelmetwithclosedmail_a_small"
+		texturefile = "gfx\\artifacts\\head\\plate\\conichelmetwithclosedmail_small.dds"
+	}
+	#Closed Flat Top with Mail
+	spriteType = {
+		name = "GFX_rtp_closedflattopwithmail_a"
+		texturefile = "gfx\\artifacts\\head\\plate\\closedflattopwithmail.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_closedflattopwithmail_a_small"
+		texturefile = "gfx\\artifacts\\head\\plate\\closedflattopwithmail_small.dds"
+	}
+	#Conic Helmet with Faceguard
+	spriteType = {
+		name = "GFX_rtp_conichelmetwithfaceguard_a"
+		texturefile = "gfx\\artifacts\\head\\plate\\conichelmetwithfaceguard.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_conichelmetwithfaceguard_a_small"
+		texturefile = "gfx\\artifacts\\head\\plate\\conichelmetwithfaceguard_small.dds"
+	}
+	#Closed Scrap Metal Helmet
+	spriteType = {
+		name = "GFX_rtp_closedscrapmetalhelmet_a"
+		texturefile = "gfx\\artifacts\\head\\plate\\closedscrapmetalhelmet.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_closedscrapmetalhelmet_a_small"
+		texturefile = "gfx\\artifacts\\head\\plate\\closedscrapmetalhelmet_small.dds"
+	}
+	#Decorated Full Helm
+	spriteType = {
+		name = "GFX_rtp_decoratedfullhelm_a"
+		texturefile = "gfx\\artifacts\\head\\plate\\decoratedfullhelm.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_decoratedfullhelm_a_small"
+		texturefile = "gfx\\artifacts\\head\\plate\\decoratedfullhelm_small.dds"
+	}
+	#Heavy Horned Plate Helmet
+	spriteType = {
+		name = "GFX_rtp_heavyhornedplatehelmet_a"
+		texturefile = "gfx\\artifacts\\head\\plate\\heavyhornedplatehelmet.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_heavyhornedplatehelmet_a_small"
+		texturefile = "gfx\\artifacts\\head\\plate\\heavyhornedplatehelmet_small.dds"
+	}
+
+	###Torso
+
+	##Cloth
+	#Linen Tunic
+	spriteType = {
+		name = "GFX_rtp_linentunic_a"
+		texturefile = "gfx\\artifacts\\torso\\cloth\\linentunic.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_linentunic_a_small"
+		texturefile = "gfx\\artifacts\\torso\\cloth\\linentunic_small.dds"
+	}
+	#Apron
+	spriteType = {
+		name = "GFX_rtp_apron_a"
+		texturefile = "gfx\\artifacts\\torso\\cloth\\apron.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_apron_a_small"
+		texturefile = "gfx\\artifacts\\torso\\cloth\\apron_small.dds"
+	}
+	#Monk's Robe
+	spriteType = {
+		name = "GFX_rtp_monkrobe_a"
+		texturefile = "gfx\\artifacts\\torso\\cloth\\monkrobe.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_monkrobe_a_small"
+		texturefile = "gfx\\artifacts\\torso\\cloth\\monkrobe_small.dds"
+	}
+	#Noble Tunic
+	spriteType = {
+		name = "GFX_rtp_nobletunic_a"
+		texturefile = "gfx\\artifacts\\torso\\cloth\\nobletunic.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_nobletunic_a_small"
+		texturefile = "gfx\\artifacts\\torso\\cloth\\nobletunic_small.dds"
+	}
+	#Sackcloth
+	spriteType = {
+		name = "GFX_rtp_sackcloth_a"
+		texturefile = "gfx\\artifacts\\torso\\cloth\\sackcloth.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_sackcloth_a_small"
+		texturefile = "gfx\\artifacts\\torso\\cloth\\sackcloth_small.dds"
+	}
+	#Leather Wraps
+	spriteType = {
+		name = "GFX_rtp_leatherwraps_a"
+		texturefile = "gfx\\artifacts\\torso\\cloth\\leatherwraps.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_leatherwraps_a_small"
+		texturefile = "gfx\\artifacts\\torso\\cloth\\leatherwraps_small.dds"
+	}
+	#Butcher's Apron
+	spriteType = {
+		name = "GFX_rtp_butcherapron_a"
+		texturefile = "gfx\\artifacts\\torso\\cloth\\butcherapron.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_butcherapron_a_small"
+		texturefile = "gfx\\artifacts\\torso\\cloth\\butcherapron_small.dds"
+	}
+	#Student's Robe
+	spriteType = {
+		name = "GFX_rtp_studentrobe_a"
+		texturefile = "gfx\\artifacts\\torso\\cloth\\studentrobe.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_studentrobe_a_small"
+		texturefile = "gfx\\artifacts\\torso\\cloth\\studentrobe_small.dds"
+	}
+
+	##Light
+	#Rugged Surcoat
+	spriteType = {
+		name = "GFX_rtp_ruggedsurcoat_a"
+		texturefile = "gfx\\artifacts\\torso\\light\\ruggedsurcoat.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_ruggedsurcoat_a_small"
+		texturefile = "gfx\\artifacts\\torso\\light\\ruggedsurcoat_small.dds"
+	}
+	#Thick Tunic
+	spriteType = {
+		name = "GFX_rtp_thicktunic_a"
+		texturefile = "gfx\\artifacts\\torso\\light\\thicktunic.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_thicktunic_a_small"
+		texturefile = "gfx\\artifacts\\torso\\light\\thicktunic_small.dds"
+	}
+	#Animal Hide Armor
+	spriteType = {
+		name = "GFX_rtp_animalhidearmor_a"
+		texturefile = "gfx\\artifacts\\torso\\light\\animalhidearmor.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_animalhidearmor_a_small"
+		texturefile = "gfx\\artifacts\\torso\\light\\animalhidearmor_small.dds"
+	}
+	#Dark Rugged Surcoat
+	spriteType = {
+		name = "GFX_rtp_darkruggedsurcoat_a"
+		texturefile = "gfx\\artifacts\\torso\\light\\darkruggedsurcoat.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_darkruggedsurcoat_a_small"
+		texturefile = "gfx\\artifacts\\torso\\light\\darkruggedsurcoat_small.dds"
+	}
+	#Scrap Metal Armor
+	spriteType = {
+		name = "GFX_rtp_scrapmetalarmor_a"
+		texturefile = "gfx\\artifacts\\torso\\light\\scrapmetalarmor.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_scrapmetalarmor_a_small"
+		texturefile = "gfx\\artifacts\\torso\\light\\scrapmetalarmor_small.dds"
+	}
+	#Cultist Leather Robe
+	spriteType = {
+		name = "GFX_rtp_cultistleatherrobe_a"
+		texturefile = "gfx\\artifacts\\torso\\light\\cultistleatherrobe.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_cultistleatherrobe_a_small"
+		texturefile = "gfx\\artifacts\\torso\\light\\cultistleatherrobe_small.dds"
+	}
+	#Leather Tunic
+	spriteType = {
+		name = "GFX_rtp_leathertunic_a"
+		texturefile = "gfx\\artifacts\\torso\\light\\leathertunic.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_leathertunic_a_small"
+		texturefile = "gfx\\artifacts\\torso\\light\\leathertunic_small.dds"
+	}
+	#Thick Furs
+	spriteType = {
+		name = "GFX_rtp_thickfurs_a"
+		texturefile = "gfx\\artifacts\\torso\\light\\thickfurs.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_thickfurs_a_small"
+		texturefile = "gfx\\artifacts\\torso\\light\\thickfurs_small.dds"
+	}
+
+	##Medium
+	#Gambeson
+	spriteType = {
+		name = "GFX_rtp_gambeson_a"
+		texturefile = "gfx\\artifacts\\torso\\medium\\gambeson.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_gambeson_a_small"
+		texturefile = "gfx\\artifacts\\torso\\medium\\gambeson_small.dds"
+	}
+	#Leather Lamellar Armor
+	spriteType = {
+		name = "GFX_rtp_leatherlamellararmor_a"
+		texturefile = "gfx\\artifacts\\torso\\medium\\leatherlamellararmor.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_leatherlamellararmor_a_small"
+		texturefile = "gfx\\artifacts\\torso\\medium\\leatherlamellararmor_small.dds"
+	}
+	#Blotched Gambeson
+	spriteType = {
+		name = "GFX_rtp_blotchedgambeson_a"
+		texturefile = "gfx\\artifacts\\torso\\medium\\blotchedgambeson.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_blotchedgambeson_a_small"
+		texturefile = "gfx\\artifacts\\torso\\medium\\blotchedgambeson_small.dds"
+	}
+	#Padded Leather
+	spriteType = {
+		name = "GFX_rtp_paddedleather_a"
+		texturefile = "gfx\\artifacts\\torso\\medium\\paddedleather.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_paddedleather_a_small"
+		texturefile = "gfx\\artifacts\\torso\\medium\\paddedleather_small.dds"
+	}
+	#Leather Scale Armor
+	spriteType = {
+		name = "GFX_rtp_leatherscalearmor_a"
+		texturefile = "gfx\\artifacts\\torso\\medium\\leatherscalearmor.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_leatherscalearmor_a_small"
+		texturefile = "gfx\\artifacts\\torso\\medium\\leatherscalearmor_small.dds"
+	}
+	#Reinforced Animal Hide Armor
+	spriteType = {
+		name = "GFX_rtp_reinforcedanimalhidearmor_a"
+		texturefile = "gfx\\artifacts\\torso\\medium\\reinforcedanimalhidearmor.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_reinforcedanimalhidearmor_a_small"
+		texturefile = "gfx\\artifacts\\torso\\medium\\reinforcedanimalhidearmor_small.dds"
+	}
+	#Rugged Scale Armor
+	spriteType = {
+		name = "GFX_rtp_ruggedscalearmor_a"
+		texturefile = "gfx\\artifacts\\torso\\medium\\ruggedscalearmor.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_ruggedscalearmor_a_small"
+		texturefile = "gfx\\artifacts\\torso\\medium\\ruggedscalearmor_small.dds"
+	}
+	#Light Scale Armor
+	spriteType = {
+		name = "GFX_rtp_lightscalearmor_a"
+		texturefile = "gfx\\artifacts\\torso\\medium\\lightscalearmor.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_lightscalearmor_a_small"
+		texturefile = "gfx\\artifacts\\torso\\medium\\lightscalearmor_small.dds"
+	}
+
+	##Heavy
+	#Mail Shirt
+	spriteType = {
+		name = "GFX_rtp_mailshirt_a"
+		texturefile = "gfx\\artifacts\\torso\\heavy\\mailshirt.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_mailshirt_a_small"
+		texturefile = "gfx\\artifacts\\torso\\heavy\\mailshirt_small.dds"
+	}
+	#Patched Mail Shirt
+	spriteType = {
+		name = "GFX_rtp_patchedmailshirt_a"
+		texturefile = "gfx\\artifacts\\torso\\heavy\\patchedmailshirt.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_patchedmailshirt_a_small"
+		texturefile = "gfx\\artifacts\\torso\\heavy\\patchedmailshirt_small.dds"
+	}
+	#Worn Mail Shirt
+	spriteType = {
+		name = "GFX_rtp_wornmailshirt_a"
+		texturefile = "gfx\\artifacts\\torso\\heavy\\wornmailshirt.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_wornmailshirt_a_small"
+		texturefile = "gfx\\artifacts\\torso\\heavy\\wornmailshirt_small.dds"
+	}
+	#Basic Mail Shirt
+	spriteType = {
+		name = "GFX_rtp_basicmailshirt_a"
+		texturefile = "gfx\\artifacts\\torso\\heavy\\basicmailshirt.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_basicmailshirt_a_small"
+		texturefile = "gfx\\artifacts\\torso\\heavy\\basicmailshirt_small.dds"
+	}
+	#Direwolf Mail Armor
+	spriteType = {
+		name = "GFX_rtp_chainmaildirewolfhidearmor_a"
+		texturefile = "gfx\\artifacts\\torso\\heavy\\chainmaildirewolfhidearmor.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_chainmaildirewolfhidearmor_a_small"
+		texturefile = "gfx\\artifacts\\torso\\heavy\\chainmaildirewolfhidearmor_small.dds"
+	}
+	#Mail Hauberk
+	spriteType = {
+		name = "GFX_rtp_mailhauberk_a"
+		texturefile = "gfx\\artifacts\\torso\\heavy\\mailhauberk.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_mailhauberk_a_small"
+		texturefile = "gfx\\artifacts\\torso\\heavy\\mailhauberk_small.dds"
+	}
+	#Lamellar Harness
+	spriteType = {
+		name = "GFX_rtp_lamellarharness_a"
+		texturefile = "gfx\\artifacts\\torso\\heavy\\lamellarharness.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_lamellarharness_a_small"
+		texturefile = "gfx\\artifacts\\torso\\heavy\\lamellarharness_small.dds"
+	}
+	#Scale Armor
+	spriteType = {
+		name = "GFX_rtp_scalearmor_a"
+		texturefile = "gfx\\artifacts\\torso\\heavy\\scalearmor.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_scalearmor_a_small"
+		texturefile = "gfx\\artifacts\\torso\\heavy\\scalearmor_small.dds"
+	}
+
+	##Plate
+	#Coat of Plates
+	spriteType = {
+		name = "GFX_rtp_coatofplates_a"
+		texturefile = "gfx\\artifacts\\torso\\plate\\coatofplates.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_coatofplates_a_small"
+		texturefile = "gfx\\artifacts\\torso\\plate\\coatofplates_small.dds"
+	}
+	#Heavy Lamellar Armor
+	spriteType = {
+		name = "GFX_rtp_heavylamellararmor_a"
+		texturefile = "gfx\\artifacts\\torso\\plate\\heavylamellararmor.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_heavylamellararmor_a_small"
+		texturefile = "gfx\\artifacts\\torso\\plate\\heavylamellararmor_small.dds"
+	}
+	#Sellsword's Armor
+	spriteType = {
+		name = "GFX_rtp_sellswordarmor_a"
+		texturefile = "gfx\\artifacts\\torso\\plate\\sellswordarmor.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_sellswordarmor_a_small"
+		texturefile = "gfx\\artifacts\\torso\\plate\\sellswordarmor_small.dds"
+	}
+	#Coat of Scales
+	spriteType = {
+		name = "GFX_rtp_coatofscales_a"
+		texturefile = "gfx\\artifacts\\torso\\plate\\coatofscales.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_coatofscales_a_small"
+		texturefile = "gfx\\artifacts\\torso\\plate\\coatofscales_small.dds"
+	}
+	#Reinforced Mail Hauberk
+	spriteType = {
+		name = "GFX_rtp_reinforcedmailhauberk_a"
+		texturefile = "gfx\\artifacts\\torso\\plate\\reinforcedmailhauberk.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_reinforcedmailhauberk_a_small"
+		texturefile = "gfx\\artifacts\\torso\\plate\\reinforcedmailhauberk_small.dds"
+	}
+	#Thick Plated Barbarian Armor
+	spriteType = {
+		name = "GFX_rtp_thickplatedbarbarianarmor_a"
+		texturefile = "gfx\\artifacts\\torso\\plate\\thickplatedbarbarianarmor.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_thickplatedbarbarianarmor_a_small"
+		texturefile = "gfx\\artifacts\\torso\\plate\\thickplatedbarbarianarmor_small.dds"
+	}
+	#Heraldic Hauberk
+	spriteType = {
+		name = "GFX_rtp_heraldichauberk_a"
+		texturefile = "gfx\\artifacts\\torso\\plate\\heraldichauberk.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_heraldichauberk_a_small"
+		texturefile = "gfx\\artifacts\\torso\\plate\\heraldichauberk_small.dds"
+	}
+	#Heavy Iron Armor
+	spriteType = {
+		name = "GFX_rtp_heavyironarmor_a"
+		texturefile = "gfx\\artifacts\\torso\\plate\\heavyironarmor.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_heavyironarmor_a_small"
+		texturefile = "gfx\\artifacts\\torso\\plate\\heavyironarmor_small.dds"
+	}
+
+	###Main Hand
+
+	##Daggers
+	#Dagger
+	spriteType = {
+		name = "GFX_rtp_dagger_a"
+		texturefile = "gfx\\artifacts\\weapons\\daggers\\dagger.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_dagger_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\daggers\\dagger_small.dds"
+	}
+	#Knife
+	spriteType = {
+		name = "GFX_rtp_knife_a"
+		texturefile = "gfx\\artifacts\\weapons\\daggers\\knife.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_knife_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\daggers\\knife_small.dds"
+	}
+	#Rondel Dagger
+	spriteType = {
+		name = "GFX_rtp_rondeldagger_a"
+		texturefile = "gfx\\artifacts\\weapons\\daggers\\rondeldagger.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_rondeldagger_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\daggers\\rondeldagger_small.dds"
+	}
+
+	##Swords
+	#Shortsword
+	spriteType = {
+		name = "GFX_rtp_shortsword_a"
+		texturefile = "gfx\\artifacts\\weapons\\swords\\shortsword.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_shortsword_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\swords\\shortsword_small.dds"
+	}
+	#Scimitar
+	spriteType = {
+		name = "GFX_rtp_scimitar_a"
+		texturefile = "gfx\\artifacts\\weapons\\swords\\scimitar.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_scimitar_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\swords\\scimitar_small.dds"
+	}
+	#Falchion
+	spriteType = {
+		name = "GFX_rtp_falchion_a"
+		texturefile = "gfx\\artifacts\\weapons\\swords\\falchion.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_falchion_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\swords\\falchion_small.dds"
+	}
+
+	##Maces
+	#Wooden Stick
+	spriteType = {
+		name = "GFX_rtp_woodenstick_a"
+		texturefile = "gfx\\artifacts\\weapons\\maces\\woodenstick.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_woodenstick_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\maces\\woodenstick_small.dds"
+	}
+	#Bludgeon
+	spriteType = {
+		name = "GFX_rtp_bludgeon_a"
+		texturefile = "gfx\\artifacts\\weapons\\maces\\bludgeon.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_bludgeon_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\maces\\bludgeon_small.dds"
+	}
+	#Morning Star
+	spriteType = {
+		name = "GFX_rtp_morningstar_a"
+		texturefile = "gfx\\artifacts\\weapons\\maces\\morningstar.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_morningstar_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\maces\\morningstar_small.dds"
+	}
+
+	##Spears
+	#Militia Spear
+	spriteType = {
+		name = "GFX_rtp_militiaspear_a"
+		texturefile = "gfx\\artifacts\\weapons\\spears\\militiaspear.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_militiaspear_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\spears\\militiaspear_small.dds"
+	}
+	#Boar Spear
+	spriteType = {
+		name = "GFX_rtp_boarspear_a"
+		texturefile = "gfx\\artifacts\\weapons\\spears\\boarspear.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_boarspear_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\spears\\boarspear_small.dds"
+	}
+	#Fighting Spear
+	spriteType = {
+		name = "GFX_rtp_fightingspear_a"
+		texturefile = "gfx\\artifacts\\weapons\\spears\\fightingspear.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_fightingspear_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\spears\\fightingspear_small.dds"
+	}
+
+	##Axes
+	#Hatchet
+	spriteType = {
+		name = "GFX_rtp_hatchet_a"
+		texturefile = "gfx\\artifacts\\weapons\\axes\\hatchet.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_hatchet_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\axes\\hatchet_small.dds"
+	}
+	#Handaxe
+	spriteType = {
+		name = "GFX_rtp_handaxe_a"
+		texturefile = "gfx\\artifacts\\weapons\\axes\\handaxe.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_handaxe_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\axes\\handaxe_small.dds"
+	}
+	#Fighting Axe
+	spriteType = {
+		name = "GFX_rtp_fightingaxe_a"
+		texturefile = "gfx\\artifacts\\weapons\\axes\\fightingaxe.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_fightingaxe_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\axes\\fightingaxe_small.dds"
+	}
+
+	##Flails
+	#Wooden Flail
+	spriteType = {
+		name = "GFX_rtp_woodenflail_a"
+		texturefile = "gfx\\artifacts\\weapons\\flails\\woodenflail.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_woodenflail_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\flails\\woodenflail_small.dds"
+	}
+	#Reinforced Wooden Flail
+	spriteType = {
+		name = "GFX_rtp_reinforcedwoodenflail_a"
+		texturefile = "gfx\\artifacts\\weapons\\flails\\reinforcedwoodenflail.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_reinforcedwoodenflail_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\flails\\reinforcedwoodenflail_small.dds"
+	}
+	#Flail
+	spriteType = {
+		name = "GFX_rtp_flail_a"
+		texturefile = "gfx\\artifacts\\weapons\\flails\\flail.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_flail_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\flails\\flail_small.dds"
+	}
+
+	##Cleavers
+	#Butcher's Cleaver
+	spriteType = {
+		name = "GFX_rtp_butchercleaver_a"
+		texturefile = "gfx\\artifacts\\weapons\\cleavers\\butchercleaver.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_butchercleaver_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\cleavers\\butchercleaver_small.dds"
+	}
+	#Scramasax
+	spriteType = {
+		name = "GFX_rtp_scramasax_a"
+		texturefile = "gfx\\artifacts\\weapons\\cleavers\\scramasax.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_scramasax_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\cleavers\\scramasax_small.dds"
+	}
+	#Military Cleaver
+	spriteType = {
+		name = "GFX_rtp_militarycleaver_a"
+		texturefile = "gfx\\artifacts\\weapons\\cleavers\\militarycleaver.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_militarycleaver_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\cleavers\\militarycleaver_small.dds"
+	}
+
+	##Hammers
+	#Pickaxe
+	spriteType = {
+		name = "GFX_rtp_pickaxe_a"
+		texturefile = "gfx\\artifacts\\weapons\\hammers\\pickaxe.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_pickaxe_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\hammers\\pickaxe_small.dds"
+	}
+	#Warhammer
+	spriteType = {
+		name = "GFX_rtp_warhammer_a"
+		texturefile = "gfx\\artifacts\\weapons\\hammers\\warhammer.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_warhammer_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\hammers\\warhammer_small.dds"
+	}
+	#Military Pick
+	spriteType = {
+		name = "GFX_rtp_militarypick_a"
+		texturefile = "gfx\\artifacts\\weapons\\hammers\\militarypick.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_militarypick_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\hammers\\militarypick_small.dds"
+	}
+
+	##Throwing Weapons
+	#Throwing Axes
+	spriteType = {
+		name = "GFX_rtp_throwingaxes_a"
+		texturefile = "gfx\\artifacts\\weapons\\throwingweapons\\throwingaxes.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_throwingaxes_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\throwingweapons\\throwingaxes_small.dds"
+	}
+	#Javelins
+	spriteType = {
+		name = "GFX_rtp_javelins_a"
+		texturefile = "gfx\\artifacts\\weapons\\throwingweapons\\javelins.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_javelins_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\throwingweapons\\javelins_small.dds"
+	}
+	#Throwing Spear
+	spriteType = {
+		name = "GFX_rtp_throwingspear_a"
+		texturefile = "gfx\\artifacts\\weapons\\throwingweapons\\throwingspear.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_throwingspear_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\throwingweapons\\throwingspear_small.dds"
+	}
+
+	##Shields
+	#Tower Shield
+	spriteType = {
+		name = "GFX_rtp_towershield_a"
+		texturefile = "gfx\\artifacts\\weapons\\shields\\towershield.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_towershield_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\shields\\towershield_small.dds"
+	}
+	#Kite Shield
+	spriteType = {
+		name = "GFX_rtp_kiteshield_a"
+		texturefile = "gfx\\artifacts\\weapons\\shields\\kiteshield.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_kiteshield_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\shields\\kiteshield_small.dds"
+	}
+	#Wooden Shield
+	spriteType = {
+		name = "GFX_rtp_woodenshield_a"
+		texturefile = "gfx\\artifacts\\weapons\\shields\\woodenshield.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_woodenshield_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\shields\\woodenshield_small.dds"
+	}
+	#Heater Shield
+	spriteType = {
+		name = "GFX_rtp_heatershield_a"
+		texturefile = "gfx\\artifacts\\weapons\\shields\\heatershield.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_heatershield_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\shields\\heatershield_small.dds"
+	}
+	#Buckler
+	spriteType = {
+		name = "GFX_rtp_buckler_a"
+		texturefile = "gfx\\artifacts\\weapons\\shields\\buckler.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_buckler_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\shields\\buckler_small.dds"
+	}
+	#Skirmisher Shield
+	spriteType = {
+		name = "GFX_rtp_skirmishershield_a"
+		texturefile = "gfx\\artifacts\\weapons\\shields\\skirmishershield.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_skirmishershield_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\shields\\skirmishershield_small.dds"
+	}
+
+	###Two Hand
+
+	##Two Handed Swords
+	#Warbrand
+	spriteType = {
+		name = "GFX_rtp_warbrand_a"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedswords\\warbrand.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_warbrand_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedswords\\warbrand_small.dds"
+	}
+	#Longsword
+	spriteType = {
+		name = "GFX_rtp_longsword_a"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedswords\\longsword.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_longsword_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedswords\\longsword_small.dds"
+	}
+	#Greatsword
+	spriteType = {
+		name = "GFX_rtp_greatsword_a"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedswords\\greatsword.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_greatsword_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedswords\\greatsword_small.dds"
+	}
+
+	##Two Handed Maces
+	#Two-Handed Mace
+	spriteType = {
+		name = "GFX_rtp_thmace_a"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedmaces\\thmace.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_thmace_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedmaces\\thmace_small.dds"
+	}
+	#Two-Handed Flanged Mace
+	spriteType = {
+		name = "GFX_rtp_thflangedmace_a"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedmaces\\thflangedmace.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_thflangedmace_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedmaces\\thflangedmace_small.dds"
+	}
+	#Two-Handed Spiked Mace
+	spriteType = {
+		name = "GFX_rtp_thspikedmace_a"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedmaces\\thspikedmace.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_thspikedmace_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedmaces\\thspikedmace_small.dds"
+	}
+
+	##Two Handed Spears
+	#Goedendag
+	spriteType = {
+		name = "GFX_rtp_goedendag_a"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedspears\\goedendag.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_goedendag_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedspears\\goedendag_small.dds"
+	}
+	#Spetum
+	spriteType = {
+		name = "GFX_rtp_spetum_a"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedspears\\spetum.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_spetum_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedspears\\spetum_small.dds"
+	}
+	#Warfork
+	spriteType = {
+		name = "GFX_rtp_warfork_a"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedspears\\warfork.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_warfork_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedspears\\warfork_small.dds"
+	}
+
+	##Two Handed Axes
+	#Woodcutter's Axe
+	spriteType = {
+		name = "GFX_rtp_woodcutteraxe_a"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedaxes\\woodcutteraxe.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_woodcutteraxe_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedaxes\\woodcutteraxe_small.dds"
+	}
+	#Greataxe
+	spriteType = {
+		name = "GFX_rtp_greataxe_a"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedaxes\\greataxe.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_greataxe_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedaxes\\greataxe_small.dds"
+	}
+	#Longaxe
+	spriteType = {
+		name = "GFX_rtp_longaxe_a"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedaxes\\longaxe.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_longaxe_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedaxes\\longaxe_small.dds"
+	}
+
+	##Two Handed Flails
+	#Two-Handed Wooden Flail
+	spriteType = {
+		name = "GFX_rtp_thwoodenflail_a"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedflails\\thwoodenflail.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_thwoodenflail_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedflails\\thwoodenflail_small.dds"
+	}
+	#Berserk Chain
+	spriteType = {
+		name = "GFX_rtp_berserkchain_a"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedflails\\berserkchain.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_berserkchain_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedflails\\berserkchain_small.dds"
+	}
+	#Two-Handed Flail
+	spriteType = {
+		name = "GFX_rtp_thflail_a"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedflails\\thflail.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_thflail_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedflails\\thflail_small.dds"
+	}
+
+	##Two Handed Cleavers
+	#Rusty Warblade
+	spriteType = {
+		name = "GFX_rtp_rustywarblade_a"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedcleavers\\rustywarblade.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_rustywarblade_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedcleavers\\rustywarblade_small.dds"
+	}
+	#Crypt Cleaver
+	spriteType = {
+		name = "GFX_rtp_cryptcleaver_a"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedcleavers\\cryptcleaver.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_cryptcleaver_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedcleavers\\cryptcleaver_small.dds"
+	}
+
+	##Two Handed Hammers
+	#Two-Handed Mallet
+	spriteType = {
+		name = "GFX_rtp_thmallet_a"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedhammers\\thmallet.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_thmallet_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedhammers\\thmallet_small.dds"
+	}
+	#Two-Handed Hammer
+	spriteType = {
+		name = "GFX_rtp_thhammer_a"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedhammers\\thhammer.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_thhammer_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedhammers\\thhammer_small.dds"
+	}
+	#Polehammer
+	spriteType = {
+		name = "GFX_rtp_polehammer_a"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedhammers\\polehammer.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_polehammer_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\twohandedhammers\\polehammer_small.dds"
+	}
+
+	##Polearms
+	#Pitchfork
+	spriteType = {
+		name = "GFX_rtp_pitchfork_a"
+		texturefile = "gfx\\artifacts\\weapons\\polearms\\pitchfork.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_pitchfork_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\polearms\\pitchfork_small.dds"
+	}
+	#Pike
+	spriteType = {
+		name = "GFX_rtp_pike_a"
+		texturefile = "gfx\\artifacts\\weapons\\polearms\\pike.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_pike_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\polearms\\pike_small.dds"
+	}
+	#Billhook
+	spriteType = {
+		name = "GFX_rtp_billhook_a"
+		texturefile = "gfx\\artifacts\\weapons\\polearms\\billhook.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_billhook_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\polearms\\billhook_small.dds"
+	}
+
+	##Bows
+	#Short Bow
+	spriteType = {
+		name = "GFX_rtp_shortbow_a"
+		texturefile = "gfx\\artifacts\\weapons\\bows\\shortbow.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_shortbow_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\bows\\shortbow_small.dds"
+	}
+	#Hunting Bow
+	spriteType = {
+		name = "GFX_rtp_huntingbow_a"
+		texturefile = "gfx\\artifacts\\weapons\\bows\\huntingbow.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_huntingbow_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\bows\\huntingbow_small.dds"
+	}
+	#War Bow
+	spriteType = {
+		name = "GFX_rtp_warbow_a"
+		texturefile = "gfx\\artifacts\\weapons\\bows\\warbow.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_warbow_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\bows\\warbow_small.dds"
+	}
+
+	##Crossbows
+	#Light Crossbow
+	spriteType = {
+		name = "GFX_rtp_lightcrossbow_a"
+		texturefile = "gfx\\artifacts\\weapons\\crossbows\\lightcrossbow.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_lightcrossbow_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\crossbows\\lightcrossbow_small.dds"
+	}
+	#Crossbow
+	spriteType = {
+		name = "GFX_rtp_crossbow_a"
+		texturefile = "gfx\\artifacts\\weapons\\crossbows\\crossbow.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_crossbow_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\crossbows\\crossbow_small.dds"
+	}
+	#Windlass Crossbow
+	spriteType = {
+		name = "GFX_rtp_windlasscrossbow_a"
+		texturefile = "gfx\\artifacts\\weapons\\crossbows\\windlasscrossbow.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_windlasscrossbow_a_small"
+		texturefile = "gfx\\artifacts\\weapons\\crossbows\\windlasscrossbow_small.dds"
+	}
+
+	###Mount
+
+	#Horse
+	spriteType = {
+		name = "GFX_rtp_horse_a"
+		texturefile = "gfx\\artifacts\\mounts\\horse.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_horse_a_small"
+		texturefile = "gfx\\artifacts\\mounts\\horse_small.dds"
+	}
+
+	###Storage
+
+	##Trade
+	#Gems
+	spriteType = {
+		name = "GFX_rtp_gems_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\gems.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_gems_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\gems_small.dds"
+	}
+	#Amber
+	spriteType = {
+		name = "GFX_rtp_amber_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\amber.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_amber_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\amber_small.dds"
+	}
+	#Beer
+	spriteType = {
+		name = "GFX_rtp_beer_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\beer.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_beer_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\beer_small.dds"
+	}
+	#Berries
+	spriteType = {
+		name = "GFX_rtp_berries_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\berries.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_berries_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\berries_small.dds"
+	}
+	#Bread
+	spriteType = {
+		name = "GFX_rtp_bread_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\bread.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_bread_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\bread_small.dds"
+	}
+	#Bricks
+	spriteType = {
+		name = "GFX_rtp_bricks_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\bricks.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_bricks_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\bricks_small.dds"
+	}
+	#Cheese
+	spriteType = {
+		name = "GFX_rtp_cheese_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\cheese.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_cheese_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\cheese_small.dds"
+	}
+	#Cloth
+	spriteType = {
+		name = "GFX_rtp_cloth_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\cloth.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_cloth_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\cloth_small.dds"
+	}
+	#Copper
+	spriteType = {
+		name = "GFX_rtp_copper_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\copper.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_copper_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\copper_small.dds"
+	}
+	#Dries Fruits
+	spriteType = {
+		name = "GFX_rtp_driedfruits_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\driedfruits.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_driedfruits_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\driedfruits_small.dds"
+	}
+	#Dyes
+	spriteType = {
+		name = "GFX_rtp_dyes_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\dyes.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_dyes_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\dyes_small.dds"
+	}
+	#Fish
+	spriteType = {
+		name = "GFX_rtp_fish_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\fish.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_fish_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\fish_small.dds"
+	}
+	#Furs
+	spriteType = {
+		name = "GFX_rtp_furs_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\furs.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_furs_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\furs_small.dds"
+	}
+	#Grain
+	spriteType = {
+		name = "GFX_rtp_grain_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\grain.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_grain_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\grain_small.dds"
+	}
+	#Ham
+	spriteType = {
+		name = "GFX_rtp_ham_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\ham.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_ham_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\ham_small.dds"
+	}
+	#Mushrooms
+	spriteType = {
+		name = "GFX_rtp_mushrooms_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\mushrooms.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_mushrooms_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\mushrooms_small.dds"
+	}
+	#Porkribs
+	spriteType = {
+		name = "GFX_rtp_porkribs_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\porkribs.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_porkribs_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\porkribs_small.dds"
+	}
+	#Salt
+	spriteType = {
+		name = "GFX_rtp_salt_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\salt.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_salt_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\salt_small.dds"
+	}
+	#Spirits
+	spriteType = {
+		name = "GFX_rtp_spirits_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\spirits.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_spirits_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\spirits_small.dds"
+	}
+	#Venison
+	spriteType = {
+		name = "GFX_rtp_venison_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\venison.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_venison_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\venison_small.dds"
+	}
+	#Wine
+	spriteType = {
+		name = "GFX_rtp_wine_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\wine.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_wine_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\wine_small.dds"
+	}
+	#Wood
+	spriteType = {
+		name = "GFX_rtp_wood_a"
+		texturefile = "gfx\\artifacts\\storage\\trade\\wood.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_wood_a_small"
+		texturefile = "gfx\\artifacts\\storage\\trade\\wood_small.dds"
+	}
+
+	##Trinkets
+	#Ancient Skull
+	spriteType = {
+		name = "GFX_rtp_ancientskull_a"
+		texturefile = "gfx\\artifacts\\inventory\\ancientskull.dds"
+	}
+	spriteType = {
+		name = "GFX_rtp_ancientskull_a_small"
+		texturefile = "gfx\\artifacts\\inventory\\ancientskull_small.dds"
+	}
+}

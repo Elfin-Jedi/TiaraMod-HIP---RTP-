@@ -1,0 +1,460 @@
+#####
+#Governments
+#
+#Total = 5
+#####
+
+feudal_governments = {
+	#Confederation
+	rtp_confederation_g = {
+		potential = {
+			independent = yes
+			rtp_is_confederation = yes
+			NOR = {
+				is_government_potential = roman_imperial_government
+				is_government_potential = confucian_bureaucracy
+				is_government_potential = chinese_imperial_government
+			}
+		}
+
+		preferred_holdings = {
+			CASTLE
+			CITY
+			TEMPLE
+			TRIBAL
+		}
+
+		allowed_holdings = {
+			CASTLE
+			CITY
+			TEMPLE
+			TRIBAL
+			FORT
+			HOSPITAL
+		}
+
+		vassal_call_to_arms = {
+			rtp_lowborn_g
+			rtp_noble_g
+			rtp_landless_mercenary_g
+			rtp_landless_order_g
+			rtp_landless_theocracy_g
+			rtp_baron_order_g
+			rtp_baron_mercenary_g
+			rtp_baron_republic_g
+			rtp_baron_theocracy_g
+			rtp_baron_g
+			rtp_baron_iqta_g
+			rtp_baron_monastic_g
+			rtp_confederation_g
+			rtp_mercenary_g
+			rtp_republic_g
+			rtp_theocracy_g
+			rtp_privateer_g
+			order_government
+			feudal_government
+			muslim_government
+			theocratic_feudal_government
+			theocracy_government
+			merchant_republic_government
+			republic_government
+			tribal_government
+		}
+
+		no_vassal_tax = {
+			rtp_lowborn_g
+			rtp_noble_g
+			rtp_landless_mercenary_g
+			rtp_landless_order_g
+			rtp_landless_theocracy_g
+			rtp_baron_order_g
+			rtp_baron_mercenary_g
+			rtp_baron_republic_g
+			rtp_baron_theocracy_g
+			rtp_baron_g
+			rtp_baron_iqta_g
+			rtp_baron_monastic_g
+			rtp_confederation_g
+			rtp_mercenary_g
+			rtp_republic_g
+			rtp_theocracy_g
+			rtp_privateer_g
+			order_government
+			feudal_government
+			muslim_government
+			theocratic_feudal_government
+			theocracy_government
+			merchant_republic_government
+			republic_government
+			tribal_government
+		}
+
+		color = { 5 59 24 }
+		frame_suffix = "_rtpconfederation"
+		capital_move_delay = 2000
+		barons_need_dynasty = yes
+		dukes_called_kings = yes
+		aggression = 0.75
+
+		character_modifier = {
+			diplomacy = 1
+
+			learning = -1
+		}
+
+		uses_prestige_for_law_change = yes
+		can_grant_kingdoms_and_empires_to_other_government_group = yes
+		gets_religion_opinion_penalties = no
+		can_demand_religious_conversion = no
+	}
+
+	#Mercenary
+	rtp_mercenary_g = {
+		potential = {
+			is_patrician = no
+			OR = {
+				mercenary = yes
+				rtp_is_mercenary = yes
+			}
+			NOR = {
+				is_government_potential = roman_imperial_government
+				is_government_potential = confucian_bureaucracy
+				is_government_potential = chinese_imperial_government
+				is_government_potential = rtp_baron_mercenary_g
+			}
+		}
+
+		preferred_holdings = {
+			CASTLE
+		}
+
+		allowed_holdings = {
+			CASTLE
+			TRIBAL
+			FORT
+		}
+
+		builds_with_prestige = {
+			TRIBAL
+		}
+
+		accepts_liege_governments = {
+			feudal_government
+			muslim_government
+			theocratic_feudal_government
+			order_government
+
+			merchant_republic_government
+			republic_government
+			rtp_republic_g
+			rtp_privateer_g
+
+			theocracy_government
+			rtp_theocracy_g
+
+			tribal_government
+
+			nomadic_government
+		}
+		
+		color = { 50 50 50 }
+		frame_suffix = "_rtpmercenary"
+		title_prefix = "mercenary_"
+		capital_move_delay = 600
+		can_build_temple = no
+		can_build_hospitals = no
+		aggression = 1.5
+
+		allow_looting = yes
+		free_levies_in_offensive_war = yes
+		uses_bride_price = yes
+		can_create_kingdoms = no
+		can_usurp_kingdoms_and_empires = no
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+		gets_religion_opinion_penalties = no
+		can_demand_religious_conversion = no
+		uses_prestige_for_law_change = yes
+
+		character_modifier = {
+			intrigue = 1
+
+			stewardship = -1
+		}
+	}
+
+	#Republic
+	rtp_republic_g = {
+		potential = {
+			ai = no
+			is_patrician = no
+			rtp_is_republic = yes
+			NAND = {
+				controls_religion = yes
+				NOT = {
+					religion_group = muslim
+				}
+			}
+			NOR = {
+				is_government_potential = roman_imperial_government
+				is_government_potential = confucian_bureaucracy
+				is_government_potential = chinese_imperial_government
+				is_government_potential = rtp_baron_republic_g
+			}
+		}
+
+		preferred_holdings = {
+			CITY
+		}
+
+		allowed_holdings = {
+			CITY
+			CASTLE
+			FORT
+			HOSPITAL
+		}
+
+		accepts_liege_governments = {
+			merchant_republic_government
+			rtp_republic_g
+		}
+
+		vassal_call_to_arms = {
+			tribal_government
+			rtp_mercenary_g
+			rtp_baron_mercenary_g
+		}
+		
+		color = { 209 125 130 }
+		frame_suffix = "_rtprepublic"
+		title_prefix = "city_"
+		capital_move_delay = 600
+		can_build_tribal = no
+		aggression = 0.25
+
+		marriage_ignore_religion = yes
+		gives_religion_opinion_penalties = no
+		gets_religion_opinion_penalties = no
+		
+		character_modifier = {
+			stewardship = 1
+
+			intrigue = -1
+		}
+	}
+
+	#Theocracy
+	rtp_theocracy_g = {
+		potential = {
+			ai = no
+			is_patrician = no
+			rtp_is_theocracy = yes
+			NOR = {
+				religion_group = muslim
+				is_government_potential = roman_imperial_government
+				is_government_potential = confucian_bureaucracy
+				is_government_potential = chinese_imperial_government
+				is_government_potential = rtp_baron_theocracy_g
+			}
+			OR = {
+				is_female = no
+				religion_allows_female_temple_holders = yes
+			}
+			OR = {
+				is_female = yes
+				religion_allows_male_temple_holders = yes
+			}
+		}
+
+		preferred_holdings = {
+			TEMPLE
+		}
+
+		allowed_holdings = {
+			TEMPLE
+			FORT
+			HOSPITAL
+		}
+
+		builds_with_piety = {
+			TEMPLE
+		}
+
+		accepts_liege_governments_religion = {
+			chinese_imperial_government
+			feudal_government
+			muslim_government
+			theocratic_feudal_government
+			order_government
+
+			confucian_bureaucracy
+			merchant_republic_government
+			republic_government
+			rtp_republic_g
+
+			theocracy_government
+
+			tribal_government
+
+			nomadic_government
+		}
+
+		vassal_call_to_arms = {
+			tribal_government
+			rtp_mercenary_g
+			rtp_baron_mercenary_g
+		}
+
+		no_vassal_tax = {
+			order_government
+			rtp_baron_order_g
+			rtp_landless_order_g
+		}
+
+		color = { 220 220 220 }
+		frame_suffix = "_rtptheocracy"
+		title_prefix = "temple_"
+		capital_move_delay = 600
+		can_build_tribal = no
+		aggression = 0.75
+
+		character_modifier = {
+			learning = 1
+
+			stewardship = -1
+		}
+		
+		men_can_take_consorts = no
+	}
+}
+
+republic_governments = {
+	#Privateer
+	rtp_privateer_g = {
+		potential = {
+			NOR = {
+				is_government_potential = roman_imperial_government
+				is_government_potential = confucian_bureaucracy
+				is_government_potential = chinese_imperial_government
+			}
+			total_years_played > 1
+			rtp_has_title = no
+			has_game_started = yes
+			OR = {
+				controls_religion = no
+				religion_group = muslim
+				has_religion_feature = religion_temporal_head
+				AND = {
+					religion = norse_pagan_reformed
+					has_religion_features = no
+				}
+			}
+			OR = {
+				AND = {
+					is_patrician = yes
+					OR = {
+						liege_before_war = {
+							NOT = {
+								character = PREV
+							}
+							government = rtp_privateer_g
+							NOT = {
+								liege_before_war = {
+									NOT = {
+										character = PREV
+								}
+									is_merchant_republic = yes
+								}
+							}
+						}
+						has_game_started = no
+					}
+				}
+				AND = {
+					OR = {
+						AND = {
+							has_game_started = yes
+							government = rtp_privateer_g
+						}
+						capital_scope = {
+							port = yes
+						}
+					}
+					higher_real_tier_than = count
+					any_demesne_province = {
+						always = yes
+					}
+					NOT = {
+						liege_before_war = {
+							NOT = {
+								character = PREV
+							}
+							government = rtp_privateer_g
+						}
+					}
+				}
+			}
+		}
+
+		preferred_holdings = {
+			CITY
+		}
+
+		allowed_holdings = {
+			CITY
+			FAMILY_PALACE
+			FORT
+			TRADE_POST
+		}
+
+		accepts_liege_governments = {
+			feudal_government
+			muslim_government
+			theocratic_feudal_government
+			order_government
+			rtp_mercenary_g
+
+			merchant_republic_government
+			republic_government
+			rtp_republic_g
+
+			theocracy_government
+			rtp_theocracy_g
+
+			tribal_government
+
+			nomadic_government
+		}
+
+		vassal_call_to_arms = {
+			tribal_government
+			rtp_mercenary_g
+			rtp_baron_mercenary_g
+		}
+
+		color = { 0 0 70 }
+		frame_suffix = "_rtpprivateer"
+		title_prefix = "privateer_"
+		dukes_called_kings = yes
+		capital_move_delay = 600
+		merchant_republic = yes
+		landed_inheritance = no
+		can_build_tribal = no
+		can_build_temple = no
+		can_build_hospitals = no
+		aggression = 1.25
+
+		character_modifier = {
+			intrigue = 1
+
+			martial = -1
+		}
+		
+		allow_looting = yes
+		uses_prestige_for_law_change = yes
+		can_create_empires = no
+		can_usurp_kingdoms_and_empires = no
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+		can_demand_religious_conversion = no
+		uses_bride_price = yes
+	}
+}

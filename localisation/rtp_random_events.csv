@@ -1,0 +1,50 @@
+#####
+#Events
+#####
+
+RTPrandom.1_title;Trading Opportunity;;;;;;x
+RTPrandom.1_desc;A [rtp_employer.GetManWoman] by the name of [rtp_employer.GetFirstName] is looking for somebody to deliver goods to Guild Master [rtp_receiver.GetFirstName] in [rtp_new_liege.Capital.GetName].;;;;;;x
+RTPrandom.1_1;I'll make the delivery.;;;;;;x
+RTPrandom.1_2;Those goods will never get there.;;;;;;x
+
+RTPrandom.2_title;Treasure Hunting;;;;;;x
+RTPrandom.2_desc;While drinking at the local tavern a [rtp_employer.GetManWoman] by the name of [rtp_employer.GetFirstName] tells you a tale regarding a cave located in [Root.Liege.Capital.GetName]. [rtp_employer.GetSheHeCap] says that there are amazing treasures ready for the taking!;;;;;;x
+RTPrandom.2_1;This is a fantastic opportunity!.;;;;;;x
+RTPrandom.2_2;Yeah right.;;;;;;x
+
+RTPrandom.3_title;Treasure Hunting;;;;;;x
+RTPrandom.3_desc;After a long year of searching for the riches said to be hidden in this cave, me and [rtp_employer.GetFirstName] finally found something that peeked our interest.;;;;;;x
+RTPrandom.3_1;[rtp_employer.GetSheHeCap] wasn't lying! The treasure is actually here!;;;;;;x
+RTPrandom.3_2;These fucking bandits left me with a nice scar.;;;;;;x
+RTPrandom.3_3;God damn wolves almost killed me!;;;;;;x
+RTPrandom.3_4;Is that a...;;;;;;x
+
+RTPrandom.4_title;Your Money or Your Life;;;;;;x
+RTPrandom.4_desc;While walking a man approaches me with sword in hand. "Your money or your life pal!";;;;;;x
+RTPrandom.4_1;I'll give you nothing but cold steel, you scum!;;;;;;x
+RTPrandom.4_2;I will pay.;;;;;;x
+
+RTPrandom.5_title;Your Money or Your Life;;;;;;x
+RTPrandom.5.1_desc;After a week you reflect on how much coin that bandit had on his corpse.;;;;;;x
+RTPrandom.5.2_desc;After a week you begin to feel weak after the wounds sustained from the encounter with the bandit.;;;;;;x
+RTPrandom.5_1;Coin is Coin.;;;;;;x
+RTPrandom.5_2;I...I just need to rest a bit.;;;;;;x
+
+RTPrandom.6_title;Almost Harvesting Season;;;;;;x
+RTPrandom.6_desc;While walking I encounter a peasant transporting fruits and vegetables to sell at the local market. "Good day my [Root.GetLordLady].";;;;;;x
+RTPrandom.6_1;Good day!;;;;;;x
+RTPrandom.6_2;Piss off.;;;;;;x
+RTPrandom.6_3;Hand over everything you got.;;;;;;x
+
+RTPrandom.7_title;Out For A Stroll;;;;;;x
+RTPrandom.7.1_desc;While out for a stroll I encounter a fellow nobleman riding his horse around the secluded pathway. "My [Root.GetLordLady].";;;;;;x
+RTPrandom.7.2_desc;While out for a stroll I encounter a nobleman riding his horse around the secluded pathway. "Away with you vile beggar!";;;;;;x;;;;;;x
+RTPrandom.7_1;My [Root.GetLordLady].;;;;;;x
+RTPrandom.7_2;*sigh*.;;;;;;x
+RTPrandom.7_3;Let us part you from your belongings.;;;;;;x
+
+#####
+#Tooltips
+#####
+
+rtp_receive_artifact_ct;Receive an §YArtifact§!;;;;;;x

@@ -1,0 +1,415 @@
+#####
+#Societies
+#####
+
+currency_name_rtp_learning;Influence;;;;;;x
+currency_name_rtp_learning_chalcedonian;Influence;;;;;;x
+currency_name_rtp_learning_catholic;Influence;;;;;;x
+currency_name_rtp_learning_orthodox;Influence;;;;;;x
+currency_name_rtp_learning_nestorian;Influence;;;;;;x
+currency_name_rtp_learning_monophysite;Influence;;;;;;x
+currency_name_rtp_learning_reformed_pagan;Influence;;;;;;x
+currency_name_rtp_learning_pagan;Influence;;;;;;x
+currency_name_rtp_learning_hindu;Influence;;;;;;x
+currency_name_rtp_learning_buddhist;Influence;;;;;;x
+currency_name_rtp_learning_jain;Influence;;;;;;x
+currency_name_rtp_learning_taoist;Influence;;;;;;x
+currency_name_rtp_learning_sunni;Influence;;;;;;x
+currency_name_rtp_learning_shiite;Influence;;;;;;x
+currency_name_rtp_learning_ibadi;Influence;;;;;;x
+currency_name_rtp_learning_jewish;Influence;;;;;;x
+currency_name_rtp_learning_zoroastrian;Influence;;;;;;x
+
+rtp_learning_chalcedonian;The Benedictine Order;;;;;;x
+rtp_learning_chalcedonian_desc;The Benedictine Order is an old monastic community with 'Ora et Labora', meaning 'pray and labor', as their motto. Often recognized by their black habits, they worship God and find purpose in prayer and quiet contemplation as well as scholarly work.;;;;;;x
+rtp_learning_chalcedonian_leader_desc;This is the society leader.;;;;;;x
+rtp_learning_chalcedonian_rank_1_male;Donatus;;;;;;x
+rtp_learning_chalcedonian_rank_2_male;Oblatus;;;;;;x
+rtp_learning_chalcedonian_rank_3_male;Commissus;;;;;;x
+rtp_learning_chalcedonian_rank_4_male;Conversus;;;;;;x
+rtp_learning_chalcedonian_rank_1_female;Donatus;;;;;;x
+rtp_learning_chalcedonian_rank_2_female;Oblatus;;;;;;x
+rtp_learning_chalcedonian_rank_3_female;Commissus;;;;;;x
+rtp_learning_chalcedonian_rank_4_female;Conversus;;;;;;x
+
+rtp_learning_catholic;The Dominican Order;;;;;;x
+rtp_learning_catholic_desc;The Dominican Order are able to listen to the confessions of any Christian – dressed in white and black, they lead the holy inquisition, charged with a mission to identify heretics. As a lay member of their Order you are expected to not pursue material wealth, but strive to be a seeker of truth.;;;;;;x
+rtp_learning_catholic_leader_desc;This is the society leader.;;;;;;x
+rtp_learning_catholic_rank_1_male;Donatus;;;;;;x
+rtp_learning_catholic_rank_2_male;Oblatus;;;;;;x
+rtp_learning_catholic_rank_3_male;Commissus;;;;;;x
+rtp_learning_catholic_rank_4_male;Conversus;;;;;;x
+rtp_learning_catholic_rank_1_female;Donatus;;;;;;x
+rtp_learning_catholic_rank_2_female;Oblatus;;;;;;x
+rtp_learning_catholic_rank_3_female;Commissus;;;;;;x
+rtp_learning_catholic_rank_4_female;Conversus;;;;;;x
+
+rtp_learning_orthodox;The Community of Saint Basil;;;;;;x
+rtp_learning_orthodox_desc;The followers of Saint Basil lead an ascetic life, finding purpose in prayer as well as work, often in the name of aiding their fellow men and women. A lay member of the Order is not required to take on the life of a hermit – instead focus should be placed on helping the members of your community.;;;;;;x
+rtp_learning_orthodox_leader_desc;This is the society leader.;;;;;;x
+rtp_learning_orthodox_rank_1_male;Archarios;;;;;;x
+rtp_learning_orthodox_rank_2_male;Rasophoros;;;;;;x
+rtp_learning_orthodox_rank_3_male;Stavrophoros;;;;;;x
+rtp_learning_orthodox_rank_4_male;Megaloschemos;;;;;;x
+rtp_learning_orthodox_rank_1_female;Archaria;;;;;;x
+rtp_learning_orthodox_rank_2_female;Rasophora;;;;;;x
+rtp_learning_orthodox_rank_3_female;Stavrophora;;;;;;x
+rtp_learning_orthodox_rank_4_female;Megaloscheme;;;;;;x
+
+rtp_learning_nestorian;The Community of Saint Abraham;;;;;;x
+rtp_learning_nestorian_desc;The order of Abraham the Great follow the monastic rules set by Abraham of Kashkar. Members swear to observe to strict obedience and to spread the word of the three great Nestorian doctors, Nestorius, Diodore of Tarsus, and Theodore of Mopsuestia. Only the literate may join the order and strict celibacy is required. Study and proselytism are the corner pillars of the order and as a member you are expected to spread the Nestorian faith ever eastwards.;;;;;;x
+rtp_learning_nestorian_leader_desc;This is the society leader.;;;;;;x
+rtp_learning_nestorian_rank_1_male;Archarios;;;;;;x
+rtp_learning_nestorian_rank_2_male;Rasophoros;;;;;;x
+rtp_learning_nestorian_rank_3_male;Stavrophoros;;;;;;x
+rtp_learning_nestorian_rank_4_male;Megaloschemos;;;;;;x
+rtp_learning_nestorian_rank_1_female;Archaria;;;;;;x
+rtp_learning_nestorian_rank_2_female;Rasophora;;;;;;x
+rtp_learning_nestorian_rank_3_female;Stavrophora;;;;;;x
+rtp_learning_nestorian_rank_4_female;Megaloscheme;;;;;;x
+
+rtp_learning_monophysite;The Community of Saint Anthony;;;;;;x
+rtp_learning_monophysite_desc;The Community of Saint Anthony follows the oldest of monastic rules, set originally by Saint Anthony of Egypt, Saint Paul of Thebes, Saint Macarius and Saint Pachomius. In the spirit of the Great Fathers of Egypt's deserts we value simplicity, submission and humility. It is the duty of miaphysite monks to work to spread the word of Christ, building on the oldest Christian monastic tradition in the world.;;;;;;x
+rtp_learning_monophysite_leader_desc;This is the society leader.;;;;;;x
+rtp_learning_monophysite_rank_1_male;Archarios;;;;;;x
+rtp_learning_monophysite_rank_2_male;Rasophoros;;;;;;x
+rtp_learning_monophysite_rank_3_male;Stavrophoros;;;;;;x
+rtp_learning_monophysite_rank_4_male;Megaloschemos;;;;;;x
+rtp_learning_monophysite_rank_1_female;Archaria;;;;;;x
+rtp_learning_monophysite_rank_2_female;Rasophora;;;;;;x
+rtp_learning_monophysite_rank_3_female;Stavrophora;;;;;;x
+rtp_learning_monophysite_rank_4_female;Megaloscheme;;;;;;x
+
+rtp_learning_reformed_pagan;Stoic Intelligentsia;;;;;;x
+rtp_learning_reformed_pagan_desc;The Hellenic School of Stoicism is based on the shunning of excesses and passions in favor of a balanced and rational approach to life, centered around the virtues of Wisdom, Courage, Temperance, and Justice. Most Stoics believe that happiness can be achieved by studying philosophy and leading a virtuous life.;;;;;;x
+rtp_learning_reformed_pagan_leader_desc;This is the society leader.;;;;;;x
+rtp_learning_reformed_pagan_rank_1_male;Archarios;;;;;;x
+rtp_learning_reformed_pagan_rank_2_male;Rasophoros;;;;;;x
+rtp_learning_reformed_pagan_rank_3_male;Stavrophoros;;;;;;x
+rtp_learning_reformed_pagan_rank_4_male;Megaloschemos;;;;;;x
+rtp_learning_reformed_pagan_rank_1_female;Archaria;;;;;;x
+rtp_learning_reformed_pagan_rank_2_female;Rasophora;;;;;;x
+rtp_learning_reformed_pagan_rank_3_female;Stavrophora;;;;;;x
+rtp_learning_reformed_pagan_rank_4_female;Megaloscheme;;;;;;x
+
+rtp_learning_pagan;The Apothecary Society;;;;;;x
+rtp_learning_pagan_desc;In addition to dispensing herbs and medicine, the apothecary offers general medical advice and a range of services for the ill.  Apothecary shops sell ingredients and the medicines they prepare to other medical practitioners, as well as dispensing them to patients.;;;;;;x
+rtp_learning_pagan_leader_desc;This is the society leader.;;;;;;x
+rtp_learning_pagan_rank_1_male;Mixer;;;;;;x
+rtp_learning_pagan_rank_2_male;Brewer;;;;;;x
+rtp_learning_pagan_rank_3_male;Alchemist;;;;;;x
+rtp_learning_pagan_rank_4_male;Master Alchemist;;;;;;x
+rtp_learning_pagan_rank_1_female;Mixer;;;;;;x
+rtp_learning_pagan_rank_2_female;Brewer;;;;;;x
+rtp_learning_pagan_rank_3_female;Alchemist;;;;;;x
+rtp_learning_pagan_rank_4_female;Master Alchemist;;;;;;x
+
+rtp_learning_hindu;The Advaita Matha;;;;;;x
+rtp_learning_hindu_desc;The Monks of the Hindu Mathas aim to be an integrative and supporting force in society. Monks can seek to achieve spiritual enlightenment through meditation and scriptural studies or through charity and participating in the local economy. The Mathas are honored and often patronized by the rulers of India.;;;;;;x
+rtp_learning_hindu_leader_desc;This is the society leader.;;;;;;x
+rtp_learning_hindu_rank_1_male;Chatra;;;;;;x
+rtp_learning_hindu_rank_2_male;Pandit;;;;;;x
+rtp_learning_hindu_rank_3_male;Guru;;;;;;x
+rtp_learning_hindu_rank_4_male;Acharya;;;;;;x
+rtp_learning_hindu_rank_1_female;Chatra;;;;;;x
+rtp_learning_hindu_rank_2_female;Pandit;;;;;;x
+rtp_learning_hindu_rank_3_female;Guru;;;;;;x
+rtp_learning_hindu_rank_4_female;Acharya;;;;;;x
+
+rtp_learning_buddhist;The Savaka-Sangha;;;;;;x
+rtp_learning_buddhist_desc;Members of Buddhist monasteries are expected to follow a strict set of rules aiming to attain Nirvana through a simple and meditative life. Foreswearing all physical property except the bare necessities Bhikkus vow to live only of what others give them.;;;;;;x
+rtp_learning_buddhist_leader_desc;This is the society leader.;;;;;;x
+rtp_learning_buddhist_rank_1_male;Sotapanna;;;;;;x
+rtp_learning_buddhist_rank_2_male;Sakadagami;;;;;;x
+rtp_learning_buddhist_rank_3_male;Anagami;;;;;;x
+rtp_learning_buddhist_rank_4_male;Arahnat;;;;;;x
+rtp_learning_buddhist_rank_1_female;Sotapanna;;;;;;x
+rtp_learning_buddhist_rank_2_female;Sakadagami;;;;;;x
+rtp_learning_buddhist_rank_3_female;Anagami;;;;;;x
+rtp_learning_buddhist_rank_4_female;Arhat;;;;;;x
+
+rtp_learning_jain;The Sravaka-Samgha;;;;;;x
+rtp_learning_jain_desc;Jain monks swear to abide by a number of vows, regulations, essential duties and restrictions. They dispose of all personal property, seeking purification and self-realization.;;;;;;x
+rtp_learning_jain_leader_desc;This is the society leader.;;;;;;x
+rtp_learning_jain_rank_1_male;Sravaka;;;;;;x
+rtp_learning_jain_rank_2_male;Brahmachari;;;;;;x
+rtp_learning_jain_rank_3_male;Kshullak;;;;;;x
+rtp_learning_jain_rank_4_male;Acharya;;;;;;x
+rtp_learning_jain_rank_1_female;Sravika;;;;;;x
+rtp_learning_jain_rank_2_female;Brahmacharini;;;;;;x
+rtp_learning_jain_rank_3_female;Kshullika;;;;;;x
+rtp_learning_jain_rank_4_female;Acharya;;;;;;x
+
+rtp_learning_taoist;You Guan;;;;;;x
+rtp_learning_taoist_desc;You guan are travelling priests who live outside a temple and wander, bringing their services where needed. They perform rituals, divination, fortune-telling, and are rumored to have skill in alchemy.;;;;;;x
+rtp_learning_taoist_leader_desc;This is the society leader.;;;;;;x
+rtp_learning_taoist_rank_1_male;Sotapanna;;;;;;x
+rtp_learning_taoist_rank_2_male;Sakadagami;;;;;;x
+rtp_learning_taoist_rank_3_male;Anagami;;;;;;x
+rtp_learning_taoist_rank_4_male;Arahnat;;;;;;x
+rtp_learning_taoist_rank_1_female;Sotapanna;;;;;;x
+rtp_learning_taoist_rank_2_female;Sakadagami;;;;;;x
+rtp_learning_taoist_rank_3_female;Anagami;;;;;;x
+rtp_learning_taoist_rank_4_female;Arhat;;;;;;x
+
+rtp_learning_sunni;The Ash’ari;;;;;;x
+rtp_learning_sunni_desc;Ash’arites stress divine revelation over human reasoning, and believe that ethics derive solely from God’s commands. Yet unlike in some schools of thought, Ash’arites do not reject debate, and encourage exploration of ill-understood concepts such as motion, body, rest, and color.;;;;;;x
+rtp_learning_sunni_leader_desc;This is the society leader.;;;;;;x
+rtp_learning_sunni_rank_1_male;Asik;;;;;;x
+rtp_learning_sunni_rank_2_male;Mühip;;;;;;x
+rtp_learning_sunni_rank_3_male;Dervish;;;;;;x
+rtp_learning_sunni_rank_4_male;Mama;;;;;;x
+rtp_learning_sunni_rank_1_female;Asik;;;;;;x
+rtp_learning_sunni_rank_2_female;Mühip;;;;;;x
+rtp_learning_sunni_rank_3_female;Dervish;;;;;;x
+rtp_learning_sunni_rank_4_female;Mama;;;;;;x
+
+rtp_learning_shiite;The Du’ah;;;;;;x
+rtp_learning_shiite_desc;The Du’ah are a group of religious believers who accept it as their duty to help all to understand Islam and how to properly worship Allah.They are known as teachers, healers, scholars, and proselytizers.;;;;;;x
+rtp_learning_shiite_leader_desc;This is the society leader.;;;;;;x
+rtp_learning_shiite_rank_1_male;Asik;;;;;;x
+rtp_learning_shiite_rank_2_male;Mühip;;;;;;x
+rtp_learning_shiite_rank_3_male;Dervish;;;;;;x
+rtp_learning_shiite_rank_4_male;Mama;;;;;;x
+rtp_learning_shiite_rank_1_female;Asik;;;;;;x
+rtp_learning_shiite_rank_2_female;Mühip;;;;;;x
+rtp_learning_shiite_rank_3_female;Dervish;;;;;;x
+rtp_learning_shiite_rank_4_female;Mama;;;;;;x
+
+rtp_learning_ibadi;The Mu’minun;;;;;;x
+rtp_learning_ibadi_desc;Literally “The Believers”, the Mu’minun embrace a common term in Islam as their own. They must be able to recite all 99 beautiful names of Allah, among proving other scholarly pursuits, and are known to readily engage in spirited debate about ideas that Ibadi Muslims hold dear.;;;;;;x
+rtp_learning_ibadi_leader_desc;This is the society leader.;;;;;;x
+rtp_learning_ibadi_rank_1_male;Asik;;;;;;x
+rtp_learning_ibadi_rank_2_male;Mühip;;;;;;x
+rtp_learning_ibadi_rank_3_male;Dervish;;;;;;x
+rtp_learning_ibadi_rank_4_male;Mama;;;;;;x
+rtp_learning_ibadi_rank_1_female;Asik;;;;;;x
+rtp_learning_ibadi_rank_2_female;Mühip;;;;;;x
+rtp_learning_ibadi_rank_3_female;Dervish;;;;;;x
+rtp_learning_ibadi_rank_4_female;Mama;;;;;;x
+
+rtp_learning_jewish;Kol Ami;;;;;;x
+rtp_learning_jewish_desc;A loose brotherhood of rabbis, scholars, and mystics, the Kol Ami prize learning and skill in debate. They regularly have informal meetings to discuss (and argue over) religious matters, and to share innovations in fields such as healing.;;;;;;x
+rtp_learning_jewish_leader_desc;This is the society leader.;;;;;;x
+rtp_learning_jewish_rank_1_male;Donor;;;;;;x
+rtp_learning_jewish_rank_2_male;Devoter;;;;;;x
+rtp_learning_jewish_rank_3_male;Caretaker;;;;;;x
+rtp_learning_jewish_rank_4_male;Shepherd;;;;;;x
+rtp_learning_jewish_rank_1_female;Donor;;;;;;x
+rtp_learning_jewish_rank_2_female;Devoter;;;;;;x
+rtp_learning_jewish_rank_3_female;Caretaker;;;;;;x
+rtp_learning_jewish_rank_4_female;Shepherd;;;;;;x
+
+rtp_learning_zoroastrian;The Ashavan;;;;;;x
+rtp_learning_zoroastrian_desc;The Ashavan are those who dedicate themselves to the pursuit of truth and righteousness. They believe that death is a journey which the living must prepare for, and as such devote themselves to teaching, enlightening others, and living a holy life.;;;;;;x
+rtp_learning_zoroastrian_leader_desc;This is the society leader.;;;;;;x
+rtp_learning_zoroastrian_rank_1_male;Donor;;;;;;x
+rtp_learning_zoroastrian_rank_2_male;Devoter;;;;;;x
+rtp_learning_zoroastrian_rank_3_male;Caretaker;;;;;;x
+rtp_learning_zoroastrian_rank_4_male;Shepherd;;;;;;x
+rtp_learning_zoroastrian_rank_1_female;Donor;;;;;;x
+rtp_learning_zoroastrian_rank_2_female;Devoter;;;;;;x
+rtp_learning_zoroastrian_rank_3_female;Caretaker;;;;;;x
+rtp_learning_zoroastrian_rank_4_female;Shepherd;;;;;;x
+
+#####
+#Powers
+#####
+
+rtp_learning_p1_sd;Wisdom Of The Elderly;;;;;;x
+rtp_learning_p1_sd_desc;We as keepers of the faith have a responsibility to guide our children towards a pious life.;;;;;;x
+rtp_learning_p1_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows a random child of yours to gain a random §YAttribute Point§!.;;;;;;x
+
+rtp_learning_p2_sd;Harmony;;;;;;x
+rtp_learning_p2_sd_desc;To become closer to the divine, we must open the body, the soul, and especially the mind.;;;;;;x
+rtp_learning_p2_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to gain §GErudite§!, lose §RPossessed§!, lose §RLunatic§!, or gain §YHealth§!.;;;;;;x
+
+rtp_learning_p3_sd;Ask For Divine Guidance;;;;;;x
+rtp_learning_p3_sd_desc;While one does not make demands of faith, sometimes faith will indeed guide us in important matters...if we bother to listen.;;;;;;x
+rtp_learning_p3_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to ask [Root.Religion.GetHighGodNameCap] for §YGuidance§!.;;;;;;x
+
+rtp_learning_p4_td;Life Of Medicine;;;;;;x
+rtp_learning_p4_td_named;Life Of Medicine;;;;;;x
+rtp_learning_p4_td_desc; My skills in the medicinal arts are unmatched. There are no diseases that I cannot cure.;;;;;;x
+rtp_learning_p4_td_power_desc;Unlocks the §YTargeted Decision§! that allows you to gain §GRenowned Physician§! and §YCure§! a victim of a disease under your realm.;;;;;;x
+
+rtp_learning_theocracy_sd;Switch to Theocracy;;;;;;x
+rtp_learning_theocracy_sd_desc;The true faithful shall be forever welcome in my realm, and [Root.Religion.GetHighGodNameCap]'s law shall be mine.;;;;;;x
+rtp_learning_theocracy_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to switch to the §YTheocracy§! government.;;;;;;x
+
+rtp_learning_holy_order_sd;Switch to Holy Order;;;;;;x
+rtp_learning_holy_order_sd_desc;Faith is strength, and mine is unshakeable. I shall lead the righteous to their greatest heights.;;;;;;x
+rtp_learning_holy_order_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to switch to the §YHoly Order§! government.;;;;;;x
+
+#####
+#Events
+#####
+
+RTPsociety.1.5_desc;To the one seeking enlightenment [Root.GetBoyGirl],\n\nWe are very pleased to have found another wishing to join us in devotion and study. We invite you to come and begin to know yourself as a true child of the heavens.\nThis road has no true end, but with each step your spirit will grow and blossom.\n\nSigned, [rtp_society_leader.GetSocietyRank] [rtp_society_leader.GetFirstName];;;;;;x
+RTPsociety.1.5_1;Forgiveness awaits.;;;;;;x
+
+#####
+#Missions
+#####
+
+rtp_in_sickness_and_in_health_mission;In Sickness and in Health;;;;;;x
+rtp_in_sickness_and_in_health_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_in_sickness_and_in_health_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me to help people affected by the plague.;;;;;;x
+rtp_in_sickness_and_in_health_mission_tooltip;Aid the people fighting off the Plague;;;;;;x
+
+RTPlsociety.1_desc;Word has traveled far that [rtp_infected_province.GetName] has been stricken by serious illness. From the stories, people are dying helpless in the streets. I am reluctant to believe the first tale or two, but after several more accounts it seems that the stories are true. Go check it out and lend them aid.;;;;;;x
+RTPlsociety.1_1;ACCEPT;;;;;;x
+RTPlsociety.1_2;DECLINE;;;;;;x
+
+RTPlsociety.2_title;In Sickness and in Health;;;;;;x
+RTPlsociety.2_desc;As the sun rises over [rtp_infected_province.Capital.GetName] we leave the inn and seek out the local priest [rtp_society_quest_target.GetFirstName]. "The sickness began almost a year ago," he tells us as we walk. "It is especially harsh on the children and the old, but we have not found anyone who has been safe from it. People take ill and within weeks they are dead.";;;;;;x
+RTPlsociety.2_1;I see...;;;;;;x
+
+RTPlsociety.3_title;In Sickness and in Health;;;;;;x
+RTPlsociety.3_desc;By the end of the week I have spent countless hours in the streets, observing and documenting the horrors afflicting these people. I know I must now make a decision as to how to proceed.;;;;;;x
+RTPlsociety.3_1;I shall create an elixir.;;;;;;x
+RTPlsociety.3_2;I shall write a report.;;;;;;x
+
+RTPlsociety.4_title;In Sickness and in Health;;;;;;x
+RTPlsociety.4_1_desc;With the elixirs I created I managed to save most of the populace. The survivors pulled together what little money they had to say thank you and were sure to spread word of my healing abilities..;;;;;;x
+RTPlsociety.4_2_desc;My elixirs had failed, most of the populace perished from the sickness. The survivors of the community thanked me for trying but asked me to leave and let them bury the dead.;;;;;;x
+RTPlsociety.4_3_desc;[Root.Society.GetName] appreciated the update on the situation and told me that they will handle the situation for now on.;;;;;;x
+RTPlsociety.4_4_desc;[Root.Society.GetName] laughed at my report and said no such thing could ever happen.;;;;;;x
+RTPlsociety.4_1;Remember. Two sips a day.;;;;;;x
+RTPlsociety.4_2;I am sorry.;;;;;;x
+RTPlsociety.4_3;And I did all the work.;;;;;;x
+RTPlsociety.4_4;I am sure the people will suffer for this.;;;;;;x
+
+rtp_the_elixir_contest_mission;The Elixir Contest;;;;;;x
+rtp_the_elixir_contest_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_the_elixir_contest_mission_desc;[Root.Society.GetTitledGrandMasterName] would like me to join the contest.;;;;;;x
+rtp_the_elixir_contest_mission_tooltip;Join the elixir contest;;;;;;x
+
+RTPlsociety.5_desc;Dear [Root.GetTitledName], I have declared a contest to be held to test skills of our fellow members. I would like all members to bring your best elixir of health within a month. Surely you are up for the challenge?;;;;;;x
+RTPlsociety.5_1;ACCEPT;;;;;;x
+RTPlsociety.5_2;DECLINE;;;;;;x
+
+RTPlsociety.6_title;The Elixir Contest;;;;;;x
+RTPlsociety.6_desc;As ideas begin clouding my mind, I remember this recipe that I saw in an old parchment which mentioned an elixir of health. “By [Root.Religion.GetHighGodName]!” I exclaimed as I found the parchment still in the chest. Unfortunately the parchment received quite a beating and some of the text is quite illegible.;;;;;;x
+RTPlsociety.6_1;Hopefully I can still make something out of it.;;;;;;x
+
+RTPlsociety.7_title;The Elixir Contest;;;;;;x
+RTPlsociety.7_desc;As I start adding the ingredients to the mixture I come across a problem. There is a burn mark on the amount of goat intestines I need to add to the mixture.;;;;;;x
+RTPlsociety.7_1;It looks like 3 measurements of intestines.;;;;;;x
+RTPlsociety.7_2;It clearly states 8 measurements of intestines.;;;;;;x
+RTPlsociety.7_3;I will not add any intestines.;;;;;;x
+
+RTPlsociety.8_title;The Elixir Contest;;;;;;x
+RTPlsociety.8_desc;I finish adding all the rest of the ingredients to the mixture and I read the last part of the parchment. It says that I should continue to stir the mixture and let it boil for...I search everywhere for the last bit of the recipe but to no luck.;;;;;;x
+RTPlsociety.8_1;Just stir it for a minute.;;;;;;x
+RTPlsociety.8_2;Most recipes say an hour.;;;;;;x
+RTPlsociety.8_3;Boil it overnight.;;;;;;x
+
+RTPlsociety.9_title;The Elixir Contest;;;;;;x
+RTPlsociety.9_desc;With the elixir done I bottled some up and went off to [Root.Society.GetName] headquarters. When I and the other members arrived, [Root.Society.GetTitledGrandMasterName] addresses us all. “Now that everyone is here it is time to test those elixirs of yours. I decided that, instead of testing our elixirs on some poor peasants, you shall be testing your own elixirs!;;;;;;x
+RTPlsociety.9_1;Uh oh.;;;;;;x
+
+RTPlsociety.10_title;The Elixir Contest;;;;;;x
+RTPlsociety.10_1_desc;As I drink the elixir the taste is awful, but I feel invigorated and full of energy. I pick up a heavy stone near me and toss it farther than any other member.;;;;;;x
+RTPlsociety.10_2_desc;As I drank the elixir it tasted very bland but as a minute went by everything went black and I passed out.;;;;;;x
+RTPlsociety.10_1;I should make more of these!;;;;;;x
+RTPlsociety.10_2;...;;;;;;x
+
+rtp_drinking_with_god_mission;Drinking with [Root.Religion.GetHighGodNameCap];;;;;;x
+rtp_drinking_with_god_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_drinking_with_god_mission_desc;[Root.Society.GetTitledGrandMasterName] would like me to join $TARGET$ and observe the sermon.;;;;;;x
+rtp_drinking_with_god_mission_tooltip;Listen to $TARGET$'s sermon;;;;;;x
+
+RTPlsociety.11_desc;A local preacher by the name of [rtp_society_quest_target.GetFirstName] is going to give a sermon to the local populace in a few months. This is a great opportunity for you to learn more about [Root.Religion.GetHighGodNameCap] and the beliefs of the [Root.Religion.GetName] faith. I am quite busy this year so I am asking you to go instead of me. Would you like to attend it?;;;;;;x
+RTPlsociety.11_1;ACCEPT;;;;;;x
+RTPlsociety.11_2;DECLINE;;;;;;x
+
+RTPlsociety.12_title;Drinking with [Root.Religion.GetHighGodNameCap];;;;;;x
+RTPlsociety.12_desc;The local preacher suggested that you meet him in the tavern this evening. As you sit next to him you begin to listen carefully when he recounts some of his old preachings and down some beers. It was starting to get late but you agreed to stay for a few drinks and keep company to the old timer.;;;;;;x
+RTPlsociety.12_1;Bartender another round for us.;;;;;;x
+
+RTPlsociety.13_title;Drinking with [Root.Religion.GetHighGodNameCap];;;;;;x
+RTPlsociety.13_desc;The next morning you and the preacher wake up with hangovers pounding like hooves on your skulls. You see the preacher run to the nearest pot and puke out all the contents from last night. The preacher begs you to conduct the reading for him as he obviously will not be able too.;;;;;;x
+RTPlsociety.13_1;Sure...I just hope the room stays still.;;;;;;x
+
+RTPlsociety.14_title;Drinking with [Root.Religion.GetHighGodNameCap];;;;;;x
+RTPlsociety.14_desc;As you proceed to the local place of worship, you try to remember what the preacher said about his preachings last night. You arrive and, to the shock of the townspeople, you head up towards the podium. You then turn towards the townsfolk and inform them that you will be giving the sermon today since the preacher is sick today.;;;;;;x
+RTPlsociety.14_1;Brothers and Sisters!;;;;;;x
+
+RTPlsociety.15_title;Drinking with [Root.Religion.GetHighGodNameCap];;;;;;x
+RTPlsociety.15_desc;[Root.Religion.GetHighGodNameCap] is above all things and the [Root.Religion.GetScriptureName] is the means of salvation. It is the corruption of [Root.Religion.GetRandomEvilGodNameCap] here in [Root.Liege.Capital.GetName] that has brought misfortune on our heads! Plague, savages, hunger and chaos...;;;;;;x
+RTPlsociety.15_1;Poisoning us all!;;;;;;x
+
+RTPlsociety.16_title;Drinking with [Root.Religion.GetHighGodNameCap];;;;;;x
+RTPlsociety.16_desc;When dogs are fighting over a bone, take the bone and they will stop. Just like the flock of ravens that has descended on this land to peck up every speck of gold and silver. [Root.Religion.GetRandomEvilGodNameCap] shows no mercy, and the sinners' hearts are poisoned by covetousness. They would do everything in order to achieve their goals! You want to wealth? Sin and you will have it!;;;;;;x
+RTPlsociety.16_1;But at what price!;;;;;;x
+
+RTPlsociety.17_title;Drinking with [Root.Religion.GetHighGodNameCap];;;;;;x
+RTPlsociety.17_desc;Your chances of salvation are gone as soon as you even speak to such creature. Look to your consciences, you robbers of the poor, for you are constantly watched by [Root.Religion.GetHighGodNameCap]!;;;;;;x
+RTPlsociety.17_1;Pray every night for absolution.;;;;;;x
+RTPlsociety.17_2;Donate and your sins will be absolved.;;;;;;x
+
+RTPlsociety.18_title;Drinking with [Root.Religion.GetHighGodNameCap];;;;;;x
+RTPlsociety.18_1_desc;The townsfolk cheered and praised your reading and agreed with everything you said.;;;;;;x
+RTPlsociety.18_2_desc;The townsfolk were not impressed and a loud crowd of boos soon followed.;;;;;;x
+RTPlsociety.18_1;Go spread the word of [Root.Religion.GetHighGodNameCap]!;;;;;;x
+RTPlsociety.18_2;I already have an headache.;;;;;;x
+
+rtp_ancient_text_mission;The Ancient Text;;;;;;x
+rtp_ancient_text_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_ancient_text_mission_desc;[Root.Society.GetTitledGrandMasterName] would like me to find the ancient text.;;;;;;x
+rtp_ancient_text_mission_tooltip;Find the ancient text;;;;;;x
+
+RTPlsociety.19_desc;My [Root.GetSisterBrother], I have a proposal which might interest you. An old letter detailing the possible locations of some lost ancient texts came into my possession not many moons ago. I can fund the expedition and both you and [rtp_society_quest_target.GetFirstName] can search for one of these treasures together!;;;;;;x
+RTPlsociety.19_1;ACCEPT;;;;;;x
+RTPlsociety.19_2;DECLINE;;;;;;x
+
+RTPlsociety.20_title;The Ancient Text;;;;;;x
+RTPlsociety.20_desc;After clearing [rtp_society_quest_target.GetHerHis] throat, [rtp_society_quest_target.GetFirstName] begins speaking. "The letter mentioned three lost texts: a tome in a local antiquary, a scroll hidden in a cave in [Root.Liege.Capital.GetName], and a tablet in an ancient library ruins in [rtp_society_quest_target.Liege.Capital.GetName]. I let you decide which one we should go after.";;;;;;x
+RTPlsociety.20_1;Let us go for the tome.;;;;;;x
+RTPlsociety.20_2;Let us go for the scroll.;;;;;;x
+RTPlsociety.20_3;Let us go for the tablet.;;;;;;x
+
+RTPlsociety.21_title;The Ancient Text;;;;;;x
+RTPlsociety.21_1_desc;When we found the engraved door to the chamber, we could hardly believe our eyes. [rtp_society_quest_target.GetFirstName] and I had nearly given up. That day would be the very last of our search, we had decided, so our discovery must surely have been a divine miracle! Something reflected the light from deep within the chamber, [rtp_society_quest_target.GetFirstName]'s breaths were quick and shallow. 'It.... it cannot be!";;;;;;x
+RTPlsociety.21_2_desc;[rtp_society_quest_target.GetFirstName] insisted that we must have misinterpreted the map. After every failure, [rtp_society_quest_target.GetSheHe] had a new idea. A suspicion crept upon me... What if the map was forged, and [Root.Society.GetTitledGrandMasterName] knew? Was the blasted expedition a plot to ruin me?!;;;;;;x
+RTPlsociety.21_3_desc;[rtp_society_quest_target.Liege.Capital.GetName] and I searched every shelf and chest in the dusty old shop. For days on end we did nothing but breathe dust and leaf through boring old texts. They were all full of nonsense! On the fourth day, I was thus incredibly surprised to lay my eyes on the symbols of the tome!;;;;;;x
+RTPlsociety.21_4_desc;[rtp_society_quest_target.GetFirstName] and I searched every shelf and chest in the dusty old shop. For days at end we did nothing but breathe dust and page through boring old texts. They were all full of nonsense! After a week, we had to admit defeat. We would never uncover anything of worth in this place.;;;;;;x
+RTPlsociety.21_5_desc;Our expedition into the ruins of the library encountered some difficulties, but in the end we made it to the ruins of [rtp_society_quest_target.Liege.Capital.GetName] safely. After a fortnight of excavation we uncovered the entrance to a hidden underground chamber. [rtp_society_quest_target.GetFirstName] and I entered side by side, the air heavy with excitement.;;;;;;x
+RTPlsociety.21_6_desc;Our expedition into foreign lands certainly encountered its fair share of difficulties. We dealt with everything from unfavorable weather to lame horses, but in the end, the fraudulent guide was the nail in the coffin. We discovered that we were in the wrong part of [rtp_society_quest_target.Liege.Capital.GetName]!;;;;;;x
+RTPlsociety.21_1;We found it!;;;;;;x
+RTPlsociety.21_2;Waste of time really.;;;;;;x
+
+rtp_the_foundation_of_lies_mission;The Foundation of Lies;;;;;;x
+rtp_the_foundation_of_lies_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_the_foundation_of_lies_mission_desc;[Root.Society.GetTitledGrandMasterName] would like me to help $TARGET$ with a project.;;;;;;x
+rtp_the_foundation_of_lies_mission_tooltip;Help $TARGET$ with the project;;;;;;x
+
+RTPlsociety.22_desc;A local noble by the name of [rtp_society_quest_target.GetLordLady] [rtp_society_quest_target.GetFirstName] is asking us to assist [rtp_society_quest_target.GetHerHim] with a project. The strange thing is that they decided to contact [Root.Society.GetName] instead of one of the many other guilds. This suggests that they require your mind, rather than your arm. Interested in checking it out?;;;;;;x
+RTPlsociety.22_1;ACCEPT;;;;;;x
+RTPlsociety.22_2;DECLINE;;;;;;x
+
+RTPlsociety.23_title;The Foundation of Lies;;;;;;x
+RTPlsociety.23_desc;You arrive at [rtp_society_quest_target.GetLordLady] [rtp_society_quest_target.GetFirstName]’s court and [rtp_society_quest_target.GetSheHe] greets you cordially. “I am in dire need of your help,” stated the [rtp_society_quest_target.GetLordLady], “and I need you to find out why the construction of the new stables has halted”. “I cannot receive a straight answer from anyone I have working on the project.";;;;;;x
+RTPlsociety.23_1;I will find the problem my [rtp_society_quest_target.GetLordLady].;;;;;;x
+
+RTPlsociety.24_title;The Foundation of Lies;;;;;;x
+RTPlsociety.24_desc;Upon arriving at the stables you see a group of men arguing with each other. As you get closer to the crowd, you notice the architect and the foreman arguing amongst each other. “I am telling you from my years of experience this beam cannot hold this weight!” yells the foreman as you approach them. You raise your hand and the crowd quiets down.;;;;;;x
+RTPlsociety.24_1;Speak one at a time please.;;;;;;x
+
+RTPlsociety.25_title;The Foundation of Lies;;;;;;x
+RTPlsociety.25_desc;You decide to talk with the foreman first. He is clearly agitated as he shows the beams in question. “You see the beams have enough weight on them as it is but this so called architect wants to add another level above without support!” - “My years of building tells me this is too much and will lead to disaster later on” he explains.;;;;;;x
+RTPlsociety.25_1;Perhaps;;;;;;x
+
+RTPlsociety.26_title;The Foundation of Lies;;;;;;x
+RTPlsociety.26_desc;You begin talking with the architect and you can feel that something in his tone of voice is off. “I apprenticed under the best architect, and that slobbering bastard dares to question me? Why should I...”. You cut him off with a strong tone “where are the plans for the stables?”. He hands you the plans and you begin going over them. This cannot be! -- you think to yourself.;;;;;;x
+RTPlsociety.26_1;Explain yourself!;;;;;;x
+
+RTPlsociety.27_title;The Foundation of Lies;;;;;;x
+RTPlsociety.27_desc;“Look, nothing bad is going to happen, I just thought if I skimped on a few materials I could pocket the extra gold for those materials” he explained. “Obviously you are way too smart for this type of charade, so how about I cut you in the gold I collected. Listen...just follow along with me and let us keep this a secret?”;;;;;;x
+RTPlsociety.27_1;Give me half and you got a deal.;;;;;;x
+RTPlsociety.27_2;What do you take me for?!?;;;;;;x
+
+RTPlsociety.28_title;Mission Failed;;;;;;x
+RTPlsociety.28_desc;While on my way towards the target, an envoy informs me that the target is no longer with us.;;;;;;x
+RTPlsociety.28_1;[Root.Society.GetTitledGrandMasterName] is not going to be happy.;;;;;;x

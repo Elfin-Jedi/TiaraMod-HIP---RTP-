@@ -1,0 +1,50 @@
+raised_inuksuk = {
+	diplomacy = 1
+	general_opinion = 5
+	monthly_character_piety = 0.5
+	icon = 48
+}
+
+counting_coup = {
+	martial = 2
+	monthly_character_prestige = -0.10
+	icon = 13
+}
+
+band_split = {
+	local_revolt_risk = -0.1
+	local_tax_modifier = -0.5
+	icon = 31
+}
+
+restricted_tobacco_use = {
+	temple_tax_modifier = -0.25
+	tribal_tax_modifier = -0.25
+	nomad_tax_modifier = -0.25
+	icon = 24
+}
+
+encouraged_tobacco_use = {
+	temple_tax_modifier = 0.25
+	tribal_tax_modifier = 0.25
+	nomad_tax_modifier = 0.25
+	disease_defence = -0.1
+	local_build_time_modifier = 0.5
+	icon = 24
+}
+
+elders_unheeded = {
+	local_revolt_risk = 0.05
+	icon = 32
+}
+
+on_vision_quest = {
+	general_opinion = 5
+	icon = 48
+}
+
+undertook_vision_quest = {
+	general_opinion = 5
+	monthly_character_piety = 0.5
+	icon = 48
+}

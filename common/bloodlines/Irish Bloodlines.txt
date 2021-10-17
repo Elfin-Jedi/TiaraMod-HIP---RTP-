@@ -1,0 +1,74 @@
+irish_bloodline_01 = {
+	irish_opinion = 6
+	monthly_character_prestige = 0.25
+	martial = 3
+	combat_rating = 15
+	bloodline_effect_great_heroes_appear = 1
+	
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_generic_pagan
+	flags = { new_irish_bloodlines }
+}
+
+irish_bloodline_02 = {
+	welsh_opinion = 4
+	monthly_character_prestige = 0.15
+	combat_rating = 5
+	command_modifier = {
+		heavy_infantry = 0.15
+		center = 0.10
+	}
+	
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_war
+	flags = { new_irish_bloodlines }
+}
+
+irish_bloodline_03 = {
+	celtic_opinion = 10
+	saxon_opinion = -15
+	english_opinion = -15
+	monthly_character_prestige = 0.30
+	combat_rating = 10
+	
+	
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_celtic_britain
+	flags = { new_irish_bloodlines }
+}
+
+irish_bloodline_04 = {
+	breton_opinion = 5
+	frankish_opinion = -5
+	old_frankish_opinion = -5
+	monthly_character_prestige = 0.2
+	combat_rating = 7
+	command_modifier = {
+		speed = 0.15
+	}
+	
+	
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_fleur_de_lis
+	flags = { new_irish_bloodlines }
+}
+
+irish_bloodline_05 = {
+	celtic_opinion = 15
+	monthly_character_prestige = 0.75
+	combat_rating = 35
+	command_modifier = {
+		damage = 0.25
+		defence = 0.25
+	}
+	
+	
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_celtic_europe
+	flags = { new_irish_bloodlines }
+}

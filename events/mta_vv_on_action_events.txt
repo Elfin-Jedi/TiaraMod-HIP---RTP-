@@ -1,0 +1,199 @@
+namespace = mta
+
+# on_startup: Set global flag for compatibility with other mods
+character_event = {
+	id = mta.161
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	ai = no
+	
+	trigger = {
+		NOT = { has_global_flag = mta_vv }
+	}
+	
+	immediate = {
+		set_global_flag = mta_vv
+	}
+}
+
+# on_yearly_pulse: Slave maintenance event
+character_event = {
+	id = mta.162
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	has_character_flag = slave
+	
+	trigger = {
+		is_enslaved = yes
+		NOT = {
+			has_game_rule = {
+				name = mta_rule_slavery
+				value = off
+			}
+		}
+	}
+
+	immediate = {
+		if = { limit = { has_global_flag = mta_debug } log = "MTA DEBUG: Slave maintenance event ran on [Root.GetBestName]" }
+		change_variable = { which = slave_year_count value = 1 }
+		if = { 
+			limit = { 
+				NOT = { has_opinion_modifier = { who = employer modifier = opinion_my_owner } } 
+				employer = { NOT = { is_enslaved = yes } }
+			}
+			employer = { reverse_opinion = { modifier = opinion_my_owner who = ROOT } }
+		}
+		if = { limit = { has_global_flag = mta_debug } log = "MTA DEBUG: [Root.GetBestName] has been enslaved for [Root.slave_year_count.GetValue] years" }
+	}
+}
+
+# on_employer_change: Slave employer change event
+# ROOT = character that got a new employer FROM = previous employer FROMFROM = new employer
+character_event = {
+	id = mta.163
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	has_character_flag = slave
+	
+	trigger = {
+		is_enslaved = yes
+		is_landed = no
+		NOT = {
+			has_game_rule = {
+				name = mta_rule_slavery
+				value = off
+			}
+		}
+	}
+
+	immediate = {
+		if = { limit = { has_global_flag = mta_debug } log = "MTA DEBUG: Slave employer change event ran on [Root.GetBestName]" }
+		if = { 
+			limit = { has_opinion_modifier = { who = FROM modifier = opinion_my_owner } }
+			remove_opinion = { who = FROM modifier = opinion_my_owner }
+		}
+		if = { 
+			limit = { 
+				NOT = { has_opinion_modifier = { who = FROMFROM modifier = opinion_my_owner } } 
+				FROMFROM = { NOT = { is_enslaved = yes } }
+			}
+			opinion = { modifier = opinion_my_owner who = FROMFROM }
+		}
+	}
+}
+
+# on_birth: Born into slavery
+character_event = {
+	id = mta.164
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				father = { 
+					trait = slave
+					is_married_matrilineally = no 
+					dynasty = ROOT
+					NAND = {
+						is_ruler = yes
+						is_landed = yes
+						independent = yes
+					}
+				}
+				NOT = { trait = bastard }
+			}
+			AND = {
+				mother = { 
+					trait = slave 
+					is_married_matrilineally = yes 
+					dynasty = ROOT
+					NAND = {
+						is_ruler = yes
+						is_landed = yes
+						independent = yes
+					}
+				}
+				NOT = { trait = bastard }
+			}
+			AND = {
+				father = { trait = slave }
+				trait = bastard
+			}
+		}
+		NOT = {
+			has_game_rule = {
+				name = mta_rule_slavery
+				value = off
+			}
+		}
+	}
+
+	immediate = {
+		if = { limit = { has_global_flag = mta_debug } log = "MTA DEBUG: [Root.GetBestName] was born into slavery" }
+		add_trait = slave
+		set_character_flag = slave
+		set_character_flag = no_court_invites
+		set_immune_to_pruning = yes
+	}
+}
+
+# on_employer_change: TMM compatibility event on new character creation
+# ROOT = character that got a new employer FROM = previous employer FROMFROM = new employer
+character_event = {
+	id = mta.165
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	has_global_flag = EMF
+	
+	trigger = {
+		is_tmm_slave = yes
+		FROM = { character = no }
+		NOT = {
+			has_game_rule = {
+				name = mta_rule_slavery
+				value = off
+			}
+		}
+	}
+
+	immediate = {
+		if = { limit = { has_global_flag = mta_debug } log = "MTA DEBUG: TMM compatibility event on new character creation ran on [Root.GetBestName]" }
+		set_character_flag = slave
+	}
+}
+
+# on_yearly_pulse: TMM compatibility maintenance event
+character_event = {
+	id = mta.166
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	has_global_flag = EMF
+	
+	trigger = {
+		is_tmm_slave = yes
+		NOT = { has_character_flag = slave }
+		NOT = {
+			has_game_rule = {
+				name = mta_rule_slavery
+				value = off
+			}
+		}
+	}
+
+	immediate = {
+		if = { limit = { has_global_flag = mta_debug } log = "MTA DEBUG: TMM compatibility maintenance event ran on [Root.GetBestName]" }
+		set_character_flag = slave
+	}
+}

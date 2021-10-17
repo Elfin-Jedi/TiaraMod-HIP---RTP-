@@ -1,0 +1,140 @@
+#####
+#Succession Laws
+#
+#Total = 6
+#####
+
+succession_laws = {
+	#Struggle
+	rtp_lowborn_succ = {
+		potential = {
+			holder_scope = {
+				government = rtp_lowborn_g
+			}
+		}
+
+		effect = {
+			succession = {
+				base_type = elective_gavelkind
+				voting_rules = rtp_lowborn_v
+			}
+		}
+	}
+
+	#Head of the Family
+	rtp_family_election_succ = {
+		potential = {
+			holder_scope = {
+				OR = {
+					government = rtp_noble_g
+					government = rtp_landless_mercenary_g
+					government = rtp_landless_order_g
+				}
+			}
+		}
+
+		allow = {
+			holder_scope = {
+				OR = {
+					government = rtp_noble_g
+					government = rtp_landless_mercenary_g
+					government = rtp_landless_order_g
+				}
+			}
+		}
+
+		effect = {
+			succession = {
+				base_type = elective_gavelkind
+				voting_rules = rtp_family_election_v
+			}
+		}
+	}
+
+	#Democratic Election
+	rtp_republic_election_succ = {
+		potential = {
+			holder_scope = {
+				ai = no
+				rtp_is_republic = yes
+				OR = {
+					independent = yes
+					any_liege = {
+						rtp_is_order_government = no
+					}
+				}
+			}
+		}
+
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = rtp_republic_election_v
+			}
+		}
+	}
+
+	#Mandate of Heaven
+	rtp_theocracy_election_succ = {
+		potential = {
+			holder_scope = {
+				ai = no
+				rtp_is_theocracy = yes
+				NOR = {
+					religion = catholic
+					religion = fraticelli
+				}
+				OR = {
+					independent = yes
+					any_liege = {
+						rtp_is_order_government = no
+					}
+				}
+			}
+		}
+
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = rtp_theocracy_election_v
+			}
+		}
+	}
+
+	#Law of the Strongest
+	rtp_mercenary_election_succ = {
+		potential = {
+			holder_scope = {
+				ai = no
+				rtp_is_landless = no
+				OR = {
+					rtp_is_mercenary = yes
+					rtp_is_holy_order = yes
+				}
+			}
+		}
+
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = rtp_mercenary_election_v
+			}
+		}
+	}
+
+	#Parley
+	rtp_confederation_succ = {
+		potential = {
+			holder_scope = {
+				rtp_is_confederation = yes
+			}
+		}
+
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = rtp_confederation_election_v
+			}
+		}
+	}
+}

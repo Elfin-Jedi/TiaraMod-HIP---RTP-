@@ -1,0 +1,188 @@
+namespace = gay_lover_events
+character_event = {
+	id = gay_lover_events.0
+	desc = EVTDESCgay_lover_events.0
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAgay_lover_events.0
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 0
+				trait = celibate
+			}
+			modifier = {
+				factor = 0
+				trait = eunuch
+			}
+			modifier = {
+				factor = 10
+				trait = homosexual
+			}
+			modifier = {
+				factor = 10
+				trait = bisexual
+			}
+			modifier = {
+				factor = 2
+				trait = lustful
+			}
+			modifier = {
+				factor = 5
+				trait = hedonist
+			}
+			modifier = {
+				factor = 0
+				NOT = { opinion = { who = FROMFROM value = 0 } }
+			}
+			modifier = {
+				factor = 0.5
+				opinion = { who = FROMFROM value = 0 }
+				NOT = { opinion = { who = FROMFROM value = 90 } }
+			}
+			modifier = {
+				factor = 2
+				opinion = { who = FROMFROM value = 90 }
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = { trait = fair }
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = {
+					OR = {
+						trait = seducer
+						trait = seductress
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				FROMFROM = {
+					has_focus = focus_seduction
+				}
+			}
+		}
+		FROMFROM = { character_event = { id = gay_lover_events.1 days = 7 } }
+	}
+	option = {
+		name = EVTOPTBgay_lover_events.0
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 10
+				trait = zealous
+			}
+			modifier = {
+				factor = 10
+				trait = celibate
+			}
+			modifier = {
+				factor = 10
+				trait = eunuch
+			}
+			modifier = {
+				factor = 5
+				trait = chaste
+			}
+			modifier = {
+				factor = 2
+				opinion = { who = FROMFROM value = 0 }
+				NOT = { opinion = { who = FROMFROM value = 90 } }
+			}
+			modifier = {
+				factor = 2
+				NOT = { opinion = { who = FROMFROM value = 90 } }
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = { trait = ugly }
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = { is_ill = yes }
+			}
+		}
+		FROMFROM = { character_event = { id = gay_lover_events.2 days = 7 } }
+	}
+}
+character_event = {
+	id = gay_lover_events.1
+	desc = EVTDESCgay_lover_events.1
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAgay_lover_events.1
+		FROM = { add_lover = ROOT }
+		clr_character_flag = pursue_gay_lover
+		ROOT = {
+			IF = {
+				limit = { NOT = { trait = homosexual } }
+				random = {
+					chance = 10
+					add_trait = homosexual
+				}
+			}
+		}
+		FROM = {
+			IF = {
+				limit = { NOT = { trait = homosexual } }
+				random = {
+					chance = 10
+					add_trait = homosexual
+				}
+			}
+		}
+	}
+}
+character_event = {
+	id = gay_lover_events.2
+	desc = EVTDESCgay_lover_events.2
+	picture = GFX_evt_quarrel
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAgay_lover_events.2
+		opinion = { modifier = opinion_spurned who = FROM }
+	}
+	option = {
+		name = EVTOPTBgay_lover_events.2
+		trigger = {
+			OR = {
+				trait = wroth
+				trait = lunatic
+			}
+		}
+		opinion = { modifier = opinion_spurned who = FROM }
+		random_list = {
+			1 = {
+				FROM = {
+					death = {
+						death_reason = death_murder_unknown
+						killer = ROOT
+					}
+				}
+			}
+			3 = {
+				FROM = {
+					any_realm_character = {
+						opinion = {
+							modifier = evil_murderer
+							who = ROOT
+							years = 25
+						}
+					}
+					death = {
+						death_reason = death_murder
+						killer = ROOT
+					}
+				}
+			}
+			1 = {}
+		}
+	}
+}

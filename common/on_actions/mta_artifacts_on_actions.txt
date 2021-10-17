@@ -1,0 +1,7 @@
+# -*- ck2.on_actions -*-
+
+on_startup = {
+	events = {
+		mta_artifacts.0 # Set global flag for compatibility with other mods
+	}
+}

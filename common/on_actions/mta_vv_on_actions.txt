@@ -1,0 +1,50 @@
+# -*- ck2.on_actions -*-
+
+on_startup = {
+	events = {
+		mta.161 # on_startup: Set global flag for compatibility with other mods
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		mta.162 # Slave maintenance event
+		mta.166 # TMM compatibility maintenance event
+	}
+}
+
+on_bi_yearly_pulse = {
+	random_events = {
+		10 = mta.167 # Slave drops dinner plate
+		10 = mta.169 # Slave steals alcohol
+		15 = mta.171 # Slaves bickering
+	}
+}
+
+on_five_year_pulse = {
+	random_events = {
+		mta_slavery_events = {
+			delay = 7
+			2600 = 0
+
+			70 = mta.191 # AI Purchase Slave: Martial
+			80 = mta.192 # AI Purchase Slave: Martial Gladiator
+			70 = mta.193 # AI Purchase Slave: Stewardship
+			80 = mta.194 # AI Purchase Slave: Learning Doctor
+			# Total: 300
+		}
+	}
+}
+
+on_birth = {
+	events = {
+		mta.164 # Born into slavery
+	}
+}
+
+on_employer_change = {
+	events = {
+		mta.163 # Slave employer change event
+		mta.165 # TMM compatibility event on new character creation
+	}
+}

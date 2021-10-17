@@ -1,0 +1,1579 @@
+targeted_decisions = {
+
+	mta_poison_decision = {
+		only_playable = yes
+		
+		filter = court
+		ai_target_filter = court
+		ai_check_interval = 18
+
+		from_potential = {
+			is_playable = yes
+			OR = {
+				trait = deceitful
+				ai = no
+			}
+			OR = {
+				trait = elusive_shadow
+				trait = gardener
+				trait = scholar
+				trait = mystic
+				ai = no
+			}
+			is_marriage_adult = yes
+			prisoner = no
+			is_incapable = no
+		}
+	
+		potential = {
+			prisoner = yes
+			host = { character = FROM }
+			NOT = { has_character_modifier = mta_poisoned_modifier }
+		}
+		
+		allow = {
+			prisoner = yes
+			FROM = {
+				OR = {
+					trait = elusive_shadow
+					trait = gardener
+					trait = scholar
+					trait = mystic
+				}
+			}
+		}
+		
+		effect = {
+			if = { limit = { has_global_flag = mta_debug } log = "MTA DEBUG: [From.GetBestName] ran mta_poison_decision on [Root.GetBestName]" }
+			hidden_tooltip = {
+				FROM = {
+					character_event = { id = mta.130 }
+				}
+				ROOT = {
+					character_event = { id = mta.131 }
+				}
+			}
+			
+			add_character_modifier = {
+					name = mta_poisoned_modifier
+					duration = -1
+			}
+
+			FROM = {
+				show_scope_change = no
+				
+				if = {
+					limit = { NOT = { trait = deceitful } }
+					random = {
+						chance = 25
+						add_trait = deceitful
+						hidden_tooltip = {
+							character_event = { id = 38255 }
+						}
+					}
+				}
+				piety = -25
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0.2
+			
+			modifier = {
+				factor = 0
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 0
+				FROM = { 
+					OR = {
+						trait = kind
+						trait = temperate
+						trait = just
+						trait = honest
+					}
+				}
+			}
+			modifier = {
+				factor = 4
+				FROM = {
+					OR = {
+						trait = arbitrary
+						trait = deceitful
+					}
+				}
+			}
+		}
+	}
+
+	mta_rape_decision = {
+		only_playable = yes
+		
+		filter = court
+		ai_target_filter = court
+		ai_check_interval = 12
+
+		from_potential = {
+			has_dlc = "Reapers"
+			has_game_rule = { 
+				name = mta_rule_rape 
+				value = on 
+			}
+			is_playable = yes
+			is_marriage_adult = yes
+			OR = {
+				NOR = {
+					is_female = yes
+					trait = chaste
+					trait = kind
+					trait = just
+					trait = patient
+					trait = temperate
+					trait = celibate
+				}
+				ai = no
+			}
+			prisoner = no
+			is_incapable = no
+			NOT = { trait = eunuch }
+		}
+	
+		potential = {
+			prisoner = yes
+			is_marriage_adult = yes
+			host = { character = FROM }
+			OR = { # Must be opposite sex, or if homosexual no restrictions
+				AND = {
+					FROM = { 
+						NOR = { 
+							trait = homosexual
+							trait = bisexual
+						}
+					}
+					NOT = { same_sex = FROM }
+				}
+				OR = {
+					FROM = { trait = homosexual }
+					FROM = { trait = bisexual }
+				}
+			}
+		}
+		
+		allow = {
+			NOT = { diplomatic_immunity = yes }
+			prisoner = yes
+			FROM = {
+				NOT = { trait = celibate }
+			}
+		}
+		
+		effect = {
+			if = { limit = { has_global_flag = mta_debug } log = "MTA DEBUG: [From.GetBestName] ran mta_rape_decision on [Root.GetBestName]" }
+			hidden_tooltip = {
+				random = {
+					chance = 20
+					FROM = {
+						if = {
+							limit = { has_nickname = no }
+							if = {
+								limit = { is_female = yes }
+								random_list = {
+									34 = { give_nickname = nick_the_cruel }
+									33 = { give_nickname = nick_the_depraved }
+									33 = { give_nickname = nick_the_wicked }
+								}
+							}
+							if = {
+								limit = { is_female = no }
+								random_list = {
+									34 = { give_nickname = nick_the_cruel }
+									33 = { give_nickname = nick_the_depraved }
+									33 = { give_nickname = nick_the_lecher }
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			hidden_tooltip = {
+				FROM = { 
+					character_event = { id = mta.140 } 
+				}
+				ROOT = { 
+					character_event = { id = mta.141 } 
+				}
+				mta_rape_opinion_effect = yes
+				mta_unprotected_sex_effect = yes
+			}
+			
+			tooltip = { 
+				add_character_modifier = { name = mta_dishonored_modifier years = 2 } 
+				opinion = { 
+					modifier = opinion_dishonored_me 
+					who = FROM 
+				}
+			}
+			
+			if = {
+				limit = {
+					FROM = { is_female = no }
+					ROOT = { is_female = yes }
+				}
+				random = {
+					chance = 87
+					mta_check_fertility_score = yes
+					custom_tooltip = {
+						text = mta_rape_impregnation_chance_ROOT_TT
+						hidden_tooltip = {
+							ROOT = { impregnate = FROM }
+						}
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					ROOT = { is_female = no }
+					FROM = { is_female = yes }
+				}
+				random = {
+					chance = 87
+					mta_check_fertility_score = yes
+					custom_tooltip = {
+						text = mta_rape_impregnation_chance_FROM_TT
+						hidden_tooltip = {
+							FROM = { impregnate = ROOT }
+						}
+					}
+				}
+			}
+			
+			FROM = {
+				show_scope_change = no
+				
+				if = {
+					limit = {
+						NOR = {
+							trait = cruel
+							trait = kind
+						}
+					}
+					random = {
+						chance = 25
+						add_trait = cruel
+						hidden_tooltip = {
+							character_event = { id = 38259 }
+						}
+					}
+				}
+				
+				if = {
+					limit = { NOT = { trait = lustful } }
+					random = {
+						chance = 25
+						add_trait = lustful
+						hidden_tooltip = {
+							character_event = { id = 38272 }
+						}
+					}
+				}
+				
+				if = {
+					limit = { trait = kind }
+					random = { 
+						chance = 50
+						remove_trait = kind
+						hidden_tooltip = {
+							character_event = { id = 38307 }
+						}
+					}
+					hidden_tooltip = {
+						random_list = {
+							30 = {
+								add_trait = stressed
+								hidden_tooltip = { character_event = { id = 38282 } }
+							}
+							10 = {
+								add_trait = depressed
+								hidden_tooltip = { character_event = { id = 38288 } }
+							}
+							60 = {
+								# Nothing
+							}
+						}
+					}
+				}
+				piety = -20
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0.1
+			
+			modifier = {
+				factor = 0
+				FROM = { 
+					OR = {
+						personal_opinion = { who = ROOT value = 40 }
+						NOT = { piety = 100 }
+						liege = { dynasty = ROOT }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					OR = {
+						trait = humble
+						trait = charitable
+						trait = shy
+					}
+				}
+			}
+			modifier = {
+				factor = 1.2
+				FROM = {
+					OR = {
+						trait = arbitrary
+						trait = envious
+						trait = lustful
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				FROM = {
+					OR = {
+						trait = cruel
+						trait = impaler
+						trait = wroth
+						is_rival = ROOT
+						trait = lunatic
+						trait = possessed
+					}
+				}
+			}
+			modifier = {
+				factor = 1.4
+				FROM = {
+					OR = {
+						NOT = { personal_opinion = { who = ROOT value = -20 } }
+						trait = disfigured
+						trait = ugly
+					}
+				}
+			}
+		}
+	}
+
+	mta_rape_slave_decision = {
+		only_playable = yes
+		diplomacy_icon = GFX_slavery_decision
+		
+		filter = home_court
+		ai_target_filter = home_court
+		ai_check_interval = 24
+
+		from_potential = {
+			has_dlc = "Reapers"
+			has_game_rule = { 
+				name = mta_rule_rape 
+				value = on 
+			}
+			is_playable = yes
+			is_marriage_adult = yes
+			OR = {
+				NOR = {
+					is_female = yes
+					trait = chaste
+					trait = kind
+					trait = just
+					trait = patient
+					trait = temperate
+					trait = celibate
+				}
+				ai = no
+			}
+			prisoner = no
+			is_incapable = no
+			NOT = { trait = eunuch }
+		}
+	
+		potential = {
+			is_enslaved = yes
+			prisoner = no
+			is_marriage_adult = yes
+			host = { character = FROM }
+			OR = { # Must be opposite sex, or if homosexual no restrictions
+				AND = {
+					FROM = { 
+						NOR = { 
+							trait = homosexual
+							trait = bisexual
+							}
+						}
+					NOT = { same_sex = FROM }
+				}
+				FROM = { trait = homosexual }
+			}
+		}
+		
+		allow = {
+			is_enslaved = yes
+			prisoner = no
+			FROM = {
+				NOT = { trait = celibate }
+			}
+		}
+		
+		effect = {
+			if = { limit = { has_global_flag = mta_debug } log = "MTA DEBUG: [From.GetBestName] ran mta_rape_slave_decision on [Root.GetBestName]" }
+			hidden_tooltip = {
+				random = {
+					chance = 10
+					FROM = {
+						if = {
+							limit = { has_nickname = no }
+							if = {
+								limit = { is_female = yes }
+								random_list = {
+									34 = { give_nickname = nick_the_cruel }
+									33 = { give_nickname = nick_the_depraved }
+									33 = { give_nickname = nick_the_wicked }
+								}
+							}
+							if = {
+								limit = { is_female = no }
+								random_list = {
+									34 = { give_nickname = nick_the_cruel }
+									33 = { give_nickname = nick_the_depraved }
+									33 = { give_nickname = nick_the_lecher }
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			hidden_tooltip = {
+				FROM = { 
+					character_event = { id = mta.138 } 
+				}
+				ROOT = { 
+					character_event = { id = mta.139 } 
+				}
+				mta_rape_opinion_effect = yes
+				mta_unprotected_sex_effect = yes
+			}
+			
+			tooltip = { 
+				add_character_modifier = { name = mta_dishonored_modifier years = 2 } 
+				opinion = { 
+					modifier = opinion_dishonored_me 
+					who = FROM 
+				}
+			}
+			
+			if = {
+				limit = {
+					FROM = { is_female = no }
+					ROOT = { is_female = yes }
+				}
+				random = {
+					chance = 87
+					mta_check_fertility_score = yes
+					custom_tooltip = {
+						text = mta_rape_impregnation_chance_ROOT_TT
+						hidden_tooltip = {
+							ROOT = { impregnate = FROM }
+						}
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					ROOT = { is_female = no }
+					FROM = { is_female = yes }
+				}
+				random = {
+					chance = 87
+					mta_check_fertility_score = yes
+					custom_tooltip = {
+						text = mta_rape_impregnation_chance_FROM_TT
+						hidden_tooltip = {
+							FROM = { impregnate = ROOT }
+						}
+					}
+				}
+			}
+			
+			FROM = {
+				show_scope_change = no
+				
+				if = {
+					limit = {
+						NOR = {
+							trait = cruel
+							trait = kind
+						}
+					}
+					random = {
+						chance = 25
+						add_trait = cruel
+						hidden_tooltip = {
+							character_event = { id = 38259 }
+						}
+					}
+				}
+				
+				if = {
+					limit = { NOT = { trait = lustful } }
+					random = {
+						chance = 25
+						add_trait = lustful
+						hidden_tooltip = {
+							character_event = { id = 38272 }
+						}
+					}
+				}
+				
+				if = {
+					limit = { trait = kind }
+					random = { 
+						chance = 50
+						remove_trait = kind
+						hidden_tooltip = {
+							character_event = { id = 38307 }
+						}
+					}
+					hidden_tooltip = {
+						random_list = {
+							30 = {
+								add_trait = stressed
+								hidden_tooltip = { character_event = { id = 38282 } }
+							}
+							10 = {
+								add_trait = depressed
+								hidden_tooltip = { character_event = { id = 38288 } }
+							}
+							60 = {
+								# Nothing
+							}
+						}
+					}
+				}
+				piety = -20
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0.1
+			
+			modifier = {
+				factor = 0
+				FROM = { 
+					OR = {
+						personal_opinion = { who = ROOT value = 40 }
+						NOT = { piety = 100 }
+						liege = { dynasty = ROOT }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					OR = {
+						trait = humble
+						trait = charitable
+						trait = shy
+					}
+				}
+			}
+			modifier = {
+				factor = 1.2
+				FROM = {
+					OR = {
+						trait = arbitrary
+						trait = envious
+						trait = lustful
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				FROM = {
+					OR = {
+						trait = cruel
+						trait = impaler
+						trait = wroth
+						is_rival = ROOT
+						trait = lunatic
+						trait = possessed
+					}
+				}
+			}
+			modifier = {
+				factor = 1.4
+				FROM = {
+					OR = {
+						NOT = { personal_opinion = { who = ROOT value = -20 } }
+						trait = disfigured
+						trait = ugly
+					}
+				}
+			}
+		}
+	}
+	
+	mta_sell_into_slavery = {
+		only_playable = yes
+	    is_high_prio = yes
+		diplomacy_icon = GFX_slavery_decision
+		
+		filter = self
+		third_party_filter = home_court_including_me
+		ai_target_filter = self
+        ai_third_party_filter = home_court_including_me
+        ai_check_interval = 18
+		third_party = ROOT
+		show_third_party_potential = no
+
+		potential = {
+			is_playable = yes
+			slavery_enabled = yes
+			is_marriage_adult = yes
+			prisoner = no
+			OR = {
+				ai = no
+				num_of_prisoners = 1
+			}
+		}
+		
+		third_party_potential = {
+			FROMFROM = {
+				OR = {
+					AND = {
+						FROM = { ai = no }
+						OR = {
+							is_enslaved = yes
+							prisoner = yes
+						}
+					}
+					prisoner = yes
+				}
+				age = 5
+				host = { character = FROM }
+			}
+		}
+		
+		allow = {
+			conditional_tooltip = {
+				trigger = { ai = no }
+				OR = {
+					custom_tooltip = {
+						text = mta_has_prisoners_TT
+						num_of_prisoners = 1
+					}
+					custom_tooltip = {
+						text = mta_has_slaves_TT
+						any_host_courtier = {
+							count = 1
+							is_enslaved = yes
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				text = mta_NOT_IN_HIDING
+				NOT = { trait = in_hiding }
+			}
+		}
+
+		third_party_allow = {
+			FROMFROM = {
+				custom_tooltip = {
+					text = mta_slave_price_not_worthless_TT
+					check_variable = { which = local_third_party_score value > 0 }
+				}
+				custom_tooltip = {
+					text = mta_slave_price_appropriate_tier_TT
+					NOT = { higher_tier_than = COUNT }
+				}
+				conditional_tooltip = {
+					trigger = { 
+						PREV = { culture = han } 
+						has_game_rule = {
+							name = mta_rule_slavery
+							value = restricted
+						}
+					}
+					custom_tooltip = {
+						text = mta_slave_same_culture_or_murderer_TT
+						NAND = {
+							culture = han
+							NOT = { has_character_modifier = known_murderer }
+						}
+					}
+				}
+				conditional_tooltip = {
+					trigger = { 
+						PREV = { religion = hindu } 
+						has_game_rule = {
+							name = mta_rule_slavery
+							value = restricted
+						}
+					}
+					custom_tooltip = {
+						text = mta_slave_hindu_caste_TT
+						NOR = {
+							trait = brahmin
+							trait = kshatriya
+						}
+					}
+				}
+				conditional_tooltip = {
+					trigger = { 
+						PREV = { religion_group = christian } 
+						has_game_rule = {
+							name = mta_rule_slavery
+							value = restricted
+						}
+					}
+					custom_tooltip = {
+						text = mta_slave_same_religion_group_TT
+						NOT = { religion_group = christian }
+					}
+				}
+				conditional_tooltip = {
+					trigger = { 
+						PREV = { religion_group = jewish_group } 
+						has_game_rule = {
+							name = mta_rule_slavery
+							value = restricted
+						}
+					}
+					custom_tooltip = {
+						text = mta_slave_same_religion_group_TT
+						NOT = { religion_group = jewish_group }
+					}
+				}
+				conditional_tooltip = {
+					trigger = { PREV = { independent = yes } }
+					custom_tooltip = {
+						text = mta_slave_price_vassal_TT
+						NAND = { 
+							is_vassal_or_below_of = PREV 
+							is_landed = yes
+						}
+					}
+				}
+				conditional_tooltip = {
+					trigger = { PREV = { independent = no } }
+					custom_tooltip = {
+						text = mta_slave_price_vassal_top_liege_TT
+						NAND = { 
+							top_liege = { is_liege_or_above_of = PREVPREV }
+							is_landed = yes
+						}
+					}
+				}
+				NOT = { diplomatic_immunity = yes }
+			}
+		}
+
+		third_party_score = {
+			factor = 10
+			
+			mta_calculate_slave_price = yes
+		}
+
+		effect = {
+			if = { limit = { has_global_flag = mta_debug } log = "MTA DEBUG: [From.GetBestName] ran mta_sell_into_slavery on [FromFrom.GetFirstName] for [local_third_party_score.GetValue] gold" }
+			FROM = { save_event_target_as = slaver } # The one selling the slave
+			FROMFROM = { save_event_target_as = slave } # The one being enslaved
+
+			# Show number of slaves_sold
+			if = {
+				limit = {
+					FROM = { check_variable = { which = slaves_sold value > 0 } }
+				}
+				custom_tooltip = { text = mta_slaves_sold_TT }
+			}
+			
+			if = {
+				limit = {
+					FROM = { check_variable = { which = slaves_sold value <= 0 } }
+				}
+				custom_tooltip = { text = mta_slaves_sold_none_TT }
+			}
+
+			# Display slave value
+			if = {
+				limit = {
+					check_variable = { which = local_third_party_score value > 0 }
+				}
+				custom_tooltip = {
+					text = mta_slave_price_TT
+					FROM = { wealth = local_third_party_score }
+				}
+			}
+			
+			if = {
+				limit = {
+					check_variable = { which = local_third_party_score value <= 0 }
+				}
+				custom_tooltip = { text = mta_slave_price_worthless_TT }
+			}
+
+			mta_slavery_opinion_effect = yes
+
+			# Castrate if applicable
+			if = {
+				limit = { 
+					FROM = { 
+						ai = yes
+						slave_castration_culture = yes 
+					} 
+					FROMFROM = { 
+						is_female = no 
+						NOT = { trait = eunuch }
+					}
+				}
+				FROMFROM = {
+					random = {
+						chance = 80
+						mta_check_castration_score = yes
+						add_trait = eunuch
+					}
+				}
+			}
+			if = {
+				limit = { 
+					FROM = { 
+						ai = no
+						has_character_flag = slave_castration
+					} 
+					FROMFROM = { 
+						is_female = no 
+						NOT = { trait = eunuch }
+					}
+				}
+				FROMFROM = {
+					show_scope_change = no
+					custom_tooltip = {
+						text = mta_castration_forced_TT
+						add_trait = eunuch
+					}
+				}
+			}
+
+			hidden_tooltip = {
+				if = {
+					limit = { FROMFROM = { NOT = { is_enslaved = yes } } }
+					FROM = { change_variable = { which = slaves_sold value = 1 } } # Update the number of slaves_sold, but only if they are not already enslaved
+				}
+				FROM = { change_variable = { which = slaves_sold_wealth which = local_third_party_score } } # Keep track of wealth earned
+				
+				# Apply slaver modifiers if applicable
+				slaver_modifier_update_effect = yes
+				
+				if = {
+					limit = { has_dlc = "Holy Fury" }
+					FROMFROM = {
+						add_trait = slave
+						death = {
+							death_reason = DEATH_SLAVERY
+							killer = event_target:slaver
+						}
+					}
+				}
+				
+				if = {
+					limit = { NOT = { has_dlc = "Holy Fury" } }
+					FROMFROM = {
+						add_trait = slave
+						death = {
+							death_reason = death_dungeon
+							killer = event_target:slaver
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.2
+
+			modifier = {
+				factor = 0
+				FROMFROM = { is_close_relative = FROM } # AI is not interested in enslaving their own family
+			}
+			modifier = {
+				factor = 0
+				FROM = { opinion = { who = FROMFROM value = 60 } }
+			}
+			modifier = {
+				factor = 0.8
+				FROM = { opinion = { who = FROMFROM value = 20 } }
+				FROM = { NOT = { opinion = { who = FROMFROM value = 60 } } }
+			}
+			modifier = {
+				factor = 0
+				FROMFROM = { # Will not be sold if punished by event
+					has_character_flag = slave_punished_by_@LIEGE 
+				}
+			}
+			modifier = {
+				factor = 0.4
+				FROMFROM = { dynasty = FROM }
+			}
+			modifier = {
+				factor = 0.1
+				FROMFROM = { tier = COUNT } 
+			}
+			modifier = {
+				factor = 1.2
+				FROMFROM = { is_landed = no }
+			}
+			modifier = {
+				factor = 1.6
+				FROMFROM = { is_lowborn = yes }
+			}
+			modifier = {
+				factor = 0.7
+				FROM = { religion = norse_pagan }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					OR = {
+						trait = kind
+						trait = humble
+						trait = temperate
+						trait = charitable
+						NOT = { ai_ambition = -39 }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { is_rival = FROMFROM } # AI will not sell their rivals, but they might claim them as a trophy
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					OR = {
+						trait = cruel
+						trait = impaler
+						trait = wroth
+						trait = arbitrary
+						trait = lunatic
+						trait = possessed
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					OR = {
+						ai_greed = 100
+						ai_ambition = 40
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = { wealth < 1 }
+			}
+			modifier = {
+				factor = 0.5
+				has_game_rule = { 
+					name = mta_rule_enslavement_rate 
+					value = halved 
+				}
+			}
+			modifier = {
+				factor = 0.25
+				has_game_rule = { 
+					name = mta_rule_enslavement_rate 
+					value = quartered 
+				}
+			}
+		}
+	}
+	
+	mta_claim_slave = {
+		only_playable = yes
+	    is_high_prio = yes
+		diplomacy_icon = GFX_slavery_decision
+		
+		filter = self
+		third_party_filter = home_court_including_me
+		ai_target_filter = self
+        ai_third_party_filter = home_court_including_me
+        ai_check_interval = 20
+		third_party = ROOT
+		show_third_party_potential = no
+
+		potential = {
+			is_playable = yes
+			slavery_enabled = yes
+			is_marriage_adult = yes
+			prisoner = no
+			OR = {
+				ai = no
+				num_of_prisoners = 1
+			}
+		}
+		
+		third_party_potential = {
+			FROMFROM = {
+				prisoner = yes
+				host = { character = FROM }
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = mta_has_prisoners_TT
+				num_of_prisoners = 1
+			}
+			custom_tooltip = {
+				text = mta_NOT_IN_HIDING
+				NOT = { trait = in_hiding }
+			}
+		}
+
+		third_party_allow = {
+			FROMFROM = {
+				custom_tooltip = {
+					text = mta_slave_price_appropriate_tier_TT
+					hidden_tooltip = { 
+						NOT = { higher_tier_than = COUNT }
+					}
+				}
+				conditional_tooltip = {
+					trigger = { 
+						PREV = { culture = han } 
+						has_game_rule = {
+							name = mta_rule_slavery
+							value = restricted
+						}
+					}
+					custom_tooltip = {
+						text = mta_slave_same_culture_or_murderer_TT
+						NAND = {
+							culture = han
+							NOT = { has_character_modifier = known_murderer }
+						}
+					}
+				}
+				conditional_tooltip = {
+					trigger = { 
+						PREV = { religion = hindu } 
+						has_game_rule = {
+							name = mta_rule_slavery
+							value = restricted
+						}
+					}
+					custom_tooltip = {
+						text = mta_slave_hindu_caste_TT
+						NOR = {
+							trait = brahmin
+							trait = kshatriya
+						}
+					}
+				}
+				conditional_tooltip = {
+					trigger = { 
+						PREV = { religion_group = christian } 
+						has_game_rule = {
+							name = mta_rule_slavery
+							value = restricted
+						}
+					}
+					custom_tooltip = {
+						text = mta_slave_same_religion_group_TT
+						NOT = { religion_group = christian }
+					}
+				}
+				conditional_tooltip = {
+					trigger = { 
+						PREV = { religion_group = jewish_group } 
+						has_game_rule = {
+							name = mta_rule_slavery
+							value = restricted
+						}
+					}
+					custom_tooltip = {
+						text = mta_slave_same_religion_group_TT
+						NOT = { religion_group = jewish_group }
+					}
+				}
+				custom_tooltip = {
+					text = mta_slave_landed_TT
+					NOT = { is_landed = yes }
+				}
+				NOT = { diplomatic_immunity = yes }
+			}
+		}
+
+		third_party_score = {
+			factor = 10
+			
+			mta_calculate_slave_price = yes
+		}
+
+		effect = {
+			if = { limit = { has_global_flag = mta_debug } log = "MTA DEBUG: [From.GetBestName] ran mta_claim_slave on [FromFrom.GetFirstName]" }
+			FROM = { # The one claiming the slave
+				save_event_target_as = slaver 
+			}
+			FROMFROM = { # The one being enslaved
+				save_event_target_as = slave 
+			}
+
+			# Show number of slaves_sold
+			if = {
+				limit = {
+					FROM = { check_variable = { which = slaves_sold value > 0 } }
+				}
+				custom_tooltip = { text = mta_only_slaves_sold_TT }
+			}
+			
+			if = {
+				limit = {
+					FROM = { check_variable = { which = slaves_sold value <= 0 } }
+				}
+				custom_tooltip = { text = mta_only_slaves_sold_none_TT }
+			}
+
+			mta_slavery_opinion_effect = yes
+			
+			FROMFROM = {
+				show_scope_change = no
+				
+				enslave_effect_2 = yes
+				hidden_tooltip = {
+					imprison = no
+					set_defacto_liege = FROM
+					move_character = FROM
+					force_host = FROM
+					if = {
+						limit = { FROM = { ai = no } } # No need to send ping event to AI
+						character_event = { id = mta.159 }
+					}
+				}
+				custom_tooltip = { text = mta_free_and_join_me_THIS_TT }
+				new_slave_effect_2 = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.2
+
+			modifier = {
+				factor = 0
+				FROMFROM = { NOT = { age = 5 } } # AI is not interested in enslaving babies and toddlers
+			}
+			modifier = {
+				factor = 0.4
+				FROMFROM = { NOT = { age = 8 } } # AI is less interested in enslaving very young children
+			}
+			modifier = {
+				factor = 0
+				FROMFROM = { is_close_relative = FROM } # AI is not interested in enslaving their own family
+			}
+			modifier = {
+				factor = 0
+				FROM = { opinion = { who = FROMFROM value = 60 } }
+			}
+			modifier = {
+				factor = 0
+				FROMFROM = { # Will not be reclaimed if recently punished by event
+					has_character_flag = slave_punished_by_@LIEGE 
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = { opinion = { who = FROMFROM value = 20 } }
+				FROM = { NOT = { opinion = { who = FROMFROM value = 60 } } }
+			}
+			modifier = {
+				factor = 0.4
+				FROMFROM = { dynasty = FROM }
+			}
+			modifier = {
+				factor = 1.6
+				FROMFROM = { is_lowborn = yes }
+			}
+			modifier = {
+				factor = 0.7
+				FROM = { religion = norse_pagan }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					OR = {
+						trait = kind
+						trait = humble
+						trait = temperate
+						trait = charitable
+						NOT = { ai_ambition = -39 }
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					OR = {
+						trait = cruel
+						trait = impaler
+						trait = wroth
+						is_rival = FROMFROM
+						trait = arbitrary
+						trait = lunatic
+						trait = possessed
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					OR = {
+						ai_greed = 100
+						ai_ambition = 40
+					}
+				}
+			}
+			modifier = {
+				factor = 1.8
+				OR = { # AI is more likely to claim a slave if they have skills their court lacks
+					AND = {
+						FROMFROM = {
+							has_education_diplomacy_trigger = yes
+						}
+						FROM = {
+							NOT = {
+								any_host_courtier = {
+									has_education_diplomacy_trigger = yes
+									count = 3
+								}
+							}
+						}
+					}
+					AND = {
+						FROMFROM = {
+							has_education_martial_trigger = yes
+						}
+						FROM = {
+							NOT = {
+								any_host_courtier = {
+									has_education_martial_trigger = yes
+									count = 3
+								}
+							}
+						}
+					}
+					AND = {
+						FROMFROM = {
+							has_education_stewardship_trigger = yes
+						}
+						FROM = {
+							NOT = {
+								any_host_courtier = {
+									has_education_stewardship_trigger = yes
+									count = 3
+								}
+							}
+						}
+					}
+					AND = {
+						FROMFROM = {
+							has_education_intrigue_trigger = yes
+						}
+						FROM = {
+							NOT = {
+								any_host_courtier = {
+									has_education_intrigue_trigger = yes
+									count = 3
+								}
+							}
+						}
+					}
+					AND = {
+						FROMFROM = {
+							religion = FROM
+							has_education_learning_trigger = yes
+						}
+						FROM = {
+							NOT = {
+								any_host_courtier = {
+									religion = FROM
+									has_education_learning_trigger = yes
+									count = 3
+								}
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_game_rule = { 
+					name = mta_rule_enslavement_rate 
+					value = halved 
+				}
+			}
+			modifier = {
+				factor = 0.25
+				has_game_rule = { 
+					name = mta_rule_enslavement_rate 
+					value = quartered 
+				}
+			}
+		}
+	}
+
+	mta_toggle_slave_castration_on = {
+		ai = no
+		only_playable = yes
+		diplomacy_icon = GFX_slavery_decision
+		
+		filter = self
+	
+		potential = {
+			ai = no
+			is_playable = yes
+			slavery_enabled = yes
+			slave_castration_culture = yes
+			NOT = { has_character_flag = slave_castration }
+			prisoner = no
+		}
+		
+		allow = {
+			slave_castration_culture = yes
+		}
+		
+		effect = {
+			if = { limit = { has_global_flag = mta_debug } log = "MTA DEBUG: [From.GetBestName] ran mta_toggle_slave_castration_on" }
+			custom_tooltip = { text = mta_castration_toggle_on_TT }
+			hidden_tooltip = { set_character_flag = slave_castration }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mta_toggle_slave_castration_off = {
+		ai = no
+		only_playable = yes
+		diplomacy_icon = GFX_slavery_decision
+		
+		filter = self
+	
+		potential = {
+			ai = no
+			is_playable = yes
+			slavery_enabled = yes
+			slave_castration_culture = yes
+			has_character_flag = slave_castration
+			prisoner = no
+		}
+		
+		allow = {
+			slave_castration_culture = yes
+		}
+		
+		effect = {
+			if = { limit = { has_global_flag = mta_debug } log = "MTA DEBUG: [From.GetBestName] ran mta_toggle_slave_castration_off" }
+			custom_tooltip = { text = mta_castration_toggle_off_TT }
+			hidden_tooltip = { clr_character_flag = slave_castration }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_free_slave = {
+		only_playable = yes
+		diplomacy_icon = GFX_slavery_decision
+		
+		filter = home_court
+		ai_target_filter = home_court
+		ai_check_interval = 12
+
+		from_potential = {
+			is_playable = yes
+			prisoner = no
+		}
+
+		potential = {
+			trait = slave
+			host = { character = FROM }
+		}
+
+		allow = {
+			is_enslaved = yes
+			is_ruler = no
+			is_landed = no
+		}
+
+		effect = {
+			if = { limit = { has_global_flag = mta_debug } log = "MTA DEBUG: [From.GetBestName] ran mta_free_slave on [Root.GetBestName]" }
+			free_slave_effect = yes
+		}
+
+		ai_will_do = {
+			factor = 0.25
+			
+			modifier = {
+				factor = 0
+				FROM = { is_slaver_group = yes }
+				NOR = {
+					AND = {
+						has_minor_title = title_commander
+						check_variable = { which = slave_year_count value >= 15 }
+						prestige = 500
+					}
+					AND = {
+						is_close_relative = yes
+						prisoner = no
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				is_close_relative = yes
+				prisoner = no
+			}
+			modifier = {
+				factor = 2
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 2
+				FROM = { 
+					NOR = {
+						religion_group = pagan_group
+						religion_group = muslim
+						religion_group = indian_group
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = { 
+					OR = {
+						trait = kind
+						trait = humble
+						trait = trusting
+						trait = charitable
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { 
+					OR = {
+						trait = cruel
+						trait = paranoid
+					}
+				}
+				NAND = {
+					FROM = { trait = lunatic }
+					is_close_relative = yes
+					prisoner = no
+				}
+			}
+		}
+	}
+	
+	mta_pardon_peasant_leader = {
+		only_playable = yes
+		
+		filter = court
+		ai_target_filter = court
+		ai_check_interval = 12
+
+		from_potential = {
+			has_game_rule = { 
+				name = mta_rule_lowborn 
+				value = on 
+			}
+			is_playable = yes
+			OR = {
+				ai_honor = 10
+				trait = kind
+				trait = humble
+				trait = trusting
+				trait = peasant_leader
+				ai = no
+			}
+			prisoner = no
+		}
+
+		potential = {
+			prisoner = yes
+			trait = peasant_leader
+			has_character_modifier = broken_spirit
+			NOT = { has_character_modifier = raised_lowborn_modifier }
+		}
+
+		allow = {
+			prisoner = yes
+			trait = peasant_leader
+		}
+
+		effect = {
+			if = { limit = { has_global_flag = mta_debug } log = "MTA DEBUG: [From.GetBestName] ran mta_pardon_peasant_leader on [Root.GetBestName]" }
+			custom_tooltip = {
+				text = mta_free_and_join_me_TT
+				imprison = no
+				move_character = FROM
+			}
+			remove_character_modifier = broken_spirit
+			add_character_modifier = { name = raised_lowborn_modifier duration = -1 hidden = no }
+			opinion = { modifier = opinion_was_shown_mercy who = FROM years = 10 }
+			hidden_tooltip = {
+				remove_opinion = { who = FROM modifier = opinion_evil_tyrant }
+			}
+			if = {
+				limit = { FROM = { ai = yes } }
+				diplomatic_immunity = yes # Stop AI peasant abuse
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.20
+			
+			modifier = {
+				factor = 2
+				FROM = {
+					trait = lunatic
+					trait = arbitrary
+					ai_ambition = 40
+					trait = peasant_leader
+				}
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { 
+					OR = {
+						trait = cruel
+						trait = wroth
+						trait = proud
+						trait = cynical
+						trait = paranoid
+						trait = stubborn
+					}
+				}
+			}
+		}
+	}
+
+}

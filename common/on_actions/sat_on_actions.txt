@@ -1,0 +1,47 @@
+on_yearly_pulse = {
+	random_events = {
+		200 = SATT.667
+		200 = SATT.692
+	}
+	events = {
+		SATT.682
+		SATT.700
+		SATT.701
+		SATT.702
+		SATT.703
+		SATT.704
+	}
+}
+
+on_bi_yearly_pulse = {
+	random_events = {
+		1000 = SATT.687
+		1000 = SATT.688
+	}
+}
+
+on_crusade_creation = {
+	events = {
+		SATT.668
+	}
+}
+
+on_character_convert_religion = {
+	events = {
+		SATT.682
+		SATT.694
+	}
+}
+
+on_death = {
+	events = {
+		SATT.684
+		SATT.699
+	}
+}
+
+on_decade_pulse = {
+	random_events = {
+		150 = SATT.689
+	}
+}

@@ -1,0 +1,634 @@
+wonder_mbw_aqueduct = {
+	picture = GFX_wonder_strip_aqueduct
+	allow_construction = yes
+	potential = {
+	}
+	active = {
+	}
+	flags = {
+		is_destructible
+		inspires_contentedness
+		inspires_relaxing
+		cost_medium
+	}
+	background_overrides = {
+	}
+	available_upgrades = {
+		upgrade_mbw_irrigation_channels
+		upgrade_mbw_silver_lined_waterways
+		upgrade_mbw_private_plumbing
+		upgrade_mbw_inspector_of_the_waters
+		
+		upgrade_fountains
+		upgrade_vineyard
+		upgrade_historical_mural
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_tower
+		upgrade_retinue
+		upgrade_tavern
+	}
+
+	stage = {
+		allow = {
+		}
+		build_time = 200
+		gold_cost_flat = 1800
+		gold_cost_ticking = 2
+		restore_time = 150
+		loot_time = 20
+		restore_cost_flat = 400
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			disease_defence = 0.005
+		}
+		owner_modifier = {
+			health = 0.2
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 300
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_time = 200
+		loot_time = 20
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			disease_defence = 0.005
+		}
+		owner_modifier = {
+			health = 0.2
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 400
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_time = 200
+		loot_time = 6
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			disease_defence = 0.005
+		}
+		owner_modifier = {
+			health = 0.3
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 400
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_time = 200
+		loot_time = 2
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			disease_defence = 0.005
+		}
+		owner_modifier = {
+			monthly_character_prestige = 1
+			health = 0.3
+		}
+	}
+}
+
+wonder_mbw_arch = {
+	picture = GFX_wonder_strip_arch
+	allow_construction = yes
+	potential = {
+	}
+	active = {
+	}
+	flags = {
+		inspires_greatness
+		is_destructible
+		cost_low
+	}
+	available_upgrades = {
+		# UNIQUE:
+		upgrade_mbw_sculpted_reliefs
+		upgrade_mbw_dedication
+		upgrade_mbw_statuery
+		upgrade_mbw_statuery_2
+
+		# OTHER:
+		upgrade_roads
+		upgrade_spikes
+		upgrade_tower
+		upgrade_retinue
+		upgrade_road_tolls
+		upgrade_tavern
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 100
+		gold_cost_flat = 1000
+		gold_cost_ticking = 1
+		restore_time = 150
+		loot_time = 20
+		restore_cost_flat = 400
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			global_revolt_risk = -0.025
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 200
+		gold_cost_flat = 800
+		gold_cost_ticking = 1
+		restore_time = 200
+		loot_time = 20
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			global_revolt_risk = -0.025
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 300
+		gold_cost_flat = 800
+		gold_cost_ticking = 1
+		restore_time = 200
+		loot_time = 6
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			global_revolt_risk = -0.025
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 400
+		gold_cost_flat = 800
+		gold_cost_ticking = 1
+		restore_time = 200
+		loot_time = 2
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			global_revolt_risk = -0.025
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+			short_reign_length = -1
+		}
+	}
+}
+
+wonder_mbw_bridge = {
+	picture = GFX_wonder_strip_bridge
+	allow_construction = yes
+	potential = {
+		# FROMFROMFROM = {
+			# OR = {
+				# borders_major_river = yes
+				# borders_lake = yes
+			# }
+		# }
+	}
+	active = {
+	}
+	flags = {
+		is_destructible
+		cost_medium
+		inspires_contentedness
+		inspires_relaxing
+	}
+	available_upgrades = {
+		upgrade_mbw_bridge_roads
+		upgrade_mbw_bridge_tolls
+		upgrade_mbw_murderholes
+		upgrade_mbw_master_of_the_crossing
+		
+		upgrade_watchtower_network
+		upgrade_spikes
+		upgrade_tower
+		upgrade_retinue
+		upgrade_historical_mural
+		upgrade_tavern
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 200
+		gold_cost_flat = 1800
+		gold_cost_ticking = 2
+		restore_time = 150
+		loot_time = 20
+		restore_cost_flat = 400
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+			land_organisation = 0.05
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 300
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_time = 200
+		loot_time = 20
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+			land_organisation = 0.05
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 400
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_time = 200
+		loot_time = 6
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+			land_organisation = 0.05
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 400
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_time = 200
+		loot_time = 2
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			siege_defence = 0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+			land_organisation = 0.05
+		}
+	}
+}
+
+wonder_mbw_colossus = {
+	picture = GFX_wonder_strip_colossus
+	allow_construction = yes
+	allow_coastal = yes
+	is_in_water = yes
+	potential = {
+		FROMFROMFROM = { is_coastal = yes }
+	}
+	active = {
+	}
+	flags = {
+		is_destructible
+		inspires_greatness
+		cost_high
+		defensive
+		gives_artifact
+		gives_artifact_colossus_head
+		can_have_water_background
+	}
+	available_upgrades = {
+		upgrade_mbw_sea_tolls
+		upgrade_mbw_murderholes
+		upgrade_mbw_great_chain
+		
+		upgrade_cothon
+		upgrade_piers
+		upgrade_office_harbor
+		upgrade_lighthouse
+		upgrade_military_wharf
+		upgrade_master_of_tides
+		upgrade_watchtower_network
+		upgrade_spikes
+		upgrade_tower
+		upgrade_retinue
+		upgrade_historical_mural
+		upgrade_tavern
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 300
+		gold_cost_flat = 2200
+		gold_cost_ticking = 3
+		restore_time = 150
+		loot_time = 20
+		restore_cost_flat = 400
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			fort_level = 0.25
+			siege_defence = 0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 400
+		gold_cost_flat = 1000
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 20
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			fort_level = 0.25
+			siege_defence = 0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 500
+		gold_cost_flat = 1000
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 6
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			fort_level = 0.25
+			siege_defence = 0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 500
+		gold_cost_flat = 1000
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 2
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			fort_level = 0.25
+			siege_defence = 0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+}
+
+wonder_mbw_market = {
+	picture = GFX_wonder_strip_market
+	allow_construction = yes
+	background_overrides = {
+	}
+	potential = {
+	}
+	active = {
+	}
+	flags = {
+		is_destructible
+		cost_low
+		defensive
+		gives_artifact
+		gives_artifact_ledgers
+	}
+	available_upgrades = {
+		upgrade_mbw_market_hall
+		upgrade_mbw_office_weights_measures
+		upgrade_mbw_market_bailiff
+		
+		upgrade_roads
+		upgrade_spikes
+		upgrade_tower
+		upgrade_retinue
+		upgrade_road_tolls 
+		upgrade_historical_mural
+		upgrade_tavern
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 100
+		gold_cost_flat = 1000
+		gold_cost_ticking = 1
+		restore_time = 150
+		loot_time = 20
+		restore_cost_flat = 400
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			local_tax_modifier = 0.025
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 200
+		gold_cost_flat = 800
+		gold_cost_ticking = 1
+		restore_time = 200
+		loot_time = 20
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			local_tax_modifier = 0.025
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 300
+		gold_cost_flat = 800
+		gold_cost_ticking = 1
+		restore_time = 200
+		loot_time = 6
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			local_tax_modifier = 0.025
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 400
+		gold_cost_flat = 800
+		gold_cost_ticking = 1
+		restore_time = 200
+		loot_time = 2
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			local_tax_modifier = 0.025
+			economy_techpoints = 0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+}
+
+wonder_mbw_obelisk = {
+	picture = GFX_wonder_strip_obelisk
+	allow_construction = yes
+	allow_coastal = yes
+	background_overrides = {
+	}
+	potential = {
+	}
+	active = {
+	}
+	flags = {
+		is_destructible
+		inspires_fear
+		cost_medium
+		gives_artifact
+		gives_artifact_capstone
+		can_have_water_background
+	}
+	available_upgrades = {
+		upgrade_mbw_vault
+		upgrade_mbw_gilded_capstone
+		upgrade_mbw_decorative_carvings
+		
+		upgrade_roads
+		upgrade_spikes
+		upgrade_retinue
+		upgrade_road_tolls 
+		upgrade_historical_mural
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 200
+		gold_cost_flat = 1800
+		gold_cost_ticking = 2
+		restore_time = 150
+		loot_time = 20
+		restore_cost_flat = 400
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			global_revolt_risk = -0.005
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 300
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_time = 200
+		loot_time = 20
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			global_revolt_risk = -0.005
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 400
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_time = 200
+		loot_time = 6
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			global_revolt_risk = -0.005
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 400
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_time = 200
+		loot_time = 2
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			global_revolt_risk = -0.005
+		}
+		owner_modifier = {
+			vassal_opinion = 10
+			monthly_character_prestige = 0.1
+		}
+	}
+}

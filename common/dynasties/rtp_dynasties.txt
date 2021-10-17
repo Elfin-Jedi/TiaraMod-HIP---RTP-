@@ -1,0 +1,33 @@
+19930 = {
+	name = " "
+	culture = english
+	used_for_random = no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0
+			texture_internal = 0
+			emblem = 0
+			color = 5
+			color = 5
+			color = 5
+		}
+	}
+}
+
+19931 = {
+	name = Noble
+	culture = english
+	used_for_random = no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0
+			texture_internal = 0
+			emblem = 0
+			color = 1
+			color = 1
+			color = 1
+		}
+	}
+}

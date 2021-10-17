@@ -1,0 +1,23 @@
+maigre = {
+
+      ruler_designer_cost = -7
+
+inherit_chance = 15
+both_parent_has_trait_inherit_chance = 90
+random = yes
+birth = 100
+  
+  martial = -2
+  intrigue = 2
+  
+  opposites = {
+			obese
+            surpoids 
+            robust                                
+  }
+  
+  opposite_opinion = -5
+  same_opinion = 10
+  combat_rating = -2
+
+}

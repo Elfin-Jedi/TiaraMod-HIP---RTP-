@@ -1,0 +1,36 @@
+raciste = {
+
+      ruler_designer_cost = -40
+
+potential = {
+     age = 16
+}
+
+personality = yes
+random = yes
+birth = 100
+  
+  diplomacy = -5
+  intrigue = 3
+  
+  opposites = {
+			tolerant
+  }
+  
+  opposite_opinion = -30
+  same_opinion = 30
+  monthly_character_prestige = -0.1
+  culture_flex = 1
+  religion_flex = 1
+  monthly_character_piety = 0.1
+  ai_rationality = -10
+  ai_zeal = 100
+  vassal_opinion = -20
+  same_opinion_if_same_religion = 10
+  same_religion_opinion = 15
+  infidel_opinion = -30
+
+command_modifier = {
+	religious_enemy = 0.2
+    }
+}

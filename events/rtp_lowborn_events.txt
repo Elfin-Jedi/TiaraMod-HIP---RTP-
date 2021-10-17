@@ -1,0 +1,244 @@
+#####
+#Lowborn Events
+#
+#Total = 6
+#####
+
+namespace = RTPlowborn
+
+#Main Events
+#####
+
+#1
+
+#Adoption Event
+character_event = {
+	id = RTPlowborn.2
+	title = "RTPlowborn_2_title"
+	desc = "RTPlowborn_2_desc"
+	picture = GFX_evt_bloodlines
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		same_realm = FROM
+		FROM = {
+			is_older_than = ROOT
+		}
+		NOT = {
+			has_character_flag = rtp_refused_adoption #You will never hear from this person again
+		}
+		prestige = 500
+		dynasty = 19930
+	}
+
+	option = {
+		name = "RTPlowborn.2_1"
+
+		prestige = -500
+
+		if = {
+			limit = {
+				trait = bastard
+			}
+			remove_trait = bastard
+			add_trait = legit_bastard
+		}
+
+		hidden_tooltip = {
+			if = {
+				limit = {
+					FROM = {
+						is_female = no
+					}
+				}
+				set_father = FROM
+			}
+			else = {
+				set_mother = FROM
+			}
+
+			any_dynasty_member_even_if_dead = {
+				dynasty = FROM
+			}
+			dynasty = FROM
+
+			set_government_type = rtp_noble_g
+			primary_title = {
+				gender_succ = true_cognatic
+				add_law = {
+					law = rtp_family_election_succ
+					cooldown = no
+					opinion_effect = no
+				}
+			}
+
+			FROM = {
+				recalc_succession = yes
+			}
+		}
+	}
+
+	option = {
+		name = "RTPlowborn.2_2"
+
+		set_character_flag = rtp_refused_adoption #You will never hear from this person again
+	}
+}
+
+#3
+
+#4
+
+#Read Event
+character_event = {
+	id = RTPlowborn.5
+	title = "RTPlowborn_5_title"
+	desc = "RTPlowborn_5_desc"
+	picture = GFX_evt_open_book_hf
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		rtp_is_capable_adult = yes
+		dynasty = 19930
+		NOR = {
+			has_character_flag = rtp_can_read #You can now read
+			trait = bastard
+		}
+	}
+
+	immediate = {
+		random = {
+			chance = 20
+
+			set_character_flag = rtp_can_read #You can now read
+		}
+	}
+
+	option = {
+		name = "RTPlowborn.5_1"
+
+		trigger = {
+			has_character_flag = rtp_can_read #You can now read
+		}
+
+		prestige = 5
+	}
+
+	option = {
+		name = "RTPlowborn.5_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_can_read #You can now read
+			}
+		}
+	}
+}
+
+#Read Event - Child
+character_event = {
+	id = RTPlowborn.6
+	title = "RTPlowborn_6_title"
+	desc = "RTPlowborn_6_desc"
+	picture = GFX_evt_child_reading
+	is_triggered_only = yes
+	ai = no
+
+	immediate = {
+		event_target:rtp_curious_ward = {
+			random = {
+				chance = 20
+
+				set_character_flag = rtp_can_read #You can now read
+			}
+		}
+	}
+
+	option = {
+		name = "RTPlowborn.6_1"
+
+		trigger = {
+			event_target:rtp_curious_ward = {
+				has_character_flag = rtp_can_read #You can now read
+			}
+		}
+
+		prestige = 5
+		event_target:rtp_curious_ward = {
+			prestige = 5
+		}
+	}
+
+	option = {
+		name = "RTPlowborn.6_2"
+
+		trigger = {
+			event_target:rtp_curious_ward = {
+				NOT = {
+					has_character_flag = rtp_can_read #You can now read
+				}
+			}
+		}
+	}
+}
+
+#Ping Events
+#####
+
+#Ping for Adoption Event
+character_event = {
+	id = RTPlowborn.100
+	is_triggered_only = yes
+	hide_window = yes
+	ai = yes
+	min_age = 16
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+		is_lowborn = no
+		is_landed = no
+	}
+
+	immediate = {
+		any_player = {
+			character_event = {
+				id = RTPlowborn.2 #Bastard Event
+			}
+		}
+	}
+}
+
+#Ping for Read Event - Child
+character_event = {
+	id = RTPlowborn.102
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+	
+	trigger = {
+		government = rtp_lowborn_g
+		has_character_flag = rtp_can_read #You can now read
+	}
+
+	immediate = {
+		random_child = {
+			limit = {
+				rtp_is_capable = yes
+				age < 16
+				age = 5
+				is_child_of = ROOT
+				NOT = {
+					has_character_flag = rtp_can_read #You can now read
+				}
+			}
+			save_event_target_as = rtp_curious_ward #The child wanting to learn how to read
+			ROOT = {
+				character_event = {
+					id = RTPlowborn.6 #Read Event - Child
+				}
+			}
+		}
+	}
+}

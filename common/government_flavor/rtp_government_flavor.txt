@@ -1,0 +1,250 @@
+#####
+#Government Flavor
+#
+#Total = 12
+#####
+
+#Landless Lowborn
+government_flavor = {
+	name = "rtp_lowborn_gf"
+	graphics = GFX_evt_bad_news
+	priority = 1
+	trigger = {
+		government = rtp_lowborn_g
+	}
+}
+
+#Landeless Noble
+government_flavor = {
+	name = "rtp_noble_gf"
+	graphics = GFX_evt_bloodlines
+	priority = 1
+	trigger = {
+		government = rtp_noble_g
+	}
+}
+
+#Feudal - Baron
+government_flavor = {
+	name = "rtp_baron_gf"
+	graphics = GFX_evt_emissary
+	priority = 1
+	trigger = {
+		government = rtp_baron_g
+	}
+}
+
+#Iqta - Baron
+government_flavor = {
+	name = "rtp_baron_iqta_gf"
+	graphics = GFX_evt_emissary_arabic
+	priority = 1
+	trigger = {
+		government = rtp_baron_iqta_g
+	}
+}
+
+#Monastic - Baron
+government_flavor = {
+	name = "rtp_baron_monastic_gf"
+	graphics = GFX_evt_india_temple
+	priority = 1
+	trigger = {
+		government = rtp_baron_monastic_g
+	}
+}
+
+#Republic - Baron
+government_flavor = {
+	name = "rtp_baron_republic_gf"
+	graphics = GFX_evt_carriage
+	priority = 1
+	trigger = {
+		government = rtp_baron_republic_g
+		capital_scope = {
+			port = no
+		}
+	}
+}
+
+#Maritime Republic - Baron
+government_flavor = {
+	name = "rtp_baron_maritime_republic_gf"
+	graphics = GFX_evt_merchant_ship_at_sea_republic
+	priority = 1
+	trigger = {
+		government = rtp_baron_republic_g
+		capital_scope = {
+			port = yes
+		}
+	}
+}
+
+#Theocracy - Baron
+government_flavor = {
+	name = "rtp_baron_theocracy_gf"
+	graphics = GFX_evt_bishop
+	priority = 1
+	trigger = {
+		government = rtp_baron_theocracy_g
+	}
+}
+
+#Republic
+government_flavor = {
+	name = "rtp_republic_gf"
+	graphics = GFX_evt_carriage
+	priority = 1
+	trigger = {
+		government = rtp_republic_g
+		capital_scope = {
+			port = no
+		}
+	}
+}
+
+#Maritime Republic
+government_flavor = {
+	name = "rtp_maritime_republic_gf"
+	graphics = GFX_evt_trade_post_republic
+	priority = 1
+	trigger = {
+		government = rtp_republic_g
+		capital_scope = {
+			port = yes
+		}
+	}
+}
+
+#Privateer
+government_flavor = {
+	name = "rtp_privateer_gf"
+	graphics = GFX_evt_merchant_ship_at_sea_republic
+	priority = 1
+	trigger = {
+		government = rtp_privateer_g
+	}
+}
+
+#Papal Theocracy
+government_flavor = {
+	name = "rtp_theocracy_papal_gf"
+	graphics = GFX_evt_pope
+	priority = 2
+	trigger = {
+		OR = {
+			government = rtp_baron_theocracy_g
+			government = rtp_theocracy_g
+		}
+		crownlaw_title = {
+			has_law = investiture_law_0
+		}
+	}
+}
+
+#Liege Theocracy
+government_flavor = {
+	name = "rtp_theocracy_liege_gf"
+	graphics = GFX_evt_judged_by_ruler
+	priority = 2
+	trigger = {
+		OR = {
+			government = rtp_baron_theocracy_g
+			government = rtp_theocracy_g
+		}
+		crownlaw_title = {
+			has_law = investiture_law_1
+		}
+	}
+}
+
+#Theocracy
+government_flavor = {
+	name = "rtp_theocracy_gf"
+	graphics = GFX_evt_bishop
+	priority = 1
+	trigger = {
+		OR = {
+			government = rtp_baron_theocracy_g
+			government = rtp_theocracy_g
+		}
+	}
+}
+
+#Mercenary Band
+government_flavor = {
+	name = "rtp_mercenary_band_gf"
+	graphics = GFX_evt_steppe_mercenaries
+	priority = 1
+	trigger = {
+		OR = {
+			government = rtp_mercenary_g
+			government = rtp_baron_mercenary_g
+			government = rtp_landless_mercenary_g
+		}
+	}
+}
+
+#Mercenary Enclave
+government_flavor = {
+	name = "rtp_mercenary_enclave_gf"
+	graphics = GFX_evt_campfire_hf
+	priority = 2
+	trigger = {
+		OR = {
+			government = rtp_mercenary_g
+			government = rtp_baron_mercenary_g
+		}
+		OR = {
+			num_of_baron_titles >= 1
+			num_of_count_titles >= 2
+			num_of_duke_titles >= 1
+			num_of_king_titles >= 1
+			num_of_emperor_titles >= 1
+		}
+	}
+}
+
+#Holy Order
+government_flavor = {
+	name = "rtp_holy_order_gf"
+	graphics = GFX_evt_crusaders
+	priority = 1
+	trigger = {
+		OR = {
+			government = order_government
+			government = rtp_baron_order_g
+			government = rtp_landless_order_g
+		}
+	}
+}
+
+#Holy Bastion
+government_flavor = {
+	name = "rtp_holy_bastion_gf"
+	graphics = GFX_evt_mass_crusade
+	priority = 2
+	trigger = {
+		OR = {
+			government = rtp_baron_order_g
+			government = order_government
+		}
+		OR = {
+			num_of_baron_titles >= 1
+			num_of_count_titles >= 2
+			num_of_duke_titles >= 1
+			num_of_king_titles >= 1
+			num_of_emperor_titles >= 1
+		}
+	}
+}
+
+#Confederation
+government_flavor = {
+	name = "rtp_confederation_gf"
+	graphics = GFX_evt_gathering_of_minds
+	priority = 2
+	trigger = {
+		government = rtp_confederation_g
+	}
+}

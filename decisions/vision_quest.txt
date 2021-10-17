@@ -1,0 +1,43 @@
+decisions = {
+	vision_quest = {
+		is_high_prio = yes
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			is_ruler = yes
+			age = 16
+			NOT = { age = 20 }
+			prisoner = no
+			NOT = { is_incapable = yes }
+			NOT = { has_character_modifier = undertook_vision_quest }
+			NOT = { has_character_modifier = on_vision_quest }
+			OR = {
+				culture_group = sivullirmiut
+				culture_group = cree_algonquian
+				culture_group = wabanaki_algonquian
+				culture_group = iroquoian
+			}
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			add_character_modifier = { name = on_vision_quest duration = -1 }
+			hidden_tooltip = {
+				character_event = { id = SOV.004 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0.05 }
+			modifier = { factor = 2.5 trait = zealous }
+			modifier = { factor = 1.5 trait = brave }
+			modifier = { factor = 0.7 trait = craven }
+			modifier = { factor = 0.5 trait = cynical }
+		}
+	}
+}

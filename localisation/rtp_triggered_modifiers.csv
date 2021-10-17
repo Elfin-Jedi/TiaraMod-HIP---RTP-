@@ -1,0 +1,173 @@
+rtp_lowborn_tm;Lowborn;;;;;;x
+rtp_lowborn_tm_desc;This character comes from a lowborn family.;;;;;;x
+
+rtp_low_rank_tm;Low Rank;;;;;;x
+rtp_low_rank_tm_desc;This character is of low rank.;;;;;;x
+
+rtp_mercenary_leader_tm;Mercenary Leader;;;;;;x
+rtp_mercenary_leader_tm_desc;This character is the leader of a mercenary company.;;;;;;x
+
+rtp_holy_order_leader_tm;Holy Order Leader;;;;;;x
+rtp_holy_order_leader_tm_desc;This character is the leader of a holy order.;;;;;;x
+
+rtp_in_command_tm;Commanding troops;;;;;;x
+rtp_in_command_tm_desc;This character is currently leading troops.;;;;;;x
+
+rtp_temporary_soldier_away_tm;[Root.GetMilitaryCampaignTitle];;;;;;x
+rtp_temporary_soldier_away_tm_desc;This character is currently on active duty.;;;;;;x
+
+rtp_temporary_soldier_home_tm;[Root.GetMilitaryCampaignTitle];;;;;;x
+rtp_temporary_soldier_home_tm_desc;This character is currently on reserves.;;;;;;x
+
+rtp_temporary_mercenary_away_tm;[Root.GetMilitaryCampaignTitle];;;;;;x
+rtp_temporary_mercenary_away_tm_desc;This character is currently on active duty.;;;;;;x
+
+rtp_temporary_mercenary_home_tm;[Root.GetMilitaryCampaignTitle];;;;;;x
+rtp_temporary_mercenary_home_tm_desc;This character is currently on reserves.;;;;;;x
+
+rtp_temporary_crusader_away_tm;[Root.GetMilitaryCampaignTitle];;;;;;x
+rtp_temporary_crusader_away_tm_desc;This character is currently on active duty.;;;;;;x
+
+rtp_temporary_crusader_home_tm;[Root.GetMilitaryCampaignTitle];;;;;;x
+rtp_temporary_crusader_home_tm_desc;This character is currently on reserves.;;;;;;x
+
+rtp_own_workshop_tm;Owns Workshop;;;;;;x
+rtp_own_workshop_tm_desc;This character owns a workshop in [Root.Location.GetName].;;;;;;x
+
+rtp_not_for_hire_mercenary_tm;Not for Hire;;;;;;x
+rtp_not_for_hire_mercenary_tm_desc;This mercenary company is currently not for hire.;;;;;;x
+
+rtp_not_for_hire_order_tm;Not for Hire;;;;;;x
+rtp_not_for_hire_order_tm_desc;This holy order is currently not for hire.;;;;;;x
+
+rtp_server_tm;Server;;;;;;x
+rtp_server_tm_desc;This character is employed as a server.;;;;;;x
+
+rtp_guard_tm;Guard;;;;;;x
+rtp_guard_tm_desc;This character is employed as a guard.;;;;;;x
+
+rtp_barterer_tm;Barterer;;;;;;x
+rtp_barterer_tm_desc;This character is employed as a barterer.;;;;;;x
+
+rtp_beggar_tm;Beggar;;;;;;x
+rtp_beggar_tm_desc;This character is employed as a beggar.;;;;;;x
+
+rtp_postulant_tm;Postulant;;;;;;x
+rtp_postulant_tm_desc;This character is employed as a postulant.;;;;;;x
+
+rtp_minstrel_tm;Minstrel;;;;;;x
+rtp_minstrel_tm_desc;This character is employed as a minstrel.;;;;;;x
+
+rtp_veteran_tm;Veteran;;;;;;x
+rtp_veteran_tm_desc;This character is employed as a veteran.;;;;;;x
+
+rtp_shop_assistant_tm;Shop Assistant;;;;;;x
+rtp_shop_assistant_tm_desc;This character is employed as a shop assistant.;;;;;;x
+
+rtp_pickpocket_tm;Pickpocket;;;;;;x
+rtp_pickpocket_tm_desc;This character is employed as a pickpocket.;;;;;;x
+
+rtp_preacher_tm;Preacher;;;;;;x
+rtp_preacher_tm_desc;This character is employed as a preacher.;;;;;;x
+
+rtp_town_crier_tm;Town Crier;;;;;;x
+rtp_town_crier_tm_desc;This character is employed as a town crier.;;;;;;x
+
+rtp_bailif_tm;Bailif;;;;;;x
+rtp_bailif_tm_desc;This character is employed as a bailif.;;;;;;x
+
+rtp_peddler_tm;Peddler;;;;;;x
+rtp_peddler_tm_desc;This character is employed as a peddler.;;;;;;x
+
+rtp_poacher_tm;Poacher;;;;;;x
+rtp_poacher_tm_desc;This character is employed as a poacher.;;;;;;x
+
+rtp_scribe_tm;Scribe;;;;;;x
+rtp_scribe_tm_desc;This character is employed as a scribe.;;;;;;x
+
+rtp_diplomat_tm;Diplomat;;;;;;x
+rtp_diplomat_tm_desc;This character is employed as a diplomat.;;;;;;x
+
+rtp_officer_tm;Officer;;;;;;x
+rtp_officer_tm_desc;This character is employed as an officer.;;;;;;x
+
+rtp_shop_keeper_tm;Shop Keeper;;;;;;x
+rtp_shop_keeper_tm_desc;This character is employed as an shop keeper.;;;;;;x
+
+rtp_brigand_tm;Brigand;;;;;;x
+rtp_brigand_tm_desc;This character is employed as a brigand.;;;;;;x
+
+rtp_librarian_tm;Librarian;;;;;;x
+rtp_librarian_tm_desc;This character is employed as a librarian.;;;;;;x
+
+rtp_sellsword_tm;Sellsword;;;;;;x
+rtp_sellsword_tm_desc;This character is employed as a sellsword.;;;;;;x
+
+rtp_holy_warrior_tm;Holy Warrior;;;;;;x
+rtp_holy_warrior_tm_desc;This character is employed as a holy warrior.;;;;;;x
+
+rtp_bandit_tm;Bandit;;;;;;x
+rtp_bandit_tm_desc;This character is employed as a bandit.;;;;;;x
+
+rtp_contracted_tm;Contracted;;;;;;x
+rtp_contracted_tm_desc;This mercenary band is currently under a contract.;;;;;;x
+
+rtp_house_0_tm;House;;;;;;x
+rtp_house_0_tm_desc;§YIncludes§!:\nHouse;;;;;;x
+
+rtp_chickens_01_tm;House;;;;;;x
+rtp_chickens_01_tm_desc;§YIncludes§!:\nHouse\nChickens;;;;;;x
+
+rtp_statuette_02_tm;House;;;;;;x
+rtp_statuette_02_tm_desc;§YIncludes§!:\nHouse\nChickens\nStatuette;;;;;;x
+
+rtp_fence_03_tm;House;;;;;;x
+rtp_fence_03_tm_desc;§YIncludes§!:\nHouse\nChickens\nStatuette\nFence;;;;;;x
+
+rtp_cows_04_tm;House;;;;;;x
+rtp_cows_04_tm_desc;§YIncludes§!:\nHouse\nChickens\nStatuette\nFence\nCows;;;;;;x
+
+rtp_tub_05_tm;House;;;;;;x
+rtp_tub_05_tm_desc;§YIncludes§!:\nHouse\nChickens\nStatuette\nFence\nCows\nTub;;;;;;x
+
+rtp_candles_06_tm;House;;;;;;x
+rtp_candles_06_tm_desc;§YIncludes§!:\nHouse\nChickens\nStatuette\nFence\nCows\nTub\nCandles;;;;;;x
+
+rtp_fireplace_07_tm;House;;;;;;x
+rtp_fireplace_07_tm_desc;§YIncludes§!:\nHouse\nChickens\nStatuette\nFence\nCows\nTub\nCandles\nFireplace;;;;;;x
+
+rtp_sheep_08_tm;House;;;;;;x
+rtp_sheep_08_tm_desc;§YIncludes§!:\nHouse\nChickens\nStatuette\nFence\nCows\nTub\nCandles\nFireplace\nSheep;;;;;;x
+
+rtp_latrine_09_tm;House;;;;;;x
+rtp_latrine_09_tm_desc;§YIncludes§!:\nHouse\nChickens\nStatuette\nFence\nCows\nTub\nCandles\nFireplace\nSheep\nLatrine;;;;;;x
+
+rtp_mansion_1_tm;Manor;;;;;;x
+rtp_mansion_1_tm_desc;§YIncludes§!:\nManor;;;;;;x
+
+rtp_farmland_11_tm;Manor;;;;;;x
+rtp_farmland_11_tm_desc;§YIncludes§!:\nManor\nFarmland;;;;;;x
+
+rtp_shrine_12_tm;Manor;;;;;;x
+rtp_shrine_12_tm_desc;§YIncludes§!:\nManor\nFarmland\nShrine;;;;;;x
+
+rtp_wall_13_tm;Manor;;;;;;x
+rtp_wall_13_tm_desc;§YIncludes§!:\nManor\nFarmland\nShrine\nWall;;;;;;x
+
+rtp_mine_14_tm;Manor;;;;;;x
+rtp_mine_14_tm_desc;§YIncludes§!:\nManor\nFarmland\nShrine\nWall\nMine;;;;;;x
+
+rtp_garden_15_tm;Manor;;;;;;x
+rtp_garden_15_tm_desc;§YIncludes§!:\nManor\nFarmland\nShrine\nWall\nMine\nGarden;;;;;;x
+
+rtp_library_16_tm;Manor;;;;;;x
+rtp_library_16_tm_desc;§YIncludes§!:\nManor\nFarmland\nShrine\nWall\nMine\nGarden\nLibrary;;;;;;x
+
+rtp_painting_17_tm;Manor;;;;;;x
+rtp_painting_17_tm_desc;§YIncludes§!:\nManor\nFarmland\nShrine\nWall\nMine\nGarden\nLibrary\nPainting;;;;;;x
+
+rtp_stable_18_tm;Manor;;;;;;x
+rtp_stable_18_tm_desc;§YIncludes§!:\nManor\nFarmland\nShrine\nWall\nMine\nGarden\nLibrary\nPainting\nStable;;;;;;x
+
+rtp_fountain_19_tm;Manor;;;;;;x
+rtp_fountain_19_tm_desc;§YIncludes§!:\nManor\nFarmland\nShrine\nWall\nMine\nGarden\nLibrary\nPainting\nStable\nFountain;;;;;;x

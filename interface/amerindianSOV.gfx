@@ -1,0 +1,46 @@
+spriteTypes = {
+ 	spriteType = {
+		name = "GFX_commission_inuksuk"
+		texturefile = "gfx\\interface\\decision_icon_convert_to_reformed.dds"
+	}
+	spriteType = {
+		name = "GFX_vision_quest"
+		texturefile = "gfx\\interface\\decision_icon_feast.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_amerindian"
+		texturefile = "gfx\\interface\\government_icon_amerindian.dds"
+	}
+     spriteType = {
+          name = "GFX_evt_inuksuk"
+          texturefile = "gfx\\event_pictures\\inuksuk.tga"
+     }
+	spriteType = {
+          name = "GFX_evt_NAwarriors"
+          texturefile = "gfx\\event_pictures\\NAwarriors.tga"
+     }
+	spriteType = {
+          name = "GFX_evt_tobacco"
+          texturefile = "gfx\\event_pictures\\tobacco.tga"
+     }
+	spriteType = {
+          name = "GFX_evt_firewoods"
+          texturefile = "gfx\\event_pictures\\firewoods.tga"
+     }
+	spriteType = {
+          name = "GFX_evt_migrationSOV"
+          texturefile = "gfx\\event_pictures\\migrationSOV.tga"
+     }
+	spriteType = {
+          name = "GFX_evt_vision"
+          texturefile = "gfx\\event_pictures\\vision.tga"
+     }
+	spriteType = {
+          name = "GFX_evt_igloo"
+          texturefile = "gfx\\event_pictures\\igloo.tga"
+     }
+	spriteType = {
+          name = "GFX_evt_tradeSOV"
+          texturefile = "gfx\\event_pictures\\tradeSOV.tga"
+     }
+}

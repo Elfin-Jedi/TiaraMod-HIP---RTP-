@@ -1,0 +1,244 @@
+spriteTypes = {
+	##### Warrior Lodges #####
+
+	#The Four Ranks
+	spriteType = { 
+		name = "GFX_ws_warriors_ranks"
+		texturefile = "gfx\\interface\\societies\\ws_rank_icons_warriors.dds"
+		noOfFrames = 4
+	}
+	
+	#Current Rank
+	spriteType = { 
+		name = "GFX_ws_warriors_ranks_highlight"
+		texturefile = "gfx\\interface\\societies\\ws_rank_icons_warriors_highlight.dds"
+		noOfFrames = 4
+	}
+	
+	#Unavailable Rank
+	spriteType = { 
+		name = "GFX_ws_warriors_ranks_locked"
+		texturefile = "gfx\\interface\\societies\\ws_rank_icons_warriors_locked.dds"
+		noOfFrames = 4
+	}
+	
+### warrior_lodge_ws_mazdan - The Immortals ###
+	#Background
+	spriteType = {
+		name = "GFX_society_main_background_warrior_lodge_ws_mazdan"
+		texturefile = "gfx\\interface\\societies\\ws_mazdan\\society_bg_ws_mazdan.dds"
+	}
+	
+	#Expanded Background
+	spriteType = {
+		name = "GFX_society_expansion_background_warrior_lodge_ws_mazdan"
+		texturefile = "gfx\\interface\\societies\\ws_mazdan\\society_exp_bg_ws_mazdan.dds"
+	}
+	
+	#Ring
+	spriteType = {
+		name = "GFX_society_portrait_ring_warrior_lodge_ws_mazdan"
+		texturefile = "gfx\\interface\\societies\\ws_mazdan\\portrait_ring_ws_mazdan.dds"
+	}
+	
+	#Small Ring
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_warrior_lodge_ws_mazdan"
+		texturefile = "gfx\\interface\\societies\\ws_mazdan\\portrait_ring_small_ws_mazdan.dds"
+	}
+	
+	#Icons
+	spriteType = {
+		name = "GFX_icon_small_warrior_lodge_ws_mazdan"
+		texturefile = "gfx\\interface\\societies\\ws_mazdan\\symbol_small_ws_mazdan.dds"
+		noOfFrames = 2
+	}
+
+	#Lodge Mission Event
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_warrior_lodge_ws_mazdan"
+		textureFile = "gfx/interface/society_quest/mission_bg_warrior_lodge_ws_mazdan.dds"
+	}
+	
+	#Currency
+	spriteType = {
+		name = "GFX_society_currency_warrior_lodge_ws_mazdan"
+		texturefile = "gfx\\interface\\societies\\ws_society_currency_warriors.dds"
+	}
+	
+### warrior_lodge_ws_eastern - The Disciples of the Shaolin ###
+	#Background
+	spriteType = {
+		name = "GFX_society_main_background_warrior_lodge_ws_eastern"
+		texturefile = "gfx\\interface\\societies\\ws_eastern\\society_bg_ws_eastern.dds"
+	}
+	
+	#Expanded Background
+	spriteType = {
+		name = "GFX_society_expansion_background_warrior_lodge_ws_eastern"
+		texturefile = "gfx\\interface\\societies\\ws_eastern\\society_exp_bg_ws_eastern.dds"
+	}
+	
+	#Ring
+	spriteType = {
+		name = "GFX_society_portrait_ring_warrior_lodge_ws_eastern"
+		texturefile = "gfx\\interface\\societies\\ws_eastern\\portrait_ring_ws_eastern.dds"
+	}
+	
+	#Small Ring
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_warrior_lodge_ws_eastern"
+		texturefile = "gfx\\interface\\societies\\ws_eastern\\portrait_ring_small_ws_eastern.dds"
+	}
+	
+	#Icons
+	spriteType = {
+		name = "GFX_icon_small_warrior_lodge_ws_eastern"
+		texturefile = "gfx\\interface\\societies\\ws_eastern\\symbol_small_ws_eastern.dds"
+		noOfFrames = 2
+	}
+
+	#Lodge Mission Event
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_warrior_lodge_ws_eastern"
+		textureFile = "gfx/interface/society_quest/mission_bg_warrior_lodge_ws_eastern.dds"
+	}
+	
+	#Currency
+	spriteType = {
+		name = "GFX_society_currency_warrior_lodge_ws_eastern"
+		texturefile = "gfx\\interface\\societies\\ws_society_currency_warriors.dds"
+	}
+	
+### warrior_lodge_ws_aztec - The Knights of the Eagle ###
+	#Background
+	spriteType = {
+		name = "GFX_society_main_background_warrior_lodge_ws_aztec"
+		texturefile = "gfx\\interface\\societies\\ws_aztec\\society_bg_ws_aztec.dds"
+	}
+	
+	#Expanded Background
+	spriteType = {
+		name = "GFX_society_expansion_background_warrior_lodge_ws_aztec"
+		texturefile = "gfx\\interface\\societies\\ws_aztec\\society_exp_bg_ws_aztec.dds"
+	}
+	
+	#Ring
+	spriteType = {
+		name = "GFX_society_portrait_ring_warrior_lodge_ws_aztec"
+		texturefile = "gfx\\interface\\societies\\ws_aztec\\portrait_ring_ws_aztec.dds"
+	}
+	
+	#Small Ring
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_warrior_lodge_ws_aztec"
+		texturefile = "gfx\\interface\\societies\\ws_aztec\\portrait_ring_small_ws_aztec.dds"
+	}
+	
+	#Icons
+	spriteType = {
+		name = "GFX_icon_small_warrior_lodge_ws_aztec"
+		texturefile = "gfx\\interface\\societies\\ws_aztec\\symbol_small_ws_aztec.dds"
+		noOfFrames = 2
+	}
+
+	#Lodge Mission Event
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_warrior_lodge_ws_aztec"
+		textureFile = "gfx/interface/society_quest/mission_bg_warrior_lodge_ws_aztec.dds"
+	}
+	
+	#Currency
+	spriteType = {
+		name = "GFX_society_currency_warrior_lodge_ws_aztec"
+		texturefile = "gfx\\interface\\societies\\ws_society_currency_warriors.dds"
+	}
+	
+### warrior_lodge_ws_muslim - The Futuwwa Brotherhood ###
+	#Background
+	spriteType = {
+		name = "GFX_society_main_background_warrior_lodge_ws_muslim"
+		texturefile = "gfx\\interface\\societies\\ws_muslim\\society_bg_ws_muslim.dds"
+	}
+	
+	#Expanded Background
+	spriteType = {
+		name = "GFX_society_expansion_background_warrior_lodge_ws_muslim"
+		texturefile = "gfx\\interface\\societies\\ws_muslim\\society_exp_bg_ws_muslim.dds"
+	}
+	
+	#Ring
+	spriteType = {
+		name = "GFX_society_portrait_ring_warrior_lodge_ws_muslim"
+		texturefile = "gfx\\interface\\societies\\ws_muslim\\portrait_ring_ws_muslim.dds"
+	}
+	
+	#Small Ring
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_warrior_lodge_ws_muslim"
+		texturefile = "gfx\\interface\\societies\\ws_muslim\\portrait_ring_small_ws_muslim.dds"
+	}
+	
+	#Icons
+	spriteType = {
+		name = "GFX_icon_small_warrior_lodge_ws_muslim"
+		texturefile = "gfx\\interface\\societies\\ws_muslim\\symbol_small_ws_muslim.dds"
+		noOfFrames = 2
+	}
+
+	#Lodge Mission Event
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_warrior_lodge_ws_muslim"
+		textureFile = "gfx/interface/society_quest/mission_bg_warrior_lodge_ws_muslim.dds"
+	}
+	
+	#Currency
+	spriteType = {
+		name = "GFX_society_currency_warrior_lodge_ws_muslim"
+		texturefile = "gfx\\interface\\societies\\ws_society_currency_warriors.dds"
+	}	
+	
+### warrior_lodge_ws_jewish - Bar Kokhba's Chosen ###
+	#Background
+	spriteType = {
+		name = "GFX_society_main_background_warrior_lodge_ws_jewish"
+		texturefile = "gfx\\interface\\societies\\ws_jewish\\society_bg_ws_jewish.dds"
+	}
+	
+	#Expanded Background
+	spriteType = {
+		name = "GFX_society_expansion_background_warrior_lodge_ws_jewish"
+		texturefile = "gfx\\interface\\societies\\ws_jewish\\society_exp_bg_ws_jewish.dds"
+	}
+	
+	#Ring
+	spriteType = {
+		name = "GFX_society_portrait_ring_warrior_lodge_ws_jewish"
+		texturefile = "gfx\\interface\\societies\\ws_jewish\\portrait_ring_ws_jewish.dds"
+	}
+	
+	#Small Ring
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_warrior_lodge_ws_jewish"
+		texturefile = "gfx\\interface\\societies\\ws_jewish\\portrait_ring_small_ws_jewish.dds"
+	}
+	
+	#Icons
+	spriteType = {
+		name = "GFX_icon_small_warrior_lodge_ws_jewish"
+		texturefile = "gfx\\interface\\societies\\ws_jewish\\symbol_small_ws_jewish.dds"
+		noOfFrames = 2
+	}
+
+	#Lodge Mission Event
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_warrior_lodge_ws_jewish"
+		textureFile = "gfx/interface/society_quest/mission_bg_warrior_lodge_ws_jewish.dds"
+	}
+	
+	#Currency
+	spriteType = {
+		name = "GFX_society_currency_warrior_lodge_ws_jewish"
+		texturefile = "gfx\\interface\\societies\\ws_society_currency_warriors.dds"
+	}
+}

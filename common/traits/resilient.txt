@@ -1,0 +1,19 @@
+resilient = {
+	
+   ruler_designer_cost = 4
+
+potential = {
+     age = 16
+}
+
+
+random = yes
+birth = 50
+inherit_chance = 25
+both_parent_has_trait_inherit_chance = 35
+health = 2
+
+    opposites = { feeble }
+
+
+}

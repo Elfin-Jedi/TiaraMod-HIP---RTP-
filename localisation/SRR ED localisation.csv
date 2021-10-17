@@ -1,0 +1,60 @@
+impotent;Impotent;;;;;;;;;;;;;x
+impotent_desc;Penis not working;;;;;;;;;;;;;x
+seek_ED_treatment;Seek cure for impotence;;;;;;;;;;;;;x
+seek_ED_treatment_desc;Summon my court physician to deal with a very pressing matter;;;;;;;;;;;;;x
+ED_curse_cooldown_tooltip;It must be over five years since you last performed this curse;;;;;;;;;;;;;x
+curse_penis;Curse [Root.GetFirstName];;;;;;;;;;;;;x
+curse_penis_desc;Curse [Root.GetFirstName] with impotence;;;;;;;;;;;;;x
+#############
+SRR1_desc;As I get older I have found it more difficult to get and maintain an erection;;;;;;;;;;;;;x
+SRR1OPT1;Hope this doesn't continue;;;;;;;;;;;;;x
+SRR2_desc;I have been under lots of stress lately and it has begun to effect my performance in bed.;;;;;;;;;;;;;x
+SRR2OPT1;Hope this doesn't continue;;;;;;;;;;;;;x
+SRR4_desc;The castle was abuzz with the strangest news. A farmer found a mutilated rooster in the woods near his field. The peasants think it is an ill omen. I try to ignore the gossip and get on with my day, but a feeling of dread follows me no matter what. "The peasantry is always superstitious, and always wrong," I mutter to myself. "I just need to set these feelings aside and move on." Then I see a beautiful young maid. "What a perfect distraction." I approach her and we begin to talk. We quickly hit it off and find a private place together to fool around. No matter what we do, I cannot get hard.;;;;;;;;;;;;;x
+SRR4OPTA;Those damned peasants were right!;;;;;;;;;;;;;x
+SRR5_desc;I sneak out of the castle in the dead of night and meet up with my accomplice. I notice a caged rooster near his feet. He has procured the sacrifice. We begin the ritual by calling upon [Root.Religion.GetRandomEvilGodName] to curse [FromFrom.GetFullName] with impotence. Once we finish the incantation, I take the rooster out of its cage and slit its throat. Then, there's a gust of wind and I hear a voice say "It is done.";;;;;;;;;;;;;x
+SRR5OPTA;May he suffer!;;;;;;;;;;;;;x
+SRR6_desc;I sneak out of the castle in the dead of night and meet up with my accomplice. I notice a caged rooster near his feet. He has procured the sacrifice. We begin the ritual by calling upon [Root.Religion.GetRandomEvilGodName] to curse [FromFrom.GetFullName] with impotence. Once we finish the incantation, I take the rooster out of its cage and slit its throat. Then, there's a gust of wind and I hear a voice say "You disappoint me. I will not do as you ask.";;;;;;;;;;;;;x
+SRR6OPTA;What could've gone wrong?;;;;;;;;;;;;;x
+SRR7_desc;My love of drink has begun to effect my performance in bed.;;;;;;;;;;;;;x
+SRR7OPTA;Hope this doesn't continue;;;;;;;;;;;;;x
+SRR7OPTB;I won't let this continue;;;;;;;;;;;;;x
+#############
+SRR12_desc;My lover, [From.GetFirstName], seems to have been avoiding me recently. When I finally do get some time alone with him, I find he is unable to perform in bed.;;;;;;;;;;;;;x
+SRR12OPTA;He's useless now.;;;;;;;;;;;;;x
+SRR12OPTB;Reassure him of my love and devotion.;;;;;;;;;;;;;x
+SRR13_desc;When I meet with my lover, [From.GetFirstName], for our usual romp, I run out of steam halfway. After I explain my recent predicament, [From.GetSheHe] says, "If you can't perform, this relationship is over";;;;;;;;;;;;;x
+SRR13OPTA;But...I thought this was love.;;;;;;;;;;;;;x
+SRR14_desc;When I meet with my lover, [From.GetFirstName], for our usual romp, I run out of steam halfway. After I explain my recent predicament, [From.GetSheHe] assures me that my relationship is more than just a physical one.;;;;;;;;;;;;;x
+SRR14OPTA;Then it is true love.;;;;;;;;;;;;;x
+SRR20_desc;Since my drinking problem has caused my impotence, there is only one solution.;;;;;;;;;;;;;x
+SRR20OPTA;I must limit my drinking.;;;;;;;;;;;;;x
+SRR20OPTB;The price is too high! I will change nothing!;;;;;;;;;;;;;x
+SRR21_desc;After a grueling month, I have managed to limit my drinking to normal levels.;;;;;;;;;;;;;x
+SRR21OPTA;It feels good;;;;;;;;;;;;;x
+SRR22_desc;After a grueling month, I have accomplished nothing. I cannot restrain my drinking.;;;;;;;;;;;;;x
+SRR22OPTA;I must accept that it can't be changed;;;;;;;;;;;;;x
+SRR22OPTB;If I can't limit my drinking, I must stop it entirely!;;;;;;;;;;;;;x
+SRR22OPTC;I can't give up after only one month.;;;;;;;;;;;;;x
+SRR23_desc;After a grueling month, I have managed to stop drinking entirely.;;;;;;;;;;;;;x
+SRR23OPTA;It feels good;;;;;;;;;;;;;x
+SRR24_desc;After a grueling month, I have accomplished nothing. I cannot stop my drinking.;;;;;;;;;;;;;x
+SRR24OPTA;I must accept that it can't be changed;;;;;;;;;;;;;x
+#############
+SRR101_desc;After my mental woes cleared, I find myself performing as usual in bed.;;;;;;;;;;;;;x
+SRR101OPTA;What a glorious day!;;;;;;;;;;;;;x
+SRR103_desc;My court physician gives me an herbal concoction that will cure me.;;;;;;;;;;;;;x
+SRR103OPTA;Bottoms up.;;;;;;;;;;;;;x
+SRR104_desc;I wait a while for the concoction to take effect. Sure enough, I'm back to normal.;;;;;;;;;;;;;x
+SRR104OPTA;What a glorious day!;;;;;;;;;;;;;x
+SRR105_desc;I wait a while for the concoction to take effect. Nothing changes. I meet with my court physician for a follow-up and he suggests my malady may have a demonic cause.;;;;;;;;;;;;;x
+SRR105OPTA;Summon the exorcist.;;;;;;;;;;;;;x
+SRR105OPTB;Hogwash! I will not entertain such an idea.;;;;;;;;;;;;;x
+SRR106_desc;The exorcist arrives and sets up in my chambers. He instructs me to sit down and begins to walk around me. He burns some incense and chants for what seems like hours.;;;;;;;;;;;;;x
+SRR106OPTA;I feel...strange;;;;;;;;;;;;;x
+SRR107_desc;After giving it some time, I find I have returned to my old self.;;;;;;;;;;;;;x
+SRR107OPTA;What a glorious day!;;;;;;;;;;;;;x
+SRR108_desc;The exorcism has failed. I am still half a man.;;;;;;;;;;;;;x
+SRR108OPTA;Nothing more can be done...;;;;;;;;;;;;;x
+SRR109_desc;After I managed to curb my drinking habit, I find myself performing as usual in bed.;;;;;;;;;;;;;x
+SRR109OPTA;What a glorious day!;;;;;;;;;;;;;x

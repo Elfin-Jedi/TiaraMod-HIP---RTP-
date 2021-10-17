@@ -1,0 +1,118 @@
+arthur = {
+	picture = GFX_bloodlines_symbol_generic_pagan
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_prestige = 1
+	levy_reinforce_rate = 0.1
+	combat_rating = 10
+	command_modifier = {
+		light_infantry = 0.1
+		pikemen = 0.1
+	}
+	bloodline_effect_one_invasion = 1
+	flags = { created_bloodline bloodline_great_conquerors bloodline_arthur }
+}
+
+guan_yu = {
+	picture = GFX_bloodlines_symbol_taoist
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_prestige = 1
+	taoist_opinion = 15
+	combat_rating = 15
+	command_modifier = {
+		morale_offence = 0.2
+	}
+	active = {
+		OR = {
+			religion = taoist
+			culture_group = chinese_group
+		}
+	}
+	flags = { created_bloodline bloodline_guan_yu }
+}
+
+trajan = {
+	picture = GFX_bloodlines_symbol_roman
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_prestige = 1
+	christian_opinion = 10
+	hellenic_pagan_opinion = 10
+	hellenic_pagan_reformed_opinion = 10
+	bloodline_effect_fearsome = 1
+	active = {
+		OR = {
+			religion_group = christian
+			religion_openly_hellenic_or_reformed_trigger = yes
+		}
+	}
+	flags = { created_bloodline bloodline_roman bloodline_trojan }
+}
+
+leif_erikson = {
+	picture = GFX_bloodlines_symbol_norse
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_prestige = 0.2
+	norse_opinion = 5
+	levy_size = 0.15
+	active = {
+		religion_openly_norse_or_reformed_trigger = yes
+	}
+	flags = { created_bloodline bloodline_leif_erikson }
+}
+
+#New Patch 1.4
+
+joan_of_arc = {
+	picture = GFX_bloodlines_symbol_joan_of_arc
+	inheritance = matrilineal
+	matrilineal_override = no
+	allow_bastards = yes
+	monthly_character_piety = 0.5
+	christian_opinion = 5
+	christian_church_opinion = -15
+	command_modifier = {
+		speed = 0.1
+		siege = 0.1
+	}
+	global_revolt_risk = -0.05
+	bloodline_effect_fearsome = 1
+	active = {
+		religion_group = christian
+	}
+	flags = { historical_bloodline bloodline_joan_of_arc }
+}
+
+#New Patch 1.5
+
+hre_male = {
+	picture = GFX_bloodlines_symbol_cross_2
+	christian_opinion = 5
+	christian_church_opinion = 5
+	monthly_character_piety = 0.25
+	monthly_character_prestige = 0.25
+	global_revolt_risk = -0.01
+	inheritance = patrilineal
+	allow_bastards = yes
+	flags = { created_bloodline hre_bloodline }
+	active = {
+		religion_group = christian
+	}
+}
+
+hre_female = {
+	picture = GFX_bloodlines_symbol_cross_2
+	christian_opinion = 5
+	christian_church_opinion = 5
+	monthly_character_piety = 0.25
+	monthly_character_prestige = 0.25
+	global_revolt_risk = -0.01
+	inheritance = matrilineal
+	allow_bastards = yes
+	flags = { created_bloodline hre_bloodline }
+	active = {
+		religion_group = christian
+	}
+}

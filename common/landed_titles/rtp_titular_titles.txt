@@ -1,0 +1,43 @@
+# Audax Validator "!" Ignore_NEXT
+
+#####
+#Landed Titles
+#
+#Total = 2
+#####
+
+#Landless
+c_landless_t = {
+	color={ 0 0 0 }
+
+	title = "rtp_null"
+	title_female = "rtp_null"
+	title_prefix = "rtp_null"
+	landless = yes
+	assimilate = no
+	culture = english
+	religion = catholic
+	can_be_claimed = no
+	can_be_usurped = no
+}
+
+#Baron
+c_baron_t = {
+	color={ 0 0 0 }
+
+	name_tier = BARON
+	landless = yes
+	assimilate = no
+	culture = english
+	religion = catholic
+	can_be_claimed = no
+	can_be_usurped = no
+}
+
+#Papacy
+k_papacy = {
+	title = "POPE"
+	foa = "POPE_FOA"
+	short_name = yes
+	location_ruler_title = yes
+}

@@ -1,0 +1,26 @@
+roux = {
+
+      ruler_designer_cost = -60
+
+potential = {
+     age = 5
+}
+
+both_parent_has_trait_inherit_chance = 95
+inherit_chance = 25
+random = yes
+birth = 50
+  
+  diplomacy = -5
+  intrigue = -5
+ 
+  opposites = {
+			albinos          
+  }
+   
+  same_opinion = 30
+  general_opinion = -20
+  sex_appeal_opinion = -30
+  monthly_character_prestige = -0.2
+  monthly_character_piety = -0.8
+}

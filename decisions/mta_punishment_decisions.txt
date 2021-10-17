@@ -1,0 +1,100 @@
+targetted_decisions = {
+
+	mta_specific_execution = {
+		ai = no 
+		only_playable = yes
+
+		filter = court
+
+		from_potential = {
+			has_dlc = "Reapers"
+			prisoner = no
+			NOT = { trait = incapable }
+		}
+
+		potential = {
+			host = { character = FROM }
+			prisoner = yes
+		}
+
+		allow = {
+			NOT = { diplomatic_immunity = yes }
+			prisoner = yes
+		}
+
+		effect = {
+			ROOT = { #The one being executed
+				save_event_target_as = mta_executed
+			}
+			FROM = { #The one ordering the execution
+				save_event_target_as = mta_executioner
+				character_event = { id = "mta.3" }
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_specific_mutilation = {
+		ai = no 
+		only_playable = yes
+
+		filter = court
+
+		from_potential = {
+			has_dlc = "Reapers"
+			AND = {
+				OR = {
+					trait = cruel
+					trait = impaler
+					trait = wroth
+					trait = arbitrary
+					AND = {
+						trait = envious
+						trait = ugly
+					}
+				}
+				NOT = { trait = kind }
+			}
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+		}
+
+		potential = {
+			host = { character = FROM }
+			prisoner = yes
+			age = 13
+		}
+
+		allow = {
+			NOT = { diplomatic_immunity = yes }
+			prisoner = yes
+		}
+
+		effect = {
+			ROOT = { #The one being mutilated
+				save_event_target_as = mta_mutilation_root
+			}
+			FROM = { #The one doing the mutilation
+				save_event_target_as = mta_mutilation_from
+				character_event = { id = "mta.2" }
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+}

@@ -1,0 +1,281 @@
+#####
+#Laws
+#####
+
+rtp_slavery_lg;Slavery;;;;;;x
+rtp_slavery_lg_desc;Whether the state should allow the use of slaves.;;;;;;x
+
+rtp_slavery_0_l;Full Slavery;;;;;;x
+rtp_slavery_0_l_option;Full;;;;;;x
+rtp_slavery_0_l_desc;Slaves will be allowed.\n§G+5§! Vassal Opinion\n§R+1%§! National Revolt Risk;;;;;;x
+
+rtp_slavery_1_l;Limited Slavery;;;;;;x
+rtp_slavery_1_l_option;Limited;;;;;;x
+rtp_slavery_1_l_desc;Only slaves of conquered people will be allowed.;;;;;;x
+
+rtp_slavery_2_l;No Slavery;;;;;;x
+rtp_slavery_2_l_option;None;;;;;;x
+rtp_slavery_2_l_desc;No slaves will be allowed.\n§G-1%§! National Revolt Risk\n§R-5§! Vassal Opinion;;;;;;x
+
+
+rtp_trade_lg;Trade;;;;;;x
+rtp_trade_lg_desc;Whether the state should regulate the markets.;;;;;;x
+
+rtp_trade_0_l;Closed Market;;;;;;x
+rtp_trade_0_l_option;Closed;;;;;;x
+rtp_trade_0_l_desc;We will regulate the market.\n§G+62§! Days of Supply\n§R-0.4%§! Trade Income;;;;;;x
+
+rtp_trade_1_l;Mixed Market;;;;;;x
+rtp_trade_1_l_option;Mixed;;;;;;x
+rtp_trade_1_l_desc;They will regulate themselves with our help.;;;;;;x
+
+rtp_trade_2_l;Open Market;;;;;;x
+rtp_trade_2_l_option;Open;;;;;;x
+rtp_trade_2_l_desc;They will regulate themselves with little interference from the state.\n§G+0.4%§! Trade Income\n§R-62§! Days of Supply;;;;;;x
+
+
+rtp_resettlement_lg;Resettlement;;;;;;x
+rtp_resettlement_lg_desc;Whether the state is allowed to resettle the population.;;;;;;x
+
+rtp_resettlement_0_l;Allowed Resettlement;;;;;;x
+rtp_resettlement_0_l_option;Allowed;;;;;;x
+rtp_resettlement_0_l_desc;Resettlement will be allowed.\n§G+4%§! Levy Reinforcement Rate\n§R+1%§! National Revolt Risk;;;;;;x
+
+rtp_resettlement_1_l;Limited Resettlement;;;;;;x
+rtp_resettlement_1_l_option;Limited;;;;;;x
+rtp_resettlement_1_l_desc;Only resettlement of conquered people will be allowed.;;;;;;x
+
+rtp_resettlement_2_l;Banned Resettlement;;;;;;x
+rtp_resettlement_2_l_option;Banned;;;;;;x
+rtp_resettlement_2_l_desc;No resettlement will be allowed.\n§G-1%§! National Revolt Risk\n§R-4%§! Vassal Opinion;;;;;;x
+
+
+rtp_welfare_lg;Welfare;;;;;;x
+rtp_welfare_lg_desc;Whether the state should aid the population in time of need.;;;;;;x
+
+rtp_welfare_0_l;No Welfare;;;;;;x
+rtp_welfare_0_l_option;None;;;;;;x
+rtp_welfare_0_l_desc;No welfare.\n§G-4%§! Retinue Maintenence Cost\n§G-4%§! Horde Maintenence Cost\n§R+1%§! National Revolt Risk;;;;;;x
+
+rtp_welfare_1_l;Limited Welfare;;;;;;x
+rtp_welfare_1_l_option;Limited;;;;;;x
+rtp_welfare_1_l_desc;Welfare for citizens only and in extreme circumstances.;;;;;;x
+
+rtp_welfare_2_l;Full Welfare;;;;;;x
+rtp_welfare_2_l_option;Full;;;;;;x
+rtp_welfare_2_l_desc;Welfare for everybody.\n§G-1%§! National Revolt Risk\n§R+4%§! Retinue Maintenence Cost\n§R+4%§! Horde Maintenence Cost;;;;;;x
+
+
+rtp_production_lg;Production;;;;;;x
+rtp_production_lg_desc;Whether the state should use imported goods.;;;;;;x
+
+rtp_production_0_l;Local Goods;;;;;;x
+rtp_production_0_l_option;Local;;;;;;x
+rtp_production_0_l_desc;We shall use local goods only.\n§G+5%§! National Tax Modifier\n§R-5%§! Build Time\n§G-5%§! Local Build Time Modifier;;;;;;x
+
+rtp_production_1_l;Mixed Goods;;;;;;x
+rtp_production_1_l_option;Mixed;;;;;;x
+rtp_production_1_l_desc;We shall use imported goods in extreme circumstances.;;;;;;x
+
+rtp_production_2_l;Imported Goods;;;;;;x
+rtp_production_2_l_option;Imported;;;;;;x
+rtp_production_2_l_desc;We shall use imported goods whatever the costs.\n§G+5%§! Build Time\n§G+5%§! Local Build Time Modifier\n§R-5%§! National Tax Modifier;;;;;;x
+
+
+rtp_property_lg;Businesses;;;;;;x
+rtp_property_lg_desc;Whether the state allows the population to open businesses.;;;;;;x
+
+rtp_property_0_l;No Businesses;;;;;;x
+rtp_property_0_l_option;None;;;;;;x
+rtp_property_0_l_desc;Only nobles are allowed to open businesses.\n§G+5%§! Levy Size\n§R-5%§! National Tax Modifier;;;;;;x
+
+rtp_property_1_l;Limited Businesses;;;;;;x
+rtp_property_1_l_option;Limited;;;;;;x
+rtp_property_1_l_desc;Only nobles and few wealthy lowborns are allowed to open businesses.;;;;;;x
+
+rtp_property_2_l;Open Businesses;;;;;;x
+rtp_property_2_l_option;Open;;;;;;x
+rtp_property_2_l_desc;Everyone can open businesses.\n§G+5%§! National Tax Modifier\n§R-5%§! Levy Size;;;;;;x
+
+
+rtp_banking_lg;Banking;;;;;;x
+rtp_banking_lg_desc;Whether the state should regulate the banks.;;;;;;x
+
+rtp_banking_0_l;Loan Shark Banking;;;;;;x
+rtp_banking_0_l_option;Sharks;;;;;;x
+rtp_banking_0_l_desc;People should know what they signed.\n§G+0.1§! Monthly Wealth\n§R+1%§! National Revolt Risk;;;;;;x
+
+rtp_banking_1_l;Competitive Banking;;;;;;x
+rtp_banking_1_l_option;Competitive;;;;;;x
+rtp_banking_1_l_desc;Banks are allowed to compete against each other.;;;;;;x
+
+rtp_banking_2_l;Regulated Banking;;;;;;x
+rtp_banking_2_l_option;Regulated;;;;;;x
+rtp_banking_2_l_desc;A fair banking system for everyone.\n§G-1%§! National Revolt Risk\n§R-0.1§! Monthly Wealth;;;;;;x
+
+
+rtp_holidays_lg;Paid Holidays;;;;;;x
+rtp_holidays_lg_desc;Whether the state should pay for the holidays granted to the citizens.;;;;;;x
+
+rtp_holidays_0_l;No Paid Holidays;;;;;;x
+rtp_holidays_0_l_option;None;;;;;;x
+rtp_holidays_0_l_desc;No holidays will be paid by the state.\n§G+4%§! National Tax Modifier\n§R+1%§! National Revolt Risk;;;;;;x
+
+rtp_holidays_1_l;Partial Paid Holidays;;;;;;x
+rtp_holidays_1_l_option;Partial;;;;;;x
+rtp_holidays_1_l_desc;Some holidays will be paid by the state.;;;;;;x
+
+rtp_holidays_2_l;Paid Holidays;;;;;;x
+rtp_holidays_2_l_option;Paid;;;;;;x
+rtp_holidays_2_l_desc;All holidays will be paid by the state.\n§G-1%§! National Revolt Risk\n§R-4%§! National Tax Modifier;;;;;;x
+
+
+
+rtp_role_lg;Church Role;;;;;;x
+rtp_role_lg_desc;Whether the church should be focused in a particular role.;;;;;;x
+
+rtp_role_0_l;Militaristic Role;;;;;;x
+rtp_role_0_l_option;Martial;;;;;;x
+rtp_role_0_l_desc;Zealots make for relentless soldiers.\n§G+4%§! Morale of Armies\n§R-0.04%§! Monthly Piety;;;;;;x
+
+rtp_role_1_l;Balanced Role;;;;;;x
+rtp_role_1_l_option;Balanced;;;;;;x
+rtp_role_1_l_desc;The church will have a balanced role.;;;;;;x
+
+rtp_role_2_l;Pacifist Role;;;;;;x
+rtp_role_2_l_option;Spiritual;;;;;;x
+rtp_role_2_l_desc;The church is meant for worship.\n§G+0.04%§! Monthly Piety\n§R-4%§! Morale of Armies;;;;;;x
+
+
+rtp_consecrated_grounds_lg;Consecrated Grounds;;;;;;x
+rtp_consecrated_grounds_lg_desc;Whether the church should have the right to mark land as sacred.;;;;;;x
+
+rtp_consecrated_grounds_0_l;No Consecrated Grounds;;;;;;x
+rtp_consecrated_grounds_0_l_option;None;;;;;;x
+rtp_consecrated_grounds_0_l_desc;We need all the land we can get.\n§G-5%§! Build Cost\n§R-5§! Same Religion Opinion;;;;;;x
+
+rtp_consecrated_grounds_1_l;Limited Consecrated Grounds;;;;;;x
+rtp_consecrated_grounds_1_l_option;Limited;;;;;;x
+rtp_consecrated_grounds_1_l_desc;The church can only mark a few of them.;;;;;;x
+
+rtp_consecrated_grounds_2_l;Full Consecrated Grounds;;;;;;x
+rtp_consecrated_grounds_2_l_option;Full;;;;;;x
+rtp_consecrated_grounds_2_l_desc;The church has full right to mark any land as sacred.\n§G+5§! Same Religion Opinion\n§R+5%§! Build Cost;;;;;;x
+
+
+rtp_membership_lg;Membership;;;;;;x
+rtp_membership_lg_desc;Whether the church should restrict membership to nobles.;;;;;;x
+
+rtp_membership_0_l;Closed Membership;;;;;;x
+rtp_membership_0_l_option;Closed;;;;;;x
+rtp_membership_0_l_desc;Membership will be restricted to nobles.\n§G+0.1%§! Monthly Prestige\n§R-4§! Same Religion Opinion;;;;;;x
+
+rtp_membership_1_l;Limited Membership;;;;;;x
+rtp_membership_1_l_option;Limited;;;;;;x
+rtp_membership_1_l_desc;Membership will be open to everyone of the realm religion.;;;;;;x
+
+rtp_membership_2_l;Open Membership;;;;;;x
+rtp_membership_2_l_option;Full;;;;;;x
+rtp_membership_2_l_desc;Membership will be open to everyone of any faith.\n§G+4§! Same Religion Opinion\n§R-0.1%§! Monthly Prestige;;;;;;x
+
+
+rtp_sanctuary_lg;Sanctuary;;;;;;x
+rtp_sanctuary_lg_desc;Whether the church should allow refugees.;;;;;;x
+
+rtp_sanctuary_0_l;No Sanctuary;;;;;;x
+rtp_sanctuary_0_l_option;None;;;;;;x
+rtp_sanctuary_0_l_desc;The church will only take care of people from our realm.\n§G+4%§! National Tax Modifier\n§R-4§! General Opinion;;;;;;x
+
+rtp_sanctuary_1_l;Limited Sanctuary;;;;;;x
+rtp_sanctuary_1_l_option;Limited;;;;;;x
+rtp_sanctuary_1_l_desc;The church will take care of people of our own culture and religion.;;;;;;x
+
+rtp_sanctuary_2_l;Open Sanctuary;;;;;;x
+rtp_sanctuary_2_l_option;Open;;;;;;x
+rtp_sanctuary_2_l_desc;The church will take care of everybody.\n§G+4§! General Opinion\n§R-4%§! National Tax Modifier;;;;;;x
+
+
+rtp_tithe_lg;Tithe;;;;;;x
+rtp_tithe_lg_desc;Whether the church should be given a tithe.;;;;;;x
+
+rtp_tithe_0_l;Mandatory Tithe;;;;;;x
+rtp_tithe_0_l_option;Mandatory;;;;;;x
+rtp_tithe_0_l_desc;The church will be given mandatory tithe.\n§G+0.1%§! Monthly Wealth\n§R-5§! Vassal Opinion;;;;;;x
+
+rtp_tithe_1_l;Voluntary Tithe;;;;;;x
+rtp_tithe_1_l_option;Voluntary;;;;;;x
+rtp_tithe_1_l_desc;The church will collect whatever voluntary tithe is offered.;;;;;;x
+
+rtp_tithe_2_l;Reversed Tithe;;;;;;x
+rtp_tithe_2_l_option;Reversed;;;;;;x
+rtp_tithe_2_l_desc;The church will be given a tithe from the state, and they will in turn distribute it to the people.\n§G+5§! Vassal Opinion\n§R-0.1%§! Monthly Wealth;;;;;;x
+
+
+rtp_attendance_lg;Attendance;;;;;;x
+rtp_attendance_lg_desc;Whether the church should make attendance mandatory.;;;;;;x
+
+rtp_attendance_0_l;Mandatory Attendance;;;;;;x
+rtp_attendance_0_l_option;Mandatory;;;;;;x
+rtp_attendance_0_l_desc;Everyone is forced to go to church.\n§G+0.1%§! Monthly Piety\n§R-5§! Vassal Opinion;;;;;;x
+
+rtp_attendance_1_l;Voluntary Attendance;;;;;;x
+rtp_attendance_1_l_option;Voluntary;;;;;;x
+rtp_attendance_1_l_desc;People are free to attend church at their own leisure, but must attend atleast once a week.;;;;;;x
+
+rtp_attendance_2_l;No Attendance;;;;;;x
+rtp_attendance_2_l_option;None;;;;;;x
+rtp_attendance_2_l_desc;No attendance required.\n§G+5§! Vassal Opinion\n§R-0.1%§! Monthly Piety;;;;;;x
+
+
+rtp_glossolalia_lg;Glossolalia;;;;;;x
+rtp_glossolalia_lg_desc;Whether glossolalia is allowed in the realm.;;;;;;x
+
+rtp_glossolalia_0_l;Banned Glossolalia;;;;;;x
+rtp_glossolalia_0_l_option;Banned;;;;;;x
+rtp_glossolalia_0_l_desc;Claiming that [Root.Religion.GetHighGodName] is speaking via a mortal is banned.\n§G+5§! Infidel Opinion\n§R-0.1%§! Monthly Piety;;;;;;x
+
+rtp_glossolalia_1_l;Clergy Glossolalia;;;;;;x
+rtp_glossolalia_1_l_option;Voluntary;;;;;;x
+rtp_glossolalia_1_l_desc;Only the clergy is worthy to have [Root.Religion.GetHighGodName] in them.;;;;;;x
+
+rtp_glossolalia_2_l;Allowed Glossolalia;;;;;;x
+rtp_glossolalia_2_l_option;None;;;;;;x
+rtp_glossolalia_2_l_desc;[Root.Religion.GetHighGodName] works in mysterious ways.\n§G+0.1%§! Monthly Piety\n§R-5§! Infidel Opinion;;;;;;x
+
+
+rtp_conversion_lg;Conversion;;;;;;x
+rtp_conversion_lg_desc;Whether conversion should be forced upon the citizens.;;;;;;x
+
+rtp_conversion_0_l;Forced Conversion;;;;;;x
+rtp_conversion_0_l_option;Forced;;;;;;x
+rtp_conversion_0_l_desc;Everyone will convert to the [Root.Religion.GetName] religion or be put to the sword.\n§G+5§! Infidel Opinion\n§R-5§! Same Religion Opinion;;;;;;x
+
+rtp_conversion_1_l;Encouraged Conversion;;;;;;x
+rtp_conversion_1_l_option;Encouraged;;;;;;x
+rtp_conversion_1_l_desc;While conversion is not mandatory...many rights will be stripped until they do so.;;;;;;x
+
+rtp_conversion_2_l;No Forced Conversion;;;;;;x
+rtp_conversion_2_l_option;None;;;;;;x
+rtp_conversion_2_l_desc;Everyone is free to follow whatever religion they wish.\n§G+5§! Same Religion Opinion\n§R-5§! Infidel Opinion;;;;;;x
+
+#####
+#Succession Laws
+#####
+
+rtp_lowborn_succ;Struggle;;;;;;x
+rtp_lowborn_succ_desc;The ruler, the spouse, and any adult child of the ruler vote on who should be the heir. All children of the current ruler are valid candidates.;;;;;;x
+
+rtp_family_election_succ;Head of the Family;;;;;;x
+rtp_family_election_succ_desc;The ruler of the house chooses the heir. All children of the current ruler are valid candidates.;;;;;;x
+
+rtp_republic_election_succ;Democratic Election;;;;;;x
+rtp_republic_election_succ_desc;The citizens vote on who should be the next ruler. Councillors are all valid candidates.;;;;;;x
+
+rtp_theocracy_election_succ;Mandate of Heaven;;;;;;x
+rtp_theocracy_election_succ_desc;The liege, ruler, and any other landed rulers with the theocracy government vote on who should be the next ruler. The Court Chaplain and any other landed rulers with the theocracy government are valid candidates.;;;;;;x
+
+rtp_mercenary_election_succ;Law of the Strongest;;;;;;x
+rtp_mercenary_election_succ_desc;The ruler, marshal, and commanders vote on who should be the next ruler. The marshal and commanders are all valid candidates.;;;;;;x
+
+rtp_confederation_succ;Parley;;;;;;x
+rtp_confederation_succ_desc;All the members of the confederation vote on who should be the next President. All children of the current ruler are valid candidates.;;;;;;x

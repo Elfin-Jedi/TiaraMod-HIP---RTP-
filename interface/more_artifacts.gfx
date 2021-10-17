@@ -1,0 +1,1020 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_caesar_bust"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\caesar_bust.dds"
+	}
+	spriteType = {
+		name = "GFX_caesar_bust_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\caesar_bust_small.dds"
+	}
+	spriteType = {
+		name = "GFX_spartan_helmet"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\spartan_helmet.dds"
+	}
+	spriteType = {
+		name = "GFX_spartan_helmet_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\spartan_helmet_small.dds"
+	}
+	spriteType = {
+		name = "GFX_athena_spear"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\athena_spear.dds"
+	}
+	spriteType = {
+		name = "GFX_athena_spear_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\athena_spear_small.dds"
+	}
+	spriteType = {
+		name = "GFX_justitia_scales"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\justitia_scales.dds"
+	}
+	spriteType = {
+		name = "GFX_justitia_scales_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\justitia_scales_small.dds"
+	}
+	spriteType = {
+		name = "GFX_alexander_shield"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\alexander_shield.dds"
+	}
+	spriteType = {
+		name = "GFX_alexander_shield_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\alexander_shield_small.dds"
+	}
+	spriteType = {
+		name = "GFX_gold_snake"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\gold_snake.dds"
+	}
+	spriteType = {
+		name = "GFX_gold_snake_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\gold_snake_small.dds"
+	}
+	spriteType = {
+		name = "GFX_gungnir"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\gungnir.dds"
+	}
+	spriteType = {
+		name = "GFX_gungnir_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\gungnir_small.dds"
+	}
+	spriteType = {
+		name = "GFX_draupnir"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\draupnir.dds"
+	}
+	spriteType = {
+		name = "GFX_draupnir_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\draupnir_small.dds"
+	}
+	spriteType = {
+		name = "GFX_brisingamen"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\brisingamen.dds"
+	}
+	spriteType = {
+		name = "GFX_brisingamen_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\brisingamen_small.dds"
+	}
+	spriteType = {
+		name = "GFX_mokosh_soil"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\mokosh_soil.dds"
+	}
+	spriteType = {
+		name = "GFX_mokosh_soil_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\mokosh_soil_small.dds"
+	}
+	spriteType = {
+		name = "GFX_dazhbog_amulet"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\dazhbog_amulet.dds"
+	}
+	spriteType = {
+		name = "GFX_dazhbog_amulet_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\dazhbog_amulet_small.dds"
+	}
+	spriteType = {
+		name = "GFX_skull_cane"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\skull_cane.dds"
+	}
+	spriteType = {
+		name = "GFX_skull_cane_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\skull_cane_small.dds"
+	}
+	spriteType = {
+		name = "GFX_tengri_bow"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\tengri_bow.dds"
+	}
+	spriteType = {
+		name = "GFX_tengri_bow_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\tengri_bow_small.dds"
+	}
+	spriteType = {
+		name = "GFX_saddle"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\saddle.dds"
+	}
+	spriteType = {
+		name = "GFX_saddle_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\saddle_small.dds"
+	}
+	spriteType = {
+		name = "GFX_velnias_shield"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\velnias_shield.dds"
+	}
+	spriteType = {
+		name = "GFX_velnias_shield_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\velnias_shield_small.dds"
+	}
+	spriteType = {
+		name = "GFX_dievas_ring"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\dievas_ring.dds"
+	}
+	spriteType = {
+		name = "GFX_dievas_ring_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\dievas_ring_small.dds"
+	}
+	spriteType = {
+		name = "GFX_jurate_amber"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\jurate_amber.dds"
+	}
+	spriteType = {
+		name = "GFX_jurate_amber_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\jurate_amber_small.dds"
+	}
+	spriteType = {
+		name = "GFX_kantele"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\kantele.dds"
+	}
+	spriteType = {
+		name = "GFX_kantele_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\kantele_small.dds"
+	}
+	spriteType = {
+		name = "GFX_eshu_staff"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\eshu_staff.dds"
+	}
+	spriteType = {
+		name = "GFX_eshu_staff_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\eshu_staff_small.dds"
+	}
+	spriteType = {
+		name = "GFX_creator_mask"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\creator_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_creator_mask_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\creator_mask_small.dds"
+	}
+	spriteType = {
+		name = "GFX_small_totem"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\small_totem.dds"
+	}
+	spriteType = {
+		name = "GFX_small_totem_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\small_totem_small.dds"
+	}
+	spriteType = {
+		name = "GFX_tezcatlipoca"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\tezcatlipoca.dds"
+	}
+	spriteType = {
+		name = "GFX_tezcatlipoca_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\tezcatlipoca_small.dds"
+	}
+	spriteType = {
+		name = "GFX_xiuhtecuhtli"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\xiuhtecuhtli.dds"
+	}
+	spriteType = {
+		name = "GFX_xiuhtecuhtli_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\xiuhtecuhtli_small.dds"
+	}
+	spriteType = {
+		name = "GFX_huitzilopochtli"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\huitzilopochtli.dds"
+	}
+	spriteType = {
+		name = "GFX_huitzilopochtli_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\huitzilopochtli_small.dds"
+	}
+	spriteType = {
+		name = "GFX_xolotl"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\xolotl.dds"
+	}
+	spriteType = {
+		name = "GFX_xolotl_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\xolotl_small.dds"
+	}
+	spriteType = {
+		name = "GFX_sunlight_maggot"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\sunlight_maggot.dds"
+	}
+	spriteType = {
+		name = "GFX_sunlight_maggot_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\sunlight_maggot_small.dds"
+	}
+	spriteType = {
+		name = "GFX_sunlight_sword"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\sunlight_sword.dds"
+	}
+	spriteType = {
+		name = "GFX_sunlight_sword_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\sunlight_sword_small.dds"
+	}
+	spriteType = {
+		name = "GFX_sun_armor"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\sun_armor.dds"
+	}
+	spriteType = {
+		name = "GFX_sun_armor_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\sun_armor_small.dds"
+	}
+	spriteType = {
+		name = "GFX_bon_picture"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\bon_picture.dds"
+	}
+	spriteType = {
+		name = "GFX_bon_picture_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\bon_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_khatvanga"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\khatvanga.dds"
+	}
+	spriteType = {
+		name = "GFX_khatvanga_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\khatvanga_small.dds"
+	}
+	spriteType = {
+		name = "GFX_praise_the_sun"
+		texturefile = "gfx\\interface\\praise_the_sun.dds"
+	}
+	#New Patch 1.1
+	spriteType = {
+		name = "GFX_cornucopia"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cornucopia.dds"
+	}
+	spriteType = {
+		name = "GFX_cornucopia_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cornucopia_small.dds"
+	}
+	spriteType = {
+		name = "GFX_petasus"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\petasus.dds"
+	}
+	spriteType = {
+		name = "GFX_petasus_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\petasus_small.dds"
+	}
+	spriteType = {
+		name = "GFX_asclepius_staff"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\asclepius_staff.dds"
+	}
+	spriteType = {
+		name = "GFX_asclepius_staff_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\asclepius_staff_small.dds"
+	}
+	spriteType = {
+		name = "GFX_excalibur"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\excalibur.dds"
+	}
+	spriteType = {
+		name = "GFX_excalibur_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\excalibur_small.dds"
+	}
+	spriteType = {
+		name = "GFX_druid_axe"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\druid_axe.dds"
+	}
+	spriteType = {
+		name = "GFX_druid_axe_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\druid_axe_small.dds"
+	}
+	spriteType = {
+		name = "GFX_cintamani"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cintamani.dds"
+	}
+	spriteType = {
+		name = "GFX_cintamani_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cintamani_small.dds"
+	}
+	spriteType = {
+		name = "GFX_green_dragon"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\green_dragon.dds"
+	}
+	spriteType = {
+		name = "GFX_green_dragon_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\green_dragon_small.dds"
+	}
+	#New Patch 1.2
+	spriteType = {
+		name = "GFX_iron_helm"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\iron_helm.dds"
+	}
+	spriteType = {
+		name = "GFX_iron_helm_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\iron_helm_small.dds"
+	}
+	spriteType = {
+		name = "GFX_hrunting"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\hrunting.dds"
+	}
+	spriteType = {
+		name = "GFX_hrunting_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\hrunting_small.dds"
+	}
+	spriteType = {
+		name = "GFX_nagling"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\nagling.dds"
+	}
+	spriteType = {
+		name = "GFX_nagling_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\nagling_small.dds"
+	}
+	spriteType = {
+		name = "GFX_gleipnir"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\gleipnir.dds"
+	}
+	spriteType = {
+		name = "GFX_gleipnir_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\gleipnir_small.dds"
+	}
+	spriteType = {
+		name = "GFX_singasteinn"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\singasteinn.dds"
+	}
+	spriteType = {
+		name = "GFX_singasteinn_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\singasteinn_small.dds"
+	}
+	spriteType = {
+		name = "GFX_angurvadal"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\angurvadal.dds"
+	}
+	spriteType = {
+		name = "GFX_angurvadal_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\angurvadal_small.dds"
+	}
+	spriteType = {
+		name = "GFX_skofnung"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\skofnung.dds"
+	}
+	spriteType = {
+		name = "GFX_skofnung_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\skofnung_small.dds"
+	}
+	spriteType = {
+		name = "GFX_aegishjalmr"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\aegishjalmr.dds"
+	}
+	spriteType = {
+		name = "GFX_aegishjalmr_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\aegishjalmr_small.dds"
+	}
+	spriteType = {
+		name = "GFX_bragi_harp"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\bragi_harp.dds"
+	}
+	spriteType = {
+		name = "GFX_bragi_harp_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\bragi_harp_small.dds"
+	}
+	spriteType = {
+		name = "GFX_gram"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\gram.dds"
+	}
+	spriteType = {
+		name = "GFX_gram_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\gram_small.dds"
+	}
+	spriteType = {
+		name = "GFX_joyeuse"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\joyeuse.dds"
+	}
+	spriteType = {
+		name = "GFX_joyeuse_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\joyeuse_small.dds"
+	}
+	spriteType = {
+		name = "GFX_sword_of_attila"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\sword_of_attila.dds"
+	}
+	spriteType = {
+		name = "GFX_sword_of_attila_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\sword_of_attila_small.dds"
+	}
+	#New Patch 1.3
+	spriteType = {
+		name = "GFX_keyur"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\keyur.dds"
+	}
+	spriteType = {
+		name = "GFX_keyur_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\keyur_small.dds"
+	}
+	spriteType = {
+		name = "GFX_khanda"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\khanda.dds"
+	}
+	spriteType = {
+		name = "GFX_khanda_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\khanda_small.dds"
+	}
+	spriteType = {
+		name = "GFX_makarakundala"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\makarakundala.dds"
+	}
+	spriteType = {
+		name = "GFX_makarakundala_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\makarakundala_small.dds"
+	}
+	spriteType = {
+		name = "GFX_parashu"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\parashu.dds"
+	}
+	spriteType = {
+		name = "GFX_parashu_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\parashu_small.dds"
+	}
+	spriteType = {
+		name = "GFX_aphrodite_cloth"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\aphrodite_cloth.dds"
+	}
+	spriteType = {
+		name = "GFX_aphrodite_cloth_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\aphrodite_cloth_small.dds"
+	}
+	spriteType = {
+		name = "GFX_archimedes_mirror"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\archimedes_mirror.dds"
+	}
+	spriteType = {
+		name = "GFX_archimedes_mirror_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\archimedes_mirror_small.dds"
+	}
+	spriteType = {
+		name = "GFX_heracles_cup"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\heracles_cup.dds"
+	}
+	spriteType = {
+		name = "GFX_heracles_cup_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\heracles_cup_small.dds"
+	}
+	spriteType = {
+		name = "GFX_sword_kladenets"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\sword_kladenets.dds"
+	}
+	spriteType = {
+		name = "GFX_sword_kladenets_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\sword_kladenets_small.dds"
+	}
+	spriteType = {
+		name = "GFX_scythian_bracelet"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\scythian_bracelet.dds"
+	}
+	spriteType = {
+		name = "GFX_scythian_bracelet_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\scythian_bracelet_small.dds"
+	}
+	spriteType = {
+		name = "GFX_scythian_comb"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\scythian_comb.dds"
+	}
+	spriteType = {
+		name = "GFX_scythian_comb_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\scythian_comb_small.dds"
+	}
+	spriteType = {
+		name = "GFX_scythian_necklace"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\scythian_necklace.dds"
+	}
+	spriteType = {
+		name = "GFX_scythian_necklace_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\scythian_necklace_small.dds"
+	}
+	spriteType = {
+		name = "GFX_scythian_pectoral"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\scythian_pectoral.dds"
+	}
+	spriteType = {
+		name = "GFX_scythian_pectoral_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\scythian_pectoral_small.dds"
+	}
+	spriteType = {
+		name = "GFX_scythian_stag"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\scythian_stag.dds"
+	}
+	spriteType = {
+		name = "GFX_scythian_stag_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\scythian_stag_small.dds"
+	}
+	spriteType = {
+		name = "GFX_scythian_warrior"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\scythian_warrior.dds"
+	}
+	spriteType = {
+		name = "GFX_scythian_warrior_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\scythian_warrior_small.dds"
+	}
+	#New Patch 1.4
+	spriteType = {
+		name = "GFX_staff_of_moses"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\staff_of_moses.dds"
+	}
+	spriteType = {
+		name = "GFX_staff_of_moses_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\staff_of_moses_small.dds"
+	}
+	spriteType = {
+		name = "GFX_aaron_rod"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\aaron_rod.dds"
+	}
+	spriteType = {
+		name = "GFX_aaron_rod_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\aaron_rod_small.dds"
+	}
+	spriteType = {
+		name = "GFX_golem"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\golem.dds"
+	}
+	spriteType = {
+		name = "GFX_golem_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\golem_small.dds"
+	}
+	spriteType = {
+		name = "GFX_joshua_shofars"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\joshua_shofars.dds"
+	}
+	spriteType = {
+		name = "GFX_joshua_shofars_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\joshua_shofars_small.dds"
+	}
+	spriteType = {
+		name = "GFX_harmonia_neckless"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\harmonia_neckless.dds"
+	}
+	spriteType = {
+		name = "GFX_harmonia_neckless_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\harmonia_neckless_small.dds"
+	}
+	spriteType = {
+		name = "GFX_medusa"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\medusa.dds"
+	}
+	spriteType = {
+		name = "GFX_medusa_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\medusa_small.dds"
+	}
+	spriteType = {
+		name = "GFX_nemean_lion"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\nemean_lion.dds"
+	}
+	spriteType = {
+		name = "GFX_nemean_lion_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\nemean_lion_small.dds"
+	}
+	spriteType = {
+		name = "GFX_trident"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\trident.dds"
+	}
+	spriteType = {
+		name = "GFX_trident_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\trident_small.dds"
+	}
+	spriteType = {
+		name = "GFX_chameleon_cloak"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\chameleon_cloak.dds"
+	}
+	spriteType = {
+		name = "GFX_chameleon_cloak_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\chameleon_cloak_small.dds"
+	}
+	spriteType = {
+		name = "GFX_ikenga_totem"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\ikenga_totem.dds"
+	}
+	spriteType = {
+		name = "GFX_ikenga_totem_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\ikenga_totem_small.dds"
+	}
+	spriteType = {
+		name = "GFX_khonvoum_bow"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\khonvoum_bow.dds"
+	}
+	spriteType = {
+		name = "GFX_khonvoum_bow_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\khonvoum_bow_small.dds"
+	}
+	spriteType = {
+		name = "GFX_opon_ifa"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\opon_ifa.dds"
+	}
+	spriteType = {
+		name = "GFX_opon_ifa_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\opon_ifa_small.dds"
+	}
+	spriteType = {
+		name = "GFX_spider_silk"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\spider_silk.dds"
+	}
+	spriteType = {
+		name = "GFX_spider_silk_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\spider_silk_small.dds"
+	}
+	#New Patch 1.5
+	spriteType = {
+		name = "GFX_simurgh_feathers"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\simurgh_feathers.dds"
+	}
+	spriteType = {
+		name = "GFX_simurgh_feathers_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\simurgh_feathers_small.dds"
+	}
+	spriteType = {
+		name = "GFX_rostam_helmet"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\rostam_helmet.dds"
+	}
+	spriteType = {
+		name = "GFX_rostam_helmet_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\rostam_helmet_small.dds"
+	}
+	spriteType = {
+		name = "GFX_arash_bow"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\arash_bow.dds"
+	}
+	spriteType = {
+		name = "GFX_arash_bow_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\arash_bow_small.dds"
+	}
+	spriteType = {
+		name = "GFX_zomorrodnegar"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\zomorrodnegar.dds"
+	}
+	spriteType = {
+		name = "GFX_zomorrodnegar_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\zomorrodnegar_small.dds"
+	}
+	spriteType = {
+		name = "GFX_tishtrya_mace"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\tishtrya_mace.dds"
+	}
+	spriteType = {
+		name = "GFX_tishtrya_mace_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\tishtrya_mace_small.dds"
+	}
+	spriteType = {
+		name = "GFX_rostam_dagger"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\rostam_dagger.dds"
+	}
+	spriteType = {
+		name = "GFX_rostam_dagger_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\rostam_dagger_small.dds"
+	}
+	spriteType = {
+		name = "GFX_rod_shield"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\rod_shield.dds"
+	}
+	spriteType = {
+		name = "GFX_rod_shield_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\rod_shield_small.dds"
+	}
+	spriteType = {
+		name = "GFX_ausrine_light"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\ausrine_light.dds"
+	}
+	spriteType = {
+		name = "GFX_ausrine_light_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\ausrine_light_small.dds"
+	}
+	spriteType = {
+		name = "GFX_sacred_domovoi"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\sacred_domovoi.dds"
+	}
+	spriteType = {
+		name = "GFX_sacred_domovoi_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\sacred_domovoi_small.dds"
+	}
+	spriteType = {
+		name = "GFX_sielulintu"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\sielulintu.dds"
+	}
+	spriteType = {
+		name = "GFX_sielulintu_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\sielulintu_small.dds"
+	}
+		spriteType = {
+		name = "GFX_saule_disc"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\saule_disc.dds"
+	}
+	spriteType = {
+		name = "GFX_saule_disc_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\saule_disc_small.dds"
+	}
+		spriteType = {
+		name = "GFX_great_bear"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\great_bear.dds"
+	}
+	spriteType = {
+		name = "GFX_great_bear_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\great_bear_small.dds"
+	}
+	#New Patch 1.6
+	spriteType = {
+		name = "GFX_curtana"
+		texturefile = "gfx/interface/inventory/artifacts/curtana.dds"
+	}
+	spriteType = {
+		name = "GFX_curtana_small"
+		texturefile = "gfx/interface/inventory/artifacts/curtana_small.dds"
+	}
+	spriteType = {
+		name = "GFX_claidheamh_soluis"
+		texturefile = "gfx/interface/inventory/artifacts/claidheamh_soluis.dds"
+	}
+	spriteType = {
+		name = "GFX_claidheamh_soluis_small"
+		texturefile = "gfx/interface/inventory/artifacts/claidheamh_soluis_small.dds"
+	}
+	spriteType = {
+		name = "GFX_cruadh_chosgarach"
+		texturefile = "gfx/interface/inventory/artifacts/cruadh_chosgarach.dds"
+	}
+	spriteType = {
+		name = "GFX_cruadh_chosgarach_small"
+		texturefile = "gfx/interface/inventory/artifacts/cruadh_chosgarach_small.dds"
+	}
+	spriteType = {
+		name = "GFX_cosgarach_mhor"
+		texturefile = "gfx/interface/inventory/artifacts/cosgarach_mhor.dds"
+	}
+	spriteType = {
+		name = "GFX_cosgarach_mhor_small"
+		texturefile = "gfx/interface/inventory/artifacts/cosgarach_mhor_small.dds"
+	}
+	spriteType = {
+		name = "GFX_drynwyn"
+		texturefile = "gfx/interface/inventory/artifacts/drynwyn.dds"
+	}
+	spriteType = {
+		name = "GFX_drynwyn_small"
+		texturefile = "gfx/interface/inventory/artifacts/drynwyn_small.dds"
+	}
+	spriteType = {
+		name = "GFX_singing_sword"
+		texturefile = "gfx/interface/inventory/artifacts/singing_sword.dds"
+	}
+	spriteType = {
+		name = "GFX_singing_sword_small"
+		texturefile = "gfx/interface/inventory/artifacts/singing_sword_small.dds"
+	}
+	spriteType = {
+		name = "GFX_egeking"
+		texturefile = "gfx/interface/inventory/artifacts/egeking.dds"
+	}
+	spriteType = {
+		name = "GFX_egeking_small"
+		texturefile = "gfx/interface/inventory/artifacts/egeking_small.dds"
+	}
+	spriteType = {
+		name = "GFX_arondight"
+		texturefile = "gfx/interface/inventory/artifacts/arondight.dds"
+	}
+	spriteType = {
+		name = "GFX_arondight_small"
+		texturefile = "gfx/interface/inventory/artifacts/arondight_small.dds"
+	}
+	spriteType = {
+		name = "GFX_grail_sword"
+		texturefile = "gfx/interface/inventory/artifacts/grail_sword.dds"
+	}
+	spriteType = {
+		name = "GFX_grail_sword_small"
+		texturefile = "gfx/interface/inventory/artifacts/grail_sword_small.dds"
+	}
+	spriteType = {
+		name = "GFX_clarent"
+		texturefile = "gfx/interface/inventory/artifacts/clarent.dds"
+	}
+	spriteType = {
+		name = "GFX_clarent_small"
+		texturefile = "gfx/interface/inventory/artifacts/clarent_small.dds"
+	}
+	spriteType = {
+		name = "GFX_fragarach"
+		texturefile = "gfx/interface/inventory/artifacts/fragarach.dds"
+	}
+	spriteType = {
+		name = "GFX_fragarach_small"
+		texturefile = "gfx/interface/inventory/artifacts/fragarach_small.dds"
+	}
+	spriteType = {
+		name = "GFX_ceard_nan_gallan"
+		texturefile = "gfx/interface/inventory/artifacts/ceard_nan_gallan.dds"
+	}
+	spriteType = {
+		name = "GFX_ceard_nan_gallan_small"
+		texturefile = "gfx/interface/inventory/artifacts/ceard_nan_gallan_small.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_wand"
+		texturefile = "gfx/interface/inventory/artifacts/magic_wand.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_wand_small"
+		texturefile = "gfx/interface/inventory/artifacts/magic_wand_small.dds"
+	}
+	spriteType = {
+		name = "GFX_cohuleen_druith"
+		texturefile = "gfx/interface/inventory/artifacts/cohuleen_druith.dds"
+	}
+	spriteType = {
+		name = "GFX_cohuleen_druith_small"
+		texturefile = "gfx/interface/inventory/artifacts/cohuleen_druith_small.dds"
+	}
+	spriteType = {
+		name = "GFX_ring_of_dispel"
+		texturefile = "gfx/interface/inventory/artifacts/ring_of_dispel.dds"
+	}
+	spriteType = {
+		name = "GFX_ring_of_dispel_small"
+		texturefile = "gfx/interface/inventory/artifacts/ring_of_dispel_small.dds"
+	}
+	spriteType = {
+		name = "GFX_necklace_lady_of_the_lake"
+		texturefile = "gfx/interface/inventory/artifacts/necklace_lady_of_the_lake.dds"
+	}
+	spriteType = {
+		name = "GFX_necklace_lady_of_the_lake_small"
+		texturefile = "gfx/interface/inventory/artifacts/necklace_lady_of_the_lake_small.dds"
+	}
+	spriteType = {
+		name = "GFX_mantle_of_arthur"
+		texturefile = "gfx/interface/inventory/artifacts/mantle_of_arthur.dds"
+	}
+	spriteType = {
+		name = "GFX_mantle_of_arthur_small"
+		texturefile = "gfx/interface/inventory/artifacts/mantle_of_arthur_small.dds"
+	}
+	spriteType = {
+		name = "GFX_mantle_of_tegau_gold_breast"
+		texturefile = "gfx/interface/inventory/artifacts/mantle_of_tegau_gold_breast.dds"
+	}
+	spriteType = {
+		name = "GFX_mantle_of_tegau_gold_breast_small"
+		texturefile = "gfx/interface/inventory/artifacts/mantle_of_tegau_gold_breast_small.dds"
+	}
+	spriteType = {
+		name = "GFX_stone_and_ring_of_eluned_the_fortunate"
+		texturefile = "gfx/interface/inventory/artifacts/stone_and_ring_of_eluned_the_fortunate.dds"
+	}
+	spriteType = {
+		name = "GFX_stone_and_ring_of_eluned_the_fortunate_small"
+		texturefile = "gfx/interface/inventory/artifacts/stone_and_ring_of_eluned_the_fortunate_small.dds"
+	}
+	spriteType = {
+		name = "GFX_hamper_of_gwyddno_garanhir"
+		texturefile = "gfx/interface/inventory/artifacts/hamper_of_gwyddno_garanhir.dds"
+	}
+	spriteType = {
+		name = "GFX_hamper_of_gwyddno_garanhir_small"
+		texturefile = "gfx/interface/inventory/artifacts/hamper_of_gwyddno_garanhir_small.dds"
+	}
+	spriteType = {
+		name = "GFX_whetstone_of_tudwal_tudglyd"
+		texturefile = "gfx/interface/inventory/artifacts/whetstone_of_tudwal_tudglyd.dds"
+	}
+	spriteType = {
+		name = "GFX_whetstone_of_tudwal_tudglyd_small"
+		texturefile = "gfx/interface/inventory/artifacts/whetstone_of_tudwal_tudglyd_small.dds"
+	}
+	spriteType = {
+		name = "GFX_adder_stone"
+		texturefile = "gfx/interface/inventory/artifacts/adder_stone.dds"
+	}
+	spriteType = {
+		name = "GFX_adder_stone_small"
+		texturefile = "gfx/interface/inventory/artifacts/adder_stone_small.dds"
+	}
+	spriteType = {
+		name = "GFX_gae_bulg"
+		texturefile = "gfx/interface/inventory/artifacts/gae_bulg.dds"
+	}
+	spriteType = {
+		name = "GFX_gae_bulg_small"
+		texturefile = "gfx/interface/inventory/artifacts/gae_bulg_small.dds"
+	}
+	spriteType = {
+		name = "GFX_rosetta_stone"
+		texturefile = "gfx/interface/inventory/artifacts/rosetta_stone.dds"
+	}
+	spriteType = {
+		name = "GFX_rosetta_stone_small"
+		texturefile = "gfx/interface/inventory/artifacts/rosetta_stone_small.dds"
+	}
+	spriteType = {
+		name = "GFX_tutankhamun_death_mask"
+		texturefile = "gfx/interface/inventory/artifacts/tutankhamun_death_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_tutankhamun_death_mask_small"
+		texturefile = "gfx/interface/inventory/artifacts/tutankhamun_death_mask_small.dds"
+	}
+	spriteType = {
+		name = "GFX_mask_of_agamemnon"
+		texturefile = "gfx/interface/inventory/artifacts/mask_of_agamemnon.dds"
+	}
+	spriteType = {
+		name = "GFX_mask_of_agamemnon_small"
+		texturefile = "gfx/interface/inventory/artifacts/mask_of_agamemnon_small.dds"
+	}
+	spriteType = {
+		name = "GFX_dead_sea_scrolls"
+		texturefile = "gfx/interface/inventory/artifacts/dead_sea_scrolls.dds"
+	}
+	spriteType = {
+		name = "GFX_dead_sea_scrolls_small"
+		texturefile = "gfx/interface/inventory/artifacts/dead_sea_scrolls_small.dds"
+	}
+	spriteType = {
+		name = "GFX_nefertiti_bust"
+		texturefile = "gfx/interface/inventory/artifacts/nefertiti_bust.dds"
+	}
+	spriteType = {
+		name = "GFX_nefertiti_bust_small"
+		texturefile = "gfx/interface/inventory/artifacts/nefertiti_bust_small.dds"
+	}
+	spriteType = {
+		name = "GFX_spear_of_lugh"
+		texturefile = "gfx/interface/inventory/artifacts/spear_of_lugh.dds"
+	}
+	spriteType = {
+		name = "GFX_spear_of_lugh_small"
+		texturefile = "gfx/interface/inventory/artifacts/spear_of_lugh_small.dds"
+	}
+	spriteType = {
+		name = "GFX_colada"
+		texturefile = "gfx/interface/inventory/artifacts/colada.dds"
+	}
+	spriteType = {
+		name = "GFX_colada_small"
+		texturefile = "gfx/interface/inventory/artifacts/colada_small.dds"
+	}
+	spriteType = {
+		name = "GFX_tizona"
+		texturefile = "gfx/interface/inventory/artifacts/tizona.dds"
+	}
+	spriteType = {
+		name = "GFX_tizona_small"
+		texturefile = "gfx/interface/inventory/artifacts/tizona_small.dds"
+	}
+	spriteType = {
+		name = "GFX_durendal"
+		texturefile = "gfx/interface/inventory/artifacts/durendal.dds"
+	}
+	spriteType = {
+		name = "GFX_durendal_small"
+		texturefile = "gfx/interface/inventory/artifacts/durendal_small.dds"
+	}
+	spriteType = {
+		name = "GFX_legbiter"
+		texturefile = "gfx/interface/inventory/artifacts/legbiter.dds"
+	}
+	spriteType = {
+		name = "GFX_legbiter_small"
+		texturefile = "gfx/interface/inventory/artifacts/legbiter_small.dds"
+	}
+	spriteType = {
+		name = "GFX_zulfiqar"
+		texturefile = "gfx/interface/inventory/artifacts/zulfiqar.dds"
+	}
+	spriteType = {
+		name = "GFX_zulfiqar_small"
+		texturefile = "gfx/interface/inventory/artifacts/zulfiqar_small.dds"
+	}
+	spriteType = {
+		name = "GFX_neferiti_bust"
+		texturefile = "gfx/interface/inventory/artifacts/neferiti_bust.dds"
+	}
+	spriteType = {
+		name = "GFX_neferiti_bust_small"
+		texturefile = "gfx/interface/inventory/artifacts/neferiti_bust_small.dds"
+	}
+	spriteType = {
+		name = "GFX_szczerbiec"
+		texturefile = "gfx/interface/inventory/artifacts/szczerbiec.dds"
+	}
+	spriteType = {
+		name = "GFX_szczerbiec_small"
+		texturefile = "gfx/interface/inventory/artifacts/szczerbiec_small.dds"
+	}
+	spriteType = {
+		name = "GFX_holy_crown_of_hungary"
+		texturefile = "gfx/interface/inventory/artifacts/holy_crown_of_hungary.dds"
+	}
+	spriteType = {
+		name = "GFX_holy_crown_of_hungary_small"
+		texturefile = "gfx/interface/inventory/artifacts/holy_crown_of_hungary_small.dds"
+	}
+	spriteType = {
+		name = "GFX_sutton_hoo"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\sutton_hoo.dds"
+	}
+	spriteType = {
+		name = "GFX_sutton_hoo_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\sutton_hoo_small.dds"
+	}
+}

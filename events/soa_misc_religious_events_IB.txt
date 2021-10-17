@@ -1,0 +1,41 @@
+# Virgin birth
+character_event = {
+	id = SoA.5242
+	desc = EVTDESC_SoA_5242
+	picture = GFX_evt_pregnancy
+	border = GFX_event_normal_frame_religion
+
+	is_married = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { trait = pregnant }
+		has_character_flag = virgin_birth
+	}
+	
+	immediate = {
+		add_trait = pregnant
+	}
+
+	option = {
+		name = EVTOPTA_SoA_5242
+		if = {
+			limit = { NOT = { trait = zealous } }
+			add_trait = zealous
+		}
+		set_character_flag = virginmary
+		emf_do_add_pregnant_common = yes
+		spouse = { character_event = { id = SoA.5243 } }
+	}
+	option = {
+		name = EVTOPTB_SoA_5242
+		if = {
+			limit = { NOT = { trait = deceitful } }
+			add_trait = deceitful
+		}
+		set_character_flag = virginmary
+		emf_do_add_pregnant_common = yes
+		spouse = { character_event = { id = SoA.5243 } }
+	}
+}

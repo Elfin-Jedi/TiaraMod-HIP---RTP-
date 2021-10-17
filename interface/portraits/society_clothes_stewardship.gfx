@@ -1,0 +1,238 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_society_merchant_clothes_europe"
+		textureFile = "gfx/characters/societies/merchant_clothes_europe.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_society_merchant_clothes_europe_behind"
+		textureFile = "gfx/characters/societies/merchant_clothes_europe_behind.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = {
+		name = "PORTRAIT_society_stewardship_clothing_europe"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 5000
+				portrait_age > child
+				portrait_clothing = yes
+				portrait_society = rtp_stewardship_europe
+				OR = {
+					portrait_in_command = no
+					portrait_government = theocracy_government
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+					portrait_government = rtp_landless_theocracy_g
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = {
+			"GFX_society_merchant_clothes_europe_behind:c0"
+			"GFX_society_merchant_clothes_europe:c2"
+		}
+
+		# Appropriate clothing
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_merchant_clothes_me"
+		textureFile = "gfx/characters/societies/merchant_clothes_me.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_society_merchant_clothes_me_behind"
+		textureFile = "gfx/characters/societies/merchant_clothes_me_behind.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = {
+		name = "PORTRAIT_society_stewardship_clothing_me"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 5000
+				portrait_age > child
+				portrait_clothing = yes
+				OR = {
+					portrait_society = rtp_stewardship_middle_east
+					portrait_society = rtp_stewardship_africa
+					portrait_society = rtp_stewardship_asia_minor
+				}
+				OR = {
+					portrait_in_command = no
+					portrait_government = theocracy_government
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+					portrait_government = rtp_landless_theocracy_g
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = {
+			"GFX_society_merchant_clothes_me_behind:c0"
+			"GFX_society_merchant_clothes_me:c2"
+		}
+
+		# Appropriate clothing
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_merchant_clothes_india"
+		textureFile = "gfx/characters/societies/merchant_clothes_india.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_society_merchant_clothes_india_behind"
+		textureFile = "gfx/characters/societies/merchant_clothes_india_behind.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = {
+		name = "PORTRAIT_society_stewardship_clothing_india"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 5000
+				portrait_age > child
+				portrait_clothing = yes
+				OR = {
+					portrait_society = rtp_stewardship_india
+					portrait_society = rtp_stewardship_persia
+					portrait_society = rtp_stewardship_himalayas
+				}
+				OR = {
+					portrait_in_command = no
+					portrait_government = theocracy_government
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+					portrait_government = rtp_landless_theocracy_g
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = {
+			"GFX_society_merchant_clothes_india_behind:c0"
+			"GFX_society_merchant_clothes_india:c2"
+		}
+
+		# Appropriate clothing
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_merchant_clothes_steppe"
+		textureFile = "gfx/characters/societies/merchant_clothes_steppe.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_society_merchant_clothes_steppe_behind"
+		textureFile = "gfx/characters/societies/merchant_clothes_steppe_behind.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = {
+		name = "PORTRAIT_society_stewardship_clothing_steppe"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 5000
+				portrait_age > child
+				portrait_clothing = yes
+				portrait_society = rtp_stewardship_steppe
+				OR = {
+					portrait_in_command = no
+					portrait_government = theocracy_government
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+					portrait_government = rtp_landless_theocracy_g
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = {
+			"GFX_society_merchant_clothes_steppe_behind:c0"
+			"GFX_society_merchant_clothes_steppe:c2"
+		}
+
+		# Appropriate clothing
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,34 @@
+psychopath = {
+	
+   ruler_designer_cost = 15
+
+potential = {
+     age = 16
+}
+
+
+random = yes
+birth = 50
+inherit_chance = 2
+both_parent_has_trait_inherit_chance = 4
+
+
+intrigue = 3
+diplomacy = -2
+
+plot_power_modifier = 0.10
+combat_rating = 2
+
+same_opinion = -10
+opposite_opinion = -10
+
+
+    opposites = { sociopath }
+
+ai_ambition = 10
+ai_rationality = 30
+ai_greed = -10
+ai_zeal = -50
+ai_honor = -50
+
+}

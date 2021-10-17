@@ -1,0 +1,46 @@
+spriteTypes = {
+	##### Warrior Lodge #####
+### warrior_lodge_cws_christian - The Champions of Christ ###
+	#Background
+	spriteType = {
+		name = "GFX_society_main_background_warrior_lodge_cws_christian"
+		texturefile = "gfx\\interface\\societies\\cws_christian\\society_bg_cws_champions_of_christ.dds"
+	}
+	
+	#Expanded Background
+	spriteType = {
+		name = "GFX_society_expansion_background_warrior_lodge_cws_christian"
+		texturefile = "gfx\\interface\\societies\\cws_christian\\society_exp_bg_cws_champions_of_christ.dds"
+	}
+	
+	#Ring
+	spriteType = {
+		name = "GFX_society_portrait_ring_warrior_lodge_cws_christian"
+		texturefile = "gfx\\interface\\societies\\cws_christian\\portrait_ring_cws_champions_of_christ.dds"
+	}
+	
+	#Small Ring
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_warrior_lodge_cws_christian"
+		texturefile = "gfx\\interface\\societies\\cws_christian\\portrait_ring_small_cws_champions_of_christ.dds"
+	}
+	
+	#Icons
+	spriteType = {
+		name = "GFX_icon_small_warrior_lodge_cws_christian"
+		texturefile = "gfx\\interface\\societies\\cws_christian\\symbol_small_cws_champions_of_christ.dds"
+		noOfFrames = 2
+	}
+	
+	#Lodge Mission Event
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_warrior_lodge_cws_christian"
+		textureFile = "gfx/interface/society_quest/mission_bg_warrior_lodge_cws_christian.dds"
+	}
+	
+	#Currency
+	spriteType = {
+		name = "GFX_society_currency_warrior_lodge_cws_christian"
+		texturefile = "gfx\\interface\\societies\\ws_society_currency_warriors.dds"
+	}
+}

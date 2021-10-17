@@ -1,0 +1,571 @@
+#####
+#House/Manor Decisions
+#
+#Total = 20
+#####
+
+decisions = {
+	#Purchase House
+	rtp_purchase_house_d = {
+		ai = no
+		is_high_prio = yes
+
+		potential = {
+			government = rtp_lowborn_g
+			NOR = {
+				has_global_flag = rtp_owns_estate #I own an estate lvl 1
+				trait = bastard
+			}
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 50
+		}
+
+		effect = {
+			sound_effect = building_completed
+			wealth = -50
+
+			hidden_tooltip = {
+				set_global_flag = rtp_owns_house #I own a house
+				set_global_flag = rtp_owns_estate #I own an estate lvl 1
+				give_minor_title = citizen_mt
+			}
+		}
+	}
+
+	#Purchase Chickens
+	rtp_purchase_chickens_d = {
+		ai = no
+
+		potential = {
+			government = rtp_lowborn_g
+			NOT = {
+				has_global_flag = rtp_owns_chickens #I own chickens
+			}
+			has_global_flag = rtp_owns_house #I own a house
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 25
+		}
+
+		effect = {
+			sound_effect = building_completed
+			wealth = -25
+
+			hidden_tooltip = {
+				set_global_flag = rtp_owns_chickens #I own chickens
+				clr_global_flag = rtp_owns_house #I own a house
+			}
+		}
+	}
+
+	#Purchase Statuette
+	rtp_purchase_statuette_d = {
+		ai = no
+
+		potential = {
+			government = rtp_lowborn_g
+			NOT = {
+				has_global_flag = rtp_owns_statuette #I own a statuette
+			}
+			has_global_flag = rtp_owns_chickens #I own chickens
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 25
+		}
+
+		effect = {
+			sound_effect = building_completed
+			wealth = -25
+
+			hidden_tooltip = {
+				set_global_flag = rtp_owns_statuette #I own a statuette
+				clr_global_flag = rtp_owns_chickens #I own chickens
+			}
+		}
+	}
+
+	#Purchase Fence
+	rtp_purchase_fence_d = {
+		ai = no
+
+		potential = {
+			government = rtp_lowborn_g
+			NOT = {
+				has_global_flag = rtp_owns_fence #I own a fence
+			}
+			has_global_flag = rtp_owns_statuette #I own a statuette
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 25
+		}
+
+		effect = {
+			sound_effect = building_completed
+			wealth = -25
+
+			hidden_tooltip = {
+				set_global_flag = rtp_owns_fence #I own a fence
+				clr_global_flag = rtp_owns_statuette #I own a statuette
+			}
+		}
+	}
+
+	#Purchase Cows
+	rtp_purchase_cows_d = {
+		ai = no
+
+		potential = {
+			government = rtp_lowborn_g
+			NOT = {
+				has_global_flag = rtp_owns_cows #I own cows
+			}
+			has_global_flag = rtp_owns_fence #I own a fence
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 25
+		}
+
+		effect = {
+			sound_effect = building_completed
+			wealth = -25
+
+			hidden_tooltip = {
+				set_global_flag = rtp_owns_cows #I own cow
+				clr_global_flag = rtp_owns_fence #I own a fence
+			}
+		}
+	}
+
+	#Purchase Tub
+	rtp_purchase_tub_d = {
+		ai = no
+
+		potential = {
+			government = rtp_lowborn_g
+			NOT = {
+				has_global_flag = rtp_owns_tub #I own a tub
+			}
+			has_global_flag = rtp_owns_cows #I own cows
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 25
+		}
+
+		effect = {
+			sound_effect = building_completed
+			wealth = -25
+
+			hidden_tooltip = {
+				set_global_flag = rtp_owns_tub #I own a tub
+				clr_global_flag = rtp_owns_cows #I own cows
+			}
+		}
+	}
+
+	#Purchase Candles
+	rtp_purchase_candles_d = {
+		ai = no
+
+		potential = {
+			government = rtp_lowborn_g
+			NOT = {
+				has_global_flag = rtp_owns_candles #I own some candles
+			}
+			has_global_flag = rtp_owns_tub #I own a tub
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 25
+		}
+
+		effect = {
+			sound_effect = building_completed
+			wealth = -25
+
+			hidden_tooltip = {
+				set_global_flag = rtp_owns_candles #I own some candles
+				clr_global_flag = rtp_owns_tub #I own a tub
+			}
+		}
+	}
+
+	#Purchase Fireplace
+	rtp_purchase_fireplace_d = {
+		ai = no
+
+		potential = {
+			government = rtp_lowborn_g
+			NOT = {
+				has_global_flag = rtp_owns_fireplace #I own a fireplace
+			}
+			has_global_flag = rtp_owns_candles #I own some candles
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 25
+		}
+
+		effect = {
+			sound_effect = building_completed
+			wealth = -25
+
+			hidden_tooltip = {
+				set_global_flag = rtp_owns_fireplace #I own a fireplace
+				clr_global_flag = rtp_owns_candles #I own some candles
+			}
+		}
+	}
+
+	#Purchase Sheep
+	rtp_purchase_sheep_d = {
+		ai = no
+
+		potential = {
+			government = rtp_lowborn_g
+			NOT = {
+				has_global_flag = rtp_owns_sheep #I own sheep
+			}
+			has_global_flag = rtp_owns_fireplace #I own a fireplace
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 25
+		}
+
+		effect = {
+			sound_effect = building_completed
+			wealth = -25
+
+			hidden_tooltip = {
+				set_global_flag = rtp_owns_sheep #I own sheep
+				clr_global_flag = rtp_owns_fireplace #I own a fireplace
+			}
+		}
+	}
+
+	#Purchase Latrine
+	rtp_purchase_latrine_d = {
+		ai = no
+
+		potential = {
+			government = rtp_lowborn_g
+			NOT = {
+				has_global_flag = rtp_owns_latrine #I own a latrine
+			}
+			has_global_flag = rtp_owns_sheep #I own sheep
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 25
+		}
+
+		effect = {
+			sound_effect = building_completed
+			wealth = -25
+
+			hidden_tooltip = {
+				set_global_flag = rtp_owns_latrine #I own a latrine
+				clr_global_flag = rtp_owns_sheep #I own sheep
+			}
+		}
+	}
+
+	#Purchase Mansion
+	rtp_purchase_mansion_d = {
+		ai = no
+		is_high_prio = yes
+
+		potential = {
+			government = rtp_noble_g
+			NOT = {
+				has_global_flag = rtp_owns_estate2 #I own an estate lvl 2
+			}
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 100
+		}
+
+		effect = {
+			sound_effect = building_completed
+			wealth = -100
+
+			hidden_tooltip = {
+				set_global_flag = rtp_owns_mansion #I own a house
+				clr_global_flag = rtp_owns_estate #I own an estate lvl 1
+				set_global_flag = rtp_owns_estate2 #I own an estate lvl 2
+				give_minor_title = sir_mt
+			}
+		}
+	}
+
+	#Purchase Farmland
+	rtp_purchase_farmland_d = {
+		ai = no
+
+		potential = {
+			government = rtp_noble_g
+			NOT = {
+				has_global_flag = rtp_owns_farmland #I own a farmland
+			}
+			has_global_flag = rtp_owns_mansion #I own a house
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 50
+		}
+
+		effect = {
+			sound_effect = building_completed
+			wealth = -50
+
+			hidden_tooltip = {
+				set_global_flag = rtp_owns_farmland #I own a farmland
+				clr_global_flag = rtp_owns_mansion #I own a house
+			}
+		}
+	}
+
+	#Purchase Shrine
+	rtp_purchase_shrine_d = {
+		ai = no
+
+		potential = {
+			government = rtp_noble_g
+			NOT = {
+				has_global_flag = rtp_owns_shrine #I own a shrine
+			}
+			has_global_flag = rtp_owns_farmland #I own a farmland
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 50
+		}
+
+		effect = {
+			sound_effect = building_completed
+			wealth = -50
+
+			hidden_tooltip = {
+				set_global_flag = rtp_owns_shrine #I own a shrine
+				clr_global_flag = rtp_owns_farmland #I own a farmland
+			}
+		}
+	}
+
+	#Purchase Wall
+	rtp_purchase_wall_d = {
+		ai = no
+
+		potential = {
+			government = rtp_noble_g
+			NOT = {
+				has_global_flag = rtp_owns_wall #I own a wall
+			}
+			has_global_flag = rtp_owns_shrine #I own a shrine
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 50
+		}
+
+		effect = {
+			sound_effect = building_completed
+			wealth = -50
+
+			hidden_tooltip = {
+				set_global_flag = rtp_owns_wall #I own a wall
+				clr_global_flag = rtp_owns_shrine #I own a shrine
+			}
+		}
+	}
+
+	#Purchase Mine
+	rtp_purchase_mine_d = {
+		ai = no
+
+		potential = {
+			government = rtp_noble_g
+			NOT = {
+				has_global_flag = rtp_owns_mine #I own a mine
+			}
+			has_global_flag = rtp_owns_wall #I own a wall
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 50
+		}
+
+		effect = {
+			sound_effect = building_completed
+			wealth = -50
+
+			hidden_tooltip = {
+				set_global_flag = rtp_owns_mine #I own a mine
+				clr_global_flag = rtp_owns_wall #I own a wall
+			}
+		}
+	}
+
+	#Purchase Garden
+	rtp_purchase_garden_d = {
+		ai = no
+
+		potential = {
+			government = rtp_noble_g
+			NOT = {
+				has_global_flag = rtp_owns_garden #I own a garden
+			}
+			has_global_flag = rtp_owns_mine #I own a mine
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 50
+		}
+
+		effect = {
+			sound_effect = building_completed
+			wealth = -50
+
+			hidden_tooltip = {
+				set_global_flag = rtp_owns_garden #I own a garden
+				clr_global_flag = rtp_owns_mine #I own a mine
+			}
+		}
+	}
+
+	#Purchase Library
+	rtp_purchase_library_d = {
+		ai = no
+
+		potential = {
+			government = rtp_noble_g
+			NOT = {
+				has_global_flag = rtp_owns_library #I own a library
+			}
+			has_global_flag = rtp_owns_garden #I own a garden
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 50
+		}
+
+		effect = {
+			sound_effect = building_completed
+			wealth = -50
+
+			hidden_tooltip = {
+				set_global_flag = rtp_owns_library #I own a library
+				clr_global_flag = rtp_owns_garden #I own a garden
+			}
+		}
+	}
+
+	#Purchase Painting
+	rtp_purchase_painting_d = {
+		ai = no
+
+		potential = {
+			government = rtp_noble_g
+			NOT = {
+				has_global_flag = rtp_owns_painting #I own a painting
+			}
+			has_global_flag = rtp_owns_library #I own a library
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 50
+		}
+
+		effect = {
+			sound_effect = building_completed
+			wealth = -50
+
+			hidden_tooltip = {
+				set_global_flag = rtp_owns_painting #I own a painting
+				clr_global_flag = rtp_owns_library #I own a library
+			}
+		}
+	}
+
+	#Purchase Stable
+	rtp_purchase_stable_d = {
+		ai = no
+
+		potential = {
+			government = rtp_noble_g
+			NOT = {
+				has_global_flag = rtp_owns_stable #I own a stable
+			}
+			has_global_flag = rtp_owns_painting #I own a painting
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 50
+		}
+
+		effect = {
+			sound_effect = building_completed
+			wealth = -50
+
+			hidden_tooltip = {
+				set_global_flag = rtp_owns_stable #I own a stable
+				clr_global_flag = rtp_owns_painting #I own a painting
+			}
+		}
+	}
+
+	#Purchase Fountain
+	rtp_purchase_fountain_d = {
+		ai = no
+
+		potential = {
+			government = rtp_noble_g
+			NOT = {
+				has_global_flag = rtp_owns_fountain #I own a fountain
+			}
+			has_global_flag = rtp_owns_stable #I own a stable
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			wealth = 50
+		}
+
+		effect = {
+			sound_effect = building_completed
+			wealth = -50
+
+			hidden_tooltip = {
+				set_global_flag = rtp_owns_fountain #I own a fountain
+				clr_global_flag = rtp_owns_stable #I own a stable
+			}
+		}
+	}
+}

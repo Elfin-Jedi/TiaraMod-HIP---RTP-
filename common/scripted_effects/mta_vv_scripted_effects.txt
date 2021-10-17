@@ -1,0 +1,663 @@
+# -*- ck2.scripted_effects -*-
+
+mta_slavery_opinion_effect = {
+	hidden_tooltip = {
+		FROMFROM = {
+			mother = {
+				opinion = {
+					modifier = opinion_sold_kin_into_slavery
+					who = event_target:slaver
+				}
+			}
+			father = {
+				opinion = {
+					modifier = opinion_sold_kin_into_slavery
+					who = event_target:slaver
+				}
+			}
+			spouse = {
+				opinion = {
+					modifier = opinion_sold_kin_into_slavery
+					who = event_target:slaver
+				}
+			}
+			any_child = {
+				opinion = {
+					modifier = opinion_sold_kin_into_slavery
+					who = event_target:slaver
+				}
+			}
+			any_sibling = {
+				opinion = {
+					modifier = opinion_sold_kin_into_slavery
+					who = event_target:slaver
+				}
+			}
+		}
+	}
+}
+
+# Used to enslave a character. Fires a ping event that fires a notification back to event_target:slaver informing them of their new slave
+enslave_effect = {
+	custom_tooltip = {
+		text = mta_enslaved_TT
+		hidden_tooltip = {
+			add_trait = slave
+			if = { 
+				limit = { NOT = { has_character_flag = no_slave_marriage_break } } # This flag can be set before using this effect to prevent marriage breakage
+				any_spouse = { remove_spouse = PREV }
+			}
+			any_consort = { remove_consort = PREV }
+			set_character_flag = slave
+			set_character_flag = no_court_invites
+			clr_character_flag = no_slave_marriage_break
+			set_immune_to_pruning = yes
+			opinion = { modifier = opinion_my_owner who = event_target:slaver }
+			if = {
+				limit = { ai = no } # No need to send ping event to AI
+				character_event = { id = mta.159 }
+			}
+		}
+	}
+}
+
+# Used to enslave a character. Does not fire a ping event
+enslave_effect_2 = {
+	custom_tooltip = {
+		text = mta_enslaved_TT
+		hidden_tooltip = {
+			add_trait = slave
+			if = { 
+				limit = { NOT = { has_character_flag = no_slave_marriage_break } } # This flag can be set before using this effect to prevent marriage breakage
+				any_spouse = { remove_spouse = PREV }
+			}
+			any_consort = { remove_consort = PREV }
+			set_character_flag = slave
+			set_character_flag = no_court_invites
+			clr_character_flag = no_slave_marriage_break
+			set_immune_to_pruning = yes
+			if = { 
+				limit = { NOT = { has_opinion_modifier = { who = event_target:slaver modifier = opinion_my_owner } } }
+				opinion = { modifier = opinion_my_owner who = event_target:slaver }
+			}
+		}
+	}
+}
+
+# Effect that can be applied to new slaves. Castrates and increases the Total Enslaved variable
+# Castration text refers to the slave by gender and has no scope
+new_slave_effect = {
+	if = {
+		limit = { 
+			event_target:slaver = { 
+				ai = yes
+				slave_castration_culture = yes 
+			} 
+			is_female = no
+			NOT = { trait = eunuch }
+		}
+		random = {
+			chance = 80
+			mta_check_castration_score = yes
+			add_trait = eunuch
+		}
+	}
+	if = {
+		limit = { 
+			event_target:slaver = { 
+				ai = no
+				has_character_flag = slave_castration
+			} 
+			is_female = no
+			NOT = { trait = eunuch }
+		}
+		custom_tooltip = {
+			text = mta.151.castration_forced_TT
+			add_trait = eunuch
+		}
+	}
+	hidden_tooltip = {
+		event_target:slaver = { change_variable = { which = slaves_sold value = 1 } } #Update the number of slaves_sold
+		
+		#Apply slaver modifiers if applicable
+		slaver_modifier_update_effect = yes
+	}
+}
+
+# Effect that can be applied to new slaves. Castrates and increases the Total Enslaved variable, and they will be taken as a concubine if appropriate
+# Castration text refers to the slave by name scoping to THIS
+new_slave_effect_2 = {
+	if = {
+		limit = { 
+			event_target:slaver = { 
+				ai = yes
+				slave_castration_culture = yes 
+			} 
+			is_female = no
+			NOT = { trait = eunuch }
+		}
+		random = {
+			chance = 80
+			mta_check_castration_score = yes
+			add_trait = eunuch
+		}
+	}
+	if = {
+		limit = { 
+			event_target:slaver = { 
+				ai = no
+				has_character_flag = slave_castration
+			} 
+			is_female = no
+			NOT = { trait = eunuch }
+		}
+		custom_tooltip = {
+			text = mta_castration_forced_TT
+			add_trait = eunuch
+		}
+	}
+	if = {
+		limit = {
+			event_target:slaver = {
+				has_concubinage = yes
+				num_of_consorts < 3
+				is_female = no
+				is_marriage_adult = yes
+				ai = yes
+			}
+			is_female = yes
+			is_marriage_adult = yes
+			ai = yes
+		}
+		hidden_tooltip = {
+			event_target:slaver = { add_consort = event_target:slave }
+		}
+	}
+	hidden_tooltip = {
+		event_target:slaver = { change_variable = { which = slaves_sold value = 1 } } #Update the number of slaves_sold
+		
+		#Apply slaver modifiers if applicable
+		slaver_modifier_update_effect = yes
+	}
+}
+
+# Applies castration if applicable. Checks gender variable that can be set in the immediate block and reset in the after block
+purchase_slave_effect = {
+	if = { 
+		limit = { 
+			NOT = { has_character_flag = slave_castration } 
+			NOT = { check_variable = { which = slave_gender value == 1 } } 
+		}
+		custom_tooltip = { text = mta.151.castration_choice_TT }
+		hidden_tooltip = { 
+			character_event = { id = mta.152 } 
+		}
+	}
+	else_if = { 
+		limit = { 
+			has_character_flag = slave_castration 
+			NOT = { check_variable = { which = slave_gender value == 1 } } 
+		}
+		custom_tooltip = { text = mta.151.castration_forced_TT }
+		hidden_tooltip = {
+			character_event = { id = NE.1 }
+		}
+	}
+	else = {
+		hidden_tooltip = {
+			character_event = { id = NE.1 }
+		}
+	}
+	hidden_tooltip = {
+		event_target:invited_character = {
+			if = {
+				limit = { 
+					base_health < 5 
+					base_health >= 4 
+				}
+				health = 1
+				if = { limit = { has_global_flag = mta_debug } log = "MTA DEBUG: purchase_slave_effect: <5 & >=4 base_health, +1 health added to [invited_character.GetBestName]" }
+			}
+			else_if = {
+				limit = { 
+					base_health < 4 
+					base_health >= 3 
+				}
+				health = 2
+				if = { limit = { has_global_flag = mta_debug } log = "MTA DEBUG: purchase_slave_effect: <4 & >=3 base_health, +2 health addded to [invited_character.GetBestName]" }
+			}
+			else_if = {
+				limit = { 
+					base_health < 3 
+				}
+				health = 3
+				if = { limit = { has_global_flag = mta_debug } log = "MTA DEBUG: purchase_slave_effect: <3 base_health, +3 health added to [invited_character.GetBestName]" }
+			}
+			else = {
+				if = { limit = { has_global_flag = mta_debug } log = "MTA DEBUG: purchase_slave_effect: >=5 base_health, no health added to [invited_character.GetBestName]" }
+			}
+		}
+	}
+}
+
+# Used to free a slave
+free_slave_effect = {
+	custom_tooltip = { text = mta_freed_TT }
+	tooltip = { 
+		# Start TMM compatibility
+		if = {
+			limit = { has_character_modifier = slave_governor }
+			remove_character_modifier = slave_governor
+		}
+		# End TMM compatibility
+		opinion = { modifier = opinion_very_grateful who = FROM years = 10 } 
+	}
+	hidden_tooltip = {
+		if = { 
+			limit = { trait = slave }
+			remove_trait = slave
+		}
+		# Start TMM compatibility
+		if = { 
+			limit = { trait = no_inherit }
+			remove_trait = no_inherit
+		}
+		if = {
+			limit = { has_character_flag = slave_culture }
+			clr_character_flag = slave_culture
+		}
+		if = {
+			limit = { has_character_modifier = slave_governor }
+			remove_character_modifier = slave_governor
+		}
+		# End TMM compatibility
+		clr_character_flag = slave
+		clr_character_flag = slave_punished_by_@LIEGE
+		clr_character_flag = no_court_invites
+		if = {
+			limit = {
+				has_character_modifier = mta_forbidden_from_marriage
+				trait = cannot_marry
+			}
+			remove_character_modifier = mta_forbidden_from_marriage
+			remove_trait = cannot_marry
+		}
+		remove_opinion = { who = FROM modifier = opinion_my_owner }
+		opinion = { modifier = opinion_very_grateful who = FROM years = 10 }
+	}
+}
+
+slaver_modifier_update_effect = {
+	if = {
+		limit = {
+			event_target:slaver = { 
+				check_variable = { which = slaves_sold value >= 5 } 
+				NOT = { has_character_modifier = mta_slaver_modifier }
+				NOT = { has_character_modifier = mta_renowned_slaver_modifier }
+			}
+		}
+		event_target:slaver = { character_event = { id = mta.142 } }
+	}
+	if = {
+		limit = {
+			event_target:slaver = { 
+				check_variable = { which = slaves_sold value >= 15 } 
+				has_character_modifier = mta_slaver_modifier
+				NOT = { has_character_modifier = mta_renowned_slaver_modifier }
+			}
+		}
+		event_target:slaver = { character_event = { id = mta.143 } }
+	}
+}
+
+mta_forbid_slave_marriage_effect = {
+	tooltip = { 
+		add_character_modifier = {
+			modifier = mta_forbidden_from_marriage
+			duration = -1
+		}
+	}
+	hidden_tooltip = {
+		add_character_modifier = {
+			modifier = mta_forbidden_from_marriage
+			duration = -1
+		}
+		add_trait = cannot_marry
+	}
+}
+
+mta_allow_slave_marriage_effect = {
+	tooltip = { remove_character_modifier = mta_forbidden_from_marriage }
+	hidden_tooltip = {
+		remove_character_modifier = mta_forbidden_from_marriage
+		remove_trait = cannot_marry
+	}
+}
+
+mta_give_warrior_nickname_effect = {
+	if = {
+		limit = {
+			has_nickname = no
+			trait = giant
+			NOT = { trait = one_eyed }
+			NOT = { trait = strong }
+			NOR = {
+				culture_group = north_germanic
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+		}
+		give_nickname = nick_the_giant
+	}
+	if = {
+		limit = {
+			has_nickname = no
+			trait = giant
+			trait = strong
+			NOR = {
+				culture_group = north_germanic
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+		}
+		give_nickname = nick_the_goliath
+	}
+	if = {
+		limit = {
+			has_nickname = no
+			trait = giant
+			trait = one_eyed
+			NOR = {
+				culture_group = north_germanic
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+		}
+		give_nickname = nick_the_cyclops
+	}
+	if = {
+		limit = {
+			has_nickname = no
+			trait = giant
+			OR = {
+				culture_group = north_germanic
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+		}
+		give_nickname = nick_the_ladder_legs
+	}
+	if = {
+		limit = {
+			has_nickname = no
+			trait = gregarious
+			OR = {
+				trait = wroth
+				trait = uncouth
+			}
+			OR = {
+				culture_group = north_germanic
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+		}
+		give_nickname = nick_the_bellower
+	}
+	if = {
+		limit = {
+			has_nickname = no
+			trait = trusting
+			trait = content
+			trait = just
+		}
+		give_nickname = nick_the_loyal
+	}
+	if = {
+		limit = {
+			has_nickname = no
+			trait = brave
+			trait = unyielding_leader
+		}
+		give_nickname = nick_the_fearless
+	}
+	if = {
+		limit = {
+			has_nickname = no
+			trait = brave
+			trait = shrewd
+		}
+		give_nickname = nick_the_brave
+	}
+	if = {
+		limit = {
+			has_nickname = no
+			trait = fair
+			OR = {
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+				religion = west_african_pagan
+				religion = west_african_pagan_reformed
+			}
+		}
+		give_nickname = nick_the_lion
+	}
+	if = {
+		limit = {
+			has_nickname = no
+			OR = {
+				trait = strong
+				trait = robust
+				trait = fair
+			}
+			OR = {
+				trait = shrewd
+				trait = quick
+				trait = genius
+			}
+			liege = {
+				capital_scope = {
+					NOR = {
+						region = world_india
+						region = world_africa
+					}
+				}
+			}
+		}
+		give_nickname = nick_the_bear
+	}
+	if = {
+		limit = {
+			has_nickname = no
+			OR = {
+				trait = strong
+				trait = robust
+			}
+			OR = {
+				trait = uncouth
+				trait = ugly
+				trait = disfigured
+			}
+			OR = {
+				trait = hedonist
+				trait = gluttonous
+			}
+		}
+		give_nickname = nick_the_boar
+	}
+	if = {
+		limit = {
+			has_nickname = no
+			is_strong_trigger = yes
+			OR = {
+				trait = brave
+				trait = ambitious
+			}
+		}
+		give_nickname = nick_the_strong
+	}
+	if = {
+		limit = {
+			has_nickname = no
+			trait = shy
+			OR = {
+				trait = patient
+				trait = humble
+			}
+		}
+		give_nickname = nick_the_silent
+	}
+	if = {
+		limit = {
+			has_nickname = no
+			trait = proud
+			trait = envious
+		}
+		give_nickname = nick_the_proud
+	}
+	if = {
+		limit = {
+			has_nickname = no
+			trait = one_eyed
+		}
+		give_nickname = nick_one_eye
+	}
+	if = {
+		limit = {
+			has_nickname = no
+			trait = humble
+			is_dumb_trigger = yes
+		}
+		give_nickname = nick_the_simple
+	}
+}
+
+mta_give_intriguer_nickname_effect = {
+	if = {
+		limit = {
+			has_nickname = no
+			trait = disfigured
+			trait = deceitful
+			trait = envious
+		}
+		give_nickname = nick_of_a_thousand_faces
+	}
+}
+
+mta_rape_opinion_effect = {
+	hidden_tooltip = {
+		opinion = { 
+			modifier = opinion_dishonored_me 
+			who = FROM 
+		}
+		mother = {
+			opinion = {
+				modifier = opinion_dishonored_close_kin
+				who = FROM
+			}
+		}
+		father = {
+			opinion = {
+				modifier = opinion_dishonored_close_kin
+				who = FROM
+			}
+		}
+		spouse = {
+			opinion = {
+				modifier = opinion_dishonored_close_kin
+				who = FROM
+			}
+		}
+		any_child = {
+			limit = {
+				NAND = {
+					father = { character = FROM }
+					mother = { 
+						character = ROOT
+						trait = slave 
+					}
+				}
+				NAND = {
+					mother = { character = FROM }
+					father = { 
+						character = ROOT
+						trait = slave 
+					}
+				}
+			}
+			opinion = {
+				modifier = opinion_dishonored_close_kin
+				who = FROM
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = { dynasty = ROOT }
+					NOT = { sibling = ROOT }
+				}
+			}
+			any_sibling = {
+				opinion = {
+					modifier = opinion_dishonored_close_kin
+					who = FROM
+				}
+			}
+			any_dynasty_member = {
+				opinion = {
+					modifier = opinion_dishonored_kin
+					who = FROM
+				}
+			}
+		}
+	}
+}
+
+mta_rape_effect = {
+	add_character_modifier = { name = mta_dishonored_modifier years = 2 }
+	
+	random_list = {
+		40 = {
+			add_trait = depressed
+			hidden_tooltip = { character_event = { id = 38288 } }
+		}
+		25 = {
+			add_trait = stressed
+			hidden_tooltip = { character_event = { id = 38282 } }
+		}
+		5 = {
+			add_trait = lunatic
+			hidden_tooltip = { character_event = { id = 38304 } }
+		}
+		30 = {
+			#nothing
+		}
+	}
+}
+
+#Impregnation and venereal disease handling between FROM and ROOT. Used in ROOT scope.
+#Identical to vanilla unprotected_sex_effect, but without impregnation
+mta_unprotected_sex_effect = {
+	random = {
+		chance = 50
+		venereal_disease_effect = yes
+	}
+	random = {
+		chance = 10
+		modifier = {
+			factor = 2
+			is_fertile_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			FROM = { is_fertile_trigger = yes }
+		}
+		modifier = {
+			factor = 0.5
+			is_infertile_trigger = yes
+		}
+		modifier = {
+			factor = 0.5
+			FROM = { is_infertile_trigger = yes }
+		}
+	}
+}

@@ -1,0 +1,52 @@
+#CODE;ENGLISH;FRENCH;GERMAN;SPANISH;;;;;;;;;x
+
+#;;;;;;;;;;;;;;x
+
+#Decisions
+send_prisoner;Send a prisoner;Donner un prisonnier;;;;;;;;;;;;x
+send_prisoner_desc;Send prisoner.;Donner le prisonnier.;;;;;;;;;;;;x
+request_prisoner;Request prisoner;Demander un prisonnier;;;;;;;;;;;;x
+request_prisoner_desc;Request prisoner;Demander un prisonnier;;;;;;;;;;;;x
+
+#Modifiers
+mark_prisoner_tag;Prisoner marked;Prisonnier marque;;;;;;;;;;;;x
+mark_prisoner_tag_desc;Prisoner marked to send to someone.;Prisonnier marque pour donner a quelqu'un.;;;;;;;;;;;;x
+release_;Release;Liberation;;;;;;;;;;;;x
+
+#Events
+EVTDESC_send_2;Do you agree to transfer a prisoner to me?;Acceptez-vous de me transferer un prisonnier ?;;;;;;;;;;;;x
+EVTDESC_send_3;I accept in exchange for a favor.;J'accepte en echange d'une faveur.;;;;;;;;;;;;x
+EVTDESC_send_4;I accept in exchange for a ransom.;J'accepte en echange d'une rancon.;;;;;;;;;;;;x
+EVTDESC_send_5;I offer it to you.;Je vous l'offre.;;;;;;;;;;;;x
+EVTDESC_send_6;I refuse your request.;Je refuser votre demande.;;;;;;;;;;;;x
+
+EVTDESC_send_11;As a token of my respect, I send you this prisoner, may he be useful to you.;En signe de respect, je vous envoie ce prisonnier, qu'il vous soit utile.;;;;;;;;;;;;x
+EVTDESC_send_12;I accept your prisoner;J'accepte votre prisonnier.;;;;;;;;;;;;x
+EVTDESC_send_13;I refuse your prisoner.;Je refuse votre prisonnier.;;;;;;;;;;;;x
+
+##A
+EVTOPTA_send_2;In exchange for a favor.;En echange d'une faveur.;;;;;;;;;;;;x
+EVTOPTA_send_3;Okay;D'accord;;;;;;;;;;;;x
+EVTOPTA_send_4;Okay;D'accord;;;;;;;;;;;;x
+
+EVTOPTA_send_11;Okay;D'accord;;;;;;;;;;;;x
+
+##B
+EVTOPTB_send_2;In exchange for a ransom.;En echange d'une rancon.;;;;;;;;;;;;x
+EVTOPTB_send_3;Release him;Liberez-le/la;;;;;;;;;;;;x
+EVTOPTB_send_4;Release him;Liberez-le/la;;;;;;;;;;;;x
+EVTOPTB_send_5;Release him;Liberez-le/la;;;;;;;;;;;;x
+
+EVTOPTB_send_11;Release him;Liberez-le/la;;;;;;;;;;;;x
+
+##C
+EVTOPTC_send_2;I offer it to you.;Je vous l'offre.;;;;;;;;;;;;x
+
+EVTOPTC_send_11;I refuse.;Je refuse;;;;;;;;;;;;x
+
+##D
+EVTOPTD_send_2;No, I keep it.;Non, je le garde.;;;;;;;;;;;;x
+
+##Custom Tooltip
+EVTOPTA_send_CT;The prisoner will be transferred to your prison.;Le prisonnier sera transferer dans vos prisons.;;;;;;;;;;;;x
+

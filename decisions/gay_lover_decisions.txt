@@ -1,0 +1,59 @@
+targetted_decisions = {
+	pursue_gay_lover = {
+		filter = all
+		ai_target_filter = self
+
+		from_potential = {
+			age = 14
+			NOT = { trait = zealous }
+			OR = {
+				AND = {
+					is_female = no
+					ROOT = { is_female = no }
+				}
+				AND = {
+					is_female = yes
+					ROOT = { is_female = yes }
+				}
+			}
+			OR = {
+				NOT = { has_character_flag = pursue_gay_lover }
+				had_character_flag = { flag = pursue_gay_lover days = 30 }
+			}
+			NOT = { has_opinion_modifier = { modifier = opinion_spurned who = ROOT } }
+		}
+		potential = {
+			age = 14
+			NOT = { trait = zealous }
+			OR = {
+				AND = {
+					is_female = no
+					FROM = { is_female = no }
+				}
+				AND = {
+					is_female = yes
+					FROM = { is_female = yes }
+				}
+			}
+			NOR = {
+				is_lover = FROM
+				is_former_lover = FROM
+			}
+			NOT = { character = FROM }
+		}
+		allow = {
+			ROOT = { prisoner = no }
+			FROM = { prisoner = no }
+			OR = {
+				ROOT = { NOT = { num_of_lovers = 3 } }
+				FROM = { NOT = { num_of_lovers = 3 } }
+			}
+		}
+		effect = {
+			character_event = { id = gay_lover_events.0 }
+		}
+		ai_will_do = {
+    			factor = 1
+ 		}
+	}
+}

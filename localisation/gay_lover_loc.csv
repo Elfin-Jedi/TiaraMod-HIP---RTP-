@@ -1,0 +1,17 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+pursue_gay_lover;Pursue a Same Sex Lover;;;;;;;;;;;;;x
+pursue_gay_lover_desc;Pursue [Root.GetFirstName] as your Homosexual Lover.;;;;;;;;;;;;;x
+EVTDESCgay_lover_events.0;[FromFrom.GetFirstName] catches eyes with you at court, later [FromFrom.GetSheHe] finds you alone and tells you how beautiful you are;;;;;;;;;;;;;x
+EVTOPTAgay_lover_events.0;Hmm? You aren't so bad yourself;;;;;;;;;;;;;x
+EVTOPTBgay_lover_events.0;I... No I can't.;;;;;;;;;;;;;x
+EVTDESCgay_lover_events.1;[From.GetFirstName], has responded to your advances and accepted you as a lover.;;;;;;;;;;;;;x
+EVTOPTAgay_lover_events.1;Wonderful News!;;;;;;;;;;;;;x
+EVTDESCgay_lover_events.2;[From.GetFirstName], has spurned your advances.;;;;;;;;;;;;;x
+EVTOPTAgay_lover_events.2;Perhaps [From.GetFirstName] is just fickle? I can try again later.;;;;;;;;;;;;;x
+EVTOPTBgay_lover_events.2;[From.GetFirstName] How can you do this to me, don't you know I love you??;;;;;;;;;;;;;x
+EVTDESCGMM_events.2;You walk into court to the murmurs of a gathered crowd, to the side of your seat is one of your courtiers. "We've received evidence of your proclivities, the whole realm knows.";;;;;;;;;;;;;x
+EVTOPTAGMM_events.2;...;;;;;;;;;;;;;x
+EVTDESCGMM_events.4;[surrogated_kid.GetFirstName] has been born and it's time to introduce [surrogated_kid.GetHerHim] to your spouse.;;;;;;;;;;;;;x
+EVTOPTAGMM_events.4;This is Mama;;;;;;;;;;;;;x
+EVTOPTBGMM_events.4;This is Papa;;;;;;;;;;;;;x
+EVTOPTCGMM_events.4;This is my friend.;;;;;;;;;;;;;x

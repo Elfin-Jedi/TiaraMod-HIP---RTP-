@@ -1,0 +1,120 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_trait_abaddon"
+		texturefile = "gfx/traits/abaddon.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_beelzebub"
+		texturefile = "gfx/traits/beelzebub.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_leviathon"
+		texturefile = "gfx/traits/leviathon.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_adramelech"
+		texturefile = "gfx/traits/adramelech.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_mammon"
+		texturefile = "gfx/traits/mammon.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_belphegor"
+		texturefile = "gfx/traits/belphegor.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_asmodeus"
+		texturefile = "gfx/traits/asmodeus.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_aamon"
+		texturefile = "gfx/traits/aamon.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_satdemon_summoning"
+		texturefile = "gfx\\event_pictures\demon_pentagram.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_form_satan_empire"
+		texturefile = "gfx\\interface\\decision_icon_invite_disciple_satan.dds"
+	}
+	spriteType = {
+		name = "GFX_summon_demon_prince"
+		texturefile = "gfx\\interface\\decision_icon_invite_disciple_satan.dds"
+	}
+	spriteType = {
+		name = "GFX_formalise_faith"
+		texturefile = "gfx\\interface\\decision_icon_invite_disciple_satan.dds"
+	}
+	spriteType = {
+		name = "GFX_join_satan_faith"
+		texturefile = "gfx\\interface\\decision_icon_invite_disciple_satan.dds"
+	}
+	spriteType = {
+		name = "GFX_satanise_province"
+		texturefile = "gfx\\interface\\decision_icon_invite_disciple_satan.dds"
+	}
+	spriteType = {
+		name = "GFX_raise_dead_army"
+		texturefile = "gfx\\interface\\decision_icon_invite_disciple_satan.dds"
+	}
+	spriteType = {
+		name = "GFX_enhance_satan_freedoms"
+		texturefile = "gfx\\interface\\decision_icon_invite_disciple_satan.dds"
+	}
+	spriteType = {
+		name = "GFX_neutralise_satan_freedoms"
+		texturefile = "gfx\\interface\\decision_icon_invite_disciple_satan.dds"
+	}
+	spriteType = {
+		name = "GFX_enhance_satan_slavery"
+		texturefile = "gfx\\interface\\decision_icon_invite_disciple_satan.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_necromancer"
+		texturefile = "gfx/traits/necromancer.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_witch"
+		texturefile = "gfx/traits/witch.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lich"
+		texturefile = "gfx/traits/lich.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

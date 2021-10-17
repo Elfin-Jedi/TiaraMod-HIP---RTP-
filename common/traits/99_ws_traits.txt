@@ -1,0 +1,54 @@
+# ws_mazdan_leader = {
+	# leader = yes
+	# random = no
+	# command_modifier = {
+		# terrain = steppe
+		# terrain = plains
+		# terrain = farmlands
+		# light_cavalry = 0.2
+		# horse_archers = 0.2
+		# knights = 0.1
+	# }
+# }
+
+# ws_eastern_leader = {
+	# leader = yes
+	# random = no
+	# command_modifier = {
+		# terrain = mountain
+		# terrain = hills
+		# speed = 0.1
+		# archers = 0.2
+	# }
+# }
+
+# ws_aztec_leader = {
+	# leader = yes
+	# random = no
+	# command_modifier = {
+		# terrain = mountain
+		# light_infantry = 0.2
+	# }
+# }
+
+# ws_muslim_leader = {
+	# leader = yes
+	# random = no
+	# command_modifier = {
+		# terrain = desert
+		# terrain = mountain
+		# siege = 0.2
+		# speed = 0.1
+	# }
+# }
+
+# ws_jewish_leader = {
+	# leader = yes
+	# random = no
+	# command_modifier = {
+		# terrain = desert
+		# terrain = mountain
+		# siege = 0.2
+		# speed = 0.1
+	# }
+# }

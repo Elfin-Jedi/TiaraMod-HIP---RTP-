@@ -1,0 +1,710 @@
+#####
+#Notification Events
+#
+#Total = 19
+#####
+
+namespace = RTPnotification
+
+#Main Events
+#####
+
+#Can Use Society Ability
+character_event = {
+	id = RTPnotification.1
+	title = "RTPnotification.1_title"
+	desc = RTPnotification.1_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+	only_playable = yes
+
+	option = {
+		name = "RTPnotification.1_1"
+	}
+}
+
+#Gained New Troops
+character_event = {
+	id = RTPnotification.2
+	title = "RTPnotification.2_title"
+	desc = RTPnotification.2_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+	only_playable = yes
+
+	option = {
+		name = "RTPnotification.2_1"
+	}
+}
+
+#Siege Encampment Ready
+character_event = {
+	id = RTPnotification.3
+	title = "RTPnotification.3_title"
+	desc = RTPnotification.3_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+
+	option = {
+		name = "RTPnotification.3_1"
+	}
+}
+
+#Successful Ladder Scaling - Attacker
+character_event = {
+	id = RTPnotification.4
+	title = "RTPnotification.4_title"
+	desc = RTPnotification.4_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		siege = {
+			is_attacker = yes
+		}
+		location = {
+			has_fort = yes
+			fort_has_building = rtp_ladders_b
+		}
+	}
+
+	immediate = {
+		rtp_victory_sounds_se = yes
+		siege = {
+			enemy = {
+				troops = -0.04
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnotification.4_1"
+	}
+}
+
+#Successful Catapul Breach - Attacker
+character_event = {
+	id = RTPnotification.5
+	title = "RTPnotification.5_title"
+	desc = RTPnotification.5_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		siege = {
+			is_attacker = yes
+		}
+		location = {
+			has_fort = yes
+			fort_has_building = rtp_ladders_b
+			fort_has_building = rtp_catapult_b
+		}
+	}
+
+	immediate = {
+		rtp_victory_sounds_se = yes
+		siege = {
+			enemy = {
+				troops = -0.8
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnotification.5_1"
+	}
+}
+
+#Successful Gate Breach - Attacker
+character_event = {
+	id = RTPnotification.6
+	title = "RTPnotification.6_title"
+	desc = RTPnotification.6_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		siege = {
+			is_attacker = yes
+		}
+		location = {
+			has_fort = yes
+			fort_has_building = rtp_ladders_b
+			fort_has_building = rtp_catapult_b
+			fort_has_building = rtp_battering_ram_b
+		}
+	}
+
+	immediate = {
+		rtp_victory_sounds_se = yes
+		siege = {
+			enemy = {
+				troops = -0.12
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnotification.6_1"
+	}
+}
+
+#Successful Bricole Breach - Attacker
+character_event = {
+	id = RTPnotification.7
+	title = "RTPnotification.7_title"
+	desc = RTPnotification.7_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		siege = {
+			is_attacker = yes
+		}
+		location = {
+			has_fort = yes
+			fort_has_building = rtp_ladders_b
+			fort_has_building = rtp_catapult_b
+			fort_has_building = rtp_battering_ram_b
+			fort_has_building = rtp_bricole_b
+		}
+	}
+
+	immediate = {
+		rtp_victory_sounds_se = yes
+		siege = {
+			enemy = {
+				troops = -0.16
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnotification.7_1"
+	}
+}
+
+#Successful Tower Scaling - Attacker
+character_event = {
+	id = RTPnotification.8
+	title = "RTPnotification.8_title"
+	desc = RTPnotification.8_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		siege = {
+			is_attacker = yes
+		}
+		location = {
+			has_fort = yes
+			fort_has_building = rtp_ladders_b
+			fort_has_building = rtp_catapult_b
+			fort_has_building = rtp_battering_ram_b
+			fort_has_building = rtp_bricole_b
+			fort_has_building = rtp_siege_towers_b
+		}
+	}
+
+	immediate = {
+		rtp_victory_sounds_se = yes
+		siege = {
+			enemy = {
+				troops = -0.20
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnotification.8_1"
+	}
+}
+
+#Successful Ballistas Kill - Attacker
+character_event = {
+	id = RTPnotification.9
+	title = "RTPnotification.9_title"
+	desc = RTPnotification.9_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		siege = {
+			is_attacker = yes
+		}
+		location = {
+			has_fort = yes
+			fort_has_building = rtp_ladders_b
+			fort_has_building = rtp_catapult_b
+			fort_has_building = rtp_battering_ram_b
+			fort_has_building = rtp_bricole_b
+			fort_has_building = rtp_siege_towers_b
+			fort_has_building = rtp_ballistas_b
+		}
+	}
+
+	immediate = {
+		rtp_victory_sounds_se = yes
+		siege = {
+			enemy = {
+				troops = -0.24
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnotification.9_1"
+	}
+}
+
+#Successful Trebuchet Kill - Attacker
+character_event = {
+	id = RTPnotification.10
+	title = "RTPnotification.10_title"
+	desc = RTPnotification.10_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		siege = {
+			is_attacker = yes
+		}
+		location = {
+			has_fort = yes
+			fort_has_building = rtp_ladders_b
+			fort_has_building = rtp_catapult_b
+			fort_has_building = rtp_battering_ram_b
+			fort_has_building = rtp_bricole_b
+			fort_has_building = rtp_siege_towers_b
+			fort_has_building = rtp_ballistas_b
+			fort_has_building = rtp_trebuchet_b
+		}
+	}
+
+	immediate = {
+		rtp_victory_sounds_se = yes
+		siege = {
+			enemy = {
+				troops = -0.28
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnotification.10_1"
+	}
+}
+
+#Successful Cannon Kill - Attacker
+character_event = {
+	id = RTPnotification.11
+	title = "RTPnotification.11_title"
+	desc = RTPnotification.11_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		siege = {
+			is_attacker = yes
+		}
+		location = {
+			has_fort = yes
+			fort_has_building = rtp_ladders_b
+			fort_has_building = rtp_catapult_b
+			fort_has_building = rtp_battering_ram_b
+			fort_has_building = rtp_bricole_b
+			fort_has_building = rtp_siege_towers_b
+			fort_has_building = rtp_ballistas_b
+			fort_has_building = rtp_trebuchet_b
+			fort_has_building = rtp_bombard_b
+		}
+	}
+
+	immediate = {
+		rtp_victory_sounds_se = yes
+		siege = {
+			enemy = {
+				troops = -0.32
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnotification.11_1"
+	}
+}
+
+#Successful Cannon Break - Defender
+character_event = {
+	id = RTPnotification.12
+	title = "RTPnotification.12_title"
+	desc = RTPnotification.12_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		siege = {
+			is_attacker = no
+		}
+		location = {
+			has_fort = yes
+			fort_has_building = rtp_ladders_b
+			fort_has_building = rtp_catapult_b
+			fort_has_building = rtp_battering_ram_b
+			fort_has_building = rtp_bricole_b
+			fort_has_building = rtp_siege_towers_b
+			fort_has_building = rtp_ballistas_b
+			fort_has_building = rtp_trebuchet_b
+			fort_has_building = rtp_bombard_b
+		}
+	}
+
+	immediate = {
+		rtp_victory_sounds_se = yes
+		location = {
+			destroy_in_extra_holding = {
+				type = fort
+				building = rtp_bombard_b
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnotification.12_1"
+	}
+}
+
+#Successful Trebuchet Break - Defender
+character_event = {
+	id = RTPnotification.13
+	title = "RTPnotification.13_title"
+	desc = RTPnotification.13_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		siege = {
+			is_attacker = no
+		}
+		location = {
+			has_fort = yes
+			NOT = {
+				fort_has_building = rtp_bombard_b
+			}
+			fort_has_building = rtp_ladders_b
+			fort_has_building = rtp_catapult_b
+			fort_has_building = rtp_battering_ram_b
+			fort_has_building = rtp_bricole_b
+			fort_has_building = rtp_siege_towers_b
+			fort_has_building = rtp_ballistas_b
+			fort_has_building = rtp_trebuchet_b
+		}
+	}
+
+	immediate = {
+		rtp_victory_sounds_se = yes
+		location = {
+			destroy_in_extra_holding = {
+				type = fort
+				building = rtp_trebuchet_b
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnotification.13_1"
+	}
+}
+
+#Successful Ballistas Break - Defender
+character_event = {
+	id = RTPnotification.14
+	title = "RTPnotification.14_title"
+	desc = RTPnotification.14_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		siege = {
+			is_attacker = no
+		}
+		location = {
+			has_fort = yes
+			NOR = {
+				fort_has_building = rtp_bombard_b
+				fort_has_building = rtp_trebuchet_b
+			}
+			fort_has_building = rtp_ladders_b
+			fort_has_building = rtp_catapult_b
+			fort_has_building = rtp_battering_ram_b
+			fort_has_building = rtp_bricole_b
+			fort_has_building = rtp_siege_towers_b
+			fort_has_building = rtp_ballistas_b
+		}
+	}
+
+	immediate = {
+		rtp_victory_sounds_se = yes
+		location = {
+			destroy_in_extra_holding = {
+				type = fort
+				building = rtp_ballistas_b
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnotification.14_1"
+	}
+}
+
+#Successful Tower Break - Defender
+character_event = {
+	id = RTPnotification.15
+	title = "RTPnotification.15_title"
+	desc = RTPnotification.15_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		siege = {
+			is_attacker = no
+		}
+		location = {
+			has_fort = yes
+			NOR = {
+				fort_has_building = rtp_ballistas_b
+				fort_has_building = rtp_trebuchet_b
+				fort_has_building = rtp_bombard_b
+			}
+			fort_has_building = rtp_ladders_b
+			fort_has_building = rtp_catapult_b
+			fort_has_building = rtp_battering_ram_b
+			fort_has_building = rtp_bricole_b
+			fort_has_building = rtp_siege_towers_b
+		}
+	}
+
+	immediate = {
+		rtp_victory_sounds_se = yes
+		location = {
+			destroy_in_extra_holding = {
+				type = fort
+				building = rtp_siege_towers_b
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnotification.15_1"
+	}
+}
+
+#Successful Bricole Break - Defender
+character_event = {
+	id = RTPnotification.16
+	title = "RTPnotification.16_title"
+	desc = RTPnotification.16_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		siege = {
+			is_attacker = no
+		}
+		location = {
+			has_fort = yes
+			NOR = {
+				fort_has_building = rtp_siege_towers_b
+				fort_has_building = rtp_ballistas_b
+				fort_has_building = rtp_trebuchet_b
+				fort_has_building = rtp_bombard_b
+			}
+			fort_has_building = rtp_ladders_b
+			fort_has_building = rtp_catapult_b
+			fort_has_building = rtp_battering_ram_b
+			fort_has_building = rtp_bricole_b
+		}
+	}
+
+	immediate = {
+		rtp_victory_sounds_se = yes
+		location = {
+			destroy_in_extra_holding = {
+				type = fort
+				building = rtp_bricole_b
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnotification.16_1"
+	}
+}
+
+#Successful Ram Break - Defender
+character_event = {
+	id = RTPnotification.17
+	title = "RTPnotification.17_title"
+	desc = RTPnotification.17_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		siege = {
+			is_attacker = no
+		}
+		location = {
+			has_fort = yes
+			NOR = {
+				fort_has_building = rtp_bricole_b
+				fort_has_building = rtp_siege_towers_b
+				fort_has_building = rtp_ballistas_b
+				fort_has_building = rtp_trebuchet_b
+				fort_has_building = rtp_bombard_b
+			}
+			fort_has_building = rtp_ladders_b
+			fort_has_building = rtp_catapult_b
+			fort_has_building = rtp_battering_ram_b
+		}
+	}
+
+	immediate = {
+		rtp_victory_sounds_se = yes
+		location = {
+			destroy_in_extra_holding = {
+				type = fort
+				building = rtp_battering_ram_b
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnotification.17_1"
+	}
+}
+
+#Successful Catapult Break - Defender
+character_event = {
+	id = RTPnotification.18
+	title = "RTPnotification.18_title"
+	desc = RTPnotification.18_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		siege = {
+			is_attacker = no
+		}
+		location = {
+			has_fort = yes
+			NOR = {
+				fort_has_building = rtp_battering_ram_b
+				fort_has_building = rtp_bricole_b
+				fort_has_building = rtp_siege_towers_b
+				fort_has_building = rtp_ballistas_b
+				fort_has_building = rtp_trebuchet_b
+				fort_has_building = rtp_bombard_b
+			}
+			fort_has_building = rtp_ladders_b
+			fort_has_building = rtp_catapult_b
+		}
+	}
+
+	immediate = {
+		rtp_victory_sounds_se = yes
+		location = {
+			destroy_in_extra_holding = {
+				type = fort
+				building = rtp_catapult_b
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnotification.18_1"
+	}
+}
+
+#Successful Ladders Break - Defender
+character_event = {
+	id = RTPnotification.19
+	title = "RTPnotification.19_title"
+	desc = RTPnotification.19_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		siege = {
+			is_attacker = no
+		}
+		location = {
+			has_fort = yes
+			NOR = {
+				fort_has_building = rtp_catapult_b
+				fort_has_building = rtp_battering_ram_b
+				fort_has_building = rtp_bricole_b
+				fort_has_building = rtp_siege_towers_b
+				fort_has_building = rtp_ballistas_b
+				fort_has_building = rtp_trebuchet_b
+				fort_has_building = rtp_bombard_b
+			}
+			fort_has_building = rtp_ladders_b
+		}
+	}
+
+	immediate = {
+		rtp_victory_sounds_se = yes
+		location = {
+			destroy_in_extra_holding = {
+				type = fort
+				building = rtp_ladders_b
+			}
+		}
+	}
+
+	option = {
+		name = "RTPnotification.19_1"
+	}
+}
+
+#Ping Events
+#####

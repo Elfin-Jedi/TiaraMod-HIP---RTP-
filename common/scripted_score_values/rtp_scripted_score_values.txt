@@ -1,0 +1,3873 @@
+#####
+#Scripted Score Values AKA Archetypes
+#
+#ONLY CHOOSE ONE ATTRIBUTE AND ONE ALIGNMENT
+#
+#Total = 14
+#####
+
+###ROOT is character
+##Attribute
+#Diplomacy based
+rtp_diplomacy_ssv = {
+	modifier = {
+		factor = 0
+
+		diplomacy <= 1
+	}
+	modifier = {
+		factor = 0.1
+
+		diplomacy == 1
+	}
+	modifier = {
+		factor = 0.2
+
+		diplomacy == 2
+	}
+	modifier = {
+		factor = 0.3
+
+		diplomacy == 3
+	}
+	modifier = {
+		factor = 0.4
+
+		diplomacy == 4
+	}
+	modifier = {
+		factor = 0.5
+
+		diplomacy == 5
+	}
+	modifier = {
+		factor = 0.6
+
+		diplomacy == 6
+	}
+	modifier = {
+		factor = 0.7
+
+		diplomacy == 7
+	}
+	modifier = {
+		factor = 0.8
+
+		diplomacy == 8
+	}
+	modifier = {
+		factor = 0.9
+
+		diplomacy == 9
+	}
+	modifier = {
+		factor = 1
+
+		diplomacy == 10
+	}
+	modifier = {
+		factor = 1.1
+
+		diplomacy == 11
+	}
+	modifier = {
+		factor = 1.2
+
+		diplomacy == 12
+	}
+	modifier = {
+		factor = 1.3
+
+		diplomacy == 13
+	}
+	modifier = {
+		factor = 1.4
+
+		diplomacy == 14
+	}
+	modifier = {
+		factor = 1.5
+
+		diplomacy == 15
+	}
+	modifier = {
+		factor = 1.6
+
+		diplomacy == 16
+	}
+	modifier = {
+		factor = 1.7
+
+		diplomacy == 17
+	}
+	modifier = {
+		factor = 1.8
+
+		diplomacy == 18
+	}
+	modifier = {
+		factor = 1.9
+
+		diplomacy == 19
+	}
+	modifier = {
+		factor = 2
+
+		diplomacy >= 20
+	}
+}
+
+#Martial based
+rtp_martial_ssv = {
+	modifier = {
+		factor = 0
+
+		martial <= 1
+	}
+	modifier = {
+		factor = 0.1
+
+		martial == 1
+	}
+	modifier = {
+		factor = 0.2
+
+		martial == 2
+	}
+	modifier = {
+		factor = 0.3
+
+		martial == 3
+	}
+	modifier = {
+		factor = 0.4
+
+		martial == 4
+	}
+	modifier = {
+		factor = 0.5
+
+		martial == 5
+	}
+	modifier = {
+		factor = 0.6
+
+		martial == 6
+	}
+	modifier = {
+		factor = 0.7
+
+		martial == 7
+	}
+	modifier = {
+		factor = 0.8
+
+		martial == 8
+	}
+	modifier = {
+		factor = 0.9
+
+		martial == 9
+	}
+	modifier = {
+		factor = 1
+
+		martial == 10
+	}
+	modifier = {
+		factor = 1.1
+
+		martial == 11
+	}
+	modifier = {
+		factor = 1.2
+
+		martial == 12
+	}
+	modifier = {
+		factor = 1.3
+
+		martial == 13
+	}
+	modifier = {
+		factor = 1.4
+
+		martial == 14
+	}
+	modifier = {
+		factor = 1.5
+
+		martial == 15
+	}
+	modifier = {
+		factor = 1.6
+
+		martial == 16
+	}
+	modifier = {
+		factor = 1.7
+
+		martial == 17
+	}
+	modifier = {
+		factor = 1.8
+
+		martial == 18
+	}
+	modifier = {
+		factor = 1.9
+
+		martial == 19
+	}
+	modifier = {
+		factor = 2
+
+		martial >= 20
+	}
+}
+
+#Stewardship based
+rtp_stewardship_ssv = {
+	modifier = {
+		factor = 0
+
+		stewardship <= 1
+	}
+	modifier = {
+		factor = 0.1
+
+		stewardship == 1
+	}
+	modifier = {
+		factor = 0.2
+
+		stewardship == 2
+	}
+	modifier = {
+		factor = 0.3
+
+		stewardship == 3
+	}
+	modifier = {
+		factor = 0.4
+
+		stewardship == 4
+	}
+	modifier = {
+		factor = 0.5
+
+		stewardship == 5
+	}
+	modifier = {
+		factor = 0.6
+
+		stewardship == 6
+	}
+	modifier = {
+		factor = 0.7
+
+		stewardship == 7
+	}
+	modifier = {
+		factor = 0.8
+
+		stewardship == 8
+	}
+	modifier = {
+		factor = 0.9
+
+		stewardship == 9
+	}
+	modifier = {
+		factor = 1
+
+		stewardship == 10
+	}
+	modifier = {
+		factor = 1.1
+
+		stewardship == 11
+	}
+	modifier = {
+		factor = 1.2
+
+		stewardship == 12
+	}
+	modifier = {
+		factor = 1.3
+
+		stewardship == 13
+	}
+	modifier = {
+		factor = 1.4
+
+		stewardship == 14
+	}
+	modifier = {
+		factor = 1.5
+
+		stewardship == 15
+	}
+	modifier = {
+		factor = 1.6
+
+		stewardship == 16
+	}
+	modifier = {
+		factor = 1.7
+
+		stewardship == 17
+	}
+	modifier = {
+		factor = 1.8
+
+		stewardship == 18
+	}
+	modifier = {
+		factor = 1.9
+
+		stewardship == 19
+	}
+	modifier = {
+		factor = 2
+
+		stewardship >= 20
+	}
+}
+
+#Intrigue based
+rtp_intrigue_ssv = {
+	modifier = {
+		factor = 0
+
+		intrigue <= 1
+	}
+	modifier = {
+		factor = 0.1
+
+		intrigue == 1
+	}
+	modifier = {
+		factor = 0.2
+
+		intrigue == 2
+	}
+	modifier = {
+		factor = 0.3
+
+		intrigue == 3
+	}
+	modifier = {
+		factor = 0.4
+
+		intrigue == 4
+	}
+	modifier = {
+		factor = 0.5
+
+		intrigue == 5
+	}
+	modifier = {
+		factor = 0.6
+
+		intrigue == 6
+	}
+	modifier = {
+		factor = 0.7
+
+		intrigue == 7
+	}
+	modifier = {
+		factor = 0.8
+
+		intrigue == 8
+	}
+	modifier = {
+		factor = 0.9
+
+		intrigue == 9
+	}
+	modifier = {
+		factor = 1
+
+		intrigue == 10
+	}
+	modifier = {
+		factor = 1.1
+
+		intrigue == 11
+	}
+	modifier = {
+		factor = 1.2
+
+		intrigue == 12
+	}
+	modifier = {
+		factor = 1.3
+
+		intrigue == 13
+	}
+	modifier = {
+		factor = 1.4
+
+		intrigue == 14
+	}
+	modifier = {
+		factor = 1.5
+
+		intrigue == 15
+	}
+	modifier = {
+		factor = 1.6
+
+		intrigue == 16
+	}
+	modifier = {
+		factor = 1.7
+
+		intrigue == 17
+	}
+	modifier = {
+		factor = 1.8
+
+		intrigue == 18
+	}
+	modifier = {
+		factor = 1.9
+
+		intrigue == 19
+	}
+	modifier = {
+		factor = 2
+
+		intrigue >= 20
+	}
+}
+
+#Learning based
+rtp_learning_ssv = {
+	modifier = {
+		factor = 0
+
+		learning <= 1
+	}
+	modifier = {
+		factor = 0.1
+
+		learning == 1
+	}
+	modifier = {
+		factor = 0.2
+
+		learning == 2
+	}
+	modifier = {
+		factor = 0.3
+
+		learning == 3
+	}
+	modifier = {
+		factor = 0.4
+
+		learning == 4
+	}
+	modifier = {
+		factor = 0.5
+
+		learning == 5
+	}
+	modifier = {
+		factor = 0.6
+
+		learning == 6
+	}
+	modifier = {
+		factor = 0.7
+
+		learning == 7
+	}
+	modifier = {
+		factor = 0.8
+
+		learning == 8
+	}
+	modifier = {
+		factor = 0.9
+
+		learning == 9
+	}
+	modifier = {
+		factor = 1
+
+		learning == 10
+	}
+	modifier = {
+		factor = 1.1
+
+		learning == 11
+	}
+	modifier = {
+		factor = 1.2
+
+		learning == 12
+	}
+	modifier = {
+		factor = 1.3
+
+		learning == 13
+	}
+	modifier = {
+		factor = 1.4
+
+		learning == 14
+	}
+	modifier = {
+		factor = 1.5
+
+		learning == 15
+	}
+	modifier = {
+		factor = 1.6
+
+		learning == 16
+	}
+	modifier = {
+		factor = 1.7
+
+		learning == 17
+	}
+	modifier = {
+		factor = 1.8
+
+		learning == 18
+	}
+	modifier = {
+		factor = 1.9
+
+		learning == 19
+	}
+	modifier = {
+		factor = 2
+
+		learning >= 20
+	}
+}
+
+
+##Alignment
+#Lawful Good
+rtp_lawful_good_ssv = {
+	#Positive - Virtues/Vices | 7 - 0
+	modifier = {
+		factor = 2
+		trait = chaste #lustful
+	}
+	modifier = {
+		factor = 2
+		trait = temperate #gluttonous
+	}
+	modifier = {
+		factor = 2
+		trait = charitable #greedy
+	}
+	modifier = {
+		factor = 2
+		trait = diligent #slothful
+	}
+	modifier = {
+		factor = 2
+		trait = patient #wroth
+	}
+	modifier = {
+		factor = 2
+		trait = kind #envious
+	}
+	modifier = {
+		factor = 2
+		trait = humble #proud
+	}
+	#Negative - Virtues/Vices | 7 - 0
+	modifier = {
+		factor = 0
+		trait = lustful #chaste
+	}
+	modifier = {
+		factor = 0
+		trait = gluttonous #temperate
+	}
+	modifier = {
+		factor = 0
+		trait = greedy #charitable
+	}
+	modifier = {
+		factor = 0
+		trait = slothful #diligent
+	}
+	modifier = {
+		factor = 0
+		trait = wroth #patient
+	}
+	modifier = {
+		factor = 0
+		trait = envious #kind
+	}
+	modifier = {
+		factor = 0
+		trait = proud #humble
+	}
+	#Positive - Personality | 9 - 0
+	modifier = {
+		factor = 2
+		trait = content #ambitious
+	}
+	modifier = {
+		factor = 2
+		trait = brave #craven
+	}
+	# modifier = { ###Use this one
+	# 	factor = 2
+	# 	trait = gentle #cruel
+	# }
+	modifier = {
+		factor = 2
+		trait = erudite #stubborn
+	}
+	modifier = {
+		factor = 2
+		trait = gregarious #shy
+	}
+	modifier = {
+		factor = 2
+		trait = honest #deceitful
+	}
+	modifier = {
+		factor = 2
+		trait = just #arbitrary
+	}
+	modifier = {
+		factor = 2
+		trait = trusting #paranoid
+	}
+	modifier = {
+		factor = 2
+		trait = zealous #cynical
+	}
+	#Negative - Personality | 9 - 0
+	modifier = {
+		factor = 0
+		trait = ambitious #content
+	}
+	modifier = {
+		factor = 0
+		trait = craven #brave
+	}
+	# modifier = { ###Use this one
+	# 	factor = 0
+	# 	trait = cruel #gentle
+	# }
+	modifier = {
+		factor = 0
+		trait = stubborn #erudite
+	}
+	modifier = {
+		factor = 0
+		trait = shy #gregarious
+	}
+	modifier = {
+		factor = 0
+		trait = deceitful #honest
+	}
+	modifier = {
+		factor = 0
+		trait = arbitrary #just
+	}
+	modifier = {
+		factor = 0
+		trait = paranoid #trusting
+	}
+	modifier = {
+		factor = 0
+		trait = cynical #zealous
+	}
+}
+
+#Neutral Good
+rtp_neutral_good_ssv = {
+	#Positive - Virtues/Vices | 5 - 1
+	modifier = {
+		factor = 1.75
+		trait = chaste #lustful
+	}
+	# modifier = {
+	# 	factor = 1.75
+	# 	trait = temperate #gluttonous
+	# }
+	modifier = {
+		factor = 1.75
+		trait = charitable #greedy
+	}
+	modifier = {
+		factor = 1.75
+		trait = diligent #slothful
+	}
+	modifier = {
+		factor = 1.75
+		trait = patient #wroth
+	}
+	modifier = {
+		factor = 1.75
+		trait = kind #envious
+	}
+	modifier = {
+		factor = 1.75
+		trait = proud #humble <-
+	}
+	#Negative - Virtues/Vices | 5 - 1
+	modifier = {
+		factor = 0.25
+		trait = lustful #chaste
+	}
+	# modifier = {
+	# 	factor = 0.25
+	# 	trait = gluttonous #temperate
+	# }
+	modifier = {
+		factor = 0.25
+		trait = greedy #charitable
+	}
+	modifier = {
+		factor = 0.25
+		trait = slothful #diligent
+	}
+	modifier = {
+		factor = 0.25
+		trait = wroth #patient
+	}
+	modifier = {
+		factor = 0.25
+		trait = envious #kind
+	}
+	modifier = {
+		factor = 0.25
+		trait = humble #proud <-
+	}
+	#Positive - Personality | 6 - 2
+	modifier = {
+		factor = 1.75
+		trait = ambitious #content <-
+	}
+	modifier = {
+		factor = 1.75
+		trait = brave #craven
+	}
+	# modifier = { ###Use this one
+	# 	factor = 1.75
+	# 	trait = gentle #cruel
+	# }
+	modifier = {
+		factor = 1.75
+		trait = stubborn #erudite <-
+	}
+	# modifier = {
+	# 	factor = 1.75
+	# 	trait = gregarious #shy
+	# }
+	modifier = {
+		factor = 1.75
+		trait = honest #deceitful
+	}
+	modifier = {
+		factor = 1.75
+		trait = just #arbitrary
+	}
+	modifier = {
+		factor = 1.75
+		trait = trusting #paranoid
+	}
+	modifier = {
+		factor = 1.75
+		trait = zealous #cynical
+	}
+	#Negative - Personality | 6 - 2
+	modifier = {
+		factor = 0.25
+		trait = content #ambitious <-
+	}
+	modifier = {
+		factor = 0.25
+		trait = craven #brave
+	}
+	# modifier = { ###Use this one
+	# 	factor = 0.25
+	# 	trait = cruel #gentle
+	# }
+	modifier = {
+		factor = 0.25
+		trait = erudite #stubborn <-
+	}
+	# modifier = {
+	# 	factor = 0.25
+	# 	trait = shy #gregarious
+	# }
+	modifier = {
+		factor = 0.25
+		trait = deceitful #honest
+	}
+	modifier = {
+		factor = 0.25
+		trait = arbitrary #just
+	}
+	modifier = {
+		factor = 0.25
+		trait = paranoid #trusting
+	}
+	modifier = {
+		factor = 0.25
+		trait = cynical #zealous
+	}
+}
+
+#Chaotic Good
+rtp_chaotic_good_ssv = {
+	#Positive - Virtues/Vices | 5 - 2
+	modifier = {
+		factor = 1.5
+		trait = chaste #lustful
+	}
+	modifier = {
+		factor = 1.5
+		trait = temperate #gluttonous
+	}
+	modifier = {
+		factor = 1.5
+		trait = charitable #greedy
+	}
+	modifier = {
+		factor = 1.5
+		trait = diligent #slothful
+	}
+	modifier = {
+		factor = 1.5
+		trait = wroth #patient <-
+	}
+	modifier = {
+		factor = 1.5
+		trait = kind #envious
+	}
+	modifier = {
+		factor = 1.5
+		trait = proud #humble <-
+	}
+	#Negative - Virtues/Vices | 5 - 2
+	modifier = {
+		factor = 0.5
+		trait = lustful #chaste
+	}
+	modifier = {
+		factor = 0.5
+		trait = gluttonous #temperate
+	}
+	modifier = {
+		factor = 0.5
+		trait = greedy #charitable
+	}
+	modifier = {
+		factor = 0.5
+		trait = slothful #diligent
+	}
+	modifier = {
+		factor = 0.5
+		trait = patient #wroth <-
+	}
+	modifier = {
+		factor = 0.5
+		trait = envious #kind
+	}
+	modifier = {
+		factor = 0.5
+		trait = humble #proud <-
+	}
+	#Positive - Personality | 6 - 3
+	modifier = {
+		factor = 1.5
+		trait = ambitious #content <-
+	}
+	modifier = {
+		factor = 1.5
+		trait = brave #craven
+	}
+	# modifier = { ###Use this one
+	# 	factor = 1.5
+	# 	trait = gentle #cruel
+	# }
+	modifier = {
+		factor = 1.5
+		trait = stubborn #erudite <-
+	}
+	modifier = {
+		factor = 1.5
+		trait = gregarious #shy
+	}
+	modifier = {
+		factor = 1.5
+		trait = honest #deceitful
+	}
+	modifier = {
+		factor = 1.5
+		trait = just #arbitrary
+	}
+	modifier = {
+		factor = 1.5
+		trait = paranoid #trusting <-
+	}
+	modifier = {
+		factor = 1.5
+		trait = zealous #cynical
+	}
+	#Negative - Personality | 6 - 3
+	modifier = {
+		factor = 0.5
+		trait = content #ambitious <-
+	}
+	modifier = {
+		factor = 0.5
+		trait = craven #brave
+	}
+	# modifier = { ###Use this one
+	# 	factor = 0.5
+	# 	trait = cruel #gentle
+	# }
+	modifier = {
+		factor = 0.5
+		trait = erudite #stubborn <-
+	}
+	modifier = {
+		factor = 0.5
+		trait = shy #gregarious
+	}
+	modifier = {
+		factor = 0.5
+		trait = deceitful #honest
+	}
+	modifier = {
+		factor = 0.5
+		trait = arbitrary #just
+	}
+	modifier = {
+		factor = 0.5
+		trait = trusting #paranoid <-
+	}
+	modifier = {
+		factor = 0.5
+		trait = cynical #zealous
+	}
+}
+
+
+#Lawful Neutral
+rtp_lawful_neutral_ssv = {
+	#Positive - Virtues/Vices | 4 - 1
+	modifier = {
+		factor = 1.25
+		trait = lustful #chaste <-
+	}
+	# modifier = {
+	# 	factor = 1.25
+	# 	trait = temperate #gluttonous
+	# }
+	modifier = {
+		factor = 1.25
+		trait = charitable #greedy
+	}
+	# modifier = {
+	# 	factor = 1.25
+	# 	trait = diligent #slothful
+	# }
+	modifier = {
+		factor = 1.25
+		trait = patient #wroth
+	}
+	modifier = {
+		factor = 1.25
+		trait = kind #envious
+	}
+	modifier = {
+		factor = 1.25
+		trait = humble #proud
+	}
+	#Negative - Virtues/Vices | 4 - 1
+	modifier = {
+		factor = 0.75
+		trait = chaste #lustful <-
+	}
+	# modifier = {
+	# 	factor = 0.75
+	# 	trait = gluttonous #temperate
+	# }
+	modifier = {
+		factor = 0.75
+		trait = greedy #charitable
+	}
+	# modifier = {
+	# 	factor = 0.75
+	# 	trait = slothful #diligent
+	# }
+	modifier = {
+		factor = 0.75
+		trait = wroth #patient
+	}
+	modifier = {
+		factor = 0.75
+		trait = envious #kind
+	}
+	modifier = {
+		factor = 0.75
+		trait = proud #humble
+	}
+	#Positive - Personality | 6 - 1
+	modifier = {
+		factor = 1.25
+		trait = content #ambitious
+	}
+	# modifier = {
+	# 	factor = 1.25
+	# 	trait = brave #craven
+	# }
+	# modifier = { ###Use this one
+	# 	factor = 1.25
+	# 	trait = gentle #cruel
+	# }
+	modifier = {
+		factor = 1.25
+		trait = erudite #stubborn
+	}
+	# modifier = {
+	# 	factor = 1.25
+	# 	trait = gregarious #shy
+	# }
+	modifier = {
+		factor = 1.25
+		trait = honest #deceitful
+	}
+	modifier = {
+		factor = 1.25
+		trait = just #arbitrary
+	}
+	modifier = {
+		factor = 1.25
+		trait = trusting #paranoid
+	}
+	modifier = {
+		factor = 1.25
+		trait = cynical #zealous <-
+	}
+	#Negative - Personality | 6 - 1
+	modifier = {
+		factor = 0.75
+		trait = ambitious #content
+	}
+	# modifier = {
+	# 	factor = 0.75
+	# 	trait = craven #brave
+	# }
+	# modifier = { ###Use this one
+	# 	factor = 0.75
+	# 	trait = cruel #gentle
+	# }
+	modifier = {
+		factor = 0.75
+		trait = stubborn #erudite
+	}
+	# modifier = {
+	# 	factor = 0.75
+	# 	trait = shy #gregarious
+	# }
+	modifier = {
+		factor = 0.75
+		trait = deceitful #honest
+	}
+	modifier = {
+		factor = 0.75
+		trait = arbitrary #just
+	}
+	modifier = {
+		factor = 0.75
+		trait = paranoid #trusting
+	}
+	modifier = {
+		factor = 0.75
+		trait = zealous #cynical <-
+	}
+}
+
+#Neutral
+rtp_neutral_ssv = {
+	#Positive - Virtues/Vices | 2 - 2
+	# modifier = {
+	# 	factor = 1.1
+	# 	trait = chaste #lustful
+	# }
+	# modifier = {
+	# 	factor = 1.1
+	# 	trait = temperate #gluttonous
+	# }
+	modifier = {
+		factor = 1.1
+		trait = charitable #greedy
+	}
+	# modifier = {
+	# 	factor = 1.1
+	# 	trait = diligent #slothful
+	# }
+	modifier = {
+		factor = 1.1
+		trait = wroth #patient <-
+	}
+	modifier = {
+		factor = 1.1
+		trait = kind #envious
+	}
+	modifier = {
+		factor = 1.1
+		trait = proud #humble <-
+	}
+	#Negative - Virtues/Vices | 2 - 2
+	# modifier = {
+	# 	factor = 0.9
+	# 	trait = lustful #chaste
+	# }
+	# modifier = {
+	# 	factor = 0.9
+	# 	trait = gluttonous #temperate
+	# }
+	modifier = {
+		factor = 0.9
+		trait = greedy #charitable
+	}
+	# modifier = {
+	# 	factor = 0.9
+	# 	trait = slothful #diligent
+	# }
+	modifier = {
+		factor = 0.9
+		trait = patient #wroth
+	}
+	modifier = {
+		factor = 0.9
+		trait = envious #kind
+	}
+	modifier = {
+		factor = 0.9
+		trait = humble #proud <-
+	}
+	#Positive - Personality | 3 - 3
+	modifier = {
+		factor = 1.1
+		trait = ambitious #content <-
+	}
+	# modifier = {
+	# 	factor = 1.1
+	# 	trait = brave #craven
+	# }
+	# modifier = { ###Use this one
+	# 	factor = 1.1
+	# 	trait = gentle #cruel
+	# }
+	modifier = {
+		factor = 1.1
+		trait = stubborn #erudite <-
+	}
+	# modifier = {
+	# 	factor = 1.1
+	# 	trait = gregarious #shy
+	# }
+	modifier = {
+		factor = 1.1
+		trait = honest #deceitful
+	}
+	modifier = {
+		factor = 1.1
+		trait = just #arbitrary
+	}
+	modifier = {
+		factor = 1.1
+		trait = paranoid #trusting <-
+	}
+	modifier = {
+		factor = 1.1
+		trait = zealous #cynical
+	}
+	#Negative - Personality | 3 - 3
+	modifier = {
+		factor = 0.9
+		trait = content #ambitious <-
+	}
+	# modifier = {
+	# 	factor = 0.9
+	# 	trait = craven #brave
+	# }
+	# modifier = { ###Use this one
+	# 	factor = 0.9
+	# 	trait = cruel #gentle
+	# }
+	modifier = {
+		factor = 0.9
+		trait = erudite #stubborn <-
+	}
+	# modifier = {
+	# 	factor = 0.9
+	# 	trait = shy #gregarious
+	# }
+	modifier = {
+		factor = 0.9
+		trait = deceitful #honest
+	}
+	modifier = {
+		factor = 0.9
+		trait = arbitrary #just
+	}
+	modifier = {
+		factor = 0.9
+		trait = trusting #paranoid <-
+	}
+	modifier = {
+		factor = 0.9
+		trait = cynical #zealous
+	}
+}
+
+#Chaotic Neutral
+rtp_chaotic_neutral_ssv = {
+	#Positive - Virtues/Vices | 1 - 4
+	modifier = {
+		factor = 1.25
+		trait = chaste #lustful <-
+	}
+	# modifier = {
+	# 	factor = 1.25
+	# 	trait = temperate #gluttonous
+	# }
+	modifier = {
+		factor = 1.25
+		trait = greedy #charitable
+	}
+	# modifier = {
+	# 	factor = 1.25
+	# 	trait = diligent #slothful
+	# }
+	modifier = {
+		factor = 1.25
+		trait = wroth #patient
+	}
+	modifier = {
+		factor = 1.25
+		trait = envious #kind
+	}
+	modifier = {
+		factor = 1.25
+		trait = proud #humble
+	}
+	#Negative - Virtues/Vices | 1 - 4
+	modifier = {
+		factor = 0.75
+		trait = lustful #chaste <-
+	}
+	# modifier = {
+	# 	factor = 0.75
+	# 	trait = gluttonous #temperate
+	# }
+	modifier = {
+		factor = 0.75
+		trait = charitable #greedy
+	}
+	# modifier = {
+	# 	factor = 0.75
+	# 	trait = slothful #diligent
+	# }
+	modifier = {
+		factor = 0.75
+		trait = patient #wroth
+	}
+	modifier = {
+		factor = 0.75
+		trait = kind #envious
+	}
+	modifier = {
+		factor = 0.75
+		trait = humble #proud
+	}
+	#Positive - Personality | 1 - 6
+	modifier = {
+		factor = 1.25
+		trait = ambitious #content
+	}
+	# modifier = {
+	# 	factor = 1.25
+	# 	trait = brave #craven
+	# }
+	# modifier = { ###Use this one
+	# 	factor = 1.25
+	# 	trait = cruel #gentle
+	# }
+	modifier = {
+		factor = 1.25
+		trait = stubborn #erudite
+	}
+	# modifier = {
+	# 	factor = 1.25
+	# 	trait = gregarious #shy
+	# }
+	modifier = {
+		factor = 1.25
+		trait = deceitful #honest
+	}
+	modifier = {
+		factor = 1.25
+		trait = arbitrary #just
+	}
+	modifier = {
+		factor = 1.25
+		trait = paranoid #trusting
+	}
+	modifier = {
+		factor = 1.25
+		trait = zealous #cynical <-
+	}
+	#Negative - Personality | 1 - 6
+	modifier = {
+		factor = 0.75
+		trait = content #ambitious
+	}
+	# modifier = {
+	# 	factor = 0.75
+	# 	trait = craven #brave
+	# }
+	# modifier = { ###Use this one
+	# 	factor = 0.75
+	# 	trait = gentle #cruel
+	# }
+	modifier = {
+		factor = 0.75
+		trait = erudite #stubborn
+	}
+	# modifier = {
+	# 	factor = 0.75
+	# 	trait = shy #gregarious
+	# }
+	modifier = {
+		factor = 0.75
+		trait = honest #deceitful
+	}
+	modifier = {
+		factor = 0.75
+		trait = just #arbitrary
+	}
+	modifier = {
+		factor = 0.75
+		trait = trusting #paranoid
+	}
+	modifier = {
+		factor = 0.75
+		trait = cynical #zealous <-
+	}
+}
+
+
+#Lawful Evil
+rtp_lawful_evil_ssv = {
+	#Positive - Virtues/Vices | 2 - 5
+	modifier = {
+		factor = 1.5
+		trait = lustful #chaste
+	}
+	modifier = {
+		factor = 1.5
+		trait = gluttonous #temperate
+	}
+	modifier = {
+		factor = 1.5
+		trait = greedy #charitable
+	}
+	modifier = {
+		factor = 1.5
+		trait = slothful #diligent
+	}
+	modifier = {
+		factor = 1.5
+		trait = patient #wroth <-
+	}
+	modifier = {
+		factor = 1.5
+		trait = envious #kind
+	}
+	modifier = {
+		factor = 1.5
+		trait = humble #proud <-
+	}
+	#Negative - Virtues/Vices | 2 - 5
+	modifier = {
+		factor = 0.5
+		trait = chaste #lustful
+	}
+	modifier = {
+		factor = 0.5
+		trait = temperate #gluttonous
+	}
+	modifier = {
+		factor = 0.5
+		trait = charitable #greedy
+	}
+	modifier = {
+		factor = 0.5
+		trait = diligent #slothful
+	}
+	modifier = {
+		factor = 0.5
+		trait = wroth #patient <-
+	}
+	modifier = {
+		factor = 0.5
+		trait = kind #envious
+	}
+	modifier = {
+		factor = 0.5
+		trait = proud #humble <-
+	}
+	#Positive - Personality | 3 - 6
+	modifier = {
+		factor = 1.5
+		trait = content #ambitious <-
+	}
+	modifier = {
+		factor = 1.5
+		trait = craven #brave
+	}
+	# modifier = { ###Use this one
+	# 	factor = 1.5
+	# 	trait = cruel #gentle
+	# }
+	modifier = {
+		factor = 1.5
+		trait = erudite #stubborn <-
+	}
+	modifier = {
+		factor = 1.5
+		trait = shy #gregarious
+	}
+	modifier = {
+		factor = 1.5
+		trait = deceitful #honest
+	}
+	modifier = {
+		factor = 1.5
+		trait = arbitrary #just
+	}
+	modifier = {
+		factor = 1.5
+		trait = trusting #paranoid <-
+	}
+	modifier = {
+		factor = 1.5
+		trait = cynical #zealous
+	}
+	#Negative - Personality | 3 - 6
+	modifier = {
+		factor = 0.5
+		trait = ambitious #content <-
+	}
+	modifier = {
+		factor = 0.5
+		trait = brave #craven
+	}
+	# modifier = { ###Use this one
+	# 	factor = 0.5
+	# 	trait = gentle #cruel
+	# }
+	modifier = {
+		factor = 0.5
+		trait = stubborn #erudite <-
+	}
+	modifier = {
+		factor = 0.5
+		trait = gregarious #shy
+	}
+	modifier = {
+		factor = 0.5
+		trait = honest #deceitful
+	}
+	modifier = {
+		factor = 0.5
+		trait = just #arbitrary
+	}
+	modifier = {
+		factor = 0.5
+		trait = paranoid #trusting <-
+	}
+	modifier = {
+		factor = 0.5
+		trait = zealous #cynical
+	}
+}
+
+#Neutral Evil
+rtp_neutral_evil_ssv = {
+	#Positive - Virtues/Vices | 1 - 5
+	modifier = {
+		factor = 1.75
+		trait = lustful #chaste
+	}
+	# modifier = {
+	# 	factor = 1.75
+	# 	trait = temperate #gluttonous
+	# }
+	modifier = {
+		factor = 1.75
+		trait = greedy #charitable
+	}
+	modifier = {
+		factor = 1.75
+		trait = slothful #diligent
+	}
+	modifier = {
+		factor = 1.75
+		trait = wroth #patient
+	}
+	modifier = {
+		factor = 1.75
+		trait = envious #kind
+	}
+	modifier = {
+		factor = 1.75
+		trait = humble #proud <-
+	}
+	#Negative - Virtues/Vices | 1 - 5
+	modifier = {
+		factor = 0.25
+		trait = chaste #lustful
+	}
+	# modifier = {
+	# 	factor = 0.25
+	# 	trait = gluttonous #temperate
+	# }
+	modifier = {
+		factor = 0.25
+		trait = charitable #greedy
+	}
+	modifier = {
+		factor = 0.25
+		trait = diligent #slothful
+	}
+	modifier = {
+		factor = 0.25
+		trait = patient #wroth
+	}
+	modifier = {
+		factor = 0.25
+		trait = kind #envious
+	}
+	modifier = {
+		factor = 0.25
+		trait = proud #humble <-
+	}
+	#Positive - Personality | 2 - 6
+	modifier = {
+		factor = 1.75
+		trait = content #ambitious <-
+	}
+	modifier = {
+		factor = 1.75
+		trait = craven #brave
+	}
+	# modifier = { ###Use this one
+	# 	factor = 1.75
+	# 	trait = cruel #gentle
+	# }
+	modifier = {
+		factor = 1.75
+		trait = erudite #stubborn <-
+	}
+	# modifier = {
+	# 	factor = 1.75
+	# 	trait = gregarious #shy
+	# }
+	modifier = {
+		factor = 1.75
+		trait = deceitful #honest
+	}
+	modifier = {
+		factor = 1.75
+		trait = arbitrary #just
+	}
+	modifier = {
+		factor = 1.75
+		trait = paranoid #trusting
+	}
+	modifier = {
+		factor = 1.75
+		trait = cynical #zealous
+	}
+	#Negative - Personality | 2 - 6
+	modifier = {
+		factor = 0.25
+		trait = ambitious #content <-
+	}
+	modifier = {
+		factor = 0.25
+		trait = brave #craven
+	}
+	# modifier = { ###Use this one
+	# 	factor = 0.25
+	# 	trait = gentle #cruel
+	# }
+	modifier = {
+		factor = 0.25
+		trait = stubborn #erudite <-
+	}
+	# modifier = {
+	# 	factor = 0.25
+	# 	trait = shy #gregarious
+	# }
+	modifier = {
+		factor = 0.25
+		trait = honest #deceitful
+	}
+	modifier = {
+		factor = 0.25
+		trait = just #arbitrary
+	}
+	modifier = {
+		factor = 0.25
+		trait = trusting #paranoid
+	}
+	modifier = {
+		factor = 0.25
+		trait = zealous #cynical
+	}
+}
+
+#Chaotic Evil
+rtp_chaotic_evil_ssv = {
+	#Positive - Virtues/Vices | 0 - 7
+	modifier = {
+		factor = 2
+		trait = lustful #chaste
+	}
+	modifier = {
+		factor = 2
+		trait = gluttonous #temperate
+	}
+	modifier = {
+		factor = 2
+		trait = greedy #charitable
+	}
+	modifier = {
+		factor = 2
+		trait = slothful #diligent
+	}
+	modifier = {
+		factor = 2
+		trait = wroth #patient
+	}
+	modifier = {
+		factor = 2
+		trait = envious #kind
+	}
+	modifier = {
+		factor = 2
+		trait = proud #humble
+	}
+	#Negative - Virtues/Vices | 0 - 7
+	modifier = {
+		factor = 0
+		trait = chaste #lustful
+	}
+	modifier = {
+		factor = 0
+		trait = temperate #gluttonous
+	}
+	modifier = {
+		factor = 0
+		trait = charitable #greedy
+	}
+	modifier = {
+		factor = 0
+		trait = diligent #slothful
+	}
+	modifier = {
+		factor = 0
+		trait = patient #wroth
+	}
+	modifier = {
+		factor = 0
+		trait = kind #envious
+	}
+	modifier = {
+		factor = 0
+		trait = humble #proud
+	}
+	#Positive - Personality | 0 - 9
+	modifier = {
+		factor = 2
+		trait = ambitious #content
+	}
+	modifier = {
+		factor = 2
+		trait = craven #brave
+	}
+	# modifier = { ###Use this one
+	# 	factor = 2
+	#	trait = cruel #gentle
+	# }
+	modifier = {
+		factor = 2
+		trait = stubborn #erudite
+	}
+	modifier = {
+		factor = 2
+		trait = shy #gregarious
+	}
+	modifier = {
+		factor = 2
+		trait = deceitful #honest
+	}
+	modifier = {
+		factor = 2
+		trait = arbitrary #just
+	}
+	modifier = {
+		factor = 2
+		trait = paranoid #trusting
+	}
+	modifier = {
+		factor = 2
+		trait = cynical #zealous
+	}
+	#Negative - Personality | 0 - 9
+	modifier = {
+		factor = 0
+		trait = content #ambitious
+	}
+	modifier = {
+		factor = 0
+		trait = brave #craven
+	}
+	# modifier = { ###Use this one
+	# 	factor = 0
+	#	trait = gentle #cruel
+	# }
+	modifier = {
+		factor = 0
+		trait = erudite #stubborn
+	}
+	modifier = {
+		factor = 0
+		trait = gregarious #shy
+	}
+	modifier = {
+		factor = 0
+		trait = honest #deceitful
+	}
+	modifier = {
+		factor = 0
+		trait = just #arbitrary
+	}
+	modifier = {
+		factor = 0
+		trait = trusting #paranoid
+	}
+	modifier = {
+		factor = 0
+		trait = zealous #cynical
+	}
+}
+
+###ROOT is title
+#Lawful Good
+rtp_lawful_good2_ssv = {
+	#Positive - Virtues/Vices | 7 - 0
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = chaste #lustful
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = temperate #gluttonous
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = charitable #greedy
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = diligent #slothful
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = patient #wroth
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = kind #envious
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = humble #proud
+		}
+	}
+	#Negative - Virtues/Vices | 7 - 0
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = lustful #chaste
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = gluttonous #temperate
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = greedy #charitable
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = slothful #diligent
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = wroth #patient
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = envious #kind
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = proud #humble
+		}
+	}
+	#Positive - Personality | 9 - 0
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = content #ambitious
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = brave #craven
+		}
+	}
+	# modifier = { ###Use this one
+	# 	factor = 2
+	# 	
+	#	holder_scope = {
+	#		trait = gentle #cruel
+	#	}
+	# }
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = erudite #stubborn
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = gregarious #shy
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = honest #deceitful
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = just #arbitrary
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = trusting #paranoid
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = zealous #cynical
+		}
+	}
+	#Negative - Personality | 9 - 0
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = ambitious #content
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = craven #brave
+		}
+	}
+	# modifier = { ###Use this one
+	# 	factor = 0
+	# 	
+	#	holder_scope = {
+	#		trait = cruel #gentle
+	#	}
+	# }
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = stubborn #erudite
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = shy #gregarious
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = deceitful #honest
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = arbitrary #just
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = paranoid #trusting
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = cynical #zealous
+		}
+	}
+}
+
+#Neutral Good
+rtp_neutral_good2_ssv = {
+	#Positive - Virtues/Vices | 5 - 1
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = chaste #lustful
+		}
+	}
+	# modifier = {
+	# 	factor = 1.75
+	# 	
+	#	holder_scope = {
+	#		trait = temperate #gluttonous
+	#	}
+	# }
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = charitable #greedy
+		}
+	}
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = diligent #slothful
+		}
+	}
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = patient #wroth
+		}
+	}
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = kind #envious
+		}
+	}
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = proud #humble <-
+		}
+	}
+	#Negative - Virtues/Vices | 5 - 1
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = lustful #chaste
+		}
+	}
+	# modifier = {
+	# 	factor = 0.25
+	# 	
+	#	holder_scope = {
+	#		trait = gluttonous #temperate
+	#	}
+	# }
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = greedy #charitable
+		}
+	}
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = slothful #diligent
+		}
+	}
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = wroth #patient
+		}
+	}
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = envious #kind
+		}
+	}
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = humble #proud <-
+		}
+	}
+	#Positive - Personality | 6 - 2
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = ambitious #content <-
+		}
+	}
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = brave #craven
+		}
+	}
+	# modifier = { ###Use this one
+	# 	factor = 1.75
+	# 	
+	#	holder_scope = {
+	#		trait = gentle #cruel
+	#	}
+	# }
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = stubborn #erudite <-
+		}
+	}
+	# modifier = {
+	# 	factor = 1.75
+	# 	
+	#	holder_scope = {
+	#		trait = gregarious #shy
+	#	}
+	# }
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = honest #deceitful
+		}
+	}
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = just #arbitrary
+		}
+	}
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = trusting #paranoid
+		}
+	}
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = zealous #cynical
+		}
+	}
+	#Negative - Personality | 6 - 2
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = content #ambitious <-
+		}
+	}
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = craven #brave
+		}
+	}
+	# modifier = { ###Use this one
+	# 	factor = 0.25
+	# 	
+	#	holder_scope = {
+	#		trait = cruel #gentle
+	#	}
+	# }
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = erudite #stubborn <-
+		}
+	}
+	# modifier = {
+	# 	factor = 0.25
+	# 	
+	#	holder_scope = {
+	#		trait = shy #gregarious
+	#	}
+	# }
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = deceitful #honest
+		}
+	}
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = arbitrary #just
+		}
+	}
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = paranoid #trusting
+		}
+	}
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = cynical #zealous
+		}
+	}
+}
+
+#Chaotic Good
+rtp_chaotic_good2_ssv = {
+	#Positive - Virtues/Vices | 5 - 2
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = chaste #lustful
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = temperate #gluttonous
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = charitable #greedy
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = diligent #slothful
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = wroth #patient <-
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = kind #envious
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = proud #humble <-
+		}
+	}
+	#Negative - Virtues/Vices | 5 - 2
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = lustful #chaste
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = gluttonous #temperate
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = greedy #charitable
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = slothful #diligent
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = patient #wroth <-
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = envious #kind
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = humble #proud <-
+		}
+	}
+	#Positive - Personality | 6 - 3
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = ambitious #content <-
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = brave #craven
+		}
+	}
+	# modifier = { ###Use this one
+	# 	factor = 1.5
+	# 	
+	#	holder_scope = {
+	#		trait = gentle #cruel
+	#	}
+	# }
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = stubborn #erudite <-
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = gregarious #shy
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = honest #deceitful
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = just #arbitrary
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = paranoid #trusting <-
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = zealous #cynical
+		}
+	}
+	#Negative - Personality | 6 - 3
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = content #ambitious <-
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = craven #brave
+		}
+	}
+	# modifier = { ###Use this one
+	# 	factor = 0.5
+	# 	
+	#	holder_scope = {
+	#		trait = cruel #gentle
+	#	}
+	# }
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = erudite #stubborn <-
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = shy #gregarious
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = deceitful #honest
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = arbitrary #just
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = trusting #paranoid <-
+		}
+	}
+	modifier = {
+		factor = 0.5
+
+		holder_scope = {
+			trait = cynical #zealous
+		}
+	}
+}
+
+
+#Lawful Neutral
+rtp_lawful_neutral2_ssv = {
+	#Positive - Virtues/Vices | 4 - 1
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = lustful #chaste <-
+		}
+	}
+	# modifier = {
+	# 	factor = 1.25
+	# 	
+	#	holder_scope = {
+	#		trait = temperate #gluttonous
+	#	}
+	# }
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = charitable #greedy
+		}
+	}
+	# modifier = {
+	# 	factor = 1.25
+	# 	
+	#	holder_scope = {
+	#		trait = diligent #slothful
+	#	}
+	# }
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = patient #wroth
+		}
+	}
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = kind #envious
+		}
+	}
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = humble #proud
+		}
+	}
+	#Negative - Virtues/Vices | 4 - 1
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = chaste #lustful <-
+		}
+	}
+	# modifier = {
+	# 	factor = 0.75
+	# 	
+	#	holder_scope = {
+	#		trait = gluttonous #temperate
+	#	}
+	# }
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = greedy #charitable
+		}
+	}
+	# modifier = {
+	# 	factor = 0.75
+	# 	
+	#	holder_scope = {
+	#		trait = slothful #diligent
+	#	}
+	# }
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = wroth #patient
+		}
+	}
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = envious #kind
+		}
+	}
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = proud #humble
+		}
+	}
+	#Positive - Personality | 6 - 1
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = content #ambitious
+		}
+	}
+	# modifier = {
+	# 	factor = 1.25
+	# 	
+	#	holder_scope = {
+	#		trait = brave #craven
+	#	}
+	# }
+	# modifier = { ###Use this one
+	# 	factor = 1.25
+	# 	
+	#	holder_scope = {
+	#		trait = gentle #cruel
+	#	}
+	# }
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = erudite #stubborn
+		}
+	}
+	# modifier = {
+	# 	factor = 1.25
+	# 	
+	#	holder_scope = {
+	#		trait = gregarious #shy
+	#	}
+	# }
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = honest #deceitful
+		}
+	}
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = just #arbitrary
+		}
+	}
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = trusting #paranoid
+		}
+	}
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = cynical #zealous <-
+		}
+	}
+	#Negative - Personality | 6 - 1
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = ambitious #content
+		}
+	}
+	# modifier = {
+	# 	factor = 0.75
+	# 	
+	#	holder_scope = {
+	#		trait = craven #brave
+	#	}
+	# }
+	# modifier = { ###Use this one
+	# 	factor = 0.75
+	# 	
+	#	holder_scope = {
+	#		trait = cruel #gentle
+	#	}
+	# }
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = stubborn #erudite
+		}
+	}
+	# modifier = {
+	# 	factor = 0.75
+	# 	
+	#	holder_scope = {
+	#		trait = shy #gregarious
+	#	}
+	# }
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = deceitful #honest
+		}
+	}
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = arbitrary #just
+		}
+	}
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = paranoid #trusting
+		}
+	}
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = zealous #cynical <-
+		}
+	}
+}
+
+#Neutral
+rtp_neutral2_ssv = {
+	#Positive - Virtues/Vices | 2 - 2
+	# modifier = {
+	# 	factor = 1.1
+	# 	
+	#	holder_scope = {
+	#		trait = chaste #lustful
+	#	}
+	# }
+	# modifier = {
+	# 	factor = 1.1
+	# 	
+	#	holder_scope = {
+	#		trait = temperate #gluttonous
+	#	}
+	# }
+	modifier = {
+		factor = 1.1
+		
+		holder_scope = {
+			trait = charitable #greedy
+		}
+	}
+	# modifier = {
+	# 	factor = 1.1
+	# 	
+	#	holder_scope = {
+	#		trait = diligent #slothful
+	#	}
+	# }
+	modifier = {
+		factor = 1.1
+		
+		holder_scope = {
+			trait = wroth #patient <-
+		}
+	}
+	modifier = {
+		factor = 1.1
+		
+		holder_scope = {
+			trait = kind #envious
+		}
+	}
+	modifier = {
+		factor = 1.1
+		
+		holder_scope = {
+			trait = proud #humble <-
+		}
+	}
+	#Negative - Virtues/Vices | 2 - 2
+	# modifier = {
+	# 	factor = 0.9
+	# 	
+	#	holder_scope = {
+	#		trait = lustful #chaste
+	#	}
+	# }
+	# modifier = {
+	# 	factor = 0.9
+	# 	
+	#	holder_scope = {
+	#		trait = gluttonous #temperate
+	#	}
+	# }
+	modifier = {
+		factor = 0.9
+		
+		holder_scope = {
+			trait = greedy #charitable
+		}
+	}
+	# modifier = {
+	# 	factor = 0.9
+	# 	
+	#	holder_scope = {
+	#		trait = slothful #diligent
+	#	}
+	# }
+	modifier = {
+		factor = 0.9
+		
+		holder_scope = {
+			trait = patient #wroth
+		}
+	}
+	modifier = {
+		factor = 0.9
+		
+		holder_scope = {
+			trait = envious #kind
+		}
+	}
+	modifier = {
+		factor = 0.9
+		
+		holder_scope = {
+			trait = humble #proud <-
+		}
+	}
+	#Positive - Personality | 3 - 3
+	modifier = {
+		factor = 1.1
+		
+		holder_scope = {
+			trait = ambitious #content <-
+		}
+	}
+	# modifier = {
+	# 	factor = 1.1
+	# 	
+	#	holder_scope = {
+	#		trait = brave #craven
+	#	}
+	# }
+	# modifier = { ###Use this one
+	# 	factor = 1.1
+	# 	
+	#	holder_scope = {
+	#		trait = gentle #cruel
+	#	}
+	# }
+	modifier = {
+		factor = 1.1
+		
+		holder_scope = {
+			trait = stubborn #erudite <-
+		}
+	}
+	# modifier = {
+	# 	factor = 1.1
+	# 	
+	#	holder_scope = {
+	#		trait = gregarious #shy
+	#	}
+	# }
+	modifier = {
+		factor = 1.1
+		
+		holder_scope = {
+			trait = honest #deceitful
+		}
+	}
+	modifier = {
+		factor = 1.1
+		
+		holder_scope = {
+			trait = just #arbitrary
+		}
+	}
+	modifier = {
+		factor = 1.1
+		
+		holder_scope = {
+			trait = paranoid #trusting <-
+		}
+	}
+	modifier = {
+		factor = 1.1
+		
+		holder_scope = {
+			trait = zealous #cynical
+		}
+	}
+	#Negative - Personality | 3 - 3
+	modifier = {
+		factor = 0.9
+		
+		holder_scope = {
+			trait = content #ambitious <-
+		}
+	}
+	# modifier = {
+	# 	factor = 0.9
+	# 	
+	#	holder_scope = {
+	#		trait = craven #brave
+	#	}
+	# }
+	# modifier = { ###Use this one
+	# 	factor = 0.9
+	# 	
+	#	holder_scope = {
+	#		trait = cruel #gentle
+	#	}
+	# }
+	modifier = {
+		factor = 0.9
+		
+		holder_scope = {
+			trait = erudite #stubborn <-
+		}
+	}
+	# modifier = {
+	# 	factor = 0.9
+	# 	
+	#	holder_scope = {
+	#		trait = shy #gregarious
+	#	}
+	# }
+	modifier = {
+		factor = 0.9
+		
+		holder_scope = {
+			trait = deceitful #honest
+		}
+	}
+	modifier = {
+		factor = 0.9
+		
+		holder_scope = {
+			trait = arbitrary #just
+		}
+	}
+	modifier = {
+		factor = 0.9
+		
+		holder_scope = {
+			trait = trusting #paranoid <-
+		}
+	}
+	modifier = {
+		factor = 0.9
+		
+		holder_scope = {
+			trait = cynical #zealous
+		}
+	}
+}
+
+#Chaotic Neutral
+rtp_chaotic_neutral2_ssv = {
+	#Positive - Virtues/Vices | 1 - 4
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = chaste #lustful <-
+		}
+	}
+	# modifier = {
+	# 	factor = 1.25
+	# 	
+	#	holder_scope = {
+	#		trait = temperate #gluttonous
+	#	}
+	# }
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = greedy #charitable
+		}
+	}
+	# modifier = {
+	# 	factor = 1.25
+	# 	
+	#	holder_scope = {
+	#		trait = diligent #slothful
+	#	}
+	# }
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = wroth #patient
+		}
+	}
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = envious #kind
+		}
+	}
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = proud #humble
+		}
+	}
+	#Negative - Virtues/Vices | 1 - 4
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = lustful #chaste <-
+		}
+	}
+	# modifier = {
+	# 	factor = 0.75
+	# 	
+	#	holder_scope = {
+	#		trait = gluttonous #temperate
+	#	}
+	# }
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = charitable #greedy
+		}
+	}
+	# modifier = {
+	# 	factor = 0.75
+	# 	
+	#	holder_scope = {
+	#		trait = slothful #diligent
+	#	}
+	# }
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = patient #wroth
+		}
+	}
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = kind #envious
+		}
+	}
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = humble #proud
+		}
+	}
+	#Positive - Personality | 1 - 6
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = ambitious #content
+		}
+	}
+	# modifier = {
+	# 	factor = 1.25
+	# 	
+	#	holder_scope = {
+	#		trait = brave #craven
+	#	}
+	# }
+	# modifier = { ###Use this one
+	# 	factor = 1.25
+	# 	
+	#	holder_scope = {
+	#		trait = cruel #gentle
+	#	}
+	# }
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = stubborn #erudite
+		}
+	}
+	# modifier = {
+	# 	factor = 1.25
+	# 	
+	#	holder_scope = {
+	#		trait = gregarious #shy
+	#	}
+	# }
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = deceitful #honest
+		}
+	}
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = arbitrary #just
+		}
+	}
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = paranoid #trusting
+		}
+	}
+	modifier = {
+		factor = 1.25
+		
+		holder_scope = {
+			trait = zealous #cynical <-
+		}
+	}
+	#Negative - Personality | 1 - 6
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = content #ambitious
+		}
+	}
+	# modifier = {
+	# 	factor = 0.75
+	# 	
+	#	holder_scope = {
+	#		trait = craven #brave
+	#	}
+	# }
+	# modifier = { ###Use this one
+	# 	factor = 0.75
+	# 	
+	#	holder_scope = {
+	#		trait = gentle #cruel
+	#	}
+	# }
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = erudite #stubborn
+		}
+	}
+	# modifier = {
+	# 	factor = 0.75
+	# 	
+	#	holder_scope = {
+	#		trait = shy #gregarious
+	#	}
+	# }
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = honest #deceitful
+		}
+	}
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = just #arbitrary
+		}
+	}
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = trusting #paranoid
+		}
+	}
+	modifier = {
+		factor = 0.75
+		
+		holder_scope = {
+			trait = cynical #zealous <-
+		}
+	}
+}
+
+
+#Lawful Evil
+rtp_lawful_evil2_ssv = {
+	#Positive - Virtues/Vices | 2 - 5
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = lustful #chaste
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = gluttonous #temperate
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = greedy #charitable
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = slothful #diligent
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = patient #wroth <-
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = envious #kind
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = humble #proud <-
+		}
+	}
+	#Negative - Virtues/Vices | 2 - 5
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = chaste #lustful
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = temperate #gluttonous
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = charitable #greedy
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = diligent #slothful
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = wroth #patient <-
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = kind #envious
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = proud #humble <-
+		}
+	}
+	#Positive - Personality | 3 - 6
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = content #ambitious <-
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = craven #brave
+		}
+	}
+	# modifier = { ###Use this one
+	# 	factor = 1.5
+	# 	
+	#	holder_scope = {
+	#		trait = cruel #gentle
+	#	}
+	# }
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = erudite #stubborn <-
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = shy #gregarious
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = deceitful #honest
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = arbitrary #just
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = trusting #paranoid <-
+		}
+	}
+	modifier = {
+		factor = 1.5
+		
+		holder_scope = {
+			trait = cynical #zealous
+		}
+	}
+	#Negative - Personality | 3 - 6
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = ambitious #content <-
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = brave #craven
+		}
+	}
+	# modifier = { ###Use this one
+	# 	factor = 0.5
+	# 	
+	#	holder_scope = {
+	#		trait = gentle #cruel
+	#	}
+	# }
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = stubborn #erudite <-
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = gregarious #shy
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = honest #deceitful
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = just #arbitrary
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = paranoid #trusting <-
+		}
+	}
+	modifier = {
+		factor = 0.5
+		
+		holder_scope = {
+			trait = zealous #cynical
+		}
+	}
+}
+
+#Neutral Evil
+rtp_neutral_evil2_ssv = {
+	#Positive - Virtues/Vices | 1 - 5
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = lustful #chaste
+		}
+	}
+	# modifier = {
+	# 	factor = 1.75
+	# 	
+	#	holder_scope = {
+	#		trait = temperate #gluttonous
+	#	}
+	# }
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = greedy #charitable
+		}
+	}
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = slothful #diligent
+		}
+	}
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = wroth #patient
+		}
+	}
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = envious #kind
+		}
+	}
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = humble #proud <-
+		}
+	}
+	#Negative - Virtues/Vices | 1 - 5
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = chaste #lustful
+		}
+	}
+	# modifier = {
+	# 	factor = 0.25
+	# 	
+	#	holder_scope = {
+	#		trait = gluttonous #temperate
+	#	}
+	# }
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = charitable #greedy
+		}
+	}
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = diligent #slothful
+		}
+	}
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = patient #wroth
+		}
+	}
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = kind #envious
+		}
+	}
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = proud #humble <-
+		}
+	}
+	#Positive - Personality | 2 - 6
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = content #ambitious <-
+		}
+	}
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = craven #brave
+		}
+	}
+	# modifier = { ###Use this one
+	# 	factor = 1.75
+	# 	
+	#	holder_scope = {
+	#		trait = cruel #gentle
+	#	}
+	# }
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = erudite #stubborn <-
+		}
+	}
+	# modifier = {
+	# 	factor = 1.75
+	# 	
+	#	holder_scope = {
+	#		trait = gregarious #shy
+	#	}
+	# }
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = deceitful #honest
+		}
+	}
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = arbitrary #just
+		}
+	}
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = paranoid #trusting
+		}
+	}
+	modifier = {
+		factor = 1.75
+		
+		holder_scope = {
+			trait = cynical #zealous
+		}
+	}
+	#Negative - Personality | 2 - 6
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = ambitious #content <-
+		}
+	}
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = brave #craven
+		}
+	}
+	# modifier = { ###Use this one
+	# 	factor = 0.25
+	# 	
+	#	holder_scope = {
+	#		trait = gentle #cruel
+	#	}
+	# }
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = stubborn #erudite <-
+		}
+	}
+	# modifier = {
+	# 	factor = 0.25
+	# 	
+	#	holder_scope = {
+	#		trait = shy #gregarious
+	#	}
+	# }
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = honest #deceitful
+		}
+	}
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = just #arbitrary
+		}
+	}
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = trusting #paranoid
+		}
+	}
+	modifier = {
+		factor = 0.25
+		
+		holder_scope = {
+			trait = zealous #cynical
+		}
+	}
+}
+
+#Chaotic Evil
+rtp_chaotic_evil2_ssv = {
+	#Positive - Virtues/Vices | 0 - 7
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = lustful #chaste
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = gluttonous #temperate
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = greedy #charitable
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = slothful #diligent
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = wroth #patient
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = envious #kind
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = proud #humble
+		}
+	}
+	#Negative - Virtues/Vices | 0 - 7
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = chaste #lustful
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = temperate #gluttonous
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = charitable #greedy
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = diligent #slothful
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = patient #wroth
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = kind #envious
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = humble #proud
+		}
+	}
+	#Positive - Personality | 0 - 9
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = ambitious #content
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = craven #brave
+		}
+	}
+	# modifier = { ###Use this one
+	# 	factor = 2
+	# 	
+	#	holder_scope = {
+	#		trait = cruel #gentle
+	#	}
+	# }
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = stubborn #erudite
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = shy #gregarious
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = deceitful #honest
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = arbitrary #just
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = paranoid #trusting
+		}
+	}
+	modifier = {
+		factor = 2
+		
+		holder_scope = {
+			trait = cynical #zealous
+		}
+	}
+	#Negative - Personality | 0 - 9
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = content #ambitious
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = brave #craven
+		}
+	}
+	# modifier = { ###Use this one
+	# 	factor = 0
+	# 	
+	#	holder_scope = {
+	#	trait = gentle #cruel
+	#	}
+	# }
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = erudite #stubborn
+		}
+	}
+	modifier = {
+		factor = 0
+	
+		holder_scope = {
+			trait = gregarious #shy
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = honest #deceitful
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = just #arbitrary
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = trusting #paranoid
+		}
+	}
+	modifier = {
+		factor = 0
+		
+		holder_scope = {
+			trait = zealous #cynical
+		}
+	}
+}

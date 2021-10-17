@@ -1,0 +1,351 @@
+#####
+#Startup Events
+#
+#Total = 4
+#####
+
+namespace = RTPstartup
+
+#Main Events
+#####
+
+#Startup Event
+narrative_event = {
+	id = RTPstartup.1
+	title = "RTPstartup.1_title"
+	desc = "RTPstartup.1_desc"
+	picture = GFX_evt_cat
+	hide_from = yes
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_started_game
+		}
+	}
+
+	option = {
+		name = "RTPstartup.1_1"
+
+		any_player = {
+			character_event = {
+				id = RTPstartup.100 #Choose your start Event
+			}
+		}
+
+		set_global_flag = rtp_started_game
+		set_global_flag = rtp_tutorial_enabled
+	}
+}
+
+#Ping Events
+#####
+
+#Choose your start Event
+character_event = {
+	id = RTPstartup.100
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+
+	immediate = {
+		set_global_flag = rtp_stop
+
+		if = {
+			limit = {
+				independent = no
+			}
+			liege = {
+				save_event_target_as = rtp_new_ruler #The person that will gain your primary title
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_vassals = 1
+			}
+			random_vassal = {
+				save_event_target_as = rtp_new_ruler #The person that will gain your primary title
+			}
+		}
+		else = {
+			create_character = {
+				age = 18
+				random_traits = yes
+				female = no
+				religion = ROOT
+				culture = ROOT
+				dynasty = random
+			}
+			new_character = {
+				save_event_target_as = rtp_new_ruler #The person that will gain your primary title
+			}
+		}
+
+		if = {
+			limit = {
+				has_game_rule = {
+					name = rtp_start_r
+					value = bastard
+				}
+			}
+			set_character_flag = rtp_started_from_nothing
+
+			capital_holding = {
+				c_landless_t = {
+					set_name = PREV
+					set_preferred_capital = PREV
+					save_persistent_event_target = {
+						name = rtp_home_capital
+						scope = PREV
+					}
+				}
+			}
+			grant_title_no_opinion = c_landless_t
+
+			any_demesne_title = {
+				limit = {
+					NOT = {
+						title = c_landless_t
+					}
+				}
+				grant_title_no_opinion = event_target:rtp_new_ruler #The person that will gain your primary title
+			}
+
+			any_claim = {
+				remove_claim = PREV
+			}
+
+			any_artifact = {
+				unsafe_destroy_artifact = yes
+			}
+
+			clear_wealth = yes
+			dynasty = 19930
+			remove_spouse = yes
+			set_father = 0
+			set_mother = 0
+			add_trait = bastard
+			add_trait = cannot_marry
+
+			change_diplomacy = -100
+			change_martial = -100
+			change_stewardship = -100
+			change_intrigue = -100
+			change_learning = -100
+
+			any_courtier = {
+				set_father = 0
+				set_mother = 0
+				death = {
+					death_reason = death_vanished
+				}
+			}
+
+			set_government_type = rtp_lowborn_g
+			primary_title = {
+				gender_succ = true_cognatic
+				add_law = {
+					law = rtp_lowborn_succ
+					cooldown = no
+					opinion_effect = no
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_game_rule = {
+					name = rtp_start_r
+					value = lowborn
+				}
+			}
+			set_character_flag = rtp_started_from_nothing
+
+			capital_holding = {
+				c_landless_t = {
+					set_name = PREV
+					set_preferred_capital = PREV
+					save_persistent_event_target = {
+						name = rtp_home_capital
+						scope = PREV
+					}
+				}
+			}
+			grant_title_no_opinion = c_landless_t
+
+			any_demesne_title = {
+				limit = {
+					NOT = {
+						title = c_landless_t
+					}
+				}
+				grant_title_no_opinion = event_target:rtp_new_ruler #The person that will gain your primary title
+			}
+
+			any_claim = {
+				remove_claim = PREV
+			}
+
+			any_artifact = {
+				unsafe_destroy_artifact = yes
+			}
+
+			clear_wealth = yes
+			dynasty = 19930
+			remove_spouse = yes
+			set_father = 0
+			set_mother = 0
+			add_trait = cannot_marry
+
+			change_diplomacy = -100
+			change_martial = -100
+			change_stewardship = -100
+			change_intrigue = -100
+			change_learning = -100
+
+			any_courtier = {
+				set_father = 0
+				set_mother = 0
+				death = {
+					death_reason = death_vanished
+				}
+			}
+
+			set_government_type = rtp_lowborn_g
+			primary_title = {
+				gender_succ = true_cognatic
+				add_law = {
+					law = rtp_lowborn_succ
+					cooldown = no
+					opinion_effect = no
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_game_rule = {
+					name = rtp_start_r
+					value = noble
+				}
+			}
+			set_character_flag = rtp_started_from_nothing
+			
+			capital_holding = {
+				c_landless_t = {
+					set_name = PREV
+					set_preferred_capital = PREV
+					save_persistent_event_target = {
+						name = rtp_home_capital
+						scope = PREV
+					}
+				}
+			}
+			grant_title_no_opinion = c_landless_t
+
+			any_demesne_title = {
+				limit = {
+					NOT = {
+						title = c_landless_t
+					}
+				}
+				grant_title_no_opinion = event_target:rtp_new_ruler #The person that will gain your primary title
+			}
+
+			dynasty = 19931
+			remove_spouse = yes
+			set_father = 0
+			set_mother = 0
+			add_trait = cannot_marry
+
+			any_courtier = {
+				set_father = 0
+				set_mother = 0
+				death = {
+					death_reason = death_vanished
+				}
+			}
+
+			set_government_type = rtp_noble_g
+			primary_title = {
+				gender_succ = true_cognatic
+				add_law = {
+					law = rtp_family_election_succ
+					cooldown = no
+					opinion_effect = no
+				}
+			}
+		}
+	}
+
+	after = {
+		clr_global_flag = rtp_stop
+		character_event = {
+			id = RTPcheck.110 #Society Check
+		}
+		character_event = {
+			id = RTPstartup.101 #Chalcedonian Start
+		}
+	}
+}
+
+#Chalcedonian Start
+character_event = {
+	id = RTPstartup.101
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+	
+	trigger = {
+		year < 1054
+		is_random_world = no
+	}
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPstartup.102 #Beasts Start
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_game_rule = {
+					name = rtp_chalcedonian_r
+					value = united
+				}
+			}
+			character_event = {
+				id = RTPreligion.100 #Ping for Chalcedonian Start
+			}
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPstartup.102 #Beasts Start
+		}
+	}
+}
+
+#Beasts Start
+character_event = {
+	id = RTPstartup.102
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+
+	immediate = {
+		if = {
+			limit = {
+				has_game_rule = {
+					name = rtp_beasts_r
+					value = yes
+				}
+			}
+			set_global_flag = rtp_beasts_enabled
+		}
+	}
+}
+
+#MTTH Events
+#####

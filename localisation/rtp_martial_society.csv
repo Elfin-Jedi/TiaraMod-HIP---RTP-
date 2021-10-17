@@ -1,0 +1,489 @@
+#####
+#Societies
+#####
+
+currency_name_rtp_martial;Influence;;;;;;x
+currency_name_rtp_martial_hellenic;Influence;;;;;;x
+currency_name_rtp_martial_bon;Influence;;;;;;x
+currency_name_rtp_martial_zun;Influence;;;;;;x
+currency_name_rtp_martial_west_african;Influence;;;;;;x
+currency_name_rtp_martial_slavic;Influence;;;;;;x
+currency_name_rtp_martial_finnish;Influence;;;;;;x
+currency_name_rtp_martial_baltic;Influence;;;;;;x
+currency_name_rtp_martial_tengri;Influence;;;;;;x
+currency_name_rtp_martial_norse;Influence;;;;;;x
+currency_name_rtp_martial_aztec;Influence;;;;;;x
+currency_name_rtp_martial_chalcedonian;Influence;;;;;;x
+currency_name_rtp_martial_catholic;Influence;;;;;;x
+currency_name_rtp_martial_orthodox;Influence;;;;;;x
+currency_name_rtp_martial_miaphysite;Influence;;;;;;x
+currency_name_rtp_martial_nestorian;Influence;;;;;;x
+currency_name_rtp_martial_jewish;Influence;;;;;;x
+currency_name_rtp_martial_sunni;Influence;;;;;;x
+currency_name_rtp_martial_shiite;Influence;;;;;;x
+currency_name_rtp_martial_ibadi;Influence;;;;;;x
+currency_name_rtp_martial_eastern;Influence;;;;;;x
+currency_name_rtp_martial_zoroastrian;Influence;;;;;;x
+
+rtp_martial_norse;The Wolf Warriors;;;;;;x
+rtp_martial_norse_desc;The Wolf Warriors, or Úlfhéðnar as they call themselves, consist of ferocious men and women fighting for honor and recognition on the battlefield, as well as an ideal of bravery and companionship. In honor of Odin the Allfather, they wear their pelts into battle, and favor a spear in personal combat.;;;;;;x
+rtp_martial_norse_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_norse_rank_1_male;Novice;;;;;;x
+rtp_martial_norse_rank_2_male;Warrior;;;;;;x
+rtp_martial_norse_rank_3_male;Veteran;;;;;;x
+rtp_martial_norse_rank_4_male;Hero;;;;;;x
+rtp_martial_norse_rank_1_female;Novice;;;;;;x
+rtp_martial_norse_rank_2_female;Warrior;;;;;;x
+rtp_martial_norse_rank_3_female;Veteran;;;;;;x
+rtp_martial_norse_rank_4_female;Hero;;;;;;x
+
+rtp_martial_tengri;The Eagle Warriors;;;;;;x
+rtp_martial_tengri_desc;The Eagle Warriors of the steppe carry on the ancient tradition of training and hunting with birds, the most prestigious type being the golden eagle. The hunters, also known as 'berkutchi', are said to only need three things in life: a fast horse, a faithful dog, and an eagle.;;;;;;x
+rtp_martial_tengri_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_tengri_rank_1_male;Novice;;;;;;x
+rtp_martial_tengri_rank_2_male;Warrior;;;;;;x
+rtp_martial_tengri_rank_3_male;Veteran;;;;;;x
+rtp_martial_tengri_rank_4_male;Hero;;;;;;x
+rtp_martial_tengri_rank_1_female;Novice;;;;;;x
+rtp_martial_tengri_rank_2_female;Warrior;;;;;;x
+rtp_martial_tengri_rank_3_female;Veteran;;;;;;x
+rtp_martial_tengri_rank_4_female;Hero;;;;;;x
+
+rtp_martial_baltic;The Band of Medeina;;;;;;x
+rtp_martial_baltic_desc;Worshiped by hunters and warriors alike, Medeina is the huntress goddess of the forest. Her followers wear wolf-pelts in her image and hold hares holy, as Medeina is known to send the animal out to lure away the unworthy, out of her domain. The warriors of Medeina have one simple calling: to protect the forest, their home and true legacy of their ancestors.;;;;;;x
+rtp_martial_baltic_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_baltic_rank_1_male;Novice;;;;;;x
+rtp_martial_baltic_rank_2_male;Warrior;;;;;;x
+rtp_martial_baltic_rank_3_male;Veteran;;;;;;x
+rtp_martial_baltic_rank_4_male;Hero;;;;;;x
+rtp_martial_baltic_rank_1_female;Novice;;;;;;x
+rtp_martial_baltic_rank_2_female;Warrior;;;;;;x
+rtp_martial_baltic_rank_3_female;Veteran;;;;;;x
+rtp_martial_baltic_rank_4_female;Hero;;;;;;x
+
+rtp_martial_finnish;The Followers of Otso;;;;;;x
+rtp_martial_finnish_desc;The Suomenusko Followers of Otso do not even utter the name of the sacred animal, but draw strength from worshiping the bear, calling it 'the King of the Forest'. After hunting one, a complex ritual must take place, wherein the bear is convinced that it was not slain, but died due to fault of its own, so that its hunters may don themselves in its fur.;;;;;;x
+rtp_martial_finnish_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_finnish_rank_1_male;Novice;;;;;;x
+rtp_martial_finnish_rank_2_male;Warrior;;;;;;x
+rtp_martial_finnish_rank_3_male;Veteran;;;;;;x
+rtp_martial_finnish_rank_4_male;Hero;;;;;;x
+rtp_martial_finnish_rank_1_female;Novice;;;;;;x
+rtp_martial_finnish_rank_2_female;Warrior;;;;;;x
+rtp_martial_finnish_rank_3_female;Veteran;;;;;;x
+rtp_martial_finnish_rank_4_female;Hero;;;;;;x
+
+rtp_martial_slavic;The Champions of Perun;;;;;;x
+rtp_martial_slavic_desc;The valiant Champions of Perun, the Slavic god of thunder, strive to uphold an ideal of honor and guard their fellow men and women from wrongdoing. Their families are known to hang protective symbols of arrows and bolts by their houses, to grant their heroes luck on the battlefield and shield them from storms.;;;;;;x
+rtp_martial_slavic_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_slavic_rank_1_male;Novice;;;;;;x
+rtp_martial_slavic_rank_2_male;Warrior;;;;;;x
+rtp_martial_slavic_rank_3_male;Veteran;;;;;;x
+rtp_martial_slavic_rank_4_male;Hero;;;;;;x
+rtp_martial_slavic_rank_1_female;Novice;;;;;;x
+rtp_martial_slavic_rank_2_female;Warrior;;;;;;x
+rtp_martial_slavic_rank_3_female;Veteran;;;;;;x
+rtp_martial_slavic_rank_4_female;Hero;;;;;;x
+
+rtp_martial_west_african;The Children of the Storm;;;;;;x
+rtp_martial_west_african_desc;Occasionally spotted leaving offerings in the rain, the Children of the Storm fight and train in the name of Dongo, the father of storms and god of thunder. When charging into battle, they wear blue and are known to carry small fetish symbols close to their heart.;;;;;;x
+rtp_martial_west_african_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_west_african_rank_1_male;Novice;;;;;;x
+rtp_martial_west_african_rank_2_male;Warrior;;;;;;x
+rtp_martial_west_african_rank_3_male;Veteran;;;;;;x
+rtp_martial_west_african_rank_4_male;Hero;;;;;;x
+rtp_martial_west_african_rank_1_female;Novice;;;;;;x
+rtp_martial_west_african_rank_2_female;Warrior;;;;;;x
+rtp_martial_west_african_rank_3_female;Veteran;;;;;;x
+rtp_martial_west_african_rank_4_female;Hero;;;;;;x
+
+rtp_martial_zun;The Keepers of the Flame;;;;;;x
+rtp_martial_zun_desc;The Zun always watching, the Keepers of the Flame vow to be a strong as their scorching god in the sky. Spending long hours training and practicing with each other, clad in the colors of flame, they are known for their cool determination on the battlefield.;;;;;;x
+rtp_martial_zun_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_zun_rank_1_male;Novice;;;;;;x
+rtp_martial_zun_rank_2_male;Warrior;;;;;;x
+rtp_martial_zun_rank_3_male;Veteran;;;;;;x
+rtp_martial_zun_rank_4_male;Hero;;;;;;x
+rtp_martial_zun_rank_1_female;Novice;;;;;;x
+rtp_martial_zun_rank_2_female;Warrior;;;;;;x
+rtp_martial_zun_rank_3_female;Veteran;;;;;;x
+rtp_martial_zun_rank_4_female;Hero;;;;;;x
+
+rtp_martial_bon;The Sentinels of Light;;;;;;x
+rtp_martial_bon_desc;The Sentinels are the boon of a society of warrior clans surrounding the many Bön monasteries. Possessing a discipline as harsh as the environment of the mountainous plateau they inhabit, these fighters are from a superstitious community and will always make certain to perform the appropriate rites and sacrifices, before each battle.;;;;;;x
+rtp_martial_bon_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_bon_rank_1_male;Novice;;;;;;x
+rtp_martial_bon_rank_2_male;Warrior;;;;;;x
+rtp_martial_bon_rank_3_male;Veteran;;;;;;x
+rtp_martial_bon_rank_4_male;Hero;;;;;;x
+rtp_martial_bon_rank_1_female;Novice;;;;;;x
+rtp_martial_bon_rank_2_female;Warrior;;;;;;x
+rtp_martial_bon_rank_3_female;Veteran;;;;;;x
+rtp_martial_bon_rank_4_female;Hero;;;;;;x
+
+rtp_martial_hellenic;The Olympian Champions;;;;;;x
+rtp_martial_hellenic_desc;The Olympian Champions train hard and maintain an expert physique, not only for the purpose of battle, but for games of sport – participating is prestigious, and the most skillful of their community are adored by everyone, commoner and noble alike.;;;;;;x
+rtp_martial_hellenic_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_hellenic_rank_1_male;Novice;;;;;;x
+rtp_martial_hellenic_rank_2_male;Warrior;;;;;;x
+rtp_martial_hellenic_rank_3_male;Veteran;;;;;;x
+rtp_martial_hellenic_rank_4_male;Hero;;;;;;x
+rtp_martial_hellenic_rank_1_female;Novice;;;;;;x
+rtp_martial_hellenic_rank_2_female;Warrior;;;;;;x
+rtp_martial_hellenic_rank_3_female;Veteran;;;;;;x
+rtp_martial_hellenic_rank_4_female;Hero;;;;;;x
+
+rtp_martial_aztec;The Otomies;;;;;;x
+rtp_martial_aztec_desc;The Otomies are a vicious order of warriors known to be fearless on the battlefield. Recognition comes from capturing prisoners for their lieges, which they will attempt even at the expense of their own lives.;;;;;;x
+rtp_martial_aztec_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_aztec_rank_1_male;Tlamani;;;;;;x
+rtp_martial_aztec_rank_2_male;Cuextecatl;;;;;;x
+rtp_martial_aztec_rank_3_male;Paplotl;;;;;;x
+rtp_martial_aztec_rank_4_male;Cuauhocelotl;;;;;;x
+rtp_martial_aztec_rank_1_female;Tlamani;;;;;;x
+rtp_martial_aztec_rank_2_female;Cuextecatl;;;;;;x
+rtp_martial_aztec_rank_3_female;Paplotl;;;;;;x
+rtp_martial_aztec_rank_4_female;Cuauhocelotl;;;;;;x
+
+rtp_martial_chalcedonian;The Confessors;;;;;;x
+rtp_martial_chalcedonian_desc;The Confessors are an order of soldiers whose members hold fast to the idea of the two natures of Christ. Apart from training for war they also tend to be entwined with the local clergy, assisting in aiding the poor during dangerous journeys.;;;;;;x
+rtp_martial_chalcedonian_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_chalcedonian_rank_1_male;Novice;;;;;;x
+rtp_martial_chalcedonian_rank_2_male;Warrior;;;;;;x
+rtp_martial_chalcedonian_rank_3_male;Veteran;;;;;;x
+rtp_martial_chalcedonian_rank_4_male;Hero;;;;;;x
+rtp_martial_chalcedonian_rank_1_female;Novice;;;;;;x
+rtp_martial_chalcedonian_rank_2_female;Warrior;;;;;;x
+rtp_martial_chalcedonian_rank_3_female;Veteran;;;;;;x
+rtp_martial_chalcedonian_rank_4_female;Heroine;;;;;;x
+
+rtp_martial_catholic;Order of Saint Martin of Tours;;;;;;x
+rtp_martial_catholic_desc;The Order of Saint Martin prides itself on order and discipline. They are widely recognizable by their habit of wearing ripped cloaks, which they wear in homage to the saint’s legend. Many also favor axes or hammers, also in homage to legends.;;;;;;x
+rtp_martial_catholic_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_catholic_rank_1_male;Novice;;;;;;x
+rtp_martial_catholic_rank_2_male;Warrior;;;;;;x
+rtp_martial_catholic_rank_3_male;Veteran;;;;;;x
+rtp_martial_catholic_rank_4_male;Hero;;;;;;x
+rtp_martial_catholic_rank_1_female;Novice;;;;;;x
+rtp_martial_catholic_rank_2_female;Warrior;;;;;;x
+rtp_martial_catholic_rank_3_female;Veteran;;;;;;x
+rtp_martial_catholic_rank_4_female;Heroine;;;;;;x
+
+rtp_martial_orthodox;Brethren of Saint John;;;;;;x
+rtp_martial_orthodox_desc;The Brethren are a devout group of men and women who venerate St John the Warrior. In addition to being fierce soldiers, they are also known to follow the tradition of assisting the wronged in retrieving stolen items and recovering escaped servants.;;;;;;x
+rtp_martial_orthodox_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_orthodox_rank_1_male;Novice;;;;;;x
+rtp_martial_orthodox_rank_2_male;Warrior;;;;;;x
+rtp_martial_orthodox_rank_3_male;Veteran;;;;;;x
+rtp_martial_orthodox_rank_4_male;Hero;;;;;;x
+rtp_martial_orthodox_rank_1_female;Novice;;;;;;x
+rtp_martial_orthodox_rank_2_female;Warrior;;;;;;x
+rtp_martial_orthodox_rank_3_female;Veteran;;;;;;x
+rtp_martial_orthodox_rank_4_female;Heroine;;;;;;x
+
+rtp_martial_miaphysite;The Midnight Warriors;;;;;;x
+rtp_martial_miaphysite_desc;The Midnight Warriors are soldiers bound by faith, always seeking the guidance of a priest before battle or significant ceremonies.;;;;;;x
+rtp_martial_miaphysite_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_miaphysite_rank_1_male;Novice;;;;;;x
+rtp_martial_miaphysite_rank_2_male;Warrior;;;;;;x
+rtp_martial_miaphysite_rank_3_male;Veteran;;;;;;x
+rtp_martial_miaphysite_rank_4_male;Hero;;;;;;x
+rtp_martial_miaphysite_rank_1_female;Novice;;;;;;x
+rtp_martial_miaphysite_rank_2_female;Warrior;;;;;;x
+rtp_martial_miaphysite_rank_3_female;Veteran;;;;;;x
+rtp_martial_miaphysite_rank_4_female;Heroine;;;;;;x
+
+rtp_martial_nestorian;The Red Masks;;;;;;x
+rtp_martial_nestorian_desc;The Red Masks derive their name and symbol from the Nestorian belief of the prosopic union of the two natures of Christ. They believe that their order represents a prosopic union as well: the honor of peacetime and strength of war.;;;;;;x
+rtp_martial_nestorian_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_nestorian_rank_1_male;Novice;;;;;;x
+rtp_martial_nestorian_rank_2_male;Warrior;;;;;;x
+rtp_martial_nestorian_rank_3_male;Veteran;;;;;;x
+rtp_martial_nestorian_rank_4_male;Hero;;;;;;x
+rtp_martial_nestorian_rank_1_female;Novice;;;;;;x
+rtp_martial_nestorian_rank_2_female;Warrior;;;;;;x
+rtp_martial_nestorian_rank_3_female;Veteran;;;;;;x
+rtp_martial_nestorian_rank_4_female;Heroine;;;;;;x
+
+rtp_martial_jewish;Sons of Zion;;;;;;x
+rtp_martial_jewish_desc;The Sons of Zion take seriously the passage in scripture: God puts on “righteousness like a breastplate, and a helmet of salvation on his head - he put on garments of vengeance for clothing, and wrapped himself in fury as in a mantle”.;;;;;;x
+rtp_martial_jewish_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_jewish_rank_1_male;Novice;;;;;;x
+rtp_martial_jewish_rank_2_male;Warrior;;;;;;x
+rtp_martial_jewish_rank_3_male;Veteran;;;;;;x
+rtp_martial_jewish_rank_4_male;Hero;;;;;;x
+rtp_martial_jewish_rank_1_female;Novice;;;;;;x
+rtp_martial_jewish_rank_2_female;Warrior;;;;;;x
+rtp_martial_jewish_rank_3_female;Veteran;;;;;;x
+rtp_martial_jewish_rank_4_female;Heroine;;;;;;x
+
+rtp_martial_sunni;The Ghazi;;;;;;x
+rtp_martial_sunni_desc;The Ghazi are a group of warriors and soldiers who train in raiding warfare, learning to weaken the enemy through raiding and looting. While regarded with some suspicion during peacetime, they are rumored to have turned the tide of many a war.;;;;;;x
+rtp_martial_sunni_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_sunni_rank_1_male;Novice;;;;;;x
+rtp_martial_sunni_rank_2_male;Warrior;;;;;;x
+rtp_martial_sunni_rank_3_male;Veteran;;;;;;x
+rtp_martial_sunni_rank_4_male;Hero;;;;;;x
+rtp_martial_sunni_rank_1_female;Novice;;;;;;x
+rtp_martial_sunni_rank_2_female;Warrior;;;;;;x
+rtp_martial_sunni_rank_3_female;Veteran;;;;;;x
+rtp_martial_sunni_rank_4_female;Heroine;;;;;;x
+
+rtp_martial_shiite;The Path of Mecca;;;;;;x
+rtp_martial_shiite_desc;Members of the Path of Mecca are known to be dignified but fierce warriors, willing to go to great lengths to defend their faith.;;;;;;x
+rtp_martial_shiite_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_shiite_rank_1_male;Novice;;;;;;x
+rtp_martial_shiite_rank_2_male;Warrior;;;;;;x
+rtp_martial_shiite_rank_3_male;Veteran;;;;;;x
+rtp_martial_shiite_rank_4_male;Hero;;;;;;x
+rtp_martial_shiite_rank_1_female;Novice;;;;;;x
+rtp_martial_shiite_rank_2_female;Warrior;;;;;;x
+rtp_martial_shiite_rank_3_female;Veteran;;;;;;x
+rtp_martial_shiite_rank_4_female;Heroine;;;;;;x
+
+rtp_martial_ibadi;Guardians of Hadith;;;;;;x
+rtp_martial_ibadi_desc;The Guardians of Hadith are a fierce but elusive group who pride themselves as much in battle as in religious scholarship.;;;;;;x
+rtp_martial_ibadi_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_ibadi_rank_1_male;Novice;;;;;;x
+rtp_martial_ibadi_rank_2_male;Warrior;;;;;;x
+rtp_martial_ibadi_rank_3_male;Veteran;;;;;;x
+rtp_martial_ibadi_rank_4_male;Hero;;;;;;x
+rtp_martial_ibadi_rank_1_female;Novice;;;;;;x
+rtp_martial_ibadi_rank_2_female;Warrior;;;;;;x
+rtp_martial_ibadi_rank_3_female;Veteran;;;;;;x
+rtp_martial_ibadi_rank_4_female;Heroine;;;;;;x
+
+rtp_martial_zoroastrian;The Flamekeepers;;;;;;x
+rtp_martial_zoroastrian_desc;The Keepers derive their name from the sacred fires of their faith. They believe strongly in acts of charity, equality of gender, and the Threefold Path: Good Thoughts, Good Words, and Good Deeds.;;;;;;x
+rtp_martial_zoroastrian_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_zoroastrian_rank_1_male;Novice;;;;;;x
+rtp_martial_zoroastrian_rank_2_male;Warrior;;;;;;x
+rtp_martial_zoroastrian_rank_3_male;Veteran;;;;;;x
+rtp_martial_zoroastrian_rank_4_male;Hero;;;;;;x
+rtp_martial_zoroastrian_rank_1_female;Novice;;;;;;x
+rtp_martial_zoroastrian_rank_2_female;Warrior;;;;;;x
+rtp_martial_zoroastrian_rank_3_female;Veteran;;;;;;x
+rtp_martial_zoroastrian_rank_4_female;Heroine;;;;;;x
+
+rtp_martial_eastern;The Snakeborne;;;;;;x
+rtp_martial_eastern_desc;Claiming lineage from a semi-divine race of half-human, half-serpent beings, the Snakeborne traditionally come from the Kshatriya caste but will admit others under the right circumstances. Warriors who pay a great deal of attention to ceremony, they are fiercely proud and often wear a small token with a snake emblem, keeping it hidden unless with other members.;;;;;;x
+rtp_martial_eastern_leader_desc;This is the society leader.;;;;;;x
+rtp_martial_eastern_rank_1_male;Novice;;;;;;x
+rtp_martial_eastern_rank_2_male;Warrior;;;;;;x
+rtp_martial_eastern_rank_3_male;Veteran;;;;;;x
+rtp_martial_eastern_rank_4_male;Hero;;;;;;x
+rtp_martial_eastern_rank_1_female;Novice;;;;;;x
+rtp_martial_eastern_rank_2_female;Warrior;;;;;;x
+rtp_martial_eastern_rank_3_female;Veteran;;;;;;x
+rtp_martial_eastern_rank_4_female;Heroine;;;;;;x
+
+#####
+#Powers
+#####
+
+rtp_martial_p1_sd;Battle Roar;;;;;;x
+rtp_martial_p1_sd_desc;The shouts of war inspire us all to be stronger.;;;;;;x
+rtp_martial_p1_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to gain a 3 year temporary boost to your §YMartial§! and §YCombat Rating§!.;;;;;;x
+
+rtp_martial_p2_sd;Through the Paces;;;;;;x
+rtp_martial_p2_sd_desc;Warriors must be fit and physically ready to handle the arts of battle. You decide to devote a sizeable amount of time to building your strength.;;;;;;x
+rtp_martial_p2_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to gain §GStrong§!, or gain §YCombat Rating§!.;;;;;;x
+
+rtp_martial_p3_sd;Naught but Strength;;;;;;x
+rtp_martial_p3_sd_desc;A true warrior does not let injury get in the way of training.;;;;;;x
+rtp_martial_p3_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to heal from §RMangled§!, §RSeverely Injured§!, or §RWounded§!.;;;;;;x
+
+rtp_martial_p4_td;And They Will Follow;;;;;;x
+rtp_martial_p4_td_named;And They Will Follow;;;;;;x
+rtp_martial_p4_td_desc;My lineage will produce the best warriors ever seen in this world!;;;;;;x
+rtp_martial_p4_td_power_desc;Unlocks the §YTargeted Decision§! that allows you to gain a rare §YLeadership Trait§! or a dynasty member to gain §GSquire§! or §GMartial Lady§!.;;;;;;x
+
+rtp_martial_tribal_sd;Switch to Tribal;;;;;;x
+rtp_martial_tribal_sd_desc;I shall lead by strength and example, under the old ways of the High Chiefs!;;;;;;x
+rtp_martial_tribal_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to switch to the §YTribal§! government.;;;;;;x
+
+rtp_martial_nomad_sd;Switch to Nomad;;;;;;x
+rtp_martial_nomad_sd_desc;§YI was born to explore and to roam, and if I am to follow another they must prove their strength first. I will never wrap the chains of cities around my neck!§!;;;;;;x
+rtp_martial_nomad_sd_power_desc;Unlocks the §YIntrigue Decision§! that allows you to switch to the §YNomad§! government.;;;;;;x
+
+#####
+#Events
+#####
+
+RTPsociety.1.2_desc;Listen up [Root.GetBoyGirl].\n\nWe are well aware that you capable of standing your ground in a fight, but we will make sure that you stay alive while doing so.\n\nWelcome to [rtp_society_leader.Society.GetName] [Root.GetBrotherSister].\nSigned, [rtp_society_leader.GetSocietyRank] [rtp_society_leader.GetFirstName];;;;;;x
+RTPsociety.1.2_1;I am eager to prove myself.;;;;;;x
+
+#####
+#Missions
+#####
+
+rtp_stolen_goods_martial_mission;Stolen Goods;;;;;;x
+rtp_stolen_goods_martial_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_stolen_goods_martial_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me to retrieve the goods stolen for $TARGET$.;;;;;;x
+rtp_stolen_goods_martial_mission_tooltip;Get the goods back;;;;;;x
+
+RTPmsociety.1_desc;Listen up! A merchant just showed up here with [rtp_society_quest_target.GetHerHis] face beaten to a pulp. Says [rtp_society_quest_target.GetSheHe] was attacked by bandits while trying to bring goods to the city. I am getting real tired of all these gutter rats around here. Go with the merchant, find the bandits, and get those goods back.;;;;;;x
+RTPmsociety.1_1;ACCEPT;;;;;;x
+RTPmsociety.1_2;DECLINE;;;;;;x
+
+RTPmsociety.2_title;Stolen Goods;;;;;;x
+RTPmsociety.2_desc;The merchant gave us details about where the attack happened. We march out to the site and inspect the area looking for tracks. I find a series of footprints, while [rtp_society_quest_target2.GetFirstName] finds another.;;;;;;x
+RTPmsociety.2_1;Come on this way!;;;;;;x
+RTPmsociety.2_2;Let's go with yours.;;;;;;x
+
+RTPmsociety.3_title;Stolen Goods;;;;;;x
+RTPmsociety.3_desc;As we crest a hill we spot a campfire below. Our scout steals off in the sunset and returns with a clenched fist, lifted. The signal that this is indeed what we have been looking for. Below, men stretch lazily at their fire, chests of the merchant’s goods piled on a wagon.;;;;;;x
+RTPmsociety.3_1;Draw swords!;;;;;;x
+
+RTPmsociety.4_title;Stolen Goods;;;;;;x
+RTPmsociety.4_desc;We raise a cry, banging swords against shields, and rush through the thicket towards the camp. Startled by the cacophony, the bandits grab for their swords and whirl on us. The sound of clashing steel rings in the air.;;;;;;x
+RTPmsociety.4_1;Get [rtp_society_quest_bandit.GetHerHim]!;;;;;;x
+RTPmsociety.4_2;I want no part of this.;;;;;;x
+
+RTPmsociety.5_title;Stolen Goods;;;;;;x
+RTPmsociety.5_desc;As soon as I am done fighting one of them, another quickly charges at me with a large axe.;;;;;;x
+RTPmsociety.5_1;Bring it on!;;;;;;x
+RTPmsociety.5_2;Look at that fucking thing!;;;;;;x
+
+RTPmsociety.6_title;Stolen Goods;;;;;;x
+RTPmsociety.6_desc;Without having any chance to draw breath, a [rtp_society_quest_bandit3.GetManWoman] pushes me to the ground. I stand up ready for another fight.;;;;;;x
+RTPmsociety.6_1;How many of you are there?!;;;;;;x
+RTPmsociety.6_2;Actually...maybe not.;;;;;;x
+
+RTPmsociety.7_title;Stolen Goods;;;;;;x
+RTPmsociety.7.1_desc;Exhilarated and bloody from our victory, we sing triumphantly as we haul the stolen goods back to [rtp_society_quest_target.GetFirstName] at the lodge. Grateful, [rtp_society_quest_target.GetSheHe] pays us handsomely before being on [rtp_society_quest_target.GetHerHis] way.;;;;;;x
+RTPmsociety.7.2_desc;Exhilarated and bloody from our defeat, we collect the remaining of our belongins and head back home.;;;;;;x
+RTPmsociety.7_1;I have an headache.;;;;;;x
+RTPmsociety.7_2;There were too many of them!;;;;;;x
+
+rtp_safe_passage_martial_mission;Safe Passage;;;;;;x
+rtp_safe_passage_martial_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_safe_passage_martial_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me to escort a caravan belonging to $TARGET$.;;;;;;x
+rtp_safe_passage_martial_mission_tooltip;Escort the caravan;;;;;;x
+
+RTPmsociety.8_desc;I have got a job for you. A young [rtp_society_quest_target.GetManWoman] has come to the lodge seeking companions for travel. They have been asked to deliver goods to a nearby city, but the road has been known to be plagued with brigands. They want one of us to come with them to keep them safe. Go with them and do not let your guard down.;;;;;;x
+RTPmsociety.8_1;ACCEPT;;;;;;x
+RTPmsociety.8_2;DECLINE;;;;;;x
+
+RTPmsociety.9_title;Safe Passage;;;;;;x
+RTPmsociety.9_desc;Many days have passed since we set out on the road towards [rtp_society_quest_target.Liege.Capital.GetName]. I walk a few paces behind [rtp_society_quest_target.GetFirstName], keeping my eyes and ears trained on the quiet surroundings.;;;;;;x
+RTPmsociety.9_1;My feet hurt.;;;;;;x
+
+RTPmsociety.10_title;Safe Passage;;;;;;x
+RTPmsociety.10_desc;As we round a corner I hear a voice call “You! Stop there!”. From behind a tree steps a young man, bow drawn. The tip of his arrow is aimed right for my face. Out of the corner of my eye I see a glint of metal.;;;;;;x
+RTPmsociety.10_1;I will protect you!;;;;;;x
+RTPmsociety.10_2;This isn't worth my life.;;;;;;x
+
+RTPmsociety.11_title;Safe Passage;;;;;;x
+RTPmsociety.11_desc;Once the fool is lying dead in pool of [rtp_society_quest_target.GetHerHis] own blood, I wipe my sword on their ragged clothing. “Come on,” I tell [rtp_society_quest_target.GetFirstName]. “Let us get out of here.";;;;;;x
+RTPmsociety.11_1;Let's hope there are no more surprises.;;;;;;x
+
+RTPmsociety.12_title;Safe Passage;;;;;;x
+RTPmsociety.12_desc;Just when we thought the remaining travel was going to be peaceful, an axe flies pass me and hits the wooden carriage.;;;;;;x
+RTPmsociety.12_1;For fuck's sake what now.;;;;;;x
+
+RTPmsociety.13_title;Safe Passage;;;;;;x
+RTPmsociety.13_desc;As I draw my sword, the [rtp_society_quest_bandit3.GetManWoman] suddenly laughs and draws [rtp_society_quest_bandit3.GetHerHis] own! “So noble you all are” [rtp_society_quest_target.GetSheHe] says, beginning to circle me with sword at the ready. “But we will have your gold now. It is worth more than your empty honor.”;;;;;;x
+RTPmsociety.13_1;Are you going to talk all day?;;;;;;x
+RTPmsociety.13_2;It sure is!;;;;;;x
+
+RTPmsociety.14_title;Safe Passage;;;;;;x
+RTPmsociety.14.1_desc;We finally arrive at [rtp_society_quest_target.Liege.Capital.GetName] and [rtp_society_quest_target.GetFirstName] tosses me a bag of gold. Smiling he tells me "For your troubles of course...you should consider mercenary work.";;;;;;x
+RTPmsociety.14.2_desc;With the caravan raided and [rtp_society_quest_target.GetFirstName] dead, there really is not any point going any further. I decide to turn back empty handed.;;;;;;x
+RTPmsociety.14_1;Maybe I will.;;;;;;x
+RTPmsociety.14_2;But...my payment.;;;;;;x
+
+rtp_late_fees_martial_mission;Late Fees;;;;;;x
+rtp_late_fees_martial_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_late_fees_martial_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me to collect tithes from $TARGET$.;;;;;;x
+rtp_late_fees_martial_mission_tooltip;Collect taxes;;;;;;x
+
+RTPmsociety.15_desc;[rtp_society_quest_target2.GetFirstName] is offering pay for some help with a vassal. Says they are refusing to pay proper tithes. Do not kill the sod, but scare [rtp_society_quest_target.GetHerHim] enough to make them remember who their rightful liege is.;;;;;;x
+RTPmsociety.15_1;ACCEPT;;;;;;x
+RTPmsociety.15_2;DECLINE;;;;;;x
+
+RTPmsociety.16_title;Late Fees;;;;;;x
+RTPmsociety.16_desc;[rtp_society_quest_target3.GetFirstName] and I travel on horseback to the holdfast. We’ve taken care to put on our most fearsome-looking armor, and bring our most intimidating weapons. As we pass the main gate, peasants gasp and run at the sight of us.;;;;;;x
+RTPmsociety.16_1;Away with you vile beggar.;;;;;;x
+
+RTPmsociety.17_title;Late Fees;;;;;;x
+RTPmsociety.17_desc;We find our mark touring [rtp_society_quest_target.GetHerHis] fields, the sun beating down overhead. I nod to [rtp_society_quest_target3.GetFirstName] and we dismount, approaching [rtp_society_quest_target.GetFirstName] with our steps in unison. Through my visor I can already see [rtp_society_quest_target.GetHerHis] face grow pale. “You there! What do you want?” [rtp_society_quest_target.GetSheHe] calls out nervously.;;;;;;x
+RTPmsociety.17_1;Were is the money [rtp_society_quest_target.GetFirstName]?;;;;;;x
+RTPmsociety.17_2;Oh you are about to find out.;;;;;;x
+
+RTPmsociety.18_title;Late Fees;;;;;;x
+RTPmsociety.18_desc;Without wasting any seconds, [rtp_society_quest_target.GetFirstName] throws the nearest chicken at us and hops the closest horse. Soon after [rtp_society_quest_target.GetSheHe] disappears in the shadows of the nearest forest.;;;;;;x
+RTPmsociety.18_1;[Root.Society.GetTitledGrandMasterName] isn't going to be happy.;;;;;;x
+
+RTPmsociety.19_title;Late Fees;;;;;;x
+RTPmsociety.19.1_desc;[rtp_society_quest_target.GetFirstName] is quite nervous and I half expect [rtp_society_quest_target.GetHerHim] to wet [rtp_society_quest_target.GetHerselfHimself] before we are through. Hands shaking, [rtp_society_quest_target.GetSheHe] hands us several gold pieces to take back, and promises to return what they owe to their liege. [rtp_society_quest_target.GetSheHeCap] seems to understand we will be back if [rtp_society_quest_target.GetSheHe] does not.;;;;;;x
+RTPmsociety.19.2_desc;[rtp_society_quest_target.GetFirstName]’s jaw is set as we talk in circles trying to make [rtp_society_quest_target.GetHerHim] understand the situation. Finally, irked, [rtp_society_quest_target.GetSheHe] points into the distance. “Pathetic louts, both of you! This is my land and you will leave at once!”. Armed citizens begin flocking behind [rtp_society_quest_target.GetHerHim].;;;;;;x
+RTPmsociety.19_1;Smart choice.;;;;;;x
+RTPmsociety.19_2;Fine...but this is not over.;;;;;;x
+
+RTPmsociety.20_title;Late Fees;;;;;;x
+RTPmsociety.20.1_desc;It takes only a few well-placed blows about the [rtp_society_quest_target.GetManWoman]’s head and stomach before [rtp_society_quest_target.GetSheHe] is on the ground gasping for mercy. “Stop! I beg you, stop! The money shall be at my liege’s doorstep by sundown, I swear to you!”;;;;;;x
+RTPmsociety.20.2_desc;[rtp_society_quest_target.GetFirstName] is stronger than I had anticipated. Several blows do little to sway them, and rage glints in [rtp_society_quest_target.GetHerHis] eyes as they shout, “Brigands, the lot of you! How dare you? Get off my land this instant before I call my guards!”;;;;;;x
+RTPmsociety.20_1;It better be.;;;;;;x
+RTPmsociety.20_2;[rtp_society_quest_target3.GetFirstName] go get the horses.;;;;;;x
+
+rtp_the_champion_martial_mission;The Champion;;;;;;x
+rtp_the_champion_martial_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_the_champion_martial_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me to be $TARGET$'s champion.;;;;;;x
+rtp_the_champion_martial_mission_tooltip;Win the duel;;;;;;x
+
+RTPmsociety.21_desc;[rtp_society_quest_target3.GetFirstName] arrived screaming and crying to the lodge. [rtp_society_quest_target3.GetSheHeCap] said that [rtp_society_quest_target3.GetHerHim] [rtp_society_quest_target2.GetHusbandWife] needs a champion in order to fight for [rtp_society_quest_target2.GetHerHim] in a trial by combat. You up for it?;;;;;;x
+RTPmsociety.21_1;ACCEPT;;;;;;x
+RTPmsociety.21_2;DECLINE;;;;;;x
+
+RTPmsociety.22_title;The Champion;;;;;;x
+RTPmsociety.22_desc;[rtp_society_quest_target3.GetFirstName] rushes me with a face filled of tears. “Please, you must help me. My [rtp_society_quest_target2.GetHusbandWife] faces trial by combat, and barely knows how to use a sword. [rtp_society_quest_target2.GetSheHeCap] is an innocent man! I have no one else to serve as [rtp_society_quest_target2.GetHerHis] champion...I beg you, help us. I assure you I can pay.”;;;;;;x
+RTPmsociety.22_1;No one else at all uh?;;;;;;x
+
+RTPmsociety.23_title;The Champion;;;;;;x
+RTPmsociety.23_desc;I arrive at the holdfast at dawn. My charge sits huddled by a downtrodding-looking man in heavy shackles. Much of the village has already gathered, and I hear whispering as they realize I am the one who stands for [rtp_society_quest_target2.GetHerHim]. I have no time to contemplate any further, as my towering opponent casts a shadow on my face.;;;;;;x
+RTPmsociety.23_1;Lets get this over with.;;;;;;x
+RTPmsociety.23_2;I am not fighting that brute.;;;;;;x
+
+RTPmsociety.24_title;The Champion;;;;;;x
+RTPmsociety.24.1_desc;As I stand triumphant, feeling warm blood drip down my cheek, the [rtp_society_quest_target3.GetManWoman] begins to weep with relief. Grumbling, the prison guard fumbles with his keys for longer than necessary before he unlocks the stock.;;;;;;x
+RTPmsociety.24.2_desc;I hunch on the ground, feeling blood dripping from beneath my armor. Somewhere to the right I hear [rtp_society_quest_target3.GetFirstName]’s terrified wailing as my defeat seals her husband's conviction.;;;;;;x
+RTPmsociety.24_1;Pay up.;;;;;;x
+RTPmsociety.24_2;Seems that [rtp_society_quest_target2.Religion.GetHighGodNameCap] does not favor [rtp_society_quest_target2.GetHerHim].;;;;;;x
+
+rtp_bounty_hunter_martial_mission;Bounty Hunter;;;;;;x
+rtp_bounty_hunter_martial_mission_fallback;SEND SCREENSHOT OF THIS TO MIGHTNIGHT PLZ <3.;;;;;;x
+rtp_bounty_hunter_martial_mission_desc;[Root.Society.GetTitledGrandMasterName] wants me to arrest or kill $TARGET$.;;;;;;x
+rtp_bounty_hunter_martial_mission_tooltip;Arrest or kill $TARGET$;;;;;;x
+
+RTPmsociety.25_desc;Damn thieves in this city are getting out of hand! One slit [rtp_society_quest_target.GetHerHim] mark's throat in an alley after robbing him blind. Captain of the guard wants the monster hunted down. Prefers the cur alive, but dead will do just as well.;;;;;;x
+RTPmsociety.25_1;ACCEPT;;;;;;x
+RTPmsociety.25_2;DECLINE;;;;;;x
+
+RTPmsociety.26_title;Bounty Hunter;;;;;;x
+RTPmsociety.26_desc;It has taken me several days, but finally I pick up the [rtp_society_quest_target.GetManWoman]'s fresh tracks in the woods. When I see [rtp_society_quest_target.GetHerHim] I call out, raising my weapon, “Stop right there criminal scum!”. [rtp_society_quest_target.GetSheHeCap] springs up, drawing [rtp_society_quest_target.GetHerHis] own sword angrily stating "You better not be a manhunter!";;;;;;x
+RTPmsociety.26_1;You violated the law.;;;;;;x
+RTPmsociety.26_2;Me? A manhunter? Nahhh.;;;;;;x
+
+RTPmsociety.27_title;Bounty Hunter;;;;;;x
+RTPmsociety.27_desc;As I look at [rtp_society_quest_target.GetHerHim] lying on the ground, face twisted in pain, [rtp_society_quest_target.GetSheHe] lifts a hand. “Listen, I can pay. More than what they are giving you. Let me go and we can work this out…;;;;;;x
+RTPmsociety.27_1;Tell me more.;;;;;;x
+RTPmsociety.27_2;Quiet or you will lose your tongue.;;;;;;x
+
+RTPmsociety.28_title;Bounty Hunter;;;;;;x
+RTPmsociety.28_desc;The [rtp_society_quest_target.GetManWoman] pulls a gold chain from inside [rtp_society_quest_target.GetHerHis] mail, slipping it off over [rtp_society_quest_target.GetHerHis] head. Jewels glint in the light of the setting sun. “Worth far more than me, to be sure. Take it.” Once my hand is around the bauble, I twist up my mouth and wave the [rtp_society_quest_target.GetManWoman] away.;;;;;;x
+RTPmsociety.28_1;Hope to see you again!;;;;;;x
+
+RTPmsociety.29_title;Bounty Hunter;;;;;;x
+RTPmsociety.29_desc;I shake my head once the [rtp_society_quest_target.GetManWoman] has fallen. Such a dishonorable death.;;;;;;x
+RTPmsociety.29_1;Should have just surrendered.;;;;;;x
+
+RTPmsociety.30_title;Bounty Hunter;;;;;;x
+RTPmsociety.30.1_desc;With the [rtp_society_quest_target.GetManWoman] knocked unconscious, I grab [rtp_society_quest_target.GetHerHim] and throw [rtp_society_quest_target.GetHerHim] on my horse with hands tied.;;;;;;x
+RTPmsociety.30.2_desc;Days have passed since the fight against [rtp_society_quest_target.GetFirstName]. A priest approaches me "Quite a wound you got there...I tried my best to stitch it up." You thank the man and mount your horse.;;;;;;x
+RTPmsociety.30_1;Time for the payment.;;;;;;x
+RTPmsociety.30_2;Maybe this lifestyle isn't meant for me.;;;;;;x
+
+RTPmsociety.31_title;Mission Failed;;;;;;x
+RTPmsociety.31_desc;While on my way towards the target, an envoy informs me that the target is no longer with us.;;;;;;x
+RTPmsociety.31_1;[Root.Society.GetTitledGrandMasterName] is not going to be happy.;;;;;;x

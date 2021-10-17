@@ -1,0 +1,100 @@
+rtp_squire_tr;Martial Lord;;;;;;x
+rtp_squire_tr_desc;This character is a martial lord.;;;;;;x
+
+rtp_martial_lady_tr;Martial Lady;;;;;;x
+rtp_martial_lady_tr_desc;This character is a martial lady.;;;;;;x
+
+rtp_admiral_tr;Admiral;;;;;;x
+rtp_admiral_tr_desc;This character is a veteran admiral.;;;;;;x
+
+rtp_chef_tr;Chef;;;;;;x
+rtp_chef_tr_desc;This character is a phenomenal chef.;;;;;;x
+
+
+rtp_maharathi_tr;Maharathi;;;;;;x
+rtp_maharathi_tr_desc;This character is a Maharathi warrior.;;;;;;x
+
+
+aztec_leader;Bloodied;;;;;;x
+aztec_leader_desc;This character has accomplished the mighty bloodied trial.;;;;;;x
+
+christian_leader;Knight;;;;;;x
+christian_leader_desc;This character was granted an honorary title of knighthood by a monarch, bishop or other political leader.;;;;;;x
+
+jewish_leader;Warden;;;;;;x
+jewish_leader_desc;This character is a person responsible for the supervision of a particular place for ensuring that regulations associated with it are obeyed.;;;;;;x
+
+muslim_leader;Mamluke;;;;;;x
+muslim_leader_desc;This character is a member of one of the armies of slaves that won political control of several Muslim states.;;;;;;x
+
+zoroastrian_leader;Immortal;;;;;;x
+zoroastrian_leader_desc;This character is an elite heavily-armed infantry serving as an Imperial Guard or Standing Army.;;;;;;x
+
+eastern_leader;Equilizer;;;;;;x
+eastern_leader_desc;This character possesses an unmatched ability in reversing the scores of a battle.;;;;;;x
+
+rtp_naval_expert_tr;Naval Expert;;;;;;x
+rtp_naval_expert_tr_desc;This character is an expert sailor and a fantastic navigator.;;;;;;x
+
+
+rtp_sanguinare_vampiris_tr;Sanguinare Vampiris;;;;;;x
+rtp_sanguinare_vampiris_tr_desc;This character is suffering from Sanguinare Vampiris.;;;;;;x
+
+rtp_feral_vampire_tr;Feral Vampire;;;;;;x
+rtp_feral_vampire_tr_desc;This character is a Feral Vampire.;;;;;;x
+
+rtp_vampire_tr;Vampire;;;;;;x
+rtp_vampire_tr_desc;This character is a Vampire.;;;;;;x
+
+
+rtp_sanies_lupinus_tr;Sanies Lupinus;;;;;;x
+rtp_sanies_lupinus_tr_desc;This character is suffering from Sanies Lupinus.;;;;;;x
+
+rtp_feral_werewolf_tr;Feral Werewolf;;;;;;x
+rtp_feral_werewolf_tr_desc;This character is a Feral Werewolf.;;;;;;x
+
+rtp_werewolf_tr;Werewolf;;;;;;x
+rtp_werewolf_tr_desc;This character is a Werewolf.;;;;;;x
+
+
+rtp_corruption_tr;Corruption;;;;;;x
+rtp_corruption_tr_desc;This character is suffering from Corruption.;;;;;;x
+
+rtp_cursed_tr;Cursed;;;;;;x
+rtp_cursed_tr_desc;This character is a Cursed.;;;;;;x
+
+rtp_gifted_tr;Gifted;;;;;;x
+rtp_gifted_tr_desc;This character is a Gifted.;;;;;;x
+
+
+rtp_mana_poisoning_tr;Mana Poisoning;;;;;;x
+rtp_mana_poisoning_tr_desc;This character is suffering from Mana Poisoning.;;;;;;x
+
+rtp_mage_tr;Mage;;;;;;x
+rtp_mage_tr_desc;This character is a Mage.;;;;;;x
+
+rtp_sage_tr;Sage;;;;;;x
+rtp_sage_tr_desc;This character is a Sage.;;;;;;x
+
+
+rtp_symphony_tr;Symphony;;;;;;x
+rtp_symphony_tr_desc;This character is suffering from Symphony.;;;;;;x
+
+rtp_shapeshifter_tr;Shapeshifter;;;;;;x
+rtp_shapeshifter_tr_desc;This character is a Shapeshifter.;;;;;;x
+
+rtp_druid_tr;Druid;;;;;;x
+rtp_druid_tr_desc;This character is a Druid.;;;;;;x
+
+#####
+#DEATHS
+#####
+
+diligent_death;from lack of sleep;;;;;;x
+rtp_sanguinare_vampiris_tr_death;from walking outside during daylight;;;;;;x
+rtp_sanies_lupinus_tr_death;from multiple stab wounds;;;;;;x
+rtp_corruption_tr_death;from bashing [Root.GetHerHis] head into a wall;;;;;;x
+rtp_mana_poisoning_tr_death;from exhaustion;;;;;;x
+rtp_symphony_tr_death;from suffocation;;;;;;x
+rtp_werewolf_tr_death;from a silver sword;;;;;;x
+rtp_feral_werewolf_tr_death;from a silver sword;;;;;;x

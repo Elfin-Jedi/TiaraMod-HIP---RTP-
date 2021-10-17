@@ -1,0 +1,33 @@
+namespace = ckrpg_burn_holdings
+
+character_event = {
+    id = ckrpg_burn_holdings.0001
+    desc = ckrpg_burn_holdings_0001
+    picture = GFX_evt_siege
+	border = GFX_event_normal_frame_war
+    is_triggered_only = yes
+    trigger = {
+
+    }
+    option = {
+        name = EVTOPTA_ckrpg_burn_holdings.0001
+        ai_chance = { factor = 2 }
+        trigger = {
+            FROM = {
+                NOT = {
+                    is_capital = yes
+                }
+            }
+        }
+        FROM = {
+            destroy_settlement = THIS
+        }
+    }
+    option = {
+        name = EVTOPTB_ckrpg_burn_holdings.0001
+        ai_chance = { factor = 1 }
+    }
+    after = {
+
+    }
+}

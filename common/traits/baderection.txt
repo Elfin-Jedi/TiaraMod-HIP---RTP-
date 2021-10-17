@@ -1,0 +1,21 @@
+baderection = {
+
+      ruler_designer_cost = -10
+
+potential = {
+     age = 16
+}
+
+random = yes
+birth = 50
+
+  opposites = {
+            eunuch
+  }
+  
+ same_opinion = 20
+ opposite_opinion = -10
+ sex_appeal_opinion = -8
+ fertility = -0.2
+ 
+}

@@ -1,0 +1,58 @@
+# Tests whether ROOT can develop a gay crush on THIS
+bornthisway_valid_gay_crush_target_trigger = {
+	age = 12	# No one will crush on a pre-pubescent child
+	OR = {
+		AND = {
+			ROOT = { is_adult = yes }	# Adults won't crush on minors
+			is_adult = yes
+		}
+		ROOT = { is_adult = no }		# Minors can crush on minors
+	}
+	same_sex = ROOT					# This is about gay crushes
+	is_inaccessible_trigger = no	# Excludes characters who are traveling or secluded
+	no_grievance_trigger = yes		# The target hasn't harmed ROOT or ROOT's family
+	has_epidemic = no
+	developing_epidemic_disease_trigger = no
+	is_incapable = no
+	NOR = {
+		character = ROOT							# Can't get a crush on yourself
+		has_character_modifier = the_oubliette
+		has_character_modifier = the_dungeon
+		trait = syphilitic
+		trait = rabies
+		trait = leper
+		trait = mangled
+		trait = inbred
+		trait = infirm
+		trait = celibate
+		trait = cat
+		trait = horse
+		is_former_lover = ROOT
+	}
+	OR = {
+		NOT = { is_close_relative = ROOT }		# Either the target is not a close relative of ROOT
+		ROOT = {								# Or ROOT's religion allows incest
+			OR = {
+				true_religion_scope = {
+					OR = {
+						has_religion_feature = religion_holy_family
+						has_religion_feature = religion_feature_zun
+					}
+				}
+				true_religion = zoroastrian
+				true_religion = messalian
+			}
+		}
+	}
+}
+
+# Tests whether ROOT is gay, whether openly or not
+bornthisway_is_gay_trigger = {
+	OR = {
+		trait = homosexual
+		trait = bisexual
+		has_character_flag = btw_born_this_way
+		has_character_flag = btw_came_out
+		has_character_flag = btw_back_in_the_closet
+	}
+}

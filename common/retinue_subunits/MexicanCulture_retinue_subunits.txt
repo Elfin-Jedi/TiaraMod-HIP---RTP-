@@ -1,0 +1,14 @@
+RETTYPE_CUL_MEXI = 
+{
+	first_type = 5
+	first_amount = 50
+	
+	potential = {
+		is_nomadic = no
+		culture = mexican
+	}
+	
+	modifier = {
+		archers_offensive = 1.0
+	}
+}

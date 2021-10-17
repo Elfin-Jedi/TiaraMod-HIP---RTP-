@@ -1,0 +1,362 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_wonder_strip_oxford_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_oxford_large.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_oxford_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_oxford_medium.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_oxford_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_oxford_small.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_split_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_split_large.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_split_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_split_medium.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_split_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_split_small.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_aksum_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_aksum_large.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_aksum_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_aksum_medium.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_aksum_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_aksum_small.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_sinai_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_sinai_large.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_sinai_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_sinai_medium.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_sinai_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_sinai_small.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_julich_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_julich_large.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_julich_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_julich_medium.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_julich_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_julich_small.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_pisa_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_pisa_large.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_pisa_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_pisa_medium.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_pisa_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_pisa_small.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_ravenna_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_ravenna_large.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_ravenna_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_ravenna_medium.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_ravenna_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_ravenna_small.dds"
+		noOfFrames = 5
+	}
+	
+		spriteType = {
+		name = "GFX_wonder_strip_apulia_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_apulia_large.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_apulia_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_apulia_medium.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_apulia_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_apulia_small.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_kerman_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_kerman_large.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_kerman_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_kerman_medium.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_kerman_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_kerman_small.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_trier_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_trier_large.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_trier_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_trier_medium.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_trier_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_trier_small.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_coruna_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_coruna_large.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_coruna_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_coruna_medium.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_coruna_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_coruna_small.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_kanchipuram_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_kanchipuram_large.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_kanchipuram_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_kanchipuram_medium.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_kanchipuram_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_kanchipuram_small.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_biskra_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_biskra_large.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_biskra_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_biskra_medium.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_biskra_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_biskra_small.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_lombardia_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_lombardia_large.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_lombardia_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_lombardia_medium.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_lombardia_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_lombardia_small.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_traungau_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_traungau_large.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_traungau_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_traungau_medium.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_traungau_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_traungau_small.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_shiraz_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_shiraz_large.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_shiraz_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_shiraz_medium.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_shiraz_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_shiraz_small.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_sambalpur_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_sambalpur_large.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_sambalpur_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_sambalpur_medium.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_sambalpur_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_sambalpur_small.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_timbuktu_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_timbuktu_large.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_timbuktu_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_timbuktu_medium.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_timbuktu_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_timbuktu_small.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_vannes_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_vannes_large.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_vannes_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_vannes_medium.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_wonder_strip_vannes_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_vannes_small.dds"
+		noOfFrames = 5
+	}
+
+	spriteType = {
+		name = "GFX_wonder_strip_kermanshah_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_kermanshah_large.dds"
+		noOfFrames = 5
+	}
+
+	spriteType = {
+		name = "GFX_wonder_strip_kermanshah_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_kermanshah_medium.dds"
+		noOfFrames = 5
+	}
+
+	spriteType = {
+		name = "GFX_wonder_strip_kermanshah_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_stages_kermanshah_small.dds"
+		noOfFrames = 5
+	}
+	
+}

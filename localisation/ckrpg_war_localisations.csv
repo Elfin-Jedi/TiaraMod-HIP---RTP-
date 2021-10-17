@@ -1,0 +1,16 @@
+ckrpg_siege_0001;At the end of a long siege, soldiers drag you out of your hiding spot.;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+ckrpg_siege_0002;You capture [From.GetBestName] in the midst of the siege. What do you want to do with [From.GetHerHim]?;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+EVTOPTA_ckrpg_siege.0002;Imprison [From.GetHerHim];FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+EVTOPTB_ckrpg_siege.0002;Imprison and convert [From.GetHerHim] by sword;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+EVTOPTC_ckrpg_siege.0002;Behead [From.GetHerHim];FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+EVTOPTD_ckrpg_siege.0002;Release [From.GetHerHim];FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+ckrpg_siege_0004;[target_imprisoned_and_converted.GetBestName] has been imprisoned and converted by sword by [target_imprisoner.GetBestName] after a siege.;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+EVTOPTA_ckrpg_siege.0004;Oh no!;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+ckrpg_siege_0005;[target_imprisoned.GetBestName] has been imprisoned by [target_imprisoner.GetBestName] after a siege.;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+EVTOPTA_ckrpg_siege.0005;Oh no!;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+ckrpg_siege_0007;[target_executed.GetBestName] is dragged from [target_executed.GetHerHis] hiding place after a siege and beheaded on the order of [target_killer.GetBestName].;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+ckrpg_converted_by_force;Converted By Force;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+ckrpg_converted_by_force_desc;After abandoning your faith under duress, it may be hard for anyone to trust you again.;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+ckrpg_executed_courtier;Executed a Courtier After Siege;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+ckrpg_executed_family_member;Executed a Family Member After Siege;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+ckrpg_executed_child;Executed Character's Child;FRENCH;GERMAN;;SPANISH;;;;;;;;;x

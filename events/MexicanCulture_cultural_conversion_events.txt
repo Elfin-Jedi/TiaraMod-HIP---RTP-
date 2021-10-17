@@ -1,0 +1,267 @@
+namespace = mexicanCulture
+
+# The Mexican Melting Pot
+character_event = {
+	id = mexicanCulture.001
+	desc = "EVTDESCmexicanCulture.001"
+	picture = GFX_evt_stone_church
+	
+	only_playable = yes
+	culture_group = iberian
+	
+	trigger = {
+		any_demesne_province = {
+			culture = nahuatl
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { government = chinese_imperial_government }
+		NOT = { culture = mexican }
+		NOT = { culture = portuguese }
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		modifier = {
+			factor = 0.75
+			learning = 7
+		}
+		modifier = {
+			factor = 0.75
+			learning = 9
+		}
+		modifier = {
+			factor = 0.75
+			learning = 11
+		}
+		modifier = {
+			factor = 0.75
+			learning = 13
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 3 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTAmexicanCulture.001"
+		culture = mexican
+		random_demesne_province = {
+			limit = {
+				culture = nahuatl
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			culture = mexican
+		}
+	}
+}
+
+
+# It's spreading
+character_event = {
+	id = mexicanCulture.002
+	desc = "EVTDESCmexicanCulture.002"
+	picture = GFX_evt_stone_church
+	
+	only_playable = yes
+	culture = mexican
+	
+	trigger = {
+		any_demesne_province = {
+			OR = {
+				culture = nahuatl
+				culture_group = iberian
+			}
+			NOT = { culture = mexican }
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 720
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTAmexicanCulture.002"
+		random_demesne_province = {
+			limit = {
+				OR = {	
+					culture = nahuatl
+					culture_group = iberian
+				}
+				NOT = { culture = mexican }
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			culture = mexican
+		}
+	}
+}
+
+
+#Make my court speak Mexican
+character_event = {
+	id = mexicanCulture.003
+	desc = "EVTDESCmexicanCulture.003"
+	picture = GFX_evt_throne_room
+	
+	only_rulers = yes
+	culture = mexican
+
+	trigger = {
+		any_courtier = {
+			OR = {	
+				culture = nahuatl
+				culture_group = iberian
+			}
+			NOT = { culture = mexican }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTAmexicanCulture.003"
+		random_courtier = {
+			limit = {
+				AND = {
+					OR = {	
+						culture = nahuatl
+						culture_group = iberian
+					}
+					NOT = { culture = mexican }
+				}
+			}
+			culture = mexican
+			hidden_tooltip = {
+				character_event = { id = mexicanCulture.005 days = 3 }
+			}
+		}
+	}
+}
+
+#Make my vassal speak Mexican
+character_event = {
+	id = mexicanCulture.004
+	desc = "EVTDESCmexicanCulture.004"
+	picture = GFX_evt_throne_room
+	
+	only_playable = yes
+	culture = mexican
+
+	trigger = {
+		independent = no
+		any_vassal = {
+			OR = {	
+				culture = nahuatl
+				culture_group = iberian
+			}
+			NOT = { culture = mexican }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 720
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTAmexicanCulture.004"
+		random_vassal = {
+			limit = {
+				AND = {
+					OR = {	
+						culture = nahuatl
+						culture_group = iberian
+					}
+					NOT = { culture = mexican }
+				}
+			}
+			culture = mexican
+			hidden_tooltip = {
+				character_event = { id = mexicanCulture.005 days = 3 }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = mexicanCulture.005
+	desc = "EVTDESCmexicanCulture.005"
+	picture = GFX_evt_throne_room
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTAmexicanCulture.005"
+		culture = mexican
+	}
+}

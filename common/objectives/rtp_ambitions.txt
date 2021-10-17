@@ -1,0 +1,397 @@
+#####
+#Ambitions
+#
+#Total = 14
+#####
+
+#Diplomatic Interest
+obj_diplomacy = {
+	type = character
+
+	diplomacy = 1
+
+	potential = {
+		always = yes
+	}
+	
+	allow = {
+		has_character_flag = rtp_ambition #He has chosen an ambition
+		always = yes
+	}
+
+	success = {
+		hidden_tooltip = {
+			always = no
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = rtp_obj_diplomacy_ct
+		}
+	}
+}
+
+#Martial Interest
+obj_martial = {
+	type = character
+
+	martial = 1
+	
+	potential = {
+		always = yes
+	}
+
+	allow = {
+		has_character_flag = rtp_ambition #He has chosen an ambition
+		always = yes
+	}
+
+	success = {
+		hidden_tooltip = {
+			always = no
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = rtp_obj_martial_ct
+		}
+	}
+}
+
+#Stewardship Interest
+obj_stewardship = {
+	type = character
+
+	stewardship = 1
+	
+	potential = {
+		always = yes
+	}
+
+	allow = {
+		has_character_flag = rtp_ambition #He has chosen an ambition
+		always = yes
+	}
+
+	success = {
+		hidden_tooltip = {
+			always = no
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = rtp_obj_stewardship_ct
+		}
+	}
+}
+
+#Intrigue Interest
+obj_intrigue = {
+	type = character
+
+	intrigue = 1
+	
+	potential = {
+		always = yes
+	}
+
+	allow = {
+		has_character_flag = rtp_ambition #He has chosen an ambition
+		always = yes
+	}
+
+	success = {
+		hidden_tooltip = {
+			always = no
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = rtp_obj_intrigue_ct
+		}
+	}
+}
+
+#Learning Interest
+obj_learning = {
+	type = character
+
+	learning = 1
+	
+	potential = {
+		always = yes
+	}
+
+	allow = {
+		has_character_flag = rtp_ambition #He has chosen an ambition
+		always = yes
+	}
+
+	success = {
+		hidden_tooltip = {
+			always = no
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = rtp_obj_learning_ct
+		}
+	}
+}
+
+#Health Interest
+obj_health = {
+	type = character
+
+	health = 0.25
+	
+	potential = {
+		always = yes
+	}
+
+	allow = {
+		has_character_flag = rtp_ambition #He has chosen an ambition
+		always = no
+	}
+
+	success = {
+		hidden_tooltip = {
+			always = yes
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = rtp_obj_health_ct
+		}
+	}
+}
+
+#Procreation Interest
+obj_fertility = {
+	type = character
+
+	fertility = 0.05
+	
+	potential = {
+		always = yes
+	}
+
+	allow = {
+		has_character_flag = rtp_ambition #He has chosen an ambition
+		always = yes
+	}
+
+	success = {
+		hidden_tooltip = {
+			always = no
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = rtp_obj_fertility_ct
+		}
+	}
+}
+
+#Money Interest
+obj_m_money = {
+	type = character
+
+	monthly_character_wealth = 0.1
+	
+	potential = {
+		always = yes
+	}
+
+	allow = {
+		has_character_flag = rtp_ambition #He has chosen an ambition
+		always = yes
+	}
+
+	success = {
+		hidden_tooltip = {
+			always = no
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = rtp_obj_m_money_ct
+		}
+	}
+}
+
+#Prestige Interest
+obj_m_prestige = {
+	type = character
+
+	monthly_character_prestige = 0.1
+	
+	potential = {
+		always = yes
+	}
+
+	allow = {
+		has_character_flag = rtp_ambition #He has chosen an ambition
+		always = yes
+	}
+
+	success = {
+		hidden_tooltip = {
+			always = no
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = rtp_obj_m_prestige_ct
+		}
+	}
+}
+
+#Piety Interest
+obj_m_piety = {
+	type = character
+
+	monthly_character_piety = 0.1
+	
+	potential = {
+		always = yes
+	}
+
+	allow = {
+		has_character_flag = rtp_ambition #He has chosen an ambition
+		always = yes
+	}
+
+	success = {
+		hidden_tooltip = {
+			always = no
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = rtp_obj_m_piety_ct
+		}
+	}
+}
+
+#Combat Interest
+obj_combat = {
+	type = character
+
+	combat_rating = 5
+	
+	potential = {
+		always = yes
+	}
+
+	allow = {
+		has_character_flag = rtp_ambition #He has chosen an ambition
+		always = yes
+	}
+
+	success = {
+		hidden_tooltip = {
+			always = no
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = rtp_obj_combat_ct
+		}
+	}
+}
+
+#Social Interest
+obj_social = {
+	type = character
+
+	general_opinion = 5
+	
+	potential = {
+		always = yes
+	}
+
+	allow = {
+		has_character_flag = rtp_ambition #He has chosen an ambition
+		always = yes
+	}
+
+	success = {
+		hidden_tooltip = {
+			always = no
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = rtp_obj_social_ct
+		}
+	}
+}
+
+#Beauty Interest
+obj_beauty = {
+	type = character
+
+	sex_appeal_opinion = 10
+	
+	potential = {
+		always = yes
+	}
+
+	allow = {
+		has_character_flag = rtp_ambition #He has chosen an ambition
+		always = yes
+	}
+
+	success = {
+		hidden_tooltip = {
+			always = no
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = rtp_obj_beauty_ct
+		}
+	}
+}
+
+#Legacy Interest
+obj_legacy = {
+	type = character
+
+	dynasty_opinion = 15
+	
+	potential = {
+		always = yes
+	}
+
+	allow = {
+		has_character_flag = rtp_ambition #He has chosen an ambition
+		always = yes
+	}
+
+	success = {
+		hidden_tooltip = {
+			always = no
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = rtp_obj_legacy_ct
+		}
+	}
+}

@@ -1,0 +1,214 @@
+mta_check_fertility_score = {
+	modifier = {
+		factor = 0
+		OR = {
+			AND = {
+				ROOT = { is_female = no }
+				FROM = {
+					is_female = yes
+					age = 45
+				}
+			}
+			AND = {
+				FROM = { is_female = no }
+				ROOT = {
+					is_female = yes
+					age = 45
+				}
+			}
+		}
+	}
+	modifier = {
+		factor = 0
+		OR = {
+			FROM = { trait = eunuch }
+			ROOT = { trait = eunuch }
+		}
+	}
+	modifier = {
+		factor = 0.2
+		FROM = {
+			NOT = { fertility = 0.1 }
+		}
+	}
+	modifier = {
+		factor = 0.2
+		ROOT = {
+			NOT = { fertility = 0.1 }
+		}
+	}
+	modifier = {
+		factor = 0.9
+		FROM = {
+			NOR = { 
+				fertility = 0.2 
+				trait = celibate 
+			}
+		}
+	}
+	modifier = {
+		factor = 0.9
+		ROOT = {
+			NOR = { 
+				fertility = 0.2 
+				trait = celibate 
+			}
+		}
+	}
+	modifier = {
+		factor = 0.9
+		FROM = {
+			NOR = { 
+				fertility = 0.3 
+				trait = celibate 
+			}
+		}
+	}
+	modifier = {
+		factor = 0.9
+		ROOT = {
+			NOR = { 
+				fertility = 0.3 
+				trait = celibate 
+			}
+		}
+	}
+	modifier = {
+		factor = 0.9
+		FROM = {
+			NOR = { 
+				fertility = 0.4 
+				trait = celibate 
+			}
+		}
+	}
+	modifier = {
+		factor = 0.9
+		ROOT = {
+			NOR = { 
+				fertility = 0.4 
+				trait = celibate 
+			}
+		}
+	}
+	modifier = {
+		factor = 0.9
+		FROM = {
+			NOR = { 
+				fertility = 0.5 
+				trait = celibate 
+			}
+		}
+	}
+	modifier = {
+		factor = 0.9
+		ROOT = {
+			NOR = { 
+				fertility = 0.5 
+				trait = celibate 
+			}
+		}
+	}
+	modifier = {
+		factor = 0.9
+		FROM = {
+			NOR = { 
+				fertility = 0.6 
+				trait = celibate 
+			}
+		}
+	}
+	modifier = {
+		factor = 0.9
+		ROOT = {
+			NOR = { 
+				fertility = 0.6 
+				trait = celibate 
+			}
+		}
+	}
+	modifier = {
+		factor = 0.9
+		FROM = {
+			NOR = { 
+				fertility = 0.7 
+				trait = celibate 
+			}
+		}
+	}
+	modifier = {
+		factor = 0.9
+		ROOT = {
+			NOR = { 
+				fertility = 0.7 
+				trait = celibate 
+			}
+		}
+	}
+	modifier = {
+		factor = 0.9
+		FROM = {
+			NOR = { 
+				fertility = 0.8 
+				trait = celibate 
+			}
+		}
+	}
+	modifier = {
+		factor = 0.9
+		ROOT = {
+			NOR = { 
+				fertility = 0.8 
+				trait = celibate 
+			}
+		}
+	}
+	modifier = {
+		factor = 0.9
+		FROM = {
+			NOR = { 
+				fertility = 0.9 
+				trait = celibate 
+			}
+		}
+	}
+	modifier = {
+		factor = 0.9
+		ROOT = {
+			NOR = { 
+				fertility = 0.9 
+				trait = celibate 
+			}
+		}
+	}
+	modifier = {
+		factor = 0.9
+		FROM = {
+			NOR = { 
+				fertility = 1.0 
+				trait = celibate 
+			}
+		}
+	}
+	modifier = {
+		factor = 0.9
+		ROOT = {
+			NOR = { 
+				fertility = 1.0 
+				trait = celibate 
+			}
+		}
+	}
+	modifier = {
+		factor = 0.88
+		FROM = {
+			fertility = 1.0
+		}
+	}
+	modifier = {
+		factor = 0.88
+		ROOT = {
+			fertility = 1.0
+		}
+	}
+}

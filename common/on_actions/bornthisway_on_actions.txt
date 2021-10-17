@@ -1,0 +1,33 @@
+# character
+on_startup = {
+	events = {
+		bornthisway_flag.0		# Flags born_this_way characters who have come out, so we can flag them again if they go back in the closet
+		bornthisway_flag.1		# Flags characters who have gone back in the closet
+		bornthisway_flag.2		# Flags some non-born_this_way characters who have come out, so we can flag them again if they go back in the closet
+	}
+}
+
+# character
+on_birth = {
+	events = {
+		bornthisway_birth.0		# Sets the btw_born_this_way character flag for a small percentage of newborns
+	}
+}
+
+# character
+on_yearly_pulse = {
+	events = {
+		bornthisway_flag.0		# Flags born_this_way characters who have come out, so we can flag them again if they go back in the closet
+		bornthisway_flag.1		# Flags characters who have gone back in the closet
+		bornthisway_flag.2		# Flags some non-born_this_way characters who have come out, so we can flag them again if they go back in the closet
+	}
+}
+
+# character
+on_adulthood = {
+	events = {
+		bornthisway_flag.0		# Flags born_this_way characters who have come out, so we can flag them again if they go back in the closet
+		bornthisway_flag.1		# Flags characters who have gone back in the closet
+		bornthisway_flag.2		# Flags some non-born_this_way characters who have come out, so we can flag them again if they go back in the closet
+	}
+}

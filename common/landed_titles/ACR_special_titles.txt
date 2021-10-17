@@ -1,0 +1,155 @@
+e_greater_egypt = {
+	color = { 192 0 0 }
+	color2 = { 255 255 255 }
+	
+	capital = 796 # Cairo
+	
+	short_name = yes
+	
+	culture = egyptian_coptic
+	religion = egyptian_pagan
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+	
+	allow = {
+		always = no # Only created through special event
+	}
+}
+
+# Pagan heads of religion
+d_celtic_pagan_reformed = {
+	color={ 122 165 70 }
+	color2={ 220 220 0 }
+	
+	capital = 64 # Gwynedd
+	
+	title = ARCHDRUID
+	title_female = ARCHDRUIDESS
+	foa = ARCHDRUID_FOA
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	primary = yes
+	
+	allow = {
+		religion = celtic_pagan_reformed
+		num_of_holy_sites = 1
+		piety = 1000
+		OR = {
+			trait = druid
+			trait = bad_druid
+		}
+	}
+	
+	# Controls a religion
+	controls_religion = celtic_pagan_reformed
+	
+	religion = celtic_pagan_reformed
+	dignity = 100
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+k_britannic_pagan = {
+	color = { 128 230 128 }
+	color2 = { 255 255 255 }
+
+	capital = 32 # Middlesex
+
+	title = ARCHDRYAD
+	title_female = ARCHDRYAD
+	foa = k_britannic_pagan_foa
+	
+	short_name = yes
+
+	allow = { # restored via decision
+		always = no
+	}
+
+	# Always exists
+	landless = yes
+	primary = yes
+
+	controls_religion = britannic_pagan
+	dignity = 100
+	religion = britannic_pagan
+
+	dynasty_title_names = no
+}
+
+d_egyptian_pagan_reformed = {
+	color = { 222 125 120 }
+	color2 = { 120 120 0 }
+	
+	capital = 795 # Asyut
+	
+	title = PARAGON_XROJ
+	title_female = PARAGON_XROJ
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	primary = yes
+	
+	# Controls a religion
+	controls_religion = egyptian_pagan_reformed
+	dignity = 100
+	religion = egyptian_pagan_reformed
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+	
+	male_names = {
+		Babaef Bakenkhonsu Bakenranef Baskakeren Baufre Chephren Cheops Tutimaios  Djedefhor Djedefptah Djedefre Djedkare Djedkhonsuefankh Djedptahiufankh Djehuty Djer Djet Duaenhor Duaenre Hakor Akoris Hannu Hapuseneb Harkhuf Harsiese Harsiese Harsiotef Harwa Hemaka Hepu Heqanakht Herihor Hersy-Ra Hewernef Hor Horbaef Horemheb Haremhab Hori Hornakht Hotepibre Hotepsekhemwy Hsekiu Seka Hugronaphor Hunefer Huni Huy Huya Ibi Wahibre Ibiau Imhotep  Imyremeshaw Inaros Isesi-ankh Sabef Sabu Sahure Sakir-Har Salitis Siamun Siaspiqa Siatum Siese Simut Smendes Smenkhkare Snefru Sobekemhat Sobekhotep Tutankhamun Tutu Unas Useramen Userhet Userkaf Userkare Usermontu Wadjmose Djoser
+	}
+
+	female_names = {
+		Baketwernel Behenu Beketamun Beketaten Benerib Betrest Bunefer Cleopatra Dakhamunzu Djefatnebti Djefatsen Djehuti Duatentopet Henuttawy Hatshepsut Henutmire Henuttaneb Henuttawy Henutwati Hetepheres Hetephernebti Inenek-Inti Inetkawes Iry-Hor Ta-Hemdjert Isetemkheb Isetnofret Itet Kapes Neferthenut Nefertiabet Nefertiti Nefertkau Nefertnesu Neferu Neferuptah Neferure Nefrubity Neith Neithhotep Nesitanebetashru Nesitaudjatakhet Neskhons Nimaethap Nitocris Nofret Nubhetepti-khered Nubkhaes Nubkhesbed Nubwenet Pageti Patareshnes Pebatjma Peksater Penebui Persenet Peseshet Pyhia Qalhata Rekhetre Reptynub Reputnebty Satiah Scota Sekhmakh Semat Senseneb Serethor Seshemetka Sesheshet Setepenre Shepenupet Sitamun Sitdjehuti Sithathoriunet Sobekneferu Tabekenamun Tabiry Tadukhipa Takahatenamun Takhat Takhuit Tashedkhonsu Tawerettenru Tentamun Tentkheta Tetisheri Tey Tiy-Merenese Tjuyu Tuya Twosret Tyti Udjebten
+	}
+}
+
+k_aten_pagan = {
+	color = { 222 125 120 }
+	color2 = { 120 120 0 }
+	
+	capital = 795 # Asyut
+	
+	title = MERYATEN
+	title_female = MERYATEN
+	
+	short_name = yes
+	
+	# Controls a religion
+	controls_religion = aten_pagan
+	dignity = 100
+	religion = aten_pagan
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_promethean_pagan = {
+	color={ 100 44 201 }
+	color2={ 201 97 108 }
+
+	capital = 482 # Athens, location of Plato's Academy
+	
+	short_name = yes
+
+	allow = {
+		always = no # made via decision
+	}
+
+	title = SCHOLARCH
+	title_female = SCHOLARCH
+
+	# Always exists
+	landless = yes
+	primary = yes
+
+	dignity = 100
+	controls_religion = promethean_pagan
+	religion = promethean_pagan
+
+	dynasty_title_names = no
+}

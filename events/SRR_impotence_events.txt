@@ -1,0 +1,1128 @@
+##################################
+# ID = space SRR.1 - SRR.999
+# 
+# Getting It 1-10
+# Life With ED 11-100
+# Cures SRR 101 - 999
+#
+##################################
+
+namespace = SRR
+
+##############################
+####Getting It SRR.1-10
+##############################
+##old age
+character_event = {
+	id = SRR.1
+	desc = SRR1_desc
+	
+	capable_only = yes
+	only_men = yes
+	min_age = 40
+	
+	trigger = {
+		has_dlc = "Reapers"
+		NOT = { trait = impotent }
+		NOT = { has_character_flag = magically_healed_penis }
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		
+		modifier = {
+			factor = 2
+			if = {
+				limit = {
+					immortal = yes
+				}
+				NOT = { immortal_age = 50 }
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				NOT = { age = 50 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			if = {
+				limit = {
+					immortal = yes
+				}
+				immortal_age = 50 
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				age = 50 
+			}
+		}
+		modifier = {
+			factor = 0.5
+			if = {
+				limit = {
+					immortal = yes
+				}
+				immortal_age = 60 
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				age = 60 
+			}
+		}
+		modifier = {
+			factor = 0.5
+			if = {
+				limit = {
+					immortal = yes
+				}
+				immortal_age = 70 
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				age = 70 
+			}
+		}
+		modifier = {
+			factor = 0.5
+			if = {
+				limit = {
+					immortal = yes
+				}
+				immortal_age = 80 
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				age = 80 
+			}
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { health = 3 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { health = 1 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { health = 5 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { health = 7 }
+		}
+	}
+	option = {
+		name = SRR1OPT1
+	
+		add_trait = impotent
+	}
+}
+##stress
+character_event = {
+	id = SRR.2
+	desc = SRR2_desc 
+	
+	capable_only = yes
+	only_men = yes
+	min_age = 16
+	
+	trigger = {
+		has_dlc = "Reapers"
+		OR = {
+			trait = stressed
+			trait = depressed
+		}
+		NOT = { trait = impotent }
+		NOT = { has_character_flag = magically_healed_penis }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		modifier = {
+			factor = 1.1
+			NOT = { health = 3 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { health = 1 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { health = 5 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { health = 7 }
+		}
+		modifier = {
+			factor = 1.1
+			if = {
+				limit = {
+					immortal = yes
+				}
+				NOT = { immortal_age = 20 }
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				NOT = { age = 20 }
+			}
+		}
+		modifier = {
+			factor = 1.1
+			if = {
+				limit = {
+					immortal = yes
+				}
+				NOT = { immortal_age = 30 }
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				NOT = { age = 30 }
+			}
+		}
+		modifier = {
+			factor = 1.1
+			if = {
+				limit = {
+					immortal = yes
+				}
+				NOT = { immortal_age = 40 }
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				NOT = { age = 40 }
+			}
+		}
+		modifier = {
+			factor = 1.1
+			if = {
+				limit = {
+					immortal = yes
+				}
+				NOT = { immortal_age = 50 }
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				NOT = { age = 50 }
+			}
+		}
+		modifier = {
+			factor = 0.9
+			if = {
+				limit = {
+					immortal = yes
+				}
+				immortal_age = 50 
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				age = 50 
+			}
+		}
+		modifier = {
+			factor = 0.9
+			if = {
+				limit = {
+					immortal = yes
+				}
+				immortal_age = 60 
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				age = 60 
+			}
+		}
+		modifier = {
+			factor = 0.9
+			if = {
+				limit = {
+					immortal = yes
+				}
+				immortal_age = 70 
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				age = 70 
+			}
+		}
+		modifier = {
+			factor = 0.9
+			if = {
+				limit = {
+					immortal = yes
+				}
+				immortal_age = 80 
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				age = 80 
+			}
+		}
+	}
+	option = {
+		name = SRR2OPT1
+	
+		add_trait = impotent
+		set_character_flag = stress_impotence
+	}
+}
+#curse penis
+character_event = {
+	id = SRR.3
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		
+		random_list = {
+			50 = {
+				#success
+				modifier = {
+					factor = 1.1 
+					ROOT = { society_rank = 2 }
+				}
+				modifier = {
+					factor = 1.1 
+					ROOT = { society_rank = 3 }
+				}
+				modifier = {
+					factor = 1.25 
+					ROOT = { society_rank = 4 }
+				}
+				modifier = {
+					factor = 1.25 
+					ROOT = { trait = mystic }
+				}
+				FROM = {
+					long_character_event = { id = SRR.4 days = 5 }
+				}
+				ROOT = {
+					long_character_event = { id = SRR.5 days = 5 }
+				}
+			}
+			50 = {
+				ROOT = {
+					long_character_event = { id = SRR.6 days = 5 }
+				}
+			}
+		}
+	}
+}
+##successfully curse penis
+long_character_event = {
+	id = SRR.4
+	desc = SRR4_desc
+	picture = GFX_evt_Lovers_entwined
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR4OPTA
+		ROOT = {
+			add_trait = impotent
+		}
+		set_character_flag = posessed_penis
+	}
+}
+#inform curser - success
+long_character_event = {
+	id = SRR.5
+	desc = SRR5_desc
+	picture = GFX_evt_dark_prayer
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR5OPTA
+	}
+}
+#inform curser - failure
+long_character_event = {
+	id = SRR.6
+	desc = SRR6_desc
+	picture = GFX_evt_dark_prayer
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR6OPTA
+	}
+}
+##alcohol  
+character_event = {
+	id = SRR.7
+	desc = SRR7_desc 
+	
+	capable_only = yes
+	only_men = yes
+	min_age = 16
+	
+	trigger = {
+		has_dlc = "Reapers"
+		trait = drunkard
+		NOT = { trait = impotent }
+		NOT = { has_character_flag = magically_healed_penis }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		modifier = {
+			factor = 1.1
+			NOT = { health = 3 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { health = 1 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { health = 5 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { health = 7 }
+		}
+		modifier = {
+			factor = 1.1
+			if = {
+				limit = {
+					immortal = yes
+				}
+				NOT = { immortal_age = 20 }
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				NOT = { age = 20 }
+			}
+		}
+		modifier = {
+			factor = 1.1
+			if = {
+				limit = {
+					immortal = yes
+				}
+				NOT = { immortal_age = 30 }
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				NOT = { age = 30 }
+			}
+		}
+		modifier = {
+			factor = 1.1
+			if = {
+				limit = {
+					immortal = yes
+				}
+				NOT = { immortal_age = 40 }
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				NOT = { age = 40 }
+			}
+		}
+		modifier = {
+			factor = 1.1
+			if = {
+				limit = {
+					immortal = yes
+				}
+				NOT = { immortal_age = 50 }
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				NOT = { age = 50 }
+			}
+		}
+		modifier = {
+			factor = 0.9
+			if = {
+				limit = {
+					immortal = yes
+				}
+				immortal_age = 50 
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				age = 50 
+			}
+		}
+		modifier = {
+			factor = 0.9
+			if = {
+				limit = {
+					immortal = yes
+				}
+				immortal_age = 60 
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				age = 60 
+			}
+		}
+		modifier = {
+			factor = 0.9
+			if = {
+				limit = {
+					immortal = yes
+				}
+				immortal_age = 70 
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				age = 70 
+			}
+		}
+		modifier = {
+			factor = 0.9
+			if = {
+				limit = {
+					immortal = yes
+				}
+				immortal_age = 80 
+			}
+			if = {
+				limit = {
+					immortal = no
+				}
+				age = 80 
+			}
+		}
+	}
+	option = {
+		name = SRR7OPTA
+	
+		add_trait = impotent
+		set_character_flag = drunk_penis
+		
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = SRR7OPTB	
+		add_trait = impotent
+		set_character_flag = drunk_penis
+		character_event = { id = SRR.20 days = 10}
+		
+		ai_chance = {
+			factor = 50
+		}
+		
+	}
+}	
+
+##############################
+####Life With ED SRR 11-100
+# 11-19 Dump lover with ED?
+# 20 Alcoholism
+##############################
+
+##lover's reaction
+character_event = {
+	id = SRR.11
+	hide_window = yes
+	
+	capable_only = yes
+	only_men = yes
+	min_age = 16
+
+	trigger = {
+		prisoner = no
+		trait = impotent
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = SRR11OPTA
+		
+		random_lover = {
+			limit = {
+				NOT = { has_character_flag = platonic_love }
+			}
+			character_event = { id = SRR.12 }
+		}
+	}
+}
+
+character_event = {
+	id = SRR.12
+	desc = SRR12_desc
+	hide_window = no
+
+	is_triggered_only = yes
+	
+	
+	option = {
+		##dump him
+		name = SRR12OPTA
+		
+		FROM = { character_event = { id = SRR.13 } }
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 2
+				trait = lustful
+			}
+		}	
+	}
+	
+	option = {
+		##stay
+		name = SRR12OPTB
+		
+		set_character_flag = platonic_love
+		FROM = { character_event = { id = SRR.14 } }
+		random = {
+			chance = 10
+			ROOT = { add_trait = chaste }
+		}
+	
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 1.5
+				trait = chaste
+			}
+			modifier = {
+				factor = 5
+				trait = celibate
+			}
+		}
+	}
+}
+character_event = {
+	id = SRR.13
+	desc = SRR13_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR13OPTA
+		
+		FROM = { remove_lover = ROOT }
+		random = {
+			chance = 25
+			add_trait = depressed
+		}
+	}
+}
+character_event = {
+	id = SRR.14
+	desc = SRR14_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR14OPTA
+		
+	}
+}
+#try to cut down drinking for the penis?
+character_event = {
+	id = SRR.20
+	desc = SRR20_desc
+	
+	is_triggered_only = yes
+	
+	#limit drinking
+	option = {
+		name = SRR20OPTA
+		
+		hidden_effect = {
+			random_list = {
+				25 = {
+				#success
+					character_event = { id = SRR.21 days = 30 }
+					
+					modifier = {
+						factor = 1.25
+						trait = temperate
+					}
+					modifier = {
+						factor = 1.5
+						trait = diligent
+					}
+				}
+				75 = {
+				#failure
+					character_event = { id = SRR.22 days = 30 }
+					
+					modifier = {
+						factor = 1.25
+						trait = hedonist
+					}
+					modifier = {
+						factor = 1.25
+						trait = gluttonous
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 1.25
+				trait = lustful
+			}
+			modifier = {
+				factor = 1.25
+				trait = seducer
+			}
+			modifier = {
+				factor = 1.5
+				has_children = no
+			}
+		}
+	}
+	
+	#don't bother
+	option = {
+		name = SRR20OPTB
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 1.25
+				trait = hedonist
+			}
+		}
+	}
+}
+
+#remove drunkard
+character_event = {
+	id = SRR.21
+	desc = SRR21_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR21OPTA
+		
+		remove_trait = drunkard
+		character_event = { id = SRR.109 days = 3}
+		set_character_flag = reformed_alcoholic
+	}
+}
+
+character_event = {
+	id = SRR.22
+	desc = SRR22_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		#give up
+		name = SRR22OPTA
+		
+		ai_chance = {
+			factor = 33
+			
+			modifier = {
+				factor = 1.25
+				trait = slothful
+			}
+		}
+	}
+	option = {
+		#no booze
+		name = SRR22OPTB
+		
+		trigger = {
+			NOT = { has_character_flag = failed_to_stop_drinking }
+		}
+		
+		hidden_effect = {
+			random_list = {
+				25 = {
+				#success
+					character_event = { id = SRR.23 days = 30 }
+					
+					modifier = {
+						factor = 1.25
+						trait = temperate
+					}
+					modifier = {
+						factor = 1.5
+						trait = diligent
+					}
+					modifier = {
+						factor = 1.25
+						has_character_flag = failed_to_limit_drinking
+					}
+				}
+				75 = {
+				#failure
+					character_event = { id = SRR.24 days = 30 }
+					set_character_flag = failed_to_stop_drinking
+					
+					modifier = {
+						factor = 1.25
+						trait = hedonist
+					}
+					modifier = {
+						factor = 1.25
+						trait = gluttonous
+					}
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 33
+			
+			modifier = {
+				factor = 1.25
+				trait = diligent
+			}
+			modifier = {
+				factor = 1.25 
+				has_children = no
+			}
+		}
+		
+	}
+	option = {
+		#keep trying
+		name = SRR22OPTC
+		
+		trigger = {
+			NOT = { has_character_flag = failed_to_limit_drinking }
+		}
+		
+		hidden_effect = {
+			random_list = {
+				25 = {
+				#success
+					character_event = { id = SRR.21 days = 30 }
+					
+					modifier = {
+						factor = 1.25
+						trait = temperate
+					}
+					modifier = {
+						factor = 1.5
+						trait = diligent
+					}
+				}
+				75 = {
+				#failure
+					character_event = { id = SRR.22 days = 30 }
+					set_character_flag = failed_to_limit_drinking
+					
+					modifier = {
+						factor = 1.25
+						trait = hedonist
+					}
+					modifier = {
+						factor = 1.25
+						trait = gluttonous
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 33
+			
+			modifier = {
+				factor = 1.25
+				trait = diligent
+			}
+			modifier = {
+				factor = 1.25 
+				has_children = no
+			}
+		}
+	}
+}
+
+#remove drunkard/add sober
+character_event = {
+	id = SRR.23
+	desc = SRR23_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR23OPTA
+		
+		remove_trait = drunkard
+		add_trait = sober
+		character_event = { id = SRR.109 days = 10 }
+		set_character_flag = reformed_alcoholic
+	}
+}
+
+#failed to stop drinking
+character_event = {
+	id = SRR.24
+	desc = SRR24_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR24OPTA
+	}
+}
+##############################
+####Cures SRR 101 - 999
+####
+##############################
+##stress gone
+character_event = {
+	id = SRR.101
+	desc = SRR101_desc
+	
+	capable_only = yes
+	only_men = yes
+	
+	trigger = {
+		trait = impotent
+		NOR = {
+			trait = stressed
+			trait = depressed
+		}
+		has_character_flag = stress_impotence
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = SRR101OPTA
+		
+		remove_trait = impotent
+		clr_character_flag = stress_impotence
+		clr_character_flag = drunk_penis
+		
+	}
+}
+
+character_event = {
+	id = SRR.102
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	
+		liege = { character_event = { id = SRR.103 } }
+		
+	}
+	
+}
+#Herbal remedy
+character_event = {
+	id = SRR.103
+	desc = SRR103_desc
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR103OPTA
+		
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 1.5
+					ROOT = { NOT = { age = 50 } }
+				}
+				modifier = {
+					factor = 0
+					ROOT = { has_character_flag = posessed_penis }
+				}
+				ROOT = { character_event = { id = SRR.104 days = 10 } }
+			}
+			90 = {
+				#failure
+				ROOT = { character_event = { id = SRR.105 days = 10 } }
+			}
+		}
+	}
+}
+#Herbal remedy success
+character_event = {
+	id = SRR.104
+	desc = SRR104_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR104OPTA
+	
+		remove_trait = impotent 
+		clr_character_flag = stress_impotence
+		clr_character_flag = drunk_penis
+		clr_character_flag = recent_ED_treatment 
+		
+	}
+}
+#Herbal remedy failure
+character_event = {
+	id = SRR.105
+	desc = SRR105_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR105OPTA
+		#Alternate treatment
+		
+		ROOT = { character_event = { id = SRR.106 days = 10 } }
+	}
+	option = {
+		name = SRR105OPTB
+		#give up
+	}
+}
+#exorcism
+character_event = {
+	id = SRR.106
+	desc = SRR106_desc
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR106OPTA
+		
+		random_list = {
+			10 = {
+				#success
+				
+				ROOT = { character_event = { id = SRR.107 days = 10 } }
+				
+				modifier = {
+					factor = 1.5
+					ROOT = { NOT = { age = 50 } }
+				}
+			}
+			90 = {
+				#failure
+				
+				modifier = {
+					factor = 0
+					ROOT = { has_character_flag = posessed_penis }
+				}
+				
+				ROOT = { character_event = { id = SRR.108 days = 10 } }
+			}
+		}
+	}
+}
+#Exorcism success
+character_event = {
+	id = SRR.107
+	desc = SRR107_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR107OPTA
+			
+		remove_trait = impotent
+		clr_character_flag = posessed_penis
+		clr_character_flag = drunk_penis
+		clr_character_flag = stress_impotence
+		clr_character_flag = recent_ED_treatment
+	}
+}
+#Exorcism failure
+character_event = {
+	id = SRR.108
+	desc = SRR108_desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SRR108OPTA
+		set_character_flag = { failed_ED_treatment }
+	}
+}
+
+##stress gone
+character_event = {
+	id = SRR.109
+	desc = SRR109_desc
+	
+	capable_only = yes
+	only_men = yes
+	
+	trigger = {
+		trait = impotent
+		NOT = {
+			trait = drunkard
+		}
+		has_character_flag = drunk_penis
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = SRR109OPTA
+		
+		remove_trait = impotent
+		clr_character_flag = drunk_penis
+		clr_character_flag = stress_impotence
+		
+	}
+}
+
+		
+

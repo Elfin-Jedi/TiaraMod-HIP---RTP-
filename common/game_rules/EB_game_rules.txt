@@ -1,0 +1,48 @@
+EB_ai_create_bloodlines = {
+	name = EB_ai_create_bloodlines_name
+	group = EB_game_rules_name
+	option = {
+		name = EB_ai_create_bloodlines_yes_name
+		text = Allow
+		desc = EB_ai_create_bloodlines_yes_name_desc
+	}
+	option = {
+		name = EB_ai_create_bloodlines_no_name
+		text = Dissallow
+		desc = EB_ai_create_bloodlines_no_name_desc
+	}
+}
+
+
+
+EB_gender_specific_inheritance = {
+	name = EB_gender_specific_inheritance_name
+	group = EB_game_rules_name
+	option = {
+		name = EB_gender_specific_inheritance_yes_name
+		text = Allow
+		desc = EB_gender_specific_inheritance_yes_name_desc
+	}
+	option = {
+		name = EB_gender_specific_inheritance_no_name
+		text = Dissallow
+		desc = EB_gender_specific_inheritance_no_name_desc
+	}
+}
+
+
+
+EB_harder_bloodline_creation = {
+	name = EB_harder_bloodline_creation_name
+	group = EB_game_rules_name
+	option = {
+		name = EB_harder_bloodline_creation_no_name
+		text = Easy
+		desc = EB_harder_bloodline_creation_no_name_desc
+	}
+	option = {
+		name = EB_harder_bloodline_creation_yes_name
+		text = Hard
+		desc = EB_harder_bloodline_creation_yes_name_desc
+	}
+}

@@ -1,0 +1,1887 @@
+#####
+#Count Events
+#
+#Total = 13
+#####
+
+namespace = RTPglobal
+
+#Main Events
+#####
+
+#Switch to a new Republic
+character_event = {
+	id = RTPglobal.1
+	title = "RTPglobal.1_title"
+	desc = "RTPglobal.1_desc"
+	picture = GFX_evt_doge_republic
+	is_triggered_only = yes
+	only_playable = yes
+
+	trigger = {
+		NOT = {
+			has_character_flag = rtp_republic_switch #Tried switching already
+		}
+		OR = {
+			government = republic_government
+			government = rtp_republic_g
+		}
+		any_demesne_province = {
+			port = yes
+		}
+		tier = DUKE
+	}
+
+	option = {
+		name = "RTPglobal.1_1"
+
+		custom_tooltip = {
+			text = "rtp_become_republic_ct"
+		}
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "RTPglobal.1_2"
+
+		custom_tooltip = {
+			text = "rtp_become_merchant_republic_ct"
+
+			create_family_palace = yes
+			set_government_type = merchant_republic_government
+		}
+
+		ai_chance = {
+			factor = 0.75
+		}
+	}
+
+	option = {
+		name = "RTPglobal.1_3"
+
+		custom_tooltip = {
+			text = "rtp_become_privateer_ct"
+
+			create_family_palace = yes
+			set_government_type = rtp_privateer_g
+		}
+
+		ai_chance = {
+			factor = 0.25
+		}
+	}
+
+	after = {
+		set_character_flag = rtp_republic_switch #Tried switching already
+	}
+}
+
+#Confederation Invite
+letter_event = {
+	id = RTPglobal.2
+	desc = "RTPglobal.2_desc"
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPglobal.2_1"
+
+		FROM = {
+			set_character_flag = rtp_accepted_confederation
+			make_tributary = {
+				who = ROOT
+				tributary_type = rtp_confederation_tt
+			}
+			ROOT = {
+				letter_event = {
+					id = RTPglobal.3 #Confederation Invite Reply
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				opinion = {
+					who = FROM
+					value < 0
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPglobal.2_2"
+
+		FROM = {
+			ROOT = {
+				letter_event = {
+					id = RTPglobal.3 #Confederation Invite Reply
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				opinion = {
+					who = FROM
+					value = 0
+				}
+			}
+		}
+	}
+}
+
+#Confederation Invite Reply
+letter_event = {
+	id = RTPglobal.3
+	desc = {
+		trigger = {
+			FROM = {
+				has_character_flag = rtp_accepted_confederation
+			}
+		}
+		text = "RTPglobal.3_1_desc"
+	}
+	desc = {
+		trigger = {
+			FROM = {
+				NOT = {
+					has_character_flag = rtp_accepted_confederation
+				}
+			}
+		}
+		text = "RTPglobal.3_2_desc"
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPglobal.3_1"
+
+		trigger = {
+			FROM = {
+				has_character_flag = rtp_accepted_confederation
+			}
+		}
+	}
+
+	option = {
+		name = "RTPglobal.3_2"
+
+		trigger = {
+			FROM = {
+				NOT = {
+					has_character_flag = rtp_accepted_confederation
+				}
+			}
+		}
+	}
+}
+
+#Visit Marketplace
+character_event = {
+	id = RTPglobal.4
+	title = "RTPglobal.4_title"
+	desc = "RTPglobal.4_desc"
+	picture = GFX_evt_market
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPglobal.4_1"
+
+		trigger = {
+			NAND = {
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+			}
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPglobal.5 #Visit the Weaponssmith
+		}
+
+		custom_tooltip = {
+			text = "rtp_weaponsmith_ct"
+		}
+
+		ai_chance = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = trade
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPglobal.4_2"
+
+		trigger = {
+			NAND = {
+				any_artifact = {
+					has_artifact_flag = head
+				}
+				any_artifact = {
+					has_artifact_flag = torso
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPglobal.6 #Visit the Armorsmith
+		}
+
+		custom_tooltip = {
+			text = "rtp_armorsmith_ct"
+		}
+
+		ai_chance = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = trade
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPglobal.4_3"
+
+		character_event = {
+			id = RTPglobal.7 #Visit the Peddlers
+		}
+
+		custom_tooltip = {
+			text = "rtp_peddlers_ct"
+		}
+
+		ai_chance = {
+			factor = 0.1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = trade
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPglobal.4_4"
+
+		trigger = {
+			any_artifact = {
+				has_artifact_flag = trade
+			}
+		}
+
+		character_event = {
+			id = RTPglobal.8 #Set up a stall
+		}
+
+		custom_tooltip = {
+			text = "rtp_set_up_shop_ct"
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#Visit the Weaponsmith
+character_event = {
+	id = RTPglobal.5
+	title = "RTPglobal.5_title"
+	desc = "RTPglobal.5_desc"
+	picture = GFX_evt_weaponsmith
+	is_triggered_only = yes
+	hide_from = yes
+
+	immediate = {
+		create_character = {
+			age = 30
+			random_traits = yes
+			culture = ROOT
+			religion = ROOT
+			dynasty = none
+			health = 10
+		}
+		new_character = {
+			save_event_target_as = rtp_merchant #The merchant
+
+			rtp_give_random_weapon_artifact_se = yes
+			rtp_give_random_weapon_artifact_se = yes
+			rtp_give_random_weapon_artifact_se = yes
+			
+			random_artifact = {
+				limit = {
+					NOR = {
+						has_artifact_flag = rtp_artifact_1
+						has_artifact_flag = rtp_artifact_2
+						has_artifact_flag = rtp_artifact_3
+					}
+				}
+				set_artifact_flag = rtp_artifact_1
+				rtp_assign_artifact_cost1_se = yes
+			}
+			random_artifact = {
+				limit = {
+					NOR = {
+						has_artifact_flag = rtp_artifact_1
+						has_artifact_flag = rtp_artifact_2
+						has_artifact_flag = rtp_artifact_3
+					}
+				}
+				set_artifact_flag = rtp_artifact_2
+				rtp_assign_artifact_cost2_se = yes
+			}
+			random_artifact = {
+				limit = {
+					NOR = {
+						has_artifact_flag = rtp_artifact_1
+						has_artifact_flag = rtp_artifact_2
+						has_artifact_flag = rtp_artifact_3
+					}
+				}
+				set_artifact_flag = rtp_artifact_3
+				rtp_assign_artifact_cost3_se = yes
+			}
+		}
+	}
+
+	option = {
+		name = "RTPglobal.5_1"
+
+		trigger = {
+			wealth = rtp_artifact_cost
+		}
+
+		event_target:rtp_merchant = {
+			show_scope_change = no
+			any_artifact = {
+				show_scope_change = no
+				limit = {
+					has_artifact_flag = rtp_artifact_1
+				}
+				clr_artifact_flag = rtp_artifact_1
+				transfer_artifact = {
+					from = event_target:rtp_merchant #The merchant
+					to = ROOT
+				}
+				rtp_assign_price_tooltip_st = yes
+			}
+		}
+
+		custom_tooltip = {
+			text = "rtp_lose_gold_ct"
+
+			multiply_variable = {
+				which = rtp_artifact_cost
+				value = -1
+			}
+		}
+
+		wealth = rtp_artifact_cost
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "RTPglobal.5_2"
+
+		trigger = {
+			wealth = rtp_artifact_cost1
+		}
+
+		event_target:rtp_merchant = {
+			show_scope_change = no
+			any_artifact = {
+				show_scope_change = no
+				limit = {
+					has_artifact_flag = rtp_artifact_2
+				}
+				clr_artifact_flag = rtp_artifact_2
+				transfer_artifact = {
+					from = event_target:rtp_merchant #The merchant
+					to = ROOT
+				}
+				rtp_assign_price_tooltip_st = yes
+			}
+		}
+
+		custom_tooltip = {
+			text = "rtp_lose_gold_ct"
+
+			multiply_variable = {
+				which = rtp_artifact_cost1
+				value = -1
+			}
+		}
+
+		wealth = rtp_artifact_cost1
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "RTPglobal.5_3"
+
+		trigger = {
+			wealth = rtp_artifact_cost2
+		}
+
+		event_target:rtp_merchant = {
+			show_scope_change = no
+			any_artifact = {
+				show_scope_change = no
+				limit = {
+					has_artifact_flag = rtp_artifact_3
+				}
+				clr_artifact_flag = rtp_artifact_3
+				transfer_artifact = {
+					from = event_target:rtp_merchant #The merchant
+					to = ROOT
+				}
+				rtp_assign_price_tooltip_st = yes
+			}
+		}
+
+		custom_tooltip = {
+			text = "rtp_lose_gold_ct"
+
+			multiply_variable = {
+				which = rtp_artifact_cost2
+				value = -1
+			}
+		}
+
+		wealth = rtp_artifact_cost2
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "RTPglobal.5_4"
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	after = {
+		hidden_tooltip = {
+			set_variable = {
+				which = rtp_artifact_cost
+				value = 0
+			}
+			set_variable = {
+				which = rtp_artifact_cost1
+				value = 0
+			}
+			set_variable = {
+				which = rtp_artifact_cost2
+				value = 0
+			}
+
+			event_target:rtp_merchant = {
+				any_artifact = {
+					clr_artifact_flag = rtp_artifact_1
+					clr_artifact_flag = rtp_artifact_2
+					clr_artifact_flag = rtp_artifact_3
+					unsafe_destroy_artifact = yes
+				}
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+}
+
+#Visit the Armorsmith
+character_event = {
+	id = RTPglobal.6
+	title = "RTPglobal.6_title"
+	desc = "RTPglobal.6_desc"
+	picture = GFX_evt_armory
+	is_triggered_only = yes
+	hide_from = yes
+
+	immediate = {
+		create_character = {
+			age = 30
+			random_traits = yes
+			culture = ROOT
+			religion = ROOT
+			dynasty = none
+			health = 10
+		}
+		new_character = {
+			save_event_target_as = rtp_merchant #The merchant
+
+			rtp_give_random_armor_artifact_se = yes
+			rtp_give_random_armor_artifact_se = yes
+			rtp_give_random_armor_artifact_se = yes
+			
+			random_artifact = {
+				limit = {
+					NOR = {
+						has_artifact_flag = rtp_artifact_1
+						has_artifact_flag = rtp_artifact_2
+						has_artifact_flag = rtp_artifact_3
+					}
+				}
+				set_artifact_flag = rtp_artifact_1
+				rtp_assign_artifact_cost1_se = yes
+			}
+			random_artifact = {
+				limit = {
+					NOR = {
+						has_artifact_flag = rtp_artifact_1
+						has_artifact_flag = rtp_artifact_2
+						has_artifact_flag = rtp_artifact_3
+					}
+				}
+				set_artifact_flag = rtp_artifact_2
+				rtp_assign_artifact_cost2_se = yes
+			}
+			random_artifact = {
+				limit = {
+					NOR = {
+						has_artifact_flag = rtp_artifact_1
+						has_artifact_flag = rtp_artifact_2
+						has_artifact_flag = rtp_artifact_3
+					}
+				}
+				set_artifact_flag = rtp_artifact_3
+				rtp_assign_artifact_cost3_se = yes
+			}
+		}
+	}
+
+	option = {
+		name = "RTPglobal.6_1"
+
+		trigger = {
+			wealth = rtp_artifact_cost
+		}
+
+		event_target:rtp_merchant = {
+			show_scope_change = no
+			any_artifact = {
+				show_scope_change = no
+				limit = {
+					has_artifact_flag = rtp_artifact_1
+				}
+				clr_artifact_flag = rtp_artifact_1
+				transfer_artifact = {
+					from = event_target:rtp_merchant #The merchant
+					to = ROOT
+				}
+				rtp_assign_price_tooltip_st = yes
+			}
+		}
+
+		custom_tooltip = {
+			text = "rtp_lose_gold_ct"
+
+			multiply_variable = {
+				which = rtp_artifact_cost
+				value = -1
+			}
+		}
+
+		wealth = rtp_artifact_cost
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "RTPglobal.6_2"
+
+		trigger = {
+			wealth = rtp_artifact_cost1
+		}
+
+		event_target:rtp_merchant = {
+			show_scope_change = no
+			any_artifact = {
+				show_scope_change = no
+				limit = {
+					has_artifact_flag = rtp_artifact_2
+				}
+				clr_artifact_flag = rtp_artifact_2
+				transfer_artifact = {
+					from = event_target:rtp_merchant #The merchant
+					to = ROOT
+				}
+				rtp_assign_price_tooltip_st = yes
+			}
+		}
+
+		custom_tooltip = {
+			text = "rtp_lose_gold_ct"
+
+			multiply_variable = {
+				which = rtp_artifact_cost1
+				value = -1
+			}
+		}
+
+		wealth = rtp_artifact_cost1
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "RTPglobal.6_3"
+
+		trigger = {
+			wealth = rtp_artifact_cost2
+		}
+
+		event_target:rtp_merchant = {
+			show_scope_change = no
+			any_artifact = {
+				show_scope_change = no
+				limit = {
+					has_artifact_flag = rtp_artifact_3
+				}
+				clr_artifact_flag = rtp_artifact_3
+				transfer_artifact = {
+					from = event_target:rtp_merchant #The merchant
+					to = ROOT
+				}
+				rtp_assign_price_tooltip_st = yes
+			}
+		}
+
+		custom_tooltip = {
+			text = "rtp_lose_gold_ct"
+
+			multiply_variable = {
+				which = rtp_artifact_cost2
+				value = -1
+			}
+		}
+
+		wealth = rtp_artifact_cost2
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "RTPglobal.6_4"
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	after = {
+		hidden_tooltip = {
+			set_variable = {
+				which = rtp_artifact_cost
+				value = 0
+			}
+			set_variable = {
+				which = rtp_artifact_cost1
+				value = 0
+			}
+			set_variable = {
+				which = rtp_artifact_cost2
+				value = 0
+			}
+
+			event_target:rtp_merchant = {
+				any_artifact = {
+					clr_artifact_flag = rtp_artifact_1
+					clr_artifact_flag = rtp_artifact_2
+					clr_artifact_flag = rtp_artifact_3
+					unsafe_destroy_artifact = yes
+				}
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+}
+
+#Visit the Peddlers
+character_event = {
+	id = RTPglobal.7
+	title = "RTPglobal.7_title"
+	desc = "RTPglobal.7_desc"
+	picture = GFX_evt_market
+	is_triggered_only = yes
+	hide_from = yes
+
+	immediate = {
+		create_character = {
+			age = 30
+			random_traits = yes
+			culture = ROOT
+			religion = ROOT
+			dynasty = none
+			health = 10
+		}
+		new_character = {
+			save_event_target_as = rtp_merchant #The merchant
+
+			rtp_give_random_generic_artifact_se = yes
+			rtp_give_random_generic_artifact_se = yes
+			rtp_give_random_generic_artifact_se = yes
+			
+			random_artifact = {
+				limit = {
+					NOR = {
+						has_artifact_flag = rtp_artifact_1
+						has_artifact_flag = rtp_artifact_2
+						has_artifact_flag = rtp_artifact_3
+					}
+				}
+				set_artifact_flag = rtp_artifact_1
+				rtp_assign_artifact_cost1_se = yes
+			}
+			random_artifact = {
+				limit = {
+					NOR = {
+						has_artifact_flag = rtp_artifact_1
+						has_artifact_flag = rtp_artifact_2
+						has_artifact_flag = rtp_artifact_3
+					}
+				}
+				set_artifact_flag = rtp_artifact_2
+				rtp_assign_artifact_cost2_se = yes
+			}
+			random_artifact = {
+				limit = {
+					NOR = {
+						has_artifact_flag = rtp_artifact_1
+						has_artifact_flag = rtp_artifact_2
+						has_artifact_flag = rtp_artifact_3
+					}
+				}
+				set_artifact_flag = rtp_artifact_3
+				rtp_assign_artifact_cost3_se = yes
+			}
+		}
+	}
+
+	option = {
+		name = "RTPglobal.7_1"
+
+		trigger = {
+			wealth = rtp_artifact_cost
+		}
+
+		event_target:rtp_merchant = {
+			show_scope_change = no
+			any_artifact = {
+				show_scope_change = no
+				limit = {
+					has_artifact_flag = rtp_artifact_1
+				}
+				clr_artifact_flag = rtp_artifact_1
+				transfer_artifact = {
+					from = event_target:rtp_merchant #The merchant
+					to = ROOT
+				}
+				rtp_assign_price_tooltip_st = yes
+			}
+		}
+
+		custom_tooltip = {
+			text = "rtp_lose_gold_ct"
+
+			multiply_variable = {
+				which = rtp_artifact_cost
+				value = -1
+			}
+		}
+
+		wealth = rtp_artifact_cost
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "RTPglobal.7_2"
+
+		trigger = {
+			wealth = rtp_artifact_cost1
+		}
+
+		event_target:rtp_merchant = {
+			show_scope_change = no
+			any_artifact = {
+				show_scope_change = no
+				limit = {
+					has_artifact_flag = rtp_artifact_2
+				}
+				clr_artifact_flag = rtp_artifact_2
+				transfer_artifact = {
+					from = event_target:rtp_merchant #The merchant
+					to = ROOT
+				}
+				rtp_assign_price_tooltip_st = yes
+			}
+		}
+
+		custom_tooltip = {
+			text = "rtp_lose_gold_ct"
+
+			multiply_variable = {
+				which = rtp_artifact_cost1
+				value = -1
+			}
+		}
+
+		wealth = rtp_artifact_cost1
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "RTPglobal.7_3"
+
+		trigger = {
+			wealth = rtp_artifact_cost2
+		}
+
+		event_target:rtp_merchant = {
+			show_scope_change = no
+			any_artifact = {
+				show_scope_change = no
+				limit = {
+					has_artifact_flag = rtp_artifact_3
+				}
+				clr_artifact_flag = rtp_artifact_3
+				transfer_artifact = {
+					from = event_target:rtp_merchant #The merchant
+					to = ROOT
+				}
+				rtp_assign_price_tooltip_st = yes
+			}
+		}
+
+		custom_tooltip = {
+			text = "rtp_lose_gold_ct"
+
+			multiply_variable = {
+				which = rtp_artifact_cost2
+				value = -1
+			}
+		}
+
+		wealth = rtp_artifact_cost2
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "RTPglobal.7_4"
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	after = {
+		hidden_tooltip = {
+			set_variable = {
+				which = rtp_artifact_cost
+				value = 0
+			}
+			set_variable = {
+				which = rtp_artifact_cost1
+				value = 0
+			}
+			set_variable = {
+				which = rtp_artifact_cost2
+				value = 0
+			}
+
+			event_target:rtp_merchant = {
+				any_artifact = {
+					clr_artifact_flag = rtp_artifact_1
+					clr_artifact_flag = rtp_artifact_2
+					clr_artifact_flag = rtp_artifact_3
+					unsafe_destroy_artifact = yes
+				}
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+}
+
+#Set up a stall
+character_event = {
+	id = RTPglobal.8
+	title = "RTPglobal.8_title"
+	desc = {
+		trigger = {
+			has_character_flag = rtp_found_buyer
+		}
+		text = "RTPglobal.8_1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_found_buyer
+			}
+		}
+		text = "RTPglobal.8_2_desc"
+	}
+	picture = GFX_evt_market
+	is_triggered_only = yes
+	hide_from = yes
+
+	immediate = {
+		random = {
+			chance = 80
+
+			set_character_flag = rtp_found_buyer
+		}
+
+		random_artifact = {
+			limit = {
+				has_artifact_flag = trade
+			}
+			rtp_assign_sellprice_artifact_cost_se = yes
+			set_artifact_flag = rtp_artifact_to_sell
+		}
+
+		create_character = {
+			age = 30
+			random_traits = yes
+			culture = ROOT
+			religion = ROOT
+			dynasty = none
+			health = 10
+		}
+		new_character = {
+			save_event_target_as = rtp_merchant #The first merchant
+		}
+	}
+
+	option = {
+		name = "RTPglobal.8_1"
+
+		trigger = {
+			has_character_flag = rtp_found_buyer
+		}
+
+		event_target:rtp_merchant = {
+			save_event_target_as = rtp_merchant #The first merchant
+		}
+
+		random_artifact = {
+			show_scope_change = no
+			limit = {
+				has_artifact_flag = rtp_artifact_to_sell
+			}
+			unsafe_destroy_artifact = yes
+			rtp_assign_price_tooltip_st = yes
+		}
+
+		wealth = rtp_artifact_cost
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "RTPglobal.8_2"
+
+		trigger = {
+			has_character_flag = rtp_found_buyer
+		}
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "RTPglobal.8_3"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_found_buyer
+			}
+		}
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	after = {
+		hidden_tooltip = {
+			clr_character_flag = rtp_found_buyer
+
+			set_variable = {
+				which = rtp_artifact_cost
+				value = 0
+			}
+			set_variable = {
+				which = rtp_artifact_cost1
+				value = 0
+			}
+			set_variable = {
+				which = rtp_artifact_cost2
+				value = 0
+			}
+
+			event_target:rtp_merchant = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+
+			any_artifact = {
+				limit = {
+					has_artifact_flag = rtp_artifact_to_sell
+				}
+				clr_artifact_flag = rtp_artifact_to_sell
+			}
+		}
+	}
+}
+
+#Workshop Offer
+character_event = {
+	id = RTPglobal.9
+	title = "RTPglobal.9_title"
+	desc = RTPglobal.9_desc
+	picture = GFX_evt_construction_site
+	is_triggered_only = yes
+	hide_from = yes
+	only_playable = yes
+
+	trigger = {
+		rtp_is_lower_baron = no
+		top_liege = {
+			NOT = {
+				has_character_modifier = expelled_jewish
+			}
+		}
+		any_demesne_province = {
+			NOR = {
+				has_province_modifier = rtp_gems_em
+				has_province_modifier = rtp_amber_em
+				has_province_modifier = rtp_beer_em
+				has_province_modifier = rtp_berries_em
+				has_province_modifier = rtp_bread_em
+				has_province_modifier = rtp_bricks_em
+				has_province_modifier = rtp_cheese_em
+				has_province_modifier = rtp_cloth_em
+				has_province_modifier = rtp_copper_em
+				has_province_modifier = rtp_driedfruits_em
+				has_province_modifier = rtp_dyes_em
+				has_province_modifier = rtp_fish_em
+				has_province_modifier = rtp_furs_em
+				has_province_modifier = rtp_grain_em
+				has_province_modifier = rtp_ham_em
+				has_province_modifier = rtp_mushrooms_em
+				has_province_modifier = rtp_porkribs_em
+				has_province_modifier = rtp_salt_em
+				has_province_modifier = rtp_spirits_em
+				has_province_modifier = rtp_venison_em
+				has_province_modifier = rtp_wine_em
+				has_province_modifier = rtp_wood_em
+			}
+		}
+	}
+
+	immediate = {
+		random_demesne_province = {
+			limit = {
+				NOR = {
+					has_province_modifier = rtp_gems_em
+					has_province_modifier = rtp_amber_em
+					has_province_modifier = rtp_beer_em
+					has_province_modifier = rtp_berries_em
+					has_province_modifier = rtp_bread_em
+					has_province_modifier = rtp_bricks_em
+					has_province_modifier = rtp_cheese_em
+					has_province_modifier = rtp_cloth_em
+					has_province_modifier = rtp_copper_em
+					has_province_modifier = rtp_driedfruits_em
+					has_province_modifier = rtp_dyes_em
+					has_province_modifier = rtp_fish_em
+					has_province_modifier = rtp_furs_em
+					has_province_modifier = rtp_grain_em
+					has_province_modifier = rtp_ham_em
+					has_province_modifier = rtp_mushrooms_em
+					has_province_modifier = rtp_porkribs_em
+					has_province_modifier = rtp_salt_em
+					has_province_modifier = rtp_spirits_em
+					has_province_modifier = rtp_venison_em
+					has_province_modifier = rtp_wine_em
+					has_province_modifier = rtp_wood_em
+				}
+			}
+			save_event_target_as = rtp_province1 #The random province
+		}
+
+		create_character = {
+			age = 25
+			random_traits = yes
+			culture = ashkenazi
+			religion = jewish
+			dynasty = random
+			female = yes
+		}
+		new_character = {
+			save_event_target_as = rtp_workshop_owner_spouse #The workshop owner spouse
+		}
+		create_character = {
+			age = 25
+			random_traits = yes
+			culture = ashkenazi
+			religion = jewish
+			dynasty = random
+			female = no
+		}
+		new_character = {
+			piety = 30
+			save_event_target_as = rtp_workshop_owner #The workshop owner
+		}
+
+		event_target:rtp_workshop_owner = {
+			add_spouse = event_target:rtp_workshop_owner_spouse #The workshop owner spouse
+		}
+	}
+
+	option = {
+		name = "RTPglobal.9_1"
+
+		event_target:rtp_workshop_owner = {
+			save_event_target_as = rtp_workshop_owner #The workshop owner
+		}
+
+		event_target:rtp_province1 = {
+			show_scope_change = no
+			random = {
+				chance = 1
+
+				unsafe_religion = jewish
+			}
+		}
+
+		hidden_tooltip = {
+			any_courtier = {
+				random = {
+					chance = 5
+
+					religion = jewish
+				}
+			}
+		}
+
+		event_target:rtp_province1 = {
+			show_scope_change = no
+			custom_tooltip = {
+				text = "rtp_accept_workshop_ct"
+
+				random_list = {
+					1 = {
+						add_province_modifier = {
+							name = rtp_gems_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_amber_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_beer_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_berries_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_bread_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_bricks_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_cheese_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_cloth_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_copper_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_driedfruits_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_dyes_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_fish_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_furs_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_grain_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_ham_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_mushrooms_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_porkribs_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_salt_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_spirits_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_venison_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_wine_em
+							duration = -1
+						}
+					}
+					1 = {
+						add_province_modifier = {
+							name = rtp_wood_em
+							duration = -1
+						}
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "RTPglobal.9_2"
+
+		event_target:rtp_workshop_owner = {
+			save_event_target_as = rtp_workshop_owner #The workshop owner
+
+			hidden_tooltip = {
+				death = {
+					death_reason = death_vanished
+				}
+				event_target:rtp_workshop_owner_spouse = {
+					death = {
+						death_reason = death_vanished
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Workshop Destruction
+character_event = {
+	id = RTPglobal.10
+	title = "RTPglobal.10_title"
+	desc = RTPglobal.10_desc
+	picture = GFX_evt_rider_adventure
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+	only_playable = yes
+
+	trigger = {
+		rtp_is_landless = no
+		any_demesne_province = {
+			OR = {
+				has_province_modifier = rtp_gems_em
+				has_province_modifier = rtp_amber_em
+				has_province_modifier = rtp_beer_em
+				has_province_modifier = rtp_berries_em
+				has_province_modifier = rtp_bread_em
+				has_province_modifier = rtp_bricks_em
+				has_province_modifier = rtp_cheese_em
+				has_province_modifier = rtp_cloth_em
+				has_province_modifier = rtp_copper_em
+				has_province_modifier = rtp_driedfruits_em
+				has_province_modifier = rtp_dyes_em
+				has_province_modifier = rtp_fish_em
+				has_province_modifier = rtp_furs_em
+				has_province_modifier = rtp_grain_em
+				has_province_modifier = rtp_ham_em
+				has_province_modifier = rtp_mushrooms_em
+				has_province_modifier = rtp_porkribs_em
+				has_province_modifier = rtp_salt_em
+				has_province_modifier = rtp_spirits_em
+				has_province_modifier = rtp_venison_em
+				has_province_modifier = rtp_wine_em
+				has_province_modifier = rtp_wood_em
+			}
+		}
+	}
+
+	immediate = {
+		random_demesne_province = {
+			limit = {
+				OR = {
+					has_province_modifier = rtp_gems_em
+					has_province_modifier = rtp_amber_em
+					has_province_modifier = rtp_beer_em
+					has_province_modifier = rtp_berries_em
+					has_province_modifier = rtp_bread_em
+					has_province_modifier = rtp_bricks_em
+					has_province_modifier = rtp_cheese_em
+					has_province_modifier = rtp_cloth_em
+					has_province_modifier = rtp_copper_em
+					has_province_modifier = rtp_driedfruits_em
+					has_province_modifier = rtp_dyes_em
+					has_province_modifier = rtp_fish_em
+					has_province_modifier = rtp_furs_em
+					has_province_modifier = rtp_grain_em
+					has_province_modifier = rtp_ham_em
+					has_province_modifier = rtp_mushrooms_em
+					has_province_modifier = rtp_porkribs_em
+					has_province_modifier = rtp_salt_em
+					has_province_modifier = rtp_spirits_em
+					has_province_modifier = rtp_venison_em
+					has_province_modifier = rtp_wine_em
+					has_province_modifier = rtp_wood_em
+				}
+			}
+			save_event_target_as = rtp_province2 #The random province
+
+			remove_province_modifier = rtp_gems_em
+			remove_province_modifier = rtp_amber_em
+			remove_province_modifier = rtp_beer_em
+			remove_province_modifier = rtp_berries_em
+			remove_province_modifier = rtp_bread_em
+			remove_province_modifier = rtp_bricks_em
+			remove_province_modifier = rtp_cheese_em
+			remove_province_modifier = rtp_cloth_em
+			remove_province_modifier = rtp_copper_em
+			remove_province_modifier = rtp_driedfruits_em
+			remove_province_modifier = rtp_dyes_em
+			remove_province_modifier = rtp_fish_em
+			remove_province_modifier = rtp_furs_em
+			remove_province_modifier = rtp_grain_em
+			remove_province_modifier = rtp_ham_em
+			remove_province_modifier = rtp_mushrooms_em
+			remove_province_modifier = rtp_porkribs_em
+			remove_province_modifier = rtp_salt_em
+			remove_province_modifier = rtp_spirits_em
+			remove_province_modifier = rtp_venison_em
+			remove_province_modifier = rtp_wine_em
+			remove_province_modifier = rtp_wood_em
+		}
+	}
+
+	option = {
+		name = "RTPglobal.10_1"
+	}
+}
+
+#Bandit Hideout
+character_event = {
+	id = RTPglobal.11
+	title = "RTPglobal.11_title"
+	desc = RTPglobal.11_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+	only_playable = yes
+
+	trigger = {
+		rtp_is_landless = no
+		any_demesne_province = {
+			NOT = {
+				has_province_modifier = rtp_bandit_hideout_em
+			}
+		}
+	}
+
+	immediate = {
+		random_demesne_province = {
+			limit = {
+				NOT = {
+					has_province_modifier = rtp_bandit_hideout_em
+				}
+			}
+			save_event_target_as = rtp_province3 #The random province
+
+			add_province_modifier = {
+				name = rtp_bandit_hideout_em
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = "RTPglobal.11_1"
+	}
+}
+
+#Building Destroyed
+character_event = {
+	id = RTPglobal.12
+	title = "RTPglobal.12_title"
+	desc = RTPglobal.12_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	hide_from = yes
+	notification = yes
+	only_playable = yes
+
+	trigger = {
+		rtp_is_landless = no
+		any_demesne_title = {
+			NOT = {
+				has_holding_modifier = caravan_raiders
+			}
+		}
+	}
+
+	immediate = {
+		random_demesne_title = {
+			limit = {
+				NOT = {
+					has_holding_modifier = caravan_raiders
+				}
+			}
+			save_event_target_as = rtp_province4 #The random province
+
+			destroy_random_building = yes
+
+			add_holding_modifier = {
+				modifier = caravan_raiders
+				years = 3
+			}
+		}
+	}
+
+	option = {
+		name = "RTPglobal.12_1"
+	}
+}
+
+#Chef Trait Event
+character_event = {
+	id = RTPglobal.13
+	title = "RTPglobal.13_title"
+	desc = "RTPglobal.13_desc"
+	picture = GFX_evt_fancy_feast
+	is_triggered_only = yes
+	hide_from = yes
+
+	trigger = {
+		any_artifact = {
+			has_artifact_flag = cooking
+			is_artifact_equipped = yes
+		}
+		NOT = {
+			trait = rtp_chef_tr
+		}
+	}
+
+	immediate = {
+		random_artifact = {
+			limit = {
+				has_artifact_flag = cooking
+			}
+			save_event_target_as = rtp_artifact #The cooking book
+		}
+	}
+
+	option = {
+		name = "RTPglobal.13_1"
+
+		add_trait = rtp_chef_tr
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "RTPglobal.13_2"
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Ping Events
+#####
+
+#100
+
+#Melting Pot
+character_event = {
+	id = RTPglobal.101
+	hide_window = yes
+	is_triggered_only = yes
+	only_rulers = yes
+
+	trigger = {
+		NOR = {
+			government = chinese_imperial_government
+			has_alternate_start_parameter = {
+				key = culture_names
+				value = random
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				culture = norse
+				capital_scope = {
+					culture = norman
+				}
+				year = 800
+			}
+			culture = norman
+		}
+		else_if = {
+			limit = {
+				culture = norse
+				capital_scope = {
+					region = custom_swedish
+				}
+				any_realm_province = {
+					culture = swedish
+				}
+				year = 1000
+			}
+			culture = swedish
+		}
+		else_if = {
+			limit = {
+				culture = norse
+				capital_scope = {
+					region = custom_norwegian
+				}
+				any_realm_province = {
+					culture = norwegian
+				}
+				year = 1000
+			}
+			culture = norwegian
+		}
+		else_if = {
+			limit = {
+				culture = norse
+				capital_scope = {
+					region = custom_danish
+				}
+				any_realm_province = {
+					culture = danish
+				}
+				year = 1000
+			}
+			culture = danish
+		}
+		else_if = {
+			limit = {
+				culture = old_frankish
+				capital_scope = {
+					region = world_europe_west_francia
+				}
+				any_realm_province = {
+					culture = frankish
+				}
+				year = 800
+			}
+			culture = frankish
+		}
+		else_if = {
+			limit = {
+				culture = pictish
+				capital_scope = {
+					region = custom_scotland
+				}
+				any_realm_province = {
+					culture = scottish
+				}
+				year = 800
+			}
+			culture = scottish
+		}
+		else_if = {
+			limit = {
+				OR = {
+					culture = visigothic
+					culture_group = arabic
+				}
+				religion_group = muslim
+				capital_scope = {
+					region = custom_andalusian
+				}
+				any_realm_province = {
+					culture = andalusian_arabic
+				}
+				year = 900
+			}
+			culture = andalusian_arabic
+		}
+		else_if = {
+			limit = {
+				culture = visigothic
+				religion_group = christian
+				capital_scope = {
+					region = custom_castillian
+				}
+				any_realm_province = {
+					culture = castillan
+				}
+				year = 950
+			}
+			culture = castillan
+		}
+		else_if = {
+			limit = {
+				culture = visigothic
+				religion_group = christian
+				capital_scope = {
+					region = custom_catalan
+				}
+				any_realm_province = {
+					culture = catalan
+				}
+				year = 950
+			}
+			culture = catalan
+		}
+		else_if = {
+			limit = {
+				OR = {
+					culture = suebi
+					culture = visigothic
+				}
+				religion_group = christian
+				capital_scope = {
+					region = custom_portuguese
+				}
+				any_realm_province = {
+					culture = portuguese
+				}
+				year = 950
+			}
+			culture = portuguese
+		}
+		else_if = {
+			limit = {
+				OR = {
+					culture = old_frankish
+					culture = old_saxon
+					culture = frisian
+				}
+				capital_scope = {
+					region = custom_frisia
+				}
+				any_realm_province = {
+					culture = dutch
+				}
+				year = 1000
+			}
+			culture = dutch
+		}
+		else_if = {
+			limit = {
+				culture = lombard
+				capital_scope = {
+					region = world_europe_south_italy
+				}
+				any_realm_province = {
+					culture = italian
+				}
+				year = 900
+			}
+			culture = italian
+		}
+		else_if = {
+			limit = {
+				culture = visigothic
+				religion_group = christian
+				capital_scope = {
+					region = world_europe_west_francia
+				}
+				any_realm_province = {
+					culture = occitan
+				}
+				year = 950
+			}
+			culture = occitan
+		}
+		else_if = {
+			limit = {
+				culture_group = east_slavic
+				any_realm_province = {
+					culture = russian
+				}
+				year = 1050
+			}
+			culture = russian
+		}
+		else_if = {
+			limit = {
+				has_global_flag = christian_crusades_unlocked
+				religion_group = christian
+				OR = {
+					culture_group = latin
+					culture_group = arabic
+				}
+				NOT = {
+					culture = roman
+				}
+				OR = {
+					capital_scope = {
+						region = world_middle_east
+					}
+					capital_scope = {
+						region = world_persia
+					}
+					capital_scope = {
+						region = world_africa
+					}
+				}
+				OR = {
+					any_realm_province = {
+						culture_group = arabic
+					}
+					top_liege = {
+						culture = outremer
+					}
+				}
+			}
+			culture = outremer
+		}
+	}
+}

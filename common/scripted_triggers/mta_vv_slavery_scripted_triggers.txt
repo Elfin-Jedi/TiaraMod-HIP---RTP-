@@ -1,0 +1,175 @@
+# Check whether slavery is allowed by game rule or not, and if set to Restricted, whether the character can practice it
+slavery_enabled = {
+	hidden_tooltip = {
+		OR = {
+			has_game_rule = {
+				name = mta_rule_slavery
+				value = restricted
+			}
+			has_game_rule = {
+				name = mta_rule_slavery
+				value = unrestricted
+			}
+		}
+	}
+	conditional_tooltip = {
+		trigger = {
+			has_game_rule = {
+				name = mta_rule_slavery
+				value = restricted
+			}
+		}
+		OR = {
+			custom_tooltip = {
+				text = mta_slavery_enabled_culture
+				OR = {
+					culture = han
+					culture = persian
+					culture_group = arabic
+				}
+			}
+			custom_tooltip = {
+				text = mta_slavery_enabled_religion
+				OR = {
+					religion = aztec
+					religion = aztec_reformed
+					religion = norse_pagan
+					religion = hindu
+					religion = west_african_pagan
+					religion_group = muslim
+					has_religion_feature = religion_feature_hellenic
+					has_religion_feature = religion_feature_norse
+					has_religion_feature = religion_feature_west_african
+					has_religion_feature = religion_ritual_sacrifice
+					has_religion_feature = religion_jizya
+				}
+			}
+			custom_tooltip = {
+				text = mta_slavery_enabled_government
+				OR = {
+					is_nomadic = yes
+					government = roman_imperial_government
+					has_landed_title = e_byzantium # Compatibility for mods not using roman_imperial_government
+					has_landed_title = e_roman_empire # Compatibility for mods not using roman_imperial_government
+					# AGOT compatibility
+					trigger_if = { 
+						limit = { year >= 7996 } # AGOT start date
+						OR = {
+							has_law = slavery_1
+							has_law = slavery_2
+							has_law = slavery_3
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# Similar to above
+is_slaver_group = {
+	conditional_tooltip = {
+		trigger = {
+			has_game_rule = {
+				name = mta_rule_slavery
+				value = restricted
+			}
+		}
+		OR = {
+			culture = han
+			culture = persian
+			culture_group = arabic
+			religion = aztec
+			religion = aztec_reformed
+			religion = norse_pagan
+			religion = hindu
+			religion = west_african_pagan
+			religion_group = muslim
+			has_religion_feature = religion_feature_hellenic
+			has_religion_feature = religion_feature_norse
+			has_religion_feature = religion_feature_west_african
+			has_religion_feature = religion_ritual_sacrifice
+			has_religion_feature = religion_jizya
+			is_nomadic = yes
+			government = roman_imperial_government
+			has_landed_title = e_byzantium # Compatibility for mods not using roman_imperial_government
+			has_landed_title = e_roman_empire # Compatibility for mods not using roman_imperial_government
+			# AGOT compatibility
+			trigger_if = { 
+				limit = { year >= 7996 } # AGOT start date
+				OR = {
+					has_law = slavery_1
+					has_law = slavery_2
+					has_law = slavery_3
+				}
+			}
+		}
+	}
+}
+
+# Different tooltip text, and should generally be used in place of 'trait = slave' to be easily altered for the sake of compatibility
+is_enslaved = {
+	custom_tooltip = {
+		text = mta_is_a_slave_TT
+		OR = {
+			trait = slave
+			trait = mamluk
+			trait = siqlabi
+			trait = abid_shira
+			trait = anatolian_mamluk
+			trait = bahriyya_mamluk
+			trait = burji_mamluk
+			trait = trainee_ghulam
+		}
+	}
+}
+
+is_tmm_slave = {
+	OR = {
+		trait = mamluk
+		trait = siqlabi
+		trait = abid_shira
+		trait = anatolian_mamluk
+		trait = bahriyya_mamluk
+		trait = burji_mamluk
+		trait = trainee_ghulam
+	}
+}
+
+# Players of these cultures and religions can toggle whether to castrate their slaves or not
+# AI of these cultures and religions will often castrate their slaves, with a base chance of 80% modified by the scripted score mta_check_castration_score
+slave_castration_culture = {
+	OR = {
+		culture = han
+		culture = persian
+		culture = roman
+		culture_group = arabic
+		culture_group = byzantine
+		religion = hellenic_pagan_reformed
+		religion_group = muslim
+	}
+}
+
+mta_is_african_culture = {
+	OR = {
+		culture_group = east_african
+		culture_group = central_african
+		culture_group = west_african
+		culture_group = north_african
+	}
+}
+
+mta_is_arabic_culture = {
+	OR = {
+		culture_group = arabic
+	}
+}
+
+mta_is_greco_roman = {
+	OR = {
+		culture = roman
+		culture_group = byzantine
+		religion = hellenic_pagan
+		religion = hellenic_pagan_reformed
+	}
+}

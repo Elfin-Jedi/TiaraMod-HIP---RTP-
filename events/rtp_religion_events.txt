@@ -1,0 +1,609 @@
+
+
+#####
+#Religion Events
+#
+#Total = 4
+#####
+
+namespace = RTPreligion
+
+#Main Events
+#####
+
+#1
+
+#Schism
+narrative_event = {
+	id = RTPreligion.2
+	title = "RTPreligion_2_title"
+	desc = "RTPreligion_2_desc"
+	picture = GFX_evt_great_schism
+	hide_from = yes
+	is_triggered_only = yes
+	sound = excommunication_declared
+
+	immediate = {
+		any_character = {
+			if = {
+				limit = {
+					has_landed_title = k_papal_state
+				}
+				save_event_target_as = rtp_catholic_leader #The Pope
+			}
+			else_if = {
+				limit = {
+					has_landed_title = k_orthodox
+				}
+				save_event_target_as = rtp_orthodox_leader #The Patriarch
+			}
+		}
+	}
+
+	option = {
+		name = "RTPreligion.2_1"
+
+		trigger = {
+			religion = chalcedonian
+			liege = {
+				OR = {
+					religion = catholic
+					religion = orthodox
+				}
+			}
+		}
+
+		liege = {
+			save_event_target_as = rtp_liege #Your liege
+		}
+
+		if = {
+			limit = {
+				liege = {
+					religion = catholic
+				}
+			}
+			unsafe_religion = catholic
+		}
+		else = {
+			unsafe_religion = orthodox
+		}
+	}
+
+	option = {
+		name = "RTPreligion.2_2"
+
+		trigger = {
+			religion = chalcedonian
+			independent = yes
+		}
+
+		event_target:rtp_catholic_leader = {
+			save_event_target_as = rtp_catholic_leader #The Pope
+		}
+
+		unsafe_religion = catholic
+	}
+
+	option = {
+		name = "RTPreligion.2_3"
+
+		trigger = {
+			religion = chalcedonian
+			independent = yes
+		}
+
+		event_target:rtp_orthodox_leader = {
+			save_event_target_as = rtp_orthodox_leader #The Patriarch
+		}
+
+		unsafe_religion = orthodox
+	}
+
+	option = {
+		name = "RTPreligion.2_4"
+
+		trigger = {
+			NOT = {
+				religion = chalcedonian
+			}
+		}
+	}
+}
+
+#Ping Events
+#####
+
+#Ping for Chalcedonian Start
+character_event = {
+	id = RTPreligion.100
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		set_global_flag = rtp_chalcedonian #Chalcedonian game
+		any_character = {
+			limit = {
+				has_landed_title = k_papal_state
+			}
+			save_event_target_as = rtp_the_pope #This is the pope
+			any_demesne_title = {
+				set_title_flag = rtp_pope_titles #These were his titles
+			}
+		}
+
+		activate_title = {
+			title = k_papal_state
+			status = no
+		}
+		activate_title = {
+			title = k_orthodox
+			status = no
+		}
+		unsafe_destroy_landed_title = k_orthodox
+
+		any_title = {
+			limit = {
+				OR = {
+					religion = catholic
+					religion = orthodox
+				}
+			}
+			if = {
+				limit = {
+					religion = catholic
+				}
+				set_title_flag = rtp_catholic_title #This was a catholic title
+			}
+			else = {
+				set_title_flag = rtp_orthodox_title #This was a orthodox title
+			}
+			religion = chalcedonian
+		}
+
+		any_character = {
+			limit = {
+				OR = {
+					religion = catholic
+					religion = orthodox
+				}
+			}
+			unsafe_religion = chalcedonian
+
+			if = {
+				limit = {
+					has_character_flag = rtp_started_from_nothing
+				}
+				add_trait = cannot_marry
+			}
+		}
+
+		any_province = {
+			limit = {
+				OR = {
+					religion = catholic
+					religion = fraticelli
+					religion = cathar
+					religion = lollard
+					religion = waldensian
+					religion = orthodox
+					religion = bogomilist
+				}
+			}
+			unsafe_religion = chalcedonian
+		}
+
+		c_roma = {
+			set_holy_site = chalcedonian
+		}
+		c_byzantion = {
+			set_holy_site = chalcedonian
+		}
+		c_antiocheia = {
+			set_holy_site = chalcedonian
+		}
+		c_jerusalem = {
+			set_holy_site = chalcedonian
+		}
+		c_alexandria = {
+			set_holy_site = chalcedonian
+		}
+
+		set_parent_religion = {
+			religion = iconoclast
+			parent = chalcedonian
+		}
+		set_parent_religion = {
+			religion = paulician
+			parent = chalcedonian
+		}
+		set_parent_religion = {
+			religion = monothelite
+			parent = chalcedonian
+		}
+
+		event_target:rtp_the_pope = {
+			any_title = {
+				limit = {
+					has_title_flag = rtp_pope_titles #These were his titles
+				}
+				gain_title = PREV
+				clr_title_flag = rtp_pope_titles #These were his titles
+			}
+		}
+
+		if = {
+			limit = {
+				year < 1054
+			}
+			event_target:rtp_the_pope = {
+				religion_authority = {
+					modifier = rtp_chalcedonian_splendor_rm
+				}
+			}
+		}
+
+		b_hagiasophia = {
+			holder_scope = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+		unsafe_destroy_landed_title = k_papal_state
+		chalcedonian = {
+			set_religion_head = k_papacy
+		}
+
+		character_event = {
+			id = RTPcheck.110 #Society Check
+		}
+	}
+}
+
+#Ping for Schism
+character_event = {
+	id = RTPreligion.101
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+	
+	trigger = {
+		has_global_flag = rtp_chalcedonian #Chalcedonian game
+		year = 867
+	}
+
+	immediate = {
+		trigger_switch = {
+			on_trigger = year
+			1054 = 	{ set_global_flag = rtp_schism }
+			1047 = 	{ random = { chance = 19 set_global_flag = rtp_schism } }
+			1037 = 	{ random = { chance = 18 set_global_flag = rtp_schism } }
+			1027 = 	{ random = { chance = 17 set_global_flag = rtp_schism } }
+			1017 = 	{ random = { chance = 16 set_global_flag = rtp_schism } }
+			1007 = 	{ random = { chance = 15 set_global_flag = rtp_schism } }
+			997 = 	{ random = { chance = 14 set_global_flag = rtp_schism } }
+			987 = 	{ random = { chance = 13 set_global_flag = rtp_schism } }
+			977 = 	{ random = { chance = 12 set_global_flag = rtp_schism } }
+			967 = 	{ random = { chance = 11 set_global_flag = rtp_schism } }
+			957 = 	{ random = { chance = 10 set_global_flag = rtp_schism } }
+			947 = 	{ random = { chance = 9 set_global_flag = rtp_schism } }
+			937 = 	{ random = { chance = 8 set_global_flag = rtp_schism } }
+			927 = 	{ random = { chance = 7 set_global_flag = rtp_schism } }
+			917 = 	{ random = { chance = 6 set_global_flag = rtp_schism } }
+			907 = 	{ random = { chance = 5 set_global_flag = rtp_schism } }
+			897 = 	{ random = { chance = 4 set_global_flag = rtp_schism } }
+			887 = 	{ random = { chance = 3 set_global_flag = rtp_schism } }
+			877 = 	{ random = { chance = 2 set_global_flag = rtp_schism } }
+			867 = 	{ random = { chance = 1 set_global_flag = rtp_schism } }
+		}
+	}
+
+	option = {
+		trigger = {
+			has_global_flag = rtp_schism #The schism happens
+		}
+
+		any_character = {
+			if = {
+				limit = {
+					OR = {
+						religion = chalcedonian
+						religion = iconoclast
+						religion = paulician
+						religion = monothelite
+					}
+					capital_scope = {
+						region = world_europe_west
+					}
+				}
+				unsafe_religion = catholic
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = chalcedonian
+						religion = iconoclast
+						religion = paulician
+						religion = monothelite
+					}
+					capital_scope = {
+						region = world_europe_north
+					}
+				}
+				unsafe_religion = catholic
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = chalcedonian
+						religion = iconoclast
+						religion = paulician
+						religion = monothelite
+					}
+					capital_scope = {
+						region = world_europe_south_italy
+					}
+				}
+				unsafe_religion = catholic
+			}
+			else_if = {
+				limit = {
+					religion = chalcedonian
+					capital_scope = {
+						region = world_europe_east
+					}
+				}
+				unsafe_religion = orthodox
+			}
+			else_if = {
+				limit = {
+					religion = chalcedonian
+					capital_scope = {
+						region = world_asia_minor
+					}
+				}
+				unsafe_religion = orthodox
+			}
+			else_if = {
+				limit = {
+					religion = chalcedonian
+					capital_scope = {
+						region = world_europe_south_east
+					}
+				}
+				unsafe_religion = orthodox
+			}
+			else_if = {
+				limit = {
+					religion = chalcedonian
+					capital_scope = {
+						NOR = {
+							region = world_europe_west
+							region = world_europe_north
+							region = world_europe_south_italy
+							region = world_europe_east
+							region = world_asia_minor
+							region = world_europe_south_east
+						}
+					}
+				}
+				random_list = {
+					50 = {
+						unsafe_religion = catholic
+					}
+					50 = {
+						unsafe_religion = orthodox
+					}
+				}
+			}
+		}
+
+		any_province = {
+			if = {
+				limit = {
+					OR = {
+						religion = chalcedonian
+						religion = iconoclast
+						religion = paulician
+						religion = monothelite
+					}
+					capital_holding = {
+						region = world_europe_west
+					}
+				}
+				unsafe_religion = catholic
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = chalcedonian
+						religion = iconoclast
+						religion = paulician
+						religion = monothelite
+					}
+					capital_holding = {
+						region = world_europe_north
+					}
+				}
+				unsafe_religion = catholic
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = chalcedonian
+						religion = iconoclast
+						religion = paulician
+						religion = monothelite
+					}
+					capital_holding = {
+						region = world_europe_south_italy
+					}
+				}
+				unsafe_religion = catholic
+			}
+			else_if = {
+				limit = {
+					religion = chalcedonian
+					capital_holding = {
+						region = world_europe_east
+					}
+				}
+				unsafe_religion = orthodox
+			}
+			else_if = {
+				limit = {
+					religion = chalcedonian
+					capital_holding = {
+						region = world_asia_minor
+					}
+				}
+				unsafe_religion = orthodox
+			}
+			else_if = {
+				limit = {
+					religion = chalcedonian
+					capital_holding = {
+						region = world_europe_south_east
+					}
+				}
+				unsafe_religion = orthodox
+			}
+		}
+
+		event_target:rtp_the_pope = {
+			any_title = {
+				limit = {
+					has_title_flag = rtp_pope_titles #These were his titles
+				}
+				gain_title = PREV
+				clr_title_flag = rtp_pope_titles #These were his titles
+			}
+		}
+
+		catholic = {
+			set_religion_head = k_papal_state
+		}
+
+		set_parent_religion = {
+			religion = iconoclast
+			parent = orthodox
+		}
+		set_parent_religion = {
+			religion = paulician
+			parent = orthodox
+		}
+		set_parent_religion = {
+			religion = monothelite
+			parent = orthodox
+		}
+
+		any_title = {
+			limit = {
+				OR = {
+					has_title_flag = rtp_catholic_title #This was a catholic title
+					has_title_flag = rtp_orthodox_title #This was a orthodox title
+				}
+			}
+			if = {
+				limit = {
+					has_title_flag = rtp_catholic_title #This was a catholic title
+				}
+				religion = catholic
+				clr_title_flag = rtp_catholic_title #This was a catholic title
+			}
+			else = {
+				religion = orthodox
+				clr_title_flag = rtp_orthodox_title #This was a orthodox title
+			}
+		}
+
+		activate_title = {
+			title = k_papal_state
+			status = yes
+		}
+		activate_title = {
+			title = k_orthodox
+			status = yes
+		}
+		if = {
+			limit = {
+				b_roma = {
+					holder_scope = {
+						religion = catholic
+						OR = {
+							government = theocracy_government
+							government = rtp_theocracy_g
+						}
+					}
+				}
+			}
+			b_roma = {
+				holder_scope = {
+					grant_title_no_opinion = k_papal_state
+				}
+			}
+		}
+		else = {
+			create_character = {
+				age = 40
+				random_traits = yes
+				culture = italian
+				religion = catholic
+				dynasty = random
+			}
+			new_character = {
+				grant_title_no_opinion = k_papal_state
+			}
+		}
+		if = {
+			limit = {
+				b_hagiasophia = {
+					holder_scope = {
+						religion = orthodox
+						OR = {
+							government = theocracy_government
+							government = rtp_theocracy_g
+						}
+					}
+				}
+			}
+			b_hagiasophia = {
+				holder_scope = {
+					grant_title_no_opinion = k_orthodox
+				}
+			}
+		}
+		else = {
+			create_character = {
+				age = 40
+				random_traits = yes
+				culture = greek
+				religion = orthodox
+				dynasty = random
+			}
+			new_character = {
+				grant_title_no_opinion = k_orthodox
+			}
+		}
+
+		clr_global_flag = rtp_chalcedonian #Chalcedonian game
+		clr_global_flag = rtp_schism #The schism happens
+
+		narrative_event = {
+			id = RTPreligion.2 #Schism
+		}
+
+		chalcedonian = {
+			set_religion_head = none
+		}
+	}
+
+	option = {
+		trigger = {
+			NOT = {
+				has_global_flag = rtp_schism #The schism happens
+			}
+		}
+	}
+}

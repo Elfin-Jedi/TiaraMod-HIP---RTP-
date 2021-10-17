@@ -1,0 +1,48 @@
+SRR_attracted_to_men = {
+	OR = {
+	trait = bisexual
+		AND = {
+			is_female = yes
+			NOT = { trait = homosexual }
+		}
+		AND = {
+			is_female = no
+			OR = {
+				trait = homosexual
+				trait = bisexual
+			}
+		}
+	}
+}
+SRR_attracted_to_women = {
+	OR = {
+		AND = {
+			is_female = no
+			NOT = { trait = homosexual }
+		}
+		AND = {
+			is_female = yes
+			OR = {
+				trait = homosexual
+				trait = bisexual
+			}
+		}
+	}
+}
+SRR_gay_accepting = {
+	OR = {
+		religion = hellenic_pagan
+		religion = hellenic_pagan_reformed
+		religion_group = indian_group
+		
+		has_game_rule = { name = queer_characters value = ultra_queer }
+	}
+}
+SRR_incest_accepting = {
+	OR = {
+		religion = messalian 
+		religion = zoroastrian 
+		
+		has_religion_feature = religion_holy_family 
+	}
+}

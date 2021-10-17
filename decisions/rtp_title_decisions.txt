@@ -1,0 +1,1898 @@
+#####
+#Title Decisions
+#
+#Total = 12
+#####
+
+title_decisions = {
+	### Player
+
+	#Move Realm
+	rtp_move_realm_tid = {
+		ai = no
+
+		from_potential = {
+			has_landed_title = c_landless_t
+		}
+
+		potential = {
+			tier = BARON
+			holder_scope = {
+				top_liege = {
+					NOT = {
+						has_opinion_modifier = {
+							who = FROM
+							modifier = opinion_looted
+						}
+					}
+				}
+				NAND = {
+					has_character_modifier = expelled_jewish
+					FROM = {
+						religion_group = jewish_group
+					}
+				}
+			}
+		}
+
+		allow = {
+			FROM = {
+				show_scope_change = no
+				rtp_is_capable_adult = yes
+				conditional_tooltip = {
+					trigger = {
+						ROOT = {
+							holder_scope = {
+								top_liege = {
+									lower_tier_than = DUKE
+								}
+								NOT = {
+									same_realm = FROM
+								}
+								FROM = {
+									liege = {
+										is_within_diplo_range = PREVPREV
+									}
+								}
+							}
+						}
+					}
+					custom_tooltip = {
+						text = "rtp_be_higher_tier_ct"
+
+						ROOT = {
+							holder_scope = {
+								top_liege = {
+									higher_tier_than = COUNT
+								}
+							}
+						}
+					}
+				}
+				conditional_tooltip = {
+					trigger = {
+						ROOT = {
+							holder_scope = {
+								FROM = {
+									independent = no
+									liege = {
+										NOT = {
+											is_within_diplo_range = PREVPREV
+										}
+									}
+								}
+							}
+						}
+					}
+					custom_tooltip = {
+						text = "rtp_be_closer_ct"
+
+						ROOT = {
+							holder_scope = {
+								FROM = {
+									liege = {
+										is_within_diplo_range = PREVPREV
+									}
+								}
+							}
+						}
+					}
+				}
+				conditional_tooltip = {
+					trigger = {
+						ROOT = {
+							holder_scope = {
+								top_liege = {
+									higher_tier_than = COUNT
+								}
+								NOT = {
+									same_realm = FROM
+								}
+								FROM = {
+									independent = no
+									liege = {
+										is_within_diplo_range = PREVPREV
+									}
+								}
+							}
+						}
+					}
+					wealth = 8
+				}
+				conditional_tooltip = {
+					trigger = {
+						ROOT = {
+							location = {
+								FROM = {
+									independent = no
+									NOT = {
+										at_location = PREV
+									}
+								}
+							}
+							holder_scope = {
+								same_realm = FROM
+							}
+						}
+					}
+					wealth = 4
+				}
+				conditional_tooltip = {
+					trigger = {
+						ROOT = {
+							location = {
+								FROM = {
+									independent = no
+									at_location = PREV
+								}
+							}
+							holder_scope = {
+								same_realm = FROM
+							}
+						}
+					}
+				}
+				conditional_tooltip = {
+					trigger = {
+						ROOT = {
+							holder_scope = {
+								higher_tier_than = COUNT
+							}
+						}
+						FROM = {
+							independent = yes
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				FROM = {
+					rtp_flush_jobs = yes
+					rtp_flush_buildings = yes
+				}
+			}
+
+			if = {
+				limit = {
+					holder_scope = {
+						NOT = {
+							same_realm = FROM
+						}
+					}
+					FROM = {
+						independent = no
+					}
+				}
+				FROM = {
+					show_scope_change = no
+					random_list = {
+						10 = {
+							wealth = -8
+						}
+						20 = {
+							wealth = -6
+						}
+						30 = {
+							wealth = -4
+						}
+						50 = {
+							wealth = -2
+						}
+					}
+
+					hidden_tooltip = {
+						random_list = {
+							90 = {
+							}
+							10 = {
+								character_event = {
+									id = RTPrandom.4 #Random Encounter - Bandits - Start
+								}
+							}
+							10 = {
+								character_event = {
+									id = RTPrandom.6 #Random Encounter - Farmers
+								}
+							}
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						holder_scope = {
+							higher_tier_than = COUNT
+						}
+					}
+					holder_scope = {
+						show_scope_change = no
+						FROM = {
+							show_scope_change = no
+							set_defacto_liege = PREV
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						holder_scope = {
+							tier = COUNT
+						}
+					}
+					holder_scope = {
+						show_scope_change = no
+						liege = {
+							show_scope_change = no
+							FROM = {
+								show_scope_change = no
+								set_defacto_liege = PREV
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						holder_scope = {
+							liege = {
+								higher_tier_than = COUNT
+							}
+						}
+					}
+					holder_scope = {
+						show_scope_change = no
+						liege = {
+							show_scope_change = no
+							FROM = {
+								show_scope_change = no
+								set_defacto_liege = PREV
+							}
+						}
+					}
+				}
+				else = {
+					holder_scope = {
+						show_scope_change = no
+						liege = {
+							show_scope_change = no
+							liege = {
+								show_scope_change = no
+								FROM = {
+									show_scope_change = no
+									set_defacto_liege = PREV
+								}
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					holder_scope = {
+						same_realm = FROM
+					}
+					location = {
+						FROM = {
+							independent = no
+							NOT = {
+								at_location = PREV
+							}
+						}
+					}
+				}
+				FROM = {
+					show_scope_change = no
+					random_list = {
+						10 = {
+							wealth = -4
+						}
+						20 = {
+							wealth = -3
+						}
+						30 = {
+							wealth = -2
+						}
+						50 = {
+							wealth = -1
+						}
+					}
+
+					hidden_tooltip = {
+						random_list = {
+							90 = {
+							}
+							5 = {
+								character_event = {
+									id = RTPrandom.4 #Random Encounter - Bandits - Start
+								}
+							}
+							5 = {
+								character_event = {
+									id = RTPrandom.6 #Random Encounter - Farmers
+								}
+							}
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						holder_scope = {
+							higher_tier_than = COUNT
+						}
+					}
+					holder_scope = {
+						show_scope_change = no
+						FROM = {
+							show_scope_change = no
+							set_defacto_liege = PREV
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						holder_scope = {
+							tier = COUNT
+						}
+					}
+					holder_scope = {
+						show_scope_change = no
+						liege = {
+							show_scope_change = no
+							FROM = {
+								show_scope_change = no
+								set_defacto_liege = PREV
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						holder_scope = {
+							liege = {
+								higher_tier_than = COUNT
+							}
+						}
+					}
+					holder_scope = {
+						show_scope_change = no
+						liege = {
+							show_scope_change = no
+							FROM = {
+								show_scope_change = no
+								set_defacto_liege = PREV
+							}
+						}
+					}
+				}
+				else = {
+					holder_scope = {
+						show_scope_change = no
+						liege = {
+							show_scope_change = no
+							liege = {
+								show_scope_change = no
+								FROM = {
+									show_scope_change = no
+									set_defacto_liege = PREV
+								}
+							}
+						}
+					}
+				}
+			}
+			else = {
+				FROM = {
+					show_scope_change = no
+					hidden_tooltip = {
+						random_list = {
+							90 = {
+							}
+							15 = {
+								character_event = {
+									id = RTPrandom.4 #Random Encounter - Bandits - Start
+								}
+							}
+							15 = {
+								character_event = {
+									id = RTPrandom.6 #Random Encounter - Farmers
+								}
+							}
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						holder_scope = {
+							higher_tier_than = COUNT
+						}
+					}
+					holder_scope = {
+						show_scope_change = no
+						FROM = {
+							show_scope_change = no
+							set_defacto_liege = PREV
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						holder_scope = {
+							tier = COUNT
+						}
+					}
+					holder_scope = {
+						show_scope_change = no
+						liege = {
+							show_scope_change = no
+							FROM = {
+								show_scope_change = no
+								set_defacto_liege = PREV
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						holder_scope = {
+							liege = {
+								higher_tier_than = COUNT
+							}
+						}
+					}
+					holder_scope = {
+						show_scope_change = no
+						liege = {
+							show_scope_change = no
+							FROM = {
+								show_scope_change = no
+								set_defacto_liege = PREV
+							}
+						}
+					}
+				}
+				else = {
+					holder_scope = {
+						show_scope_change = no
+						liege = {
+							show_scope_change = no
+							liege = {
+								show_scope_change = no
+								FROM = {
+									show_scope_change = no
+									set_defacto_liege = PREV
+								}
+							}
+						}
+					}
+				}
+			}
+
+			c_landless_t = {
+				set_name = PREV
+				set_preferred_capital = PREV
+				save_persistent_event_target = {
+					name = rtp_home_capital
+					scope = PREV
+				}
+			}
+		}
+	}
+
+	#Purchase Holding
+	rtp_purchase_holding_tid = {
+		ai = no
+
+		from_potential = {
+			rtp_is_landless = yes
+			rtp_is_baron = no
+			NOT = {
+				dynasty = 19930
+			}
+		}
+
+		potential = {
+			tier = COUNT
+			location = {
+				has_empty_holding = yes
+				FROM = {
+					at_location = PREV
+				}
+			}
+		}
+
+		allow = {
+			FROM = {
+				show_scope_change = no
+				rtp_is_capable_adult = yes
+				conditional_tooltip = {
+					trigger = {
+						rtp_is_holy_order = yes
+					}
+					OR = {
+						wealth = 500
+						AND = {
+							wealth = 250
+							ROOT = {
+								show_scope_change = no
+								holder_scope = {
+									show_scope_change = no
+									owes_favor_to = FROM
+								}
+							}
+						}
+					}
+				}
+				conditional_tooltip = {
+					trigger = {
+						has_landed_title = c_landless_t
+						ROOT = {
+							holder_scope = {
+								OR = {
+									same_liege = FROM
+									is_liege_of = FROM
+								}
+							}
+						}
+					}
+					OR = {
+						wealth = 600
+						AND = {
+							wealth = 300
+							ROOT = {
+								show_scope_change = no
+								holder_scope = {
+									show_scope_change = no
+									owes_favor_to = FROM
+								}
+							}
+						}
+					}
+				}
+				conditional_tooltip = {
+					trigger = {
+						rtp_is_mercenary = yes
+					}
+					OR = {
+						wealth = 700
+						AND = {
+							wealth = 350
+							ROOT = {
+								show_scope_change = no
+								holder_scope = {
+									show_scope_change = no
+									owes_favor_to = FROM
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			location = {
+				save_event_target_as = rtp_selected_province #The selected province
+			}
+			FROM = {
+				character_event = {
+					id = RTPnoble.3 #Purchase Holding
+				}
+			}
+		}
+	}
+	
+	#Purchase County
+	rtp_purchase_county_tid = {
+		ai = no
+
+		from_potential = {
+			rtp_is_baron = yes
+			NOT = {
+				dynasty = 19930
+			}
+		}
+
+		potential = {
+			tier = COUNT
+			location = {
+				FROM = {
+					at_location = PREV
+				}
+			}
+			holder_scope = {
+				num_of_count_titles = 2
+			}
+		}
+
+		allow = {
+			FROM = {
+				show_scope_change = no
+				rtp_is_capable_adult = yes
+				OR = {
+					wealth = 1000
+					AND = {
+						wealth = 500
+						ROOT = {
+							show_scope_change = no
+							holder_scope = {
+								show_scope_change = no
+								owes_favor_to = FROM
+							}
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			location = {
+				save_event_target_as = rtp_selected_province #The selected province
+			}
+			FROM = {
+				character_event = {
+					id = RTPbaron.2 #Purchase County
+				}
+			}
+		}
+	}
+
+	#Recruit Volunteers
+	rtp_recruit_volunteers_tid = {
+		ai = no
+
+		from_potential = {
+			has_landed_title = c_landless_t
+			rtp_is_mercenary = no
+			rtp_is_holy_order = no
+			check_variable = {
+				which = rtp_volunteers
+				value <= 2000
+			}
+		}
+
+		potential = {
+			tier = COUNT
+			location = {
+				FROM = {
+					has_landed_title = c_landless_t
+					at_location = PREV
+				}
+			}
+		}
+
+		allow = {
+			FROM = {
+				rtp_is_capable_adult = yes
+			}
+			location = {
+				show_scope_change = no
+				NOT = {
+					has_province_modifier = rtp_recruited_timer_em
+				}
+				conditional_tooltip = {
+					trigger = {
+						num_of_max_settlements == 1
+					}
+					FROM = {
+						show_scope_change = no
+						wealth = 5
+					}
+				}
+				conditional_tooltip = {
+					trigger = {
+						num_of_max_settlements == 2
+					}
+					FROM = {
+						show_scope_change = no
+						wealth = 6
+					}
+				}
+				conditional_tooltip = {
+					trigger = {
+						num_of_max_settlements == 3
+					}
+					FROM = {
+						show_scope_change = no
+						wealth = 8
+					}
+				}
+				conditional_tooltip = {
+					trigger = {
+						num_of_max_settlements == 4
+					}
+					FROM = {
+						show_scope_change = no
+						wealth = 9
+					}
+				}
+				conditional_tooltip = {
+					trigger = {
+						num_of_max_settlements == 5
+					}
+					FROM = {
+						show_scope_change = no
+						wealth = 11
+					}
+				}
+				conditional_tooltip = {
+					trigger = {
+						num_of_max_settlements == 6
+					}
+					FROM = {
+						show_scope_change = no
+						wealth = 12
+					}
+				}
+				conditional_tooltip = {
+					trigger = {
+						num_of_max_settlements = 7
+					}
+					FROM = {
+						show_scope_change = no
+						wealth = 14
+					}
+				}
+			}
+		}
+
+		effect = {
+			location = {
+				save_event_target_as = rtp_selected_holding #The selected holding
+			}
+			FROM = {
+				character_event = {
+					id = RTPlandless.28 #Recruit Volunteers
+				}
+			}
+		}
+	}
+
+	#Recruit Zealots
+	rtp_recruit_zealots_tid = {
+		ai = no
+
+		from_potential = {
+			has_landed_title = c_landless_t
+		}
+
+		potential = {
+			tier = COUNT
+			holder_scope = {
+				same_realm = FROM
+				NOT = {
+					religion = FROM
+				}
+			}
+			location = {
+				religion = FROM
+				FROM = {
+					at_location = PREV
+				}
+				NOT = {
+					has_province_modifier = rtp_recruited_zealouts_timer_em
+				}
+			}
+		}
+
+		allow = {
+			FROM = {
+				piety = 50
+				rtp_is_capable_adult = yes
+				check_variable = {
+					which = rtp_zealouts
+					value < 4
+				}
+			}
+		}
+
+		effect = {
+			location = {
+				save_event_target_as = rtp_selected_province #The selected province
+			}
+			FROM = {
+				show_scope_change = no
+				piety = -50
+				
+				character_event = {
+					id = RTPlandless.29 #Recruit Zealouts
+				}
+			}
+		}
+	}
+
+	#Recruit Patriots
+	rtp_recruit_patriots_tid = {
+		ai = no
+
+		from_potential = {
+			has_landed_title = c_landless_t
+		}
+
+		potential = {
+			tier = COUNT
+			holder_scope = {
+				same_realm = FROM
+				NOT = {
+					culture = FROM
+				}
+			}
+			location = {
+				culture = FROM
+				FROM = {
+					at_location = PREV
+				}
+				NOT = {
+					has_province_modifier = rtp_recruited_patriots_timer_em
+				}
+			}
+		}
+
+		allow = {
+			FROM = {
+				prestige = 50
+				rtp_is_capable_adult = yes
+				check_variable = {
+					which = rtp_patriots
+					value < 4
+				}
+			}
+		}
+
+		effect = {
+			location = {
+				save_event_target_as = rtp_selected_province #The selected province
+			}
+			FROM = {
+				show_scope_change = no
+				prestige = -50
+				
+				character_event = {
+					id = RTPlandless.26 #Recruit Patriots
+				}
+			}
+		}
+	}
+
+	#Preach Religion
+	rtp_preach_religion_tid = {
+		filter = sub_realm_owned
+		ai_target_filter = sub_realm_owned
+		ai_check_interval = 12
+
+		from_potential = {
+			OR = {
+				is_landed = no
+				rtp_is_landless = yes
+			}
+		}
+
+		potential = {
+			tier = COUNT
+			location = {
+				NOT = {
+					religion = FROM
+				}
+				FROM = {
+					at_location = PREV
+				}
+			}
+		}
+
+		allow = {
+			FROM = {
+				show_scope_change = no
+				rtp_is_capable_adult = yes
+				piety = 50
+			}
+		}
+
+		effect = {
+			FROM = {
+				piety = -50
+			}
+			random_list = {
+				60 = {
+				}
+				20 = {
+					location = {
+						show_scope_change = no
+						religion = FROM
+						random = {
+							chance = 20
+
+							any_province_character = {
+								show_scope_change = no
+								unsafe_religion = FROM
+							}
+						}
+					}
+				}
+				20 = {
+					holder_scope = {
+						show_scope_change = no
+						reverse_imprison = FROM
+					}
+				}
+			}
+		}
+	}
+
+	#Build Workshop
+	rtp_build_workshop_tid = {
+		ai = no
+
+		from_potential = {
+			has_landed_title = c_landless_t
+		}
+
+		potential = {
+			tier = COUNT
+			location = {
+				NOR = {
+					has_province_modifier = rtp_gems_em
+					has_province_modifier = rtp_amber_em
+					has_province_modifier = rtp_beer_em
+					has_province_modifier = rtp_berries_em
+					has_province_modifier = rtp_bread_em
+					has_province_modifier = rtp_bricks_em
+					has_province_modifier = rtp_cheese_em
+					has_province_modifier = rtp_cloth_em
+					has_province_modifier = rtp_copper_em
+					has_province_modifier = rtp_driedfruits_em
+					has_province_modifier = rtp_dyes_em
+					has_province_modifier = rtp_fish_em
+					has_province_modifier = rtp_furs_em
+					has_province_modifier = rtp_grain_em
+					has_province_modifier = rtp_ham_em
+					has_province_modifier = rtp_mushrooms_em
+					has_province_modifier = rtp_porkribs_em
+					has_province_modifier = rtp_salt_em
+					has_province_modifier = rtp_spirits_em
+					has_province_modifier = rtp_venison_em
+					has_province_modifier = rtp_wine_em
+					has_province_modifier = rtp_wood_em
+				}
+				FROM = {
+					at_location = PREV
+					NOT = {
+						has_character_flag = rtp_owns_workshop@PREV
+					}
+				}
+			}
+		}
+
+		allow = {
+			FROM = {
+				rtp_is_capable_adult = yes
+				wealth = 100
+			}
+		}
+
+		effect = {
+			location = {
+				show_scope_change = no
+				FROM = {
+					show_scope_change = no
+					wealth = -100
+					set_character_flag = rtp_owns_workshop@PREV
+				}
+				hidden_tooltip = {
+					random_list = {
+						1 = {
+							add_province_modifier = {
+								name = rtp_gems_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_amber_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_beer_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_berries_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_bread_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_bricks_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_cheese_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_cloth_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_copper_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_driedfruits_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_dyes_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_fish_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_furs_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_grain_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_ham_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_mushrooms_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_porkribs_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_salt_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_spirits_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_venison_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_wine_em
+								duration = -1
+							}
+						}
+						1 = {
+							add_province_modifier = {
+								name = rtp_wood_em
+								duration = -1
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#Steal Trade Goods
+	rtp_steal_trade_goods_tid = {
+		ai = no
+
+		from_potential = {
+			has_landed_title = c_landless_t
+			check_variable = {
+				which = rtp_volunteers
+				value > 0
+			}
+		}
+
+		potential = {
+			tier = COUNT
+			location = {
+				OR = {
+					has_province_modifier = rtp_gems_em
+					has_province_modifier = rtp_amber_em
+					has_province_modifier = rtp_beer_em
+					has_province_modifier = rtp_berries_em
+					has_province_modifier = rtp_bread_em
+					has_province_modifier = rtp_bricks_em
+					has_province_modifier = rtp_cheese_em
+					has_province_modifier = rtp_cloth_em
+					has_province_modifier = rtp_copper_em
+					has_province_modifier = rtp_driedfruits_em
+					has_province_modifier = rtp_dyes_em
+					has_province_modifier = rtp_fish_em
+					has_province_modifier = rtp_furs_em
+					has_province_modifier = rtp_grain_em
+					has_province_modifier = rtp_ham_em
+					has_province_modifier = rtp_mushrooms_em
+					has_province_modifier = rtp_porkribs_em
+					has_province_modifier = rtp_salt_em
+					has_province_modifier = rtp_spirits_em
+					has_province_modifier = rtp_venison_em
+					has_province_modifier = rtp_wine_em
+					has_province_modifier = rtp_wood_em
+				}
+				FROM = {
+					at_location = PREV
+				}
+			}
+		}
+
+		allow = {
+			FROM = {
+				rtp_is_capable_adult = yes
+				check_variable = {
+					which = rtp_volunteers
+					value >= 100
+				}
+			}
+		}
+
+		effect = {
+			FROM = {
+				subtract_variable = {
+					which = rtp_volunteers
+					value = 100
+				}
+			}
+
+			location = {
+				show_scope_change = no
+				random_list = {
+					65 = {
+						if = {
+							limit = {
+								has_province_modifier = rtp_gems_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_gems_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_amber_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_amber_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_beer_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_beer_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_berries_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_berries_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_bread_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_bread_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_bricks_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_bricks_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_cheese_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_cheese_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_cloth_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_cloth_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_copper_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_copper_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_driedfruits_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_driedfruits_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_dyes_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_dyes_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_fish_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_fish_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_furs_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_furs_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_grain_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_grain_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_ham_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_ham_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_mushrooms_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_mushrooms_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_porkribs_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_porkribs_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_salt_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_salt_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_spirits_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_spirits_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_venison_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_venison_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_wine_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_wine_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_wood_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_wood_a
+							}
+						}
+					}
+					20 = {
+
+					}
+					10 = {
+						if = {
+							limit = {
+								has_province_modifier = rtp_gems_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_gems_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_amber_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_amber_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_beer_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_beer_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_berries_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_berries_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_bread_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_bread_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_bricks_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_bricks_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_cheese_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_cheese_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_cloth_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_cloth_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_copper_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_copper_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_driedfruits_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_driedfruits_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_dyes_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_dyes_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_fish_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_fish_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_furs_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_furs_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_grain_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_grain_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_ham_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_ham_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_mushrooms_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_mushrooms_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_porkribs_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_porkribs_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_salt_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_salt_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_spirits_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_spirits_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_venison_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_venison_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_wine_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_wine_a
+							}
+						}
+						else_if = {
+							limit = {
+								has_province_modifier = rtp_wood_em
+							}
+							FROM = {
+								show_scope_change = no
+								add_artifact = rtp_wood_a
+							}
+						}
+
+						custom_tooltip = {
+							text = "rtp_will_destroy_workshop_ct"
+
+							remove_province_modifier = rtp_gems_em
+							remove_province_modifier = rtp_amber_em
+							remove_province_modifier = rtp_beer_em
+							remove_province_modifier = rtp_berries_em
+							remove_province_modifier = rtp_bread_em
+							remove_province_modifier = rtp_bricks_em
+							remove_province_modifier = rtp_cheese_em
+							remove_province_modifier = rtp_cloth_em
+							remove_province_modifier = rtp_copper_em
+							remove_province_modifier = rtp_driedfruits_em
+							remove_province_modifier = rtp_dyes_em
+							remove_province_modifier = rtp_fish_em
+							remove_province_modifier = rtp_furs_em
+							remove_province_modifier = rtp_grain_em
+							remove_province_modifier = rtp_ham_em
+							remove_province_modifier = rtp_mushrooms_em
+							remove_province_modifier = rtp_porkribs_em
+							remove_province_modifier = rtp_salt_em
+							remove_province_modifier = rtp_spirits_em
+							remove_province_modifier = rtp_venison_em
+							remove_province_modifier = rtp_wine_em
+							remove_province_modifier = rtp_wood_em
+
+							FROM = {
+								any_player = {
+									limit = {
+										has_character_flag = rtp_owns_workshop@PREVPREV
+									}
+									clr_character_flag = rtp_owns_workshop@PREVPREV
+								}
+							}
+						}
+					}
+					5 = {
+						ROOT = {
+							show_scope_change = no
+							holder_scope = {
+								show_scope_change = no
+								reverse_imprison = FROM
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#Raid Holding
+	rtp_raid_holding_tid = {
+		ai = no
+
+		from_potential = {
+			has_landed_title = c_landless_t
+			check_variable = {
+				which = rtp_volunteers
+				value > 0
+			}
+			top_liege = {
+				any_neighbor_independent_ruler = {
+					higher_tier_than = DUKE
+				}
+			}
+		}
+
+		potential = {
+			tier = BARON
+			location = {
+				FROM = {
+					at_location = PREV
+				}
+			}
+			NOT = {
+				has_holding_modifier = caravan_raiders
+			}
+		}
+
+		allow = {
+			FROM = {
+				rtp_is_capable_adult = yes
+				check_variable = {
+					which = rtp_volunteers
+					value >= 200
+				}
+			}
+		}
+
+		effect = {
+			FROM = {
+				show_scope_change = no
+				random = {
+					chance = 5
+
+					if = {
+						limit = {
+							NOR = {
+								trait = viking
+								trait = pirate
+								trait = ravager
+								trait = seaking
+								trait = sea_queen
+							}
+						}
+						add_trait = ravager
+					}
+				}
+				rtp_give_big_gold_se = yes
+				subtract_variable = {
+					which = rtp_volunteers
+					value = 200
+				}
+
+				hidden_tooltip = {
+					top_liege = {
+						random_neighbor_independent_ruler = {
+							limit = {
+								higher_tier_than = DUKE
+							}
+							capital_holding = {
+								c_landless_t = {
+									set_name = PREV
+									set_preferred_capital = PREV
+									save_persistent_event_target = {
+										name = rtp_home_capital
+										scope = PREV
+									}
+								}
+								FROM = {
+									set_defacto_liege = PREVPREV
+								}
+							}
+						}
+					}
+				}
+			}
+
+			hidden_tooltip = {
+				destroy_random_building = yes
+
+				add_holding_modifier = {
+					modifier = caravan_raiders
+					years = 3
+				}
+			}
+
+			holder_scope = {
+				show_scope_change = no
+				random = {
+					chance = 20
+
+					reverse_imprison = FROM
+				}
+				top_liege = {
+					show_scope_change = no
+					opinion = {
+						who = FROM
+						modifier = opinion_looted
+						years = 100
+					}
+				}
+				opinion = {
+					who = FROM
+					modifier = opinion_looted
+					years = 100
+				}
+			}
+		}
+	}
+
+	#Set up Bandit Hideout
+	rtp_set_up_bandit_hideout_tid = {
+		ai = no
+
+		from_potential = {
+			has_landed_title = c_landless_t
+			check_variable = {
+				which = rtp_volunteers
+				value > 0
+			}
+			NOT = {
+				has_character_flag = rtp_owns_bandit_hideout@ROOT
+			}
+		}
+
+		potential = {
+			tier = COUNT
+			location = {
+				FROM = {
+					at_location = PREV
+				}
+			}
+		}
+
+		allow = {
+			FROM = {
+				show_scope_change = no
+				rtp_is_capable_adult = yes
+				check_variable = {
+					which = rtp_volunteers
+					value >= 500
+				}
+			}
+		}
+
+		effect = {
+			FROM = {
+				show_scope_change = no
+				set_character_flag = rtp_owns_bandit_hideout@ROOT
+				rtp_give_medium_gold_se = yes
+				subtract_variable = {
+					which = rtp_volunteers
+					value = 500
+				}
+			}
+
+			location = {
+				show_scope_change = no
+				add_province_modifier = {
+					modifier = rtp_bandit_hideout_em
+					duration = -1
+				}
+			}
+
+			hidden_tooltip = {
+				FROM = {
+					rtp_flush_jobs = yes
+					give_minor_title = bandit_mt
+				}
+			}
+		}
+	}
+
+	### AI + Player
+
+	#Destroy Bandit Hideout
+	rtp_destroy_bandit_hideout_tid = {
+		filter = owned
+		ai_target_filter = owned
+		ai_check_interval = 12
+
+		from_potential = {
+			rtp_is_lower_baron = no
+		}
+
+		potential = {
+			tier = COUNT
+			location = {
+				has_province_modifier = rtp_bandit_hideout_em
+			}
+		}
+
+		allow = {
+			FROM = {
+				show_scope_change = no
+				prestige = 50
+			}
+		}
+
+		effect = {
+			location = {
+				show_scope_change = no
+				remove_province_modifier = rtp_bandit_hideout_em
+			}
+			FROM = {
+				show_scope_change = no
+				prestige = -50
+
+				hidden_tooltip = {
+					any_player = {
+						if = {
+							limit = {
+								has_character_flag = rtp_owns_bandit_hideout@ROOT
+							}
+							clr_character_flag = rtp_owns_bandit_hideout@ROOT
+							rtp_flush_jobs = yes
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

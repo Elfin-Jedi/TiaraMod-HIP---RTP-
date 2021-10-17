@@ -1,0 +1,48 @@
+belliciste = {
+
+      ruler_designer_cost = 70
+
+
+personality = yes
+random = yes
+birth = 100
+
+  diplomacy = -5
+  martial = 8
+  combat_rating = 3
+
+  opposites = {
+			nonviolent
+            content
+            temperate
+  }
+  
+
+  general_opinion = -20
+  same_opinion = 30
+  opposite_opinion = -20
+  vassal_opinion = -20
+  ambition_opinion = -80
+  ai_rationality = 100
+  ai_zeal = 100
+  ai_greed = 100
+  ai_honor = -100
+  ai_ambition = 100
+  
+
+command_modifier = {
+	damage = 0.3
+        defence = 0.3
+        siege = 0.2
+        speed = 0.2
+        retreat = 0.4
+        center = 0.1
+        flank = 0.1
+        cavalry = 0.1
+        narrow_flank = 0.1
+        winter_supply = 0.1
+        winter_combat = 0.1
+        morale_offence = 0.2
+        morale_defence = 0.2
+    }
+}

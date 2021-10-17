@@ -1,0 +1,613 @@
+# p0 background
+0 = {
+	0 = { # castle 1
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion_group = christian }
+		}
+		modifier = {
+			factor = 0
+			is_nomadic = yes
+		}
+	}
+
+	1 = { #throne room
+		factor = 15
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			NOT = { real_tier = king }
+			NOT = { real_tier = emperor }
+		}
+		modifier = {
+			factor = 5
+			OR = { 
+				real_tier = emperor 
+				spouse = { real_tier = emperor }
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				is_nomadic = yes
+				is_tribal = yes
+			}
+		}
+	}
+
+	2 = { # dungeon
+		factor = 100
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			prisoner = no
+			NOT = { death_reason = death_dungeon }
+		}
+	}
+
+	3 = { # forest
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			location = { 
+				OR = { 
+					region = world_middle_east_jerusalem 
+					region = world_middle_east_arabia
+					region = world_africa
+				} 
+			}
+		}
+		modifier = {
+			factor = 0.01
+			is_nomadic = yes
+		}
+	#	modifier = {
+	#		factor = 10
+	#		is_tribal = yes
+	#	}
+	}
+
+	4 = { # bed
+		factor = 100
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			is_alive = yes
+			NOT = { trait = incapable }
+			NOT = { trait = infirm }
+		}
+		modifier = {
+			factor = 0.001
+			OR = {
+				death_sacrificed_trigger = yes
+				death_reason = death_battle
+				death_execution_trigger = yes
+				death_reason = death_dungeon
+			}
+		}
+		modifier = {
+			factor = 0.02
+			trait = infirm
+			is_alive = yes
+		}
+	}
+	
+	5 = { # secret room
+		factor = 100
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			OR = { 
+				religion_group = muslim
+				religion_group = indian_group
+				religion_group = zoroastrian_group
+				religion = zun_pagan
+				religion = zun_pagan_reformed 
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = { 
+				trait = drunkard
+				trait = hedonist
+				trait = lustful
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				higher_real_tier_than = DUKE
+				spouse = { higher_real_tier_than = DUKE } 
+			}
+		}
+	}
+	
+	6 = { # military camp
+		factor = 100
+		modifier = {
+			factor = 0
+			trait = saint
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					is_alive = yes
+					in_command = no
+					NOT = { has_job_title  = job_marshal }
+				}
+				AND = {
+					is_alive = no
+					NOT = { death_reason = death_battle }
+				}
+			}
+			NOR = {
+				has_character_flag = rtp_temporary_soldier #You serve as a levy now
+				has_character_flag = rtp_temporary_mercenary #You serve as a mercenary now
+				has_character_flag = rtp_temporary_crusader #You serve as a crusader now
+				government = rtp_mercenary_g
+				government = rtp_baron_mercenary_g
+				government = rtp_landless_mercenary_g
+			}
+		}
+		modifier = {
+			factor = 0.02
+			has_job_title = job_marshal
+		}
+	}
+	
+	7 = { # Dolmen
+		factor = 5
+		modifier = {
+			factor = 0
+			trait = saint
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion_group = pagan_group }
+		}
+		modifier = {
+			factor = 0
+			OR = { 
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = { 
+				is_offmap_tag_including_dead = offmap_china
+				location = { 
+					NOR = { 
+						region = world_europe 
+						region = world_steppe
+					} 
+				}
+			}
+		}
+		modifier = {
+			factor = 100
+			is_alive = no
+		}
+		modifier = {
+			factor = 2
+			is_priest = yes
+		}
+	}
+	
+	8 = { # Gallows
+		factor = 5
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = cruel }
+			NOT = { trait = impaler }
+			NOT = { death_execution_trigger = yes }
+		}
+		modifier = {
+			factor = 20
+			OR = {
+				trait = impaler
+				death_execution_trigger = yes
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				higher_real_tier_than = DUKE
+				spouse = { higher_real_tier_than = DUKE } 
+			}
+		}
+	}
+	
+	9 = { # Church
+		factor = 100
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion_group = christian }
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				is_theocracy = yes
+				has_job_title = job_spiritual
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = { 
+				has_landed_title = k_papal_state 
+				has_landed_title = k_hellenic_pagan 
+				has_landed_title = d_fraticelli 
+				has_claim = k_papal_state 
+				has_claim = d_fraticelli 
+			}
+		}
+	}
+	
+	10 = { # Desert
+		factor = 5
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			OR = { 
+				is_offmap_tag_including_dead = offmap_china
+				location = { 
+					NOR = { 
+						region = world_middle_east_jerusalem 
+						region = world_middle_east_arabia
+						region = world_africa
+					} 
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				higher_real_tier_than = COUNT
+				spouse = { higher_real_tier_than = COUNT } 
+			}
+		}
+		modifier = {
+			factor = 10
+			OR = {
+				is_tribal = yes
+				is_nomadic = yes
+			}
+		}
+	}
+	
+	11 = { # Steppe
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			OR = { 
+				is_offmap_tag_including_dead = offmap_china
+				location = { 
+					NOT = { 
+						region = world_steppe
+					} 
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			OR = {
+				is_tribal = yes
+				is_nomadic = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				higher_real_tier_than = COUNT
+				spouse = { higher_real_tier_than = COUNT } 
+			}
+		}
+	}
+	
+	12 = { # Ocean w ships
+		factor = 10
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			OR = { 
+				is_offmap_tag_including_dead = offmap_china
+				capital_scope = { 
+					NOT = { 
+						port = yes 
+					} 
+				}
+				location = { 
+					NOT = { 
+						terrain = coastal_desert 
+					} 
+				}
+			}
+		}
+	}
+	
+	13 = { # Muslim interior
+		factor = 2
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion_group = muslim }
+			NOT = { religion_group = zoroastrian_group }
+			NOT = { religion = zun_pagan }
+			NOT = { religion_group = indian_group }
+		}
+	}
+	
+	14 = { # Harem
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion_group = muslim }
+			NOT = { religion_group = indian_group }
+			NOT = { religion_group = zoroastrian_group }
+			NOT = { religion = zun_pagan }
+			NOT = { religion = zun_pagan_reformed }
+		}
+		modifier = {
+			factor = 100
+			OR = {
+				trait = lustful
+				trait = hedonist
+			}
+		}
+	}
+	
+	15 = { # Muslim interior 2
+		factor = 10
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			OR = { 
+				is_offmap_tag_including_dead = offmap_china
+				location = { 
+					NOR = { 
+						region = world_middle_east_jerusalem 
+						region = world_middle_east_arabia
+						region = world_africa
+					} 
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			lower_real_tier_than = DUKE
+			spouse = { lower_real_tier_than = DUKE } 
+		}
+	}
+
+	16 = { # Mongol camp 1
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			is_nomadic = no
+		}
+		modifier = {
+			factor = 2
+			culture = mongol
+		}
+	}
+
+	17 = { # Mongol camp 2
+		factor = 10
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			OR = { 
+				is_offmap_tag_including_dead = offmap_china
+				location = { 
+					NOT = { 
+						region = world_steppe
+					} 
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			culture = mongol
+		}
+		modifier = {
+			factor = 0
+			lower_real_tier_than = DUKE
+			spouse = { lower_real_tier_than = DUKE } 
+		}
+	}
+
+	18 = { # Papal palace
+		factor = 100
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_landed_title = k_papal_state }
+			NOT = { has_landed_title = k_hellenic_pagan }
+			NOT = { has_landed_title = d_fraticelli }
+			NOT = { has_claim = k_papal_state }
+			NOT = { has_claim = d_fraticelli }
+		}
+	}
+
+	19 = { # Muslim mosque
+		factor = 100
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion_group = muslim }
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				is_theocracy = yes
+				has_job_title = job_spiritual
+			}
+		}
+	}
+
+	20 = { # Pagan human sacrifice
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion_group = pagan_group }
+			NOT = { death_sacrificed_trigger = yes }
+		}
+		modifier = {
+			factor = 1000
+			death_sacrificed_trigger = yes
+		}
+		modifier = {
+			factor = 10
+			is_priest = yes
+		}
+	}
+	21 = { # Saint Halo
+		factor = 1
+		hide_layers = { 18 = { } } #Hide layers with special crowns.
+		hide_layers = { 19 = { } } #Hide layers with special crowns.
+		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
+		
+		modifier = {
+			factor = 0
+			NOT = { trait = saint }
+		}
+		modifier = {
+			factor = 1000
+			trait = saint 
+		}
+	}
+	22 = { # blue curtains
+		factor = 4
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			NOT = { 
+				culture_group = latin
+			}
+		}
+	}
+	23 = { # ocean window
+		factor = 5
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			OR = { 
+				is_offmap_tag_including_dead = offmap_china
+				location = { 
+					NOR = { 
+						region = world_europe_west  
+						region = world_europe_south
+					} 
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			lower_real_tier_than = DUKE
+			spouse = { lower_real_tier_than = DUKE } 
+		}
+		modifier = {
+			factor = 5
+			location = { 
+				port = yes 
+			}
+		}
+	}
+	24 = { # field window
+		factor = 5
+		modifier = {
+			factor = 0
+			trait = saint 
+		}
+		modifier = {
+			factor = 0
+			OR = { 
+				is_offmap_tag_including_dead = offmap_china
+				location = { 
+					NOR = { 
+						region = world_europe_east   
+						region = world_europe_north
+					} 
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			lower_real_tier_than = DUKE
+			spouse = { lower_real_tier_than = DUKE } 
+		}
+	}
+}

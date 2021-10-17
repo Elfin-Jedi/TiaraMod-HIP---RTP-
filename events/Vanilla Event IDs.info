@@ -1,0 +1,19 @@
+childhood_personality_traits_events.txt		# Adolescent
+id = 1980	# Male Homosexual
+id = 1990	# Female Homosexual
+
+ze_adolescence_events.txt					# Adolescent
+id = ZE.13700	# Waking up from a very interesting dream, what was it about?
+# Note: Only one option adds the homosexual trait
+id = ZE.13610	# Farrier's apprentice/Carpenter's daughter
+# Note: Only one option adds the homosexual trait
+
+tournament_events.txt						# Adult
+id = 70023		# Character becomes homosexual
+
+furusiyya_events.txt						# Adult, Male, Muslim
+id = 88273		# Character becomes homosexual
+
+mnm_monastic_orders_events.txt				# Adult, member of a monastic order
+id = MNM.4441	#Long lonely time without your spouse
+# Note: Only one option adds the homosexual trait

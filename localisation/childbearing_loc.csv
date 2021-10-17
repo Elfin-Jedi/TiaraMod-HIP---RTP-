@@ -1,0 +1,33 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+have_child;Begin Work to have a Child;;;;;;;;;;;;;x
+have_child_desc;You can seek blessing from your spouse to have a child with another party.;;;;;;;;;;;;;x
+body_parent;Surrogate Parent;;;;;;;;;;;;;x
+body_parent_desc;You can select this person as a parent of your child.;;;;;;;;;;;;;x
+EVTDESCchildbearing_events.0;[FromFrom.GetFirstName] approaches you one day, "I want a child" [FromFrom.GetSheHe] says, "And I know how to go about it". [FromFrom.GetSheHe] goes over the idea.;;;;;;;;;;;;;x
+EVTOPTAchildbearing_events.0;I understand, let's do it my love.;;;;;;;;;;;;;x
+EVTOPTBchildbearing_events.0;I don't care, we aren't having a child!;;;;;;;;;;;;;x
+EVTDESCchildbearing_events.1;[From.GetFirstName] has ignored your argument and refused the whole plan.;;;;;;;;;;;;;x
+EVTOPTAchildbearing_events.1;But [From.GetFirstName]... Very well...;;;;;;;;;;;;;x
+EVTOPTBchildbearing_events.1;I don't care what [From.GetFirstName] thinks, I want a child!;;;;;;;;;;;;;x
+EVTDESCchildbearing_events.2;You plan to have a child, who with?.;;;;;;;;;;;;;x
+EVTOPTAchildbearing_events.2;My dear friend will help!;;;;;;;;;;;;;x
+EVTOPTBchildbearing_events.2;I'll pick someone from my court. Opens a diplomacy option.;;;;;;;;;;;;;x
+EVTOPTCchildbearing_events.2;Anyone will do! I just want a child.;;;;;;;;;;;;;x
+EVTOPTDchildbearing_events.2;You Know, there are many children in need of a loving home.;;;;;;;;;;;;;x
+EVTDESCchildbearing_events.3;[From.GetFirstName] has decided to have a child despite your objection.;;;;;;;;;;;;;x
+EVTOPTAchildbearing_events.3;How can you do this, [From.GetFirstName]?;;;;;;;;;;;;;x
+EVTDESCchildbearing_events.5;You've Decided to adopt a child; Orphan Boys;;;;;;;;;;;;;x
+EVTOPTAchildbearing_events.5;This one?;;;;;;;;;;;;;x
+EVTOPTBchildbearing_events.5;This one?;;;;;;;;;;;;;x
+EVTOPTCchildbearing_events.5;This one?;;;;;;;;;;;;;x
+EVTOPTDchildbearing_events.5;See the Girls?;;;;;;;;;;;;;x
+EVTDESCchildbearing_events.6;You've Decided to adopt a child; Orphan Girls;;;;;;;;;;;;;x
+EVTOPTAchildbearing_events.6;This one?;;;;;;;;;;;;;x
+EVTOPTBchildbearing_events.6;This one?;;;;;;;;;;;;;x
+EVTOPTCchildbearing_events.6;This one?;;;;;;;;;;;;;x
+EVTOPTDchildbearing_events.6;See the Boys?;;;;;;;;;;;;;x
+EVTDESCchildbearing_events.10;[From.GetFirstName] has approached you about you being a parent for [From.GetHerHis] child.;;;;;;;;;;;;;x
+EVTOPTAchildbearing_events.10;I'd love to be of help.;;;;;;;;;;;;;x
+EVTOPTBchildbearing_events.10;No I can't.;;;;;;;;;;;;;x
+EVTDESCchildbearing_events.11;[From.GetFirstName] shutdown your plan and refused to be part.;;;;;;;;;;;;;x
+EVTOPTAchildbearing_events.11;Damn [From.GetHerHim], now I must start over.;;;;;;;;;;;;;x

@@ -1,0 +1,186 @@
+#################################################### Incomplete Definition: A
+############## Extra Bloodlines List ############### Incomplete Localisation: B
+#################################################### 
+## 1  EB_bloodline_effect_remove_negatives        ## 
+## 2  EB_bloodline_effect_become_zealous          ## 
+## 3  EB_bloodline_effect_become_greedy           ## 
+## 4  EB_bloodline_effect_become_just             ## 
+## 5  EB_bloodline_effect_become_cynical          ## 
+## 6  EB_bloodline_effect_become_honest           ## 
+## 7  EB_bloodline_effect_become_charitable       ## 
+## 8  EB_bloodline_effect_become_deceitful        ## 
+## 9  EB_bloodline_effect_become_slothful         ## 
+## 10 EB_bloodline_effect_become_possessed        ## 
+## 11 EB_bloodline_effect_become_ambitious        ## 
+## 12 EB_bloodline_effect_add_leadership_trait_A  ##
+## 13 EB_bloodline_effect_add_leadership_trait_B  ##
+## 14 EB_bloodline_effect_add_leadership_trait_C  ##
+## 15 EB_recently_removed_negative_trait_timer    ##
+####################################################
+################# More to Come!! ###################
+####################################################
+
+#1
+EB_bloodline_effect_remove_negatives = {
+	show_as_percent = no
+	is_good = yes
+	is_monthly = no
+	is_hidden = no
+	max_decimals = 0
+	show_value = no	
+}
+
+
+#2
+EB_bloodline_effect_become_zealous = {
+	show_as_percent = no
+	is_good = yes
+	is_monthly = no
+	is_hidden = no
+	max_decimals = 0
+	show_value = no	
+}
+
+
+#3
+EB_bloodline_effect_become_greedy = {
+	show_as_percent = no
+	is_good = yes
+	is_monthly = no
+	is_hidden = no
+	max_decimals = 0
+	show_value = no	
+}
+
+
+#4
+
+EB_bloodline_effect_become_just = {
+	show_as_percent = no
+	is_good = yes
+	is_monthly = no
+	is_hidden = no
+	max_decimals = 0
+	show_value = no	
+}
+
+
+#5
+EB_bloodline_effect_become_cynical = {
+	show_as_percent = no
+	is_good = yes
+	is_monthly = no
+	is_hidden = no
+	max_decimals = 0
+	show_value = no	
+}
+
+
+#6
+EB_bloodline_effect_become_honest = {
+	show_as_percent = no
+	is_good = yes
+	is_monthly = no
+	is_hidden = no
+	max_decimals = 0
+	show_value = no	
+}
+
+
+#7
+EB_bloodline_effect_become_charitable = {
+	show_as_percent = no
+	is_good = yes
+	is_monthly = no
+	is_hidden = no
+	max_decimals = 0
+	show_value = no	
+}
+
+
+#8
+EB_bloodline_effect_become_deceitful = {
+	show_as_percent = no
+	is_good = yes
+	is_monthly = no
+	is_hidden = no
+	max_decimals = 0
+	show_value = no	
+}
+
+
+#9
+EB_bloodline_effect_become_slothful = {
+	show_as_percent = no
+	is_good = yes
+	is_monthly = no
+	is_hidden = no
+	max_decimals = 0
+	show_value = no	
+}
+
+
+#10
+EB_bloodline_effect_become_possessed = {
+	show_as_percent = no
+	is_good = yes
+	is_monthly = no
+	is_hidden = no
+	max_decimals = 0
+	show_value = no	
+}
+
+
+#11
+EB_bloodline_effect_become_ambitious = {
+	show_as_percent = no
+	is_good = yes
+	is_monthly = no
+	is_hidden = no
+	max_decimals = 0
+	show_value = no	
+}
+
+
+#12
+EB_bloodline_effect_add_leadership_trait_A = {
+	show_as_percent = no
+	is_good = yes
+	is_monthly = no
+	is_hidden = no
+	max_decimals = 0
+	show_value = no	
+}
+
+
+#13
+EB_bloodline_effect_add_leadership_trait_B = {
+	show_as_percent = no
+	is_good = yes
+	is_monthly = no
+	is_hidden = no
+	max_decimals = 0
+	show_value = no	
+}
+
+
+#14
+EB_bloodline_effect_add_leadership_trait_C = {
+	show_as_percent = no
+	is_good = yes
+	is_monthly = no
+	is_hidden = no
+	max_decimals = 0
+	show_value = no	
+}
+
+
+#15
+EB_recently_removed_negative_trait_timer = {
+	show_as_percent = no
+	is_good = no
+	is_monthly = no
+	is_hidden = yes
+	max_decimals = 0
+	show_value = no	
+}

@@ -1,0 +1,166 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	group = "TEXT_KEY_FOR_GROUP"					# Used for filtering. A single rule can be in multiple groups 
+#	alt_start_default = option_name					# Default value in alt start. If not set, defaults 
+#	option = {										# please note that the first option is always the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		achievements = no							# by default achievements = yes, allows or disallows achievements
+#		alt_start_achievements = no					# by default alt_start_achievements = yes, allows or disallows achievements in alt start. Note that it defaults to yes even when achievements = no
+#	}
+# }
+
+ws_christian_rule = {
+	name = "RULE_WS_CHRISTIAN"
+	group = "RULE_GROUP_WS"
+	option = {
+		name = ws_player
+		text = "RULE_OPTION_WS_PLAYER"
+		desc = "RULE_WS_CHRISTIAN_PLAYER"
+	}
+	option = {
+		name = on
+		text = "RULE_OPTION_ON"
+		desc = "RULE_WS_CHRISTIAN_ON"
+	}
+	option = {
+		name = off
+		text = "RULE_OPTION_OFF"
+		desc = "RULE_WS_CHRISTIAN_OFF"
+	}
+	option = {
+		name = ws_exists
+		text = "RULE_OPTION_WS_EXISTS"
+		desc = "RULE_WS_CHRISTIAN_EXISTS"
+	}
+}
+
+ws_mazdan_rule = {
+	name = "RULE_WS_MAZDAN"
+	group = "RULE_GROUP_WS"
+	option = {
+		name = ws_player
+		text = "RULE_OPTION_WS_PLAYER"
+		desc = "RULE_WS_MAZDAN_PLAYER"
+	}
+	option = {
+		name = on
+		text = "RULE_OPTION_ON"
+		desc = "RULE_WS_MAZDAN_ON"
+	}
+	option = {
+		name = off
+		text = "RULE_OPTION_OFF"
+		desc = "RULE_WS_MAZDAN_OFF"
+	}
+	option = {
+		name = ws_exists
+		text = "RULE_OPTION_WS_EXISTS"
+		desc = "RULE_WS_MAZDAN_EXISTS"
+	}
+}
+
+ws_eastern_rule = {
+	name = "RULE_WS_EASTERN"
+	group = "RULE_GROUP_WS"
+	option = {
+		name = ws_player
+		text = "RULE_OPTION_WS_PLAYER"
+		desc = "RULE_WS_EASTERN_PLAYER"
+	}
+	option = {
+		name = on
+		text = "RULE_OPTION_ON"
+		desc = "RULE_WS_EASTERN_ON"
+	}
+	option = {
+		name = off
+		text = "RULE_OPTION_OFF"
+		desc = "RULE_WS_EASTERN_OFF"
+	}
+	option = {
+		name = ws_exists
+		text = "RULE_OPTION_WS_EXISTS"
+		desc = "RULE_WS_EASTERN_EXISTS"
+	}
+}
+
+# ws_aztec_rule = {
+	# name = "RULE_WS_AZTEC"
+	# group = "RULE_GROUP_WS"
+	# option = {
+		# name = ws_player
+		# text = "RULE_OPTION_WS_PLAYER"
+		# desc = "RULE_WS_AZTEC_PLAYER"
+	# }
+	# option = {
+		# name = on
+		# text = "RULE_OPTION_ON"
+		# desc = "RULE_WS_AZTEC_ON"
+	# }
+	# option = {
+		# name = off
+		# text = "RULE_OPTION_OFF"
+		# desc = "RULE_WS_AZTEC_OFF"
+	# }
+	# option = {
+		# name = ws_exists
+		# text = "RULE_OPTION_WS_EXISTS"
+		# desc = "RULE_WS_AZTEC_EXISTS"
+	# }
+# }
+
+ws_muslim_rule = {
+	name = "RULE_WS_MUSLIM"
+	group = "RULE_GROUP_WS"
+	option = {
+		name = ws_player
+		text = "RULE_OPTION_WS_PLAYER"
+		desc = "RULE_WS_MUSLIM_PLAYER"
+	}
+	option = {
+		name = on
+		text = "RULE_OPTION_ON"
+		desc = "RULE_WS_MUSLIM_ON"
+	}
+	option = {
+		name = off
+		text = "RULE_OPTION_OFF"
+		desc = "RULE_WS_MUSLIM_OFF"
+	}
+	option = {
+		name = ws_exists
+		text = "RULE_OPTION_WS_EXISTS"
+		desc = "RULE_WS_MUSLIM_EXISTS"
+	}
+}
+
+ws_jewish_rule = {
+	name = "RULE_WS_JEWISH"
+	group = "RULE_GROUP_WS"
+	option = {
+		name = ws_player
+		text = "RULE_OPTION_WS_PLAYER"
+		desc = "RULE_WS_JEWISH_PLAYER"
+	}
+	option = {
+		name = on
+		text = "RULE_OPTION_ON"
+		desc = "RULE_WS_JEWISH_ON"
+	}
+	option = {
+		name = off
+		text = "RULE_OPTION_OFF"
+		desc = "RULE_WS_JEWISH_OFF"
+	}
+	option = {
+		name = ws_exists
+		text = "RULE_OPTION_WS_EXISTS"
+		desc = "RULE_WS_JEWISH_EXISTS"
+	}
+}

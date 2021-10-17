@@ -1,0 +1,649 @@
+spriteTypes = {
+  #Landless - Lowborn
+  spriteType = {
+    name = "GFX_icon_rtp_lowborn_g"
+    texturefile = "gfx\\interface\\governments\\government_icon_landless.dds"
+  }
+  spriteType = {
+    name = "GFX_charframe_34_lowborn"
+    texturefile = "gfx\\interface\\character_frames\\charframe_34_lowborn.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_50_lowborn"
+    texturefile = "gfx\\interface\\character_frames\\charframe_50_lowborn.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_75_lowborn"
+    texturefile = "gfx\\interface\\character_frames\\charframe_75_lowborn.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_100_lowborn"
+    texturefile = "gfx\\interface\\character_frames\\charframe_100_lowborn.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_150_lowborn"
+    texturefile = "gfx\\interface\\character_frames\\charframe_150_lowborn.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  
+  #Landless - Noble
+  spriteType = {
+    name = "GFX_icon_rtp_noble_g"
+    texturefile = "gfx\\interface\\governments\\government_icon_noble.dds"
+  }
+  spriteType = {
+    name = "GFX_charframe_34_noble"
+    texturefile = "gfx\\interface\\character_frames\\charframe_34_lowborn.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_50_noble"
+    texturefile = "gfx\\interface\\character_frames\\charframe_50_lowborn.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_75_noble"
+    texturefile = "gfx\\interface\\character_frames\\charframe_75_lowborn.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_100_noble"
+    texturefile = "gfx\\interface\\character_frames\\charframe_100_lowborn.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_150_noble"
+    texturefile = "gfx\\interface\\character_frames\\charframe_150_lowborn.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+
+  #Landless - Mercenary
+  spriteType = {
+    name = "GFX_icon_rtp_landless_mercenary_g"
+    texturefile = "gfx\\interface\\governments\\government_icon_mercenary.dds"
+  }
+  spriteType = {
+    name = "GFX_charframe_34_landlessmercenary"
+    texturefile = "gfx\\interface\\character_frames\\charframe_34_landless_merc.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_50_landlessmercenary"
+    texturefile = "gfx\\interface\\character_frames\\charframe_50_landless_merc.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_75_landlessmercenary"
+    texturefile = "gfx\\interface\\character_frames\\charframe_75_landless_merc.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_100_landlessmercenary"
+    texturefile = "gfx\\interface\\character_frames\\charframe_100_landless_merc.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_150_landlessmercenary"
+    texturefile = "gfx\\interface\\character_frames\\charframe_150_landless_merc.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+
+  #Landless - Holy Order
+  spriteType = {
+    name = "GFX_icon_rtp_landless_order_g"
+    texturefile = "gfx\\interface\\governments\\government_icon_order.dds"
+  }
+  spriteType = {
+    name = "GFX_charframe_34_landlessorder"
+    texturefile = "gfx\\interface\\character_frames\\charframe_34_landless_order.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_50_landlessorder"
+    texturefile = "gfx\\interface\\character_frames\\charframe_50_landless_order.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_75_landlessorder"
+    texturefile = "gfx\\interface\\character_frames\\charframe_75_landless_order.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_100_landlessorder"
+    texturefile = "gfx\\interface\\character_frames\\charframe_100_landless_order.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_150_landlessorder"
+    texturefile = "gfx\\interface\\character_frames\\charframe_150_landless_order.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+
+  #Landless - Theocracy
+  spriteType = {
+    name = "GFX_icon_rtp_landless_theocracy_g"
+    texturefile = "gfx\\interface\\governments\\government_icon_theocracy.dds"
+  }
+  spriteType = {
+    name = "GFX_charframe_34_landlesstheocracy"
+    texturefile = "gfx\\interface\\character_frames\\charframe_34_landless_theocracy.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_50_landlesstheocracy"
+    texturefile = "gfx\\interface\\character_frames\\charframe_50_landless_theocracy.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_75_landlesstheocracy"
+    texturefile = "gfx\\interface\\character_frames\\charframe_75_landless_theocracy.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_100_landlesstheocracy"
+    texturefile = "gfx\\interface\\character_frames\\charframe_100_landless_theocracy.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_150_landlesstheocracy"
+    texturefile = "gfx\\interface\\character_frames\\charframe_150_landless_theocracy.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+
+  #Landless - Adventurer
+  spriteType = {
+    name = "GFX_icon_rtp_landless_adventurer_g"
+    texturefile = "gfx\\interface\\governments\\government_icon_adventurer.dds"
+  }
+  spriteType = {
+    name = "GFX_charframe_34_landlessadventurer"
+    texturefile = "gfx\\interface\\character_frames\\charframe_34_landless_adventurer.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_50_landlessadventurer"
+    texturefile = "gfx\\interface\\character_frames\\charframe_50_landless_adventurer.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_75_landlessadventurer"
+    texturefile = "gfx\\interface\\character_frames\\charframe_75_landless_adventurer.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_100_landlessadventurer"
+    texturefile = "gfx\\interface\\character_frames\\charframe_100_landless_adventurer.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_150_landlessadventurer"
+    texturefile = "gfx\\interface\\character_frames\\charframe_150_landless_adventurer.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+
+  #Baron - Feudal
+  spriteType = {
+    name = "GFX_icon_rtp_baron_g"
+    texturefile = "gfx\\interface\\governments\\government_icon_baron.dds"
+  }
+  spriteType = {
+    name = "GFX_charframe_34_baron"
+    texturefile = "gfx\\interface\\character_frames\\charframe_34_baron.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_50_baron"
+    texturefile = "gfx\\interface\\character_frames\\charframe_50_baron.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_75_baron"
+    texturefile = "gfx\\interface\\character_frames\\charframe_75_baron.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_100_baron"
+    texturefile = "gfx\\interface\\character_frames\\charframe_100_baron.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_150_baron"
+    texturefile = "gfx\\interface\\character_frames\\charframe_150_baron.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+
+  #Baron - Iqta
+  spriteType = {
+    name = "GFX_icon_rtp_baron_iqta_g"
+    texturefile = "gfx\\interface\\governments\\government_icon_iqta.dds"
+  }
+  spriteType = {
+    name = "GFX_charframe_34_baroniqta"
+    texturefile = "gfx\\interface\\character_frames\\charframe_34_baron_iqta.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_50_baroniqta"
+    texturefile = "gfx\\interface\\character_frames\\charframe_50_baron_iqta.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_75_baroniqta"
+    texturefile = "gfx\\interface\\character_frames\\charframe_75_baron_iqta.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_100_baroniqta"
+    texturefile = "gfx\\interface\\character_frames\\charframe_100_baron_iqta.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_150_baroniqta"
+    texturefile = "gfx\\interface\\character_frames\\charframe_150_baron_iqta.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+
+  #Baron - Monastic
+  spriteType = {
+    name = "GFX_icon_rtp_baron_monastic_g"
+    texturefile = "gfx\\interface\\governments\\government_icon_theocratic_feudal.dds"
+  }
+  spriteType = {
+    name = "GFX_charframe_34_baronmonastic"
+    texturefile = "gfx\\interface\\character_frames\\charframe_34_baron_theocraticfeudal.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_50_baronmonastic"
+    texturefile = "gfx\\interface\\character_frames\\charframe_50_baron_theocraticfeudal.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_75_baronmonastic"
+    texturefile = "gfx\\interface\\character_frames\\charframe_75_baron_theocraticfeudal.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_100_baronmonastic"
+    texturefile = "gfx\\interface\\character_frames\\charframe_100_baron_theocraticfeudal.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_150_baronmonastic"
+    texturefile = "gfx\\interface\\character_frames\\charframe_150_baron_theocraticfeudal.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+
+  #Baron - Republic
+  spriteType = {
+    name = "GFX_icon_rtp_baron_republic_g"
+    texturefile = "gfx\\interface\\governments\\government_icon_republic.dds"
+  }
+  spriteType = {
+    name = "GFX_charframe_34_baronrepublic"
+    texturefile = "gfx\\interface\\character_frames\\charframe_34_baron_republic.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_50_baronrepublic"
+    texturefile = "gfx\\interface\\character_frames\\charframe_50_baron_republic.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_75_baronrepublic"
+    texturefile = "gfx\\interface\\character_frames\\charframe_75_baron_republic.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_100_baronrepublic"
+    texturefile = "gfx\\interface\\character_frames\\charframe_100_baron_republic.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_150_baronrepublic"
+    texturefile = "gfx\\interface\\character_frames\\charframe_150_baron_republic.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+
+  #Baron - Mercenary
+  spriteType = {
+    name = "GFX_icon_rtp_baron_mercenary_g"
+    texturefile = "gfx\\interface\\governments\\government_icon_mercenary.dds"
+  }
+  spriteType = {
+    name = "GFX_charframe_34_baronmercenary"
+    texturefile = "gfx\\interface\\character_frames\\charframe_34_baron_merc.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_50_baronmercenary"
+    texturefile = "gfx\\interface\\character_frames\\charframe_50_baron_merc.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_75_baronmercenary"
+    texturefile = "gfx\\interface\\character_frames\\charframe_75_baron_merc.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_100_baronmercenary"
+    texturefile = "gfx\\interface\\character_frames\\charframe_100_baron_merc.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_150_baronmercenary"
+    texturefile = "gfx\\interface\\character_frames\\charframe_150_baron_merc.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+
+  #Baron - Order
+  spriteType = {
+    name = "GFX_icon_rtp_baron_order_g"
+    texturefile = "gfx\\interface\\governments\\government_icon_order.dds"
+  }
+  spriteType = {
+    name = "GFX_charframe_34_baronorder"
+    texturefile = "gfx\\interface\\character_frames\\charframe_34_baron_order.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_50_baronorder"
+    texturefile = "gfx\\interface\\character_frames\\charframe_50_baron_order.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_75_baronorder"
+    texturefile = "gfx\\interface\\character_frames\\charframe_75_baron_order.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_100_baronorder"
+    texturefile = "gfx\\interface\\character_frames\\charframe_100_baron_order.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_150_baronorder"
+    texturefile = "gfx\\interface\\character_frames\\charframe_150_baron_order.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+
+  #Baron - Theocracy
+  spriteType = {
+    name = "GFX_icon_rtp_baron_theocracy_g"
+    texturefile = "gfx\\interface\\governments\\government_icon_theocracy.dds"
+  }
+  spriteType = {
+    name = "GFX_charframe_34_barontheocracy"
+    texturefile = "gfx\\interface\\character_frames\\charframe_34_baron_theocracy.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_50_barontheocracy"
+    texturefile = "gfx\\interface\\character_frames\\charframe_50_baron_theocracy.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_75_barontheocracy"
+    texturefile = "gfx\\interface\\character_frames\\charframe_75_baron_theocracy.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_100_barontheocracy"
+    texturefile = "gfx\\interface\\character_frames\\charframe_100_baron_theocracy.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_150_barontheocracy"
+    texturefile = "gfx\\interface\\character_frames\\charframe_150_baron_theocracy.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+
+  #Republic
+  spriteType = {
+    name = "GFX_icon_rtp_republic_g"
+    texturefile = "gfx\\interface\\governments\\government_icon_republic.dds"
+  }
+  spriteType = {
+    name = "GFX_charframe_34_rtprepublic"
+    texturefile = "gfx\\interface\\charframe_34_republic.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_50_rtprepublic"
+    texturefile = "gfx\\interface\\charframe_50_republic.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_75_rtprepublic"
+    texturefile = "gfx\\interface\\charframe_75_republic.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_100_rtprepublic"
+    texturefile = "gfx\\interface\\charframe_100_republic.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_150_rtprepublic"
+    texturefile = "gfx\\interface\\charframe_150_republic.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+
+  #Theocracy
+  spriteType = {
+    name = "GFX_icon_rtp_theocracy_g"
+    texturefile = "gfx\\interface\\governments\\government_icon_theocracy.dds"
+  }
+  spriteType = {
+    name = "GFX_charframe_34_rtptheocracy"
+    texturefile = "gfx\\interface\\charframe_34_theocracy.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_50_rtptheocracy"
+    texturefile = "gfx\\interface\\charframe_50_theocracy.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_75_rtptheocracy"
+    texturefile = "gfx\\interface\\charframe_75_theocracy.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_100_rtptheocracy"
+    texturefile = "gfx\\interface\\charframe_100_theocracy.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_150_rtptheocracy"
+    texturefile = "gfx\\interface\\charframe_150_theocracy.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+
+  #Mercenary
+  spriteType = {
+    name = "GFX_icon_rtp_mercenary_g"
+    texturefile = "gfx\\interface\\governments\\government_icon_mercenary.dds"
+  }
+  spriteType = {
+    name = "GFX_charframe_34_rtpmercenary"
+    texturefile = "gfx\\interface\\charframe_34_merc.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_50_rtpmercenary"
+    texturefile = "gfx\\interface\\charframe_50_merc.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_75_rtpmercenary"
+    texturefile = "gfx\\interface\\charframe_75_merc.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_100_rtpmercenary"
+    texturefile = "gfx\\interface\\charframe_100_merc.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_150_rtpmercenary"
+    texturefile = "gfx\\interface\\charframe_150_merc.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+
+  #Privateer
+  spriteType = {
+    name = "GFX_icon_rtp_privateer_g"
+    texturefile = "gfx\\interface\\governments\\government_icon_privateer.dds"
+  }
+  spriteType = {
+    name = "GFX_charframe_34_rtpprivateer"
+    texturefile = "gfx\\interface\\charframe_34_privateer.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_50_rtpprivateer"
+    texturefile = "gfx\\interface\\charframe_50_privateer.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_75_rtpprivateer"
+    texturefile = "gfx\\interface\\charframe_75_privateer.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_100_rtpprivateer"
+    texturefile = "gfx\\interface\\charframe_100_privateer.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_150_rtpprivateer"
+    texturefile = "gfx\\interface\\charframe_150_privateer.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+
+  #Confederation
+  spriteType = {
+    name = "GFX_icon_rtp_confederation_g"
+    texturefile = "gfx\\interface\\governments\\government_icon_confederation.dds"
+  }
+  spriteType = {
+    name = "GFX_charframe_34_rtpconfederation"
+    texturefile = "gfx\\interface\\charframe_34_confederation.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_50_rtpconfederation"
+    texturefile = "gfx\\interface\\charframe_50_confederation.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_75_rtpconfederation"
+    texturefile = "gfx\\interface\\charframe_75_confederation.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_100_rtpconfederation"
+    texturefile = "gfx\\interface\\charframe_100_confederation.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+  spriteType = {
+    name = "GFX_charframe_150_rtpconfederation"
+    texturefile = "gfx\\interface\\charframe_150_confederation.tga"
+    noOfFrames = 6
+    allwaystransparent = yes
+  }
+}

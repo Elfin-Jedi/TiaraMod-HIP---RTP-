@@ -1,0 +1,220 @@
+namespace = ckrpg_siege
+
+character_event = {
+    # imprison all siege characters (on action)
+    id = ckrpg_siege.0001
+    desc = ckrpg_siege_0001
+    is_triggered_only = yes
+    trigger = {
+
+    }
+    option = {
+        name = OK
+        ai_chance = { factor = 1 }
+        new_character = {
+            character_event = { id = ckrpg_siege.0002 }
+        }
+    }
+    after = {
+
+    }
+}
+
+character_event = {
+    # imprison all siege characters (on action)
+    id = ckrpg_siege.0002
+    desc = ckrpg_siege_0002
+    picture = GFX_evt_siege
+	border = GFX_event_normal_frame_war
+    is_triggered_only = yes
+    trigger = {
+
+    }
+    option = {
+        name = EVTOPTA_ckrpg_siege.0002
+        ai_chance = { factor = 1 }
+        ROOT = {
+            save_event_target_as = target_imprisoner
+        }
+        FROM = {
+            imprison = ROOT
+            save_event_target_as = target_imprisoned
+            liege = {
+                character_event = { id = ckrpg_siege.0005 }
+            }
+        }
+
+    }
+    option = {
+        name = EVTOPTB_ckrpg_siege.0002
+        picture = GFX_evt_siege
+    	border = GFX_event_normal_frame_war
+        ai_chance = { factor = 98 }
+        trigger = {
+            NOT = {
+                FROM = {
+                    religion = {
+                        target = ROOT
+                        target_type = true
+                    }
+                }
+            }
+        }
+        ROOT = {
+            save_event_target_as = target_imprisoner
+        }
+        FROM = {
+
+            random_list = {
+                75 = {
+                    imprison = ROOT
+                    save_event_target_as = target_imprisoned_and_converted
+                    religion = {
+                        target = ROOT
+                        target_type = true
+                    }
+                    add_trait = ckrpg_converted_by_force
+                    liege = {
+                        character_event = { id = ckrpg_siege.0004 }
+                    }
+                }
+
+                25 = {
+                    save_event_target_as = target_executed
+                    death = { death_reason = death_execution_beheading killer = ROOT }
+                    any_liege = {
+                        if = {
+                            limit = {
+                                is_parent_of = event_target:target_executed
+                            }
+                            opinion = { modifier = ckrpg_executed_child who = ROOT years = 100}
+                        }
+                        else_if = {
+                            limit = {
+                                dynasty = event_target:target_executed
+                            }
+                            opinion = { modifier = ckrpg_executed_family_member who = ROOT years = 30 }
+                        }
+                        else = {
+                            opinion = { modifier = ckrpg_executed_courtier who = ROOT years = 2 }
+                        }
+                    }
+                    ROOT = {
+                        save_event_target_as = target_killer
+                    }
+                    liege = {
+                        character_event = { id = ckrpg_siege.0007 }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = EVTOPTC_ckrpg_siege.0002
+        ai_chance = { factor = 1 }
+        trigger = {
+        }
+        ROOT = {
+            save_event_target_as = target_killer
+        }
+        FROM = {
+            death = { death_reason = death_execution_beheading killer = ROOT }
+            save_event_target_as = target_executed
+            any_liege = {
+                if = {
+                    limit = {
+                        is_parent_of = event_target:target_executed
+                    }
+                    opinion = { modifier = ckrpg_executed_child who = ROOT years = 100}
+                }
+                else_if = {
+                    limit = {
+                        dynasty = event_target:target_executed
+                    }
+                    opinion = { modifier = ckrpg_executed_family_member who = ROOT years = 30 }
+                }
+                else = {
+                    opinion = { modifier = ckrpg_executed_courtier who = ROOT years = 2 }
+                }
+            }
+            liege = {
+                character_event = { id = ckrpg_siege.0007 }
+            }
+        }
+    }
+    option = {
+        name = EVTOPTD_ckrpg_siege.0002
+        ai_chance = { factor = 1 }
+    }
+    after = {
+
+    }
+}
+
+character_event = {
+    id = ckrpg_siege.0004
+    desc = ckrpg_siege_0004
+    picture = GFX_evt_siege
+	border = GFX_event_normal_frame_war
+    is_triggered_only = yes
+    trigger = {
+
+    }
+    option = {
+        name = EVTOPTA_ckrpg_siege.0004
+    }
+    after = {
+
+    }
+}
+
+character_event = {
+    id = ckrpg_siege.0005
+    desc = ckrpg_siege_0005
+    picture = GFX_evt_siege
+	border = GFX_event_normal_frame_war
+    is_triggered_only = yes
+    trigger = {
+
+    }
+    option = {
+        name = EVTOPTA_ckrpg_siege.0005
+    }
+    after = {
+
+    }
+}
+
+character_event = {
+    id = ckrpg_siege.0006
+    desc = ckrpg_siege_0006
+    picture = GFX_evt_siege
+	border = GFX_event_normal_frame_war
+    is_triggered_only = yes
+    trigger = {
+
+    }
+    option = {
+        name = EVTOPTA_ckrpg_siege.0006
+    }
+    after = {
+
+    }
+}
+
+character_event = {
+    id = ckrpg_siege.0007
+    desc = ckrpg_siege_0007
+    picture = GFX_evt_beheading
+    border = GFX_event_normal_frame_war
+    is_triggered_only = yes
+    trigger = {
+
+    }
+    option = {
+        name = EVTOPTA_ckrpg_siege.0004
+    }
+    after = {
+
+    }
+}

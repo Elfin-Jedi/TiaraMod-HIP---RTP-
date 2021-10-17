@@ -1,0 +1,143 @@
+# Demon prince traits are removed via on_religious_conversion events or decisions, so that the global flag can be reset. Do not make them religious = yes
+
+abaddon = {
+	customizer = no
+	martial = 20
+	intrigue = -4
+	learning = -2
+	church_opinion = 20
+	monthly_character_piety = 2
+	monthly_character_prestige = 5
+	cached = yes
+	random = no
+	combat_rating = 40
+	vassal_opinion = 10
+}
+
+beelzebub = {
+	customizer = no
+	church_opinion = 30
+	monthly_character_piety = 4
+	monthly_character_prestige = 5
+	cached = yes
+	random = no
+	vassal_opinion = 50
+	diplomacy = 15
+	stewardship = -2
+}
+
+leviathon = {
+	customizer = no
+	church_opinion = 20
+	monthly_character_piety = 2
+	monthly_character_prestige = 2
+	cached = yes
+	random = no
+	intrigue = 15
+}
+
+adramelech = {
+	customizer = no
+	church_opinion = 20
+	monthly_character_piety = 2
+	monthly_character_prestige = 10
+	cached = yes
+	random = no
+	combat_rating = 2
+	vassal_opinion = 5
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+}
+
+mammon = {
+	customizer = no
+	church_opinion = 20
+	monthly_character_piety = 2
+	monthly_character_prestige = 2
+	cached = yes
+	random = no
+	monthly_character_wealth = 10
+	stewardship = 15
+}
+
+belphegor = {
+	customizer = no
+	church_opinion = 20
+	monthly_character_piety = 2
+	monthly_character_prestige = 2
+	cached = yes
+	random = no
+	tech_growth_modifier = 10 #####################
+	learning = 15
+	stewardship = 2
+}
+
+asmodeus = {
+	customizer = no
+	church_opinion = 20
+	monthly_character_piety = 2
+	monthly_character_prestige = 5
+	cached = yes
+	random = no
+	fertility = 1.0
+	sex_appeal_opinion = 50
+	diplomacy = 10
+	intrigue = 5
+}
+
+aamon = {
+	customizer = no
+	church_opinion = 35
+	monthly_character_piety = 5
+	monthly_character_prestige = 10
+	cached = yes
+	random = no
+	diplomacy = 15
+	martial = 15
+	stewardship = 15
+	intrigue = 15
+	learning = 15
+	combat_rating = 40
+	vassal_opinion = 20
+	immortal = yes
+}
+
+necromancer = {
+	customizer = no
+	church_opinion = 10
+	monthly_character_piety = 0.25
+	monthly_character_prestige = 1
+	random = no
+	intrigue = 5
+	learning = 5
+	diplomacy = -2
+	combat_rating = 20
+	religious = yes
+}
+
+witch = {
+	customizer = no
+	church_opinion = 10
+	monthly_character_piety = 0.05
+	monthly_character_prestige = 0.1
+	random = no
+	learning = 5
+	intrigue = 2
+	combat_rating = 10
+	religious = yes
+}
+
+lich = {
+	customizer = no
+	church_opinion = 20
+	monthly_character_piety = 0.1
+	monthly_character_prestige = 1
+	random = no
+	combat_rating = 40
+	learning = 20
+	intrigue = 20
+	martial = 5
+	diplomacy = -5
+	immortal = yes
+}

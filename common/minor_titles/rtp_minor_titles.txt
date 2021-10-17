@@ -1,0 +1,333 @@
+#####
+#Minor Titles
+#
+#Total = 18
+#####
+
+#LVL 1
+#####
+
+#Server
+server_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#Guard
+guard_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#Barterer
+barterer_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#Beggard
+beggar_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#Postulant
+postulant_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#LVL2
+#####
+
+#Minstrel
+minstrel_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#Veteran
+veteran_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#Shop Assistant
+shop_assistant_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#Pickpocket
+pickpocket_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#Preacher
+preacher_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#LVL3
+#####
+
+#Town Crier
+town_crier_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#Bailif
+bailif_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#Peddler
+peddler_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#Poacher
+poacher_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#Scribe
+scribe_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#LVL4
+#####
+
+#Diplomat
+diplomat_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#Officer
+officer_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#Shop Keeper
+shop_keeper_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#Brigand
+brigand_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#Librarian
+librarian_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#OTHER
+#####
+
+#Sellsword
+sellsword_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#Holy Warrior
+holy_warrior_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#Bandit
+bandit_mt = {
+	grant_limit = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = { has_landed_title = c_landless_t }
+	}
+}
+
+#Citizen
+citizen_mt = {
+	grant_limit = 1
+	show_as_title = yes
+	dignity = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = {
+			has_global_flag = rtp_owns_estate #I own an estate lvl 1
+		}
+	}
+}
+
+#Sir
+sir_mt = {
+	grant_limit = 1
+	show_as_title = yes
+	dignity = 1
+	allowed_to_grant = {
+		always = no
+	}
+	revoke_trigger = {
+		NOT = {
+			has_global_flag = rtp_owns_estate2 #I own an estate lvl 2
+		}
+	}
+}
+
+#COURT
+#####
+
+#Chef
+rtp_chef_mt = {
+	is_high_prio = yes
+	message = yes
+	dignity = 0.1
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 5
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.1
+	
+	allowed_to_hold = {
+		trait = rtp_chef_tr
+	}
+	
+	allowed_to_grant = {
+		rtp_is_lower_baron = no
+	}
+	
+	gain_effect = {
+	}
+
+	lose_effect = {
+	}
+}

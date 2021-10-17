@@ -1,0 +1,19 @@
+
+#####################################################
+##### WS Warrior Lodge #####
+#####################################################
+
+is_member_of_non_pagan_warrior_lodge_trigger = {
+	custom_tooltip = {
+		text = is_member_of_non_pagan_warrior_lodge_tt
+		hidden_trigger = {
+			OR = {
+				society_member_of = warrior_lodge_cws_christian
+				society_member_of = warrior_lodge_ws_mazdan
+				society_member_of = warrior_lodge_ws_eastern
+				society_member_of = warrior_lodge_ws_muslim
+				society_member_of = warrior_lodge_ws_jewish
+			}
+		}
+	}
+}

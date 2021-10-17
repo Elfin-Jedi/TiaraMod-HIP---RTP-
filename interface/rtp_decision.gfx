@@ -1,0 +1,282 @@
+spriteTypes = {
+
+  ###Common
+  spriteType = {
+    name = "GFX_rtp_claim_nobility_d"
+    texturefile = "gfx\\interface\\decisions\\claim_nobility.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_abandon_titles_d"
+    texturefile = "gfx\\interface\\decisions\\abandon_titles.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_quit_job_d"
+    texturefile = "gfx\\interface\\decisions\\quit_job.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_seek_members_d"
+    texturefile = "gfx\\interface\\decisions\\seek_members.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_raise_troops_d"
+    texturefile = "gfx\\interface\\decisions\\raise_troops.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_raise_volunteers_d"
+    texturefile = "gfx\\interface\\decisions\\raise_volunteers.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_raise_zealouts_d_d"
+    texturefile = "gfx\\interface\\decisions\\raise_volunteers.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_raise_patriots_d"
+    texturefile = "gfx\\interface\\decisions\\raise_volunteers.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_visit_doctor_d"
+    texturefile = "gfx\\interface\\decisions\\visit_doctor.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_found_trade_company_d"
+    texturefile = "gfx\\interface\\decisions\\patrician.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_found_mercenary_company_d"
+    texturefile = "gfx\\interface\\decisions\\mercenary.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_found_holy_order_d"
+    texturefile = "gfx\\interface\\decisions\\holy_order.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_pray_d"
+    texturefile = "gfx\\interface\\decisions\\pray.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_enable_piracy_d"
+    texturefile = "gfx\\interface\\decisions\\piracy.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_gamble_d"
+    texturefile = "gfx\\interface\\decisions\\gamble.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_arena_d"
+    texturefile = "gfx\\interface\\decisions\\arena.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_find_spouse_d"
+    texturefile = "gfx\\interface\\decisions\\find_spouse.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_switch_to_mercenary_d"
+    texturefile = "gfx\\interface\\decisions\\mercenary.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_visit_marketplace_d"
+    texturefile = "gfx\\interface\\decisions\\visit_market.dds"
+  }
+
+  ###Estates
+  spriteType = {
+    name = "GFX_rtp_purchase_house_d"
+    texturefile = "gfx\\interface\\decisions\\house.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_purchase_chickens_d"
+    texturefile = "gfx\\interface\\decisions\\house.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_purchase_statuette_d"
+    texturefile = "gfx\\interface\\decisions\\house.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_purchase_fence_d"
+    texturefile = "gfx\\interface\\decisions\\house.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_purchase_cows_d"
+    texturefile = "gfx\\interface\\decisions\\house.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_purchase_tub_d"
+    texturefile = "gfx\\interface\\decisions\\house.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_purchase_candles_d"
+    texturefile = "gfx\\interface\\decisions\\house.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_purchase_fireplace_d"
+    texturefile = "gfx\\interface\\decisions\\house.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_purchase_sheep_d"
+    texturefile = "gfx\\interface\\decisions\\house.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_purchase_latrine_d"
+    texturefile = "gfx\\interface\\decisions\\house.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_purchase_mansion_d"
+    texturefile = "gfx\\interface\\decisions\\mansion.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_purchase_farmland_d"
+    texturefile = "gfx\\interface\\decisions\\mansion.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_purchase_shrine_d"
+    texturefile = "gfx\\interface\\decisions\\mansion.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_purchase_wall_d"
+    texturefile = "gfx\\interface\\decisions\\mansion.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_purchase_mine_d"
+    texturefile = "gfx\\interface\\decisions\\mansion.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_purchase_garden_d"
+    texturefile = "gfx\\interface\\decisions\\mansion.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_purchase_library_d"
+    texturefile = "gfx\\interface\\decisions\\mansion.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_purchase_painting_d"
+    texturefile = "gfx\\interface\\decisions\\mansion.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_purchase_stable_d"
+    texturefile = "gfx\\interface\\decisions\\mansion.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_purchase_fountain_d"
+    texturefile = "gfx\\interface\\decisions\\mansion.dds"
+  }
+
+  ###Artifacts
+  spriteType = {
+    name = "GFX_rtp_use_jade_dragon_d"
+    texturefile = "gfx\\interface\\decisions\\use_jade_dragon.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_use_dragon_amulet_d"
+    texturefile = "gfx\\interface\\decisions\\use_dragon_amulet.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_use_water_clock_d"
+    texturefile = "gfx\\interface\\decisions\\use_water_clock.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_use_emerald_tablet_d"
+    texturefile = "gfx\\interface\\decisions\\use_emerald_tablet.dds"
+  }
+
+  ###Societies
+  spriteType = {
+    name = "GFX_rtp_martial_p1_sd"
+    texturefile = "gfx\\interface\\decisions\\power1_martial.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_martial_p2_sd"
+    texturefile = "gfx\\interface\\decisions\\power2_martial.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_martial_p3_sd"
+    texturefile = "gfx\\interface\\decisions\\power3_martial.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_martial_p4_sd"
+    texturefile = "gfx\\interface\\decisions\\power4_martial.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_martial_tribal_sd"
+    texturefile = "gfx\\interface\\decisions\\become_tribal.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_martial_nomad_sd"
+    texturefile = "gfx\\interface\\decisions\\become_nomad.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_intrigue_p3_sd"
+    texturefile = "gfx\\interface\\decisions\\power3_intrigue.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_intrigue_p4_sd"
+    texturefile = "gfx\\interface\\decisions\\power4_intrigue.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_intrigue_mercenary_sd"
+    texturefile = "gfx\\interface\\decisions\\become_mercenary.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_intrigue_privateer_sd"
+    texturefile = "gfx\\interface\\decisions\\become_privateer.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_stewardship_p1_sd"
+    texturefile = "gfx\\interface\\decisions\\power1_stewardship.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_stewardship_pp1_sd"
+    texturefile = "gfx\\interface\\decisions\\power1_stewardship.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_stewardship_p2_sd"
+    texturefile = "gfx\\interface\\decisions\\power2_stewardship.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_stewardship_p3_sd"
+    texturefile = "gfx\\interface\\decisions\\power3_stewardship.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_stewardship_p4_sd"
+    texturefile = "gfx\\interface\\decisions\\power4_stewardship.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_stewardship_republic_sd"
+    texturefile = "gfx\\interface\\decisions\\become_republic.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_stewardship_merchant_republic_sd"
+    texturefile = "gfx\\interface\\decisions\\become_merchant_republic.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_diplomacy_p2_sd"
+    texturefile = "gfx\\interface\\decisions\\power2_diplomacy.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_diplomacy_feudal_sd"
+    texturefile = "gfx\\interface\\decisions\\become_feudal.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_diplomacy_confederation_sd"
+    texturefile = "gfx\\interface\\decisions\\become_confederation.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_learning_p1_sd"
+    texturefile = "gfx\\interface\\decisions\\power1_learning.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_learning_p2_sd"
+    texturefile = "gfx\\interface\\decisions\\power2_learning.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_learning_p3_sd"
+    texturefile = "gfx\\interface\\decisions\\power3_learning.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_learning_theocracy_sd"
+    texturefile = "gfx\\interface\\decisions\\become_theocracy.dds"
+  }
+  spriteType = {
+    name = "GFX_rtp_learning_holy_order_sd"
+    texturefile = "gfx\\interface\\decisions\\become_holy_order.dds"
+  }
+}

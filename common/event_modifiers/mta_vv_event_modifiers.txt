@@ -1,0 +1,56 @@
+mta_poisoned_modifier = {
+	health_penalty = -10
+	icon = 42
+}
+
+mta_dishonored_modifier = {
+	general_opinion = -5
+	health_penalty = -0.5
+	icon = 88
+}
+
+mta_slaver_modifier = {
+	monthly_character_prestige = 0.1
+	monthly_character_piety = -0.05
+	general_opinion = -5
+	liege_opinion = 5
+	vassal_opinion = 5
+	icon = 106
+}
+
+mta_renowned_slaver_modifier = {
+	monthly_character_prestige = 0.25
+	monthly_character_piety = -0.1
+	general_opinion = -10
+	liege_opinion = 10
+	vassal_opinion = 10
+	icon = 106
+}
+
+mta_employ_slave_timer = {
+	icon = 112
+}
+
+mta_employ_lowborn_timer = {
+	icon = 112
+}
+
+mta_slave_modifier = {
+	health_penalty = -0.25
+	general_opinion = -5
+	icon = 29
+}
+
+mta_forbidden_from_marriage = {
+	icon = 40
+}
+
+raised_lowborn_modifier = {
+	general_opinion = -10
+	icon = 29
+}
+
+raised_lowborn_temp_modifier = {
+	general_opinion = -20
+	icon = 29
+}

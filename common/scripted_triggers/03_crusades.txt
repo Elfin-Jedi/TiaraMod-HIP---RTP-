@@ -1,0 +1,275 @@
+# -*- ck2.scripted_triggers -*-
+
+# Referenced by the "Join Crusade" button in the Crusade view for Crusades using the new Crusade system
+pledge_crusade_trigger = {
+	#is_adult = yes
+	is_incapable = no
+	custom_tooltip = {
+		text = recent_crusade_unpledge_TT
+		NOT = { has_character_modifier = recently_unpledged_to_crusade_cooldown }
+	}
+	custom_tooltip = {
+		text = crusade_no_antipope_TT
+		rightful_religious_head_scope = {
+			OR = {
+				has_landed_title = k_papal_state
+				has_landed_title = d_fraticelli
+			}
+		}
+	}
+	rightful_religious_head_scope = {
+		is_within_diplo_range = PREV
+		NOT = { war_with = PREV }
+	}
+	custom_tooltip = {
+		text = pledge_crusade_alternate_crusades
+		check_if_alternate_crusades_trigger = yes
+	}
+	conditional_tooltip = {
+		trigger = {
+			OR = {
+				catholic = { crusade_target_char = { character = PREVPREV } }
+				fraticelli = { crusade_target_char = { character = PREVPREV } }
+			}
+		}
+		custom_tooltip = {
+			text = defense_pledge_crusade_target_TT
+			NOR = {
+				catholic = { crusade_target_char = { character = PREVPREV } }
+				fraticelli = { crusade_target_char = { character = PREVPREV } }
+			}
+		}
+	}
+	conditional_tooltip = {
+		trigger = {
+			OR = {
+				catholic = { crusade_target_char = { is_liege_or_above = PREVPREV } }
+				fraticelli = { crusade_target_char = { is_liege_or_above = PREVPREV } }
+			}
+		}
+		custom_tooltip = {
+			text = pledge_crusade_target_not_liege_TT
+			NOR = {
+				catholic = { crusade_target_char = { is_liege_or_above = PREVPREV } }
+				fraticelli = { crusade_target_char = { is_liege_or_above = PREVPREV } }
+			}
+		}
+	}
+}
+
+# Referenced by the "Leave Crusade" button in the Crusade view for Crusades using the new Crusade system
+unpledge_crusade_trigger = {
+	conditional_tooltip = {
+		trigger = {
+			has_character_flag = forced_to_crusade
+			check_if_fourth_crusade_trigger = no
+		}
+		custom_tooltip = { 
+			text = forced_to_crusade_TT
+			always = no
+		}
+	}
+	conditional_tooltip = {
+		trigger = {
+			NOT = { has_character_flag = forced_to_crusade }
+			check_if_fourth_crusade_trigger = no
+		}
+		custom_tooltip = {
+			text = unpledge_crusade_trigger_TT
+			NOT = { any_war = { using_cb = new_crusade } }
+		}
+	}
+	conditional_tooltip = {
+		trigger = {
+			NOR = {
+				any_war = { using_cb = new_crusade }
+				has_character_flag = forced_to_crusade
+			}
+			check_if_fourth_crusade_trigger = no
+		}
+		custom_tooltip = {
+			text = recent_crusade_pledge_TT
+			NOT = { has_character_modifier = recently_pledged_to_crusade_cooldown }
+		}
+	}
+}
+
+# Referenced by the "Join Crusade" button in the Crusade defender view for Crusades using the new Crusade system
+defender_pledge_crusade_trigger = {
+	custom_tooltip = {
+		text = defense_pledge_crusade_target_TT_2
+		OR = {
+			catholic = { crusade_target_char = { is_within_diplo_range = ROOT } }
+			fraticelli = { crusade_target_char = { is_within_diplo_range = ROOT } }
+		}
+	}
+	custom_tooltip = {
+		text = defense_pledge_crusade_target_TT
+		NOR = {
+			catholic = { crusade_target_char = { character = PREVPREV } }
+			fraticelli = { crusade_target_char = { character = PREVPREV } }
+		}
+	}
+}
+
+contribute_to_crusade_pot_trigger = {
+
+}
+
+# Referenced by the "Select Receiver Stance" button in the Crusade view for Crusades using the new Crusade system
+select_crusade_receiver_stance_trigger = {
+	has_pledged_crusade_participation = yes
+}
+
+check_if_crusader_trigger = {
+	conditional_tooltip = {
+		trigger = {
+			ROOT = {
+				OR = {
+					religion = catholic
+					religion = fraticelli
+					religion = britannic_pagan
+				}
+				OR = {
+					has_pledged_crusade_participation = yes
+					any_war = { using_cb = new_crusade }
+				}
+				NOR = {
+					has_landed_title = k_papal_state
+					has_landed_title = d_fraticelli
+				}
+			}
+		}
+		custom_tooltip = {
+			text = crusade_invalidate_other_wars_TT
+			NOT = {
+				ROOT = {
+					has_pledged_crusade_participation = yes
+					OR = {
+						religion_scope = { is_preparing_crusade = yes }
+						any_war = { using_cb = new_crusade }
+					}
+					religion = FROM
+					FROM = {
+						OR = {
+							has_pledged_crusade_participation = yes
+							trigger_if = {
+								limit = { religion = catholic }
+								has_landed_title = k_papal_state
+							}
+							trigger_else = {
+								# Going to be religion = fraticelli due to the previous tooltip's trigger
+								has_landed_title = d_fraticelli
+							}
+						}
+					}
+				}
+			}
+		}
+		AND = {
+			ROOT = {
+				religion = britannic_pagan
+				has_pledged_crusade_participation = yes
+			}
+			britannic_pagan = {
+				OR = {
+					is_preparing_crusade = yes
+					ROOT = {
+						any_war = {
+							using_cb = new_crusade
+						}
+					}
+				}
+			}
+			FROM = {
+				religion = britannic_pagan
+				OR = {
+					has_landed_title = k_britannic_pagan
+					has_pledged_crusade_participation = yes
+				}
+			}
+		}
+	}
+}
+
+# same as above, but FROMFROM is the actual attacker
+check_if_crusader_thirdparty_trigger = {
+	conditional_tooltip = {
+		trigger = {
+			OR = {
+				religion = catholic
+				religion = fraticelli
+			}
+			OR = {
+				has_pledged_crusade_participation = yes
+				any_war = { using_cb = new_crusade }
+			}
+			NOR = {
+				has_landed_title = k_papal_state
+				has_landed_title = d_fraticelli
+			}
+		}
+		custom_tooltip = {
+			text = crusade_invalidate_other_wars_TT
+			NAND = {
+				has_pledged_crusade_participation = yes
+				OR = {
+					religion_scope = { is_preparing_crusade = yes }
+					any_war = { using_cb = new_crusade }
+				}
+				religion = FROM
+				FROM = {
+					OR = {
+						has_pledged_crusade_participation = yes
+						trigger_if = {
+							limit = { religion = catholic }
+							has_landed_title = k_papal_state
+						}
+						trigger_else = {
+							# Going to be religion = fraticelli due to the previous tooltip's trigger
+							has_landed_title = d_fraticelli
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+check_if_alternate_crusades_trigger = {
+	NOR = {
+		any_war = {
+			OR = {
+				using_cb = northern_crusade_war
+				using_cb = shepherds_crusade_invasion
+			}
+		}
+		AND = {
+			OR = {
+                has_landed_title = d_teutonic_order
+                has_landed_title = k_teutonic_state
+            }
+            has_global_flag = northern_crusades_active
+		}
+		AND = {
+			has_global_flag = active_reconquista
+			OR = {
+				has_character_flag = currently_reconquering_iberia
+				has_character_flag = reconquista_sponsor
+				has_character_flag = promised_reconquista_ally
+			}
+		}
+		reconquista_check_trigger = yes
+	}
+}
+
+check_if_fourth_crusade_trigger = {
+	crusade_target_title = { title = k_thrace }
+	has_global_flag = 4th_crusade_official
+	NOT = { has_global_flag = fourth_crusade_complete }
+	crusade_target_char = { has_landed_title = e_byzantium }
+}
+
+check_if_not_fourth_crusade_trigger = {
+	NOT = { check_if_fourth_crusade_trigger = yes }
+}

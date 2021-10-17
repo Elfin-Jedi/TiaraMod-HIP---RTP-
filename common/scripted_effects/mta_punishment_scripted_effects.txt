@@ -1,0 +1,912 @@
+# -*- ck2.scripted_effects -*-
+
+#Used by execution decision event mta.3
+mta_execution_opinion_effect = {
+	#If they are a landed vassal of the executioner who does not have a valid reason to execute
+	if = {
+		limit = {
+			event_target:mta_executed = {
+				#NOR = { #The check for crime = yes sounded good, but this lets you kill rivals without consequence
+					#is_foe = event_target:mta_executioner
+					#event_target:mta_executioner = { is_foe = event_target:mta_executed }
+				#}
+				ROOT = { mta_from_has_execute_reason = no }
+				is_vassal_or_below_of = event_target:mta_executioner
+				is_landed = yes
+			}
+		}
+		#Apply tyranny opinion to vassals
+		custom_tooltip = {
+			text = mta_vassal_tyranny_TT
+			hidden_tooltip = {
+				event_target:mta_executioner = {
+					any_realm_lord = {
+						opinion = {
+							modifier = opinion_tyrant
+							who = event_target:mta_executioner
+						}
+					}
+				}
+			}
+		}
+		#Apply opinion consequences to the executed character's family
+		custom_tooltip = {
+			text = mta_killed_close_kin_crime_TT
+			hidden_tooltip = {
+				event_target:mta_executed = {
+					opinion = {
+						modifier = opinion_executing_me
+						who = event_target:mta_executioner
+					}
+					mother = {
+						opinion = {
+							modifier = opinion_executed_close_kin_unjust
+							who = event_target:mta_executioner
+						}
+						opinion = {
+							modifier = opinion_executed_child
+							who = event_target:mta_executioner
+						}
+					}
+					father = {
+						opinion = {
+							modifier = opinion_executed_close_kin_unjust
+							who = event_target:mta_executioner
+						}
+						opinion = {
+							modifier = opinion_executed_child
+							who = event_target:mta_executioner
+						}
+					}
+					spouse = {
+						opinion = {
+							modifier = opinion_executed_close_kin_unjust
+							who = event_target:mta_executioner
+						}
+					}
+					any_child = {
+						opinion = {
+							modifier = opinion_executed_close_kin_unjust
+							who = event_target:mta_executioner
+						}
+					}
+					if = {
+						limit = {
+							event_target:mta_executioner = {
+								NOT = { dynasty = event_target:mta_executed }
+								NOT = { sibling = event_target:mta_executed }
+							}
+						}
+						any_sibling = {
+							opinion = {
+								modifier = opinion_executed_close_kin_unjust
+								who = event_target:mta_executioner
+							}
+						}
+						any_dynasty_member = {
+							limit = { NOT = { character = event_target:mta_executed } }
+							opinion = {
+								modifier = opinion_executed_kin_unjust
+								who = event_target:mta_executioner
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#If they are landed, but a liege of the executioner who does not have a valid reason to execute
+	else_if = {
+		limit = {
+			event_target:mta_executed = {
+				#NOR = { #The check for crime = yes sounded good, but this lets you kill rivals without consequence
+					#is_foe = event_target:mta_executioner
+					#event_target:mta_executioner = { is_foe = event_target:mta_executed }
+				#}
+				ROOT = { mta_from_has_execute_reason = no }
+				is_liege_or_above_of = event_target:mta_executioner
+				NOT = { is_vassal_or_below_of = event_target:mta_executioner }
+				is_landed = yes
+			}
+		}
+		custom_tooltip = {
+			text = mta_executed_countrymen_TT
+			hidden_tooltip = {
+				event_target:mta_executed = {
+					any_realm_lord = {
+						opinion = {
+							modifier = opinion_unjust_execution
+							who = event_target:mta_executioner
+						}
+					}
+				}
+			}
+		}
+		#Apply opinion consequences to the executed character's family
+		custom_tooltip = {
+			text = mta_killed_close_kin_crime_TT
+			hidden_tooltip = {
+				event_target:mta_executed = {
+					opinion = {
+						modifier = opinion_executing_me
+						who = event_target:mta_executioner
+					}
+					mother = {
+						opinion = {
+							modifier = opinion_executed_close_kin_unjust
+							who = event_target:mta_executioner
+						}
+						opinion = {
+							modifier = opinion_executed_child
+							who = event_target:mta_executioner
+						}
+					}
+					father = {
+						opinion = {
+							modifier = opinion_executed_close_kin_unjust
+							who = event_target:mta_executioner
+						}
+						opinion = {
+							modifier = opinion_executed_child
+							who = event_target:mta_executioner
+						}
+					}
+					spouse = {
+						opinion = {
+							modifier = opinion_executed_close_kin_unjust
+							who = event_target:mta_executioner
+						}
+					}
+					any_child = {
+						opinion = {
+							modifier = opinion_executed_close_kin_unjust
+							who = event_target:mta_executioner
+						}
+					}
+					if = {
+						limit = {
+							event_target:mta_executioner = {
+								NOT = { dynasty = event_target:mta_executed }
+								NOT = { sibling = event_target:mta_executed }
+							}
+						}
+						any_sibling = {
+							opinion = {
+								modifier = opinion_executed_close_kin_unjust
+								who = event_target:mta_executioner
+							}
+						}
+						any_dynasty_member = {
+							limit = { NOT = { character = event_target:mta_executed } }
+							opinion = {
+								modifier = opinion_executed_kin_unjust
+								who = event_target:mta_executioner
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#If they or a close relative is landed, but they are NOT a vassal or liege of the executioner who does not have a valid reason to execute, and ARE from an enemy country
+	else_if = {
+		limit = {
+			event_target:mta_executed = {
+				#NOR = { #The check for crime = yes sounded good, but this lets you kill rivals without consequence
+					#is_foe = event_target:mta_executioner
+					#event_target:mta_executioner = { is_foe = event_target:mta_executed }
+				#}
+				ROOT = { mta_from_has_execute_reason = no }
+				NOT = { is_liege_or_above_of = event_target:mta_executioner }
+				NOT = { is_vassal_or_below_of = event_target:mta_executioner }
+				
+				OR = {
+					#If they are NOT independent and their liege is at war with the executioner's realm
+					AND = {
+						independent = no
+						top_liege = {
+							any_war = { 
+								OR = { 
+									AND = { 
+										any_attacker = { character = PREV } 
+										OR = {
+											any_defender = { character = event_target:mta_executioner } 
+											any_defender = { is_liege_or_above_of = event_target:mta_executioner }
+										}
+									}
+									AND = { 
+										any_defender = { character = PREV } 
+										OR = {
+											any_attacker = { character = event_target:mta_executioner } 
+											any_attacker = { is_liege_or_above_of = event_target:mta_executioner }
+										}
+									}
+								}  
+							}
+						}
+					}
+					#If they are independent and at war with the executioner's realm
+					AND = {
+						independent = yes
+						any_war = { 
+							OR = { 
+								AND = { 
+									any_attacker = { character = PREV } 
+									OR = {
+										any_defender = { character = event_target:mta_executioner } 
+										any_defender = { is_liege_or_above_of = event_target:mta_executioner }
+									}
+								}
+								AND = { 
+									any_defender = { character = PREV } 
+									OR = {
+										any_attacker = { character = event_target:mta_executioner } 
+										any_attacker = { is_liege_or_above_of = event_target:mta_executioner }
+									}
+								}
+							}  
+						}
+					}
+				}
+				
+				OR = {
+					is_landed = yes
+					any_dynasty_member = {
+						is_close_relative = event_target:mta_executed
+						is_landed = yes
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = mta_executed_enemy_country_TT
+		}
+		#Apply opinion consequences to the executed character's family
+		custom_tooltip = {
+			text = mta_killed_close_kin_TT
+			hidden_tooltip = {
+				event_target:mta_executed = {
+					opinion = {
+						modifier = opinion_executing_me
+						who = event_target:mta_executioner
+					}
+					mother = {
+						opinion = {
+							modifier = opinion_executed_close_kin
+							who = event_target:mta_executioner
+						}
+						opinion = {
+							modifier = opinion_executed_child
+							who = event_target:mta_executioner
+						}
+					}
+					father = {
+						opinion = {
+							modifier = opinion_executed_close_kin
+							who = event_target:mta_executioner
+						}
+						opinion = {
+							modifier = opinion_executed_child
+							who = event_target:mta_executioner
+						}
+					}
+					spouse = {
+						opinion = {
+							modifier = opinion_executed_close_kin
+							who = event_target:mta_executioner
+						}
+					}
+					any_child = {
+						opinion = {
+							modifier = opinion_executed_close_kin
+							who = event_target:mta_executioner
+						}
+					}
+					if = {
+						limit = {
+							event_target:mta_executioner = {
+								NOT = { dynasty = event_target:mta_executed }
+								NOT = { sibling = event_target:mta_executed }
+							}
+						}
+						any_sibling = {
+							opinion = {
+								modifier = opinion_executed_close_kin
+								who = event_target:mta_executioner
+							}
+						}
+						any_dynasty_member = {
+							limit = { NOT = { character = event_target:mta_executed } }
+							opinion = {
+								modifier = opinion_executed_kin
+								who = event_target:mta_executioner
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#If they or a close relative is landed, but they are NOT a vassal or liege of the executioner who does not have a valid reason to execute, and are NOT from an enemy country
+	else_if = {
+		limit = {
+			event_target:mta_executed = {
+				#NOR = { #The check for crime = yes sounded good, but this lets you kill rivals without consequence
+					#is_foe = event_target:mta_executioner
+					#event_target:mta_executioner = { is_foe = event_target:mta_executed }
+				#}
+				ROOT = { mta_from_has_execute_reason = no }
+				NOT = { is_liege_or_above_of = event_target:mta_executioner }
+				NOT = { is_vassal_or_below_of = event_target:mta_executioner }
+				
+				NOR = {
+					#If they are NOT independent and their liege is at war with the executioner's realm
+					AND = {
+						independent = no
+						top_liege = {
+							any_war = { 
+								OR = { 
+									AND = { 
+										any_attacker = { character = PREV } 
+										OR = {
+											any_defender = { character = event_target:mta_executioner } 
+											any_defender = { is_liege_or_above_of = event_target:mta_executioner }
+										}
+									}
+									AND = { 
+										any_defender = { character = PREV } 
+										OR = {
+											any_attacker = { character = event_target:mta_executioner } 
+											any_attacker = { is_liege_or_above_of = event_target:mta_executioner }
+										}
+									}
+								}  
+							}
+						}
+					}
+					#If they are independent and at war with the executioner's realm
+					AND = {
+						independent = yes
+						any_war = { 
+							OR = { 
+								AND = { 
+									any_attacker = { character = PREV } 
+									OR = {
+										any_defender = { character = event_target:mta_executioner } 
+										any_defender = { is_liege_or_above_of = event_target:mta_executioner }
+									}
+								}
+								AND = { 
+									any_defender = { character = PREV } 
+									OR = {
+										any_attacker = { character = event_target:mta_executioner } 
+										any_attacker = { is_liege_or_above_of = event_target:mta_executioner }
+									}
+								}
+							}  
+						}
+					}
+				}
+				
+				OR = {
+					is_landed = yes
+					any_dynasty_member = {
+						is_close_relative = event_target:mta_executed
+						is_landed = yes
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = mta_executed_countrymen_TT
+			hidden_tooltip = {
+				event_target:mta_executed = {
+					if = {
+						limit = {
+							OR = {
+								AND = {
+									is_landed = yes
+									independent = no
+								}
+								is_landed = no
+							}
+						}
+						top_liege = {
+							opinion = {
+								modifier = opinion_unjust_execution
+								who = event_target:mta_executioner
+							}
+							any_realm_lord = {
+								opinion = {
+									modifier = opinion_unjust_execution
+									who = event_target:mta_executioner
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							event_target:mta_executed = {
+								is_landed = yes
+								independent = yes
+							}
+						}
+						any_realm_lord = {
+							opinion = {
+								modifier = opinion_unjust_execution
+								who = event_target:mta_executioner
+							}
+						}
+					}
+				}
+			}
+		}
+		#Apply opinion consequences to the executed character's family
+		custom_tooltip = {
+			text = mta_killed_close_kin_crime_TT
+			hidden_tooltip = {
+				event_target:mta_executed = {
+					opinion = {
+						modifier = opinion_executing_me
+						who = event_target:mta_executioner
+					}
+					mother = {
+						opinion = {
+							modifier = opinion_executed_close_kin_unjust
+							who = event_target:mta_executioner
+						}
+						opinion = {
+							modifier = opinion_executed_child
+							who = event_target:mta_executioner
+						}
+					}
+					father = {
+						opinion = {
+							modifier = opinion_executed_close_kin_unjust
+							who = event_target:mta_executioner
+						}
+						opinion = {
+							modifier = opinion_executed_child
+							who = event_target:mta_executioner
+						}
+					}
+					spouse = {
+						opinion = {
+							modifier = opinion_executed_close_kin_unjust
+							who = event_target:mta_executioner
+						}
+					}
+					any_child = {
+						opinion = {
+							modifier = opinion_executed_close_kin_unjust
+							who = event_target:mta_executioner
+						}
+					}
+					if = {
+						limit = {
+							event_target:mta_executioner = {
+								NOT = { dynasty = event_target:mta_executed }
+								NOT = { sibling = event_target:mta_executed }
+							}
+						}
+						any_sibling = {
+							opinion = {
+								modifier = opinion_executed_close_kin_unjust
+								who = event_target:mta_executioner
+							}
+						}
+						any_dynasty_member = {
+							limit = { NOT = { character = event_target:mta_executed } }
+							opinion = {
+								modifier = opinion_executed_kin_unjust
+								who = event_target:mta_executioner
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#If none of the above applies and the character being executed is unimportant
+	else = {
+		#Apply opinion consequences to the executed character's family
+		custom_tooltip = {
+			text = mta_killed_close_kin_TT
+			hidden_tooltip = {
+				event_target:mta_executed = {
+					opinion = {
+						modifier = opinion_executing_me
+						who = event_target:mta_executioner
+					}
+					mother = {
+						opinion = {
+							modifier = opinion_executed_close_kin
+							who = event_target:mta_executioner
+						}
+						opinion = {
+							modifier = opinion_executed_child
+							who = event_target:mta_executioner
+						}
+					}
+					father = {
+						opinion = {
+							modifier = opinion_executed_close_kin
+							who = event_target:mta_executioner
+						}
+						opinion = {
+							modifier = opinion_executed_child
+							who = event_target:mta_executioner
+						}
+					}
+					spouse = {
+						opinion = {
+							modifier = opinion_executed_close_kin
+							who = event_target:mta_executioner
+						}
+					}
+					any_child = {
+						opinion = {
+							modifier = opinion_executed_close_kin
+							who = event_target:mta_executioner
+						}
+					}
+					if = {
+						limit = {
+							event_target:mta_executioner = {
+								NOT = { dynasty = event_target:mta_executed }
+								NOT = { sibling = event_target:mta_executed }
+							}
+						}
+						any_sibling = {
+							opinion = {
+								modifier = opinion_executed_close_kin
+								who = event_target:mta_executioner
+							}
+						}
+						any_dynasty_member = {
+							limit = { NOT = { character = event_target:mta_executed } }
+							opinion = {
+								modifier = opinion_executed_kin
+								who = event_target:mta_executioner
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Used by on_executed event mta.4
+#This is similar to the above effect, but does not apply opinion_executed_child or opinion_unjust_execution because hardcoded executions already do
+mta_on_executed_opinion_effect = {
+	#If they are a landed vassal of the executioner who does not have a valid reason to execute
+	if = {
+		limit = {
+			event_target:mta_executed = {
+				#NOR = { #The check for crime = yes sounded good, but this lets you kill rivals without consequence
+					#is_foe = event_target:mta_executioner
+					#event_target:mta_executioner = { is_foe = event_target:mta_executed }
+				#}
+				FROM = { mta_root_has_execute_reason = no }
+				is_vassal_or_below_of = event_target:mta_executioner
+				is_landed = yes
+			}
+		}
+		#Apply opinion consequences to the executed character's family
+		custom_tooltip = {
+			text = mta_killed_close_kin_crime_TT
+			hidden_tooltip = {
+				event_target:mta_executed = {
+					opinion = {
+						modifier = opinion_executing_me
+						who = event_target:mta_executioner
+					}
+					mother = {
+						opinion = {
+							modifier = opinion_executed_close_kin_unjust
+							who = event_target:mta_executioner
+						}
+					}
+					father = {
+						opinion = {
+							modifier = opinion_executed_close_kin_unjust
+							who = event_target:mta_executioner
+						}
+					}
+					spouse = {
+						opinion = {
+							modifier = opinion_executed_close_kin_unjust
+							who = event_target:mta_executioner
+						}
+					}
+					any_child = {
+						opinion = {
+							modifier = opinion_executed_close_kin_unjust
+							who = event_target:mta_executioner
+						}
+					}
+					if = {
+						limit = {
+							event_target:mta_executioner = {
+								NOT = { dynasty = event_target:mta_executed }
+								NOT = { sibling = event_target:mta_executed }
+							}
+						}
+						any_sibling = {
+							opinion = {
+								modifier = opinion_executed_close_kin_unjust
+								who = event_target:mta_executioner
+							}
+						}
+						any_dynasty_member = {
+							limit = { NOT = { character = event_target:mta_executed } }
+							opinion = {
+								modifier = opinion_executed_kin_unjust
+								who = event_target:mta_executioner
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#If they are landed, but NOT a vassal of the executioner who does not have a valid reason to execute, and are NOT from an enemy country
+	else_if = {
+		limit = {
+			event_target:mta_executed = {
+				FROM = { mta_root_has_execute_reason = no }
+				
+				NOR = {
+					#If they are NOT independent and their liege is at war with the executioner's realm
+					AND = {
+						independent = no
+						top_liege = {
+							any_war = { 
+								OR = { 
+									AND = { 
+										any_attacker = { character = PREV } 
+										OR = {
+											any_defender = { character = event_target:mta_executioner } 
+											any_defender = { is_liege_or_above_of = event_target:mta_executioner }
+										}
+									}
+									AND = { 
+										any_defender = { character = PREV } 
+										OR = {
+											any_attacker = { character = event_target:mta_executioner } 
+											any_attacker = { is_liege_or_above_of = event_target:mta_executioner }
+										}
+									}
+								}  
+							}
+						}
+					}
+					#If they are independent and at war with the executioner's realm
+					AND = {
+						independent = yes
+						any_war = { 
+							OR = { 
+								AND = { 
+									any_attacker = { character = PREV } 
+									OR = {
+										any_defender = { character = event_target:mta_executioner } 
+										any_defender = { is_liege_or_above_of = event_target:mta_executioner }
+									}
+								}
+								AND = { 
+									any_defender = { character = PREV } 
+									OR = {
+										any_attacker = { character = event_target:mta_executioner } 
+										any_attacker = { is_liege_or_above_of = event_target:mta_executioner }
+									}
+								}
+							}  
+						}
+					}
+				}
+				
+				NOT = { is_vassal_or_below_of = event_target:mta_executioner }
+				is_landed = yes
+			}
+		}
+		#Apply opinion consequences to the executed character's family
+		custom_tooltip = {
+			text = mta_killed_close_kin_crime_TT
+			hidden_tooltip = {
+				event_target:mta_executed = {
+					opinion = {
+						modifier = opinion_executing_me
+						who = event_target:mta_executioner
+					}
+					mother = {
+						opinion = {
+							modifier = opinion_executed_close_kin_unjust
+							who = event_target:mta_executioner
+						}
+					}
+					father = {
+						opinion = {
+							modifier = opinion_executed_close_kin_unjust
+							who = event_target:mta_executioner
+						}
+					}
+					spouse = {
+						opinion = {
+							modifier = opinion_executed_close_kin_unjust
+							who = event_target:mta_executioner
+						}
+					}
+					any_child = {
+						opinion = {
+							modifier = opinion_executed_close_kin_unjust
+							who = event_target:mta_executioner
+						}
+					}
+					if = {
+						limit = {
+							event_target:mta_executioner = {
+								NOT = { dynasty = event_target:mta_executed }
+								NOT = { sibling = event_target:mta_executed }
+							}
+						}
+						any_sibling = {
+							opinion = {
+								modifier = opinion_executed_close_kin_unjust
+								who = event_target:mta_executioner
+							}
+						}
+						any_dynasty_member = {
+							limit = { NOT = { character = event_target:mta_executed } }
+							opinion = {
+								modifier = opinion_executed_kin_unjust
+								who = event_target:mta_executioner
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#If none of the above applies and the character being executed is unimportant
+	else = {
+		#Apply opinion consequences to the executed character's family
+		custom_tooltip = {
+			text = mta_killed_close_kin_TT
+			hidden_tooltip = {
+				event_target:mta_executed = {
+					opinion = {
+						modifier = opinion_executing_me
+						who = event_target:mta_executioner
+					}
+					mother = {
+						opinion = {
+							modifier = opinion_executed_close_kin
+							who = event_target:mta_executioner
+						}
+					}
+					father = {
+						opinion = {
+							modifier = opinion_executed_close_kin
+							who = event_target:mta_executioner
+						}
+					}
+					spouse = {
+						opinion = {
+							modifier = opinion_executed_close_kin
+							who = event_target:mta_executioner
+						}
+					}
+					any_child = {
+						opinion = {
+							modifier = opinion_executed_close_kin
+							who = event_target:mta_executioner
+						}
+					}
+					if = {
+						limit = {
+							event_target:mta_executioner = {
+								NOT = { dynasty = event_target:mta_executed }
+								NOT = { sibling = event_target:mta_executed }
+							}
+						}
+						any_sibling = {
+							opinion = {
+								modifier = opinion_executed_close_kin
+								who = event_target:mta_executioner
+							}
+						}
+						any_dynasty_member = {
+							limit = { NOT = { character = event_target:mta_executed } }
+							opinion = {
+								modifier = opinion_executed_kin
+								who = event_target:mta_executioner
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+mta_mutilation_effect = {
+	#If the game rule to release prisoners after punishment is set to true, then release them
+	if = {
+		limit = { 
+			has_game_rule = {
+				name = punishment_release_prisoner
+				value = on
+			}
+		}
+		event_target:mta_mutilation_root = { prisoner = no }
+	}
+	#Apply opinion consequences to the mutilated character's family
+	event_target:mta_mutilation_root = {
+		opinion = {
+			modifier = opinion_mutilated_me
+			who = event_target:mta_mutilation_from
+		}
+		hidden_tooltip = {
+			mother = {
+				opinion = {
+					modifier = opinion_mutilated_close_kin
+					who = event_target:mta_mutilation_from
+				}
+			}
+			father = {
+				opinion = {
+					modifier = opinion_mutilated_close_kin
+					who = event_target:mta_mutilation_from
+				}
+			}
+			spouse = {
+				opinion = {
+					modifier = opinion_mutilated_close_kin
+					who = event_target:mta_mutilation_from
+				}
+			}
+			any_child = {
+				opinion = {
+					modifier = opinion_mutilated_close_kin
+					who = event_target:mta_mutilation_from
+				}
+			}
+			if = {
+				limit = {
+					event_target:mta_mutilation_from = {
+						NOT = { dynasty = event_target:mta_mutilation_root }
+						NOT = { sibling = event_target:mta_mutilation_root }
+					}
+				}
+				any_sibling = {
+					opinion = {
+						modifier = opinion_mutilated_close_kin
+						who = event_target:mta_mutilation_from
+					}
+				}
+				any_dynasty_member = {
+					opinion = {
+						modifier = opinion_mutilated_family
+						who = event_target:mta_mutilation_from
+					}
+				}
+			}
+		}
+	}
+	#The character performing the mutilation loses piety and has a chance to become cruel
+	event_target:mta_mutilation_from = {
+		show_scope_change = no
+		piety = -50
+		if = {
+			limit = { NOT = { trait = cruel } }
+			random = {
+				chance = 25
+				add_trait = cruel
+				hidden_tooltip = {
+					character_event = { id = 38259 }
+				}
+			}
+		}
+	}
+}

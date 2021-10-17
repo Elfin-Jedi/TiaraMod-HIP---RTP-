@@ -1,0 +1,16 @@
+misc_bloodline_00 = {
+	general_opinion = 100
+	monthly_character_prestige = 10.00
+	stewardship = 25
+	martial = 25
+	diplomacy = 25
+	intrigue = 25
+	learning = 25
+	global_tax_modifier = 5.00
+
+
+	inheritance = all_descendants
+	allow_bastards = yes
+	picture = GFX_bloodline_misc_bloodline_00
+	flags = { new_miscellaneous_bloodlines }
+}

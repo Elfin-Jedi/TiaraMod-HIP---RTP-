@@ -1,0 +1,113 @@
+spriteTypes = {
+
+	### Books
+	spriteType = {
+		name = "GFX_book_variant_1"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\book_variant_1.dds"
+	}
+	spriteType = {
+		name = "GFX_book_variant_1_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\book_variant_1_small.dds"
+	}
+	spriteType = {
+		name = "GFX_book_variant_2"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\book_variant_2.dds"
+	}
+	spriteType = {
+		name = "GFX_book_variant_2_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\book_variant_2_small.dds"
+	}
+	spriteType = {
+		name = "GFX_book_variant_3"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\book_variant_3.dds"
+	}
+	spriteType = {
+		name = "GFX_book_variant_3_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\book_variant_3_small.dds"
+	}
+
+	### Cloaks
+	spriteType = {
+		name = "GFX_linen_cloak_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\linen_cloak_small.dds"
+	}
+	spriteType = {
+		name = "GFX_linen_cloak"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\linen_cloak.dds"
+	}
+	spriteType = {
+		name = "GFX_imperial_cloak_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\imperial_cloak_small.dds"
+	}
+	spriteType = {
+		name = "GFX_imperial_cloak"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\imperial_cloak.dds"
+	}
+	spriteType = {
+		name = "GFX_fur_cloak_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\fur_cloak_small.dds"
+	}
+	spriteType = {
+		name = "GFX_fur_cloak"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\fur_cloak.dds"
+	}
+	spriteType = {
+		name = "GFX_reindeer_cloak_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\reindeer_cloak_small.dds"
+	}
+	spriteType = {
+		name = "GFX_reindeer_cloak"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\reindeer_cloak.dds"
+	}
+	
+	### Tagelmusts
+	spriteType = {
+		name = "GFX_berber_veil_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\berber_veil_small.dds"
+	}
+	spriteType = {
+		name = "GFX_berber_veil"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\berber_veil.dds"
+	}
+	spriteType = {
+		name = "GFX_berber_veil_pale_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\berber_veil_pale_small.dds"
+	}
+	spriteType = {
+		name = "GFX_berber_veil_pale"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\berber_veil_pale.dds"
+	}
+	spriteType = {
+		name = "GFX_berber_veil_white_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\berber_veil_white_small.dds"
+	}
+	spriteType = {
+		name = "GFX_berber_veil_white"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\berber_veil_white.dds"
+	}
+	spriteType = {
+		name = "GFX_berber_veil_dark_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\berber_veil_dark_small.dds"
+	}
+	spriteType = {
+		name = "GFX_berber_veil_dark"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\berber_veil_dark.dds"
+	}
+	spriteType = {
+		name = "GFX_berber_veil_black_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\berber_veil_black_small.dds"
+	}
+	spriteType = {
+		name = "GFX_berber_veil_black"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\berber_veil_black.dds"
+	}
+	spriteType = {
+		name = "GFX_berber_veil_green_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\berber_veil_green_small.dds"
+	}
+	spriteType = {
+		name = "GFX_berber_veil_green"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\berber_veil_green.dds"
+	}
+	
+}

@@ -1,0 +1,3715 @@
+#####
+#Check Events
+#
+#Total = 27
+#####
+
+namespace = RTPcheck
+
+#Main Events
+#####
+
+#1
+
+#Go Into Hiding
+character_event = {
+	id = RTPcheck.2
+	title = "RTPcheck_2_title"
+	desc = "RTPcheck_2_desc"
+	picture = GFX_evt_hooded_figure_hf
+	is_triggered_only = yes
+	
+	trigger = {
+		rtp_is_capable = yes
+	}
+
+	option = {
+		name = "RTPcheck.2_1"
+
+		add_trait = in_hiding
+
+		character_event = {
+			id = RTPcheck.3 #Come Out Of Hiding
+			years = 2
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = "RTPcheck.2_2"
+
+		prestige = 10
+
+		hidden_tooltip = {
+			add_character_modifier = {
+				modifier = rtp_hiding_timer_em
+				years = 5
+			}
+		}
+
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+}
+
+#Come Out Of Hiding
+character_event = {
+	id = RTPcheck.3
+	title = "RTPcheck_3_title"
+	desc = "RTPcheck_3_desc"
+	picture = GFX_evt_house_arrest_escape
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPcheck.3_1"
+
+		remove_trait = in_hiding
+	}
+}
+
+#Non-Dynastic Game Over
+character_event = {
+	id = RTPcheck.4
+	title = "RTPcheck_4_title"
+	desc = "RTPcheck_4_desc"
+	picture = GFX_evt_death
+	sound = succession_view
+	is_triggered_only = yes
+	ai = no
+
+	option = {
+		name = "RTPcheck.4_1"
+		sound_effect = play
+
+		trigger = {
+			event_target:rtp_new_child = {
+				is_alive = yes
+			}
+		}
+
+		event_target:rtp_new_child = {
+			save_event_target_as = rtp_new_child #Play as a new dynasty member
+			hidden_tooltip = {
+				wealth = global_cash
+				ROOT = {
+					any_artifact = {
+						limit = {
+							has_artifact_flag = rtp_give_back_artifacts
+						}
+						transfer_artifact = {
+							from = ROOT
+							to = event_target:rtp_new_child
+						}
+					}
+				}
+			}
+		}
+
+		custom_tooltip = {
+			text = "rtp_child_ct"
+			
+			hidden_tooltip = {
+				set_variable = {
+					which = rtp_troops
+					which = global_rtp_troops
+				}
+				if = {
+					limit = {
+						event_target:rtp_new_child = {
+							is_landed = no
+						}
+					}
+					event_target:rtp_new_child = {
+						grant_title_no_opinion = c_landless_t
+						if = {
+							limit = {
+								event_target:rtp_previous_liege = {
+									lower_tier_than = DUKE
+								}
+							}
+							set_defacto_liege = THIS
+						}
+						any_close_relative = {
+							limit = {
+								is_landed = no
+							}
+							force_host = PREV
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						event_target:rtp_new_child = {
+							tier = BARON
+						}
+					}
+					event_target:rtp_new_child = {
+						grant_title_no_opinion = c_baron_t
+						any_close_relative = {
+							limit = {
+								is_landed = no
+							}
+							force_host = PREV
+						}
+					}
+				}
+				else = {
+					event_target:rtp_new_child = {
+						set_defacto_liege = event_target:rtp_previous_liege #This is your old liege
+						any_close_relative = {
+							limit = {
+								is_landed = no
+							}
+							force_host = PREV
+						}
+					}
+				}
+		
+				set_player_character = event_target:rtp_new_child #Play as a new dynasty member
+				
+				event_target:rtp_new_child = {
+					hidden_tooltip = {
+						any_artifact = {
+							limit = {
+								has_artifact_flag = rtp_give_back_artifacts
+							}
+							clr_artifact_flag = rtp_give_back_artifacts
+						}
+						character_event = {
+							id = RTPcheck.102 #Play As Random Dynasty Member Check
+							days = 1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPcheck.4_2"
+		sound_effect = play
+
+		trigger = {
+			event_target:rtp_new_dynasty_member = {
+				is_alive = yes
+			}
+		}
+
+		event_target:rtp_new_dynasty_member = {
+			save_event_target_as = rtp_new_dynasty_member #Play as a new dynasty member
+			hidden_tooltip = {
+				wealth = global_cash
+				ROOT = {
+					any_artifact = {
+						limit = {
+							has_artifact_flag = rtp_give_back_artifacts
+						}
+						transfer_artifact = {
+							from = ROOT
+							to = event_target:rtp_new_dynasty_member
+						}
+					}
+				}
+			}
+		}
+
+		custom_tooltip = {
+			text = "rtp_dynasty_ct"
+			
+			hidden_tooltip = {
+				set_variable = {
+					which = rtp_troops
+					which = global_rtp_troops
+				}
+				if = {
+					limit = {
+						event_target:rtp_new_dynasty_member = {
+							is_landed = no
+						}
+					}
+					event_target:rtp_new_dynasty_member = {
+						grant_title_no_opinion = c_landless_t
+						if = {
+							limit = {
+								event_target:rtp_previous_liege = {
+									lower_tier_than = DUKE
+								}
+							}
+							set_defacto_liege = THIS
+						}
+						if = {
+							limit = {
+								event_target:rtp_new_dynasty_member = {
+									is_adult = no
+								}
+							}
+							any_close_relative = {
+								limit = {
+									is_landed = no
+								}
+								force_host = PREV
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						event_target:rtp_new_dynasty_member = {
+							tier = BARON
+						}
+					}
+					event_target:rtp_new_dynasty_member = {
+						grant_title_no_opinion = c_baron_t
+						if = {
+							limit = {
+								event_target:rtp_new_dynasty_member = {
+									is_adult = no
+								}
+							}
+							any_close_relative = {
+								limit = {
+									is_landed = no
+								}
+								force_host = PREV
+							}
+						}
+					}
+				}
+				else = {
+					event_target:rtp_new_dynasty_member = {
+						set_defacto_liege = event_target:rtp_previous_liege #This is your old liege
+						if = {
+							limit = {
+								event_target:rtp_new_dynasty_member = {
+									is_adult = no
+								}
+							}
+							any_close_relative = {
+								limit = {
+									is_landed = no
+								}
+								force_host = PREV
+							}
+						}
+					}
+				}
+		
+				set_player_character = event_target:rtp_new_dynasty_member #Play as a new dynasty member
+				
+				event_target:rtp_new_dynasty_member = {
+					hidden_tooltip = {
+						any_artifact = {
+							limit = {
+								has_artifact_flag = rtp_give_back_artifacts
+							}
+							clr_artifact_flag = rtp_give_back_artifacts
+						}
+						character_event = {
+							id = RTPcheck.102 #Play As Random Dynasty Member Check
+							days = 1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPcheck.4_3"
+		trigger = {
+			rtp_is_landless = no
+		}
+		sound_effect = play
+
+		ROOT = {
+			save_event_target_as = rtp_new_character #Game over? I think not!
+		}
+
+		hidden_tooltip = {
+			wealth = global_cash
+			set_variable = {
+				which = rtp_troops
+				which = global_rtp_troops
+			}
+			rtp_flush_buildings = yes
+			any_artifact = {
+				limit = {
+					has_artifact_flag = rtp_give_back_artifacts
+				}
+				clr_artifact_flag = rtp_give_back_artifacts
+			}
+			clr_global_flag = rtp_stop
+		}
+
+		custom_tooltip = {
+			text = "rtp_non_dynasty_ct"
+		}
+	}
+
+	option = {
+		name = "RTPcheck.4_4"
+		sound_effect = quit
+
+		custom_tooltip = {
+			text = "rtp_game_over_ct"
+			
+			hidden_tooltip = {
+				set_player_character = FROM
+			}
+		}
+	}
+
+	after = {
+		hidden_tooltip = {
+			rtp_flush_buildings = yes
+			set_variable = {
+				which = global_cash
+				value = 0
+			}
+			set_variable = {
+				which = global_rtp_troops
+				value = 0
+			}
+		}
+	}
+}
+
+#Roll Dice
+character_event = {
+	id = RTPcheck.5
+	title = "RTPcheck_5_title"
+	desc = "RTPcheck_5_desc"
+	picture = GFX_evt_emissary
+	is_triggered_only = yes
+	ai = no
+	notification = yes
+
+	immediate = {
+		random_list = {
+			10 = {
+				set_variable = {
+					which = rtp_dice_roll
+					value = 1
+				}
+			}
+			10 = {
+				set_variable = {
+					which = rtp_dice_roll
+					value = 2
+				}
+			}
+			10 = {
+				set_variable = {
+					which = rtp_dice_roll
+					value = 3
+				}
+			}
+			10 = {
+				set_variable = {
+					which = rtp_dice_roll
+					value = 4
+				}
+			}
+			10 = {
+				set_variable = {
+					which = rtp_dice_roll
+					value = 5
+				}
+			}
+			10 = {
+				set_variable = {
+					which = rtp_dice_roll
+					value = 6
+				}
+			}
+			10 = {
+				set_variable = {
+					which = rtp_dice_roll
+					value = 7
+				}
+			}
+			10 = {
+				set_variable = {
+					which = rtp_dice_roll
+					value = 8
+				}
+			}
+			10 = {
+				set_variable = {
+					which = rtp_dice_roll
+					value = 9
+				}
+			}
+			10 = {
+				set_variable = {
+					which = rtp_dice_roll
+					value = 10
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPcheck.5_1"
+	}
+}
+
+#Stillborn Baby
+character_event = {
+	id = RTPcheck.6
+	title = "RTPcheck_6_title"
+	desc = "RTPcheck_6_desc"
+	picture = GFX_evt_pregnancy
+	is_triggered_only = yes
+	notification = yes
+
+	immediate = {
+		FROM = {
+			remove_trait = pregnant
+			remove_trait = hard_pregnancy
+			remove_trait = pregnancy_finishing
+			remove_trait = troubled_pregnancy
+		}
+	}
+
+	option = {
+		name = "RTPcheck.6_1"
+	}
+}
+
+#Received Trade Goods
+character_event = {
+	id = RTPcheck.7
+	title = "RTPcheck_7_title"
+	desc = "RTPcheck_7_desc"
+	picture = GFX_evt_construction_site
+	is_triggered_only = yes
+	notification = yes
+
+	trigger = {
+		rtp_is_lower_baron = no
+	}
+
+	option = {
+		name = "RTPcheck.7_1"
+	}
+}
+
+#Ping Events
+#####
+
+#Job Pay Check
+character_event = {
+	id = RTPcheck.100
+	hide_window = yes
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		rtp_is_landless = yes
+	}
+
+	fail_trigger_effect = {
+		remove_character_modifier = rtp_job_stipend1_em
+		remove_character_modifier = rtp_job_stipend2_em
+		remove_character_modifier = rtp_job_stipend3_em
+		remove_character_modifier = rtp_job_stipend4_em
+
+		set_variable = {
+			which = rtp_diplomacy_pay
+			value = 0
+		}
+		set_variable = {
+			which = rtp_martial_pay
+			value = 0
+		}
+		set_variable = {
+			which = rtp_stewardship_pay
+			value = 0
+		}
+		set_variable = {
+			which = rtp_intrigue_pay
+			value = 0
+		}
+		set_variable = {
+			which = rtp_learning_pay
+			value = 0
+		}
+	}
+
+	immediate = {
+		remove_character_modifier = rtp_job_stipend1_em
+		remove_character_modifier = rtp_job_stipend2_em
+		remove_character_modifier = rtp_job_stipend3_em
+		remove_character_modifier = rtp_job_stipend4_em
+
+		if = {
+			limit = {
+				OR = {
+					has_minor_title = server_mt
+					has_minor_title = minstrel_mt
+					has_minor_title = town_crier_mt
+					has_minor_title = diplomat_mt
+				}
+			}
+			export_to_variable = {
+				which = rtp_diplomacy_pay
+				value = diplomacy
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = rtp_diplomacy_pay
+						value > 0
+					}
+				}
+				trigger_switch = {
+					on_trigger = has_minor_title
+					server_mt = 		{ add_character_modifier = { modifier = rtp_job_stipend1_em years = 2 stacking = yes } }
+					minstrel_mt = 		{ add_character_modifier = { modifier = rtp_job_stipend2_em years = 2 stacking = yes } }
+					town_crier_mt = 	{ add_character_modifier = { modifier = rtp_job_stipend3_em years = 2 stacking = yes } }
+					diplomat_mt = 		{ add_character_modifier = { modifier = rtp_job_stipend4_em years = 2 stacking = yes } }
+				}
+				subtract_variable = {
+					which = rtp_diplomacy_pay
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_minor_title = guard_mt
+					has_minor_title = veteran_mt
+					has_minor_title = bailif_mt
+					has_minor_title = officer_mt
+				}
+			}
+			export_to_variable = {
+				which = rtp_martial_pay
+				value = martial
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = rtp_martial_pay
+						value > 0
+					}
+				}
+				trigger_switch = {
+					on_trigger = has_minor_title
+					guard_mt = 		{ add_character_modifier = { modifier = rtp_job_stipend1_em years = 2 stacking = yes } }
+					veteran_mt = 	{ add_character_modifier = { modifier = rtp_job_stipend2_em years = 2 stacking = yes } }
+					bailif_mt = 	{ add_character_modifier = { modifier = rtp_job_stipend3_em years = 2 stacking = yes } }
+					officer_mt = 	{ add_character_modifier = { modifier = rtp_job_stipend4_em years = 2 stacking = yes } }
+				}
+				subtract_variable = {
+					which = rtp_martial_pay
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_minor_title = barterer_mt
+					has_minor_title = shop_assistant_mt
+					has_minor_title = peddler_mt
+					has_minor_title = shop_keeper_mt
+				}
+			}
+			export_to_variable = {
+				which = rtp_stewardship_pay
+				value = stewardship
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = rtp_stewardship_pay
+						value > 0
+					}
+				}
+				trigger_switch = {
+					on_trigger = has_minor_title
+					barterer_mt = 			{ add_character_modifier = { modifier = rtp_job_stipend1_em years = 2 stacking = yes } }
+					shop_assistant_mt = 	{ add_character_modifier = { modifier = rtp_job_stipend2_em years = 2 stacking = yes } }
+					peddler_mt = 			{ add_character_modifier = { modifier = rtp_job_stipend3_em years = 2 stacking = yes } }
+					shop_keeper_mt = 		{ add_character_modifier = { modifier = rtp_job_stipend4_em years = 2 stacking = yes } }
+				}
+				subtract_variable = {
+					which = rtp_stewardship_pay
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_minor_title = beggar_mt
+					has_minor_title = pickpocket_mt
+					has_minor_title = poacher_mt
+					has_minor_title = brigand_mt
+				}
+			}
+			export_to_variable = {
+				which = rtp_intrigue_pay
+				value = intrigue
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = rtp_intrigue_pay
+						value > 0
+					}
+				}
+				trigger_switch = {
+					on_trigger = has_minor_title
+					beggar_mt = 		{ add_character_modifier = { modifier = rtp_job_stipend1_em years = 2 stacking = yes } }
+					pickpocket_mt = 	{ add_character_modifier = { modifier = rtp_job_stipend2_em years = 2 stacking = yes } }
+					poacher_mt = 		{ add_character_modifier = { modifier = rtp_job_stipend3_em years = 2 stacking = yes } }
+					brigand_mt = 		{ add_character_modifier = { modifier = rtp_job_stipend4_em years = 2 stacking = yes } }
+				}
+				subtract_variable = {
+					which = rtp_intrigue_pay
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_minor_title = postulant_mt
+					has_minor_title = preacher_mt
+					has_minor_title = scribe_mt
+					has_minor_title = librarian_mt
+				}
+			}
+			export_to_variable = {
+				which = rtp_learning_pay
+				value = learning
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = rtp_learning_pay
+						value > 0
+					}
+				}
+				trigger_switch = {
+					on_trigger = has_minor_title
+					postulant_mt = 	{ add_character_modifier = { modifier = rtp_job_stipend1_em years = 2 stacking = yes } }
+					preacher_mt = 	{ add_character_modifier = { modifier = rtp_job_stipend2_em years = 2 stacking = yes } }
+					scribe_mt = 	{ add_character_modifier = { modifier = rtp_job_stipend3_em years = 2 stacking = yes } }
+					librarian_mt = 	{ add_character_modifier = { modifier = rtp_job_stipend4_em years = 2 stacking = yes } }
+				}
+				subtract_variable = {
+					which = rtp_learning_pay
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+#Ping For Non-Dynastic Game Over
+character_event = {
+	id = RTPcheck.101
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+	
+	trigger = {
+		current_heir = {
+			NOT = {
+				dynasty = ROOT
+			}
+		}
+	}
+
+	immediate = {
+		set_global_flag = rtp_stop
+
+		export_to_variable = {
+			which = global_cash
+			value = wealth
+		}
+		set_variable = {
+			which = global_rtp_troops
+			which = rtp_troops
+		}
+		clear_wealth = yes
+		liege = {
+			save_event_target_as = rtp_previous_liege #This is your old liege
+		}
+		random_child = {
+			save_event_target_as = rtp_new_child #Play as a new child of yours
+		}
+		random_dynasty_member = {
+			limit = {
+				NOT = {
+					character = event_target:rtp_new_child #Play as a new child of yours
+				}
+			}
+			save_event_target_as = rtp_new_dynasty_member #Play as a new dynasty member
+		}
+		current_heir = {
+			save_event_target_as = rtp_new_character #Game over? I think not!
+		}
+		any_artifact = {
+			set_artifact_flag = rtp_give_back_artifacts
+			transfer_artifact = {
+				from = ROOT
+				to = event_target:rtp_new_character
+			}
+		}
+		event_target:rtp_new_character = {
+			character_event = {
+				id = RTPcheck.4 #Non-Dynastic Game Over
+				days = 1
+			}
+		}
+
+		if = {
+			limit = {
+				has_landed_title = k_papal_state
+			}
+			event_target:rtp_new_character = {
+				ROOT = {
+					create_character = {
+						age = 40
+						random_traits = yes
+						female = no
+						religion = PREV
+						culture = PREV
+						dynasty = random
+					}
+					new_character = {
+						event_target:rtp_new_character = {
+							any_demesne_title = {
+								grant_title_no_opinion = PREVPREV
+							}
+						}
+					}
+				}
+				set_government_type = rtp_theocracy_g
+				ROOT = {
+					set_variable = {
+						which = global_rtp_cardinals
+						which = rtp_cardinals
+					}
+					any_demesne_title = {
+						grant_title = PREVPREV
+					}
+				}
+				set_variable = {
+					which = rtp_cardinals
+					which = global_rtp_cardinals
+				}
+				set_variable = {
+					which = global_rtp_cardinals
+					which = 0
+				}
+				remove_title = title_cardinal
+			}
+		}
+
+		set_player_character = event_target:rtp_new_character #Game over? I think not!
+	}
+}
+
+#Play As Random Dynasty Member Check
+character_event = {
+	id = RTPcheck.102
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_landed_title = c_landless_t
+			}
+			if = {
+				limit = {
+					dynasty = 19930
+				}
+				set_government_type = rtp_lowborn_g
+				c_landless_t = {
+					gender_succ = true_cognatic
+					add_law = {
+						law = rtp_lowborn_succ
+						cooldown = no
+						opinion_effect = no
+					}
+				}
+			}
+			else = {
+				set_government_type = rtp_noble_g
+				c_landless_t = {
+					gender_succ = true_cognatic
+					add_law = {
+						law = rtp_family_election_succ
+						cooldown = no
+						opinion_effect = no
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_landed_title = c_baron_t
+			}
+			rtp_assign_baron_laws = yes
+		}
+		else = {
+			capital_holding = {
+				rtp_assign_count_laws = yes
+			}
+		}
+	}
+
+	after = {
+		clr_global_flag = rtp_stop
+	}
+}
+
+#Laws Check
+character_event = {
+	id = RTPcheck.103
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+
+	trigger = {
+		NOR = {
+			has_character_modifier = rtp_game_over_timer_em
+			has_global_flag = rtp_stop
+		}
+	}
+
+	immediate = {
+		add_character_modifier = {
+			modifier = rtp_game_over_timer_em
+			days = 1
+		}
+
+		if = {
+			limit = {
+				ai = no
+				has_landed_title = c_landless_t
+				FROM = {
+					higher_tier_than = BARON
+					is_landless_type_title = no
+				}
+			}
+			set_character_flag = rtp_landless_to_higher_than_baron
+		}
+		else_if = {
+			limit = {
+				ai = no
+				has_landed_title = c_landless_t
+				FROM = {
+					tier = BARON
+				}
+			}
+			c_baron_t = {
+				grant_title_no_opinion = ROOT
+			}
+			set_character_flag = rtp_landless_to_baron
+		}
+		else_if = {
+			limit = {
+				ai = no
+				has_landed_title = c_baron_t
+				FROM = {
+					higher_tier_than = BARON
+					is_landless_type_title = no
+				}
+			}
+			set_character_flag = rtp_baron_to_higher_than_baron
+		}
+	}
+
+	option = {
+		if = {
+			limit = {
+				has_character_flag = rtp_landless_to_higher_than_baron
+			}
+
+			capital_holding = {
+				rtp_assign_count_laws = yes
+			}
+			e_china_west_governor = {
+				holder_scope = {
+					grant_title_no_opinion = c_landless_t
+					grant_title_no_opinion = c_baron_t
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_character_flag = rtp_landless_to_baron
+			}
+
+			rtp_assign_baron_laws = yes
+			e_china_west_governor = {
+				holder_scope = {
+					grant_title_no_opinion = c_landless_t
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_character_flag = rtp_baron_to_higher_than_baron
+			}
+
+			any_demesne_title = {
+				copy_title_laws = c_baron_t
+			}
+			e_china_west_governor = {
+				holder_scope = {
+					grant_title_no_opinion = c_landless_t
+					grant_title_no_opinion = c_baron_t
+				}
+			}
+		}
+
+		clr_character_flag = rtp_landless_to_baron
+		clr_character_flag = rtp_landless_to_higher_than_baron
+		clr_character_flag = rtp_baron_to_higher_than_baron
+		recalc_succession = yes
+	}
+}
+
+#Capital Check
+character_event = {
+	id = RTPcheck.104
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+
+	trigger = {
+		has_landed_title = c_landless_t
+	}
+
+	immediate = {
+		c_landless_t = {
+			set_preferred_capital = persistent_event_target:rtp_home_capital
+			set_name = persistent_event_target:rtp_home_capital
+		}
+	}
+}
+
+#Lowrank Check
+character_event = {
+	id = RTPcheck.105
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		any_player = {
+			save_event_target_as = rtp_player #The player
+		}
+		if = {
+			limit = {
+				event_target:rtp_player = {
+					is_landed = no
+				}
+				dynasty = event_target:rtp_player #The player
+			}
+			add_trait = cannot_marry
+		}
+	}
+}
+
+#No Marriages Check
+character_event = {
+	id = RTPcheck.106
+	hide_window = yes
+	is_triggered_only = yes
+	ai = no
+	
+	trigger = {
+		OR = {
+			government = rtp_lowborn_g
+			government = rtp_noble_g
+			government = rtp_theocracy_g
+			government = rtp_baron_theocracy_g
+			government = order_government
+			government = rtp_baron_order_g
+			government = rtp_landless_order_g
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					government = rtp_lowborn_g
+					government = rtp_noble_g
+				}
+			}
+			add_trait = cannot_marry
+		}
+		else_if = {
+			limit = {
+				OR = {
+					government = rtp_theocracy_g
+					government = rtp_baron_theocracy_g
+					government = order_government
+					government = rtp_baron_order_g
+					government = rtp_landless_order_g
+				}
+				NOR = {
+					religion_group = pagan_group
+					religion_group = jewish_group
+					religion = hindu
+				}
+			}
+			add_trait = cannot_marry
+			remove_spouse = yes
+		}
+
+		if = {
+			limit = {
+				OR = {
+					government = order_government
+					government = rtp_baron_order_g
+					government = rtp_landless_order_g
+				}
+			}
+			add_trait = celibate
+			remove_spouse = yes
+		}
+	}
+}
+
+#Marriage Status Check
+character_event = {
+	id = RTPcheck.107
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+
+	immediate = {
+		any_player = {
+			if = {
+				limit = {
+					is_landed = yes
+				}
+				remove_trait = cannot_marry
+				any_dynasty_member_even_if_dead = {
+					remove_trait = cannot_marry
+				}
+			}
+			else = {
+				add_trait = cannot_marry
+				any_dynasty_member_even_if_dead = {
+					add_trait = cannot_marry
+				}
+			}
+		}
+	}
+}
+
+#Player Death Check
+character_event = {
+	id = RTPcheck.108
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+
+	trigger = {
+		is_landed = no
+		OR = {
+			has_character_flag = rtp_temporary_soldier #You serve as a levy now
+			has_character_flag = rtp_temporary_mercenary #You serve as a mercenary now
+			has_character_flag = rtp_temporary_crusader #You serve as a crusader now
+		}
+	}
+
+	immediate = {
+		current_heir = {
+			set_defacto_liege = event_target:rtp_saved_liege
+			liege = {
+				capital_holding = {
+					c_landless_t = {
+						set_name = PREV
+						set_preferred_capital = PREV
+						save_persistent_event_target = {
+							name = rtp_home_capital
+							scope = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Property Flag Check
+character_event = {
+	id = RTPcheck.109
+	hide_window = yes
+	is_triggered_only = yes
+	ai = no
+
+	immediate = {
+		if = {
+			limit = {
+				has_global_flag = rtp_owns_estate #I own an estate lvl 1
+			}
+			remove_title = sir_mt
+			give_minor_title = citizen_mt
+		}
+		else_if = {
+			limit = {
+				has_global_flag = rtp_owns_estate2 #I own an estate lvl 2
+			}
+			remove_title = citizen_mt
+			give_minor_title = sir_mt
+		}
+		else = {
+			remove_title = sir_mt
+			remove_title = citizen_mt
+		}
+	}
+}
+
+#Society Check
+character_event = {
+	id = RTPcheck.110
+	hide_window = yes
+	is_triggered_only = yes
+	ai = no
+
+	immediate = {
+		if = {
+			limit = {
+				lower_tier_than = KING
+				is_in_society = yes
+				OR = {
+					AND = {
+						society_rank == 1
+						society_currency = 500
+					}
+					AND = {
+						society_rank == 2
+						society_currency = 1000
+					}
+					AND = {
+						society_rank == 3
+						society_currency = 2000
+					}
+				}
+				NOT = {
+					has_character_flag = rtp_refuse_rankup #Refused rankup
+				}
+			}
+			society = {
+				random_society_member = {
+					limit = {
+						is_society_grandmaster = yes
+					}
+					save_event_target_as = rtp_society_leader #This is the leader of the society
+				}
+			}
+			event_target:rtp_society_leader = {
+				ROOT = {
+					letter_event = {
+						id = RTPsociety.3 #Society Member Can Rank Up Letter
+					}
+				}
+			}
+		}
+
+		any_playable_ruler = {
+			limit = {
+				lower_tier_than = KING
+				ai = yes
+			}
+			if = {
+				limit = {
+					NOT = {
+						society = {
+							any_society_member = {
+								is_society_grandmaster = yes
+							}
+						}
+					}
+				}
+				set_society_grandmaster = yes
+			}
+			else_if = {
+				limit = {
+					is_in_society = yes
+					society_can_rank_up = yes
+				}
+				society_rank_up = 1
+			}
+			else_if = {
+				limit = {
+					is_in_society = no
+					rtp_is_capable_adult = yes
+					rtp_can_join_society_st = yes
+				}
+				rtp_join_society_se = yes
+			}
+		}
+		
+		any_character = {
+			limit = {
+				is_ruler = no
+				ai = yes
+			}
+			if = {
+				limit = {
+					NOT = {
+						society = {
+							any_society_member = {
+								is_society_grandmaster = yes
+							}
+						}
+					}
+				}
+				set_society_grandmaster = yes
+			}
+			else_if = {
+				limit = {
+					is_in_society = yes
+					society_can_rank_up = yes
+				}
+				society_rank_up = 1
+			}
+			else_if = {
+				limit = {
+					is_in_society = no
+					rtp_can_join_society_st = yes
+				}
+				rtp_join_society_se = yes
+			}
+		}
+
+		rtp_create_society_members_se = yes
+	}
+}
+
+#Ambition Check
+character_event = {
+	id = RTPcheck.111
+	hide_window = yes
+	is_triggered_only = yes
+	min_age = 16
+
+	trigger = {
+		has_ambition = no
+	}
+
+	immediate = {
+		set_character_flag = rtp_ambition #He has chosen an ambition
+		random_list = {
+			10 = {
+				add_ambition = obj_diplomacy
+			}
+			10 = {
+				add_ambition = obj_martial
+			}
+			10 = {
+				add_ambition = obj_stewardship
+			}
+			10 = {
+				add_ambition = obj_intrigue
+			}
+			10 = {
+				add_ambition = obj_learning
+			}
+			10 = {
+				add_ambition = obj_health
+			}
+			10 = {
+				add_ambition = obj_fertility
+			}
+			10 = {
+				add_ambition = obj_m_money
+			}
+			10 = {
+				add_ambition = obj_m_prestige
+			}
+			10 = {
+				add_ambition = obj_m_piety
+			}
+			10 = {
+				add_ambition = obj_combat
+			}
+			10 = {
+				add_ambition = obj_social
+			}
+			10 = {
+				add_ambition = obj_beauty
+			}
+			10 = {
+				add_ambition = obj_legacy
+			}
+		}
+	}
+}
+
+#War Flag Check
+character_event = {
+	id = RTPcheck.112
+	hide_window = yes
+	is_triggered_only = yes
+	only_playable = yes
+	has_global_flag = rtp_conflict #Conflict already happening
+
+	trigger = {
+		OR = {
+			has_character_flag = rtp_regular_war #Regular war
+			has_character_flag = rtp_invasion_war #Invasion
+			has_character_flag = rtp_crusade_war #Crusade
+			has_character_flag = rtp_rebellion_war #Rebellion
+			has_character_flag = rtp_mercenary_war #Mercenary contract
+			has_character_flag = rtp_religious_uprising_war #Religious Uprising
+			has_character_flag = rtp_peasant_rebellion_war #Peasant Rebellion
+			has_character_flag = rtp_culture_uprising_war #Culture Uprising
+			FROM = {
+				has_character_flag = rtp_regular_war #Regular war
+				has_character_flag = rtp_invasion_war #Invasion
+				has_character_flag = rtp_crusade_war #Crusade
+				has_character_flag = rtp_rebellion_war #Rebellion
+				has_character_flag = rtp_mercenary_war #Mercenary contract
+				has_character_flag = rtp_religious_uprising_war #Religious Uprising
+				has_character_flag = rtp_peasant_rebellion_war #Peasant Rebellion
+				has_character_flag = rtp_culture_uprising_war #Culture Uprising
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					has_character_flag = rtp_invasion_war #Invasion
+					FROM = {
+						has_character_flag = rtp_invasion_war #Invasion
+					}
+				}
+			}
+			any_player = {
+				if = {
+					limit = {
+						event_target:rtp_saved_liege = {
+							always = yes
+						}
+					}
+					set_defacto_liege = event_target:rtp_saved_liege
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_character_flag = rtp_invasion_war #Invasion
+					FROM = {
+						has_character_flag = rtp_invasion_war #Invasion
+					}
+				}
+			}
+			any_player = {
+				if = {
+					limit = {
+						event_target:rtp_saved_liege = {
+							always = yes
+						}
+					}
+					set_defacto_liege = event_target:rtp_saved_liege
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_character_flag = rtp_mercenary_war #Mercenary contract
+					FROM = {
+						has_character_flag = rtp_mercenary_war #Mercenary contract
+					}
+				}
+			}
+			any_player = {
+				if = {
+					limit = {
+						event_target:rtp_saved_liege = {
+							always = yes
+						}
+					}
+					set_defacto_liege = event_target:rtp_saved_liege
+				}
+			}
+		}
+		any_player = {
+			remove_title = job_commander
+			remove_trait = travelling
+			clr_global_flag = rtp_conflict #Conflict already happening
+			clr_character_flag = rtp_regular_war #Regular war
+			clr_character_flag = rtp_invasion_war #Invasion
+			clr_character_flag = rtp_temporary_soldier #You serve as a levy now
+			clr_character_flag = rtp_temporary_mercenary #You serve as a mercenary now
+			clr_character_flag = rtp_temporary_crusader #You serve as a crusader now
+			clr_character_flag = rtp_invasion_prestige #Do it for prestige
+			clr_character_flag = rtp_invasion_gold #Do it for gold
+			clr_character_flag = rtp_invasion_barony #Do it for a barony
+			clr_character_flag = rtp_invasion_county #Do it for a county
+		}
+		clear_global_event_target = rtp_saved_liege
+		clr_character_flag = rtp_regular_war #Regular war
+		clr_character_flag = rtp_invasion_war #Invasion
+		clr_character_flag = rtp_crusade_war #Crusade
+		clr_character_flag = rtp_rebellion_war #Rebellion
+		clr_character_flag = rtp_mercenary_war #Mercenary contract
+		clr_character_flag = rtp_religious_uprising_war #Religious Uprising
+		clr_character_flag = rtp_peasant_rebellion_war #Peasant Rebellion
+		clr_character_flag = rtp_culture_uprising_war #Culture Uprising
+		FROM = {
+			clr_character_flag = rtp_regular_war #Regular war
+			clr_character_flag = rtp_invasion_war #Invasion
+			clr_character_flag = rtp_crusade_war #Crusade
+			clr_character_flag = rtp_rebellion_war #Rebellion
+			clr_character_flag = rtp_mercenary_war #Mercenary contract
+			clr_character_flag = rtp_religious_uprising_war #Religious Uprising
+			clr_character_flag = rtp_peasant_rebellion_war #Peasant Rebellion
+			clr_character_flag = rtp_culture_uprising_war #Culture Uprising
+		}
+	}
+}
+
+#Plot Check
+character_event = {
+	id = RTPcheck.113
+	hide_window = yes
+	is_triggered_only = yes
+	min_age = 16
+	is_part_of_plot = yes
+
+	immediate = {
+		if = {
+			limit = {
+				rtp_has_plot_st = yes
+				plot_target_char = {
+					NOR = {
+						has_character_modifier = rtp_hiding_timer_em
+						trait = in_hiding
+					}
+					ROOT = {
+						plot_is_known_by = PREV
+					}
+				}
+			}
+			plot_target_char = {
+				character_event = {
+					id = RTPcheck.2 #Go Into Hiding
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				ai = yes
+			}
+			if = {
+				limit = {
+					rtp_has_plot_st = yes
+				}
+				if = {
+					limit = {
+						plot_target_char = {
+							trait = in_hiding
+						}
+					}
+					rtp_cancel_plot_st = yes
+				}
+				else_if = {
+					limit = {
+						plot_target_char = {
+							reverse_opinion = {
+								who = ROOT
+								value = 100
+							}
+						}
+					}
+					rtp_cancel_plot_st = yes
+				}
+				else_if = {
+					limit = {
+						plot_target_char = {
+							reverse_opinion = {
+								who = ROOT
+								value = 90
+							}
+						}
+					}
+					random = {
+						chance = 90
+	
+						rtp_cancel_plot_st = yes
+					}
+				}
+				else_if = {
+					limit = {
+						plot_target_char = {
+							reverse_opinion = {
+								who = ROOT
+								value = 80
+							}
+						}
+					}
+					random = {
+						chance = 80
+	
+						rtp_cancel_plot_st = yes
+					}
+				}
+				else_if = {
+					limit = {
+						plot_target_char = {
+							reverse_opinion = {
+								who = ROOT
+								value = 70
+							}
+						}
+					}
+					random = {
+						chance = 70
+	
+						rtp_cancel_plot_st = yes
+					}
+				}
+				else_if = {
+					limit = {
+						plot_target_char = {
+							reverse_opinion = {
+								who = ROOT
+								value = 60
+							}
+						}
+					}
+					random = {
+						chance = 60
+	
+						rtp_cancel_plot_st = yes
+					}
+				}
+				else_if = {
+					limit = {
+						plot_target_char = {
+							reverse_opinion = {
+								who = ROOT
+								value = 50
+							}
+						}
+					}
+					random = {
+						chance = 50
+	
+						rtp_cancel_plot_st = yes
+					}
+				}
+				else_if = {
+					limit = {
+						plot_target_char = {
+							reverse_opinion = {
+								who = ROOT
+								value = 40
+							}
+						}
+					}
+					random = {
+						chance = 40
+	
+						rtp_cancel_plot_st = yes
+					}
+				}
+				else_if = {
+					limit = {
+						plot_target_char = {
+							reverse_opinion = {
+								who = ROOT
+								value = 30
+							}
+						}
+					}
+					random = {
+						chance = 30
+	
+						rtp_cancel_plot_st = yes
+					}
+				}
+				else_if = {
+					limit = {
+						plot_target_char = {
+							reverse_opinion = {
+								who = ROOT
+								value = 20
+							}
+						}
+					}
+					random = {
+						chance = 20
+	
+						rtp_cancel_plot_st = yes
+					}
+				}
+				else_if = {
+					limit = {
+						plot_target_char = {
+							reverse_opinion = {
+								who = ROOT
+								value = 10
+							}
+						}
+					}
+					random = {
+						chance = 10
+	
+						rtp_cancel_plot_st = yes
+					}
+				}
+	
+				any_plot_backer = {
+					if = {
+						limit = {
+							plot_target_char = {
+								reverse_opinion = {
+									who = PREVPREV
+									value = 100
+								}
+							}
+						}
+						leave_plot = ROOT
+					}
+					else_if = {
+						limit = {
+							plot_target_char = {
+								reverse_opinion = {
+									who = PREVPREV
+									value = 90
+								}
+							}
+						}
+						random = {
+							chance = 90
+	
+							leave_plot = ROOT
+						}
+					}
+					else_if = {
+						limit = {
+							plot_target_char = {
+								reverse_opinion = {
+									who = PREVPREV
+									value = 80
+								}
+							}
+						}
+						random = {
+							chance = 80
+	
+							leave_plot = ROOT
+						}
+					}
+					else_if = {
+						limit = {
+							plot_target_char = {
+								reverse_opinion = {
+									who = PREVPREV
+									value = 70
+								}
+							}
+						}
+						random = {
+							chance = 70
+	
+							leave_plot = ROOT
+						}
+					}
+					else_if = {
+						limit = {
+							plot_target_char = {
+								reverse_opinion = {
+									who = PREVPREV
+									value = 60
+								}
+							}
+						}
+						random = {
+							chance = 60
+	
+							leave_plot = ROOT
+						}
+					}
+					else_if = {
+						limit = {
+							plot_target_char = {
+								reverse_opinion = {
+									who = PREVPREV
+									value = 50
+								}
+							}
+						}
+						random = {
+							chance = 50
+	
+							leave_plot = ROOT
+						}
+					}
+					else_if = {
+						limit = {
+							plot_target_char = {
+								reverse_opinion = {
+									who = PREVPREV
+									value = 40
+								}
+							}
+						}
+						random = {
+							chance = 40
+	
+							leave_plot = ROOT
+						}
+					}
+					else_if = {
+						limit = {
+							plot_target_char = {
+								reverse_opinion = {
+									who = PREVPREV
+									value = 30
+								}
+							}
+						}
+						random = {
+							chance = 30
+	
+							leave_plot = ROOT
+						}
+					}
+					else_if = {
+						limit = {
+							plot_target_char = {
+								reverse_opinion = {
+									who = PREVPREV
+									value = 20
+								}
+							}
+						}
+						random = {
+							chance = 20
+	
+							leave_plot = ROOT
+						}
+					}
+					else_if = {
+						limit = {
+							plot_target_char = {
+								reverse_opinion = {
+									who = PREVPREV
+									value = 10
+								}
+							}
+						}
+						random = {
+							chance = 10
+	
+							leave_plot = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Government Check
+character_event = {
+	id = RTPcheck.114
+	hide_window = yes
+	is_triggered_only = yes
+	only_rulers = yes
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					rtp_is_mercenary = yes
+					rtp_is_holy_order = yes
+				}
+			}
+			set_variable = {
+				which = global_rtp_troops
+				which = rtp_troops
+			}
+			current_heir = {
+				set_variable = {
+					which = rtp_troops
+					which = global_rtp_troops
+				}
+			}
+			set_variable = {
+				which = global_rtp_troops
+				value = 0
+			}
+		}
+
+		if = {
+			limit = {
+				current_heir = {
+					lower_tier_than = ROOT
+				}
+			}
+			if = {
+				limit = {
+					rtp_is_mercenary = yes
+				}
+				current_heir = {
+					set_character_flag = rtp_mercenary #This guy is a mercenary
+				}
+			}
+			else_if = {
+				limit = {
+					rtp_is_holy_order = yes
+				}
+				current_heir = {
+					set_character_flag = rtp_holy_order #This guy is a holy order
+				}
+			}
+			else_if = {
+				limit = {
+					rtp_is_republic = yes
+				}
+				current_heir = {
+					set_character_flag = rtp_republic #This guy is a republic
+				}
+			}
+			else_if = {
+				limit = {
+					rtp_is_theocracy = yes
+				}
+				current_heir = {
+					set_character_flag = rtp_theocracy #This guy is a theocracy
+				}
+			}
+			else_if = {
+				limit = {
+					rtp_is_confederation = yes
+				}
+				current_heir = {
+					set_character_flag = rtp_confederation #This guy is a confederation
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				any_player = {
+					NOR = {
+						has_landed_title = c_landless_t
+						has_landed_title = c_baron_t
+					}
+				}
+			}
+			current_heir = {
+				e_china_west_governor = {
+					holder_scope = {
+						grant_title_no_opinion = c_landless_t
+						grant_title_no_opinion = c_baron_t
+					}
+				}
+			}
+		}
+	}
+}
+
+#War Leader Death Check
+character_event = {
+	id = RTPcheck.115
+	hide_window = yes
+	is_triggered_only = yes
+	only_playable = yes
+	has_global_flag = rtp_conflict #Conflict already happening
+
+	trigger = {
+		OR = {
+			has_character_flag = rtp_regular_war #Regular war
+			has_character_flag = rtp_invasion_war #Invasion
+			has_character_flag = rtp_crusade_war #Crusade
+			has_character_flag = rtp_rebellion_war #Rebellion
+			has_character_flag = rtp_mercenary_war #Mercenary contract
+			has_character_flag = rtp_religious_uprising_war #Religious Uprising
+			has_character_flag = rtp_peasant_rebellion_war #Peasant Rebellion
+			has_character_flag = rtp_culture_uprising_war #Culture Uprising
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_character_flag = rtp_invasion_war #Invasion
+			}
+			any_player = {
+				if = {
+					limit = {
+						event_target:rtp_saved_liege = {
+							always = yes
+						}
+					}
+					set_defacto_liege = event_target:rtp_saved_liege
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_character_flag = rtp_crusade_war #Crusade
+			}
+			any_player = {
+				if = {
+					limit = {
+						event_target:rtp_saved_liege = {
+							always = yes
+						}
+					}
+					set_defacto_liege = event_target:rtp_saved_liege
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_character_flag = rtp_mercenary_war #Mercenary contract
+			}
+			any_player = {
+				if = {
+					limit = {
+						event_target:rtp_saved_liege = {
+							always = yes
+						}
+					}
+					set_defacto_liege = event_target:rtp_saved_liege
+				}
+			}
+		}
+		any_player = {
+			remove_trait = travelling
+			remove_title = job_commander
+			clr_global_flag = rtp_conflict #Conflict already happening
+			clr_character_flag = rtp_temporary_soldier #You serve as a levy now
+			clr_character_flag = rtp_temporary_mercenary #You serve as a mercenary now
+			clr_character_flag = rtp_temporary_crusader #You serve as a crusader now
+			clr_character_flag = rtp_invasion_prestige #Do it for prestige
+			clr_character_flag = rtp_invasion_gold #Do it for gold
+			clr_character_flag = rtp_invasion_barony #Do it for a barony
+			clr_character_flag = rtp_invasion_county #Do it for a county
+			clear_global_event_target = rtp_saved_liege
+		}
+		any_character = {
+			limit = {
+				OR = {
+					has_character_flag = rtp_regular_war #Regular war
+					has_character_flag = rtp_invasion_war #Invasion
+					has_character_flag = rtp_crusade_war #Crusade
+					has_character_flag = rtp_rebellion_war #Rebellion
+					has_character_flag = rtp_mercenary_war #Mercenary contract
+					has_character_flag = rtp_religious_uprising_war #Religious Uprising
+					has_character_flag = rtp_peasant_rebellion_war #Peasant Rebellion
+					has_character_flag = rtp_culture_uprising_war #Culture Uprising
+				}
+			}
+			clr_character_flag = rtp_regular_war #Regular war
+			clr_character_flag = rtp_invasion_war #Invasion
+			clr_character_flag = rtp_crusade_war #Crusade
+			clr_character_flag = rtp_rebellion_war #Rebellion
+			clr_character_flag = rtp_mercenary_war #Mercenary contract
+			clr_character_flag = rtp_religious_uprising_war #Religious Uprising
+			clr_character_flag = rtp_peasant_rebellion_war #Peasant Rebellion
+			clr_character_flag = rtp_culture_uprising_war #Culture Uprising
+		}
+	}
+}
+
+#Focus Prestige Hit
+character_event = {
+	id = RTPcheck.116
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_focus = focus_war
+			has_focus = focus_hunting
+			has_focus = focus_rulership
+			has_focus = focus_business
+			has_focus = focus_seduction
+			has_focus = focus_intrigue
+			has_focus = focus_carousing
+			has_focus = focus_family
+			has_focus = focus_scholarship
+			has_focus = focus_theology
+		}
+	}
+
+	immediate = {
+		prestige = 50
+	}
+}
+
+#Overstretched Check
+character_event = {
+	id = RTPcheck.117
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		rtp_assign_overstretched_modifier_se = yes
+	}
+}
+
+#Law Modifiers
+character_event = {
+	id = RTPcheck.118
+	hide_window = yes
+	is_triggered_only = yes
+	only_playable = yes
+
+	immediate = {
+		rtp_assign_laws_se = yes
+	}
+}
+
+#Cardinal Check
+character_event = {
+	id = RTPcheck.119
+	hide_window = yes
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		has_landed_title = k_papal_state
+		check_variable = {
+			which = rtp_cardinals
+			value <= 9
+		}
+	}
+
+	immediate = {
+		random_character = {
+			limit = {
+				religion = catholic
+				rtp_is_theocracy_government = yes
+				k_papal_state = {
+					holder_scope = {
+						is_within_diplo_range = PREVPREV
+					}
+				}
+				
+				NOT = {
+					top_liege = {
+						any_vassal = {
+							any_claim = {
+								title = k_papal_state
+							}
+						}
+					}
+				}
+			}
+			give_minor_title = title_cardinal
+		}
+
+		change_variable = {
+			which = rtp_cardinals
+			value = 1
+		}
+		character_event = {
+			id = RTPcheck.119 #Cardinal Check
+			days = 30
+		}
+	}
+}
+
+#Player Pope Check
+character_event = {
+	id = RTPcheck.120
+	hide_window = yes
+	is_triggered_only = yes
+	ai = yes
+	only_playable = yes
+
+	trigger = {
+		has_landed_title = k_papal_state
+		any_player = {
+			ROOT = {
+				current_heir = {
+					character = PREVPREV
+				}
+			}
+		}
+	}
+
+	immediate = {
+		current_heir = {
+			set_player_character = ROOT
+		}
+	}
+}
+
+#Auto WoL Check
+character_event = {
+	id = RTPcheck.121
+	hide_window = yes
+	is_triggered_only = yes
+	ai = no
+
+	trigger = {
+		rtp_is_capable_adult = yes
+		OR = {
+			AND = {
+				has_focus = focus_seduction
+				has_global_flag = rtp_auto_seduce #Auto Seduction
+			}
+			AND = {
+				has_focus = focus_intrigue
+				has_global_flag = rtp_auto_spy #Auto Spying
+			}
+			AND = {
+				has_focus = focus_carousing
+				has_global_flag = rtp_auto_carousing #Auto Carousing
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_focus = focus_carousing
+				has_global_flag = rtp_auto_carousing #Auto Carousing
+			}
+			top_liege = {
+				random_realm_character = {
+					limit = {
+						rtp_is_capable_adult = yes
+						OR = {
+							is_ruler = yes
+							is_close_relative = yes
+							is_councillor = yes
+						}
+					}
+					character_event = {
+						id = RTPcheck.122 #Auto WoL Ping
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_focus = focus_intrigue
+				has_global_flag = rtp_auto_spy #Auto Spying
+			}
+			top_liege = {
+				random_realm_character = {
+					limit = {
+						is_ruler = yes
+						reverse_opinion = {
+							who = ROOT
+							value <= 0
+						}
+					}
+					character_event = {
+						id = RTPcheck.122 #Auto WoL Ping
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_focus = focus_seduction
+				has_global_flag = rtp_auto_seduce #Auto Seduction
+			}
+			if = {
+				limit = {
+					NOT = {
+						trait = homosexual
+					}
+				}
+				top_liege = {
+					random_realm_character = {
+						limit = {
+							rtp_is_capable_adult = yes
+							age <= 35
+							NOR = {
+								trait = homosexual
+								trait = celibate
+								same_sex = ROOT
+								is_lover = ROOT
+								is_consort = ROOT
+								is_former_lover = ROOT
+								any_spouse = {
+									character = ROOT
+								}
+							}
+						}
+						character_event = {
+							id = RTPcheck.122 #Auto WoL Ping
+						}
+					}
+				}
+			}
+			else = {
+				top_liege = {
+					random_realm_character = {
+						limit = {
+							rtp_is_capable_adult = yes
+							age <= 35
+							same_sex = ROOT
+							NOR = {
+								trait = celibate
+								is_lover = ROOT
+								is_consort = ROOT
+								is_former_lover = ROOT
+								any_spouse = {
+									character = ROOT
+								}
+							}
+						}
+						character_event = {
+							id = RTPcheck.122 #Auto WoL Ping
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Auto WoL Ping
+character_event = {
+	id = RTPcheck.122
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = {
+			if = {
+				limit = {
+					has_focus = focus_carousing
+					has_global_flag = rtp_auto_carousing #Auto Carousing
+				}
+				if = {
+					limit = {
+						NOR = {
+							had_character_flag = {
+								flag = inviting_guests_to_party_timer
+								days = 90
+							}
+							has_character_modifier = organizing_party
+						}
+					}
+					add_character_modifier = {
+						modifier = organizing_party
+						duration = 120
+					}
+					hidden_tooltip = {
+						character_event = {
+							id = WoL.4010
+							days = 120
+						}
+					}
+					set_character_flag = inviting_guests_to_party_timer
+				}
+				set_character_flag = do_not_disturb
+
+				ROOT = {
+					hidden_tooltip = {
+						letter_event = {
+							id = WoL.4000
+							days = 7
+						}
+					}
+					set_character_flag = carousing_invite
+				}
+			}
+			else_if = {
+				limit = {
+					has_focus = focus_intrigue
+					has_global_flag = rtp_auto_spy #Auto Spying
+				}
+				any_opinion_modifier_target = {
+					limit = {
+						reverse_has_opinion_modifier = {
+							who = PREV
+							modifier = opinion_spying_on
+						}
+					}
+					reverse_remove_opinion = {
+						who = PREV
+						modifier = opinion_spying_on
+					}
+				}
+				opinion = {
+					who = ROOT
+					modifier = opinion_spying_on
+					months = 12000
+				}
+				character_event = {
+					id = WoL.2050
+					days = 1
+				}
+			}
+			else_if = {
+				limit = {
+					has_focus = focus_seduction
+					has_global_flag = rtp_auto_seduce #Auto Seduction
+				}
+				if = {
+					limit = {
+						NOT = {
+							trait = homosexual
+						}
+					}
+					opinion = {
+						who = ROOT
+						modifier = opinion_seducing
+						years = 1000
+					}
+					
+					if = {
+						limit = {
+							is_close_relative = ROOT
+							NOR = {
+								religion = messalian
+								religion = zoroastrian
+							}
+						}
+						character_event = {
+							id = WoL.102
+							days = 1
+						}
+						break = yes
+					}
+					
+					if = {
+						limit = {
+							religion_group = christian
+							OR = {
+								is_priest = yes
+								is_ascetic_trigger = yes
+								ROOT = {
+									is_priest = yes
+									is_ascetic_trigger = yes
+								}
+							}
+						}
+						character_event = {
+							id = WoL.103
+							days = 1
+						}
+						break = yes
+					}
+					
+					if = {
+						limit = {
+							age_diff = {
+								who = ROOT
+								years = 25
+							}
+						}
+						character_event = {
+							id = WoL.101
+							days = 1
+						}
+						break = yes
+					}
+					
+					character_event = {
+						id = WoL.100
+						days = 1
+					}
+				}
+				else = {
+					opinion = {
+						who = ROOT
+						modifier = opinion_seducing
+						years = 1000
+					}
+	
+					character_event = {
+						id = WoL.104
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+#Too Many Bloodlines Check
+character_event = {
+	id = RTPcheck.123
+	hide_window = yes
+	is_triggered_only = yes
+	only_playable = yes
+
+	trigger = {
+		any_owned_bloodline = {
+			bloodline_is_active_for = ROOT
+		}
+	}
+
+	immediate = {
+		random_owned_bloodline = {
+			set_bloodline_flag = rtp_main_bloodline #This is going to be the only bloodline you can have
+		}
+		any_owned_bloodline = {
+			limit = {
+				NOT = {
+					has_bloodline_flag = rtp_main_bloodline #This is going to be the only bloodline you can have
+				}
+			}
+			remove_bloodline_member = ROOT
+		}
+		random_owned_bloodline = {
+			limit = {
+				has_bloodline_flag = rtp_main_bloodline #This is going to be the only bloodline you can have
+			}
+			clr_bloodline_flag = rtp_main_bloodline #This is going to be the only bloodline you can have
+		}
+	}
+}
+
+#Bloodlines Check
+character_event = {
+	id = RTPcheck.124
+	hide_window = yes
+	is_triggered_only = yes
+	only_playable = yes
+
+	trigger = {
+		higher_real_tier_than = DUKE
+		NOT = {
+			any_owned_bloodline = {
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { check_variable = { which = bloodline_murdered_people value = 1 } }
+				NOT = { has_global_flag = rtp_bloodline1_founded }
+			}
+			set_variable = { which = bloodline_murdered_people value = 0 }
+		}
+		if = {
+			limit = {
+				NOT = { check_variable = { which = bloodline_won_wars value = 1 } }
+				NOT = { has_global_flag = rtp_bloodline2_founded }
+			}
+			set_variable = { which = bloodline_won_wars value = 0 }
+		}
+		if = {
+			limit = {
+				NOT = { check_variable = { which = bloodline_built_holdings value = 1 } }
+				NOT = { has_global_flag = rtp_bloodline3_founded }
+			}
+			set_variable = { which = bloodline_built_holdings value = 0 }
+		}
+		if = {
+			limit = {
+				NOT = { check_variable = { which = bloodline_built_cities value = 1 } }
+				NOT = { has_global_flag = rtp_bloodline4_founded }
+			}
+			set_variable = { which = bloodline_built_cities value = 0 }
+		}
+		if = {
+			limit = {
+				NOT = { check_variable = { which = bloodline_built_castles value = 1 } }
+				NOT = { has_global_flag = rtp_bloodline5_founded }
+			}
+			set_variable = { which = bloodline_built_castles value = 0 }
+		}
+		if = {
+			limit = {
+				NOT = { check_variable = { which = bloodline_built_temples value = 1 } }
+				NOT = { has_global_flag = rtp_bloodline6_founded }
+			}
+			set_variable = { which = bloodline_built_temples value = 0 }
+		}
+		if = {
+			limit = {
+				NOT = { age = 12 }
+			}
+			set_character_flag = flag_forge_bloodline_was_child
+		}
+		if = {
+			limit = {
+				check_variable = { which = bloodline_murdered_people value = 30 }
+				NOT = { has_global_flag = rtp_bloodline1_founded }
+			}
+			set_character_flag = flag_about_to_murder_bloodline
+			set_global_flag = rtp_bloodline1_founded #Bloodline already found
+			character_event = { id = HF.24025 days = 25 random = 25 }
+		}
+		# if = {
+		# 	limit = {
+		# 		NOT = { has_global_flag = rtp_bloodline7_founded }
+		# 	}
+		# 	set_global_flag = rtp_bloodline7_founded #Bloodline already found
+		# 	set_variable = { which = bloodline_peaceful_years value = 0 }
+		# 	character_event = { id = HF.24020 days = 365 }
+		# }
+		else_if = {
+			limit = {
+				check_variable = { which = bloodline_won_wars value = 15 }
+				NOT = { has_global_flag = rtp_bloodline2_founded }
+			}
+			set_character_flag = flag_about_to_war_bloodline
+			set_global_flag = rtp_bloodline2_founded #Bloodline already found
+			character_event = { id = HF.24031 days = 25 random = 25 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = bloodline_built_holdings value = 24 }
+				NOT = { has_global_flag = rtp_bloodline3_founded }
+			}
+			set_character_flag = flag_about_to_builder_bloodline
+			set_global_flag = rtp_bloodline3_founded #Bloodline already found
+			narrative_event = { id = HF.24047 days = 25 random = 25 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = bloodline_built_cities value = 10 }
+				NOT = { has_global_flag = rtp_bloodline4_founded }
+			}
+			set_character_flag = flag_about_to_builder_bloodline
+			set_global_flag = rtp_bloodline4_founded #Bloodline already found
+			narrative_event = { id = HF.24042 days = 25 random = 25 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = bloodline_built_castles value = 10 }
+				NOT = { has_global_flag = rtp_bloodline5_founded }
+			}
+			set_character_flag = flag_about_to_builder_bloodline
+			set_global_flag = rtp_bloodline5_founded #Bloodline already found
+			narrative_event = { id = HF.24043 days = 25 random = 25 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = bloodline_built_temples value = 10 }
+				NOT = { has_global_flag = rtp_bloodline6_founded }
+			}
+			set_character_flag = flag_about_to_builder_bloodline
+			set_global_flag = rtp_bloodline6_founded #Bloodline already found
+			narrative_event = { id = HF.24044 days = 25 random = 25 }
+		}
+		else_if = {
+			limit = {
+				higher_real_tier_than = KING
+			}
+			character_event = { id = HF.24052 days = 800 random = 800 }
+		}
+
+		random_list = {
+			1000 = {
+			}
+			1 = {
+				if = {
+					limit = {
+						NOT = { has_global_flag = rtp_bloodline8_founded }
+					}
+					if = {
+						limit = {
+							is_female = no
+						}
+						create_bloodline = { type = legendary_eagle_hunter_male }
+					}
+					else = {
+						create_bloodline = { type = legendary_eagle_hunter_female }
+					}
+					new_bloodline = {
+						set_description = bloodline_desc_legendary_eagle_hunter
+						random_list = {
+							20 = { set_name = bloodline_legendary_eagle_hunter_A }
+							20 = { set_name = bloodline_legendary_eagle_hunter_B }
+							20 = { set_name = bloodline_legendary_eagle_hunter_C }
+							20 = { set_name = bloodline_legendary_eagle_hunter_D }
+						}
+					}
+					set_global_flag = rtp_bloodline8_founded #Bloodline already found
+				}
+			}
+			1 = {
+				if = {
+					limit = {
+						NOT = { has_global_flag = rtp_bloodline9_founded }
+					}
+					if = {
+						limit = {
+							is_female = no
+						}
+						create_bloodline = { type = legendary_dog_hunter_male }
+					}
+					else = {
+						create_bloodline = { type = legendary_dog_hunter_female }
+					}
+					new_bloodline = {
+						set_description = bloodline_desc_legendary_dog_hunter
+						random_list = {
+							20 = { set_name = bloodline_legendary_dog_hunter_A }
+							20 = { set_name = bloodline_legendary_dog_hunter_B }
+							20 = { set_name = bloodline_legendary_dog_hunter_C }
+							20 = { set_name = bloodline_legendary_dog_hunter_D }
+						}
+					}
+					set_global_flag = rtp_bloodline9_founded #Bloodline already found
+				}
+			}
+			1 = {
+				if = {
+					limit = {
+						NOT = { has_global_flag = rtp_bloodline10_founded }
+					}
+					if = {
+						limit = {
+							is_female = no
+						}
+						create_bloodline = { type = legendary_battle_survivor_male }
+					}
+					else = {
+						create_bloodline = { type = legendary_battle_survivor_female }
+					}
+					new_bloodline = {
+						set_description = bloodline_desc_legendary_battle_survivor
+						random_list = {
+							20 = { set_name = bloodline_legendary_battle_survivor_A }
+							20 = { set_name = bloodline_legendary_battle_survivor_B }
+							20 = { set_name = bloodline_legendary_battle_survivor_C }
+							20 = { set_name = bloodline_legendary_battle_survivor_D }
+						}
+					}
+					set_global_flag = rtp_bloodline10_founded #Bloodline already found
+				}
+			}
+			1 = {
+				if = {
+					limit = {
+						NOT = { has_global_flag = rtp_bloodline11_founded }
+					}
+					if = {
+						limit = {
+							is_female = no
+						}
+						create_bloodline = { type = legendary_leader_male }
+					}
+					else = {
+						create_bloodline = { type = legendary_leader_female }
+					}
+					new_bloodline = {
+						set_description = bloodline_desc_legendary_leader
+						set_name = bloodline_legendary_leader_C
+					}
+					set_global_flag = rtp_bloodline11_founded #Bloodline already found
+				}
+			}
+			1 = {
+				if = {
+					limit = {
+						NOT = { has_global_flag = rtp_bloodline12_founded }
+					}
+					if = {
+						limit = {
+							is_female = no
+						}
+						create_bloodline = { type = legendary_soldier_male }
+					}
+					else = {
+						create_bloodline = { type = legendary_soldier_female }
+					}
+					new_bloodline = {
+						set_description = bloodline_desc_legendary_soldier
+						random_list = {
+							20 = { set_name = bloodline_legendary_soldier_A }
+							20 = { set_name = bloodline_legendary_soldier_B }
+						}
+					}
+					set_global_flag = rtp_bloodline12_founded #Bloodline already found
+				}
+			}
+			1 = {
+				if = {
+					limit = {
+						NOT = { has_global_flag = rtp_bloodline13_founded }
+					}
+					if = {
+						limit = {
+							is_female = no
+						}
+						create_bloodline = { type = legendary_battle_bard_male }
+					}
+					else = {
+						create_bloodline = { type = legendary_battle_bard_female }
+					}
+					new_bloodline = {
+						set_description = bloodline_desc_legendary_battle_bard
+						set_name = bloodline_legendary_soldier_D
+					}
+					set_global_flag = rtp_bloodline13_founded #Bloodline already found
+				}
+			}
+			1 = {
+				if = {
+					limit = {
+						NOT = { has_global_flag = rtp_bloodline14_founded }
+					}
+					if = {
+						limit = {
+							is_female = no
+						}
+						create_bloodline = { type = legendary_commander_male }
+					}
+					else = {
+						create_bloodline = { type = legendary_commander_female }
+					}
+					new_bloodline = {
+						set_description = bloodline_desc_legendary_commander
+						random_list = {
+							20 = { set_name = bloodline_legendary_commander_A }
+							20 = { set_name = bloodline_legendary_commander_B }
+						}
+					}
+					set_global_flag = rtp_bloodline14_founded #Bloodline already found
+				}
+			}
+			1 = {
+				if = {
+					limit = {
+						NOT = { has_global_flag = rtp_bloodline15_founded }
+					}
+					if = {
+						limit = {
+							is_female = no
+						}
+						create_bloodline = { type = legendary_captor_male }
+					}
+					else = {
+						create_bloodline = { type = legendary_captor_female }
+					}
+					new_bloodline = {
+						set_description = bloodline_desc_legendary_captor
+						random_list = {
+							20 = { set_name = bloodline_legendary_captor_A }
+							20 = { set_name = bloodline_legendary_captor_B }
+							20 = { set_name = bloodline_legendary_captor_C }
+							20 = { set_name = bloodline_legendary_captor_D }
+						}
+					}
+					set_global_flag = rtp_bloodline15_founded #Bloodline already found
+				}
+			}
+			1 = {
+				if = {
+					limit = {
+						NOT = { has_global_flag = rtp_bloodline16_founded }
+					}
+					if = {
+						limit = {
+							is_female = no
+						}
+						create_bloodline = { type = legendary_raider_male }
+					}
+					else = {
+						create_bloodline = { type = legendary_raider_female }
+					}
+					new_bloodline = {
+						set_description = bloodline_desc_legendary_raider
+						random_list = {
+							20 = { set_name = bloodline_legendary_raider_A }
+							20 = { set_name = bloodline_legendary_raider_B }
+							20 = { set_name = bloodline_legendary_raider_D }
+						}
+					}
+					set_global_flag = rtp_bloodline16_founded #Bloodline already found
+				}
+			}
+		}
+	}
+}
+
+#125
+
+#126
+
+#Random Spouse Check
+character_event = {
+	id = RTPcheck.127
+	is_triggered_only = yes
+	hide_window = yes
+	ai = yes
+	is_married = no
+
+	immediate = {
+		any_player = {
+			save_event_target_as = rtp_player #The player
+		}
+
+		if = {
+			limit = {
+				event_target:rtp_player = {
+					rtp_is_landless = yes
+				}
+				dynasty = event_target:rtp_player #The player
+			}
+			if = {
+				limit = {
+					dynasty = 19930
+				}
+				if = {
+					limit = {
+						is_female = no
+					}
+					create_character = {
+						age = 20
+						female = yes
+						random_traits = yes
+						religion = location
+						culture = location
+						dynasty = none
+					}
+				}
+				else = {
+					create_character = {
+						age = 20
+						female = no
+						random_traits = yes
+						religion = location
+						culture = location
+						dynasty = none
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						is_female = no
+					}
+					create_character = {
+						age = 20
+						female = yes
+						random_traits = yes
+						religion = location
+						culture = location
+						dynasty = random
+					}
+				}
+				else = {
+					create_character = {
+						age = 20
+						female = no
+						random_traits = yes
+						religion = location
+						culture = location
+						dynasty = random
+					}
+				}
+			}
+			new_character = {
+				save_event_target_as = rtp_potential_spouse #Potential Spouse
+			}
+	
+			if = {
+				limit = {
+					dynasty = 19930
+				}
+				if = {
+					limit = {
+						is_female = no
+					}
+					add_spouse = event_target:rtp_potential_spouse #Potential Spouse
+					prestige = 100
+				}
+				else = {
+					add_spouse_matrilineal = event_target:rtp_potential_spouse #Potential Spouse
+					prestige = 100
+					event_target:rtp_player = {
+						prestige = 100
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						is_female = no
+					}
+					add_spouse = event_target:rtp_potential_spouse #Potential Spouse
+					prestige = 100
+				}
+				else = {
+					add_spouse_matrilineal = event_target:rtp_potential_spouse #Potential Spouse
+					prestige = 100
+				}
+			}
+		}
+	}
+}
+
+#Assign Trade Goods Check
+character_event = {
+	id = RTPcheck.128
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_assigned_goods
+		}
+	}
+
+	immediate = {
+		set_global_flag = rtp_assigned_goods
+
+		any_province = {
+			random_list = {
+				90 = {
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_gems_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_amber_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_beer_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_berries_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_bread_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_bricks_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_cheese_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_cloth_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_copper_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_driedfruits_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_dyes_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_fish_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_furs_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_grain_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_ham_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_mushrooms_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_porkribs_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_salt_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_spirits_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_venison_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_wine_em
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = rtp_wood_em
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+#Give Trade Goods Check
+character_event = {
+	id = RTPcheck.129
+	is_triggered_only = yes
+	hide_window = yes
+	only_rulers = yes
+
+	immediate = {
+		any_demesne_province = {
+			save_event_target_as = rtp_this_province #The province
+			
+			random = {
+				chance = 1
+
+				if = {
+					limit = {
+						has_province_modifier = rtp_gems_em
+					}
+					ROOT = {
+						add_artifact = rtp_gems_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_amber_em
+					}
+					ROOT = {
+						add_artifact = rtp_amber_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_beer_em
+					}
+					ROOT = {
+						add_artifact = rtp_beer_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_berries_em
+					}
+					ROOT = {
+						add_artifact = rtp_berries_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_bread_em
+					}
+					ROOT = {
+						add_artifact = rtp_bread_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_bricks_em
+					}
+					ROOT = {
+						add_artifact = rtp_bricks_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_cheese_em
+					}
+					ROOT = {
+						add_artifact = rtp_cheese_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_cloth_em
+					}
+					ROOT = {
+						add_artifact = rtp_cloth_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_copper_em
+					}
+					ROOT = {
+						add_artifact = rtp_copper_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_driedfruits_em
+					}
+					ROOT = {
+						add_artifact = rtp_driedfruits_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_dyes_em
+					}
+					ROOT = {
+						add_artifact = rtp_dyes_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_fish_em
+					}
+					ROOT = {
+						add_artifact = rtp_fish_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_furs_em
+					}
+					ROOT = {
+						add_artifact = rtp_furs_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_grain_em
+					}
+					ROOT = {
+						add_artifact = rtp_grain_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_ham_em
+					}
+					ROOT = {
+						add_artifact = rtp_ham_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_mushrooms_em
+					}
+					ROOT = {
+						add_artifact = rtp_mushrooms_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_porkribs_em
+					}
+					ROOT = {
+						add_artifact = rtp_porkribs_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_salt_em
+					}
+					ROOT = {
+						add_artifact = rtp_salt_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_spirits_em
+					}
+					ROOT = {
+						add_artifact = rtp_spirits_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_venison_em
+					}
+					ROOT = {
+						add_artifact = rtp_venison_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_wine_em
+					}
+					ROOT = {
+						add_artifact = rtp_wine_a
+					}
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = rtp_wood_em
+					}
+					ROOT = {
+						add_artifact = rtp_wood_a
+					}
+				}
+
+				ROOT = {
+					character_event = {
+						id = RTPcheck.7 #Received Trade Goods
+					}
+				}
+			}
+		}
+	}
+}
+
+#Stillborn Check
+character_event = {
+	id = RTPcheck.130
+	is_triggered_only = yes
+	hide_window = yes
+	is_female = yes
+	
+	trigger = {
+		is_pregnant = yes
+	}
+
+	immediate = {
+		random = {
+			chance = 10
+
+			cancel_pregnancy = yes
+
+			character_event = {
+				id = RTPcheck.6 #Stillborn Baby
+				days = 90
+			}
+			father_of_unborn = {
+				character_event = {
+					id = RTPcheck.6 #Stillborn Baby
+					days = 90
+				}
+			}
+		}
+	}
+}
+
+#Better artifacts Check
+character_event = {
+	id = RTPcheck.131
+	is_triggered_only = yes
+	hide_window = yes
+	min_age = 16
+	
+	trigger = {
+		any_artifact = {
+			is_artifact_equipped = no
+		}
+	}
+
+	immediate = {
+		#Lets get the best inventory items
+		if = {
+			limit = {
+				any_artifact = {
+					count = 6
+					has_artifact_flag = inventory
+				}
+			}
+			random_artifact = {
+				limit = {
+					has_artifact_flag = inventory
+				}
+				preferred_limit = {
+					quality == 1
+				}
+				preferred_limit = {
+					quality == 2
+				}
+				preferred_limit = {
+					quality == 3
+				}
+				preferred_limit = {
+					quality == 4
+				}
+				preferred_limit = {
+					quality == 5
+				}
+				preferred_limit = {
+					NOT = {
+						has_artifact_flag = special
+					}
+				}
+				save_event_target_as = rtp_use_this_artifact #The artifact to use
+				ROOT = {
+					event_target:rtp_use_this_artifact = {
+						unsafe_destroy_artifact = yes
+					}
+				}
+			}
+		}
+
+		#Lets get the best mount
+		random_artifact = {
+			limit = {
+				has_artifact_flag = mount
+			}
+			preferred_limit = {
+				has_artifact_flag = special
+			}
+			preferred_limit = {
+				quality = 5
+			}
+			preferred_limit = {
+				quality = 4
+			}
+			preferred_limit = {
+				quality = 3
+			}
+			preferred_limit = {
+				quality = 2
+			}
+			preferred_limit = {
+				quality = 1
+			}
+			save_event_target_as = rtp_use_this_artifact #The artifact to use
+			ROOT = {
+				any_artifact = {
+					limit = {
+						has_artifact_flag = mount
+						NOR = {
+							has_artifact_flag = special
+							artifact = event_target:rtp_use_this_artifact #The artifact to use
+						}
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		#Lets get the best headgear
+		random_artifact = {
+			limit = {
+				has_artifact_flag = head
+			}
+			preferred_limit = {
+				has_artifact_flag = special
+			}
+			preferred_limit = {
+				quality = 5
+			}
+			preferred_limit = {
+				quality = 4
+			}
+			preferred_limit = {
+				quality = 3
+			}
+			preferred_limit = {
+				quality = 2
+			}
+			preferred_limit = {
+				quality = 1
+			}
+			save_event_target_as = rtp_use_this_artifact #The artifact to use
+			ROOT = {
+				any_artifact = {
+					limit = {
+						has_artifact_flag = head
+						NOR = {
+							has_artifact_flag = special
+							artifact = event_target:rtp_use_this_artifact #The artifact to use
+						}
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		#Lets get the best torso
+		random_artifact = {
+			limit = {
+				has_artifact_flag = torso
+			}
+			preferred_limit = {
+				has_artifact_flag = special
+			}
+			preferred_limit = {
+				quality = 5
+			}
+			preferred_limit = {
+				quality = 4
+			}
+			preferred_limit = {
+				quality = 3
+			}
+			preferred_limit = {
+				quality = 2
+			}
+			preferred_limit = {
+				quality = 1
+			}
+			save_event_target_as = rtp_use_this_artifact #The artifact to use
+			ROOT = {
+				any_artifact = {
+					limit = {
+						has_artifact_flag = torso
+						NOR = {
+							has_artifact_flag = special
+							artifact = event_target:rtp_use_this_artifact #The artifact to use
+						}
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		#Lets get the best mainhand
+		random_artifact = {
+			limit = {
+				has_artifact_flag = mainhand
+			}
+			preferred_limit = {
+				has_artifact_flag = special
+			}
+			preferred_limit = {
+				quality = 5
+			}
+			preferred_limit = {
+				quality = 4
+			}
+			preferred_limit = {
+				quality = 3
+			}
+			preferred_limit = {
+				quality = 2
+			}
+			preferred_limit = {
+				quality = 1
+			}
+			save_event_target_as = rtp_use_this_artifact #The artifact to use
+			ROOT = {
+				any_artifact = {
+					limit = {
+						has_artifact_flag = mainhand
+						NOR = {
+							has_artifact_flag = special
+							artifact = event_target:rtp_use_this_artifact #The artifact to use
+						}
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		#Lets get the best offhand
+		random_artifact = {
+			limit = {
+				has_artifact_flag = offhand
+			}
+			preferred_limit = {
+				has_artifact_flag = special
+			}
+			preferred_limit = {
+				quality = 5
+			}
+			preferred_limit = {
+				quality = 4
+			}
+			preferred_limit = {
+				quality = 3
+			}
+			preferred_limit = {
+				quality = 2
+			}
+			preferred_limit = {
+				quality = 1
+			}
+			save_event_target_as = rtp_use_this_artifact #The artifact to use
+			ROOT = {
+				any_artifact = {
+					limit = {
+						has_artifact_flag = offhand
+						NOR = {
+							has_artifact_flag = special
+							artifact = event_target:rtp_use_this_artifact #The artifact to use
+						}
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		#Lets get the best twohand
+		random_artifact = {
+			limit = {
+				has_artifact_flag = twohand
+			}
+			preferred_limit = {
+				has_artifact_flag = special
+			}
+			preferred_limit = {
+				quality = 5
+			}
+			preferred_limit = {
+				quality = 4
+			}
+			preferred_limit = {
+				quality = 3
+			}
+			preferred_limit = {
+				quality = 2
+			}
+			preferred_limit = {
+				quality = 1
+			}
+			save_event_target_as = rtp_use_this_artifact #The artifact to use
+			ROOT = {
+				any_artifact = {
+					limit = {
+						has_artifact_flag = twohand
+						NOR = {
+							has_artifact_flag = special
+							artifact = event_target:rtp_use_this_artifact #The artifact to use
+						}
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		#Lets get the best weapon loadout
+		random_artifact = {
+			limit = {
+				has_artifact_flag = weapon
+			}
+			preferred_limit = {
+				has_artifact_flag = special
+			}
+			preferred_limit = {
+				quality = 5
+			}
+			preferred_limit = {
+				quality = 4
+			}
+			preferred_limit = {
+				quality = 3
+			}
+			preferred_limit = {
+				quality = 2
+			}
+			preferred_limit = {
+				quality = 1
+			}
+			save_event_target_as = rtp_use_this_artifact #The artifact to use
+			if = {
+				limit = {
+					event_target:rtp_use_this_artifact = {
+						OR = {
+							has_artifact_flag = mainhand
+							has_artifact_flag = offhand
+						}
+					}
+				}
+				ROOT = {
+					any_artifact = {
+						limit = {
+							has_artifact_flag = twohand
+							NOT = {
+								has_artifact_flag = special
+							}
+						}
+						unsafe_destroy_artifact = yes
+					}
+				}
+			}
+			else = {
+				ROOT = {
+					any_artifact = {
+						limit = {
+							OR = {
+								has_artifact_flag = mainhand
+								has_artifact_flag = offhand
+							}
+							NOT = {
+								has_artifact_flag = special
+							}
+						}
+						unsafe_destroy_artifact = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+#Ping for Overstretched Check
+character_event = {
+	id = RTPcheck.132
+	hide_window = yes
+	is_triggered_only = yes
+	only_playable = yes
+
+	immediate = {
+		character_event = {
+			id = RTPcheck.117 #Overstretched Check
+			days = 3
+		}
+	}
+}
+
+#MTTH Events
+#####

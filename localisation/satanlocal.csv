@@ -1,0 +1,292 @@
+d_satan_state;The Unholy Cabal;;;;;;;;;;;;;x
+d_satan_state_adj;Unholy;;;;;;;;;;;;;x
+satanic;Satanic;;;;;;;;;;;;;x
+satanism;Satanic;;;;;;;;;;;;;x
+BLACKCRUSADE;Black Crusade;;;;;;;;;;;;;x
+SATANTEXT;The Unholy Scriptures;;;;;;;;;;;;;x
+UNHOLYPRIEST;Priest;;;;;;;;;;;;;x
+LUCIFERHIGH;Lucifer;;;;;;;;;;;;;x
+ANTICHRIST;Listener;;;;;;;;;;;;;x
+ANTICHRISTFOA;Your Unholiness;;;;;;;;;;;;;x
+satanism_DESC;Disciples of the fallen angel;;;;;;;;;;;;;x
+formalise_faith;Formalise the Satanic Faith;;;;;;;;;;;;;x
+formalise_faith_desc;The High Priest of Lucifer's Own may announce to the world his true faith. He will become the vanguard of Satan's armies on Earth, for any who wish to join him upon a dark crusade.;;;;;;;;;;;;;x
+join_satan_faith;Convert to Satanism;;;;;;;;;;;;;x
+join_satan_faith_desc;If the High Priest has been brave enough to formalise your beliefs, you may officially display your devotion, at your own risk, of course.;;;;;;;;;;;;;x
+SATAN_FORMED_TITLE;Satanism Founded;;;;;;;;;;;;;x
+SATAN_FORMED_DESC;The Satanic faith, founded upon the reverence of Lucifer, has been officially brought into existence as the state religion of a sizeable realm. It's possible many may rise up in support of what was formerly an underground cult.;;;;;;;;;;;;;x
+SATAN_FORMED_OP1;A new era of darkness is upon us.;;;;;;;;;;;;;x
+SATAN_FORMED_OP2;Burn the heretic. Purge the unclean.;;;;;;;;;;;;;x
+join_satan_faith_power_desc;If the High Priest has been brave enough to formalise your beliefs, you may officially display your devotion. At your own peril, of course.;;;;;;;;;;;;;x
+formalise_faith_power_desc;The High Priest of Lucifer's Own may announce to the world his true faith. He will become the vanguard of Satan's armies on Earth, for any who wish to join him upon a dark crusade.;;;;;;;;;;;;;x
+FEMALEANTICHRIST;Listener;;;;;;;;;;;;;x
+temple_baron_satanic;Priest;;;;;;;;;;;;;x
+temple_baron_female_satanic;Priestess;;;;;;;;;;;;;x
+temple_count_satanic;Warlock;;;;;;;;;;;;;x
+temple_count_female_satanic;Witch;;;;;;;;;;;;;x
+temple_duke_satanic;Magus;;;;;;;;;;;;;x
+temple_duke_female_satanic;Maga;;;;;;;;;;;;;x
+SATAN_SIN_WROTH_DESC;Lately you have found yourself revelling in unprovoked violent outbursts. Three of your servants have already been mutilated and killed by your own hand, and many at your court now appear to cower under your gaze. One courtier in particular seems to be trying to escape your presence...;;;;;;;;;;;;x
+SATAN_WROTH_OP1;Have your guards torture and execute them.;;;;;;;;;;;;;x
+SATAN_WROTH_OP2;Beat them with your own hands.;;;;;;;;;;;;;x
+SATAN_SIN_WROTH_DESC2;In a fit of demonic rage, your liege has ordered his guards to murder you. The onlookers at court can only cower beneath your liege's presence, as the guards cut you down.;;;;;;;;;;;;;x
+SATAN_WROTH_OP3;Woe is me;;;;;;;;;;;;;x
+SATAN_SIN_WROTH_DESC3;In a fit of arbitrarily directed rage, your liege has beaten you to a bloody pulp, leaving you maimed and barely able to draw breath. The others at court merely looked on in fear as your bones and body were broken.;;;;;;;;;;;;;x
+SATAN_WROTH_OP4;Woe is me;;;;;;;;;;;;;x
+SATAN_SIN_WROTH_DESC4;In a fit of arbitrarily directed rage, your liege has beaten you to death in front of his entire court. He seemed to be acting as though some spectral force were commanding him to commit such a deed, and the rest of the court could only cower in his presence. Perhaps your heir will avenge your death...;;;;;;;;;;;;;x
+SATAN_WROTH_OP5;Woe is me;;;;;;;;;;;;;x
+wroth_maimed;Maimed;;;;;;;;;;;;;x
+SATANIC_CRUSADE_SATAN;For some time now there has been a feeling of electricity in the air, along with a constant strange murmuring, distant and unintelligable, yet nevertheless lingering, as though it were carried by the breeze. Many local peasants and artisans have complained of animals behaving strangely, with otherwise peaceful creatures turning aggressive and savaging humans and other animals alike. These anomalies recently ceased, however the Listener of our faith after days of isolation has declared that the Great Unholy One, Lucifer himself, had been communicating his desires for the material world, decipherable only by the Listener. Lucifer's commands have since been known: All followers are to embark upon a crusade for the [From.GetFullBaseName] as soon as possible, with the main combatant being granted new lands for rape, plunder, and gradual enslavement...;;;;;;;;;;;;x
+SATAN_CRUSADE_TITLE;Black Crusade For [From.GetBaseName];;;;;;;;;;;;;x
+SATANIC_CRUSADE_NOTSAT;The foul heretics of the Satanic cult, after much incoherent babbling, have declared a "Black Crusade" for the [From.GetFullBaseName]. We will have to see what becomes of this development.;;;;;;;;;;;;x
+SATANIC_CRUSADE_OP1;Kill! Maim! Burn!;;;;;;;;;;;;x
+SATANIC_CRUSADE_OP2;May Lucifer grant them victory.;;;;;;;;;;;;x
+SATANIC_CRUSADE_OP3;Perhaps we should aid the defenders.;;;;;;;;;;;;x
+cowardly_brutalised_subject;Intimidated Vassals;;;;;;;;;;;;x
+brave_brutalised_subject;Ruthlessly Violent;;;;;;;;;;;;x
+e_satan_empire;Satanic Empire;;;;;;;;;;;;x
+e_satan_empire_adj;Luciferian;;;;;;;;;;;;x
+SATEMPIRETITLE;Black-Hand;;;;;;;;;;;;x
+FEMSATEMPIRETITLE;Empress;;;;;;;;;;;;x
+SATEMPIREFOA;Light Bringer;;;;;;;;;;;;x
+form_satan_empire;Form the Satanic Dominion;;;;;;;;;;;;x
+form_satan_empire_desc;Create an empire to rule all empires. You shall be Lucifer's right hand, and accomplish his will by uniting all worldly polities under one banner. All independent Satanic realms shall be brought under your rule, as well as any landed secret Satanists (ie members of Lucifer's Own).;;;;;;;;;;;;x
+SATAN_EMPIRE_FORMED;Satanic Empire Founded;;;;;;;;;;;;x
+SATAN_EMPIRE_FORMED_DESC1;Lucifer's Dominion, the great Satanic Empire, has been formalised by [Root.GetTitledName]. Followers of the debauched Dark God are now commanded, by Lucifer himself through the voice of the Listener, to swear allegiance to his Black Hand, and unite the planet under one rule.;;;;;;;;;;;;x
+SATAN_EMPIRE_FORMED_DESC2;Lucifer's Dominion, an empire of Satanic cultists, has been formalised after the growing power and influence of one of Satanism's most notorious and wretched followers, [Root.GetTitledName]. Satanists from across the known world are flocking to the banners of this heretic, and proclaiming him to be some sort of unholy prophet and bringer of death, destruction and debauchery.;;;;;;;;;;;;x
+SATAN_EMPIRE_FORMED_OP1;This world shall burn!;;;;;;;;;;;;x
+SATAN_EMPIRE_FORMED_OP2;We must consolidate and prepare to resist the swine;;;;;;;;;;;;x
+satanic_empire_liege;Devoted Followers;;;;;;;;;;;;x
+satwroth;Wroth;;;;;;;;;;;;x
+satwroth_desc;The fifth deadly sin is Wrath, 'Ira', and this character certainly has a hot temper.;;;;;;;;;;;;x
+satlustful;Lustful;;;;;;;;;;;;x
+satlustful_desc;Lust, or 'Luxuria', the first deadly sin, enflames this character. These carnal desires are not appreciated by the Church, and might also cause problems out of the marital bed...;;;;;;;;;;;;x
+satgluttonous;Gluttonous;;;;;;;;;;;;x
+satgluttonous_desc;Gluttony, or 'Gula', is the second deadly sin and lacks positive effects. The Church despises gluttons, and so do members of the opposite sex.;;;;;;;;;;;;x
+satgreedy;Greedy;;;;;;;;;;;;x
+satgreedy_desc;The character is infamously greedy. 'Avaritia', the third deadly sin, while not respected, does help squeeze out some extra tax income.;;;;;;;;;;;;x
+satslothful;Slothful;;;;;;;;;;;;x
+satslothful_desc;This character is shockingly lazy. 'Acedia', the fourth deadly sin, is an altogether negative trait.;;;;;;;;;;;;x
+satenvious;Envious;;;;;;;;;;;;x
+satenvious_desc;This character is envious, the sixth deadly sin - 'Invidia'.;;;;;;;;;;;;x
+satproud;Proud;;;;;;;;;;;;x
+satproud_desc;Pride, 'Superbia' is the seventh deadly sin according to the Church. However, proud characters tend to be ambitious and work hard to increase their Prestige.;;;;;;;;;;;;x
+satchaste;Chaste;;;;;;;;;;;;x
+satchaste_desc;Chastity, or 'Castitas' is the first of the seven virtues. Chaste characters are admired for their virtue and are unlikely to have extramarital affairs.;;;;;;;;;;;;x
+sattemperate;Temperate;;;;;;;;;;;;x
+sattemperate_desc;This character believes in the virtue of 'Temperantia', moderation - a valuable trait in rulers and Stewards.;;;;;;;;;;;;x
+satcharitable;Charitable;;;;;;;;;;;;x
+satcharitable_desc;This character is famously charitable. 'Caritas' is the third of the seven virtues and a most chivalrous trait;;;;;;;;;;;;x
+satdiligent;Diligent;;;;;;;;;;;;x
+satdiligent_desc;This character is dutiful and diligent, the fourth of the seven virtues - 'Industria'.;;;;;;;;;;;;x
+satkind;Kind;;;;;;;;;;;;x
+satkind_desc;This character is kind and full of empathy. The sixth virtue, 'Humanitas', is popular with vassals, but makes for a rather poor Spymaster.;;;;;;;;;;;;x
+satpatient;Patient;;;;;;;;;;;;x
+satpatient_desc;Patience, or 'Patientia', is the fifth of the seven virtues and the opposite of Wrath. Patient characters are just a little bit better at almost everything.;;;;;;;;;;;;x
+sathumble;Humble;;;;;;;;;;;;x
+sathumble_desc;Humility, or 'Humilitas', is the seventh virtue and the opposite of Pride. Humble characters gain [Player.Religion.GetPietyName] where the proud gain Prestige. Humble characters tend to dislike prideful ones.;;;;;;;;;;;;x
+abaddon;Abaddon;;;;;;;;;;;;x
+abaddon_desc;Abaddon, the demon of wrath and vengeance follows this character.;;;;;;;;;;;;x
+beelzebub;Beelzebub;;;;;;;;;;;;x
+beelzebub_desc;Beelzebub, Demonic Lord of Gluttony and Excess follows this character. Your halls shall be filled with everlasting feasts.;;;;;;;;;;;;x
+leviathon;Leviathon;;;;;;;;;;;;x
+leviathon_desc;Leviathon, Demon of Envy and Cunning Hatred follows this character.;;;;;;;;;;;;x
+adramelech;Adramelech;;;;;;;;;;;;x
+adramelech_desc;Adramelech, the Lord of Pride and Glory follows this character.;;;;;;;;;;;;x
+mammon;Mammon;;;;;;;;;;;;x
+mammon_desc;Mammon, Demon of Greed and Desire follows this character.;;;;;;;;;;;;x
+belphegor;Belphegor;;;;;;;;;;;;x
+belphegor_desc;Belphegor, the Bringer of Inventions and Laziness follows this character.;;;;;;;;;;;;x
+asmodeus;Asmodeus;;;;;;;;;;;;x
+asmodeus_desc;Asmodeus, Lord of Lust and carnal passions follows this character.;;;;;;;;;;;;x
+aamon;Aamon;;;;;;;;;;;;x
+aamon_desc;Aamon, the Lord of all Demons, knower of future and past follows this character. Aamon additionally provides his master with unending health, with death only possible by the hands of other men.;;;;;;;;;;;;x
+CONVERT_TO_SATAN_DESC;My sins are now virtues;;;;;;;;;;;;x
+CONVERT_TO_SATAN_OP;Excellent;;;;;;;;;;;;x
+summon_demon_prince;Perform a Demonic Summoning;;;;;;;;;;;;x
+summon_demon_prince_desc;Summon one of the eight Demon Princes to serve you (and your heirs) in the physical realm. Note that there will only ever be one prince, and that you may pick one to summon according to the sins you currently commit, and also that there is a special follower for those who possess every sin. A human sacrifice will be required as an initial vessel for the demon (one of your prisoners).;;;;;;;;;;;;x
+SATAN_DEMON_SUMMON_TITLE;Great Summoning;;;;;;;;;;;;x
+SATAN_DEMON_SUMMON_DESC;Your priests have been working tirelessly for the past three days in order to prepare for a summoning not yet seen by the world. A gigantic space has been cleared in your castle's cellar, and various foreboding items appear arranged in a chaotic yet delightfully decadent manner. Severed goat heads and human genitalia mounted on effigies of bloated, diseased cadavers line a central ring, containing what appears to be a pentagram, yet warped as though reality itself had been bent. The only matter left to decide is which demon to invoke...;;;;;;;;;;;;x
+DEMON_SUMMON_OP1;Abaddon, Lord of Destruction;;;;;;;;;;;;x
+DEMON_SUMMON_OP2;Beelzebub, Lord of the Flies;;;;;;;;;;;;x
+DEMON_SUMMON_OP3;Leviathon, Demon of Envy;;;;;;;;;;;;x
+DEMON_SUMMON_OP4;Adramelech, Demon of Glory;;;;;;;;;;;;x
+DEMON_SUMMON_OP5;Mammon, Demon of Greed;;;;;;;;;;;;x
+DEMON_SUMMON_OP6;Belphegor, Demon of Laze;;;;;;;;;;;;x
+DEMON_SUMMON_OP7;Asmodeus, Prince of Carnal Desire;;;;;;;;;;;;x
+DEMON_SUMMON_OP8;Aamon, the Timeless;;;;;;;;;;;;x
+NEXT_EVT;More choices;;;;;;;;;;;;x
+PREV_EVT;Go back;;;;;;;;;;;;x
+SATAN_WROTH_DEMSUM;Summoning of Abaddon;;;;;;;;;;;;x
+SATAN_WROTH_DEMSUM_DESC;You and your priests begin the invocation of Abaddon, first by chanting from the Unholy Scriptures, then by engaging in ritualistic violence with fellow onlookers. The walls of the cellar begin to bleed, and some priests break down into uncontrollable fits of violent motion. Your sacrifice is briskly led into the circle, and with a swift move of your hands their neck is snapped. The corpse begins writhing and exuding otherworldly speech, and moments later is transformed into a large, crimson-scaled demonic being.;;;;;;;;;;;;x
+SATAN_WROTH_DEMSUM_OP;You serve me now;;;;;;;;;;;;x
+SATAN_GLUT_DEMSUM;Summoning of Beelzebub;;;;;;;;;;;;x
+SATAN_GLUT_DEMSUM_DESC;You and your priests begin the invocation of Beelzebub, first by chanting from the Unholy Scriptures, then by feasting on all of the food your realm had to offer. Your entire court is indulged in a gigantic feast, with the unwitting sacrifice being fed most. Once full, they are led into the circle and gutted at the stomach, entrails and partially digested food scattering across the pentagram. The disemboweled corpse then begins a transformation into a bulging, grotesque demon. It's clear that this is Beelzebub, Lord of the Flies.;;;;;;;;;;;;x
+SATAN_GLUT_DEMSUM_OP;You serve me now;;;;;;;;;;;;x
+SATAN_ENVY_DEMSUM;Summoning of Leviathon;;;;;;;;;;;;x
+SATAN_ENVY_DEMSUM_DESC;You and your priests begin the invocation of Leviathon by chanting from the Unholy Scriptures. The words seem to resonate throughout the chamber, in greater and greater volume, until finally they can be heard as a perpetual echo without any input from you or your followers. The sacrifice is led into the circle and their throat is cut. Strangely, the blood clings to the lines of the pentagram as it floods outwards, and soon begins glowing. Not long after, Leviathon, shorter than you expected and with dark, untelling eyes, stands before you...;;;;;;;;;;;;x
+SATAN_ENVY_DEMSUM_OP;You serve me now;;;;;;;;;;;;x
+SATAN_PRIDE_DEMSUM;Summoning of Adramelech;;;;;;;;;;;;x
+SATAN_PRIDE_DEMSUM_DESC;You and your priests begin the invocation of Adramelech by chanting from the Unholy Scriptures. A statue of the Demon himself, prepared by the finest artisans you could enthrall, is then placed within the room's central pentagram. The sacrifice is subsequently led to a position below the statue's knees, and their throat is cut. A wave of infernal roaring and cheering sweeps through the chamber, and from the ruins of a human body, Adramelech materialises in all his resplendent glory.;;;;;;;;;;;;x
+SATAN_PRIDE_DEMSUM_OP;You serve me now;;;;;;;;;;;;x
+SATAN_GREED_DEMSUM;Summoning of Mammon;;;;;;;;;;;;x
+SATAN_GREED_DEMSUM_DESC;You and your followers begin invoking the Demon Mammon via chants provided within the Unholy Scriptures, additionally a huge mound of gold, trinkets (and anything valuable you could find) is offered up to the lord. After the invocations, a sacrifice is led into the circle and killed, with the resultant blood drained over the pile of gold. As though the blood were beyond boiling point, the gold begins to liquify and gradually takes the shape of Mammon. Shrewd and cunning, like a rat, Mammon stands before you.;;;;;;;;;;;;x
+SATAN_GREED_DEMSUM_OP;You serve me now;;;;;;;;;;;;x
+SATAN_SLOTH_DEMSUM;Summoning of Belphegor;;;;;;;;;;;;x
+SATAN_SLOTH_DEMSUM_DESC;You and your priests begin the invocation of Belphegor, and subsequently prepare the human sacrifice for death. After the sacrifice is killed, Belphegor materialises and offers his services to you. He appears rather placid and sloppy in general manner, yet he has a keen wit about him and a knack for shortcuts.;;;;;;;;;;;;x
+SATAN_SLOTH_DEMSUM_OP;You serve me now;;;;;;;;;;;;x
+SATAN_LUST_DEMSUM;Summoning of Asmodeus;;;;;;;;;;;;x
+SATAN_LUST_DEMSUM_DESC;You and your priests begin the invocation of Asmodeus, and although it's rather pure at first, it soon devolves into an orgy of debaucherous activity with dozens of courtesans and courtiers. Midway through, you lead your sacrifice into the circle and, with a swift motion, slash their throat with a ceremonial dagger. Asmodeus subsequently assumes control of the empty vessel and presents himself.;;;;;;;;;;;;x
+SATAN_LUST_DEMSUM_OP;You serve me now;;;;;;;;;;;;x
+SATAN_AAMON_DEMSUM;Summoning of Aamon;;;;;;;;;;;;x
+SATAN_AAMON_DEMSUM_DESC;The invocation of Aamon begins, with the incantations read aloud by yourself from the Unholy Scriptures. Your subjects follow your chanting, awaiting the majesty of Aamon's presence, and gradually a darkness grows from the centre of the pentagram. It seems to suck the light, and even sound, from the room, so that none may converse and focus is solely concentrated on the void. In silence, you slash your sacrifice's throat and let their blood drain into the abyss. Not long after, a monumental being, timeless in its splendor, emerges from the void.;;;;;;;;;;;;x
+SATAN_AAMON_DEMSUM_OP;You serve me now;;;;;;;;;;;;x
+secret_satan_convert;Satanist Sympathies;;;;;;;;;;;;x
+satanise_province;Corrupt Province;;;;;;;;;;;;x
+satanise_province_desc;You may secretly corrupt one of your provinces, reducing tax, disease resistance and revolt risk, in order to bring the province with you upon conversion to the true Satanic Faith. (Sometimes the trigger doesn't reevaluate instantly, so make sure you have uncorrupted demesne provinces to corrupt before clicking).;;;;;;;;;;;;x
+satanise_province_power_desc;You may secretly corrupt one of your provinces, reducing tax, disease resistance and revolt risk, in order to bring the province with you upon conversion to the true Satanic Faith.;;;;;;;;;;;;x
+SATANISE_PROVINCE_EVT_DESC;With the assistance of fellow Satanists, as well as the use of nefarious dark powers to corrupt the minds of the innocent, you have converted local aristocrats, and with them peasants and commonfolk, to the hedonistic pleasures of Devil worship. The population is now selfish and debaucherous, prone to tax evasion and sexually transmitted disease.;;;;;;;;;;;;x
+SATANISE_PROVINCE_EVT_OP1;Excellent, they shall convert with me if or when the time comes;;;;;;;;;;;;x
+SAT_INHERIT_DEMON_DESC;Although my life may be at an end, my demonic servant shall continue to serve my heir.;;;;;;;;;;;;x
+SAT_INHERIT_DEMON_OP;We will meet again in the inferno deep below;;;;;;;;;;;;x
+title_court_necromancer;Court Necromancer;;;;;;;;;;;;x
+title_court_necromancer_desc;Necromancy is the dark magical practice concerned with the manipulation of deceased spirits and their former bodies. You court necromancer will be involved in all sorts of insalubrious activities, and will need to be kept well-supplied with fresh cadavers. Keep in mind court necromancers with greater prestige and piety have a better chance of going on to become a lich, which can only benefit your realm...;;;;;;;;;;;;x
+title_court_minion;Minion;;;;;;;;;;;;x
+title_court_minion_desc;The court minion is a humble servant of his or her master, living to serve and obey every command, whether nefarious or just.;;;;;;;;;;;;x
+title_court_witch;Court Witch;;;;;;;;;;;;x
+title_court_witch_desc;Witchcraft, with negative connotations in the former restrictive Jehovic religions, is the practice of magic and otherwise off-limits areas of mysticism. Your court witch will be responsible for the procurement of potions and all other needs related to the practice of relatively mundane magic.;;;;;;;;;;;;x 
+title_court_medium;Court Medium;;;;;;;;;;;;x
+title_court_medium_desc;The court medium will be involved in Satanic rituals which involve communique with the dead.;;;;;;;;;;;;x
+SAT_NECRO_TRAIT_EVT;You've been working as court necromancer for your liege for quite some time, however the exquisite possibilities and potential of your role have only just begun to dawn on you. What secrets of the human body await your discovery?;;;;;;;;;;;;x
+SAT_NECRO_TRAIT_OP;I've found my calling;;;;;;;;;;;;x
+SAT_NECRO_TRAIT_OP2;On second thought, perhaps I've indulged too much;;;;;;;;;;;;x
+necromancer;Necromancer;;;;;;;;;;;;x
+necromancer_desc;This character wields the insidious powers of the dead.;;;;;;;;;;;;x
+witch;Witch;;;;;;;;;;;;x
+witch_desc;This character is a witch, she has mastered the various magical disciplines (except necromancy), as well as some subtler areas such as alchemy and brewing.;;;;;;;;;;;;x
+SAT_WITCH_TRAIT_EVT;You have lately become enamoured with your position as court witch. The sheer power and variety of spells at your disposal, as well as the rigorous search for new and intriguing potions, have made you utterly devoted to your role.;;;;;;;;;;;;x
+SAT_WITCH_TRAIT_OP;This is my life calling!;;;;;;;;;;;;x
+SAT_WITCH_TRAIT_OP2;Perhaps I should ease up a bit;;;;;;;;;;;;x
+SAT_LICHIFIC_EVT_TIT;Descendancy to Lichhood;;;;;;;;;;;;x
+SAT_LICHIFIC_EVT_DESC;Lately, after uncovering a tome lost to the world for a thousand years, you have become fascinated by the idea of Lichdom. Such a being would be resistent to the ravages of time, making one effectively immortal, as well as commanding greater necromantic powers than ever before seen. Armies of the dead would be at your disposable.;;;;;;;;;;;;x
+SAT_LICHIFIC_EVT_OP1;Begin preparations for the ritual;;;;;;;;;;;;x
+SAT_LICHIFIC_EVT_OP2;I am content with mortality;;;;;;;;;;;;x
+SAT_LIEGELICH_EVT_TIT;Necromancer Descends to Lichhood;;;;;;;;;;;;x
+SAT_LIEGELICH_EVT_DESC;Your court necromancer has decided to take the hallowing path of the liches. He will become impervious to the effects of time, and command great power with the undead and spirits of the other realm. When his power becomes great enough, and you amass enough piety, you may be able to summon an army of the dead for your use (provided he remains in your service, of course).;;;;;;;;;;;;x
+SAT_LIEGELICH_EVT_OP1;Excellent;;;;;;;;;;;;x
+lich;Lich;;;;;;;;;;;;x
+lich_desc;This character is a lich, immune to the mortality of age and decay. They also command mastery of necromancy and other dark magics, as well as offer the potential of raising an army of the dead for their liege if placed as court necromancer.;;;;;;;;;;;;x
+SAT_RAISEDEAD_EVT_TIT;Army of the Dead;;;;;;;;;;;;x
+SAT_RAISEDEAD_EVT_DESC;At your request, the lich in your employ has been tasked with making preparations for the raising of an undead army. Using the gold you provided, he has acquired all necessary equipment for the ritual. The ceremony lasts all night, allowing you to witness some of the strangest and most unnatural occurrences, things you never thought possible. The dead climbed up from beneath the earth, some with rotting flesh still attached, others only stripped bone. By the end of it, tens of thousands of the hollowed ones stand before you and your lich in servitude.;;;;;;;;;;;;x
+SAT_RAISEDEAD_EVT_OP1;We shall rule the world;;;;;;;;;;;;x
+SAT_RAISEDEAD_EVT_OP2;Cull them, I've changed my mind;;;;;;;;;;;;x
+raise_dead_army;Raise Undead Army;;;;;;;;;;;;x
+raise_dead_army_desc;You may use your lich's well developed dark powers to raise an army of the dead, 30,000 thralls, to do your bidding.;;;;;;;;;;;;x
+d_satanic_band;Blood Brothers;;;;;;;;;;;;x
+d_satanic_band_adj;Blood Brother;;;;;;;;;;;;x
+d_satanic_second_band;Crimson Blades;;;;;;;;;;;;x
+d_satanic_second_band_adj;Crimson;;;;;;;;;;;;x
+d_satanic_third_band;Demonkin;;;;;;;;;;;;x
+d_satanic_third_band_adj;Demonic;;;;;;;;;;;;x
+d_satan_holyorder;Lucifer's Talons;;;;;;;;;;;;x
+d_satan_holyorder_adj;Luciferian;;;;;;;;;;;;x
+SATAN_HOLYORDER;Warchief;;;;;;;;;;;;x
+SATAN_HOLYORDER_FOA;My Warlord;;;;;;;;;;;;x
+d_satan_holyordertwo;Fallen Legion;;;;;;;;;;;;x
+d_satan_holyordertwo_adj;Fallen;;;;;;;;;;;;x
+satanist_county_conquest_desc;Satanists have very little politeness when it comes to war. They can declare war on anyone adjacent (except liege or vassal) for a neighbouring county, and have very short truces.;;;;;;;;;;;;x
+satcatholic_persecuted;Religiously Persecuted;;;;;;;;;;;;x
+SAT_BURNCATHOLIC_EVTDESC;It has been brought to your attention that there is still a Catholic residing at your court. In a flurry of outrage, you quickly rally the court around you with anti-Catholic rhetoric and slurs, these are the same Catholics who persecuted you and your forefathers after all. You manage to convince your courtiers that the only just retribution is a burning at the stake.;;;;;;;;;;;;x
+SAT_BURNCATHOLIC_OP1;Gather wood! There'll be a great pyre tonight;;;;;;;;;;;;x
+SAT_BURNCATHOLIC_OP2;Death is too easy, banish them;;;;;;;;;;;;x
+SAT_BURNCATHOLIC_OP3;On second thought, perhaps I should leave them be;;;;;;;;;;;;x
+SAT_BURNCATHOLICTWO_EVTDESC;A great stake is built at your command, and a large stockpile of wood and oil is gathered near the front of your castle. Later in the evening, the burning commences, with haunting screams ringing out over the land.;;;;;;;;;;;;x
+BURNCATHOLICATSTAKE;Lucifer will be pleased;;;;;;;;;;;;x
+DUMMYSATANOPTION;Good;;;;;;;;;;;;x
+SAT_REMOVEPROVINCEMODS;My provinces are no longer ruled by Satanists;;;;;;;;;;;;x
+enhance_satan_slavery;Enslave Demesne;;;;;;;;;;;;x
+enhance_satan_slavery_desc;Put the less fortunate in your demesne into a form of bondage far more restrictive than serfdom. Tax and levies will increase, along with revolt risk.;;;;;;;;;;;;x
+enhance_satan_freedoms;Liberate Demesne;;;;;;;;;;;;x
+enhance_satan_freedoms_desc;Allow the peasantry and burghers a great degree of freedom in their worship of Lucifer, decreasing tax and levies, as well as revolt risk.;;;;;;;;;;;;x
+neutralise_satan_freedoms;Demesne Status Quo;;;;;;;;;;;;x
+neutralise_satan_freedoms_desc;Return your demesne to the usual affairs of serfdom.;;;;;;;;;;;;x
+SAT_PROVFREEDOM;Your Satanic provinces are now liberated;;;;;;;;;;;;x
+SAT_PROVFREEDOM_OP;Good;;;;;;;;;;;;x
+SAT_PROVNEUTRAL;Your Satanic provinces have returned to the default state of serfdom;;;;;;;;;;;;x
+SAT_PROVNEUTRAL_OP;Good;;;;;;;;;;;;x
+SAT_PROVSLAVERY;Your Satanic provinces are now enslaved;;;;;;;;;;;;x
+SAT_PROVSLAVERY_OP;Good;;;;;;;;;;;;x
+satan_freedoms_enacted;Liberated;;;;;;;;;;;;x
+satan_slavery_enacted;Enslaved;;;;;;;;;;;;x
+LOSESATANPRIDE;You've lately come to realise that, despite Lucifer's view on pride and glory in oneself, perhaps it's better to be more reserved, and hold back praise for myself until it's truly due.;;;;;;;;;;;;x
+LOSESATPRIDE2;No, I must stay true to Lucifer;;;;;;;;;;;;x
+LOSESATPRIDE1;Yes, it's best if I become more humble;;;;;;;;;;;;x
+LOSESATANSLOTH;Perhaps it's time I stopped being so lazy, there are plenty of activities to enjoy which require just a bit of effort on my part.;;;;;;;;;;;;x
+LOSESATSLOTH1;Yes, I can accomplish Lucifer's aims more swiftly this way;;;;;;;;;;;;x
+LOSESATSLOTH2;No, neither the Church nor Lucifer would be pleased;;;;;;;;;;;;x
+LOSESATANWROTH;Violence has come to feel meaningless to you. Maybe it's time to cease these ways?;;;;;;;;;;;;x
+LOSESATWROTH1;The Church may disagree, but I'm tired of hurting those who've done no wrong to me;;;;;;;;;;;;x
+LOSESATWROTH2;I must maintain the fury of Hell, if I'm to please Lucifer;;;;;;;;;;;;x
+LOSESATANGREEDY;My greed and desire for material wealth has consumed me. Perhaps I should change my ways?;;;;;;;;;;;;x
+LOSESATGREEDY1;I won't give anything away of course, but being a bit less shrewd couldn't hurt;;;;;;;;;;;;x
+LOSESATGREEDY2;The Church compels me to gather ever more riches;;;;;;;;;;;;x
+LOSESATANLUST;Debauchery is unbecoming of me. My wife and concubines are more than enough for satisfaction.;;;;;;;;;;;;x
+LOSESATLUST1;Venereal disease is something I would prefer not to contract either;;;;;;;;;;;;x
+LOSESATLUST2;Satan commands me to enjoy the pleasures of the flesh;;;;;;;;;;;;x
+LOSESATANGLUTTONY;My stomach has grown to be too large. I want to be thin and fit again.;;;;;;;;;;;;x
+LOSESATGLUTTONY1;I will stop eating so much;;;;;;;;;;;;x
+LOSESATGLUTTONY2;No, Lucifer demands that I indulge myself;;;;;;;;;;;;x
+LOSESATANENVY;My envy of others has cost me too many friendships and acquaintances;;;;;;;;;;;;x
+LOSESATENVY1;Very well, I will do my best to view others in a positive light;;;;;;;;;;;;x
+LOSESATENVY2;Without envy, I'll never become better than the others;;;;;;;;;;;;x
+LOSESATANCHARITY;The church argues against helping the weak and poor... Perhaps they are right.;;;;;;;;;;;;x
+LOSESATCHARITY1;I will cease my charities immediately;;;;;;;;;;;;x
+LOSESATCHARITY2;The Church is wrong on this issue;;;;;;;;;;;;x
+LOSESATANDILIGENT;I'm tired of always completing tasks with a diligence no one else seems to possess. Perhaps I should embrace the Church's teachings and simply do what is necessary, instead of what's best.;;;;;;;;;;;;x
+LOSESATDILIGENT1;Indeed;;;;;;;;;;;;x
+LOSESATDILIGENT2;No, diligence will benefit me in the long run;;;;;;;;;;;;x
+LOSESATANCHASTE;For too long I've been putting off all activities relating to sex. Perhaps it's time I finally indulge my carnal desires...;;;;;;;;;;;;x
+LOSESATCHASTE1;Lucifer encourages it;;;;;;;;;;;;x
+LOSESATCHASTE2;No, it would not be right;;;;;;;;;;;;x
+LOSESATANTEMPERATE;I'm tired of always moderating myself when it comes to eating and drinking. Why can't I consume as much as I wish?;;;;;;;;;;;;x
+LOSESATTEMPERATE1;The Church won't mind, in fact they encourage it;;;;;;;;;;;;x
+LOSESATTEMPERATE2;I will become fat and weak without temperance;;;;;;;;;;;;x
+LOSESATANHUMBLE;I'm always doubting myself and concealing achievements that everyone should know about.;;;;;;;;;;;;x
+LOSESATHUMBLE1;People must know about me;;;;;;;;;;;;x
+LOSESATHUMBLE2;If my achievements are worthy, people will notice;;;;;;;;;;;;x
+LOSESATANKIND;My kindness is overcoming my rationality. Certain people deserve to be locked away in the oubliette.;;;;;;;;;;;;x
+LOSESATKIND1;Lucifer would prefer more souls in his care;;;;;;;;;;;;x
+LOSESATKIND2;I don't have it in me to inflict such horrors;;;;;;;;;;;;x
+LOSESATANPATIENT;I hate waiting for plans to come to fruition. Why can't things happen more quickly?;;;;;;;;;;;;x
+LOSESATPATIENT1;I can't keep waiting forever;;;;;;;;;;;;x
+LOSESATPATIENT2;Everything pays off in time;;;;;;;;;;;;x
+satan_wroth;Wroth;;;;;;;;;;;;x
+satan_lustful;Lustful;
+satan_gluttonous;Gluttonous;;;;;;;;;;;;x
+satan_greedy;Greedy;;;;;;;;;;;;x
+satan_slothful;Slothful;;;;;;;;;;;;x
+satan_envious;Envious;;;;;;;;;;;;x
+satan_proud;Proud;;;;;;;;;;;;x
+satan_chaste;Chaste;;;;;;;;;;;;x
+satan_temperate;Temperate;;;;;;;;;;;;x
+satan_charitable;Charitable;;;;;;;;;;;;x
+satan_diligent;Diligent;;;;;;;;;;;;x
+satan_kind;Kind;;;;;;;;;;;;x
+satan_patient;Patient;;;;;;;;;;;;x
+satan_humble;Humble;;;;;;;;;;;;x
+satan_mass;Sacrificial Butchery;;;;;;;;;;;;x
+satan_warrior;Devourer;;;;;;;;;;;;x
+satan_warriors;Devourers;;;;;;;;;;;;x
+satan_priest;Acolyte;;;;;;;;;;;;x
+satan_unholyman;listener;;;;;;;;;;;;x
+satan_unholyman_cap;Listener;;;;;;;;;;;;x
+satan_true_group;Satanists;;;;;;;;;;;;x
+satan_true_adjective;Satanic;;;;;;;;;;;;x
+satan_adherent;Satanist;;;;;;;;;;;;x
+satan_worship_house;temple;;;;;;;;;;;;x
+satan_worship_house_cap;Temple;;;;;;;;;;;;x
+disband_satan_empire;Disband Satanic Empire;;;;;;;;;;;;x
+disband_satan_empire_desc;Cast off the remnants of the diabolical Satanic dominion by destroying its imperial title.;;;;;;;;;;;;x
+destroy_satan_demon;Banish Demonic Follower;;;;;;;;;;;;x
+destroy_satan_demon_desc;The demon following your predecessor is still bound to you. Destroy it, and let no one ever speak of its vile existence again.;;;;;;;;;;;;x
+satanic_church_opinion;Satanic Church Opinion;;;;;;;;;;;;x

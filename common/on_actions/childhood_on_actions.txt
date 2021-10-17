@@ -1,0 +1,11 @@
+on_bi_yearly_pulse = {
+	events = {
+		puer.1000 #Event tombola
+	}
+}
+
+on_adulthood = {
+	events = {
+		puer.1055 #Clear flags
+	}
+}

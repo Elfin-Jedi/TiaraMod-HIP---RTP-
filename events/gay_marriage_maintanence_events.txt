@@ -1,0 +1,175 @@
+namespace = GMM_events
+character_event = {#Child born, Clear opinions starter
+	id = GMM_events.0
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			father_even_if_dead = { has_character_flag = surrogated_parent }
+			mother_even_if_dead = { has_character_flag = surrogated_parent }
+		}
+	}
+	immediate = {
+		remove_trait = bastard
+		remove_trait = legit_bastard
+		save_event_target_as = surrogated_kid
+		father_even_if_dead = {
+			IF = {#If Dad is real parent, send dad 
+				limit = { has_character_flag = surrogated_parent }
+				save_event_target_as = surrogated_parent
+				random_spouse = {
+					save_event_target_as = surrogated_spouse
+				}
+				character_event = { id = GMM_events.1 days = 7 }
+			}
+		}
+		mother_even_if_dead = {
+			IF = {#If Mom is real parent, send dad
+				limit = { has_character_flag = surrogated_parent }
+				save_event_target_as = surrogated_parent
+				random_spouse = {
+					save_event_target_as = surrogated_spouse
+				}
+				character_event = { id = GMM_events.1 days = 7 }
+			}
+		}
+	}
+}
+character_event = {#Clear Bad Opinions from Parents spouse, Straighten out relations
+	id = GMM_events.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		any_spouse = {#Remove Hateful Spouse Opinions
+				limit = {
+					OR = {
+						has_opinion_modifier = { modifier = opinion_bastard_spawn who = ROOT }
+						has_opinion_modifier = { modifier = legitimized_bastard who = ROOT }
+						has_opinion_modifier = { modifier = acknowledged_bastard who = ROOT }
+						has_opinion_modifier = { modifier = opinion_unfaithful_husband who = ROOT }
+						has_opinion_modifier = { modifier = opinion_unfaithful_wife who = ROOT }
+						has_opinion_modifier = { modifier = opinion_furious who = ROOT }
+					}
+				}
+				remove_opinion = { modifier = opinion_bastard_spawn who = ROOT }
+				remove_opinion = { modifier = legitimized_bastard who = ROOT }
+				remove_opinion = { modifier = acknowledged_bastard who = ROOT }
+				remove_opinion = { modifier = opinion_unfaithful_husband who = ROOT }
+				remove_opinion = { modifier = opinion_unfaithful_wife who = ROOT }
+				remove_opinion = { modifier = opinion_furious who = ROOT }
+		}
+		event_target:surrogated_kid = {
+			#Set Kid's Dynasty
+			dynasty = event_target:surrogated_parent
+			#Natural Born Kid
+			remove_trait = bastard
+			remove_trait = legit_bastard
+			remove_opinion = { modifier = legitimized_bastard who = ROOT }
+			any_sibling = {
+				remove_opinion = { modifier = legitimized_bastard who = PREV }
+			}
+			#Event to Real Parent
+			event_target:surrogated_parent = { character_event = { id = GMM_events.3 } }
+		}
+		hidden_tooltip = {
+			clr_character_flag = surrogated_parent
+		}
+	}
+}
+character_event = {#Outted as Gay
+	id = GMM_events.2
+	desc = EVTDESCGMM_events.2
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { trait = homosexual }
+		any_lover = {
+			OR = {
+				AND = {
+					is_female = no
+					ROOT = { is_female = no }
+				}
+				AND = {
+					is_female = yes
+					ROOT = { is_female = yes }
+				}
+			}
+		}
+	}
+	immediate = {
+		IF = {
+			limit = { NOT = { trait = homosexual } }
+			add_trait = homosexual
+		}
+		any_lover = {
+			limit = {
+				NOT = { trait = homosexual }
+				OR = {
+					AND = {
+						is_female = no
+						ROOT = { is_female = no }
+					}
+					AND = {
+						is_female = yes
+						ROOT = { is_female = yes }
+					}
+				}
+			}
+			add_trait = homosexual
+		}
+	}
+	option = {
+		name = EVTOPTAGMM_events.2
+	}
+}
+character_event = {#Remove More Opinions, choose if 2 Parents
+	id = GMM_events.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:surrogated_parent = {
+			any_spouse = {
+				limit = {
+					has_opinion_modifier = { modifier = slut_seductress who = ROOT }
+				}
+				remove_opinion = { modifier = slut_seductress who = ROOT }
+			}
+			character_event = { id = GMM_events.4 }
+		}
+	}
+
+}
+character_event = {
+	id = GMM_events.4
+	desc = EVTDESCGMM_events.4
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+
+	option = {
+		trigger = { event_target:surrogated_parent = { is_female = yes } }
+		name = EVTOPTAGMM_events.4
+		event_target:surrogated_spouse = {
+			event_target:surrogated_kid = {
+				set_father = PREV
+			}
+		}
+	}
+
+	option = {
+		trigger = { event_target:surrogated_parent = { is_female = no } }
+		name = EVTOPTBGMM_events.4
+		event_target:surrogated_spouse = {
+			event_target:surrogated_kid = {
+				set_mother = PREV
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTCGMM_events.4
+	}
+}

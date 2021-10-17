@@ -1,0 +1,150 @@
+#dorimi
+hist_york = {
+	agnatic = yes # Always inherited from fathers
+		
+	opposites = {
+		hist_lancaster
+	}
+	
+	martial = 1
+
+	opposite_opinion = -20
+	vassal_opinion = 5
+
+}
+hist_lancaster = {
+	agnatic = yes # Always inherited from fathers
+		
+	opposites = {
+		hist_york
+	}
+	
+	martial = 1
+
+	opposite_opinion = -20
+	vassal_opinion = 5
+}
+hist_bourchier = {
+	agnatic = yes # Always inherited from fathers
+	
+	martial = 1
+
+	vassal_opinion = 5
+}
+hist_delapole = {
+	agnatic = yes # Always inherited from fathers
+	
+	martial = 1
+
+	vassal_opinion = 5
+}
+hist_howard = {
+	agnatic = yes # Always inherited from fathers
+	
+	martial = 1
+	
+	same_opinion = 10
+	vassal_opinion = 5
+}
+hist_herbert = {
+	agnatic = yes # Always inherited from fathers
+	
+	martial = 1
+
+	vassal_opinion = 5
+}
+hist_stanley = {
+	agnatic = yes # Always inherited from fathers
+	
+	martial = 1
+	
+	vassal_opinion = 5
+}
+hist_tudor = {
+	agnatic = yes # Always inherited from fathers
+	
+	martial = 1
+
+	vassal_opinion = 5
+}
+hist_percy = {
+	agnatic = yes # Always inherited from fathers
+	
+	opposites = {
+		hist_neville
+	}
+	
+	martial = 1
+
+	opposite_opinion = -20
+	vassal_opinion = 5
+}
+hist_neville = {
+	agnatic = yes # Always inherited from fathers
+	
+	opposites = {
+		hist_percy
+	}
+	
+	martial = 1
+
+	opposite_opinion = -20
+	vassal_opinion = 5
+}
+hist_talbot = {
+	agnatic = yes # Always inherited from fathers
+	
+	diplomacy = 1
+	
+	same_opinion = 10
+	vassal_opinion = 5
+}
+hist_tiptoft = {
+	agnatic = yes # Always inherited from fathers
+	
+	martial = 1
+
+	vassal_opinion = 5
+}
+hist_stafford = {
+	agnatic = yes # Always inherited from fathers
+	
+	diplomacy = 1
+	
+	same_opinion = 10
+	vassal_opinion = 5
+}
+hist_grey = {
+	agnatic = yes # Always inherited from fathers
+	
+	diplomacy = 1
+
+	vassal_opinion = 5
+}
+hist_fitz = {
+	agnatic = yes # Always inherited from fathers
+	
+	martial = 1
+
+	vassal_opinion = 5
+}
+hist_butler = {
+	agnatic = yes # Always inherited from fathers
+	
+	martial = 1
+
+	vassal_opinion = 5
+}
+hist_loyal = {
+	
+	martial = 1
+
+	liege_opinion = 30
+}
+hist_founder = {
+	agnatic = yes # Always inherited from fathers
+
+	martial = 1
+
+	liege_opinion = 5
+}

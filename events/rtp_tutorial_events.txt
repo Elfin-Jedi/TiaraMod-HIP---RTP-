@@ -1,0 +1,575 @@
+#####
+#Tutorial Events
+#
+#Total = 17
+#####
+
+namespace = RTPtutorial
+
+#Warnings
+#####
+
+#Move to a new realm - Warning
+character_event = {
+	id = RTPtutorial.1
+	title = "RTPtutorial.1_title"
+	desc = RTPtutorial.1_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	ai = no
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		rtp_is_capable_adult = yes
+		rtp_is_landless = yes
+		top_liege = {
+			character = ROOT
+		}
+	}
+
+	immediate = {
+		sound_effect = tutorial_hint
+	}
+
+	option = {
+		name = "RTPtutorial.1_1"
+	}
+}
+
+#Tutorials
+#####
+
+#100
+
+#Move to a new realm - Tutorial
+character_event = {
+	id = RTPtutorial.101
+	title = "RTPtutorial.101_title"
+	desc = RTPtutorial.101_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	ai = no
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_tutorial_101
+		}
+		has_game_rule = {
+			name = rtp_tutorial_r
+			value = yes
+		}
+	}
+
+	immediate = {
+		sound_effect = tutorial_hint
+		set_global_flag = rtp_tutorial_101
+	}
+
+	option = {
+		name = "RTPtutorial.101_1"
+	}
+}
+
+#Buy weapons and armors - Tutorial
+character_event = {
+	id = RTPtutorial.102
+	title = "RTPtutorial.102_title"
+	desc = RTPtutorial.102_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	ai = no
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_tutorial_102
+		}
+		has_game_rule = {
+			name = rtp_tutorial_r
+			value = yes
+		}
+	}
+
+	immediate = {
+		sound_effect = tutorial_hint
+		set_global_flag = rtp_tutorial_102
+	}
+
+	option = {
+		name = "RTPtutorial.102_1"
+	}
+}
+
+#Trading - Tutorial
+character_event = {
+	id = RTPtutorial.103
+	title = "RTPtutorial.103_title"
+	desc = RTPtutorial.103_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	ai = no
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_tutorial_103
+		}
+		has_game_rule = {
+			name = rtp_tutorial_r
+			value = yes
+		}
+	}
+
+	immediate = {
+		sound_effect = tutorial_hint
+		set_global_flag = rtp_tutorial_103
+	}
+
+	option = {
+		name = "RTPtutorial.103_1"
+	}
+}
+
+#Opening Workshops - Tutorial
+character_event = {
+	id = RTPtutorial.104
+	title = "RTPtutorial.104_title"
+	desc = RTPtutorial.104_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	ai = no
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_tutorial_104
+		}
+		has_game_rule = {
+			name = rtp_tutorial_r
+			value = yes
+		}
+	}
+
+	immediate = {
+		sound_effect = tutorial_hint
+		set_global_flag = rtp_tutorial_104
+	}
+
+	option = {
+		name = "RTPtutorial.104_1"
+	}
+}
+
+#Preaching Religion - Tutorial
+character_event = {
+	id = RTPtutorial.105
+	title = "RTPtutorial.105_title"
+	desc = RTPtutorial.105_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	ai = no
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_tutorial_105
+		}
+		has_game_rule = {
+			name = rtp_tutorial_r
+			value = yes
+		}
+	}
+
+	immediate = {
+		sound_effect = tutorial_hint
+		set_global_flag = rtp_tutorial_105
+	}
+
+	option = {
+		name = "RTPtutorial.105_1"
+	}
+}
+
+#Recruit Volunteers - Tutorial
+character_event = {
+	id = RTPtutorial.106
+	title = "RTPtutorial.106_title"
+	desc = RTPtutorial.106_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	ai = no
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_tutorial_106
+		}
+		has_game_rule = {
+			name = rtp_tutorial_r
+			value = yes
+		}
+	}
+
+	immediate = {
+		sound_effect = tutorial_hint
+		set_global_flag = rtp_tutorial_106
+	}
+
+	option = {
+		name = "RTPtutorial.106_1"
+	}
+}
+
+#Recruit Patriots - Tutorial
+character_event = {
+	id = RTPtutorial.107
+	title = "RTPtutorial.107_title"
+	desc = RTPtutorial.107_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	ai = no
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_tutorial_107
+		}
+		has_game_rule = {
+			name = rtp_tutorial_r
+			value = yes
+		}
+	}
+
+	immediate = {
+		sound_effect = tutorial_hint
+		set_global_flag = rtp_tutorial_107
+	}
+
+	option = {
+		name = "RTPtutorial.107_1"
+	}
+}
+
+#Recruit Zealots - Tutorial
+character_event = {
+	id = RTPtutorial.108
+	title = "RTPtutorial.108_title"
+	desc = RTPtutorial.108_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	ai = no
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_tutorial_108
+		}
+		has_game_rule = {
+			name = rtp_tutorial_r
+			value = yes
+		}
+	}
+
+	immediate = {
+		sound_effect = tutorial_hint
+		set_global_flag = rtp_tutorial_108
+	}
+
+	option = {
+		name = "RTPtutorial.108_1"
+	}
+}
+
+#Mercenary Government - Tutorial
+character_event = {
+	id = RTPtutorial.109
+	title = "RTPtutorial.109_title"
+	desc = RTPtutorial.109_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	ai = no
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_tutorial_109
+		}
+		has_game_rule = {
+			name = rtp_tutorial_r
+			value = yes
+		}
+	}
+
+	immediate = {
+		sound_effect = tutorial_hint
+		set_global_flag = rtp_tutorial_109
+	}
+
+	option = {
+		name = "RTPtutorial.109_1"
+	}
+}
+
+#Privateer Government - Tutorial
+character_event = {
+	id = RTPtutorial.110
+	title = "RTPtutorial.110_title"
+	desc = RTPtutorial.110_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	ai = no
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_tutorial_110
+		}
+		has_game_rule = {
+			name = rtp_tutorial_r
+			value = yes
+		}
+	}
+
+	immediate = {
+		sound_effect = tutorial_hint
+		set_global_flag = rtp_tutorial_110
+	}
+
+	option = {
+		name = "RTPtutorial.110_1"
+	}
+}
+
+#Tips
+#####
+
+#1000
+
+#Gladiator Trait - Tips
+character_event = {
+	id = RTPtutorial.1001
+	title = "RTPtutorial.1001_title"
+	desc = RTPtutorial.1001_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	ai = no
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_tutorial_1001
+		}
+		has_game_rule = {
+			name = rtp_tutorial_r
+			value = yes
+		}
+	}
+
+	immediate = {
+		sound_effect = tutorial_hint
+		set_global_flag = rtp_tutorial_1001
+	}
+
+	option = {
+		name = "RTPtutorial.1001_1"
+	}
+}
+
+#Adventurer Trait - Tips
+character_event = {
+	id = RTPtutorial.1002
+	title = "RTPtutorial.1002_title"
+	desc = RTPtutorial.1002_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	ai = no
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_tutorial_1002
+		}
+		has_game_rule = {
+			name = rtp_tutorial_r
+			value = yes
+		}
+	}
+
+	immediate = {
+		sound_effect = tutorial_hint
+		set_global_flag = rtp_tutorial_1002
+	}
+
+	option = {
+		name = "RTPtutorial.1002_1"
+	}
+}
+
+#Holy Warrior Trait - Tips
+character_event = {
+	id = RTPtutorial.1003
+	title = "RTPtutorial.1003_title"
+	desc = RTPtutorial.1003_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	ai = no
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_tutorial_1003
+		}
+		has_game_rule = {
+			name = rtp_tutorial_r
+			value = yes
+		}
+	}
+
+	immediate = {
+		sound_effect = tutorial_hint
+		set_global_flag = rtp_tutorial_1003
+	}
+
+	option = {
+		name = "RTPtutorial.1003_1"
+	}
+}
+
+#No House/Manor - Tips
+character_event = {
+	id = RTPtutorial.1004
+	title = "RTPtutorial.1004_title"
+	desc = RTPtutorial.1004_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	ai = no
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_tutorial_1004
+		}
+		has_game_rule = {
+			name = rtp_tutorial_r
+			value = yes
+		}
+	}
+
+	immediate = {
+		sound_effect = tutorial_hint
+		set_global_flag = rtp_tutorial_1004
+	}
+
+	option = {
+		name = "RTPtutorial.1004_1"
+	}
+}
+
+#Naval Battles - Tips
+character_event = {
+	id = RTPtutorial.1005
+	title = "RTPtutorial.1005_title"
+	desc = RTPtutorial.1005_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	ai = no
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_tutorial_1005
+		}
+		has_game_rule = {
+			name = rtp_tutorial_r
+			value = yes
+		}
+	}
+
+	immediate = {
+		sound_effect = tutorial_hint
+		set_global_flag = rtp_tutorial_1005
+	}
+
+	option = {
+		name = "RTPtutorial.1005_1"
+	}
+}
+
+#Terrains - Tips
+character_event = {
+	id = RTPtutorial.1006
+	title = "RTPtutorial.1006_title"
+	desc = RTPtutorial.1006_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	ai = no
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_tutorial_1006
+		}
+		has_game_rule = {
+			name = rtp_tutorial_r
+			value = yes
+		}
+	}
+
+	immediate = {
+		sound_effect = tutorial_hint
+		set_global_flag = rtp_tutorial_1006
+	}
+
+	option = {
+		name = "RTPtutorial.1006_1"
+	}
+}
+
+#Non-Dynastic Heir - Tips
+character_event = {
+	id = RTPtutorial.1007
+	title = "RTPtutorial.1007_title"
+	desc = RTPtutorial.1007_desc
+	picture = GFX_evt_bandits
+	is_triggered_only = yes
+	ai = no
+	hide_from = yes
+	notification = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_tutorial_1007
+		}
+		has_game_rule = {
+			name = rtp_tutorial_r
+			value = yes
+		}
+	}
+
+	immediate = {
+		sound_effect = tutorial_hint
+		set_global_flag = rtp_tutorial_1007
+	}
+
+	option = {
+		name = "RTPtutorial.1007_1"
+	}
+}

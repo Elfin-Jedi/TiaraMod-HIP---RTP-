@@ -1,0 +1,381 @@
+### TOOLTIPS ###
+mta_NEEDS_25_PRESTIGE_COST;Can afford cost of §R25.0§! Prestige\n;;;;;;;;;;;;;x
+mta_NOT_RECRUITED_COURTIER_TWO_WEEKS;Have NOT recruited this type of courtier within the last 2 weeks\n;;;;;;;;;;;;;x
+mta_NOT_IN_HIDING;Is NOT in hiding;;;;;;;;;x
+mta_rape_impregnation_chance_FROM_TT;§Y[From.GetTitledFirstName]§! becomes pregnant with §Y[Root.GetTitledFirstName]§!'s child;;;;;;;;;;;;;x
+mta_rape_impregnation_chance_ROOT_TT;§Y[Root.GetTitledFirstName]§! becomes pregnant with §Y[From.GetTitledFirstName]§!'s child;;;;;;;;;;;;;x
+mta_free_and_join_me_THIS_TT;§Y[This.GetBestName]§! will be released from prison and join my court.;;;;;;;;;x
+mta_free_and_join_me_TT;§Y[Root.GetBestName]§! will be released from prison and join my court.;;;;;;;;;x
+
+#Reasons
+mta_REASON_RELIGION;This option is available because you are §Y[Root.Religion.GetName]§!;;;;;;;;;x
+mta_REASON_RELIGION_GROUP;This option is available because you are §Y[Root.Religion.GetGroupName]§!;;;;;;;;;x
+mta_REASON_DOCTRINE_ENATIC_CLANS;This option is available because your religion has the §YEnatic Clans§! doctrine;;;;;;;;;x
+
+#Slavery
+mta_has_prisoners_TT;Has one or more prisoners;;;;;;;;;x
+mta_has_slaves_TT;Has one or more slaves;;;;;;;;;x
+mta_slavery_enabled_culture;§YCulture§! allows slavery;;;;;;;;;x
+mta_slavery_enabled_religion;§YReligion§! allows slavery;;;;;;;;;x
+mta_slavery_enabled_government;§YGovernment§! allows slavery;;;;;;;;;x
+mta_slave_price_TT;§Y[FromFrom.GetTitledFirstName]§! will be sold for §Y[local_third_party_score.GetValue]§! gold.;;;;;;;;;x
+mta_slave_price_worthless_TT;§Y[FromFrom.GetTitledFirstName]§! is not worth money.;;;;;;;;;x
+mta_slave_price_not_worthless_TT;Is worth money;;;;;;;;;x
+mta_slave_price_appropriate_tier_TT;Rank is NOT higher than §YCount§!;;;;;;;;;x
+mta_slave_price_appropriate_age_TT;Age is greater or equal to §Y5§!;;;;;;;;;x
+mta_slave_price_vassal_TT;Is NOT a landed vassal of §Y[Prev.GetBestName]§!;;;;;;;;;x
+mta_slave_price_vassal_top_liege_TT;Is NOT a landed vassal of §Y[Prev.TopLiege.GetBestName]§!;;;;;;;;;x
+mta_slave_landed_TT;Is NOT landed;;;;;;;;;x
+mta_slave_hindu_caste_TT;Caste is NOT §YKshatriya§! or §YBrahmin§!;;;;;;;;;x
+mta_slave_same_religion_group_TT;Does NOT publicly practice a religion in the §Y[From.Religion.GetGroupName]§! group;;;;;;;;;x
+mta_slave_same_religion_group_county_TT;Is NOT in the §Y[From.Religion.GetGroupName]§! religion group;;;;;;;;;x
+mta_slave_same_culture_TT;Does NOT have §Y[From.Culture.GetName]§! culture;;;;;;;;;x
+mta_slave_same_culture_or_murderer_TT;Does NOT have §Y[From.Culture.GetName]§! culture or is a §YKnown Murderer§!;;;;;;;;;x
+mta_slave_same_culture_county_TT;Does NOT have §Y[From.Culture.GetName]§! culture;;;;;;;;;x
+mta_is_in_from_realm_TT;Is in the §Y[From.PrimaryTitle.GetFullName]§!;;;;;;;;;x
+mta_is_tributary_TT;Holder is a Tributary of §Y[From.GetBestName]§!;;;;;;;;;x
+mta_is_tributary_top_liege_TT;Holder is a Tributary of §Y[From.GetBestName]§!;;;;;;;;;x
+mta_has_trade_post_TT;Has a Trade Post belonging to §Y[From.GetBestName]§!;;;;;;;;;x
+mta_slaves_sold_TT;§YTotal Enslaved§!: [From.slaves_sold.GetValue]\n§YTotal Wealth Earned§!: §Y[From.slaves_sold_wealth.GetValue]§! ¤\n;;;;;;;;;x
+mta_slaves_sold_none_TT;§YTotal Enslaved§!: 0\n§YTotal Wealth Earned§!: 0 ¤;;;;;;;;;x
+mta_only_slaves_sold_TT;§YTotal Enslaved§!: [From.slaves_sold.GetValue]\n;;;;;;;;;x
+mta_only_slaves_sold_none_TT;§YTotal Enslaved§!: 0\n;;;;;;;;;x
+mta_enslaved_TT;§Y[This.GetBestName]§! will be enslaved.;;;;;;;;;x
+mta_freed_TT;§Y[This.GetBestName]§! will be freed from slavery.;;;;;;;;;x
+mta_castration_toggle_on_TT;Enslaved men will be castrated.;;;;;;;;;x
+mta_castration_toggle_off_TT;Enslaved men will not be castrated.;;;;;;;;;x
+mta_castration_forced_TT;§Y[This.GetBestName]§! will be castrated.;;;;;;;;;x
+mta_is_a_slave_TT;Is enslaved;;;;;;;;;x
+
+### DECISIONS ###
+mta_poison_decision;Poison Prisoner;;;;;;;;;;;;;x
+mta_poison_decision_desc;As §Y[Root.GetTitledFirstName]§! is your prisoner, you may give the order to poison [Root.GetHerHim]. Thanks to the exotic poisons and toxins at your disposal, [Root.GetSheHe] will appear to have died a natural death. ;;;;;;;;;;;;;x
+mta_rape_decision;Visit in Dungeon;;;;;;;;;;;;;x
+mta_rape_decision_desc;As §Y[Root.GetTitledFirstName]§! is your prisoner, you may spend the night in [Root.GetHerHis] cell, ensuring [Root.GetSheHe] isn't feeling lonely. ;;;;;;;;;;;;;x
+mta_rape_slave_decision;Visit in Chambers;;;;;;;;;;;;;x
+mta_rape_slave_decision_desc;As §Y[Root.GetTitledFirstName]§! is your slave, you may spend the night in [Root.GetHerHis] chambers, ensuring [Root.GetSheHe] isn't feeling lonely.;;;;;;;;;;;;;x
+mta_invite_a_local;Invite Lowborn to Court;;;;;;;;;;;;;x
+mta_invite_a_local_desc;Invite a local §Y[Root.Location.Culture.GetName]§! villager of §Y[Root.Location.Religion.GetName]§! faith from [Root.GetName] to your court.;;;;;;;;;;;;;x
+mta_pardon_peasant_leader;Pardon Peasant Leader;;;;;;;;;;;;;x
+mta_pardon_peasant_leader_desc;Pardon §Y[Root.GetTitledFirstName]§! and employ [Root.GetHerHim] in your court.;;;;;;;;;;;;;x
+mta_sell_into_slavery;Sell Slave;;;;;;;;;;;;;x
+mta_sell_into_slavery_desc;Sell a prisoner into slavery for money.;;;;;;;;;;;;;x
+mta_claim_slave;Claim Slave;;;;;;;;;;;;;x
+mta_claim_slave_desc;Claim a prisoner as your slave.;;;;;;;;;;;;;x
+mta_free_slave;Free Slave;;;;;;;;;;;;;x
+mta_free_slave_desc;Free §Y[Root.GetBestName]§! from slavery.;;;;;;;;;;;;;x
+mta_invite_a_slave;Purchase Slave;;;;;;;;;;;;;x
+mta_invite_a_slave_desc;Purchase a local §Y[Root.Location.Culture.GetName]§! slave of §Y[Root.Location.Religion.GetName]§! faith from [Root.GetName] to work in your court.;;;;;;;;;;;;;x
+mta_send_slave;Send Slave;;;;;;;;;;;;;x
+mta_send_slave_desc;Offer a slave as a gift to §Y[Root.GetBestName]§!, for §G+15§! Opinion.;;;;;;;;;;;;;x
+mta_forbid_slave_marriage;Forbid Marriage;;;;;;;;;;;;;x
+mta_forbid_slave_marriage_desc;Slaves in your court can be forbidden from the right to marry.;;;;;;;;;;;;;x
+mta_allow_slave_marriage;Allow Marriage;;;;;;;;;;;;;x
+mta_allow_slave_marriage_desc;Slaves in your court can be permitted the right to marry, if previously forbidden.;;;;;;;;;;;;;x
+mta_toggle_slave_castration_on;Enforce Slave Castration;;;;;;;;;;;;;x
+mta_toggle_slave_castration_on_desc;Castration of male slaves is commonly practiced by those of your culture or religion, and may be toggled on or off.;;;;;;;;;;;;;x
+mta_toggle_slave_castration_off;Stop Slave Castration;;;;;;;;;;;;;x
+mta_toggle_slave_castration_off_desc;Castration of male slaves is commonly practiced by those of your culture or religion, and may be toggled on or off.;;;;;;;;;;;;;x
+
+### EVENTS ###
+#Merciless Ruler
+EVTDESCAc.130;Guards brought poisoned food and wine to your prisoner as you instructed. Although [From.GetSheHe] seemed surprised to receive such a generous meal, hunger and thirst did their job—[From.GetSheHe] ate and drank everything delivered! It won't be long until [From.GetSheHe] drops dead.;;;;;;;;;;;;;x
+EVTOPTAAc.130;Good riddance!;;;;;;;;;x
+EVTTOOLTIP.131;§Y[Root.GetTitledFirstName]§! is poisoned.;;;;;;;;;x
+EVTDESCAc.131;Guards brought some food and wine to your cell and left. Even though it seems suspicious, you eagerly consume it all to try to sate your ravenous hunger. Falling asleep, you experience a strange feeling inside your stomach...;;;;;;;;;;;;;x
+EVTOPTAAc.131;It was actually quite a delicious meal!;;;;;;;;;x
+EVTDESCAc.140;You slowly enter [From.GetTitledFirstName]'s cell and send the guards away. [From.GetSheHeCap] is sitting in front of you, eyes closed. [From.GetSheHeCap] knows that this night will be a long one.;;;;;;;;;;;;;x
+EVTOPTAAc.140;[From.GetSheHeCap] is so friendly!;;;;;;;;;;;;;x
+EVTTOOLTIP.141;§Y[Root.GetTitledFirstName]§! has been dishonored!;;;;;;;;;x
+EVTDESCAc.141;Guards open the cell door, letting their liege [From.GetTitledFirstName] in. An ugly smile on [From.GetHerHis] face doesn't promise anything good and [From.GetHerHis] eyes are eating your chest. Something's not right...;;;;;;;;;;x
+EVTOPTAAc.141;STAY AWAY!;;;;;;;;;x
+# Slaver visiting slave in chambers
+mta.138.desc;You slowly enter [From.GetTitledFirstName]'s chambers and close the door behind you. [From.GetSheHeCap] looks at you and then turns [From.GetHerHis] head down, eyes fixed to the ground. [From.GetSheHeCap] knows that this night will be a long one.;;;;;;;;;;;;;x
+# Slave being visited in chambers
+mta.139.desc;The door to your chambers slowly creeks open, with [From.GetTitledFirstName] entering and shutting the door behind [From.GetHerHim]. An ugly smile on [From.GetHerHis] face doesn't promise anything good and [From.GetHerHis] eyes are eating your chest. Something's not right...;;;;;;;;;;x
+#Invite a Lowborn
+mta.1.desc;The [mta_settlement_root.Location.Culture.GetName] commoner who you decide to invite to your court is...;;;;;;;;;x
+mta.1.a;...a man;;;;;;;;;x
+mta.1.b;...a woman;;;;;;;;;x
+mta.1.c;...a cat;;;;;;;;;x
+mta.1.d;...actually, not needed;;;;;;;;;x
+## SLAVERY ##
+#Slaver modifiers
+mta.142.desc;From taking slaves, you've established a reputation for yourself as a known Slaver. If human property is to be bought, you're certainly someone willing to sell.;;;;;;;;;;;;;x
+mta.142.a;I haven't even gotten started yet!;;;;;;;;;x
+mta.143.desc;Enslaving so many people like cattle has earned you a reputation as a Notorious Slaver. Throughout the land, those who would speak against the terrible [Root.GetBestName] are warned to watch their back... lest they end up in chains and on display at a market.;;;;;;;;;;;;;x
+mta.143.a;And they better.;;;;;;;;;x
+#Purchase Slave
+mta.150.desc;You meet with a respected [mta_settlement_root.Location.Culture.GetName] slave trader in the markets of [mta_settlement_root.Location.Capital.GetName], looking to make a purchase. "[mta_settlement_root.Location.MTA_GetRelGreeting], [Root.GetTitledFirstName]. There is a variety of wares I can offer. First, to narrow it down, do you require a male or female slave? Or do you already have a specific request in mind?";;;;;;;;;x
+mta.150.a;A male slave.;;;;;;;;;x
+mta.150.b;A female slave.;;;;;;;;;x
+mta.150.c;I have a special, more specific request.;;;;;;;;;x
+mta.150.d;On second thought, I don't need a slave.;;;;;;;;;x
+mta.150.expertise_choice_TT;You will be able to choose the slave's area of expertise.;;;;;;;;;x
+mta.150.start_over_TT;You will go back to the start of the transaction.;;;;;;;;;x
+mta.150.cancel_TT;Cancel the transaction.;;;;;;;;;x
+#Purchase Slave - Male
+mta.151.desc;The slaver smiles, eagerly looking to finalize the deal. "Of course, a male slave it is. Now, what skills would you prefer for him to have? I have a few options available for you to choose from...";;;;;;;;;x
+mta.151.a;He must be martially trained.;;;;;;;;;x
+mta.151.b;He must be bureaucratically competent.;;;;;;;;;x
+mta.151.c;He must be diplomatically capable.;;;;;;;;;x
+mta.151.d;Let's start this deal over.;;;;;;;;;x
+mta.151.castration_forced_TT;He will be castrated.;;;;;;;;;x
+mta.151.castration_choice_TT;You will be able to choose whether to castrate him or not.;;;;;;;;;x
+#Purchase Slave - Male - Castration Choice
+mta.152.desc;Nodding and resting his hand on a small, sickle-shaped curved knife on his belt, the slaver turns his head towards his former property and then back to you. "Very good. Would you like him castrated, my [Root.GetLordLady]? It will be quick and clean, I assure you, with no risk of damaging your new property.";;;;;;;;;x
+mta.152.desc_matriarchal;Nodding and resting her hand on a small, sickle-shaped curved knife on her belt, the slaver turns her head towards her former property and then back to you. "Very good. Would you like him castrated, my [Root.GetLordLady]? It will be quick and clean, I assure you, with no risk of damaging your new property.";;;;;;;;;x
+mta.152.a;Of course!;;;;;;;;;x
+mta.152.b;No, he's fine as he is.;;;;;;;;;x
+#Purchase Slave - Female
+mta.153.desc;The slaver smiles, eagerly looking to finalize the deal. "Of course, a female slave it is. Now, what skills would you prefer for her to have? I have a few options available for you to choose from...";;;;;;;;;x
+mta.153.a;She must be trained in court intrigue.;;;;;;;;;x
+mta.153.b;She must be bureaucratically competent.;;;;;;;;;x
+mta.153.c;She must be diplomatically capable.;;;;;;;;;x
+mta.153.d;Let's start this deal over.;;;;;;;;;x
+#Purchase Slave - Special Request
+mta.154.desc;The slaver raises his brow. "What is it that you have in mind, my [Root.GetLordLady]?";;;;;;;;;x
+mta.154.desc_matriarchal;The slaver raises her brow. "What is it that you have in mind, my [Root.GetLordLady]?";;;;;;;;;x
+mta.154.a;I want a gladiator skilled in one-on-one combat.;;;;;;;;;x
+mta.151.a_choice_TT;He will have the §YDuelist§! trait and a higher chance of being competent.;;;;;;;;;x
+mta.154.b;I want a capable and trustworthy physician.;;;;;;;;;x
+mta.151.b_choice_TT;He will have the §YRenowned Physician§! trait and a higher chance of being competent.;;;;;;;;;x
+mta.151.b_enatic_choice_TT;She will have the §YRenowned Physician§! trait and a higher chance of being competent.;;;;;;;;;x
+mta.154.c;I want a beautiful [mta_settlement_root.Location.Culture.GetName] woman.;;;;;;;;;x
+mta.151.c_choice_TT;She will have the §YGroomed§! trait and a higher chance of being §YAttractive§! and competent.;;;;;;;;;x
+mta.154.c_enatic;I want a handsome [mta_settlement_root.Location.Culture.GetName] man.;;;;;;;;;x
+mta.151.c_enatic_choice_TT;He will have the §YGroomed§! trait and a higher chance of being §YAttractive§! and competent.;;;;;;;;;x
+mta.154.z;Let's start this deal over.;;;;;;;;;x
+mta.154.special_request_TT;You will be able to choose a more specialized slave;;;;;;;;;x
+#Sent Slave
+mta.156.desc;To the [GetFromRootCompliment] [Root.GetFirstName],\n\nI humbly offer you this slave as a gift. I promise that [slave_sent.GetFullName] shall serve you well.\n\nSigned,\n[From.GetTitledName];;;;;;;;;x
+mta.156.b;I didn't ask for this.;;;;;;;;;x
+#Rejected Sent Slave
+mta.157.desc;To the [Root.GetBestName],\n\nThank you, but I have no need for [slave_sent.GetFullName].;;;;;;;;;x
+mta.157.a;Ok;;;;;;;;;x
+#Accepted Sent Slave
+mta.158.desc;To the [GetFromRootCompliment] [Root.GetFirstName],\n\nPeace be with you. I accept your gracious gift. [slave_sent.GetFullName] will serve splendidly!;;;;;;;;;x
+mta.158.a;Ok;;;;;;;;;x
+#Claimed slave notification
+mta.160.desc;§Y[From.GetBestName]§! is now your slave.;;;;;;;;;x
+#Slave drops dinner plate
+mta.168.desc;Just as dinner is being served, [From.GetFirstName] accidentally drops my plate, shattering it to pieces and getting my food all over the floor! [From.GetSheHeCap]'s looking at me scared of how I might react, clearly knowing [From.GetSheHe] made a mistake. What will I ever do with someone so clumsy serving me?!;;;;;;;;;x
+mta.168.a;GET TO CLEANING THAT UP! NOW!!;;;;;;;;;x
+mta.168.b;No matter. These things happen.;;;;;;;;;x
+mta.168.c;Stop staring at me and clean that up already!;;;;;;;;;x
+mta.168.d;What a mess. Somebody help this [From.GetManWoman]!;;;;;;;;;x
+mta.168.e;You think you can get away with ruining MY dinner?!;;;;;;;;;x
+mta.168.clean_mess_TT;[From.GetFirstName] hastily goes to clean up [From.GetHerHis] mess.;;;;;;;;;x
+mta.168.clean_mess_together_TT;[From.GetFirstName] is relieved [From.GetSheHe] doesn't have to clean up [From.GetHerHis] mess alone.;;;;;;;;;x
+mta.168.clean_mess_patience_TT;[From.GetFirstName] is relieved by your patience and goes to clean up [From.GetHerHis] mess.;;;;;;;;;x
+mta.168.clean_mess_wroth_TT;[From.GetFirstName] hurries in a panic to clean up [From.GetHerHis] mess.;;;;;;;;;x
+mta.168.clean_mess_afraid_TT;[From.GetFirstName] fears what you might do to [From.GetHerHim]...;;;;;;;;;x
+#Slave steals alcohol
+mta.170.desc;While getting something to drink from my cellar, I caught [From.GetFirstName] already half drunk and nervously trying to sneak away with a bottle of [Root.GetAlcohol]! [From.GetSheHeCap] must have taken it from my stock. A slave taking something belonging to their [Root.GetMasterMistress] without permission would be considered stealing by most.;;;;;;;;;x
+mta.170.a;Drinking alone?! Let's finish that bottle together!;;;;;;;;;x
+mta.170.b;Why don't you come finish it with me in my chambers...?;;;;;;;;;x
+mta.170.c;I'll let you go this time, but don't do this again.;;;;;;;;;x
+mta.170.d;Do you know what the punishment is for thievery?!;;;;;;;;;x
+mta.170.drink_TT;You have a drink with [From.GetFirstName].;;;;;;;;;x
+mta.170.hedonist_TT;You intimately spend the night with [From.GetFirstName].;;;;;;;;;x
+mta.170.pardon_slave_TT;You let [From.GetFirstName] go.;;;;;;;;;x
+#Slaves bickering
+mta.172.desc;It sounds like two of my slaves are bickering with each other and don't realize I can hear them! [From.GetFirstName] is arguing with [slave_bickerer.GetFirstName] that [slave_bickerer.GetSheHe] is always given far less work compared to [From.GetHerHim], while [slave_bickerer.GetFirstName] says [From.GetFirstName] just doesn't even pay attention to half of what [slave_bickerer.GetSheHe] does.;;;;;;;;;x
+mta.172.a;There's no need to argue about who does what.;;;;;;;;;x
+mta.172.b;[From.GetFirstName] clearly does more than [slave_bickerer.GetFirstName]!;;;;;;;;;x
+mta.172.c;[slave_bickerer.GetFirstName] clearly does more than [From.GetFirstName]!;;;;;;;;;x
+mta.172.d;What do I care? Let them argue.;;;;;;;;;x
+
+### EVENT MODIFIERS ###
+mta_poisoned_modifier;Poisoned Meal;;;;;;;;x
+mta_dishonored_modifier;Dishonored;;;;;;;;x
+mta_slaver_modifier;Slaver;;;;;;;;x
+mta_slaver_modifier_desc;This character has established a reputation for practicing slavery.;;;;;;;;x
+mta_renowned_slaver_modifier;Notorious Slaver;;;;;;;;x
+mta_renowned_slaver_modifier_desc;This character has established quite the reputation among foreign realms for enslaving whomever they please like cattle.;;;;;;;;x
+mta_slave_modifier;Slave;;;;;;;;;;;;;x
+mta_slave_modifier_desc;This character is or was formerly a slave, and is looked down upon in the eyes of the nobility.;;;;;;;;;;;;;x
+mta_forbidden_from_marriage;Will Not Marry;;;;;;;;;;;;;x
+mta_forbidden_from_marriage_desc;This character is a slave that has been forbidden the right to marriage by their [Liege.GetMasterMistress].;;;;;;;;;;;;;x
+raised_lowborn_modifier;Elevated Peasant;;;;;;;;;;;;;x
+raised_lowborn_modifier_desc;This character is of low birth and has had their status elevated by their liege, but this is seen as a breach of feudal contract by some and they are still seen as lesser in the eyes of the nobility.;;;;;;;;;;;;;x
+raised_lowborn_temp_modifier;Elevated Lowborn;;;;;;;;;;;;;x
+
+#### OPINION MODIFIERS ###
+opinion_eager_lowborn;Elevated Me;;;;;;;;;;;;;x
+opinion_eager_lowborn_temp;Elevated Me;;;;;;;;;;;;;x
+opinion_dishonored_me;Dishonored Me;;;;;;;;;;;;;x
+opinion_dishonored_close_kin;Dishonored Close Kin;;;;;;;;;;;;;x
+opinion_dishonored_kin;Dishonored Kin;;;;;;;;;;;;;x
+opinion_my_owner;My Master;;;;;;;;;;;;;x
+opinion_sold_kin_into_slavery;Enslaved Close Kin;;;;;;;;;;;;;x
+opinion_received_slave;Gave me a Slave;;;;;;;;;;;;;x
+
+### MISCELLANEOUS ###
+slave;Slave;;;;;;;;;;;;;x
+slave_desc;This character has been enslaved and is excluded from inheritance. [Root.GetEnslavementLengthDesc];;;;;;;;;;;;;x
+slave_death;overworked and exhausted;;;;;;;;;;;;;x
+String_Enslavement_length_desc;[Root.GetSheHeCap] has been enslaved for §Y[Root.slave_year_count.GetValue]§! years.;;;;;;;;;;;;;x
+String_Enslavement_recent_desc;[Root.GetSheHeCap] has recently been enslaved.;;;;;;;;;;;;;x
+String_Enslavement_length_count;[Root.slave_year_count.GetValue];;;;;;;;;;;;;x
+String_Enslavement_recent_count;0;;;;;;;;;;;;;x
+
+### CUSTOM LOCALISATION ###
+String_MTA_Gods_blessings;Gods' blessings upon you;;;;;;;;;;;;;x
+
+### GAME RULES ###
+MTA_RULE_GROUP;MTA;;;;;;;;;;;;;x
+MTA_RULE_SLAVERY_NAME;§BMTA - Vice and Virtue§!: Slavery;;;;;;;;;;;;;x
+MTA_RULE_SLAVERY_RESTRICTED;Restricted;;;;;;;;;;;;;x
+MTA_RULE_SLAVERY_RESTRICTED_DESC;Slavery is allowed for certain cultures, governments, religions, and doctrines (Civilized, Sons of Ragnarok, Totem Guardians, Bloodthirsty Gods, or Religious Tax).\n;;;;;;;;;;;;;x
+MTA_RULE_SLAVERY_UNRESTRICTED;Unrestricted;;;;;;;;;;;;;x
+MTA_RULE_SLAVERY_UNRESTRICTED_DESC;Slavery is allowed for everyone regardless of culture, government, or religion.;;;;;;;;;;;;;x
+MTA_RULE_SLAVERY_OFF;Off;;;;;;;;;;;;;x
+MTA_RULE_SLAVERY_OFF_DESC;Slavery is disabled.\n;;;;;;;;;;;;;x
+MTA_RULE_ENSLAVEMENT_RATE_NAME;§BMTA - Vice and Virtue§!: AI Slavery Rate;;;;;;;;;;;;;x
+MTA_RULE_ENSLAVEMENT_RATE_DEFAULT;Default;;;;;;;;;;;;;x
+MTA_RULE_ENSLAVEMENT_RATE_DEFAULT_DESC;If slavery is enabled, the AI will use slavery decisions at the default rate.;;;;;;;;;;;;;x
+MTA_RULE_ENSLAVEMENT_RATE_HALVED;Halved;;;;;;;;;;;;;x
+MTA_RULE_ENSLAVEMENT_RATE_HALVED_DESC;If slavery is enabled, the AI will use slavery decisions at half the default rate.;;;;;;;;;;;;;x
+MTA_RULE_ENSLAVEMENT_RATE_QUARTERED;Quartered;;;;;;;;;;;;;x
+MTA_RULE_ENSLAVEMENT_RATE_QUARTERED_DESC;If slavery is enabled, the AI will use slavery decisions at a quarter the default rate.;;;;;;;;;;;;;x
+MTA_RULE_RAPE_NAME;§BMTA - Vice and Virtue§!: Visit in Chambers;;;;;;;;;;;;;x
+MTA_RULE_RAPE_ON;On;;;;;;;;;;;;;x
+MTA_RULE_RAPE_ON_DESC;Rulers may forcibly spend the night with their prisoners and slaves.\n;;;;;;;;;;;;;x
+MTA_RULE_RAPE_OFF;Off;;;;;;;;;;;;;x
+MTA_RULE_RAPE_OFF_DESC;Forcibly spending the night with prisoners and slaves is disabled.\n;;;;;;;;;;;;;x
+MTA_RULE_LOWBORN_NAME;§BMTA - Vice and Virtue§!: Lowborn Elevation;;;;;;;;;;;;;x
+MTA_RULE_LOWBORN_ON;On;;;;;;;;;;;;;x
+MTA_RULE_LOWBORN_ON_DESC;Rulers can invite lowborn characters from counties in their realm to their court. Peasant leaders can be pardoned.\n;;;;;;;;;;;;;x
+MTA_RULE_LOWBORN_NO_PARDONS;No Pardons;;;;;;;;;;;;;x
+MTA_RULE_LOWBORN_NO_PARDONS_DESC;Rulers can invite lowborn characters from counties in their realm to their court. but peasant leaders cannot be pardoned.\n;;;;;;;;;;;;;x
+MTA_RULE_LOWBORN_OFF;Off;;;;;;;;;;;;;x
+MTA_RULE_LOWBORN_OFF_DESC;Inviting lowborn characters from realm counties and pardoning peasant leaders is disabled.\n;;;;;;;;;;;;;x
+
+### AI REASONS ###
+## RED ##
+MTA_AIReason_Modifier_FROMFROM_Same_Culture;§R[FromFrom.Culture.GetName]§! ([From.Culture.GetName]);;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Same_Religion_Group;§R[FromFrom.Religion.GetGroupName]§! ([From.Religion.GetGroupName]);;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Carries_Disease;§RSick§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Deaf;§RDeaf§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Incapable;§RIncapable§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Infirm;§RInfirm§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Imbecile;§RImbecile§!;;;;;;;;;x
+## YELLOW ##
+#Mental disabilities
+MTA_AIReason_Modifier_FROMFROM_Is_Slow;§YSlow§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Inbred;§YInbred§!;;;;;;;;;x
+#Injuries
+MTA_AIReason_Modifier_FROMFROM_Is_Mangled;§YMangled§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Blind;§YBlinded§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_One_Eyed;§YOne-Eyed§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_One_Handed;§YOne-Handed§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_One_Legged;§YOne-Legged§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Disfigured;§YDisfigured§!;;;;;;;;;x
+#Terrible congenital
+MTA_AIReason_Modifier_FROMFROM_Is_Weak;§YWeak§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Ugly;§YUgly§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Clubfooted;§YClubfooted§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Harelip;§YHarelipped§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Has_Wrymouth;§YWrymouth§!;;;;;;;;;x
+#Bad congenital
+MTA_AIReason_Modifier_FROMFROM_Is_Absent_Minded;§YAbsent-Minded§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Delicate;§YDelicate§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Homely;§YHomely§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Dim;§YDim§!;;;;;;;;;x
+#Congenital equivalents
+MTA_AIReason_Modifier_FROMFROM_Is_Shrewd;§YShrewd§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Dull;§YDull§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Brawny;§YBrawny§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Frail;§YFrail§!;;;;;;;;;x
+#Good congenital
+MTA_AIReason_Modifier_FROMFROM_Is_Attractive;§YAttractive§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Strong;§YStrong§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Quick;§YQuick§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Genius;§YGenius§!;;;;;;;;;x
+#Decent congenital traits
+MTA_AIReason_Modifier_FROMFROM_Is_Burly;§YBurly§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Comely;§YComely§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Bright;§YBright§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Agile;§YAgile§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Melodious_Voice;§YSilver Tongue§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Powerful_Voice;§YPowerful Voice§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Calm_Voice;§YCalm Voice§!;;;;;;;;;x
+#Height traits
+MTA_AIReason_Modifier_FROMFROM_Is_Giant;§YGiant§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Tall;§YTall§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Short;§YShort§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Tiny;§YTiny§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Dwarf;§YDwarf§!;;;;;;;;;x
+#Lifestyle and profession
+MTA_AIReason_Modifier_FROMFROM_Is_Renowned_Physician;§YRenowned Physician§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Administrator;§YAdministrator§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Architect;§YArchitect§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Gardener;§YGardener§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Poet;§YPoet§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Strategist;§YStrategist§!;;;;;;;;;x
+#Personality and misc
+MTA_AIReason_Modifier_FROMFROM_Is_Stubborn;§YStubborn§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Wroth;§YWroth§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Slothful;§YSlothful§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Gluttonous;§YGluttonous§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Temperate;§YTemperate§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Diligent;§YDiligent§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Patient;§YPatient§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Ambitious;§YAmbitious§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Content;§YContent§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Envious;§YEnvious§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Honest;§YHonest§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Deceitful;§YDeceitful§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Paranoid;§YParanoid§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Zealous;§YZealous§!;;;;;;;;;x
+#Mental illness
+MTA_AIReason_Modifier_FROMFROM_Is_Depressed;§YDepressed§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Possessed;§YPossessed§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Is_Lunatic;§YLunatic§!;;;;;;;;;x
+#Cultural Features
+MTA_AIReason_Modifier_FROMFROM_Patriarchal;§YFemale§! (Agnatic Clans);;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Matriarchal;§YMale§! (Enatic Clans);;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Culture_Group;§Y[FromFrom.Culture.GetGroupName]§! ([Prev.Culture.GetGroupName]);;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Barbarian;§YBarbarian§! (Civilized);;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Edu_Martial_Gov;§YMilitary Education§! ([Prev.Government.GetName]);;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Edu_Stewardship_Gov;§YStewardship Education§! ([Prev.Government.GetName]);;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Caste;§RHigh Caste§! ([hindu.GetName]);;;;;;;;;x
+#Ageism
+MTA_AIReason_Modifier_FROMFROM_Young_Child;§YYoung Child§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Child;§YChild§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Teenager;§YTeenager§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Old;§YOld§!;;;;;;;;;x
+#Attributes
+MTA_AIReason_Modifier_FROMFROM_Diplomacy;§YDiplomacy§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Martial;§YMartial§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Stewardship;§YStewardship§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Intrigue;§YIntrigue§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Learning;§YLearning§!;;;;;;;;;x
+#Diplomacy
+MTA_AIReason_Modifier_FROMFROM_Edu_Naive_Appeaser;§YNaive Appeaser§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Edu_Underhanded_Rogue;§YUnderhanded Rogue§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Edu_Charismatic_Negotiator;§YCharismatic Negotiator§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Edu_Grey_Eminence;§YGrey Eminence§!;;;;;;;;;x
+#Martial
+MTA_AIReason_Modifier_FROMFROM_Edu_Misguided_Warrior;§YMisguided Warrior§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Edu_Tough_Soldier;§YTough Soldier§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Edu_Skilled_Tactician;§YSkilled Tactician§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Edu_Brilliant_Strategist;§YBrilliant Strategist§!;;;;;;;;;x
+#Stewardship
+MTA_AIReason_Modifier_FROMFROM_Edu_Indulgent_Wastrel;§YIndulgent Wastrel§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Edu_Thrifty_Clerk;§YThrifty Clerk§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Edu_Fortune_Builder;§YFortune Builder§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Edu_Midas_Touched;§YMidas Touched§!;;;;;;;;;x
+#Intrigue
+MTA_AIReason_Modifier_FROMFROM_Edu_Amateurish_Plotter;§YAmateurish Plotter§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Edu_Flamboyant_Schemer;§YFlamboyant Schemer§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Edu_Intricate_Webweaver;§YIntricate Webweaver§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Edu_Elusive_Shadow;§YElusive Shadow§!;;;;;;;;;x
+#Learning
+MTA_AIReason_Modifier_FROMFROM_Edu_Detached_Priest;§YDetached Priest§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Edu_Dutiful_Cleric;§YDutiful Cleric§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Edu_Scholarly_Theologian;§YScholarly Theologian§!;;;;;;;;;x
+MTA_AIReason_Modifier_FROMFROM_Edu_Mastermind_Theologian;§YMastermind Theologian§!;;;;;;;;;x
+#Time Enslaved
+MTA_AIReason_Modifier_FROMFROM_Years_Enslaved;§YYears Enslaved§!;;;;;;;;;x

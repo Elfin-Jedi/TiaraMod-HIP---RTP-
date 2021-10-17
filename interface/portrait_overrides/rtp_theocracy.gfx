@@ -1,0 +1,1189 @@
+spriteTypes = {
+
+	#Catholic - Pope
+	portraitType = {
+		name = "PORTRAIT_rtp_pope"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 15000
+				portrait_clothing = yes
+				portrait_is_female = no
+				portrait_age > child
+				OR = {
+					portrait_government = theocracy_government
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				portrait_tier = KING
+				OR = {
+					portrait_religion = catholic
+					portrait_religion = lollard
+				}
+			}
+		}
+
+		layer = {
+			"GFX_religious_male_clothes_behind:c0"
+			"GFX_religious_male_headgear_behind:c1"
+			"GFX_religious_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_male_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				0 = {
+					always = yes
+				}
+			}
+			4 = { #Beard
+				0 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				0 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Chalcedonian - Pope
+	portraitType = {
+		name = "PORTRAIT_rtp_chalcedonian_pope"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 15000
+				portrait_clothing = yes
+				portrait_is_female = no
+				portrait_age > child
+				OR = {
+					portrait_government = theocracy_government
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				portrait_tier = KING
+				portrait_religion = chalcedonian
+			}
+		}
+
+		layer = {
+			"GFX_religious_male_clothes_behind:c0"
+			"GFX_religious_male_headgear_behind:c1"
+			"GFX_religious_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_male_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				0 = {
+					always = yes
+				}
+			}
+			4 = { #Beard
+				0 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				0 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Catholic - Male
+	portraitType = {
+		name = "PORTRAIT_rtp_catholic_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = no
+				portrait_age > child
+				OR = {
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				OR = {
+					portrait_religion = catholic
+					portrait_religion = cathar
+					portrait_religion = fraticelli
+					portrait_religion = waldensian
+					portrait_religion = lollard
+				}
+			}
+		}
+
+		layer = {
+			"GFX_religious_male_clothes_behind:c0"
+			"GFX_religious_male_headgear_behind:c1"
+			"GFX_religious_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_male_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				1 = {
+					always = yes
+				}
+			}
+			4 = { #Beard
+				0 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				1 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Catholic - Female
+	portraitType = {
+		name = "PORTRAIT_rtp_catholic_female"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = yes
+				portrait_age > child
+				OR = {
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				OR = {
+					portrait_religion = catholic
+					portrait_religion = cathar
+					portrait_religion = fraticelli
+					portrait_religion = waldensian
+					portrait_religion = lollard
+				}
+			}
+		}
+
+		layer = {
+			"GFX_religious_female_clothes_behind:c0"
+			"GFX_religious_female_headgear_behind:c1"
+			"GFX_religious_female_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_female_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				1 = {
+					always = yes
+				}
+			}
+			4 = { #Beard
+				0 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				1 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Orthodox - Male
+	portraitType = {
+		name = "PORTRAIT_rtp_orthodox_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = no
+				portrait_age > child
+				OR = {
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				OR = {
+					portrait_religion = orthodox
+					portrait_religion = miaphysite
+					portrait_religion = monophysite
+					portrait_religion = bogomilist
+					portrait_religion = monothelite
+					portrait_religion = iconoclast
+					portrait_religion = paulician
+					portrait_religion = nestorian
+					portrait_religion = messalian
+				}
+			}
+		}
+
+		layer = {
+			"GFX_religious_male_clothes_behind:c0"
+			"GFX_religious_male_headgear_behind:c1"
+			"GFX_religious_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_male_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				2 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				2 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Orthodox - Female
+	portraitType = {
+		name = "PORTRAIT_rtp_orthodox_female"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = yes
+				portrait_age > child
+				OR = {
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				OR = {
+					portrait_religion = orthodox
+					portrait_religion = miaphysite
+					portrait_religion = monophysite
+					portrait_religion = bogomilist
+					portrait_religion = monothelite
+					portrait_religion = iconoclast
+					portrait_religion = paulician
+					portrait_religion = nestorian
+					portrait_religion = messalian
+				}
+			}
+		}
+
+		layer = {
+			"GFX_religious_female_clothes_behind:c0"
+			"GFX_religious_female_headgear_behind:c1"
+			"GFX_religious_female_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_female_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				2 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				2 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Chalcedonian - Male
+	portraitType = {
+		name = "PORTRAIT_rtp_chalcedonian_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = no
+				portrait_age > child
+				OR = {
+					portrait_government = theocracy_government
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				portrait_religion = chalcedonian
+				NOT = {
+					portrait_tier = KING
+				}
+			}
+		}
+
+		layer = {
+			"GFX_religious_male_clothes_behind:c0"
+			"GFX_religious_male_headgear_behind:c1"
+			"GFX_religious_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_male_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				1 = {
+					always = yes
+				}
+			}
+			4 = { #Beard
+				0 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				2 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Chalcedonian - Female
+	portraitType = {
+		name = "PORTRAIT_rtp_chalcedonian_female"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = yes
+				portrait_age > child
+				OR = {
+					portrait_government = theocracy_government
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				portrait_religion = chalcedonian
+				NOT = {
+					portrait_tier = KING
+				}
+			}
+		}
+
+		layer = {
+			"GFX_religious_female_clothes_behind:c0"
+			"GFX_religious_female_headgear_behind:c1"
+			"GFX_religious_female_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_female_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				1 = {
+					always = yes
+				}
+			}
+			4 = { #Beard
+				0 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				2 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Norse/Finnish/Slavic - Male
+	portraitType = {
+		name = "PORTRAIT_rtp_norse_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = no
+				portrait_age > child
+				OR = {
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				OR = {
+					portrait_religion = norse_pagan
+					portrait_religion = norse_pagan_reformed
+					portrait_religion = slavic_pagan
+					portrait_religion = slavic_pagan_reformed
+				}
+			}
+		}
+
+		layer = {
+			"GFX_religious_male_clothes_behind:c0"
+			"GFX_religious_male_headgear_behind:c1"
+			"GFX_religious_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_male_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				3 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				3 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Norse/Finnish/Slavic - Female
+	portraitType = {
+		name = "PORTRAIT_rtp_norse_female"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = yes
+				portrait_age > child
+				OR = {
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				OR = {
+					portrait_religion = norse_pagan
+					portrait_religion = norse_pagan_reformed
+					portrait_religion = finnish_pagan
+					portrait_religion = finnish_pagan_reformed
+					portrait_religion = slavic_pagan
+					portrait_religion = slavic_pagan_reformed
+				}
+			}
+		}
+
+		layer = {
+			"GFX_religious_female_clothes_behind:c0"
+			"GFX_religious_female_headgear_behind:c1"
+			"GFX_religious_female_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_female_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				3 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				3 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Tengri/Zunist - Male
+	portraitType = {
+		name = "PORTRAIT_rtp_tengri_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = no
+				portrait_age > child
+				OR = {
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				OR = {
+					portrait_religion = tengri_pagan
+					portrait_religion = tengri_pagan_reformed
+					portrait_religion = zun_pagan
+					portrait_religion = zun_pagan_reformed
+				}
+			}
+		}
+
+		layer = {
+			"GFX_religious_male_clothes_behind:c0"
+			"GFX_religious_male_headgear_behind:c1"
+			"GFX_religious_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_male_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				6 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				6 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Tengri/Zunist - Female
+	portraitType = {
+		name = "PORTRAIT_rtp_tengri_female"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = yes
+				portrait_age > child
+				OR = {
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				OR = {
+					portrait_religion = tengri_pagan
+					portrait_religion = tengri_pagan_reformed
+					portrait_religion = zun_pagan
+					portrait_religion = zun_pagan_reformed
+				}
+			}
+		}
+
+		layer = {
+			"GFX_religious_female_clothes_behind:c0"
+			"GFX_religious_female_headgear_behind:c1"
+			"GFX_religious_female_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_female_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				4 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				4 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Zoroastrian - Male
+	portraitType = {
+		name = "PORTRAIT_rtp_zoroastrian_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = no
+				portrait_age > child
+				OR = {
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				OR = {
+					portrait_religion = zoroastrian
+					portrait_religion = mazdaki
+					portrait_religion = manichean
+					portrait_religion = khurmazta
+				}
+			}
+		}
+
+		layer = {
+			"GFX_religious_male_clothes_behind:c0"
+			"GFX_religious_male_headgear_behind:c1"
+			"GFX_religious_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_male_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				5 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				5 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Zoroastrian - Female
+	portraitType = {
+		name = "PORTRAIT_rtp_zoroastrian_female"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = yes
+				portrait_age > child
+				OR = {
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				OR = {
+					portrait_religion = zoroastrian
+					portrait_religion = mazdaki
+					portrait_religion = manichean
+					portrait_religion = khurmazta
+				}
+			}
+		}
+
+		layer = {
+			"GFX_religious_female_clothes_behind:c0"
+			"GFX_religious_female_headgear_behind:c1"
+			"GFX_religious_female_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_female_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				5 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				5 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Romuva - Male
+	portraitType = {
+		name = "PORTRAIT_rtp_romuva_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = no
+				portrait_age > child
+				OR = {
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				OR = {
+					portrait_religion = baltic_pagan
+					portrait_religion = baltic_pagan_reformed
+				}
+			}
+		}
+
+		layer = {
+			"GFX_religious_male_clothes_behind:c0"
+			"GFX_religious_male_headgear_behind:c1"
+			"GFX_religious_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_male_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				6 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				6 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Romuva - Female
+	portraitType = {
+		name = "PORTRAIT_rtp_romuva_female"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = yes
+				portrait_age > child
+				OR = {
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				OR = {
+					portrait_religion = baltic_pagan
+					portrait_religion = baltic_pagan_reformed
+				}
+			}
+		}
+
+		layer = {
+			"GFX_religious_female_clothes_behind:c0"
+			"GFX_religious_female_headgear_behind:c1"
+			"GFX_religious_female_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_female_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				6 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				6 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Hindu - Male
+	portraitType = {
+		name = "PORTRAIT_rtp_hindu_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = no
+				portrait_age > child
+				OR = {
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				portrait_religion = hindu
+			}
+		}
+
+		layer = {
+			"GFX_religious_male_clothes_behind:c0"
+			"GFX_religious_male_headgear_behind:c1"
+			"GFX_religious_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_male_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				8 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				8 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Hindu - Female
+	portraitType = {
+		name = "PORTRAIT_rtp_hindu_female"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = yes
+				portrait_age > child
+				OR = {
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				portrait_religion = hindu
+			}
+		}
+
+		layer = {
+			"GFX_religious_female_clothes_behind:c0"
+			"GFX_religious_female_headgear_behind:c1"
+			"GFX_religious_female_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_female_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				8 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				8 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Jain - Male
+	portraitType = {
+		name = "PORTRAIT_rtp_jain_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = no
+				portrait_age > child
+				OR = {
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				portrait_religion = jain
+			}
+		}
+
+		layer = {
+			"GFX_religious_male_clothes_behind:c0"
+			"GFX_religious_male_headgear_behind:c1"
+			"GFX_religious_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_male_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				9 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				9 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Jain - Female
+	portraitType = {
+		name = "PORTRAIT_rtp_jain_female"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = yes
+				portrait_age > child
+				OR = {
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				portrait_religion = jain
+			}
+		}
+
+		layer = {
+			"GFX_religious_female_clothes_behind:c0"
+			"GFX_religious_female_headgear_behind:c1"
+			"GFX_religious_female_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_female_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				9 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				9 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Buddhist/Taoist/Bon - Male
+	portraitType = {
+		name = "PORTRAIT_rtp_buddhist_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = no
+				portrait_age > child
+				OR = {
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				OR = {
+					portrait_religion = buddhist
+					portrait_religion = taoist
+					portrait_religion = bon
+					portrait_religion = bon_reformed
+				}
+			}
+		}
+
+		layer = {
+			"GFX_religious_male_clothes_behind:c0"
+			"GFX_religious_male_headgear_behind:c1"
+			"GFX_religious_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_male_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				10 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				10 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#Buddhist/Taoist/Bon - Female
+	portraitType = {
+		name = "PORTRAIT_rtp_buddhist_female"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = yes
+				portrait_age > child
+				OR = {
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				OR = {
+					portrait_religion = buddhist
+					portrait_religion = taoist
+					portrait_religion = bon
+					portrait_religion = bon_reformed
+				}
+			}
+		}
+
+		layer = {
+			"GFX_religious_female_clothes_behind:c0"
+			"GFX_religious_female_headgear_behind:c1"
+			"GFX_religious_female_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_female_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				10 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				10 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#West_african_pagan - Male
+	portraitType = {
+		name = "PORTRAIT_rtp_west_african_pagan_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = no
+				portrait_age > child
+				OR = {
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				OR = {
+					portrait_religion = west_african_pagan
+					portrait_religion = west_african_pagan_reformed
+				}
+			}
+		}
+
+		layer = {
+			"GFX_religious_male_clothes_behind:c0"
+			"GFX_religious_male_headgear_behind:c1"
+			"GFX_religious_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_male_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				16 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				16 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	#West_african_pagan - Female
+	portraitType = {
+		name = "PORTRAIT_rtp_west_african_pagan_female"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_clothing = yes
+				portrait_is_female = yes
+				portrait_age > child
+				OR = {
+					portrait_government = rtp_theocracy_g
+					portrait_government = rtp_baron_theocracy_g
+				}
+				OR = {
+					portrait_religion = west_african_pagan
+					portrait_religion = west_african_pagan_reformed
+				}
+			}
+		}
+
+		layer = {
+			"GFX_religious_female_clothes_behind:c0"
+			"GFX_religious_female_headgear_behind:c1"
+			"GFX_religious_female_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_religious_female_headgear:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+
+		allow_property_values = {
+			3 = { #Clothes
+				16 = {
+					always = yes
+				}
+			}
+			5 = { #Headgear
+				16 = {
+					always = yes
+				}
+			}
+		}
+	}
+}

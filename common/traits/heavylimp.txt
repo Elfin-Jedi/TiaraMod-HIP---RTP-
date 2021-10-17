@@ -1,0 +1,27 @@
+heavylimp = {
+
+      ruler_designer_cost = -20
+
+potential = {
+     age = 5
+}
+
+random = yes
+birth = 25
+health = -1
+  
+  diplomacy = -3
+  martial = -3
+  
+  opposites = {
+			slightlimp                             
+  }
+  
+  
+  same_opinion = 20
+  general_opinion = -20
+  vassal_opinion = -10
+  sex_appeal_opinion = -20
+  combat_rating = -2
+
+}

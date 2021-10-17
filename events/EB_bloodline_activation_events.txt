@@ -1,0 +1,4387 @@
+namespace = EB_bae
+
+
+##################################################### Incomplete Event: A
+############### Extra Bloodlines List ############### Bug: B
+##################################################### Incomplete Localisation: C
+## 1  EB_perfect_bloodline                         ## 
+## 2  EB_zealot_bloodline                          ## 
+## 3  EB_greedy_bloodline                          ## 
+## 4  EB_honor_bloodline                           ## 
+## 5  EB_cynical_bloodline                         ## 
+## 6  EB_great_dynasty_bloodline                   ## 
+## 7  EB_great_diplomat_bloodline                  ## 
+## 8  EB_great_commander_bloodline                 ## 
+## 9  EB_great_steward_bloodline                   ## 
+## 10 EB_great_spymaster_bloodline                 ## 
+## 11 EB_great_philosopher_bloodline               ## 
+## 12 EB_mastermind_bloodline                      ## 
+## 13 EB_charitable_bloodline                      ## 
+## 14 EB_deceitful_bloodline                       ## 
+## 15 EB_slothful_bloodline                        ## 
+## 16 EB_possessed_bloodline                       ## 
+## 17 EB_ambitious_bloodline                       ## 
+## 18 EB_rational_bloodline                        ## 
+## 19 EB_sinner_bloodline                          ## 
+## 20 EB_virtue_bloodline                          ## 
+## 21 EB_western_europe_conqueror_bloodline        ## 
+## 22 EB_northern_europe_conqueror_bloodline       ## 
+## 23 EB_eastern_europe_conqueror_bloodline        ## 
+## 24 EB_southern_europe_conqueror_bloodline       ## 
+## 25 EB_western_steppes_conqueror_bloodline       ## 
+## 26 EB_north_africa_conqueror_bloodline          ## 
+## 27 EB_south_africa_conqueror_bloodline          ## 
+## 28 EB_middle_east_conqueror_bloodline           ##  
+## 29 EB_central_asia_conqueror_bloodline          ## 
+## 30 EB_india_conqueror_bloodline                 ## 
+## 31 EB_africa_great_conqueror_bloodline          ## 
+## 32 EB_europe_great_conqueror_bloodline          ## 
+## 33 EB_steppe_great_conqueror_bloodline          ## 
+## 34 EB_central_asia_great_conqueror_bloodline    ## 
+## 35 EB_middle_east_great_conqueror_bloodline     ## 
+## 36 EB_schismatic_bloodline                      ##
+## 37 EB_self_crowned_bloodline                    ##
+## 38 EB_fertile_bloodline                         ## 
+## 39 EB_lawmaker_bloodline                        ## 
+## 40 EB_uniter_of_kingdoms_bloodline              ## 
+## 41 EB_glorious_bloodline                        ## 
+## 42 EB_lasting_dynasty_bloodline                 ## 
+## 43 EB_prester_bloodline                         ## 
+## 44 EB_russian_hegemon_bloodline                 ## 
+## 45 EB_holy_protector_bloodline                  ## 
+## 46 EB_great_pentarch_bloodline                  ## 
+## 47 EB_new_augustus_bloodline                    ## 
+## 48 EB_restorer_of_the_empire_bloodline          ## 
+## 49 EB_prophesied_bloodline                      ## 
+## 50 EB_kingdom_of_david_bloodline                ## 
+#####################################################
+################# More to Come!! ####################
+#####################################################
+
+
+#1
+character_event = {
+	id = EB_bae.0001
+	desc = EB_bae_perfect_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			trait = genius
+			trait = strong
+			trait = fair
+			trait = robust
+			trait = shrewd
+			trait = diligent
+			trait = patient
+			trait = ambitious
+			trait = brave
+			trait = gregarious
+			prestige >= 5000
+		}
+		NOR = {
+			trait = clubfooted
+			trait = dwarf
+			trait = harelip
+			trait = hunchback
+			trait = inbred
+			trait = lisp
+			trait = stutter
+			trait = giant
+			trait = lefthanded
+			trait = is_fat
+			trait = is_malnourished
+			trait = disfigured
+			trait = mangled
+			trait = one_eyed
+			trait = one_handed
+			trait = one_legged
+			has_character_flag = EB_perfect_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_perfect_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_perfect_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_perfect_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_perfect_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_perfect_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_perfect_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_perfect_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#2
+character_event = {
+	id = EB_bae.0002
+	desc = EB_bae_zealot_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			trait = temperate
+			trait = chaste
+			trait = charitable
+			trait = diligent
+			trait = ambitious
+			trait = just
+			trait = stubborn
+			trait = zealous
+			prestige >= 5000
+		}
+		NOR = {
+			trait = lustful
+			trait = gluttonous
+			trait = slothful
+			trait = arbitrary
+			trait = content
+			trait = cynical
+			trait = is_fat
+			trait = is_malnourished
+			has_character_flag = EB_zealot_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_zealot_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_zealot_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_zealot_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_zealot_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_zealot_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_zealot_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_zealot_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#3
+character_event = {
+	id = EB_bae.0003
+	desc = EB_bae_greedy_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			trait = lustful
+			trait = gluttonous
+			trait = greedy
+			trait = slothful
+			trait = cruel
+			prestige >= 5000
+		}
+		NOR = {
+			trait = temperate
+			trait = charitable
+			trait = diligent
+			has_character_flag = EB_greedy_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_greedy_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_greedy_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_greedy_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_greedy_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_greedy_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_greedy_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_greedy_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#4
+character_event = {
+	id = EB_bae.0004
+	desc = EB_bae_honor_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			trait = honest
+			trait = just
+			trait = charitable
+			trait = kind
+			trait = trusting
+			prestige >= 5000
+		}
+		NOR = {
+			trait = greedy
+			trait = wroth
+			trait = envious
+			trait = arbitrary
+			trait = cruel
+			trait = deceitful
+			trait = paranoid
+			has_character_flag = EB_honor_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_honor_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_honor_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_honor_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_honor_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_honor_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_honor_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_honor_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#5
+character_event = {
+	id = EB_bae.0005
+	desc = EB_bae_cynical_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			trait = lustful
+			trait = gluttonous
+			trait = slothful
+			trait = arbitrary
+			trait = cynical
+			trait = content
+			prestige >= 5000
+		}
+		NOR = {
+			trait = temperate
+			trait = chaste
+			trait = charitable
+			trait = diligent
+			trait = ambitious
+			trait = just
+			trait = stubborn
+			trait = zealous
+			has_character_flag = EB_cynical_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+		OR = {
+			trait = is_fat
+			trait = is_malnourished
+		}
+	}
+	option = {
+		name = EB_bae_cynical_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_cynical_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_cynical_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_cynical_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_cynical_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_cynical_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_cynical_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#6
+character_event = {
+	id = EB_bae.0006
+	desc = EB_bae_great_dynasty_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			score >= 200000
+		}
+		NOT = {
+			has_character_flag = EB_great_dynasty_bloodline_flag
+		}
+		ai = no
+	}
+	option = {
+		name = EB_bae_great_dynasty_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_great_dynasty_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_great_dynasty_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_great_dynasty_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_great_dynasty_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_great_dynasty_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_great_dynasty_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#7
+character_event = {
+	id = EB_bae.0007
+	desc = EB_bae_great_diplomat_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 10
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			prestige >= 5000
+		}
+		NOT = {
+			has_character_flag = EB_great_diplomat_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+		OR = {
+			AND = {
+				has_game_rule = {
+					name = EB_harder_bloodline_creation
+					value = EB_harder_bloodline_creation_no_name
+				}
+				diplomacy >=30
+			}
+			AND = {
+				has_game_rule = {
+					name = EB_harder_bloodline_creation
+					value = EB_harder_bloodline_creation_yes_name
+				}
+				diplomacy >=40
+			}
+		}
+	}
+	option = {
+		name = EB_bae_great_diplomat_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_great_diplomat_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_great_diplomat_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_great_diplomat_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_great_diplomat_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_great_diplomat_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_great_diplomat_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#8
+character_event = {
+	id = EB_bae.0008
+	desc = EB_bae_great_commander_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 10
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			prestige >= 5000
+		}
+		NOT = {
+			has_character_flag = EB_great_commander_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+		OR = {
+			AND = {
+				has_game_rule = {
+					name = EB_harder_bloodline_creation
+					value = EB_harder_bloodline_creation_no_name
+				}
+				martial >= 35
+			}
+			AND = {
+				has_game_rule = {
+					name = EB_harder_bloodline_creation
+					value = EB_harder_bloodline_creation_yes_name
+				}
+				martial >= 50
+			}
+		}
+	}
+	option = {
+		name = EB_bae_great_commander_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_great_commander_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_great_commander_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_great_commander_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_great_commander_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_great_commander_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_great_commander_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#9
+character_event = {
+	id = EB_bae.0009
+	desc = EB_bae_great_steward_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 10
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			prestige >= 5000
+		}
+		NOT = {
+			has_character_flag = EB_great_steward_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+		OR = {
+			AND = {
+				has_game_rule = {
+					name = EB_harder_bloodline_creation
+					value = EB_harder_bloodline_creation_no_name
+				}
+				stewardship >= 30
+			}
+			AND = {
+				has_game_rule = {
+					name = EB_harder_bloodline_creation
+					value = EB_harder_bloodline_creation_yes_name
+				}
+				stewardship >= 40
+			}
+		}
+	}
+	option = {
+		name = EB_bae_great_steward_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_great_steward_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_great_steward_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_great_steward_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_great_steward_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_great_steward_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_great_steward_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#10
+character_event = {
+	id = EB_bae.0010
+	desc = EB_bae_great_spymaster_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 10
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			prestige >= 5000
+		}
+		NOT = {
+			has_character_flag = EB_great_spymaster_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+		OR = {
+			AND = {
+				has_game_rule = {
+					name = EB_harder_bloodline_creation
+					value = EB_harder_bloodline_creation_no_name
+				}
+				intrigue >= 30
+			}
+			AND = {
+				has_game_rule = {
+					name = EB_harder_bloodline_creation
+					value = EB_harder_bloodline_creation_yes_name
+				}
+				intrigue >= 40
+			}
+		}
+	}
+	option = {
+		name = EB_bae_great_spymaster_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_great_spymaster_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_great_spymaster_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_great_spymaster_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_great_spymaster_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_great_spymaster_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_great_spymaster_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#11
+character_event = {
+	id = EB_bae.0011
+	desc = EB_bae_great_philosopher_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 10
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			prestige >= 5000
+		}
+		NOT = {
+			has_character_flag = EB_great_philosopher_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+		OR = {
+			AND = {
+				has_game_rule = {
+					name = EB_harder_bloodline_creation
+					value = EB_harder_bloodline_creation_no_name
+				}
+				learning >= 35
+			}
+			AND = {
+				has_game_rule = {
+					name = EB_harder_bloodline_creation
+					value = EB_harder_bloodline_creation_yes_name
+				}
+				learning >= 50
+			}
+		}
+	}
+	option = {
+		name = EB_bae_great_philosopher_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_great_philosopher_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_great_philosopher_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_great_philosopher_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_great_philosopher_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_great_philosopher_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_great_philosopher_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#12
+character_event = {
+	id = EB_bae.0012
+	desc = EB_bae_mastermind_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 10
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			prestige >= 5000
+		}
+		NOT = {
+			has_character_flag = EB_mastermind_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+		OR = {
+			AND = {
+				has_game_rule = {
+					name = EB_harder_bloodline_creation
+					value = EB_harder_bloodline_creation_no_name
+				}
+				diplomacy >= 20
+				martial >= 20
+				stewardship >= 20
+				intrigue >= 20
+				learning >= 20
+			}
+			AND = {
+				has_game_rule = {
+					name = EB_harder_bloodline_creation
+					value = EB_harder_bloodline_creation_yes_name
+				}
+				diplomacy >= 25
+				martial >= 25
+				stewardship >= 25
+				intrigue >= 25
+				learning >= 25
+			}
+		}
+	}
+	option = {
+		name = EB_bae_mastermind_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_mastermind_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_mastermind_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_mastermind_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_mastermind_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_mastermind_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_mastermind_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#13
+character_event = {
+	id = EB_bae.0013
+	desc = EB_bae_charitable_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			trait = temperate
+			trait = charitable
+			trait = diligent
+			prestige >= 5000
+		}
+		NOR = {
+			trait = lustful
+			trait = gluttonous
+			trait = greedy
+			trait = slothful
+			trait = cruel
+			has_character_flag = EB_charitable_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_charitable_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_charitable_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_charitable_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_charitable_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_charitable_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_charitable_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_charitable_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#14
+character_event = {
+	id = EB_bae.0014
+	desc = EB_bae_deceitful_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			trait = greedy
+			trait = wroth
+			trait = envious
+			trait = arbitrary
+			trait = cruel
+			trait = deceitful
+			trait = paranoid
+			prestige >= 5000
+		}
+		NOR = {
+			trait = honest
+			trait = just
+			trait = charitable
+			trait = kind
+			trait = trusting
+			has_character_flag = EB_deceitful_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_deceitful_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_deceitful_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_deceitful_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_deceitful_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_deceitful_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_deceitful_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_deceitful_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#15
+character_event = {
+	id = EB_bae.0015
+	desc = EB_bae_slothful_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			trait = charitable
+			trait = humble
+			trait = slothful
+			trait = content
+			prestige >= 5000
+		}
+		NOR = {
+			trait = greedy
+			trait = proud
+			trait = ambitious
+			trait = stubborn
+			has_character_flag = EB_slothful_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_slothful_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_slothful_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_slothful_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_slothful_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_slothful_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_slothful_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_slothful_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#16
+character_event = {
+	id = EB_bae.0016
+	desc = EB_bae_possessed_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			trait = drunkard
+			trait = infirm
+			trait = lunatic
+			trait = possessed
+			trait = imbecile
+			trait = inbred
+			trait = slow
+			trait = dull
+			trait = wroth
+			trait = arbitrary
+			trait = zealous
+			prestige >= 5000
+		}
+		NOR = {
+			trait = genius
+			trait = shrewd
+			trait = patient
+			trait = cynical
+			trait = just
+			has_character_flag = EB_possessed_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_possessed_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_possessed_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_possessed_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_possessed_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_possessed_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_possessed_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_possessed_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#17
+character_event = {
+	id = EB_bae.0017
+	desc = EB_bae_ambitious_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			trait = greedy
+			trait = proud
+			trait = ambitious
+			trait = stubborn
+			prestige >= 5000
+		}
+		NOR = {
+			trait = charitable
+			trait = humble
+			trait = slothful
+			trait = content
+			has_character_flag = EB_ambitious_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_ambitious_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_ambitious_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_ambitious_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_ambitious_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_ambitious_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_ambitious_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_ambitious_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#18
+character_event = {
+	id = EB_bae.0018
+	desc = EB_bae_rational_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			trait = genius
+			trait = shrewd
+			trait = patient
+			trait = cynical
+			trait = just
+			prestige >= 5000
+		}
+		NOR = {
+			trait = drunkard
+			trait = infirm
+			trait = lunatic
+			trait = possessed
+			trait = imbecile
+			trait = inbred
+			trait = slow
+			trait = dull
+			trait = wroth
+			trait = arbitrary
+			trait = zealous
+			has_character_flag = EB_rational_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_rational_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_rational_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_rational_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_rational_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_rational_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_rational_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_rational_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#19
+character_event = {
+	id = EB_bae.0019
+	desc = EB_bae_sinner_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			trait = lustful
+			trait = gluttonous
+			trait = greedy
+			trait = slothful
+			trait = wroth
+			trait = envious
+			trait = proud
+			prestige >= 5000
+		}
+		NOR = {
+			trait = chaste
+			trait = temperate
+			trait = charitable
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = humble
+			has_character_flag = EB_sinner_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_sinner_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_sinner_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_sinner_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_sinner_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_sinner_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_sinner_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_sinner_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#20
+character_event = {
+	id = EB_bae.0020
+	desc = EB_bae_virtue_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		years = 20
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			trait = chaste
+			trait = temperate
+			trait = charitable
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = humble
+			prestige >= 5000
+		}
+		NOR = {
+			trait = lustful
+			trait = gluttonous
+			trait = greedy
+			trait = slothful
+			trait = wroth
+			trait = envious
+			trait = proud
+			has_character_flag = EB_virtue_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_virtue_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_virtue_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_virtue_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_virtue_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_virtue_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_virtue_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_virtue_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#21
+character_event = {
+	id = EB_bae.0021
+	desc = EB_bae_western_europe_conqueror_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			completely_controls_region = world_europe_west
+			prestige >= 5000
+		}
+		NOT = {
+			has_dynasty_flag = EB_western_europe_conqueror_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_western_europe_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_western_europe_conqueror_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_western_europe_conqueror_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_western_europe_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_western_europe_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_western_europe_conqueror_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_western_europe_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#22
+character_event = {
+	id = EB_bae.0022
+	desc = EB_bae_northern_europe_conqueror_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			completely_controls_region = world_europe_north
+			prestige >= 5000
+		}
+		NOT = {
+			has_dynasty_flag = EB_northern_europe_conqueror_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_northern_europe_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_northern_europe_conqueror_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_northern_europe_conqueror_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_northern_europe_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_northern_europe_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_northern_europe_conqueror_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_northern_europe_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#23
+character_event = {
+	id = EB_bae.0023
+	desc = EB_bae_eastern_europe_conqueror_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			completely_controls_region = world_europe_east
+			prestige >= 5000
+		}
+		NOT = {
+			has_dynasty_flag = EB_eastern_europe_conqueror_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_eastern_europe_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_eastern_europe_conqueror_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_eastern_europe_conqueror_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_eastern_europe_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_eastern_europe_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_eastern_europe_conqueror_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_eastern_europe_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#24
+character_event = {
+	id = EB_bae.0024
+	desc = EB_bae_southern_europe_conqueror_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			completely_controls_region = world_europe_south
+			completely_controls_region = world_asia_minor
+			prestige >= 5000
+		}
+		NOT = {
+			has_dynasty_flag = EB_southern_europe_conqueror_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_southern_europe_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_southern_europe_conqueror_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_southern_europe_conqueror_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_southern_europe_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_southern_europe_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_southern_europe_conqueror_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_southern_europe_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#25
+character_event = {
+	id = EB_bae.0025
+	desc = EB_bae_western_steppes_conqueror_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			completely_controls_region = world_steppe_west
+			prestige >= 5000
+		}
+		NOT = {
+			has_dynasty_flag = EB_western_steppes_conqueror_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_western_steppes_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_western_steppes_conqueror_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_western_steppes_conqueror_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_western_steppes_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_western_steppes_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_western_steppes_conqueror_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_western_steppes_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#26
+character_event = {
+	id = EB_bae.0026
+	desc = EB_bae_north_africa_conqueror_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			completely_controls_region = world_africa_north
+			prestige >= 5000
+		}
+		NOT = {
+			has_dynasty_flag = EB_north_africa_conqueror_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_north_africa_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_north_africa_conqueror_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_north_africa_conqueror_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_north_africa_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_north_africa_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_north_africa_conqueror_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_north_africa_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#27
+character_event = {
+	id = EB_bae.0027
+	desc = EB_bae_south_africa_conqueror_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			completely_controls_region = world_africa_west
+			completely_controls_region = world_africa_central
+			completely_controls_region = world_africa_east
+			prestige >= 5000
+		}
+		NOT = {
+			has_dynasty_flag = EB_south_africa_conqueror_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_south_africa_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_south_africa_conqueror_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_south_africa_conqueror_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_south_africa_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_south_africa_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_south_africa_conqueror_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_south_africa_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#28
+character_event = {
+	id = EB_bae.0028
+	desc = EB_bae_middle_east_conqueror_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			completely_controls_region = world_middle_east
+			completely_controls_region = world_persia
+			prestige >= 5000
+		}
+		NOT = {
+			has_dynasty_flag = EB_middle_east_conqueror_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_middle_east_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_middle_east_conqueror_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_middle_east_conqueror_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_middle_east_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_middle_east_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_middle_east_conqueror_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_middle_east_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#29
+character_event = {
+	id = EB_bae.0029
+	desc = EB_bae_central_asia_conqueror_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			completely_controls_region = world_himalayas
+			completely_controls_region = world_steppe_tarim
+			completely_controls_region = world_steppe_east
+			prestige >= 5000
+		}
+		NOT = {
+			has_dynasty_flag = EB_central_asia_conqueror_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_central_asia_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_central_asia_conqueror_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_central_asia_conqueror_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_central_asia_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_central_asia_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_central_asia_conqueror_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_central_asia_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#30
+character_event = {
+	id = EB_bae.0030
+	desc = EB_bae_india_conqueror_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			completely_controls_region = world_india
+			prestige >= 5000
+		}
+		NOT = {
+			has_dynasty_flag = EB_india_conqueror_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_india_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_india_conqueror_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_india_conqueror_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_india_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_india_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_india_conqueror_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_india_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#31
+character_event = {
+	id = EB_bae.0031
+	desc = EB_bae_africa_great_conqueror_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			completely_controls_region = world_africa
+			prestige >= 5000
+		}
+		NOT = {
+			has_dynasty_flag = EB_africa_great_conqueror_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_africa_great_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_africa_great_conqueror_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_africa_great_conqueror_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_africa_great_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_africa_great_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_africa_great_conqueror_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_africa_great_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#32
+character_event = {
+	id = EB_bae.0032
+	desc = EB_bae_europe_great_conqueror_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			completely_controls_region = world_europe
+			prestige >= 5000
+		}
+		NOT = {
+			has_dynasty_flag = EB_europe_great_conqueror_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_europe_great_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_europe_great_conqueror_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_europe_great_conqueror_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_europe_great_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_europe_great_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_europe_great_conqueror_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_europe_great_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#33
+character_event = {
+	id = EB_bae.0033
+	desc = EB_bae_steppe_great_conqueror_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			completely_controls_region = world_steppe
+			prestige >= 5000
+		}
+		NOT = {
+			has_dynasty_flag = EB_steppe_great_conqueror_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_steppe_great_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_steppe_great_conqueror_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_steppe_great_conqueror_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_steppe_great_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_steppe_great_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_steppe_great_conqueror_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_steppe_great_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#34
+character_event = {
+	id = EB_bae.0034
+	desc = EB_bae_central_asia_great_conqueror_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			completely_controls_region = world_india
+			completely_controls_region = world_himalayas
+			prestige >= 5000
+		}
+		NOT = {
+			has_dynasty_flag = EB_central_asia_great_conqueror_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_central_asia_great_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_central_asia_great_conqueror_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_central_asia_great_conqueror_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_central_asia_great_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_central_asia_great_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_central_asia_great_conqueror_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_central_asia_great_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#35
+character_event = {
+	id = EB_bae.0035
+	desc = EB_bae_middle_east_great_conqueror_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			completely_controls_region = world_persia
+			completely_controls_region = world_asia_minor
+			completely_controls_region = world_middle_east
+			prestige >= 5000
+		}
+		NOT = {
+			has_dynasty_flag = EB_middle_east_great_conqueror_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_middle_east_great_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_middle_east_great_conqueror_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_middle_east_great_conqueror_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_middle_east_great_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_middle_east_great_conqueror_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_middle_east_great_conqueror_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_middle_east_great_conqueror_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#36
+character_event = {
+	id = EB_bae.0036
+	desc = EB_bae_schismatic_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			any_vassal = {
+				any_claim = {
+					title = k_papal_state
+				}
+			}
+		}
+		NOT = {
+			has_character_flag = EB_schismatic_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_schismatic_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_schismatic_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_schismatic_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_schismatic_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_schismatic_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_schismatic_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_schismatic_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#37
+character_event = {
+	id = EB_bae.0037
+	desc = EB_bae_self_crowned_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			trait = crowned_by_myself
+		}
+		NOT = {
+			has_character_flag = EB_self_crowned_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_self_crowned_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_self_crowned_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_self_crowned_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_self_crowned_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_self_crowned_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_self_crowned_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_self_crowned_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#38
+character_event = {
+	id = EB_bae.0038
+	desc = EB_bae_fertile_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			num_of_children >= 30
+		}
+		NOT = {
+			has_character_flag = EB_fertile_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_fertile_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_fertile_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_fertile_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_fertile_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_fertile_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_fertile_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_fertile_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#39
+character_event = {
+	id = EB_bae.0039
+	desc = EB_bae_lawmaker_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			OR = {
+				has_character_flag = achievement_not_a_tribe
+				has_character_flag = achievement_res_publica
+			}
+		}
+		NOT = {
+			has_character_flag = EB_lawmaker_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_lawmaker_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_lawmaker_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_lawmaker_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_lawmaker_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_lawmaker_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_lawmaker_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_lawmaker_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#40
+character_event = {
+	id = EB_bae.0040
+	desc = EB_bae_uniter_of_kingdoms_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			has_landed_title = k_england
+			has_landed_title = k_scotland
+			has_landed_title = k_wales
+			has_landed_title = k_ireland
+		}
+		NOT = {
+			has_dynasty_flag = EB_uniter_of_kingdoms_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_uniter_of_kingdoms_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_uniter_of_kingdoms_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_uniter_of_kingdoms_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_uniter_of_kingdoms_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_uniter_of_kingdoms_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_uniter_of_kingdoms_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_uniter_of_kingdoms_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#41
+character_event = {
+	id = EB_bae.0041
+	desc = EB_bae_glorious_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			possible = {
+				primary_title = {
+					tier = COUNT
+				}
+			}
+			primary_title = {
+				tier = EMPEROR
+				rebel = no
+				temporary = no
+			}
+		}
+		NOT = {
+			has_character_flag = EB_glorious_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_glorious_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_glorious_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_glorious_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_glorious_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_glorious_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_glorious_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_glorious_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#42
+character_event = {
+	id = EB_bae.0042
+	desc = EB_bae_lasting_dynasty_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			total_years_played >= 200 
+		}
+		NOT = {
+			has_dynasty_flag = EB_lasting_dynasty_bloodline_flag
+		}
+		ai = no
+	}
+	option = {
+		name = EB_bae_lasting_dynasty_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_lasting_dynasty_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_lasting_dynasty_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_lasting_dynasty_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_lasting_dynasty_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_lasting_dynasty_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_lasting_dynasty_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#43
+character_event = {
+	id = EB_bae.0043
+	desc = EB_bae_prester_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			religion = catholic
+			any_realm_province = {
+				any_neighbor_province = {
+					owner = {
+						top_liege = {
+							has_landed_title = k_abyssinia
+							religion = miaphysite
+						}
+					}
+				}
+			}
+		}
+		NOT = {
+			has_dynasty_flag = EB_prester_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_prester_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_prester_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_prester_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_prester_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_prester_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_prester_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_prester_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#44
+character_event = {
+	id = EB_bae.0044
+	desc = EB_bae_russian_hegemon_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			culture = russian
+			has_landed_title = e_russia
+		}
+		NOT = {
+			has_dynasty_flag = EB_russian_hegemon_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_russian_hegemon_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_russian_hegemon_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_russian_hegemon_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_russian_hegemon_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_russian_hegemon_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_russian_hegemon_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_russian_hegemon_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#45
+character_event = {
+	id = EB_bae.0045
+	desc = EB_bae_holy_protector_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			any_realm_province = {
+				province_id = 333	# Rome
+			}
+			any_realm_province = {
+				province_id = 774	# Jerusalem
+			}
+			any_realm_province = {
+				province_id = 719	# Mecca
+			}
+			any_realm_province = {
+				province_id = 718	# Medina
+			}
+		}
+		NOT = {
+			has_dynasty_flag = EB_holy_protector_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_holy_protector_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_holy_protector_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_holy_protector_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_holy_protector_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_holy_protector_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_holy_protector_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_holy_protector_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+#46
+character_event = {
+	id = EB_bae.0046
+	desc = EB_bae_great_pentarch_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			religion = orthodox
+			any_realm_province = {
+				province_id = 333	# Rome
+			}
+			any_realm_province = {
+				province_id = 496	# Constantinople
+			}
+			any_realm_province = {
+				province_id = 802	# Alexandria
+			}
+			any_realm_province = {
+				province_id = 764	# Antioch
+			}
+			any_realm_province = {
+				province_id = 774	# Jerusalem
+			}
+		}
+		NOT = {
+			has_dynasty_flag = EB_great_pentarch_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_great_pentarch_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_great_pentarch_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_great_pentarch_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_dynasty_flag = EB_great_pentarch_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_great_pentarch_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_great_pentarch_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_dynasty_flag = EB_great_pentarch_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+##47
+#character_event = {
+#	id = EB_bae.0047
+#	desc = EB_bae_new_augustus_0001
+#	only_playable = yes
+#	mean_time_to_happen = {
+#		months = 1
+#		modifier = {
+#			factor = 0.5
+#			always = yes
+#		}
+#	}
+#	trigger = {
+#		AND = {
+#			has_dlc = "Holy Fury"
+#			has_character_flag = achievement_legacy_of_rome
+#		}
+#		NOT = {
+#			has_character_flag = EB_new_augustus_bloodline_flag
+#		}
+#		OR = {
+#			has_game_rule = {
+#				name = EB_ai_create_bloodlines
+#				value = EB_ai_create_bloodlines_yes_name
+#			}
+#			ai = no
+#		}
+#	}
+#	option = {
+#		name = EB_bae_new_augustus_0001_A
+#		trigger = {
+#			has_game_rule = {
+#				name = EB_gender_specific_inheritance
+#				value = EB_gender_specific_inheritance_yes_name
+#			}
+#		}
+#		if = { 
+#			limit = {
+#				is_female = no
+#			}
+#			create_bloodline = {
+#				type = EB_new_augustus_bloodline
+#				inheritance = patrilineal
+#			}
+#		}
+#		else_if = {
+#			limit = {
+#				is_female = yes
+#			}
+#			create_bloodline = {
+#				type = EB_new_augustus_bloodline
+#				inheritance = matrilineal
+#			}
+#		}
+#		ROOT = { set_character_flag = EB_new_augustus_bloodline_flag }
+#		ai_chance = {
+#			factor = 100
+#		}
+#	}
+#	option = {
+#		name = EB_bae_new_augustus_0001_A
+#		trigger = {
+#			has_game_rule = {
+#				name = EB_gender_specific_inheritance
+#				value = EB_gender_specific_inheritance_no_name
+#			}
+#		}
+#		create_bloodline = {
+#			type = EB_new_augustus_bloodline
+#			inheritance = all_descendants
+#		}
+#		ROOT = { set_character_flag = EB_new_augustus_bloodline_flag }
+#		ai_chance = {
+#			factor = 100
+#		}
+#	}
+#}
+
+
+
+
+#48
+character_event = {
+	id = EB_bae.0048
+	desc = EB_bae_restorer_of_the_empire_0001
+	only_playable = yes
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	trigger = {
+		AND = {
+			has_dlc = "Holy Fury"
+			has_character_flag = achievement_spqr
+		}
+		NOT = {
+			has_character_flag = EB_restorer_of_the_empire_bloodline_flag
+		}
+		OR = {
+			has_game_rule = {
+				name = EB_ai_create_bloodlines
+				value = EB_ai_create_bloodlines_yes_name
+			}
+			ai = no
+		}
+	}
+	option = {
+		name = EB_bae_restorer_of_the_empire_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_yes_name
+			}
+		}
+		if = { 
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = EB_restorer_of_the_empire_bloodline
+				inheritance = patrilineal
+			}
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = EB_restorer_of_the_empire_bloodline
+				inheritance = matrilineal
+			}
+		}
+		ROOT = { set_character_flag = EB_restorer_of_the_empire_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = EB_bae_restorer_of_the_empire_0001_A
+		trigger = {
+			has_game_rule = {
+				name = EB_gender_specific_inheritance
+				value = EB_gender_specific_inheritance_no_name
+			}
+		}
+		create_bloodline = {
+			type = EB_restorer_of_the_empire_bloodline
+			inheritance = all_descendants
+		}
+		ROOT = { set_character_flag = EB_restorer_of_the_empire_bloodline_flag }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+
+##49
+#character_event = {
+#	id = EB_bae.0049
+#	desc = EB_bae_prophesied_0001
+#	only_playable = yes
+#	mean_time_to_happen = {
+#		months = 1
+#		modifier = {
+#			factor = 0.5
+#			always = yes
+#		}
+#	}
+#	trigger = {
+#		AND = {
+#			has_dlc = "Holy Fury"
+#			has_character_flag = achievement_brings_benefit
+#		}
+#		NOT = {
+#			has_character_flag = EB_prophesied_bloodline_flag
+#		}
+#		OR = {
+#			has_game_rule = {
+#				name = EB_ai_create_bloodlines
+#				value = EB_ai_create_bloodlines_yes_name
+#			}
+#			ai = no
+#		}
+#	}
+#	option = {
+#		name = EB_bae_prophesied_0001_A
+#		trigger = {
+#			has_game_rule = {
+#				name = EB_gender_specific_inheritance
+#				value = EB_gender_specific_inheritance_yes_name
+#			}
+#		}
+#		if = { 
+#			limit = {
+#				is_female = no
+#			}
+#			create_bloodline = {
+#				type = EB_prophesied_bloodline
+#				inheritance = patrilineal
+#			}
+#		}
+#		else_if = {
+#			limit = {
+#				is_female = yes
+#			}
+#			create_bloodline = {
+#				type = EB_prophesied_bloodline
+#				inheritance = matrilineal
+#			}
+#		}
+#		ROOT = { set_character_flag = EB_prophesied_bloodline_flag }
+#		ai_chance = {
+#			factor = 100
+#		}
+#	}
+#	option = {
+#		name = EB_bae_prophesied_0001_A
+#		trigger = {
+#			has_game_rule = {
+#				name = EB_gender_specific_inheritance
+#				value = EB_gender_specific_inheritance_no_name
+#			}
+#		}
+#		create_bloodline = {
+#			type = EB_prophesied_bloodline
+#			inheritance = all_descendants
+#		}
+#		ROOT = { set_character_flag = EB_prophesied_bloodline_flag }
+#		ai_chance = {
+#			factor = 100
+#		}
+#	}
+#}
+
+
+
+
+##50
+#character_event = {
+#	id = EB_bae.0050
+#	desc = EB_bae_kingdom_of_david_0001
+#	only_playable = yes
+#	mean_time_to_happen = {
+#		months = 1
+#		modifier = {
+#			factor = 0.5
+#			always = yes
+#		}
+#	}
+#	trigger = {
+#		AND = {
+#			has_dlc = "Holy Fury"
+#			has_character_flag = achievement_kingdom_of_david
+#		}
+#		NOT = {
+#			has_character_flag = EB_kingdom_of_david_bloodline_flag
+#		}
+#		OR = {
+#			has_game_rule = {
+#				name = EB_ai_create_bloodlines
+#				value = EB_ai_create_bloodlines_yes_name
+#			}
+#			ai = no
+#		}
+#	}
+#	option = {
+#		name = EB_bae_kingdom_of_david_0001_A
+#		trigger = {
+#			has_game_rule = {
+#				name = EB_gender_specific_inheritance
+#				value = EB_gender_specific_inheritance_yes_name
+#			}
+#		}
+#		if = { 
+#			limit = {
+#				is_female = no
+#			}
+#			create_bloodline = {
+#				type = EB_kingdom_of_david_bloodline
+#				inheritance = patrilineal
+#			}
+#		}
+#		else_if = {
+#			limit = {
+#				is_female = yes
+#			}
+#			create_bloodline = {
+#				type = EB_kingdom_of_david_bloodline
+#				inheritance = matrilineal
+#			}
+#		}
+#		ROOT = { set_character_flag = EB_kingdom_of_david_bloodline_flag }
+#		ai_chance = {
+#			factor = 100
+#		}
+#	}
+#	option = {
+#		name = EB_bae_kingdom_of_david_0001_A
+#		trigger = {
+#			has_game_rule = {
+#				name = EB_gender_specific_inheritance
+#				value = EB_gender_specific_inheritance_no_name
+#			}
+#		}
+#		create_bloodline = {
+#			type = EB_kingdom_of_david_bloodline
+#			inheritance = all_descendants
+#		}
+#		ROOT = { set_character_flag = EB_kingdom_of_david_bloodline_flag }
+#		ai_chance = {
+#			factor = 100
+#		}
+#	}
+#}
+
+
+
+

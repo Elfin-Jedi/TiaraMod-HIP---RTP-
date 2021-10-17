@@ -1,0 +1,134 @@
+character_event = {	# Overwrites event found in /events/LT_wonder_flavor_events.txt
+	id = LT.20805
+	desc = EVTDESC_LT_20805
+	picture = GFX_evt_end_of_days
+	border = GFX_event_normal_frame_war
+
+    is_triggered_only = yes
+
+    only_independent = yes
+
+
+	trigger = {
+		NOT = { has_character_flag = looted_wonder_artifact }
+		event_target:target_wonder = { 
+			has_wonder_flag = gives_artifact
+			NOT = { has_wonder_flag = artifact_was_looted }
+			wonder_owner = {
+				character = ROOT
+			}
+		}
+		any_courtier = {
+    		is_inaccessible_or_incapable_trigger = no
+	    }
+	}
+
+    immediate = { 
+    	set_character_flag = looted_wonder_artifact
+    	event_target:target_wonder = {
+    		set_wonder_flag = artifact_was_looted
+    	}
+	    any_courtier = {
+	    	limit = { is_inaccessible_or_incapable_trigger = no }
+	    	score_value = { #Prioritizes selecting an interesting courtier...
+	            value = 10
+	            interesting_courtier_selection_score = yes
+	        }
+
+	    	save_event_target_as = target_courtier
+	    	event_target:target_wonder = {
+		    	trigger_switch = {
+		    		on_trigger = has_wonder_flag
+		    		gives_artifact_bells = {
+		    			PREV = {
+		    				add_artifact = wonder_artifact_bells
+		    				new_artifact = {
+								set_name = looted_wonder_artifact_bells_rename
+								set_description = looted_wonder_artifact_bells_desc
+								set_creation_date = 1.1.1
+	    						save_event_target_as = looted_artifact
+				    		}
+						}
+						if = {
+							limit = { has_wonder_upgrade = upgrade_bells }
+							destroy_wonder_upgrade = upgrade_bells
+						}
+						if = {
+							limit = { has_wonder_upgrade = upgrade_bells_golden }
+							destroy_wonder_upgrade = upgrade_bells_golden
+						}
+		    		}
+		    		gives_artifact_book = {
+		    			PREV = {
+		    				add_random_book_effect = yes
+		    				new_artifact = {
+								set_creation_date = 1.1.1
+	    						save_event_target_as = looted_artifact
+	    					}
+						}
+		    		}
+					######################## Edits begin
+					gives_artifact_colossus_head = {
+		    			PREV = {
+		    				add_artifact = mbw_artifact_colossus_head
+		    				new_artifact = {
+								set_name = looted_mbw_artifact_colossus_head_rename
+								set_description = looted_mbw_artifact_colossus_head_desc
+								set_creation_date = 1.1.1
+	    						save_event_target_as = looted_artifact
+				    		}
+						}
+		    		}
+					gives_artifact_capstone = {
+		    			PREV = {
+		    				add_artifact = mbw_artifact_capstone
+		    				new_artifact = {
+								set_name = looted_mbw_artifact_capstone_rename
+								set_description = looted_mbw_artifact_capstone_desc
+								set_creation_date = 1.1.1
+	    						save_event_target_as = looted_artifact
+				    		}
+						}
+		    		}
+					gives_artifact_ledgers = {
+		    			PREV = {
+		    				add_artifact = mbw_artifact_ledgers
+		    				new_artifact = {
+								set_name = looted_mbw_artifact_ledgers_rename
+								set_description = looted_mbw_artifact_ledgers_desc
+								set_creation_date = 1.1.1
+	    						save_event_target_as = looted_artifact
+				    		}
+						}
+		    		}
+					######################## Edits end
+		    	}
+		    }
+	    }
+    }
+
+    option = {# I want it!
+		name = EVTOPTA_LT_20805
+		event_target:target_courtier = {
+			show_scope_change = no 
+			reverse_opinion = {
+				modifier = opinion_grateful
+				who = ROOT
+			}
+			event_target:looted_artifact = {
+				show_scope_change = no 
+				transfer_artifact = { from = PREV to = FROM }
+			}
+		}
+	}
+
+	option = {# give it away
+		name = EVTOPTB_LT_20805
+		event_target:target_courtier = {
+			opinion = {
+				modifier = opinion_grateful
+				who = ROOT
+			}
+		}
+	}
+}

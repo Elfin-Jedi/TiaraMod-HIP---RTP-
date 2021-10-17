@@ -1,0 +1,2 @@
+NDefines.NMilitary.ATTACK_TO_DAMAGE_MULT = 0.02
+NDefines.NMilitary.MORALELOSS_FACTOR = 2.0

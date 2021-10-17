@@ -1,0 +1,1429 @@
+#####
+#Festivities Events
+#
+#Total = 14
+#####
+
+namespace = RTPfestivities
+
+#Main Events
+#####
+
+#1
+
+#2
+
+#3
+
+#Summer Fair
+character_event = {
+	id = RTPfestivities.4
+	title = "RTPfestivities.4_title"
+	desc = "RTPfestivities.4_desc"
+	picture = GFX_evt_jugglers
+	is_triggered_only = yes
+	ai = no
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+	}
+
+	immediate = {
+		opinion = {
+			modifier = opinion_happy
+			who = FROM
+			years = 1
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.4_1"
+
+		trigger = {
+			wealth = 20
+		}
+
+		random_list = {
+			10 = {
+				wealth = -20
+			}
+			20 = {
+				wealth = -15
+			}
+			30 = {
+				wealth = -10
+			}
+			50 = {
+				wealth = -5
+			}
+		}
+
+		random_list = {
+			10 = {
+				prestige = 20
+			}
+			20 = {
+				prestige = 15
+			}
+			30 = {
+				prestige = 10
+			}
+			50 = {
+				prestige = 5
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.4_2"
+
+		trigger = {
+			piety = 20
+		}
+
+		random_list = {
+			10 = {
+				piety = -20
+			}
+			20 = {
+				piety = -15
+			}
+			30 = {
+				piety = -10
+			}
+			50 = {
+				piety = -5
+			}
+		}
+
+		random_list = {
+			10 = {
+				wealth = 20
+			}
+			20 = {
+				wealth = 15
+			}
+			30 = {
+				wealth = 10
+			}
+			50 = {
+				wealth = 5
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.4_3"
+
+		trigger = {
+			government = rtp_noble_g
+		}
+		
+		prestige = 15
+	}
+
+	option = {
+		name = "RTPfestivities.4_4"
+
+		piety = 10
+	}
+}
+
+#Feast
+character_event = {
+	id = RTPfestivities.5
+	title = "RTPfestivities.5_title"
+	desc = "RTPfestivities.5_desc"
+	picture = GFX_evt_feast
+	is_triggered_only = yes
+	ai = no
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = "RTPfestivities.5_1"
+
+		trigger = {
+			government = rtp_noble_g
+		}
+
+		prestige = 10
+
+		opinion = {
+			modifier = opinion_happy
+			who = FROM
+			years = 1
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.5_2"
+
+		trigger = {
+			government = rtp_lowborn_g
+		}
+
+		wealth = -1
+
+		add_character_modifier = {
+			modifier = modifier_positive
+			years = 1
+		}
+		random = {
+			chance = 20
+			add_character_modifier = {
+				modifier = epic_hangover
+				months = 6
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.5_3"
+
+		trigger = {
+			government = rtp_lowborn_g
+		}
+
+		wealth = -1
+		
+		add_character_modifier = {
+			modifier = lovers_entertainment
+			years = 1
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.5_4"
+
+		piety = 10
+	}
+}
+
+#Great Hunt
+character_event = {
+	id = RTPfestivities.6
+	title = "RTPfestivities.6_title"
+	desc = "RTPfestivities.6_desc"
+	picture = GFX_evt_hunt
+	is_triggered_only = yes
+	ai = no
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = "RTPfestivities.6_1"
+
+		trigger = {
+			government = rtp_noble_g
+		}
+
+		random_list = {
+			89 = {
+				prestige = 25
+			}
+			10 = {
+				prestige = 50
+				add_trait = wounded
+			}
+			1 = {
+				death = {
+					death_reason = death_accident_boar
+				}
+			}
+		}
+
+		opinion = {
+			modifier = opinion_happy
+			who = FROM
+			years = 1
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.6_2"
+
+		trigger = {
+			government = rtp_lowborn_g
+		}
+
+		random_list = {
+			10 = {
+				wealth = 15
+			}
+			20 = {
+				wealth = 10
+			}
+			30 = {
+				wealth = 5
+			}
+			50 = {
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.6_3"
+
+		trigger = {
+			government = rtp_lowborn_g
+		}
+
+		random_list = {
+			50 = {
+				wealth = 5
+			}
+			30 = {
+				wealth = 10
+			}
+			10 = {
+				wealth = 20
+			}
+			5 = {
+				wealth = 30
+				add_trait = wounded
+			}
+			4 = {
+				imprison = FROM
+			}
+			1 = {
+				death = {
+					death_reason = death_execution_boar
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.6_4"
+
+		piety = 10
+	}
+}
+
+#7
+
+#Tiger Hunt
+character_event = {
+	id = RTPfestivities.8
+	title = "RTPfestivities.8_title"
+	desc = "RTPfestivities.8_desc"
+	picture = GFX_evt_tiger
+	is_triggered_only = yes
+	ai = no
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = "RTPfestivities.8_1"
+
+		trigger = {
+			government = rtp_noble_g
+		}
+
+		random_list = {
+			89 = {
+				prestige = 25
+			}
+			10 = {
+				prestige = 50
+				add_trait = wounded
+			}
+			1 = {
+				death = {
+					death_reason = death_accident_tiger
+				}
+			}
+		}
+
+		opinion = {
+			modifier = opinion_happy
+			who = FROM
+			years = 1
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.8_2"
+
+		trigger = {
+			government = rtp_lowborn_g
+		}
+
+		random_list = {
+			10 = {
+				wealth = 15
+			}
+			20 = {
+				wealth = 10
+			}
+			30 = {
+				wealth = 5
+			}
+			50 = {
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.8_3"
+		
+		prestige = -10
+		piety = 25
+	}
+
+	option = {
+		name = "RTPfestivities.8_4"
+
+		piety = 10
+	}
+}
+
+#Blot
+character_event = {
+	id = RTPfestivities.9
+	title = "RTPfestivities.9_title"
+	desc = "RTPfestivities.9_desc"
+	picture = GFX_evt_runestone_raising_oldgods
+	is_triggered_only = yes
+	ai = no
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = "RTPfestivities.9_1"
+
+		trigger = {
+			government = rtp_noble_g
+			religion = FROM
+		}
+
+		piety = 25
+
+		opinion = {
+			modifier = opinion_happy
+			who = FROM
+			years = 1
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.9_2"
+
+		trigger = {
+			government = rtp_lowborn_g
+			religion = FROM
+		}
+
+		random_list = {
+			10 = {
+				wealth = 15
+			}
+			20 = {
+				wealth = 10
+			}
+			30 = {
+				wealth = 5
+			}
+			50 = {
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.9_3"
+
+		trigger = {
+			NOT = {
+				religion = FROM
+			}
+		}
+		
+		piety = 25
+	}
+
+	option = {
+		name = "RTPfestivities.9_4"
+
+		trigger = {
+			religion = FROM
+		}
+
+		piety = 10
+	}
+}
+
+#Nerge
+character_event = {
+	id = RTPfestivities.10
+	title = "RTPfestivities.10_title"
+	desc = "RTPfestivities.10_desc"
+	picture = GFX_evt_hunt
+	is_triggered_only = yes
+	ai = no
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = "RTPfestivities.10_1"
+
+		trigger = {
+			government = rtp_noble_g
+		}
+
+		random_list = {
+			89 = {
+				prestige = 25
+			}
+			10 = {
+				prestige = 50
+				add_trait = wounded
+			}
+			1 = {
+				death = {
+					death_reason = death_execution_boar
+				}
+			}
+		}
+
+		opinion = {
+			modifier = opinion_happy
+			who = FROM
+			years = 1
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.10_2"
+
+		trigger = {
+			government = rtp_lowborn_g
+		}
+
+		random_list = {
+			10 = {
+				wealth = 15
+			}
+			20 = {
+				wealth = 10
+			}
+			30 = {
+				wealth = 5
+			}
+			50 = {
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.10_3"
+
+		trigger = {
+			government = rtp_lowborn_g
+		}
+
+		random_list = {
+			50 = {
+				wealth = 5
+			}
+			30 = {
+				wealth = 10
+			}
+			10 = {
+				wealth = 20
+			}
+			5 = {
+				wealth = 30
+				add_trait = wounded
+			}
+			4 = {
+				FROM = {
+					imprison = ROOT
+				}
+			}
+			1 = {
+				death = {
+					death_reason = death_accident_generic_beast
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.10_4"
+
+		piety = 10
+	}
+}
+
+#Ukon Juhla
+character_event = {
+	id = RTPfestivities.11
+	title = "RTPfestivities.11_title"
+	desc = "RTPfestivities.11_desc"
+	picture = GFX_evt_jugglers
+	is_triggered_only = yes
+	ai = no
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+	}
+
+	immediate = {
+		opinion = {
+			modifier = opinion_happy
+			who = FROM
+			years = 1
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.11_1"
+
+		trigger = {
+			wealth = 20
+		}
+
+		random_list = {
+			10 = {
+				wealth = -20
+			}
+			20 = {
+				wealth = -15
+			}
+			30 = {
+				wealth = -10
+			}
+			50 = {
+				wealth = -5
+			}
+		}
+
+		random_list = {
+			10 = {
+				prestige = 20
+			}
+			20 = {
+				prestige = 15
+			}
+			30 = {
+				prestige = 10
+			}
+			50 = {
+				prestige = 5
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.11_2"
+
+		trigger = {
+			piety = 20
+		}
+
+		random_list = {
+			10 = {
+				piety = -20
+			}
+			20 = {
+				piety = -15
+			}
+			30 = {
+				piety = -10
+			}
+			50 = {
+				piety = -5
+			}
+		}
+
+		random_list = {
+			10 = {
+				wealth = 20
+			}
+			20 = {
+				wealth = 15
+			}
+			30 = {
+				wealth = 10
+			}
+			50 = {
+				wealth = 5
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.11_3"
+
+		trigger = {
+			wealth = 5
+		}
+		
+		random_list = {
+			10 = {
+				piety = 30
+			}
+			20 = {
+				piety = 20
+			}
+			30 = {
+				piety = 10
+			}
+			40 = {
+				piety = 0
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.11_4"
+
+		piety = 10
+	}
+}
+
+#12
+
+#Uzgavenes
+character_event = {
+	id = RTPfestivities.13
+	title = "RTPfestivities.13_title"
+	desc = "RTPfestivities.13_desc"
+	picture = GFX_evt_mysterious_forest
+	is_triggered_only = yes
+	ai = no
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+	}
+
+	immediate = {
+		opinion = {
+			modifier = opinion_happy
+			who = FROM
+			years = 1
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.13_1"
+
+		trigger = {
+			wealth = 20
+		}
+
+		random_list = {
+			10 = {
+				wealth = -20
+			}
+			20 = {
+				wealth = -15
+			}
+			30 = {
+				wealth = -10
+			}
+			50 = {
+				wealth = -5
+			}
+		}
+
+		random_list = {
+			10 = {
+				prestige = 20
+			}
+			20 = {
+				prestige = 15
+			}
+			30 = {
+				prestige = 10
+			}
+			50 = {
+				prestige = 5
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.13_2"
+
+		trigger = {
+			piety = 20
+		}
+
+		random_list = {
+			10 = {
+				piety = -20
+			}
+			20 = {
+				piety = -15
+			}
+			30 = {
+				piety = -10
+			}
+			50 = {
+				piety = -5
+			}
+		}
+
+		random_list = {
+			10 = {
+				wealth = 20
+			}
+			20 = {
+				wealth = 15
+			}
+			30 = {
+				wealth = 10
+			}
+			50 = {
+				wealth = 5
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.13_3"
+
+		add_character_modifier = {
+			modifier = blessing_of_health
+			years = 1
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.13_4"
+
+		piety = 10
+	}
+}
+
+#Jarilo
+character_event = {
+	id = RTPfestivities.14
+	title = "RTPfestivities.14_title"
+	desc = "RTPfestivities.14_desc"
+	picture = GFX_evt_midwinter_blot_oldgods
+	is_triggered_only = yes
+	ai = no
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+	}
+
+	immediate = {
+		opinion = {
+			modifier = opinion_happy
+			who = FROM
+			years = 1
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.14_1"
+
+		trigger = {
+			wealth = 20
+		}
+
+		random_list = {
+			10 = {
+				wealth = -20
+			}
+			20 = {
+				wealth = -15
+			}
+			30 = {
+				wealth = -10
+			}
+			50 = {
+				wealth = -5
+			}
+		}
+
+		random_list = {
+			10 = {
+				prestige = 20
+			}
+			20 = {
+				prestige = 15
+			}
+			30 = {
+				prestige = 10
+			}
+			50 = {
+				prestige = 5
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.14_2"
+
+		trigger = {
+			piety = 20
+		}
+
+		random_list = {
+			10 = {
+				piety = -20
+			}
+			20 = {
+				piety = -15
+			}
+			30 = {
+				piety = -10
+			}
+			50 = {
+				piety = -5
+			}
+		}
+
+		random_list = {
+			10 = {
+				wealth = 20
+			}
+			20 = {
+				wealth = 15
+			}
+			30 = {
+				wealth = 10
+			}
+			50 = {
+				wealth = 5
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.13_3"
+
+		add_character_modifier = {
+			modifier = blessing_of_health
+			years = 1
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.14_4"
+
+		piety = 10
+	}
+}
+
+#Passover
+character_event = {
+	id = RTPfestivities.15
+	title = "RTPfestivities.15_title"
+	desc = "RTPfestivities.15_desc"
+	picture = GFX_evt_fancy_feast
+	is_triggered_only = yes
+	ai = no
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = "RTPfestivities.15_1"
+
+		trigger = {
+			government = rtp_noble_g
+		}
+
+		prestige = 10
+
+		opinion = {
+			modifier = opinion_happy
+			who = FROM
+			years = 1
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.15_2"
+
+		trigger = {
+			government = rtp_lowborn_g
+		}
+
+		wealth = -1
+
+		add_character_modifier = {
+			modifier = modifier_positive
+			years = 1
+		}
+		random = {
+			chance = 20
+			add_character_modifier = {
+				modifier = epic_hangover
+				months = 6
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.15_3"
+
+		trigger = {
+			government = rtp_lowborn_g
+		}
+
+		wealth = -5
+		
+		piety = 25
+	}
+
+	option = {
+		name = "RTPfestivities.15_4"
+
+		piety = 10
+	}
+}
+
+#Diwali Feast
+character_event = {
+	id = RTPfestivities.16
+	title = "RTPfestivities.16_title"
+	desc = "RTPfestivities.16_desc"
+	picture = GFX_evt_fancy_feast
+	is_triggered_only = yes
+	ai = no
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = "RTPfestivities.16_1"
+
+		trigger = {
+			government = rtp_noble_g
+		}
+
+		prestige = 10
+
+		opinion = {
+			modifier = opinion_happy
+			who = FROM
+			years = 1
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.16_2"
+
+		trigger = {
+			government = rtp_lowborn_g
+		}
+
+		wealth = -1
+
+		add_character_modifier = {
+			modifier = modifier_positive
+			years = 1
+		}
+		random = {
+			chance = 20
+			add_character_modifier = {
+				modifier = epic_hangover
+				months = 6
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.16_3"
+
+		trigger = {
+			government = rtp_lowborn_g
+		}
+
+		add_character_modifier = {
+			modifier = too_honest
+			years = 1
+		}
+
+		prestige = 25
+	}
+
+	option = {
+		name = "RTPfestivities.16_4"
+
+		piety = 10
+	}
+}
+
+#Zun Feast
+character_event = {
+	id = RTPfestivities.17
+	title = "RTPfestivities.17_title"
+	desc = "RTPfestivities.17_desc"
+	picture = GFX_evt_fancy_feast
+	is_triggered_only = yes
+	ai = no
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = "RTPfestivities.17_1"
+
+		trigger = {
+			government = rtp_noble_g
+		}
+
+		prestige = 10
+
+		opinion = {
+			modifier = opinion_happy
+			who = FROM
+			years = 1
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.17_2"
+
+		trigger = {
+			government = rtp_lowborn_g
+		}
+
+		wealth = -1
+
+		add_character_modifier = {
+			modifier = modifier_positive
+			years = 1
+		}
+		random = {
+			chance = 20
+			add_character_modifier = {
+				modifier = epic_hangover
+				months = 6
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.17_3"
+
+		trigger = {
+			government = rtp_lowborn_g
+		}
+
+		add_character_modifier = {
+			modifier = blessing_of_health
+			years = 1
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.17_4"
+
+		piety = 10
+	}
+}
+
+#Bema
+character_event = {
+	id = RTPfestivities.18
+	title = "RTPfestivities.18_title"
+	desc = "RTPfestivities.18_desc"
+	picture = GFX_evt_jugglers
+	is_triggered_only = yes
+	ai = no
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+	}
+
+	immediate = {
+		opinion = {
+			modifier = opinion_happy
+			who = FROM
+			years = 1
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.18_1"
+
+		trigger = {
+			wealth = 20
+		}
+
+		random_list = {
+			10 = {
+				wealth = -20
+			}
+			20 = {
+				wealth = -15
+			}
+			30 = {
+				wealth = -10
+			}
+			50 = {
+				wealth = -5
+			}
+		}
+
+		random_list = {
+			10 = {
+				prestige = 20
+			}
+			20 = {
+				prestige = 15
+			}
+			30 = {
+				prestige = 10
+			}
+			50 = {
+				prestige = 5
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.18_2"
+
+		trigger = {
+			piety = 20
+		}
+
+		random_list = {
+			10 = {
+				piety = -20
+			}
+			20 = {
+				piety = -15
+			}
+			30 = {
+				piety = -10
+			}
+			50 = {
+				piety = -5
+			}
+		}
+
+		random_list = {
+			10 = {
+				wealth = 20
+			}
+			20 = {
+				wealth = 15
+			}
+			30 = {
+				wealth = 10
+			}
+			50 = {
+				wealth = 5
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.18_3"
+		
+		add_character_modifier = {
+			modifier = wine_meat
+			years = 1
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.18_4"
+
+		piety = 10
+	}
+}
+
+#Jashn-e Sadeh
+character_event = {
+	id = RTPfestivities.19
+	title = "RTPfestivities.19_title"
+	desc = "RTPfestivities.19_desc"
+	picture = GFX_evt_campfire_hf
+	is_triggered_only = yes
+	ai = no
+	
+	trigger = {
+		rtp_is_capable_adult = yes
+	}
+
+	immediate = {
+		opinion = {
+			modifier = opinion_happy
+			who = FROM
+			years = 1
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.19_1"
+
+		trigger = {
+			wealth = 20
+		}
+
+		random_list = {
+			10 = {
+				wealth = -20
+			}
+			20 = {
+				wealth = -15
+			}
+			30 = {
+				wealth = -10
+			}
+			50 = {
+				wealth = -5
+			}
+		}
+
+		random_list = {
+			10 = {
+				prestige = 20
+			}
+			20 = {
+				prestige = 15
+			}
+			30 = {
+				prestige = 10
+			}
+			50 = {
+				prestige = 5
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.19_2"
+
+		trigger = {
+			piety = 20
+		}
+
+		random_list = {
+			10 = {
+				piety = -20
+			}
+			20 = {
+				piety = -15
+			}
+			30 = {
+				piety = -10
+			}
+			50 = {
+				piety = -5
+			}
+		}
+
+		random_list = {
+			10 = {
+				wealth = 20
+			}
+			20 = {
+				wealth = 15
+			}
+			30 = {
+				wealth = 10
+			}
+			50 = {
+				wealth = 5
+			}
+		}
+	}
+
+	option = {
+		name = "RTPfestivities.19_3"
+
+		trigger = {
+			government = rtp_noble_g
+		}
+		
+		liege = {
+			random = {
+				chance = 20
+				add_character_modifier = {
+					modifier = trade_district_fire
+					years = 1
+				}
+			}
+		}
+
+		prestige = 10
+	}
+
+	option = {
+		name = "RTPfestivities.19_4"
+
+		piety = 10
+	}
+}
+
+#20
+
+#21
+
+#22
+
+#Jews Expulsion
+character_event = {
+	id = RTPfestivities.23
+	title = "RTPfestivities.23_title"
+	desc = "RTPfestivities.23_desc"
+	picture = GFX_evt_bad_news
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPfestivities.23_1"
+
+		hidden_tooltip = {
+			rtp_flush_buildings = yes
+			rtp_flush_jobs = yes
+		}
+		clear_wealth = yes
+		set_defacto_liege = THIS
+	}
+}
+
+#Ping Events
+#####
+
+#MTTH Events
+#####

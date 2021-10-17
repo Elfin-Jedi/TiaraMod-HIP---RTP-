@@ -1,0 +1,41 @@
+imperialiste = {
+
+      ruler_designer_cost = 60
+
+
+personality = yes
+random = yes
+birth = 100
+
+  diplomacy = -3
+  intrigue = 3
+  martial = 3
+  combat_rating = 2
+
+  opposites = {
+			nonviolent
+            content
+            temperate
+  }
+  
+
+  general_opinion = -30
+  same_opinion = -30
+  opposite_opinion = -30
+  vassal_opinion = -20
+  ambition_opinion = -80
+  ai_rationality = 100
+  ai_zeal = 100
+  ai_greed = 100
+  ai_honor = -100
+  ai_ambition = 100
+  
+
+command_modifier = {
+	damage = 0.3
+        siege = 0.2
+        speed = 0.2
+        retreat = 0.4
+        center = 0.1
+    }
+}

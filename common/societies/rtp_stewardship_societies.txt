@@ -1,0 +1,1638 @@
+#####
+#Stewardship Society
+#
+#Total = 8
+#####
+
+#Europe
+rtp_stewardship_europe = {
+	sound = stewardship_society
+	society_ranks_gfx = generic_ranks
+	primary_attribute = stewardship
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		stewardship = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_stewardship_europe
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_stewardship_society #Bye Felicia!
+			}
+		}
+		top_liege = {
+			capital_scope = {
+				region = world_europe
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			society_member_of = rtp_stewardship_europe
+			top_liege = {
+				capital_scope = {
+					region = world_europe
+				}
+			}
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			global_tax_modifier = 0.05
+		}
+		decisions = {
+			rtp_stewardship_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			global_tax_modifier = 0.1
+			stewardship = 1
+			land_morale = -0.1
+		}
+		decisions = {
+			rtp_stewardship_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			global_tax_modifier = 0.15
+			stewardship = 2
+			land_morale = -0.1
+			combat_rating = -5
+		}
+		decisions = {
+			rtp_stewardship_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			global_tax_modifier = 0.2
+			stewardship = 3
+			land_morale = -0.1
+			combat_rating = -10
+		}
+		decisions = {
+			rtp_stewardship_p4_sd
+			rtp_stewardship_republic_sd
+			rtp_stewardship_merchant_republic_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_stewardship
+		
+		per_attribute = {
+			name = stewardship
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			stewardship = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			top_liege = {
+				capital_scope = {
+					region = world_europe
+				}
+			}
+		}
+	}
+}
+
+#Africa
+rtp_stewardship_africa = {
+	sound = stewardship_society
+	society_ranks_gfx = generic_ranks
+	primary_attribute = stewardship
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		stewardship = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_stewardship_africa
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_stewardship_society #Bye Felicia!
+			}
+		}
+		top_liege = {
+			capital_scope = {
+				region = world_africa
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			society_member_of = rtp_stewardship_africa
+			top_liege = {
+				capital_scope = {
+					region = world_africa
+				}
+			}
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			global_tax_modifier = 0.05
+		}
+		decisions = {
+			rtp_stewardship_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			global_tax_modifier = 0.1
+			stewardship = 1
+			land_morale = -0.1
+		}
+		decisions = {
+			rtp_stewardship_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			global_tax_modifier = 0.15
+			stewardship = 2
+			land_morale = -0.1
+			combat_rating = -5
+		}
+		decisions = {
+			rtp_stewardship_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			global_tax_modifier = 0.2
+			stewardship = 3
+			land_morale = -0.1
+			combat_rating = -10
+		}
+		decisions = {
+			rtp_stewardship_p4_sd
+			rtp_stewardship_republic_sd
+			rtp_stewardship_merchant_republic_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_stewardship
+		
+		per_attribute = {
+			name = stewardship
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			stewardship = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			top_liege = {
+				capital_scope = {
+					region = world_africa
+				}
+			}
+		}
+	}
+}
+
+#Asia Minor
+rtp_stewardship_asia_minor = {
+	sound = stewardship_society
+	society_ranks_gfx = generic_ranks
+	primary_attribute = stewardship
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		stewardship = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_stewardship_asia_minor
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_stewardship_society #Bye Felicia!
+			}
+		}
+		top_liege = {
+			capital_scope = {
+				region = world_asia_minor
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			society_member_of = rtp_stewardship_asia_minor
+			top_liege = {
+				capital_scope = {
+					region = world_asia_minor
+				}
+			}
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			global_tax_modifier = 0.05
+		}
+		decisions = {
+			rtp_stewardship_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			global_tax_modifier = 0.1
+			stewardship = 1
+			land_morale = -0.1
+		}
+		decisions = {
+			rtp_stewardship_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			global_tax_modifier = 0.15
+			stewardship = 2
+			land_morale = -0.1
+			combat_rating = -5
+		}
+		decisions = {
+			rtp_stewardship_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			global_tax_modifier = 0.2
+			stewardship = 3
+			land_morale = -0.1
+			combat_rating = -10
+		}
+		decisions = {
+			rtp_stewardship_p4_sd
+			rtp_stewardship_republic_sd
+			rtp_stewardship_merchant_republic_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_stewardship
+		
+		per_attribute = {
+			name = stewardship
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			stewardship = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			top_liege = {
+				capital_scope = {
+					region = world_asia_minor
+				}
+			}
+		}
+	}
+}
+
+#India
+rtp_stewardship_india = {
+	sound = stewardship_society
+	society_ranks_gfx = generic_ranks
+	primary_attribute = stewardship
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		stewardship = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_stewardship_india
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_stewardship_society #Bye Felicia!
+			}
+		}
+		top_liege = {
+			capital_scope = {
+				OR = {
+					region = world_india
+					region = world_china
+				}
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			society_member_of = rtp_stewardship_india
+			top_liege = {
+				capital_scope = {
+					OR = {
+						region = world_india
+						region = world_china
+					}
+				}
+			}
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			global_tax_modifier = 0.05
+		}
+		decisions = {
+			rtp_stewardship_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			global_tax_modifier = 0.1
+			stewardship = 1
+			land_morale = -0.1
+		}
+		decisions = {
+			rtp_stewardship_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			global_tax_modifier = 0.15
+			stewardship = 2
+			land_morale = -0.1
+			combat_rating = -5
+		}
+		decisions = {
+			rtp_stewardship_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			global_tax_modifier = 0.2
+			stewardship = 3
+			land_morale = -0.1
+			combat_rating = -10
+		}
+		decisions = {
+			rtp_stewardship_p4_sd
+			rtp_stewardship_republic_sd
+			rtp_stewardship_merchant_republic_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_stewardship
+		
+		per_attribute = {
+			name = stewardship
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			stewardship = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			top_liege = {
+				capital_scope = {
+					OR = {
+						region = world_india
+						region = world_china
+					}
+				}
+			}
+		}
+	}
+}
+
+#Persia
+rtp_stewardship_persia = {
+	sound = stewardship_society
+	society_ranks_gfx = generic_ranks
+	primary_attribute = stewardship
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		stewardship = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_stewardship_persia
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_stewardship_society #Bye Felicia!
+			}
+		}
+		top_liege = {
+			capital_scope = {
+				region = world_persia
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			society_member_of = rtp_stewardship_persia
+			top_liege = {
+				capital_scope = {
+					region = world_persia
+				}
+			}
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			global_tax_modifier = 0.05
+		}
+		decisions = {
+			rtp_stewardship_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			global_tax_modifier = 0.1
+			stewardship = 1
+			land_morale = -0.1
+		}
+		decisions = {
+			rtp_stewardship_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			global_tax_modifier = 0.15
+			stewardship = 2
+			land_morale = -0.1
+			combat_rating = -5
+		}
+		decisions = {
+			rtp_stewardship_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			global_tax_modifier = 0.2
+			stewardship = 3
+			land_morale = -0.1
+			combat_rating = -10
+		}
+		decisions = {
+			rtp_stewardship_p4_sd
+			rtp_stewardship_republic_sd
+			rtp_stewardship_merchant_republic_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_stewardship
+		
+		per_attribute = {
+			name = stewardship
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			stewardship = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			top_liege = {
+				capital_scope = {
+					region = world_persia
+				}
+			}
+		}
+	}
+}
+
+#Middle East
+rtp_stewardship_middle_east = {
+	sound = stewardship_society
+	society_ranks_gfx = generic_ranks
+	primary_attribute = stewardship
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		stewardship = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_stewardship_middle_east
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_stewardship_society #Bye Felicia!
+			}
+		}
+		top_liege = {
+			capital_scope = {
+				region = world_middle_east
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			society_member_of = rtp_stewardship_middle_east
+			top_liege = {
+				capital_scope = {
+					region = world_middle_east
+				}
+			}
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			global_tax_modifier = 0.05
+		}
+		decisions = {
+			rtp_stewardship_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			global_tax_modifier = 0.1
+			stewardship = 1
+			land_morale = -0.1
+		}
+		decisions = {
+			rtp_stewardship_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			global_tax_modifier = 0.15
+			stewardship = 2
+			land_morale = -0.1
+			combat_rating = -5
+		}
+		decisions = {
+			rtp_stewardship_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			global_tax_modifier = 0.2
+			stewardship = 3
+			land_morale = -0.1
+			combat_rating = -10
+		}
+		decisions = {
+			rtp_stewardship_p4_sd
+			rtp_stewardship_republic_sd
+			rtp_stewardship_merchant_republic_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_stewardship
+		
+		per_attribute = {
+			name = stewardship
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			stewardship = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			top_liege = {
+				capital_scope = {
+					region = world_middle_east
+				}
+			}
+		}
+	}
+}
+
+#Steppes
+rtp_stewardship_steppe = {
+	sound = stewardship_society
+	society_ranks_gfx = generic_ranks
+	primary_attribute = stewardship
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		stewardship = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_stewardship_steppe
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_stewardship_society #Bye Felicia!
+			}
+		}
+		top_liege = {
+			capital_scope = {
+				region = world_steppe
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			society_member_of = rtp_stewardship_steppe
+			top_liege = {
+				capital_scope = {
+					region = world_steppe
+				}
+			}
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			global_tax_modifier = 0.05
+		}
+		decisions = {
+			rtp_stewardship_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			global_tax_modifier = 0.1
+			stewardship = 1
+			land_morale = -0.1
+		}
+		decisions = {
+			rtp_stewardship_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			global_tax_modifier = 0.15
+			stewardship = 2
+			land_morale = -0.1
+			combat_rating = -5
+		}
+		decisions = {
+			rtp_stewardship_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			global_tax_modifier = 0.2
+			stewardship = 3
+			land_morale = -0.1
+			combat_rating = -10
+		}
+		decisions = {
+			rtp_stewardship_p4_sd
+			rtp_stewardship_republic_sd
+			rtp_stewardship_merchant_republic_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_stewardship
+		
+		per_attribute = {
+			name = stewardship
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			stewardship = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			top_liege = {
+				capital_scope = {
+					region = world_steppe
+				}
+			}
+		}
+	}
+}
+
+#Himalayas
+rtp_stewardship_himalayas = {
+	sound = stewardship_society
+	society_ranks_gfx = generic_ranks
+	primary_attribute = stewardship
+	opinion_to_other_members = 5
+	opinion_per_rank_above = 5
+	society_influence = no
+	indestructible = yes
+	member_score_per_attribute = 1
+	member_score_per_rank = 2
+	
+	active = {
+		always = yes
+	}
+	
+	can_join_society = {
+		stewardship = 5
+		lower_tier_than = KING
+		rtp_is_capable_adult = yes
+		NOR = {
+			AND = {
+				ai = yes
+				is_society_rank_full = {
+					society = rtp_stewardship_himalayas
+					rank = 1
+				}
+			}
+			custom_tooltip = {
+				text = "rtp_got_kicked_ct"
+				has_character_flag = rtp_kicked_from_stewardship_society #Bye Felicia!
+			}
+		}
+		top_liege = {
+			capital_scope = {
+				region = world_himalayas
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			society_member_of = rtp_stewardship_himalayas
+			top_liege = {
+				capital_scope = {
+					region = world_himalayas
+				}
+			}
+		}
+	}
+
+	potential = {
+		lower_tier_than = KING
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 50
+		startup_limit = 50
+		modifier = {
+			global_tax_modifier = 0.05
+		}
+		decisions = {
+			rtp_stewardship_p1_sd
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 30
+		startup_limit = 30
+		modifier = {
+			global_tax_modifier = 0.1
+			stewardship = 1
+			land_morale = -0.1
+		}
+		decisions = {
+			rtp_stewardship_p2_sd
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 15
+		startup_limit = 15
+		modifier = {
+			global_tax_modifier = 0.15
+			stewardship = 2
+			land_morale = -0.1
+			combat_rating = -5
+		}
+		decisions = {
+			rtp_stewardship_p3_sd
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 5
+		startup_limit = 5
+		modifier = {
+			global_tax_modifier = 0.2
+			stewardship = 3
+			land_morale = -0.1
+			combat_rating = -10
+		}
+		decisions = {
+			rtp_stewardship_p4_sd
+			rtp_stewardship_republic_sd
+			rtp_stewardship_merchant_republic_sd
+		}
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_rtp_stewardship
+		
+		per_attribute = {
+			name = stewardship
+			value = 1
+		}
+	}
+
+	member_score = {
+		value = 1
+
+		modifier = {
+			factor = 2
+
+			custom_tooltip = {
+				text = "rtp_is_a_noble_ct"
+
+				OR = {
+					AND = {
+						ai = yes
+						is_ruler = no
+						NOT = {
+							dynasty = none
+						}
+					}
+					AND = {
+						ai = no
+						rtp_is_landless = yes
+						NOT = {
+							dynasty = 19930
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 3
+
+			custom_tooltip = {
+				text = "rtp_is_a_baron_ct"
+
+				OR = {
+					tier = BARON
+					rtp_is_baron = yes
+				}
+			}
+		}
+
+		modifier = {
+			factor = 4
+
+			custom_tooltip = {
+				text = "rtp_is_a_count_ct"
+
+				tier = COUNT
+				is_landed = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+
+			custom_tooltip = {
+				text = "rtp_is_a_duke_ct"
+
+				tier = DUKE
+				is_landed = yes
+			}
+		}
+	}
+	
+	startup_populate = {
+		trigger = {
+			ai = yes
+			stewardship = 5
+			is_female = no
+			lower_tier_than = KING
+			rtp_is_capable_adult = yes
+			is_in_society = no
+			top_liege = {
+				capital_scope = {
+					region = world_himalayas
+				}
+			}
+		}
+	}
+}

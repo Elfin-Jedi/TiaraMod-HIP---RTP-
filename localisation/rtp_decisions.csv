@@ -1,0 +1,361 @@
+rtp_claim_nobility_d;Claim Nobility;;;;;;x
+rtp_claim_nobility_d_desc;Tales of my deeds have reached many realms. It is time for me to gain a place amongst the nobility.;;;;;;x
+
+rtp_abandon_titles_d;Abandon Titles;;;;;;x
+rtp_abandon_titles_d_desc;Forget this sedentary life. I want to see the world!;;;;;;x
+
+rtp_raise_troops_d;Raise Troops;;;;;;x
+rtp_raise_troops_d_desc;I can raise my troops.;;;;;;x
+
+rtp_raise_volunteers_d;Raise Volunteers;;;;;;x
+rtp_raise_volunteers_d_desc;I can raise my volunteers.;;;;;;x
+
+rtp_raise_zealouts_d;Raise Zealots;;;;;;x
+rtp_raise_zealouts_d_desc;I can raise my [Root.Religion.GetName] zealots and declare war on [Root.TopLiege.GetTitledName].;;;;;;x
+
+rtp_raise_patriots_d;Raise Patriots;;;;;;x
+rtp_raise_patriots_d_desc;I can raise my [Root.Culture.GetName] patriots and declare war on [Root.TopLiege.GetTitledName].;;;;;;x
+
+rtp_visit_doctor_d;Visit Doctor;;;;;;x
+rtp_visit_doctor_d_desc;I can go see the local doctor.;;;;;;x
+
+rtp_found_trade_company_d;Overtake Trade Company;;;;;;x
+rtp_found_trade_company_d_desc;I have accumulated enough gold to overtake one of the existing trade companies.;;;;;;x
+
+rtp_found_mercenary_company_d;Found Mercenary Company;;;;;;x
+rtp_found_mercenary_company_d_desc;My fame has spread around [Root.Capital.GetName] so much that many are willing to follow me in search of fame and wealth.;;;;;;x
+
+rtp_found_holy_order_d;Found Holy Order;;;;;;x
+rtp_found_holy_order_d_desc;I shall become the true defender of the [Root.Religion.GetName] faith. [Root.Religion.GetHighGodName] be praised!;;;;;;x
+
+rtp_pray_d;Pray;;;;;;x
+rtp_pray_d_desc;Say a prayer to [Root.Religion.GetHighGodName] in order to possibly receive a random boon.;;;;;;x
+
+rtp_gamble_d;Gamble;;;;;;x
+rtp_gamble_d_desc;I have some spare coins which can be used for gambling.;;;;;;x
+
+rtp_arena_d;Fight in the Arena;;;;;;x
+rtp_arena_d_desc;Prove yourself in the Arena as you are pitted against a random combatant.;;;;;;x
+
+rtp_enable_piracy_d;Piracy;;;;;;x
+rtp_enable_piracy_d_desc;As Privateers we may raise the black flag in order to collect extra income...neighboring rulers might not like it though.;;;;;;x
+
+rtp_quit_job_d;Quit Job;;;;;;x
+rtp_quit_job_d_desc;I don't like this job anymore.;;;;;;x
+
+rtp_find_spouse_d;Find a Spouse;;;;;;x
+rtp_find_spouse_d_desc;I have yet to get married. Perhaps I should go look for one.;;;;;;x
+
+rtp_seek_members_d;Seek Confederation Members;;;;;;x
+rtp_seek_members_d_desc;As the President of this Confederation, I can choose to invite more people to the league.;;;;;;x
+
+rtp_visit_marketplace_d;Visit Marketplace;;;;;;x
+rtp_visit_marketplace_d_desc;I wonder what sort of goods they are currently selling down at the marketplace.;;;;;;x
+
+#####
+#House/Manor Decisions
+#####
+
+rtp_purchase_house_d;Buy a House;;;;;;x
+rtp_purchase_house_d_desc;I saved enough money to buy a house.;;;;;;x
+
+rtp_purchase_chickens_d;Buy some Chickens;;;;;;x
+rtp_purchase_chickens_d_desc;I saved enough money to buy some chickens.;;;;;;x
+
+rtp_purchase_statuette_d;Buy a Statuette;;;;;;x
+rtp_purchase_statuette_d_desc;I saved enough money to buy a statuette.;;;;;;x
+
+rtp_purchase_fence_d;Buy a Fence;;;;;;x
+rtp_purchase_fence_d_desc;I saved enough money to buy a fence.;;;;;;x
+
+rtp_purchase_cows_d;Buy some Cows;;;;;;x
+rtp_purchase_cows_d_desc;I saved enough money to buy some cows.;;;;;;x
+
+rtp_purchase_tub_d;Buy a Tub;;;;;;x
+rtp_purchase_tub_d_desc;I saved enough money to buy a tub.;;;;;;x
+
+rtp_purchase_candles_d;Buy some Candles;;;;;;x
+rtp_purchase_candles_d_desc;I saved enough money to buy some candles.;;;;;;x
+
+rtp_purchase_fireplace_d;Buy a Fireplace;;;;;;x
+rtp_purchase_fireplace_d_desc;I saved enough money to buy a fireplace.;;;;;;x
+
+rtp_purchase_sheep_d;Buy some Sheep;;;;;;x
+rtp_purchase_sheep_d_desc;I saved enough money to buy some sheep.;;;;;;x
+
+rtp_purchase_latrine_d;Buy a Latrine;;;;;;x
+rtp_purchase_latrine_d_desc;I saved enough money to buy a latrine.;;;;;;x
+
+rtp_purchase_mansion_d;Buy a Manor;;;;;;x
+rtp_purchase_mansion_d_desc;I saved enough money to buy a manor.;;;;;;x
+
+rtp_purchase_farmland_d;Buy a Farmland;;;;;;x
+rtp_purchase_farmland_d_desc;I saved enough money to buy some farmland.;;;;;;x
+
+rtp_purchase_shrine_d;Buy a Shrine;;;;;;x
+rtp_purchase_shrine_d_desc;I saved enough money to buy a shrine.;;;;;;x
+
+rtp_purchase_wall_d;Buy a Wall;;;;;;x
+rtp_purchase_wall_d_desc;I saved enough money to buy a wall.;;;;;;x
+
+rtp_purchase_mine_d;Buy a Mine;;;;;;x
+rtp_purchase_mine_d_desc;I saved enough money to buy a mine.;;;;;;x
+
+rtp_purchase_garden_d;Buy a Garden;;;;;;x
+rtp_purchase_garden_d_desc;I saved enough money to buy a garden.;;;;;;x
+
+rtp_purchase_library_d;Buy a Library;;;;;;x
+rtp_purchase_library_d_desc;I saved enough money to buy a library.;;;;;;x
+
+rtp_purchase_painting_d;Buy a Painting;;;;;;x
+rtp_purchase_painting_d_desc;I saved enough money to buy a painting.;;;;;;x
+
+rtp_purchase_stable_d;Buy a Stable;;;;;;x
+rtp_purchase_stable_d_desc;I saved enough money to buy a stable.;;;;;;x
+
+rtp_purchase_fountain_d;Buy a Fountain;;;;;;x
+rtp_purchase_fountain_d_desc;I saved enough money to buy a fountain.;;;;;;x
+
+#####
+#Title Decisions
+#####
+
+rtp_preach_religion_tid;Preach Religion;;;;;;x
+rtp_preach_religion_tid_desc;The inhabitants of this province do not share my religion. I shall preach the words of [From.Religion.GetScriptureName].;;;;;;x
+
+rtp_move_realm_tid;Move;;;;;;x
+rtp_move_realm_tid_desc;There is nothing left for my family in this realm.  For a price, I may move to a different realm.;;;;;;x
+
+rtp_purchase_holding_tid;Purchase Holding;;;;;;x
+rtp_purchase_holding_tid_desc;I could build a new holding in this province, as long as I have the coin to pay for it.;;;;;;x
+
+rtp_purchase_county_tid;Purchase County;;;;;;x
+rtp_purchase_county_tid_desc;My liege would be willing to grant me a County as long as I am willing to pay for it.;;;;;;x
+
+rtp_recruit_volunteers_tid;Recruit Volunteers;;;;;;x
+rtp_recruit_volunteers_tid_desc;I can search around [Root.GetName] in search for volunteers for my army.;;;;;;x
+
+rtp_recruit_zealots_tid;Recruit Zealots;;;;;;x
+rtp_recruit_zealots_tid_desc;I can search around [Root.GetName] in search for zealouts willing to overthrow the current religion.;;;;;;x
+
+rtp_recruit_patriots_tid;Recruit Patriots;;;;;;x
+rtp_recruit_patriots_tid_desc;I can search around [Root.GetName] in search for patriots willing to overthrow the current culture.;;;;;;x
+
+rtp_build_workshop_tid;Build Workshop;;;;;;x
+rtp_build_workshop_tid_desc;[Root.GetName] is currently lacking a workshop. I could spend some coin in order to establish one.;;;;;;x
+
+rtp_steal_trade_goods_tid;Steal Trade Goods;;;;;;x
+rtp_steal_trade_goods_tid_desc;[Root.GetName] is host of a quality workshop. I can send some of my volunteers to "acquire" a few of those goods.;;;;;;x
+
+rtp_raid_holding_tid;Raid Holding;;;;;;x
+rtp_raid_holding_tid_desc;Me and my men can raid and loot [Root.GetName] in order to acquire some gold coins from it. We must surely be ready to leave this realm after the deed is done.;;;;;;x
+
+rtp_set_up_bandit_hideout_tid;Set up Bandit Hideout;;;;;;x
+rtp_set_up_bandit_hideout_tid_desc;[Root.GetName] seems like a great place to establish a hideout. I can send some of my volunteers set up one.;;;;;;x
+
+rtp_destroy_bandit_hideout_tid;Destroy Bandit Hideout;;;;;;x
+rtp_destroy_bandit_hideout_tid_desc;These bandits have been harassing the good citizens of [Root.GetName] for far too long. Time to flush them out.;;;;;;x
+
+#####
+#Targeted Decisions
+#####
+
+rtp_money_favor_td;Money Favor;;;;;;x
+rtp_money_favor_td_desc;[Root.GetTitledName] owes me a favor. I can demand money from [Root.GetHerHim].;;;;;;x
+
+rtp_prestige_favor_td;Prestige Favor;;;;;;x
+rtp_prestige_favor_td_desc;[Root.GetTitledName] owes me a favor. I can demand recognition as a prestigious [From.GetManWoman] from [Root.GetHerHim].;;;;;;x
+
+rtp_piety_favor_td;Piety Favor;;;;;;x
+rtp_piety_favor_td_desc;[Root.GetTitledName] owes me a favor. I can demand recognition as a pious [From.GetManWoman] from [Root.GetHerHim].;;;;;;x
+
+rtp_roll_dice_td;Roll Dice;;;;;;x
+rtp_roll_dice_td_desc;Roll a 10 sided dice.\n\nMake sure to turn §YNotification Events§! in the §YMessage Settings§! to §YPriority 2§! in order to see the results!;;;;;;x
+
+rtp_challenge_tribal_ruler_td;Challenge Ruler;;;;;;x
+rtp_challenge_tribal_ruler_td_desc;The people of the local tribes know me as a prestigious man. I may challenge the local ruler in a duel and become their new Chief.;;;;;;x
+
+rtp_start_auto_seduce_td;Start Automatic Seduction;;;;;;x
+rtp_start_auto_seduce_td_desc;You will automatically seduce people.;;;;;;x
+
+rtp_stop_auto_seduce_td;Stop Automatic Seduction;;;;;;x
+rtp_stop_auto_seduce_td_desc;You will no longer automatically seduce people.;;;;;;x
+
+rtp_start_auto_spy_td;Start Automatic Spying;;;;;;x
+rtp_start_auto_spy_td_desc;You will automatically spy on people.;;;;;;x
+
+rtp_stop_auto_spy_td;Stop Automatic Spying;;;;;;x
+rtp_stop_auto_spy_td_desc;You will no longer automatically spy on people.;;;;;;x
+
+rtp_start_auto_carousing_td;Start Automatic Carousing;;;;;;x
+rtp_start_auto_carousing_td_desc;You will automatically organize parties.;;;;;;x
+
+rtp_stop_auto_carousing_td;Stop Automatic Carousing;;;;;;x
+rtp_stop_auto_carousing_td_desc;You will no longer automatically organize parties.;;;;;;x
+
+#####
+#Artifact Decisions
+#####
+
+rtp_use_jade_dragon_d;Use Jade Dragon;;;;;;x
+rtp_use_jade_dragon_d_desc;Spawn a 1000 men regiment to aid you in your war.;;;;;;x
+
+rtp_use_dragon_amulet_d;Use Dragon Amulet;;;;;;x
+rtp_use_dragon_amulet_d_desc;Makes your current vassals have a +50 opinion of you for 50 years.;;;;;;x
+
+rtp_use_water_clock_d;Use Water Clock;;;;;;x
+rtp_use_water_clock_d_desc;You become 5 years younger.;;;;;;x
+
+rtp_use_emerald_tablet_d;Use Emerald Tablet;;;;;;x
+rtp_use_emerald_tablet_d_desc;Gives +25 Military, Economy, or Culture Technology Points.;;;;;;x
+
+
+rtp_switch_hand_knife_td;Switch Hand;;;;;;x
+rtp_switch_hand_knife_td_desc;Switches the hand holding the §YKnife§!.;;;;;;x
+
+rtp_switch_hand_dagger_td;Switch Hand;;;;;;x
+rtp_switch_hand_dagger_td_desc;Switches the hand holding the §YDagger§!.;;;;;;x
+
+rtp_switch_hand_rondeldagger_td;Switch Hand;;;;;;x
+rtp_switch_hand_rondeldagger_td_desc;Switches the hand holding the §YRondel Dagger§!.;;;;;;x
+
+
+rtp_switch_hand_shortsword_td;Switch Hand;;;;;;x
+rtp_switch_hand_shortsword_td_desc;Switches the hand holding the §YShortsword§!.;;;;;;x
+
+rtp_switch_hand_scimitar_td;Switch Hand;;;;;;x
+rtp_switch_hand_scimitar_td_desc;Switches the hand holding the §YScimitar§!.;;;;;;x
+
+rtp_switch_hand_falchion_td;Switch Hand;;;;;;x
+rtp_switch_hand_falchion_td_desc;Switches the hand holding the §YFalchion§!.;;;;;;x
+
+
+rtp_switch_hand_woodenstick_td;Switch Hand;;;;;;x
+rtp_switch_hand_woodenstick_td_desc;Switches the hand holding the §YWoodenstick§!.;;;;;;x
+
+rtp_switch_hand_bludgeon_td;Switch Hand;;;;;;x
+rtp_switch_hand_bludgeon_td_desc;Switches the hand holding the §YBludgeon§!.;;;;;;x
+
+rtp_switch_hand_morningstar_td;Switch Hand;;;;;;x
+rtp_switch_hand_morningstar_td_desc;Switches the hand holding the §YMorning Star§!.;;;;;;x
+
+
+rtp_switch_hand_boarspear_td;Switch Hand;;;;;;x
+rtp_switch_hand_boarspear_td_desc;Switches the hand holding the §YBoarspear§!.;;;;;;x
+
+rtp_switch_hand_militiaspear_td;Switch Hand;;;;;;x
+rtp_switch_hand_militiaspear_td_desc;Switches the hand holding the §YMilitia Spear§!.;;;;;;x
+
+rtp_switch_hand_fightingspear_td;Switch Hand;;;;;;x
+rtp_switch_hand_fightingspear_td_desc;Switches the hand holding the §YFighting Spear§!.;;;;;;x
+
+
+rtp_switch_hand_hatchet_td;Switch Hand;;;;;;x
+rtp_switch_hand_hatchet_td_desc;Switches the hand holding the §YHatchet§!.;;;;;;x
+
+rtp_switch_hand_handaxe_td;Switch Hand;;;;;;x
+rtp_switch_hand_handaxe_td_desc;Switches the hand holding the §YHandaxe§!.;;;;;;x
+
+rtp_switch_hand_fightingaxe_td;Switch Hand;;;;;;x
+rtp_switch_hand_fightingaxe_td_desc;Switches the hand holding the §YFighting Axe§!.;;;;;;x
+
+
+rtp_switch_hand_woodenflail_td;Switch Hand;;;;;;x
+rtp_switch_hand_woodenflail_td_desc;Switches the hand holding the §YWooden Flail§!.;;;;;;x
+
+rtp_switch_hand_reinforcedwoodenflail_td;Switch Hand;;;;;;x
+rtp_switch_hand_reinforcedwoodenflail_td_desc;Switches the hand holding the §YReinforced Wooden Flail§!.;;;;;;x
+
+rtp_switch_hand_flail_td;Switch Hand;;;;;;x
+rtp_switch_hand_flail_td_desc;Switches the hand holding the §YFlail§!.;;;;;;x
+
+
+rtp_switch_hand_butchercleaver_td;Switch Hand;;;;;;x
+rtp_switch_hand_butchercleaver_td_desc;Switches the hand holding the §YButcher's Cleaver§!.;;;;;;x
+
+rtp_switch_hand_scramasax_td;Switch Hand;;;;;;x
+rtp_switch_hand_scramasax_td_desc;Switches the hand holding the §YScramasax§!.;;;;;;x
+
+rtp_switch_hand_militarycleaver_td;Switch Hand;;;;;;x
+rtp_switch_hand_militarycleaver_td_desc;Switches the hand holding the §YMilitary Cleaver§!.;;;;;;x
+
+
+rtp_switch_hand_pickaxe_td;Switch Hand;;;;;;x
+rtp_switch_hand_pickaxe_td_desc;Switches the hand holding the §YPickaxe§!.;;;;;;x
+
+rtp_switch_hand_militarypick_td;Switch Hand;;;;;;x
+rtp_switch_hand_militarypick_td_desc;Switches the hand holding the §YMilitary Pick§!.;;;;;;x
+
+rtp_switch_hand_warhammer_td;Switch Hand;;;;;;x
+rtp_switch_hand_warhammer_td_desc;Switches the hand holding the §YWarhammer§!.;;;;;;x
+
+
+rtp_use_ancientskull_td;Use Ancient Skull;;;;;;x
+rtp_use_ancientskull_td_desc;Infect the target a random supernatural curse.;;;;;;x
+
+rtp_use_chinese_arm_protector_td;Use Chinese Arm Protector;;;;;;x
+rtp_use_chinese_arm_protector_td_desc;Gives the target +10 health for 1 year.;;;;;;x
+
+rtp_shroud_of_jesus_td;Use Shroud of Jesus;;;;;;x
+rtp_shroud_of_jesus_td_desc;Cures the target of a disease.;;;;;;x
+
+rtp_holy_grail_td;Use Holy Grail;;;;;;x
+rtp_holy_grail_td_desc;Gives the target +0.2 health.;;;;;;x
+
+rtp_holy_chalice_td;Use Holy Chalice;;;;;;x
+rtp_holy_chalice_td_desc;Gives the target +0.2 health.;;;;;;x
+
+rtp_bones_of_st_peter_td;Use Bones of St. Peter;;;;;;x
+rtp_bones_of_st_peter_td_desc;Cures the target of a disease.;;;;;;x
+
+rtp_fragment_of_true_cross_td;Use Nail of the True Cross;;;;;;x
+rtp_fragment_of_true_cross_td_desc;Cures the target of a disease.;;;;;;x
+
+rtp_holy_foreskin_td;Use Holy Prepuce;;;;;;x
+rtp_holy_foreskin_td_desc;Cures the target of a disease.;;;;;;x
+
+rtp_fingerbone_of_saint_td;Use Saint's Fingerbone;;;;;;x
+rtp_fingerbone_of_saint_td_desc;Cures the target of a disease.;;;;;;x
+
+rtp_finger_of_st_john_td;Use Finger of St. John;;;;;;x
+rtp_finger_of_st_john_td_desc;Cures the target of a disease.;;;;;;x
+
+rtp_chains_of_st_peter_td;Use Chains of St. Peter;;;;;;x
+rtp_chains_of_st_peter_td_desc;Cures the target of a disease.;;;;;;x
+
+rtp_right_hand_st_demetrius_td;Use Right Hand of St. Demetrius;;;;;;x
+rtp_right_hand_st_demetrius_td_desc;Cures the target of a disease.;;;;;;x
+
+rtp_veil_of_veronica_td;Use Veil of Veronica;;;;;;x
+rtp_veil_of_veronica_td_desc;Cures the target of a disease.;;;;;;x
+
+rtp_image_of_edessa_td;Use Image of Edessa;;;;;;x
+rtp_image_of_edessa_td_desc;Cures the target of a disease.;;;;;;x
+
+rtp_remains_of_st_cessianus_td;Use Remains of St. Cessianus;;;;;;x
+rtp_remains_of_st_cessianus_td_desc;Cures the target of a disease.;;;;;;x
+
+#####
+#Tooltips
+#####
+
+rtp_become_feudal_ct;Become §YFeudal§!;;;;;;x
+rtp_become_republic_ct;Become a §YRepublic§!;;;;;;x
+rtp_become_merchant_republic_ct;Become a §YMerchant Republic§!;;;;;;x
+rtp_become_privateer_ct;Become a §YPrivateer§!;;;;;;x
+rtp_become_confederation_ct;Become a §YConfederation§!;;;;;;x
+rtp_become_mercenary_ct;Become a §YMercenary Company§!;;;;;;x
+rtp_become_theocracy_ct;Become a §YTheocracy§!;;;;;;x
+rtp_become_holy_order_ct;Become a §YHoly Order§!;;;;;;x
+rtp_become_tribal_ct;Become a §YTribe§!;;;;;;x
+rtp_become_nomad_ct;Become a §YNomad§!;;;;;;x
+rtp_become_patrician_ct;Become a §YPatrician§!;;;;;;x
+rtp_be_closer_ct;Be within diplomatic range!;;;;;;x
+rtp_be_higher_tier_ct;The top liege must be atleast of DUKE tier!;;;;;;x
+rtp_can_read_ct;Can §YRead§!;;;;;;x
+rtp_troops;Troops;;;;;;x
+rtp_volunteers;Volunteers;;;;;;x
+rtp_zealouts;Pledged [Root.Religion.GetName] Counties;;;;;;x
+rtp_patriots;Pledged [Root.Culture.GetName] Counties;;;;;;x
+rtp_use_ancientskull_ct;Infect the target with a random disease.;;;;;;x
+rtp_will_destroy_workshop_ct;Will destroy the local trade goods workshop!.;;;;;;x

@@ -1,0 +1,89 @@
+#####
+#Events
+#####
+
+RTPdisease.2_title;Sanguinare Vampiris;;;;;;x
+RTPdisease.2_desc;You feel weakened by the sunlight and feel a strange thirst as the sun sets. You have contracted Sanguinare Vampiris.;;;;;;x
+RTPdisease.2_1;Alas!;;;;;;x
+
+RTPdisease.3_title;Sanguinare Vampiris;;;;;;x
+RTPdisease.3.1_desc;You can finally go outside without the constant need of shade and water once again quenches your thirst. You no longer suffer from Sanguinare Vampiris.;;;;;;x
+RTPdisease.3.2_desc;You have become pale and fangs have grown out of your mouth. You are now a Vampire.;;;;;;x
+RTPdisease.3_1;Such a beautiful day outside!;;;;;;x
+RTPdisease.3_2;That neck looks tasty.;;;;;;x
+
+RTPdisease.4_title;Seeking Blood;;;;;;x
+RTPdisease.4.1_desc;It has been quite some time since I quenched my thirst with the blood of a noble. At night I slipped into [rtp_victim.GetTitledName]'s room and began feeding on [rtp_victim.GetHerHim].;;;;;;x
+RTPdisease.4.2_desc;It has been quite some time since I quenched my thirst with the blood of a noble. At night I slipped into [rtp_victim.GetTitledName]'s room and, as I began feeding on [rtp_victim.GetHerHim], [rtp_victim.GetSheHe] pushed me away and began yelling out for the guards.;;;;;;x
+RTPdisease.4_1;Well worth the risk.;;;;;;x
+RTPdisease.4_2;This is bad!.;;;;;;x
+
+RTPdisease.5_title;Sanies Lupinus;;;;;;x
+RTPdisease.5_desc;You feel angry all the time and periodically let out terrifying screams. You have contracted Sanies Lupinus.;;;;;;x
+RTPdisease.5_1;Alas!;;;;;;x
+
+RTPdisease.6_title;Sanies Lupinus;;;;;;x
+RTPdisease.6.1_desc;You can finally have a normal conversation with people and the constant rage is gone. You no longer suffer from Sanies Lupinus.;;;;;;x
+RTPdisease.6.2_desc;You have become furry and claws have grown out of your hands. You are now a Werewolf.;;;;;;x
+RTPdisease.6_1;Sorry for being such an ass.;;;;;;x
+RTPdisease.6_2;The hunt calls out to me!;;;;;;x
+
+RTPdisease.7_title;The Hunt Calls;;;;;;x
+RTPdisease.7.1_desc;It is a special night today. The full moon is glimmering the sky and I feel a hunger that can only be satisfied by feeding off a noble. At night I encounter [rtp_victim.GetTitledName] and [rtp_victim.GetHerHis] escort travelling the countryside. I killed the guards and managed to claw [rtp_victim.GetTitledName].;;;;;;x
+RTPdisease.7.2_desc;It is a special night today. The full moon is glimmering the sky and I feel a hunger that can only be satisfied by feeding off a noble. At night I encounter [rtp_victim.GetTitledName] and [rtp_victim.GetHerHis] escort travelling the countryside. They surely were well prepared for the encounter as they quickly formed a shieldwall.;;;;;;x
+RTPdisease.7_1;AWOOOOO!!!;;;;;;x
+RTPdisease.7_2;*Whimpering noises*;;;;;;x
+
+RTPdisease.8_title;Corruption;;;;;;x
+RTPdisease.8_desc;You see dark entities and are often seen talking to yourself. You have contracted Corruption.;;;;;;x
+RTPdisease.8_1;Alas!;;;;;;x
+
+RTPdisease.9_title;Corruption;;;;;;x
+RTPdisease.9.1_desc;You no longer see dark visions and the whispers are gone. You no longer suffer from Corruption.;;;;;;x
+RTPdisease.9.2_desc;Your body has grown razor sharp bones sticking out of the flesh and your eyes have a demonic look to them. You are now a Cursed.;;;;;;x
+RTPdisease.9_1;Where am I?;;;;;;x
+RTPdisease.9_2;I will do [Root.Religion.GetRandomEvilGodNameCap]'s bidding.;;;;;;x
+
+RTPdisease.10_title;The Rite;;;;;;x
+RTPdisease.10.1_desc;[Root.Religion.GetRandomEvilGodNameCap] has whispered to me today. A new person is fit to join our ranks and I am to carry out the request. At night I slipped into [rtp_victim.GetTitledName]'s manor and infused [rtp_victim.GetHerHim] with my cursed blood.;;;;;;x
+RTPdisease.10.2_desc;[Root.Religion.GetRandomEvilGodNameCap] has whispered to me today. A new person is fit to join our ranks and I am to carry out the request. At night I slipped into [rtp_victim.GetTitledName]'s manor and unfortunately alerted the guard dogs of my presence.;;;;;;x
+RTPdisease.10_1;Good...until the last drop.;;;;;;x
+RTPdisease.10_2;May [Root.Religion.GetRandomGodNameCap] take you!;;;;;;x
+
+RTPdisease.11_title;Mana Poisoning;;;;;;x
+RTPdisease.11_desc;You have blurry vision and are always exhausted. You have contracted Mana Poisoning.;;;;;;x
+RTPdisease.11_1;Alas!;;;;;;x
+
+RTPdisease.12_title;Mana Poisoning;;;;;;x
+RTPdisease.12.1_desc;Your energy is back and you can see clearly again. You no longer suffer from Mana Poisoning.;;;;;;x
+RTPdisease.12.2_desc;You feel a strange power flowing through your veins and a luminescent aura surrounds you. You are now a Mage.;;;;;;x
+RTPdisease.12_1;Well...back to work!;;;;;;x
+RTPdisease.12_2;Unlimited power!;;;;;;x
+
+RTPdisease.13_title;Recharge;;;;;;x
+RTPdisease.13.1_desc;My mana has been running low for quite sometime and I finally found a suitable candidate with enough of it to sustain me for a couple of years. At night I slipped into [rtp_victim.GetTitledName]'s room and began absorbing mana from [rtp_victim.GetHerHim].;;;;;;x
+RTPdisease.13.2_desc;My mana has been running low for quite sometime and I finally found a suitable candidate with enough of it to sustain me for a couple of years. At night I slipped into [rtp_victim.GetTitledName]'s room and [rtp_victim.GetSheHe] was missing from [rtp_victim.GetHerHis] bed.;;;;;;x
+RTPdisease.13_1;I feel recharged!;;;;;;x
+RTPdisease.13_2;I need to get out of here!;;;;;;x
+
+RTPdisease.14_title;Symphony;;;;;;x
+RTPdisease.14_desc;You vomit balls of hair and you tend to forget a lot of things. You have contracted Symphony.;;;;;;x
+RTPdisease.14_1;Alas!;;;;;;x
+
+RTPdisease.15_title;Symphony;;;;;;x
+RTPdisease.15.1_desc;Your memory is starting to come back and you no longer puke hair. You no longer suffer from Symphony.;;;;;;x
+RTPdisease.15.2_desc;You can communicate with animals and your image cannot be seen in mirrors. You are now a Shapeshifter.;;;;;;x
+RTPdisease.15_1;What was I doing again?;;;;;;x
+RTPdisease.15_2;I also like milk Ser Pounce-A-Lot.;;;;;;x
+
+RTPdisease.16_title;Steal Memories;;;;;;x
+RTPdisease.16.1_desc;The ability of shapeshifting has made my mind quite fragile and I am starting to forget how to be human. At night I slipped into [rtp_victim.GetTitledName]'s room and began transferring memories from [rtp_victim.GetHerHim] to myself.;;;;;;x
+RTPdisease.16.2_desc;The ability of shapeshifting has made my mind quite fragile and I am starting to forget how to be human. At night I slipped into [rtp_victim.GetTitledName]'s room and [rtp_victim.GetHerHis] memories made me scream.;;;;;;x
+RTPdisease.16_1;Ah so that is why we wear clothes!;;;;;;x
+RTPdisease.16_2;What is wrong with you!;;;;;;x
+
+#####
+#Tooltips
+#####
+
+rtp_known_abomination_ct;Your true form is now revealed!;;;;;;x

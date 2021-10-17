@@ -1,0 +1,6506 @@
+#####################################################################
+############################ INDEX ##################################
+#####################################################################
+### ANYONE ADDING WONDERS: Keep this updated, please!
+###
+### Template:
+###
+###		wonder_example_name = {
+###		    picture = GFX_something
+###			model = GFX_something
+###			default_picture_stage = 3
+###			allow_construction = yes
+###			is_in_water = no
+###			allow_coastal = no
+###			show_model = yes
+###			background_overrides = {
+###				jungle = fields
+###				forest = jungle
+###			}
+###			potential = {
+###			}
+###			active = {
+###			}
+###			available_upgrades = {
+###			}
+###			flags = {
+###			}
+###			stage = {
+###				allow = {
+###
+###				}
+###				build_time = 600
+###				restore_time = 90
+###				loot_time = 10
+###				gold_cost_flat = 1000
+###				gold_cost_ticking = 2
+###				restore_cost_flat = 427
+###				restore_cost_ticking = 3
+###				upgrade_slots = {
+###
+###				}
+###				local_modifier = {
+###
+###				}
+###				owner_modifier = {
+###
+###				}
+###			}
+###		}
+###
+
+
+# (Note: Names are reference points, but likely displayed differently in game)
+# Scopes: ROOT is the character, FROMFROM the wonder and FROMFROMFROM the province.
+
+################### Available Wonders #############################
+#### 10. CITIES OF WONDERS
+# 10A. City of Wonders ............................ wonder_city_of_wonders
+# 10B. City of Wonders (Republic) ................. wonder_city_of_wonders_rep
+
+################# Historical/Pre-existing Wonders #################
+# H01. City of Wonders (Constantinople) ........... wonder_city_of_wonders_byz  - (Basileuousa of Constantinople)
+# H02. City of Wonders (Roma) ..................... wonder_city_of_wonders_roma - (The Eternal City of Roma)
+# H03. City of Wonders (Alexandria) ............... wonder_city_of_wonders_alex - (Alexandria)
+# H04. City of Wonders (Antioch) .................. wonder_city_of_wonders_anti - (Antioch)
+# H05. City of Wonders (Jerusalem) ................ wonder_city_of_wonders_jeru - (Jerusalem)
+# H06. City of Wonders (Baghdad) .................. wonder_city_of_wonders_baby - (Baghdad/Babylon)
+# H07. City of Wonders (Delhi) .................... wonder_city_of_wonders_delh - (Delhi)
+# H08. City of Wonders (Athens) .................... wonder_city_of_wonders_athens - (Athens)
+# H09. City of Wonders (Persepolis) ................ wonder_city_of_wonders_parsa  - (Parsa)
+# H10. City of Wonders (Carthage) .................. wonder_city_of_wonders_carth  - (Carthage)
+# H11. City of Wonders (Syracuse) .................. wonder_city_of_wonders_syra  - (Syrakousai)
+# H12. City of Wonders (Cordoba) ................... wonder_city_of_wonders_cord  - (Cordoba)
+
+### Cities of Wonders ## City of Wonders ###
+### 10A. City of Wonders ###
+wonder_city_of_wonders = {
+	allow_coastal = yes
+	picture = GFX_wonder_strip_cow_grand_walls
+	potential = {
+		NOT = { government = merchant_republic_government }	
+	}
+	active = {
+	}
+	flags = {
+		cost_high
+		wonder_name_7
+		wonder_desc_7
+	}
+	available_upgrades = {
+		### DISTRICTS ###
+		# Temples (Religious):
+		upgrade_cow_district_hagia_sophia # Unique - Byzantion
+		upgrade_cow_district_notre_dame # Unique - Ile de France
+		upgrade_cow_district_old_st_peter # Unique - Roma
+		upgrade_cow_district_domus_aurea_anti # Unique - Antiocheia
+		upgrade_cow_district_holy_sepulchre_jeru # Unique - Jerusalem
+		upgrade_cow_district_cathedral
+		upgrade_cow_district_dome_rock_jeru # Unique - Jerusalem
+		upgrade_cow_district_mosque
+		upgrade_cow_district_third_temple_jeru # Unique - Jerusalem
+		upgrade_cow_district_synagogue
+		upgrade_cow_district_temple_pagan
+		upgrade_cow_district_pantheon_roma # Unique - Roma
+		upgrade_cow_district_serapeion_alex # Unique - Alexandria
+		upgrade_cow_district_parthenon_athens # Unique - Athens
+		upgrade_cow_district_temple_hellenic # Pagan temple upgrades
+		upgrade_cow_district_temple_buddhist
+		upgrade_cow_district_hindu_konark # Unique - Kataka
+		upgrade_cow_district_temple_hindu
+		
+		# Statues:
+		upgrade_cow_district_colossus_solis # Unique - Roma
+		upgrade_cow_district_colossus_constantine # Unique - Byzantion
+		upgrade_cow_district_colossus_athena # Unique - Athens
+		upgrade_cow_district_statue_ruler
+		upgrade_cow_district_horse_statue_incitatus # Unique - Roma or Byzantion
+		upgrade_cow_district_horse_statue
+		
+		# Fortifications:
+		upgrade_cow_district_theodosian_walls # Unique - Byzantion
+		upgrade_cow_district_aurelian_walls # Unique - Roma
+		upgrade_cow_district_grand_walls_athens # Unique - Athens
+		upgrade_cow_district_grand_walls_baby # Unique - Baghdad
+		upgrade_cow_district_round_city_baby # Unique - Baghdad
+		upgrade_cow_district_grand_walls_syra # Unique - Siracusa
+		upgrade_cow_district_grand_walls
+		upgrade_cow_district_chryseia_pyle # Unique - Byzantion
+		upgrade_cow_district_castra_praetoria # Unique - Roma
+		upgrade_cow_district_akra_anti # Unique - Antiocheia
+		upgrade_cow_district_tower_of_david # Unique - Jerusalem
+		upgrade_cow_district_ishtar_gate # Unique - Baghdad
+		upgrade_cow_district_all_nations_parsa # Unique - Shiraz
+		upgrade_cow_district_byrsa_carthage # Unique - Tunis
+		upgrade_cow_district_fortress
+		upgrade_cow_district_underground_city_petra # Unique - Maan
+		upgrade_cow_district_underground_city
+		
+		# Great Harbor:
+		upgrade_cow_district_limen_byz # Unique - Byzantion
+		upgrade_cow_district_portus_roma # Unique - Roma
+		upgrade_cow_district_port_of_piraeus # Unique - Athens
+		upgrade_cow_district_cothon_carthage # Unique - Tunis
+		upgrade_cow_district_harbor
+		
+		# Great Lighthouse:
+		upgrade_cow_district_pharos_alex # Unique - Alexandria
+		upgrade_cow_district_pharos_byz # Unique - Byzantion
+		upgrade_cow_district_tower_of_babel # Unique - Baghdad
+		upgrade_cow_district_lighthouse
+		
+		# Royal Palace:
+		upgrade_cow_district_mega_palation # Unique - Byzantion
+		upgrade_cow_district_lateran_palace # Unique - Roma
+		upgrade_cow_district_apadana_parsa # Unique - Shiraz
+		upgrade_cow_district_palace
+
+		# Cultural:
+        upgrade_cow_district_odeon_athens # Unique - Athens
+        upgrade_cow_district_amphitheatre_syra # Unique - Siracusa
+		upgrade_cow_district_hippodromos_byz # Unique - Byzantion
+		upgrade_cow_district_circus_anti # Unique - Antiocheia
+		upgrade_cow_district_colosseum # Unique - Roma
+		upgrade_cow_district_amphitheatre
+		upgrade_cow_district_forum_constantine # Unique - Byzantion
+		upgrade_cow_district_forum_romanum # Unique - Roma
+		upgrade_cow_district_hanging_gardens_baby # Unique - Baghdad
+		upgrade_cow_district_gardens_parsa # Unique - Shiraz
+		upgrade_cow_district_garden
+		
+        # Learning Centers:
+        upgrade_cow_district_bibliothekai_byz # Unique - Byzantion
+		upgrade_cow_district_bibliotheca_ulpia # Unique - Roma
+		upgrade_cow_district_bibliothekai_alex # Unique - Alexandria
+		upgrade_cow_district_house_of_wisdom # Unique - Baghdad
+		upgrade_cow_district_library_syra # Unique - Siracusa
+		upgrade_cow_district_library
+        upgrade_cow_district_pandidakterion # Unique - Byzantion
+		upgrade_cow_district_mouseion_alex # Unique - Alexandria
+		upgrade_cow_district_university
+
+		# Burial Places/Religious (OTHER):
+		upgrade_cow_district_mausoleum_halicarnassus # Unique - Lykia
+		upgrade_cow_district_mausoleum_roma # Unique - Roma
+		upgrade_cow_district_mausoleion_apostles_byz # Unique - Byzantion
+		upgrade_cow_district_mausoleion_alexander # Unique - Alexandria
+		upgrade_cow_district_tomb_of_cyrus # Unique - Shiraz
+		upgrade_cow_district_mausoleum
+		upgrade_cow_district_pyramid_giza # Unique - Gizeh
+		upgrade_cow_district_pyramid
+		upgrade_cow_district_stonehenge # Unique - Wiltshire
+		upgrade_cow_district_pagan_stones
+		upgrade_cow_district_aztec_pyramid
+
+		### UPGRADES ###
+		# Cathedral upgrades:
+		upgrade_cow_gargoyles
+		upgrade_cow_bells
+		upgrade_cow_stained_glass_window
+		upgrade_cow_relic_tomb
+		upgrade_cow_grand_basilica
+		upgrade_cow_catacombs
+		upgrade_cow_giant_cross
+		upgrade_cow_bells_golden
+
+		# Mosque upgrades:
+		upgrade_cow_minaret
+		upgrade_cow_open_courtyard
+		upgrade_cow_dome
+		upgrade_cow_lamps_hanging
+		upgrade_cow_soup_kitchen
+		upgrade_cow_school_mosque
+		upgrade_cow_hostel
+		upgrade_cow_custodian_of_the_mosque
+
+		# Synagogue upgrades:
+		upgrade_cow_tallest_building
+		upgrade_cow_garden_outer
+		upgrade_cow_holy_ark
+		upgrade_cow_decorations
+		upgrade_cow_choir_rooms
+		upgrade_cow_school_synagogue
+
+		# Pagan temple upgrades:
+		upgrade_cow_statue_god
+		upgrade_cow_temple_guards
+		upgrade_cow_sacrificial_altar
+		upgrade_cow_sacred_grove
+		upgrade_cow_prophecy_rooms
+		upgrade_cow_temple_precinct
+		upgrade_cow_inner_sanctuary
+		upgrade_cow_custodian_of_temple
+
+		# Buddhist temple upgrades:
+		upgrade_cow_chaitya-grihas
+		upgrade_cow_gompa
+		upgrade_cow_bodhi_tree
+		upgrade_cow_cave_complex
+		upgrade_cow_vihara
+		upgrade_cow_school_buddhist
+		upgrade_cow_relic_stupa
+		upgrade_cow_commerative_stupa
+		upgrade_cow_symbolic_stupa
+		upgrade_cow_votive_stupa
+
+		# Hindu temple upgrades:
+		upgrade_cow_high_gopura
+		upgrade_cow_shikhara
+		upgrade_cow_mandapa
+		upgrade_cow_temple_complex
+		upgrade_cow_school_hindu
+		upgrade_cow_hospital_hindu
+		
+		# Statue upgrades:
+		upgrade_cow_plating_gold
+		upgrade_cow_plating_silver
+		upgrade_cow_plating_bronze
+		upgrade_cow_statues_family
+		upgrade_cow_golden_crown
+		upgrade_cow_watcher_of_giants
+		# Horse Statue upgrades
+		upgrade_cow_stable
+		upgrade_cow_statues_animals
+		
+		# Grand Walls upgrades:
+        upgrade_cow_mirror_towers # Unique - Siracusa
+		upgrade_cow_archimedes_claw # Unique - Siracusa
+		upgrade_cow_gastraphetes_makers # Unique - Siracusa
+		upgrade_cow_walls_sea
+		upgrade_cow_studded_bastions
+		upgrade_cow_strategic_exclaves
+		upgrade_cow_soaring_fortresses
+		upgrade_cow_hidden_gates
+		upgrade_cow_gatehouse_forts
+		upgrade_cow_killing_fields
+		upgrade_cow_deep_defense_architecture
+		upgrade_cow_artificial_islands
+		upgrade_cow_wall_walker
+        
+        # Fortress upgrades:
+		upgrade_cow_armory
+		upgrade_cow_watch_tower
+		upgrade_cow_vault
+		upgrade_cow_moat_pit
+		upgrade_cow_moat_spike
+		upgrade_cow_moat_water
+		upgrade_cow_moat_bones
+		upgrade_cow_hidden_passageways
+		upgrade_cow_garden_inner
+		
+		# Underground City upgrades:
+		upgrade_cow_dungeon
+		upgrade_cow_caves_natural
+		upgrade_cow_tunnels_travel
+		upgrade_cow_metal_mine_precious
+		upgrade_cow_guardian_of_the_deep
+		
+		# Great Harbor upgrades:
+        upgrade_cow_cothon
+		upgrade_cow_piers
+		upgrade_cow_office_harbor
+		upgrade_cow_lighthouse
+		upgrade_cow_military_wharf
+		upgrade_cow_master_of_tides
+		
+		# Great Lighthouse upgrades:
+		upgrade_cow_treasure_chamber
+		upgrade_cow_giant_banners
+		upgrade_cow_royal_apartments
+		upgrade_cow_historical_mural
+		upgrade_cow_lighthouse_custodian
+		
+        # Royal Palace upgrades:
+        upgrade_cow_throne_fancy
+		upgrade_cow_trap_door
+		upgrade_cow_royal_bedchamber
+		upgrade_cow_skull_throne
+		upgrade_cow_golden_throne
+		upgrade_cow_automata_throne
+        upgrade_cow_torture_chamber
+		upgrade_cow_brewery
+        upgrade_cow_dueling_room
+		upgrade_cow_royal_custodian
+		
+		# Amphitheatre upgrades:
+		upgrade_cow_naval_spectacle
+		upgrade_cow_animal_cages
+		upgrade_cow_hippodrome
+		upgrade_cow_training_academy
+        upgrade_cow_theater_stage
+		upgrade_cow_master_of_the_games
+        
+        # Garden upgrades:
+        upgrade_cow_fountains
+		upgrade_cow_fountain_of_youth
+		upgrade_cow_hanging_gardens
+		upgrade_cow_secluded_groves
+		upgrade_cow_hidden_burial
+		upgrade_cow_poisonous_flowers
+		upgrade_cow_herb_garden
+		upgrade_cow_statues_garden
+		upgrade_cow_vineyard
+        upgrade_cow_pet_graveyard
+        
+        # Library upgrades: 
+        upgrade_cow_collection_drama
+		upgrade_cow_collection_architecture
+		upgrade_cow_collection_math
+		upgrade_cow_collection_history
+		upgrade_cow_collection_science
+		upgrade_cow_scribe_room
+		upgrade_cow_keeper_of_tomes
+
+        # University upgrades:
+		upgrade_cow_great_seminars
+		upgrade_cow_wing_of_diplomacy
+		upgrade_cow_wing_of_martial
+		upgrade_cow_wing_of_stewardship
+		upgrade_cow_wing_of_intrigue
+        upgrade_cow_wing_of_learning
+		upgrade_cow_guardian_of_knowledge
+		
+		# Mausoleum upgrades:
+		upgrade_cow_statues_dead
+		upgrade_cow_eternal_flame
+		upgrade_cow_unmarked_tombs
+		upgrade_cow_quadriga_statue
+		upgrade_cow_keeper_of_the_dead
+		upgrade_cow_horse_graveyard		
+
+		# Pagan Stones upgrades:
+		upgrade_cow_runestones
+		upgrade_cow_more_stones
+		upgrade_cow_stone_custodian
+		
+		# Pyramids upgrades:
+		upgrade_cow_extra_pyramids
+		upgrade_cow_mythological_beast
+		upgrade_cow_hidden_room
+		upgrade_cow_necropolis
+		upgrade_cow_traps
+		upgrade_cow_lime_stone_casing
+		upgrade_cow_overseer_of_rites
+		
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_tower
+		upgrade_road_tolls
+		upgrade_retinue
+	}
+	stage = {
+		allow = {
+			prestige = 10000
+			OR = { 
+				realm_size = 200
+				AND = {
+					is_feudal = yes
+					real_tier = emperor
+					ai = no
+				}
+			}
+			custom_tooltip = { # Custom tooltip to better explain the in-game tooltip
+					text = CANNOT_HAVE_MORE_THAN_ONE_COW
+					hidden_tooltip = {
+						NOT = { has_custom_city_of_wonders_trigger = yes }
+					}
+			}
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.05
+		}
+	}
+	stage = {
+		allow = {			
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {			
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {			
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {			
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {			
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.10
+		}
+	}
+	stage = {
+		allow = {			
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {			
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {			
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.20
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 215
+		gold_cost_flat = 7500
+		gold_cost_ticking = 15
+		restore_time = 200
+		loot_time = 4
+		restore_cost_flat = 1000
+		restore_cost_ticking = 4
+		upgrade_slots = 10
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			wonder_build_cost_modifier = -0.20
+		}
+	}
+}
+
+
+### 10B. City of Wonders (Republic) ## City of Wonders for Merchant Republics ###
+wonder_city_of_wonders_rep = {
+	allow_coastal = yes
+	picture = GFX_wonder_strip_cow_grand_walls
+	potential = {
+		government = merchant_republic_government
+	}
+	active = {
+	}
+	flags = {
+		cost_high
+		wonder_name_7
+		wonder_desc_7
+	}
+	available_upgrades = {
+		### DISTRICTS ###
+		# Temples (Religious):
+		upgrade_cow_district_hagia_sophia # Unique - Byzantion
+		upgrade_cow_district_notre_dame # Unique - Ile de France
+		upgrade_cow_district_old_st_peter # Unique - Roma
+		upgrade_cow_district_domus_aurea_anti # Unique - Antiocheia
+		upgrade_cow_district_holy_sepulchre_jeru # Unique - Jerusalem
+		upgrade_cow_district_cathedral
+		upgrade_cow_district_dome_rock_jeru # Unique - Jerusalem
+		upgrade_cow_district_mosque
+		upgrade_cow_district_third_temple_jeru # Unique - Jerusalem
+		upgrade_cow_district_synagogue
+		upgrade_cow_district_temple_pagan
+		upgrade_cow_district_pantheon_roma # Unique - Roma
+		upgrade_cow_district_serapeion_alex # Unique - Alexandria
+		upgrade_cow_district_parthenon_athens # Unique - Athens
+		upgrade_cow_district_temple_hellenic # Pagan temple upgrades
+		upgrade_cow_district_temple_buddhist
+		upgrade_cow_district_hindu_konark # Unique - Kataka
+		upgrade_cow_district_temple_hindu
+		
+		# Statues:
+		upgrade_cow_district_colossus_solis # Unique - Roma
+		upgrade_cow_district_colossus_constantine # Unique - Byzantion
+		upgrade_cow_district_colossus_athena # Unique - Athens
+		upgrade_cow_district_statue_ruler
+		upgrade_cow_district_horse_statue_incitatus # Unique - Roma or Byzantion
+		upgrade_cow_district_horse_statue
+		
+		# Fortifications:
+		upgrade_cow_district_theodosian_walls # Unique - Byzantion
+		upgrade_cow_district_aurelian_walls # Unique - Roma
+		upgrade_cow_district_grand_walls_athens # Unique - Athens
+		upgrade_cow_district_grand_walls_baby # Unique - Baghdad
+		upgrade_cow_district_round_city_baby # Unique - Baghdad
+		upgrade_cow_district_grand_walls
+		upgrade_cow_district_chryseia_pyle # Unique - Byzantion
+		upgrade_cow_district_castra_praetoria # Unique - Roma
+		upgrade_cow_district_akra_anti # Unique - Antiocheia
+		upgrade_cow_district_tower_of_david # Unique - Jerusalem
+		upgrade_cow_district_ishtar_gate # Unique - Baghdad
+		upgrade_cow_district_all_nations_parsa # Unique - Shiraz
+		upgrade_cow_district_byrsa_carthage # Unique - Tunis
+		upgrade_cow_district_fortress
+		upgrade_cow_district_underground_city_petra # Unique - Maan
+		upgrade_cow_district_underground_city
+		
+		# Great Harbor:
+		upgrade_cow_district_limen_byz # Unique - Byzantion
+		upgrade_cow_district_portus_roma # Unique - Roma
+		upgrade_cow_district_port_of_piraeus # Unique - Athens
+		upgrade_cow_district_cothon_carthage # Unique - Tunis
+		upgrade_cow_district_harbor
+		
+		# Great Lighthouse:
+		upgrade_cow_district_pharos_alex # Unique - Alexandria
+		upgrade_cow_district_pharos_byz # Unique - Byzantion
+		upgrade_cow_district_tower_of_babel # Unique - Baghdad
+		upgrade_cow_district_lighthouse
+		
+		# Royal Palace:
+		upgrade_cow_district_mega_palation # Unique - Byzantion
+		upgrade_cow_district_lateran_palace # Unique - Roma
+		upgrade_cow_district_apadana_parsa # Unique - Shiraz
+		upgrade_cow_district_palace
+
+		# Cultural:
+        upgrade_cow_district_odeon_athens # Unique - Athens
+        upgrade_cow_district_amphitheatre_syra # Unique - Siracusa
+		upgrade_cow_district_hippodromos_byz # Unique - Byzantion
+		upgrade_cow_district_circus_anti # Unique - Antiocheia
+		upgrade_cow_district_colosseum # Unique - Roma
+		upgrade_cow_district_amphitheatre
+		upgrade_cow_district_forum_constantine # Unique - Byzantion
+		upgrade_cow_district_forum_romanum # Unique - Roma
+		upgrade_cow_district_hanging_gardens_baby # Unique - Baghdad
+		upgrade_cow_district_gardens_parsa # Unique - Shiraz
+		upgrade_cow_district_garden
+		
+        # Learning Centers:
+        upgrade_cow_district_bibliothekai_byz # Unique - Byzantion
+		upgrade_cow_district_bibliotheca_ulpia # Unique - Roma
+		upgrade_cow_district_bibliothekai_alex # Unique - Alexandria
+		upgrade_cow_district_house_of_wisdom # Unique - Baghdad
+		upgrade_cow_district_library
+        upgrade_cow_district_pandidakterion # Unique - Byzantion
+		upgrade_cow_district_mouseion_alex # Unique - Alexandria
+		upgrade_cow_district_university
+
+		# Burial Places/Religious (OTHER):
+		upgrade_cow_district_mausoleum_halicarnassus # Unique - Lykia
+		upgrade_cow_district_mausoleum_roma # Unique - Roma
+		upgrade_cow_district_mausoleion_apostles_byz # Unique - Byzantion
+		upgrade_cow_district_mausoleion_alexander # Unique - Alexandria
+		upgrade_cow_district_tomb_of_cyrus # Unique - Shiraz
+		upgrade_cow_district_mausoleum
+		upgrade_cow_district_pyramid_giza # Unique - Gizeh
+		upgrade_cow_district_pyramid
+		upgrade_cow_district_stonehenge # Unique - Wiltshire
+		upgrade_cow_district_pagan_stones
+		upgrade_cow_district_aztec_pyramid
+
+		### UPGRADES ###
+		# Cathedral upgrades:
+		upgrade_cow_gargoyles
+		upgrade_cow_bells
+		upgrade_cow_stained_glass_window
+		upgrade_cow_relic_tomb
+		upgrade_cow_grand_basilica
+		upgrade_cow_catacombs
+		upgrade_cow_giant_cross
+		upgrade_cow_bells_golden
+
+		# Mosque upgrades:
+		upgrade_cow_minaret
+		upgrade_cow_open_courtyard
+		upgrade_cow_dome
+		upgrade_cow_lamps_hanging
+		upgrade_cow_soup_kitchen
+		upgrade_cow_school_mosque
+		upgrade_cow_hostel
+		upgrade_cow_custodian_of_the_mosque
+
+		# Synagogue upgrades:
+		upgrade_cow_tallest_building
+		upgrade_cow_garden_outer
+		upgrade_cow_holy_ark
+		upgrade_cow_decorations
+		upgrade_cow_choir_rooms
+		upgrade_cow_school_synagogue
+
+		# Pagan temple upgrades:
+		upgrade_cow_statue_god
+		upgrade_cow_temple_guards
+		upgrade_cow_sacrificial_altar
+		upgrade_cow_sacred_grove
+		upgrade_cow_prophecy_rooms
+		upgrade_cow_temple_precinct
+		upgrade_cow_inner_sanctuary
+		upgrade_cow_custodian_of_temple
+
+		# Buddhist temple upgrades:
+		upgrade_cow_chaitya-grihas
+		upgrade_cow_gompa
+		upgrade_cow_bodhi_tree
+		upgrade_cow_cave_complex
+		upgrade_cow_vihara
+		upgrade_cow_school_buddhist
+		upgrade_cow_relic_stupa
+		upgrade_cow_commerative_stupa
+		upgrade_cow_symbolic_stupa
+		upgrade_cow_votive_stupa
+
+		# Hindu temple upgrades:
+		upgrade_cow_high_gopura
+		upgrade_cow_shikhara
+		upgrade_cow_mandapa
+		upgrade_cow_temple_complex
+		upgrade_cow_school_hindu
+		upgrade_cow_hospital_hindu
+		
+		# Statue upgrades:
+		upgrade_cow_plating_gold
+		upgrade_cow_plating_silver
+		upgrade_cow_plating_bronze
+		upgrade_cow_statues_family
+		upgrade_cow_golden_crown
+		upgrade_cow_watcher_of_giants
+		# Horse Statue upgrades
+		upgrade_cow_stable
+		upgrade_cow_statues_animals
+		
+		# Grand Walls upgrades:
+        upgrade_cow_mirror_towers # Unique - Siracusa
+		upgrade_cow_archimedes_claw # Unique - Siracusa
+		upgrade_cow_gastraphetes_makers # Unique - Siracusa
+		upgrade_cow_walls_sea
+		upgrade_cow_studded_bastions
+		upgrade_cow_strategic_exclaves
+		upgrade_cow_soaring_fortresses
+		upgrade_cow_hidden_gates
+		upgrade_cow_gatehouse_forts
+		upgrade_cow_killing_fields
+		upgrade_cow_deep_defense_architecture
+		upgrade_cow_artificial_islands
+		upgrade_cow_wall_walker
+        
+        # Fortress upgrades:
+		upgrade_cow_armory
+		upgrade_cow_watch_tower
+		upgrade_cow_vault
+		upgrade_cow_moat_pit
+		upgrade_cow_moat_spike
+		upgrade_cow_moat_water
+		upgrade_cow_moat_bones
+		upgrade_cow_hidden_passageways
+		upgrade_cow_garden_inner
+		
+		# Underground City upgrades:
+		upgrade_cow_dungeon
+		upgrade_cow_caves_natural
+		upgrade_cow_tunnels_travel
+		upgrade_cow_metal_mine_precious
+		upgrade_cow_guardian_of_the_deep
+		
+		# Great Harbor upgrades:
+        upgrade_cow_cothon
+		upgrade_cow_piers
+		upgrade_cow_office_harbor
+		upgrade_cow_lighthouse
+		upgrade_cow_military_wharf
+		upgrade_cow_master_of_tides
+		
+		# Great Lighthouse upgrades:
+		upgrade_cow_treasure_chamber
+		upgrade_cow_giant_banners
+		upgrade_cow_royal_apartments
+		upgrade_cow_historical_mural
+		upgrade_cow_lighthouse_custodian
+		
+        # Royal Palace upgrades:
+        upgrade_cow_throne_fancy
+		upgrade_cow_trap_door
+		upgrade_cow_royal_bedchamber
+		upgrade_cow_skull_throne
+		upgrade_cow_golden_throne
+		upgrade_cow_automata_throne
+        upgrade_cow_torture_chamber
+		upgrade_cow_brewery
+        upgrade_cow_dueling_room
+		upgrade_cow_royal_custodian
+		
+		# Amphitheatre upgrades:
+		upgrade_cow_naval_spectacle
+		upgrade_cow_animal_cages
+		upgrade_cow_hippodrome
+		upgrade_cow_training_academy
+        upgrade_cow_theater_stage
+		upgrade_cow_master_of_the_games
+        
+        # Garden upgrades:
+        upgrade_cow_fountains
+		upgrade_cow_fountain_of_youth
+		upgrade_cow_hanging_gardens
+		upgrade_cow_secluded_groves
+		upgrade_cow_hidden_burial
+		upgrade_cow_poisonous_flowers
+		upgrade_cow_herb_garden
+		upgrade_cow_statues_garden
+		upgrade_cow_vineyard
+        upgrade_cow_pet_graveyard
+        
+        # Library upgrades: 
+        upgrade_cow_collection_drama
+		upgrade_cow_collection_architecture
+		upgrade_cow_collection_math
+		upgrade_cow_collection_history
+		upgrade_cow_collection_science
+		upgrade_cow_scribe_room
+		upgrade_cow_keeper_of_tomes
+
+        # University upgrades:
+		upgrade_cow_great_seminars
+		upgrade_cow_wing_of_diplomacy
+		upgrade_cow_wing_of_martial
+		upgrade_cow_wing_of_stewardship
+		upgrade_cow_wing_of_intrigue
+        upgrade_cow_wing_of_learning
+		upgrade_cow_guardian_of_knowledge
+		
+		# Mausoleum upgrades:
+		upgrade_cow_statues_dead
+		upgrade_cow_eternal_flame
+		upgrade_cow_unmarked_tombs
+		upgrade_cow_quadriga_statue
+		upgrade_cow_keeper_of_the_dead
+		upgrade_cow_horse_graveyard		
+
+		# Pagan Stones upgrades:
+		upgrade_cow_runestones
+		upgrade_cow_more_stones
+		upgrade_cow_stone_custodian
+		
+		# Pyramids upgrades:
+		upgrade_cow_extra_pyramids
+		upgrade_cow_mythological_beast
+		upgrade_cow_hidden_room
+		upgrade_cow_necropolis
+		upgrade_cow_traps
+		upgrade_cow_lime_stone_casing
+		upgrade_cow_overseer_of_rites
+		
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_tower
+		upgrade_road_tolls
+		upgrade_retinue
+	}
+	stage = {
+		allow = {
+			prestige = 4000
+			OR = {
+				realm_size = 10 # It should at the very least be a "grand" republic
+				higher_real_tier_than = duke
+			}
+			ai = no # Disabled for the AI due to how easy it is to construct it
+			custom_tooltip = { # Custom tooltip to better explain the in-game tooltip
+				text = CANNOT_HAVE_MORE_THAN_ONE_COW
+				hidden_tooltip = {
+					NOT = { has_custom_city_of_wonders_trigger = yes }
+				}
+			}
+		}
+		build_time = 158
+		gold_cost_flat = 6000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.05
+		}
+	}
+	stage = {
+		allow = {			
+		}
+		build_time = 158
+		gold_cost_flat = 5000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {			
+		}
+		build_time = 158
+		gold_cost_flat = 5000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {			
+		}
+		build_time = 158
+		gold_cost_flat = 5000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {			
+		}
+		build_time = 158
+		gold_cost_flat = 5000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {			
+		}
+		build_time = 158
+		gold_cost_flat = 5000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.10
+		}
+	}
+	stage = {
+		allow = {			
+		}
+		build_time = 158
+		gold_cost_flat = 5000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {			
+		}
+		build_time = 158
+		gold_cost_flat = 5000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {			
+		}
+		build_time = 158
+		gold_cost_flat = 5000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.20
+		}
+	}
+	stage = {
+		allow = {			
+		}
+		build_time = 258
+		gold_cost_flat = 6000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 10
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			wonder_build_cost_modifier = -0.20
+		}
+	}
+}
+
+### H01. City of Wonders (Constantinople) ###
+wonder_city_of_wonders_byz = {
+	# allow_coastal = yes
+	picture = GFX_wonder_strip_cow_constantinople
+	model = wonder_hagia_sophia
+	potential = {
+        FROMFROMFROM = {
+			province_id = 496 # Byzantion
+		}			
+	}
+	active = {
+	}
+	flags = {
+		cost_high
+		is_historical
+		wonder_desc_7
+	}
+	available_upgrades = {
+		### DISTRICTS ###
+		# Temples (Religious):
+		# upgrade_cow_district_cathedral # Hagia Sophia unique instead
+		upgrade_cow_district_hagia_sophia # Cathedral upgrades
+		upgrade_cow_district_mosque
+		upgrade_cow_district_synagogue
+		upgrade_cow_district_temple_pagan
+		upgrade_cow_district_temple_hellenic # Pagan temple upgrades
+		upgrade_cow_district_temple_buddhist
+		upgrade_cow_district_temple_hindu
+		
+		# Statues:
+		# upgrade_cow_district_statue_ruler # Kolossos Konstantinou instead
+		upgrade_cow_district_colossus_constantine
+		# upgrade_cow_district_horse_statue # Incitatus instead
+		upgrade_cow_district_horse_statue_incitatus
+		
+		# Fortifications:
+        # upgrade_cow_district_grand_walls # Theodosian Walls instead
+        upgrade_cow_district_theodosian_walls
+        # upgrade_cow_district_fortress # Chryseia Pyle instead (Golden Gate)
+        upgrade_cow_district_chryseia_pyle
+		upgrade_cow_district_underground_city
+		
+		# Great Harbor:
+        # upgrade_cow_district_harbor # Limen ton Neorion instead
+		upgrade_cow_district_limen_byz
+		
+		# Great Lighthouse:
+		# upgrade_cow_district_lighthouse # Megalos Pyrgos instead 
+		upgrade_cow_district_pharos_byz
+		
+		# Royal Palace:
+        # upgrade_cow_district_palace # Mega Palation instead
+		upgrade_cow_district_mega_palation
+
+		# Cultural:
+        # upgrade_cow_district_amphitheatre # Hippodromos instead
+		upgrade_cow_district_hippodromos_byz
+        # upgrade_cow_district_garden # Forum of Constantine instead
+        upgrade_cow_district_forum_constantine
+		
+        # Learning Centers:
+        # upgrade_cow_district_library # Bibliothekai of Konstantinoupolis instead
+        upgrade_cow_district_bibliothekai_byz
+        # upgrade_cow_district_university # Pandidakterion instead
+        upgrade_cow_district_pandidakterion
+
+		# Burial Places/Religious (OTHER):
+		# upgrade_cow_district_mausoleum
+		upgrade_cow_district_mausoleion_apostles_byz
+		upgrade_cow_district_pyramid
+		upgrade_cow_district_pagan_stones
+		upgrade_cow_district_aztec_pyramid
+
+		### UPGRADES ###
+		# Cathedral upgrades:
+		upgrade_cow_gargoyles
+		upgrade_cow_bells
+		upgrade_cow_stained_glass_window
+		upgrade_cow_relic_tomb
+		upgrade_cow_grand_basilica
+		upgrade_cow_catacombs
+		upgrade_cow_giant_cross
+		upgrade_cow_bells_golden
+
+		# Mosque upgrades:
+		upgrade_cow_minaret
+		upgrade_cow_open_courtyard
+		upgrade_cow_dome
+		upgrade_cow_lamps_hanging
+		upgrade_cow_soup_kitchen
+		upgrade_cow_school_mosque
+		upgrade_cow_hostel
+		upgrade_cow_custodian_of_the_mosque
+
+		# Synagogue upgrades:
+		upgrade_cow_tallest_building
+		upgrade_cow_garden_outer
+		upgrade_cow_holy_ark
+		upgrade_cow_decorations
+		upgrade_cow_choir_rooms
+		upgrade_cow_school_synagogue
+
+		# Pagan temple upgrades:
+		upgrade_cow_statue_god
+		upgrade_cow_temple_guards
+		upgrade_cow_sacrificial_altar
+		upgrade_cow_sacred_grove
+		upgrade_cow_prophecy_rooms
+		upgrade_cow_temple_precinct
+		upgrade_cow_inner_sanctuary
+		upgrade_cow_custodian_of_temple
+
+		# Buddhist temple upgrades:
+		upgrade_cow_chaitya-grihas
+		upgrade_cow_gompa
+		upgrade_cow_bodhi_tree
+		upgrade_cow_cave_complex
+		upgrade_cow_vihara
+		upgrade_cow_school_buddhist
+		upgrade_cow_relic_stupa
+		upgrade_cow_commerative_stupa
+		upgrade_cow_symbolic_stupa
+		upgrade_cow_votive_stupa
+
+		# Hindu temple upgrades:
+		upgrade_cow_high_gopura
+		upgrade_cow_shikhara
+		upgrade_cow_mandapa
+		upgrade_cow_temple_complex
+		upgrade_cow_school_hindu
+		upgrade_cow_hospital_hindu
+		
+		# Statue upgrades:
+		upgrade_cow_plating_gold
+		upgrade_cow_plating_silver
+		upgrade_cow_plating_bronze
+		upgrade_cow_statues_family
+		upgrade_cow_golden_crown
+		upgrade_cow_watcher_of_giants
+		# Horse Statue upgrades
+		upgrade_cow_stable
+		upgrade_cow_statues_animals
+		
+		# Grand Walls upgrades:
+        upgrade_cow_walls_sea
+		upgrade_cow_studded_bastions
+		upgrade_cow_strategic_exclaves
+		upgrade_cow_soaring_fortresses
+		upgrade_cow_hidden_gates
+		upgrade_cow_gatehouse_forts
+		upgrade_cow_killing_fields
+		upgrade_cow_deep_defense_architecture
+		upgrade_cow_artificial_islands
+		upgrade_cow_wall_walker
+        
+        # Fortress upgrades:
+		upgrade_cow_armory
+		upgrade_cow_watch_tower
+		upgrade_cow_vault
+		upgrade_cow_moat_pit
+		upgrade_cow_moat_spike
+		upgrade_cow_moat_water
+		upgrade_cow_moat_bones
+		upgrade_cow_hidden_passageways
+		upgrade_cow_garden_inner
+		
+		# Underground City upgrades:
+		upgrade_cow_dungeon
+		upgrade_cow_caves_natural
+		upgrade_cow_tunnels_travel
+		upgrade_cow_metal_mine_precious
+		upgrade_cow_guardian_of_the_deep
+		
+		# Great Harbor upgrades:
+        upgrade_cow_cothon
+		upgrade_cow_piers
+		upgrade_cow_office_harbor
+		upgrade_cow_lighthouse
+		upgrade_cow_military_wharf
+		upgrade_cow_master_of_tides
+		
+		# Great Lighthouse upgrades:
+		upgrade_cow_treasure_chamber
+		upgrade_cow_giant_banners
+		upgrade_cow_royal_apartments
+		upgrade_cow_historical_mural
+		upgrade_cow_lighthouse_custodian
+		
+        # Royal Palace upgrades:
+        upgrade_cow_throne_fancy
+		upgrade_cow_trap_door
+		upgrade_cow_royal_bedchamber
+		upgrade_cow_skull_throne
+		upgrade_cow_golden_throne
+		upgrade_cow_automata_throne
+        upgrade_cow_torture_chamber
+		upgrade_cow_brewery
+        upgrade_cow_dueling_room
+		upgrade_cow_royal_custodian
+		
+		# Amphitheatre upgrades:
+		upgrade_cow_naval_spectacle
+		upgrade_cow_animal_cages
+		# upgrade_cow_hippodrome # Amphitheatron instead
+		upgrade_cow_training_academy
+        upgrade_cow_theater_stage
+		upgrade_cow_master_of_the_games
+        
+        # Garden upgrades:
+        upgrade_cow_fountains
+		upgrade_cow_fountain_of_youth
+		upgrade_cow_hanging_gardens
+		upgrade_cow_secluded_groves
+		upgrade_cow_hidden_burial
+		upgrade_cow_poisonous_flowers
+		upgrade_cow_herb_garden
+		upgrade_cow_statues_garden
+		upgrade_cow_vineyard
+        upgrade_cow_pet_graveyard
+        
+        # Library upgrades: 
+        upgrade_cow_collection_drama
+		upgrade_cow_collection_architecture
+		upgrade_cow_collection_math
+		upgrade_cow_collection_history
+		upgrade_cow_collection_science
+		upgrade_cow_scribe_room
+		upgrade_cow_keeper_of_tomes
+
+        # University upgrades:
+		upgrade_cow_great_seminars
+		upgrade_cow_wing_of_diplomacy
+		upgrade_cow_wing_of_martial
+		upgrade_cow_wing_of_stewardship
+		upgrade_cow_wing_of_intrigue
+        upgrade_cow_wing_of_learning
+		upgrade_cow_guardian_of_knowledge
+		
+		# Mausoleum upgrades:
+		upgrade_cow_statues_dead
+		upgrade_cow_eternal_flame
+		upgrade_cow_unmarked_tombs
+		upgrade_cow_quadriga_statue
+		upgrade_cow_keeper_of_the_dead
+		upgrade_cow_horse_graveyard		
+
+		# Pagan Stones upgrades:
+		upgrade_cow_runestones
+		upgrade_cow_more_stones
+		upgrade_cow_stone_custodian
+		
+		# Pyramids upgrades:
+		upgrade_cow_extra_pyramids
+		upgrade_cow_mythological_beast
+		upgrade_cow_hidden_room
+		upgrade_cow_necropolis
+		upgrade_cow_traps
+		upgrade_cow_lime_stone_casing
+		upgrade_cow_overseer_of_rites
+		
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_tower
+		upgrade_road_tolls
+		upgrade_retinue
+	}
+	stage = {
+		allow = {
+			prestige = 10000
+			OR = { 
+				realm_size = 200
+				AND = {
+					is_feudal = yes
+					real_tier = emperor
+					ai = no
+				}
+			}
+			FROMFROMFROM = {
+				province_id = 496 # Byzantion
+			}			
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.05
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.10
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.20
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			wonder_build_cost_modifier = -0.20
+		}
+	}
+}
+
+### H02. City of Wonders (Roma) ###
+wonder_city_of_wonders_roma = {
+	# allow_coastal = yes
+	picture = GFX_wonder_strip_cow_roma
+	model = wonder_cathedral
+	potential = {
+        FROMFROMFROM = {
+			province_id = 333 # Roma
+		}			
+	}
+	active = {
+	}
+	flags = {
+		cost_high
+		is_historical
+		wonder_desc_7
+	}
+	available_upgrades = {
+		### DISTRICTS ###
+		# Temples (Religious):
+		# upgrade_cow_district_cathedral # Old St. Peter's Basilica (Basilica Sanctus Petrus) instead
+		upgrade_cow_district_old_st_peter # Cathedral upgrades
+		upgrade_cow_district_mosque
+		upgrade_cow_district_synagogue
+		upgrade_cow_district_temple_pagan
+		# upgrade_cow_district_temple_hellenic # Pagan temple upgrades - Pantheon/Pantheum instead
+		upgrade_cow_district_pantheon_roma # Pagan temple upgrades
+		upgrade_cow_district_temple_buddhist
+		upgrade_cow_district_temple_hindu
+		
+		# Statues:
+		# upgrade_cow_district_statue_ruler # Colossus Solis instead
+		upgrade_cow_district_colossus_solis
+		# upgrade_cow_district_horse_statue # Incitatus instead
+		upgrade_cow_district_horse_statue_incitatus
+		
+		# Fortifications:
+        # upgrade_cow_district_grand_walls # Aurelian Walls instead
+        upgrade_cow_district_aurelian_walls
+        # upgrade_cow_district_fortress # Castra Praetoria instead
+        upgrade_cow_district_castra_praetoria
+		upgrade_cow_district_underground_city
+		
+		# Great Harbor:
+        # upgrade_cow_district_harbor # Portus of Roma instead
+        upgrade_cow_district_portus_roma
+		
+		# Great Lighthouse:
+		upgrade_cow_district_lighthouse
+		
+		# Royal Palace:
+        # upgrade_cow_district_palace # Lateran Palace instead
+		upgrade_cow_district_lateran_palace
+
+		# Cultural:
+        # upgrade_cow_district_amphitheatre # Colosseum instead
+		upgrade_cow_district_colosseum
+        # upgrade_cow_district_garden # Forum Romanum instead
+        upgrade_cow_district_forum_romanum
+		
+        # Learning Centers:
+        # upgrade_cow_district_library # Bibliotheca Ulpia instead
+        upgrade_cow_district_bibliotheca_ulpia
+        upgrade_cow_district_university
+
+		# Burial Places/Religious (OTHER):
+		# upgrade_cow_district_mausoleum
+		upgrade_cow_district_mausoleum_roma
+		upgrade_cow_district_pyramid
+		upgrade_cow_district_pagan_stones
+		upgrade_cow_district_aztec_pyramid
+
+		### UPGRADES ###
+		# Cathedral upgrades:
+		upgrade_cow_gargoyles
+		upgrade_cow_bells
+		upgrade_cow_stained_glass_window
+		upgrade_cow_relic_tomb
+		upgrade_cow_grand_basilica
+		upgrade_cow_catacombs
+		upgrade_cow_giant_cross
+		upgrade_cow_bells_golden
+
+		# Mosque upgrades:
+		upgrade_cow_minaret
+		upgrade_cow_open_courtyard
+		upgrade_cow_dome
+		upgrade_cow_lamps_hanging
+		upgrade_cow_soup_kitchen
+		upgrade_cow_school_mosque
+		upgrade_cow_hostel
+		upgrade_cow_custodian_of_the_mosque
+
+		# Synagogue upgrades:
+		upgrade_cow_tallest_building
+		upgrade_cow_garden_outer
+		upgrade_cow_holy_ark
+		upgrade_cow_decorations
+		upgrade_cow_choir_rooms
+		upgrade_cow_school_synagogue
+
+		# Pagan temple upgrades:
+		upgrade_cow_statue_god
+		upgrade_cow_temple_guards
+		upgrade_cow_sacrificial_altar
+		upgrade_cow_sacred_grove
+		upgrade_cow_prophecy_rooms
+		upgrade_cow_temple_precinct
+		upgrade_cow_inner_sanctuary
+		upgrade_cow_custodian_of_temple
+
+		# Buddhist temple upgrades:
+		upgrade_cow_chaitya-grihas
+		upgrade_cow_gompa
+		upgrade_cow_bodhi_tree
+		upgrade_cow_cave_complex
+		upgrade_cow_vihara
+		upgrade_cow_school_buddhist
+		upgrade_cow_relic_stupa
+		upgrade_cow_commerative_stupa
+		upgrade_cow_symbolic_stupa
+		upgrade_cow_votive_stupa
+
+		# Hindu temple upgrades:
+		upgrade_cow_high_gopura
+		upgrade_cow_shikhara
+		upgrade_cow_mandapa
+		upgrade_cow_temple_complex
+		upgrade_cow_school_hindu
+		upgrade_cow_hospital_hindu
+		
+		# Statue upgrades:
+		upgrade_cow_plating_gold
+		upgrade_cow_plating_silver
+		upgrade_cow_plating_bronze
+		upgrade_cow_statues_family
+		upgrade_cow_golden_crown
+		upgrade_cow_watcher_of_giants
+		# Horse Statue upgrades
+		upgrade_cow_stable
+		upgrade_cow_statues_animals
+		
+		# Grand Walls upgrades:
+        upgrade_cow_walls_sea
+		upgrade_cow_studded_bastions
+		upgrade_cow_strategic_exclaves
+		upgrade_cow_soaring_fortresses
+		upgrade_cow_hidden_gates
+		upgrade_cow_gatehouse_forts
+		upgrade_cow_killing_fields
+		upgrade_cow_deep_defense_architecture
+		upgrade_cow_artificial_islands
+		upgrade_cow_wall_walker
+        
+        # Fortress upgrades:
+		upgrade_cow_armory
+		upgrade_cow_watch_tower
+		upgrade_cow_vault
+		upgrade_cow_moat_pit
+		upgrade_cow_moat_spike
+		upgrade_cow_moat_water
+		upgrade_cow_moat_bones
+		upgrade_cow_hidden_passageways
+		upgrade_cow_garden_inner
+		
+		# Underground City upgrades:
+		upgrade_cow_dungeon
+		upgrade_cow_caves_natural
+		upgrade_cow_tunnels_travel
+		upgrade_cow_metal_mine_precious
+		upgrade_cow_guardian_of_the_deep
+		
+		# Great Harbor upgrades:
+        upgrade_cow_cothon
+		upgrade_cow_piers
+		upgrade_cow_office_harbor
+		upgrade_cow_lighthouse
+		upgrade_cow_military_wharf
+		upgrade_cow_master_of_tides
+		
+		# Great Lighthouse upgrades:
+		upgrade_cow_treasure_chamber
+		upgrade_cow_giant_banners
+		upgrade_cow_royal_apartments
+		upgrade_cow_historical_mural
+		upgrade_cow_lighthouse_custodian
+		
+        # Royal Palace upgrades:
+        upgrade_cow_throne_fancy
+		upgrade_cow_trap_door
+		upgrade_cow_royal_bedchamber
+		upgrade_cow_skull_throne
+		upgrade_cow_golden_throne
+		upgrade_cow_automata_throne
+        upgrade_cow_torture_chamber
+		upgrade_cow_brewery
+        upgrade_cow_dueling_room
+		upgrade_cow_royal_custodian
+		
+		# Amphitheatre upgrades:
+		upgrade_cow_naval_spectacle
+		upgrade_cow_animal_cages
+		# upgrade_cow_hippodrome # Circus Maximus instead
+		upgrade_cow_circus_maximus
+		upgrade_cow_training_academy
+        upgrade_cow_theater_stage
+		upgrade_cow_master_of_the_games
+        
+        # Garden upgrades:
+        upgrade_cow_fountains
+		upgrade_cow_fountain_of_youth
+		upgrade_cow_hanging_gardens
+		upgrade_cow_secluded_groves
+		upgrade_cow_hidden_burial
+		upgrade_cow_poisonous_flowers
+		upgrade_cow_herb_garden
+		upgrade_cow_statues_garden
+		upgrade_cow_vineyard
+        upgrade_cow_pet_graveyard
+        
+        # Library upgrades: 
+        upgrade_cow_collection_drama
+		upgrade_cow_collection_architecture
+		upgrade_cow_collection_math
+		upgrade_cow_collection_history
+		upgrade_cow_collection_science
+		upgrade_cow_scribe_room
+		upgrade_cow_keeper_of_tomes
+
+        # University upgrades:
+		upgrade_cow_great_seminars
+		upgrade_cow_wing_of_diplomacy
+		upgrade_cow_wing_of_martial
+		upgrade_cow_wing_of_stewardship
+		upgrade_cow_wing_of_intrigue
+        upgrade_cow_wing_of_learning
+		upgrade_cow_guardian_of_knowledge
+		
+		# Mausoleum upgrades:
+		upgrade_cow_statues_dead
+		upgrade_cow_eternal_flame
+		upgrade_cow_unmarked_tombs
+		upgrade_cow_quadriga_statue
+		upgrade_cow_keeper_of_the_dead
+		upgrade_cow_horse_graveyard		
+
+		# Pagan Stones upgrades:
+		upgrade_cow_runestones
+		upgrade_cow_more_stones
+		upgrade_cow_stone_custodian
+		
+		# Pyramids upgrades:
+		upgrade_cow_extra_pyramids
+		upgrade_cow_mythological_beast
+		upgrade_cow_hidden_room
+		upgrade_cow_necropolis
+		upgrade_cow_traps
+		upgrade_cow_lime_stone_casing
+		upgrade_cow_overseer_of_rites
+		
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_tower
+		upgrade_road_tolls
+		upgrade_retinue
+	}
+	stage = {
+		allow = {
+			prestige = 10000
+			OR = { 
+				realm_size = 200
+				AND = {
+					is_feudal = yes
+					real_tier = emperor
+					ai = no
+				}
+			}
+			FROMFROMFROM = {
+				province_id = 333 # Roma
+			}			
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.05
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.10
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.20
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			wonder_build_cost_modifier = -0.20
+		}
+	}
+}
+
+### H03. City of Wonders (Alexandria) ###
+wonder_city_of_wonders_alex = {
+	# allow_coastal = yes
+	picture = GFX_wonder_strip_cow_alexandria_pharos
+	model = wonder_grand_lighthouse
+	is_in_water = yes
+	potential = {
+        FROMFROMFROM = {
+			province_id = 802 # Alexandria
+        }	
+	}
+	active = {
+	}
+	flags = {
+		cost_high
+		is_historical
+		wonder_desc_7
+		wonder_cow_name_1
+	}
+	available_upgrades = {
+		### DISTRICTS ###
+		# Temples (Religious):
+		upgrade_cow_district_cathedral
+		upgrade_cow_district_mosque
+		upgrade_cow_district_synagogue
+		upgrade_cow_district_temple_pagan
+		# upgrade_cow_district_temple_hellenic # Pagan temple upgrades - Serapeion instead
+		upgrade_cow_district_serapeion_alex # Pagan temple upgrades
+		upgrade_cow_district_temple_buddhist
+		upgrade_cow_district_temple_hindu
+		
+		# Statues:
+		upgrade_cow_district_statue_ruler
+		upgrade_cow_district_horse_statue
+		
+		# Fortifications:
+        upgrade_cow_district_grand_walls
+        upgrade_cow_district_fortress
+		upgrade_cow_district_underground_city
+		
+		# Great Harbor:
+        upgrade_cow_district_harbor
+		
+		# Great Lighthouse:
+		# upgrade_cow_district_lighthouse # Pharos of Alexandreia instead
+		upgrade_cow_district_pharos_alex # Pharos of Alexandreia
+		
+		# Royal Palace:
+        upgrade_cow_district_palace
+
+		# Cultural:
+        upgrade_cow_district_amphitheatre
+        upgrade_cow_district_garden
+		
+        # Learning Centers:
+        # upgrade_cow_district_library # Bibliothekai of Alexandreia instead
+		upgrade_cow_district_bibliothekai_alex
+        # upgrade_cow_district_university # Mouseion at ALexandreia instead
+		upgrade_cow_district_mouseion_alex
+
+		# Burial Places/Religious (OTHER):
+		# upgrade_cow_district_mausoleum # Mausoleion of Alexander instead
+		upgrade_cow_district_mausoleion_alexander
+		upgrade_cow_district_pyramid
+		upgrade_cow_district_pagan_stones
+		upgrade_cow_district_aztec_pyramid
+
+		### UPGRADES ###
+		# Cathedral upgrades:
+		upgrade_cow_gargoyles
+		upgrade_cow_bells
+		upgrade_cow_stained_glass_window
+		upgrade_cow_relic_tomb
+		upgrade_cow_grand_basilica
+		# upgrade_cow_catacombs # Necropolis instead
+		upgrade_cow_necropolis_alex
+		upgrade_cow_giant_cross
+		upgrade_cow_bells_golden
+
+		# Mosque upgrades:
+		upgrade_cow_minaret
+		upgrade_cow_open_courtyard
+		upgrade_cow_dome
+		upgrade_cow_lamps_hanging
+		upgrade_cow_soup_kitchen
+		upgrade_cow_school_mosque
+		upgrade_cow_hostel
+		upgrade_cow_custodian_of_the_mosque
+
+		# Synagogue upgrades:
+		upgrade_cow_tallest_building
+		upgrade_cow_garden_outer
+		upgrade_cow_holy_ark
+		upgrade_cow_decorations
+		upgrade_cow_choir_rooms
+		upgrade_cow_school_synagogue
+
+		# Pagan temple upgrades:
+		upgrade_cow_statue_god
+		upgrade_cow_temple_guards
+		upgrade_cow_sacrificial_altar
+		upgrade_cow_sacred_grove
+		upgrade_cow_prophecy_rooms
+		upgrade_cow_temple_precinct
+		upgrade_cow_inner_sanctuary
+		upgrade_cow_custodian_of_temple
+
+		# Buddhist temple upgrades:
+		upgrade_cow_chaitya-grihas
+		upgrade_cow_gompa
+		upgrade_cow_bodhi_tree
+		upgrade_cow_cave_complex
+		upgrade_cow_vihara
+		upgrade_cow_school_buddhist
+		upgrade_cow_relic_stupa
+		upgrade_cow_commerative_stupa
+		upgrade_cow_symbolic_stupa
+		upgrade_cow_votive_stupa
+
+		# Hindu temple upgrades:
+		upgrade_cow_high_gopura
+		upgrade_cow_shikhara
+		upgrade_cow_mandapa
+		upgrade_cow_temple_complex
+		upgrade_cow_school_hindu
+		upgrade_cow_hospital_hindu
+		
+		# Statue upgrades:
+		upgrade_cow_plating_gold
+		upgrade_cow_plating_silver
+		upgrade_cow_plating_bronze
+		upgrade_cow_statues_family
+		upgrade_cow_golden_crown
+		upgrade_cow_watcher_of_giants
+		# Horse Statue upgrades
+		upgrade_cow_stable
+		upgrade_cow_statues_animals
+		
+		# Grand Walls upgrades:
+        upgrade_cow_walls_sea
+		upgrade_cow_studded_bastions
+		upgrade_cow_strategic_exclaves
+		upgrade_cow_soaring_fortresses
+		upgrade_cow_hidden_gates
+		upgrade_cow_gatehouse_forts
+		upgrade_cow_killing_fields
+		upgrade_cow_deep_defense_architecture
+		upgrade_cow_artificial_islands
+		upgrade_cow_wall_walker
+        
+        # Fortress upgrades:
+		upgrade_cow_armory
+		upgrade_cow_watch_tower
+		upgrade_cow_vault
+		upgrade_cow_moat_pit
+		upgrade_cow_moat_spike
+		upgrade_cow_moat_water
+		upgrade_cow_moat_bones
+		upgrade_cow_hidden_passageways
+		upgrade_cow_garden_inner
+		
+		# Underground City upgrades:
+		upgrade_cow_dungeon
+		upgrade_cow_caves_natural
+		upgrade_cow_tunnels_travel
+		upgrade_cow_metal_mine_precious
+		upgrade_cow_guardian_of_the_deep
+		
+		# Great Harbor upgrades:
+        upgrade_cow_cothon
+		upgrade_cow_piers
+		upgrade_cow_office_harbor
+		upgrade_cow_lighthouse
+		upgrade_cow_military_wharf
+		upgrade_cow_master_of_tides
+		
+		# Great Lighthouse (Pharos) upgrades:
+		upgrade_cow_treasure_chamber
+		upgrade_cow_giant_banners
+		upgrade_cow_royal_apartments
+		upgrade_cow_historical_mural
+		upgrade_cow_lighthouse_custodian
+		
+        # Royal Palace upgrades:
+        upgrade_cow_throne_fancy
+		upgrade_cow_trap_door
+		upgrade_cow_royal_bedchamber
+		upgrade_cow_skull_throne
+		upgrade_cow_golden_throne
+		upgrade_cow_automata_throne
+        upgrade_cow_torture_chamber
+		upgrade_cow_brewery
+        upgrade_cow_dueling_room
+		upgrade_cow_royal_custodian
+		
+		# Amphitheatre upgrades:
+		upgrade_cow_naval_spectacle
+		upgrade_cow_animal_cages
+		upgrade_cow_hippodrome
+		upgrade_cow_training_academy
+        upgrade_cow_theater_stage
+		upgrade_cow_master_of_the_games
+        
+        # Garden upgrades:
+        upgrade_cow_fountains
+		upgrade_cow_fountain_of_youth
+		upgrade_cow_hanging_gardens
+		upgrade_cow_secluded_groves
+		upgrade_cow_hidden_burial
+		upgrade_cow_poisonous_flowers
+		upgrade_cow_herb_garden
+		upgrade_cow_statues_garden
+		upgrade_cow_vineyard
+        upgrade_cow_pet_graveyard
+        
+        # Library upgrades: 
+        upgrade_cow_collection_drama
+		upgrade_cow_collection_architecture
+		upgrade_cow_collection_math
+		upgrade_cow_collection_history
+		upgrade_cow_collection_science
+		upgrade_cow_scribe_room
+		upgrade_cow_keeper_of_tomes
+
+        # University upgrades:
+		upgrade_cow_great_seminars
+		upgrade_cow_wing_of_diplomacy
+		upgrade_cow_wing_of_martial
+		upgrade_cow_wing_of_stewardship
+		upgrade_cow_wing_of_intrigue
+        upgrade_cow_wing_of_learning
+		upgrade_cow_guardian_of_knowledge
+		
+		# Mausoleum upgrades:
+		upgrade_cow_statues_dead
+		upgrade_cow_eternal_flame
+		upgrade_cow_unmarked_tombs
+		upgrade_cow_quadriga_statue
+		upgrade_cow_keeper_of_the_dead
+		upgrade_cow_horse_graveyard		
+
+		# Pagan Stones upgrades:
+		upgrade_cow_runestones
+		upgrade_cow_more_stones
+		upgrade_cow_stone_custodian
+		
+		# Pyramids upgrades:
+		upgrade_cow_extra_pyramids
+		upgrade_cow_mythological_beast
+		upgrade_cow_hidden_room
+		upgrade_cow_necropolis
+		upgrade_cow_traps
+		upgrade_cow_lime_stone_casing
+		upgrade_cow_overseer_of_rites
+		
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_tower
+		upgrade_road_tolls
+		upgrade_retinue
+	}
+	stage = {
+		allow = {
+			prestige = 10000
+			OR = { 
+				realm_size = 200
+				AND = {
+					is_feudal = yes
+					real_tier = emperor
+					ai = no
+				}
+			}
+			FROMFROMFROM = {
+				province_id = 802 # Alexandria
+				is_coastal = yes
+			}			
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.05
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.10
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.20
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			wonder_build_cost_modifier = -0.20
+		}
+	}
+}
+
+### H04. City of Wonders (Antioch) ###
+wonder_city_of_wonders_anti = {
+	allow_coastal = yes
+	picture = GFX_wonder_strip_cow_grand_walls
+	potential = {
+        FROMFROMFROM = {
+			province_id = 764 # Antiocheia
+        }	
+	}
+	active = {
+	}
+	flags = {
+		cost_high
+		is_historical
+		wonder_desc_7
+		wonder_cow_name_1
+	}
+	available_upgrades = {
+		### DISTRICTS ###
+		# Temples (Religious):
+		# upgrade_cow_district_cathedral # Domus Aurea instead
+		upgrade_cow_district_domus_aurea_anti
+		upgrade_cow_district_mosque
+		upgrade_cow_district_synagogue
+		upgrade_cow_district_temple_pagan
+		upgrade_cow_district_temple_hellenic # Pagan temple upgrades
+		upgrade_cow_district_temple_buddhist
+		upgrade_cow_district_temple_hindu
+		
+		# Statues:
+		upgrade_cow_district_statue_ruler
+		upgrade_cow_district_horse_statue
+		
+		# Fortifications:
+        upgrade_cow_district_grand_walls
+        # upgrade_cow_district_fortress # Akra of Antiocheia instead
+		upgrade_cow_district_akra_anti
+		upgrade_cow_district_underground_city
+		
+		# Great Harbor:
+        upgrade_cow_district_harbor
+		
+		# Great Lighthouse:
+		upgrade_cow_district_lighthouse
+		
+		# Royal Palace:
+        upgrade_cow_district_palace
+
+		# Cultural:
+        # upgrade_cow_district_amphitheatre # Circus of Antiocheia
+        upgrade_cow_district_circus_anti
+        upgrade_cow_district_garden
+		
+        # Learning Centers:
+        upgrade_cow_district_library
+        upgrade_cow_district_university
+
+		# Burial Places/Religious (OTHER):
+		upgrade_cow_district_mausoleum
+		upgrade_cow_district_pyramid
+		upgrade_cow_district_pagan_stones
+		upgrade_cow_district_aztec_pyramid
+
+		### UPGRADES ###
+		# Cathedral upgrades:
+		upgrade_cow_gargoyles
+		upgrade_cow_bells
+		upgrade_cow_stained_glass_window
+		upgrade_cow_relic_tomb
+		upgrade_cow_grand_basilica
+		upgrade_cow_catacombs
+		upgrade_cow_giant_cross
+		upgrade_cow_bells_golden
+
+		# Mosque upgrades:
+		upgrade_cow_minaret
+		upgrade_cow_open_courtyard
+		upgrade_cow_dome
+		upgrade_cow_lamps_hanging
+		upgrade_cow_soup_kitchen
+		upgrade_cow_school_mosque
+		upgrade_cow_hostel
+		upgrade_cow_custodian_of_the_mosque
+
+		# Synagogue upgrades:
+		upgrade_cow_tallest_building
+		upgrade_cow_garden_outer
+		upgrade_cow_holy_ark
+		upgrade_cow_decorations
+		upgrade_cow_choir_rooms
+		upgrade_cow_school_synagogue
+
+		# Pagan temple upgrades:
+		upgrade_cow_statue_god
+		upgrade_cow_temple_guards
+		upgrade_cow_sacrificial_altar
+		upgrade_cow_sacred_grove
+		upgrade_cow_prophecy_rooms
+		upgrade_cow_temple_precinct
+		upgrade_cow_inner_sanctuary
+		upgrade_cow_custodian_of_temple
+
+		# Buddhist temple upgrades:
+		upgrade_cow_chaitya-grihas
+		upgrade_cow_gompa
+		upgrade_cow_bodhi_tree
+		upgrade_cow_cave_complex
+		upgrade_cow_vihara
+		upgrade_cow_school_buddhist
+		upgrade_cow_relic_stupa
+		upgrade_cow_commerative_stupa
+		upgrade_cow_symbolic_stupa
+		upgrade_cow_votive_stupa
+
+		# Hindu temple upgrades:
+		upgrade_cow_high_gopura
+		upgrade_cow_shikhara
+		upgrade_cow_mandapa
+		upgrade_cow_temple_complex
+		upgrade_cow_school_hindu
+		upgrade_cow_hospital_hindu
+		
+		# Statue upgrades:
+		upgrade_cow_plating_gold
+		upgrade_cow_plating_silver
+		upgrade_cow_plating_bronze
+		upgrade_cow_statues_family
+		upgrade_cow_golden_crown
+		upgrade_cow_watcher_of_giants
+		# Horse Statue upgrades
+		upgrade_cow_stable
+		upgrade_cow_statues_animals
+		
+		# Grand Walls upgrades:
+        upgrade_cow_walls_sea
+		upgrade_cow_studded_bastions
+		upgrade_cow_strategic_exclaves
+		upgrade_cow_soaring_fortresses
+		upgrade_cow_hidden_gates
+		upgrade_cow_gatehouse_forts
+		upgrade_cow_killing_fields
+		upgrade_cow_deep_defense_architecture
+		upgrade_cow_artificial_islands
+		upgrade_cow_wall_walker
+        
+        # Fortress upgrades:
+		upgrade_cow_armory
+		upgrade_cow_watch_tower
+		upgrade_cow_vault
+		upgrade_cow_moat_pit
+		upgrade_cow_moat_spike
+		upgrade_cow_moat_water
+		upgrade_cow_moat_bones
+		upgrade_cow_hidden_passageways
+		upgrade_cow_garden_inner
+		
+		# Underground City upgrades:
+		upgrade_cow_dungeon
+		upgrade_cow_caves_natural
+		upgrade_cow_tunnels_travel
+		upgrade_cow_metal_mine_precious
+		upgrade_cow_guardian_of_the_deep
+		
+		# Great Harbor upgrades:
+        upgrade_cow_cothon
+		upgrade_cow_piers
+		upgrade_cow_office_harbor
+		upgrade_cow_lighthouse
+		upgrade_cow_military_wharf
+		upgrade_cow_master_of_tides
+		
+		# Great Lighthouse (Pharos) upgrades:
+		upgrade_cow_treasure_chamber
+		upgrade_cow_giant_banners
+		upgrade_cow_royal_apartments
+		upgrade_cow_historical_mural
+		upgrade_cow_lighthouse_custodian
+		
+        # Royal Palace upgrades:
+        upgrade_cow_throne_fancy
+		upgrade_cow_trap_door
+		upgrade_cow_royal_bedchamber
+		upgrade_cow_skull_throne
+		upgrade_cow_golden_throne
+		upgrade_cow_automata_throne
+        upgrade_cow_torture_chamber
+		upgrade_cow_brewery
+        upgrade_cow_dueling_room
+		upgrade_cow_royal_custodian
+		
+		# Amphitheatre upgrades:
+		upgrade_cow_naval_spectacle
+		upgrade_cow_animal_cages
+		upgrade_cow_hippodrome
+		upgrade_cow_training_academy
+        upgrade_cow_theater_stage
+		upgrade_cow_master_of_the_games
+        
+        # Garden upgrades:
+        upgrade_cow_fountains
+		upgrade_cow_fountain_of_youth
+		upgrade_cow_hanging_gardens
+		upgrade_cow_secluded_groves
+		upgrade_cow_hidden_burial
+		upgrade_cow_poisonous_flowers
+		upgrade_cow_herb_garden
+		upgrade_cow_statues_garden
+		upgrade_cow_vineyard
+        upgrade_cow_pet_graveyard
+        
+        # Library upgrades: 
+        upgrade_cow_collection_drama
+		upgrade_cow_collection_architecture
+		upgrade_cow_collection_math
+		upgrade_cow_collection_history
+		upgrade_cow_collection_science
+		upgrade_cow_scribe_room
+		upgrade_cow_keeper_of_tomes
+
+        # University upgrades:
+		upgrade_cow_great_seminars
+		upgrade_cow_wing_of_diplomacy
+		upgrade_cow_wing_of_martial
+		upgrade_cow_wing_of_stewardship
+		upgrade_cow_wing_of_intrigue
+        upgrade_cow_wing_of_learning
+		upgrade_cow_guardian_of_knowledge
+		
+		# Mausoleum upgrades:
+		upgrade_cow_statues_dead
+		upgrade_cow_eternal_flame
+		upgrade_cow_unmarked_tombs
+		upgrade_cow_quadriga_statue
+		upgrade_cow_keeper_of_the_dead
+		upgrade_cow_horse_graveyard		
+
+		# Pagan Stones upgrades:
+		upgrade_cow_runestones
+		upgrade_cow_more_stones
+		upgrade_cow_stone_custodian
+		
+		# Pyramids upgrades:
+		upgrade_cow_extra_pyramids
+		upgrade_cow_mythological_beast
+		upgrade_cow_hidden_room
+		upgrade_cow_necropolis
+		upgrade_cow_traps
+		upgrade_cow_lime_stone_casing
+		upgrade_cow_overseer_of_rites
+		
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_tower
+		upgrade_road_tolls
+		upgrade_retinue
+	}
+	stage = {
+		allow = {
+			prestige = 10000
+			OR = { 
+				realm_size = 200
+				AND = {
+					is_feudal = yes
+					real_tier = emperor
+					ai = no
+				}
+			}
+			FROMFROMFROM = {
+				province_id = 764 # Antiocheia
+			}			
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.05
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.10
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.20
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			wonder_build_cost_modifier = -0.20
+		}
+	}
+}
+
+### H05. City of Wonders (Jerusalem) ###
+wonder_city_of_wonders_jeru = {
+	# allow_coastal = yes
+	picture = GFX_wonder_strip_cow_grand_walls
+	potential = {
+        FROMFROMFROM = {
+			province_id = 774 # Jerusalem
+        }	
+	}
+	active = {
+	}
+	flags = {
+		cost_high
+		is_historical
+		wonder_desc_7
+	}
+	available_upgrades = {
+		### DISTRICTS ###
+		# Temples (Religious):
+		# upgrade_cow_district_cathedral # Basilica of the Holy Sepulchre instead
+		upgrade_cow_district_holy_sepulchre_jeru
+		# upgrade_cow_district_mosque # Dome of the Rock instead
+		upgrade_cow_district_dome_rock_jeru
+		# upgrade_cow_district_synagogue # Third Temple instead
+		upgrade_cow_district_third_temple_jeru
+		upgrade_cow_district_temple_pagan
+		upgrade_cow_district_temple_hellenic # Pagan temple upgrades
+		upgrade_cow_district_temple_buddhist
+		upgrade_cow_district_temple_hindu
+		
+		# Statues:
+		upgrade_cow_district_statue_ruler
+		upgrade_cow_district_horse_statue
+		
+		# Fortifications:
+        upgrade_cow_district_grand_walls
+        # upgrade_cow_district_fortress # Tower of David instead
+		upgrade_cow_district_tower_of_david # Unique - Jerusalem
+		upgrade_cow_district_underground_city
+		
+		# Great Harbor:
+        upgrade_cow_district_harbor
+		
+		# Great Lighthouse:
+		upgrade_cow_district_lighthouse
+		
+		# Royal Palace:
+        upgrade_cow_district_palace
+
+		# Cultural:
+        upgrade_cow_district_amphitheatre
+        upgrade_cow_district_garden
+		
+        # Learning Centers:
+        upgrade_cow_district_library
+        upgrade_cow_district_university
+
+		# Burial Places/Religious (OTHER):
+		upgrade_cow_district_mausoleum
+		upgrade_cow_district_pyramid
+		upgrade_cow_district_pagan_stones
+		upgrade_cow_district_aztec_pyramid
+
+		### UPGRADES ###
+		# Cathedral upgrades:
+		upgrade_cow_gargoyles
+		upgrade_cow_bells
+		upgrade_cow_stained_glass_window
+		upgrade_cow_relic_tomb
+		upgrade_cow_grand_basilica
+		upgrade_cow_catacombs
+		upgrade_cow_giant_cross
+		upgrade_cow_bells_golden
+
+		# Mosque upgrades:
+		upgrade_cow_minaret
+		upgrade_cow_open_courtyard
+		upgrade_cow_dome
+		upgrade_cow_lamps_hanging
+		upgrade_cow_soup_kitchen
+		upgrade_cow_school_mosque
+		upgrade_cow_hostel
+		upgrade_cow_custodian_of_the_mosque
+
+		# Synagogue upgrades:
+		upgrade_cow_tallest_building
+		upgrade_cow_garden_outer
+		upgrade_cow_holy_ark
+		upgrade_cow_decorations
+		upgrade_cow_choir_rooms
+		upgrade_cow_school_synagogue
+
+		# Pagan temple upgrades:
+		upgrade_cow_statue_god
+		upgrade_cow_temple_guards
+		upgrade_cow_sacrificial_altar
+		upgrade_cow_sacred_grove
+		upgrade_cow_prophecy_rooms
+		upgrade_cow_temple_precinct
+		upgrade_cow_inner_sanctuary
+		upgrade_cow_custodian_of_temple
+
+		# Buddhist temple upgrades:
+		upgrade_cow_chaitya-grihas
+		upgrade_cow_gompa
+		upgrade_cow_bodhi_tree
+		upgrade_cow_cave_complex
+		upgrade_cow_vihara
+		upgrade_cow_school_buddhist
+		upgrade_cow_relic_stupa
+		upgrade_cow_commerative_stupa
+		upgrade_cow_symbolic_stupa
+		upgrade_cow_votive_stupa
+
+		# Hindu temple upgrades:
+		upgrade_cow_high_gopura
+		upgrade_cow_shikhara
+		upgrade_cow_mandapa
+		upgrade_cow_temple_complex
+		upgrade_cow_school_hindu
+		upgrade_cow_hospital_hindu
+		
+		# Statue upgrades:
+		upgrade_cow_plating_gold
+		upgrade_cow_plating_silver
+		upgrade_cow_plating_bronze
+		upgrade_cow_statues_family
+		upgrade_cow_golden_crown
+		upgrade_cow_watcher_of_giants
+		# Horse Statue upgrades
+		upgrade_cow_stable
+		upgrade_cow_statues_animals
+		
+		# Grand Walls upgrades:
+        upgrade_cow_walls_sea
+		upgrade_cow_studded_bastions
+		upgrade_cow_strategic_exclaves
+		upgrade_cow_soaring_fortresses
+		upgrade_cow_hidden_gates
+		upgrade_cow_gatehouse_forts
+		upgrade_cow_killing_fields
+		upgrade_cow_deep_defense_architecture
+		upgrade_cow_artificial_islands
+		upgrade_cow_wall_walker
+        
+        # Fortress upgrades:
+		upgrade_cow_armory
+		upgrade_cow_watch_tower
+		upgrade_cow_vault
+		upgrade_cow_moat_pit
+		upgrade_cow_moat_spike
+		upgrade_cow_moat_water
+		upgrade_cow_moat_bones
+		upgrade_cow_hidden_passageways
+		upgrade_cow_garden_inner
+		
+		# Underground City upgrades:
+		upgrade_cow_dungeon
+		upgrade_cow_caves_natural
+		upgrade_cow_tunnels_travel
+		upgrade_cow_metal_mine_precious
+		upgrade_cow_guardian_of_the_deep
+		
+		# Great Harbor upgrades:
+        upgrade_cow_cothon
+		upgrade_cow_piers
+		upgrade_cow_office_harbor
+		upgrade_cow_lighthouse
+		upgrade_cow_military_wharf
+		upgrade_cow_master_of_tides
+		
+		# Great Lighthouse (Pharos) upgrades:
+		upgrade_cow_treasure_chamber
+		upgrade_cow_giant_banners
+		upgrade_cow_royal_apartments
+		upgrade_cow_historical_mural
+		upgrade_cow_lighthouse_custodian
+		
+        # Royal Palace upgrades:
+        upgrade_cow_throne_fancy
+		upgrade_cow_trap_door
+		upgrade_cow_royal_bedchamber
+		upgrade_cow_skull_throne
+		upgrade_cow_golden_throne
+		upgrade_cow_automata_throne
+        upgrade_cow_torture_chamber
+		upgrade_cow_brewery
+        upgrade_cow_dueling_room
+		upgrade_cow_royal_custodian
+		
+		# Amphitheatre upgrades:
+		upgrade_cow_naval_spectacle
+		upgrade_cow_animal_cages
+		upgrade_cow_hippodrome
+		upgrade_cow_training_academy
+        upgrade_cow_theater_stage
+		upgrade_cow_master_of_the_games
+        
+        # Garden upgrades:
+        upgrade_cow_fountains
+		upgrade_cow_fountain_of_youth
+		upgrade_cow_hanging_gardens
+		upgrade_cow_secluded_groves
+		upgrade_cow_hidden_burial
+		upgrade_cow_poisonous_flowers
+		upgrade_cow_herb_garden
+		upgrade_cow_statues_garden
+		upgrade_cow_vineyard
+        upgrade_cow_pet_graveyard
+        
+        # Library upgrades: 
+        upgrade_cow_collection_drama
+		upgrade_cow_collection_architecture
+		upgrade_cow_collection_math
+		upgrade_cow_collection_history
+		upgrade_cow_collection_science
+		upgrade_cow_scribe_room
+		upgrade_cow_keeper_of_tomes
+
+        # University upgrades:
+		upgrade_cow_great_seminars
+		upgrade_cow_wing_of_diplomacy
+		upgrade_cow_wing_of_martial
+		upgrade_cow_wing_of_stewardship
+		upgrade_cow_wing_of_intrigue
+        upgrade_cow_wing_of_learning
+		upgrade_cow_guardian_of_knowledge
+		
+		# Mausoleum upgrades:
+		upgrade_cow_statues_dead
+		upgrade_cow_eternal_flame
+		upgrade_cow_unmarked_tombs
+		upgrade_cow_quadriga_statue
+		upgrade_cow_keeper_of_the_dead
+		upgrade_cow_horse_graveyard		
+
+		# Pagan Stones upgrades:
+		upgrade_cow_runestones
+		upgrade_cow_more_stones
+		upgrade_cow_stone_custodian
+		
+		# Pyramids upgrades:
+		upgrade_cow_extra_pyramids
+		upgrade_cow_mythological_beast
+		upgrade_cow_hidden_room
+		upgrade_cow_necropolis
+		upgrade_cow_traps
+		upgrade_cow_lime_stone_casing
+		upgrade_cow_overseer_of_rites
+		
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_tower
+		upgrade_road_tolls
+		upgrade_retinue
+	}
+	stage = {
+		allow = {
+			prestige = 10000
+			OR = { 
+				realm_size = 200
+				AND = {
+					is_feudal = yes
+					real_tier = emperor
+					ai = no
+				}
+			}
+			FROMFROMFROM = {
+				province_id = 774 # Jerusalem
+			}			
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.05
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.10
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.20
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			wonder_build_cost_modifier = -0.20
+		}
+	}
+}
+
+### H06. City of Wonders (Babylon/Baghdad) ###
+wonder_city_of_wonders_baby = {
+	allow_coastal = yes
+	picture = GFX_wonder_strip_cow_grand_walls
+	potential = {
+        FROMFROMFROM = {
+			province_id = 693 # Baghdad
+        }	
+	}
+	active = {
+	}
+	flags = {
+		cost_high
+		is_historical
+		wonder_desc_7
+		wonder_cow_name_1
+	}
+	available_upgrades = {
+		### DISTRICTS ###
+		# Temples (Religious):
+		upgrade_cow_district_cathedral
+		upgrade_cow_district_mosque
+		upgrade_cow_district_synagogue
+		upgrade_cow_district_temple_pagan
+		upgrade_cow_district_temple_hellenic # Pagan temple upgrades
+		upgrade_cow_district_temple_buddhist
+		upgrade_cow_district_temple_hindu
+		
+		# Statues:
+		upgrade_cow_district_statue_ruler
+		upgrade_cow_district_horse_statue
+		
+		# Fortifications:
+        # upgrade_cow_district_grand_walls # City of Peace or Nimitti-Bel instead
+        upgrade_cow_district_grand_walls_baby
+        upgrade_cow_district_round_city_baby
+        # upgrade_cow_district_fortress # Ishtar Gate instead
+        upgrade_cow_district_ishtar_gate
+		upgrade_cow_district_underground_city
+		
+		# Great Harbor:
+        upgrade_cow_district_harbor
+		
+		# Great Lighthouse:
+		# upgrade_cow_district_lighthouse # Tower of Babel instead
+		upgrade_cow_district_tower_of_babel
+		
+		# Royal Palace:
+        upgrade_cow_district_palace
+
+		# Cultural:
+        upgrade_cow_district_amphitheatre
+        # upgrade_cow_district_garden # Hanging Gardens of Babylon instead
+		upgrade_cow_district_hanging_gardens_baby
+		
+        # Learning Centers:
+        # upgrade_cow_district_library # House of Wisdom instead
+		upgrade_cow_district_house_of_wisdom
+        upgrade_cow_district_university
+
+		# Burial Places/Religious (OTHER):
+		upgrade_cow_district_mausoleum
+		upgrade_cow_district_pyramid
+		upgrade_cow_district_pagan_stones
+		upgrade_cow_district_aztec_pyramid
+
+		### UPGRADES ###
+		# Cathedral upgrades:
+		upgrade_cow_gargoyles
+		upgrade_cow_bells
+		upgrade_cow_stained_glass_window
+		upgrade_cow_relic_tomb
+		upgrade_cow_grand_basilica
+		upgrade_cow_catacombs
+		upgrade_cow_giant_cross
+		upgrade_cow_bells_golden
+
+		# Mosque upgrades:
+		upgrade_cow_minaret
+		upgrade_cow_open_courtyard
+		upgrade_cow_dome
+		upgrade_cow_lamps_hanging
+		upgrade_cow_soup_kitchen
+		upgrade_cow_school_mosque
+		upgrade_cow_hostel
+		upgrade_cow_custodian_of_the_mosque
+
+		# Synagogue upgrades:
+		upgrade_cow_tallest_building
+		upgrade_cow_garden_outer
+		upgrade_cow_holy_ark
+		upgrade_cow_decorations
+		upgrade_cow_choir_rooms
+		upgrade_cow_school_synagogue
+
+		# Pagan temple upgrades:
+		upgrade_cow_statue_god
+		upgrade_cow_temple_guards
+		upgrade_cow_sacrificial_altar
+		upgrade_cow_sacred_grove
+		upgrade_cow_prophecy_rooms
+		upgrade_cow_temple_precinct
+		upgrade_cow_inner_sanctuary
+		upgrade_cow_custodian_of_temple
+
+		# Buddhist temple upgrades:
+		upgrade_cow_chaitya-grihas
+		upgrade_cow_gompa
+		upgrade_cow_bodhi_tree
+		upgrade_cow_cave_complex
+		upgrade_cow_vihara
+		upgrade_cow_school_buddhist
+		upgrade_cow_relic_stupa
+		upgrade_cow_commerative_stupa
+		upgrade_cow_symbolic_stupa
+		upgrade_cow_votive_stupa
+
+		# Hindu temple upgrades:
+		upgrade_cow_high_gopura
+		upgrade_cow_shikhara
+		upgrade_cow_mandapa
+		upgrade_cow_temple_complex
+		upgrade_cow_school_hindu
+		upgrade_cow_hospital_hindu
+		
+		# Statue upgrades:
+		upgrade_cow_plating_gold
+		upgrade_cow_plating_silver
+		upgrade_cow_plating_bronze
+		upgrade_cow_statues_family
+		upgrade_cow_golden_crown
+		upgrade_cow_watcher_of_giants
+		# Horse Statue upgrades
+		upgrade_cow_stable
+		upgrade_cow_statues_animals
+		
+		# Grand Walls upgrades:
+        upgrade_cow_walls_sea
+		upgrade_cow_studded_bastions
+		upgrade_cow_strategic_exclaves
+		upgrade_cow_soaring_fortresses
+		upgrade_cow_hidden_gates
+		upgrade_cow_gatehouse_forts
+		upgrade_cow_killing_fields
+		upgrade_cow_deep_defense_architecture
+		upgrade_cow_artificial_islands
+		upgrade_cow_wall_walker
+        
+        # Fortress upgrades:
+		upgrade_cow_armory
+		upgrade_cow_watch_tower
+		upgrade_cow_vault
+		upgrade_cow_moat_pit
+		upgrade_cow_moat_spike
+		upgrade_cow_moat_water
+		upgrade_cow_moat_bones
+		upgrade_cow_hidden_passageways
+		upgrade_cow_garden_inner
+		
+		# Underground City upgrades:
+		upgrade_cow_dungeon
+		upgrade_cow_caves_natural
+		upgrade_cow_tunnels_travel
+		upgrade_cow_metal_mine_precious
+		upgrade_cow_guardian_of_the_deep
+		
+		# Great Harbor upgrades:
+        upgrade_cow_cothon
+		upgrade_cow_piers
+		upgrade_cow_office_harbor
+		upgrade_cow_lighthouse
+		upgrade_cow_military_wharf
+		upgrade_cow_master_of_tides
+		
+		# Great Lighthouse (Pharos) upgrades:
+		upgrade_cow_treasure_chamber
+		upgrade_cow_giant_banners
+		upgrade_cow_royal_apartments
+		upgrade_cow_historical_mural
+		upgrade_cow_lighthouse_custodian
+		
+        # Royal Palace upgrades:
+        upgrade_cow_throne_fancy
+		upgrade_cow_trap_door
+		upgrade_cow_royal_bedchamber
+		upgrade_cow_skull_throne
+		upgrade_cow_golden_throne
+		upgrade_cow_automata_throne
+        upgrade_cow_torture_chamber
+		upgrade_cow_brewery
+        upgrade_cow_dueling_room
+		upgrade_cow_royal_custodian
+		
+		# Amphitheatre upgrades:
+		upgrade_cow_naval_spectacle
+		upgrade_cow_animal_cages
+		upgrade_cow_hippodrome
+		upgrade_cow_training_academy
+        upgrade_cow_theater_stage
+		upgrade_cow_master_of_the_games
+        
+        # Garden upgrades:
+        upgrade_cow_fountains
+		upgrade_cow_fountain_of_youth
+		upgrade_cow_hanging_gardens
+		upgrade_cow_secluded_groves
+		upgrade_cow_hidden_burial
+		upgrade_cow_poisonous_flowers
+		upgrade_cow_herb_garden
+		upgrade_cow_statues_garden
+		upgrade_cow_vineyard
+        upgrade_cow_pet_graveyard
+        
+        # Library upgrades: 
+        upgrade_cow_collection_drama
+		upgrade_cow_collection_architecture
+		upgrade_cow_collection_math
+		upgrade_cow_collection_history
+		upgrade_cow_collection_science
+		upgrade_cow_scribe_room
+		upgrade_cow_keeper_of_tomes
+
+        # University upgrades:
+		upgrade_cow_great_seminars
+		upgrade_cow_wing_of_diplomacy
+		upgrade_cow_wing_of_martial
+		upgrade_cow_wing_of_stewardship
+		upgrade_cow_wing_of_intrigue
+        upgrade_cow_wing_of_learning
+		upgrade_cow_guardian_of_knowledge
+		
+		# Mausoleum upgrades:
+		upgrade_cow_statues_dead
+		upgrade_cow_eternal_flame
+		upgrade_cow_unmarked_tombs
+		upgrade_cow_quadriga_statue
+		upgrade_cow_keeper_of_the_dead
+		upgrade_cow_horse_graveyard		
+
+		# Pagan Stones upgrades:
+		upgrade_cow_runestones
+		upgrade_cow_more_stones
+		upgrade_cow_stone_custodian
+		
+		# Pyramids upgrades:
+		upgrade_cow_extra_pyramids
+		upgrade_cow_mythological_beast
+		upgrade_cow_hidden_room
+		upgrade_cow_necropolis
+		upgrade_cow_traps
+		upgrade_cow_lime_stone_casing
+		upgrade_cow_overseer_of_rites
+		
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_tower
+		upgrade_road_tolls
+		upgrade_retinue
+	}
+	stage = {
+		allow = {
+			prestige = 10000
+			OR = { 
+				realm_size = 200
+				AND = {
+					is_feudal = yes
+					real_tier = emperor
+					ai = no
+				}
+			}
+			FROMFROMFROM = {
+				province_id = 693 # Baghdad
+			}			
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.05
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.10
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.20
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			wonder_build_cost_modifier = -0.20
+		}
+	}
+}
+
+### H07. City of Wonders (Delhi) ###
+wonder_city_of_wonders_delh = {
+	allow_coastal = yes
+	picture = GFX_wonder_strip_cow_grand_walls
+	potential = {
+        FROMFROMFROM = {
+			province_id = 1365 # Delhi
+        }	
+	}
+	active = {
+	}
+	flags = {
+		cost_high
+		is_historical
+		wonder_desc_7
+		wonder_cow_name_1
+		wonder_cow_desc_1
+	}
+	available_upgrades = {
+		### DISTRICTS ###
+		# Temples (Religious):
+		upgrade_cow_district_cathedral
+		upgrade_cow_district_mosque
+		upgrade_cow_district_synagogue
+		upgrade_cow_district_temple_pagan
+		upgrade_cow_district_temple_hellenic # Pagan temple upgrades
+		upgrade_cow_district_temple_buddhist
+		upgrade_cow_district_temple_hindu
+		
+		# Statues:
+		upgrade_cow_district_statue_ruler
+		upgrade_cow_district_horse_statue
+		
+		# Fortifications:
+        upgrade_cow_district_grand_walls
+        upgrade_cow_district_fortress
+		upgrade_cow_district_underground_city
+		
+		# Great Harbor:
+        upgrade_cow_district_harbor
+		
+		# Great Lighthouse:
+		upgrade_cow_district_lighthouse
+		
+		# Royal Palace:
+        upgrade_cow_district_palace
+
+		# Cultural:
+        upgrade_cow_district_amphitheatre
+        upgrade_cow_district_garden
+		
+        # Learning Centers:
+        upgrade_cow_district_library
+        upgrade_cow_district_university
+
+		# Burial Places/Religious (OTHER):
+		upgrade_cow_district_mausoleum
+		upgrade_cow_district_pyramid
+		upgrade_cow_district_pagan_stones
+		upgrade_cow_district_aztec_pyramid
+
+		### UPGRADES ###
+		# Cathedral upgrades:
+		upgrade_cow_gargoyles
+		upgrade_cow_bells
+		upgrade_cow_stained_glass_window
+		upgrade_cow_relic_tomb
+		upgrade_cow_grand_basilica
+		upgrade_cow_catacombs
+		upgrade_cow_giant_cross
+		upgrade_cow_bells_golden
+
+		# Mosque upgrades:
+		upgrade_cow_minaret
+		upgrade_cow_open_courtyard
+		upgrade_cow_dome
+		upgrade_cow_lamps_hanging
+		upgrade_cow_soup_kitchen
+		upgrade_cow_school_mosque
+		upgrade_cow_hostel
+		upgrade_cow_custodian_of_the_mosque
+
+		# Synagogue upgrades:
+		upgrade_cow_tallest_building
+		upgrade_cow_garden_outer
+		upgrade_cow_holy_ark
+		upgrade_cow_decorations
+		upgrade_cow_choir_rooms
+		upgrade_cow_school_synagogue
+
+		# Pagan temple upgrades:
+		upgrade_cow_statue_god
+		upgrade_cow_temple_guards
+		upgrade_cow_sacrificial_altar
+		upgrade_cow_sacred_grove
+		upgrade_cow_prophecy_rooms
+		upgrade_cow_temple_precinct
+		upgrade_cow_inner_sanctuary
+		upgrade_cow_custodian_of_temple
+
+		# Buddhist temple upgrades:
+		upgrade_cow_chaitya-grihas
+		upgrade_cow_gompa
+		upgrade_cow_bodhi_tree
+		upgrade_cow_cave_complex
+		upgrade_cow_vihara
+		upgrade_cow_school_buddhist
+		upgrade_cow_relic_stupa
+		upgrade_cow_commerative_stupa
+		upgrade_cow_symbolic_stupa
+		upgrade_cow_votive_stupa
+
+		# Hindu temple upgrades:
+		upgrade_cow_high_gopura
+		upgrade_cow_shikhara
+		upgrade_cow_mandapa
+		upgrade_cow_temple_complex
+		upgrade_cow_school_hindu
+		upgrade_cow_hospital_hindu
+		
+		# Statue upgrades:
+		upgrade_cow_plating_gold
+		upgrade_cow_plating_silver
+		upgrade_cow_plating_bronze
+		upgrade_cow_statues_family
+		upgrade_cow_golden_crown
+		upgrade_cow_watcher_of_giants
+		# Horse Statue upgrades
+		upgrade_cow_stable
+		upgrade_cow_statues_animals
+		
+		# Grand Walls upgrades:
+        upgrade_cow_walls_sea
+		upgrade_cow_studded_bastions
+		upgrade_cow_strategic_exclaves
+		upgrade_cow_soaring_fortresses
+		upgrade_cow_hidden_gates
+		upgrade_cow_gatehouse_forts
+		upgrade_cow_killing_fields
+		upgrade_cow_deep_defense_architecture
+		upgrade_cow_artificial_islands
+		upgrade_cow_wall_walker
+        
+        # Fortress upgrades:
+		upgrade_cow_armory
+		upgrade_cow_watch_tower
+		upgrade_cow_vault
+		upgrade_cow_moat_pit
+		upgrade_cow_moat_spike
+		upgrade_cow_moat_water
+		upgrade_cow_moat_bones
+		upgrade_cow_hidden_passageways
+		upgrade_cow_garden_inner
+		
+		# Underground City upgrades:
+		upgrade_cow_dungeon
+		upgrade_cow_caves_natural
+		upgrade_cow_tunnels_travel
+		upgrade_cow_metal_mine_precious
+		upgrade_cow_guardian_of_the_deep
+		
+		# Great Harbor upgrades:
+        upgrade_cow_cothon
+		upgrade_cow_piers
+		upgrade_cow_office_harbor
+		upgrade_cow_lighthouse
+		upgrade_cow_military_wharf
+		upgrade_cow_master_of_tides
+		
+		# Great Lighthouse (Pharos) upgrades:
+		upgrade_cow_treasure_chamber
+		upgrade_cow_giant_banners
+		upgrade_cow_royal_apartments
+		upgrade_cow_historical_mural
+		upgrade_cow_lighthouse_custodian
+		
+        # Royal Palace upgrades:
+        upgrade_cow_throne_fancy
+		upgrade_cow_trap_door
+		upgrade_cow_royal_bedchamber
+		upgrade_cow_skull_throne
+		upgrade_cow_golden_throne
+		upgrade_cow_automata_throne
+        upgrade_cow_torture_chamber
+		upgrade_cow_brewery
+        upgrade_cow_dueling_room
+		upgrade_cow_royal_custodian
+		
+		# Amphitheatre upgrades:
+		upgrade_cow_naval_spectacle
+		upgrade_cow_animal_cages
+		upgrade_cow_hippodrome
+		upgrade_cow_training_academy
+        upgrade_cow_theater_stage
+		upgrade_cow_master_of_the_games
+        
+        # Garden upgrades:
+        upgrade_cow_fountains
+		upgrade_cow_fountain_of_youth
+		upgrade_cow_hanging_gardens
+		upgrade_cow_secluded_groves
+		upgrade_cow_hidden_burial
+		upgrade_cow_poisonous_flowers
+		upgrade_cow_herb_garden
+		upgrade_cow_statues_garden
+		upgrade_cow_vineyard
+        upgrade_cow_pet_graveyard
+        
+        # Library upgrades: 
+        upgrade_cow_collection_drama
+		upgrade_cow_collection_architecture
+		upgrade_cow_collection_math
+		upgrade_cow_collection_history
+		upgrade_cow_collection_science
+		upgrade_cow_scribe_room
+		upgrade_cow_keeper_of_tomes
+
+        # University upgrades:
+		upgrade_cow_great_seminars
+		upgrade_cow_wing_of_diplomacy
+		upgrade_cow_wing_of_martial
+		upgrade_cow_wing_of_stewardship
+		upgrade_cow_wing_of_intrigue
+        upgrade_cow_wing_of_learning
+		upgrade_cow_guardian_of_knowledge
+		
+		# Mausoleum upgrades:
+		upgrade_cow_statues_dead
+		upgrade_cow_eternal_flame
+		upgrade_cow_unmarked_tombs
+		upgrade_cow_quadriga_statue
+		upgrade_cow_keeper_of_the_dead
+		upgrade_cow_horse_graveyard		
+
+		# Pagan Stones upgrades:
+		upgrade_cow_runestones
+		upgrade_cow_more_stones
+		upgrade_cow_stone_custodian
+		
+		# Pyramids upgrades:
+		upgrade_cow_extra_pyramids
+		upgrade_cow_mythological_beast
+		upgrade_cow_hidden_room
+		upgrade_cow_necropolis
+		upgrade_cow_traps
+		upgrade_cow_lime_stone_casing
+		upgrade_cow_overseer_of_rites
+		
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_tower
+		upgrade_road_tolls
+		upgrade_retinue
+	}
+	stage = {
+		allow = {
+			prestige = 10000
+			OR = { 
+				realm_size = 200
+				AND = {
+					is_feudal = yes
+					real_tier = emperor
+					ai = no
+				}
+			}
+			FROMFROMFROM = {
+				province_id = 1365 # Delhi
+			}			
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.05
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.10
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.20
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			wonder_build_cost_modifier = -0.20
+		}
+	}
+}
+
+### H08. City of Wonders (Athens) ###
+wonder_city_of_wonders_athens = {
+	allow_coastal = no
+	picture = GFX_wonder_strip_cow_grand_walls
+	potential = {
+        FROMFROMFROM = {
+			province_id = 482 # Athens
+        }	
+	}
+	active = {
+	}
+	flags = {
+		cost_high
+		is_historical
+		wonder_desc_7
+		wonder_cow_name_1
+	}
+	available_upgrades = {
+		### DISTRICTS ###
+		# Temples (Religious):
+		upgrade_cow_district_cathedral
+		upgrade_cow_district_mosque
+		upgrade_cow_district_synagogue
+		upgrade_cow_district_temple_pagan
+		# upgrade_cow_district_temple_hellenic # Pagan temple upgrades - Parthenonas of Athenai instead
+		upgrade_cow_district_parthenon_athens
+		upgrade_cow_district_temple_buddhist
+		upgrade_cow_district_temple_hindu
+		
+		# Statues:
+		# upgrade_cow_district_statue_ruler # Athena Promachos instead
+		upgrade_cow_district_colossus_athena
+		upgrade_cow_district_horse_statue
+		
+		# Fortifications:
+        # upgrade_cow_district_grand_walls # Makra Teiche instead
+        upgrade_cow_district_grand_walls_athens
+        upgrade_cow_district_fortress
+		upgrade_cow_district_underground_city
+		
+		# Great Harbor:
+        # upgrade_cow_district_harbor # Limen tou Peiraia instead
+        upgrade_cow_district_port_of_piraeus
+		
+		# Great Lighthouse:
+		upgrade_cow_district_lighthouse
+		
+		# Royal Palace:
+        upgrade_cow_district_palace
+
+		# Cultural:
+        # upgrade_cow_district_amphitheatre # Odeion of Pericles
+		upgrade_cow_district_odeon_athens
+        upgrade_cow_district_garden
+		
+        # Learning Centers:
+        upgrade_cow_district_library
+        upgrade_cow_district_university
+
+		# Burial Places/Religious (OTHER):
+		upgrade_cow_district_mausoleum
+		upgrade_cow_district_pyramid
+		upgrade_cow_district_pagan_stones
+		upgrade_cow_district_aztec_pyramid
+
+		### UPGRADES ###
+		# Cathedral upgrades:
+		upgrade_cow_gargoyles
+		upgrade_cow_bells
+		upgrade_cow_stained_glass_window
+		upgrade_cow_relic_tomb
+		upgrade_cow_grand_basilica
+		upgrade_cow_catacombs
+		upgrade_cow_giant_cross
+		upgrade_cow_bells_golden
+
+		# Mosque upgrades:
+		upgrade_cow_minaret
+		upgrade_cow_open_courtyard
+		upgrade_cow_dome
+		upgrade_cow_lamps_hanging
+		upgrade_cow_soup_kitchen
+		upgrade_cow_school_mosque
+		upgrade_cow_hostel
+		upgrade_cow_custodian_of_the_mosque
+
+		# Synagogue upgrades:
+		upgrade_cow_tallest_building
+		upgrade_cow_garden_outer
+		upgrade_cow_holy_ark
+		upgrade_cow_decorations
+		upgrade_cow_choir_rooms
+		upgrade_cow_school_synagogue
+
+		# Pagan temple upgrades:
+		upgrade_cow_statue_god
+		upgrade_cow_temple_guards
+		upgrade_cow_sacrificial_altar
+		upgrade_cow_sacred_grove
+		upgrade_cow_prophecy_rooms
+		upgrade_cow_temple_precinct
+		upgrade_cow_inner_sanctuary
+		upgrade_cow_custodian_of_temple
+
+		# Buddhist temple upgrades:
+		upgrade_cow_chaitya-grihas
+		upgrade_cow_gompa
+		upgrade_cow_bodhi_tree
+		upgrade_cow_cave_complex
+		upgrade_cow_vihara
+		upgrade_cow_school_buddhist
+		upgrade_cow_relic_stupa
+		upgrade_cow_commerative_stupa
+		upgrade_cow_symbolic_stupa
+		upgrade_cow_votive_stupa
+
+		# Hindu temple upgrades:
+		upgrade_cow_high_gopura
+		upgrade_cow_shikhara
+		upgrade_cow_mandapa
+		upgrade_cow_temple_complex
+		upgrade_cow_school_hindu
+		upgrade_cow_hospital_hindu
+		
+		# Statue upgrades:
+		upgrade_cow_plating_gold
+		upgrade_cow_plating_silver
+		upgrade_cow_plating_bronze
+		upgrade_cow_statues_family
+		upgrade_cow_golden_crown
+		upgrade_cow_watcher_of_giants
+		# Horse Statue upgrades
+		upgrade_cow_stable
+		upgrade_cow_statues_animals
+		
+		# Grand Walls upgrades:
+        upgrade_cow_walls_sea
+		upgrade_cow_studded_bastions
+		upgrade_cow_strategic_exclaves
+		upgrade_cow_soaring_fortresses
+		upgrade_cow_hidden_gates
+		upgrade_cow_gatehouse_forts
+		upgrade_cow_killing_fields
+		upgrade_cow_deep_defense_architecture
+		upgrade_cow_artificial_islands
+		upgrade_cow_wall_walker
+        
+        # Fortress upgrades:
+		upgrade_cow_armory
+		upgrade_cow_watch_tower
+		upgrade_cow_vault
+		upgrade_cow_moat_pit
+		upgrade_cow_moat_spike
+		upgrade_cow_moat_water
+		upgrade_cow_moat_bones
+		upgrade_cow_hidden_passageways
+		upgrade_cow_garden_inner
+		
+		# Underground City upgrades:
+		upgrade_cow_dungeon
+		upgrade_cow_caves_natural
+		upgrade_cow_tunnels_travel
+		upgrade_cow_metal_mine_precious
+		upgrade_cow_guardian_of_the_deep
+		
+		# Great Harbor upgrades:
+        upgrade_cow_cothon
+		upgrade_cow_piers
+		upgrade_cow_office_harbor
+		upgrade_cow_lighthouse
+		upgrade_cow_military_wharf
+		upgrade_cow_master_of_tides
+		
+		# Great Lighthouse (Pharos) upgrades:
+		upgrade_cow_treasure_chamber
+		upgrade_cow_giant_banners
+		upgrade_cow_royal_apartments
+		upgrade_cow_historical_mural
+		upgrade_cow_lighthouse_custodian
+		
+        # Royal Palace upgrades:
+        upgrade_cow_throne_fancy
+		upgrade_cow_trap_door
+		upgrade_cow_royal_bedchamber
+		upgrade_cow_skull_throne
+		upgrade_cow_golden_throne
+		upgrade_cow_automata_throne
+        upgrade_cow_torture_chamber
+		upgrade_cow_brewery
+        upgrade_cow_dueling_room
+		upgrade_cow_royal_custodian
+		
+		# Amphitheatre upgrades:
+		upgrade_cow_naval_spectacle
+		upgrade_cow_animal_cages
+		upgrade_cow_hippodrome
+		upgrade_cow_training_academy
+        upgrade_cow_theater_stage
+		upgrade_cow_master_of_the_games
+        
+        # Garden upgrades:
+        upgrade_cow_fountains
+		upgrade_cow_fountain_of_youth
+		upgrade_cow_hanging_gardens
+		upgrade_cow_secluded_groves
+		upgrade_cow_hidden_burial
+		upgrade_cow_poisonous_flowers
+		upgrade_cow_herb_garden
+		upgrade_cow_statues_garden
+		upgrade_cow_vineyard
+        upgrade_cow_pet_graveyard
+        
+        # Library upgrades: 
+        upgrade_cow_collection_drama
+		upgrade_cow_collection_architecture
+		upgrade_cow_collection_math
+		upgrade_cow_collection_history
+		upgrade_cow_collection_science
+		upgrade_cow_scribe_room
+		upgrade_cow_keeper_of_tomes
+
+        # University upgrades:
+		upgrade_cow_great_seminars
+		upgrade_cow_wing_of_diplomacy
+		upgrade_cow_wing_of_martial
+		upgrade_cow_wing_of_stewardship
+		upgrade_cow_wing_of_intrigue
+        upgrade_cow_wing_of_learning
+		upgrade_cow_guardian_of_knowledge
+		
+		# Mausoleum upgrades:
+		upgrade_cow_statues_dead
+		upgrade_cow_eternal_flame
+		upgrade_cow_unmarked_tombs
+		upgrade_cow_quadriga_statue
+		upgrade_cow_keeper_of_the_dead
+		upgrade_cow_horse_graveyard		
+
+		# Pagan Stones upgrades:
+		upgrade_cow_runestones
+		upgrade_cow_more_stones
+		upgrade_cow_stone_custodian
+		
+		# Pyramids upgrades:
+		upgrade_cow_extra_pyramids
+		upgrade_cow_mythological_beast
+		upgrade_cow_hidden_room
+		upgrade_cow_necropolis
+		upgrade_cow_traps
+		upgrade_cow_lime_stone_casing
+		upgrade_cow_overseer_of_rites
+		
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_tower
+		upgrade_road_tolls
+		upgrade_retinue
+	}
+	stage = {
+		allow = {
+			prestige = 10000
+			OR = { 
+				realm_size = 200
+				AND = {
+					is_feudal = yes
+					real_tier = emperor
+					ai = no
+				}
+			}
+			FROMFROMFROM = {
+				province_id = 482 # Athens
+			}			
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.05
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.10
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.20
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			wonder_build_cost_modifier = -0.20
+		}
+	}
+}
+
+### H09. City of Wonders (Persepolis) ###
+wonder_city_of_wonders_parsa = {
+	allow_coastal = no
+	picture = GFX_wonder_strip_cow_grand_walls
+	potential = {
+        FROMFROMFROM = {
+			province_id = 644 # Shiraz
+		}
+	}
+	active = {
+	}
+	flags = {
+		cost_high
+		is_historical
+		wonder_desc_7
+		wonder_cow_name_1
+	}
+	available_upgrades = {
+		### DISTRICTS ###
+		# Temples (Religious):
+		upgrade_cow_district_cathedral
+		upgrade_cow_district_mosque
+		upgrade_cow_district_synagogue
+		upgrade_cow_district_temple_pagan
+		upgrade_cow_district_temple_hellenic # Pagan temple upgrades
+		upgrade_cow_district_temple_buddhist
+		upgrade_cow_district_temple_hindu
+		
+		# Statues:
+		upgrade_cow_district_statue_ruler
+		upgrade_cow_district_horse_statue
+		
+		# Fortifications:
+        upgrade_cow_district_grand_walls
+		upgrade_cow_district_all_nations_parsa # Gate of All Nations instead
+        # upgrade_cow_district_fortress
+		upgrade_cow_district_underground_city
+		
+		# Great Harbor:
+        upgrade_cow_district_harbor
+		
+		# Great Lighthouse:
+		upgrade_cow_district_lighthouse
+		
+		# Royal Palace:
+        upgrade_cow_district_apadana_parsa
+        # upgrade_cow_district_palace # Apadana of Parsa instead
+
+		# Cultural:
+        upgrade_cow_district_amphitheatre
+        upgrade_cow_district_gardens_parsa
+        # upgrade_cow_district_garden # Gardens of Parsa instead
+		
+        # Learning Centers:
+        upgrade_cow_district_library
+        upgrade_cow_district_university
+
+		# Burial Places/Religious (OTHER):
+		upgrade_cow_district_tomb_of_cyrus # Only for Iranians or Zoroastrians
+		upgrade_cow_district_mausoleum
+		upgrade_cow_district_pyramid
+		upgrade_cow_district_pagan_stones
+		upgrade_cow_district_aztec_pyramid
+
+		### UPGRADES ###
+		# Cathedral upgrades:
+		upgrade_cow_gargoyles
+		upgrade_cow_bells
+		upgrade_cow_stained_glass_window
+		upgrade_cow_relic_tomb
+		upgrade_cow_grand_basilica
+		upgrade_cow_catacombs
+		upgrade_cow_giant_cross
+		upgrade_cow_bells_golden
+
+		# Mosque upgrades:
+		upgrade_cow_minaret
+		upgrade_cow_open_courtyard
+		upgrade_cow_dome
+		upgrade_cow_lamps_hanging
+		upgrade_cow_soup_kitchen
+		upgrade_cow_school_mosque
+		upgrade_cow_hostel
+		upgrade_cow_custodian_of_the_mosque
+
+		# Synagogue upgrades:
+		upgrade_cow_tallest_building
+		upgrade_cow_garden_outer
+		upgrade_cow_holy_ark
+		upgrade_cow_decorations
+		upgrade_cow_choir_rooms
+		upgrade_cow_school_synagogue
+
+		# Pagan temple upgrades:
+		upgrade_cow_statue_god
+		upgrade_cow_temple_guards
+		upgrade_cow_sacrificial_altar
+		upgrade_cow_sacred_grove
+		upgrade_cow_prophecy_rooms
+		upgrade_cow_temple_precinct
+		upgrade_cow_inner_sanctuary
+		upgrade_cow_custodian_of_temple
+
+		# Buddhist temple upgrades:
+		upgrade_cow_chaitya-grihas
+		upgrade_cow_gompa
+		upgrade_cow_bodhi_tree
+		upgrade_cow_cave_complex
+		upgrade_cow_vihara
+		upgrade_cow_school_buddhist
+		upgrade_cow_relic_stupa
+		upgrade_cow_commerative_stupa
+		upgrade_cow_symbolic_stupa
+		upgrade_cow_votive_stupa
+
+		# Hindu temple upgrades:
+		upgrade_cow_high_gopura
+		upgrade_cow_shikhara
+		upgrade_cow_mandapa
+		upgrade_cow_temple_complex
+		upgrade_cow_school_hindu
+		upgrade_cow_hospital_hindu
+		
+		# Statue upgrades:
+		upgrade_cow_plating_gold
+		upgrade_cow_plating_silver
+		upgrade_cow_plating_bronze
+		upgrade_cow_statues_family
+		upgrade_cow_golden_crown
+		upgrade_cow_watcher_of_giants
+		# Horse Statue upgrades
+		upgrade_cow_stable
+		upgrade_cow_statues_animals
+		
+		# Grand Walls upgrades:
+        upgrade_cow_walls_sea
+		upgrade_cow_studded_bastions
+		upgrade_cow_strategic_exclaves
+		upgrade_cow_soaring_fortresses
+		upgrade_cow_hidden_gates
+		upgrade_cow_gatehouse_forts
+		upgrade_cow_killing_fields
+		upgrade_cow_deep_defense_architecture
+		upgrade_cow_artificial_islands
+		upgrade_cow_wall_walker
+        
+        # Fortress upgrades:
+		upgrade_cow_armory
+		upgrade_cow_watch_tower
+		upgrade_cow_vault
+		upgrade_cow_moat_pit
+		upgrade_cow_moat_spike
+		upgrade_cow_moat_water
+		upgrade_cow_moat_bones
+		upgrade_cow_hidden_passageways
+		upgrade_cow_garden_inner
+		
+		# Underground City upgrades:
+		upgrade_cow_dungeon
+		upgrade_cow_caves_natural
+		upgrade_cow_tunnels_travel
+		upgrade_cow_metal_mine_precious
+		upgrade_cow_guardian_of_the_deep
+		
+		# Great Harbor upgrades:
+        upgrade_cow_cothon
+		upgrade_cow_piers
+		upgrade_cow_office_harbor
+		upgrade_cow_lighthouse
+		upgrade_cow_military_wharf
+		upgrade_cow_master_of_tides
+		
+		# Great Lighthouse (Pharos) upgrades:
+		upgrade_cow_treasure_chamber
+		upgrade_cow_giant_banners
+		upgrade_cow_royal_apartments
+		upgrade_cow_historical_mural
+		upgrade_cow_lighthouse_custodian
+		
+        # Royal Palace upgrades:
+        upgrade_cow_throne_fancy
+		upgrade_cow_trap_door
+		upgrade_cow_royal_bedchamber
+		upgrade_cow_skull_throne
+		upgrade_cow_golden_throne
+		upgrade_cow_automata_throne
+        upgrade_cow_torture_chamber
+		upgrade_cow_brewery
+        upgrade_cow_dueling_room
+		upgrade_cow_royal_custodian
+		
+		# Amphitheatre upgrades:
+		upgrade_cow_naval_spectacle
+		upgrade_cow_animal_cages
+		upgrade_cow_hippodrome
+		upgrade_cow_training_academy
+        upgrade_cow_theater_stage
+		upgrade_cow_master_of_the_games
+        
+        # Garden upgrades:
+        upgrade_cow_fountains
+		upgrade_cow_fountain_of_youth
+		upgrade_cow_hanging_gardens
+		upgrade_cow_secluded_groves
+		upgrade_cow_hidden_burial
+		upgrade_cow_poisonous_flowers
+		upgrade_cow_herb_garden
+		upgrade_cow_statues_garden
+		upgrade_cow_vineyard
+        upgrade_cow_pet_graveyard
+        
+        # Library upgrades: 
+        upgrade_cow_collection_drama
+		upgrade_cow_collection_architecture
+		upgrade_cow_collection_math
+		upgrade_cow_collection_history
+		upgrade_cow_collection_science
+		upgrade_cow_scribe_room
+		upgrade_cow_keeper_of_tomes
+
+        # University upgrades:
+		upgrade_cow_great_seminars
+		upgrade_cow_wing_of_diplomacy
+		upgrade_cow_wing_of_martial
+		upgrade_cow_wing_of_stewardship
+		upgrade_cow_wing_of_intrigue
+        upgrade_cow_wing_of_learning
+		upgrade_cow_guardian_of_knowledge
+		
+		# Mausoleum upgrades:
+		upgrade_cow_statues_dead
+		upgrade_cow_eternal_flame
+		upgrade_cow_unmarked_tombs
+		upgrade_cow_quadriga_statue
+		upgrade_cow_keeper_of_the_dead
+		upgrade_cow_horse_graveyard		
+
+		# Pagan Stones upgrades:
+		upgrade_cow_runestones
+		upgrade_cow_more_stones
+		upgrade_cow_stone_custodian
+		
+		# Pyramids upgrades:
+		upgrade_cow_extra_pyramids
+		upgrade_cow_mythological_beast
+		upgrade_cow_hidden_room
+		upgrade_cow_necropolis
+		upgrade_cow_traps
+		upgrade_cow_lime_stone_casing
+		upgrade_cow_overseer_of_rites
+		
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_tower
+		upgrade_road_tolls
+		upgrade_retinue
+	}
+	stage = {
+		allow = {
+			prestige = 10000
+			OR = { 
+				realm_size = 200
+				AND = {
+					is_feudal = yes
+					real_tier = emperor
+					ai = no
+				}
+			}
+			FROMFROMFROM = {
+				province_id = 644 # Shiraz
+			}			
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.05
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.10
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.20
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			wonder_build_cost_modifier = -0.20
+		}
+	}
+}
+
+### H10. City of Wonders (Carthage) ###
+wonder_city_of_wonders_carth = {
+	allow_coastal = yes
+	picture = GFX_wonder_strip_cow_grand_walls
+	potential = {
+        FROMFROMFROM = {
+			province_id = 817 # Tunis
+        }	
+	}
+	active = {
+	}
+	flags = {
+		cost_high
+		is_historical
+		wonder_desc_7
+		wonder_cow_name_1
+	}
+	available_upgrades = {
+		### DISTRICTS ###
+		# Temples (Religious):
+		upgrade_cow_district_cathedral
+		upgrade_cow_district_mosque
+		upgrade_cow_district_synagogue
+		upgrade_cow_district_temple_pagan
+		upgrade_cow_district_temple_hellenic # Pagan temple upgrades
+		upgrade_cow_district_temple_buddhist
+		upgrade_cow_district_temple_hindu
+		
+		# Statues:
+		upgrade_cow_district_statue_ruler
+		upgrade_cow_district_horse_statue
+		
+		# Fortifications:
+        upgrade_cow_district_grand_walls
+        upgrade_cow_district_byrsa_carthage
+        # upgrade_cow_district_fortress # Byrsa instead
+		upgrade_cow_district_underground_city
+		
+		# Great Harbor:
+        upgrade_cow_district_cothon_carthage
+        # upgrade_cow_district_harbor # Cothon of Carthago instead
+		
+		# Great Lighthouse:
+		upgrade_cow_district_lighthouse
+		
+		# Royal Palace:
+        upgrade_cow_district_palace
+
+		# Cultural:
+        upgrade_cow_district_amphitheatre
+        upgrade_cow_district_garden
+		
+        # Learning Centers:
+        upgrade_cow_district_library
+        upgrade_cow_district_university
+
+		# Burial Places/Religious (OTHER):
+		upgrade_cow_district_mausoleum
+		upgrade_cow_district_pyramid
+		upgrade_cow_district_pagan_stones
+		upgrade_cow_district_aztec_pyramid
+
+		### UPGRADES ###
+		# Cathedral upgrades:
+		upgrade_cow_gargoyles
+		upgrade_cow_bells
+		upgrade_cow_stained_glass_window
+		upgrade_cow_relic_tomb
+		upgrade_cow_grand_basilica
+		upgrade_cow_catacombs
+		upgrade_cow_giant_cross
+		upgrade_cow_bells_golden
+
+		# Mosque upgrades:
+		upgrade_cow_minaret
+		upgrade_cow_open_courtyard
+		upgrade_cow_dome
+		upgrade_cow_lamps_hanging
+		upgrade_cow_soup_kitchen
+		upgrade_cow_school_mosque
+		upgrade_cow_hostel
+		upgrade_cow_custodian_of_the_mosque
+
+		# Synagogue upgrades:
+		upgrade_cow_tallest_building
+		upgrade_cow_garden_outer
+		upgrade_cow_holy_ark
+		upgrade_cow_decorations
+		upgrade_cow_choir_rooms
+		upgrade_cow_school_synagogue
+
+		# Pagan temple upgrades:
+		upgrade_cow_statue_god
+		upgrade_cow_temple_guards
+		upgrade_cow_sacrificial_altar
+		upgrade_cow_sacred_grove
+		upgrade_cow_prophecy_rooms
+		upgrade_cow_temple_precinct
+		upgrade_cow_inner_sanctuary
+		upgrade_cow_custodian_of_temple
+
+		# Buddhist temple upgrades:
+		upgrade_cow_chaitya-grihas
+		upgrade_cow_gompa
+		upgrade_cow_bodhi_tree
+		upgrade_cow_cave_complex
+		upgrade_cow_vihara
+		upgrade_cow_school_buddhist
+		upgrade_cow_relic_stupa
+		upgrade_cow_commerative_stupa
+		upgrade_cow_symbolic_stupa
+		upgrade_cow_votive_stupa
+
+		# Hindu temple upgrades:
+		upgrade_cow_high_gopura
+		upgrade_cow_shikhara
+		upgrade_cow_mandapa
+		upgrade_cow_temple_complex
+		upgrade_cow_school_hindu
+		upgrade_cow_hospital_hindu
+		
+		# Statue upgrades:
+		upgrade_cow_plating_gold
+		upgrade_cow_plating_silver
+		upgrade_cow_plating_bronze
+		upgrade_cow_statues_family
+		upgrade_cow_golden_crown
+		upgrade_cow_watcher_of_giants
+		# Horse Statue upgrades
+		upgrade_cow_stable
+		upgrade_cow_statues_animals
+		
+		# Grand Walls upgrades:
+        upgrade_cow_walls_sea
+		upgrade_cow_studded_bastions
+		upgrade_cow_strategic_exclaves
+		upgrade_cow_soaring_fortresses
+		upgrade_cow_hidden_gates
+		upgrade_cow_gatehouse_forts
+		upgrade_cow_killing_fields
+		upgrade_cow_deep_defense_architecture
+		upgrade_cow_artificial_islands
+		upgrade_cow_wall_walker
+        
+        # Fortress upgrades:
+		upgrade_cow_armory
+		upgrade_cow_watch_tower
+		upgrade_cow_vault
+		upgrade_cow_moat_pit
+		upgrade_cow_moat_spike
+		upgrade_cow_moat_water
+		upgrade_cow_moat_bones
+		upgrade_cow_hidden_passageways
+		upgrade_cow_garden_inner
+		
+		# Underground City upgrades:
+		upgrade_cow_dungeon
+		upgrade_cow_caves_natural
+		upgrade_cow_tunnels_travel
+		upgrade_cow_metal_mine_precious
+		upgrade_cow_guardian_of_the_deep
+		
+		# Great Harbor upgrades:
+        upgrade_cow_cothon
+		upgrade_cow_piers
+		upgrade_cow_office_harbor
+		upgrade_cow_lighthouse
+		upgrade_cow_military_wharf
+		upgrade_cow_master_of_tides
+		
+		# Great Lighthouse (Pharos) upgrades:
+		upgrade_cow_treasure_chamber
+		upgrade_cow_giant_banners
+		upgrade_cow_royal_apartments
+		upgrade_cow_historical_mural
+		upgrade_cow_lighthouse_custodian
+		
+        # Royal Palace upgrades:
+        upgrade_cow_throne_fancy
+		upgrade_cow_trap_door
+		upgrade_cow_royal_bedchamber
+		upgrade_cow_skull_throne
+		upgrade_cow_golden_throne
+		upgrade_cow_automata_throne
+        upgrade_cow_torture_chamber
+		upgrade_cow_brewery
+        upgrade_cow_dueling_room
+		upgrade_cow_royal_custodian
+		
+		# Amphitheatre upgrades:
+		upgrade_cow_naval_spectacle
+		upgrade_cow_animal_cages
+		upgrade_cow_hippodrome
+		upgrade_cow_training_academy
+        upgrade_cow_theater_stage
+		upgrade_cow_master_of_the_games
+        
+        # Garden upgrades:
+        upgrade_cow_fountains
+		upgrade_cow_fountain_of_youth
+		upgrade_cow_hanging_gardens
+		upgrade_cow_secluded_groves
+		upgrade_cow_hidden_burial
+		upgrade_cow_poisonous_flowers
+		upgrade_cow_herb_garden
+		upgrade_cow_statues_garden
+		upgrade_cow_vineyard
+        upgrade_cow_pet_graveyard
+        
+        # Library upgrades: 
+        upgrade_cow_collection_drama
+		upgrade_cow_collection_architecture
+		upgrade_cow_collection_math
+		upgrade_cow_collection_history
+		upgrade_cow_collection_science
+		upgrade_cow_scribe_room
+		upgrade_cow_keeper_of_tomes
+
+        # University upgrades:
+		upgrade_cow_great_seminars
+		upgrade_cow_wing_of_diplomacy
+		upgrade_cow_wing_of_martial
+		upgrade_cow_wing_of_stewardship
+		upgrade_cow_wing_of_intrigue
+        upgrade_cow_wing_of_learning
+		upgrade_cow_guardian_of_knowledge
+		
+		# Mausoleum upgrades:
+		upgrade_cow_statues_dead
+		upgrade_cow_eternal_flame
+		upgrade_cow_unmarked_tombs
+		upgrade_cow_quadriga_statue
+		upgrade_cow_keeper_of_the_dead
+		upgrade_cow_horse_graveyard		
+
+		# Pagan Stones upgrades:
+		upgrade_cow_runestones
+		upgrade_cow_more_stones
+		upgrade_cow_stone_custodian
+		
+		# Pyramids upgrades:
+		upgrade_cow_extra_pyramids
+		upgrade_cow_mythological_beast
+		upgrade_cow_hidden_room
+		upgrade_cow_necropolis
+		upgrade_cow_traps
+		upgrade_cow_lime_stone_casing
+		upgrade_cow_overseer_of_rites
+		
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_tower
+		upgrade_road_tolls
+		upgrade_retinue
+	}
+	stage = {
+		allow = {
+			prestige = 10000
+			OR = { 
+				realm_size = 200
+				AND = {
+					is_feudal = yes
+					real_tier = emperor
+					ai = no
+				}
+			}
+			OR = {
+				culture = maghreb_arabic
+				culture = roman
+				culture_group = byzantine
+			}
+			FROMFROMFROM = {
+				province_id = 817 # Tunis
+			}			
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.05
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.10
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.20
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			wonder_build_cost_modifier = -0.20
+		}
+	}
+}
+
+### H11. City of Wonders (Syracuse) ###
+wonder_city_of_wonders_syra = {
+	allow_coastal = yes
+	picture = GFX_wonder_strip_cow_grand_walls
+	potential = {
+        FROMFROMFROM = {
+			province_id = 343 # Siracusa
+        }
+	}
+	active = {
+	}
+	flags = {
+		cost_high
+		is_historical
+		wonder_desc_7
+		wonder_cow_name_1
+	}
+	available_upgrades = {
+		### DISTRICTS ###
+		# Temples (Religious):
+		upgrade_cow_district_cathedral
+		upgrade_cow_district_mosque
+		upgrade_cow_district_synagogue
+		upgrade_cow_district_temple_pagan
+		upgrade_cow_district_temple_hellenic # Pagan temple upgrades
+		upgrade_cow_district_temple_buddhist
+		upgrade_cow_district_temple_hindu
+		
+		# Statues:
+		upgrade_cow_district_statue_ruler
+		upgrade_cow_district_horse_statue
+		
+		# Fortifications:
+        upgrade_cow_district_grand_walls_syra
+        # upgrade_cow_district_grand_walls # Grand Walls of Syrakousai instead
+        upgrade_cow_district_fortress
+		upgrade_cow_district_underground_city
+		
+		# Great Harbor:
+        upgrade_cow_district_harbor
+		
+		# Great Lighthouse:
+		upgrade_cow_district_lighthouse
+		
+		# Royal Palace:
+        upgrade_cow_district_palace
+
+		# Cultural:
+        # upgrade_cow_district_amphitheatre # Amphitheatron of Syrakousai instead
+		upgrade_cow_district_amphitheatre_syra
+        upgrade_cow_district_garden
+		
+        # Learning Centers:
+        upgrade_cow_district_library_syra
+        # upgrade_cow_district_library # Bibliothekai of Archimedes
+        upgrade_cow_district_university
+
+		# Burial Places/Religious (OTHER):
+		upgrade_cow_district_mausoleum
+		upgrade_cow_district_pyramid
+		upgrade_cow_district_pagan_stones
+		upgrade_cow_district_aztec_pyramid
+
+		### UPGRADES ###
+		# Cathedral upgrades:
+		upgrade_cow_gargoyles
+		upgrade_cow_bells
+		upgrade_cow_stained_glass_window
+		upgrade_cow_relic_tomb
+		upgrade_cow_grand_basilica
+		upgrade_cow_catacombs
+		upgrade_cow_giant_cross
+		upgrade_cow_bells_golden
+
+		# Mosque upgrades:
+		upgrade_cow_minaret
+		upgrade_cow_open_courtyard
+		upgrade_cow_dome
+		upgrade_cow_lamps_hanging
+		upgrade_cow_soup_kitchen
+		upgrade_cow_school_mosque
+		upgrade_cow_hostel
+		upgrade_cow_custodian_of_the_mosque
+
+		# Synagogue upgrades:
+		upgrade_cow_tallest_building
+		upgrade_cow_garden_outer
+		upgrade_cow_holy_ark
+		upgrade_cow_decorations
+		upgrade_cow_choir_rooms
+		upgrade_cow_school_synagogue
+
+		# Pagan temple upgrades:
+		upgrade_cow_statue_god
+		upgrade_cow_temple_guards
+		upgrade_cow_sacrificial_altar
+		upgrade_cow_sacred_grove
+		upgrade_cow_prophecy_rooms
+		upgrade_cow_temple_precinct
+		upgrade_cow_inner_sanctuary
+		upgrade_cow_custodian_of_temple
+
+		# Buddhist temple upgrades:
+		upgrade_cow_chaitya-grihas
+		upgrade_cow_gompa
+		upgrade_cow_bodhi_tree
+		upgrade_cow_cave_complex
+		upgrade_cow_vihara
+		upgrade_cow_school_buddhist
+		upgrade_cow_relic_stupa
+		upgrade_cow_commerative_stupa
+		upgrade_cow_symbolic_stupa
+		upgrade_cow_votive_stupa
+
+		# Hindu temple upgrades:
+		upgrade_cow_high_gopura
+		upgrade_cow_shikhara
+		upgrade_cow_mandapa
+		upgrade_cow_temple_complex
+		upgrade_cow_school_hindu
+		upgrade_cow_hospital_hindu
+		
+		# Statue upgrades:
+		upgrade_cow_plating_gold
+		upgrade_cow_plating_silver
+		upgrade_cow_plating_bronze
+		upgrade_cow_statues_family
+		upgrade_cow_golden_crown
+		upgrade_cow_watcher_of_giants
+		# Horse Statue upgrades
+		upgrade_cow_stable
+		upgrade_cow_statues_animals
+		
+		# Grand Walls upgrades:
+        upgrade_cow_mirror_towers # Unique - Siracusa
+		upgrade_cow_archimedes_claw # Unique - Siracusa
+		upgrade_cow_gastraphetes_makers # Unique - Siracusa
+		upgrade_cow_walls_sea
+		upgrade_cow_studded_bastions
+		upgrade_cow_strategic_exclaves
+		upgrade_cow_soaring_fortresses
+		upgrade_cow_hidden_gates
+		upgrade_cow_gatehouse_forts
+		upgrade_cow_killing_fields
+		upgrade_cow_deep_defense_architecture
+		upgrade_cow_artificial_islands
+		upgrade_cow_wall_walker
+        
+        # Fortress upgrades:
+		upgrade_cow_armory
+		upgrade_cow_watch_tower
+		upgrade_cow_vault
+		upgrade_cow_moat_pit
+		upgrade_cow_moat_spike
+		upgrade_cow_moat_water
+		upgrade_cow_moat_bones
+		upgrade_cow_hidden_passageways
+		upgrade_cow_garden_inner
+		
+		# Underground City upgrades:
+		upgrade_cow_dungeon
+		upgrade_cow_caves_natural
+		upgrade_cow_tunnels_travel
+		upgrade_cow_metal_mine_precious
+		upgrade_cow_guardian_of_the_deep
+		
+		# Great Harbor upgrades:
+        upgrade_cow_cothon
+		upgrade_cow_piers
+		upgrade_cow_office_harbor
+		upgrade_cow_lighthouse
+		upgrade_cow_military_wharf
+		upgrade_cow_master_of_tides
+		
+		# Great Lighthouse (Pharos) upgrades:
+		upgrade_cow_treasure_chamber
+		upgrade_cow_giant_banners
+		upgrade_cow_royal_apartments
+		upgrade_cow_historical_mural
+		upgrade_cow_lighthouse_custodian
+		
+        # Royal Palace upgrades:
+        upgrade_cow_throne_fancy
+		upgrade_cow_trap_door
+		upgrade_cow_royal_bedchamber
+		upgrade_cow_skull_throne
+		upgrade_cow_golden_throne
+		upgrade_cow_automata_throne
+        upgrade_cow_torture_chamber
+		upgrade_cow_brewery
+        upgrade_cow_dueling_room
+		upgrade_cow_royal_custodian
+		
+		# Amphitheatre upgrades:
+		upgrade_cow_naval_spectacle
+		upgrade_cow_animal_cages
+		upgrade_cow_hippodrome
+		upgrade_cow_training_academy
+        upgrade_cow_theater_stage
+		upgrade_cow_master_of_the_games
+        
+        # Garden upgrades:
+        upgrade_cow_fountains
+		upgrade_cow_fountain_of_youth
+		upgrade_cow_hanging_gardens
+		upgrade_cow_secluded_groves
+		upgrade_cow_hidden_burial
+		upgrade_cow_poisonous_flowers
+		upgrade_cow_herb_garden
+		upgrade_cow_statues_garden
+		upgrade_cow_vineyard
+        upgrade_cow_pet_graveyard
+        
+        # Library upgrades: 
+        upgrade_cow_collection_drama
+		upgrade_cow_collection_architecture
+		upgrade_cow_collection_math
+		upgrade_cow_collection_history
+		upgrade_cow_collection_science
+		upgrade_cow_scribe_room
+		upgrade_cow_keeper_of_tomes
+
+        # University upgrades:
+		upgrade_cow_great_seminars
+		upgrade_cow_wing_of_diplomacy
+		upgrade_cow_wing_of_martial
+		upgrade_cow_wing_of_stewardship
+		upgrade_cow_wing_of_intrigue
+        upgrade_cow_wing_of_learning
+		upgrade_cow_guardian_of_knowledge
+		
+		# Mausoleum upgrades:
+		upgrade_cow_statues_dead
+		upgrade_cow_eternal_flame
+		upgrade_cow_unmarked_tombs
+		upgrade_cow_quadriga_statue
+		upgrade_cow_keeper_of_the_dead
+		upgrade_cow_horse_graveyard		
+
+		# Pagan Stones upgrades:
+		upgrade_cow_runestones
+		upgrade_cow_more_stones
+		upgrade_cow_stone_custodian
+		
+		# Pyramids upgrades:
+		upgrade_cow_extra_pyramids
+		upgrade_cow_mythological_beast
+		upgrade_cow_hidden_room
+		upgrade_cow_necropolis
+		upgrade_cow_traps
+		upgrade_cow_lime_stone_casing
+		upgrade_cow_overseer_of_rites
+		
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_tower
+		upgrade_road_tolls
+		upgrade_retinue
+	}
+	stage = {
+		allow = {
+			prestige = 10000
+			OR = { 
+				realm_size = 200
+				AND = {
+					is_feudal = yes
+					real_tier = emperor
+					ai = no
+				}
+			}
+			FROMFROMFROM = {
+				province_id = 343 # Siracusa
+			}			
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.05
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.10
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.20
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			wonder_build_cost_modifier = -0.20
+		}
+	}
+}
+
+### H12. City of Wonders (Cordoba) ###
+wonder_city_of_wonders_cord = {
+	allow_coastal = yes
+	picture = GFX_wonder_strip_cow_grand_walls
+	potential = {
+        FROMFROMFROM = {
+			province_id = 181 # Cordoba
+        }
+	}
+	active = {
+	}
+	flags = {
+		cost_high
+		is_historical
+		wonder_desc_7
+		wonder_cow_name_3
+	}
+	available_upgrades = {
+		### DISTRICTS ###
+		# Temples (Religious):
+		upgrade_cow_district_cathedral
+		upgrade_cow_district_mosque_cord
+		# upgrade_cow_district_mosque # Great Mosque of Cordoba instead
+		upgrade_cow_district_synagogue
+		upgrade_cow_district_temple_pagan
+		upgrade_cow_district_temple_hellenic # Pagan temple upgrades
+		upgrade_cow_district_temple_buddhist
+		upgrade_cow_district_temple_hindu
+		
+		# Statues:
+		upgrade_cow_district_statue_ruler
+		upgrade_cow_district_horse_statue
+		
+		# Fortifications:
+        upgrade_cow_district_grand_walls
+        upgrade_cow_district_fortress
+		upgrade_cow_district_underground_city
+		
+		# Great Harbor:
+        upgrade_cow_district_harbor
+		
+		# Great Lighthouse:
+		upgrade_cow_district_lighthouse
+		
+		# Royal Palace:
+        upgrade_cow_district_medina_azahara
+        # upgrade_cow_district_palace # Medina Azahara instead
+
+		# Cultural:
+        upgrade_cow_district_amphitheatre
+        upgrade_cow_district_garden
+		
+        # Learning Centers:
+        upgrade_cow_district_library
+        upgrade_cow_district_university_cord
+        # upgrade_cow_district_university # Grand University of Cordoba instead
+
+		# Burial Places/Religious (OTHER):
+		upgrade_cow_district_mausoleum
+		upgrade_cow_district_pyramid
+		upgrade_cow_district_pagan_stones
+		upgrade_cow_district_aztec_pyramid
+
+		### UPGRADES ###
+		# Cathedral upgrades:
+		upgrade_cow_gargoyles
+		upgrade_cow_bells
+		upgrade_cow_stained_glass_window
+		upgrade_cow_relic_tomb
+		upgrade_cow_grand_basilica
+		upgrade_cow_catacombs
+		upgrade_cow_giant_cross
+		upgrade_cow_bells_golden
+
+		# Mosque upgrades:
+		upgrade_cow_minaret
+		upgrade_cow_open_courtyard
+		upgrade_cow_dome
+		upgrade_cow_lamps_hanging
+		upgrade_cow_soup_kitchen
+		upgrade_cow_school_mosque
+		upgrade_cow_hostel
+		upgrade_cow_custodian_of_the_mosque
+
+		# Synagogue upgrades:
+		upgrade_cow_tallest_building
+		upgrade_cow_garden_outer
+		upgrade_cow_holy_ark
+		upgrade_cow_decorations
+		upgrade_cow_choir_rooms
+		upgrade_cow_school_synagogue
+
+		# Pagan temple upgrades:
+		upgrade_cow_statue_god
+		upgrade_cow_temple_guards
+		upgrade_cow_sacrificial_altar
+		upgrade_cow_sacred_grove
+		upgrade_cow_prophecy_rooms
+		upgrade_cow_temple_precinct
+		upgrade_cow_inner_sanctuary
+		upgrade_cow_custodian_of_temple
+
+		# Buddhist temple upgrades:
+		upgrade_cow_chaitya-grihas
+		upgrade_cow_gompa
+		upgrade_cow_bodhi_tree
+		upgrade_cow_cave_complex
+		upgrade_cow_vihara
+		upgrade_cow_school_buddhist
+		upgrade_cow_relic_stupa
+		upgrade_cow_commerative_stupa
+		upgrade_cow_symbolic_stupa
+		upgrade_cow_votive_stupa
+
+		# Hindu temple upgrades:
+		upgrade_cow_high_gopura
+		upgrade_cow_shikhara
+		upgrade_cow_mandapa
+		upgrade_cow_temple_complex
+		upgrade_cow_school_hindu
+		upgrade_cow_hospital_hindu
+		
+		# Statue upgrades:
+		upgrade_cow_plating_gold
+		upgrade_cow_plating_silver
+		upgrade_cow_plating_bronze
+		upgrade_cow_statues_family
+		upgrade_cow_golden_crown
+		upgrade_cow_watcher_of_giants
+		# Horse Statue upgrades
+		upgrade_cow_stable
+		upgrade_cow_statues_animals
+		
+		# Grand Walls upgrades:
+		upgrade_cow_walls_sea
+		upgrade_cow_studded_bastions
+		upgrade_cow_strategic_exclaves
+		upgrade_cow_soaring_fortresses
+		upgrade_cow_hidden_gates
+		upgrade_cow_gatehouse_forts
+		upgrade_cow_killing_fields
+		upgrade_cow_deep_defense_architecture
+		upgrade_cow_artificial_islands
+		upgrade_cow_wall_walker
+        
+        # Fortress upgrades:
+		upgrade_cow_armory
+		upgrade_cow_watch_tower
+		upgrade_cow_vault
+		upgrade_cow_moat_pit
+		upgrade_cow_moat_spike
+		upgrade_cow_moat_water
+		upgrade_cow_moat_bones
+		upgrade_cow_hidden_passageways
+		upgrade_cow_garden_inner
+		
+		# Underground City upgrades:
+		upgrade_cow_dungeon
+		upgrade_cow_caves_natural
+		upgrade_cow_tunnels_travel
+		upgrade_cow_metal_mine_precious
+		upgrade_cow_guardian_of_the_deep
+		
+		# Great Harbor upgrades:
+        upgrade_cow_cothon
+		upgrade_cow_piers
+		upgrade_cow_office_harbor
+		upgrade_cow_lighthouse
+		upgrade_cow_military_wharf
+		upgrade_cow_master_of_tides
+		
+		# Great Lighthouse (Pharos) upgrades:
+		upgrade_cow_treasure_chamber
+		upgrade_cow_giant_banners
+		upgrade_cow_royal_apartments
+		upgrade_cow_historical_mural
+		upgrade_cow_lighthouse_custodian
+		
+        # Royal Palace upgrades:
+        upgrade_cow_throne_fancy
+		upgrade_cow_trap_door
+		upgrade_cow_royal_bedchamber
+		upgrade_cow_skull_throne
+		upgrade_cow_golden_throne
+		upgrade_cow_automata_throne
+        upgrade_cow_torture_chamber
+		upgrade_cow_brewery
+        upgrade_cow_dueling_room
+		upgrade_cow_royal_custodian
+		
+		# Amphitheatre upgrades:
+		upgrade_cow_naval_spectacle
+		upgrade_cow_animal_cages
+		upgrade_cow_hippodrome
+		upgrade_cow_training_academy
+        upgrade_cow_theater_stage
+		upgrade_cow_master_of_the_games
+        
+        # Garden upgrades:
+        upgrade_cow_fountains
+		upgrade_cow_fountain_of_youth
+		upgrade_cow_hanging_gardens
+		upgrade_cow_secluded_groves
+		upgrade_cow_hidden_burial
+		upgrade_cow_poisonous_flowers
+		upgrade_cow_herb_garden
+		upgrade_cow_statues_garden
+		upgrade_cow_vineyard
+        upgrade_cow_pet_graveyard
+        
+        # Library upgrades: 
+        upgrade_cow_collection_drama
+		upgrade_cow_collection_architecture
+		upgrade_cow_collection_math
+		upgrade_cow_collection_history
+		upgrade_cow_collection_science
+		upgrade_cow_scribe_room
+		upgrade_cow_keeper_of_tomes
+
+        # University upgrades:
+		upgrade_cow_great_seminars
+		upgrade_cow_wing_of_diplomacy
+		upgrade_cow_wing_of_martial
+		upgrade_cow_wing_of_stewardship
+		upgrade_cow_wing_of_intrigue
+        upgrade_cow_wing_of_learning
+		upgrade_cow_guardian_of_knowledge
+		
+		# Mausoleum upgrades:
+		upgrade_cow_statues_dead
+		upgrade_cow_eternal_flame
+		upgrade_cow_unmarked_tombs
+		upgrade_cow_quadriga_statue
+		upgrade_cow_keeper_of_the_dead
+		upgrade_cow_horse_graveyard		
+
+		# Pagan Stones upgrades:
+		upgrade_cow_runestones
+		upgrade_cow_more_stones
+		upgrade_cow_stone_custodian
+		
+		# Pyramids upgrades:
+		upgrade_cow_extra_pyramids
+		upgrade_cow_mythological_beast
+		upgrade_cow_hidden_room
+		upgrade_cow_necropolis
+		upgrade_cow_traps
+		upgrade_cow_lime_stone_casing
+		upgrade_cow_overseer_of_rites
+		
+		# OTHER:
+		upgrade_cow_street_lamps_cord
+		upgrade_cow_sewers_cord
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_tower
+		upgrade_road_tolls
+		upgrade_retinue
+	}
+	stage = {
+		allow = {
+			prestige = 10000
+			OR = { 
+				realm_size = 200
+				AND = {
+					is_feudal = yes
+					real_tier = emperor
+					ai = no
+				}
+			}
+			religion_group = muslim
+			FROMFROMFROM = {
+				province_id = 181 # Cordoba
+			}			
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 300
+		loot_time = 200
+		restore_cost_flat = 800
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.05
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.10
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 3
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.10
+			monthly_character_piety = 0.20
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 158
+		gold_cost_flat = 4000
+		gold_cost_ticking = 10
+		restore_time = 400
+		loot_time = 200
+		restore_cost_flat = 1000
+		restore_cost_ticking = 2
+		upgrade_slots = 6
+		local_modifier = {
+			wonder_build_cost_modifier = -0.05
+		}
+		owner_modifier = {
+			wonder_build_cost_modifier = -0.20
+		}
+	}
+}

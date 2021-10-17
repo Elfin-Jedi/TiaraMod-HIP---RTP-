@@ -1,0 +1,17 @@
+barren = {
+	
+ ruler_designer_cost = -10
+
+potential = {
+     age = 16
+}
+        random = yes
+        birth = 10
+	inherit_chance = 10
+	both_parent_has_trait_inherit_chance = 60
+        fertility = -0.75
+
+	
+	opposites = { fertile }
+
+}

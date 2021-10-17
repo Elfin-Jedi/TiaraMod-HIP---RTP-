@@ -1,0 +1,110 @@
+namespace = make_rival
+character_event = {
+	id = make_rival.0
+	desc = EVTDESCmake_rival.0
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+
+	immediate = {
+		FROMFROM = { set_character_flag = recent_friend }
+	}
+
+	option = {						#Option 1: Declare Rival "So be it"
+		name = EVTOPTAmake_rival.0
+		ai_chance = {
+			factor = 3.0
+			modifier = {
+				factor = 0
+				trait = possessed
+			}
+			modifier = {
+				factor = 3.0
+				trait = wroth
+			}
+			modifier = {
+				factor = 0.33
+				trait = honest
+			}
+			modifier = {
+				factor = 0.33
+				trait = gregarious
+			}
+			modifier = {
+				factor = 0
+				NOT = { opinion = { who = FROMFROM value = 0 } }
+			}
+			modifier = {
+				factor = 8
+				opinion = { who = FROMFROM value = -40 }
+			}
+		}
+		hidden_tooltip = {
+			FROMFROM = { character_event = { id = make_rival.1 days = 1 } }
+		}
+	}
+
+	option = {						#Option 2: Neutral "That's too bad"
+		name = EVTOPTBmake_rival.0
+		ai_chance = {
+			factor = 0.9
+			modifier = {
+				factor = 0
+				trait = possessed
+			}
+			modifier = {
+				factor = 0.33
+				trait = wroth
+			}
+			modifier = {
+				factor = 3
+				trait = honest
+			}
+			modifier = {
+				factor = 10
+				trait = gregarious
+			}
+			modifier = {
+				factor = 0
+				NOT = { opinion = { who = FROMFROM value = 0 } }
+			}
+			modifier = {
+				factor = 8
+				opinion = { who = FROMFROM value = 40 }
+			}
+		}
+	}
+}
+
+character_event = {					#Become mutual rivals
+	id = make_rival.1
+	desc = EVTDESCmake_rival.1
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAmake_rival.1
+		add_character_modifier = { name = recent_friend days = 360 }
+		FROMFROM = { add_character_modifier = { name = recent_friend days = 360 } }
+		hidden_tooltip = { clr_character_flag = recent_friend }
+		
+		prestige = -50		
+		add_rival = FROM
+	}
+}
+character_event = {					#Dismissed by rival (take prestige hit)
+	id = make_rival.2
+	desc = EVTDESCmake_rival.2
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAmake_rival.2
+		opinion = { modifier = rival_rejected who = FROMFROM days = 360 }
+		add_character_modifier = { name = recent_friend days = 180 }
+		FROMFROM = { add_character_modifier = { name = recent_friend days = 180 } }
+		hidden_tooltip = { clr_character_flag = recent_friend }
+		
+		prestige = -100
+		add_rival = FROM
+	}
+}

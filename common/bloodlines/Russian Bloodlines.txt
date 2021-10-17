@@ -1,0 +1,119 @@
+russian_bloodline_01 = {
+	russian_opinion = 8
+	monthly_character_prestige = 0.2
+	diplomacy = 3
+	combat_rating = 10
+	bloodline_effect_great_heroes_appear = 1
+	
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_placeholder_symbol_2
+	flags = { new_russian_bloodlines }
+}
+
+russian_bloodline_02 = {
+	orthodox_opinion = 8
+	catholic_opinion = 8
+	iconoclast_opinion = 8
+	monthly_character_piety = 0.25
+	learning = 4
+	christian_church_opinion = 5
+	
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_cross_nestorian
+	flags = { new_russian_bloodlines }
+}
+
+russian_bloodline_03 = {
+	monthly_character_prestige = 0.1
+	martial = 2
+	combat_rating = 7
+	command_modifier = {
+		speed = 0.25
+		religious_enemy = 0.30
+	}
+	
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_midgard
+	flags = { new_russian_bloodlines }
+}
+
+russian_bloodline_04 = {
+	monthly_character_prestige = 0.35
+	russian_opinion = 10
+	diplomacy = 2
+	stewardship = 4
+	combat_rating = 7
+	command_modifier = {
+		damage = 0.2
+	}
+	
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_russian_bloodline_04
+	flags = { new_russian_bloodlines }
+}
+
+russian_bloodline_05 = {
+	monthly_character_prestige = 0.10
+	mongol_opinion = -15
+	martial = 4
+	combat_rating = 10
+	command_modifier = {
+		heavy_infantry = 0.25
+		speed = 0.25
+	}
+	
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_horse
+	flags = { new_russian_bloodlines }
+}
+
+russian_bloodline_06 = {
+	monthly_character_prestige = 0.25
+	south_slavic_opinion = 10
+	diplomacy = 4
+	combat_rating = 6
+	command_modifier = {
+		cavalry = 0.20
+	}
+	
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_roman
+	flags = { new_russian_bloodlines }
+}
+
+russian_bloodline_07 = {
+	slavic_pagan_opinion = 8
+	slavic_pagan_reformed_opinion = 8
+	monthly_character_piety = 0.25
+	learning = 2
+	martial = 2
+	command_modifier = {
+		religious_enemy = 0.25
+	}
+	
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_slavic_arrow
+	flags = { new_russian_bloodlines }
+}
+
+russian_bloodline_08 = {
+	monthly_character_prestige = 0.1
+	martial = 2
+	combat_rating = 10
+	command_modifier = {
+		speed = 0.15
+		cavalry = 0.20
+	}
+	
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_midgard
+	flags = { new_russian_bloodlines }
+}

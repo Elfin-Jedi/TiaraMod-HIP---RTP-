@@ -1,0 +1,233 @@
+rome_bloodline_01 = {
+	italian_opinion = 5
+	roman_opinion = 5
+	monthly_character_prestige = 0.25
+	stewardship = 1
+	martial = 1
+	combat_rating = 5
+	bloodline_effect_castellan = 1
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_rome_bloodline_01
+	flags = { new_roman_bloodlines }
+}
+
+rome_bloodline_02 = {
+	maghreb_arabic_opinion = 5
+	roman_opinion = 5
+	monthly_character_prestige = 0.25
+	martial = 2
+	combat_rating = 5
+	bloodline_effect_drill = 1
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_rome_bloodline_02
+	flags = { new_roman_bloodlines }
+}
+
+rome_bloodline_03 = {
+	greek_opinion = 5
+	roman_opinion = 5
+	monthly_character_prestige = 0.25
+	monthly_character_piety = 0.15
+	martial = 1
+	learning = 1
+	combat_rating = 5
+	bloodline_effect_great_heroes_appear = 1
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_rome_bloodline_03
+	flags = { new_roman_bloodlines }
+}
+
+rome_bloodline_04 = {
+	italian_opinion = 5
+	roman_opinion = 5
+	monthly_character_prestige = 0.25
+	intrigue = 1
+	diplomacy = 1
+	combat_rating = 5
+	bloodline_effect_ambition = 1
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_rome_bloodline_04
+	flags = { new_roman_bloodlines }
+}
+
+rome_bloodline_05 = {
+	central_germanic_opinion = 5
+	roman_opinion = 5
+	monthly_character_prestige = 0.25
+	martial = 1
+	stewardship = 1
+	combat_rating = 5
+	bloodline_effect_knights = 1
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_rome_bloodline_05
+	flags = { new_roman_bloodlines }
+}
+
+rome_bloodline_06 = {
+	iberian_opinion = 5
+	roman_opinion = 5
+	monthly_character_prestige = 0.25
+	martial = 1
+	learning = 1
+	combat_rating = 5
+	global_tax_modifier = 0.03
+	global_revolt_risk = -0.03
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_rome_bloodline_06
+	flags = { new_roman_bloodlines }
+}
+
+rome_bloodline_07 = {
+	roman_opinion = 15
+	monthly_character_prestige = 0.25
+	martial = 1
+	intrigue = 1
+	combat_rating = 5
+	bloodline_effect_less_factions = 1
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_rome_bloodline_07
+	flags = { new_roman_bloodlines }
+}
+
+rome_bloodline_08 = {
+	latin_opinion = 5
+	monthly_character_prestige = 0.25
+	intrigue = 2
+	combat_rating = 5
+	bloodline_effect_teuta_ships = 1
+
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_rome_bloodline_08
+	flags = { new_roman_bloodlines }
+}
+
+rome_bloodline_09 = {
+	othodox_opinion = 10
+	catholic_opinion = -5
+	monthly_character_prestige = 0.05
+	monthly_character_piety = 0.2
+	learning = 3
+	command_modifier = {
+		religious_enemy = 0.3
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_cross_1
+	flags = { new_roman_bloodlines }
+}
+
+rome_bloodline_10 = {
+	vassal_opinion = 15
+	monthly_character_prestige = 0.5
+	diplomacy = 4
+	stewardship = 4
+	marshal = 4
+	combat_rating = 10
+	command_modifier = {
+		morale_offence = 0.25
+		morale_defence = 0.25
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_rome_bloodline_10
+	flags = { new_roman_bloodlines }
+}
+
+rome_bloodline_11 = {
+	greek_opinion = 5
+	italian_opinion = 5
+	monthly_character_prestige = 0.2
+	martial = 2
+	diplomacy = 1
+	combat_rating = 7
+	command_modifier = {
+		cavalry = 0.15
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_rome_bloodline_11
+	flags = { new_roman_bloodlines }
+}
+
+rome_bloodline_12 = {
+	roman_opinion = 5
+	west_germanic_opinion = -5
+	monthly_character_prestige = 0.10
+	martial = 1
+	combat_rating = 5
+	command_modifier = {
+		center = 0.15
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_rome_bloodline_12
+	flags = { new_roman_bloodlines }
+}
+
+rome_bloodline_13 = {
+	roman_opinion = 5
+	celtic_opinion = -5
+	monthly_character_prestige = 0.15
+	martial = 1
+	combat_rating = 6
+	command_modifier = {
+		speed = 0.15
+		damage = 0.10
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_rome_bloodline_13
+	flags = { new_roman_bloodlines }
+}
+
+rome_bloodline_14 = {
+	vassal_opinion = 5
+	persian_opinion = -5
+	monthly_character_prestige = 0.10
+	martial = 1
+	combat_rating = 5
+	command_modifier = {
+		heavy_infantry = 0.15
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_rome_bloodline_14
+	flags = { new_roman_bloodlines }
+}
+
+rome_bloodline_15 = {
+	orthodox_opinion = 10
+	church_opinion = 4
+	monthly_character_piety = 0.25
+	learning = 3
+	build_cost_modifier = -0.20
+	saintly_inquisitional_bloodline = 1
+	
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodline_rome_bloodline_15
+	flags = { new_roman_bloodlines }
+}

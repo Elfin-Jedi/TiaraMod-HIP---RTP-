@@ -1,0 +1,31 @@
+anthropophobie = {
+
+      ruler_designer_cost = -15
+
+potential = {
+     age = 16
+}
+
+random = yes
+birth = 25
+  
+  diplomacy = -5
+
+  opposites = {
+			gregarious
+            socializer
+            brave
+            agoraphobie
+            baratineur
+            bavard
+            charismatique
+                       
+           
+  }
+  
+  same_opinion = 20
+  vassal_opinion = -20
+  general_opinion = -20
+  sex_appeal_opinion = -15
+
+}

@@ -1,0 +1,470 @@
+# Magnificent Aqueduct
+
+upgrade_mbw_irrigation_channels = {
+	picture = GFX_upgrade_icon_bricks
+	show_in_history = yes
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_plural
+		defensive
+		body_stash
+		secluded
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+		tradevalue = 30
+		local_tax_modifier = 0.05
+		supply_limit = 0.25
+	}
+	owner_modifier = {
+		custom_modifier_text = private_talk_possible_modifier_tt
+	}
+}
+
+upgrade_mbw_silver_lined_waterways = {
+	picture = GFX_upgrade_icon_ingots_silver
+	show_in_history = yes
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_plural
+		valuable
+		plating
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+		disease_defence = 0.05
+	}
+	owner_modifier = {
+		health = 0.5
+	}
+}
+
+upgrade_mbw_private_plumbing = {
+	picture = GFX_upgrade_icon_ingots_gold
+	show_in_history = yes
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_singular
+		heating
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+		levy_size = 0.10
+		local_tax_modifier = 0.05
+	}
+	owner_modifier = {
+		town_opinion = 30
+	}
+}
+
+upgrade_mbw_inspector_of_the_waters = {
+	picture = GFX_upgrade_icon_key
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_singular
+		unlocks_minor_title
+	}
+	build_time = 12
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+		
+	}
+	owner_modifier = {
+		custom_modifier_text = mbw_inspector_waters_custom_modifier_tt
+	}
+}
+
+# Triumphal Arch
+
+upgrade_mbw_sculpted_reliefs = {
+	picture = GFX_upgrade_icon_roses_red
+	show_in_history = yes
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_plural
+		decorative
+		romantic
+		mural
+		contemplative
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+		local_revolt_risk = -0.05
+	}
+	owner_modifier = {
+		monthly_character_prestige = 0.05
+	}
+}
+
+upgrade_mbw_dedication = {
+	picture = GFX_upgrade_icon_bricks
+	show_in_history = yes
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_singular
+		mural
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+	}
+	owner_modifier = {
+		dynasty_opinion = 10
+		monthly_character_prestige = 0.05
+	}
+}
+
+upgrade_mbw_statuery = {
+	picture = GFX_upgrade_icon_stones
+	show_in_history = yes
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_plural
+		decorative
+		religion_conversion_faster
+		statues
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+	}
+	owner_modifier = {
+		monthly_character_prestige = 0.05
+		custom_modifier_text = religious_spread_custom_modifier_tt
+	}
+}
+
+upgrade_mbw_statuery_2 = {
+	picture = GFX_upgrade_icon_stones
+	show_in_history = yes
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_plural
+		decorative
+		culture_conversion_faster
+		statues
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+	}
+	owner_modifier = {
+		monthly_character_prestige = 0.05
+		custom_modifier_text = culture_convertion_custom_modifier_tt
+	}
+}
+
+# Opulent Bridge
+
+upgrade_mbw_bridge_roads = {
+	picture = GFX_upgrade_icon_bricks
+	show_in_history = yes
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_plural
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+		global_movement_speed = 0.3
+		global_supply_limit = 0.25
+	}
+	owner_modifier = {
+	}
+}
+
+upgrade_mbw_bridge_tolls = {
+	picture = GFX_upgrade_icon_ingots_gold
+	show_in_history = yes
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_plural
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+		local_tax_modifier = 0.05
+	}
+	owner_modifier = {
+		stewardship = 3
+	}
+}
+
+upgrade_mbw_master_of_the_crossing = {
+	picture = GFX_upgrade_icon_key
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_singular
+		unlocks_minor_title
+	}
+	build_time = 12
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+		
+	}
+	owner_modifier = {
+		custom_modifier_text = mbw_master_crossing_custom_modifier_tt
+	}
+}
+
+# Harbour Colossus
+
+upgrade_mbw_sea_tolls = {
+	picture = GFX_upgrade_icon_ingots_gold
+	show_in_history = yes
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_singular
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+		tradevalue = 30
+		local_tax_modifier = 0.05
+		supply_limit = 0.25
+	}
+	owner_modifier = {
+	}
+}
+
+upgrade_mbw_murderholes = {
+	picture = GFX_upgrade_icon_skulls
+	show_in_history = yes
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_plural
+		defensive
+		scary
+		towering
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+		siege_defence = 0.10
+		archers = 200
+	}
+	owner_modifier = {
+		custom_modifier_text = intimidation_possible_modifier_tt
+	}
+}
+
+upgrade_mbw_great_chain = {
+	picture = GFX_upgrade_icon_ingots_bronze
+	show_in_history = yes
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_singular
+		defensive
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+		siege_defence = 0.10
+		disease_defence = 0.05
+	}
+	owner_modifier = {
+	}
+}
+
+# Market Cross
+
+upgrade_mbw_market_hall = {
+	picture = GFX_upgrade_icon_bricks
+	show_in_history = yes
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_singular
+		room
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+		local_tax_modifier = 0.05
+		supply_limit = 0.25
+		tradevalue = 30
+	}
+	owner_modifier = {
+	}
+}
+
+upgrade_mbw_office_weights_measures = {
+	picture = GFX_upgrade_icon_ingots_gold
+	show_in_history = yes
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_singular
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+		tradevalue = 30
+		local_tax_modifier = 0.05
+	}
+	owner_modifier = {
+		monthly_character_prestige = 0.05
+	}
+}
+
+upgrade_mbw_market_bailiff = {
+	picture = GFX_upgrade_icon_key
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_singular
+		unlocks_minor_title
+	}
+	build_time = 12
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+		
+	}
+	owner_modifier = {
+		custom_modifier_text = mbw_market_bailiff_custom_modifier_tt
+	}
+}
+
+# Imposing Obelisk
+
+upgrade_mbw_vault = {
+	picture = GFX_upgrade_icon_equipment
+	show_in_history = yes
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_singular
+		artifact_protection
+		body_stash
+		stores_relic
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+	}
+	owner_modifier = {
+		custom_modifier_text = less_likely_to_be_looted_modifier_tt
+		custom_modifier_text = storing_a_relic_possible_modifier_tt
+	}
+}
+
+upgrade_mbw_gilded_capstone = {
+	picture = GFX_upgrade_icon_ingots_gold
+	show_in_history = yes
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_singular
+		golden
+		valuable
+		towering
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+		local_revolt_risk = -0.05
+	}
+	owner_modifier = {
+		global_revolt_risk = -0.05
+	}
+}
+
+upgrade_mbw_decorative_carvings = {
+	picture = GFX_upgrade_icon_skulls
+	show_in_history = yes
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_singular
+		decorative
+		mural
+		scary
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+		local_revolt_risk = -0.05
+	}
+	owner_modifier = {
+		monthly_character_prestige = 0.1
+		custom_modifier_text = intimidation_possible_modifier_tt
+	}
+}

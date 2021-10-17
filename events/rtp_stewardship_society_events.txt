@@ -1,0 +1,2010 @@
+#####
+#Stewardship Society Events
+#
+#Total = 34
+#####
+
+namespace = RTPssociety
+
+#Main Events
+#####
+
+#Stall Warning - Stewardship Mission Start
+society_quest_event = {
+	id = RTPssociety.1
+	desc = "RTPssociety.1_desc"
+	is_triggered_only = yes
+
+	immediate = {
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1825
+		}
+
+		random_character = {
+			limit = {
+				rtp_is_capable_adult = yes
+				higher_tier_than = BARON
+			}
+			preferred_limit = {
+				ROOT = {
+					top_liege = {
+						is_within_diplo_range = PREVPREV
+					}
+				}
+			}
+			save_event_target_as = rtp_society_quest_target #The target of the quest
+			job_treasurer = {
+				save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+			}
+			create_character = {
+				age = 35
+				random_traits = yes
+				religion = PREV
+				culture = PREV
+				female = no
+				dynasty = none
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target3 #The third target of the quest
+			}
+		}
+	}
+
+	option = {
+		name = "RTPssociety.1_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			event_target:rtp_society_quest_target2 = {
+				show_scope_change = no
+				set_quest_target = {
+					id = rtp_stall_warning_stewardship_mission
+					holder = ROOT
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPssociety.2 #Stall Warning - Stewardship Mission Part 1
+			days = 90
+		}
+	}
+
+	option = {
+		name = "RTPssociety.1_2"
+
+		custom_tooltip = {
+			text = "rtp_may_be_kicked_ct"
+
+			random = {
+				chance = 25
+	
+				society = {
+					leader = {
+						ROOT = {
+							letter_event = {
+								id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Stall Warning - Stewardship Mission Part 1
+character_event = {
+	id = RTPssociety.2
+	title = "RTPssociety.2_title"
+	desc = "RTPssociety.2_desc"
+	picture = GFX_evt_stressed_ruler
+	is_triggered_only = yes
+	hide_from = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPssociety.36 #Failed To Reach Target In Time
+		}
+	}
+
+	trigger = {
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+		event_target:rtp_society_quest_target2 = {
+			is_alive = yes
+		}
+		event_target:rtp_society_quest_target3 = {
+			is_alive = yes
+		}
+	}
+
+	option = {
+		name = "RTPssociety.2_1"
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.3 #Stolen Goods - Martial Mission Part 2
+			days = 1
+		}
+	}
+}
+
+#Stall Warning - Stewardship Mission Part 2
+character_event = {
+	id = RTPssociety.3
+	title = "RTPssociety.3_title"
+	desc = "RTPssociety.3_desc"
+	picture = GFX_evt_construction_site
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPssociety.3_1"
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.4 #Stall Warning - Stewardship Mission Part 3
+			days = 1
+		}
+	}
+}
+
+#Stall Warning - Stewardship Mission Part 3
+character_event = {
+	id = RTPssociety.4
+	title = "RTPssociety.4_title"
+	desc = "RTPssociety.4_desc"
+	picture = GFX_evt_construction_site
+	is_triggered_only = yes
+	hide_from = yes
+
+	immediate = {
+		random = {
+			chance = 50
+
+			set_character_flag = rtp_success #You succeed
+		}
+	}
+
+	option = {
+		name = "RTPssociety.4_1"
+
+		event_target:rtp_society_quest_target2 = {
+			save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+		}
+
+		random = {
+			chance = 10
+
+			add_trait = arbitrary
+		}
+
+		character_event = {
+			id = RTPssociety.5 #Stall Warning - Stewardship Mission Part 4-1
+			days = 1
+		}
+	}
+
+	option = {
+		name = "RTPssociety.4_2"
+
+		event_target:rtp_society_quest_target3 = {
+			save_event_target_as = rtp_society_quest_target3 #The third target of the quest
+		}
+
+		random = {
+			chance = 10
+
+			add_trait = just
+		}
+
+		character_event = {
+			id = RTPssociety.6 #Stall Warning - Stewardship Mission Part 4-2
+			days = 1
+		}
+	}
+
+	option = {
+		name = "RTPssociety.4_3"
+
+		event_target:rtp_society_quest_target2 = {
+			save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+		}
+		event_target:rtp_society_quest_target3 = {
+			save_event_target_as = rtp_society_quest_target3 #The third target of the quest
+		}
+
+		random = {
+			chance = 10
+
+			add_trait = quick
+		}
+
+		character_event = {
+			id = RTPssociety.7 #Stall Warning - Stewardship Mission Part 4-3
+			days = 1
+		}
+	}
+}
+
+#Stall Warning - Stewardship Mission Part 4-1
+character_event = {
+	id = RTPssociety.5
+	title = "RTPssociety.5_title"
+	desc = "RTPssociety.5_desc"
+	picture = GFX_evt_construction_site
+	is_triggered_only = yes
+	hide_from = yes
+
+	immediate = {
+		set_character_flag = rtp_chosen_steward #I chose this dude
+	}
+
+	option = {
+		name = "RTPssociety.5_1"
+
+		event_target:rtp_society_quest_target3 = {
+			save_event_target_as = rtp_society_quest_target3 #The third target of the quest
+		}
+
+		character_event = {
+			id = RTPssociety.8 #Stall Warning - Stewardship Mission End
+			days = 1
+		}
+	}
+}
+
+#Stall Warning - Stewardship Mission Part 4-2
+character_event = {
+	id = RTPssociety.6
+	title = "RTPssociety.6_title"
+	desc = "RTPssociety.6_desc"
+	picture = GFX_evt_stressed_ruler
+	is_triggered_only = yes
+	hide_from = yes
+
+	immediate = {
+		set_character_flag = rtp_chosen_mason #I chose the masons
+	}
+
+	option = {
+		name = "RTPssociety.6_1"
+
+		event_target:rtp_society_quest_target2 = {
+			save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+		}
+
+		character_event = {
+			id = RTPssociety.8 #Stall Warning - Stewardship Mission End
+			days = 1
+		}
+	}
+}
+
+#Stall Warning - Stewardship Mission Part 4-3
+character_event = {
+	id = RTPssociety.7
+	title = "RTPssociety.7_title"
+	desc = "RTPssociety.7_desc"
+	picture = GFX_evt_castle_construction
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPssociety.7_1"
+
+		character_event = {
+			id = RTPssociety.8 #Stall Warning - Stewardship Mission End
+			days = 1
+		}
+	}
+}
+
+#Stall Warning - Stewardship Mission End
+character_event = {
+	id = RTPssociety.8
+	title = "RTPssociety.8_title"
+	desc = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		text = "RTPssociety.8.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+			has_character_flag = rtp_chosen_steward #I chose this dude
+		}
+		text = "RTPssociety.8.3_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+			has_character_flag = rtp_chosen_mason #I chose the masons
+		}
+		text = "RTPssociety.8.3_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+			NOR = {
+				has_character_flag = rtp_chosen_steward #I chose this dude
+				has_character_flag = rtp_chosen_mason #I chose the masons
+			}
+		}
+		text = "RTPssociety.8.4_desc"
+	}
+	picture = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		picture = GFX_evt_council_agreement
+	}
+	picture = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		picture = GFX_evt_council_quarrelling
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPssociety.8_1"
+
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_stall_warning_stewardship_mission
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_medium_currency_se = yes
+	}
+
+	option = {
+		name = "RTPssociety.8_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_stall_warning_stewardship_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.101 #Ping For Cleaning Out Missions - Stewardship Mission
+			days = 90
+		}
+	}
+}
+
+#Fair Play - Stewardship Mission Start
+society_quest_event = {
+	id = RTPssociety.9
+	desc = "RTPssociety.9_desc"
+	is_triggered_only = yes
+
+	immediate = {
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1825
+		}
+
+		top_liege = {
+			create_character = {
+				age = 32
+				random_traits = yes
+				culture = random
+				dynasty = none
+				health = 10
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target #The first target of the quest
+			}
+			create_character = {
+				age = 28
+				random_traits = yes
+				culture = random
+				dynasty = none
+				health = 10
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+			}
+			create_character = {
+				age = 35
+				random_traits = yes
+				culture = random
+				dynasty = none
+				health = 10
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target3 #The third target of the quest
+			}
+			create_character = {
+				age = 42
+				random_traits = yes
+				culture = random
+				dynasty = none
+				health = 10
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target4 #The fourth target of the quest
+			}
+		}
+	}
+
+	option = {
+		name = "RTPssociety.9_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			ROOT = {
+				show_scope_change = no
+				set_quest_target = {
+					id = rtp_fair_play_stewardship_mission
+					holder = ROOT
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPssociety.10 #Fair Play - Stewardship Mission Part 1
+			days = 90
+		}
+	}
+
+	option = {
+		name = "RTPssociety.9_2"
+
+		custom_tooltip = {
+			text = "rtp_may_be_kicked_ct"
+
+			random = {
+				chance = 25
+	
+				society = {
+					leader = {
+						ROOT = {
+							letter_event = {
+								id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Fair Play - Stewardship Mission Part 1
+character_event = {
+	id = RTPssociety.10
+	title = "RTPssociety.10_title"
+	desc = "RTPssociety.10_desc"
+	picture = GFX_evt_jugglers
+	is_triggered_only = yes
+	hide_from = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPssociety.36 #Failed To Reach Target In Time
+		}
+	}
+
+	trigger = {
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+		event_target:rtp_society_quest_target2 = {
+			is_alive = yes
+		}
+		event_target:rtp_society_quest_target3 = {
+			is_alive = yes
+		}
+		event_target:rtp_society_quest_target4 = {
+			is_alive = yes
+		}
+	}
+
+	option = {
+		name = "RTPssociety.10_1"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		random = {
+			chance = 10
+
+			add_trait = just
+		}
+	}
+
+	option = {
+		name = "RTPssociety.10_2"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		random = {
+			chance = 10
+
+			add_trait = greedy
+		}
+	}
+
+	option = {
+		name = "RTPssociety.10_3"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		random = {
+			chance = 20
+
+			add_trait = charitable
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.11 #Fair Play - Stewardship Mission Part 2
+		}
+	}
+}
+
+#Fair Play - Stewardship Mission Part 2
+character_event = {
+	id = RTPssociety.11
+	title = "RTPssociety.11_title"
+	desc = "RTPssociety.11_desc"
+	picture = GFX_evt_jugglers
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPssociety.11_1"
+
+		event_target:rtp_society_quest_target2 = {
+			save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+		}
+
+		random = {
+			chance = 10
+
+			add_trait = just
+		}
+	}
+
+	option = {
+		name = "RTPssociety.11_2"
+
+		event_target:rtp_society_quest_target2 = {
+			save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+		}
+
+		random = {
+			chance = 10
+
+			add_trait = greedy
+		}
+	}
+
+	option = {
+		name = "RTPssociety.11_3"
+
+		event_target:rtp_society_quest_target2 = {
+			save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+		}
+
+		random = {
+			chance = 20
+
+			add_trait = charitable
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.12 #Fair Play - Stewardship Mission Part 3
+		}
+	}
+}
+
+#Fair Play - Stewardship Mission Part 3
+character_event = {
+	id = RTPssociety.12
+	title = "RTPssociety.12_title"
+	desc = "RTPssociety.12_desc"
+	picture = GFX_evt_jugglers
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPssociety.12_1"
+
+		event_target:rtp_society_quest_target3 = {
+			save_event_target_as = rtp_society_quest_target3 #The third target of the quest
+		}
+
+		random = {
+			chance = 10
+
+			add_trait = just
+		}
+	}
+
+	option = {
+		name = "RTPssociety.12_2"
+
+		event_target:rtp_society_quest_target3 = {
+			save_event_target_as = rtp_society_quest_target3 #The third target of the quest
+		}
+
+		random = {
+			chance = 10
+
+			add_trait = greedy
+		}
+	}
+
+	option = {
+		name = "RTPssociety.12_3"
+
+		event_target:rtp_society_quest_target3 = {
+			save_event_target_as = rtp_society_quest_target3 #The third target of the quest
+		}
+
+		random = {
+			chance = 20
+
+			add_trait = charitable
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.13 #Fair Play - Stewardship Mission Part 4
+		}
+	}
+}
+
+#Fair Play - Stewardship Mission Part 4
+character_event = {
+	id = RTPssociety.13
+	title = "RTPssociety.13_title"
+	desc = "RTPssociety.13_desc"
+	picture = GFX_evt_jugglers
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPssociety.13_1"
+
+		event_target:rtp_society_quest_target4 = {
+			save_event_target_as = rtp_society_quest_target4 #The fourth target of the quest
+		}
+
+		random = {
+			chance = 10
+
+			add_trait = just
+		}
+	}
+
+	option = {
+		name = "RTPssociety.13_2"
+
+		event_target:rtp_society_quest_target4 = {
+			save_event_target_as = rtp_society_quest_target4 #The fourth target of the quest
+		}
+
+		random = {
+			chance = 10
+
+			add_trait = greedy
+		}
+	}
+
+	option = {
+		name = "RTPssociety.13_3"
+
+		event_target:rtp_society_quest_target4 = {
+			save_event_target_as = rtp_society_quest_target4 #The fourth target of the quest
+		}
+
+		random = {
+			chance = 20
+
+			add_trait = charitable
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.14 #Fair Play - Stewardship Mission Part 5
+		}
+	}
+}
+
+#Fair Play - Stewardship Mission Part 5
+character_event = {
+	id = RTPssociety.14
+	title = "RTPssociety.14_title"
+	desc = "RTPssociety.14_desc"
+	picture = GFX_evt_jugglers
+	is_triggered_only = yes
+	hide_from = yes
+
+	immediate = {
+		random = {
+			chance = 50
+
+			set_character_flag = rtp_success #You succeed
+		}
+	}
+
+	option = {
+		name = "RTPssociety.14_1"
+
+		character_event = {
+			id = RTPssociety.15 #Fair Play - Stewardship Mission End
+			days = 7
+		}
+	}
+}
+
+#Fair Play - Stewardship Mission End
+character_event = {
+	id = RTPssociety.15
+	title = "RTPssociety.15_title"
+	desc = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		text = "RTPssociety.15.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPssociety.15.2_desc"
+	}
+	picture = GFX_evt_jugglers
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPssociety.15_1"
+
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_fair_play_stewardship_mission
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_medium_currency_se = yes
+	}
+
+	option = {
+		name = "RTPssociety.15_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_fair_play_stewardship_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.101 #Ping For Cleaning Out Missions - Stewardship Mission
+			days = 90
+		}
+	}
+}
+
+#Open to Offers - Stewardship Mission Start
+society_quest_event = {
+	id = RTPssociety.16
+	desc = "RTPssociety.16_desc"
+	is_triggered_only = yes
+
+	immediate = {
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1825
+		}
+
+		random_independent_ruler = {
+			preferred_limit = {
+				ROOT = {
+					top_liege = {
+						is_within_diplo_range = PREVPREV
+					}
+				}
+			}
+			create_character = {
+				age = 36
+				random_traits = yes
+				religion = PREV
+				culture = PREV
+				dynasty = random
+				health = 10
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target #The first target of the quest
+			}
+			create_character = {
+				age = 31
+				random_traits = yes
+				religion = PREV
+				culture = PREV
+				dynasty = none
+				female = no
+				trait = monk
+				health = 10
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+			}
+			create_character = {
+				age = 47
+				random_traits = yes
+				religion = PREV
+				culture = PREV
+				dynasty = none
+				health = 10
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target3 #The thirdtarget of the quest
+			}
+		}
+	}
+
+	option = {
+		name = "RTPssociety.16_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			event_target:rtp_society_quest_target = {
+				show_scope_change = no
+				set_quest_target = {
+					id = rtp_open_to_offers_stewardship_mission
+					holder = ROOT
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPssociety.17 #Open to Offers - Stewardship Mission Part 1
+			days = 90
+		}
+	}
+
+	option = {
+		name = "RTPssociety.16_2"
+
+		custom_tooltip = {
+			text = "rtp_may_be_kicked_ct"
+
+			random = {
+				chance = 25
+	
+				society = {
+					leader = {
+						ROOT = {
+							letter_event = {
+								id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Open to Offers - Stewardship Mission Part 1
+character_event = {
+	id = RTPssociety.17
+	title = "RTPssociety.17_title"
+	desc = "RTPssociety.17_desc"
+	picture = GFX_evt_noble_in_castle
+	is_triggered_only = yes
+	hide_from = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPssociety.36 #Failed To Reach Target In Time
+		}
+	}
+
+	trigger = {
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+		event_target:rtp_society_quest_target2 = {
+			is_alive = yes
+		}
+		event_target:rtp_society_quest_target3 = {
+			is_alive = yes
+		}
+	}
+
+	option = {
+		name = "RTPssociety.17_1"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.18 #Open to Offers - Stewardship Mission Part 2
+			days = 1
+		}
+	}
+}
+
+#Open to Offers - Stewardship Mission Part 2
+character_event = {
+	id = RTPssociety.18
+	title = "RTPssociety.18_title"
+	desc = "RTPssociety.18_desc"
+	picture = GFX_evt_monastery_monks
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPssociety.18_1"
+
+		event_target:rtp_society_quest_target2 = {
+			save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.19 #Open to Offers - Stewardship Mission Part 3
+			days = 1
+		}
+	}
+}
+
+#Open to Offers - Stewardship Mission Part 3
+character_event = {
+	id = RTPssociety.19
+	title = "RTPssociety.19_title"
+	desc = "RTPssociety.19_desc"
+	picture = GFX_evt_merchant_caravan
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPssociety.19_1"
+
+		event_target:rtp_society_quest_target3 = {
+			save_event_target_as = rtp_society_quest_target3 #The third target of the quest
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.20 #Open to Offers - Stewardship Mission End
+			days = 1
+		}
+	}
+}
+
+#Open to Offers - Stewardship Mission End
+character_event = {
+	id = RTPssociety.20
+	title = "RTPssociety.20_title"
+	desc = "RTPssociety.20_desc"
+	picture = GFX_evt_noble_in_castle
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPssociety.20_1"
+
+		event_target:rtp_society_quest_target2 = {
+			save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_open_to_offers_stewardship_mission
+
+		random = {
+			chance = 20
+
+			add_trait = kind
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	option = {
+		name = "RTPssociety.20_2"
+
+		event_target:rtp_society_quest_target3 = {
+			save_event_target_as = rtp_society_quest_target3 #The third target of the quest
+		}
+
+		random_list = {
+			50 = {
+				sound_effect = quest_completed
+
+				clr_quest = rtp_open_to_offers_stewardship_mission
+			}
+			50 = {
+				sound_effect = quest_failed
+
+				clr_quest = {
+					id = rtp_open_to_offers_stewardship_mission
+					failure = yes
+				}
+			}
+		}
+
+		random = {
+			chance = 20
+
+			add_trait = greedy
+		}
+
+		rtp_give_big_gold_se = yes
+		rtp_give_big_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.101 #Ping For Cleaning Out Missions - Stewardship Mission
+			days = 90
+		}
+	}
+}
+
+#Game of Loans - Stewardship Mission Start
+society_quest_event = {
+	id = RTPssociety.21
+	desc = "RTPssociety.21_desc"
+	is_triggered_only = yes
+
+	immediate = {
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1825
+		}
+
+		random_character = {
+			limit = {
+				is_landed = yes
+				is_priest = yes
+			}
+			preferred_limit = {
+				ROOT = {
+					top_liege = {
+						is_within_diplo_range = PREVPREV
+					}
+				}
+			}
+			save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+			create_character = {
+				age = 36
+				random_traits = yes
+				religion = PREV
+				culture = PREV
+				dynasty = random
+				health = 10
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target #The first target of the quest
+			}
+		}
+	}
+
+	option = {
+		name = "RTPssociety.21_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			event_target:rtp_society_quest_target = {
+				show_scope_change = no
+				set_quest_target = {
+					id = rtp_game_of_loans_stewardship_mission
+					holder = ROOT
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPssociety.22 #Game of Loans - Stewardship Mission Part 1
+			days = 90
+		}
+	}
+
+	option = {
+		name = "RTPssociety.21_2"
+
+		custom_tooltip = {
+			text = "rtp_may_be_kicked_ct"
+
+			random = {
+				chance = 25
+	
+				society = {
+					leader = {
+						ROOT = {
+							letter_event = {
+								id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Game of Loans - Stewardship Mission Part 1
+character_event = {
+	id = RTPssociety.22
+	title = "RTPssociety.22_title"
+	desc = "RTPssociety.22_desc"
+	picture = GFX_evt_stressed_ruler
+	is_triggered_only = yes
+	hide_from = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPssociety.36 #Failed To Reach Target In Time
+		}
+	}
+
+	trigger = {
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+		event_target:rtp_society_quest_target2 = {
+			is_alive = yes
+		}
+	}
+
+	option = {
+		name = "RTPssociety.22_1"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.23 #Game of Loans - Stewardship Mission Part 2
+		}
+	}
+}
+
+#Game of Loans - Stewardship Mission Part 2
+character_event = {
+	id = RTPssociety.23
+	title = "RTPssociety.23_title"
+	desc = "RTPssociety.23_desc"
+	picture = GFX_evt_stressed_ruler
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPssociety.23_1"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.24 #Game of Loans - Stewardship Mission Part 3
+		}
+	}
+}
+
+#Game of Loans - Stewardship Mission Part 3
+character_event = {
+	id = RTPssociety.24
+	title = "RTPssociety.24_title"
+	desc = "RTPssociety.24_desc"
+	picture = GFX_evt_stressed_ruler
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPssociety.24_1"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.25 #Game of Loans - Stewardship Mission Part 4
+			days = 1
+		}
+	}
+}
+
+#Game of Loans - Stewardship Mission Part 4
+character_event = {
+	id = RTPssociety.25
+	title = "RTPssociety.25_title"
+	desc = "RTPssociety.25_desc"
+	picture = GFX_evt_monk
+	is_triggered_only = yes
+	hide_from = yes
+
+	immediate = {
+		random = {
+			chance = 50
+
+			set_character_flag = rtp_success #You succeed
+		}
+	}
+
+	option = {
+		name = "RTPssociety.25_1"
+
+		event_target:rtp_society_quest_target2 = {
+			save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+		}
+
+		random = {
+			chance = 20
+
+			add_trait = greedy
+		}
+	}
+
+	option = {
+		name = "RTPssociety.25_2"
+
+		event_target:rtp_society_quest_target2 = {
+			save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+		}
+
+		random = {
+			chance = 20
+
+			add_trait = charitable
+		}
+	}
+
+	option = {
+		name = "RTPssociety.25_3"
+
+		event_target:rtp_society_quest_target2 = {
+			save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+		}
+
+		random = {
+			chance = 10
+
+			add_trait = just
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.26 #Game of Loans - Stewardship Mission Part 5
+		}
+	}
+}
+
+#Game of Loans - Stewardship Mission Part 5
+character_event = {
+	id = RTPssociety.26
+	title = "RTPssociety.26_title"
+	desc = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		text = "RTPssociety.26.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPssociety.26.2_desc"
+	}
+	picture = GFX_evt_monk
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPssociety.26_1"
+
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+
+		event_target:rtp_society_quest_target2 = {
+			save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+		}
+	}
+
+	option = {
+		name = "RTPssociety.26_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+
+		event_target:rtp_society_quest_target2 = {
+			save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.27 #Game of Loans - Stewardship Mission End
+			days = 45
+		}
+	}
+}
+
+#Game of Loans - Stewardship Mission End
+character_event = {
+	id = RTPssociety.27
+	title = "RTPssociety.27_title"
+	desc = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		text = "RTPssociety.27.1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPssociety.27.2_desc"
+	}
+	picture = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		picture = GFX_evt_relaxed_ruler
+	}
+	picture = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		picture = GFX_evt_stressed_ruler
+	}
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = "RTPssociety.27_1"
+
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_game_of_loans_stewardship_mission
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_medium_currency_se = yes
+	}
+
+	option = {
+		name = "RTPssociety.27_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_game_of_loans_stewardship_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.101 #Ping For Cleaning Out Missions - Stewardship Mission
+			days = 90
+		}
+	}
+}
+
+#Forged in Fire - Stewardship Mission Start
+society_quest_event = {
+	id = RTPssociety.28
+	desc = "RTPssociety.28_desc"
+	is_triggered_only = yes
+
+	immediate = {
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1825
+		}
+
+		random_independent_ruler = {
+			preferred_limit = {
+				ROOT = {
+					top_liege = {
+						is_within_diplo_range = PREVPREV
+					}
+				}
+			}
+			create_character = {
+				age = 21
+				random_traits = yes
+				religion = PREV
+				culture = PREV
+				female = no
+				dynasty = none
+				health = 10
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target #The first target of the quest
+			}
+		}
+	}
+
+	option = {
+		name = "RTPssociety.28_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			event_target:rtp_society_quest_target = {
+				show_scope_change = no
+				set_quest_target = {
+					id = rtp_forged_in_fire_stewardship_mission
+					holder = ROOT
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPssociety.29 #Forged in Fire - Stewardship Mission Part 1
+			days = 90
+		}
+	}
+
+	option = {
+		name = "RTPssociety.28_2"
+
+		custom_tooltip = {
+			text = "rtp_may_be_kicked_ct"
+
+			random = {
+				chance = 25
+	
+				society = {
+					leader = {
+						ROOT = {
+							letter_event = {
+								id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Forged in Fire - Stewardship Mission Part 1
+character_event = {
+	id = RTPssociety.29
+	title = "RTPssociety.29_title"
+	desc = "RTPssociety.29_desc"
+	picture = GFX_evt_weaponsmith
+	is_triggered_only = yes
+	hide_from = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPssociety.36 #Failed To Reach Target In Time
+		}
+	}
+
+	trigger = {
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+	}
+
+	option = {
+		name = "RTPssociety.29_1"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+	}
+
+	option = {
+		name = "RTPssociety.29_2"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.30 #Forged in Fire - Stewardship Mission Part 2
+			days = 1
+		}
+	}
+}
+
+#Forged in Fire - Stewardship Mission Part 2
+character_event = {
+	id = RTPssociety.30
+	title = "RTPssociety.30_title"
+	desc = "RTPssociety.30_desc"
+	picture = GFX_evt_weaponsmith
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPssociety.30_1"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.31 #Forged in Fire - Stewardship Mission Part 3
+			days = 7
+		}
+	}
+}
+
+#Forged in Fire - Stewardship Mission Part 3
+character_event = {
+	id = RTPssociety.31
+	title = "RTPssociety.31_title"
+	desc = "RTPssociety.31_desc"
+	picture = GFX_evt_weaponsmith
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPssociety.31_1"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.32 #Forged in Fire - Stewardship Mission Part 4
+		}
+	}
+}
+
+#Forged in Fire - Stewardship Mission Part 4
+character_event = {
+	id = RTPssociety.32
+	title = "RTPssociety.32_title"
+	desc = "RTPssociety.32_desc"
+	picture = GFX_evt_weaponsmith
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPssociety.32_1"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.33 #Forged in Fire - Stewardship Mission Part 5
+		}
+	}
+}
+
+#Forged in Fire - Stewardship Mission Part 4
+character_event = {
+	id = RTPssociety.33
+	title = "RTPssociety.33_title"
+	desc = "RTPssociety.33_desc"
+	picture = GFX_evt_weaponsmith
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPssociety.33_1"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.34 #Forged in Fire - Stewardship Mission Part 6
+		}
+	}
+}
+
+#Forged in Fire - Stewardship Mission Part 5
+character_event = {
+	id = RTPssociety.34
+	title = "RTPssociety.34_title"
+	desc = "RTPssociety.34_desc"
+	picture = GFX_evt_weaponsmith
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPssociety.34_1"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.35 #Forged in Fire - Stewardship Mission End
+		}
+	}
+}
+
+#Forged in Fire - Stewardship Mission End
+character_event = {
+	id = RTPssociety.35
+	title = "RTPssociety.35_title"
+	desc = "RTPssociety.35_desc"
+	picture = GFX_evt_weaponsmith
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPssociety.35_1"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_forged_in_fire_stewardship_mission
+
+		random = {
+			chance = 10
+
+			add_trait = just
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	option = {
+		name = "RTPssociety.35_2"
+
+		random_list = {
+			50 = {
+				sound_effect = quest_completed
+
+				clr_quest = rtp_forged_in_fire_stewardship_mission
+			}
+			50 = {
+				sound_effect = quest_failed
+
+				clr_quest = {
+					id = rtp_forged_in_fire_stewardship_mission
+					failure = yes
+				}
+			}
+		}
+
+		random = {
+			chance = 10
+
+			add_trait = deceitful
+		}
+
+		rtp_give_big_gold_se = yes
+		rtp_give_big_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPssociety.101 #Ping For Cleaning Out Missions - Stewardship Mission
+			days = 90
+		}
+	}
+}
+
+#Failed To Reach Target In Time
+character_event = {
+	id = RTPssociety.36
+	title = "RTPssociety.36_title"
+	desc = "RTPssociety.36_desc"
+	picture = GFX_evt_bad_news
+	hide_from = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = "RTPssociety.36_1"
+
+		character_event = {
+			id = RTPssociety.101 #Ping For Cleaning Out Missions - Martial Mission
+		}
+	}
+}
+
+#Ping Events
+#####
+
+#Ping for Society Leader Hands Out Missions - Stewardship Mission
+character_event = {
+	id = RTPssociety.100
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		rtp_is_in_stewardship_society_st = yes
+		is_society_grandmaster = yes
+	}
+
+	immediate = {
+		society = {
+			random_society_member = {
+				limit = {
+					has_any_quest = no
+					is_society_grandmaster = no
+					rtp_is_capable_adult = yes
+					NOT = {
+						has_character_modifier = quest_cooldown_timer
+					}
+				}
+				preferred_limit = {
+					ai = no
+				}
+				random_list = {
+					20 = {
+						society_quest_event = {
+							id = RTPssociety.1 #Stall Warning - Stewardship Mission Start
+						}
+					}
+					20 = {
+						society_quest_event = {
+							id = RTPssociety.9 #Fair Play - Stewardship Mission Start
+						}
+					}
+					20 = {
+						society_quest_event = {
+							id = RTPssociety.16 #Open to Offers - Stewardship Mission Start
+						}
+					}
+					20 = {
+						society_quest_event = {
+							id = RTPssociety.21 #Game of Loans - Stewardship Mission Start
+						}
+					}
+					20 = {
+						society_quest_event = {
+							id = RTPssociety.28 #Forged in Fire - Stewardship Mission Start
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Ping For Cleaning Out Missions - Stewardship Mission
+character_event = {
+	id = RTPssociety.101
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+
+	immediate = {
+		remove_trait = travelling
+		
+		clr_quest = {
+			id = rtp_stall_warning_stewardship_mission
+			failure = yes
+		}
+		clr_quest = {
+			id = rtp_fair_play_stewardship_mission
+			failure = yes
+		}
+		clr_quest = {
+			id = rtp_open_to_offers_stewardship_mission
+			failure = yes
+		}
+		clr_quest = {
+			id = rtp_game_of_loans_stewardship_mission
+			failure = yes
+		}
+		clr_quest = {
+			id = rtp_forged_in_fire_stewardship_mission
+			failure = yes
+		}
+
+		clr_character_flag = rtp_success #You succeed
+		clr_character_flag = rtp_chosen_mason #I chose the masons
+		clr_character_flag = rtp_chosen_steward #I chose this dude
+
+		event_target:rtp_society_quest_target = {
+			if = {
+				limit = {
+					has_character_flag = rtp_trash #Just delete this dude
+				}
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+		event_target:rtp_society_quest_target2 = {
+			if = {
+				limit = {
+					has_character_flag = rtp_trash #Just delete this dude
+				}
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+		event_target:rtp_society_quest_target3 = {
+			if = {
+				limit = {
+					has_character_flag = rtp_trash #Just delete this dude
+				}
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+		event_target:rtp_society_quest_target4 = {
+			if = {
+				limit = {
+					has_character_flag = rtp_trash #Just delete this dude
+				}
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+}
+
+#Ping For Cancelling Mission - Stewardship Mission
+character_event = {
+	id = RTPssociety.102
+	hide_window = yes
+	is_triggered_only = yes
+	sound = quest_failed
+	
+	trigger = {
+	}
+
+	immediate = {
+		random = {
+			chance = 5
+
+			society = {
+				leader = {
+					ROOT = {
+						letter_event = {
+							id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#MTTH Events
+#####

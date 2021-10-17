@@ -1,0 +1,290 @@
+# Audax Validator "!" Ignore_NEXT
+
+#####
+#Society Events
+#
+#Total = 4
+#####
+
+namespace = RTPsociety
+
+#Main Events
+#####
+
+#Welcome letter
+letter_event = {
+	id = RTPsociety.1
+	desc = {
+		trigger = {
+			event_target:rtp_society_leader = {
+				rtp_is_in_intrigue_society_st = yes
+			}
+		}
+		text = "RTPsociety.1.1_desc"
+	}
+	desc = {
+		trigger = {
+			event_target:rtp_society_leader = {
+				rtp_is_in_martial_society_st = yes
+			}
+		}
+		text = "RTPsociety.1.2_desc"
+	}
+	desc = {
+		trigger = {
+			event_target:rtp_society_leader = {
+				rtp_is_in_diplomacy_society_st = yes
+			}
+		}
+		text = "RTPsociety.1.3_desc"
+	}
+	desc = {
+		trigger = {
+			event_target:rtp_society_leader = {
+				rtp_is_in_stewardship_society_st = yes
+			}
+		}
+		text = "RTPsociety.1.4_desc"
+	}
+	desc = {
+		trigger = {
+			event_target:rtp_society_leader = {
+				rtp_is_in_learning_society_st = yes
+			}
+		}
+		text = "RTPsociety.1.5_desc"
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = {
+			trigger = {
+				event_target:rtp_society_leader = {
+					rtp_is_in_intrigue_society_st = yes
+				}
+			}
+			text = "RTPsociety.1.1_1"
+		}
+		name = {
+			trigger = {
+				event_target:rtp_society_leader = {
+					rtp_is_in_martial_society_st = yes
+				}
+			}
+			text = "RTPsociety.1.2_1"
+		}
+		name = {
+			trigger = {
+				event_target:rtp_society_leader = {
+					rtp_is_in_diplomacy_society_st = yes
+				}
+			}
+			text = "RTPsociety.1.3_1"
+		}
+		name = {
+			trigger = {
+				event_target:rtp_society_leader = {
+					rtp_is_in_stewardship_society_st = yes
+				}
+			}
+			text = "RTPsociety.1.4_1"
+		}
+		name = {
+			trigger = {
+				event_target:rtp_society_leader = {
+					rtp_is_in_learning_society_st = yes
+				}
+			}
+			text = "RTPsociety.1.5_1"
+		}
+
+		event_target:rtp_society_leader = {
+			show_scope_change = no
+			society = {
+				show_scope_change = no
+				ROOT = {
+					show_scope_change = no
+					join_society = PREV
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPsociety.1_2"
+	}
+}
+
+#Society Member Gets Kicked Out From The Society
+letter_event = {
+	id = RTPsociety.2
+	desc = {
+		trigger = {
+			society_rank < 2
+		}
+		text = "RTPsociety.2_1_desc"
+	}
+	desc = {
+		trigger = {
+			society_rank = 2
+			society_can_rank_down = yes
+		}
+		text = "RTPsociety.2_2_desc"
+	}
+	desc = {
+		trigger = {
+			society_rank = 2
+			society_can_rank_down = no
+		}
+		text = "RTPsociety.2_3_desc"
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPsociety.2_1"
+
+		trigger = {
+			society_rank < 2
+		}
+
+		if = {
+			limit = {
+				rtp_is_in_diplomacy_society_st = yes
+			}
+			set_character_flag = rtp_kicked_from_diplomacy_society #Bye Felicia!
+		}
+		else_if = {
+			limit = {
+				rtp_is_in_martial_society_st = yes
+			}
+			set_character_flag = rtp_kicked_from_martial_society #Bye Felicia!
+		}
+		else_if = {
+			limit = {
+				rtp_is_in_intrigue_society_st = yes
+			}
+			set_character_flag = rtp_kicked_from_intrigue_society #Bye Felicia!
+		}
+		else_if = {
+			limit = {
+				rtp_is_in_stewardship_society_st = yes
+			}
+			set_character_flag = rtp_kicked_from_stewardship_society #Bye Felicia!
+		}
+		else_if = {
+			limit = {
+				rtp_is_in_learning_society_st = yes
+			}
+			set_character_flag = rtp_kicked_from_learning_society #Bye Felicia!
+		}
+		leave_society = yes
+	}
+
+	option = {
+		name = "RTPsociety.2_2"
+
+		trigger = {
+			society_rank = 2
+			society_can_rank_down = yes
+		}
+
+		society_rank_down = 1
+	}
+
+	option = {
+		name = "RTPsociety.2_3"
+
+		trigger = {
+			society_rank = 2
+			society_can_rank_down = no
+		}
+
+		prestige = -50
+	}
+}
+
+#Society Member Can Rank Up Letter
+letter_event = {
+	id = RTPsociety.3
+	desc = "RTPsociety.3_desc"
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = "RTPsociety.3_1"
+
+		if = {
+			limit = {
+				society_rank == 1
+			}
+			change_society_currency = -500
+			society_rank_up = 1
+		}
+		else_if = {
+			limit = {
+				society_rank == 2
+			}
+			change_society_currency = -1000
+			society_rank_up = 1
+		}
+		else = {
+			change_society_currency = -2000
+			society_rank_up = 1
+		}
+	}
+
+	option = {
+		name = "RTPsociety.3_2"
+
+		set_character_flag = rtp_refuse_rankup #Refused rankup
+	}
+}
+
+#Ping Events
+#####
+
+#Ping for Society Leader Receives Request to Join Society
+character_event = {
+	id = RTPsociety.100
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			leader = {
+				OR = {
+					rtp_is_in_diplomacy_society_st = yes
+					rtp_is_in_martial_society_st = yes
+					rtp_is_in_intrigue_society_st = yes
+					rtp_is_in_stewardship_society_st = yes
+					rtp_is_in_learning_society_st = yes
+				}
+			}
+		}
+	}
+
+	immediate = {
+		FROM = {
+			leader = {
+				save_event_target_as = rtp_society_leader #This is the leader of the society
+			}
+		}
+
+		event_target:rtp_society_leader = {
+			ROOT = {
+				letter_event = {
+					id = RTPsociety.1 #Welcome letter - Intrigue Society
+				}
+			}
+		}
+	}
+}
+
+#MTTH Events
+#####
+

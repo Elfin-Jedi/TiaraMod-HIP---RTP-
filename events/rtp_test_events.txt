@@ -1,0 +1,29 @@
+# Audax Validator "!" Ignore_NEXT
+
+#####
+#Test Events
+#
+#Total = 1
+#####
+
+namespace = RTPtest
+
+#Test Events
+#####
+
+#Siege Sounds - Ping
+character_event = {
+	id = RTPtest.1
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+
+	immediate = {
+		any_realm_province = {
+			owner = {
+				create_fort = PREV
+				create_hospital = PREV
+			}
+		}
+	}
+}

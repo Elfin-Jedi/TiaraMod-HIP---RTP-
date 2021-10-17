@@ -1,0 +1,484 @@
+#####
+#Targeted Decisions
+#
+#Total = 11
+#####
+
+targeted_decisions = {
+	#Roll Dice
+	rtp_roll_dice_td = {
+		filter = self
+		ai_target_filter = self
+		ai = no
+	
+		potential = {
+			always = yes
+		}
+		
+		effect = {
+			character_event = {
+				id = RTPcheck.5 #Roll Dice
+			}
+		}
+	}
+
+	#Challenge Tribal Ruler
+	rtp_challenge_tribal_ruler_td = {
+		filter = independent_rulers
+		ai_target_filter = independent_rulers
+		ai_check_interval = 12
+
+		from_potential = {
+			rtp_is_landless = yes
+			NOR = {
+				dynasty = 19930
+				dynasty = none
+				has_character_modifier = recent_duel_timer
+			}
+			top_liege = {
+				is_within_diplo_range = ROOT
+			}
+		}
+
+		potential = {
+			tier = COUNT
+			independent = yes
+			is_tribal = yes
+			NOT = {
+				has_character_modifier = recent_duel_timer
+				has_character_flag = rtp_won_tribe #I already defeated somebody
+			}
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			FROM = {
+				rtp_is_capable_adult = yes
+				prestige = 500
+			}
+		}
+
+		effect = {
+			prestige = -500
+			set_character_flag = rtp_won_tribe #I already defeated somebody
+			remove_character_modifier = recent_duel_victory
+			save_event_target_as = rtp_tribal_ruler #The ruler you challenged
+			save_event_target_as = combatant_2 #The target of the duel
+			hidden_tooltip = {
+				capital_scope = {
+					county = {
+						save_event_target_as = rtp_new_title #The new landed title you will gain
+					}
+				}
+			}
+			FROM = {
+				remove_character_modifier = recent_duel_victory
+				save_event_target_as = combatant_1 #The person issuing the duel
+				character_event = {
+					id = RTPlandless.1 #Tribal Challenge
+					days = 7
+				}
+				character_event = {
+					id = HFP.10100
+				}
+				add_character_modifier = {
+					modifier = recent_duel_timer
+					years = 1
+					hidden = yes
+				}
+			}
+
+			add_character_modifier = {
+				modifier = recent_duel_timer
+				years = 1
+				hidden = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.01
+		}
+	}
+
+	#Money Favor
+	rtp_money_favor_td = {
+		filter = realm
+		ai_target_filter = realm
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			owes_favor_to = FROM
+		}
+
+		allow = {
+			OR = {
+				AND = {
+					wealth = 5
+					lower_tier_than = BARON
+				}
+				AND = {
+					wealth = 10
+					tier = BARON
+				}
+				AND = {
+					wealth = 20
+					tier = COUNT
+				}
+				AND = {
+					wealth = 40
+					tier = DUKE
+				}
+				AND = {
+					wealth = 80
+					tier = KING
+				}
+				AND = {
+					wealth = 160
+					tier = EMPEROR
+				}
+			}
+		}
+
+		effect = {
+			reverse_remove_favor = FROM
+			if = {
+				limit = {
+					lower_tier_than = BARON
+				}
+				wealth = -5
+				FROM = {
+					wealth = 5
+				}
+			}
+			else_if = {
+				limit = {
+					tier = BARON
+				}
+				wealth = -10
+				FROM = {
+					wealth = 10
+				}
+			}
+			else_if = {
+				limit = {
+					tier = COUNT
+				}
+				wealth = -20
+				FROM = {
+					wealth = 20
+				}
+			}
+			else_if = {
+				limit = {
+					tier = DUKE
+				}
+				wealth = -40
+				FROM = {
+					wealth = 40
+				}
+			}
+			else_if = {
+				limit = {
+					tier = KING
+				}
+				wealth = -80
+				FROM = {
+					wealth = 80
+				}
+			}
+			else = {
+				wealth = -160
+				FROM = {
+					wealth = 160
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+				
+				wealth = 0
+			}
+		}
+	}
+
+	#Prestige Favor
+	rtp_prestige_favor_td = {
+		filter = realm
+		ai_target_filter = realm
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			owes_favor_to = FROM
+		}
+
+		allow = {
+		}
+
+		effect = {
+			reverse_remove_favor = FROM
+			if = {
+				limit = {
+					lower_tier_than = BARON
+				}
+				prestige = -5
+				FROM = {
+					prestige = 5
+				}
+			}
+			else_if = {
+				limit = {
+					tier = BARON
+				}
+				prestige = -10
+				FROM = {
+					prestige = 10
+				}
+			}
+			else_if = {
+				limit = {
+					tier = COUNT
+				}
+				prestige = -20
+				FROM = {
+					prestige = 20
+				}
+			}
+			else_if = {
+				limit = {
+					tier = DUKE
+				}
+				prestige = -40
+				FROM = {
+					prestige = 40
+				}
+			}
+			else_if = {
+				limit = {
+					tier = KING
+				}
+				prestige = -80
+				FROM = {
+					prestige = 80
+				}
+			}
+			else = {
+				prestige = -160
+				FROM = {
+					prestige = 160
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				prestige = 0
+			}
+		}
+	}
+
+	#Piety Favor
+	rtp_piety_favor_td = {
+		filter = realm
+		ai_target_filter = realm
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			owes_favor_to = FROM
+		}
+
+		allow = {
+		}
+
+		effect = {
+			reverse_remove_favor = FROM
+			if = {
+				limit = {
+					lower_tier_than = BARON
+				}
+				piety = -5
+				FROM = {
+					piety = 5
+				}
+			}
+			else_if = {
+				limit = {
+					tier = BARON
+				}
+				piety = -10
+				FROM = {
+					piety = 10
+				}
+			}
+			else_if = {
+				limit = {
+					tier = COUNT
+				}
+				piety = -20
+				FROM = {
+					piety = 20
+				}
+			}
+			else_if = {
+				limit = {
+					tier = DUKE
+				}
+				piety = -40
+				FROM = {
+					piety = 40
+				}
+			}
+			else_if = {
+				limit = {
+					tier = KING
+				}
+				piety = -80
+				FROM = {
+					piety = 80
+				}
+			}
+			else = {
+				piety = -160
+				FROM = {
+					piety = 160
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				piety = 0
+			}
+		}
+	}
+
+	#Automate Seduction - ON
+	rtp_start_auto_seduce_td = {
+		filter = self
+		ai_target_filter = self
+		ai = no
+
+		potential = {
+			has_focus = focus_seduction
+			NOR = {
+				has_any_opinion_modifier = opinion_seducing
+				has_global_flag = rtp_auto_seduce #Auto Seduction
+			}
+		}
+		
+		effect = {
+			set_global_flag = rtp_auto_seduce #Auto Seduction
+		}
+	}
+
+	#Automate Seduction - OFF
+	rtp_stop_auto_seduce_td = {
+		filter = self
+		ai_target_filter = self
+		ai = no
+	
+		potential = {
+			has_focus = focus_seduction
+			has_global_flag = rtp_auto_seduce #Auto Seduction
+		}
+		
+		effect = {
+			clr_global_flag = rtp_auto_seduce #Auto Seduction
+		}
+	}
+
+	#Automate Spying - ON
+	rtp_start_auto_spy_td = {
+		filter = self
+		ai_target_filter = self
+		ai = no
+
+		potential = {
+			has_focus = focus_intrigue
+			NOR = {
+				has_any_opinion_modifier = opinion_spying_on
+				has_any_opinion_modifier = opinion_breaking_out
+				has_global_flag = rtp_auto_spy #Auto Spying
+			}
+		}
+		
+		effect = {
+			set_global_flag = rtp_auto_spy #Auto Spying
+		}
+	}
+
+	#Automate Spying - OFF
+	rtp_stop_auto_spy_td = {
+		filter = self
+		ai_target_filter = self
+		ai = no
+	
+		potential = {
+			has_focus = focus_intrigue
+			has_global_flag = rtp_auto_spy #Auto Spying
+		}
+		
+		effect = {
+			clr_global_flag = rtp_auto_spy #Auto Spying
+		}
+	}
+
+	#Automate Carousing - ON
+	rtp_start_auto_carousing_td = {
+		filter = self
+		ai_target_filter = self
+		ai = no
+
+		potential = {
+			has_focus = focus_carousing
+			NOR = {
+				had_character_flag = {
+					flag = inviting_guests_to_party_timer
+					days = 30
+				}
+				has_character_flag = party_host
+				has_global_flag = rtp_auto_carousing #Auto Carousing
+			}
+		}
+		
+		effect = {
+			set_global_flag = rtp_auto_carousing #Auto Carousing
+		}
+	}
+
+	#Automate Carousing - OFF
+	rtp_stop_auto_carousing_td = {
+		filter = self
+		ai_target_filter = self
+		ai = no
+	
+		potential = {
+			has_focus = focus_carousing
+			has_global_flag = rtp_auto_carousing #Auto Carousing
+		}
+		
+		effect = {
+			clr_global_flag = rtp_auto_carousing #Auto Carousing
+		}
+	}
+}

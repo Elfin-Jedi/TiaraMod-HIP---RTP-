@@ -1,0 +1,837 @@
+#####
+#Learning Society Decisions
+#
+#Total = 7
+#####
+
+society_decisions = {
+	#Level 1 - Wisdom Of The Elderly
+	rtp_learning_p1_sd = {
+		is_high_prio = yes
+
+		potential = {
+			rtp_is_in_learning_society_st = yes
+			society_rank = 1
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			rtp_can_use_p1_st = yes
+		}
+
+		effect = {
+			hidden_tooltip = {
+				add_character_modifier = {
+					modifier = rtp_used_p1_timer_em
+					years = 3
+				}
+				character_event = {
+					id = RTPnotification.1 #Can Use Society Ability
+					years = 3
+				}
+			}
+
+			if = {
+				limit = {
+					society_rank == 1
+				}
+				random = {
+					chance = 25
+
+					sound_effect = power_wisdom_of_the_elderly
+	
+					hidden_tooltip = {
+						random_child = {
+							random_list = {
+								20 = {
+									change_diplomacy = 1
+								}
+								20 = {
+									change_martial = 1
+								}
+								20 = {
+									change_stewardship = 1
+								}
+								20 = {
+									change_intrigue = 1
+								}
+								20 = {
+									change_learning = 1
+								}
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					society_rank == 2
+				}
+				random = {
+					chance = 30
+
+					sound_effect = power_wisdom_of_the_elderly
+	
+					hidden_tooltip = {
+						random_child = {
+							random_list = {
+								20 = {
+									change_diplomacy = 1
+								}
+								20 = {
+									change_martial = 1
+								}
+								20 = {
+									change_stewardship = 1
+								}
+								20 = {
+									change_intrigue = 1
+								}
+								20 = {
+									change_learning = 1
+								}
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					society_rank == 3
+				}
+				random = {
+					chance = 35
+
+					sound_effect = power_wisdom_of_the_elderly
+	
+					hidden_tooltip = {
+						random_child = {
+							random_list = {
+								20 = {
+									change_diplomacy = 1
+								}
+								20 = {
+									change_martial = 1
+								}
+								20 = {
+									change_stewardship = 1
+								}
+								20 = {
+									change_intrigue = 1
+								}
+								20 = {
+									change_learning = 1
+								}
+							}
+						}
+					}
+				}
+			}
+			else = {
+				random = {
+					chance = 40
+
+					sound_effect = power_wisdom_of_the_elderly
+	
+					hidden_tooltip = {
+						random_child = {
+							random_list = {
+								20 = {
+									change_diplomacy = 1
+								}
+								20 = {
+									change_martial = 1
+								}
+								20 = {
+									change_stewardship = 1
+								}
+								20 = {
+									change_intrigue = 1
+								}
+								20 = {
+									change_learning = 1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Level 2 - Harmony
+	rtp_learning_p2_sd = {
+		is_high_prio = yes
+
+		potential = {
+			rtp_is_in_learning_society_st = yes
+			society_rank = 2
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			rtp_can_use_p2_st = yes
+		}
+
+		effect = {
+			hidden_tooltip = {
+				add_character_modifier = {
+					modifier = rtp_used_p2_timer_em
+					years = 6
+				}
+				character_event = {
+					id = RTPnotification.1 #Can Use Society Ability
+					years = 6
+				}
+			}
+
+			if = {
+				limit = {
+					society_rank == 2
+				}
+				random = {
+					chance = 30
+
+					sound_effect = power_harmony
+	
+					if = {
+						limit = {
+							NOT = {
+								trait = erudite
+							}
+						}
+						add_trait = erudite
+					}
+					else_if = {
+						limit = {
+							trait = possessed
+						}
+						remove_trait = possessed
+					}
+					else_if = {
+						limit = {
+							trait = lunatic
+						}
+						remove_trait = lunatic
+					}
+					else = {
+						health = 0.1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					society_rank == 3
+				}
+				random = {
+					chance = 35
+
+					sound_effect = power_harmony
+	
+					if = {
+						limit = {
+							NOT = {
+								trait = erudite
+							}
+						}
+						add_trait = erudite
+					}
+					else_if = {
+						limit = {
+							trait = possessed
+						}
+						remove_trait = possessed
+					}
+					else_if = {
+						limit = {
+							trait = lunatic
+						}
+						remove_trait = lunatic
+					}
+					else = {
+						health = 0.1
+					}
+				}
+			}
+			else = {
+				random = {
+					chance = 40
+
+					sound_effect = power_harmony
+	
+					if = {
+						limit = {
+							NOT = {
+								trait = erudite
+							}
+						}
+						add_trait = erudite
+					}
+					else_if = {
+						limit = {
+							trait = possessed
+						}
+						remove_trait = possessed
+					}
+					else_if = {
+						limit = {
+							trait = lunatic
+						}
+						remove_trait = lunatic
+					}
+					else = {
+						health = 0.1
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Level 3 - Ask for Divine Guidance
+	rtp_learning_p3_sd = {
+		is_high_prio = yes
+
+		potential = {
+			rtp_is_in_learning_society_st = yes
+			society_rank = 3
+		}
+
+		allow = {
+			rtp_can_use_p3_st = yes
+		}
+
+		effect = {
+			hidden_tooltip = {
+				add_character_modifier = {
+					modifier = rtp_used_p3_timer_em
+					years = 9
+				}
+				character_event = {
+					id = RTPnotification.1 #Can Use Society Ability
+					years = 9
+				}
+			}
+
+			if = {
+				limit = {
+					society_rank == 3
+				}
+				random = {
+					chance = 35
+
+					sound_effect = power_ask_for_divine_guidance
+	
+					random_list = {
+						10 = {
+							add_character_modifier = {
+								name = good_battle_omen
+								duration = -1
+							}
+						}
+						10 = {
+							add_character_modifier = {
+								name = good_relationship_omen
+								duration = -1
+							}
+						}
+						10 = {
+							add_character_modifier = {
+								name = good_power_omen
+								duration = -1
+							}
+						}
+						10 = {
+							add_character_modifier = {
+								name = bad_battle_omen
+								duration = -1
+							}
+						}
+						10 = {
+							add_character_modifier = {
+								name = bad_relationship_omen
+								duration = -1
+							}
+						}
+						10 = {
+							add_character_modifier = {
+								name = bad_power_omen
+								duration = -1
+							}
+						}
+					}
+				}
+				hidden_effect = {
+					random_list = {
+						10 = {
+							character_event = {
+								id = MNM.1225
+								days = 1500
+								random = 300
+							}
+						}
+						10 = {
+							character_event = {
+								id = MNM.1226
+								days = 1500
+								random = 300
+							}
+						}
+						10 = {
+							character_event = {
+								id = MNM.1227
+								days = 1500
+								random = 300
+							}
+						}
+					}
+				}
+			}
+			else = {
+				random = {
+					chance = 40
+
+					sound_effect = power_ask_for_divine_guidance
+
+					random_list = {
+						10 = {
+							add_character_modifier = {
+								name = good_battle_omen
+								duration = -1
+							}
+						}
+						10 = {
+							add_character_modifier = {
+								name = good_relationship_omen
+								duration = -1
+							}
+						}
+						10 = {
+							add_character_modifier = {
+								name = good_power_omen
+								duration = -1
+							}
+						}
+						10 = {
+							add_character_modifier = {
+								name = bad_battle_omen
+								duration = -1
+							}
+						}
+						10 = {
+							add_character_modifier = {
+								name = bad_relationship_omen
+								duration = -1
+							}
+						}
+						10 = {
+							add_character_modifier = {
+								name = bad_power_omen
+								duration = -1
+							}
+						}
+					}
+					hidden_effect = {
+						random_list = {
+							10 = {
+								character_event = {
+									id = MNM.1225
+									days = 1500
+									random = 300
+								}
+							}
+							10 = {
+								character_event = {
+									id = MNM.1226
+									days = 1500
+									random = 300
+								}
+							}
+							10 = {
+								character_event = {
+									id = MNM.1227
+									days = 1500
+									random = 300
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Level 4 - Become Theocracy
+	rtp_learning_theocracy_sd = {
+		is_high_prio = yes
+		ai_check_interval = 60
+		only_playable = yes
+
+		potential = {
+			is_tribal = no
+			is_nomadic = no
+			mercenary = no
+			holy_order = no
+			controls_religion = no
+			is_landed = yes
+			rtp_is_theocracy_government = no
+			rtp_is_in_learning_society_st = yes
+			society_rank = 4
+			NOR = {
+				has_character_flag = rtp_switched_government #Already switched your government
+				religion_group = muslim
+			}
+			OR = {
+				is_female = no
+				religion_allows_female_temple_holders = yes
+			}
+			OR = {
+				is_female = yes
+				religion_allows_male_temple_holders = yes
+			}
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			higher_tier_than = BARON
+		}
+
+		effect = {
+			sound_effect = bloodline_added
+
+			custom_tooltip = {
+				text = "rtp_become_theocracy_ct"
+				clr_character_flag = rtp_mercenary #This guy is a mercenary
+				clr_character_flag = rtp_holy_order #This guy is a holy order
+				clr_character_flag = rtp_confederation #This guy is a confederation
+				set_character_flag = rtp_theocracy #This guy is a theocracy
+				clr_character_flag = rtp_republic #This guy is a republic
+
+				if = {
+					limit = {
+						is_patrician = yes
+					}
+					create_character = {
+						age = 20
+						dynasty = random
+						random_traits = yes
+						female = no
+						religion = ROOT
+						culture = ROOT
+					}
+					new_character = {
+						save_event_target_as = rtp_new_patrician_house #The new family
+					}
+					any_demesne_title = {
+						limit = {
+							holding_type = family_palace
+						}
+						grant_title_no_opinion = event_target:rtp_new_patrician_house #The new family
+					}
+				}
+
+				if = {
+					limit = {
+						OR = {
+							religion = catholic
+							religion = fraticelli
+						}
+					}
+					if = {
+						limit = {
+							ai = no
+						}
+						set_government_type = rtp_theocracy_g
+					}
+					else = {
+						set_government_type = theocracy_government
+					}
+					any_demesne_title = {
+						gender_succ = agnatic
+						add_law = {
+							law = succ_catholic_bishopric
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						ai = no
+						NOR = {
+							religion = catholic
+							religion = fraticelli
+						}
+					}
+					set_government_type = rtp_theocracy_g
+					any_demesne_title = {
+						gender_succ = agnatic
+						add_law = {
+							law = rtp_theocracy_election_succ
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+				}
+				else = {
+					set_government_type = theocracy_government
+					any_demesne_title = {
+						gender_succ = agnatic
+						add_law = {
+							law = succ_open_elective
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+				}
+				
+				capital_holding = {
+					convert_to = temple
+					refill_holding_levy = yes
+				}
+			}
+
+			set_character_flag = rtp_switched_government #Already switched your government
+		}
+
+		ai_will_do = {
+			factor = 0.01
+		}
+	}
+
+	#Level 4 - Become Holy Order
+	rtp_learning_holy_order_sd = {
+		is_high_prio = yes
+		ai_check_interval = 60
+		only_playable = yes
+		
+		potential = {
+			is_tribal = no
+			is_nomadic = no
+			mercenary = no
+			holy_order = no
+			controls_religion = no
+			is_landed = yes
+			rtp_is_holy_order = no
+			rtp_is_in_learning_society_st = yes
+			society_rank = 4
+			NOT = {
+				has_character_flag = rtp_switched_government #Already switched your government
+			}
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			higher_tier_than = BARON
+		}
+
+		effect = {
+			sound_effect = bloodline_added
+
+			custom_tooltip = {
+				text = "rtp_become_holy_order_ct"
+				clr_character_flag = rtp_mercenary #This guy is a mercenary
+				set_character_flag = rtp_holy_order #This guy is a holy order
+				clr_character_flag = rtp_confederation #This guy is a confederation
+				clr_character_flag = rtp_theocracy #This guy is a theocracy
+				clr_character_flag = rtp_republic #This guy is a republic
+
+				if = {
+					limit = {
+						is_patrician = yes
+					}
+					create_character = {
+						age = 20
+						dynasty = random
+						random_traits = yes
+						female = no
+						religion = ROOT
+						culture = ROOT
+					}
+					new_character = {
+						save_event_target_as = rtp_new_patrician_house #The new family
+					}
+					any_demesne_title = {
+						limit = {
+							holding_type = family_palace
+						}
+						grant_title_no_opinion = event_target:rtp_new_patrician_house #The new family
+					}
+				}
+
+				set_government_type = order_government
+				if = {
+					limit = {
+						ai = no
+					}
+					any_demesne_title = {
+						gender_succ = agnatic
+						add_law = {
+							law = rtp_mercenary_election_succ
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+				}
+				else = {
+					any_demesne_title = {
+						gender_succ = agnatic
+						add_law = {
+							law = succ_open_elective
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+				}
+				
+				capital_holding = {
+					convert_to = castle
+					refill_holding_levy = yes
+				}
+			}
+
+			set_character_flag = rtp_switched_government #Already switched your government
+		}
+
+		ai_will_do = {
+			factor = 0.01
+		}
+	}
+}
+
+targeted_decisions = {
+	#Level 4 - Life Of Medicine
+	rtp_learning_p4_td = {
+		is_in_society = yes
+		filter = realm_including_me
+		ai_target_filter = realm_including_me
+
+		from_potential = {
+			rtp_is_in_learning_society_st = yes
+			society_rank = 4
+		}
+
+		potential = {
+		}
+
+		allow = {
+			FROM = {
+				rtp_can_use_p4_st = yes
+			}
+			OR = {
+				trait = has_aztec_disease
+				trait = has_typhus
+				trait = dysentery
+				trait = has_tuberculosis
+				trait = dancing_plague
+				trait = flu
+				trait = food_poisoning
+				trait = gout
+				trait = syphilitic
+				trait = cancer
+				trait = has_typhoid_fever
+				trait = has_measles
+				trait = leper
+				trait = pneumonic
+				trait = rabies
+				trait = scurvy
+				trait = sickly
+				trait = has_small_pox
+				trait = has_bubonic_plague
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				FROM = {
+					add_character_modifier = {
+						modifier = rtp_used_p4_timer_em
+						years = 12
+					}
+					character_event = {
+						id = RTPnotification.1 #Can Use Society Ability
+						years = 12
+					}
+				}
+			}
+
+			random = {
+				chance = 40
+
+				FROM = {
+					sound_effect = power_life_of_medicine
+				}
+
+				if = {
+					limit = {
+						FROM = {
+							NOT = {
+								trait = physician
+							}
+						}
+					}
+					FROM = {
+						add_trait = physician
+					}
+				}
+
+				trigger_switch = {
+					on_trigger = trait
+					has_aztec_disease = 	{ remove_trait = has_aztec_disease }
+					has_typhus = 			{ remove_trait = has_typhus }
+					dysentery = 			{ remove_trait = dysentery }
+					has_tuberculosis = 		{ remove_trait = has_tuberculosis }
+					dancing_plague = 		{ remove_trait = dancing_plague }
+					flu = 					{ remove_trait = flu }
+					food_poisoning = 		{ remove_trait = food_poisoning }
+					gout = 					{ remove_trait = gout }
+					syphilitic = 			{ remove_trait = syphilitic }
+					cancer = 				{ remove_trait = cancer }
+					has_typhoid_fever = 	{ remove_trait = has_typhoid_fever }
+					has_measles = 			{ remove_trait = has_measles }
+					leper = 				{ remove_trait = leper }
+					pneumonic = 			{ remove_trait = pneumonic }
+					rabies = 				{ remove_trait = rabies }
+					scurvy = 				{ remove_trait = scurvy }
+					sickly = 				{ remove_trait = sickly }
+					has_small_pox = 		{ remove_trait = has_small_pox }
+					has_bubonic_plague = 	{ remove_trait = has_bubonic_plague }
+				}
+
+				opinion = {
+					who = FROM
+					modifier = rtp_healed_om
+					years = 5
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 4
+				is_child_of = FROM
+			}
+			modifier = {
+				factor = 3
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 2
+				is_liege_of = FROM
+			}
+		}
+	}
+}

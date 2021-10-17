@@ -1,0 +1,193 @@
+# Caesar's Books by CaesarTheRoman
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_cbs_ancient_diplomacy"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_ancient_diplomacy.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_ancient_diplomacy_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_ancient_diplomacy_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cbs_ancient_martial"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_ancient_martial.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_ancient_martial_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_ancient_martial_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cbs_ancient_stewardship"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_ancient_stewardship.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_ancient_stewardship_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_ancient_stewardship_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cbs_ancient_learning"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_ancient_learning.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_ancient_learning_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_ancient_learning_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cbs_diplomacy"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_book_diplomacy.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_diplomacy_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_book_diplomacy_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cbs_martial"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_book_martial.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_martial_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_book_martial_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cbs_stewardship"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_book_stewardship.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_stewardship_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_book_stewardship_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cbs_intrigue"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_book_intrigue.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_intrigue_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_book_intrigue_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cbs_learning"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_book_learning.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_learning_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_book_learning_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cbs_chinese_diplomacy"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_book_chinese_diplomacy.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_chinese_diplomacy_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_book_chinese_diplomacy_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cbs_chinese_martial"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_book_chinese_martial.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_chinese_martial_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_book_chinese_martial_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cbs_chinese_stewardship"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_book_chinese_stewardship.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_chinese_stewardship_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_book_chinese_stewardship_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cbs_chinese_intrigue"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_book_chinese_intrigue.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_chinese_intrigue_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_book_chinese_intrigue_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cbs_chinese_learning"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_book_chinese_learning.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_chinese_learning_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_book_chinese_learning_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cbs_scroll_diplomacy"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_scroll_diplomacy.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_scroll_diplomacy_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_scroll_diplomacy_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cbs_scroll_stewardship"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_scroll_stewardship.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_scroll_stewardship_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_scroll_stewardship_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cbs_scroll_intrigue"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_scroll_intrigue.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_scroll_intrigue_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_scroll_intrigue_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cbs_scroll_learning"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_scroll_learning.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_scroll_learning_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_scroll_learning_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cbs_arab_diplomacy"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_arab_diplomacy.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_arab_diplomacy_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_arab_diplomacy_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cbs_arab_stewardship"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_arab_stewardship.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_arab_stewardship_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_arab_stewardship_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cbs_arab_learning"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_arab_learning.dds"
+	}
+	spriteType = {
+		name = "GFX_cbs_arab_learning_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\cbs_arab_learning_small.dds"
+	}
+	
+}

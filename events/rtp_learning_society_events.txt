@@ -1,0 +1,1592 @@
+#####
+#Learning Society Events
+#
+#Total = 21
+#####
+
+namespace = RTPlsociety
+
+#Main Events
+#####
+
+#In Sickness and In Health - Learning Mission Start
+society_quest_event = {
+	id = RTPlsociety.1
+	desc = "RTPlsociety.1_desc"
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1825
+		}
+
+		random_province = {
+			preferred_limit = {
+				OR = {
+					disease = tuberculosis
+					disease = typhoid_fever
+					disease = typhus
+					disease = bubonic_plague
+					disease = measles
+					disease = small_pox
+					disease = syphilis
+					disease = dancing_plague
+				}
+			}
+			save_event_target_as = rtp_infected_province #The diseased province
+		}
+
+		event_target:rtp_infected_province = {
+			holder_scope = {
+				create_character = {
+					age = 35
+					random_traits = yes
+					religion = PREV
+					culture = PREV
+					female = no
+					dynasty = none
+					health = 10
+					trait = monk
+				}
+				new_character = {
+					set_character_flag = rtp_trash #Just delete this dude
+					save_event_target_as = rtp_society_quest_target #The first target of the quest
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.1_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			event_target:rtp_society_quest_target = {
+				show_scope_change = no
+				set_quest_target = {
+					id = rtp_in_sickness_and_in_health_mission
+					holder = ROOT
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPlsociety.2 #In Sickness and In Health - Learning Mission Part 1
+			days = 90
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.1_2"
+
+		custom_tooltip = {
+			text = "rtp_may_be_kicked_ct"
+
+			random = {
+				chance = 25
+	
+				society = {
+					leader = {
+						ROOT = {
+							letter_event = {
+								id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#In Sickness and In Health - Learning Mission Part 1
+character_event = {
+	id = RTPlsociety.2
+	title = "RTPlsociety.2_title"
+	desc = "RTPlsociety.2_desc"
+	picture = GFX_evt_depopulated_town
+	is_triggered_only = yes
+	hide_from = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPlsociety.28 #Failed To Reach Target In Time
+		}
+	}
+
+	trigger = {
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.2_1"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPlsociety.3 #In Sickness and In Health - Learning Mission Part 2
+			days = 1
+		}
+	}
+}
+
+#In Sickness and In Health - Learning Mission Part 2
+character_event = {
+	id = RTPlsociety.3
+	title = "RTPlsociety.3_title"
+	desc = "RTPlsociety.3_desc"
+	picture = GFX_evt_depopulated_town
+	is_triggered_only = yes
+	hide_from = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = "RTPlsociety.3_1"
+
+		random = {
+			chance = 10
+
+			add_trait = stubborn
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.3_2"
+
+		random = {
+			chance = 10
+
+			add_trait = erudite
+		}
+
+		set_character_flag = rtp_report #You chose to write a report
+	}
+
+	after = {
+		character_event = {
+			id = RTPlsociety.4 #In Sickness and In Health - Learning Mission End
+			days = 1
+		}
+	}
+}
+
+#In Sickness and In Health - Learning Mission End
+character_event = {
+	id = RTPlsociety.4
+	title = "RTPlsociety.4_title"
+	desc = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+			NOT = {
+				has_character_flag = rtp_report #You chose to write a report
+			}
+		}
+		text = "RTPlsociety.4_1_desc"
+	}
+	desc = {
+		trigger = {
+			NOR = {
+				has_character_flag = rtp_report #You chose to write a report
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPlsociety.4_2_desc"
+	}
+	desc = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+			has_character_flag = rtp_report #You chose to write a report
+		}
+		text = "RTPlsociety.4_3_desc"
+	}
+	desc = {
+		trigger = {
+			has_character_flag = rtp_report #You chose to write a report
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPlsociety.4_4_desc"
+	}
+	picture = GFX_evt_depopulated_town
+	is_triggered_only = yes
+	hide_from = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		random = {
+			chance = 50
+
+			set_character_flag = rtp_success #You succeed
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.4_1"
+
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+			NOT = {
+				has_character_flag = rtp_report #You chose to write a report
+			}
+		}
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_in_sickness_and_in_health_mission
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_medium_currency_se = yes
+	}
+
+	option = {
+		name = "RTPlsociety.4_2"
+
+		trigger = {
+			NOR = {
+				has_character_flag = rtp_report #You chose to write a report
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_in_sickness_and_in_health_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	option = {
+		name = "RTPlsociety.4_3"
+
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+			has_character_flag = rtp_report #You chose to write a report
+		}
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_in_sickness_and_in_health_mission
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_medium_currency_se = yes
+	}
+
+	option = {
+		name = "RTPlsociety.4_4"
+
+		trigger = {
+			has_character_flag = rtp_report #You chose to write a report
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_in_sickness_and_in_health_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPlsociety.101 #Ping For Cleaning Out Missions - Stewardship Mission
+			days = 90
+		}
+	}
+}
+
+#The Elixir Contest - Learning Mission Start
+society_quest_event = {
+	id = RTPlsociety.5
+	desc = "RTPlsociety.5_desc"
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1825
+		}
+
+		society = {
+			leader = {
+				save_event_target_as = rtp_society_quest_target #The first target of the quest
+			}
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.5_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			ROOT = {
+				show_scope_change = no
+				set_quest_target = {
+					id = rtp_the_elixir_contest_mission
+					holder = ROOT
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPlsociety.6 #The Elixir Contest - Learning Mission Part 1
+			days = 90
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.5_2"
+
+		custom_tooltip = {
+			text = "rtp_may_be_kicked_ct"
+
+			random = {
+				chance = 25
+	
+				society = {
+					leader = {
+						ROOT = {
+							letter_event = {
+								id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#The Elixir Contest - Learning Mission Part 1
+character_event = {
+	id = RTPlsociety.6
+	title = "RTPlsociety.6_title"
+	desc = "RTPlsociety.6_desc"
+	picture = GFX_evt_performing_experiments
+	is_triggered_only = yes
+	hide_from = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPlsociety.28 #Failed To Reach Target In Time
+		}
+	}
+
+	trigger = {
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.6_1"
+
+		character_event = {
+			id = RTPlsociety.7 #The Elixir Contest - Learning Mission Part 2
+			days = 1
+		}
+	}
+}
+
+#The Elixir Contest - Learning Mission Part 2
+character_event = {
+	id = RTPlsociety.7
+	title = "RTPlsociety.7_title"
+	desc = "RTPlsociety.7_desc"
+	picture = GFX_evt_performing_experiments
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPlsociety.7_1"
+
+		random = {
+			chance = 20
+
+			add_trait = temperate
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.7_2"
+
+		random = {
+			chance = 10
+
+			add_trait = trusting
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.7_3"
+
+		random = {
+			chance = 10
+
+			add_trait = paranoid
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPlsociety.8 #The Elixir Contest - Learning Mission Part 3
+			days = 1
+		}
+	}
+}
+
+#The Elixir Contest - Learning Mission Part 3
+character_event = {
+	id = RTPlsociety.8
+	title = "RTPlsociety.8_title"
+	desc = "RTPlsociety.8_desc"
+	picture = GFX_evt_performing_experiments
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPlsociety.8_1"
+
+		random = {
+			chance = 20
+
+			add_trait = temperate
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.8_2"
+
+		random = {
+			chance = 10
+
+			add_trait = trusting
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.8_3"
+
+		random = {
+			chance = 10
+
+			add_trait = paranoid
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPlsociety.9 #The Elixir Contest - Learning Mission Part 4
+			days = 1
+		}
+	}
+}
+
+#The Elixir Contest - Learning Mission Part 4
+character_event = {
+	id = RTPlsociety.9
+	title = "RTPlsociety.9_title"
+	desc = "RTPlsociety.9_desc"
+	picture = GFX_evt_accused
+	is_triggered_only = yes
+	hide_from = yes
+
+	immediate = {
+		random = {
+			chance = 50
+
+			set_character_flag = rtp_success #You succeed
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.9_1"
+
+		character_event = {
+			id = RTPlsociety.10 #The Elixir Contest - Learning Mission End
+			days = 1
+		}
+	}
+}
+
+#The Elixir Contest - Learning Mission End
+character_event = {
+	id = RTPlsociety.10
+	title = "RTPlsociety.10_title"
+	desc = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		text = "RTPlsociety.10_1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPlsociety.10_2_desc"
+	}
+	picture = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		picture = GFX_evt_experiment
+	}
+	picture = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		picture = GFX_evt_experiments_failed
+	}
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPlsociety.10_1"
+
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_the_elixir_contest_mission
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_medium_currency_se = yes
+	}
+
+	option = {
+		name = "RTPlsociety.10_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_the_elixir_contest_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPlsociety.101 #Ping For Cleaning Out Missions - Learning Mission
+			days = 90
+		}
+	}
+}
+
+#Drinking with God - Learning Mission Start
+society_quest_event = {
+	id = RTPlsociety.11
+	desc = "RTPlsociety.11_desc"
+	is_triggered_only = yes
+
+	immediate = {
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1825
+		}
+
+		top_liege = {
+			create_character = {
+				age = 50
+				random_traits = yes
+				culture = PREV
+				religion = PREV
+				dynasty = none
+				female = no
+				trait = monk
+				health = 10
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target #The first target of the quest
+			}
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.11_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			ROOT = {
+				show_scope_change = no
+				set_quest_target = {
+					id = rtp_drinking_with_god_mission
+					holder = ROOT
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPlsociety.12 #Drinking with God - Learning Mission Part 1
+			days = 90
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.11_2"
+
+		custom_tooltip = {
+			text = "rtp_may_be_kicked_ct"
+
+			random = {
+				chance = 25
+	
+				society = {
+					leader = {
+						ROOT = {
+							letter_event = {
+								id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Drinking with God - Learning Mission Part 1
+character_event = {
+	id = RTPlsociety.12
+	title = "RTPlsociety.12_title"
+	desc = "RTPlsociety.12_desc"
+	picture = GFX_evt_outside_tavern_hf
+	is_triggered_only = yes
+	hide_from = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPlsociety.28 #Failed To Reach Target In Time
+		}
+	}
+
+	trigger = {
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.12_1"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		character_event = {
+			id = RTPlsociety.13 #Drinking with God - Learning Mission Part 2
+			days = 1
+		}
+	}
+}
+
+#Drinking with God - Learning Mission Part 2
+character_event = {
+	id = RTPlsociety.13
+	title = "RTPlsociety.13_title"
+	desc = "RTPlsociety.13_desc"
+	picture = GFX_evt_drunk
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPlsociety.13_1"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		character_event = {
+			id = RTPlsociety.14 #Drinking with God - Learning Mission Part 3
+		}
+	}
+}
+
+#Drinking with God - Learning Mission Part 3
+character_event = {
+	id = RTPlsociety.14
+	title = "RTPlsociety.14_title"
+	desc = "RTPlsociety.14_desc"
+	picture = GFX_evt_bishop
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPlsociety.14_1"
+
+		character_event = {
+			id = RTPlsociety.15 #Drinking with God - Learning Mission Part 4
+		}
+	}
+}
+
+#Drinking with God - Learning Mission Part 4
+character_event = {
+	id = RTPlsociety.15
+	title = "RTPlsociety.15_title"
+	desc = "RTPlsociety.15_desc"
+	picture = GFX_evt_bishop
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPlsociety.15_1"
+
+		character_event = {
+			id = RTPlsociety.16 #Drinking with God - Learning Mission Part 5
+		}
+	}
+}
+
+#Drinking with God - Learning Mission Part 5
+character_event = {
+	id = RTPlsociety.16
+	title = "RTPlsociety.16_title"
+	desc = "RTPlsociety.16_desc"
+	picture = GFX_evt_bishop
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPlsociety.16_1"
+
+		character_event = {
+			id = RTPlsociety.17 #Drinking with God - Learning Mission Part 6
+		}
+	}
+}
+
+#Drinking with God - Learning Mission Part 6
+character_event = {
+	id = RTPlsociety.17
+	title = "RTPlsociety.17_title"
+	desc = "RTPlsociety.17_desc"
+	picture = GFX_evt_bishop
+	is_triggered_only = yes
+	hide_from = yes
+
+	immediate = {
+		random = {
+			chance = 50
+
+			set_character_flag = rtp_success #You succeed
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.17_1"
+
+		random = {
+			chance = 20
+
+			add_trait = humble
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.17_2"
+
+		random = {
+			chance = 20
+
+			add_trait = proud
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPlsociety.18 #Drinking with God - Learning Mission End
+		}
+	}
+}
+
+#Drinking with God - Learning Mission End
+character_event = {
+	id = RTPlsociety.18
+	title = "RTPlsociety.18_title"
+	desc = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+		text = "RTPlsociety.18_1_desc"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPlsociety.18_2_desc"
+	}
+	picture = GFX_evt_monastery_monks
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPlsociety.18_1"
+
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_drinking_with_god_mission
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_medium_currency_se = yes
+	}
+
+	option = {
+		name = "RTPlsociety.18_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_drinking_with_god_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPlsociety.101 #Ping For Cleaning Out Missions - Learning Mission
+			days = 90
+		}
+	}
+}
+
+#The Ancient Text - Learning Mission Start
+society_quest_event = {
+	id = RTPlsociety.19
+	desc = "RTPlsociety.19_desc"
+	is_triggered_only = yes
+
+	immediate = {
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1825
+		}
+
+		society = {
+			random_society_member = {
+				preferred_limit = {
+					ROOT = {
+						top_liege = {
+							is_within_diplo_range = PREVPREV
+						}
+					}
+				}
+				save_event_target_as = rtp_society_quest_target #The first target of the quest
+			}
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.19_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			event_target:rtp_society_quest_target = {
+				show_scope_change = no
+				set_quest_target = {
+					id = rtp_ancient_text_mission
+					holder = ROOT
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPlsociety.20 #The Ancient Text - Learning Mission Part 1
+			days = 90
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.19_2"
+
+		custom_tooltip = {
+			text = "rtp_may_be_kicked_ct"
+
+			random = {
+				chance = 25
+	
+				society = {
+					leader = {
+						ROOT = {
+							letter_event = {
+								id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#The Ancient Text - Learning Mission Part 1
+character_event = {
+	id = RTPlsociety.20
+	title = "RTPlsociety.20_title"
+	desc = "RTPlsociety.20_desc"
+	picture = GFX_evt_aztec_explorers
+	is_triggered_only = yes
+	hide_from = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPlsociety.28 #Failed To Reach Target In Time
+		}
+	}
+
+	trigger = {
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+	}
+
+	immediate = {
+		random = {
+			chance = 50
+
+			set_character_flag = rtp_success #You succeed
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.20_1"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		set_character_flag = rtp_option_1 #The tome
+
+		random = {
+			chance = 10
+
+			add_trait = content
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.20_2"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		set_character_flag = rtp_option_2 #The scroll
+
+		random = {
+			chance = 10
+
+			add_trait = brave
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.20_3"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		set_character_flag = rtp_option_3 #The tablet
+
+		random = {
+			chance = 10
+
+			add_trait = ambitious
+		}
+	}
+
+	after = {
+		character_event = {
+			id = RTPlsociety.21 #The Ancient Text - Learning Mission End
+			days = 7
+		}
+	}
+}
+
+#The Ancient Text - Learning Mission End
+character_event = {
+	id = RTPlsociety.21
+	title = "RTPlsociety.21_title"
+	desc = {
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+			has_character_flag = rtp_option_1 #The tome
+		}
+		text = "RTPlsociety.21_1_desc"
+	}
+	desc = {
+		trigger = {
+			has_character_flag = rtp_option_1 #The tome
+			NOR = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPlsociety.21_2_desc"
+	}
+	desc = {
+		trigger = {
+			has_character_flag = rtp_option_2 #The scroll
+			has_character_flag = rtp_success #You succeed
+		}
+		text = "RTPlsociety.21_3_desc"
+	}
+	desc = {
+		trigger = {
+			has_character_flag = rtp_option_2 #The scroll
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPlsociety.21_4_desc"
+	}
+	desc = {
+		trigger = {
+			has_character_flag = rtp_option_3 #The tablet
+			has_character_flag = rtp_success #You succeed
+		}
+		text = "RTPlsociety.21_5_desc"
+	}
+	desc = {
+		trigger = {
+			has_character_flag = rtp_option_3 #The tablet
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+		text = "RTPlsociety.21_6_desc"
+	}
+	picture = GFX_evt_treasure_chamber
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPlsociety.21_1"
+
+		trigger = {
+			has_character_flag = rtp_success #You succeed
+		}
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_ancient_text_mission
+
+		rtp_give_medium_gold_se = yes
+		rtp_give_medium_currency_se = yes
+	}
+
+	option = {
+		name = "RTPlsociety.21_2"
+
+		trigger = {
+			NOT = {
+				has_character_flag = rtp_success #You succeed
+			}
+		}
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_ancient_text_mission
+			failure = yes
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPlsociety.101 #Ping For Cleaning Out Missions - Learning Mission
+			days = 90
+		}
+	}
+}
+
+#The Foundation of Lies - Learning Mission Start
+society_quest_event = {
+	id = RTPlsociety.22
+	desc = "RTPlsociety.22_desc"
+	is_triggered_only = yes
+
+	immediate = {
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1825
+		}
+
+		top_liege = {
+			create_character = {
+				age = 30
+				random_traits = yes
+				culture = PREV
+				religion = PREV
+				dynasty = random
+				health = 10
+			}
+			new_character = {
+				set_character_flag = rtp_trash #Just delete this dude
+				save_event_target_as = rtp_society_quest_target #The first target of the quest
+			}
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.19_1"
+
+		add_trait = travelling
+
+		hidden_tooltip = {
+			event_target:rtp_society_quest_target = {
+				show_scope_change = no
+				set_quest_target = {
+					id = rtp_the_foundation_of_lies_mission
+					holder = ROOT
+				}
+			}
+		}
+
+		character_event = {
+			id = RTPlsociety.23 #The Foundation of Lies - Learning Mission Part 1
+			days = 90
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.19_2"
+
+		custom_tooltip = {
+			text = "rtp_may_be_kicked_ct"
+
+			random = {
+				chance = 25
+	
+				society = {
+					leader = {
+						ROOT = {
+							letter_event = {
+								id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#The Foundation of Lies - Learning Mission Part 1
+character_event = {
+	id = RTPlsociety.23
+	title = "RTPlsociety.23_title"
+	desc = "RTPlsociety.23_desc"
+	picture = GFX_evt_stressed_ruler
+	is_triggered_only = yes
+	hide_from = yes
+
+	fail_trigger_effect = {
+		character_event = {
+			id = RTPlsociety.28 #Failed To Reach Target In Time
+		}
+	}
+
+	trigger = {
+		event_target:rtp_society_quest_target = {
+			is_alive = yes
+		}
+	}
+
+	option = {
+		name = "RTPlsociety.23_1"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		character_event = {
+			id = RTPlsociety.24 #The Foundation of Lies - Learning Mission Part 2
+			days = 1
+		}
+	}
+}
+
+#The Foundation of Lies - Learning Mission Part 2
+character_event = {
+	id = RTPlsociety.24
+	title = "RTPlsociety.24_title"
+	desc = "RTPlsociety.24_desc"
+	picture = GFX_evt_construction_site
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPlsociety.24_1"
+
+		character_event = {
+			id = RTPlsociety.25 #The Foundation of Lies - Learning Mission Part 3
+		}
+	}
+}
+
+#The Foundation of Lies - Learning Mission Part 3
+character_event = {
+	id = RTPlsociety.25
+	title = "RTPlsociety.25_title"
+	desc = "RTPlsociety.25_desc"
+	picture = GFX_evt_construction_site
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPlsociety.25_1"
+
+		character_event = {
+			id = RTPlsociety.26 #The Foundation of Lies - Learning Mission Part 4
+		}
+	}
+}
+
+#The Foundation of Lies - Learning Mission Part 4
+character_event = {
+	id = RTPlsociety.26
+	title = "RTPlsociety.26_title"
+	desc = "RTPlsociety.26_desc"
+	picture = GFX_evt_construction_site
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPlsociety.26_1"
+
+		character_event = {
+			id = RTPlsociety.27 #The Foundation of Lies - Learning Mission End
+		}
+	}
+}
+
+#The Foundation of Lies - Learning Mission End
+character_event = {
+	id = RTPlsociety.27
+	title = "RTPlsociety.27_title"
+	desc = "RTPlsociety.27_desc"
+	picture = GFX_evt_construction_site
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPlsociety.27_1"
+
+		sound_effect = quest_failed
+
+		clr_quest = {
+			id = rtp_the_foundation_of_lies_mission
+			failure = yes
+		}
+
+		random = {
+			chance = 20
+
+			add_trait = greedy
+		}
+
+		rtp_give_big_gold_se = yes
+		rtp_give_big_currency_se = yes
+	}
+
+	option = {
+		name = "RTPlsociety.27_2"
+
+		event_target:rtp_society_quest_target = {
+			save_event_target_as = rtp_society_quest_target #The first target of the quest
+		}
+
+		sound_effect = quest_completed
+
+		clr_quest = rtp_the_foundation_of_lies_mission
+
+		random = {
+			chance = 20
+
+			add_trait = charitable
+		}
+
+		rtp_give_small_gold_se = yes
+		rtp_give_small_currency_se = yes
+	}
+
+	after = {
+		character_event = {
+			id = RTPlsociety.101 #Ping For Cleaning Out Missions - Learning Mission
+			days = 90
+		}
+	}
+}
+
+#Failed To Reach Target In Time
+character_event = {
+	id = RTPlsociety.28
+	title = "RTPlsociety.28_title"
+	desc = "RTPlsociety.28_desc"
+	picture = GFX_evt_bad_news
+	hide_from = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "RTPlsociety.28_1"
+
+		character_event = {
+			id = RTPlsociety.101 #Ping For Cleaning Out Missions - Martial Mission
+		}
+	}
+}
+
+#Ping Events
+#####
+
+#Ping for Society Leader Hands Out Missions - Learning Mission
+character_event = {
+	id = RTPlsociety.100
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		rtp_is_in_learning_society_st = yes
+		is_society_grandmaster = yes
+	}
+
+	immediate = {
+		society = {
+			random_society_member = {
+				limit = {
+					has_any_quest = no
+					is_society_grandmaster = no
+					rtp_is_capable_adult = yes
+					NOT = {
+						has_character_modifier = quest_cooldown_timer
+					}
+				}
+				preferred_limit = {
+					ai = no
+				}
+				random_list = {
+					20 = {
+						society_quest_event = {
+							id = RTPlsociety.1 #In Sickness and In Health - Learning Mission Start
+						}
+					}
+					20 = {
+						society_quest_event = {
+							id = RTPlsociety.5 #The Elixir Contest - Learning Mission Start
+						}
+					}
+					20 = {
+						society_quest_event = {
+							id = RTPlsociety.11 #Drinking with God - Learning Mission Start
+						}
+					}
+					20 = {
+						society_quest_event = {
+							id = RTPlsociety.19 #The Ancient Text - Learning Mission Start
+						}
+					}
+					20 = {
+						society_quest_event = {
+							id = RTPlsociety.22 #The Foundation of Lies - Learning Mission Start
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Ping For Cleaning Out Missions - Learning Mission
+character_event = {
+	id = RTPlsociety.101
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+
+	immediate = {
+		remove_trait = travelling
+		
+		clr_quest = {
+			id = rtp_in_sickness_and_in_health_mission
+			failure = yes
+		}
+		clr_quest = {
+			id = rtp_the_elixir_contest_mission
+			failure = yes
+		}
+		clr_quest = {
+			id = rtp_drinking_with_god_mission
+			failure = yes
+		}
+		clr_quest = {
+			id = rtp_ancient_text_mission
+			failure = yes
+		}
+		clr_quest = {
+			id = rtp_the_foundation_of_lies_mission
+			failure = yes
+		}
+
+		clr_character_flag = rtp_success #You succeed
+		clr_character_flag = rtp_report #You chose to write a report
+		set_character_flag = rtp_option_1 #The tome
+		set_character_flag = rtp_option_2 #The scroll
+		set_character_flag = rtp_option_3 #The tablet
+
+		event_target:rtp_society_quest_target = {
+			if = {
+				limit = {
+					has_character_flag = rtp_trash #Just delete this dude
+				}
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+}
+
+#Ping For Cancelling Mission - Learning Mission
+character_event = {
+	id = RTPlsociety.102
+	hide_window = yes
+	is_triggered_only = yes
+	sound = quest_failed
+	
+	trigger = {
+	}
+
+	immediate = {
+		random = {
+			chance = 10
+
+			society = {
+				leader = {
+					ROOT = {
+						letter_event = {
+							id = RTPsociety.2 #Society Member Gets Kicked Out From The Society
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#MTTH Events
+#####

@@ -1,0 +1,29 @@
+RTPdestiny.1_desc;My [Root.GetLordLady],\n\nYour father asked me to assign his personal retinue to you. They stand ready to do your bidding at any time.\n\nSincerely,\n[rtp_captain.GetTitledName].;;;;;;x
+RTPdestiny.1_1;Let us begin.;;;;;;x
+
+RTPdestiny.2_desc;My [Root.GetLordLady],\n\nWith your brother gone, me and my men are now ready to follow you in battle.\n\nSincerely,\n[rtp_captain.GetTitledName].;;;;;;x
+RTPdestiny.2_1;Father always chose me.;;;;;;x
+
+RTPdestiny.3_desc;My [Root.GetLordLady],\n\nYou [Root.Religion.GetName]s think you can come and take our land like this...we shall see if you are worthy. We stand ready for battle.\n\nSincerely,\n[rtp_captain.GetTitledName].;;;;;;x
+RTPdestiny.3_1;I AM worthy.;;;;;;x
+
+RTPdestiny.4_desc;My [Root.GetLordLady],\n\nUniting all of our people together is a worthy cause...but how long do you think it will last? We are at your command.\n\nSincerely,\n[rtp_captain.GetTitledName].;;;;;;x
+RTPdestiny.4_1;Long enough to see me an Emperor.;;;;;;x
+
+RTPdestiny.5_desc;My [Root.GetLordLady],\n\nConquered by a [Root.Culture.GetName]...our ancestors must be ashamed of us right now. Just say the word and we shall mobilize our army against the enemy.\n\nSincerely,\n[rtp_captain.GetTitledName].;;;;;;x
+RTPdestiny.5_1;Rome awaits.;;;;;;x
+
+RTPdestiny.6_title;Icelandic Colonization;;;;;;x
+RTPdestiny.6_desc;Tales of a new uncolonized landmass located North-West of Britannia are beginning to become more frequent each day. Most people are dismissing these tales as simply that, but others see this as an opportunity to make a name for themselves and, perhaps one day, even rule the whole landmass. The adventurers seeking this land must be prepared for a long and dangerous journey that will put men's resolve to a strenious test.;;;;;;x
+RTPdestiny.6_1;Get my ship ready.;;;;;;x
+RTPdestiny.6_2;Just drunken tales.;;;;;;x
+
+RTPdestiny.7_title;Icelandic Colonization;;;;;;x
+RTPdestiny.7_desc;Many years have passed since we set out to explore the uncharted lands of this "New World". I almost sustained a mutiny due to the ship crew feeling that I had led them into a hopeless voyage, but all that changed when we spotted a huge beautiful earthland sprinkled with ice...an iceland.;;;;;;x
+RTPdestiny.7_1;We shall call it Iceland.;;;;;;x
+
+#####
+#Tooltips
+#####
+
+rtp_conqueror_loc;Great Conqueror;;;;;;x

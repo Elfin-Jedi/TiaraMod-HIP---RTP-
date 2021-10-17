@@ -1,0 +1,25 @@
+RTPnaval_1_title;Enemy Admiral;;;;;;x
+RTPnaval_1_desc;While sailing I encounter a fleet belonging to [rtp_defending_liege.GetTitledName]. This detachment is currently being lead by [rtp_defending_admiral.GetTitledName]. This is our chance to engage their ships.;;;;;;x
+RTPnaval.1_1;Prepare the grappling hooks.;;;;;;x
+RTPnaval.1_2;Raise the black flag.;;;;;;x
+RTPnaval.1_3;Let us steer clear of them.;;;;;;x
+
+RTPnaval_2_title;Naval Battle;;;;;;x
+RTPnaval.2_desc;At the break of dawn my fleet engaged [rtp_defending_admiral.GetTitledName]'s ships on the high seas. Our flagship's battering ram dealt a crushing blow to theirs, a cry raising as my men flung chains and ropes across the gaps to board. Aboard their ships, fires raged as archers pelted their decks with flaming arrows, splintering of wood giving way to the sound of the clashes of steel as we boarded.;;;;;;x
+RTPnaval.2_1;Take the survivors prisoners.;;;;;;x
+RTPnaval.2_2;We lost vital supplies.;;;;;;x
+
+RTPnaval.3_title;Naval Battle;;;;;;x
+RTPnaval.3_desc;[From.GetTitledName] has decided to attack my detachment located in the [From.Location.GetName].;;;;;;x
+RTPnaval.3_1;Their loss.;;;;;;x
+RTPnaval.3_2;Noted.;;;;;;x
+
+RTPnaval_4_title;Enemy Admiral;;;;;;x
+RTPnaval_4_desc;While sailing I encounter a fleet belonging to my enemy [rtp_attacking_liege.GetTitledName]. This detachment is currently being lead by [rtp_attacking_admiral.GetTitledName]. It is currently trying to avoid any possible conflicts.;;;;;;x
+RTPnaval.4_1;Chase them down!;;;;;;x
+RTPnaval.4_2;We have other priorities.;;;;;;x
+
+RTPnaval.5_title;Naval Battle;;;;;;x
+RTPnaval.5_desc;I braced for impact as [rtp_attacking_admiral.GetTitledName]'s flagship slammed into our hull, hearing cries as the force threw my men into the rails. Seeing their chains already flying towards our deck I drew my weapon and shouted for my men to do the same, ready to repel our unwanted guests. Blood spattered our deck and sails as they came aboard, straight into our blades.;;;;;;x
+RTPnaval.5_1;Take the survivors prisoners.;;;;;;x
+RTPnaval.5_2;We lost vital supplies.;;;;;;x

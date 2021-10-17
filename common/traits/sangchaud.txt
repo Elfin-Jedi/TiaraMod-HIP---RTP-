@@ -1,0 +1,22 @@
+sangchaud = {
+
+      ruler_designer_cost = 10
+
+
+personality = yes
+random = yes
+birth = 100
+
+  martial = 2
+
+  opposites = {
+			frileux
+  }
+  
+
+  same_opinion = 5
+
+command_modifier = {
+	winter_combat = 0.50
+    }
+}

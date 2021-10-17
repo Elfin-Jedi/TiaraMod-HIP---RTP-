@@ -1,0 +1,3586 @@
+caesar_bust = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		caesar_bust = {
+			value = 1
+		}
+	}
+}
+
+spartan_helmet = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		spartan_helmet = {
+			value = 1
+		}
+	}
+}
+
+athena_spear = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		athena_spear = {
+			value = 1
+		}
+	}
+}
+
+justitia_scales = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		justitia_scales = {
+			value = 1
+		}
+	}
+}
+
+alexander_shield = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		alexander_shield = {
+			value = 1
+		}
+	}
+}
+
+gold_snake = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		gold_snake = {
+			value = 1
+		}
+	}
+}
+
+gungnir = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		gungnir = {
+			value = 1
+		}
+	}
+}
+
+mistilteinn = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		mistilteinn = {
+			value = 1
+		}
+	}
+}
+
+draupnir = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		draupnir = {
+			value = 1
+		}
+	}
+}
+
+brisingamen = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		brisingamen = {
+			value = 1
+		}
+	}
+}
+
+mokosh_soil = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		mokosh_soil = {
+			value = 1
+		}
+	}
+}
+
+dazhbog_amulet = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		dazhbog_amulet = {
+			value = 1
+		}
+	}
+}
+
+skull_cane = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		skull_cane = {
+			value = 1
+		}
+	}
+}
+
+tengri_bow = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = tengri_pagan
+				religion = tengri_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		tengri_bow = {
+			value = 1
+		}
+	}
+}
+
+saddle = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = tengri_pagan
+				religion = tengri_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		saddle = {
+			value = 1
+		}
+	}
+}
+
+velnias_shield = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = baltic_pagan
+				religion = baltic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		velnias_shield = {
+			value = 1
+		}
+	}
+}
+
+dievas_ring = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = baltic_pagan
+				religion = baltic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		dievas_ring = {
+			value = 1
+		}
+	}
+}
+
+jurate_amber = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = baltic_pagan
+				religion = baltic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		jurate_amber = {
+			value = 1
+		}
+	}
+}
+
+ukko_axe = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = finnish_pagan
+				religion = finnish_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		ukko_axe = {
+			value = 1
+		}
+	}
+}
+
+kantele = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = finnish_pagan
+				religion = finnish_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		kantele = {
+			value = 1
+		}
+	}
+}
+
+eshu_staff = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = west_african_pagan
+				religion = west_african_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		eshu_staff = {
+			value = 1
+		}
+	}
+}
+
+creator_mask = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = west_african_pagan
+				religion = west_african_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		creator_mask = {
+			value = 1
+		}
+	}
+}
+
+small_totem = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = west_african_pagan
+				religion = west_african_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		small_totem = {
+			value = 1
+		}
+	}
+}
+
+tezcatlipoca = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = aztec
+				religion = aztec_reformed
+			}
+			is_landed = yes
+		}
+		additive_modifier = {
+			value = 100
+			any_demesne_title = {
+				title = e_mexikha
+			}
+		}
+	}
+
+	artifacts = {
+		tezcatlipoca = {
+			value = 1
+		}
+	}
+}
+
+xiuhtecuhtli = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = aztec
+				religion = aztec_reformed
+			}
+			is_landed = yes
+		}
+		additive_modifier = {
+			value = 100
+			any_demesne_title = {
+				title = e_mexikha
+			}
+		}
+	}
+
+	artifacts = {
+		xiuhtecuhtli = {
+			value = 1
+		}
+	}
+}
+
+huitzilopochtli = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = aztec
+				religion = aztec_reformed
+			}
+			is_landed = yes
+		}
+		additive_modifier = {
+			value = 100
+			any_demesne_title = {
+				title = e_mexikha
+			}
+		}
+	}
+
+	artifacts = {
+		huitzilopochtli = {
+			value = 1
+		}
+	}
+}
+
+xolotl = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = aztec
+				religion = aztec_reformed
+			}
+			is_landed = yes
+		}
+		additive_modifier = {
+			value = 100
+			any_demesne_title = {
+				title = e_mexikha
+			}
+		}
+	}
+
+	artifacts = {
+		xolotl = {
+			value = 1
+		}
+	}
+}
+
+bon_picture = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = bon
+				religion = bon_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		bon_picture = {
+			value = 1
+		}
+	}
+}
+
+khatvanga = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = bon
+				religion = bon_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		khatvanga = {
+			value = 1
+		}
+	}
+}
+
+# New Patch 1.1
+
+cornucopia = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		cornucopia = {
+			value = 1
+		}
+	}
+}
+
+petasus = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		petasus = {
+			value = 1
+		}
+	}
+}
+
+asclepius_staff = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		asclepius_staff = {
+			value = 1
+		}
+	}
+}
+
+druid_axe = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				culture_group = celtic
+				culture_group = west_germanic
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		druid_axe = {
+			value = 1
+		}
+	}
+}
+
+cintamani = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = taoist
+				culture_group = chinese_group
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		cintamani = {
+			value = 1
+		}
+	}
+}
+
+# New Patch 1.2
+
+angurvadal = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		angurvadal = {
+			value = 1
+		}
+	}
+}
+
+skofnung = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+	weight = {
+        value = 0
+        additive_modifier = {
+			value = 5
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		skofnung = {
+			value = 1
+		}
+	}
+}
+
+hrunting = {
+    max_amount = 1
+    spawn_date = -1.1.1
+
+    spawn_chance = {
+        value = 100
+        modifier = {
+            factor = 0
+            NOT = { has_dlc = "Mystics" }
+        }
+    }
+
+	weight = {
+        value = 0
+		additive_modifier = {
+			value = 100
+			primary_title = {
+				title = c_vista
+			}
+			year = 867
+			NOT = { year = 1066 }
+		}
+        additive_modifier = {
+			value = 5
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			NOT = { year = 867 }
+			year = 1066
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		hrunting = {
+			value = 1
+		}
+	}
+}
+
+nagling = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+	weight = {
+        value = 0
+		additive_modifier = {
+			value = 100
+			primary_title = {
+				title = c_vista
+			}
+			year = 867
+			NOT = { year = 1066 }
+		}
+        additive_modifier = {
+			value = 5
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			NOT = { year = 867 }
+			year = 1066
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		nagling = {
+			value = 1
+		}
+	}
+}
+
+gleipnir = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		gleipnir = {
+			value = 1
+		}
+	}
+}
+
+singasteinn = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		singasteinn = {
+			value = 1
+		}
+	}
+}
+
+aegishjalmr = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		aegishjalmr = {
+			value = 1
+		}
+	}
+}
+
+bragi_harp = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		bragis_harp = {
+			value = 1
+		}
+	}
+}
+
+eitur = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		eitur = {
+			value = 1
+		}
+	}
+}
+
+mimir_head = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		mimirs_head = {
+			value = 1
+		}
+	}
+}
+
+gram = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+    weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			primary_title = {
+				title = c_charolais
+			}
+			NOT = { year = 867 }
+		}
+		additive_modifier = {
+			value = 100
+			primary_title = {
+				title = c_charolais
+			}
+			year = 867
+		}
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+		}
+	}
+
+	artifacts = {
+		gram = {
+			value = 1
+		}
+	}
+}
+
+joyeuse = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+    weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			primary_title = {
+				title = k_france
+			}
+		}
+	}
+	
+	artifacts = {
+		joyeuse = {
+			value = 1
+		}
+	}
+}
+
+sword_of_attila = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+    weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			owns = 565
+			NOT = { year = 867 }
+		}
+		additive_modifier = {
+			value = 100
+			owns = 1647
+			year = 867
+			NOT = { year = 1066 }
+		}
+		additive_modifier = {
+			value = 100
+			primary_title = {
+				title = k_hungary
+			}
+			year = 1066
+		}
+	}
+
+	artifacts = {
+		sword_of_attila = {
+			value = 1
+		}
+	}
+}
+
+# New Patch 1.3
+
+keyur = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = indian_group
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		keyur = {
+			value = 1
+		}
+	}
+}
+
+makarakundala = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = indian_group
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		makarakundala = {
+			value = 1
+		}
+	}
+}
+
+khanda = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = indian_group
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		khanda = {
+			value = 1
+		}
+	}
+}
+
+parashu = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = indian_group
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		parashu = {
+			value = 1
+		}
+	}
+}
+
+aphrodite_cloth = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		aphrodite_cloth = {
+			value = 1
+		}
+	}
+}
+
+archimedes_mirror = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		archimedes_mirror = {
+			value = 1
+		}
+	}
+}
+
+heracles_cup = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		heracles_cup = {
+			value = 1
+		}
+	}
+}
+
+sword_kladenets = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		sword_kladenets = {
+			value = 1
+		}
+	}
+}
+
+scythian_comb = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = tengri_pagan
+				religion = tengri_pagan_reformed
+				culture_group = altaic
+				culture_group = magyar
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		scythian_comb = {
+			value = 1
+		}
+	}
+}
+
+scythian_stag = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = tengri_pagan
+				religion = tengri_pagan_reformed
+				culture_group = altaic
+				culture_group = magyar
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		scythian_stag = {
+			value = 1
+		}
+	}
+}
+
+scythian_warrior = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = tengri_pagan
+				religion = tengri_pagan_reformed
+				culture_group = altaic
+				culture_group = magyar
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		scythian_warrior = {
+			value = 1
+		}
+	}
+}
+
+scythian_bracelet = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = tengri_pagan
+				religion = tengri_pagan_reformed
+				culture_group = altaic
+				culture_group = magyar
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		scythian_bracelet = {
+			value = 1
+		}
+	}
+}
+
+scythian_necklace = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = tengri_pagan
+				religion = tengri_pagan_reformed
+				culture_group = altaic
+				culture_group = magyar
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		scythian_necklace = {
+			value = 1
+		}
+	}
+}
+
+scythian_pectoral = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = tengri_pagan
+				religion = tengri_pagan_reformed
+				culture_group = altaic
+				culture_group = magyar
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		scythian_pectoral = {
+			value = 1
+		}
+	}
+}
+
+# New Patch 1.4
+
+golem = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = jewish_group
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		golem = {
+			value = 1
+		}
+	}
+}
+
+joshua_shofars = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+				religion_group = jewish_group
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		joshua_shofars = {
+			value = 1
+		}
+	}
+}
+
+book_of_life = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion_group = christian
+				religion_group = jewish_group
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		book_of_life = {
+			value = 1
+		}
+	}
+}
+
+aaron_rod = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+				is_alternate_start = yes
+			}
+		}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+				religion_group = jewish_group
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		aaron_rod = {
+			value = 1
+		}
+	}
+}
+
+nemean_lion = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		nemean_lion = {
+			value = 1
+		}
+	}
+}
+
+medusa = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		medusa = {
+			value = 1
+		}
+	}
+}
+
+trident = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		trident = {
+			value = 1
+		}
+	}
+}
+
+opon_ifa = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = west_african_pagan
+				religion = west_african_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		opon_ifa = {
+			value = 1
+		}
+	}
+}
+
+spider_silk = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = west_african_pagan
+				religion = west_african_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		spider_silk = {
+			value = 1
+		}
+	}
+}
+
+ikenga_totem = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = west_african_pagan
+				religion = west_african_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		ikenga_totem = {
+			value = 1
+		}
+	}
+}
+
+chameleon_cloak = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = west_african_pagan
+				religion = west_african_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		chameleon_cloak = {
+			value = 1
+		}
+	}
+}
+
+khonvoum_bow = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = west_african_pagan
+				religion = west_african_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		khonvoum_bow = {
+			value = 1
+		}
+	}
+}
+
+# New Patch 1.5
+
+simurgh_feathers = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = zoroastrian_group
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		simurgh_feathers = {
+			value = 1
+		}
+	}
+}
+
+rostam_helmet = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = zoroastrian_group
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		rostam_helmet = {
+			value = 1
+		}
+	}
+}
+
+arash_bow = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = zoroastrian_group
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		arash_bow = {
+			value = 1
+		}
+	}
+}
+
+zomorrodnegar = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = zoroastrian_group
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		zomorrodnegar = {
+			value = 1
+		}
+	}
+}
+
+tishtrya_mace = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = zoroastrian_group
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		tishtrya_mace = {
+			value = 1
+		}
+	}
+}
+
+rostam_dagger = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = zoroastrian_group
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		rostam_dagger = {
+			value = 1
+		}
+	}
+}
+
+sacred_domovoi = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		sacred_domovoi = {
+			value = 1
+		}
+	}
+}
+
+rod_shield = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		rod_shield = {
+			value = 1
+		}
+	}
+}
+
+ausrine_light = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = baltic_pagan
+				religion = baltic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		ausrine_light = {
+			value = 1
+		}
+	}
+}
+
+saule_disc = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = baltic_pagan
+				religion = baltic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		saule_disc = {
+			value = 1
+		}
+	}
+}
+
+great_bear = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = finnish_pagan
+				religion = finnish_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		great_bear = {
+			value = 1
+		}
+	}
+}
+
+sielulintu = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion = finnish_pagan
+				religion = finnish_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		sielulintu = {
+			value = 1
+		}
+	}
+}
+
+# New Patch 1.6
+
+colada = { # Count Rodrigo of Valencia
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+    
+    weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			primary_title = {
+				title = c_valencia
+			}
+			religion_group = christian
+			year = 1094
+		}
+	}
+    artifacts = {
+        colada = {
+            value = 1
+        }
+    }
+}
+
+tizona = { # Count Rodrigo of Valencia
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+    
+    weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			primary_title = {
+				title = c_valencia
+			}
+			religion_group = christian
+			year = 1094
+		}
+	}
+    artifacts = {
+        tizona = {
+            value = 1
+        }
+    }
+}
+
+legbiter = { # King Magnus of Norway's Sword
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+	
+    weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			primary_title = {
+				title = k_norway
+			}
+			year = 1099
+		}
+		additive_modifier = {
+			value = 100
+			primary_title = {
+				title = k_norway
+			}
+			year = 1103
+		}
+	}
+    artifacts = {
+        legbiter = {
+            value = 1
+        }
+    }
+}
+
+durendal = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+
+    weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			primary_title = {
+				title = k_france
+			}
+		}
+	}
+	
+	artifacts = {
+		durendal = {
+			value = 1
+		}
+	}
+}
+
+zulfiqar = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = muslim
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		zulfiqar = {
+			value = 1
+		}
+	}
+}
+
+grail_of_baal_hammon = { # zulfiqar
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = jewish_group
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		grail_of_baal_hammon = {
+			value = 1
+		}
+	}
+}
+
+grail_sword = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = christian
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		grail_sword = {
+			value = 1
+		}
+	}
+}
+
+adder_stone = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+			culture_group = celtic
+			culture_group = west_germanic
+		}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		adder_stone = {
+			value = 1
+		}
+	}
+}
+
+hamper_of_gwyddno_garanhir = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+			culture_group = celtic
+			culture_group = west_germanic
+		}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		hamper_of_gwyddno_garanhir = {
+			value = 1
+		}
+	}
+}
+
+claidheamh_soluis = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 10
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+			culture_group = celtic
+			culture_group = west_germanic
+		}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		claidheamh_soluis = {
+			value = 1
+		}
+	}
+}
+
+cruadh_chosgarach = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+			culture_group = celtic
+			culture_group = west_germanic
+		}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		cruadh_chosgarach = {
+			value = 1
+		}
+	}
+}
+
+cosgarach_mhor = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+			culture_group = celtic
+			culture_group = west_germanic
+		}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		cosgarach_mhor = {
+			value = 1
+		}
+	}
+}
+
+egeking = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+			culture_group = celtic
+			culture_group = west_germanic
+		}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		egeking = {
+			value = 1
+		}
+	}
+}
+
+gae_bulg = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+			culture_group = celtic
+			culture_group = west_germanic
+		}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		gae_bulg = {
+			value = 1
+		}
+	}
+}
+
+singing_sword = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+			culture_group = celtic
+			culture_group = west_germanic
+		}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		singing_sword = {
+			value = 1
+		}
+	}
+}
+
+ceard_nan_gallan = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+			culture_group = celtic
+			culture_group = west_germanic
+		}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		ceard_nan_gallan = {
+			value = 1
+		}
+	}
+}
+
+fragarach = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 30
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+			culture_group = celtic
+			culture_group = west_germanic
+		}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		fragarach = {
+			value = 1
+		}
+	}
+}
+
+mask_of_agamemnon = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 20
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+			religion = hellenic_pagan
+			religion = hellenic_pagan_reformed
+		}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		mask_of_agamemnon = {
+			value = 1
+		}
+	}
+}

@@ -1,0 +1,33 @@
+targetted_decisions = {
+    custom_play_as_target = {
+		filter = all
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			ai = yes
+		}
+		allow = {
+	        always = yes
+		}
+		effect = {
+			if = {
+				limit = { ROOT = {is_landed = no} }
+				
+				grant_title_no_opinion = c_landless_t
+
+				FROM = {
+						set_player_character = ROOT
+				}
+			}
+			else = {
+				FROM = {
+					set_player_character = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

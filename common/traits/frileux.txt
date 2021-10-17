@@ -1,0 +1,20 @@
+frileux = {
+
+      ruler_designer_cost = -8
+
+
+personality = yes
+random = yes
+birth = 100
+
+  opposites = {
+			sangchaud
+  }
+  
+
+  same_opinion = 5
+
+command_modifier = {
+	winter_combat = -0.50
+    }
+}

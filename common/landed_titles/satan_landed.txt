@@ -1,0 +1,238 @@
+e_satan_empire = {
+	color={ 0.5 0.0 0.0 }
+	color2={ 0.5 0.0 0.0 }
+	capital = 334 ############
+	title = "SATEMPIRETITLE"
+	title_female = "FEMSATEMPIRETITLE"
+	foa = "SATEMPIREFOA"
+	short_name = yes
+	dynasty_title_names = no
+	dignity = 100
+}
+
+d_satan_state = {
+	color={ 0.9 0.0 0.0 } ##########
+	color2={ 0.9 0.0 0.0 } ##########
+	capital = 333 #######
+	title = "ANTICHRIST"
+	title_female = "FEMALEANTICHRIST"
+	foa = "ANTICHRISTFOA"
+	short_name = yes
+	controls_religion = satanism
+	primary = yes
+	landless = yes
+	dignity = 100
+	religion = satanism
+	dynasty_title_names = no
+}
+
+d_satanic_band = {
+	color = { 108 123 48 }
+	color2 = { 255 255 255 }
+
+	capital = 333
+	
+	# Hire Trigger
+	allow = {
+		religion = satanism
+	}
+	
+	# Parent Religion 
+	religion = satanism
+	
+	culture = italian
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = great_company_composition
+}
+
+d_satanic_second_band = {
+	color = { 89 50 48 }
+	color2 = { 255 255 255 }
+
+	capital = 333
+	
+	# Hire Trigger
+	allow = {
+		religion = satanism
+	}
+	
+	# Parent Religion 
+	religion = satanism
+	
+	culture = german
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = white_company_composition
+}
+
+d_satanic_third_band = {
+	color = { 50 50 48 }
+	color2 = { 255 255 255 }
+
+	capital = 333
+	
+	# Hire Trigger
+	allow = {
+		religion = satanism
+	}
+	
+	# Parent Religion 
+	religion = satanism
+	
+	culture = polish
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = zealots_composition
+}
+
+d_satan_holyorder = {
+	color={ 230 230 230 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 333
+	
+	title = "SATAN_HOLYORDER"
+	foa = "SATAN_HOLYORDER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = knights_templar_composition
+	
+	culture = castilian
+	
+	# Parent Religion 
+	religion = satanism
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 10 # (Must be an integer between 1 and 512)
+}
+
+d_satan_holyordertwo = {
+	color={ 150 80 70 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 333
+	
+	title = "SATAN_HOLYORDER"
+	foa = "SATAN_HOLYORDER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = knights_templar_composition
+	
+	culture = welsh
+	
+	# Parent Religion 
+	religion = satanism
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 10 # (Must be an integer between 1 and 512)
+}
+
+k_germany = {
+	satanism = 2000
+}
+
+k_byzantium = {
+	satanism = 2000
+}
+
+k_italy = {
+	satanism = 4000
+}
+
+k_pomerania = {
+	satanism = 2000
+}
+
+k_france = {
+	satanism = 2000
+}
+
+k_jerusalem = {
+	satanism = 3000
+}
+
+k_england = {
+	satanism = 2000
+}
+
+c_ile_de_france = {
+	holy_site = satanism
+}
+
+c_roma = {
+	holy_site = satanism
+}
+
+c_brandenburg = {
+	holy_site = satanism
+}
+
+c_middlesex = {
+	holy_site = satanism
+}
+
+c_byzantion = {
+	holy_site = satanism
+}

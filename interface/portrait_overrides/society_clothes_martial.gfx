@@ -1,0 +1,2563 @@
+spriteTypes = {
+
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_catholic_male_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				OR = {
+					portrait_society = rtp_martial_catholic
+					portrait_society = rtp_martial_chalcedonian
+				}
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_hellenic_male_clothes_behind:c0"
+			"GFX_empty:c1"
+			"GFX_society_warrior_lodge_hellenic_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_society_warrior_lodge_baltic_male_clothes_infront:c5"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			31 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	portraitType = { #Portraits - Female
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_catholic_female_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				OR = {
+					portrait_society = rtp_martial_catholic
+					portrait_society = rtp_martial_chalcedonian
+				}
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_hellenic_female_clothes_behind:c0"
+			"GFX_empty:c1"
+			"GFX_society_warrior_lodge_hellenic_female_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_society_warrior_lodge_baltic_male_clothes_infront:c5"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	portraitType = {
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_orthodox_male_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				OR = {
+					portrait_society = rtp_martial_orthodox
+					portrait_society = rtp_martial_nestorian
+				}
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_slavic_male_clothes_behind:c0"
+			"GFX_empty:c1"
+			"GFX_society_warrior_lodge_slavic_male_clothes:c2"
+			"GFX_society_warrior_lodge_slavic_female_clothes_infront:c3"
+			"GFX_empty:c4"
+			"GFX_society_warrior_lodge_hellenic_male_clothes_infront:c5"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				2 = {
+					OR = {
+						portrait_society_rank = 3
+						portrait_society_rank = 4
+					}
+				}
+				3 = {
+					portrait_society_rank = 2
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			31 = {
+				0 = { always = yes }
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	portraitType = {
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_rtp_martial_miaphysite_male_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_miaphysite
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_slavic_male_clothes_behind:c0"
+			"GFX_empty:c1"
+			"GFX_society_warrior_lodge_slavic_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_society_warrior_lodge_bon_male_clothes_infront:c5"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				2 = {
+					OR = {
+						portrait_society_rank = 3
+						portrait_society_rank = 4
+					}
+				}
+				3 = {
+					portrait_society_rank = 2
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			31 = {
+				0 = { always = yes }
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_sunni_male_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_sunni
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_african_male_clothes_behind:c0"
+			"GFX_society_warrior_lodge_tengri_female_clothes:c2"
+			#"GFX_society_warrior_lodge_african_female_clothes_infront:c4"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					OR = {
+						portrait_society_rank = 2
+						portrait_society_rank = 3
+					}
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+		}
+	}
+
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_shia_male_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_clothing = yes
+				portrait_is_female = no
+				has_dlc = "Holy Fury"
+				OR = {
+					portrait_society = rtp_martial_shiite
+					portrait_society = rtp_martial_ibadi
+				}
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_bon_male_clothes_behind:c0"
+			"GFX_society_warrior_lodge_zun_male_headgear_behind:c1"
+			"GFX_society_warrior_lodge_bon_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_society_warrior_lodge_zun_male_headgear:c5"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			31 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	portraitType = { #Portraits - Female
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_shia_female_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_clothing = yes
+				portrait_is_female = yes
+				has_dlc = "Holy Fury"
+				OR = {
+					portrait_society = rtp_martial_shiite
+					portrait_society = rtp_martial_ibadi
+				}
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_bon_female_clothes_behind:c0"
+			"GFX_society_warrior_lodge_zun_female_headgear_behind:c1"
+			"GFX_society_warrior_lodge_bon_female_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_society_warrior_lodge_zun_female_headgear:c5"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_jewish_male_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_jewish
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_tengri_male_clothes_behind:c0"
+			"GFX_empty:c1"
+			"GFX_society_warrior_lodge_tengri_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_society_warrior_lodge_hellenic_male_headgear:c5"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 2
+				}
+				1 = {
+					OR = {
+						portrait_society_rank = 3
+						portrait_society_rank = 4
+					}
+				}
+				2 = {
+					portrait_society_rank = 1
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					OR = {
+						portrait_society_rank = 3
+						portrait_society_rank = 4
+					}
+				}
+			}
+			31 = {
+				0 = { always = yes }
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_zoroastrian_male_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_zoroastrian
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_zun_male_clothes_behind:p3:c0"
+			"GFX_society_warrior_lodge_zun_male_clothes:p3:c2"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+		}
+	}
+
+	portraitType = { #Portraits - Female
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_zoroastrian_female_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_zoroastrian
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_zun_female_clothes_behind:p3:c0"
+			"GFX_society_warrior_lodge_zun_female_clothes:p3:c2"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_bacchant_male_headgear_front"
+		textureFile = "gfx/characters/societies/hf_bacchant_male_headgear_front.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_society_bacchant_male_headgear_behind"
+		textureFile = "gfx/characters/societies/hf_bacchant_male_headgear_behind.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_eastern_male_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_clothing = yes
+				portrait_is_female = no
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_eastern
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_bon_male_clothes_behind:c0"
+			"GFX_society_bacchant_male_headgear_behind:c1"
+			"GFX_society_warrior_lodge_bon_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_society_warrior_lodge_bon_male_clothes_infront:c4"
+			"GFX_society_bacchant_male_headgear_front:c5"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			31 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	portraitType = { #Portraits - Female
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_eastern_female_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_clothing = yes
+				portrait_is_female = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_eastern
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_bon_female_clothes_behind:c0"
+			"GFX_society_bacchant_male_headgear_behind:c1"
+			"GFX_society_warrior_lodge_bon_female_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_society_warrior_lodge_bon_male_clothes_infront:c4"
+			"GFX_society_bacchant_male_headgear_front:c5"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_warrior_lodge_norse_male_clothes_behind"
+		textureFile = "gfx/characters/societies/wl_norse_male_clothes_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_norse_male_clothes"
+		textureFile = "gfx/characters/societies/wl_norse_male_clothes.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_norse_male_headgear_behind"
+		textureFile = "gfx/characters/societies/wl_norse_male_headgear_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_norse_male_headgear"
+		textureFile = "gfx/characters/societies/wl_norse_male_headgear.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_norse_male_headgear_mid"
+		textureFile = "gfx/characters/societies/wl_norse_male_headgear_mid.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_norse_male_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_norse
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_norse_male_headgear_behind:c1"
+			"GFX_society_warrior_lodge_norse_male_clothes_behind:c0"
+			"GFX_society_warrior_lodge_norse_male_clothes:c2"
+			"GFX_society_warrior_lodge_norse_male_headgear_mid:c3"
+			"GFX_society_warrior_lodge_norse_male_headgear:c5"
+			"GFX_empty:c4"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			31 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_warrior_lodge_norse_female_clothes_behind"
+		textureFile = "gfx/characters/societies/wl_norse_female_clothes_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_norse_female_clothes"
+		textureFile = "gfx/characters/societies/wl_norse_female_clothes.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_norse_female_headgear_behind"
+		textureFile = "gfx/characters/societies/wl_norse_female_headgear_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_norse_female_headgear"
+		textureFile = "gfx/characters/societies/wl_norse_female_headgear.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_norse_female_headgear_mid"
+		textureFile = "gfx/characters/societies/wl_norse_female_headgear_mid.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = { #Portraits - Female
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_norse_female_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_norse
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_norse_female_headgear_behind:c1"
+			"GFX_society_warrior_lodge_norse_female_clothes_behind:c0"
+			"GFX_society_warrior_lodge_norse_female_clothes:c2"
+			"GFX_society_warrior_lodge_norse_female_headgear_mid:c3"
+			"GFX_society_warrior_lodge_norse_female_headgear:c5"
+			"GFX_empty:c4"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_warrior_lodge_baltic_male_clothes_behind"
+		textureFile = "gfx/characters/societies/wl_baltic_male_clothes_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_baltic_male_clothes"
+		textureFile = "gfx/characters/societies/wl_baltic_male_clothes.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_baltic_male_clothes_infront"
+		textureFile = "gfx/characters/societies/wl_baltic_male_clothes_infront.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_baltic_male_headgear_behind"
+		textureFile = "gfx/characters/societies/wl_baltic_male_headgear_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_baltic_male_headgear"
+		textureFile = "gfx/characters/societies/wl_baltic_male_headgear_hairlayer.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_baltic_male_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_baltic
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_in_command = yes
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_baltic_male_headgear_behind:c1"
+			"GFX_society_warrior_lodge_baltic_male_clothes_behind:c0"
+			"GFX_society_warrior_lodge_baltic_male_clothes:c2"
+			"GFX_society_warrior_lodge_baltic_male_headgear:c5"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_society_warrior_lodge_baltic_male_clothes_infront:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			31 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_warrior_lodge_baltic_female_clothes_behind"
+		textureFile = "gfx/characters/societies/wl_baltic_female_clothes_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_baltic_female_clothes"
+		textureFile = "gfx/characters/societies/wl_baltic_female_clothes.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_baltic_female_headgear_behind"
+		textureFile = "gfx/characters/societies/wl_baltic_female_headgear_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_baltic_female_headgear"
+		textureFile = "gfx/characters/societies/wl_baltic_female_headgear_hairlayer.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = { #Portraits - Female
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_baltic_female_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_baltic
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_in_command = yes
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_baltic_female_headgear_behind:c1"
+			"GFX_society_warrior_lodge_baltic_female_clothes_behind:c0"
+			"GFX_society_warrior_lodge_baltic_female_clothes:c2"
+			"GFX_society_warrior_lodge_baltic_female_headgear:c5"
+			"GFX_empty:c3"
+			"GFX_empty:c7"
+			"GFX_empty:c4"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_warrior_lodge_slavic_male_clothes_behind"
+		textureFile = "gfx/characters/societies/wl_slavic_male_clothes_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_slavic_male_clothes"
+		textureFile = "gfx/characters/societies/wl_slavic_male_clothes.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_slavic_male_clothes_infront"
+		textureFile = "gfx/characters/societies/wl_slavic_male_clothes_infront.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_slavic_male_headgear_behind"
+		textureFile = "gfx/characters/societies/wl_slavic_male_headgear_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_slavic_male_headgear_mid"
+		textureFile = "gfx/characters/societies/wl_slavic_male_headgear_mid.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_slavic_male_headgear"
+		textureFile = "gfx/characters/societies/wl_slavic_male_headgear.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_slavic_male_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_slavic
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_in_command = yes
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_slavic_male_headgear_behind:c1"
+			"GFX_society_warrior_lodge_slavic_male_clothes_behind:c0"
+			"GFX_society_warrior_lodge_slavic_male_clothes:c2"
+			"GFX_society_warrior_lodge_slavic_male_headgear_mid:c3"
+			"GFX_society_warrior_lodge_slavic_male_headgear:c5"
+			"GFX_empty:c4"
+			"GFX_society_warrior_lodge_slavic_male_clothes_infront:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			31 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_warrior_lodge_slavic_female_clothes_behind"
+		textureFile = "gfx/characters/societies/wl_slavic_female_clothes_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_slavic_female_clothes"
+		textureFile = "gfx/characters/societies/wl_slavic_female_clothes.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_slavic_female_clothes_infront"
+		textureFile = "gfx/characters/societies/wl_slavic_female_clothes_infront.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_slavic_female_headgear_behind"
+		textureFile = "gfx/characters/societies/wl_slavic_female_headgear_behind.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = { #Portraits - Female
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_slavic_female_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_slavic
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_in_command = yes
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_slavic_female_headgear_behind:c1"
+			"GFX_society_warrior_lodge_slavic_female_clothes_behind:c0"
+			"GFX_society_warrior_lodge_slavic_female_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c5"
+			"GFX_empty:c4"
+			"GFX_society_warrior_lodge_slavic_female_clothes_infront:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_finnish_male_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_finnish
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_in_command = yes
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_slavic_male_headgear_behind:c1"
+			"GFX_society_warrior_lodge_baltic_male_clothes_behind:c0"
+			"GFX_society_warrior_lodge_baltic_male_clothes:c2"
+			"GFX_society_warrior_lodge_slavic_male_headgear_mid:c3"
+			"GFX_society_warrior_lodge_slavic_male_headgear:c5"
+			"GFX_society_warrior_lodge_baltic_male_clothes_infront:c4"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 4
+				}
+				3 = {
+					portrait_society_rank = 3
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			31 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	portraitType = { #Portraits - Female
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_finnish_female_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_finnish
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_in_command = yes
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_slavic_male_headgear_behind:c1"
+			"GFX_society_warrior_lodge_baltic_female_clothes_behind:c0"
+			"GFX_society_warrior_lodge_baltic_female_clothes:c2"
+			"GFX_society_warrior_lodge_slavic_male_headgear_mid:c3"
+			"GFX_society_warrior_lodge_slavic_male_headgear:c5"
+			"GFX_society_warrior_lodge_baltic_male_clothes_infront:c4"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 4
+				}
+				3 = {
+					portrait_society_rank = 3
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_warrior_lodge_tengri_male_clothes_behind"
+		textureFile = "gfx/characters/societies/wl_tengri_male_clothes_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_tengri_male_clothes"
+		textureFile = "gfx/characters/societies/wl_tengri_male_clothes.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_tengri_male_clothes_infront"
+		textureFile = "gfx/characters/societies/wl_tengri_male_clothes_infront.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_tengri_male_headgear_behind"
+		textureFile = "gfx/characters/societies/wl_tengri_male_headgear_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_tengri_male_headgear_mid"
+		textureFile = "gfx/characters/societies/wl_tengri_male_headgear_mid.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_tengri_male_headgear"
+		textureFile = "gfx/characters/societies/wl_tengri_male_headgear.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_tengri_male_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_tengri
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_in_command = yes
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_tengri_male_headgear_behind:p5:c1"
+			"GFX_society_warrior_lodge_tengri_male_clothes_behind:p3:c0"
+			"GFX_society_warrior_lodge_tengri_male_clothes:p3:c2"
+			"GFX_society_warrior_lodge_tengri_male_headgear_mid:p5:c3"
+			"GFX_society_warrior_lodge_tengri_male_headgear:p5:c5"
+			"GFX_empty:c4"
+			"GFX_society_warrior_lodge_tengri_male_clothes_infront:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			31 = {
+				0 = { always = yes }
+			}
+		}
+
+		headgear_that_hides_hair = { 1 2 3 }
+	}
+
+	spriteType = {
+		name = "GFX_society_warrior_lodge_tengri_female_clothes_behind"
+		textureFile = "gfx/characters/societies/wl_tengri_female_clothes_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_tengri_female_clothes"
+		textureFile = "gfx/characters/societies/wl_tengri_female_clothes.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_tengri_female_clothes_infront"
+		textureFile = "gfx/characters/societies/wl_tengri_female_clothes_infront.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_tengri_female_headgear_behind"
+		textureFile = "gfx/characters/societies/wl_tengri_female_headgear_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_tengri_female_headgear"
+		textureFile = "gfx/characters/societies/wl_tengri_female_headgear.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = { #Portraits - Female
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_tengri_female_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_tengri
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_in_command = yes
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_tengri_female_headgear_behind:p5:c1"
+			"GFX_society_warrior_lodge_tengri_female_clothes_behind:p3:c0"
+			"GFX_empty:c4"
+			"GFX_society_warrior_lodge_tengri_female_clothes:p3:c2"
+			"GFX_empty:c3"
+			"GFX_society_warrior_lodge_tengri_female_headgear:p5:c5"
+			"GFX_society_warrior_lodge_tengri_female_clothes_infront:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+
+		headgear_that_hides_hair = { 1 2 3 }
+	}
+
+	spriteType = {
+		name = "GFX_society_warrior_lodge_african_male_clothes_behind"
+		textureFile = "gfx/characters/societies/wl_african_male_clothes_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_african_male_clothes"
+		textureFile = "gfx/characters/societies/wl_african_male_clothes.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_african_male_clothes_infront"
+		textureFile = "gfx/characters/societies/wl_african_male_clothes_infront.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_african_male_headgear_behind"
+		textureFile = "gfx/characters/societies/wl_african_male_headgear_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_african_male_headgear"
+		textureFile = "gfx/characters/societies/wl_african_male_headgear.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_african_male_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_west_african
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_in_command = yes
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_african_male_headgear_behind:p5:c1"
+			"GFX_society_warrior_lodge_african_male_clothes_behind:p3:c0"
+			"GFX_society_warrior_lodge_african_male_clothes:p3:c2"
+			"GFX_empty:c3"
+			"GFX_society_warrior_lodge_african_male_headgear:p5:c5"
+			"GFX_empty:c4"
+			"GFX_society_warrior_lodge_african_male_clothes_infront:p3:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			31 = {
+				0 = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_warrior_lodge_african_female_clothes_behind"
+		textureFile = "gfx/characters/societies/wl_african_female_clothes_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_african_female_clothes"
+		textureFile = "gfx/characters/societies/wl_african_female_clothes.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_african_female_clothes_infront"
+		textureFile = "gfx/characters/societies/wl_african_female_clothes_infront.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_african_female_headgear_behind"
+		textureFile = "gfx/characters/societies/wl_african_female_headgear_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_african_female_headgear"
+		textureFile = "gfx/characters/societies/wl_african_female_headgear.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = { #Portraits - Female
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_african_female_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_west_african
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_in_command = yes
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_african_female_headgear_behind:p5:c1"
+			"GFX_society_warrior_lodge_african_female_clothes_behind:p3:c0"
+			"GFX_society_warrior_lodge_african_female_clothes:p3:c2"
+			"GFX_empty:c3"
+			"GFX_society_warrior_lodge_african_female_headgear:p5:c5"
+			"GFX_empty:c4"
+			"GFX_society_warrior_lodge_african_female_clothes_infront:p5:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_warrior_lodge_hellenic_male_clothes_behind"
+		textureFile = "gfx/characters/societies/wl_hellenic_male_clothes_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_hellenic_male_clothes"
+		textureFile = "gfx/characters/societies/wl_hellenic_male_clothes.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_hellenic_male_clothes_infront"
+		textureFile = "gfx/characters/societies/wl_hellenic_male_clothes_infront.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_hellenic_male_headgear_behind"
+		textureFile = "gfx/characters/societies/wl_hellenic_male_headgear_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_hellenic_male_headgear"
+		textureFile = "gfx/characters/societies/wl_hellenic_male_headgear.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_hellenic_male_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_hellenic
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_in_command = yes
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_hellenic_male_headgear_behind:p5:c1"
+			"GFX_society_warrior_lodge_hellenic_male_clothes_behind:p3:c0"
+			"GFX_society_warrior_lodge_hellenic_male_clothes:p3:c2"
+			"GFX_empty:c3"
+			"GFX_society_warrior_lodge_hellenic_male_headgear:p5:c5"
+			"GFX_empty:c4"
+			"GFX_society_warrior_lodge_hellenic_male_clothes_infront:p5:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			31 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_warrior_lodge_hellenic_female_clothes_behind"
+		textureFile = "gfx/characters/societies/wl_hellenic_female_clothes_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_hellenic_female_clothes"
+		textureFile = "gfx/characters/societies/wl_hellenic_female_clothes.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_hellenic_female_clothes_infront"
+		textureFile = "gfx/characters/societies/wl_hellenic_female_clothes_infront.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_hellenic_female_headgear_behind"
+		textureFile = "gfx/characters/societies/wl_hellenic_female_headgear_behind.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = { #Portraits - Female
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_hellenic_female_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_hellenic
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_in_command = yes
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_hellenic_female_headgear_behind:p5:c1"
+			"GFX_society_warrior_lodge_hellenic_female_clothes_behind:p3:c0"
+			"GFX_society_warrior_lodge_hellenic_female_clothes:p3:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c5"
+			"GFX_empty:c4"
+			"GFX_society_warrior_lodge_hellenic_female_clothes_infront:p3:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_warrior_lodge_bon_male_clothes_behind"
+		textureFile = "gfx/characters/societies/wl_bon_male_clothes_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_bon_male_clothes"
+		textureFile = "gfx/characters/societies/wl_bon_male_clothes.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_bon_male_clothes_infront"
+		textureFile = "gfx/characters/societies/wl_bon_male_clothes_infront.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_bon_male_headgear_behind"
+		textureFile = "gfx/characters/societies/wl_bon_male_headgear_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_bon_male_headgear"
+		textureFile = "gfx/characters/societies/wl_bon_male_headgear.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_bon_male_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_bon
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_in_command = yes
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_bon_male_headgear_behind:p5:c1"
+			"GFX_society_warrior_lodge_bon_male_clothes_behind:p3:c0"
+			"GFX_society_warrior_lodge_bon_male_clothes:p3:c2"
+			"GFX_empty:c3"
+			"GFX_society_warrior_lodge_bon_male_headgear:p5:c5"
+			"GFX_empty:c4"
+			"GFX_society_warrior_lodge_bon_male_clothes_infront:p3:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			31 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_warrior_lodge_bon_female_clothes_behind"
+		textureFile = "gfx/characters/societies/wl_bon_female_clothes_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_bon_female_clothes"
+		textureFile = "gfx/characters/societies/wl_bon_female_clothes.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_bon_female_clothes_infront"
+		textureFile = "gfx/characters/societies/wl_bon_female_clothes_infront.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_bon_female_headgear_behind"
+		textureFile = "gfx/characters/societies/wl_bon_female_headgear_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_bon_female_headgear"
+		textureFile = "gfx/characters/societies/wl_bon_female_headgear.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = { #Portraits - Female
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_bon_female_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_bon
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_in_command = yes
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_bon_female_headgear_behind:p5:c1"
+			"GFX_society_warrior_lodge_bon_female_clothes_behind:p3:c0"
+			"GFX_society_warrior_lodge_bon_female_clothes:p3:c2"
+			"GFX_empty:c3"
+			"GFX_society_warrior_lodge_bon_female_headgear:p5:c5"
+			"GFX_empty:c4"
+			"GFX_society_warrior_lodge_bon_female_clothes_infront:p3:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_warrior_lodge_zun_male_clothes_behind"
+		textureFile = "gfx/characters/societies/wl_zun_male_clothes_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_zun_male_clothes"
+		textureFile = "gfx/characters/societies/wl_zun_male_clothes.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_zun_male_clothes_infront"
+		textureFile = "gfx/characters/societies/wl_zun_male_clothes_infront.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_zun_male_headgear_behind"
+		textureFile = "gfx/characters/societies/wl_zun_male_headgear_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_zun_male_headgear"
+		textureFile = "gfx/characters/societies/wl_zun_male_headgear.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_zun_male_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_zun
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_in_command = yes
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_zun_male_headgear_behind:p5:c1"
+			"GFX_society_warrior_lodge_zun_male_clothes_behind:p3:c0"
+			"GFX_society_warrior_lodge_zun_male_clothes:p3:c2"
+			"GFX_empty:c3"
+			"GFX_society_warrior_lodge_zun_male_headgear:p5:c5"
+			"GFX_empty:c4"
+			"GFX_society_warrior_lodge_zun_male_clothes_infront:p3:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			31 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_warrior_lodge_zun_female_clothes_behind"
+		textureFile = "gfx/characters/societies/wl_zun_female_clothes_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_zun_female_clothes"
+		textureFile = "gfx/characters/societies/wl_zun_female_clothes.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_zun_female_clothes_infront"
+		textureFile = "gfx/characters/societies/wl_zun_female_clothes_infront.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_zun_female_headgear_behind"
+		textureFile = "gfx/characters/societies/wl_zun_female_headgear_behind.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_society_warrior_lodge_zun_female_headgear"
+		textureFile = "gfx/characters/societies/wl_zun_female_headgear.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = { #Portraits - Female
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_zun_female_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_zun
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_in_command = yes
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_zun_female_headgear_behind:p5:c1"
+			"GFX_society_warrior_lodge_zun_female_clothes_behind:p3:c0"
+			"GFX_society_warrior_lodge_zun_female_clothes:p3:c2"
+			"GFX_empty:c3"
+			"GFX_society_warrior_lodge_zun_female_headgear:p5:c5"
+			"GFX_empty:c4"
+			"GFX_society_warrior_lodge_zun_female_clothes_infront:p3:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_society_bacchant_male_clothing_behind"
+		textureFile = "gfx/characters/societies/hf_bacchant_male_clothing_behind.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_society_bacchant_male_clothing_front"
+		textureFile = "gfx/characters/societies/hf_bacchant_male_clothing_front.dds"
+		noOfFrames = 4
+	}
+
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_aztec_male_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_clothing = yes
+				portrait_is_female = no
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_aztec
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_in_command = yes
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_african_male_headgear_behind:p5:c1"
+			"GFX_society_bacchant_male_clothing_behind:p3:c0"
+			"GFX_society_bacchant_male_clothing_front:p3:c2"
+			"GFX_empty:c3"
+			"GFX_society_warrior_lodge_african_male_headgear:p5:c5"
+			"GFX_society_warrior_lodge_african_male_clothes_infront:c4"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				2 = {
+					OR = {
+						portrait_society_rank = 2
+						portrait_society_rank = 3
+					}
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			31 = {
+				0 = { always = yes }
+			}
+		}
+	}
+
+	portraitType = {
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_society_martial_aztec_female_clothing"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_clothing = yes
+				portrait_is_female = yes
+				has_dlc = "Holy Fury"
+				portrait_society = rtp_martial_aztec
+				OR = {
+					NOT = { portrait_tier = duke }
+					portrait_in_command = yes
+					portrait_has_trait = blgcaon
+					portrait_has_trait = blgquesting
+				}
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = { 
+			"GFX_society_warrior_lodge_african_male_headgear_behind:p5:c1"
+			"GFX_society_warrior_lodge_norse_female_clothes_behind:p3:c0"
+			"GFX_society_warrior_lodge_norse_female_clothes:p3:c2"
+			"GFX_empty:c3"
+			"GFX_society_warrior_lodge_african_male_headgear:p5:c5"
+			"GFX_society_warrior_lodge_african_female_clothes_infront:c4"
+			"GFX_empty:c7"
+		}
+
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				2 = {
+					OR = {
+						portrait_society_rank = 2
+						portrait_society_rank = 3
+					}
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			32 = {
+				0 = { always = yes }
+			}
+			33 = {
+				0 = { always = yes }
+			}
+		}
+	}
+}

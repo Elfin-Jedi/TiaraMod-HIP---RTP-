@@ -1,0 +1,1884 @@
+#####
+#Conflicts Events
+#
+#Total = 29
+#####
+
+namespace = RTPconflicts
+
+#Main Events
+#####
+
+#Peasant Rebellion - Start
+character_event = {
+	id = RTPconflicts.1
+	title = "RTPconflicts.1_title"
+	desc = "RTPconflicts.1_desc"
+	picture = GFX_evt_peasants
+	is_triggered_only = yes
+	hide_from = yes
+	
+	trigger = {
+		has_landed_title = c_landless_t
+		dynasty = 19930
+		rtp_is_capable_adult = yes
+		rtp_is_mercenary = no
+		rtp_is_holy_order = no
+	}
+
+	immediate = {
+		rtp_war_sounds_se = yes
+		set_global_flag = rtp_conflict #Conflict already happening
+	}
+
+	option = {
+		name = "RTPconflicts.1_1"
+
+		trigger = {
+			event_target:rtp_attacker = {
+				higher_tier_than = COUNT
+			}
+		}
+
+		add_trait = peasant_leader
+		
+		random = {
+			chance = 10
+			add_trait = wounded
+		}
+
+		event_target:rtp_attacker = {
+			set_character_flag = rtp_peasant_rebellion_war #Peasant Rebellion
+			ROOT = {
+				set_defacto_liege = PREV
+			}
+			capital_holding = {
+				c_landless_t = {
+					set_name = PREV
+					set_preferred_capital = PREV
+					save_persistent_event_target = {
+						name = rtp_home_capital
+						scope = PREV
+					}
+				}
+			}
+		}
+		event_target:rtp_defender = {
+			set_character_flag = rtp_peasant_rebellion_war #Peasant Rebellion
+		}
+
+		give_job_title = job_commander
+		set_character_flag = rtp_temporary_soldier #You serve as a levy now
+	}
+
+	option = {
+		name = "RTPconflicts.1_2"
+
+		rtp_give_small_gold_se = yes
+		
+		random = {
+			chance = 5
+			add_trait = wounded
+		}
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			rtp_give_adventurer_points_se = yes
+			rtp_give_holy_warrior_points_se = yes
+
+			event_target:rtp_attacker = {
+				set_character_flag = rtp_regular_war #Regular war
+			}
+			event_target:rtp_defender = {
+				set_character_flag = rtp_regular_war #Regular war
+			}
+			give_job_title = job_commander
+			set_character_flag = rtp_temporary_soldier #You serve as a levy now
+		}
+	}
+
+	option = {
+		name = "RTPconflicts.1_3"
+
+		clr_global_flag = rtp_conflict #Conflict already happening
+	}
+}
+
+#Peasant Rebellion - End
+character_event = {
+	id = RTPconflicts.2
+	title = "RTPconflicts.2_title"
+	desc = "RTPconflicts.2_desc"
+	picture = GFX_evt_peasants
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPconflicts.2_1"
+
+		event_target:rtp_attacker = {
+			set_truce = {
+				who = ROOT
+				years = 50
+			}
+
+			random_demesne_province = {
+				random_province_holding = {
+					limit = {
+						is_capital = no
+						OR = {
+							holding_type = castle
+							holding_type = city
+							holding_type = temple
+						}
+					}
+					grant_title = ROOT
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				event_target:rtp_attacker = {
+					lower_tier_than = DUKE
+				}
+			}
+			set_defacto_liege = THIS
+		}
+		remove_title = job_commander
+	}
+
+	option = {
+		name = "RTPconflicts.2_2"
+
+		prestige = 25
+
+		set_defacto_liege = THIS
+	}
+}
+
+#Religious Uprising Event - Start
+character_event = {
+	id = RTPconflicts.3
+	title = "RTPconflicts.3_title"
+	desc = "RTPconflicts.3_desc"
+	picture = GFX_evt_mass_baptism
+	is_triggered_only = yes
+	hide_from = yes
+	
+	trigger = {
+		has_landed_title = c_landless_t
+		rtp_is_capable_adult = yes
+		rtp_is_mercenary = no
+		rtp_is_holy_order = no
+		OR = {
+			religion = event_target:rtp_attacker #The attacker
+			secret_religion = event_target:rtp_religion #The character's religion
+		}
+	}
+
+	immediate = {
+		rtp_war_sounds_se = yes
+		set_global_flag = rtp_conflict #Conflict already happening
+	}
+
+	option = {
+		name = "RTPconflicts.3_1"
+
+		trigger = {
+			event_target:rtp_attacker = {
+				higher_tier_than = COUNT
+			}
+		}
+
+		add_trait = heresiarch
+
+		rtp_give_small_piety_se = yes
+		
+		random = {
+			chance = 10
+			add_trait = wounded
+		}
+
+		event_target:rtp_attacker = {
+			set_character_flag = rtp_religious_uprising_war #Religious Uprising
+			ROOT = {
+				set_defacto_liege = PREV
+			}
+			capital_holding = {
+				c_landless_t = {
+					set_name = PREV
+					set_preferred_capital = PREV
+					save_persistent_event_target = {
+						name = rtp_home_capital
+						scope = PREV
+					}
+				}
+			}
+		}
+		event_target:rtp_defender = {
+			set_character_flag = rtp_religious_uprising_war #Religious Uprising
+		}
+
+		give_job_title = job_commander
+		set_character_flag = rtp_temporary_soldier #You serve as a levy now
+	}
+
+	option = {
+		name = "RTPconflicts.3_2"
+
+		clr_global_flag = rtp_conflict #Conflict already happening
+	}
+}
+
+#Religious Uprising Event - End
+character_event = {
+	id = RTPconflicts.4
+	title = "RTPconflicts.4_title"
+	desc = "RTPconflicts.4_desc"
+	picture = GFX_evt_mass_baptism
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPconflicts.4_1"
+
+		event_target:rtp_attacker = {
+			set_truce = {
+				who = ROOT
+				years = 50
+			}
+
+			random_demesne_province = {
+				random_province_holding = {
+					limit = {
+						is_capital = no
+						OR = {
+							holding_type = castle
+							holding_type = city
+							holding_type = temple
+						}
+					}
+					grant_title = ROOT
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				event_target:rtp_attacker = {
+					lower_tier_than = DUKE
+				}
+			}
+			set_defacto_liege = THIS
+		}
+		remove_title = job_commander
+	}
+
+	option = {
+		name = "RTPconflicts.4_2"
+
+		piety = 25
+
+		set_defacto_liege = THIS
+	}
+}
+
+#Invasion Event - Start
+narrative_event = {
+	id = RTPconflicts.5
+	title = "RTPconflicts.5_title"
+	desc = "RTPconflicts.5_desc"
+	picture = GFX_evt_vikings_arriving_oldgods
+	is_triggered_only = yes
+	hide_from = yes
+	ai = no
+	
+	trigger = {
+		has_landed_title = c_landless_t
+		rtp_is_capable_adult = yes
+		rtp_is_mercenary = no
+		rtp_is_holy_order = no
+		liege = {
+			is_within_diplo_range = FROM
+		}
+	}
+
+	immediate = {
+		rtp_war_sounds_se = yes
+		set_global_flag = rtp_conflict #Conflict already happening
+		liege = {
+			save_global_event_target_as = rtp_saved_liege
+		}
+	}
+
+	option = {
+		name = "RTPconflicts.5_1"
+
+		trigger = {
+			event_target:rtp_attacker = {
+				higher_tier_than = COUNT
+			}
+		}
+
+		random = {
+			chance = 15
+			add_trait = wounded
+		}
+
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			rtp_give_adventurer_points_se = yes
+
+			random_list = {
+				50 = {
+					set_character_flag = rtp_invasion_prestige #Do it for prestige
+				}
+				40 = {
+					set_character_flag = rtp_invasion_gold #Do it for gold
+				}
+				9 = {
+					set_character_flag = rtp_invasion_barony #Do it for a barony
+				}
+				1 = {
+					set_character_flag = rtp_invasion_county #Do it for a county
+				}
+			}
+		}
+
+		event_target:rtp_attacker = {
+			set_character_flag = rtp_invasion_war #Invasion
+			set_character_flag = rtp_chosen_side #Chosen Side
+			ROOT = {
+				set_defacto_liege = PREV
+			}
+		}
+		event_target:rtp_defender = {
+			set_character_flag = rtp_invasion_war #Invasion
+		}
+		give_job_title = job_commander
+		set_character_flag = rtp_temporary_mercenary #You serve as a mercenary now
+	}
+
+	option = {
+		name = "RTPconflicts.5_2"
+
+		trigger = {
+			event_target:rtp_defender = {
+				higher_tier_than = COUNT
+			}
+		}
+
+		random = {
+			chance = 15
+			add_trait = wounded
+		}
+
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			rtp_give_adventurer_points_se = yes
+
+			random_list = {
+				50 = {
+					set_character_flag = rtp_invasion_prestige #Do it for prestige
+				}
+				40 = {
+					set_character_flag = rtp_invasion_gold #Do it for gold
+				}
+				9 = {
+					set_character_flag = rtp_invasion_barony #Do it for a barony
+				}
+				1 = {
+					set_character_flag = rtp_invasion_county #Do it for a county
+				}
+			}
+		}
+
+		event_target:rtp_attacker = {
+			set_character_flag = rtp_invasion_war #Invasion
+		}
+		event_target:rtp_defender = {
+			set_character_flag = rtp_invasion_war #Invasion
+			set_character_flag = rtp_chosen_side #Chosen Side
+			ROOT = {
+				set_defacto_liege = PREV
+			}
+		}
+		give_job_title = job_commander
+		set_character_flag = rtp_temporary_mercenary #You serve as a mercenary now
+	}
+
+	option = {
+		name = "RTPconflicts.5_3"
+
+		clr_global_flag = rtp_conflict #Conflict already happening
+		clear_global_event_target = rtp_saved_liege
+	}
+}
+
+#Invasion Event - End
+character_event = {
+	id = RTPconflicts.6
+	title = "RTPconflicts.6_title"
+	desc = "RTPconflicts.6_desc"
+	picture = GFX_evt_pagan_artifacts
+	is_triggered_only = yes
+	hide_from = yes
+	ai = no
+
+	immediate = {
+		remove_trait = travelling
+		clr_character_flag = rtp_temporary_mercenary #You serve as a mercenary now
+	}
+
+	option = {
+		name = "RTPconflicts.6_1"
+
+		trigger = {
+			event_target:rtp_winner = {
+				has_character_flag = rtp_chosen_side #Chosen Side
+			}
+		}
+
+		hidden_tooltip = {
+			event_target:rtp_winner = {
+				set_truce = {
+					who = ROOT
+					years = 50
+				}
+			}
+	
+			rtp_give_major_conflict_rewards_se = yes
+		}
+
+		if = {
+			limit = {
+				is_landed = yes
+				event_target:rtp_winner = {
+					lower_tier_than = DUKE
+				}
+			}
+			set_defacto_liege = THIS
+		}
+		else_if = {
+			limit = {
+				is_landed = no
+			}
+			set_defacto_liege = event_target:rtp_saved_liege
+		}
+		remove_title = job_commander
+	}
+
+	option = {
+		name = "RTPconflicts.6_2"
+
+		trigger = {
+			event_target:rtp_winner = {
+				NOT = {
+					has_character_flag = rtp_chosen_side #Chosen Side
+				}
+			}
+		}
+
+		prestige = -25
+		set_defacto_liege = event_target:rtp_saved_liege
+		remove_title = job_commander
+	}
+
+	after = {
+		clear_global_event_target = rtp_saved_liege
+	}
+}
+
+#Crusade Event - Start
+narrative_event = {
+	id = RTPconflicts.7
+	title = "RTPconflicts.7_title"
+	desc = {
+		trigger = {
+			event_target:rtp_attacker = {
+				religion = ROOT
+			}
+		}
+		text = "RTPconflicts.7_desc1"
+	}
+	desc = {
+		trigger = {
+			event_target:rtp_defender = {
+				religion = ROOT
+			}
+		}
+		text = "RTPconflicts.7_desc2"
+	}
+	picture = GFX_evt_northern_crusade
+	is_triggered_only = yes
+	hide_from = yes
+	ai = no
+	
+	trigger = {
+		has_landed_title = c_landless_t
+		rtp_is_capable_adult = yes
+		rtp_is_mercenary = no
+		rtp_is_holy_order = no
+		OR = {
+			event_target:rtp_attacker = {
+				religion = ROOT
+			}
+			event_target:rtp_defender = {
+				religion = ROOT
+			}
+		}
+	}
+
+	immediate = {
+		rtp_war_sounds_se = yes
+		set_global_flag = rtp_conflict #Conflict already happening
+		save_global_event_target_as = rtp_saved_liege
+	}
+
+	option = {
+		name = "RTPconflicts.7_1"
+
+		trigger = {
+			event_target:rtp_attacker = {
+				religion = ROOT
+				higher_tier_than = COUNT
+			}
+		}
+
+		if = {
+			limit = {
+				rtp_has_holy_warrior_trait_st = no
+			}
+			rtp_give_holy_warrior_trait_se = yes
+		}
+
+		random = {
+			chance = 15
+			add_trait = wounded
+		}
+
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			random_list = {
+				50 = {
+					set_character_flag = rtp_invasion_prestige #Do it for prestige
+				}
+				40 = {
+					set_character_flag = rtp_invasion_gold #Do it for gold
+				}
+				9 = {
+					set_character_flag = rtp_invasion_barony #Do it for a barony
+				}
+				1 = {
+					set_character_flag = rtp_invasion_county #Do it for a county
+				}
+			}
+		}
+
+		event_target:rtp_attacker = {
+			set_character_flag = rtp_crusade_war #Crusade
+			set_character_flag = rtp_chosen_side #Chosen Side
+			ROOT = {
+				set_defacto_liege = PREV
+			}
+		}
+		event_target:rtp_defender = {
+			set_character_flag = rtp_crusade_war #Crusade
+		}
+
+		give_job_title = job_commander
+		set_character_flag = rtp_temporary_crusader #You serve as a crusader now
+	}
+
+	option = {
+		name = "RTPconflicts.7_2"
+
+		trigger = {
+			event_target:rtp_defender = {
+				religion = ROOT
+				higher_tier_than = COUNT
+			}
+		}
+
+		piety = 50
+
+		if = {
+			limit = {
+				rtp_has_holy_warrior_trait_st = no
+			}
+			rtp_give_holy_warrior_trait_se = yes
+		}
+
+		random = {
+			chance = 15
+			add_trait = wounded
+		}
+
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+		}
+
+		event_target:rtp_attacker = {
+			set_character_flag = rtp_crusade_war #Crusade
+		}
+		event_target:rtp_defender = {
+			set_character_flag = rtp_crusade_war #Crusade
+			set_character_flag = rtp_chosen_side #Chosen Side
+		}
+
+		give_job_title = job_commander
+		set_character_flag = rtp_temporary_crusader #You serve as a crusader now
+	}
+
+	option = {
+		name = "RTPconflicts.7_3"
+
+		prestige = 25
+
+		clr_global_flag = rtp_conflict #Conflict already happening
+	}
+}
+
+#Crusade Event - End
+character_event = {
+	id = RTPconflicts.8
+	title = "RTPconflicts.8_title"
+	desc = "RTPconflicts.8_desc"
+	picture = GFX_evt_northern_crusade
+	is_triggered_only = yes
+	hide_from = yes
+	ai = no
+
+	immediate = {
+		remove_trait = travelling
+		clr_character_flag = rtp_temporary_crusader #You serve as a crusader now
+	}
+
+	option = {
+		name = "RTPconflicts.8_1"
+
+		trigger = {
+			event_target:rtp_winner = {
+				has_character_flag = rtp_chosen_side #Chosen Side
+			}
+		}
+		
+		hidden_tooltip = {
+			event_target:rtp_winner = {
+				set_truce = {
+					who = ROOT
+					years = 50
+				}
+			}
+	
+			rtp_give_major_conflict_rewards_se = yes
+		}
+
+		if = {
+			limit = {
+				is_landed = yes
+				event_target:rtp_winner = {
+					lower_tier_than = DUKE
+				}
+			}
+			set_defacto_liege = THIS
+		}
+		else_if = {
+			limit = {
+				is_landed = no
+			}
+			set_defacto_liege = event_target:rtp_saved_liege
+		}
+		remove_title = job_commander
+	}
+
+	option = {
+		name = "RTPconflicts.8_2"
+
+		trigger = {
+			event_target:rtp_winner = {
+				NOT = {
+					has_character_flag = rtp_chosen_side #Chosen Side
+				}
+			}
+		}
+
+		set_defacto_liege = event_target:rtp_saved_liege
+		remove_title = job_commander
+		piety = -25
+	}
+
+	after = {
+		clear_global_event_target = rtp_saved_liege
+	}
+}
+
+#Culture Uprising Event - Start
+character_event = {
+	id = RTPconflicts.9
+	title = "RTPconflicts.9_title"
+	desc = "RTPconflicts.9_desc"
+	picture = GFX_evt_china_civil_war
+	is_triggered_only = yes
+	hide_from = yes
+	
+	trigger = {
+		has_landed_title = c_landless_t
+		rtp_is_capable_adult = yes
+		rtp_is_mercenary = no
+		rtp_is_holy_order = no
+		culture = event_target:rtp_attacker #The attacker
+	}
+
+	immediate = {
+		rtp_war_sounds_se = yes
+		set_global_flag = rtp_conflict #Conflict already happening
+	}
+
+	option = {
+		name = "RTPconflicts.9_1"
+
+		trigger = {
+			event_target:rtp_attacker = {
+				higher_tier_than = COUNT
+			}
+		}
+
+		rtp_give_small_prestige_se = yes
+		
+		random = {
+			chance = 10
+			add_trait = wounded
+		}
+
+		event_target:rtp_attacker = {
+			set_character_flag = rtp_culture_uprising_war #Culture Uprising
+			ROOT = {
+				set_defacto_liege = PREV
+			}
+			capital_holding = {
+				c_landless_t = {
+					set_name = PREV
+					set_preferred_capital = PREV
+					save_persistent_event_target = {
+						name = rtp_home_capital
+						scope = PREV
+					}
+				}
+			}
+		}
+		event_target:rtp_defender = {
+			set_character_flag = rtp_culture_uprising_war #Culture Uprising
+		}
+
+		give_job_title = job_commander
+		set_character_flag = rtp_temporary_soldier #You serve as a levy now
+	}
+
+	option = {
+		name = "RTPconflicts.9_2"
+
+		clr_global_flag = rtp_conflict #Conflict already happening
+	}
+}
+
+#Culture Uprising Event - End
+character_event = {
+	id = RTPconflicts.10
+	title = "RTPconflicts.10_title"
+	desc = "RTPconflicts.10_desc"
+	picture = GFX_evt_china_civil_war
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = "RTPconflicts.10_1"
+
+		event_target:rtp_attacker = {
+			set_truce = {
+				who = ROOT
+				years = 50
+			}
+
+			random_demesne_province = {
+				random_province_holding = {
+					limit = {
+						is_capital = no
+						OR = {
+							holding_type = castle
+							holding_type = city
+							holding_type = temple
+						}
+					}
+					grant_title = ROOT
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				event_target:rtp_attacker = {
+					lower_tier_than = DUKE
+				}
+			}
+			set_defacto_liege = THIS
+		}
+		remove_title = job_commander
+	}
+
+	option = {
+		name = "RTPconflicts.10_2"
+
+		prestige = 25
+		set_defacto_liege = THIS
+	}
+}
+
+#Temporary Soldier Event
+character_event = {
+	id = RTPconflicts.11
+	title = "RTPconflicts.11_title"
+	desc = "RTPconflicts.11_desc"
+	picture = GFX_evt_battle
+	is_triggered_only = yes
+	hide_from = yes
+	ai = no
+	
+	trigger = {
+		has_landed_title = c_landless_t
+		rtp_is_capable_adult = yes
+		rtp_is_mercenary = no
+		rtp_is_holy_order = no
+		rtp_has_special_job_st = no
+		has_job_title = no
+		NOT = {
+			has_minor_title = title_commander
+		}
+	}
+
+	immediate = {
+		rtp_war_sounds_se = yes
+		set_global_flag = rtp_conflict #Conflict already happening
+	}
+
+	option = {
+		name = "RTPconflicts.11_1"
+
+		rtp_give_small_gold_se = yes
+		
+		random = {
+			chance = 5
+			add_trait = wounded
+		}
+		
+		hidden_tooltip = {
+			rtp_flush_jobs = yes
+			rtp_give_adventurer_points_se = yes
+			rtp_give_holy_warrior_points_se = yes
+
+			event_target:rtp_attacker = {
+				set_character_flag = rtp_regular_war #Regular war
+			}
+			event_target:rtp_defender = {
+				set_character_flag = rtp_regular_war #Regular war
+			}
+
+			give_job_title = job_commander
+			set_character_flag = rtp_temporary_soldier #You serve as a levy now
+		}
+	}
+
+	option = {
+		name = "RTPconflicts.11_2"
+
+		clr_global_flag = rtp_conflict #Conflict already happening
+	}
+}
+
+#Rebellion Event
+character_event = {
+	id = RTPconflicts.12
+	title = "RTPconflicts.12_title"
+	desc = "RTPconflicts.12_desc"
+	picture = GFX_evt_hiding_from_pursuers
+	is_triggered_only = yes
+	hide_from = yes
+	ai = no
+	
+	trigger = {
+		has_landed_title = c_landless_t
+		rtp_is_capable_adult = yes
+		rtp_is_mercenary = no
+		rtp_is_holy_order = no
+		has_job_title = no
+		NOT = {
+			has_minor_title = title_commander
+		}
+	}
+
+	immediate = {
+		rtp_war_sounds_se = yes
+
+		random_neighbor_independent_ruler = {
+			limit = {
+				war = no
+				primary_title = {
+					is_landless_type_title = no
+				}
+				higher_tier_than = COUNT
+			}
+			save_event_target_as = rtp_new_liege #You serve him/her now
+		}
+
+		set_global_flag = rtp_conflict #Conflict already happening
+	}
+
+	option = {
+		name = "RTPconflicts.12_1"
+
+		rtp_give_small_gold_se = yes
+		
+		random = {
+			chance = 10
+			add_trait = wounded
+		}
+		
+		hidden_tooltip = {
+			rtp_give_adventurer_points_se = yes
+			rtp_flush_jobs = yes
+
+			set_character_flag = rtp_temporary_soldier #You serve as a levy now
+
+			event_target:rtp_attacker = {
+				set_character_flag = rtp_rebellion_war #Rebellion
+			}
+			event_target:rtp_defender = {
+				set_character_flag = rtp_rebellion_war #Rebellion
+			}
+		}
+
+		give_job_title = job_commander
+	}
+
+	option = {
+		name = "RTPconflicts.12_2"
+
+		random = {
+			chance = 20
+			add_trait = wounded
+		}
+
+		random_list = {
+			50 = {
+			}
+			30 = {
+				prestige = 50
+			}
+			20 = {
+				wealth = 50
+			}
+		}
+
+		hidden_tooltip = {
+			rtp_give_adventurer_points_se = yes
+			rtp_flush_jobs = yes
+
+			set_character_flag = rtp_temporary_soldier #You serve as a levy now
+			set_character_flag = rtp_rebel #This guy is the rebel
+
+			event_target:rtp_attacker = {
+				set_character_flag = rtp_rebellion_war #Rebellion
+				set_character_flag = rtp_chosen_side #Chosen Side
+				ROOT = {
+					set_defacto_liege = PREV
+				}
+			}
+			event_target:rtp_defender = {
+				set_character_flag = rtp_rebellion_war #Rebellion
+			}
+		}
+
+		give_job_title = job_commander
+	}
+
+	option = {
+		name = "RTPconflicts.12_3"
+
+		event_target:rtp_new_liege = {
+			save_event_target_as = rtp_new_liege #You serve him/her now
+		}
+
+		random_list = {
+			10 = {
+				wealth = -8
+			}
+			20 = {
+				wealth = -6
+			}
+			30 = {
+				wealth = -4
+			}
+			50 = {
+				wealth = -2
+			}
+		}
+
+		set_defacto_liege = event_target:rtp_new_liege #You serve him/her now
+		event_target:rtp_new_liege = {
+			capital_holding = {
+				c_landless_t = {
+					set_name = PREV
+					set_preferred_capital = PREV
+					save_persistent_event_target = {
+						name = rtp_home_capital
+						scope = PREV
+					}
+				}
+			}
+		}
+
+		event_target:rtp_attacker = {
+			set_character_flag = rtp_rebellion_war #Rebellion
+		}
+		event_target:rtp_defender = {
+			set_character_flag = rtp_rebellion_war #Rebellion
+		}
+	}
+
+	option = {
+		name = "RTPconflicts.12_4"
+
+		clr_global_flag = rtp_conflict #Conflict already happening
+	}
+}
+
+#Mercenary Event
+character_event = {
+	id = RTPconflicts.13
+	title = "RTPconflicts.13_title"
+	desc = "RTPconflicts.13_desc"
+	picture = GFX_evt_viking_battle_oldgods
+	is_triggered_only = yes
+	ai = no
+	
+	trigger = {
+		has_landed_title = c_landless_t
+		rtp_is_capable_adult = yes
+		has_job_title = no
+		rtp_is_mercenary = no
+		rtp_is_holy_order = no
+		rtp_has_special_job_st = no
+		NOT = {
+			has_minor_title = title_commander
+		}
+		OR = {
+			liege = {
+				capital_scope = {
+					can_land_path_to = {
+						target = event_target:rtp_mercenary_capital #The capital of the mercenary band
+						distance <= 150
+					}
+				}
+			}
+			liege = {
+				capital_scope = {
+					can_naval_path_to = {
+						target = event_target:rtp_mercenary_capital #The capital of the mercenary band
+						distance <= 150
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		rtp_war_sounds_se = yes
+		set_global_flag = rtp_conflict #Conflict already happening
+	}
+
+	option = {
+		name = "RTPconflicts.13_1"
+
+		if = {
+			limit = {
+				event_target:rtp_mercenary_captain = {
+					has_landed_title = d_varangian_guard
+				}
+			}
+			add_trait = varangian
+		}
+		rtp_give_adventurer_points_se = yes
+		rtp_flush_jobs = yes
+		
+		rtp_give_medium_gold_se = yes
+		
+		random = {
+			chance = 10
+			add_trait = wounded
+		}
+
+		hidden_tooltip = {
+			save_global_event_target_as = rtp_saved_liege
+			event_target:rtp_mercenary_employer = {
+				ROOT = {
+					set_defacto_liege = PREV
+				}
+			}
+			give_job_title = job_commander
+			set_character_flag = rtp_temporary_mercenary #You serve as a mercenary now
+		}
+
+		FROM = {
+			set_character_flag = rtp_mercenary_war #Mercenary contract
+		}
+	}
+
+	option = {
+		name = "RTPconflicts.13_2"
+
+		clr_global_flag = rtp_conflict #Conflict already happening
+	}
+}
+
+#Ping Events
+#####
+
+#Ping for Peasant Rebellion - Start
+character_event = {
+	id = RTPconflicts.100
+	is_triggered_only = yes
+	hide_window = yes
+	only_playable = yes
+	
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_conflict #Conflict already happening
+		}
+		FROM = {
+			any_war = {
+				using_cb = peasant_revolt
+			}
+		}
+	}
+
+	immediate = {
+		save_event_target_as = rtp_defender #The defender
+		FROM = {
+			save_event_target_as = rtp_attacker #The attacker
+		}
+
+		any_player = {
+			save_event_target_as = rtp_player #This is me
+		}
+
+		if = {
+			limit = {
+				is_liege_of = event_target:rtp_player #This is me
+			}
+			event_target:rtp_player = {
+				character_event = {
+					id = RTPconflicts.1 #Peasant Rebellion - Start
+				}
+			}
+		}
+	}
+}
+
+#Ping for Peasant Rebellion - End
+character_event = {
+	id = RTPconflicts.101
+	is_triggered_only = yes
+	hide_window = yes
+	only_playable = yes
+	
+	trigger = {
+		has_character_flag = rtp_peasant_rebellion_war #Peasant Rebellion
+		FROM = {
+			has_character_flag = rtp_peasant_rebellion_war #Peasant Rebellion
+		}
+	}
+
+	immediate = {
+		any_player = {
+			save_event_target_as = rtp_player #This is me
+		}
+		if = {
+			limit = {
+				FROM = {
+					war_score = 100
+				}
+			}
+			FROM = {
+				event_target:rtp_player = {
+					character_event = {
+						id = RTPconflicts.2 #Peasant Rebellion - End
+					}
+				}
+			}
+		}
+		else = {
+			event_target:rtp_player = {
+				imprison = ROOT
+				set_defacto_liege = ROOT
+			}
+		}
+		character_event = {
+			id = RTPcheck.112 #War Flag Check
+		}
+	}
+}
+
+#Ping for Religious Uprising Event - Start
+character_event = {
+	id = RTPconflicts.102
+	is_triggered_only = yes
+	hide_window = yes
+	only_playable = yes
+	
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_conflict #Conflict already happening
+		}
+		FROM = {
+			OR = {
+				has_character_flag = religious_revolter
+				has_character_flag = heretic_revolter
+			}
+		}
+	}
+
+	immediate = {
+		save_event_target_as = rtp_defender #The defender
+		FROM = {
+			save_event_target_as = rtp_attacker #The attacker
+			religion_scope = {
+				save_event_target_as = rtp_religion #The character's religion
+			}
+		}
+
+		any_player = {
+			save_event_target_as = rtp_player #This is me
+		}
+
+		if = {
+			limit = {
+				is_liege_of = event_target:rtp_player #This is me
+			}
+			event_target:rtp_player = {
+				character_event = {
+					id = RTPconflicts.3 #Religious Uprising Event - Start
+				}
+			}
+		}
+	}
+}
+
+#Ping for Religious Uprising Event - End
+character_event = {
+	id = RTPconflicts.103
+	is_triggered_only = yes
+	hide_window = yes
+	only_playable = yes
+	
+	trigger = {
+		has_character_flag = rtp_religious_uprising_war #Religious Uprising
+		FROM = {
+			has_character_flag = rtp_religious_uprising_war #Religious Uprising
+		}
+	}
+
+	immediate = {
+		any_player = {
+			save_event_target_as = rtp_player #This is me
+		}
+		if = {
+			limit = {
+				FROM = {
+					war_score = 100
+				}
+			}
+			FROM = {
+				event_target:rtp_player = {
+					character_event = {
+						id = RTPconflicts.4 #Religious Uprising Event - End
+					}
+				}
+			}
+		}
+		else = {
+			event_target:rtp_player = {
+				imprison = ROOT
+				set_defacto_liege = ROOT
+			}
+		}
+		character_event = {
+			id = RTPcheck.112 #War Flag Check
+		}
+	}
+}
+
+#Ping for Invasion Event - Start
+character_event = {
+	id = RTPconflicts.104
+	is_triggered_only = yes
+	hide_window = yes
+	only_playable = yes
+	
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_conflict #Conflict already happening
+		}
+		any_war = {
+			OR = {
+				using_cb = invasion
+				using_cb = viking_invasion
+				using_cb = manifest_destiny_invasion
+				using_cb = reconquista_leon
+				using_cb = reconquista_castille
+				using_cb = reconquista_aragon
+				using_cb = reconquista_galicia
+				using_cb = reconquista_beja
+				using_cb = reconquista_granada
+				using_cb = reconquista_cordoba
+				using_cb = reconquista_valencia
+				using_cb = reconquista_navarra
+				using_cb = reconquista_balearic
+			}
+		}
+	}
+
+	immediate = {
+		save_event_target_as = rtp_defender #The defender
+		FROM = {
+			save_event_target_as = rtp_attacker #The attacker
+		}
+		any_player = {
+			narrative_event = {
+				id = RTPconflicts.5 #Invasion Event - Start
+			}
+		}
+	}
+}
+
+#Ping for Invasion Event - End
+character_event = {
+	id = RTPconflicts.105
+	hide_window = yes
+	is_triggered_only = yes
+	only_playable = yes
+	
+	trigger = {
+		has_character_flag = rtp_invasion_war #Invasion
+		FROM = {
+			has_character_flag = rtp_invasion_war #Invasion
+		}
+	}
+
+	immediate = {
+		character_event = {
+			id = RTPcheck.112 #War Flag Check
+			days = 3
+		}
+
+		if = {
+			limit = {
+				FROM = {
+					war_score = 100
+				}
+			}
+			FROM = {
+				save_event_target_as = rtp_winner #The winner of the invasion
+			}
+			save_event_target_as = rtp_loser #The loser of the invasion
+			any_player= {
+				character_event = {
+					id = RTPconflicts.6 #Invasion Event - End
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				war_score = 100
+			}
+			save_event_target_as = rtp_winner #The winner of the invasion
+			FROM = {
+				save_event_target_as = rtp_loser #The loser of the invasion
+			}
+			any_player = {
+				character_event = {
+					id = RTPconflicts.6 #Invasion Event - End
+				}
+			}
+		}
+	}
+}
+
+#Ping for Crusade Event - Start
+character_event = {
+	id = RTPconflicts.106
+	is_triggered_only = yes
+	hide_window = yes
+	only_playable = yes
+	
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_conflict #Conflict already happening
+		}
+		any_war = {
+			OR = {
+				using_cb = crusade
+				using_cb = new_crusade
+				using_cb = northern_crusade_war
+			}
+		}
+	}
+
+	immediate = {
+		save_event_target_as = rtp_defender #The defender
+		FROM = {
+			save_event_target_as = rtp_attacker #The attacker
+		}
+		any_player = {
+			narrative_event = {
+				id = RTPconflicts.7 #Crusade Event - Start
+			}
+		}
+	}
+}
+
+#Ping for Crusade Event - End
+character_event = {
+	id = RTPconflicts.107
+	hide_window = yes
+	is_triggered_only = yes
+	only_playable = yes
+	
+	trigger = {
+		has_character_flag = rtp_crusade_war #Crusade
+		FROM = {
+			has_character_flag = rtp_crusade_war #Crusade
+		}
+	}
+
+	immediate = {
+		character_event = {
+			id = RTPcheck.112 #War Flag Check
+			days = 3
+		}
+
+		if = {
+			limit = {
+				FROM = {
+					war_score = 100
+				}
+			}
+			FROM = {
+				save_event_target_as = rtp_winner #The winner of the invasion
+			}
+			save_event_target_as = rtp_loser #The loser of the invasion
+			any_player = {
+				character_event = {
+					id = RTPconflicts.8 #Crusade Event - End
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				war_score = 100
+			}
+			save_event_target_as = rtp_winner #The winner of the invasion
+			FROM = {
+				save_event_target_as = rtp_loser #The loser of the invasion
+			}
+			any_player = {
+				character_event = {
+					id = RTPconflicts.8 #Crusade Event - End
+				}
+			}
+		}
+	}
+}
+
+#Ping for Culture Uprising Event - Start
+character_event = {
+	id = RTPconflicts.108
+	is_triggered_only = yes
+	hide_window = yes
+	only_playable = yes
+	
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_conflict #Conflict already happening
+		}
+		FROM = {
+			has_character_flag = nationalist_rebel
+		}
+	}
+
+	immediate = {
+		save_event_target_as = rtp_defender #The defender
+		FROM = {
+			save_event_target_as = rtp_attacker #The attacker
+		}
+
+		any_player = {
+			save_event_target_as = rtp_player #This is me
+		}
+
+		if = {
+			limit = {
+				is_liege_of = event_target:rtp_player #This is me
+			}
+			event_target:rtp_player = {
+				character_event = {
+					id = RTPconflicts.9 #Culture Uprising Event - Start
+				}
+			}
+		}
+	}
+}
+
+#Ping for Culture Uprising Event - End
+character_event = {
+	id = RTPconflicts.109
+	is_triggered_only = yes
+	hide_window = yes
+	only_playable = yes
+	
+	trigger = {
+		has_character_flag = rtp_culture_uprising_war #Culture Uprising
+		FROM = {
+			has_character_flag = rtp_culture_uprising_war #Culture Uprising
+		}
+	}
+
+	immediate = {
+		any_player = {
+			save_event_target_as = rtp_player #This is me
+		}
+		if = {
+			limit = {
+				FROM = {
+					war_score = 100
+				}
+			}
+			FROM = {
+				event_target:rtp_player = {
+					character_event = {
+						id = RTPconflicts.10 #Culture Uprising Event - End
+					}
+				}
+			}
+		}
+		else = {
+			event_target:rtp_player = {
+				imprison = ROOT
+				set_defacto_liege = ROOT
+			}
+		}
+		character_event = {
+			id = RTPcheck.112 #War Flag Check
+		}
+	}
+}
+
+#Ping for Temporary Soldier Event - Start
+character_event = {
+	id = RTPconflicts.110
+	is_triggered_only = yes
+	hide_window = yes
+	only_playable = yes
+	
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_conflict #Conflict already happening
+		}
+		FROM = {
+			NOR = {
+				has_character_flag = religious_revolter
+				has_character_flag = heretic_revolter
+				has_character_flag = nationalist_rebel
+			}
+		}
+		any_war = {
+			NOR = {
+				using_cb = invasion
+				using_cb = viking_invasion
+				using_cb = manifest_destiny_invasion
+				using_cb = reconquista_leon
+				using_cb = reconquista_castille
+				using_cb = reconquista_aragon
+				using_cb = reconquista_galicia
+				using_cb = reconquista_beja
+				using_cb = reconquista_granada
+				using_cb = reconquista_cordoba
+				using_cb = reconquista_valencia
+				using_cb = reconquista_navarra
+				using_cb = reconquista_balearic
+				using_cb = crusade
+				using_cb = new_crusade
+				using_cb = northern_crusade_war
+				using_cb = bid_for_independence
+				using_cb = depose_liege
+				using_cb = overthrow_ruler
+				using_cb = overthrow_ruler_no_calls
+				using_cb = change_gavelkind_succession_law
+				using_cb = lower_crown_authority_law
+				using_cb = lower_tribal_organization_law
+				using_cb = cb_faction_independence
+				using_cb = cb_install_khan
+				using_cb = cb_install_antiking
+				using_cb = increase_council_power_war
+				using_cb = peasant_revolt
+			}
+		}
+	}
+
+	immediate = {
+		save_event_target_as = rtp_defender #The defender
+		FROM = {
+			save_event_target_as = rtp_attacker #The attacker
+		}
+
+		any_player = {
+			save_event_target_as = rtp_player #This is me
+		}
+
+		if = {
+			limit = {
+				FROM = {
+					is_liege_of = event_target:rtp_player #This is me
+				}
+			}
+			FROM = {
+				save_event_target_as = rtp_liege #Your liege
+			}
+			event_target:rtp_player = {
+				character_event = {
+					id = RTPconflicts.11 #Temporary Soldier Event
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_liege_of = event_target:rtp_player #This is me
+			}
+			save_event_target_as = rtp_liege #Your liege
+			event_target:rtp_player = {
+				character_event = {
+					id = RTPconflicts.11 #Temporary Soldier Event
+				}
+			}
+		}
+	}
+}
+
+#Ping for Temporary Soldier Event - End
+character_event = {
+	id = RTPconflicts.111
+	is_triggered_only = yes
+	hide_window = yes
+	only_playable = yes
+	
+	trigger = {
+		has_character_flag = rtp_regular_war #Regular war
+		FROM = {
+			has_character_flag = rtp_regular_war #Regular war
+		}
+	}
+
+	immediate = {
+		character_event = {
+			id = RTPcheck.112 #War Flag Check
+		}
+		any_player = {
+			random = {
+				chance = 25
+		
+				if = {
+					limit = {
+						NOT = {
+							has_minor_title = holy_warrior_mt
+						}
+					}
+					character_event = {
+						id = RTPjob.22 # Holy Warrior
+					}
+				}
+			}
+		}
+	}
+}
+
+#Ping for Rebellion Event - Start
+character_event = {
+	id = RTPconflicts.112
+	is_triggered_only = yes
+	hide_window = yes
+	only_playable = yes
+	
+	trigger = {
+		NOT = {
+			has_global_flag = rtp_conflict #Conflict already happening
+		}
+		any_war = {
+			OR = {
+				using_cb = bid_for_independence
+				using_cb = depose_liege
+				using_cb = overthrow_ruler
+				using_cb = overthrow_ruler_no_calls
+				using_cb = change_gavelkind_succession_law
+				using_cb = lower_crown_authority_law
+				using_cb = lower_tribal_organization_law
+				using_cb = cb_faction_independence
+				using_cb = cb_install_khan
+				using_cb = cb_install_antiking
+				using_cb = increase_council_power_war
+			}
+		}
+		any_neighbor_independent_ruler = {
+			war = no
+			higher_tier_than = COUNT
+		}
+	}
+
+	immediate = {
+		save_event_target_as = rtp_defender #The defender
+		FROM = {
+			save_event_target_as = rtp_attacker #The attacker
+		}
+
+		any_player = {
+			save_event_target_as = rtp_player #This is me
+		}
+
+		if = {
+			limit = {
+				is_liege_of = event_target:rtp_player #This is me
+			}
+			event_target:rtp_player = {
+				character_event = {
+					id = RTPconflicts.12 #Rebellion Event
+				}
+			}
+		}
+	}
+}
+
+#Ping for Rebellion Event - End
+character_event = {
+	id = RTPconflicts.113
+	is_triggered_only = yes
+	hide_window = yes
+	only_playable = yes
+	
+	trigger = {
+		has_character_flag = rtp_rebellion_war #Rebellion
+		FROM = {
+			has_character_flag = rtp_rebellion_war #Rebellion
+		}
+	}
+
+	immediate = {
+		any_player = {
+			save_event_target_as = rtp_player #This is me
+		}
+		if = {
+			limit = {
+				war_score = 100
+				FROM = {
+					has_character_flag = rtp_chosen_side #Chosen Side
+				}
+			}
+			event_target:rtp_player = {
+				imprison = ROOT
+				set_defacto_liege = ROOT
+			}
+		}
+		character_event = {
+			id = RTPcheck.112 #War Flag Check
+		}
+	}
+}
+
+#Ping for Mercenary Event - Start
+character_event = {
+	id = RTPconflicts.114
+	is_triggered_only = yes
+	hide_window = yes
+	ai = yes
+	in_command = yes
+	
+	trigger = {
+		mercenary = yes
+		NOT = {
+			has_global_flag = rtp_conflict #Conflict already happening
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				location = {
+					holder_scope = {
+						war = yes
+						higher_tier_than = COUNT
+					}
+				}
+			}
+			location = {
+				holder_scope = {
+					save_event_target_as = rtp_mercenary_employer #The employer of the mercenary band
+				}
+			}
+			save_event_target_as = rtp_mercenary_captain #The captain of the mercenary band
+			capital_scope = {
+				save_event_target_as = rtp_mercenary_capital #The capital of the mercenary band
+			}
+			any_player = {
+				character_event = {
+					id = RTPconflicts.13 #Mercenary Event
+				}
+			}
+		}
+	}
+}
+
+#Ping for Mercenary Event - End
+character_event = {
+	id = RTPconflicts.115
+	is_triggered_only = yes
+	hide_window = yes
+	ai = yes
+	
+	trigger = {
+		mercenary = yes
+		has_character_flag = rtp_mercenary_war #Mercenary contract
+	}
+
+	immediate = {
+		any_player = {
+			random = {
+				chance = 10
+
+				if = {
+					limit = {
+						NOT = {
+							has_minor_title = sellsword_mt
+						}
+					}
+					character_event = {
+						id = RTPjob.21 #Mercenary
+					}
+				}
+			}
+		}
+		character_event = {
+			id = RTPcheck.112 #War Flag Check
+		}
+	}
+}
+
+#MTTH Events
+#####

@@ -1,0 +1,13 @@
+ckrpg_executed_family_member = {
+    opinion = -40
+    decay = yes
+}
+
+ckrpg_executed_child = {
+    opinion = -100
+    decay = yes
+}
+
+ckrpg_executed_courtier = {
+    opinion = -1
+}

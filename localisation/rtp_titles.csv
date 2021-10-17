@@ -1,0 +1,30 @@
+c_landless_t; ;;;;;;x
+c_landless_t_adj; ;;;;;;x
+
+c_baron_t;[Root.Capital.GetName];;;;;;x
+c_baron_t_adj;[Root.Capital.GetName];;;;;;x
+
+rtp_confederation_title_name;[Root.PrimaryTitle.GetAdjective] Confederation;;;;;;x
+
+rtp_null; ;;;;;;x
+
+mercenary_baron;Sergeant;;;;;;x
+mercenary_baron_female;Sergeant;;;;;;x
+
+mercenary_count;Lieutenant;;;;;;x
+mercenary_count_female;Lieutenant;;;;;;x
+
+mercenary_duke;Captain;;;;;;x
+mercenary_duke_female;Captain;;;;;;x
+
+privateer_baron;Commander;;;;;;x
+privateer_baron_female;Commander;;;;;;x
+
+privateer_count;Post Captain;;;;;;x
+privateer_count_female;Post Captain;;;;;;x
+
+privateer_duke;Commodore;;;;;;x
+privateer_duke_female;Commodore;;;;;;x
+
+privateer_king;Admiral;;;;;;x
+privateer_king_female;Admiral;;;;;;x

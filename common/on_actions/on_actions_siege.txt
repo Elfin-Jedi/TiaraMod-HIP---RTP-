@@ -1,0 +1,11 @@
+on_siege_over_loc_chars = {
+    events = {
+        ckrpg_siege.0001
+    }
+}
+
+on_released_from_prison = {
+    events = {
+        ckrpg_siege.0008
+    }
+}

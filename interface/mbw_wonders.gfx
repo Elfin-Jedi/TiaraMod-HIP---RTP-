@@ -1,0 +1,160 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_wonder_strip_aqueduct_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_aqueduct_large.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_wonder_strip_aqueduct_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_aqueduct_medium.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_wonder_strip_aqueduct_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_aqueduct_small.dds"
+		noOfFrames = 5
+	}
+	
+	#
+	
+	spriteType = {
+		name = "GFX_wonder_strip_arch_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_arch_large.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_wonder_strip_arch_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_arch_medium.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_wonder_strip_arch_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_arch_small.dds"
+		noOfFrames = 5
+	}
+	
+	#
+	
+	spriteType = {
+		name = "GFX_wonder_strip_bridge_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_bridge_large.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_wonder_strip_bridge_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_bridge_medium.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_wonder_strip_bridge_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_bridge_small.dds"
+		noOfFrames = 5
+	}
+	
+	#
+	
+	spriteType = {
+		name = "GFX_wonder_strip_colossus_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_colossus_large.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_wonder_strip_colossus_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_colossus_medium.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_wonder_strip_colossus_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_colossus_small.dds"
+		noOfFrames = 5
+	}
+	
+	#
+	
+	spriteType = {
+		name = "GFX_wonder_strip_market_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_market_large.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_wonder_strip_market_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_market_medium.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_wonder_strip_market_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_market_small.dds"
+		noOfFrames = 5
+	}
+	
+	#
+	
+	spriteType = {
+		name = "GFX_wonder_strip_obelisk_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_obelisk_large.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_wonder_strip_obelisk_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_obelisk_medium.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_wonder_strip_obelisk_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_obelisk_small.dds"
+		noOfFrames = 5
+	}
+	
+	#
+	
+	spriteType = {
+		name = "GFX_wonder_strip_sewer_large"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_sewer_large.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_wonder_strip_sewer_medium"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_sewer_medium.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_wonder_strip_sewer_small"
+		texturefile = "gfx\\interface\\wonder_interface\\wonder_strips\\wonder_mbw_sewer_small.dds"
+		noOfFrames = 5
+	}
+	
+	#
+	
+	spriteType = {
+		name = "GFX_mbw_capstone"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\mbw_artifact_capstone.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_mbw_capstone_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\mbw_artifact_capstone_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_mbw_colossus_head"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\mbw_artifact_colossus_head.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_mbw_colossus_head_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\mbw_artifact_colossus_head_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_mbw_ledgers"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\mbw_artifact_ledgers.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_mbw_ledgers_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\mbw_artifact_ledgers_small.dds"
+	}
+	
+	
+}

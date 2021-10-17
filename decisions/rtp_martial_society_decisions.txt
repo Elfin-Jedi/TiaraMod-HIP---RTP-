@@ -1,0 +1,723 @@
+#####
+#Martial Society Decisions
+#
+#Total = 6
+#####
+
+society_decisions = {
+	#Level 1 - Battle Roar
+	rtp_martial_p1_sd = {
+		is_high_prio = yes
+
+		potential = {
+			rtp_is_in_martial_society_st = yes
+			society_rank = 1
+		}
+
+		allow = {
+			rtp_can_use_p1_st = yes
+		}
+
+		effect = {
+			hidden_tooltip = {
+				add_character_modifier = {
+					modifier = rtp_used_p1_timer_em
+					years = 3
+				}
+				character_event = {
+					id = RTPnotification.1 #Can Use Society Ability
+					years = 3
+				}
+			}
+
+			if = {
+				limit = {
+					society_rank == 1
+				}
+				random = {
+					chance = 25
+
+					if = {
+						limit = {
+							is_female = no
+						}
+						sound_effect = power_battle_roar
+					}
+					else = {
+						sound_effect = power_battle_roar_female
+					}
+
+					add_character_modifier = {
+						modifier = rtp_battle_roar_em
+						years = 3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					society_rank == 2
+				}
+				random = {
+					chance = 30
+
+					if = {
+						limit = {
+							is_female = no
+						}
+						sound_effect = power_battle_roar
+					}
+					else = {
+						sound_effect = power_battle_roar_female
+					}
+
+					add_character_modifier = {
+						modifier = rtp_battle_roar_em
+						years = 3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					society_rank == 3
+				}
+				random = {
+					chance = 35
+
+					if = {
+						limit = {
+							is_female = no
+						}
+						sound_effect = power_battle_roar
+					}
+					else = {
+						sound_effect = power_battle_roar_female
+					}
+
+					add_character_modifier = {
+						modifier = rtp_battle_roar_em
+						years = 3
+					}
+				}
+			}
+			else = {
+				random = {
+					chance = 40
+
+					if = {
+						limit = {
+							is_female = no
+						}
+						sound_effect = power_battle_roar
+					}
+					else = {
+						sound_effect = power_battle_roar_female
+					}
+
+					add_character_modifier = {
+						modifier = rtp_battle_roar_em
+						years = 3
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Level 2 - Through the Paces
+	rtp_martial_p2_sd = {
+		is_high_prio = yes
+
+		potential = {
+			rtp_is_in_martial_society_st = yes
+			society_rank = 2
+		}
+
+		allow = {
+			rtp_can_use_p2_st = yes
+		}
+
+		effect = {
+			hidden_tooltip = {
+				add_character_modifier = {
+					modifier = rtp_used_p2_timer_em
+					years = 6
+				}
+				character_event = {
+					id = RTPnotification.1 #Can Use Society Ability
+					years = 6
+				}
+			}
+
+			if = {
+				limit = {
+					society_rank == 2
+				}
+				random = {
+					chance = 30
+
+					if = {
+						limit = {
+							is_female = no
+						}
+						sound_effect = power_through_the_paces
+					}
+					else = {
+						sound_effect = power_through_the_paces_female
+					}
+
+					if = {
+						limit = {
+							NOT = {
+								trait = strong
+							}
+						}
+						add_trait = strong
+					}
+					else = {
+						add_character_modifier = {
+							modifier = rtp_training_em
+							duration = -1
+							stacking = yes
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					society_rank == 3
+				}
+				random = {
+					chance = 35
+
+					if = {
+						limit = {
+							is_female = no
+						}
+						sound_effect = power_through_the_paces
+					}
+					else = {
+						sound_effect = power_through_the_paces_female
+					}
+
+					if = {
+						limit = {
+							NOT = {
+								trait = strong
+							}
+						}
+						add_trait = strong
+					}
+					else = {
+						add_character_modifier = {
+							modifier = rtp_training_em
+							duration = -1
+							stacking = yes
+						}
+					}
+				}
+			}
+			else = {
+				random = {
+					chance = 40
+
+					if = {
+						limit = {
+							is_female = no
+						}
+						sound_effect = power_through_the_paces
+					}
+					else = {
+						sound_effect = power_through_the_paces_female
+					}
+
+					if = {
+						limit = {
+							NOT = {
+								trait = strong
+							}
+						}
+						add_trait = strong
+					}
+					else = {
+						add_character_modifier = {
+							modifier = rtp_training_em
+							duration = -1
+							stacking = yes
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Level 3 - Naught but Strength
+	rtp_martial_p3_sd = {
+		is_high_prio = yes
+
+		potential = {
+			rtp_is_in_martial_society_st = yes
+			society_rank = 3
+		}
+
+		allow = {
+			rtp_can_use_p3_st = yes
+			OR = {
+				trait = wounded
+				trait = severely_injured
+				trait = mangled
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				add_character_modifier = {
+					modifier = rtp_used_p3_timer_em
+					years = 9
+				}
+				character_event = {
+					id = RTPnotification.1 #Can Use Society Ability
+					years = 9
+				}
+			}
+
+			if = {
+				limit = {
+					society_rank == 3
+				}
+				random = {
+					chance = 35
+
+					sound_effect = power_naught_but_strength
+
+					if = {
+						limit = {
+							trait = mangled
+						}
+						remove_trait = mangled
+					}
+					else_if = {
+						limit = {
+							trait = severely_injured
+						}
+						remove_trait = severely_injured
+					}
+					else = {
+						remove_trait = wounded
+					}
+				}
+			}
+			else = {
+				random = {
+					chance = 40
+
+					sound_effect = power_naught_but_strength
+
+					if = {
+						limit = {
+							trait = mangled
+						}
+						remove_trait = mangled
+					}
+					else_if = {
+						limit = {
+							trait = severely_injured
+						}
+						remove_trait = severely_injured
+					}
+					else = {
+						remove_trait = wounded
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Level 4 - Become Tribal
+	rtp_martial_tribal_sd = {
+		is_high_prio = yes
+		ai_check_interval = 60
+		only_playable = yes
+
+		potential = {
+			is_tribal = no
+			is_nomadic = no
+			mercenary = no
+			holy_order = no
+			controls_religion = no
+			is_landed = yes
+			rtp_is_in_martial_society_st = yes
+			society_rank = 4
+			NOT = {
+				has_character_flag = rtp_switched_government #Already switched your government
+			}
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			higher_tier_than = BARON
+		}
+
+		effect = {
+			sound_effect = bloodline_added
+
+			custom_tooltip = {
+				text = "rtp_become_tribal_ct"
+				clr_character_flag = rtp_mercenary #This guy is a mercenary
+				clr_character_flag = rtp_holy_order #This guy is a holy order
+				clr_character_flag = rtp_confederation #This guy is a confederation
+				clr_character_flag = rtp_theocracy #This guy is a theocracy
+				clr_character_flag = rtp_republic #This guy is a republic
+
+				if = {
+					limit = {
+						is_patrician = yes
+					}
+					create_character = {
+						age = 20
+						dynasty = random
+						random_traits = yes
+						female = no
+						religion = ROOT
+						culture = ROOT
+					}
+					new_character = {
+						save_event_target_as = rtp_new_patrician_house #The new family
+					}
+					any_demesne_title = {
+						limit = {
+							holding_type = family_palace
+						}
+						grant_title_no_opinion = event_target:rtp_new_patrician_house #The new family
+					}
+				}
+
+				any_demesne_title = {
+					limit = {
+						tier = BARON
+						NOT = {
+							holding_type = tribal
+						}
+					}
+					destroy_settlement = yes
+					ROOT = {
+						wealth = 100
+						spawn_unit = {
+							province = location
+							home = location
+							owner = ROOT
+							troops = {
+								light_infantry = { 500 1000 }
+							}
+							merge = yes
+							attrition = 0
+						}
+					}
+				}
+				any_vassal = {
+					limit = {
+						tier = BARON
+					}
+					any_demesne_title = {
+						limit = {
+							tier = BARON
+							OR = {
+								holding_type = castle
+								holding_type = city
+							}
+						}
+						destroy_settlement = yes
+						ROOT = {
+							wealth = 100
+							spawn_unit = {
+								province = location
+								home = location
+								owner = ROOT
+								troops = {
+									light_infantry = { 500 500 }
+								}
+								merge = yes
+								attrition = 0
+							}
+						}
+					}
+				}
+
+				any_demesne_province = {
+					limit = {
+						has_empty_holding = yes
+					}
+					build_holding = {
+						type = tribal
+						holder = ROOT
+					}
+				}
+
+				set_government_type = tribal_government
+				any_demesne_title = {
+					gender_succ = agnatic
+					add_law = {
+						law = succ_elective_gavelkind
+						cooldown = no
+						opinion_effect = no
+					}
+				}
+
+				any_demesne_title = {
+					limit = {
+						holding_type = tribal
+					}
+					refill_holding_levy = yes
+				}
+
+				set_character_flag = rtp_switched_government #Already switched your government
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.01
+		}
+	}
+
+	#Level 4 - Become Nomad
+	rtp_martial_nomad_sd = {
+		is_high_prio = yes
+		ai_check_interval = 60
+		only_playable = yes
+		
+		potential = {
+			is_tribal = no
+			is_nomadic = no
+			mercenary = no
+			holy_order = no
+			controls_religion = no
+			is_landed = yes
+			rtp_is_in_martial_society_st = yes
+			society_rank = 4
+			NOT = {
+				has_character_flag = rtp_switched_government #Already switched your government
+			}
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			higher_tier_than = BARON
+		}
+
+		effect = {
+			sound_effect = bloodline_added
+
+			custom_tooltip = {
+				text = "rtp_become_nomad_ct"
+				clr_character_flag = rtp_mercenary #This guy is a mercenary
+				clr_character_flag = rtp_holy_order #This guy is a holy order
+				clr_character_flag = rtp_confederation #This guy is a confederation
+				clr_character_flag = rtp_theocracy #This guy is a theocracy
+				clr_character_flag = rtp_republic #This guy is a republic
+
+				if = {
+					limit = {
+						is_patrician = yes
+					}
+					create_character = {
+						age = 20
+						dynasty = random
+						random_traits = yes
+						female = no
+						religion = ROOT
+						culture = ROOT
+					}
+					new_character = {
+						save_event_target_as = rtp_new_patrician_house #The new family
+					}
+					any_demesne_title = {
+						limit = {
+							holding_type = family_palace
+						}
+						grant_title_no_opinion = event_target:rtp_new_patrician_house #The new family
+					}
+				}
+
+				set_government_type = nomadic_government
+				any_demesne_title = {
+					gender_succ = agnatic
+					add_law = {
+						law = succ_ultimogeniture
+						cooldown = no
+						opinion_effect = no
+					}
+				}
+
+				any_demesne_title = {
+					limit = {
+						tier = BARON
+					}
+					destroy_settlement = yes
+					ROOT = {
+						spawn_unit = {
+							province = location
+							home = location
+							owner = ROOT
+							troops = {
+								light_infantry = { 1000 1000 }
+							}
+							merge = yes
+							attrition = 0
+						}
+					}
+				}
+				any_vassal = {
+					limit = {
+						tier = BARON
+					}
+					any_demesne_title = {
+						limit = {
+							tier = BARON
+						}
+						destroy_settlement = yes
+						ROOT = {
+							spawn_unit = {
+								province = location
+								home = location
+								owner = ROOT
+								troops = {
+									light_infantry = { 1000 1000 }
+								}
+								merge = yes
+								attrition = 0
+							}
+						}
+					}
+				}
+
+				random_demesne_province = {
+					limit = {
+						has_empty_holding = yes
+					}
+					build_holding = {
+						type = nomad
+						holder = ROOT
+					}
+				}
+
+				set_character_flag = rtp_switched_government #Already switched your government
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.01
+		}
+	}
+}
+
+targeted_decisions = {
+	#Level 4 - And They Will Follow
+	rtp_martial_p4_td = {
+		is_in_society = yes
+		filter = dynasty_including_me
+		ai_target_filter = dynasty_including_me
+
+		from_potential = {
+			rtp_is_in_martial_society_st = yes
+			society_rank = 4
+		}
+
+		potential = {
+		}
+
+		allow = {
+			FROM = {
+				rtp_can_use_p4_st = yes
+			}
+			OR = {
+				AND = {
+					character = FROM
+					FROM = {
+						rtp_has_martial_society_trait_st = no
+					}
+				}
+				AND = {
+					NOT = {
+						character = FROM
+					}
+					NOR = {
+						trait = rtp_squire_tr
+						trait = rtp_martial_lady_tr
+					}
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				FROM = {
+					add_character_modifier = {
+						modifier = rtp_used_p4_timer_em
+						years = 12
+					}
+					character_event = {
+						id = RTPnotification.1 #Can Use Society Ability
+						years = 12
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					character = FROM
+					FROM = {
+						rtp_has_martial_society_trait_st = no
+					}
+				}
+				FROM = {
+					random = {
+						chance = 40
+
+						sound_effect = power_and_they_will_follow
+
+						rtp_give_martial_society_trait_se = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					is_female = no
+				}
+				random = {
+					chance = 40
+
+					FROM = {
+						sound_effect = power_and_they_will_follow
+					}
+	
+					add_trait = rtp_squire_tr
+				}
+			}
+			else = {
+				random = {
+					chance = 40
+
+					FROM = {
+						sound_effect = power_and_they_will_follow
+					}
+	
+					add_trait = rtp_martial_lady_tr
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

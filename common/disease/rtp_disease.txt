@@ -1,0 +1,740 @@
+#####
+#Diseases
+#
+#Total = 5
+#####
+
+#Sanguinare Vampiris
+rtp_sanguinare_vampiris_dis = {
+	always_get_message = yes
+	tooltip = "rtp_sanguinare_vampiris_dis_info"
+	disease_gfx = disease_gfx_small_pox
+	icon = 8
+	color = { 255 204 204 }
+	months = 12
+	trait = rtp_sanguinare_vampiris_tr
+	contagiousness = 0.3
+	outbreak_chance = 0.0075
+
+	effect = {
+		local_tax_modifier = -0.25
+		supply_limit = -2
+		max_attrition = 0.05
+		disease_defence = 0.2
+	}
+
+	character_infection_chances = {
+		months = 3
+	}
+
+	on_character_infection = {
+		if = {
+			limit = {
+				NOR = {
+					trait = rtp_sanguinare_vampiris_tr
+					trait = rtp_feral_vampire_tr
+					trait = rtp_vampire_tr
+					trait = rtp_sanies_lupinus_tr
+					trait = rtp_feral_werewolf_tr
+					trait = rtp_werewolf_tr
+					trait = rtp_corruption_tr
+					trait = rtp_cursed_tr
+					trait = rtp_gifted_tr
+					trait = rtp_mana_poisoning_tr
+					trait = rtp_mage_tr
+					trait = rtp_sage_tr
+					trait = rtp_symphony_tr
+					trait = rtp_shapeshifter_tr
+					trait = rtp_druid_tr
+					trait = horse
+					trait = cat
+				}
+			}
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 0
+
+						has_character_modifier = in_seclusion
+					}
+					modifier = {
+						factor = 0.1
+
+						is_nomadic = yes
+						NOT = {
+							is_unimportant_trigger = yes
+						}
+					}
+					modifier = {
+						factor = 0.5
+
+						is_tribal = yes
+						NOT = {
+							is_unimportant_trigger = yes
+						}
+					}
+					modifier = {
+						factor = 50
+						is_unimportant_trigger = yes
+					}
+
+					character_event = {
+						id = RTPdisease.101 #Ping for Sanguinare Vampiris
+					}
+				}
+				90 = {
+				}
+			}
+		}
+	}
+
+	on_province_infection = {
+		province_event = {
+			id = RIP.11703
+		}
+	}
+
+	yearly_province_pulse = {
+		random_list = {
+			92 = {
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 1
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 2
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 3
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 4
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 5
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 6
+				}
+			}
+			8 = {
+				increase_depopulation_effect = yes
+			}
+		}
+	}
+
+	timeperiod = {
+		start_date = 769.1.1
+		end_date = 1452.1.1
+
+		can_outbreak = {
+			has_global_flag = rtp_beasts_enabled
+		}
+
+		max_total_provinces = 10
+		
+		min_nb_province = 1
+		max_nb_province = 1
+
+		one_only = no
+	}
+}
+
+#Sanies Lupinus
+rtp_sanies_lupinus_dis = {
+	always_get_message = yes
+	tooltip = "rtp_sanies_lupinus_dis_info"
+	disease_gfx = disease_gfx_small_pox
+	icon = 9
+	color = { 255 255 204 }
+	months = 12
+	trait = rtp_sanies_lupinus_tr
+	contagiousness = 0.3
+	outbreak_chance = 0.0075
+
+	effect = {
+		local_tax_modifier = -0.25
+		supply_limit = -2
+		max_attrition = 0.05
+		disease_defence = 0.2
+	}
+
+	character_infection_chances = {
+		months = 3
+	}
+
+	on_character_infection = {
+		if = {
+			limit = {
+				NOR = {
+					trait = rtp_sanguinare_vampiris_tr
+					trait = rtp_feral_vampire_tr
+					trait = rtp_vampire_tr
+					trait = rtp_sanies_lupinus_tr
+					trait = rtp_feral_werewolf_tr
+					trait = rtp_werewolf_tr
+					trait = rtp_corruption_tr
+					trait = rtp_cursed_tr
+					trait = rtp_gifted_tr
+					trait = rtp_mana_poisoning_tr
+					trait = rtp_mage_tr
+					trait = rtp_sage_tr
+					trait = rtp_symphony_tr
+					trait = rtp_shapeshifter_tr
+					trait = rtp_druid_tr
+					trait = horse
+					trait = cat
+				}
+			}
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 0
+
+						has_character_modifier = in_seclusion
+					}
+					modifier = {
+						factor = 0.1
+
+						is_nomadic = yes
+						NOT = {
+							is_unimportant_trigger = yes
+						}
+					}
+					modifier = {
+						factor = 0.5
+
+						is_tribal = yes
+						NOT = {
+							is_unimportant_trigger = yes
+						}
+					}
+					modifier = {
+						factor = 50
+						is_unimportant_trigger = yes
+					}
+
+					character_event = {
+						id = RTPdisease.102 #Ping for Sanies Lupinus
+					}
+				}
+				90 = {
+				}
+			}
+		}
+	}
+
+	on_province_infection = {
+		province_event = {
+			id = RIP.11703
+		}
+	}
+
+	yearly_province_pulse = {
+		random_list = {
+			92 = {
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 1
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 2
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 3
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 4
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 5
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 6
+				}
+			}
+			8 = {
+				increase_depopulation_effect = yes
+			}
+		}
+	}
+	
+	timeperiod = {
+		start_date = 769.1.1
+		end_date = 1452.1.1
+
+		can_outbreak = {
+			has_global_flag = rtp_beasts_enabled
+		}
+
+		max_total_provinces = 10
+		
+		min_nb_province = 1
+		max_nb_province = 1
+
+		one_only = no
+	}
+}
+
+#Corruption
+rtp_corruption_dis = {
+	always_get_message = yes
+	tooltip = "rtp_corruption_dis_info"
+	disease_gfx = disease_gfx_tuberculosis
+	icon = 10
+	color = { 229 204 255 }
+	months = 12
+	trait = rtp_corruption_tr
+	contagiousness = 0.3
+	outbreak_chance = 0.0075
+
+	effect = {
+		local_tax_modifier = -0.25
+		supply_limit = -2
+		max_attrition = 0.05
+		disease_defence = 0.2
+	}
+
+	character_infection_chances = {
+		months = 3
+	}
+
+	on_character_infection = {
+		if = {
+			limit = {
+				NOR = {
+					trait = rtp_sanguinare_vampiris_tr
+					trait = rtp_feral_vampire_tr
+					trait = rtp_vampire_tr
+					trait = rtp_sanies_lupinus_tr
+					trait = rtp_feral_werewolf_tr
+					trait = rtp_werewolf_tr
+					trait = rtp_corruption_tr
+					trait = rtp_cursed_tr
+					trait = rtp_gifted_tr
+					trait = rtp_mana_poisoning_tr
+					trait = rtp_mage_tr
+					trait = rtp_sage_tr
+					trait = rtp_symphony_tr
+					trait = rtp_shapeshifter_tr
+					trait = rtp_druid_tr
+					trait = horse
+					trait = cat
+				}
+			}
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 0
+
+						has_character_modifier = in_seclusion
+					}
+					modifier = {
+						factor = 0.1
+
+						is_nomadic = yes
+						NOT = {
+							is_unimportant_trigger = yes
+						}
+					}
+					modifier = {
+						factor = 0.5
+
+						is_tribal = yes
+						NOT = {
+							is_unimportant_trigger = yes
+						}
+					}
+					modifier = {
+						factor = 50
+						is_unimportant_trigger = yes
+					}
+
+					character_event = {
+						id = RTPdisease.103 #Ping for Corruption
+					}
+				}
+				90 = {
+				}
+			}
+		}
+	}
+
+	on_province_infection = {
+		province_event = {
+			id = RIP.11703
+		}
+	}
+
+	yearly_province_pulse = {
+		random_list = {
+			92 = {
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 1
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 2
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 3
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 4
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 5
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 6
+				}
+			}
+			8 = {
+				increase_depopulation_effect = yes
+			}
+		}
+	}
+	
+	timeperiod = {
+		start_date = 769.1.1
+		end_date = 1452.1.1
+
+		can_outbreak = {
+			has_global_flag = rtp_beasts_enabled
+		}
+
+		max_total_provinces = 10
+		
+		min_nb_province = 1
+		max_nb_province = 1
+
+		one_only = no
+	}
+}
+
+#Mana Poisoning
+rtp_mana_poisoning_dis = {
+	always_get_message = yes
+	tooltip = "rtp_mana_poisoning_dis_info"
+	disease_gfx = disease_gfx_tuberculosis
+	icon = 11
+	color = { 204 255 255 }
+	months = 12
+	trait = rtp_mana_poisoning_tr
+	contagiousness = 0.3
+	outbreak_chance = 0.0075
+
+	effect = {
+		local_tax_modifier = -0.25
+		supply_limit = -2
+		max_attrition = 0.05
+		disease_defence = 0.2
+	}
+
+	character_infection_chances = {
+		months = 3
+	}
+
+	on_character_infection = {
+		if = {
+			limit = {
+				NOR = {
+					trait = rtp_sanguinare_vampiris_tr
+					trait = rtp_feral_vampire_tr
+					trait = rtp_vampire_tr
+					trait = rtp_sanies_lupinus_tr
+					trait = rtp_feral_werewolf_tr
+					trait = rtp_werewolf_tr
+					trait = rtp_corruption_tr
+					trait = rtp_cursed_tr
+					trait = rtp_gifted_tr
+					trait = rtp_mana_poisoning_tr
+					trait = rtp_mage_tr
+					trait = rtp_sage_tr
+					trait = rtp_symphony_tr
+					trait = rtp_shapeshifter_tr
+					trait = rtp_druid_tr
+					trait = horse
+					trait = cat
+				}
+			}
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 0
+
+						has_character_modifier = in_seclusion
+					}
+					modifier = {
+						factor = 0.1
+
+						is_nomadic = yes
+						NOT = {
+							is_unimportant_trigger = yes
+						}
+					}
+					modifier = {
+						factor = 0.5
+
+						is_tribal = yes
+						NOT = {
+							is_unimportant_trigger = yes
+						}
+					}
+					modifier = {
+						factor = 50
+						is_unimportant_trigger = yes
+					}
+
+					character_event = {
+						id = RTPdisease.104 #Ping for Mana Poisoning
+					}
+				}
+				90 = {
+				}
+			}
+		}
+	}
+
+	on_province_infection = {
+		province_event = {
+			id = RIP.11703
+		}
+	}
+
+	yearly_province_pulse = {
+		random_list = {
+			92 = {
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 1
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 2
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 3
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 4
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 5
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 6
+				}
+			}
+			8 = {
+				increase_depopulation_effect = yes
+			}
+		}
+	}
+	
+	timeperiod = {
+		start_date = 769.1.1
+		end_date = 1452.1.1
+
+		can_outbreak = {
+			has_global_flag = rtp_beasts_enabled
+		}
+
+		max_total_provinces = 10
+		
+		min_nb_province = 1
+		max_nb_province = 1
+
+		one_only = no
+	}
+}
+
+#Symphony
+rtp_symphony_dis = {
+	always_get_message = yes
+	tooltip = "rtp_symphony_dis_info"
+	disease_gfx = disease_gfx_typhoid_fever
+	icon = 12
+	color = { 204 255 204 }
+	months = 12
+	trait = rtp_symphony_tr
+	contagiousness = 0.3
+	outbreak_chance = 0.0075
+
+	effect = {
+		local_tax_modifier = -0.25
+		supply_limit = -2
+		max_attrition = 0.05
+		disease_defence = 0.2
+	}
+
+	character_infection_chances = {
+		months = 3
+	}
+
+	on_character_infection = {
+		if = {
+			limit = {
+				NOR = {
+					trait = rtp_sanguinare_vampiris_tr
+					trait = rtp_feral_vampire_tr
+					trait = rtp_vampire_tr
+					trait = rtp_sanies_lupinus_tr
+					trait = rtp_feral_werewolf_tr
+					trait = rtp_werewolf_tr
+					trait = rtp_corruption_tr
+					trait = rtp_cursed_tr
+					trait = rtp_gifted_tr
+					trait = rtp_mana_poisoning_tr
+					trait = rtp_mage_tr
+					trait = rtp_sage_tr
+					trait = rtp_symphony_tr
+					trait = rtp_shapeshifter_tr
+					trait = rtp_druid_tr
+					trait = horse
+					trait = cat
+				}
+			}
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 0
+
+						has_character_modifier = in_seclusion
+					}
+					modifier = {
+						factor = 0.1
+
+						is_nomadic = yes
+						NOT = {
+							is_unimportant_trigger = yes
+						}
+					}
+					modifier = {
+						factor = 0.5
+
+						is_tribal = yes
+						NOT = {
+							is_unimportant_trigger = yes
+						}
+					}
+					modifier = {
+						factor = 50
+						is_unimportant_trigger = yes
+					}
+
+					character_event = {
+						id = RTPdisease.101 #Ping for Sanguinare Vampiris
+					}
+				}
+				90 = {
+				}
+			}
+		}
+	}
+
+	on_province_infection = {
+		province_event = {
+			id = RIP.11703
+		}
+	}
+
+	yearly_province_pulse = {
+		random_list = {
+			92 = {
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 1
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 2
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 3
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 4
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 5
+				}
+				modifier = {
+					factor = 1.1
+
+					hospital_level = 6
+				}
+			}
+			8 = {
+				increase_depopulation_effect = yes
+			}
+		}
+	}
+
+	timeperiod = {
+		start_date = 769.1.1
+		end_date = 1452.1.1
+
+		can_outbreak = {
+			has_global_flag = rtp_beasts_enabled
+		}
+
+		max_total_provinces = 10
+		
+		min_nb_province = 1
+		max_nb_province = 1
+
+		one_only = no
+	}
+}
