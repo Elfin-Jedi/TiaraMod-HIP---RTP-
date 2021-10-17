@@ -1,0 +1,49 @@
+targetted_decisions = {
+	marry_gay_lover = {
+		filter = all
+		ai_target_filter = self
+
+		from_potential = {
+			age = 14
+			is_married = no
+			is_betrothed = no
+			OR = {
+				AND = {
+					is_female = no
+					ROOT = { is_female = no }
+				}
+				AND = {
+					is_female = yes
+					ROOT = { is_female = yes }
+				}
+			}
+		}
+		potential = {
+			is_lover = FROM
+			age = 14
+			is_married = no
+			is_betrothed = no
+			OR = {
+				AND = {
+					is_female = no
+					FROM = { is_female = no }
+				}
+				AND = {
+					is_female = yes
+					FROM = { is_female = yes }
+				}
+			}
+		}
+		allow = {
+			ROOT = { prisoner = no }
+			FROM = { prisoner = no }
+		}
+		effect = {
+			ROOT = { character_event = { id = gay_marriage_events.0 } }
+			FROM = { set_character_flag = proposed_gay_marriage }
+		}
+		ai_will_do = {
+    			factor = 1
+ 		}
+	}
+}

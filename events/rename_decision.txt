@@ -1,0 +1,47 @@
+targetted_decisions = {
+
+    rename_on = {
+		filter = all
+		
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			ai = yes
+		}
+		allow = {
+	        always = yes
+		}
+		effect = {
+	        ROOT = {
+		        prompt_name = { player = from type = RENAME_CHARACTER_MESSAGE }
+	        }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+    rename_self = {
+		filter = self
+		
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			is_alive = yes
+		}
+		allow = {
+	        always = yes
+		}
+		effect = {
+	        ROOT = {
+		        prompt_name = { player = from type = RENAME_CHARACTER_MESSAGE }
+	        }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

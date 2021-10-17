@@ -1,0 +1,147 @@
+targeted_decisions = {
+	
+	mta_send_slave = {
+		ai = no
+		only_playable = yes
+		diplomacy_icon = GFX_slavery_decision
+		
+		filter = all
+		third_party_filter = home_court
+		ai_target_filter = none
+        ai_third_party_filter = none
+        ai_check_interval = 60
+		third_party = FROM
+		show_third_party_potential = no
+	
+		from_potential = {
+			ai = no
+			is_playable = yes
+			slavery_enabled = yes
+			in_seclusion = no
+		}
+		
+		potential = {
+			is_playable = yes
+		}
+		
+		third_party_potential = {
+			FROMFROM = {
+				is_enslaved = yes
+				prisoner = no
+			}
+		}
+		
+		allow = {
+			show_only_failed_conditions = yes
+			FROM = {
+				custom_tooltip = {
+					text = mta_has_slaves_TT
+					any_host_courtier = {
+						count = 1
+						is_enslaved = yes
+					}
+				}
+			}
+			conditional_tooltip = {
+				trigger = { ai = yes }
+				slavery_enabled = yes
+			}
+			is_within_diplo_range = FROM
+			in_seclusion = no
+		}
+		
+		third_party_allow = {
+			FROMFROM = {
+				is_enslaved = yes
+			}
+		}
+		
+		effect = {
+			FROM = { save_event_target_as = slave_sender }
+			FROMFROM = {
+				show_scope_change = no
+				save_event_target_as = slave_sent
+				hidden_tooltip = {
+					move_character = ROOT
+				}
+			}
+			ROOT = {
+				show_scope_change = no
+				save_event_target_as = slave_received
+				hidden_tooltip = {
+					letter_event = { id = mta.156 }
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_forbid_slave_marriage = {
+		ai = no
+		only_playable = yes
+		diplomacy_icon = GFX_slavery_decision
+		
+		filter = home_court
+	
+		from_potential = {
+			ai = no
+			is_playable = yes
+		}
+		
+		potential = {
+			is_enslaved = yes
+			NOR = {
+				has_character_modifier = mta_forbidden_from_marriage
+				trait = cannot_marry
+			}
+			host = { character = FROM }
+		}
+		
+		allow = {
+			is_enslaved = yes
+		}
+		
+		effect = {
+			mta_forbid_slave_marriage_effect = yes
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_allow_slave_marriage = {
+		ai = no
+		only_playable = yes
+		diplomacy_icon = GFX_slavery_decision
+		
+		filter = home_court
+	
+		from_potential = {
+			ai = no
+			is_playable = yes
+		}
+		
+		potential = {
+			is_enslaved = yes
+			has_character_modifier = mta_forbidden_from_marriage
+			trait = cannot_marry
+			host = { character = FROM }
+		}
+		
+		allow = {
+			is_enslaved = yes
+		}
+		
+		effect = {
+			mta_allow_slave_marriage_effect = yes
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

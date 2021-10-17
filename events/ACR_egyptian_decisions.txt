@@ -1,0 +1,478 @@
+decisions = {
+
+	hold_sed_festival = {
+		only_playable = yes
+		is_high_prio = yes
+		potential = {
+			is_playable = yes
+			prisoner = no
+			higher_tier_than = duke
+			religion_openly_in_egyptian_subgroup_trigger = yes
+			ruled_years = 30
+			NOT = {	has_character_flag = holding_sed_festival }
+			NOT = { has_character_modifier = held_sed_festival_timer }
+		}
+		
+		allow = {
+			war = no
+			in_command = no
+			any_demesne_title = {
+				NOT = { higher_tier_than = count }
+				is_occupied = no
+			}
+			has_regent = no
+			NOT = { trait = in_hiding }
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				set_character_flag = holding_sed_festival
+				
+				# Can be renewed every 3 years
+				add_character_modifier = {
+					name = held_sed_festival_timer
+					duration = 1080
+					hidden = yes
+				}
+				
+				# Keep counter of number of Sed festivals hold
+				change_variable = { which = nb_sed_festivals value = 1 }
+	
+				character_event = { id = egyptian.10 days = 15 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# Originally copied from CK2+
+
+	restore_luxor = {
+		only_playable = yes
+		is_high_prio = yes
+		potential = {
+			is_playable = yes
+			independent = yes
+			higher_tier_than = duke
+			religion_openly_egyptian_or_reformed_trigger = yes
+			NOT = { has_global_flag = luxor_restored }
+			NOT = { has_global_flag = luxor_restoring }
+		}	
+		allow = {
+			wealth = 1000
+			795 = {
+				owner = {
+					character = ROOT
+				}
+			}
+			war = no
+			has_regent = no
+		}
+		effect = {
+			set_global_flag = luxor_restoring
+			wealth = -1000
+			795 = {
+				province_event = { id = egyptian.0 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				NOT = {
+					wealth = 1500
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					learning = 8
+				}
+			}
+		}
+	}
+
+	build_pyramid = {
+		only_playable = yes
+		is_high_prio = yes
+		potential = {
+			always = no
+			is_playable = yes
+			higher_tier_than = duke
+			religion_openly_in_egyptian_subgroup_trigger = yes
+			NOT = {
+				has_character_flag = pyramid_built
+				has_character_flag = pyramid_building_char
+				capital_scope = { has_province_flag = pyramid_building_prov }
+			}
+		}
+		allow = {
+			wealth = 600
+			war = no
+			has_regent = no
+		}
+		effect = {
+			set_character_flag = pyramid_building_char
+			character_event = { id = egyptian.4 }
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				NOT = {
+					wealth = 1000
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					learning = 8
+				}
+			}
+		}
+	}
+
+	organize_anubis = {
+		only_playable = yes
+		is_high_prio = yes
+		potential = {
+			is_playable = yes
+			higher_tier_than = duke
+			has_regent = no
+			religion_openly_egyptian_or_reformed_trigger = yes
+			NOT = { has_global_flag = anubis_founded }
+		}
+		allow = {
+			prestige = 300
+			wealth = 300
+		}
+		effect = {
+			set_global_flag = anubis_founded
+			prestige = -300
+			wealth = -300
+			hidden_tooltip = {
+				set_character_flag = event_ancrel4007
+				narrative_event = { id = egyptian.7 }
+				create_character = {
+					random_traits = yes
+					religion = ROOT
+					culture = egyptian_arabic
+					dynasty = NONE
+					age = 34
+					attributes = {
+						martial = 7
+						diplomacy = 5
+						intrigue = 2
+						learning = 2
+						stewardship = 2
+					}
+				}
+				new_character = {
+					activate_title = { title = d_anubis status = yes }
+					d_anubis = {
+						grant_title = PREV
+					}
+					set_government_type = order_government
+					set_defacto_liege = this
+					if = {
+						limit = { ROOT = { ai = no } }
+						ROOT = {
+							chronicle = {
+								entry = CHRONICLE_ANUBIS_GUARD
+								portrait = [Prev.GetID]
+							}
+						}
+					}
+				}
+			}
+			religion_authority = {
+				modifier = religious_order_formed
+				years = 10
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	organize_horus = {
+		only_playable = yes
+		is_high_prio = yes
+		potential = {
+			is_playable = yes
+			higher_tier_than = duke # Tease the decision for kings
+			has_regent = no
+			religion_openly_egyptian_or_reformed_trigger = yes
+			NOT = { has_global_flag = horus_founded }
+			has_global_flag = anubis_founded
+		}
+		allow = {
+			higher_tier_than = king
+			prestige = 300
+			wealth = 300
+		}
+		effect = {
+			set_global_flag = horus_founded
+			prestige = -300
+			wealth = -300
+			activate_title = { title = d_horus status = yes }
+			hidden_tooltip = {
+				set_character_flag = event_ancrel4008
+				narrative_event = { id = egyptian.8 }
+				create_character = {
+					random_traits = yes
+					religion = ROOT
+					culture = egyptian_arabic
+					dynasty = NONE
+					age = 34
+					attributes = {
+						martial = 7
+						diplomacy = 5
+						intrigue = 2
+						learning = 2
+						stewardship = 2
+					}
+				}
+				new_character = {
+					d_horus = {
+						grant_title = PREV
+					}
+					set_government_type = order_government
+					set_defacto_liege = this
+					if = {
+						limit = { ROOT = { ai = no } }
+						ROOT = {
+							chronicle = {
+								entry = CHRONICLE_HORUS_GUARD
+								portrait = [Prev.GetID]
+							}
+						}
+					}
+				}
+			}
+			religion_authority = {
+				modifier = religious_order_formed
+				years = 10
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# end ck2+ decisions
+	
+	restore_akhetaten = {
+		only_playable = yes
+		is_high_prio = yes
+		potential = {
+			is_playable = yes
+			independent = yes
+			higher_tier_than = duke
+			religion = aten_pagan
+			NOT = { has_global_flag = akhetaten_restored }
+			NOT = { has_global_flag = akhetaten_restoring }
+		}	
+		allow = {
+			wealth = 1000
+			795 = {
+				owner = {
+					character = ROOT
+				}
+			}
+			war = no
+			has_regent = no	
+		}
+		effect = {
+			set_global_flag = akhetaten_restoring
+			wealth = -1000
+			795 = {
+				province_event = { id = atenic.0 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				NOT = {
+					wealth = 1500
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					learning = 8
+				}
+			}
+		}
+	}
+
+	restore_priesthood_aten_pagan = {
+		only_playable = yes
+		is_high_prio = yes
+		potential = {
+			has_dlc = "The Old Gods"
+			is_playable = yes
+			higher_tier_than = duke # Tease the decision for kings
+			religion = aten_pagan
+			NOT = { has_global_flag = aten_priesthood_founded }
+			has_regent = no
+		}
+		allow = {
+			higher_tier_than = king
+			realm_learning = 25
+			piety = 500
+			wealth = 500
+			war = no
+			religion_authority = 0.6
+			custom_tooltip = {
+				text = akhetaten_restored_condition
+				has_global_flag = akhetaten_restored
+			}
+			b_meir = {
+				has_holder = yes
+				holder_scope = { top_liege = { character = ROOT } }
+			}
+		}
+		effect = {
+			set_global_flag = aten_priesthood_founded
+			wealth = -500
+			piety = -250
+			prestige = 250
+			activate_title = { title = k_aten_pagan status = yes }
+			add_artifact = crown_meryaten
+			hidden_tooltip = {
+				k_aten_pagan = {
+					grant_title = ROOT
+				}
+				narrative_event = { id = atenic.4 }
+				if = {
+					limit = { ROOT = { ai = no } }
+					ROOT = {
+						chronicle = {
+							entry = CHRONICLE_ATEN_PRIESTHOOD
+							portrait = [Root.GetID]
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	organize_burning_blades = {
+		only_playable = yes
+		is_high_prio = yes
+		potential = {
+			is_playable = yes
+			higher_tier_than = duke # Tease the decision for kings
+			has_regent = no
+			religion = aten_pagan
+			NOT = { has_global_flag = burning_blades_founded }
+		}
+		allow = {
+			k_aten_pagan = {
+				holder = ROOT
+			}
+			higher_tier_than = king
+			prestige = 300
+			wealth = 300
+		}
+		effect = {
+			set_global_flag = burning_blades_founded
+			prestige = -300
+			wealth = -300
+			activate_title = { title = d_burning_blades status = yes }
+			hidden_tooltip = {
+				set_character_flag = eventancrel.5005
+				narrative_event = { id = atenic.5 }
+				create_character = {
+					random_traits = yes
+					religion = aten_pagan
+					culture = ROOT
+					dynasty = NONE
+					age = 34
+					attributes = {
+						martial = 7
+						diplomacy = 5
+						intrigue = 2
+						learning = 2
+						stewardship = 2
+					}
+				}
+				new_character = {
+					add_trait = zealous
+					d_burning_blades = {
+						grant_title = PREV
+					}
+					set_government_type = order_government
+					set_defacto_liege = this
+					if = {
+						limit = { ROOT = { ai = no } }
+						ROOT = {
+							chronicle = {
+								entry = CHRONICLE_BURNING_BLADES
+								portrait = [Prev.GetID]
+							}
+						}
+					}
+				}
+			}
+			religion_authority = {
+				modifier = religious_order_formed
+				years = 10
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	restore_greater_egypt = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			has_landed_title = k_egypt
+			religion_openly_in_egyptian_subgroup_trigger = yes
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			NOT = { has_global_flag = greater_egypt_restored }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			prestige = 3000
+			completely_controls = d_alexandria
+			completely_controls = d_damietta
+			completely_controls = d_cairo
+			completely_controls = d_aswan
+			completely_controls = d_sinai
+			completely_controls = d_faiyum
+			completely_controls = d_asyut
+			completely_controls = d_paraetonium
+			completely_controls = d_nobatia
+			completely_controls = d_nubia
+			completely_controls = d_cyrenaica
+			completely_controls = d_oultrejourdain
+			completely_controls = d_jerusalem
+		}
+		effect = {
+			set_global_flag = greater_egypt_restored
+			narrative_event = { id = egyptian.401 tooltip = egyptian.401.tt }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

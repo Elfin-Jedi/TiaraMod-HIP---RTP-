@@ -1,0 +1,40 @@
+targetted_decisions = { 					#Shows on right click menu
+	make_rival = {
+		filter = all
+		ai_target_filter = sub_realm
+
+		from_potential = {					#Conditions on the decision taker for the decision to appear
+			ai = no
+			age = 16
+			is_adult = yes
+			NOT = { has_character_modifier = recent_friend }
+		}
+		potential = {						#Conditions on the vassal or dynasty member for the decision to appear
+			NOT = { character = FROM }
+			is_within_diplo_range = FROM
+			age = 16
+			is_adult = yes
+			NOT = {	is_friend = FROM}
+			NOT = {	is_rival = FROM}
+			#opinion = { who = FROM value = -40 }
+		}
+		allow = {							#Conditions for the decision to be enabled
+			opinion = { who = FROM value = -40 }
+			NOT = {	is_friend = FROM}
+			NOT = {	is_rival = FROM}
+			NOT = { has_character_modifier = recent_friend }
+			FROM = {
+				piety = 100
+				}
+			}
+		effect = {
+			character_event = { id = make_rival.0 }
+		}
+		ai_will_do = {						#Factors for an AI character to take the decision (1 = 100% chance)
+			factor = 0
+			}
+	}
+}
+#TODO:
+# Consider revising allow to be either or mutual likeness.
+# Code in so rivals not considered... just in case.

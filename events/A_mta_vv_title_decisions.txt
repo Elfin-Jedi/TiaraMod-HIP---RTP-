@@ -1,0 +1,93 @@
+########################################################################
+#
+#SPECIAL SETTLEMENT DECISIONS RELATED TO PROVINCE'S CULTURE
+#
+########################################################################
+#
+# Settlement decisions are possible vs _all_ settlements and are shown in the Settlement Diplomacy View, not the Intrigue View. The taker is in the FROM scope.
+#
+# filter = [capital/owned/vassal_owned/sub_realm_owned/realm_owned/dynasty_owned/all]
+# ai_target_filter = [capital/owned/vassal_owned/sub_realm_owned/realm_owned/dynasty_owned/all] (which settlements for which the AI evaluates the decision.)
+#	owned: all settlements owned by the AI
+#	vassal_owned: all settlements owned by direct vassal rulers of the AI's employer
+#	sub_realm_owned: all settlements below the AI's employer
+#	realm_owned: all settlements in the same top realm as the AI
+#	dynasty_owned: all settlements owned by members of the same dynasty
+#	all: all settlements (Avoid if possible. VERY CPU-HEAVY!)
+#	 
+
+
+title_decisions = {
+	mta_invite_a_local = {
+		ai = no
+		only_playable = yes
+		
+		filter = all
+		ai_target_filter = realm_owned
+	
+		from_potential = {
+			ai = no
+			OR = {
+				has_game_rule = { 
+					name = mta_rule_lowborn 
+					value = on 
+				}
+				has_game_rule = { 
+					name = mta_rule_lowborn 
+					value = no_pardons 
+				}
+			}
+			is_playable = yes
+			prisoner = no
+			in_seclusion = no
+		}
+		
+		potential = {
+			OR = {
+				holder_scope = { character = FROM }
+				holder_scope = { is_vassal_or_below_of = FROM }
+				FROM = { ai = no }
+			}
+			tier = COUNT
+		}
+		
+		allow = {
+			FROM = {
+				scaled_wealth = { value = 0.10 min = 10 max = 100 }
+				custom_tooltip = { text = mta_NEEDS_25_PRESTIGE_COST hidden_tooltip = { prestige = 25 } }
+				custom_tooltip = {
+					text = mta_NOT_RECRUITED_COURTIER_TWO_WEEKS
+					hidden_tooltip = {
+						NOT = { has_character_modifier = mta_employ_lowborn_timer }
+					}
+				}
+			}
+			ROOT = {
+				custom_tooltip = {
+					text = mta_is_in_from_realm_TT
+					hidden_tooltip = {
+						OR = {
+							holder_scope = { character = FROM }
+							holder_scope = { is_vassal_or_below_of = FROM }
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			ROOT = {
+				location = { save_event_target_as = mta_settlement_root }
+			}
+			FROM = {
+				save_event_target_as = mta_settlement_from
+				add_character_modifier = { name = mta_employ_lowborn_timer days = 14 hidden = yes }
+				character_event = { id = mta.1 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

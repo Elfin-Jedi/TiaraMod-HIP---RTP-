@@ -1,0 +1,78 @@
+targetted_decisions = {
+	have_child = {
+		filter = all
+		ai_target_filter = self
+
+		from_potential = {
+			ai = no
+			age = 14
+			is_married = yes
+			OR = {
+				NOT = { has_character_flag = have_child_same_sex }
+				had_character_flag = { flag = have_child_same_sex days = 365 }
+			}
+		}
+		potential = {
+			age = 14
+			spouse = { character = FROM }
+			OR = {
+				AND = {
+					FROM = { is_female = no }
+					ROOT = { is_female = no }
+				}
+				AND = {
+					FROM = { is_female = yes }
+					ROOT = { is_female = yes }
+				}
+			}
+		}
+		allow = {
+			ROOT = { prisoner = no }
+			FROM = { prisoner = no }
+		}
+		effect = {
+			ROOT = { character_event = { id = childbearing_events.0 } }
+			FROM = { set_character_flag = have_child_same_sex }
+		}
+		ai_will_do = {
+    			factor = 0
+ 		}
+	}
+	body_parent = {
+		filter = court
+		ai_target_filter = self
+
+		from_potential = {
+			ai = no
+			age = 14
+			is_married = yes
+			has_character_flag = body_parent
+		}
+		potential = {
+			age = 14
+			is_married = no
+			is_betrothed = no
+			OR = {
+				AND = {
+					FROM = { is_female = no }
+					ROOT = { is_female = yes }
+				}
+				AND = {
+					FROM = { is_female = yes }
+					ROOT = { is_female = no }
+				}
+			}
+		}
+		allow = {
+			ROOT = { prisoner = no }
+			FROM = { prisoner = no }
+		}
+		effect = {
+			FROM = { character_event = { id = childbearing_events.4 } }
+			FROM = { clr_character_flag = body_parent }
+		}
+		ai_will_do = {
+    			factor = 0
+ 		}
+	}
+}

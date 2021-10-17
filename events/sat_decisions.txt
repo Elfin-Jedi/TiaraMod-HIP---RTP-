@@ -1,0 +1,433 @@
+decisions = {
+	form_satan_empire = {
+		only_independent = yes
+		only_rulers = yes
+		is_high_prio = yes
+		
+		potential = {
+			e_satan_empire = { has_holder = no }
+			is_playable = yes
+			religion = satanism
+			is_nomadic = no
+			is_theocracy = no
+			mercenary = no
+			holy_order = no
+		}
+		allow = {
+			is_adult = yes
+			OR = {
+				tier = duke
+				tier = king
+				tier = emperor
+			}
+			prisoner = no
+			NOT = { trait = incapable }
+			independent = yes
+			prestige = 8000
+			piety = 1000
+			wealth = 1000
+			religion_authority = 0.5
+		}
+		effect = {
+			e_satan_empire = {
+				grant_title = PREV
+				copy_title_laws = PREV
+			}
+			wealth = -750
+			narrative_event = { id = SATT.669 days = 1 }
+		}
+		ai_will_do = {
+			factor = 0.75
+		}
+	}
+	
+	summon_demon_prince = {
+		only_independent = yes
+		only_rulers = yes
+		is_high_prio = yes
+		
+		potential = {
+			religion = satanism
+			is_nomadic = no
+			is_theocracy = no
+			holy_order = no
+			mercenary = no
+			is_playable = yes
+			has_global_flag = satanism_formed
+			NOT = { has_global_flag = demon_prince_summoned }
+		}
+		
+		allow = {
+			piety = 1000
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 5000
+			num_of_prisoners = 1
+			OR = {
+				trait = lustful
+				trait = gluttonous
+				trait = greedy
+				trait = slothful
+				trait = wroth
+				trait = envious
+				trait = proud
+			}
+		}
+		
+		effect = {
+			narrative_event = { id = SATT.673 days = 3 }
+			set_global_flag = demon_prince_summoned
+		}
+		ai_will_do = {
+			factor = 0.75
+		}
+	}
+	
+	raise_dead_army = {
+		only_independent = yes
+		only_rulers = yes
+		is_high_prio = yes
+		
+		potential = {
+			religion = satanism
+			is_theocracy = no
+			holy_order = no
+			mercenary = no
+			is_playable = yes
+			NOT = { has_global_flag = raised_dead_army }
+			OR = {
+				any_courtier_or_vassal = {
+					has_minor_title = title_court_necromancer
+					trait = lich
+					liege = { character = PREVPREV }
+				}
+				AND = {
+					trait = lich
+					OR = {
+						tier = king
+						tier = emperor
+					}
+				}
+			}
+		}
+		
+		allow = {
+			piety = 1000
+			wealth = 500
+		}
+		
+		effect = {
+			set_global_flag = raised_dead_army
+			narrative_event = { id = SATT.691 days = 15 }
+			piety = -1000
+			wealth = -500
+		}
+		ai_will_do = {
+			factor = 0.25
+		}
+	}
+	
+	enhance_satan_freedoms = {
+		only_rulers = yes
+		
+		potential = {
+			religion = satanism
+			any_demesne_province = {
+				religion = satanism
+			}
+			NOR = {
+				has_character_flag = satan_free_lands
+				has_character_flag = satan_slave_lands
+			}
+			independent = yes
+		}
+		
+		allow = {
+			piety = 50
+			wealth = 25
+		}
+		effect = {
+			character_event = { id = SATT.695 days = 0 }
+			piety = -50
+			wealth = -25
+		}
+		ai_will_do = {
+			factor = 0.25
+			modifier = {
+				factor = 2
+				trait = kind
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					trait = greedy
+					trait = wroth
+				}
+			}
+		}
+	}
+	
+	neutralise_satan_freedoms = {
+		only_rulers = yes
+		
+		potential = {
+			religion = satanism
+			any_demesne_province = {
+				religion = satanism
+			}
+			OR = {
+				has_character_flag = satan_free_lands
+				has_character_flag = satan_slave_lands
+			}
+			independent = yes
+		}
+		
+		allow = {
+			piety = 50
+			wealth = 25
+		}
+		effect = {
+			character_event = { id = SATT.696 days = 0 }
+			piety = -50
+			wealth = -25
+		}
+		ai_will_do = {
+			factor = 0.25
+			modifier = {
+				factor = 2
+				trait = cynical
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					trait = greedy
+					trait = wroth
+				}
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+		}
+	}
+	
+	enhance_satan_slavery = {
+		only_rulers = yes
+		
+		potential = {
+			religion = satanism
+			any_demesne_province = {
+				religion = satanism
+			}
+			NOR = {
+				has_character_flag = satan_free_lands
+				has_character_flag = satan_slave_lands
+			}
+			independent = yes
+		}
+		
+		allow = {
+			piety = 50
+			wealth = 25
+		}
+		effect = {
+			character_event = { id = SATT.697 days = 0 }
+			piety = -50
+			wealth = -25
+		}
+		ai_will_do = {
+			factor = 0.25
+			modifier = {
+				factor = 0.5
+				trait = kind
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					trait = greedy
+					trait = wroth
+				}
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+		}
+	}
+	
+	disband_satan_empire = {
+		only_rulers = yes
+		only_independent = yes
+		is_high_prio = yes
+		
+		potential = {
+			NOT = { religion = satanism }
+			has_landed_title = e_satan_empire
+		}
+		
+		allow = {
+			
+		}
+		effect = {
+			e_satan_empire = { destroy_landed_title = THIS }
+			piety = 100
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				society_member_of = the_satanists
+			}
+		}
+	}
+	
+	destroy_satan_demon = {
+		is_high_prio = yes
+		
+		potential = {
+			NOT = { religion = satanism }
+			OR = {
+				trait = abaddon
+				trait = beelzebub
+				trait = leviathon
+				trait = adramelech
+				trait = mammon
+				trait = belphegor
+				trait = asmodeus
+				trait = aamon
+			}
+		}
+		
+		allow = {
+		
+		}
+		
+		effect = {
+			remove_trait = abaddon
+			remove_trait = beelzebub
+			remove_trait = leviathon
+			remove_trait = adramelech
+			remove_trait = mammon
+			remove_trait = belphegor
+			remove_trait = asmodeus
+			remove_trait = aamon
+			piety = 100
+			clr_global_flag = demon_prince_summoned
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				society_member_of = the_satanists
+			}
+		}
+	}
+}
+
+society_decisions = {
+	satanise_province = { ###################################
+		only_playable = yes
+		potential = {
+			has_dlc = "Mystics"
+			society_rank >= 3
+			society_member_of = the_satanists
+			any_demesne_province = {
+				NOT = { has_province_modifier = secret_satan_convert }
+				NOT = { religion = satanism }
+			}
+		}
+		
+		allow = {
+			independent = yes
+			prisoner = no
+			has_society_currency_major_trigger = yes
+			wealth = 50
+		}
+		
+		effect = {
+			detract_society_currency_major_effect = yes
+			wealth = -50
+			character_event = { id = SATT.683 days = 0 }
+		}
+		ai_will_do = {
+			factor = 0.25
+		}
+	}
+	
+	formalise_faith = {
+		is_high_prio = yes
+		
+		potential = {
+			has_dlc = "Mystics"
+			society_rank >= 4
+			NOT = {
+				has_global_flag = satanism_formed
+			}
+			society_member_of = the_satanists
+		}
+		
+		allow = {
+			prestige = 5000
+			independent = yes
+			prisoner = no
+			has_society_currency_major_trigger = yes
+		}
+		
+		effect = {
+			detract_society_currency_major_effect = yes
+			prestige = -5000
+			religion = satanism
+			activate_title = { title = d_satan_state status = yes }
+			hidden_tooltip = {
+				create_random_intriguer = {
+					random_traits = yes
+					religion = satanism
+					culture = ROOT
+					dynasty = random
+					female = no
+					age = 41
+				}
+				new_character = {
+					d_satan_state = {
+						grant_title = PREV
+					}
+				}
+			}
+			narrative_event = { id = SATT.666 days = 0 }
+		}
+		ai_will_do = {
+			factor = 0.75
+		}
+	}
+	join_satan_faith = {
+		is_high_prio = yes
+		potential = {
+			has_dlc = "Mystics"
+			society_rank >= 3
+			society_member_of = the_satanists
+			NOT = {
+				religion = satanism
+			}
+			has_global_flag = satanism_formed
+		}
+		
+		allow = {
+			has_society_currency_major_trigger = yes
+			prisoner = no
+			independent = yes
+			prestige = 1000
+		}
+
+		effect = {
+			detract_society_currency_major_effect = yes
+			religion = satanism
+			prestige = -1000
+		}
+		ai_will_do = {
+			factor = 0.75
+		}
+	} ########################################
+}

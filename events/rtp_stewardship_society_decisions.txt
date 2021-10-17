@@ -1,0 +1,798 @@
+#####
+#Stewardship Society Decisions
+#
+#Total = 7
+#####
+
+decisions = {
+	#Level 1 - Pay Off Loan
+	rtp_stewardship_pp1_d = {
+		is_high_prio = yes
+
+		potential = {
+			OR = {
+				has_character_modifier = rtp_loan_stewarship1_em
+				has_character_modifier = rtp_loan_stewarship2_em
+				has_character_modifier = rtp_loan_stewarship3_em
+				has_character_modifier = rtp_loan_stewarship4_em
+			}
+		}
+
+		allow = {
+			OR = {
+				AND = {
+					rtp_is_landless = yes
+					wealth = 50
+				}
+				AND = {
+					rtp_is_baron = yes
+					wealth = 100
+				}
+				AND = {
+					tier = COUNT
+					wealth = 150
+					rtp_is_landless = no
+					rtp_is_baron = no
+				}
+				AND = {
+					higher_tier_than = COUNT
+					wealth = 200
+					rtp_is_landless = no
+					rtp_is_baron = no
+				}
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					rtp_is_landless = yes
+				}
+				wealth = -50
+			}
+			else_if = {
+				limit = {
+					rtp_is_baron = yes
+				}
+				wealth = -100
+			}
+			else_if = {
+				limit = {
+					tier = COUNT
+				}
+				wealth = -150
+			}
+			else = {
+				wealth = -200
+			}
+
+			hidden_tooltip = {
+				remove_character_modifier = rtp_loan_stewarship1_em
+				remove_character_modifier = rtp_loan_stewarship2_em
+				remove_character_modifier = rtp_loan_stewarship3_em
+				remove_character_modifier = rtp_loan_stewarship4_em
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+society_decisions = {
+	#Level 1 - Take Out A Loan
+	rtp_stewardship_p1_sd = {
+		is_high_prio = yes
+
+		potential = {
+			rtp_is_in_stewardship_society_st = yes
+			society_rank = 1
+			NOR = {
+				has_character_modifier = rtp_loan_stewarship1_em
+				has_character_modifier = rtp_loan_stewarship2_em
+				has_character_modifier = rtp_loan_stewarship3_em
+				has_character_modifier = rtp_loan_stewarship4_em
+			}
+		}
+
+		allow = {
+			rtp_can_use_p1_st = yes
+		}
+
+		effect = {
+			hidden_tooltip = {
+				add_character_modifier = {
+					modifier = rtp_used_p1_timer_em
+					years = 3
+				}
+				character_event = {
+					id = RTPnotification.1 #Can Use Society Ability
+					years = 3
+				}
+			}
+
+			if = {
+				limit = {
+					society_rank == 1
+				}
+				random = {
+					chance = 25
+
+					sound_effect = china_grace_gain
+	
+					if = {
+						limit = {
+							rtp_is_landless = yes
+						}
+						wealth = 10
+						add_character_modifier = {
+							modifier = rtp_loan_stewarship1_em
+							duration = -1
+							inherit = yes
+						}
+					}
+					else_if = {
+						limit = {
+							rtp_is_baron = yes
+						}
+						wealth = 60
+						add_character_modifier = {
+							modifier = rtp_loan_stewarship2_em
+							duration = -1
+							inherit = yes
+						}
+					}
+					else_if = {
+						limit = {
+							tier = COUNT
+						}
+						wealth = 110
+						add_character_modifier = {
+							modifier = rtp_loan_stewarship3_em
+							duration = -1
+							inherit = yes
+						}
+					}
+					else = {
+						wealth = 160
+						add_character_modifier = {
+							modifier = rtp_loan_stewarship4_em
+							duration = -1
+							inherit = yes
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					society_rank == 2
+				}
+				random = {
+					chance = 30
+
+					sound_effect = china_grace_gain
+	
+					if = {
+						limit = {
+							rtp_is_landless = yes
+						}
+						wealth = 20
+						add_character_modifier = {
+							modifier = rtp_loan_stewarship1_em
+							duration = -1
+							inherit = yes
+						}
+					}
+					else_if = {
+						limit = {
+							rtp_is_baron = yes
+						}
+						wealth = 70
+						add_character_modifier = {
+							modifier = rtp_loan_stewarship2_em
+							duration = -1
+							inherit = yes
+						}
+					}
+					else_if = {
+						limit = {
+							tier = COUNT
+						}
+						wealth = 120
+						add_character_modifier = {
+							modifier = rtp_loan_stewarship3_em
+							duration = -1
+							inherit = yes
+						}
+					}
+					else = {
+						wealth = 170
+						add_character_modifier = {
+							modifier = rtp_loan_stewarship4_em
+							duration = -1
+							inherit = yes
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					society_rank == 3
+				}
+				random = {
+					chance = 35
+
+					sound_effect = china_grace_gain
+	
+					if = {
+						limit = {
+							rtp_is_landless = yes
+						}
+						wealth = 30
+						add_character_modifier = {
+							modifier = rtp_loan_stewarship1_em
+							duration = -1
+							inherit = yes
+						}
+					}
+					else_if = {
+						limit = {
+							rtp_is_baron = yes
+						}
+						wealth = 80
+						add_character_modifier = {
+							modifier = rtp_loan_stewarship2_em
+							duration = -1
+							inherit = yes
+						}
+					}
+					else_if = {
+						limit = {
+							tier = COUNT
+						}
+						wealth = 130
+						add_character_modifier = {
+							modifier = rtp_loan_stewarship3_em
+							duration = -1
+							inherit = yes
+						}
+					}
+					else = {
+						wealth = 180
+						add_character_modifier = {
+							modifier = rtp_loan_stewarship4_em
+							duration = -1
+							inherit = yes
+						}
+					}
+				}
+			}
+			else = {
+				random = {
+					chance = 40
+
+					sound_effect = china_grace_gain
+	
+					if = {
+						limit = {
+							rtp_is_landless = yes
+						}
+						wealth = 50
+						add_character_modifier = {
+							modifier = rtp_loan_stewarship1_em
+							duration = -1
+							inherit = yes
+						}
+					}
+					else_if = {
+						limit = {
+							rtp_is_baron = yes
+						}
+						wealth = 100
+						add_character_modifier = {
+							modifier = rtp_loan_stewarship2_em
+							duration = -1
+							inherit = yes
+						}
+					}
+					else_if = {
+						limit = {
+							tier = COUNT
+						}
+						wealth = 150
+						add_character_modifier = {
+							modifier = rtp_loan_stewarship3_em
+							duration = -1
+							inherit = yes
+						}
+					}
+					else = {
+						wealth = 200
+						add_character_modifier = {
+							modifier = rtp_loan_stewarship4_em
+							duration = -1
+							inherit = yes
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+				war = no
+			}
+			modifier = {
+				factor = 0
+				war = yes
+				wealth = 10
+			}
+		}
+	}
+
+	#Level 2 - Open Business
+	rtp_stewardship_p2_sd = {
+		is_high_prio = yes
+
+		potential = {
+			society_rank = 2
+			rtp_is_in_stewardship_society_st = yes
+		}
+
+		allow = {
+			rtp_can_use_p2_st = yes
+		}
+
+		effect = {
+			hidden_tooltip = {
+				add_character_modifier = {
+					modifier = rtp_used_p2_timer_em
+					years = 6
+				}
+				character_event = {
+					id = RTPnotification.1 #Can Use Society Ability
+					years = 6
+				}
+			}
+
+			if = {
+				limit = {
+					society_rank == 2
+				}
+				random = {
+					chance = 30
+
+					sound_effect = narrative_event
+	
+					if = {
+						limit = {
+							NOT = {
+								trait = shrewd
+							}
+						}
+						add_trait = shrewd
+					}
+					else_if = {
+						limit = {
+							NOR = {
+								trait = sympathy_christendom
+								trait = sympathy_indian
+								trait = sympathy_islam
+								trait = sympathy_judaism
+								trait = sympathy_pagans
+								trait = sympathy_zoroastrianism
+							}
+						}
+
+						trigger_switch = {
+							on_trigger = religion_group
+							christian = 			{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
+							muslim = 				{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
+							zoroastrian_group = 	{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } } }
+							jewish_group = 			{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
+							indian_group = 			{ random_list = { 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
+							pagan_group = 			{ random_list = { 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_zoroastrianism } } }
+						}
+					}
+					else = {
+						add_character_modifier = {
+							modifier = rtp_tolerance_em
+							duration = -1
+							stacking = yes
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					society_rank == 3
+				}
+				random = {
+					chance = 35
+
+					sound_effect = narrative_event
+	
+					if = {
+						limit = {
+							NOT = {
+								trait = shrewd
+							}
+						}
+						add_trait = shrewd
+					}
+					else_if = {
+						limit = {
+							NOR = {
+								trait = sympathy_christendom
+								trait = sympathy_indian
+								trait = sympathy_islam
+								trait = sympathy_judaism
+								trait = sympathy_pagans
+								trait = sympathy_zoroastrianism
+							}
+						}
+
+						trigger_switch = {
+							on_trigger = religion_group
+							christian = 			{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
+							muslim = 				{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
+							zoroastrian_group = 	{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } } }
+							jewish_group = 			{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
+							indian_group = 			{ random_list = { 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
+							pagan_group = 			{ random_list = { 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_zoroastrianism } } }
+						}
+					}
+					else = {
+						add_character_modifier = {
+							modifier = rtp_tolerance_em
+							duration = -1
+							stacking = yes
+						}
+					}
+				}
+			}
+			else = {
+				random = {
+					chance = 40
+
+					sound_effect = narrative_event
+	
+					if = {
+						limit = {
+							NOT = {
+								trait = shrewd
+							}
+						}
+						add_trait = shrewd
+					}
+					else_if = {
+						limit = {
+							NOR = {
+								trait = sympathy_christendom
+								trait = sympathy_indian
+								trait = sympathy_islam
+								trait = sympathy_judaism
+								trait = sympathy_pagans
+								trait = sympathy_zoroastrianism
+							}
+						}
+
+						trigger_switch = {
+							on_trigger = religion_group
+							christian = 			{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
+							muslim = 				{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
+							zoroastrian_group = 	{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } } }
+							jewish_group = 			{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
+							indian_group = 			{ random_list = { 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
+							pagan_group = 			{ random_list = { 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_zoroastrianism } } }
+						}
+					}
+					else = {
+						add_character_modifier = {
+							modifier = rtp_tolerance_em
+							duration = -1
+							stacking = yes
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Level 3 - Time Is Money
+	rtp_stewardship_p3_sd = {
+		is_high_prio = yes
+
+		potential = {
+			society_rank = 3
+			rtp_is_in_stewardship_society_st = yes
+		}
+
+		allow = {
+			rtp_can_use_p3_st = yes
+		}
+
+		effect = {
+			hidden_tooltip = {
+				add_character_modifier = {
+					modifier = rtp_used_p3_timer_em
+					years = 9
+				}
+				character_event = {
+					id = RTPnotification.1 #Can Use Society Ability
+					years = 9
+				}
+			}
+
+			if = {
+				limit = {
+					society_rank == 3
+				}
+				random = {
+					chance = 35
+
+					sound_effect = province_event
+	
+					add_character_modifier = {
+						modifier = rtp_toll_booth_em
+						years = 5
+					}
+				}
+			}
+			else = {
+				random = {
+					chance = 40
+
+					sound_effect = province_event
+	
+					add_character_modifier = {
+						modifier = rtp_toll_booth_em
+						years = 5
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Level 4 - Death And Taxes
+	rtp_stewardship_p4_sd = {
+		is_high_prio = yes
+
+		potential = {
+			rtp_is_in_stewardship_society_st = yes
+			society_rank = 4
+		}
+
+		allow = {
+			rtp_can_use_p4_st = yes
+			num_of_society_members > 1
+		}
+
+		effect = {
+			hidden_tooltip = {
+				add_character_modifier = {
+					modifier = rtp_used_p4_timer_em
+					years = 12
+				}
+				character_event = {
+					id = RTPnotification.1 #Can Use Society Ability
+					years = 12
+				}
+			}
+
+			random = {
+				chance = 40
+
+				sound_effect = power_death_and_taxes
+
+				society = {
+					any_society_member = {
+						limit = {
+							wealth = 5
+							war = no
+						}
+						random = {
+							chance = 25
+
+							wealth = -5
+							ROOT = {
+								wealth = 5
+							}
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Level 4 - Become Republic
+	rtp_stewardship_republic_sd = {
+		is_high_prio = yes
+		ai_check_interval = 60
+		only_playable = yes
+		
+		potential = {
+			is_tribal = no
+			is_nomadic = no
+			mercenary = no
+			holy_order = no
+			controls_religion = no
+			is_landed = yes
+			rtp_is_republic_government = no
+			rtp_is_in_stewardship_society_st = yes
+			society_rank = 4
+			NOT = {
+				has_character_flag = rtp_switched_government #Already switched your government
+			}
+			NAND = {
+				controls_religion = yes
+				NOT = {
+					religion_group = muslim
+				}
+			}
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			higher_tier_than = BARON
+		}
+
+		effect = {
+			sound_effect = bloodline_added
+
+			custom_tooltip = {
+				text = "rtp_become_republic_ct"
+				clr_character_flag = rtp_mercenary #This guy is a mercenary
+				clr_character_flag = rtp_holy_order #This guy is a holy order
+				clr_character_flag = rtp_confederation #This guy is a confederation
+				clr_character_flag = rtp_theocracy #This guy is a theocracy
+				set_character_flag = rtp_republic #This guy is a republic
+
+				if = {
+					limit = {
+						is_patrician = yes
+					}
+					create_character = {
+						age = 20
+						dynasty = random
+						random_traits = yes
+						female = no
+						religion = ROOT
+						culture = ROOT
+					}
+					new_character = {
+						save_event_target_as = rtp_new_patrician_house #The new family
+					}
+					any_demesne_title = {
+						limit = {
+							holding_type = family_palace
+						}
+						grant_title_no_opinion = event_target:rtp_new_patrician_house #The new family
+					}
+				}
+
+				if = {
+					limit = {
+						ai = no
+					}
+					set_government_type = rtp_republic_g
+					any_demesne_title = {
+						gender_succ = agnatic
+						add_law = {
+							law = rtp_republic_election_succ
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+				}
+				else = {
+					set_government_type = republic_government
+					any_demesne_title = {
+						gender_succ = agnatic
+						add_law = {
+							law = succ_open_elective
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+				}
+				
+				capital_holding = {
+					convert_to = city
+					refill_holding_levy = yes
+				}
+
+				set_character_flag = rtp_switched_government #Already switched your government
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.01
+
+			modifier = {
+				factor = 0
+
+				higher_tier_than = COUNT
+			}
+		}
+	}
+
+	#Level 4 - Become Merchant Republic
+	rtp_stewardship_merchant_republic_sd = {
+		is_high_prio = yes
+		ai_check_interval = 60
+		only_playable = yes
+		
+		potential = {
+			is_tribal = no
+			is_nomadic = no
+			mercenary = no
+			holy_order = no
+			controls_religion = no
+			is_landed = yes
+			rtp_is_in_stewardship_society_st = yes
+			society_rank = 4
+			NOR = {
+				has_character_flag = rtp_switched_government #Already switched your government
+				government = merchant_republic_government
+				government = rtp_privateer_g
+			}
+			liege = {
+				NOR = {
+					government = merchant_republic_government
+					government = rtp_privateer_g
+				}
+			}
+		}
+
+		allow = {
+			rtp_is_capable_adult = yes
+			higher_tier_than = COUNT
+			any_demesne_province = {
+				port = yes
+			}
+		}
+
+		effect = {
+			sound_effect = bloodline_added
+
+			custom_tooltip = {
+				text = "rtp_become_merchant_republic_ct"
+				clr_character_flag = rtp_mercenary #This guy is a mercenary
+				clr_character_flag = rtp_holy_order #This guy is a holy order
+				clr_character_flag = rtp_confederation #This guy is a confederation
+				clr_character_flag = rtp_theocracy #This guy is a theocracy
+				clr_character_flag = rtp_republic #This guy is a republic
+
+				capital_holding = {
+					convert_to = city
+					refill_holding_levy = yes
+				}
+
+				create_family_palace = yes
+				set_government_type = merchant_republic_government
+				set_character_flag = rtp_switched_government #Already switched your government
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.01
+		}
+	}
+}

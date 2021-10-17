@@ -1,0 +1,46 @@
+decisions = {
+	form_mexico = {
+		only_independent = yes
+		is_high_prio = yes
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = {
+				religion = catholic
+				religion = fraticelli
+			}
+			culture = mexican
+			e_mexico = {
+				has_holder = no
+			}
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 2000
+			realm_size = 180
+			scaled_wealth = 2
+		}
+		effect = {
+			scaled_wealth = -2
+			if = {
+				limit = { has_nickname = no }
+				give_nickname = nick_the_great
+			}
+			primary_title = {
+				e_mexico = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

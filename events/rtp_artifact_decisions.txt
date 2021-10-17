@@ -1,0 +1,2447 @@
+#####
+#Artifact Decisions
+#
+#Total = 21
+#####
+
+decisions = {
+	#Jade Dragon - Summon an army
+	rtp_use_jade_dragon_d = {
+		is_high_prio = yes
+
+		potential = {
+			any_artifact = {
+				artifact_type = jade_dragon
+			}
+		}
+
+		allow = {
+			war = yes
+		}
+
+		effect = {
+			spawn_unit = {
+				province = location
+				home = location
+				owner = ROOT
+				troops = {
+					light_infantry = { 300 300 }
+					archers = { 300 300 }
+					heavy_infantry = { 200 200 }
+					pikemen = { 100 100 }
+					light_cavalry = { 50 50 }
+					knights = { 50 50 }
+				}
+				cannot_inherit = no
+				disband_on_peace = yes
+				attrition = 0
+			}
+
+			random_artifact = {
+				show_scope_change = no
+				limit = {
+					artifact_type = jade_dragon
+				}
+				unsafe_destroy_artifact = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Dragon Amulet - Current vassals like you better
+	rtp_use_dragon_amulet_d = {
+		is_high_prio = yes
+
+		potential = {
+			any_artifact = {
+				artifact_type = chinese_dragon_amulet
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			any_vassal = {
+				show_scope_change = no
+				opinion = {
+					modifier = rtp_displayed_dragon_amulet_om
+					who = ROOT
+					years = 50
+				}
+			}
+
+			random_artifact = {
+				show_scope_change = no
+				limit = {
+					artifact_type = chinese_dragon_amulet
+				}
+				unsafe_destroy_artifact = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_vassal = {
+					opinion = {
+						who = ROOT
+						value = 20
+					}
+				}
+			}
+		}
+	}
+
+	#Water Clock - Subtracts 5 years from your current age
+	rtp_use_water_clock_d = {
+		is_high_prio = yes
+		
+		potential = {
+			any_artifact = {
+				artifact_type = water_clock
+			}
+		}
+
+		allow = {
+			age = 25
+		}
+
+		effect = {
+			add_age = -5
+
+			random_artifact = {
+				show_scope_change = no
+				limit = {
+					artifact_type = water_clock
+				}
+				unsafe_destroy_artifact = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Emerald Tablet - Gain Random 25 Tech Points
+	rtp_use_emerald_tablet_d = {
+		is_high_prio = yes
+
+		potential = {
+			any_artifact = {
+				artifact_type = emerald_tablet
+			}
+		}
+
+		allow = {
+			is_landed = yes
+		}
+
+		effect = {
+			random_list = {
+				10 = {
+					military_techpoints = 25
+				}
+				10 = {
+					economy_techpoints = 25
+				}
+				10 = {
+					culture_techpoints = 25
+				}
+			}
+
+			random_artifact = {
+				show_scope_change = no
+				limit = {
+					artifact_type = emerald_tablet
+				}
+				unsafe_destroy_artifact = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+targeted_decisions = {
+	#Switch hand for the knife
+	rtp_switch_hand_knife_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_knife_a
+					artifact_type = rtp_knife_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_knife_a
+							artifact_type = rtp_knife_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_knife_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_knife_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_knife_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+	#Switch hand for the dagger
+	rtp_switch_hand_dagger_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_dagger_a
+					artifact_type = rtp_dagger_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_dagger_a
+							artifact_type = rtp_dagger_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_dagger_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_dagger_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_dagger_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+	#Switch hand for the rondel dagger
+	rtp_switch_hand_rondeldagger_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_rondeldagger_a
+					artifact_type = rtp_rondeldagger_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_rondeldagger_a
+							artifact_type = rtp_rondeldagger_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_rondeldagger_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_rondeldagger_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_rondeldagger_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+
+	#Switch hand for the shortsword
+	rtp_switch_hand_shortsword_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_shortsword_a
+					artifact_type = rtp_shortsword_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_shortsword_a
+							artifact_type = rtp_shortsword_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_shortsword_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_shortsword_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_shortsword_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+	#Switch hand for the scimitar
+	rtp_switch_hand_scimitar_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_scimitar_a
+					artifact_type = rtp_scimitar_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_scimitar_a
+							artifact_type = rtp_scimitar_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_scimitar_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_scimitar_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_scimitar_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+	#Switch hand for the falchion
+	rtp_switch_hand_falchion_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_falchion_a
+					artifact_type = rtp_falchion_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_falchion_a
+							artifact_type = rtp_falchion_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_falchion_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_falchion_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_falchion_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+
+	#Switch hand for the woodenstick
+	rtp_switch_hand_woodenstick_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_woodenstick_a
+					artifact_type = rtp_woodenstick_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_woodenstick_a
+							artifact_type = rtp_woodenstick_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_woodenstick_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_woodenstick_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_woodenstick_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+	#Switch hand for the bludgeon
+	rtp_switch_hand_bludgeon_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_bludgeon_a
+					artifact_type = rtp_bludgeon_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_bludgeon_a
+							artifact_type = rtp_bludgeon_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_bludgeon_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_bludgeon_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_bludgeon_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+	#Switch hand for the morningstar
+	rtp_switch_hand_morningstar_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_morningstar_a
+					artifact_type = rtp_morningstar_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_morningstar_a
+							artifact_type = rtp_morningstar_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_morningstar_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_morningstar_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_morningstar_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+
+	#Switch hand for the militiaspear
+	rtp_switch_hand_militiaspear_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_militiaspear_a
+					artifact_type = rtp_militiaspear_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_militiaspear_a
+							artifact_type = rtp_militiaspear_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_militiaspear_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_militiaspear_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_militiaspear_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+	#Switch hand for the boarspear
+	rtp_switch_hand_boarspear_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_boarspear_a
+					artifact_type = rtp_boarspear_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_boarspear_a
+							artifact_type = rtp_boarspear_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_boarspear_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_boarspear_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_boarspear_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+	#Switch hand for the fightingspear
+	rtp_switch_hand_fightingspear_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_fightingspear_a
+					artifact_type = rtp_fightingspear_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_fightingspear_a
+							artifact_type = rtp_fightingspear_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_fightingspear_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_fightingspear_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_fightingspear_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+
+	#Switch hand for the hatchet
+	rtp_switch_hand_hatchet_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_hatchet_a
+					artifact_type = rtp_hatchet_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_hatchet_a
+							artifact_type = rtp_hatchet_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_hatchet_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_hatchet_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_hatchet_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+	#Switch hand for the handaxe
+	rtp_switch_hand_handaxe_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_handaxe_a
+					artifact_type = rtp_handaxe_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_handaxe_a
+							artifact_type = rtp_handaxe_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_handaxe_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_handaxe_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_handaxe_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+	#Switch hand for the fightingaxe
+	rtp_switch_hand_fightingaxe_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_fightingaxe_a
+					artifact_type = rtp_fightingaxe_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_fightingaxe_a
+							artifact_type = rtp_fightingaxe_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_fightingaxe_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_fightingaxe_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_fightingaxe_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+
+	#Switch hand for the woodenflail
+	rtp_switch_hand_woodenflail_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_woodenflail_a
+					artifact_type = rtp_woodenflail_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_woodenflail_a
+							artifact_type = rtp_woodenflail_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_woodenflail_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_woodenflail_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_woodenflail_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+	#Switch hand for the reinforcedwoodenflail
+	rtp_switch_hand_reinforcedwoodenflail_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_reinforcedwoodenflail_a
+					artifact_type = rtp_reinforcedwoodenflail_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_reinforcedwoodenflail_a
+							artifact_type = rtp_reinforcedwoodenflail_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_reinforcedwoodenflail_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_reinforcedwoodenflail_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_reinforcedwoodenflail_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+	#Switch hand for the flail
+	rtp_switch_hand_flail_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_flail_a
+					artifact_type = rtp_flail_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_flail_a
+							artifact_type = rtp_flail_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_flail_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_flail_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_flail_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+
+	#Switch hand for the butchercleaver
+	rtp_switch_hand_butchercleaver_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_butchercleaver_a
+					artifact_type = rtp_butchercleaver_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_butchercleaver_a
+							artifact_type = rtp_butchercleaver_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_butchercleaver_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_butchercleaver_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_butchercleaver_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+	#Switch hand for the scramasax
+	rtp_switch_hand_scramasax_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_scramasax_a
+					artifact_type = rtp_scramasax_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_scramasax_a
+							artifact_type = rtp_scramasax_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_scramasax_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_scramasax_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_scramasax_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+	#Switch hand for the militarycleaver
+	rtp_switch_hand_militarycleaver_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_militarycleaver_a
+					artifact_type = rtp_militarycleaver_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_militarycleaver_a
+							artifact_type = rtp_militarycleaver_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_militarycleaver_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_militarycleaver_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_militarycleaver_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+
+	#Switch hand for the pickaxe
+	rtp_switch_hand_pickaxe_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_pickaxe_a
+					artifact_type = rtp_pickaxe_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_pickaxe_a
+							artifact_type = rtp_pickaxe_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_pickaxe_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_pickaxe_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_pickaxe_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+	#Switch hand for the militarypick
+	rtp_switch_hand_militarypick_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_militarypick_a
+					artifact_type = rtp_militarypick_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_militarypick_a
+							artifact_type = rtp_militarypick_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_militarypick_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_militarypick_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_militarypick_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+	#Switch hand for the warhammer
+	rtp_switch_hand_warhammer_td = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 12
+
+		from_potential = {
+		}
+
+		potential = {
+			any_artifact = {
+				OR = {
+					artifact_type = rtp_warhammer_a
+					artifact_type = rtp_warhammer_off_a
+				}
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_artifact = {
+					limit = {
+						OR = {
+							artifact_type = rtp_warhammer_a
+							artifact_type = rtp_warhammer_off_a
+						}
+					}
+					if = {
+						limit = {
+							artifact_type = rtp_warhammer_off_a
+						}
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_warhammer_a
+						}
+					}
+					else = {
+						unsafe_destroy_artifact = yes
+						ROOT = {
+							add_artifact = rtp_warhammer_off_a
+						}
+					}
+					break = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				any_artifact = {
+					has_artifact_flag = offhand
+				}
+				any_artifact = {
+					has_artifact_flag = mainhand
+				}
+			}
+		}
+	}
+
+
+	#Ancient Skull - Inflict a curse on a target
+	rtp_use_ancientskull_td = {
+		from_potential = {
+			any_artifact = {
+				artifact_type = rtp_ancientskull_a
+			}
+		}
+
+		potential = {
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				random_list = {
+					10 = {
+						character_event = {
+							id = RTPdisease.2 #Sanguinare Vampiris - Start
+						}
+					}
+					10 = {
+						character_event = {
+							id = RTPdisease.5 #Sanies Lupinus - Start
+						}
+					}
+					10 = {
+						character_event = {
+							id = RTPdisease.8 #Corruption - Start
+						}
+					}
+				}
+			}
+
+			FROM = {
+				show_scope_change = no
+				random_artifact = {
+					show_scope_change = no
+					limit = {
+						artifact_type = rtp_ancientskull_a
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				NOT = {
+					is_foe = FROM
+				}
+			}
+
+			modifier = {
+				factor = 0
+
+				character = FROM
+			}
+		}
+	}
+
+	#Chinese Arm Protector - Gives the target +10 health for a year
+	rtp_use_chinese_arm_protector_td = {
+		from_potential = {
+			any_artifact = {
+				artifact_type = chinese_arm_protector
+			}
+		}
+
+		potential = {
+		}
+
+		allow = {
+		}
+
+		effect = {
+			add_character_modifier = {
+				modifier = rtp_warded_em
+				years = 1
+			}
+
+			FROM = {
+				show_scope_change = no
+				random_artifact = {
+					show_scope_change = no
+					limit = {
+						artifact_type = chinese_arm_protector
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				NOT = {
+					character = FROM
+				}
+			}
+		}
+	}
+
+	#Shroud of Jesus - Cure target of a disease
+	rtp_shroud_of_jesus_td = {
+		from_potential = {
+			any_artifact = {
+				artifact_type = shroud_of_jesus
+			}
+		}
+
+		potential = {
+		}
+
+		allow = {
+			is_ill = yes
+		}
+
+		effect = {
+			cure_illness = yes
+
+			FROM = {
+				show_scope_change = no
+				random_artifact = {
+					show_scope_change = no
+					limit = {
+						artifact_type = shroud_of_jesus
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				NOT = {
+					character = FROM
+				}
+			}
+		}
+	}
+
+	#Holy Grail - Gain +0.2 health
+	rtp_holy_grail_td = {
+		from_potential = {
+			any_artifact = {
+				artifact_type = holy_grail
+			}
+			religion_group = christian
+		}
+
+		potential = {
+		}
+
+		allow = {
+		}
+
+		effect = {
+			health = 0.2
+
+			FROM = {
+				show_scope_change = no
+				random_artifact = {
+					show_scope_change = no
+					limit = {
+						artifact_type = holy_grail
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				NOT = {
+					character = FROM
+				}
+			}
+		}
+	}
+
+	#Holy Chalice - Gain +0.2 health
+	rtp_holy_chalice_td = {
+		from_potential = {
+			any_artifact = {
+				artifact_type = holy_chalice
+			}
+			religion_group = christian
+		}
+
+		potential = {
+		}
+
+		allow = {
+		}
+
+		effect = {
+			health = 0.2
+
+			FROM = {
+				show_scope_change = no
+				random_artifact = {
+					show_scope_change = no
+					limit = {
+						artifact_type = holy_chalice
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				NOT = {
+					character = FROM
+				}
+			}
+		}
+	}
+
+	#Bones of St. Peter - Cure target of a disease
+	rtp_bones_of_st_peter_td = {
+		from_potential = {
+			any_artifact = {
+				artifact_type = bones_of_st_peter
+			}
+			religion_group = christian
+		}
+
+		potential = {
+		}
+
+		allow = {
+			is_ill = yes
+		}
+
+		effect = {
+			cure_illness = yes
+
+			FROM = {
+				show_scope_change = no
+				random_artifact = {
+					show_scope_change = no
+					limit = {
+						artifact_type = bones_of_st_peter
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				NOT = {
+					character = FROM
+				}
+			}
+		}
+	}
+
+	#Nail of the True Cross - Cure target of a disease
+	rtp_fragment_of_true_cross_td = {
+		from_potential = {
+			any_artifact = {
+				artifact_type = fragment_of_true_cross
+			}
+			religion_group = christian
+		}
+
+		potential = {
+		}
+
+		allow = {
+			is_ill = yes
+		}
+
+		effect = {
+			cure_illness = yes
+
+			FROM = {
+				show_scope_change = no
+				random_artifact = {
+					show_scope_change = no
+					limit = {
+						artifact_type = fragment_of_true_cross
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				NOT = {
+					character = FROM
+				}
+			}
+		}
+	}
+
+	#Holy Prepuce - Cure target of a disease
+	rtp_holy_foreskin_td = {
+		from_potential = {
+			any_artifact = {
+				artifact_type = holy_foreskin
+			}
+			religion_group = christian
+		}
+
+		potential = {
+		}
+
+		allow = {
+			is_ill = yes
+		}
+
+		effect = {
+			cure_illness = yes
+
+			FROM = {
+				show_scope_change = no
+				random_artifact = {
+					show_scope_change = no
+					limit = {
+						artifact_type = holy_foreskin
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				NOT = {
+					character = FROM
+				}
+			}
+		}
+	}
+
+	#Saint's Fingerbone - Cure target of a disease
+	rtp_fingerbone_of_saint_td = {
+		from_potential = {
+			any_artifact = {
+				artifact_type = fingerbone_of_saint
+			}
+			religion_group = christian
+		}
+
+		potential = {
+		}
+
+		allow = {
+			is_ill = yes
+		}
+
+		effect = {
+			cure_illness = yes
+
+			FROM = {
+				show_scope_change = no
+				random_artifact = {
+					show_scope_change = no
+					limit = {
+						artifact_type = fingerbone_of_saint
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				NOT = {
+					character = FROM
+				}
+			}
+		}
+	}
+
+	#Finger of St. John - Cure target of a disease
+	rtp_finger_of_st_john_td = {
+		from_potential = {
+			any_artifact = {
+				artifact_type = finger_of_st_john
+			}
+			religion_group = christian
+		}
+
+		potential = {
+		}
+
+		allow = {
+			is_ill = yes
+		}
+
+		effect = {
+			cure_illness = yes
+
+			FROM = {
+				show_scope_change = no
+				random_artifact = {
+					show_scope_change = no
+					limit = {
+						artifact_type = finger_of_st_john
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				NOT = {
+					character = FROM
+				}
+			}
+		}
+	}
+
+	#Chains of St. Peter - Cure target of a disease
+	rtp_chains_of_st_peter_td = {
+		from_potential = {
+			any_artifact = {
+				artifact_type = chains_of_st_peter
+			}
+			religion_group = christian
+		}
+
+		potential = {
+		}
+
+		allow = {
+			is_ill = yes
+		}
+
+		effect = {
+			cure_illness = yes
+
+			FROM = {
+				show_scope_change = no
+				random_artifact = {
+					show_scope_change = no
+					limit = {
+						artifact_type = chains_of_st_peter
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				NOT = {
+					character = FROM
+				}
+			}
+		}
+	}
+
+	#Right Hand of St. Demetrius - Cure target of a disease
+	rtp_right_hand_st_demetrius_td = {
+		from_potential = {
+			any_artifact = {
+				artifact_type = right_hand_st_demetrius
+			}
+			religion_group = christian
+		}
+
+		potential = {
+		}
+
+		allow = {
+			is_ill = yes
+		}
+
+		effect = {
+			cure_illness = yes
+
+			FROM = {
+				show_scope_change = no
+				random_artifact = {
+					show_scope_change = no
+					limit = {
+						artifact_type = right_hand_st_demetrius
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				NOT = {
+					character = FROM
+				}
+			}
+		}
+	}
+
+	#Veil of Veronica - Cure target of a disease
+	rtp_veil_of_veronica_td = {
+		from_potential = {
+			any_artifact = {
+				artifact_type = veil_of_veronica
+			}
+			religion_group = christian
+		}
+
+		potential = {
+		}
+
+		allow = {
+			is_ill = yes
+		}
+
+		effect = {
+			cure_illness = yes
+
+			FROM = {
+				show_scope_change = no
+				random_artifact = {
+					show_scope_change = no
+					limit = {
+						artifact_type = veil_of_veronica
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				NOT = {
+					character = FROM
+				}
+			}
+		}
+	}
+
+	#Image of Edessa - Cure target of a disease
+	rtp_image_of_edessa_td = {
+		from_potential = {
+			any_artifact = {
+				artifact_type = image_of_edessa
+			}
+			religion_group = christian
+		}
+
+		potential = {
+		}
+
+		allow = {
+			is_ill = yes
+		}
+
+		effect = {
+			cure_illness = yes
+
+			FROM = {
+				show_scope_change = no
+				random_artifact = {
+					show_scope_change = no
+					limit = {
+						artifact_type = image_of_edessa
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				NOT = {
+					character = FROM
+				}
+			}
+		}
+	}
+
+	#Remains of St. Cessianus - Cure target of a disease
+	rtp_remains_of_st_cessianus_td = {
+		from_potential = {
+			any_artifact = {
+				artifact_type = remains_of_st_cessianus
+			}
+			religion_group = christian
+		}
+
+		potential = {
+		}
+
+		allow = {
+			is_ill = yes
+		}
+
+		effect = {
+			cure_illness = yes
+
+			FROM = {
+				show_scope_change = no
+				random_artifact = {
+					show_scope_change = no
+					limit = {
+						artifact_type = remains_of_st_cessianus
+					}
+					unsafe_destroy_artifact = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				NOT = {
+					character = FROM
+				}
+			}
+		}
+	}
+}
