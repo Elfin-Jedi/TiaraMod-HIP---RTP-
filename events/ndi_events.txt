@@ -1,0 +1,43 @@
+namespace = ndi
+	
+	character_event = {
+		id = ndi.1
+		desc = "Nothing"
+		is_triggered_only = yes
+		hide_window = yes
+		
+		trigger = {
+			ai = no
+			current_heir = { NOT = { dynasty = ROOT } }
+		}
+		
+		immediate = {
+			current_heir = { save_event_target_as = ndi_target }
+			set_player_character = event_target:ndi_target
+			transfer_scaled_wealth = { to = event_target:ndi_target value = all }
+			any_artifact = {					
+				transfer_artifact = {				
+					from = PREV			
+					to = event_target:ndi_target
+				}
+			}
+		}
+		
+		option = {
+			name = "Nothing"
+			event_target:ndi_target = { narrative_event = { id = ndi.2 } }
+		}
+	}
+	
+	narrative_event = {
+		id = ndi.2
+		title = "Death & Succession"
+		desc = ndidesc.2
+		border = GFX_event_narrative_frame_diplomacy
+		picture = GFX_evt_magnificent_castle
+		is_triggered_only = yes
+		
+		option = {
+			name = "Only time will tell if this is good..."
+		}
+	}
