@@ -144,8 +144,8 @@ pagan_group = {
 		# Use norsegfx rather than celticgfx to have the northern pagan rounded CoA on the map
 		graphical_culture = norsegfx
 		alternate_start = { always = no }
-		icon = 61
-		heresy_icon = 62
+		icon = 5
+		heresy_icon = 14
 		
 		ai_convert_other_group = 2 # always try to convert
 		ai_convert_same_group = 2 # always try to convert
@@ -187,8 +187,8 @@ pagan_group = {
 		# Use norsegfx rather than celticgfx to have the northern pagan rounded CoA on the map
 		graphical_culture = norsegfx
 		
-		icon = 60
-		heresy_icon = 62
+		icon = 5
+		heresy_icon = 14
 		
 		color = { 0.14 0.36 0.16 }
 		crusade_name = GREAT_HOLY_WAR
@@ -258,8 +258,8 @@ pagan_group = {
 		interface_skin = { christian_interface pagan_interface }
 		alternate_start = { always = no }
 		
-		icon = 61
-		heresy_icon = 62
+		icon = 5
+		heresy_icon = 14
 		
 		ai_convert_other_group = 2 # always try to convert
 		ai_convert_same_group = 2 # always try to convert
@@ -318,8 +318,8 @@ pagan_group = {
 		interface_skin = { zoroastrian_interface hellenic_interface }
 		alternate_start = { always = no }
 		
-		icon = 64
-		heresy_icon = 65
+		icon = 67
+		heresy_icon = 67
 
 		ai_convert_other_group = 2 # always try to convert
 		ai_convert_same_group = 1
@@ -360,8 +360,8 @@ pagan_group = {
 
 		reformed = egyptian_pagan_reformed
 		
-		icon = 63
-		heresy_icon = 65
+		icon = 67
+		heresy_icon = 67
 
 		ai_convert_other_group = 1
 		ai_convert_same_group = 0
@@ -423,8 +423,8 @@ pagan_group = {
 
 		#pre_reformed = yes
 
-		icon = 64
-		heresy_icon = 65
+		icon = 65
+		heresy_icon = 66
 		
 		ai_convert_other_group = 2 # always try to convert
 		ai_convert_same_group = 2 # always try to convert
