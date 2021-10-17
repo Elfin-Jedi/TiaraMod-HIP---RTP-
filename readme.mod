@@ -46,7 +46,7 @@ Contains:
 "Seduction and Romance Revamped"
 "Send Prisoner"
 "Some Interesting NicknamesEN"
-"Sons of Vinland"
+"Sons of Vinland" [No Map, mostly just cultures & religions]
 "The Great Trade League"
 "The Orders of Chivalry"
 "The Sufi Schools"
