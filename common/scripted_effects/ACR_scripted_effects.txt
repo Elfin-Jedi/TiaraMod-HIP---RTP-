@@ -35,12 +35,12 @@ banish_to_monastery_effect = {
 
 # reduces prosperity by 3 levels, adding depopulation if necessary
 devestate_province_effect = {
-	decrease_prosperity_effect = yes
-	decrease_prosperity_effect = yes
-	decrease_prosperity_effect = yes
+	decrease_prosperity_depopulate_effect = yes
+	decrease_prosperity_depopulate_effect = yes
+	decrease_prosperity_depopulate_effect = yes
 }
 
-decrease_prosperity_effect = {
+decrease_prosperity_depopulate_effect = {
 	### Depopulated Provinces
 	if = {
 		limit = { has_province_modifier = depopulated_2	}
