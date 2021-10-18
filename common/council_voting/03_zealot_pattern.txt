@@ -191,7 +191,7 @@ zealot_pattern_for = {
 		}
 	}
 	dissolve_alliance_interaction = { 
-		FROMFROMFROM = {
+		FROMFROM = {
 			NOT = { religion = ROOT }
 			NOT = { 
 				reverse_opinion = {
@@ -207,7 +207,7 @@ zealot_pattern_for = {
 			custom_tooltip = {
 				text = pattern_zealot_fromfrom_is_pious_tooltip
 				hidden_tooltip = {
-					FROMFROMFROM = {
+					FROMFROM = {
 						religion = ROOT
 						piety = 200
 					}
@@ -219,7 +219,7 @@ zealot_pattern_for = {
 		custom_tooltip = {
 			text = pattern_zealot_fromfrom_is_pious_tooltip
 			hidden_tooltip = {
-				FROMFROMFROM = {
+				FROMFROM = {
 					religion = ROOT
 					piety = 200
 				}
@@ -701,7 +701,7 @@ zealot_pattern_for = {
 	
 	tribal_organization_0 = {
 		OR = {
-			is_organized_religion_trigger = no
+			emf_unreformed_pagan = yes
 			is_tribal = yes
 		}
 	}
@@ -711,7 +711,7 @@ zealot_pattern_for = {
 			custom_tooltip = {
 				text = TT_NOT_UNREFORMED_PAGAN
 				hidden_tooltip = {
-					is_organized_religion_trigger = yes
+					emf_unreformed_pagan = no
 				}
 			}
 			is_tribal = no
@@ -723,7 +723,7 @@ zealot_pattern_for = {
 			custom_tooltip = {
 				text = TT_NOT_UNREFORMED_PAGAN
 				hidden_tooltip = {
-					is_organized_religion_trigger = yes
+					emf_unreformed_pagan = no
 				}
 			}
 			is_tribal = no
@@ -735,7 +735,7 @@ zealot_pattern_for = {
 			custom_tooltip = {
 				text = TT_NOT_UNREFORMED_PAGAN
 				hidden_tooltip = {
-					is_organized_religion_trigger = yes
+					emf_unreformed_pagan = no
 				}
 			}
 			is_tribal = no
@@ -746,7 +746,7 @@ zealot_pattern_for = {
 			custom_tooltip = {
 				text = TT_NOT_UNREFORMED_PAGAN
 				hidden_tooltip = {
-					is_organized_religion_trigger = yes
+					emf_unreformed_pagan = no
 				}
 			}
 			is_tribal = no
@@ -890,7 +890,7 @@ zealot_pattern_against = {
 		custom_tooltip = {
 			text = pattern_zealot_fromfrom_is_pious_tooltip
 			hidden_tooltip = {
-				FROMFROMFROM = {
+				FROMFROM = {
 					religion = ROOT
 					piety = 200
 				}
@@ -899,7 +899,7 @@ zealot_pattern_against = {
 	}
 	form_non_aggression_pact_interaction = {
 		pacifist = no
-		FROMFROMFROM = {
+		FROMFROM = {
 			NOT = { religion = ROOT }
 			NOT = { 
 				reverse_opinion = {
@@ -910,7 +910,7 @@ zealot_pattern_against = {
 		}
 	}
 	form_alliance_interaction = {
-		FROMFROMFROM = {
+		FROMFROM = {
 			NOT = { religion = ROOT }
 			NOT = { 
 				reverse_opinion = {
@@ -1289,10 +1289,6 @@ zealot_pattern_against = {
 		}
 	}
 	
-	investiture_law_0 = {
-		religion = britannic_pagan
-	}
-	
 	# Zealots who do not belong to a feminist religion/culture will actively oppose Status of Women laws, even if they're female, but those who do belong to such groups will actively support Status of Women.
 	status_of_women_0 = {
 		emf_feminist_religion = yes
@@ -1336,28 +1332,6 @@ zealot_pattern_against = {
 	}
 	status_of_women_4 = { 
 		emf_feminist_religion = no
-	}
-	
-	enatic_succession = {
-		religion = britannic_pagan
-		is_female = yes
-	}
-
-	enatic_cognatic_succession = {
-		religion = britannic_pagan
-		OR = {
-			is_female = no
-			FROMFROM = {
-				NOT = { has_law = enatic_succession }
-			}
-		}
-	}
-
-	true_cognatic_succession = {
-		religion = britannic_pagan
-		NOT = {
-			FROMFROM = { has_law = enatic_cognatic_succession }
-		}
 	}
 	
 	administration_0 = { always = yes }
@@ -1477,7 +1451,7 @@ zealot_pattern_against = {
 	
 	tribal_organization_0 = {
 		NOR = {
-			is_organized_religion_trigger = no
+			emf_unreformed_pagan = yes
 			is_tribal = yes
 		}
 	}
@@ -1487,7 +1461,7 @@ zealot_pattern_against = {
 			custom_tooltip = {
 				text = TT_NOT_UNREFORMED_PAGAN
 				hidden_tooltip = {
-					is_organized_religion_trigger = yes
+					emf_unreformed_pagan = no
 				}
 			}
 			is_tribal = no
@@ -1499,7 +1473,7 @@ zealot_pattern_against = {
 			custom_tooltip = {
 				text = TT_NOT_UNREFORMED_PAGAN
 				hidden_tooltip = {
-					is_organized_religion_trigger = yes
+					emf_unreformed_pagan = no
 				}
 			}
 			is_tribal = no
@@ -1511,7 +1485,7 @@ zealot_pattern_against = {
 			custom_tooltip = {
 				text = TT_NOT_UNREFORMED_PAGAN
 				hidden_tooltip = {
-					is_organized_religion_trigger = yes
+					emf_unreformed_pagan = no
 				}
 			}
 			is_tribal = no
@@ -1522,7 +1496,7 @@ zealot_pattern_against = {
 			custom_tooltip = {
 				text = TT_NOT_UNREFORMED_PAGAN
 				hidden_tooltip = {
-					is_organized_religion_trigger = yes
+					emf_unreformed_pagan = no
 				}
 			}
 			is_tribal = no
