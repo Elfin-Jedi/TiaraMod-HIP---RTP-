@@ -836,7 +836,7 @@ character_event = {
 			text = promethean.402.b.tt
 			hidden_tooltip = {
 				event_target:donor_province = {
-					decrease_prosperity_effect = yes
+					decrease_prosperity_depopulate_effect = yes
 					remove_province_modifier = preparing_settlers
 				}
 				event_target:receiver_province = {
@@ -873,8 +873,8 @@ character_event = {
 			text = promethean.402.c.tt
 			hidden_tooltip = {
 				event_target:donor_province = {
-					decrease_prosperity_effect = yes
-					decrease_prosperity_effect = yes
+					decrease_prosperity_depopulate_effect = yes
+					decrease_prosperity_depopulate_effect = yes
 					remove_province_modifier = preparing_settlers
 				}
 				event_target:receiver_province = {
@@ -1038,7 +1038,7 @@ character_event = {
 			text = promethean.405.c.tt
 			hidden_tooltip = {
 				event_target:donor_province = {
-					decrease_prosperity_effect = yes
+					decrease_prosperity_depopulate_effect = yes
 				}
 				event_target:receiver_province = {
 					set_province_flag = received_one_prosperity
