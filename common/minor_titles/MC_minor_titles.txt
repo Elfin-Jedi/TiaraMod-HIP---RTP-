@@ -23,7 +23,6 @@ title_councilmember_everything1 = {
 	allowed_to_grant = {
 		has_dlc = "Zeus"
 		higher_tier_than = BARON
-		primary_title = { has_law = law_voting_power_1 }
 	}
 	
 	allowed_to_hold = {
@@ -72,7 +71,6 @@ title_councilmember_everything2 = {
 	allowed_to_grant = {
 		has_dlc = "Zeus"
 		higher_tier_than = BARON
-		primary_title = { has_law = law_voting_power_1 }
 	}
 	
 	allowed_to_hold = {
@@ -121,7 +119,6 @@ title_councilmember_everything3 = {
 	allowed_to_grant = {
 		has_dlc = "Zeus"
 		higher_tier_than = BARON
-		primary_title = { has_law = law_voting_power_1 }
 	}
 	
 	allowed_to_hold = {
@@ -170,7 +167,6 @@ title_extra_king = {
 	allowed_to_grant = {
 		higher_tier_than = DUKE
 		has_dlc = "Zeus"
-		primary_title = { has_law = law_voting_power_1 }
 	}
 	
 	allowed_to_hold = {
@@ -220,7 +216,6 @@ title_extra_emperor = {
 	allowed_to_grant = {
 		higher_tier_than = KING
 		has_dlc = "Zeus"
-		primary_title = { has_law = law_voting_power_1 }
 		NOT = {
 			primary_title = { has_law = administration_2 }
 		}
@@ -274,7 +269,6 @@ title_extra_senator1 = {
 	allowed_to_grant = {
 		higher_tier_than = KING
 		has_dlc = "Zeus"
-		primary_title = { has_law = law_voting_power_1 }
 		primary_title = { has_law = administration_2 }
 	}
 	
@@ -326,7 +320,6 @@ title_extra_senator2 = {
 	allowed_to_grant = {
 		higher_tier_than = KING
 		has_dlc = "Zeus"
-		primary_title = { has_law = law_voting_power_1 }
 		primary_title = { has_law = administration_2 }
 	}
 	
@@ -378,7 +371,6 @@ title_extra_senator3 = {
 	allowed_to_grant = {
 		higher_tier_than = KING
 		has_dlc = "Zeus"
-		primary_title = { has_law = law_voting_power_1 }
 		primary_title = { has_law = administration_2 }
 	}
 	
