@@ -71,13 +71,13 @@ dark = {
 		
 		allow_in_ruler_designer = yes
 		
-		intermarry = chthonic
+		intermarry = hadesian
 		intermarry = osirisian
 		intermarry = satanism
 
 	}
 	
-	chthonic = {
+	hadesian = {
 		graphical_culture = norsegfx
 		secondary_event_pictures = norse_pagan
 
@@ -209,7 +209,7 @@ dark = {
 		allow_in_ruler_designer = yes
 		
 		intermarry = luciferian
-		intermarry = chthonic
+		intermarry = hadesian
 		intermarry = satanism
 	}
 	
