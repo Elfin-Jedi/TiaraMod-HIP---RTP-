@@ -59,21 +59,6 @@ rtp_beasts_r = {
 	}
 }
 
-rtp_ambient_sounds_r = {
-	name = "rtp_ambient_sounds_r"
-	group = rtp_ambient_sounds_r
-	option = {
-		name = no
-		text = "rtp_ambient_sounds_no"
-		desc = "rtp_ambient_sounds_no_desc"
-	}
-	option = {
-		name = yes
-		text = "rtp_ambient_sounds_yes"
-		desc = "rtp_ambient_sounds_yes_desc"
-	}
-}
-
 rtp_tutorial_r = {
 	name = "rtp_tutorial_r"
 	group = rtp_tutorial_r
