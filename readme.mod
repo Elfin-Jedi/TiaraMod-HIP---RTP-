@@ -36,6 +36,7 @@ Contains:
 "Muslim Bloodlines"
 "New Kingdoms and Cultures" [Cultures Only]
 "Nicknames+++"
+"Non-Dynastic Inheritance"
 "Normal Retreat"
 "Play As Anyone"
 "Religious Trinity"
@@ -59,7 +60,7 @@ Contains:
 "WOWGAG's More Artifacts & Bloodlines" [Contains "Historical and Fantastical Artifacts" & "Mythic Artifacts"]
 
 Next:
-"Non-Dynastic Inheritance"
+"HIP - Comprehensive Annals of Five Dynasties"
 --- More Goals:
 "Blind/Castrate/Torture everyone no piety loss/cruel trait 3.3"
 "More Ambitions - Find Purpose"
@@ -69,6 +70,5 @@ Next:
 "Expanded Traits"
 "More Cultural Names (for HIP + SWMH)"
 "VIET Events Reborn - A Flavor Event Mod"
-"HIP - Comprehensive Annals of Five Dynasties"
 "HIP - More Cultures and Religions"
 "Enatic Kingdoms"
