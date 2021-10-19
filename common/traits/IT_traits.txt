@@ -3150,7 +3150,8 @@ secretly_paulician = {
 }
 
 secretly_tondrakian = {
-	oppsecretly_catholic
+	opposites = {
+		secretly_catholic
 		secretly_cathar
 		secretly_fraticelli
 		secretly_waldensian
