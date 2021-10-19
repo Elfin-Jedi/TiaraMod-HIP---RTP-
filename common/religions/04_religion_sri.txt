@@ -5,7 +5,7 @@ pagan_group = {
 	# These are largely based on work by Keizer Harm
 	inca_religion_reformed = {
 		graphical_culture = mesoamericangfx
-		alternate_start = { always = no }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 		
 		secondary_event_pictures = mesoamerican
 		

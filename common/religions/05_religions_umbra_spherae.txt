@@ -37,7 +37,7 @@ pagan_group = {
 	
 	mayan_reformed = {
 		graphical_culture = mesoamericangfx
-		alternate_start = { always = no }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 		
 		secondary_event_pictures = mesoamerican
 		
@@ -131,6 +131,7 @@ pagan_group = {
 	jurchen_pagan_reformed = { # Jurchens
 		graphical_culture = mongolgfx	
 		secondary_event_pictures = tengri_pagan
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 29
 		heresy_icon = 30
@@ -233,6 +234,7 @@ pagan_group = {
 		graphical_culture = hindugfx
 		interface_skin = { indian_interface muslim_interface }
 		secondary_event_pictures = sunni
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 35
 		heresy_icon = 36
@@ -349,6 +351,7 @@ pagan_group = {
 		graphical_culture = hindugfx
 		interface_skin = { indian_interface muslim_interface }
 		secondary_event_pictures = sunni
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 35
 		heresy_icon = 36
@@ -460,6 +463,7 @@ pagan_group = {
 		graphical_culture = hindugfx
 		interface_skin = { indian_interface muslim_interface }
 		secondary_event_pictures = sunni
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 35
 		heresy_icon = 36
@@ -571,6 +575,7 @@ pagan_group = {
 		graphical_culture = hindugfx
 		interface_skin = { indian_interface muslim_interface }
 		secondary_event_pictures = sunni
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 35
 		heresy_icon = 36
@@ -682,6 +687,7 @@ pagan_group = {
 		graphical_culture = hindugfx
 		interface_skin = { indian_interface muslim_interface }
 		secondary_event_pictures = sunni
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 35
 		heresy_icon = 36
@@ -793,6 +799,7 @@ pagan_group = {
 		graphical_culture = hindugfx
 		interface_skin = { indian_interface muslim_interface }
 		secondary_event_pictures = sunni
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 35
 		heresy_icon = 36
@@ -904,6 +911,7 @@ pagan_group = {
 		graphical_culture = hindugfx
 		interface_skin = { indian_interface muslim_interface }
 		secondary_event_pictures = sunni
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 35
 		heresy_icon = 36
@@ -1015,6 +1023,7 @@ pagan_group = {
 		graphical_culture = hindugfx
 		interface_skin = { indian_interface muslim_interface }
 		secondary_event_pictures = sunni
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 35
 		heresy_icon = 36
@@ -1120,6 +1129,7 @@ pagan_group = {
 		graphical_culture = hindugfx
 		interface_skin = { indian_interface muslim_interface }
 		secondary_event_pictures = sunni
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 35
 		heresy_icon = 36
@@ -1230,6 +1240,7 @@ pagan_group = {
 	ainu_pantheism_reformed = {
 		graphical_culture = mongolgfx	
 		secondary_event_pictures = tengri_pagan
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 64
 		
@@ -1325,6 +1336,7 @@ pagan_group = {
 		graphical_culture = africangfx
 		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
 		secondary_event_pictures = west_african_pagan
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 35
 		heresy_icon = 36
@@ -1432,6 +1444,7 @@ pagan_group = {
 		graphical_culture = africangfx
 		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
 		secondary_event_pictures = west_african_pagan
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 35
 		heresy_icon = 36
@@ -1538,6 +1551,7 @@ pagan_group = {
 	omotic_pagan_reformed = {
 		graphical_culture = africangfx
 		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 35
 		heresy_icon = 36
@@ -1645,6 +1659,7 @@ pagan_group = {
 		graphical_culture = africangfx
 		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
 		secondary_event_pictures = west_african_pagan
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 35
 		heresy_icon = 36
@@ -1752,6 +1767,7 @@ pagan_group = {
 		graphical_culture = africangfx
 		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
 		secondary_event_pictures = west_african_pagan
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 35
 		heresy_icon = 36
@@ -1859,6 +1875,7 @@ pagan_group = {
 		graphical_culture = africangfx
 		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
 		secondary_event_pictures = west_african_pagan
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 35
 		heresy_icon = 36
@@ -1966,7 +1983,7 @@ pagan_group = {
 
 	inuit_pagan_reformed = {
 		graphical_culture = pagangfx
-		alternate_start = { always = no }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 		
 		secondary_event_pictures = finnish_pagan
 
@@ -2090,7 +2107,7 @@ pagan_group = {
 
 	algic_pagan_reformed = {
 		graphical_culture = mesoamericangfx
-		alternate_start = { always = no }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 		
 		secondary_event_pictures = mesoamerican
 		
@@ -2201,6 +2218,7 @@ pagan_group = {
 		graphical_culture = africangfx
 		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
 		secondary_event_pictures = sunni
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 35
 		heresy_icon = 36
@@ -2320,6 +2338,7 @@ pagan_group = {
 		graphical_culture = africangfx
 		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
 		secondary_event_pictures = west_african_pagan
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 35
 		heresy_icon = 36
@@ -2436,6 +2455,7 @@ pagan_group = {
 		graphical_culture = mesoamericangfx
 		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
 		secondary_event_pictures = west_african_pagan
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 35
 		heresy_icon = 36
@@ -2552,6 +2572,7 @@ pagan_group = {
 		graphical_culture = mesoamericangfx
 		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
 		secondary_event_pictures = west_african_pagan
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 35
 		heresy_icon = 36
@@ -2666,6 +2687,7 @@ pagan_group = {
 		graphical_culture = africangfx
 		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
 		secondary_event_pictures = sunni
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 35
 		heresy_icon = 36

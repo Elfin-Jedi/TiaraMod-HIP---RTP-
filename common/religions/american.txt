@@ -2,7 +2,7 @@ pagan_group = {
 
 	tuniit_pagan_reformed = {
 		graphical_culture = pagangfx
-		alternate_start = { always = no }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 		
 		secondary_event_pictures = finnish_pagan
 

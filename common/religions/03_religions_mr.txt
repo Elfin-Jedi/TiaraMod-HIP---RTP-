@@ -9,6 +9,7 @@ pagan_group = {
 	dayak_pagan_reformed = { # Kaharingan
 		graphical_culture = africangfx
 		secondary_event_pictures = west_african_pagan
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 		interface_skin = { indian_interface muslim_interface }
 
 		icon = 57
@@ -145,150 +146,10 @@ pagan_group = {
 		can_demand_religious_conversion = no
 	}
 	
-	melanesian_pagan_reformed = {
-		graphical_culture = africangfx
-		secondary_event_pictures = west_african_pagan
-		interface_skin = { indian_interface muslim_interface }
-
-		icon = 57
-		heresy_icon = 56
-		
-		ai_convert_other_group = 2 # always try to convert
-		
-		color = { 86 72 47 }
-		
-		high_god_name = GOD_THE_CREATOR
-		
-		god_names = {
-			GOD_THE_SPIRITS GOD_THE_ANCESTORS
-		}
-		evil_god_names = {
-			THE_DARK_SPIRITS
-		}
-		
-	#	unit_modifier = {		
-	#		garrison_size = 0.4
-	#		
-	#		key = "DEF_RELIGION"
-	#	}
-	#	unit_home_modifier = {
-	#		land_morale = 0.8
-	#		light_infantry_defensive = 0.8
-	#		heavy_infantry_defensive = 0.8
-	#		pikemen_defensive = 0.8
-	#		light_cavalry_defensive = 0.8
-	#		knights_defensive = 0.8
-	#		archers_defensive = 0.8
-	#		horse_archers_defensive = 0.8
-	#		camel_cavalry_defensive = 0.8
-	#		war_elephants_defensive = 0.8
-	#		
-	#		garrison_size = 0.4
-	#		
-	#		key = "DEF_RELIGION_HOME_TERRITORY"
-	#	}
-		
-		crusade_name = GREAT_HOLY_WAR
-		scripture_name = THE_LEGENDS
-		priest_title = SHAMAN
-		
-		priests_can_marry = yes
-		allow_looting = yes
-		can_call_crusade = yes
-		max_consorts = 3
-		women_can_take_consorts = yes
-		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
-		seafarer = yes
-		
-		aggression = 2.0 # AI aggression factor
-		
-		religious_clothing_head = 6
-		religious_clothing_priest = 6
-		
-		intermarry = hindu
-		intermarry = melanesian_pagan
-		intermarry = dayak_pagan
-		intermarry = dayak_pagan_reformed
-
-		allow_in_ruler_designer = no
-	}
-
-	melanesian_pagan = {
-		graphical_culture = africangfx
-		secondary_event_pictures = west_african_pagan
-		interface_skin = { indian_interface muslim_interface }
-
-		icon = 57
-		heresy_icon = 56
-		
-		color = { 86 72 47 }
-		
-		high_god_name = GOD_THE_CREATOR
-		
-		god_names = {
-			GOD_THE_SPIRITS GOD_THE_ANCESTORS
-		}
-		evil_god_names = {
-			THE_DARK_SPIRITS
-		}
-		
-		unit_modifier = {		
-			garrison_size = 0.4
-			
-			key = "DEF_RELIGION"
-		}
-		unit_home_modifier = {
-			land_morale = 0.8
-			light_infantry_defensive = 0.8
-			heavy_infantry_defensive = 0.8
-			pikemen_defensive = 0.8
-			light_cavalry_defensive = 0.8
-			knights_defensive = 0.8
-			archers_defensive = 0.8
-			horse_archers_defensive = 0.8
-			camel_cavalry_defensive = 0.8
-			war_elephants_defensive = 0.8
-			
-			garrison_size = 0.4
-			
-			key = "DEF_RELIGION_HOME_TERRITORY"
-		}
-	
-		crusade_name = GREAT_HOLY_WAR
-		scripture_name = THE_LEGENDS
-		priest_title = SHAMAN
-		
-		priests_can_marry = yes
-		allow_looting = yes
-		peace_prestige_loss = yes # Lose Prestige while at peace
-		raised_vassal_opinion_loss = no
-		max_consorts = 3
-		women_can_take_consorts = yes
-		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
-		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		reformed = melanesian_pagan_reformed
-		defensive_attrition = yes
-		seafarer = yes
-		
-		short_reign_opinion_year_mult = 3 # The default is 2
-		
-		aggression = 2.0 # AI aggression factor
-		
-		religious_clothing_head = 6
-		religious_clothing_priest = 6
-		
-		intermarry = hindu
-		intermarry = melanesian_pagan_reformed
-		intermarry = dayak_pagan
-		intermarry = dayak_pagan_reformed
-
-		dislike_tribal_organization = yes
-		can_demand_religious_conversion = no
-	}
-	
 	sanamahi_pagan_reformed = { # Bamars
 		graphical_culture = indiangfx
 		secondary_event_pictures = sunni
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 		interface_skin = { indian_interface muslim_interface }
 
 		icon = 57
@@ -427,6 +288,7 @@ pagan_group = {
 	viet_pagan_reformed = { # Thanist
 		graphical_culture = chinesegfx
 		secondary_event_pictures = sunni
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 		interface_skin = { taoist_interface indian_interface muslim_interface }
 
 		icon = 57
