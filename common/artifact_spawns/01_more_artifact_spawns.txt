@@ -1292,14 +1292,14 @@ hrunting = {
 
 	weight = {
         value = 0
-		additive_modifier = {
-			value = 100
-			primary_title = {
-				title = c_vista
-			}
-			year = 867
-			NOT = { year = 1066 }
-		}
+#		additive_modifier = {
+#			value = 100
+#			primary_title = {
+#				title = c_vista
+#			}
+#			year = 867
+#			NOT = { year = 1066 }
+#		}
         additive_modifier = {
 			value = 5
 			OR = {
@@ -1333,14 +1333,14 @@ nagling = {
 
 	weight = {
         value = 0
-		additive_modifier = {
-			value = 100
-			primary_title = {
-				title = c_vista
-			}
-			year = 867
-			NOT = { year = 1066 }
-		}
+#		additive_modifier = {
+#			value = 100
+#			primary_title = {
+#				title = c_vista
+#			}
+#			year = 867
+#			NOT = { year = 1066 }
+#		}
         additive_modifier = {
 			value = 5
 			OR = {
