@@ -1,0 +1,311 @@
+# Caesar's Books by CaesarTheRoman
+
+cbs_exped = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_hako = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_ancient_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_leovi = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_greek = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_ancient_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_prae = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_walth = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_eirik = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_ancient_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_beowulf = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_ancient_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_maldon = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_febail = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_ancient_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_liet = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_slovo = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_povesti = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_troi = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_cogad = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_ancient_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_acallam = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_akritas = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_erec = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_destroi = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_herva = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_lyvon = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_heims = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_egils = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_caesarg = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_ancient_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_caesarc = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_ancient_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_liu = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_chinese_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_sunzi = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_chinese_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_wuzi = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_chinese_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_sima = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_chinese_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_huang = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_chinese_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}
+
+cbs_sanshil = {
+	quality = 3
+	martial = 3
+	learning = 1
+	combat_rating = 5
+	picture = "GFX_cbs_chinese_martial"
+	slot = library
+	flags = { about_martial book cbs_book }
+}

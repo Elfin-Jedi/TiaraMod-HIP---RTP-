@@ -1,0 +1,241 @@
+# Caesar's Books by CaesarTheRoman
+
+cbs_geoponica = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_hudud = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_arab_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_fredegar = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_ety = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_pasch = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_remain = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_arab_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_regula = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_algebra = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_arab_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_aio = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_islend = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_ancient_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_barcino = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_hiberni = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_duk = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_policrat = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_tain = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_ancient_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_manas = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_scroll_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_sogur = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_gonzales = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_keita = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_ancient_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_guoyu = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_chinese_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_yanzi = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_chinese_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_liji = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_chinese_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_chunq = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_chinese_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}
+
+cbs_zuoz = {
+	quality = 3
+	stewardship = 3
+	learning = 1
+	monthly_character_wealth = 0.5
+	picture = "GFX_cbs_chinese_stewardship"
+	slot = library
+	flags = { about_stewardship book cbs_book }
+}

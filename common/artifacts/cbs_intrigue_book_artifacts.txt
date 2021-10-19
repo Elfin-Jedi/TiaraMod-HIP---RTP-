@@ -1,0 +1,121 @@
+# Caesar's Books by CaesarTheRoman
+
+cbs_taktik = {
+	quality = 3
+	intrigue = 3
+	learning = 1
+	plot_power_modifier = 0.05
+	picture = "GFX_cbs_intrigue"
+	slot = library
+	flags = { about_intrigue book cbs_book }
+}
+
+cbs_suda = {
+	quality = 3
+	intrigue = 3
+	learning = 1
+	plot_power_modifier = 0.05
+	picture = "GFX_cbs_intrigue"
+	slot = library
+	flags = { about_intrigue book cbs_book }
+}
+
+cbs_ratna = {
+	quality = 3
+	intrigue = 3
+	learning = 1
+	plot_power_modifier = 0.05
+	picture = "GFX_cbs_scroll_intrigue"
+	slot = library
+	flags = { about_intrigue book cbs_book }
+}
+
+cbs_kadam = {
+	quality = 3
+	intrigue = 3
+	learning = 1
+	plot_power_modifier = 0.05
+	picture = "GFX_cbs_scroll_intrigue"
+	slot = library
+	flags = { about_intrigue book cbs_book }
+}
+
+cbs_emmae = {
+	quality = 3
+	intrigue = 3
+	learning = 1
+	plot_power_modifier = 0.05
+	picture = "GFX_cbs_intrigue"
+	slot = library
+	flags = { about_intrigue book cbs_book }
+}
+
+cbs_apok = {
+	quality = 3
+	intrigue = 3
+	learning = 1
+	plot_power_modifier = 0.05
+	picture = "GFX_cbs_intrigue"
+	slot = library
+	flags = { about_intrigue book cbs_book }
+}
+
+cbs_huon = {
+	quality = 3
+	intrigue = 3
+	learning = 1
+	plot_power_modifier = 0.05
+	picture = "GFX_cbs_intrigue"
+	slot = library
+	flags = { about_intrigue book cbs_book }
+}
+
+cbs_seven = {
+	quality = 3
+	intrigue = 3
+	learning = 1
+	plot_power_modifier = 0.05
+	picture = "GFX_cbs_intrigue"
+	slot = library
+	flags = { about_intrigue book cbs_book }
+}
+
+cbs_reyna = {
+	quality = 3
+	intrigue = 3
+	learning = 1
+	plot_power_modifier = 0.05
+	picture = "GFX_cbs_intrigue"
+	slot = library
+	flags = { about_intrigue book cbs_book }
+}
+
+cbs_njals = {
+	quality = 3
+	intrigue = 3
+	learning = 1
+	plot_power_modifier = 0.05
+	picture = "GFX_cbs_intrigue"
+	slot = library
+	flags = { about_intrigue book cbs_book }
+}
+
+cbs_zhouli = {
+	quality = 3
+	intrigue = 3
+	learning = 1
+	plot_power_modifier = 0.05
+	picture = "GFX_cbs_chinese_intrigue"
+	slot = library
+	flags = { about_intrigue book cbs_book }
+}
+
+cbs_xunzi = {
+	quality = 3
+	intrigue = 3
+	learning = 1
+	plot_power_modifier = 0.05
+	picture = "GFX_cbs_chinese_intrigue"
+	slot = library
+	flags = { about_intrigue book cbs_book }
+}

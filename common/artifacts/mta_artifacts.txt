@@ -1,0 +1,392 @@
+############################
+########## Cloaks ##########
+############################
+
+cloak_fur_tier_1 = {
+	monthly_character_prestige = 0.1
+	command_modifier = {
+		winter_supply = 1
+	}
+	quality = 1
+	active = {
+		is_adult = yes
+	}
+	flags = { accessory cloak }
+	stacking = no
+	picture = "GFX_linen_cloak"
+	slot = ceremonial_torso
+}
+
+cloak_fur_tier_2 = {
+	monthly_character_prestige = 0.2
+	command_modifier = {
+		winter_combat = 0.05
+		winter_supply = 1
+	}
+	quality = 2
+	active = {
+		mta_capital_has_harsh_climate = yes
+		is_adult = yes
+	}
+	allowed_gift = {
+		mta_capital_has_harsh_climate = yes
+	}
+	flags = { accessory cloak }
+	stacking = no
+	picture = "GFX_fur_cloak"
+	slot = ceremonial_torso
+}
+
+cloak_fur_tier_3 = {
+	monthly_character_prestige = 0.3
+	command_modifier = {
+		winter_combat = 0.10
+		winter_supply = 2
+	}
+	quality = 3
+	active = {
+		mta_capital_has_harsh_climate = yes
+		is_adult = yes
+	}
+	allowed_gift = {
+		mta_capital_has_harsh_climate = yes
+	}
+	flags = { accessory cloak }
+	stacking = no
+	picture = "GFX_fur_cloak"
+	slot = ceremonial_torso
+}
+
+cloak_fur_tier_4 = {
+	monthly_character_prestige = 0.4
+	attrition = -0.10
+	command_modifier = {
+		winter_combat = 0.10
+		winter_supply = 2
+	}
+	quality = 4
+	active = {
+		mta_capital_has_harsh_climate = yes
+		is_adult = yes
+	}
+	allowed_gift = {
+		mta_capital_has_harsh_climate = yes
+	}
+	flags = { accessory cloak rare }
+	stacking = no
+	picture = "GFX_reindeer_cloak"
+	slot = ceremonial_torso
+}
+
+cloak_imperial = {
+	monthly_character_prestige = 0.6
+	diplomacy = 1
+	intrigue = 2
+	quality = 5
+	active = {
+		is_adult = yes
+		is_feudal = yes
+		OR = {
+			has_landed_title = e_byzantium
+			has_landed_title = e_roman_empire
+		}
+	}
+	flags = { accessory cloak }
+	stacking = no
+	picture = "GFX_imperial_cloak"
+	slot = ceremonial_torso
+}
+
+############################
+#### African Artifacts #####
+############################
+
+berber_veil_tier_1 = {
+	monthly_character_prestige = 0.1
+	defensive_plot_power_modifier = 0.05
+	north_african_opinion = 1
+	quality = 1
+	active = {
+		mta_capital_has_temperate_climate = yes
+		is_adult = yes
+	}
+	allowed_gift = {
+		mta_capital_has_temperate_climate = yes
+	}
+	flags = { accessory tagelmust }
+	stacking = no
+	picture = "GFX_berber_veil_pale"
+	slot = mask
+}
+
+berber_veil_tier_2 = {
+	monthly_character_prestige = 0.2
+	intrigue = 1
+	defensive_plot_power_modifier = 0.05
+	north_african_opinion = 2
+	quality = 2
+	active = {
+		mta_capital_has_temperate_climate = yes
+		is_adult = yes
+	}
+	allowed_gift = {
+		mta_capital_has_temperate_climate = yes
+	}
+	flags = { accessory tagelmust }
+	stacking = no
+	picture = "GFX_berber_veil"
+	slot = mask
+}
+
+berber_veil_tier_3 = {
+	monthly_character_prestige = 0.3
+	intrigue = 1
+	defensive_plot_power_modifier = 0.05
+	north_african_opinion = 3
+	quality = 3
+	active = {
+		mta_capital_has_temperate_climate = yes
+		is_adult = yes
+	}
+	allowed_gift = {
+		mta_capital_has_temperate_climate = yes
+	}
+	flags = { accessory tagelmust }
+	stacking = no
+	picture = "GFX_berber_veil_dark"
+	slot = mask
+}
+
+###########################
+#### Muslim Artifacts #####
+###########################
+
+litham_black = {
+	monthly_character_piety = 0.2
+	intrigue = 1
+	defensive_plot_power_modifier = 0.05
+	muslim_opinion = 3
+	quality = 3
+	active = {
+		OR = {
+			culture_group = arabic
+			religion_group = muslim
+			mta_capital_has_temperate_climate = yes
+		}
+		is_adult = yes
+	}
+	allowed_gift = {
+		OR = {
+			culture_group = arabic
+			religion_group = muslim
+			mta_capital_has_temperate_climate = yes
+		}
+	}
+	flags = { accessory muslim litham }
+	stacking = no
+	picture = "GFX_berber_veil_black"
+	slot = mask
+}
+
+litham_white = {
+	monthly_character_piety = 0.2
+	intrigue = 1
+	defensive_plot_power_modifier = 0.05
+	muslim_opinion = 3
+	quality = 3
+	active = {
+		OR = {
+			culture_group = arabic
+			religion_group = muslim
+			mta_capital_has_temperate_climate = yes
+		}
+		is_adult = yes
+	}
+	allowed_gift = {
+		OR = {
+			culture_group = arabic
+			religion_group = muslim
+			mta_capital_has_temperate_climate = yes
+		}
+	}
+	flags = { accessory muslim litham }
+	stacking = no
+	picture = "GFX_berber_veil_white"
+	slot = mask
+}
+
+litham_green = {
+	monthly_character_piety = 0.2
+	intrigue = 1
+	defensive_plot_power_modifier = 0.05
+	muslim_opinion = 3
+	quality = 3
+	active = {
+		OR = {
+			culture_group = arabic
+			religion_group = muslim
+			mta_capital_has_temperate_climate = yes
+		}
+		is_adult = yes
+	}
+	allowed_gift = {
+		OR = {
+			culture_group = arabic
+			religion_group = muslim
+			mta_capital_has_temperate_climate = yes
+		}
+	}
+	flags = { accessory muslim litham }
+	stacking = no
+	picture = "GFX_berber_veil_green"
+	slot = mask
+}
+
+anazah = {
+	monthly_character_piety = 0.4
+	monthly_character_prestige = 0.4
+	same_religion_opinion = 2
+	learning = 1
+	quality = 4
+	active = { religion_group = muslim }
+	allowed_gift = {
+		religion_group = muslim
+	}
+	flags = { religious muslim very_rare jewelry crown_jewel lance mohammad }
+	stacking = no
+	picture = "GFX_lance"
+	slot = ceremonial_weapon
+}
+
+#############################
+###### Pagan Artifacts ######
+#############################
+
+### Germanic
+gungnir = {
+	monthly_character_prestige = 0.5
+	martial = 3
+	combat_rating = 20
+	command_modifier = {
+		heavy_infantry = 0.1
+		pikemen = 0.1
+	}
+	same_religion_opinion = 5
+	quality = 5
+	active = {
+		religion_openly_norse_or_reformed_trigger = yes
+		is_adult = yes
+	}
+	allowed_gift = {
+		religion_openly_norse_or_reformed_trigger = yes
+	}
+	flags = { religious norse_pagan very_rare combat_weapon spear }
+	stacking = no
+	picture = "GFX_spear"
+	
+	slot = weapon
+}
+
+### Finnish
+kalevanmiekka = {
+	monthly_character_prestige = 0.5
+	martial = 3
+	combat_rating = 16
+	command_modifier = {
+		light_infantry = 0.2
+	}
+	same_religion_opinion = 5
+	active = { 
+		religion_openly_finnish_or_reformed_trigger = yes
+		is_adult = yes
+	}
+	allowed_gift = {
+		religion_openly_finnish_or_reformed_trigger = yes
+	}
+	quality = 5
+	flags = { religious finnish_pagan very_rare combat_weapon sword }
+	stacking = no
+	picture = "GFX_blue_glowing_sword"
+	slot = weapon
+}
+
+#############################
+##### Random/Misc Books #####
+#############################
+
+digenes_akrites = {
+	monthly_character_piety = 0.2
+	command_modifier = {
+		religious_enemy = 0.05
+	}
+	byzantine_opinion = 2
+	quality = 3
+	active = {
+		OR = {
+			culture_group = byzantine
+			culture = roman
+		}
+		NOT = { religion_group = muslim }
+	}
+	flags = { book byzantine poetry rare }
+	stacking = no
+	picture = "GFX_book_poetry"
+	slot = library
+}
+
+the_circle = {
+	diplomacy = 1
+	general_opinion = 2
+	sex_appeal_opinion = 5
+	quality = 3
+	active = {
+		OR = {
+			culture = greek
+			learning = 6
+		}
+	}
+	flags = { book byzantine poetry }
+	stacking = no
+	picture = "GFX_book_blue"
+	slot = library
+}
+
+song_of_roland = {
+	monthly_character_piety = 0.2
+	command_modifier = {
+		religious_enemy = 0.05
+	}
+	latin_opinion = 2
+	quality = 3
+	active = {
+		OR = {
+			culture_group = latin
+			religion_group = christian
+		}
+		NOT = { religion_group = muslim }
+	}
+	flags = { book latin poetry rare }
+	stacking = no
+	picture = "GFX_book_variant_1"
+	slot = library
+}
+
+sirat_delhemma = {
+	monthly_character_piety = 0.2
+	command_modifier = {
+		religious_enemy = 0.05
+	}
+	arabic_opinion = 2
+	quality = 3
+	active = {
+		OR = {
+			culture_group = arabic
+			religion_group = muslim
+		}
+		NOT = { religion_group = christian }
+	}
+	flags = { book arabic poetry rare }
+	stacking = no
+	picture = "GFX_book_variant_3"
+	slot = library
+}

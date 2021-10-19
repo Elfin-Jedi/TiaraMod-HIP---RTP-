@@ -1,0 +1,4872 @@
+#####
+#Artifacts
+#
+#Total = 178
+#####
+
+###Headgear
+
+##Cloth
+#Mouthpiece
+rtp_mouthpiece_a = {
+	picture = "GFX_rtp_mouthpiece_a"
+	flags = { armor head cloth }
+	slot = head
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cloth_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Headscarf
+rtp_headscarf_a = {
+	picture = "GFX_rtp_headscarf_a"
+	flags = { armor head cloth }
+	slot = head
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cloth_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Leather Headband
+rtp_leatherheadband_a = {
+	picture = "GFX_rtp_leatherheadband_a"
+	flags = { armor head cloth }
+	slot = head
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cloth_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Hood
+rtp_hood_a = {
+	picture = "GFX_rtp_hood_a"
+	flags = { armor head cloth }
+	slot = head
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cloth_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Hunter's Hat
+rtp_hunterhat_a = {
+	picture = "GFX_rtp_hunterhat_a"
+	flags = { armor head cloth }
+	slot = head
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cloth_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Straw Hat
+rtp_strawhat_a = {
+	picture = "GFX_rtp_strawhat_a"
+	flags = { armor head cloth }
+	slot = head
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cloth_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Feathered Hat
+rtp_featheredhat_a = {
+	picture = "GFX_rtp_featheredhat_a"
+	flags = { armor head cloth }
+	slot = head
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cloth_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Witchhunter's Hat
+rtp_withchunterhat_a = {
+	picture = "GFX_rtp_withchunterhat_a"
+	flags = { armor head cloth }
+	slot = head
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cloth_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+##Light
+#Full Leather Cap
+rtp_fullleathercap_a = {
+	picture = "GFX_rtp_fullleathercap_a"
+	flags = { armor head light }
+	slot = head
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_light_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Aketon Cap
+rtp_aketoncap_a = {
+	picture = "GFX_rtp_aketoncap_a"
+	flags = { armor head light }
+	slot = head
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_light_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Bear Headpiece
+rtp_bearheadpiece_a = {
+	picture = "GFX_rtp_bearheadpiece_a"
+	flags = { armor head light }
+	slot = head
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_light_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Leather Helmet
+rtp_leatherhelmet_a = {
+	picture = "GFX_rtp_leatherhelmet_a"
+	flags = { armor head light }
+	slot = head
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_light_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Open Leather Cap
+rtp_openleathercap_a = {
+	picture = "GFX_rtp_openleathercap_a"
+	flags = { armor head light }
+	slot = head
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_light_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Beastmaster's Headpiece
+rtp_beastmasterheadpiece_a = {
+	picture = "GFX_rtp_beastmasterheadpiece_a"
+	flags = { armor head light }
+	slot = head
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_light_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Leather Hood
+rtp_leatherhood_a = {
+	picture = "GFX_rtp_leatherhood_a"
+	flags = { armor head light }
+	slot = head
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_light_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Duelist's Hat
+rtp_duelisthat_a = {
+	picture = "GFX_rtp_duelisthat_a"
+	flags = { armor head light }
+	slot = head
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_light_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+##Medium
+#Padded Nasal Helmet
+rtp_paddednasalhelmet_a = {
+	picture = "GFX_rtp_paddednasalhelmet_a"
+	flags = { armor head medium }
+	slot = head
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_medium_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+#Kettle Hat
+rtp_kettlehat_a = {
+	picture = "GFX_rtp_kettlehat_a"
+	flags = { armor head medium }
+	slot = head
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_medium_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+#Padded Flat Top Helmet
+rtp_paddedflattophelmet_a = {
+	picture = "GFX_rtp_paddedflattophelmet_a"
+	flags = { armor head medium }
+	slot = head
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_medium_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+#Nordic Helmet
+rtp_nordichelmet_a = {
+	picture = "GFX_rtp_nordichelmet_a"
+	flags = { armor head medium }
+	slot = head
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_medium_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+#Padded Dented Nasal Helmet
+rtp_paddeddentednasalhelmet_a = {
+	picture = "GFX_rtp_paddeddentednasalhelmet_a"
+	flags = { armor head medium }
+	slot = head
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_medium_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+#Sallet Helmet
+rtp_sallethelmet_a = {
+	picture = "GFX_rtp_sallethelmet_a"
+	flags = { armor head medium }
+	slot = head
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_medium_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+#Flat Top Helmet
+rtp_flattophelmet_a = {
+	picture = "GFX_rtp_flattophelmet_a"
+	flags = { armor head medium }
+	slot = head
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_medium_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+#Padded Kettle Hat
+rtp_paddedkettlehat_a = {
+	picture = "GFX_rtp_paddedkettlehat_a"
+	flags = { armor head medium }
+	slot = head
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_medium_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+##Heavy
+#Mail Coif
+rtp_mailcoif_a = {
+	picture = "GFX_rtp_mailcoif_a"
+	flags = { armor head heavy }
+	slot = head
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Steppe Helmet with Mail
+rtp_steppehelmetwithmail_a = {
+	picture = "GFX_rtp_steppehelmetwithmail_a"
+	flags = { armor head heavy }
+	slot = head
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Nasal Helmet with Rusty Mail
+rtp_nasalhelmetwithrustymail_a = {
+	picture = "GFX_rtp_nasalhelmetwithrustymail_a"
+	flags = { armor head heavy }
+	slot = head
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Bascinet with Mail
+rtp_bascinetwithmail_a = {
+	picture = "GFX_rtp_bascinetwithmail_a"
+	flags = { armor head heavy }
+	slot = head
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Kettle Hat with Mail
+rtp_kettlehatwithmail_a = {
+	picture = "GFX_rtp_kettlehatwithmail_a"
+	flags = { armor head heavy }
+	slot = head
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Nasal Helmet with Mail
+rtp_nasalhelmetwithmail_a = {
+	picture = "GFX_rtp_nasalhelmetwithmail_a"
+	flags = { armor head heavy }
+	slot = head
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Nasal Helmet with Closed Mail
+rtp_nasalhelmetwithclosedmail_a = {
+	picture = "GFX_rtp_nasalhelmetwithclosedmail_a"
+	flags = { armor head heavy }
+	slot = head
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Closed Mail Coif
+rtp_closedmailcoif_a = {
+	picture = "GFX_rtp_closedmailcoif_a"
+	flags = { armor head heavy }
+	slot = head
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+##Plate
+#Full Helm
+rtp_fullhelm_a = {
+	picture = "GFX_rtp_fullhelm_a"
+	flags = { armor head plate }
+	slot = head
+	quality = 5
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 10
+}
+
+#Barbute Helmet
+rtp_barbutehelmet_a = {
+	picture = "GFX_rtp_barbutehelmet_a"
+	flags = { armor head plate }
+	slot = head
+	quality = 5
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 10
+}
+
+#Conic Helmet with Closed Mail
+rtp_conichelmetwithclosedmail_a = {
+	picture = "GFX_rtp_conichelmetwithclosedmail_a"
+	flags = { armor head plate }
+	slot = head
+	quality = 5
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 10
+}
+
+#Closed Flat Top with Mail
+rtp_closedflattopwithmail_a = {
+	picture = "GFX_rtp_closedflattopwithmail_a"
+	flags = { armor head plate }
+	slot = head
+	quality = 5
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 10
+}
+
+#Conic Helmet with Faceguard
+rtp_conichelmetwithfaceguard_a = {
+	picture = "GFX_rtp_conichelmetwithfaceguard_a"
+	flags = { armor head plate }
+	slot = head
+	quality = 5
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 10
+}
+
+#Closed Scrap Metal Helmet
+rtp_closedscrapmetalhelmet_a = {
+	picture = "GFX_rtp_closedscrapmetalhelmet_a"
+	flags = { armor head plate }
+	slot = head
+	quality = 5
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 10
+}
+
+#Decorated Full Helm
+rtp_decoratedfullhelm_a = {
+	picture = "GFX_rtp_decoratedfullhelm_a"
+	flags = { armor head plate }
+	slot = head
+	quality = 5
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 10
+}
+
+#Heavy Horned Plate Helmet
+rtp_heavyhornedplatehelmet_a = {
+	picture = "GFX_rtp_heavyhornedplatehelmet_a"
+	flags = { armor head plate }
+	slot = head
+	quality = 5
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 10
+}
+
+###Torso
+
+##Cloth
+#Linen Tunic
+rtp_linentunic_a = {
+	picture = "GFX_rtp_linentunic_a"
+	flags = { armor torso cloth }
+	slot = torso
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cloth_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Apron
+rtp_apron_a = {
+	picture = "GFX_rtp_apron_a"
+	flags = { armor torso cloth }
+	slot = torso
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cloth_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Monk's Robe
+rtp_monkrobe_a = {
+	picture = "GFX_rtp_monkrobe_a"
+	flags = { armor torso cloth }
+	slot = torso
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cloth_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Noble Tunic
+rtp_nobletunic_a = {
+	picture = "GFX_rtp_nobletunic_a"
+	flags = { armor torso cloth }
+	slot = torso
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cloth_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Sackcloth
+rtp_sackcloth_a = {
+	picture = "GFX_rtp_sackcloth_a"
+	flags = { armor torso cloth }
+	slot = torso
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cloth_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Leather Wraps
+rtp_leatherwraps_a = {
+	picture = "GFX_rtp_leatherwraps_a"
+	flags = { armor torso cloth }
+	slot = torso
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cloth_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Butcher's Apron
+rtp_butcherapron_a = {
+	picture = "GFX_rtp_butcherapron_a"
+	flags = { armor torso cloth }
+	slot = torso
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cloth_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Student's Robe
+rtp_studentrobe_a = {
+	picture = "GFX_rtp_studentrobe_a"
+	flags = { armor torso cloth }
+	slot = torso
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cloth_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+##Light
+#Rugged Surcoat
+rtp_ruggedsurcoat_a = {
+	picture = "GFX_rtp_ruggedsurcoat_a"
+	flags = { armor torso light }
+	slot = torso
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_light_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Thick Tunic
+rtp_thicktunic_a = {
+	picture = "GFX_rtp_thicktunic_a"
+	flags = { armor torso light }
+	slot = torso
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_light_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Animal Hide Armor
+rtp_animalhidearmor_a = {
+	picture = "GFX_rtp_animalhidearmor_a"
+	flags = { armor torso light }
+	slot = torso
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_light_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Dark Rugged Surcoat
+rtp_darkruggedsurcoat_a = {
+	picture = "GFX_rtp_darkruggedsurcoat_a"
+	flags = { armor torso light }
+	slot = torso
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_light_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Scrap Metal Armor
+rtp_scrapmetalarmor_a = {
+	picture = "GFX_rtp_scrapmetalarmor_a"
+	flags = { armor torso light }
+	slot = torso
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_light_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Cultist Leather Robe
+rtp_cultistleatherrobe_a = {
+	picture = "GFX_rtp_cultistleatherrobe_a"
+	flags = { armor torso light }
+	slot = torso
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_light_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Leather Tunic
+rtp_leathertunic_a = {
+	picture = "GFX_rtp_leathertunic_a"
+	flags = { armor torso light }
+	slot = torso
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_light_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Thick Furs
+rtp_thickfurs_a = {
+	picture = "GFX_rtp_thickfurs_a"
+	flags = { armor torso light }
+	slot = torso
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_light_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+
+##Medium
+#Gambeson
+rtp_gambeson_a = {
+	picture = "GFX_rtp_gambeson_a"
+	flags = { armor torso medium }
+	slot = torso
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_medium_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+#Leather Lamellar Armor
+rtp_leatherlamellararmor_a = {
+	picture = "GFX_rtp_leatherlamellararmor_a"
+	flags = { armor torso medium }
+	slot = torso
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_medium_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+#Blotched Gambeson
+rtp_blotchedgambeson_a = {
+	picture = "GFX_rtp_blotchedgambeson_a"
+	flags = { armor torso medium }
+	slot = torso
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_medium_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+#Padded Leather
+rtp_paddedleather_a = {
+	picture = "GFX_rtp_paddedleather_a"
+	flags = { armor torso medium }
+	slot = torso
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_medium_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+#Leather Scale Armor
+rtp_leatherscalearmor_a = {
+	picture = "GFX_rtp_leatherscalearmor_a"
+	flags = { armor torso medium }
+	slot = torso
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_medium_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+#Reinforced Animal Hide Armor
+rtp_reinforcedanimalhidearmor_a = {
+	picture = "GFX_rtp_reinforcedanimalhidearmor_a"
+	flags = { armor torso medium }
+	slot = torso
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_medium_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+#Rugged Scale Armor
+rtp_ruggedscalearmor_a = {
+	picture = "GFX_rtp_ruggedscalearmor_a"
+	flags = { armor torso medium }
+	slot = torso
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_medium_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+#Light Scale Armor
+rtp_lightscalearmor_a = {
+	picture = "GFX_rtp_lightscalearmor_a"
+	flags = { armor torso medium }
+	slot = torso
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_medium_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+
+##Heavy
+#Mail Shirt
+rtp_mailshirt_a = {
+	picture = "GFX_rtp_mailshirt_a"
+	flags = { armor torso heavy }
+	slot = torso
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Patched Mail Shirt
+rtp_patchedmailshirt_a = {
+	picture = "GFX_rtp_patchedmailshirt_a"
+	flags = { armor torso heavy }
+	slot = torso
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Worn Mail Shirt
+rtp_wornmailshirt_a = {
+	picture = "GFX_rtp_wornmailshirt_a"
+	flags = { armor torso heavy }
+	slot = torso
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Basic Mail Shirt
+rtp_basicmailshirt_a = {
+	picture = "GFX_rtp_basicmailshirt_a"
+	flags = { armor torso heavy }
+	slot = torso
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Direwolf Mail Armor
+rtp_chainmaildirewolfhidearmor_a = {
+	picture = "GFX_rtp_chainmaildirewolfhidearmor_a"
+	flags = { armor torso heavy }
+	slot = torso
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Mail Hauberk
+rtp_mailhauberk_a = {
+	picture = "GFX_rtp_mailhauberk_a"
+	flags = { armor torso heavy }
+	slot = torso
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Lamellar Harness
+rtp_lamellarharness_a = {
+	picture = "GFX_rtp_lamellarharness_a"
+	flags = { armor torso heavy }
+	slot = torso
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Scale Armor
+rtp_scalearmor_a = {
+	picture = "GFX_rtp_scalearmor_a"
+	flags = { armor torso heavy }
+	slot = torso
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+
+##Plate
+#Coat of Plates
+rtp_coatofplates_a = {
+	picture = "GFX_rtp_coatofplates_a"
+	flags = { armor torso plate }
+	slot = torso
+	quality = 5
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 10
+}
+
+#Heavy Lamellar Armor
+rtp_heavylamellararmor_a = {
+	picture = "GFX_rtp_heavylamellararmor_a"
+	flags = { armor torso plate }
+	slot = torso
+	quality = 5
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 10
+}
+
+#Sellsword's Armor
+rtp_sellswordarmor_a = {
+	picture = "GFX_rtp_sellswordarmor_a"
+	flags = { armor torso plate }
+	slot = torso
+	quality = 5
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 10
+}
+
+#Coat of Scales
+rtp_coatofscales_a = {
+	picture = "GFX_rtp_coatofscales_a"
+	flags = { armor torso plate }
+	slot = torso
+	quality = 5
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 10
+}
+
+#Reinforced Mail Hauberk
+rtp_reinforcedmailhauberk_a = {
+	picture = "GFX_rtp_reinforcedmailhauberk_a"
+	flags = { armor torso plate }
+	slot = torso
+	quality = 5
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 10
+}
+
+#Thick Plated Barbarian Armor
+rtp_thickplatedbarbarianarmor_a = {
+	picture = "GFX_rtp_thickplatedbarbarianarmor_a"
+	flags = { armor torso plate }
+	slot = torso
+	quality = 5
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 10
+}
+
+#Heraldic Hauberk
+rtp_heraldichauberk_a = {
+	picture = "GFX_rtp_heraldichauberk_a"
+	flags = { armor torso plate }
+	slot = torso
+	quality = 5
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 10
+}
+
+#Heavy Iron Armor
+rtp_heavyironarmor_a = {
+	picture = "GFX_rtp_heavyironarmor_a"
+	flags = { armor torso plate }
+	slot = torso
+	quality = 5
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 10
+}
+
+###Main Hand
+
+##Daggers
+#Knife
+rtp_knife_a = {
+	picture = "GFX_rtp_knife_a"
+	flags = { weapon mainhand dagger }
+	slot = mainhand
+	quality = 1
+
+	active = {
+		age = 8
+
+		custom_tooltip = {
+			text = "rtp_dagger_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Dagger
+rtp_dagger_a = {
+	picture = "GFX_rtp_dagger_a"
+	flags = { weapon mainhand dagger }
+	slot = mainhand
+	quality = 2
+
+	active = {
+		age = 8
+
+		custom_tooltip = {
+			text = "rtp_dagger_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Rondel Dagger
+rtp_rondeldagger_a = {
+	picture = "GFX_rtp_rondeldagger_a"
+	flags = { weapon mainhand dagger }
+	slot = mainhand
+	quality = 3
+
+	active = {
+		age = 8
+
+		custom_tooltip = {
+			text = "rtp_dagger_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+
+##Swords
+#Shortsword
+rtp_shortsword_a = {
+	picture = "GFX_rtp_shortsword_a"
+	flags = { weapon mainhand sword }
+	slot = mainhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_sword_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_light_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Scimitar
+rtp_scimitar_a = {
+	picture = "GFX_rtp_scimitar_a"
+	flags = { weapon mainhand sword }
+	slot = mainhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_sword_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_light_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Falchion
+rtp_falchion_a = {
+	picture = "GFX_rtp_falchion_a"
+	flags = { weapon mainhand sword }
+	slot = mainhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_sword_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_light_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+
+##Maces
+#Wooden Stick
+rtp_woodenstick_a = {
+	picture = "GFX_rtp_woodenstick_a"
+	flags = { weapon mainhand mace }
+	slot = mainhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_mace_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Bludgeon
+rtp_bludgeon_a = {
+	picture = "GFX_rtp_bludgeon_a"
+	flags = { weapon mainhand mace }
+	slot = mainhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_mace_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Morning Star
+rtp_morningstar_a = {
+	picture = "GFX_rtp_morningstar_a"
+	flags = { weapon mainhand mace }
+	slot = mainhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_mace_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+
+##Spears
+#Militia Spear
+rtp_militiaspear_a = {
+	picture = "GFX_rtp_militiaspear_a"
+	flags = { weapon mainhand spear }
+	slot = mainhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_spear_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Boar Spear
+rtp_boarspear_a = {
+	picture = "GFX_rtp_boarspear_a"
+	flags = { weapon mainhand spear }
+	slot = mainhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_spear_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Fighting Spear
+rtp_fightingspear_a = {
+	picture = "GFX_rtp_fightingspear_a"
+	flags = { weapon mainhand spear }
+	slot = mainhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_spear_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+
+##Axes
+#Hatchet
+rtp_hatchet_a = {
+	picture = "GFX_rtp_hatchet_a"
+	flags = { weapon mainhand axe }
+	slot = mainhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_axe_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_medium_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Handaxe
+rtp_handaxe_a = {
+	picture = "GFX_rtp_handaxe_a"
+	flags = { weapon mainhand axe }
+	slot = mainhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_axe_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_medium_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Fighting Axe
+rtp_fightingaxe_a = {
+	picture = "GFX_rtp_fightingaxe_a"
+	flags = { weapon mainhand axe }
+	slot = mainhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_axe_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_medium_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+
+##Flails
+#Wooden Flail
+rtp_woodenflail_a = {
+	picture = "GFX_rtp_woodenflail_a"
+	flags = { weapon mainhand flail }
+	slot = mainhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_flail_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Reinforced Wooden Flail
+rtp_reinforcedwoodenflail_a = {
+	picture = "GFX_rtp_reinforcedwoodenflail_a"
+	flags = { weapon mainhand flail }
+	slot = mainhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_flail_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Flail
+rtp_flail_a = {
+	picture = "GFX_rtp_flail_a"
+	flags = { weapon mainhand flail }
+	slot = mainhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_flail_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+
+##Cleavers
+#Butcher's Cleaver
+rtp_butchercleaver_a = {
+	picture = "GFX_rtp_butchercleaver_a"
+	flags = { weapon mainhand cleaver }
+	slot = mainhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cleaver_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_cloth_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Scramasax
+rtp_scramasax_a = {
+	picture = "GFX_rtp_scramasax_a"
+	flags = { weapon mainhand cleaver }
+	slot = mainhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cleaver_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_cloth_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Military Cleaver
+rtp_militarycleaver_a = {
+	picture = "GFX_rtp_militarycleaver_a"
+	flags = { weapon mainhand cleaver }
+	slot = mainhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cleaver_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_cloth_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+
+##Hammers
+#Pickaxe
+rtp_pickaxe_a = {
+	picture = "GFX_rtp_pickaxe_a"
+	flags = { weapon mainhand hammer }
+	slot = mainhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_hammer_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Military Pick
+rtp_militarypick_a = {
+	picture = "GFX_rtp_militarypick_a"
+	flags = { weapon mainhand hammer }
+	slot = mainhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_hammer_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Warhammer
+rtp_warhammer_a = {
+	picture = "GFX_rtp_warhammer_a"
+	flags = { weapon mainhand hammer }
+	slot = mainhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_hammer_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_plate_ct"
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+###Off Hand
+
+##Daggers
+#Knife - Off
+rtp_knife_off_a = {
+	picture = "GFX_rtp_knife_a"
+	flags = { weapon offhand dagger }
+	slot = offhand
+	quality = 1
+
+	active = {
+		age = 8
+
+		custom_tooltip = {
+			text = "rtp_dagger_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_plate_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Dagger - Off
+rtp_dagger_off_a = {
+	picture = "GFX_rtp_dagger_a"
+	flags = { weapon offhand dagger }
+	slot = offhand
+	quality = 2
+
+	active = {
+		age = 8
+
+		custom_tooltip = {
+			text = "rtp_dagger_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_plate_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Rondel Dagger - Off
+rtp_rondeldagger_off_a = {
+	picture = "GFX_rtp_rondeldagger_a"
+	flags = { weapon offhand dagger }
+	slot = offhand
+	quality = 3
+
+	active = {
+		age = 8
+
+		custom_tooltip = {
+			text = "rtp_dagger_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_plate_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+
+##Swords
+#Shortsword - Off
+rtp_shortsword_off_a = {
+	picture = "GFX_rtp_shortsword_a"
+	flags = { weapon offhand sword }
+	slot = offhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_sword_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_light_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Scimitar - Off
+rtp_scimitar_off_a = {
+	picture = "GFX_rtp_scimitar_a"
+	flags = { weapon offhand sword }
+	slot = offhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_sword_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_light_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Falchion - Off
+rtp_falchion_off_a = {
+	picture = "GFX_rtp_falchion_a"
+	flags = { weapon offhand sword }
+	slot = offhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_sword_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_light_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+
+##Maces
+#Wooden Stick - Off
+rtp_woodenstick_off_a = {
+	picture = "GFX_rtp_woodenstick_a"
+	flags = { weapon offhand mace }
+	slot = offhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_mace_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Bludgeon - Off
+rtp_bludgeon_off_a = {
+	picture = "GFX_rtp_bludgeon_a"
+	flags = { weapon offhand mace }
+	slot = offhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_mace_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Morningstar - Off
+rtp_morningstar_off_a = {
+	picture = "GFX_rtp_morningstar_a"
+	flags = { weapon offhand mace }
+	slot = offhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_mace_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+
+##Spears
+#Militia Spear - Off
+rtp_militiaspear_off_a = {
+	picture = "GFX_rtp_militiaspear_a"
+	flags = { weapon offhand spear }
+	slot = offhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_spear_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Boar Spear - Off
+rtp_boarspear_off_a = {
+	picture = "GFX_rtp_boarspear_a"
+	flags = { weapon offhand spear }
+	slot = offhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_spear_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Fighting Spear - Off
+rtp_fightingspear_off_a = {
+	picture = "GFX_rtp_fightingspear_a"
+	flags = { weapon offhand spear }
+	slot = offhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_spear_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+
+##Axes
+#Hatchet - Off
+rtp_hatchet_off_a = {
+	picture = "GFX_rtp_hatchet_a"
+	flags = { weapon offhand axe }
+	slot = offhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_axe_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_medium_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Handaxe - Off
+rtp_handaxe_off_a = {
+	picture = "GFX_rtp_handaxe_a"
+	flags = { weapon offhand axe }
+	slot = offhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_axe_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_medium_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Fighting Axe - Off
+rtp_fightingaxe_off_a = {
+	picture = "GFX_rtp_fightingaxe_a"
+	flags = { weapon offhand axe }
+	slot = offhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_axe_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_medium_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+
+##Flails
+#Wooden Flail - Off
+rtp_woodenflail_off_a = {
+	picture = "GFX_rtp_woodenflail_a"
+	flags = { weapon offhand flail }
+	slot = offhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_flail_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Reinforced Wooden Flail - Off
+rtp_reinforcedwoodenflail_off_a = {
+	picture = "GFX_rtp_reinforcedwoodenflail_a"
+	flags = { weapon offhand flail }
+	slot = offhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_flail_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Flail - Off
+rtp_flail_off_a = {
+	picture = "GFX_rtp_flail_a"
+	flags = { weapon offhand flail }
+	slot = offhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_flail_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+
+##Cleavers
+#Butcher's Cleaver - Off
+rtp_butchercleaver_off_a = {
+	picture = "GFX_rtp_butchercleaver_a"
+	flags = { weapon offhand cleaver }
+	slot = offhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cleaver_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_cloth_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Scramasax - Off
+rtp_scramasax_off_a = {
+	picture = "GFX_rtp_scramasax_a"
+	flags = { weapon offhand cleaver }
+	slot = offhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cleaver_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_cloth_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Military Cleaver - Off
+rtp_militarycleaver_off_a = {
+	picture = "GFX_rtp_militarycleaver_a"
+	flags = { weapon offhand cleaver }
+	slot = offhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cleaver_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_cloth_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+
+##Hammers
+#Pickaxe - Off
+rtp_pickaxe_off_a = {
+	picture = "GFX_rtp_pickaxe_a"
+	flags = { weapon offhand hammer }
+	slot = offhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_hammer_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_plate_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Military Pick - Off
+rtp_militarypick_off_a = {
+	picture = "GFX_rtp_militarypick_a"
+	flags = { weapon offhand hammer }
+	slot = offhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_hammer_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_plate_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Warhammer - Off
+rtp_warhammer_off_a = {
+	picture = "GFX_rtp_warhammer_a"
+	flags = { weapon offhand hammer }
+	slot = offhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_hammer_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_plate_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+
+##Throwing Weapons
+#Throwing Axes - Off
+rtp_throwingaxes_off_a = {
+	picture = "GFX_rtp_throwingaxes_a"
+	flags = { weapon offhand throwing }
+	slot = offhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_throwing_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_light_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Javelins - Off
+rtp_javelins_off_a = {
+	picture = "GFX_rtp_javelins_a"
+	flags = { weapon offhand throwing }
+	slot = offhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_throwing_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_light_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+#Throwing Spear - Off
+rtp_throwingspear_off_a = {
+	picture = "GFX_rtp_throwingspear_a"
+	flags = { weapon offhand throwing }
+	slot = offhand
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_throwing_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_light_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+
+##Shields
+#Buckler - Off
+rtp_buckler_off_a = {
+	picture = "GFX_rtp_buckler_a"
+	flags = { armor offhand shield }
+	slot = offhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_shield_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Skirmisher Shield - Off
+rtp_skirmishershield_off_a = {
+	picture = "GFX_rtp_skirmishershield_a"
+	flags = { armor offhand shield }
+	slot = offhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_shield_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 2
+}
+
+#Wooden Shield - Off
+rtp_woodenshield_off_a = {
+	picture = "GFX_rtp_woodenshield_a"
+	flags = { armor offhand shield }
+	slot = offhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_shield_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Heater Shield - Off
+rtp_heatershield_off_a = {
+	picture = "GFX_rtp_heatershield_a"
+	flags = { armor offhand shield }
+	slot = offhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_shield_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 6
+}
+
+#Kite Shield - Off
+rtp_kiteshield_off_a = {
+	picture = "GFX_rtp_kiteshield_a"
+	flags = { armor offhand shield }
+	slot = offhand
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_shield_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Tower Shield - Off
+rtp_towershield_off_a = {
+	picture = "GFX_rtp_towershield_a"
+	flags = { armor offhand shield }
+	slot = offhand
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_shield_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_twohand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = twohand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+###Two Hand
+
+##Two Handed Swords
+#Warbrand
+rtp_warbrand_a = {
+	picture = "GFX_rtp_warbrand_a"
+	flags = { weapon twohand sword }
+	slot = mainhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_sword_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_light_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Longsword
+rtp_longsword_a = {
+	picture = "GFX_rtp_longsword_a"
+	flags = { weapon twohand sword }
+	slot = mainhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_sword_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_light_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Greatsword
+rtp_greatsword_a = {
+	picture = "GFX_rtp_greatsword_a"
+	flags = { weapon twohand sword }
+	slot = mainhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_sword_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_light_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 12
+}
+
+
+##Two Handed Maces
+#Two-Handed Mace
+rtp_thmace_a = {
+	picture = "GFX_rtp_thmace_a"
+	flags = { weapon twohand mace }
+	slot = mainhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_mace_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+rtp_thspikedmace_a = {
+	picture = "GFX_rtp_thspikedmace_a"
+	flags = { weapon twohand mace }
+	slot = mainhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_mace_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Two-Handed Flanged Mace
+rtp_thflangedmace_a = {
+	picture = "GFX_rtp_thflangedmace_a"
+	flags = { weapon twohand mace }
+	slot = mainhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_mace_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 12
+}
+
+
+##Two Handed Spears
+#Goedendag
+rtp_goedendag_a = {
+	picture = "GFX_rtp_goedendag_a"
+	flags = { weapon twohand spear }
+	slot = mainhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_spear_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Warfork
+rtp_warfork_a = {
+	picture = "GFX_rtp_warfork_a"
+	flags = { weapon twohand spear }
+	slot = mainhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_spear_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Spetum
+rtp_spetum_a = {
+	picture = "GFX_rtp_spetum_a"
+	flags = { weapon twohand spear }
+	slot = mainhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_spear_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 12
+}
+
+
+##Two Handed Axes
+#Woodcutter's Axe
+rtp_woodcutteraxe_a = {
+	picture = "GFX_rtp_woodcutteraxe_a"
+	flags = { weapon twohand axe }
+	slot = mainhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_axe_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_medium_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Greataxe
+rtp_greataxe_a = {
+	picture = "GFX_rtp_greataxe_a"
+	flags = { weapon twohand axe }
+	slot = mainhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_axe_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_medium_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Longaxe
+rtp_longaxe_a = {
+	picture = "GFX_rtp_longaxe_a"
+	flags = { weapon twohand axe }
+	slot = mainhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_axe_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_medium_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 12
+}
+
+
+##Two Handed Flails
+#Two-Handed Wooden Flail
+rtp_thwoodenflail_a = {
+	picture = "GFX_rtp_thwoodenflail_a"
+	flags = { weapon twohand flail }
+	slot = mainhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_flail_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Berserk Chain
+rtp_berserkchain_a = {
+	picture = "GFX_rtp_berserkchain_a"
+	flags = { weapon twohand flail }
+	slot = mainhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_flail_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Two-Handed Flail
+rtp_thflail_a = {
+	picture = "GFX_rtp_thflail_a"
+	flags = { weapon twohand flail }
+	slot = mainhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_flail_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_heavy_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 12
+}
+
+
+##Two Handed Cleavers
+#Rusty Warblade
+rtp_rustywarblade_a = {
+	picture = "GFX_rtp_rustywarblade_a"
+	flags = { weapon twohand cleaver }
+	slot = mainhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cleaver_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_cloth_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Crypt Cleaver
+rtp_cryptcleaver_a = {
+	picture = "GFX_rtp_cryptcleaver_a"
+	flags = { weapon twohand cleaver }
+	slot = mainhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_cleaver_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_cloth_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+
+##Two Handed Hammers
+#Two-Handed Mallet
+rtp_thmallet_a = {
+	picture = "GFX_rtp_thmallet_a"
+	flags = { weapon twohand hammer }
+	slot = mainhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_hammer_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_plate_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Two-Handed Hammer
+rtp_thhammer_a = {
+	picture = "GFX_rtp_thhammer_a"
+	flags = { weapon twohand hammer }
+	slot = mainhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_hammer_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_plate_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Polehammer
+rtp_polehammer_a = {
+	picture = "GFX_rtp_polehammer_a"
+	flags = { weapon twohand hammer }
+	slot = mainhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_hammer_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_plate_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 12
+}
+
+
+##Polearms
+#Pitchfork
+rtp_pitchfork_a = {
+	picture = "GFX_rtp_pitchfork_a"
+	flags = { weapon twohand polearm }
+	slot = mainhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_polearm_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_medium_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Pike
+rtp_pike_a = {
+	picture = "GFX_rtp_pike_a"
+	flags = { weapon twohand polearm }
+	slot = mainhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_polearm_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_medium_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Billhook
+rtp_billhook_a = {
+	picture = "GFX_rtp_billhook_a"
+	flags = { weapon twohand polearm }
+	slot = mainhand
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_polearm_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_medium_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 16
+}
+
+
+##Bows
+#Short Bow
+rtp_shortbow_a = {
+	picture = "GFX_rtp_shortbow_a"
+	flags = { weapon twohand bow }
+	slot = mainhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_bow_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_medium_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Hunting Bow
+rtp_huntingbow_a = {
+	picture = "GFX_rtp_huntingbow_a"
+	flags = { weapon twohand bow }
+	slot = mainhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_bow_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_medium_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 12
+}
+
+#War Bow
+rtp_warbow_a = {
+	picture = "GFX_rtp_warbow_a"
+	flags = { weapon twohand bow }
+	slot = mainhand
+	quality = 4
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_bow_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_medium_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 16
+}
+
+
+##Crossbows
+#Light Crossbow
+rtp_lightcrossbow_a = {
+	picture = "GFX_rtp_lightcrossbow_a"
+	flags = { weapon twohand crossbow }
+	slot = mainhand
+	quality = 1
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_crossbow_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_plate_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+#Crossbow
+rtp_crossbow_a = {
+	picture = "GFX_rtp_crossbow_a"
+	flags = { weapon twohand crossbow }
+	slot = mainhand
+	quality = 2
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_crossbow_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_plate_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 8
+}
+
+#Windlass Crossbow
+rtp_windlasscrossbow_a = {
+	picture = "GFX_rtp_windlasscrossbow_a"
+	flags = { weapon twohand crossbow }
+	slot = mainhand
+	quality = 3
+
+	active = {
+		is_adult = yes
+
+		custom_tooltip = {
+			text = "rtp_crossbow_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_plate_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 12
+}
+
+
+###Mount
+
+#Horse
+rtp_horse_a = {
+	picture = "GFX_rtp_horse_a"
+	flags = { mount horse }
+	slot = mount
+	quality = 2
+
+	active = {
+		age = 8
+	}
+
+	allowed_gift = {
+		always = no
+	}
+
+	combat_rating = 4
+}
+
+
+###Storage
+
+##Trade
+#Gems
+rtp_gems_a = {
+	picture = "GFX_rtp_gems_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Amber
+rtp_amber_a = {
+	picture = "GFX_rtp_amber_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Beer
+rtp_beer_a = {
+	picture = "GFX_rtp_beer_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Berries
+rtp_berries_a = {
+	picture = "GFX_rtp_berries_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Bread
+rtp_bread_a = {
+	picture = "GFX_rtp_bread_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Bricks
+rtp_bricks_a = {
+	picture = "GFX_rtp_bricks_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Cheese
+rtp_cheese_a = {
+	picture = "GFX_rtp_cheese_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Cloth
+rtp_cloth_a = {
+	picture = "GFX_rtp_cloth_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Copper
+rtp_copper_a = {
+	picture = "GFX_rtp_copper_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Dried Fruits
+rtp_driedfruits_a = {
+	picture = "GFX_rtp_driedfruits_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Dyes
+rtp_dyes_a = {
+	picture = "GFX_rtp_dyes_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Fish
+rtp_fish_a = {
+	picture = "GFX_rtp_fish_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Furs
+rtp_furs_a = {
+	picture = "GFX_rtp_furs_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Grain
+rtp_grain_a = {
+	picture = "GFX_rtp_grain_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Ham
+rtp_ham_a = {
+	picture = "GFX_rtp_ham_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Mushrooms
+rtp_mushrooms_a = {
+	picture = "GFX_rtp_mushrooms_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Porkribs
+rtp_porkribs_a = {
+	picture = "GFX_rtp_porkribs_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Salt
+rtp_salt_a = {
+	picture = "GFX_rtp_salt_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Spirits
+rtp_spirits_a = {
+	picture = "GFX_rtp_spirits_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Venison
+rtp_venison_a = {
+	picture = "GFX_rtp_venison_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Wine
+rtp_wine_a = {
+	picture = "GFX_rtp_wine_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Wood
+rtp_wood_a = {
+	picture = "GFX_rtp_wood_a"
+	flags = { storage trade }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}
+
+
+##Trinkets
+#Ancient Skull
+rtp_ancientskull_a = {
+	picture = "GFX_rtp_ancientskull_a"
+	flags = { storage trinket }
+	quality = 6
+
+	allowed_gift = {
+		always = no
+	}
+}

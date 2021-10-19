@@ -1,0 +1,51 @@
+slots = {
+	mbw_wonder_loot = 3
+}
+
+mbw_artifact_capstone = {
+	monthly_character_prestige = 0.1
+	global_revolt_risk = -0.05
+	short_reign_length = -5
+	vassal_opinion = 5
+	quality = 5
+
+	flags = {
+		unique
+	}
+
+	stacking = no
+	picture = "GFX_mbw_capstone"
+	slot = mbw_wonder_loot
+}
+
+mbw_artifact_colossus_head = {
+	monthly_character_prestige = 0.1
+	global_revolt_risk = -0.05
+	short_reign_length = -5
+	vassal_opinion = 5
+	quality = 5
+
+	flags = {
+		unique
+		sculpture
+	}
+	stacking = no
+	picture = "GFX_mbw_colossus_head"
+	slot = mbw_wonder_loot
+}
+
+mbw_artifact_ledgers = {
+	monthly_character_prestige = 0.1
+	stewardship = 1
+	intrigue =1
+	local_tax_modifier = 0.025
+	quality = 5
+
+	flags = {
+		unique
+		book
+	}
+	stacking = no
+	picture = "GFX_mbw_ledgers"
+	slot = mbw_wonder_loot
+}

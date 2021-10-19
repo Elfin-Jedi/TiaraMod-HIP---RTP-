@@ -1,0 +1,586 @@
+# Caesar's Books by CaesarTheRoman
+
+cbs_fixed = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_arab_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_pahnut = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_sefer = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_ancient_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_thorsdr = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_shahna = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_scroll_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_aghani = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_arab_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_aethel = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_vamsa = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_scroll_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_actibus = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_eccles = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_gentis = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_kitab = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_arab_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_sponsus = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_elucid = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_tahafut = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_scroll_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_dunelm = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_ancient_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_ormulum = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_roskil = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_lejrek = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_sic = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_hortus = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_enide = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_cliges = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_lion = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_lancelot = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_perceval = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_khosrow = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_scroll_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_otia = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_mundi = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_musica = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_caerf = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_talie = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_aneir = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_hergest = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_pancha = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_scroll_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_nasiri = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_arab_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_autodid = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_arab_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_anon = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_dnyane = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_scroll_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_cursor = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_lament = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_riming = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_ancient_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_moralia = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_poimen = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_adversus = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_vita = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_consola = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_ancient_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_august = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_elien = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_visio = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_morale = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_patric = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_virtutum = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_arme = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_gregor = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_wisse = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_mantiq = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_arab_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_masnavi = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_arab_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_bustan = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_scroll_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_qissa = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_scroll_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_owl = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_lunyu = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_chinese_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_erya = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_chinese_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_iching = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_chinese_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}
+
+cbs_shijing = {
+	quality = 3
+	learning = 4
+	general_opinion = 5
+	picture = "GFX_cbs_chinese_learning"
+	slot = library
+	flags = { about_learning book cbs_book }
+}

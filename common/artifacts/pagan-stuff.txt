@@ -1,0 +1,221 @@
+dragon_scale = {
+  monthly_character_prestige = 0.5
+  same_religion_opinion = 10
+  martial = 2
+  command_modifier = {
+    morale_offence = 0.2
+    morale_defence = 0.2  
+  }
+  quality = 5
+  active = {
+    OR = {
+      religion = tengri_pagan
+      religion = tengri_pagan_reformed
+    }
+    is_adult = yes
+  }
+  flags = { religious tengri_pagan very_rare combat }
+  stacking = no
+  picture = "GFX_pouch"
+}
+
+firebird_plumage = {
+  monthly_character_prestige = 1
+  martial = 1
+  stewardship = 1
+  diplomacy = 1
+  intrigue = 1
+  learning = 1
+  same_religion_opinion = 10
+  quality = 5
+  active = {
+    OR = {
+      religion = slavic_pagan
+      religion = slavic_pagan_reformed
+    }
+  }
+  flags = { religious slavic_pagan very_rare }
+  stacking = no
+  picture = "GFX_pouch"
+}
+
+baba_yaga_pestle_mortar = {
+  monthly_character_piety = -2
+  martial = 5
+  intrigue = 5
+  diplomacy_penalty = -5
+  demesne_size = 2
+  global_revolt_risk = 0.04
+  plot_power_modifier = 0.25
+  vassal_opinion = -10
+  levy_size = 0.10
+  same_religion_opinion = -30
+  command_modifier = {
+    morale_offence = 0.2  
+  }
+  quality = 5
+  active = {
+    OR = {
+      religion = slavic_pagan
+      religion = slavic_pagan_reformed
+    
+    }
+  }
+  flags = { religious slavic_pagan very_rare }
+  stacking = no
+  picture = "GFX_pouch"
+  slot = weapon
+  
+}
+
+yadachy_cloak = {
+  monthly_character_piety = 1
+  same_religion_opinion = 10
+  demesne_size = 2
+  learning = 2
+  population_growth = 0.15
+  active = {
+    OR = {
+      religion = tengri_pagan
+      religion = tengri_pagan_reformed
+        
+    }
+  }
+  quality = 5
+  flags = { religious slavic_pagan very_rare }
+  picture = "GFX_pouch"
+  
+}
+
+sacred_amber = {
+  global_tax_modifier = 0.3
+  stewardship = 4
+  active = {
+    OR = {
+      religion = baltic_pagan
+      religion = baltic_pagan_reformed  
+    }
+  }
+  quality = 5
+  flags = { religious baltic_pagan very_rare }
+  picture = "GFX_crown_gold_fancy"
+  slot = crown
+}
+
+ekwensu_mask = {
+  intrigue = 3
+  martial = 3
+  plot_power_modifier = 0.25
+  defensive_plot_power_modifier = 0.25
+  active = {
+    OR = {
+      religion = west_african_pagan
+      religion = west_african_pagan_reformed 
+    }
+  }
+  quality = 5
+  flags = { religious west_african_pagan very_rare }
+  picture = "GFX_bracelet_jeweled_gold" 
+}
+
+shango_staff = {
+  monthly_character_prestige = 0.5
+	monthly_character_piety = 0.5
+  stewardship = 3
+  diplomacy = 3
+  martial_penalty = -10
+  vassal_opinion = 10
+  global_tax_modifier = 0.1
+  demesne_size = 2
+  global_garrison_size = 0.3
+  global_levy_size = -0.3
+  global_revolt_risk = -0.2
+  vassal_limit = 10
+  active = {
+    OR = {
+      religion = west_african_pagan
+      religion = west_african_pagan_reformed
+    }
+  }
+  quality = 5
+  flags = { religious west_african_pagan very_rare }
+  picture = "GFX_royal_scepter"
+  slot = ceremonial_weapon
+}
+
+ukonvasara = {
+  monthly_character_prestige = 0.5
+  monthly_character_piety = 0.5
+  martial = 5
+  command_modifier = {
+    morale_offence = 0.2
+    morale_defence = 0.2  
+  }
+  active = {
+    OR ={
+      religion = finnish_pagan
+      religion = finnish_pagan_reformed
+    }
+  }
+  quality = 5
+  flags = { religious finnish_pagan very_rare combat }
+  slot = weapon
+  picture = "GFX_mjolnir"
+}
+
+magic_kantele = {
+  monthly_character_prestige = 0.5
+  monthly_character_piety = 0.5
+  command_modifier = {
+    morale_defence = 0.15
+  }
+  general_opinion = 10
+  active = {
+    OR ={
+      religion = finnish_pagan
+      religion = finnish_pagan_reformed
+    }
+  }
+  quality = 5
+  flags = { religious finnish_pagan very_rare }
+  slot = ceremonial_weapon
+  picture = "GFX_king_davids_harp"
+}
+
+eye_of_ra = {
+  monthly_character_prestige = 0.5
+  monthly_character_piety = 0.5
+  health = 1
+  fertility = 0.25
+  disease_defence = 0.25
+  plot_discovery_chance = 0.25
+  defensive_plot_power_modifier = 0.25
+  global_revolt_risk = -0.04
+  active = {
+    OR = {
+      religion = zun_pagan
+      religion = zun_pagan_reformed  
+    }
+  }
+  quality = 5
+  flags = { religious zun_pagan very_rare }
+  picture = "GFX_pouch"
+}
+
+helios_chariot = {
+  monthly_character_prestige = 0.5
+  monthly_character_piety = 0.5
+  command_modifier = {
+    speed = 0.25
+    cavalry =0.1
+  }
+  active = {
+    OR = {
+      religion = zun_pagan
+      religion = zun_pagan_reformed  
+    }
+  }
+  quality = 5
+  flags = { religious zun_pagan very_rare }
+  picture = "GFX_pouch"
+}

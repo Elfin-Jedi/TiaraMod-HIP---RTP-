@@ -1,0 +1,284 @@
+# Caesar's Books by CaesarTheRoman
+
+cbs_admini = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_haley = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_ancient_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_tarik = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_arab_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_chronic = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_annales = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_ancient_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_tractatus = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_ancient_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_origo = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_ancient_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_legenda = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_layla = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_arab_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_regum = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_brut = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_berengar = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_dano = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_hungaro = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_polono = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_rijn = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_vepkh = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+
+cbs_bahram = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_scroll_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+
+cbs_lais = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+
+cbs_vetala = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_scroll_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_faerey = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_ancient_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_delarose = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_blanq = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_shujing = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_chinese_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_yili = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_chinese_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_xiaojing = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_chinese_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_jizhong = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_chinese_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
+
+cbs_zhanguo = {
+	quality = 3
+	diplomacy = 3
+	learning = 1
+	vassal_opinion = 5
+	picture = "GFX_cbs_chinese_diplomacy"
+	slot = library
+	flags = { about_diplomacy book cbs_book }
+}
