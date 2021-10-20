@@ -18,7 +18,6 @@ pagan_group = {
 	ainu_pagan_reformed = {
 		graphical_culture = mongolgfx
 		secondary_event_pictures = tengri_pagan
-		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 29
 		heresy_icon = 30
@@ -157,7 +156,6 @@ pagan_group = {
 	chinese_pagan_reformed = { # Shenist/Wuist/Nuoist
 		graphical_culture = chinesegfx
 		secondary_event_pictures = sunni
-		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 		interface_skin = { taoist_interface indian_interface muslim_interface }
 
 		icon = 53
@@ -302,7 +300,6 @@ pagan_group = {
 	korean_pagan_reformed = { # Muist/Shinist
 		graphical_culture = chinesegfx
 		secondary_event_pictures = sunni
-		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 		interface_skin = { taoist_interface indian_interface muslim_interface }
 
 		icon = 56
@@ -447,7 +444,6 @@ pagan_group = {
 	ryukyuan_pagan_reformed = {
 		graphical_culture = chinesegfx
 		secondary_event_pictures = sunni
-		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 		interface_skin = { taoist_interface indian_interface muslim_interface }
 
 		icon = 56

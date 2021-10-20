@@ -9,7 +9,6 @@ pagan_group = {
 	dayak_pagan_reformed = { # Kaharingan
 		graphical_culture = africangfx
 		secondary_event_pictures = west_african_pagan
-		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 		interface_skin = { indian_interface muslim_interface }
 
 		icon = 57
@@ -149,7 +148,6 @@ pagan_group = {
 	sanamahi_pagan_reformed = { # Bamars
 		graphical_culture = indiangfx
 		secondary_event_pictures = sunni
-		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 		interface_skin = { indian_interface muslim_interface }
 
 		icon = 57
@@ -288,7 +286,6 @@ pagan_group = {
 	viet_pagan_reformed = { # Thanist
 		graphical_culture = chinesegfx
 		secondary_event_pictures = sunni
-		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 		interface_skin = { taoist_interface indian_interface muslim_interface }
 
 		icon = 57
