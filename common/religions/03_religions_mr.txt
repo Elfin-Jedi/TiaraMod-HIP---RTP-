@@ -10,6 +10,7 @@ pagan_group = {
 		graphical_culture = africangfx
 		secondary_event_pictures = west_african_pagan
 		interface_skin = { indian_interface muslim_interface }
+		alternate_start = { always = no }
 
 		icon = 57
 		heresy_icon = 56
@@ -149,6 +150,7 @@ pagan_group = {
 		graphical_culture = indiangfx
 		secondary_event_pictures = sunni
 		interface_skin = { indian_interface muslim_interface }
+		alternate_start = { always = no }
 
 		icon = 57
 		heresy_icon = 56
@@ -287,6 +289,7 @@ pagan_group = {
 		graphical_culture = chinesegfx
 		secondary_event_pictures = sunni
 		interface_skin = { taoist_interface indian_interface muslim_interface }
+		alternate_start = { always = no }
 
 		icon = 57
 		heresy_icon = 56

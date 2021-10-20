@@ -8,6 +8,7 @@ pagan_group = {
 
 	titan_pagan = {
 		graphical_culture = norsegfx
+		alternate_start = { always = no }
 
 		icon = 58
 		heresy_icon = 59
@@ -74,6 +75,7 @@ pagan_group = {
 	promethean_pagan = {
 		graphical_culture = hellenicgfx
 		interface_skin = { hellenic_interface }
+		alternate_start = { always = no }
 
 		ai_convert_other_group = 2 # always try to convert
 		ai_convert_same_group = 2 # always try to convert
@@ -419,6 +421,7 @@ pagan_group = {
 	aten_pagan = { # Atenism
 		graphical_culture = africangfx
 		interface_skin = { zoroastrian_interface muslim_interface }
+		alternate_start = { always = no }
 
 		#pre_reformed = yes
 
