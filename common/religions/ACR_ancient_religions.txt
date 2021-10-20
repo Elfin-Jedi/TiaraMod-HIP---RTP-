@@ -47,6 +47,7 @@ pagan_group = {
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		psc_marriage = yes
 
 		aggression = 2.0 # AI aggression factor
@@ -167,6 +168,7 @@ pagan_group = {
 		priests_can_marry = no
 		priests_can_inherit = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		can_call_crusade = yes
 		join_crusade_if_bordering_hostile = yes
 
@@ -235,6 +237,7 @@ pagan_group = {
 		feminist = yes
 		defensive_attrition = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes # Lose Prestige while at peace
 		raised_vassal_opinion_loss = no
 		allow_looting = yes
@@ -292,7 +295,6 @@ pagan_group = {
 		female_temple_holders = yes
 		feminist = yes
 		women_can_take_consorts = yes
-		men_can_take_consorts = no
 		male_temple_holders = no
 
 		can_have_antipopes = yes
