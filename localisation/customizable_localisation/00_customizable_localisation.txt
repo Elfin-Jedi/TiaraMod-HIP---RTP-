@@ -4100,6 +4100,21 @@ defined_text = {
 			NOT = { religion = britannic_pagan }
 		}
 	}
+	text = {
+		localisation_key = String_Great_Hero_cap
+		trigger = {
+			religion_group = dark_group
+			NOT = { religion = satanism }
+			NOT = { religion = luciferian }
+		}
+	}
+	text = {
+		localisation_key = String_Famous_Sinner_cap
+		trigger = {
+			religion = satanism
+			religion = luciferian
+		}
+	}
 }
 
 defined_text = { #WIP
