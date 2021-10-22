@@ -15,12 +15,13 @@ Contains:
 "Combat Rebalance"
 "Cultural Emergence"
 "Cultures+"
+"Easy Heresy" [Religions Added]
 "Extra Bloodlines 1.4"
 "Friend Mod"
 "HIP - Forge Unlimited Bloodlines"
 "HIP - More Bloodlines"
 "Idiosyncrasy"
-"Inherited 'secretly religion' traits"
+"Inherited 'secretly religion' traits" [Religions Added]
 "Invite Locals ++"
 "Legalized Gay Marriage"
 "Mexican Culture"
