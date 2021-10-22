@@ -1,0 +1,408 @@
+decisions = {
+
+show_decision_list = {
+	ai_check_interval = 12
+	potential = {
+		ai = no
+		NOT = { has_character_flag = heresylist_toggled }
+	}
+	allow = {
+		NOR = {
+			has_character_flag = christian_religiontime
+			has_character_flag = muslim_religiontime
+			has_character_flag = mazdan_religiontime
+			has_character_flag = jewish_religiontime
+			has_character_flag = indian_religiontime
+			has_character_flag = pagan_europe_religiontime
+			has_character_flag = pagan_asia_religiontime
+			has_character_flag = pagan_africa_religiontime
+			has_character_flag = pagan_americas_religiontime
+			has_character_flag = pagan_oceania_religiontime
+		}
+	}
+	effect = {
+		set_character_flag = heresylist_toggled 
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+hide_decision_list = {
+	ai_check_interval = 12
+	potential = {
+		ai = no
+		has_character_flag = heresylist_toggled
+	}
+	allow = {
+		NOR = {
+			has_character_flag = christian_religiontime
+			has_character_flag = muslim_religiontime
+			has_character_flag = mazdan_religiontime
+			has_character_flag = jewish_religiontime
+			has_character_flag = indian_religiontime
+			has_character_flag = pagan_europe_religiontime
+			has_character_flag = pagan_asia_religiontime
+			has_character_flag = pagan_africa_religiontime
+			has_character_flag = pagan_americas_religiontime
+			has_character_flag = pagan_oceania_religiontime
+		}
+	}
+	effect = {
+		clr_character_flag = heresylist_toggled 
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+christian_religion = {
+	ai_check_interval = 12
+	potential = {
+		ai = no
+		has_character_flag = heresylist_toggled 
+	}
+	allow = {
+		NOR = {
+			has_character_flag = christian_religiontime
+			has_character_flag = muslim_religiontime
+			has_character_flag = mazdan_religiontime
+			has_character_flag = jewish_religiontime
+			has_character_flag = indian_religiontime
+			has_character_flag = pagan_europe_religiontime
+			has_character_flag = pagan_asia_religiontime
+			has_character_flag = pagan_africa_religiontime
+			has_character_flag = pagan_americas_religiontime
+			has_character_flag = pagan_oceania_religiontime
+			has_character_flag = dark_religiontime
+		}
+	}
+	effect = {
+		ROOT = {
+			set_character_flag = christian_religiontime
+			character_event = { id = easyheresy.01 }
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+muslim_religion = {
+	ai_check_interval = 12
+	potential = {
+		ai = no
+		has_character_flag = heresylist_toggled 
+	}
+	allow = {
+		NOR = {
+			has_character_flag = christian_religiontime
+			has_character_flag = muslim_religiontime
+			has_character_flag = mazdan_religiontime
+			has_character_flag = jewish_religiontime
+			has_character_flag = indian_religiontime
+			has_character_flag = pagan_europe_religiontime
+			has_character_flag = pagan_asia_religiontime
+			has_character_flag = pagan_africa_religiontime
+			has_character_flag = pagan_americas_religiontime
+			has_character_flag = pagan_oceania_religiontime
+			has_character_flag = dark_religiontime
+		}
+	}
+	effect = {
+		ROOT = {
+			set_character_flag = muslim_religiontime
+			character_event = { id = easyheresy.11 }
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+mazdan_religion = {
+	ai_check_interval = 12
+	potential = {
+		ai = no
+		has_character_flag = heresylist_toggled 
+	}
+	allow = {
+		NOR = {
+			has_character_flag = christian_religiontime
+			has_character_flag = muslim_religiontime
+			has_character_flag = mazdan_religiontime
+			has_character_flag = jewish_religiontime
+			has_character_flag = indian_religiontime
+			has_character_flag = pagan_europe_religiontime
+			has_character_flag = pagan_asia_religiontime
+			has_character_flag = pagan_africa_religiontime
+			has_character_flag = pagan_americas_religiontime
+			has_character_flag = pagan_oceania_religiontime
+			has_character_flag = dark_religiontime
+		}
+	}
+	effect = {
+		ROOT = {
+			set_character_flag = mazdan_religiontime
+			character_event = { id = easyheresy.21 }
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+jewish_religion = {
+	ai_check_interval = 12
+	potential = {
+		ai = no
+		has_character_flag = heresylist_toggled 
+	}
+	allow = {
+		NOR = {
+			has_character_flag = christian_religiontime
+			has_character_flag = muslim_religiontime
+			has_character_flag = mazdan_religiontime
+			has_character_flag = jewish_religiontime
+			has_character_flag = indian_religiontime
+			has_character_flag = pagan_europe_religiontime
+			has_character_flag = pagan_asia_religiontime
+			has_character_flag = pagan_africa_religiontime
+			has_character_flag = pagan_americas_religiontime
+			has_character_flag = pagan_oceania_religiontime
+			has_character_flag = dark_religiontime
+		}
+	}
+	effect = {
+		ROOT = {
+			set_character_flag = jewish_religiontime
+			character_event = { id = easyheresy.31 }
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+indian_religion = {
+	ai_check_interval = 12
+	potential = {
+		ai = no
+		has_character_flag = heresylist_toggled 
+	}
+	allow = {
+		NOR = {
+			has_character_flag = christian_religiontime
+			has_character_flag = muslim_religiontime
+			has_character_flag = mazdan_religiontime
+			has_character_flag = jewish_religiontime
+			has_character_flag = indian_religiontime
+			has_character_flag = pagan_europe_religiontime
+			has_character_flag = pagan_asia_religiontime
+			has_character_flag = pagan_africa_religiontime
+			has_character_flag = pagan_americas_religiontime
+			has_character_flag = pagan_oceania_religiontime
+			has_character_flag = dark_religiontime
+		}
+	}
+	effect = {
+		ROOT = {
+			set_character_flag = indian_religiontime
+			character_event = { id = easyheresy.41 }
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+pagan_europe_religion = {
+	ai_check_interval = 12
+	potential = {
+		ai = no
+		has_character_flag = heresylist_toggled 
+	}
+	allow = {
+		NOR = {
+			has_character_flag = christian_religiontime
+			has_character_flag = muslim_religiontime
+			has_character_flag = mazdan_religiontime
+			has_character_flag = jewish_religiontime
+			has_character_flag = indian_religiontime
+			has_character_flag = pagan_europe_religiontime
+			has_character_flag = pagan_asia_religiontime
+			has_character_flag = pagan_africa_religiontime
+			has_character_flag = pagan_americas_religiontime
+			has_character_flag = pagan_oceania_religiontime
+			has_character_flag = dark_religiontime
+		}
+	}
+	effect = {
+		ROOT = {
+			set_character_flag = pagan_europe_religiontime
+			character_event = { id = easyheresy.51 }
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+pagan_asia_religion = {
+	ai_check_interval = 12
+	potential = {
+		ai = no
+		has_character_flag = heresylist_toggled 
+	}
+	allow = {
+		NOR = {
+			has_character_flag = christian_religiontime
+			has_character_flag = muslim_religiontime
+			has_character_flag = mazdan_religiontime
+			has_character_flag = jewish_religiontime
+			has_character_flag = indian_religiontime
+			has_character_flag = pagan_europe_religiontime
+			has_character_flag = pagan_asia_religiontime
+			has_character_flag = pagan_africa_religiontime
+			has_character_flag = pagan_americas_religiontime
+			has_character_flag = pagan_oceania_religiontime
+			has_character_flag = dark_religiontime
+		}
+	}
+	effect = {
+		ROOT = {
+			set_character_flag = pagan_asia_religiontime
+			character_event = { id = easyheresy.61 }
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+pagan_africa_religion = {
+	ai_check_interval = 12
+	potential = {
+		ai = no
+		has_character_flag = heresylist_toggled 
+	}
+	allow = {
+		NOR = {
+			has_character_flag = christian_religiontime
+			has_character_flag = muslim_religiontime
+			has_character_flag = mazdan_religiontime
+			has_character_flag = jewish_religiontime
+			has_character_flag = indian_religiontime
+			has_character_flag = pagan_europe_religiontime
+			has_character_flag = pagan_asia_religiontime
+			has_character_flag = pagan_africa_religiontime
+			has_character_flag = pagan_americas_religiontime
+			has_character_flag = pagan_oceania_religiontime
+			has_character_flag = dark_religiontime
+		}
+	}
+	effect = {
+		ROOT = {
+			set_character_flag = pagan_africa_religiontime
+			character_event = { id = easyheresy.71 }
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+pagan_americas_religion = {
+	ai_check_interval = 12
+	potential = {
+		ai = no
+		has_character_flag = heresylist_toggled 
+	}
+	allow = {
+		NOR = {
+			has_character_flag = christian_religiontime
+			has_character_flag = muslim_religiontime
+			has_character_flag = mazdan_religiontime
+			has_character_flag = jewish_religiontime
+			has_character_flag = indian_religiontime
+			has_character_flag = pagan_europe_religiontime
+			has_character_flag = pagan_asia_religiontime
+			has_character_flag = pagan_americas_religiontime
+			has_character_flag = pagan_oceania_religiontime
+			has_character_flag = dark_religiontime
+		}
+	}
+	effect = {
+		ROOT = {
+			set_character_flag = pagan_americas_religiontime
+			character_event = { id = easyheresy.81 }
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+pagan_oceania_religion = {
+	ai_check_interval = 12
+	potential = {
+		ai = no
+		has_character_flag = heresylist_toggled 
+	}
+	allow = {
+		NOR = {
+			has_character_flag = christian_religiontime
+			has_character_flag = muslim_religiontime
+			has_character_flag = mazdan_religiontime
+			has_character_flag = jewish_religiontime
+			has_character_flag = indian_religiontime
+			has_character_flag = pagan_europe_religiontime
+			has_character_flag = pagan_asia_religiontime
+			has_character_flag = pagan_americas_religiontime
+			has_character_flag = pagan_oceania_religiontime
+			has_character_flag = dark_religiontime
+		}
+	}
+	effect = {
+		ROOT = {
+			set_character_flag = pagan_oceania_religiontime
+			character_event = { id = easyheresy.91 }
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+dark_religion = {
+	ai_check_interval = 12
+	potential = {
+		ai = no
+		has_character_flag = heresylist_toggled 
+	}
+	allow = {
+		NOR = {
+			has_character_flag = christian_religiontime
+			has_character_flag = muslim_religiontime
+			has_character_flag = mazdan_religiontime
+			has_character_flag = jewish_religiontime
+			has_character_flag = indian_religiontime
+			has_character_flag = pagan_europe_religiontime
+			has_character_flag = pagan_asia_religiontime
+			has_character_flag = pagan_americas_religiontime
+			has_character_flag = pagan_oceania_religiontime
+			has_character_flag = dark_religiontime
+		}
+	}
+	effect = {
+		ROOT = {
+			set_character_flag = dark_religiontime
+			character_event = { id = easyheresy.101 }
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+}
