@@ -1,0 +1,1848 @@
+namespace = easyheresy
+
+character_event = {
+	id = easyheresy.01 #Christians
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = christian_religiontime
+	}
+
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.01a
+		set_secret_religion = catholic
+	}
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.01b
+		set_secret_religion = cathar
+	}
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.01c
+		set_secret_religion = fraticelli
+	}
+	
+	option = { #There are others.
+		name = easyheresy.01d
+		hidden_tooltip = { character_event = { id = easyheresy.02 } }
+		trigger = {
+			ai = no
+		}
+	}
+	
+	after = {
+		clr_character_flag = christian_religiontime
+	}
+}
+	
+character_event = {
+	id = easyheresy.02
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = christian_religiontime
+	}
+		
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.02a
+		set_secret_religion = lollard
+	}
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.02b
+		set_secret_religion = waldensian
+	}
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.02c
+		set_secret_religion = adoptionist
+	}
+	
+	option = { #There are others.
+		name = easyheresy.01d
+		hidden_tooltip = { character_event = { id = easyheresy.03 } }
+		trigger = {
+			ai = no
+		}
+	}
+	
+	after = {
+		clr_character_flag = christian_religiontime
+	}
+}
+	
+character_event = {
+	id = easyheresy.03
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = christian_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.03a
+		set_secret_religion = arian
+	}
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.03b
+		set_secret_religion = orthodox
+	}
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.03c
+		set_secret_religion = bogomilist
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.03d
+		hidden_tooltip = { character_event = { id = easyheresy.04 } }
+	}
+	after = {
+		clr_character_flag = christian_religiontime
+	}
+}	
+	
+character_event = {
+	id = easyheresy.04
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = christian_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.04a
+		set_secret_religion = monothelite
+	}
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.04b
+		set_secret_religion = iconoclast
+	}
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.04c
+		set_secret_religion = syriac
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.04d
+		hidden_tooltip = { character_event = { id = easyheresy.05 } }
+	}
+	after = {
+		clr_character_flag = christian_religiontime
+	}
+}
+	
+character_event = {
+	id = easyheresy.05
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = christian_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.05a
+		set_secret_religion = maronite
+	}
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.05b
+		set_secret_religion = miaphysite
+	}
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.05c
+		set_secret_religion = monophysite
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.05d
+		hidden_tooltip = { character_event = { id = easyheresy.06 } }
+	}
+	after = {
+		clr_character_flag = christian_religiontime
+	}
+}
+	
+character_event = {
+	id = easyheresy.06
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = christian_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.06a
+		set_secret_religion = apostolic
+	}
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.06b
+		set_secret_religion = paulician
+	}
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.06c
+		set_secret_religion = tondrakian
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.06d
+		hidden_tooltip = { character_event = { id = easyheresy.07 } }
+	}
+	after = {
+		clr_character_flag = christian_religiontime
+	}
+}
+	
+character_event = {
+	id = easyheresy.07
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = christian_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.07a
+		set_secret_religion = nestorian
+	}
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.07b
+		set_secret_religion = messalian
+	}
+	option = {
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.07c
+		set_secret_religion = chalcedonian
+	}
+	option = { # Back to Start
+		trigger = {
+			has_character_flag = christian_religiontime
+		}
+		name = easyheresy.07d
+		hidden_tooltip = { character_event = { id = easyheresy.01 } }
+	}
+	after = {
+		clr_character_flag = christian_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.11 #Muslims
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = muslim_religiontime
+	}
+
+	option = {
+		trigger = {
+			has_character_flag = muslim_religiontime
+		}
+		name = easyheresy.11a
+		set_secret_religion = sunni
+	}
+	option = {
+		trigger = {
+			has_character_flag = muslim_religiontime
+		}
+		name = easyheresy.11b
+		set_secret_religion = zikri
+	}
+	option = {
+		trigger = {
+			has_character_flag = muslim_religiontime
+		}
+		name = easyheresy.11c
+		set_secret_religion = mahdiyya
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = muslim_religiontime
+		}
+		name = easyheresy.11d
+		hidden_tooltip = { character_event = { id = easyheresy.12 } }
+	}
+	after = {
+		clr_character_flag = muslim_religiontime
+	}
+}
+	
+character_event = {
+	id = easyheresy.12
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = muslim_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = muslim_religiontime
+		}
+		name = easyheresy.12a
+		set_secret_religion = nabawiyya
+	}
+	option = {
+		trigger = {
+			has_character_flag = muslim_religiontime
+		}
+		name = easyheresy.12b
+		set_secret_religion = ibadi
+	}
+	option = {
+		trigger = {
+			has_character_flag = muslim_religiontime
+		}
+		name = easyheresy.12c
+		set_secret_religion = kharijite
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = muslim_religiontime
+		}
+		name = easyheresy.12d
+		hidden_tooltip = { character_event = { id = easyheresy.13 } }
+	}
+	after = {
+		clr_character_flag = muslim_religiontime
+	}
+}
+	
+character_event = {
+	id = easyheresy.13
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = muslim_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = muslim_religiontime
+		}
+		name = easyheresy.13a
+		set_secret_religion = haruri
+	}
+	option = {
+		trigger = {
+			has_character_flag = muslim_religiontime
+		}
+		name = easyheresy.13b
+		set_secret_religion = shiite
+	}
+	option = {
+		trigger = {
+			has_character_flag = muslim_religiontime
+		}
+		name = easyheresy.13c
+		set_secret_religion = waqifi
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = muslim_religiontime
+		}
+		name = easyheresy.13d
+		hidden_tooltip = { character_event = { id = easyheresy.14 } }
+	}
+	after = {
+		clr_character_flag = muslim_religiontime
+	}
+}
+	
+character_event = {
+	id = easyheresy.14
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = muslim_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = muslim_religiontime
+		}
+		name = easyheresy.14a
+		set_secret_religion = zaydi
+	}
+	option = {
+		trigger = {
+			has_character_flag = muslim_religiontime
+		}
+		name = easyheresy.14b
+		set_secret_religion = hurufi
+	}
+	option = {
+		trigger = {
+			has_character_flag = muslim_religiontime
+		}
+		name = easyheresy.14c
+		set_secret_religion = ismaili
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = muslim_religiontime
+		}
+		name = easyheresy.14d
+		hidden_tooltip = { character_event = { id = easyheresy.15 } }
+	}
+	after = {
+		clr_character_flag = muslim_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.15
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = muslim_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = muslim_religiontime
+		}
+		name = easyheresy.15a
+		set_secret_religion = druze
+	}
+	option = {
+		trigger = {
+			has_character_flag = muslim_religiontime
+		}
+		name = easyheresy.15b
+		set_secret_religion = qarmatian
+	}
+	option = { # Back to Start
+		trigger = {
+			has_character_flag = muslim_religiontime
+		}
+		name = easyheresy.15c
+		hidden_tooltip = { character_event = { id = easyheresy.11 } }
+	}
+	after = {
+		clr_character_flag = muslim_religiontime
+	}
+}
+	
+character_event = {
+	id = easyheresy.21
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = mazdan_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = mazdan_religiontime
+		}
+		name = easyheresy.21a
+		set_secret_religion = zoroastrian
+	}
+	option = {
+		trigger = {
+			has_character_flag = mazdan_religiontime
+		}
+		name = easyheresy.21b
+		set_secret_religion = mazdaki
+	}
+	option = {
+		trigger = {
+			has_character_flag = mazdan_religiontime
+		}
+		name = easyheresy.21c
+		set_secret_religion = zurvanist
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = mazdan_religiontime
+		}
+		name = easyheresy.21d
+		hidden_tooltip = { character_event = { id = easyheresy.22 } }
+	}
+	after = {
+		clr_character_flag = mazdan_religiontime
+	}
+}
+	
+character_event = {
+	id = easyheresy.22
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = mazdan_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = mazdan_religiontime
+		}
+		name = easyheresy.22a
+		set_secret_religion = manichean
+	}
+	option = {
+		trigger = {
+			has_character_flag = mazdan_religiontime
+		}
+		name = easyheresy.22b
+		set_secret_religion = mandaean
+	}
+	option = {
+		trigger = {
+			has_character_flag = mazdan_religiontime
+		}
+		name = easyheresy.22c
+		set_secret_religion = yazidi
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = mazdan_religiontime
+		}
+		name = easyheresy.22d
+		hidden_tooltip = { character_event = { id = easyheresy.23 } }
+	}
+	after = {
+		clr_character_flag = mazdan_religiontime
+	}
+}
+	
+character_event = {
+	id = easyheresy.23
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = mazdan_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = mazdan_religiontime
+		}
+		name = easyheresy.23a
+		set_secret_religion = khurmazta
+	}
+	# Back to Start
+	option = {
+		trigger = {
+			has_character_flag = mazdan_religiontime
+		}
+		name = easyheresy.23b
+		hidden_tooltip = { character_event = { id = easyheresy.21 } }
+	}
+	after = {
+		clr_character_flag = mazdan_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.31
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = jewish_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = jewish_religiontime
+		}
+		name = easyheresy.31a
+		set_secret_religion = jewish
+	}
+	option = {
+		trigger = {
+			has_character_flag = jewish_religiontime
+		}
+		name = easyheresy.31b
+		set_secret_religion = samaritan
+	}
+	option = {
+		trigger = {
+			has_character_flag = jewish_religiontime
+		}
+		name = easyheresy.31c
+		set_secret_religion = karaite
+	}
+	after = {
+		clr_character_flag = jewish_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.41
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = indian_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.41a
+		set_secret_religion = hinduism
+	}
+	option = {
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.41b
+		set_secret_religion = buddhism
+	}
+	option = {
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.41c
+		set_secret_religion = jain
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.41d
+		hidden_tooltip = { character_event = { id = easyheresy.42 } }
+	}
+	after = {
+		clr_character_flag = indian_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.42
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = indian_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.42a
+		set_secret_religion = taoist
+	}
+	option = {
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.42b
+		set_secret_religion = shinto
+	}
+	option = {
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.42c
+		set_secret_religion = nat
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.42d
+		hidden_tooltip = { character_event = { id = easyheresy.43 } }
+	}
+	after = {
+		clr_character_flag = indian_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.43
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = indian_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.43a
+		set_secret_religion = sastsana_phi
+	}
+	option = {
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.43b
+		set_secret_religion = rmagao
+	}
+	option = {
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.43c
+		set_secret_religion = shenjiao
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.43d
+		hidden_tooltip = { character_event = { id = easyheresy.44 } }
+	}
+	after = {
+		clr_character_flag = indian_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.44
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = indian_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.44a
+		set_secret_religion = benzhujiao
+	}
+	option = {
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.44b
+		set_secret_religion = bimojiao
+	}
+	option = {
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.44c
+		set_secret_religion = ua_dab
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.44d
+		hidden_tooltip = { character_event = { id = easyheresy.45 } }
+	}
+	after = {
+		clr_character_flag = indian_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.45
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = indian_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.45a
+		set_secret_religion = nugyauq
+	}
+	option = {
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.45b
+		set_secret_religion = thangiao
+	}
+	option = {
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.45c
+		set_secret_religion = shingyo
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.45d
+		hidden_tooltip = { character_event = { id = easyheresy.46 } }
+	}
+	after = {
+		clr_character_flag = indian_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.46
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = indian_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.46a
+		set_secret_religion = nihon_shinto
+	}
+	option = {
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.46b
+		set_secret_religion = ryukyu_shinto
+	}
+	option = {
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.46c
+		set_secret_religion = confucian
+	}
+	option = { # Back to Start
+		trigger = {
+			has_character_flag = indian_religiontime
+		}
+		name = easyheresy.07d
+		hidden_tooltip = { character_event = { id = easyheresy.41 } }
+	}
+	after = {
+		clr_character_flag = indian_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.51
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = pagan_europe_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = pagan_europe_religiontime
+		}
+		name = easyheresy.51a
+		set_secret_religion = norse_pagan
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_europe_religiontime
+		}
+		name = easyheresy.51b
+		set_secret_religion = baltic_pagan
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_europe_religiontime
+		}
+		name = easyheresy.51c
+		set_secret_religion = finnish_pagan
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = pagan_europe_religiontime
+		}
+		name = easyheresy.51d
+		hidden_tooltip = { character_event = { id = easyheresy.52 } }
+	}
+	after = {
+		clr_character_flag = pagan_europe_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.52
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = pagan_europe_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = pagan_europe_religiontime
+		}
+		name = easyheresy.52a
+		set_secret_religion = hellenic_pagan
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_europe_religiontime
+		}
+		name = easyheresy.52b
+		set_secret_religion = celtic_pagan
+	}
+	option = { # Back to Start
+		trigger = {
+			has_character_flag = pagan_europe_religiontime
+		}
+		name = easyheresy.52c
+		hidden_tooltip = { character_event = { id = easyheresy.51 } }
+	}
+	after = {
+		clr_character_flag = pagan_europe_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.61
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = pagan_asia_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = pagan_asia_religiontime
+		}
+		name = easyheresy.61a
+		set_secret_religion = tengri_pagan
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_asia_religiontime
+		}
+		name = easyheresy.61b
+		set_secret_religion = slavic_pagan
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_asia_religiontime
+		}
+		name = easyheresy.61c
+		set_secret_religion = bon
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = pagan_asia_religiontime
+		}
+		name = easyheresy.61d
+		hidden_tooltip = { character_event = { id = easyheresy.62 } }
+	}
+	after = {
+		clr_character_flag = pagan_asia_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.62
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = pagan_asia_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = pagan_asia_religiontime
+		}
+		name = easyheresy.62a
+		set_secret_religion = ainu_pagan
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_asia_religiontime
+		}
+		name = easyheresy.62b
+		set_secret_religion = chinese_pagan
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_asia_religiontime
+		}
+		name = easyheresy.62c
+		set_secret_religion = korean_pagan
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = pagan_asia_religiontime
+		}
+		name = easyheresy.62d
+		hidden_tooltip = { character_event = { id = easyheresy.63 } }
+	}
+	after = {
+		clr_character_flag = pagan_asia_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.63
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = pagan_asia_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = pagan_asia_religiontime
+		}
+		name = easyheresy.63a
+		set_secret_religion = ryukyuan_pagan
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_asia_religiontime
+		}
+		name = easyheresy.63b
+		set_secret_religion = jurchen_pagan
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_asia_religiontime
+		}
+		name = easyheresy.63c
+		set_secret_religion = taiwanese_religion
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = pagan_asia_religiontime
+		}
+		name = easyheresy.63d
+		hidden_tooltip = { character_event = { id = easyheresy.64 } }
+	}
+	after = {
+		clr_character_flag = pagan_asia_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.64
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = pagan_asia_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = pagan_asia_religiontime
+		}
+		name = easyheresy.64a
+		set_secret_religion = ainu_pantheism
+	}
+	option = { # Back to Start
+		trigger = {
+			has_character_flag = pagan_asia_religiontime
+		}
+		name = easyheresy.64b
+		hidden_tooltip = { character_event = { id = easyheresy.61 } }
+	}
+	after = {
+		clr_character_flag = pagan_asia_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.71
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = pagan_africa_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = pagan_africa_religiontime
+		}
+		name = easyheresy.71a
+		set_secret_religion = west_african_pagan
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_africa_religiontime
+		}
+		name = easyheresy.71b
+		set_secret_religion = zun_pagan
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_africa_religiontime
+		}
+		name = easyheresy.71c
+		set_secret_religion = south_bantu_mythology
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = pagan_africa_religiontime
+		}
+		name = easyheresy.71d
+		hidden_tooltip = { character_event = { id = easyheresy.72 } }
+	}
+	after = {
+		clr_character_flag = pagan_africa_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.72
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = pagan_africa_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = pagan_africa_religiontime
+		}
+		name = easyheresy.72a
+		set_secret_religion = east_bantu_mythology
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_africa_religiontime
+		}
+		name = easyheresy.72b
+		set_secret_religion = omotic_pagan
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_africa_religiontime
+		}
+		name = easyheresy.72c
+		set_secret_religion = cushitic_pagan
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = pagan_africa_religiontime
+		}
+		name = easyheresy.72d
+		hidden_tooltip = { character_event = { id = easyheresy.73 } }
+	}
+	after = {
+		clr_character_flag = pagan_africa_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.73
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = pagan_africa_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = pagan_africa_religiontime
+		}
+		name = easyheresy.73a
+		set_secret_religion = nilotic_pagan
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_africa_religiontime
+		}
+		name = easyheresy.73b
+		set_secret_religion = khoi_san_mythology
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_africa_religiontime
+		}
+		name = easyheresy.73c
+		set_secret_religion = animism
+	}
+	option = { #There are others. # Back to Start
+		trigger = {
+			has_character_flag = pagan_africa_religiontime
+		}
+		name = easyheresy.73d
+		hidden_tooltip = { character_event = { id = easyheresy.74 } }
+	}
+	after = {
+		clr_character_flag = pagan_africa_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.74
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = pagan_africa_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = pagan_africa_religiontime
+		}
+		name = easyheresy.74a
+		set_secret_religion = egyptian_pagan
+	}
+	option = { # Back to Start
+		trigger = {
+			has_character_flag = pagan_africa_religiontime
+		}
+		name = easyheresy.74b
+		hidden_tooltip = { character_event = { id = easyheresy.71 } }
+	}
+	after = {
+		clr_character_flag = pagan_africa_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.81
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = pagan_americas_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = pagan_americas_religiontime
+		}
+		name = easyheresy.81a
+		set_secret_religion = aztec
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_americas_religiontime
+		}
+		name = easyheresy.81b
+		set_secret_religion = inca_religion
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_americas_religiontime
+		}
+		name = easyheresy.81c
+		set_secret_religion = mayan
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = pagan_americas_religiontime
+		}
+		name = easyheresy.81d
+		hidden_tooltip = { character_event = { id = easyheresy.82 } }
+	}
+	after = {
+		clr_character_flag = pagan_americas_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.82
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = pagan_americas_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = pagan_americas_religiontime
+		}
+		name = easyheresy.82a
+		set_secret_religion = inuit_pagan
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_americas_religiontime
+		}
+		name = easyheresy.82b
+		set_secret_religion = algic_pagan
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_americas_religiontime
+		}
+		name = easyheresy.82c
+		set_secret_religion = tuniit_pagan
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = pagan_americas_religiontime
+		}
+		name = easyheresy.82d
+		hidden_tooltip = { character_event = { id = easyheresy.83 } }
+	}
+	after = {
+		clr_character_flag = pagan_americas_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.83
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = pagan_americas_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = pagan_americas_religiontime
+		}
+		name = easyheresy.83a
+		set_secret_religion = inti
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_americas_religiontime
+		}
+		name = easyheresy.83b
+		set_secret_religion = south_american
+	}
+	option = { # Back to Start
+		trigger = {
+			has_character_flag = pagan_americas_religiontime
+		}
+		name = easyheresy.83c
+		hidden_tooltip = { character_event = { id = easyheresy.81 } }
+	}
+	after = {
+		clr_character_flag = pagan_americas_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.91
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = pagan_oceania_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = pagan_oceania_religiontime
+		}
+		name = easyheresy.91a
+		set_secret_religion = dayak_pagan
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_oceania_religiontime
+		}
+		name = easyheresy.91b
+		set_secret_religion = melanesian_pagan
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_oceania_religiontime
+		}
+		name = easyheresy.91c
+		set_secret_religion = sanamahi_pagan
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = pagan_oceania_religiontime
+		}
+		name = easyheresy.91d
+		hidden_tooltip = { character_event = { id = easyheresy.92 } }
+	}
+	after = {
+		clr_character_flag = pagan_oceania_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.92
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = pagan_oceania_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = pagan_oceania_religiontime
+		}
+		name = easyheresy.92a
+		set_secret_religion = viet_pagan
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_oceania_religiontime
+		}
+		name = easyheresy.92b
+		set_secret_religion = philippine_religion
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_oceania_religiontime
+		}
+		name = easyheresy.92c
+		set_secret_religion = bornean_religion
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = pagan_oceania_religiontime
+		}
+		name = easyheresy.92d
+		hidden_tooltip = { character_event = { id = easyheresy.93 } }
+	}
+	after = {
+		clr_character_flag = pagan_oceania_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.93
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = pagan_oceania_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = pagan_oceania_religiontime
+		}
+		name = easyheresy.93a
+		set_secret_religion = sulawesi_religion
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_oceania_religiontime
+		}
+		name = easyheresy.93b
+		set_secret_religion = flores_religion
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_oceania_religiontime
+		}
+		name = easyheresy.93c
+		set_secret_religion = java_religion
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = pagan_oceania_religiontime
+		}
+		name = easyheresy.93d
+		hidden_tooltip = { character_event = { id = easyheresy.94 } }
+	}
+	after = {
+		clr_character_flag = pagan_oceania_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.94
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = pagan_oceania_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = pagan_oceania_religiontime
+		}
+		name = easyheresy.94a
+		set_secret_religion = sumatran_religion
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_oceania_religiontime
+		}
+		name = easyheresy.94b
+		set_secret_religion = malagasy_religion
+	}
+	option = {
+		trigger = {
+			has_character_flag = pagan_oceania_religiontime
+		}
+		name = easyheresy.94c
+		set_secret_religion = dreamtime_religion
+	}
+	option = { #There are others.
+		trigger = {
+			has_character_flag = pagan_oceania_religiontime
+		}
+		name = easyheresy.94d
+		hidden_tooltip = { character_event = { id = easyheresy.95 } }
+	}
+	after = {
+		clr_character_flag = pagan_oceania_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.95
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = pagan_oceania_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = pagan_oceania_religiontime
+		}
+		name = easyheresy.95a
+		set_secret_religion = maori_religion
+	}
+	option = { # Back to Start
+		trigger = {
+			has_character_flag = pagan_oceania_religiontime
+		}
+		name = easyheresy.95b
+		hidden_tooltip = { character_event = { id = easyheresy.91 } }
+	}
+	after = {
+		clr_character_flag = pagan_oceania_religiontime
+	}
+}
+
+character_event = {
+	id = easyheresy.101
+	
+	title = easyheresy.1.title
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	desc = easyheresy.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = dark_religiontime
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = dark_religiontime
+		}
+		name = easyheresy.101a
+		set_secret_religion = luciferian
+	}
+	option = {
+		trigger = {
+			has_character_flag = dark_religiontime
+		}
+		name = easyheresy.101b
+		set_secret_religion = hadesian
+	}
+	option = {
+		trigger = {
+			has_character_flag = dark_religiontime
+		}
+		name = easyheresy.101c
+		set_secret_religion = osirisian
+	}
+	option = {
+		trigger = {
+			has_character_flag = dark_religiontime
+		}
+		name = easyheresy.101d
+		set_secret_religion = satanism
+	}
+	after = {
+		clr_character_flag = dark_religiontime
+	}
+}
