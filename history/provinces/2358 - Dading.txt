@@ -1,0 +1,19 @@
+# County Title
+title = c_dading
+
+# Settlements
+max_settlements = 7
+
+b_dading = tribal
+b_changxing = tribal
+b_fushu = tribal
+
+
+# Misc
+culture = qay
+religion = tengri_pagan
+
+# History
+1270.1.1 = {
+	culture = mongol
+}#Khitans disappear as a separate people

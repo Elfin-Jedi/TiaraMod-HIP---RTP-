@@ -1,0 +1,26 @@
+# County Title
+title = c_linhuang
+
+# Settlements
+max_settlements = 5
+
+b_linhuang = tribal
+#b_zuzhou = city
+#b_longhua = castle
+#b_raozhou = city
+#b_huaizhou = city
+#b_qingzhou = city
+
+# Misc
+culture = khitan
+religion = tengri_pagan
+
+# History
+926.1.1 = {
+	b_linhuang = city
+	b_zuzhou = city
+	b_longhua = castle
+}
+1270.1.1 = {
+	culture = mongol
+}#Khitans disappear as a separate people

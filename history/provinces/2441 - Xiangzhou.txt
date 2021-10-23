@@ -1,0 +1,17 @@
+# County Title
+title = c_xiangzhou_jingxi
+
+# Settlements
+max_settlements = 6
+
+b_xiangyang = city
+b_dengcheng_xiangzhou = city
+b_gucheng_xiangzhou = city
+b_yicheng_xiangzhou = city
+b_zhonglu = city
+#b_nanzhang = city
+#b_lexiang = city
+
+# Misc
+culture = han
+religion = taoist

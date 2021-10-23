@@ -1,0 +1,16 @@
+# County Title
+title = c_jingzhou_shangjing
+
+# Settlements
+max_settlements = 1
+
+b_jinshan_jingzhou = tribal
+
+# Misc
+culture = khitan
+religion = tengri_pagan
+
+# History
+1270.1.1 = {
+	culture = mongol
+}#Khitans disappear as a separate people
