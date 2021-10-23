@@ -5303,7 +5303,7 @@ upgrade_cow_automata_throne = { # Automata Throne
 			}
 		}
 		OR = {
-			government = roman_imperial_government
+			government = imperial_government
 			TECH_CONSTRUCTION = 5
 		}
 	}
