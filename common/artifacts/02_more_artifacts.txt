@@ -2471,33 +2471,33 @@ singing_sword = { #103 Poet Sword - of Conaire Mor, would sing in battle
 	slot = weapon
 }
 
-spear_of_lugh = { #104 Sword - Fantasy, Celtic god Lugh's Spear
-	monthly_character_prestige = 0.5
-	monthly_character_piety = 0.5
-	same_religion_opinion = 5
-	combat_rating = 20
-	command_modifier = {
-		heavy_infantry = 0.15
-	}
-	active = {
-		is_adult = yes
-		OR = {
-			culture_group = celtic
-			culture_group = west_germanic
-		}
-	}
-	allowed_gift = {
-		OR = {
-			culture_group = celtic
-			culture_group = west_germanic
-		}
-	}
-	quality = 5
-	flags = { religious very_rare irish }
-	stacking = no
-	picture = "GFX_spear_of_lugh"
-	slot = weapon
-}
+#spear_of_lugh = { #104 Sword - Fantasy, Celtic god Lugh's Spear
+#	monthly_character_prestige = 0.5
+#	monthly_character_piety = 0.5
+#	same_religion_opinion = 5
+#	combat_rating = 20
+#	command_modifier = {
+#		heavy_infantry = 0.15
+#	}
+#	active = {
+#		is_adult = yes
+#		OR = {
+#			culture_group = celtic
+#			culture_group = west_germanic
+#		}
+#	}
+#	allowed_gift = {
+#		OR = {
+#			culture_group = celtic
+#			culture_group = west_germanic
+#		}
+#	}
+#	quality = 5
+#	flags = { religious very_rare irish }
+#	stacking = no
+#	picture = "GFX_spear_of_lugh"
+#	slot = weapon
+#}
 
 ceard_nan_gallan = { #105 Ceremonial Sword - is "the Smith of the Branches". This was the sword of Oisin, greatest poet of Ireland, warrior of the Fianna.
 	monthly_character_prestige = 0.25
@@ -2625,24 +2625,24 @@ tutankhamun_death_mask = { #110 King Tut's death mask
 	slot = crown
 }
 
-mask_of_agamemnon = { #111 mask found in Mycenae, Hellenic Pagan
-	monthly_character_prestige = 0.25
-	diplomacy = 2
-	stewardship = 2
-	vassal_opinion = 10
-	same_religion_opinion = 5
-	active = {
-		religion_openly_hellenic_or_reformed_trigger = yes
-	}
-	allowed_gift = {
-		religion_openly_hellenic_or_reformed_trigger = yes
-	}
-	quality = 4
-	flags = { religious hellenic_pagan very_rare }
-	stacking = no
-	picture = "GFX_mask_of_agamemnon"
-	slot = mask
-}
+#mask_of_agamemnon = { #111 mask found in Mycenae, Hellenic Pagan
+#	monthly_character_prestige = 0.25
+#	diplomacy = 2
+#	stewardship = 2
+#	vassal_opinion = 10
+#	same_religion_opinion = 5
+#	active = {
+#		religion_openly_hellenic_or_reformed_trigger = yes
+#	}
+#	allowed_gift = {
+#		religion_openly_hellenic_or_reformed_trigger = yes
+#	}
+#	quality = 4
+#	flags = { religious hellenic_pagan very_rare }
+#	stacking = no
+#	picture = "GFX_mask_of_agamemnon"
+#	slot = mask
+#}
 
 
 ### BRITISH ISLES FROM HAFA
