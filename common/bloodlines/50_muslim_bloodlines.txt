@@ -8,26 +8,6 @@ umayyad = {
 	picture = GFX_bloodlines_symbol_war
 	flags = { historical_bloodline bloodline_drill }
 }
-abbasid = {
-	sunni_opinion = 10
-	monthly_character_prestige = 0.1
-	build_time_modifier = -0.15
-	bloodline_effect_great_heroes_appear = 1
-	inheritance = patrilineal
-	allow_bastards = yes
-	picture = GFX_bloodlines_placeholder_symbol
-	flags = { historical_bloodline bloodline_heroes }
-}
-fatimid = {
-	shiite_opinion = 10
-	combat_rating = 5
-	monthly_character_prestige = 0.2
-	bloodline_effect_great_heroes_appear = 1
-	inheritance = patrilineal
-	allow_bastards = yes
-	picture = GFX_bloodlines_symbol_ashoka_lion
-	flags = { historical_bloodline bloodline_heroes }
-}
 hashimid = {
 	bedouin_arabic_opinion = 5
 	shiite_opinion = 5

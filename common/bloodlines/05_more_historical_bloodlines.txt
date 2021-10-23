@@ -67,16 +67,6 @@ abbasid = {
 	flags = { historical_bloodline bloodline_abbasid }
 }
 
-alfred = {
-	picture = GFX_bloodlines_symbol_alfred
-	inheritance = patrilineal
-	allow_bastards = yes
-	monthly_character_prestige = 0.25
-	west_germanic_opinion = 10
-	combat_rating = 10
-	flags = { historical_bloodline bloodline_alfred }
-}
-
 asturias = {
 	picture = GFX_bloodlines_symbol_asturias
 	inheritance = patrilineal
