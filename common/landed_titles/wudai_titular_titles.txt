@@ -1,0 +1,970 @@
+# -*- ck2.landed_titles -*-
+
+
+### Historical dynasties
+
+k_dai = {
+	color={ 100 110 20 }
+	color2={ 255 255 255 }
+	
+	culture = xianbei
+	
+	capital = 2277 # Shengzhou
+	
+	allow = {
+		always = no
+	}
+}
+k_liang = {
+	color={ 100 110 20 }
+	color2={ 255 255 255 }
+	
+	culture = xianbei
+	
+	capital = 2196 # Liangzhou
+	
+	allow = {
+		always = no
+	}
+}
+e_yan = {
+	color={ 100 110 20 }
+	color2={ 255 255 255 }
+	
+	culture = xianbei
+	
+	capital = 2586 # Yingzhou
+	
+	allow = {
+		always = no
+	}
+}
+e_western_yan = {
+	color={ 100 110 20 }
+	color2={ 255 255 255 }
+	
+	culture = xianbei
+	
+	capital = 2267 # Luzhou
+	
+	allow = {
+		always = no
+	}
+}
+e_southern_yan = {
+	color={ 100 110 20 }
+	color2={ 255 255 255 }
+	
+	culture = xianbei
+	
+	capital = 2575 # Qingzhou
+	
+	allow = {
+		always = no
+	}
+}
+e_xixia = {
+	color={ 8 182 64 }
+	color2={ 255 255 255 }
+		
+	culture = tangut
+	
+	capital = 2215 # Xingqing
+	
+	tangut = "Phon Be Le Le"
+	
+	allow = {
+		always = no
+	}
+}
+e_wei = {
+	color={ 100 110 20 }
+	color2={ 255 255 255 }
+	
+	culture = xianbei
+	
+	capital = 2257 # Henan
+	
+	allow = {
+		always = no
+	}
+}
+e_wei_2 = {
+	color={ 100 110 20 }
+	color2={ 255 255 255 }
+	
+	culture = xianbei
+	
+	capital = 2259 # Xiangzhou
+	
+	allow = {
+		always = no
+	}
+}
+e_southern_qi = {
+	color={ 91 50 74 }
+	color2={ 255 255 255 }
+	
+	culture = han
+	
+	capital = 2579 # Shangzhou
+	
+	allow = {
+		always = no
+	}
+}
+e_hanzhao = {
+	color={ 124 73 111 }
+	color2={ 255 255 255 }
+	
+	culture = han
+	
+	capital = 2276 # Jingzhao
+	
+	allow = {
+		always = no
+	}
+}
+e_northern_xia = {
+	color={ 124 73 111 }
+	color2={ 255 255 255 }
+	
+	culture = han
+	
+	capital = 2303 # Tiande
+	
+	allow = {
+		always = no
+	}
+}
+e_southern_liang = {
+	color={ 124 73 111 }
+	color2={ 255 255 255 }
+	
+	culture = han
+	
+	capital = 2579 # Shangzhou
+	
+	allow = {
+		always = no
+	}
+}
+k_western_liang = {
+	color={ 187 99 161 }
+	color2={ 255 255 255 }
+	
+	culture = han
+	
+	capital = 2198 # Suzhou
+	
+	allow = {
+		always = no
+	}
+}
+e_western_liang = {
+	color={ 187 99 161 }
+	color2={ 255 255 255 }
+	
+	culture = han
+	
+	capital = 2495 # Jiangling
+	
+	allow = {
+		always = no
+	}
+}
+e_later_tang = {
+	color={ 187 99 161 }
+	color2={ 255 255 255 }
+	
+	culture = shatuo
+	
+	capital = 2257 # Henan
+	
+	allow = {
+		always = no
+	}
+}
+e_later_liang = {
+	color={ 147 79 201 }
+	color2={ 255 255 255 }
+	
+	culture = han
+	
+	capital = 2470 # Kaifeng
+	
+	allow = {
+		always = no
+	}
+}
+e_later_jin = {
+	color={ 107 19 221 }
+	color2={ 255 255 255 }
+	
+	culture = shatuo
+	
+	capital = 2470 # Kaifeng
+	
+	allow = {
+		always = no
+	}
+}
+e_later_han = {
+	color={ 187 55 43 }
+	color2={ 255 255 255 }
+	
+	culture = shatuo
+	
+	capital = 2470 # Kaifeng
+	
+	allow = {
+		always = no
+	}
+}
+e_later_zhou = {
+	color={ 141 79 122 }
+	color2={ 255 255 255 }
+	
+	culture = han
+	
+	capital = 2470 # Kaifeng
+	
+	allow = {
+		always = no
+	}
+}
+e_former_shu = {
+	color={ 82 99 165 }
+	color2={ 255 255 255 }
+	
+	culture = han
+	
+	capital = 2401 # Chengdu
+	
+	allow = {
+		always = no
+	}
+}
+e_later_shu = {
+	color={ 111 143 12 }
+	color2={ 255 255 255 }
+	
+	culture = han
+	
+	capital = 2401 # Chengdu
+	
+	allow = {
+		always = no
+	}
+}
+e_liu_yan = {
+	color={ 100 20 50 }
+	color2={ 255 255 255 }
+	
+	culture = han
+	
+	capital = 2355 #Youdu
+	
+	allow = {
+		always = no
+	}
+}
+e_huang_qi = {
+	color = { 0 250 40 }
+    color2 = { 255 255 255 }
+	
+	culture = han
+	
+	capital = 2276 # Jingzhao
+	
+	allow = {
+		always = no
+	}
+}
+e_tang = {
+	color = { 250 40 0 }
+	color2 = { 255 255 255 }
+	
+	culture = han
+	
+	capital = 2276 # Jingzhao
+	
+	allow = {
+		always = no
+	}
+}
+e_sui = {
+	color = { 46 40 12 }
+    color2 = { 255 255 255 }
+	
+	culture = han
+	
+	capital = 2276 # Jingzhao
+	
+	allow = {
+		always = no
+	}
+}
+e_song = {
+	color = { 99 84 62 }
+    color2 = { 255 255 255 }
+	
+	culture = han
+	
+	capital = 2470 # Kaifeng
+	
+	allow = {
+		always = no
+	}
+}
+e_southern_tang = {
+	color = { 155 136 14 }
+    color2 = { 255 255 255 }
+	
+	culture = han
+	
+	capital = 2579 # Shangzhou
+	
+	allow = {
+		always = no
+	}
+}
+k_wuyue = {
+	color = { 31 41 14 }
+    color2 = { 255 255 255 }
+	
+	culture = han
+	
+	capital = 2524 # Hangzhou
+	
+	allow = {
+		title_king_basic_allow = yes
+	}
+}
+e_min = {
+	color = { 73 32 148 }
+    color2 = { 255 255 255 }
+	
+	culture = han
+	
+	capital = 2533 # Fuzhou
+	
+	allow = {
+		always = no
+	}
+}
+e_yin = {
+	color = { 230 230 230 }
+    color2 = { 255 255 255 }
+	
+	culture = han
+	
+	capital = 2534 # Jianzhou
+	
+	allow = {
+		always = no
+	}
+}
+e_southern_chen = {
+	color = { 11 73 122 }
+    color2 = { 255 255 255 }
+	
+	culture = han
+	
+	capital = 2579 # Shangzhou
+	
+	allow = {
+		always = no
+	}
+}
+e_southern_wu = {
+	color = { 57 124 11 }
+    color2 = { 255 255 255 }
+	
+	culture = han
+	
+	capital = 2479 # Yangzhou
+	
+	allow = {
+		always = no
+	}
+}
+e_eastern_wu = {
+	color = { 97 124 66 }
+    color2 = { 255 255 255 }
+	
+	culture = han
+	
+	capital = 2579 # Shengzhou
+	
+	allow = {
+		always = no
+	}
+}
+e_shu_han = {
+	color = { 57 124 11 }
+    color2 = { 255 255 255 }
+	
+	culture = han
+	
+	capital = 2401 # Chengdu
+	
+	allow = {
+		always = no
+	}
+}
+e_southern_han = {
+	color = { 252 255 0 }
+    color2 = { 255 255 255 }
+	
+	culture = han
+	
+	capital = 2542 # Guangzhou
+	
+	allow = {
+		always = no
+	}
+}
+k_annan = {
+	color = { 125 124 22 }
+    color2 = { 255 255 255 }
+	
+	culture = vietnamese
+	capital = 2598 # Jiaozhou
+	
+	han = "Annan"
+	vietnamese = "An Nam"
+	
+	allow = {
+		title_king_basic_allow = yes
+		NOT = { has_landed_title = k_daiviet }
+	}
+}
+k_daiviet = {
+	color = { 125 124 22 }
+    color2 = { 255 255 255 }
+	
+	culture = vietnamese
+	capital = 2598 # Jiaozhou
+	
+	allow = {
+		culture = vietnamese
+		title_king_basic_allow = yes
+		NOT = { has_landed_title = k_annan }
+	}
+}
+e_luoping = {
+	color = { 42 123 112 }
+    color2 = { 255 255 255 }
+	
+	culture = han
+	
+	capital = 2529 # Yuezhou
+
+	allow = {
+		always = no
+	}
+}
+k_dingan = {
+	color = { 61 137 96 }
+    color2 = { 255 255 255 }
+	
+	culture = bohai
+	capital = 1554 # Ryongwon
+	
+	bohai = "Jeongan"
+	han = "Dingan"
+	
+	allow = {
+		title_king_basic_allow = yes
+	}
+}
+e_luoping = {
+	color = { 42 123 112 }
+    color2 = { 255 255 255 }
+	
+	culture = han
+	
+	capital = 2529 # Yuezhou
+
+	allow = {
+		always = no
+	}
+}
+e_xi = {
+	color = { 115 169 141 }
+    color2 = { 255 255 255 }
+	
+	culture = qay
+	
+	capital = 2358 # Dading
+
+	allow = {
+		title_emperor_basic_allow = yes
+		culture = qay
+	}
+}
+
+#Tribal titles
+
+d_tabghach = {
+	color={ 100 110 20 }
+	color2={ 255 255 255 }
+	
+	culture = xianbei
+	tribe = yes
+	
+	capital = 2303 # Tiande
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+d_toufa = {
+	color={ 100 110 20 }
+	color2={ 255 255 255 }
+	
+	culture = xianbei
+	tribe = yes
+	
+	capital = 2303 # Tiande
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+d_murong = {
+	color={ 100 110 20 }
+	color2={ 255 255 255 }
+	
+	culture = xianbei
+	tribe = yes
+	
+	capital = 2303 # Tiande
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+d_diela = {
+	color={ 100 110 20 }
+	color2={ 255 255 255 }
+	
+	culture = khitan
+	tribe = yes
+	
+	capital = 2359 # Linhuang
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+d_zhuye = {
+	color={ 100 110 20 }
+	color2={ 255 255 255 }
+	
+	culture = shatuo
+	tribe = yes
+	
+	capital = 2265 # Taiyuan
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+d_naiman = {
+	color={ 43 81 75 }
+	color2={ 255 255 255 }
+	
+	culture = tatar
+	tribe = yes
+	
+	capital = 2226 # Tsagaannuur
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+d_mergid = {
+	color={ 69 134 11 }
+	color2={ 255 255 255 }
+	
+	culture = mongol
+	tribe = yes
+	
+	capital = 2425 # Khilok
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+d_qiyad = {
+	color={ 142 174 63 }
+	color2={ 255 255 255 }
+	
+	culture = mongol
+	tribe = yes
+	
+	capital = 2424 # Khentii
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+d_jadaran = {
+	color={ 193 134 93 }
+	color2={ 255 255 255 }
+	
+	culture = mongol
+	tribe = yes
+	
+	capital = 2426 # Tuul
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+d_uriyangqad = {
+	color={ 11 104 23 }
+	color2={ 255 255 255 }
+	
+	culture = mongol
+	tribe = yes
+	
+	capital = 2235 # Baygal
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+d_kereyid = {
+	color={ 35 34 73 }
+	color2={ 255 255 255 }
+	
+	culture = tatar
+	tribe = yes
+	
+	capital = 2234 # Kara Khorum
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+d_qaum_tatar = {
+	color={ 92 111 0 }
+	color2={ 255 255 255 }
+	
+	culture = tatar
+	tribe = yes
+	
+	capital = 2423 # Tatar
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+d_jalayir = {
+	color={ 62 84 103 }
+	color2={ 255 255 255 }
+	
+	culture = mongol
+	tribe = yes
+	
+	capital = 2421 # Onon
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+d_qonggirad = {
+	color={ 102 54 33 }
+	color2={ 255 255 255 }
+	
+	culture = mongol
+	tribe = yes
+	
+	capital = 2420 # Argun
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+d_dilie = {
+	color={ 22 11 75 }
+	color2={ 255 255 255 }
+	
+	culture = mongol
+	tribe = yes
+	
+	capital = 2422 # Hulun
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+d_wugu = {
+	color={ 101 78 66 }
+	color2={ 255 255 255 }
+	
+	culture = mongol
+	tribe = yes
+	
+	capital = 2419 # Khalka
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+d_uyghur = {
+	color={ 101 78 66 }
+	color2={ 255 255 255 }
+	
+	culture = uyghur
+	tribe = yes
+	
+	capital = 2234 # Kara Khorum
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+d_qay = {
+	color={ 136 124 33 }
+	color2={ 255 255 255 }
+	
+	culture = qay
+	tribe = yes
+	
+	capital = 2358 # Dading
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+d_shiwei = {
+	color={ 199 199 199 }
+	color2={ 255 255 255 }
+	
+	culture = khitan
+	tribe = yes
+	
+	capital = 2418 # Shiwei
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+d_weji = {
+	color={ 11 65 204 }
+	color2={ 255 255 255 }
+	
+	culture = jurchen
+	tribe = yes
+	
+	capital = 2616 # Dongping
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+d_tieli = {
+	color={ 45 187 22 }
+	color2={ 255 255 255 }
+	
+	culture = jurchen
+	tribe = yes
+	
+	capital = 2618 # Tieli
+	
+	allow = {
+		always = no
+	}
+	
+	title = "HIGH_CHIEF"
+	foa = "HIGH_CHIEF_FOA"
+}
+### Dynamic CoA for Chinese dynasties
+
+# Chinese dynasties
+e_china_cheng = { color = { 255 76 28 } allow = { always = no } }
+e_china_chu = { color = { 231 117 34 } allow = { always = no } }
+e_china_dai = { color = { 58 55 55 } allow = { always = no } }
+e_china_han = { color = { 201 244 31 } allow = { always = no } }
+e_china_ji = { color = { 240 20 222 } allow = { always = no } }
+e_china_jin = { color = { 18 184 239 } allow = { always = no } }
+e_china_jin_2 = { color = { 242 194 28 } allow = { always = no } }
+e_china_li = { color = { 209 231 121 } allow = { always = no } }
+e_china_liang = { color = { 196 81 81 } allow = { always = no } }
+e_china_liang_2 = { color = { 240 207 93 } allow = { always = no } }
+e_china_liao = { color = { 140 235 158 } allow = { always = no } }
+e_china_lu = { color = { 39 132 163 } allow = { always = no } }
+e_china_lu_2 = { color = { 239 102 102 } allow = { always = no } }
+e_china_min = { color = { 214 124 240 } allow = { always = no } }
+e_china_ming = { color = { 235 18 18 } allow = { always = no } }
+e_china_nan = { color = { 165 82 21 } allow = { always = no } }
+e_china_qi = { color = { 49 177 163 } allow = { always = no } }
+e_china_qi_2 = { color = { 127 150 35 } allow = { always = no } }
+e_china_qin = { color = { 98 89 89 } allow = { always = no } }
+e_china_qing = { color = { 45 69 172 } allow = { always = no } }
+e_china_shu = { color = { 20 234 211 } allow = { always = no } }
+e_china_shun = { color = { 122 143 235 } allow = { always = no } }
+e_china_song = { color = { 240 207 93 } allow = { always = no } }
+e_china_tang = { color = { 255 76 28 } allow = { always = no } }
+e_china_wei = { color = { 18 59 239 } allow = { always = no } }
+e_china_wu = { color = { 209 48 48 } allow = { always = no } }
+e_china_xia = { color = { 31 231 68 } allow = { always = no } }
+e_china_xi = { color = { 158 126 16 } allow = { always = no } }
+e_china_xu = { color = { 243 142 235 } allow = { always = no } }
+e_china_yan = { color = { 245 179 130 } allow = { always = no } }
+e_china_yin = { color = { 157 36 96 } allow = { always = no } }
+e_china_ying = { color = { 102 205 189 } allow = { always = no } }
+e_china_yuan = { color = { 140 59 164 } allow = { always = no } }
+e_china_yue = { color = { 239 144 102 } allow = { always = no } }
+e_china_zhao = { color = { 232 78 140 } allow = { always = no } }
+e_china_zhen = { color = { 244 41 59 } allow = { always = no } }
+e_china_zheng = { color = { 232 144 39 } allow = { always = no } }
+e_china_zhou = { color = { 217 215 216 } allow = { always = no } }
+
+# Nanzhao/Dali
+k_nanzhao = { allow = { always = no } }
+k_li = { allow = { always = no } }
+k_fengmin = { allow = { always = no } }
+k_changhe = { allow = { always = no } }
+k_tianxing = { allow = { always = no } }
+k_yining = { allow = { always = no } }
+k_dali = { allow = { always = no } }
+
+#Circuits
+d_anyi = { allow = { always = no } }
+d_baqu = { allow = { always = no } }
+d_baoxin = { allow = { always = no } }
+d_daibei = { allow = { always = no } }
+d_dingbian = { allow = { always = no } }
+d_dingchang = { allow = { always = no } }
+d_dingnan = { allow = { always = no } }
+d_dingwu = { allow = { always = no } }
+d_fufang = { allow = { always = no } }
+#d_ganhua = { allow = { always = no } }
+d_ganyi = { allow = { always = no } }
+d_guiyi = { allow = { always = no } }
+d_henghai = { allow = { always = no } }
+d_huguo = { allow = { always = no } }
+d_jianning = { allow = { always = no } }
+d_jianwu = { allow = { always = no } }
+d_jinchang = { allow = { always = no } }
+d_jingji = { allow = { always = no } }
+d_jingjiang = { allow = { always = no } }
+d_jingnan_2 = { allow = { always = no } }
+#d_jingsheng = { allow = { always = no } }
+d_kuangyi = { allow = { always = no } }
+d_kuizhong = { allow = { always = no } }
+d_lulong = { allow = { always = no } }
+d_ningguo = { allow = { always = no } }
+d_ninghua = { allow = { always = no } }
+d_ningsai = { allow = { always = no } }
+d_ningyuan = { allow = { always = no } }
+d_pinghai = { allow = { always = no } }
+d_qiyang = { allow = { always = no } }
+d_qinfeng = { allow = { always = no } }
+d_qinhua = { allow = { always = no } }
+d_qianzhong = { allow = { always = no } }
+d_rongzhao = { allow = { always = no } }
+d_shanguo = { allow = { always = no } }
+d_shunguo = { allow = { always = no } }
+#d_shunyi = { allow = { always = no } }
+d_weibei = { allow = { always = no } }
+d_weibo = { allow = { always = no } }
+d_weiguo = { allow = { always = no } }
+d_weixin = { allow = { always = no } }
+d_weiwu = { allow = { always = no } }
+d_wuchang = { allow = { always = no } }
+d_wuan = { allow = { always = no } }
+d_wude = { allow = { always = no } }
+d_wuning = { allow = { always = no } }
+d_wusheng = { allow = { always = no } }
+d_wushun = { allow = { always = no } }
+d_wuqing = { allow = { always = no } }
+d_wuzhen = { allow = { always = no } }
+d_xiasui = { allow = { always = no } }
+d_xingming = { allow = { always = no } }
+d_xingwen = { allow = { always = no } }
+d_xusi = { allow = { always = no } }
+d_xuanhua = { allow = { always = no } }
+d_xuanwei = { allow = { always = no } }
+d_xuanyi = { allow = { always = no } }
+d_yanhai = { allow = { always = no } }
+d_yisheng = { allow = { always = no } }
+d_yingmen = { allow = { always = no } }
+d_yongshun = { allow = { always = no } }
+d_youguo = { allow = { always = no } }
+d_yunzhong = { allow = { always = no } }
+d_zhaode = { allow = { always = no } }
+d_zhaoxin = { allow = { always = no } }
+d_zhangwu = { allow = { always = no } }
+d_zhangyi = { allow = { always = no } }
+d_zhendong = { allow = { always = no } }
+d_zhenjiang = { allow = { always = no } }
+#d_zhongwu = { allow = { always = no } }
+d_zhongyi = { allow = { always = no } }
+d_zhongzheng = { allow = { always = no } }
+

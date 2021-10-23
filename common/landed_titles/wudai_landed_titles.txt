@@ -1,0 +1,7084 @@
+###Landed Titles
+e_china = {
+  color = { 250 40 0 }
+  color2 = { 255 255 255 }
+	
+  short_name = yes
+  capital = 2276 # Jingtao
+	
+	k_gansu = {
+		color={ 0 231 136 }
+		color2={ 255 255 255 }
+		
+		capital = 2215 # Jingzhou
+		
+		culture = han
+		
+		
+		d_hexi = {
+			color={ 238 213 5 }
+			
+			capital = 2196 # Liangzhou
+			
+			bodpa = "Lingchu"
+			
+			c_liangzhou = { #2196 Liangzhou
+				color={ 220 205 5 }
+				
+				bodpa = "Lingchu"
+				tangut = "Lonchew"
+				
+				#Tang era settlements
+				b_wuwei = {
+					tangut = "Uvi"
+				}
+				b_guzang = {
+					tangut = "Kutson"
+				}
+				b_shenwu = {
+					tangut = "Jweu"
+				}
+				b_changsong = {
+					tangut = "Shonswin"
+				}
+				b_tianbao = {
+					tangut = "Thenpo"
+				}
+				b_jialin = {
+					tangut = "Kalin"
+				}
+			}
+			c_guazhou = { #2197 Guazhou
+				color={ 210 198 5 }
+				
+				tangut = "Kwachew"
+				bodpa = "Kyachu"
+
+				b_jinchang = {
+					tangut = "Tswinshon"
+				}
+				b_changle_guazhou = {
+					tangut = "Shwola"
+				}
+				
+			}
+			c_suzhou = { #2198 Suzhou
+				color={ 200 188 5 }
+				
+				tangut = "Suchew"
+				bodpa = "Suchu"
+				
+				b_jiuquan = {
+					tangut = "Tsewtshwan"
+				}
+				b_fulu = {
+					tangut = "Hulu"
+				}
+				b_yumen = {
+					tangut = "Gumin"
+				}
+			}
+			c_shazhou = { #2199 Shazhou
+				color={ 190 178 5 }
+				
+				tangut = "Shachew"
+				bodpa = "Shachu"
+
+				b_dunhuang = {
+					tangut = "Thuhwo"
+				}
+				b_shouchang = {
+					tangut = "Zhiwshon"
+				}
+			}
+			c_ganzhou = { #2200 Ganzhou
+				color={ 180 168 5 }
+				
+				tangut = "Kanchew"
+				bodpa = "Kamchu"
+
+				b_zhangye = {
+					tangut = "Chonen"
+				}
+				b_shandan = {
+					tangut = "Shantan"
+				}
+			}
+		}
+		d_henan = {
+			color={ 31 186 165 }
+			
+			capital = 2298 # Xiazhou
+			
+			
+			c_youzhou = { #2295 Youzhou
+				color={ 31 196 175 }
+				
+				tangut = "Ewchew"
+
+				b_yanen = {
+					tangut = "Ginin"
+				}
+				b_changze = {
+					tangut = "Chhonchhu"
+				}
+			}
+			c_xiazhou = { #2298 Xiazhou
+				color={ 31 206 185 }
+				
+				tangut = "Hachew"
+
+				b_shuofang = {
+					tangut = "Shwahon"
+				}
+				b_dejing = {
+					tangut = "Titshen"
+				}
+				b_ningshuo = {
+					tangut = "Neshwa"
+				}
+				b_shunhua = {
+					tangut = "Swinhwa"
+				}
+			}
+			c_yinzhou = { #2302 Yinzhou
+				color={ 31 216 195 }
+				
+				tangut = "Ginchew"
+
+				b_yinchuan = {
+					tangut = "Gincchhwan"
+				}
+				b_rulin = {
+					tangut = "Rurlin"
+				}
+				b_funing = {
+					tangut = "Hune"
+				}
+				b_zhenxiang = {
+					tangut = "Chinhon"
+				}
+				b_kaiguang = {
+					tangut = "Kheko"
+				}
+			}
+			c_suizhou_henan = { #2301 Suizhou
+				color={ 31 226 205 }
+
+				tangut = "Shwachew"
+				
+				b_longquan_suizhou = {
+				}
+				b_yanfu = {
+				}
+				b_suide = {
+					tangut = "Schwati"
+				}
+				b_chengping = {
+				}
+				b_dabin_suizhou = {
+				}
+				b_angu_suizhou = {
+				}
+				b_anquan = {
+				}
+			}
+		}
+		d_shuofang = {
+			color={ 51 150 225 }
+				
+			capital = 2286 #Lingzhou
+			
+			c_xingqing = { #2215 Xingzhou
+				color={ 61 150 215 }
+				
+				tangut = "Chonhon"
+				
+				b_huaiyuan = {
+					tangut = "Hwenghwan"
+				}
+				b_lingzhou = {
+					tangut = "Lenchew"
+				}
+				b_weizhou = {
+					tangut = "Vichew"
+				}
+				b_jingzhou = {
+					tangut = "Tshenchew"
+				}
+				b_huaizhou_xingqing = {
+					tangut = "Hwenchew"
+				}
+				b_dingzhou = {
+					tangut = "Thechew"
+				}
+				b_shunzhou = {
+					tangut = "Swinchew"
+				}
+			}
+			c_yanzhou_qinfeng = { #2219 Yanzhou
+				color={ 71 150 205 }
+				
+				tangut = "Siphe"
+
+				b_yanchuan_xiping = {
+					tangut = "Anchhwan"
+				}
+				b_wuyuan = {
+					tangut = "Ughwan"
+				}
+				b_xingning = {
+					tangut = "Honne"
+				}
+			}
+			c_lingzhou = { #2286 Lingzhou 
+				color={ 81 150 195 }
+				
+				tangut = "Lenchew"
+				
+				b_lingwu = {
+			
+				}
+				b_huile = {
+			
+				}
+				b_baojing = {
+			
+				}
+				b_wusha = { #Weizhou
+				
+				}
+				b_wenchi = { #Weizhou
+				
+				}
+			}
+			c_huizhou = { #2313 Huizhou
+				color={ 91 150 185 }
+				
+				tangut = "Kwechew"
+
+				b_fuchuan = {
+					tangut = "Huchhon"
+				}
+				b_xian = {#fortess
+					tangut = "Sian"
+				}
+				b_fuwen = {
+					tangut = "Huvin"
+				}
+				b_pingxi = {#fortress
+					tangut = "Phesi"
+				}
+				b_huining = {#fortress
+					tangut = "Kwene"
+				}
+				b_huichuan = {#fortress
+					tangut = "Kwechhon"
+				}
+				b_xinquan = {#
+					tangut = "Sintshwan"
+				}
+			}
+		}
+		d_zhenwu = {
+			color={ 115 187 125 }
+			
+			capital = 2277 #Shengzhou
+			
+			c_shengzhou = { #2277 Shengzhou
+				color={ 115 197 135 }
+				
+				
+				b_ningbian = {
+					tangut = "Nepen"
+				}
+				b_fugu = {#Fuzhou
+					tangut = "Huu"
+				}
+				b_jinsu = {
+					tangut = "Kwensu"
+				}
+				b_heqing = {
+					tangut = "Hunkhe"
+				}
+			}
+			c_yunnei = { #2281 Yunnei
+				color={ 115 207 145 }
+
+				b_roufu = {
+				}
+				b_ningren = {
+				}
+			}
+			c_tiande = { #2303 Tiande
+				color={ 115 207 155 }
+
+				b_linhe = {
+					tangut = "Lwinhun"
+				}
+				b_wuyuan_tiande = {
+				}
+				b_fuqing = {
+					tangut = "Hukhe"
+				}
+				b_wulahai = {
+					mongol = "Uraqai"
+					tangut = "Onrarna"
+				}
+			}
+			c_dongsheng = { #2308 Dongsheng
+				color={ 115 217 165 }
+
+				b_yulin = {
+				}
+				b_hebin = {
+				}
+			}
+			c_linzhou = { #2300 Linzhou
+				color={ 115 227 175 }
+
+				b_yichuan = {
+				}
+			}
+			
+			allow = { title_duke_basic_allow = yes }
+		}
+		allow = { title_king_basic_allow = yes }
+	} #end of k_gansu
+	k_qinfeng = {
+		
+		color={ 105 121 105 }
+		color2={ 255 255 255 }
+		
+		capital = 2321 #Fengxiang
+		
+		culture = han
+		
+		tangut = "Tshinhon"
+		
+		d_fengxiang = {
+			color={ 105 121 105 }
+			
+			capital = 2321 #Fengxiang
+			
+			tangut = "Tshinhon"
+			
+			
+			c_longzhou_qinfeng = { #2311 Longzhou
+				color={ 115 131 95 }
+				
+				tangut = "Lonchew"
+				
+				b_qianyuan = {
+					tangut = "Kheghwan"
+				}
+				b_qianyang = {
+					tangut = "Kheon"
+				}
+				b_wushan_longzhou = {
+					tangut = "Ghushan"
+				}
+				b_longan = {
+					tangut = "Lonan"
+				}
+			}
+			c_yizhou_qinfeng = { #2320 Yizhou
+				color={ 125 131 85 }
+				
+				tangut = "Ichew"
+
+				b_huating = {
+					tangut = "Hwathe"
+				}
+			}
+			c_fengxiang = { #2321 Fengxiang
+				color={ 135 131 75 }
+				
+				tangut = "Honso"
+				
+				b_tianxing = {
+					tangut = "Thenhon"
+				}
+				b_qishan = {
+					tangut = "Khishan"
+				}
+				b_fufeng = {
+					tangut = "Huhon"
+				}
+				b_zhouzhi = {
+					tangut = "Chuchi"
+				}
+				b_mei = {
+					tangut = "My"
+				}
+				b_baoji = {
+					tangut = "Poki"
+				}
+				b_guo = {
+					tangut = "Kwen"
+				}
+				#linyou, purun in reserve. Imperial office at sizhu.
+			}
+		}
+		d_binning = {
+			color={ 75 12 85 }
+				
+			capital = 2279 #Binzhou
+			
+			c_ningzhou = { #2275 Ningzhou
+				color={ 85 12 95 }
+				
+				tangut = "Nechew"
+
+				b_dingan_ningzhou = {
+					tangut = "Thean"
+				}
+				b_xiangle = {
+					tangut = "Sola"
+				}
+				b_zhenning = {
+					tangut = "Chinne"
+				}
+			}
+			c_binzhou = { #2279 Binzhou
+				color={ 95 12 105 }
+				
+				tangut = "Pinchew"
+
+				b_xinping = {
+					tangut = "Sinphe"
+				}
+				b_yilu = {
+					tangut = "Ngwelu"
+				}
+				b_sanshui = {
+					tangut = "Sozyr"
+				}
+				b_dingping = {
+					tangut = "Thenphe"
+				}
+				b_chunhua = {
+					tangut = "Shwinhwa"
+				}
+			}
+			c_qingzhou = { #2314 Qingzhou - in 1125 renamed to Qingyang-fu
+				color={ 105 12 115 }
+
+				b_anhua = {
+				}
+				b_heshui = {
+				}
+				b_huachi = {
+				}
+				b_dingbien = {#fortress
+				}
+				b_baibao = {#fortress
+				}
+				b_zhenan = {#fortress
+				}
+			}
+		}
+		d_jingyuan = { 
+			color={ 98 19 184 }
+			
+			capital = 2273 #Jingzhou
+			
+			c_zhenrong = { #2270 Zhenrong army - before 997 Pinggao district of Yuanzhou. 
+				color={ 108 29 174 }
+				
+				tangut = "Chinzhon"
+				
+				b_pengyang = { #fortress
+					tangut = "Phion"
+				}
+				b_pingxia = { #fortress
+					tangut = "Pheha"
+				}
+			}
+			c_weizhou_qinfeng = { #2272 Weizhou
+				color={ 108 39 164 }
+				
+				tangut = "Vechew"
+				
+				b_pingliang = {
+					tangut = "Phelon"
+				}
+				b_panyuan = {
+					tangut = "Phwanghwan"
+				}
+				b_anhua_weizhou = {
+					tangut = "Anhwa"
+				}
+				b_chongxin = {
+					tangut = "Chhosin"
+				}
+				b_huaning = {
+					tangut = "Hwane"
+				}
+				b_jingxia = { #fortress
+					tangut = "Tshenha"
+				}
+			}
+			c_jingzhou = { #2273 Jingzhou
+				color={ 108 49 154 }
+				
+				tangut = "Kechew"
+				
+				b_baoding = {
+					tangut = "Pothe"
+				}
+				b_lingtai = {
+					tangut = "Lenthe"
+				}
+				b_liangyuan = {
+					tangut = "Longhwan"
+				}
+				b_changwu = {
+					tangut = "Chhonu"
+				}
+			}
+			c_yuanzhou = { #2274 Yuanzhou
+				color={ 108 59 144 }
+				
+				tangut = "Ghwanchew"
+				
+				b_linjing = {
+					tangut = "Lwinke"
+				}
+				b_pengyang_yuanzhou = {
+					tangut = "Phion"
+				}
+				b_xincheng_yuanzhou = {#garrison
+					tangut = "Sinvi"
+				}
+				b_liuquan = {#garrison
+					tangut = "Lewtshwan"
+				}
+			}
+		}
+		d_longyou = {
+			color= { 31 16 44 }
+			
+			capital = 2172 #Lanzhou
+			
+			c_minzhou = { #2064 Minzhou - in 1143 renamed to Xihe.
+				color={ 105 69 134 }
+
+				tangut = "Minchew"
+				bodpa = "Minchu"
+
+				b_changdao = {
+					tangut = "Chhondwer"
+				}
+				b_datan = {
+					tangut = "Thedan"
+				}
+				b_youchuan = {
+					tangut = "Ewchhwan"
+				}
+			}
+			c_gongzhou = { #2066 Gongzhou
+				color={ 115 79 124 }
+
+				b_longxi_gongzhou = {
+				}
+				b_yongning_gongzhou = {
+				}
+				b_tongwei = {
+				}
+			}
+			c_xizhou_longyou = { #2170 Xizhou
+				color={ 125 89 114 }
+
+				b_didao = {
+					bodpa = "Shingkun"
+				}
+				b_changle_xizhou = {
+				}
+			}
+			c_lanzhou_longyou = { #2172 Lanzhou
+				color={ 135 99 104 }
+				
+				bodpa = "Lanchu"
+				
+				b_wuquan = {
+				}
+				b_jincheng_lanzhou = {
+				}
+			}
+			c_taozhou = { #2416 Taozhou
+				color={ 145 109 94 }
+				
+				bodpa = "Chone"
+				
+				b_lintan = {
+				}
+			}
+			c_hezhou_longyou = { #2590 Hezhou
+				color={ 155 119 84 }
+				
+				bodpa = "Gachu"
+				
+				b_fuhan = {
+				}
+				b_daxia = {
+				}
+				b_fenglin = {
+				}
+			}
+		}
+		d_wuxing = {
+			color= { 147 12 65 }
+			
+			capital = 2364 #Xingzhou
+			
+			c_fengzhou_qinfeng = { #2319 Fengzhou
+				color={ 137 22 65 }
+				
+				tangut = "Huchew"
+
+				b_liangquan = {
+					tangut = "Lontshwan"
+				}
+				b_liangdang = {
+					tangut = "Londo"
+				}
+				b_hechi = {
+					tangut = "Hachhi"
+				}
+				b_kaibao = {
+					tangut = "Khepo"
+				}
+			}
+			c_xingzhou = { #2364 Xingzhou - in 1207 renamed Mianzhou
+				color={ 127 32 65 }
+
+				b_shunzheng = {
+				}
+				b_changju = {
+				}
+				#Da'an jun
+				b_sanquan = {
+				}
+			}
+		}
+		d_xiongwu = {
+			color= { 79 88 11 }
+			
+			capital = 2312 #Qinzhou
+			
+			c_qinzhou = { #2312 Qinzhou
+				color={ 89 98 11 }
+				
+				tangut = "Tshinchew"
+				
+				b_chengji = {
+					tangut = "Shenki"
+				}
+				b_longcheng = {
+					tangut = "Lonshen"
+				}
+				b_qingshui_qinzhou = {
+					tangut = "Khezyr"
+				}
+				b_tianshui = {
+					tangut = "Thenzyr"
+				}
+				b_taiping = {#Imperial offices
+					tangut = "Thephe"
+				}
+				b_fuqiang = {#fortress
+					tangut = "Huko"
+				}
+				b_gangu = {#fortress
+					tangut = "Kanu"
+				}
+			}
+			c_chengzhou = { #2365 Chengzhou - in 1225 made Tongqing-fu
+				color={ 99 108 11 }
+				
+				tangut = "Shenchew"
+
+				b_tonggu = {
+					tangut = "Thonu"
+				}
+				b_liting = {
+					tangut = "Ryrthe"
+				}
+			}
+			c_jiezhou = { #2366 Jiezhou
+				color={ 109 118 11 }
+				
+				tangut = "Kechew"
+
+				b_fujin = {
+					tangut = "Hutsin"
+				}
+				b_jiangli = {
+					tangut = "Zoli"
+				}
+			}
+		}
+		allow = { title_king_basic_allow = yes }
+	} #end of k_qinfeng
+	k_yongxing = {
+		color={ 85 167 85 }
+		color2={ 255 255 255 }
+			
+		capital = 2276 #Jingzhao
+		
+		culture = han
+		
+		tangut = "Vehon"
+		
+		d_yongxing = {
+			color={ 85 167 85 }
+			
+			capital = 2276 #Jingzhao
+			
+			tangut = "Vehon"
+			
+			c_jingzhao = { #2276 Jingzhao
+				color={ 85 157 75 }
+				
+				tangut = "Kechhew"
+
+				b_changan = {
+					tangut = "Chhonan"
+				}
+				b_fanchuan_jingzhao = {
+					tangut = "Hwanchhwan"
+				}
+				b_hu_jingzhao = {
+					tangut = "Hwu"
+				}
+				b_lantian = {
+					tangut = "Lanthen"
+				}
+				b_xianyang = {
+					tangut = "Jenon"
+				}
+				b_jingyang = {
+					tangut = "Keon"
+				}
+				b_liyang = {
+					tangut = "Lion"
+				}
+				#gaoyang, xingping, lingtong in reserve
+			}
+			c_yaozhou = { #2283 Yaozhou
+				color={ 85 147 65 }
+				
+				tangut = "Yachew"
+
+				b_huayuan = {
+					tangut = "Hwaghwan"
+				}
+				b_fuping = {
+					tangut = "Huphe"
+				}
+				b_sanyuan = {
+					tangut = "Soghwan"
+				}
+				b_yunyang = {
+					tangut = "Ion"
+				}
+				b_tongguan = {
+					tangut = "Thonkwan"
+				}
+				b_meiyuan = {
+					tangut = "Merghwan"
+				}
+			}
+			c_tongzhou = { #2309 Tongzhou
+				color={ 85 137 55 }
+				
+				tangut = "Thonchew"
+
+				b_fengyi_tongzhou = {
+				}
+				b_dengcheng = {
+				}
+				b_chaoyi = {
+				}
+				b_heyang_tongzhou = {
+				}
+				b_baishui = {
+				}
+				b_hancheng = {
+				}
+				b_shawan = { #Imperial offices
+				}
+			}
+			c_huazhou = { #2310 Huazhou
+				color={ 85 127 45 }
+
+				b_zheng = {
+				}
+				b_xiagui = {
+				}
+				b_pucheng = {
+				}
+				b_huayin = {
+				}
+				b_weinan = {
+				}
+			}
+			c_quanzhou = { #2316 Quanzhou - in 1117 restored and renamed Lizhou
+				color={ 85 117 35 }
+
+				b_fengtian = {
+				}
+				b_yongshou = {
+				}
+				b_wugong = {
+				}
+				b_liquan = {
+				}
+				b_haozhi = {
+				}
+			}
+		}
+		d_baoda = {
+			color={ 0 19 95 }
+				
+			capital = 2317 #Fuzhou
+			
+			c_fangzhou = { #2278 Fangzhou
+				color={ 0 29 105 }
+
+				tangut = "Honzhou"
+
+				b_zhongbu = {
+					tangut = "Chhonbu"
+				}
+				b_yijun = {
+					tangut = "Ngwekwin"
+				}
+			}
+			c_danzhou = { #2296 Danzhou
+				color={ 0 39 115 }
+				
+				tangut = "Tanchew"
+
+				b_yichuan_danzhou = {
+					tangut = "Ngwechhwan"
+				}
+			}
+			c_baoan = { #2315 Bao'an army
+				color={ 0 49 125 }
+
+				b_jinyang = { #fortress
+				}
+			}
+			c_fuzhou = { #2317 Fuzhou
+				color={ 0 59 135 }
+
+				b_luojiao = {
+				}
+				b_sanchuan = {
+				}
+				b_fulu_fuzhou = {
+				}
+			}
+			c_yanzhou = { #2387 Yanzhou - in 1089 renamed Yan'an-fu
+				color={ 0 69 145 }
+
+				b_fushi = {
+				}
+				b_yanchuan = {
+				}
+				b_yanchang = {
+				}
+				b_menshan = {
+				}
+				b_linzhen = {
+				}
+				b_ganquan = {
+				}
+				b_qingjian = {#fortress
+				}
+			}
+		}
+		d_baosai = {
+			color={ 43 85 111 }
+				
+			capital = 2387 #Yanzhou
+			
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_baoyi = {
+			color={ 0 169 4 }
+				
+			capital = 2293 #Shanzhou
+			
+			c_guozhou_yongxing = { #2291 Guozhou
+				color={ 0 159 14 }
+				
+				tangut = "Kwenchew"
+
+				b_lushi = {
+					tangut = "Lushy"
+				}
+				b_guolue = {
+					tangut = "Kwenlew"
+				}
+				b_zhuyang = {
+					tangut = "Chuon"
+				}
+				b_luanchuan = {
+					tangut = "Lwanchhwan"
+				}
+			}
+			c_shanzhou = { #2293 Shanzhou
+				color={ 0 149 24 }
+				
+				tangut = "Shachew"
+
+				b_shan = {
+					tangut = "Sha"
+				}
+				b_pingling = {
+					tangut = "Phelu"
+				}
+				b_xia = {
+					tangut = "Ha"
+				}
+				b_lingbao = {
+					tangut = "Lenpo"
+				}
+				b_ruicheng = {
+					tangut = "Rershen"
+				}
+				b_hucheng = {
+					tangut = "Hushen"
+				}
+				b_wenxiang = {
+					tangut = "Vinhon"
+				}
+			}
+		}
+		d_hezhong = { 
+			color={ 15 106 219 }
+			
+			capital = 2290 #Hezhong
+			
+			c_hezhong = { #2290 Hezhong
+				color={ 25 96 219 }
+				
+				tangut = "Hunchhon"
+
+				b_hedong_hezhong = {
+					tangut = "Hunto"
+				}
+				b_linjin = {
+					tangut = "Lwintswin"
+				}
+				b_yishi = {
+					tangut = "Gishy"
+				}
+				b_yuxiang = {
+					tangut = "Guhon"
+				}
+				b_wanquan = {
+					tangut = "Vantshwan"
+				}
+				b_longmen_hezhong = {
+					tangut = "Lonmin"
+				}
+				b_ronghe = {
+					tangut = "Vehun"
+				}
+			}
+			c_jiezhou_yongxing = { #2292 Jiezhou
+				color={ 35 86 219 }
+				
+				tangut = "Kechew"
+
+				b_jie = {
+					tangut = "Ke"
+				}
+				b_wenxi = {
+					tangut = "Vinhi"
+				}
+				b_anyi = {
+					tangut = "Any"
+				}
+			}
+			c_jinzhou_hedong = { #2288 Jinzhou - 1116 renamed to Pingyang
+				color={ 45 76 219 }
+
+				b_linqin = {
+				}
+				b_hongdong = {
+				}
+				b_xiangling = {
+				}
+				b_shenshan = {
+				}
+				b_zhaocheng = {
+				}
+				b_qinxi = {
+				}
+				b_huoyi = {
+				}
+				# yushi, yueyang, hechuan in reserve
+			}
+			c_jiangzhou = { #2289 Jiangzhou
+				color={ 55 66 219 }
+
+				b_zhengping = {
+				}
+				b_dianwo = {
+				}
+				b_taiping_jiangzhou = {
+				}
+				b_yicheng = {
+				}
+				b_jishan = {
+				}
+				b_jiang = {
+				}
+				b_yuandian = {
+				}
+			}
+			c_cizhou = { #2304 Cizhou
+				color={ 66 56 219 }
+
+				b_jixiang = {
+				}
+				b_wencheng = {
+				}
+				b_xiangning = {
+				}
+			}
+			c_xizhou = { #2306 Xizhou
+				color={ 76 46 219 }
+
+				b_xichuan = {
+				}
+				b_wenquan_xizhou = {
+				}
+				b_pu = {
+				}
+				b_daning_xizhou = {
+				}
+				b_shilou = {
+				}
+				b_yonghe = {
+				}
+			}
+		}
+		
+		d_jinshang = {
+			color={ 48 169 54 }
+				
+			capital = 2294 #Shangzhou
+			
+			c_shangzhou = { #2294 Shangzhou
+				color={ 58 169 64 }
+				
+				tangut = "Shonchew"
+
+				b_shangluo = { #shang in the sense of "up"
+					tangut = "Shonlu"
+				}
+				b_shangluo_shangzhou = { #shang in the sense of "trade"
+					tangut = "Shonlu"
+				}
+				b_luonan = {
+					tangut = "Luzyr"
+				}
+				b_fengyang = {
+					tangut = "Honon"
+				}
+				b_shangjin = {
+					tangut = "Shontsin"
+				}
+			}
+			c_jinzhou = { #2361 Jinzhou
+				color={ 68 169 74 }
+
+				b_xicheng = {
+				}
+				b_hanyin = {
+				}
+				b_xunyang = {
+				}
+				b_shiquan_jinzhou = {
+				}
+				b_pingli = {
+				}
+			}
+		}
+		d_kuangguo = {
+			color={ 18 49 174 }
+				
+			capital = 2309 #Tongzhou
+			
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_zhenguo = {
+			color={ 18 179 174 }
+				
+			capital = 2310 #Huazhou
+			
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		
+	}#end of k_yongxing
+	k_hedong = {
+		color = { 50 0 160 }
+		
+		capital = 2265 # Taiyuan
+		
+		culture = han
+		
+		d_datong = {
+			color={ 0 10 0 }
+
+			capital = 2271 #Datong		
+
+			c_yuzhou_datong = { #2268 Yuzhou
+				color={ 10 20 0 }
+				
+				b_lingxian = {
+				}
+				b_dingan = {
+				}
+				b_feihu = {
+				}
+				b_lingqiu = {
+				}
+				b_guangling = {
+				}
+			}
+			c_datong = { #2271 Datong
+				color={ 20 30 0 }
+
+				b_datong = {
+				}
+				b_yunzhong = {
+				}
+				b_tiancheng = {
+				}
+				b_changqing = {
+				}
+				b_fengyi= {
+				}
+				b_huairen = { 
+				}
+				b_yongning = {#Hongzhou
+				}
+			}
+			c_fengzhou = { #2280 Fengzhou
+				color={ 30 40 0 }
+
+				b_fumin_fengzhou = {
+				}
+				b_zhenwu = {
+				}
+			}
+			c_yingzhou = { #2282 Yingzhou
+				color={ 40 50 0 }
+
+				b_jincheng_yingzhou = {
+				}
+				b_hunyuan = {
+				}
+				b_heyin = {
+				}
+			}
+			c_shuozhou = { #2287 Shuozhou
+				color={ 50 60 0 }
+
+				b_shanyang = {
+				}
+				b_ningyuan = {
+				}
+				b_mayi = {
+				}
+				b_shenwu_wuzhou = { #wuzhou
+				}
+				b_huanzhou = {
+				}
+			}
+		}
+		d_hedong = {
+			color={ 77 141 67 }
+			
+			capital = 2265 #Bingzhou
+			
+			c_liaozhou = { #2261 Liaozhou
+				color={ 77 131 77 }
+
+				b_liaoshan = {
+				}
+				b_heshun = {
+				}
+				b_yushe = {
+				}
+				b_pingcheng = {
+				}
+			}
+			c_fenzhou = { #2263 Fenzhou
+				color={ 77 121 87 }
+
+				b_xihe = {
+				}
+				b_pingyao = {
+				}
+				b_jiaxiu = {
+				}
+				b_lingshi = {
+				}
+				b_kaoyi = {
+				}
+			}
+			c_qinzhou_hedong = { #2264 Qinzhou
+				color={ 77 111 97 }
+
+				b_wuxiang = {
+				}
+				b_qinyuan = {
+				}
+				b_mianshang = {
+				}
+				b_dongdi = { #Weisheng army
+				}
+			}
+			c_bingzhou = { #2265 Bingzhou - later renamed Taiyuan-fu
+				color={ 77 101 107 }
+
+				b_yangdian = {
+				}
+				b_taigu = {
+				}
+				b_yuci = {
+				}
+				b_shouyang = {
+				}
+				b_yu = {
+				}
+				b_jiaocheng = {
+				}
+				b_wenshui = {
+				}
+				#qi, qingyuan, pingjin in reserve
+			}
+			c_daizhou = { #2266 Daizhou
+				color={ 77 91 117 }
+
+				b_yanmen = {
+				}
+				b_guo_daizhou = {
+				}
+				b_wutai = {
+				}
+				b_fanzhi = {
+				}
+				b_tanglin = {
+				}
+			}
+			c_pingding = { #2269 Pingding
+				color={ 77 81 127 }
+
+				b_pingding = {
+				}
+				b_leping = {
+				}
+				b_guangyang = { #fort
+				}
+			}
+			c_xianzhou = { #2284 Xianzhou 
+				color={ 77 71 137 }
+
+				b_jingle = {
+				}
+			}
+			c_xinzhou_hedong = { #2285 Xinzhou 
+				color={ 77 61 147 }
+
+				b_xiurong = {
+				}
+				b_dingxiang = {
+				}
+			}
+			c_lanzhou = { #2305 Lanzhou
+				color={ 77 51 157 }
+
+				b_yifang = {
+				}
+				b_hehe = {
+				}
+				b_loufan = {
+				}
+				b_langu = { #Kelan army
+				}
+				b_ninghua = { #Ninghua army
+				}
+				b_huoshan = { #Huoshan army
+				}
+			}
+			c_shizhou_hedong = { #2307 Shizhou
+				color={ 77 41 167 }
+				
+				tangut = "Shichew"
+
+				b_lishi = {
+				}
+				b_pingyi = {
+				}
+				b_fangshan = {
+				}
+			}
+		}
+		d_zhangguo = {
+			color={ 25 70 14 }
+
+			capital = 2282 #Yingzhou
+			
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_zhaoyi = {
+			color={ 99 121 87 }
+			
+			capital = 2267 #Luzhou
+			
+			c_zezhou = { #2250 Zezhou
+				color={ 89 111 87 }
+
+				b_jincheng = {
+				}
+				b_gaoping = {
+				}
+				b_yangcheng = {
+				}
+				b_duanshi = {
+				}
+				b_lingchuan = {
+				}
+				b_qinshui = {
+				}
+				b_xiongding = {#mountain pass
+				}
+			}
+			c_xingzhou_hebeixi = { #2252 Xingzhou - in 1119 renamed to Xinde-fu
+				color={ 79 101 87 }
+
+				b_xingtai = {
+				}
+				b_shahe = {
+				}
+				b_ren = {
+				}
+				b_yaoshan = {
+				}
+				b_pingxiang = {
+				}
+				b_neiqiu = {
+				}
+				b_nanhe = {
+				}
+				#julu in reserve
+			}
+			c_cizhou_hebeixi = { #2256 Cizhou
+				color={ 69 91 87 }
+
+				b_fuyang = {
+				}
+				b_handan = {
+				}
+				b_wuan = {
+				}
+			}
+			c_mingzhou = { #2262 Mingzhou
+				color={ 49 71 87 }
+
+				b_yongnian = {
+				}
+				b_feixiang = {
+				}
+				b_pingen = {
+				}
+				b_jize = {
+				}
+				b_dianzhou = {
+				}
+				b_linming = {
+				}
+			}
+			c_luzhou_hedong = { #2267 Luzhou - 1104 renamed to Longde-fu
+				color={ 39 61 87 }
+
+				b_shangdang = {
+				}
+				b_tunliu = {
+				}
+				b_xiangyuan = {
+				}
+				b_lucheng = {
+				}
+				b_hukai = {
+				}
+				b_changzi = {
+				}
+				b_she = {
+				}
+				#licheng in reserve
+			}
+		}
+		d_fenzhou = {
+			color={ 105 141 97 }
+			
+			capital = 2263 #Fenzhou
+			
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_jianxiong = {
+			color={ 105 141 97 }
+			
+			capital = 2288 #Jinzhou
+			
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_weisai = {
+			color={ 125 171 117 }
+			
+			capital = 2354 #Fengsheng
+			
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		allow = { title_king_basic_allow = yes }
+	}#end of k_hedong
+	k_hebeixi = {
+		color = { 118 159 127 }
+		color2 = { 255 255 255 }
+		
+		capital = 2355 # Youdu
+		
+		culture = han
+		
+		d_nanjing = {
+			color={ 50 20 50 }
+
+			capital = 2355 #Youdu
+			
+			c_yingzhou_hebei = { #2245 Yingzhou - in 1108 renamed to Hejian-fu
+				color={ 60 30 50 }
+
+				b_hejian = {
+				}
+				b_leshou = {
+				}
+				b_shucheng = {
+				}
+				b_gaoyang = { #Shun'an army
+				}
+			}
+			c_baozhou = { #2247 Baozhou
+				color={ 70 40 50 }
+
+				b_baosai = {
+				}
+				b_ansu = { #Ansu army
+				}
+				b_jingrong = { #Ansu army
+				}
+				b_suicheng = { #Weiyu and Guangxin army
+				}
+			}
+			c_mozhou = { #2349 Mozhou
+				color={ 80 50 50 }
+
+				b_mo = {
+				}
+				b_changfeng = {
+				}
+				b_renqiu = {
+				}
+			}
+			c_bazhou = { #2350 Bazhou
+				color={ 90 60 50 }
+
+				b_wenan = {
+				}
+				b_dacheng = {
+				}
+			}
+			c_xiongzhou = { #2351 Xiongzhou
+				color={ 100 70 50 }
+				
+				tangut = "Honchew"
+
+				b_guixin = {
+				}
+				#b_rongcheng = { #split between Xiongzhou and Yizhou
+				#}
+			}
+			c_zhuozhou = { #2352 Zhuozhou
+				color={ 110 80 50 }
+
+				b_fanyang = {
+				}
+				b_guan = {
+				}
+				b_xincheng = {
+				}
+				b_guiyi = {
+				}
+			}
+			c_fengsheng = { #2354 Fengsheng
+				color={ 120 90 50 }
+
+				b_yongxing = {
+				}
+				b_fanshan = {
+				}
+				b_longmen = {
+				}
+				b_wangyun = {
+				}
+				b_wende = { #Guihuazhou
+				}
+				b_huailai = { #Kehanzhou
+				}
+				b_jinshan = { #Ruzhou
+				}
+			}
+			c_xijin = { #2355 Youdu
+				color={ 130 100 50 }
+
+				b_xijin = {
+				}
+				b_wanping = {
+				}
+				b_changping = {
+				}
+				b_liangxiang = {
+				}
+				b_anci = {
+				}
+				b_wuqing = {
+				}
+				b_xianghe = {
+				}
+			}
+			c_jizhou = { #2356 Jizhou
+				color={ 140 110 50 }
+
+				b_yuyang = {
+				}
+				b_sanhe = {
+				}
+				b_yutian = {
+				}
+				b_zunhua = {#Jingzhou
+				}
+			}
+			c_tanzhou = { #2357 Tanzhou
+				color={ 150 120 50 }
+
+				b_miyun = {
+				}
+				b_xingtang = {
+				}
+			}
+			c_pingzhou = { #2585 Pingzhou
+				color={ 160 130 50 }
+
+				b_lulong = {
+				}
+				b_funing_pingzhou = {
+				}
+				b_shicheng_pingzhou = {
+				}
+				b_macheng = {
+				}
+			}
+			c_yingzhou_nanjing = { #2586 Yingzhou
+				color={ 170 140 50 }
+
+				b_liucheng = {
+				}
+			}
+		}
+		d_anguo = {
+			color={ 22 131 71 }
+			
+			capital = 2252 #Xingzhou
+			
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_chengde = {
+			color={ 19 75 185 }
+			
+			capital = 2251 #Zhenzhou
+			
+			c_jizhou_hebei = { #2246 Jizhou
+				color={ 19 85 175 }
+
+				b_xindu_jizhou = {
+				}
+				b_tiao = {
+				}
+				b_nangong = {
+				}
+				b_zaoqiang = {
+				}
+				b_wuyi = {
+				}
+				b_hengshui = {
+				}
+			}
+			c_shenzhou = { #2248 Shenzhou
+				color={ 19 75 165 }
+
+				b_jingan = {
+				}
+				b_shulu = {
+				}
+				b_anping = {
+				}
+				b_yaoyang = {
+				}
+				b_wuqiang = {
+				}
+			}
+			c_zhenzhou = { #2251 Zhenzhou - in 1048 renamed Zhending-fu
+				color={ 19 65 155 }
+
+				b_zhending = {
+				}
+				b_qiaocheng = {
+				}
+				b_yuecheng = {
+				}
+				b_yuanshi = {
+				}
+				b_jingxing = {
+				}
+				b_huolu = {
+				}
+				b_pingshan = {
+				}
+				#xingtang, lingshou in reserve
+			}
+			c_zhaozhou = { #2255 Zhaozhou - in 1119 renamed Qingyuan-fu
+				color={ 19 55 145 }
+
+				b_pingji = {
+				}
+				b_ningjin = {
+				}
+				b_lincheng = {
+				}
+				b_gaoyi = {
+				}
+				b_longping = {
+				}
+				b_baixiang = {
+				}
+				b_zenhuang = {
+				}
+			}
+			
+		}
+		d_yiwu = {
+			color={ 1 26 94 }
+			
+			capital = 2253 #Dingzhou
+			
+			c_qizhou = { #2249 Qizhou
+				color={ 11 26 84 }
+
+				b_puyin = {
+				}
+				b_gucheng_qizhou = {
+				}
+				b_shenze = {
+				}
+				b_boye = { #Yongning army
+				}
+			}
+			c_dingzhou = { #2253 Dingzhou - in 1113 renamed to Zhongshan-fu
+				color={ 21 26 74 }
+				
+				tangut = "Thechew"
+
+				b_anxi = {
+				}
+				b_wuji = {
+				}
+				b_dianyang = {
+				}
+				b_tang = {
+				}
+				b_wangdu = {
+				}
+				b_xinle_dingzhou = {
+				}
+				b_beiping = { #Beiping army
+				}
+			}
+			c_yizhou = { #2353 Yizhou
+				color={ 31 26 64 }
+
+				b_yi = {
+				}
+				b_laishui = {
+				}
+				b_rongcheng = {
+				}
+			}
+		}
+		allow = { title_king_basic_allow = yes }
+	}#end of k_hebeixi
+	k_hebeidong = {
+		color = { 118 44 10 }
+		color2 = { 255 255 255 }
+		
+		capital = 2254 #Weizhou
+		
+		culture = han
+		
+		d_heyang = {
+			color={ 48 166 24 }
+			
+			capital = 2260 #Mengzhou
+			
+			c_huaizhou = { #2258 Huaizhou
+				color={ 58 166 34 }
+
+				b_henei = {
+				}
+				b_xiuwu = {
+				}
+				b_wuzhi = {
+				}
+			}
+			c_mengzhou = { #2260 Mengzhou
+				color={ 68 166 44 }
+
+				b_heyang = {
+				}
+				b_jiyuan = {
+				}
+				b_wen = {
+				}
+				b_sishui = {
+				}
+				b_heying = {
+				}
+				b_wangwu = {
+				}
+			}
+		}
+		d_tianxiong = {
+			color={ 93 201 206 }
+			
+			capital = 2465 #Weizhou
+			
+			c_weizhou_hebeixi = { #2254 Weizhou
+				color={ 103 191 206 }
+
+				b_ji_weizhou = {
+				}
+				b_xinxiang = {
+				}
+				b_huojia = {
+				}
+				b_gongcheng = {
+				}
+				b_liyang_weizhou = {#imperial office
+				}
+				b_zongcheng = {
+				}
+			}
+			c_xiangzhou = { #2259 Xiangzhou
+				color={ 113 181 206 }
+
+				b_anyang = {
+				}
+				b_tangyin = {
+				}
+				b_linzhang = {
+				}
+				b_linlu = {
+				}
+				b_huanshui = {
+				}
+				b_chengan = {
+				}
+				b_neihuang = {
+				}
+			}
+			c_bozhou = { #2463 Bozhou
+				color={ 123 171 206 }
+
+				b_qingcheng_bozhou = {
+				}
+				b_boping = {
+				}
+				b_wushui = {
+				}
+				b_qingping = {
+				}
+				b_tangyi = {
+				}
+				b_gaotang = {
+				}
+				b_quan = {
+				}
+			}
+			c_beizhou = { #2464 Beizhou
+				color={ 133 161 206 }
+
+				b_qinghe = {
+				}
+				b_qingyang_beizhou = {
+				}
+				b_wucheng_beizhou = {
+				}
+				b_jingcheng = {
+				}
+				b_linqing = {
+				}
+				b_zhangnan = {
+				}
+				b_liting_beizhou = {
+				}
+			}
+			c_weizhou_tianxiong = { #2465 Weizhou
+				color={ 123 171 206 }
+
+				b_guixiang = {
+				}
+				b_yuancheng = {
+				}
+				b_wei = {
+				}
+				b_guantao = {
+				}
+				b_changle = {
+				}
+				b_linhe_weizhou = {
+				}
+				b_chanshui = {
+				}
+			}
+			c_chanzhou = { #2467 Chanzhou
+				color={ 113 181 206 }
+
+				b_dunqiu = {
+				}
+				b_qingfeng = {
+				}
+				b_guancheng_chanzhou = {
+				}
+				b_linhuang_chanzhou = {
+				}
+			}
+		}
+		d_zhangde = {
+			color={ 165 37 18 }
+			
+			capital = 2259 #Xiangzhou
+			
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_zhenning = {
+			color={ 158 163 221 }
+			
+			capital = 2467 #Chanzhou
+			
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_yongqing = {
+			color={ 43 111 221 }
+			
+			capital = 2464 #Beizhou
+			
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_yichang = {
+			color={ 10 67 104 }
+			
+			capital = 2471 #Cangzhou
+			
+			c_dezhou = { #2445 Dezhou
+				color={ 10 67 104 }
+
+				b_ande = {
+				}
+				b_changhe = {
+				}
+				b_pingyuan = {
+				}
+				b_pingchang = {
+				}
+				b_jiangling_dezhou = {
+				}
+				b_anling = {
+				}
+			}
+			c_jingzhou_hebei = { #2466 Jingzhou
+				color={ 10 87 124 }
+
+				b_gonggao = {
+				}
+				b_dongguang = {
+				}
+				b_linjin_jingzhou = {
+				}
+				b_nanpi = {
+				}
+			}
+			c_cangzhou = { #2471 Cangzhou
+				color={ 10 77 114 }
+
+				b_qingchi = {
+				}
+				b_yanshan = {
+				}
+				b_changlu = {
+				}
+				b_laoling = {
+				}
+				b_raoan = {
+				}
+				b_wudi ={
+				}
+				b_quanfu = {
+				}
+			}	
+		}
+		d_yicheng = {
+			color={ 98 11 221 }
+			
+			capital = 2472 #Huazhou
+			
+			c_zhengzhou = { #2444 Zhengzhou
+				color={ 88 11 211 }
+
+				b_guancheng = {
+				}
+				b_xingyang = {
+				}
+				b_xingze = {
+				}
+				b_yuanwu = {
+				}
+				b_yangwu = {
+				}
+				b_xinzheng_zhengzhou ={
+				}
+				b_zhongmu = {
+				}
+			}
+			c_huazhou_yicheng = { #2472 Huazhou
+				color={ 78 11 201 }
+
+				b_baima_huazhou = {
+				}
+				b_weinan_huazhou = {
+				}
+				b_kuangcheng = {
+				}
+				b_weicheng_huazhou = {
+				}
+				b_zuocheng = {
+				}
+				b_suanzuo ={
+				}
+				b_lingchang = {
+				}
+			}
+		}
+		
+		allow = { title_king_basic_allow = yes }
+	}#end of k_hebeidong
+	k_jingxi = {
+		color = { 40 20 180 }
+		
+		capital = 2257 # Henan
+		
+		culture = han
+		
+		d_dongdu = {
+			color={ 115 197 115 }
+			
+			capital = 2257 #Henan
+			
+			c_henan = { #2257 Henan
+				color={ 105 197 105 }
+
+				b_luoyang = {
+				}
+				b_henan = {
+				}
+				b_yongan = {
+				}
+				b_yanshi = {
+				}
+				b_yingyang = {
+				}
+				b_gong = {
+				}
+				b_mi = {
+				}
+				#xinan, fucheng, yiyang, mianchi, yongning, changshui, shouan, heqing, dengfeng, fucai in reserve
+			}
+			c_ruzhou = { #2378 Ruzhou
+				color={ 95 197 95 }
+
+				b_linru = {
+				}
+				b_liang = {
+				}
+				b_jiacheng = {
+				}
+				b_xiangcheng = {
+				}
+				b_ye = {
+				}
+				b_lushan ={
+				}
+				b_baofeng = {
+				}
+			}
+			
+		}
+		d_jingxinan = {
+			color={ 87 146 165 }
+			
+			capital = 2441 #Xiangzhou
+			
+			c_dengzhou = { #2297 Dengzhou
+				color={ 77 136 165 }
+
+				b_rang = {
+				}
+				b_nanyang = {
+				}
+				b_fangcheng = {
+				}
+				b_neixiang = {
+				}
+				b_shunyang = {
+				}
+				b_xichuan_dengzhou = {
+				}
+			}
+			c_junzhou = { #2318 Junzhou
+				color={ 67 126 165 }
+
+				b_wudang = {
+				}
+				b_yunxiang = {
+				}
+			}
+			c_fangzhou_jingxinan = { #2360 Fangzhou
+				color={ 57 116 165 }
+
+				b_fangling = {
+				}
+				b_zhushan = {
+				}
+				b_yongqing = {
+				}
+				b_shangyong = {
+				}
+			}
+			c_xiangzhou_jingxi = { #2441 Xiangzhou
+				color={ 47 106 165 }
+
+				b_xiangyang = {
+				}
+				b_dengcheng_xiangzhou = {
+				}
+				b_gucheng_xiangzhou = {
+				}
+				b_yicheng_xiangzhou = {
+				}
+				b_zhonglu = {
+				}
+				b_nanzhang = {
+				}
+				b_lexiang = {
+				}
+			}
+			c_tangzhou = { #2476 Tangzhou
+				color={ 37 96 165 }
+
+				b_biyang = {
+				}
+				b_biyang_2 = {
+				}
+				b_ciqiu = {
+				}
+				b_tongbai = {
+				}
+				b_pingshi = {
+				}
+				b_huyang = {
+				}
+				b_fangcheng_tangzhou = {
+				}
+			}
+			c_suizhou_shannan = { #2490 Suizhou
+				color={ 27 86 165 }
+
+				b_sui = {
+				}
+				b_guanghua = {
+				}
+				b_zaoyang = {
+				}
+				b_tangcheng = {
+				}
+				b_angui = {
+				}
+				b_pinglin = {
+				}
+				b_shunyi = {
+				}
+			}
+			c_yingzhou_shannan = { #2491 Yingzhou
+				color={ 17 76 165 }
+
+				b_changshou = {
+				}
+				b_jingshan = {
+				}
+				b_fushui = {
+				}
+				b_lanshui_yingzhou = {
+				}
+			}
+			c_fuzhou_shannan = { #2493 Fuzhou
+				color={ 7 66 165 }
+
+				b_mianyang = {
+				}
+				b_jingling = {
+				}
+				b_jianli = {
+				}
+				b_yusha = {
+				}
+			}
+		}
+		d_weisheng = {
+			color={ 127 196 105 }
+			
+			capital = 2297 #Dengzhou
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		allow = { title_king_basic_allow = yes }
+	}#end of k_jingxi
+	k_henan = {
+		color = { 95 73 184 }
+		
+		capital = 2575 # Qingzhou
+		
+		culture = han
+		
+		d_tianping = {
+			color={ 73 25 11 }
+			
+			capital = 2461 #Yunzhou
+			
+			c_qizhou_shandong = { #2446 Qizhou
+				color={ 53 15 21 }
+
+				b_zhangqiu = {
+				}
+				b_licheng = {
+				}
+				b_linyi = {
+				}
+				b_linji = {
+				}
+				b_changqing_qizhou = {
+				}
+				b_fengqi = {
+				}
+				b_yucheng = {
+				}
+			}
+			c_jizhou_shandong = { #2460 Jizhou
+				color={ 63 25 21 }
+
+				b_juye = {
+				}
+				b_rencheng = {
+				}
+				b_jinxiang = {
+				}
+				b_yuncheng = {
+				}
+			}
+			c_yunzhou = { #2461 Yunzhou
+				color={ 73 35 21 }
+
+				b_xuchang = {
+				}
+				b_shouzhang = {
+				}
+				b_pingyin = {
+				}
+				b_donga = {
+				}
+				b_yanggu = {
+				}
+				b_zhongdu = {
+				}
+			}
+			c_puzhou_shandong = { #2468 Puzhou
+				color={ 83 45 21 }
+
+				b_juancheng = {
+				}
+				b_puyang = {
+				}
+				b_fan = {
+				}
+				b_leize = {
+				}
+				b_linpu = {
+				}
+				b_kunwu = {
+				}
+				b_lincheng_puzhou = {
+				}
+			}
+			c_caozhou = { #2469 Caozhou
+				color={ 93 55 21 }
+
+				b_jiyin = {
+				}
+				b_kaocheng = {
+				}
+				b_wanqu = {
+				}
+				b_chengshi = {
+				}
+				b_nanhua = {
+				}
+				b_mengze = {
+				}
+				b_jinyang_caozhou = {
+				}
+			}
+			c_dizhou = { #2501 Dizhou
+				color={ 103 65 21 }
+
+				b_yanci = {
+				}
+				b_dihe = {
+				}
+				b_yangxin = {
+				}
+			}
+			c_binzhou_shandong = { #2576 Binzhou
+				color={ 113 75 21 }
+
+				b_bohai = {
+				}
+				b_putai = {
+				}
+				b_zhaoan = { #Northern Song
+				}
+				b_lijin = { #Jin
+				}
+			}
+		}
+		d_zhangxin = {
+			color={ 123 75 41 }
+			
+			capital = 2575 #Caozhou
+			
+			allow = { 
+				FROM = { is_de_jure_title = yes }
+			}
+		}	
+		d_pinglu = {
+			color={ 61 95 41 }
+			
+			capital = 2575 #Qingzhou
+			
+			c_zizhou_shandong = { #2447 Zizhou
+				color={ 61 105 51 }
+
+				b_zichuan = {
+				}
+				b_changbai = {
+				}
+				b_changshan = {
+				}
+				b_gaowan = {
+				}
+				b_zouping = {
+				}
+			}
+			c_laizhou = { #2573 Laizhou
+				color={ 61 115 61 }
+
+				b_ye_laizhou = {
+				}
+				b_changyang = {
+				}
+				b_jiaoshui = {
+				}
+				b_jimo = {
+				}
+				b_qucheng = {
+				}
+				b_dangli = {
+				}
+				b_qutai = {
+				}
+			}
+			c_dengzhou_shandong = { #2574 Dengzhou
+				color={ 61 125 71 }
+
+				b_penglai = {
+				}
+				b_muping = {
+				}
+				b_wendeng = {
+				}
+				b_huang = {
+				}
+				b_qingyang = {
+				}
+				b_kuoding = {
+				}
+			}
+			c_qingzhou_shandong = { #2575 Qingzhou
+				color={ 61 135 81 }
+
+				b_yidu = {
+				}
+				b_linzi = {
+				}
+				b_qiancheng = {
+				}
+				b_bochang = {
+				}
+				b_shouguang = {
+				}
+				b_linqu = {
+				}
+				b_beihai = {
+				}
+			}
+		}
+		d_taining = {
+			color={ 107 133 189 }
+			
+			capital = 2448 #Yanzhou
+			
+			c_yanzhou_shandong = { #2448 Yanzhou
+				color={ 117 143 179 }
+				
+				b_jiaqiu = {
+				}
+				b_quguo = {
+				}
+				b_quanfeng = {
+				}
+				b_pishui = {
+				}
+				b_zou = {
+				}
+				b_gongqiu = {
+				}
+				b_laiwu = {
+				}
+			}
+			c_yizhou_shandong = { #2449 Yizhou
+				color={ 127 153 189 }
+				
+				b_linyi_yizhou = {
+				}
+				b_fei = {
+				}
+				b_cheng = {
+				}
+				b_yishui = {
+				}
+				b_xintai = {
+				}
+				b_lanling = {
+				}
+				b_zengcheng = {
+				}
+			}
+			c_mizhou = { #2450 Mizhou
+				color={ 137 163 199 }
+				
+				b_zhucheng = {
+				}
+				b_futang = {
+				}
+				b_gaomi = {
+				}
+				b_ju = {
+				}
+				b_jiaoxi = {
+				}
+				b_wucheng = {
+				}
+			}
+			c_haizhou = { #2451 Haizhou
+				color={ 147 173 209 }
+				
+				b_qushan = {
+				}
+				b_donghai = {
+				}
+				b_shuyang = {
+				}
+				b_huairen_haizhou = {
+				}
+				b_longju_haizhou = {
+				}
+				b_zhuqi = {
+				}
+				b_ganyu = {
+				}
+			}
+			c_shanzhou_shandong = { #2459 Shanzhou
+				color={ 157 183 209 }
+				
+				b_shanfu = {
+				}
+				b_dangshan = {
+				}
+				b_chengwu = {
+				}
+				b_yutai = {
+				}
+			}
+		}
+		
+		d_xuanwu = {
+			color={ 240 10 25 }
+			
+			capital = 2470 #Bianzhou
+			
+			c_yingzhou_henan = { #2456 Yingzhou
+				color={ 240 20 35 }
+				
+				b_ruyin = {
+				}
+				b_yingshang = {
+				}
+				b_xiacai = {
+				}
+				b_shenqiu = {
+				}
+				b_taihe_yingzhou = {
+				}
+				b_yingyang_yingzhou = {
+				}
+				b_gaotang_yingzhou = {
+				}
+			}
+			c_bozhou_henan = { #2457 Bozhou
+				color={ 240 30 45 }
+				
+				b_qiao = {
+				}
+				b_cuo = {
+				}
+				b_chengfu = {
+				}
+				b_luyi = {
+				}
+				b_zhenyuan = {
+				}
+				b_yongcheng = {
+				}
+				b_mengcheng = {
+				}
+			}
+			c_songzhou = { #2458 Songzhou
+				color={ 240 40 55 }
+				
+				b_songcheng = {
+				}
+				b_xiangyi = {
+				}
+				b_ningling = {
+				}
+				b_xiayi = {
+				}
+				b_gushu = {
+				}
+				b_chuqiu = {
+				}
+				b_zhecheng = {
+				}
+			}
+			c_bianzhou = { #2470 Bianzhou
+				color={ 240 50 65 }
+				
+				b_kaifeng = {
+				}
+				b_junyi = {
+				}
+				b_weishi = {
+				}
+				b_fengqiu = {
+				}
+				b_yongqiu = {
+				}
+				b_chenliu = {
+				}
+				b_changyuan_bianzhou = {
+				}
+			}
+		}
+		d_guide = {
+			color={ 93 4 1 }
+			
+			capital = 2458 #Songzhou
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_zhenan = {
+			color={ 165 41 77 }
+			
+			capital = 2474 #Chenzhou
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_zhongwu = {
+			color={ 61 61 61 }
+			
+			capital = 2473 #Xuzhou
+			
+			c_xuzhou_zhongwu = { #2473 Xuzhou
+				color={ 61 71 71 }
+				
+				b_changshe = {
+				}
+				b_changge = {
+				}
+				b_yangdi = {
+				}
+				b_xuchang_xuzhou = {
+				}
+				b_yanling = {
+				}
+				b_fugou = {
+				}
+				b_linying = {
+				}
+			}
+			c_chenzhou = { #2474 Chenzhou
+				color={ 61 81 81 }
+				
+				b_wanqiu = {
+				}
+				b_taikang = {
+				}
+				b_xiangcheng_chenzhou = {
+				}
+				b_tongyang = {
+				}
+				b_yinshui = {
+				}
+				b_nandun = {
+				}
+				b_xihua = {
+				}
+			}
+			c_caizhou = { #2475 Caizhou
+				color={ 61 91 91 }
+				
+				b_ruyang = {
+				}
+				b_langshan = {
+				}
+				b_suiping_caizhou = {
+				}
+				b_shangcai = {
+				}
+				b_xincai = {
+				}
+				b_baoxin = {
+				}
+				b_xinxi = {
+				}
+			}
+		}
+		d_fengguo = {
+			color={ 73 141 86 }
+			
+			capital = 2475 #Caizhou
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_ganhua = {
+			color={ 135 140 1 }
+			
+			capital = 2454 #Xuzhou
+			
+			c_sizhou_ganhua = { #2452 Sizhou
+				color={ 145 150 1 }
+				
+				b_linhuai = {
+				}
+				b_lianshui_sizhou = {
+				}
+				b_xuyi = {
+				}
+				b_xucheng = {
+				}
+				b_jincheng_sizhou = {
+				}
+			}
+			c_xuzhou_ganhua = { #2454 Xuzhou
+				color={ 155 160 1 }
+				
+				b_pengcheng = {
+				}
+				b_xiao = {
+				}
+				b_feng = {
+				}
+				b_pei = {
+				}
+				b_teng = {
+				}
+				b_suqian = {
+				}
+				b_xiapi = {
+				}
+			}
+			c_suzhou_ganhua = { #2455 Suzhou
+				color={ 165 170 1 }
+				
+				b_fuli = {
+				}
+				b_hong = {
+				}
+				b_qi_suzhou = {
+				}
+				b_linhuan = {
+				}
+				b_longkang = {
+				}
+			}
+			c_haozhou = { #2481 Haozhou
+				color={ 175 180 1 }
+				
+				b_zhongli = {
+				}
+				b_dingyuan_haozhou = {
+				}
+				b_zhaoyi = {
+				}
+				b_tushan = {
+				}
+				b_suiling = {
+				}
+				b_jiyin_haozhou = {
+				}
+			}
+		}
+	}
+	k_huainan = {
+		color={ 80 201 35 }
+		
+		capital = 2479 #Yangzhou
+		
+		culture = han
+		
+		d_huainan = {
+			color={ 80 201 35 }
+			
+			capital = 2479 #Yangzhou
+			
+			c_chuzhou = { #2453 Chuzhou
+				color={ 70 190 35 }
+				
+				b_shanyang_chuzhou = {
+				}
+				b_yancheng = {
+				}
+				b_baoying = {
+				}
+				b_huaiyin = {
+				}
+				b_sheyang = {
+				}
+				b_anle = {
+				}
+				b_xinan = {
+				}
+			}
+			c_yangzhou_huainan = { #2479 Yangzhou
+				color={ 60 180 35 }
+				
+				b_jiangdu = {
+				}
+				b_jiangyang = {
+				}
+				b_luhe = {
+				}
+				b_gaoyou = {
+				}
+				b_yangzi = {
+				}
+				b_tianchang = {
+				}
+				b_haian = {
+				}
+			}
+			c_chuzhou_huainan = { #2480 Chuzhou
+				color={ 50 170 35 }
+				
+				b_qingliu = {
+				}
+				b_quanshu = {
+				}
+				b_yongyang = {
+				}
+			}
+			c_hezhou_huainan = { #2482 Hezhou
+				color={ 40 160 35 }
+				
+				b_liyang_hezhou = {
+				}
+				b_wujiang = {
+				}
+				b_hanshan = {
+				}
+			}
+			c_luzhou_huainan = { #2483 Luzhou
+				color={ 30 150 35 }
+				
+				b_hefei = {
+				}
+				b_shen = {
+				}
+				b_chao = {
+				}
+				b_lujiang = {
+				}
+				b_shucheng_luzhou = {
+				}
+				b_kaicheng = {
+				}
+				b_fuyang_luzhou = {
+				}
+			}
+			c_shouzhou = { #2484 Shouzhou
+				color={ 20 140 35 }
+				
+				b_shouchun = {
+				}
+				b_anfeng = {
+				}
+				b_chengtang = {
+				}
+				b_huoqiu = {
+				}
+				b_huoshan_shouzhou = {
+				}
+				b_xiaohuang = {
+				}
+				b_feiling = {
+				}
+			}
+			c_guangzhou = { #2485 Guangzhou
+				color={ 10 130 35 }
+				
+				b_dingcheng = {
+				}
+				b_guangshan = {
+				}
+				b_xianju = {
+				}
+				b_yincheng = {
+				}
+				b_gushi = {
+				}
+				b_songan = {
+				}
+			}
+			c_shuzhou_huainan = { #2486 Shuzhou
+				color={ 0 120 35 }
+				
+				b_huaining_shuzhou = {
+				}
+				b_susong = {
+				}
+				b_wangjiang = {
+				}
+				b_taihu = {
+				}
+				b_tongcheng = {
+				}
+				b_wancheng = {
+				}
+				b_wanyang = {
+				}
+			}
+			c_taizhou_huainan = { #2577 Taizhou
+				color={ 0 110 25 }
+				
+				b_hailing = {
+				}
+				b_rugao = {
+				}
+				b_taixing = {
+				}
+				b_xinghua = {
+				}
+			}
+		}
+		d_eyue = {
+			color={ 23 105 191 }
+			
+			capital = 2494 #Ezhou
+			
+			c_qizhou_hubei = { #2487 Qizhou
+				color={ 23 105 191 }
+				
+				b_qichun = {
+				}
+				b_huangmei = {
+				}
+				b_guangji_qizhou = {
+				}
+				b_qishui = {
+				}
+				b_yifeng = {
+				}
+				b_changji_qizhou = {
+				}
+				b_tangyang = {
+				}
+			}
+			c_huangzhou = { #2488 Huangzhou
+				color={ 33 115 191 }
+				
+				b_huanggang = {
+				}
+				b_huangpi = {
+				}
+				b_macheng_huangzhou = {
+				}
+				b_mulan = {
+				}
+				b_baocheng_huangzhou = {
+				}
+				b_yangcheng_huangzhou = {
+				}
+			}
+			c_shenzhou_hubei = { #2489 Shenzhou
+				color={ 43 125 191 }
+				
+				b_yiyang = {
+				}
+				b_zhongshan = {
+				}
+				b_luoshan = {
+				}
+			}
+			c_anzhou = { #2492 Anzhou
+				color={ 53 135 191 }
+				
+				b_anling_anzhou = {
+				}
+				b_yunmeng = {
+				}
+				b_xiaochang = {
+				}
+				b_yingcheng = {
+				}
+				b_jiyang = {
+				}
+				b_yingshan_anzhou = {
+				}
+				b_huanyang = {
+				}
+			}
+			c_ezhou = { #2494 Ezhou
+				color={ 63 145 191 }
+				
+				b_jiangxia = {
+				}
+				b_yongxing_ezhou = {
+				}
+				b_wuchang = {
+				}
+				b_puqi = {
+				}
+				b_tangnian = {
+				}
+				
+			}
+			c_yuezhou = { #2496 Yuezhou
+				color={ 73 155 191 }
+				
+				b_baling = {
+				}
+				b_huarong = {
+				}
+				b_qiaojiang = {
+				}
+				b_xiangyin = {
+				}
+				b_changjiang_yuezhou = {
+				}
+				b_luo_yuezhou = {
+				}
+				b_linxiang = {
+				}
+			}
+			c_mianzhou_eyue = { #2594 Mianzhou
+				color={ 83 165 191 }
+				
+				b_hanyang = {
+				}
+				b_chachuan = {
+				}
+			}
+		}
+		d_anyuan = {
+			color={ 43 125 101 }
+			
+			capital = 2492 #Anzhou
+			
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_desheng = {
+			color={ 71 1 52 }
+			
+			capital = 2483 #Luzhou
+			
+		}
+		d_dingyuan = {
+			color={ 70 190 35 }
+			
+			capital = 2453 #Chuzhou
+			
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}	
+		d_qinghuai = {
+			color={ 83 65 143 }
+			
+			capital = 2481 #Haozhou
+			
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+	} #end of k_huainan
+	k_jiangnan = {
+		color={ 12 201 35 }
+		
+		capital = 2579 #Shengzhou
+		
+		culture = han
+		
+		d_zhexi = {
+			color={ 4 3 225 }
+			
+			capital = 2520 #Runzhou
+			
+			c_runzhou = { #2520 Runzhou
+				color={ 14 14 225 }
+				
+				b_dantu = {
+				}
+				b_danyang = {
+				}
+				b_jintan = {
+				}
+				b_yanling_runzhou = {
+				}
+			}
+			c_changzhou_jiangnan = { #2521 Changzhou
+				color={ 24 24 225 }
+				
+				b_jinling = {
+				}
+				b_wujin = {
+				}
+				b_jiangyin = {
+				}
+				b_yixing = {
+				}
+				b_wuxi = {
+				}
+				b_lanling_changzhou = {
+				}
+				b_jiyang_changzhou = {
+				}
+			}
+			c_suzhou_jiangnan = { #2522 Suzhou
+				color={ 34 34 225 }
+				
+				b_wu = {
+				}
+				b_changzhou = {
+				}
+				b_kunshan = {
+				}
+				b_changshu = {
+				}
+				b_wujiang_suzhou = {
+				}
+				b_jiading = {
+				}
+			}
+			c_huzhou = { #2523 Huzhou
+				color={ 44 44 225 }
+				
+				b_wucheng_huzhou = {
+				}
+				b_wukang = {
+				}
+				b_changcheng = {
+				}
+				b_anji = {
+				}
+				b_deqing = {
+				}
+				b_yuanxiang = {
+				}
+				b_guian = {
+				}
+			}
+			c_hangzhou = { #2524 Hangzhou
+				color={ 54 54 225 }
+				
+				b_qiantang = {
+				}
+				b_yanguan = {
+				}
+				b_yuhang = {
+				}
+				b_fuyang_hangzhou = {
+				}
+				b_yuqian = {
+				}
+				b_linan = {
+				}
+				b_xincheng_hangzhou = {
+				}
+			}
+			c_muzhou = { #2525 Muzhou
+				color={ 64 64 225 }
+				
+				b_jiande = {
+				}
+				b_qingxi = {
+				}
+				b_shouchang_muzhou = {
+				}
+				b_tonglu = {
+				}
+				b_fenshui = {
+				}
+				b_suian = {
+				}
+				b_zhaode = {
+				}
+			}
+			c_xiuzhou = { #2578 Xiuzhou
+				color={ 74 74 225 }
+				
+				b_jiaxing = {
+				}
+				b_huating_xiuzhou = {
+				}
+				b_haiyan = {
+				}
+				b_chongde_xiuzhou = {
+				}
+			}
+			c_shengzhou_jiangnan = { #2579 Shengzhou
+				color={ 84 84 225 }
+				
+				b_shangyuan = {
+				}
+				b_gurong = {
+				}
+				b_lishui = {
+				}
+				b_liyang_shengzhou = {
+				}
+				b_anye = {
+				}
+			}
+		}
+		d_xuanshe = {
+			color={ 10 200 71 }
+			
+			capital = 2519 #Xuanzhou
+			
+			c_shezhou = { #2517 Shezhou
+				color={ 20 200 81 }
+				
+				b_she_shezhou = {
+				}
+				b_xiuning = {
+				}
+				b_yi_shezhou = {
+				}
+				b_jixi = {
+				}
+				b_wuyuan_shezhou = {
+				}
+				b_qimen = {
+				}
+				b_guide = {
+				}
+			}
+			c_chizhou = { #2518 Chizhou
+				color={ 30 200 91 }
+				
+				b_qiupu = {
+				}
+				b_qingyang_chizhou = {
+				}
+				b_zhide = {
+				}
+				b_shidai = {
+				}
+			}
+			c_xuanzhou = { #2519 Xuanzhou
+				color={ 40 200 101 }
+				
+				b_xuancheng = {
+				}
+				b_dangtu = {
+				}
+				b_jing = {
+				}
+				b_guangde = {
+				}
+				b_nanling = {
+				}
+				b_taiping_xuanzhou = {
+				}
+				b_ningguo = {
+				}
+			}
+		}
+		d_zhedong = {
+			color={ 0 158 158 }
+			
+			capital = 2529 #Yuezhou
+			
+			c_quzhou_jiangnan = { #2526 Shezhou
+				color={ 10 148 158 }
+				
+				b_xian_quzhou = {
+				}
+				b_longqiu = {
+				}
+				b_xujiang = {
+				}
+				b_changshan_quzhou = {
+				}
+				b_dingyang = {
+				}
+				b_baishi = {
+				}
+				b_yingchuan = {
+				}
+			}
+			c_wuzhou = { #2527 Wuzhou
+				color={ 20 138 158 }
+				
+				b_jinhua = {
+				}
+				b_yiwu_wuzhou = {
+				}
+				b_yongkang_wuzhou = {
+				}
+				b_dongyang = {
+				}
+				b_lanxi = {
+				}
+				b_wucheng_wuzhou = {
+				}
+				b_puyang_wuzhou = {
+				}
+			}
+			c_chuzhou_jiangnan = { #2528 Chuzhou
+				color={ 30 128 158 }
+				
+				b_lishui_chuzhou = {
+				}
+				b_songyang = {
+				}
+				b_jinyun = {
+				}
+				b_qingtian = {
+				}
+				b_suichang = {
+				}
+				b_longquan = {
+				}
+				b_qingyuan = {
+				}
+			}
+			c_yuezhou_jiangnan = { #2529 Yuezhou
+				color={ 40 118 158 }
+				
+				b_huiji = {
+				}
+				b_shanyin = {
+				}
+				b_zhuji = {
+				}
+				b_yuyao = {
+				}
+				b_shan_yuezhou = {
+				}
+				b_xiaoshan = {
+				}
+				b_shangyu = {
+				}
+			}
+			c_mingzhou_jiangnan = { #2530 Mingzhou
+				color={ 50 108 158 }
+				
+				b_mao_mingzhou = {
+				}
+				b_fenghua = {
+				}
+				b_cixi = {
+				}
+				b_xiangshan = {
+				}
+				b_wengshan = {
+				}
+				b_dinghai = {
+				}
+				b_changguo = {
+				}
+			}
+			c_taizhou_jiangnan = { #2531 Taizhou
+				color={ 60 98 158 }
+				
+				b_linhai = {
+				}
+				b_tangxing = {
+				}
+				b_huanyan = {
+				}
+				b_lean = {
+				}
+				b_ninghai = {
+				}
+				b_zhangan = {
+				}
+				b_tiantai = {
+				}
+			}
+			c_wenzhou_jiangnan = { #2532 Wenzhou
+				color={ 70 88 158 }
+				
+				b_yongjia = {
+				}
+				b_angu = {
+				}
+				b_hengyang = {
+				}
+				b_lecheng = {
+				}
+				b_pingyang = {
+				}
+				b_lian = {
+				}
+			}
+		}
+		d_zhenhai = {
+			color={ 205 31 76 }
+			
+			capital = 2524 #Hangzhou
+			
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_zhongwu_wuyue = {
+			color={ 164 122 11 }
+			
+			capital = 2522 #Suzhou
+			
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+	}#end of k_jiangnan
+	k_jiangxi = {
+		color={ 67 84 191 }
+		
+		capital = 2504 #Tanzhou
+		
+		culture = han
+		
+		d_hunan = {
+			color={ 210 11 32 }
+			
+			capital = 2504 #Tanzhou
+			
+			c_shaozhou = { #2503 Shaozhou
+				color={ 210 21 42 }
+				
+				b_shaoyang = {
+				}
+				b_wugang = {
+				}
+				b_jianxing = {
+				}
+				b_shaoling = {
+				}
+				b_xinhua = {
+				}
+			}
+			c_tanzhou_hunan = { #2504 Tanzhou
+				color={ 210 31 52 }
+				
+				b_changsha = {
+				}
+				b_xiangtan = {
+				}
+				b_xiangxiang = {
+				}
+				b_yiyang_tanzhou = {
+				}
+				b_liling = {
+				}
+				b_liuyang = {
+				}
+				b_xinkang = {
+				}
+			}
+			c_hengzhou = { #2505 Hengzhou
+				color={ 210 41 62 }
+				
+				b_hengyang_hengzhou = {
+				}
+				b_hengshan = {
+				}
+				b_changning = {
+				}
+				b_xiu = {
+				}
+				b_chaling = {
+				}
+				b_leiyang = {
+				}
+				b_anren_hengzhou = {
+				}
+			}
+			c_yongzhou = { #2506 Yongzhou
+				color={ 210 51 72 }
+				
+				b_lingling = {
+				}
+				b_piyang = {
+				}
+				b_xiangyuan_yongzhou = {
+				}
+				b_dongan = {
+				}
+			}
+			c_daozhou = { #2507 Daozhou
+				color={ 210 61 82 }
+				
+				b_hongdao = {
+				}
+				b_yantang = {
+				}
+				b_jianghua = {
+				}
+				b_yongming = {
+				}
+				b_dali = {
+				}
+			}
+			c_chenzhou_hunan = { #2508 Chenzhou
+				color={ 210 71 92 }
+				
+				b_chen = {
+				}
+				b_yizhang = {
+				}
+				b_pingyang_chenzhou = {
+				}
+				b_zixi = {
+				}
+				b_gaoting = {
+				}
+				b_yichang = {
+				}
+				b_linwu = {
+				}
+			}
+			c_lianzhou_hunan = { #2509 Lianzhou
+				color={ 210 81 102 }
+				
+				b_guiyang = {
+				}
+				b_yangshan_lianzhou = {
+				}
+				b_lianshan = {
+				}
+			}
+			c_quanzhou_hunan = { #2510 Quanzhou
+				color={ 210 91 112 }
+				
+				b_qingxiang = {
+				}
+				b_guangyang_quanzhou = {
+				}
+			}
+		}
+		d_jiangxi = {
+			color={ 11 203 210 }
+			
+			capital = 2513 #Hongzhou
+			
+			c_qianzhou_jiangxi = { #2462 Qianzhou
+				color={ 11 193 200 }
+				
+				b_gan = {
+				}
+				b_qianhua = {
+				}
+				b_nankang = {
+				}
+				b_yudu = {
+				}
+				b_xinfeng_qianzhou = {
+				}
+				b_dayu = {
+				}
+				b_anyuan = {
+				}
+			}
+			c_jizhou_jiangxi = { #2511 Jizhou
+				color={ 11 183 190 }
+				
+				b_luling = {
+				}
+				b_taihe_jizhou = {
+				}
+				b_anfu = {
+				}
+				b_xingan = {
+				}
+				b_yongxin = {
+				}
+				b_jishui = {
+				}
+				b_longquan_jizhou = {
+				}
+			}
+			c_yuanzhou_jiangxi = { #2512 Yuanzhou
+				color={ 11 173 180 }
+				
+				b_yichun = {
+				}
+				b_pinxiang = {
+				}
+				b_xinyu = {
+				}
+				b_fenyi = {
+				}
+			}
+			c_hongzhou = { #2513 Hongzhou
+				color={ 11 163 170 }
+				
+				b_nanchang = {
+				}
+				b_fengcheng = {
+				}
+				b_gaoan = {
+				}
+				b_jianchang = {
+				}
+				b_xinwu = {
+				}
+				b_wuning_hongzhou = {
+				}
+				b_fenning = {
+				}
+			}
+			c_jiangzhou_jiangxi = { #2514 Jiangzhou
+				color={ 11 153 160 }
+				
+				b_xunyang_jiangzhou = {
+				}
+				b_pengze = {
+				}
+				b_duchang = {
+				}
+				b_dean = {
+				}
+				b_ruanchang = {
+				}
+				b_hukou = {
+				}
+				b_chucheng = {
+				}
+			}
+			c_raozhou = { #2515 Raozhou
+				color={ 11 143 150 }
+				
+				b_poyang = {
+				}
+				b_yugan = {
+				}
+				b_leping_raozhou = {
+				}
+				b_fuliang_raozhou = {
+				}
+				b_dexing = {
+				}
+				b_guangjin = {
+				}
+				b_yuting = {
+				}
+			}
+			c_xinzhou_jiangxi = { #2516 Xinzhou
+				color={ 11 133 140 }
+				
+				b_shangrao = {
+				}
+				b_yiyang_xinzhou = {
+				}
+				b_guixi = {
+				}
+				b_yushan = {
+				}
+				b_yanshan_xinzhou = {
+				}
+				b_yongfeng = {
+				}
+				b_baofeng_xinzhou = {
+				}
+			}
+			c_fuzhou_jiangxi = { #2535 Fuzhou
+				color={ 11 123 130 }
+				
+				b_linchuan = {
+				}
+				b_nancheng = {
+				}
+				b_chongren = {
+				}
+				b_nanfeng = {
+				}
+				b_yihuang = {
+				}
+				b_jinxi = {
+				}
+				b_lean_fuzhou = {
+				}
+			}
+		}
+		d_anhua = {
+			color={ 0 95 31 }
+			
+			capital = 2515 #Raozhou
+			
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_baisheng = {
+			color={ 35 11 76 }
+			
+			capital = 2462 #Qianzhou
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_fenghua = {
+			color={ 131 84 62 }
+			
+			capital = 2514 #Jiangzhou
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_wuping = {
+			color={ 195 24 11 }
+			
+			capital = 2497 #Lizhou
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+	} #end of k_jiangxi
+	k_fujian = {
+		color={ 83 22 11 }
+		
+		capital = 2533 #Fuzhou
+		
+		culture = han
+		
+		d_fujian = {
+			color={ 73 11 0 }
+			
+			capital = 2533 #Fuzhou
+			
+			c_fuzhou_fujian = { #2533 Fujian
+				color={ 83 22 0 }
+				
+				b_min = {
+				}
+				b_hougan = {
+				}
+				b_changle_fuzhou = {
+				}
+				b_futang_fuzhou = {
+				}
+				b_lianjiang = {
+				}
+				b_changxi = {
+				}
+				b_gutian = {
+				}
+			}
+			c_jianzhou_fujian = { #2534 Jianzhou
+				color={ 93 32 0 }
+				
+				b_jianan = {
+				}
+				b_shaowu = {
+				}
+				b_pucheng_jianzhou = {
+				}
+				b_jianyang = {
+				}
+				b_songxi = {
+				}
+				b_chongan = {
+				}
+				b_zhenghe = {
+				}
+			}
+			c_tingzhou = { #2536 Tingzhou
+				color={ 103 42 0 }
+				
+				b_changting = {
+				}
+				b_ninghua_tingzhou = {
+				}
+				b_shanghang = {
+				}
+				b_wuping = {
+				}
+				b_qingliu_tingzhou = {
+				}
+				b_liancheng = {
+				}
+			}
+			c_quanzhou_fujian = { #2537 Quanzhou
+				color={ 113 52 0 }
+				
+				b_jinjiang_quanzhou = {
+				}
+				b_nanan = {
+				}
+				b_putian = {
+				}
+				b_xianyou = {
+				}
+				b_tongan = {
+				}
+				b_huian = {
+				}
+				b_yongchun = {
+				}
+			}
+			c_zhangzhou = { #2538 Zhangzhou
+				color={ 123 62 0 }
+				
+				b_longxi = {
+				}
+				b_longyan = {
+				}
+				b_zhangpu = {
+				}
+				b_huaien = {
+				}
+				b_changtai = {
+				}
+			}
+			c_nanjian = { #2539 Nanjian
+				color={ 133 52 0 }
+				
+				b_jianpu = {
+				}
+				b_jiangle = {
+				}
+				b_shunchang = {
+				}
+				b_sha = {
+				}
+				b_youxi = {
+				}
+			}
+		}
+		d_qingyuan = {
+			color={ 125 67 11 }
+			
+			capital = 2537 #Quanzhou
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_yongan = {
+			color={ 184 113 53 }
+			
+			capital = 2534 #Jianzhou
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+	} #end of k_fujian
+	k_lingnan = {
+		color={ 60 203 34 }
+		
+		capital = 2542 # Guangzhou
+		
+		culture = han
+		
+		d_lingnandong = {
+			color={ 11 203 14 }
+			
+			capital = 2542 #Guangzhou
+			
+			c_chaozhou = { #2540 Chaozhou
+				color={ 21 203 24 }
+				
+				b_haiyang = {
+				}
+				b_chaoyang = {
+				}
+				b_jieyang = {
+				}
+			}
+			c_xunzhou = { #2541 Xunzhou
+				color={ 31 203 34 }
+				
+				b_xingning_xunzhou = {
+				}
+				b_leixiang = {
+				}
+				b_longchuan = {
+				}
+				b_qichang = {
+				}
+			}
+			c_guangzhou_lingnan = { #2542 Guangzhou
+				color={ 41 203 44 }
+				
+				b_nanhai = {
+				}
+				b_panyu = {
+				}
+				b_zengcheng_guangzhou = {
+				}
+				b_huameng = {
+				}
+				b_huaiji = {
+				}
+				b_jianshui_guangzhou = {
+				}
+				b_dongguan = {
+				}
+			}
+			c_shaozhou_lingnan = { #2543 Shaozhou
+				color={ 51 203 54 }
+				
+				b_dianjiang_shaozhou = {
+				}
+				b_lechang = {
+				}
+				b_wengyuan = {
+				}
+				b_renhua = {
+				}
+				b_zhanchang = {
+				}
+				b_ruyuan = {
+				}
+				b_linshuang = {
+				}
+			}
+			c_enzhou = { #2544 Enzhou
+				color={ 61 203 64 }
+				
+				b_enping = {
+				}
+				b_duling = {
+				}
+				b_yangjiang = {
+				}
+				b_yangchun = { #Chunzhou
+				}
+				b_luoshui = { #Chunzhou
+				}
+				b_dongling = { #Qinzhou
+				}
+				b_fulin = { #Qinzhou
+				}
+			}
+			c_xinzhou = { #2545 Xinzhou
+				color={ 71 203 74 }
+				
+				b_xinxing = {
+				}
+				b_yongshun = {
+				}
+				b_suolu = {
+				}
+				b_xinchang = {
+				}
+				b_dandie = {
+				}
+			}
+			c_kangzhou = { #2546 Kangzhou
+				color={ 81 203 84 }
+				
+				b_duanxi = {
+				}
+				b_jinkang = {
+				}
+				b_yuecheng_kangzhou = {
+				}
+				b_ducheng = {
+				}
+				b_shuangshui = { #Shuangzhou
+				}
+				b_kaiyang = { #Shuangzhou
+				}
+				b_zhennan_shuangzhou = { #Shuangzhou
+				}
+			}
+			c_gaozhou = { #2547 Gaozhou
+				color={ 91 203 94 }
+				
+				b_dianbai = {
+				}
+				b_liangde = {
+				}
+				b_baoning_gaozhou = {
+				} 
+				b_maoming = { #Panzhou
+				}
+				b_panshui = { #Panzhou
+				}
+				b_nanba = { #Panzhou
+				}
+				b_xinyi = { #Douzhou
+				}
+			}
+			c_luozhou = { #2548 Luozhou
+				color={ 101 203 104 }
+				
+				b_shilong = { #Bianzhou
+				}
+				b_lingluo = { #Bianzhou
+				}
+				b_lianjiang_luozhou = {
+				} 
+				b_wuchuan_luozhou = {
+				}
+				b_hanshui = {
+				}
+				b_linglu = {
+				}
+				b_luofei = {
+				}
+			}
+			c_leizhou = { #2549 Leizhou
+				color={ 111 203 114 }
+				
+				b_haikang = {
+				}
+				b_suixi = {
+				}
+				b_xuwen = {
+				} 
+				b_shenchuan = {
+				}
+			}
+			c_fengzhou_lingnan = { #2561 Fengzhou
+				color={ 121 203 124 }
+				
+				b_fengchuan = {
+				}
+				b_kaijian = {
+				}
+				b_fengxing = {
+				}
+			}
+			c_huizhou_lingnan = { #2580 Huizhou
+				color={ 131 203 134 }
+				
+				b_guishan = {
+				}
+				b_boluo = {
+				}
+				b_heyuan = {
+				}
+				b_haifeng = {
+				}
+				b_luoyang_huizhou = {
+				}
+				b_shicheng_huizhou = {
+				}
+				b_lingan = {
+				}
+			}
+			c_yingzhou_lingnan = { #2581 Yingzhou
+				color={ 141 203 144 }
+				
+				b_zhenyang = {
+				}
+				b_hanguang = {
+				}
+			}
+			c_nanxiong = { #2582 Nanxiong
+				color={ 151 203 154 }
+				
+				b_baochang = {
+				}
+				b_shixing = {
+				}
+			}
+			c_meizhou_lingnan = { #2583 Meizhou
+				color={ 161 203 164 }
+				
+				b_chengxiang = {
+				}
+			}
+			c_duanzhou = { #2584 Duanzhou
+				color={ 171 203 174 }
+				
+				b_gaoyao = {
+				}
+				b_pingxing = {
+				}
+				b_sihui = {
+				}
+				b_bolin = {
+				}
+				b_qingtai = {
+				}
+			}
+		}
+		d_qiongguan = {
+			color={ 37 13 37 }
+			
+			capital = 2550 #Qiongzhou
+			
+			c_qiongzhou_lingnan = { #2550 Qiongzhou
+				color={ 37 23 47 }
+				
+				b_qiongshan = {
+				}
+				b_lingao = {
+				}
+				b_zengkou = {
+				}
+				b_lehui = {
+				}
+				b_yanluo = {
+				}
+			}
+			c_danzhou_lingnan = { #2551 Danzhou
+				color={ 37 33 57 }
+				
+				b_yilun = {
+				}
+				b_changhua = {
+				}
+				b_ganen = {
+				}
+				b_luochang = {
+				}
+				b_fuluo = {
+				}
+				b_jian = {
+				}
+			}
+			c_zhenzhou_lingnan = { #2552 Zhenzhou
+				color={ 37 43 67 }
+				
+				b_ningyuan_zhenzhou = {
+				}
+				b_yande = {
+				}
+				b_jiyang_zhenzhou = {
+				}
+				b_linchuan_zhenzhou = {
+				}
+				b_luotun = {
+				}
+			}
+			c_wanan = { #2553 Wan'an
+				color={ 37 53 77 }
+				
+				b_wanan = {
+				}
+				b_lingshui = {
+				}
+				b_fuyun = {
+				}
+				b_boliao = {
+				}
+			}
+			c_yazhou_lingnan = { #2592 Yazhou
+				color={ 37 23 47 }
+				
+				b_shecheng = {
+				}
+				b_chengmai = {
+				}
+				b_wencheng_yazhou = {
+				}
+				b_yancheng_yazhou = {
+				}
+			}
+		}
+		d_rongguan = {
+			color={ 106 91 106 }
+			
+			capital = 2558 #Rongzhou
+			
+			c_lianzhou_rongguan = { #2554 Lianzhou
+				color={ 116 101 106 }
+				
+				b_hepu = {
+				}
+				b_fengshan = {
+				}
+				b_cailong = {
+				}
+				b_dalian = {
+				}
+				b_zhuchi = {
+				}
+				b_dongluo = {
+				}
+				b_gaocheng = {
+				}
+			}
+			c_baizhou = { #2556 Baizhou
+				color={ 136 121 106 }
+				
+				b_bobai = {
+				}
+				b_jianning = {
+				}
+				b_zhouluo = {
+				}
+				b_nanchang_baizhou = {
+				}
+				b_langping = {
+				}
+				b_longhao = {
+				}
+				b_chunliang = {
+				}
+			}
+			c_yulin = { #2557 Yulin
+				color={ 146 131 106 }
+				
+				b_yuping = {
+				}
+				b_xingye = {
+				}
+				b_xingde = {
+				}
+				b_tanli = {
+				}
+				b_nanliu = {
+				}
+				b_dingchuan = {
+				}
+				b_dangchuan = {
+				}
+			}
+			c_rongzhou_lingnan = { #2558 Rongzhou
+				color={ 156 141 106 }
+				
+				b_puning = {
+				}
+				b_beiliu = {
+				}
+				b_lingcheng = {
+				}
+				b_weilong = {
+				}
+				b_xindao = {
+				}
+				b_lingchuan_rongzhou = {
+				}
+				b_eshi = { #Shunzhou
+				}
+			}
+			c_tengzhou = { #2559 Tenzhou
+				color={ 166 151 106 }
+				
+				b_tanjin = {
+				}
+				b_ganyi = {
+				}
+				b_yichang_tengzhou = {
+				}
+				b_ningfeng = {
+				}
+				b_cuixi = { #Yizhou
+				}
+				b_yongye = { #Yizhou
+				}
+				b_liancheng_yizhou = { #Yizhou
+				}
+			}
+		}
+		d_guiguan = {
+			color={ 203 11 106 }
+			
+			capital = 2564 #Guizhou
+			
+			c_wuzhou_lingnan = { #2560 Wuzhou
+				color={ 193 21 106 }
+				
+				b_cangwu = {
+				}
+				b_rongcheng_wuzhou = {
+				}
+				b_mengling = {
+				}
+				b_haojing = {
+				}
+				b_suiyue = {
+				}
+			}
+			c_hezhou_lingnan = { #2562 Hezhou
+				color={ 183 31 106 }
+				
+				b_linhe_hezhou = {
+				}
+				b_guiling = {
+				}
+				b_fengcheng_hezhou = {
+				}
+				b_fengyang_hezhou = {
+				}
+				b_fuchuan_hezhou = {
+				}
+				b_dangshan_hezhou = {
+				}
+			}
+			c_zhaozhou_lingnan = { #2563 Zhaozhou
+				color={ 173 41 106 }
+				
+				b_pingle = {
+				}
+				b_gongcheng_zhaozhou = {
+				}
+				b_yongping_zhaozhou = {
+				}
+				b_longping_zhaozhou = {
+				}
+				b_majiang = {
+				}
+				b_siqin = {
+				}
+				b_lishan_zhaozhou = {
+				}
+			}
+			c_guizhou_lingnan = { #2564 Guizhou
+				color={ 163 51 106 }
+				
+				b_lingui = {
+				}
+				b_liding = {
+				}
+				b_lingchuan_guizhou = {
+				}
+				b_yangshuo = {
+				}
+				b_lipu = {
+				}
+				b_fengshui = {
+				}
+				b_xiuren = {
+				}
+			}
+			c_rongzhou_guiguan = { #2566 Rongzhou
+				color={ 153 61 106 }
+				
+				b_rongshui = {
+				}
+				b_wuyang = {
+				}
+				b_linzang = {
+				}
+				b_huangshui = {
+				}
+				b_anxiu = {
+				}
+			}
+			c_liuzhou = { #2567 Liuzhou
+				color={ 143 71 106 }
+				
+				b_maping = {
+				}
+				b_longcheng_liuzhou = {
+				}
+				b_xiang = {
+				}
+				b_luocao = {
+				}
+				b_luorong = {
+				}
+				b_liuling = {
+				}
+				b_lesha = {
+				}
+			}
+			c_xiangzhou_lingnan = { #2568 Xiangzhou
+				color={ 133 81 106 }
+				
+				b_yangshou = {
+				}
+				b_wuxian = {
+				}
+				b_wuhua = {
+				}
+				b_laibin = {
+				}
+				b_xunde = {
+				}
+				b_guihua = {
+				}
+				b_changfeng_xiangzhou = {
+				}
+			}
+		}
+		d_lingnanxi = {
+			color= { 106 20 220 }
+			
+			capital = 2593 #Yongzhou
+			
+			
+			c_qinzhou_lingnan = { #2555 Qinzhou
+				color={ 126 111 106 }
+				
+				b_qinjiang = {
+				}
+				b_baojing_qinzhou = {
+				}
+				b_neiting = {
+				}
+				b_zunhua_qinzhou = {
+				}
+				b_lingshan = {
+				}
+			}
+			c_xunzhou_lingnan = { #2569 Xunzhou
+				color={ 106 30 210 }
+				
+				b_guiping_xunzhou = {
+				}
+				b_huanghua = {
+				}
+				b_dabin = {
+				}
+				b_lingjiang = {
+				}
+			}
+			c_guizhou_lingnanxi = { #2570 Guizhou
+				color={ 106 40 200 }
+				
+				b_yulin_guizhou = {
+				}
+				b_huaize = {
+				}
+				b_chaoshui = {
+				}
+				b_yishan = {
+				}
+			}
+			c_hengzhou_lingnan = { #2571 Hengzhou
+				color={ 106 50 190 }
+				
+				b_ningpu = {
+				}
+				b_conghua = {
+				}
+				b_leshan = {
+				}
+				b_mengze_hengzhou = {
+				}
+				b_lingshan_hengzhou = {
+				}
+			}
+			c_binzhou_lingnan = { #2572 Binzhou
+				color={ 106 60 180 }
+				
+				b_lingfang = {
+				}
+				b_langxie = {
+				}
+				b_baocheng_binzhou = {
+				}
+				b_sigan = {
+				}
+			}
+			c_yongzhou_lingnan = { #2593 Yongzhou
+				color={ 106 70 170 }
+				
+				b_xuanhua_yongzhou = {
+				}
+				b_wuyuan_yongzhou = {
+				}
+				b_jinxing = {
+				}
+				b_langning = {
+				}
+				b_silong = {
+				}
+				b_ruhe = {
+				}
+				b_fengling = {
+				}
+			}
+		}
+		d_jinghai = {
+			color= { 33 74 65 }
+			
+			capital = 2598 #Jiaozhou
+			
+			vietnamese = "Tinh Hai"
+			
+			c_luzhou_annan = { #2243 Luzhou
+				color={ 33 44 35 }
+				
+				vietnamese = "Luc Chau"
+				
+				b_wulei = {
+				}
+				b_huaqing = {
+				}
+				b_ninghai_luzhou = {
+				}
+			}
+			c_sumao = { #2595 Sumao
+				color={ 33 54 45 }
+				
+				vietnamese = "To Mau"
+				
+				b_guihua_sumao = {
+				}
+				b_binyang = {
+				}
+				b_ande_sumao = {
+				}
+			}
+			c_tangzhou_annan = { #2596 Tangzhou
+				color={ 33 64 55 }
+				
+				vietnamese = "Thang Chau"
+				
+				b_tangquan = {
+				}
+				b_lvshui = {
+				}
+				b_luoshao = {
+				}
+			}
+			c_wuan = { #2597 Wu'an
+				color={ 33 74 65 }
+				
+				vietnamese = "Vu An"
+				
+				b_wu'an = {
+				}
+				b_linjiang_wuan = {
+				}
+				b_junkou = { #Junzhou
+				}
+				b_lean_junzhou = { #Junzhou
+				}
+			}
+			c_jiaozhou = { #2598 Jiaozhou
+				color={ 33 84 75 }
+				
+				vietnamese = "Giao Chau"
+				
+				b_jiaozhi = {
+				}
+				b_songping = {
+				}
+				b_taiping_jiaozhou = {
+				}
+				b_zhuyuan = {
+				}
+				b_longbian = {
+				}
+				b_pingdao = {
+				}
+				b_wuping_jiaozhou = {
+				}
+			}
+			c_changzhou_annan = { #2599 Changzhou
+				color={ 33 94 85 }
+				
+				vietnamese = "Truong Chau"
+				
+				b_wenyang = {
+				}
+				b_dongcai = {
+				}
+				b_changshan_changzhou = {
+				}
+				b_qichang_changzhou = {
+				}
+			}
+			c_aizhou = { #2600 Aizhou
+				color={ 33 104 95 }
+				
+				vietnamese = "Ai Chau"
+				
+				b_jiuzhen = {
+				}
+				b_anshun = {
+				}
+				b_chongping = {
+				}
+				b_junning = {
+				}
+				b_rinan = {
+				}
+				b_changlin_aizhou = {
+				}
+				b_yifeng_aizhou = {
+				}
+			}
+			c_yanzhou_annan = { #2601 Yanzhou
+				color={ 33 114 105 }
+				
+				vietnamese = "Dien Chau"
+				
+				b_zhongyi = {
+				}
+				b_huaihuan = {
+				}
+				b_longchi = {
+				}
+				b_sinong = {
+				}
+				b_wulang = {
+				}
+				b_wurong = {
+				}
+				b_wujin_yanzhou = {
+				}
+			}
+			c_huanzhou = { #2602 Huanzhou
+				color={ 33 124 115 }
+				
+				vietnamese = "Hoan Chau"
+				
+				b_jiude = {
+				}
+				b_puyang_huanzhou = {
+				}
+				b_yuedang = {
+				}
+				b_anren_huanzhou = {
+				}
+				b_fuyan_huanzhou = {
+				}
+				b_xiangjing = {
+				}
+				b_xiyuan = {
+				}
+			}
+			c_wue = { #2604 Wu'e
+				color={ 33 134 125 }
+				
+				vietnamese = "Vu Nga"
+				
+				b_wue = {
+				}
+				b_ruma = {
+				}
+				b_wuyi_huanzhou = {
+				}
+				b_wuyi_2_huanzhou = {
+				}
+				b_wulv = {
+				}
+				b_wulao = {
+				}
+				b_liangshan_wue = {
+				}
+			}
+			c_wuding = { #2605 Wuding
+				color={ 33 144 135 }
+				
+				vietnamese = "Vu Dinh"
+				
+				b_fulu_wuding = {
+				}
+				b_rouyuan = {
+				}
+				b_kanglin = {
+				}
+			}
+			c_fengzhou_annan = { #2606 Fengzhou
+				color={ 33 154 145 }
+				
+				vietnamese = "Phong Chau"
+				
+				b_jianing = {
+				}
+				b_chenghua = {
+				}
+				b_xinchang_fengzhou = {
+				}
+				b_songshan_fengzhou = {
+				}
+				b_zhulv = {
+				}
+				b_zhuge = {
+				}
+				b_shidi = {
+				}
+			}
+			c_liangzhou_annan = { #2607 Liangzhou
+				color={ 33 164 155 }
+				
+				vietnamese = "Lang Chau"
+				
+				b_wuxing = {
+				}
+				b_gudu = {
+				}
+			}
+			c_guangyuan = { #2608 Guangyuan
+				color={ 33 174 165 }
+				
+				vietnamese = "Quang Nguyen"
+				
+				b_guangyuan = {
+				}
+			}
+		}
+		allow = { title_king_basic_allow = yes }
+	}#end of k_lingnan
+	k_xichuan = {
+		color = { 99 226 213 }
+		
+		capital = 2401 # Chengdu
+		
+		culture = han
+		
+		d_xichuan = {
+			color={ 7 186 145 }
+			
+			capital = 2401 #Chengdu
+			
+			c_xuzhou = { #2391 Xuzhou - until 1114 Rongzhou
+				color={ 17 186 155 }
+
+				b_yibin = {
+				}
+				b_nanxi = {
+				}
+				b_xuanhua = {
+				}
+				b_qingfu = {
+				}
+				b_kaibian = {
+					tangut = "Khepen"
+				}
+				b_guishun = {
+				}
+			}
+			c_jiazhou = { #2392 Jiazhou - in 1196 renamed to Jiading-fu
+				color={ 27 186 165 }
+
+				b_longyou = {
+				}
+				b_hongya = {
+				}
+				b_laijiang = {
+				}
+				b_emei = {
+				}
+				b_jianwei = {
+				}
+				b_fengyuan = {
+				}
+				b_suishan = {
+				}
+				#luomu, yujin in reserve
+			}
+			c_lizhou_chengdu = { #2393 Lizhou
+				color={ 37 186 175 }
+
+				b_hanyuan = {
+				}
+				b_qiongbu = {
+				}
+				b_yangshan = {
+				}
+				b_feiyue = {
+				}
+			}
+			c_yazhou = { #2394 Yazhou
+				color={ 47 186 185 }
+
+				b_yandao = {
+				}
+				b_lushan_yazhou = {
+				}
+				b_mingshan = {
+				}
+				b_rongjing = {
+				}
+				b_baizhang = {
+				}
+			}
+			c_qiongzhou = { #2395 Qiongzhou
+				color={ 57 186 195 }
+
+				b_linqiong = {
+				}
+				b_yizheng = {
+				}
+				b_anren = {
+				}
+				b_dayi = {
+				}
+				b_pujiang = {
+				}
+				b_huojing = {
+				}
+				b_huimin = {
+				}
+			}
+			c_meizhou = { #2396 Meizhou
+				color={ 67 186 205 }
+
+				b_meishan = {
+				}
+				b_pengshan = {
+				}
+				b_danleng = {
+				}
+				b_qingshen = {
+				}
+			}
+			c_shuzhou = { #2400 Shuzhou - in 1177 renamed to Chongqing-fu
+				color={ 77 186 215 }
+
+				b_jinyuan = {
+				}
+				b_xinjin = {
+				}
+				b_jiangyuan = {
+				}
+				b_yongkang = {
+				}
+				b_qingcheng = {#Yongkang army
+				}
+			}
+			c_chengdu = { #2401 Chengdu
+				color={ 87 186 225 }
+
+				b_chengdu = {
+				}
+				b_cichi = {
+				}
+				b_xindu = {
+				}
+				b_pi = {
+				}
+				b_shuangliu = {
+				}
+				b_wenjiang = {
+				}
+				b_xinfan = {
+				}
+				#guangdu, lingquan in reserve
+			}
+			c_pengzhou = { #2402 Pengzhou
+				color={ 87 186 235 }
+
+				b_jiulong = {
+				}
+				b_chongning = {
+				}
+				b_mengyang = {
+				}
+				b_daojiang = { #Yongkang army
+				}
+			}
+			c_maozhou = { #2403 Maozhou
+				color={ 97 186 245 }
+
+				b_wenshan = {
+				}
+				b_shiquan = { #Weimao army
+				}
+				b_zhenqiang = { #fort
+				}
+				b_wenchuan = { #Southern Song
+				}
+				b_chunqi = { #native settlement formerly known as Baozhou, made a fortress. In 1114 renamed to Qizhou.
+				}
+				b_shouning = { #native settlement formerly known as Zhenzhou, made a fort. In 1116 transfered to Shouning army.
+				}
+			}
+			c_weizhou_chengdu = { #2404 Weizhou
+				color={ 107 186 255 }
+
+				b_baoning = {
+				}
+				b_tonghua = {
+				}
+				b_shouhui = { #native settlement, in 1114 renamed to Hengzhou, in 1121 integrated into Weizhou.
+				}
+			}
+			c_hanzhou = { #2405 Hanzhou
+				color={ 117 186 245 }
+
+				b_luo = {
+				}
+				b_shifang = {
+				}
+				b_mianzhu = {
+				}
+				b_deyang = {
+				}
+				b_jindang = {
+				}
+			}
+			c_zizhou = { #2413 Zizhou
+				color={ 127 186 235 }
+
+				b_panshi = {
+				}
+				b_ziyang = {
+				}
+				b_longshui = {
+				}
+				b_neijiang = {
+				}
+			}
+			c_xizhou_chengdu = { #2414 Xizhou
+				color={ 137 186 225 }
+
+				b_yuexi = {
+				}
+				b_suqi = {
+				}
+				b_xilu = {
+				}
+				b_changming = {
+				}
+				b_heju = {
+				}
+				b_taideng = {
+				}
+			}
+			c_jianzhou_chengdu = { #2415 Jianzhou
+				color={ 147 186 215 }
+
+				b_yangan = {
+				}
+				b_pingquan = {
+				}
+				b_jinshui = {
+				}
+			}
+		}
+		d_dongchuan = {
+			color={ 27 146 125 }
+			
+			capital = 2411 #Suizhou
+			
+			
+			c_hezhou = { #2382 Hezhou
+				color={ 27 136 135 }
+
+				b_shixi = {
+				}
+				b_hanchu = {
+				}
+				b_bachuan = {
+				}
+				b_chishui = {
+				}
+				b_dongliang = {
+				}
+			}
+			c_yuzhou = { #2383 Yuzhou - in 1102 renamed Gongzhou, in 1189 renamed Chongqing-fu
+				color={ 27 126 145 }
+
+				b_wanshou = {
+				}
+				b_ba = {
+				}
+				b_jiangxin = {
+				}
+				b_bishan = {
+				}
+			}
+			c_luzhou = { #2388 Luzhou - in 1261 renamed Jiang'anzhou
+				color={ 27 116 155 }
+
+				b_luchuan = {
+				}
+				b_jiangan = {
+				}
+				b_hejiang = {
+				}
+				b_naxi = {#Southern Song
+				}
+				b_nanjing = {
+				}
+				b_yuegong = {
+				}
+				b_jiuzhi_luzhou = {
+				}
+			}
+			c_changzhou = { #2389 Changzhou
+				color={ 27 106 165 }
+
+				b_dazu = {
+				}
+				b_changyuan = {
+				}
+				b_yongchuan = {
+				}
+			}
+			c_fushun = { #2390 Fushun
+				color={ 27 96 175 }
+
+				b_fuyi = {
+				}
+				b_fushun = {
+				}
+			}
+			c_xianjing = { #2397 Xianjing - in 1163 renamed to Longzhou
+				color={ 27 86 185 }
+
+				b_shijian = {
+				}
+				b_renshou = {
+				}
+				b_jingyan = {
+				}
+				b_guiping = {#Southern Song
+				}
+				b_ji = {#Southern Song
+				}
+				b_daan = {#garrison
+				}
+			}
+			c_rongzhou = { #2398 Rongzhou
+				color={ 27 76 196 }
+
+				b_rongde = {
+				}
+				b_weiyuan = {
+				}
+				b_ziguan = {
+				}
+				b_yingling = {
+				}
+				b_heyi = {
+				}
+			}
+			c_zizhou_tongchuan = { #2399 Zizhou - in 1118 renamed to Tongchuan-fu
+				color={ 27 66 206 }
+
+				b_qi = {
+				}
+				b_zhongjiang = {
+				}
+				b_fucheng = {
+				}
+				b_xiehong = {
+				}
+				b_yanting = {
+				}
+				b_tongquan = {
+				}
+				b_feiwu = {
+				}
+				#dongshan, dongguan, yongtai in reserve
+			}
+			c_mianzhou = { #2406 Mianzhou
+				color={ 27 56 216 }
+
+				b_baxi = {
+				}
+				b_zhangming = {
+				}
+				b_weicheng = {
+				}
+				b_luojiang = {
+				}
+				b_yanquan = {
+				}
+				b_shiquan_mianzhou = {
+				}
+				b_shenquan = {
+				}
+				#longan in reserve
+			}
+			c_longzhou = { #2407 Longzhou - in 1115 renamed to Zhengzhou, in 1131 once again named Longzhou
+				color={ 27 46 226 }
+
+				b_jiangyou = {
+				}
+				b_qingchuan = {
+				}
+			}
+			c_jianzhou = { #2408 Jianzhou - in 1190 renamed to Longqing-fu
+				color={ 27 36 236 }
+
+				b_puan = {
+				}
+				b_yonggui = { #disbanded in 967
+				}
+				b_xintong = {
+				}
+				b_yingping = {
+				}
+				b_wulian = {
+				}
+				b_jincheng_jianzhou = {
+				}
+				b_jianmen = {
+				}
+			}
+			
+			c_suizhou = { #2411 Suizhou - in 1115 renamed Suining-fu
+				color={ 27 26 246 }
+
+				b_xiaoxi = {
+				}
+				b_pengxi = {
+				}
+				b_changjiang = {
+				}
+				b_qingshi = {
+				}
+				b_suining = {
+				}
+			}
+			c_puzhou = { #2412 Puzhou
+				color={ 27 16 236 }
+				
+				b_anyue = {
+				}
+				b_chongkan = {
+				}
+				b_puci = {
+				}
+				b_anju = {
+				}
+				b_yuezhi = {
+				}
+			}
+		}
+		d_shannanxi = {
+			color={ 99 208 54 }
+			
+			capital = 2363 #Xingyuan
+			
+			c_yangzhou = { #2362 Yangzhou
+				color={ 109 198 54 }
+
+				b_xingdao = {
+				}
+				b_xixiang = {
+				}
+				b_zhenfu = {
+				}
+			}
+			c_xingyuan = { #2363 Xingyuan
+				color={ 119 188 54 }
+
+				b_nanzheng = {
+				}
+				b_chenggu = {
+				}
+				b_baocheng = {
+				}
+				b_xi = {
+				}
+				b_lianshui = { #Southern Song
+				}
+			}
+			
+			c_wenzhou = { #2367 Wenzhou
+				color={ 129 178 54 }
+
+				b_dianshui = {
+				}
+			}
+			c_lizhou = { #2368 Lizhou
+				color={ 139 168 54 }
+
+				b_miangu = {
+				}
+				b_jiameng = {
+				}
+				b_jiachuan = {
+				}
+				b_zhaohua = {
+				}
+			}
+			c_jizhou_lizhou = { #2369 Jizhou
+				color={ 149 158 54 }
+
+				b_nanjiang = {
+				}
+			}
+			c_bizhou = { #2370 Bizhou
+				color={ 159 148 54 }
+
+				b_tongjiang = {
+				}
+			}
+			c_bazhou_lizhou = { #2371 Bazhou
+				color={ 169 138 54 }
+
+				b_huacheng = {
+				}
+				b_pandao = {
+				}
+				b_guiren = {
+				}
+				b_shining = {
+				}
+				b_enxi = {
+				}
+				b_cengkou = {
+				}
+			}
+			c_dazhou = { #2372 Dazhou - before 965 Tongzhou
+				color={ 179 128 54 }
+
+				b_tongchuan = {
+				}
+				b_langying = {
+				}
+				b_baqu = {
+				}
+				b_yongmu = {
+				}
+				b_xinning = {
+				}
+				b_dongxiang = {
+				}
+				b_tongming = {#Southern Song
+				}
+			}
+			c_kaizhou = { #2373 Kaizhou
+				color={ 189 118 54 }
+
+				b_kaijiang = {
+				}
+				b_xinbo = {
+				}
+				b_wansui = {
+				}
+			}
+			c_quzhou = { #2379 Quzhou
+				color={ 199 108 54 }
+
+				b_liujiang = {
+				}
+				b_linshui = {
+				}
+				b_linshan = {
+				}
+				b_dazhu = {#Southern Song
+				}
+			}
+			c_guangan = { #2380 Guang'an - in 1266 renamed to Ningxi
+				color={ 209 98 54 }
+
+				b_qujiang = {
+				}
+				b_yuechi = {
+				}
+				b_xinming = {
+				}
+				b_hexi_guangan = {#Southern Song
+				}
+			}
+			c_pengzhou_lizhou = { #2381 Pengzhou
+				color={ 219 88 54 }
+
+				b_pengchi = {
+				}
+				b_yilong = {
+				}
+				b_dangqu = {
+				}
+				b_yingshan = {
+				}
+				b_fuyu = {
+				}
+				b_liangshan_pengzhou = {#Southern Song
+				}
+				b_xiangru = {#Southern Song
+				}
+			}
+			c_langzhou = { #2409 Langzhou
+				color={ 229 78 54 }
+
+				b_langzhong = {
+				}
+				b_cangxi = {
+				}
+				b_nanbu = {
+				}
+				b_xinjing = {
+				}
+				b_fengguo = {
+				}
+				b_xinzheng = {
+				}
+				b_xishui = {
+				}
+			}
+			c_guozhou = { #2410 Guozhou - in 1227 renamed to Shunqing-fu
+				color={ 239 68 54 }
+
+				b_nanchong = {
+				}
+				b_xichong = {
+				}
+				b_liuxi = {
+				}
+			}
+			
+			allow = { title_duke_basic_allow = yes }
+		}
+		d_baoning = {
+			color={ 99 142 194 }
+			
+			capital = 2409 #Langzhou
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_huaide = {
+			color={ 82 82 84 }
+			
+			capital = 2371 #Bazhou
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_longjian = {
+			color={ 132 132 134 }
+			
+			capital = 2407 #Longzhou
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_weirong = {
+			color={ 117 18 95 }
+			
+			capital = 2402 #Pengzhou
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_yongping = {
+			color={ 139 248 4 }
+			
+			capital = 2394 #Yazhou
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+	}#end of k_xichuan
+	k_xiaxi = {
+		color={ 57 126 145 }
+			
+		capital = 2374 #Kuizhou
+		
+		culture = han
+		
+		d_jingnan = {
+			color={ 122 82 11 }
+			
+			capital = 2495 #Jiangling
+			
+			c_guizhou = { #2375 Guizhou
+				color={ 112 72 11 }
+
+				b_zigui = {
+				}
+				b_xingshan = {
+				}
+				b_badong = {
+				}
+			}
+			c_xiazhou_jingnan = { #2478 Xiazhou
+				color={ 102 62 11 }
+
+				b_yiling = {
+				}
+				b_yidu_xiazhou = {
+				}
+				b_changyang_xiazhou = {
+				}
+				b_yuanan = {
+				}
+				b_bashan = {
+				}
+				b_yanshui = {
+				}
+			}
+			c_jiangling = { #2495 Jiangling
+				color={ 92 52 11 }
+
+				b_jiangling = {
+				}
+				b_zhijiang = {
+				}
+				b_dangyang = {
+				}
+				b_changlin = {
+				}
+				b_shidao = {
+				}
+				b_songzi = {
+				}
+				b_gongan = {
+				}
+			}
+			c_lizhou_jingnan = { #2497 Lizhou
+				color={ 82 42 11 }
+
+				b_liyang_lizhou = {
+				}
+				b_anxiang = {
+				}
+				b_shimen = {
+				}
+				b_cili = {
+				}
+				b_canling = {
+				}
+				b_chongyi = {
+				}
+			}
+			c_langzhou_jingnan = { #2498 Langzhou
+				color={ 72 32 11 }
+
+				b_wuling = {
+				}
+				b_longyang = {
+				}
+				b_taoyuan = {
+				}
+			}
+			
+			allow = { title_duke_basic_allow = yes }
+		}
+		
+		d_ningjiang = {
+			color={ 49 168 104 }
+			
+			capital = 2374 #Kuizhou
+			
+			c_kuizhou = { #2374 Kuizhou
+				color={ 49 178 94 }
+
+				b_fengjie = {
+				}
+				b_wushan = {
+				}
+				b_daning = {
+				}
+				b_yunan = {
+				}
+			}
+
+			c_wanzhou = { #2376 Wanzhou
+				color={ 49 188 84 }
+
+				b_nanbo = {
+				}
+				b_wuning = {
+				}
+				b_liangshan = {
+				}
+			}
+			c_zhongzhou = { #2377 Zhongzhou - in 1265 renamed to Xianchun-fu
+				color={ 49 198 74 }
+
+				b_linjiang = {
+				}
+				b_dianjiang = {
+				}
+				b_nanbin = {
+				}
+				b_fengdu = {#Southern Song
+				}
+				b_longju = {#Southern Song
+				}
+			}
+			
+			allow = { title_duke_basic_allow = yes }
+		}
+		d_wutai = {
+			color={ 9 118 174 }
+			
+			capital = 2384 #Fuzhou
+			
+			c_fuzhou_kuizhou = { #2384 Fuzhou
+				color={ 19 128 174 }
+
+				b_fuliang = {
+				}
+				b_yuewen = {
+				}
+				b_wulong = {
+				}
+				b_wenshan_fuzhou = {
+				}
+				b_baima = {
+				}
+			}
+			c_qianzhou = { #2385 Qianzhou - in 1228 renamed to Shaoqing-fu
+				color={ 29 138 174 }
+
+				b_pengshui = {
+				}
+				b_qianjiang = {
+				}
+			}
+			c_shizhou = { #2386 Shizhou
+				color={ 39 148 174 }
+
+				b_qingjiang = {
+				}
+				b_jianshi = {
+				}
+				b_guangji = {
+				}
+			}
+			c_zhenzhou_kuizhou = { #2442 Zhenzhou
+				color={ 49 158 174 }
+
+				b_yelang = {
+				}
+				b_ligao = {
+				}
+				b_leyuan = {
+				}
+				b_nanchuan = { #Nanzhou
+				}
+				b_sanxi = { #Nanzhou
+				}
+				b_rongyi = { #Zhenzhou
+				}
+				b_fuhuan = { #Zhenzhou
+				}
+			}
+			c_sizhou = { #2443 Sizhou
+				color={ 59 168 174 }
+
+				b_wuchuan = {
+				}
+				b_siwang = {
+				}
+				b_siqiong = {
+				}
+			}
+			c_chenzhou_wutai = { #2499 Chenzhou
+				color={ 69 178 174 }
+
+				b_yuanling = {
+				}
+				b_luxi = {
+				}
+				b_shupu = {
+				}
+				b_mayang = {
+				}
+				b_chenxi = {
+				}
+				b_huixi = {
+				}
+				b_chilian = {
+				}
+			}
+			c_xizhou_hunan = { #2500 Xizhou
+				color={ 79 188 174 }
+
+				b_daxiang = {
+				}
+				b_santing = {
+				}
+			}
+			c_jinzhou_hunan = { #2502 Jinzhou
+				color={ 89 198 174 }
+
+				b_luyang = {
+				}
+				b_shaoyu = {
+				}
+				b_weiyang = {
+				}
+				b_changfeng_jinzhou = {
+				}
+				b_luopu = {
+				}
+			}
+			c_xuzhou_hunan = { #2565 Xuzhou
+				color={ 99 208 174 }
+
+				b_longpiao = {
+				}
+				b_langxi = {
+				}
+				b_tanyang = {
+				}
+				b_siwei = {
+				}
+			}
+			c_jiangzhou_hunan = { #2591 Jiangzhou
+				color={ 109 218 174 }
+
+				b_eshan = {
+				}
+				b_weixi = {
+				}
+				b_zijiang = {
+				}
+			}
+			allow = { title_duke_basic_allow = yes }
+		}
+		d_wuding = {
+			color={ 69 188 74 }
+			
+			capital = 2274 #Yuanzhou
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_wuxin = {
+			color={ 29 98 194 }
+			
+			capital = 2411 #Suizhou
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		d_yongning = {
+			color={ 239 48 92 }
+			
+			capital = 2410 #Guozhou
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		
+		d_zhaowu = {
+			color={ 59 108 174 }
+			
+			capital = 2368 #Lizhou
+			allow = {
+				FROM = { is_de_jure_title = yes }
+			}
+		}
+		allow = { title_king_basic_allow = yes }
+	}#end of k_xiaxi
+	allow = { always = no }
+}#end of e_china
+e_null={
+	k_yunnan = {
+		color = { 135 61 74 }
+		
+		capital = 2429 # Dali
+		
+		#baiman = "Dablit"
+		#wuman = "Ma Shy Nzy"
+		#bodpa = "Ljang Yul"
+		
+		d_dali = {
+			color={ 77 206 149 }
+			
+			capital = 2429 #Dali
+			
+			c_dali = { #2429 Dali
+				color={ 170 45 142 }
+				
+				wuman = "Yangyuyang"
+				baiman = "Dablit"
+				
+				b_taihe = {
+					han = "Taihe"
+					wuman = "Yangyuyang"
+					baiman = "Dablit"
+				}
+				b_mengshe = {
+					han = "Menghua"
+					wuman = "Ma Shy"
+					baiman = "Kainan"
+				}
+				b_zhaochuan = {
+					han = "Ning"
+					wuman = "Zhaochuan"
+					baiman = "Tianshui"
+				}
+				b_dengchuan = {
+					han = "Dengchuan"
+					wuman = "Deyuan"
+					baiman = "Deyuan"
+				}
+				b_langqiong = {
+					han = "Langqiong"
+					wuman = "Mici"
+					baiman = "Mici"
+				}
+			}
+			c_shanju = { #2430 Shanju
+				color={ 2 48 15 }
+				
+				#han = "Beisheng"
+				#wuman = "Shanju"
+				#baiman = "Shanju"
+				
+				
+				b_beisheng = {
+					han = "Beisheng"
+					wuman = "Shanju"
+					baiman = "Shanju"
+				}
+				b_shunzhou_shanju = {
+					han = "Shunzhou"
+					wuman = "Niushan"
+					baiman = "Niushan"
+				}
+				b_langqu = {
+					han = "Langqu"
+					wuman = "Luogongshan"
+					baiman = "Luogongshan"
+				}
+			}
+			c_moutong = { #2431 Moutong
+				color={ 44 51 143 }
+				
+				han = "Heqing"
+				wuman = "Moutong"
+				baiman = "Moutong"
+				
+				b_heqing_moutong = {
+					han = "Heqing"
+					baiman = "Hhop Kait"
+					wuman = "Longzhe"
+				}
+				b_jianchuan= {
+					baiman = "Yidushan"
+					wuman = "Jianchuan"
+				}
+			}
+			c_tengchong = { #2432 Tengchong
+				color={ 86 54 16 }
+				
+				#han = "Tengchong"
+				#baiman = "Tengchong"
+				#wuman = "Ruanhua"
+				
+				b_tengchong = {
+				}
+				b_nanshan = {
+				}
+				b_qulanshan = {
+					han = "Zhenxi"
+				}
+			}
+			c_yongchang = { #2433 Yongchang
+				color={ 128 57 144 }
+
+				b_yongchang = {
+				}
+				b_yongping = {
+					wuman = "Shengxiang"
+					baiman = "Shengxiang"
+				}
+				b_zhenkang = {
+					han = "Zhenkang"
+					wuman = "Shishan"
+					baiman = "Shishan"
+				}
+			}
+			c_nongdong = { #2437 Nongdong
+				color={ 86 69 146 }
+				
+				#han = "Yaozhou"
+				#wuman = "Nongdong"
+				#baiman = "Nongdong"
+
+				b_yaozhou = {
+					wuman = "Nongdong"
+				}
+				b_dayao = {
+				}
+				b_qinling = {
+				}
+			}
+			allow = { title_duke_basic_allow = yes }
+		}
+		d_yunnan = {
+			color={ 77 104 169 }
+			
+			capital = 2435 #Tuodong
+			
+			c_tuodong = { #2435 Tuodong
+				color={ 2 63 145 }
+				
+				#han = "Kunzhou"
+				#wuman = "Tuodong"
+				#baiman = "Shanchan"
+				
+				b_shanchan = {	
+					han = "Kunming"
+					baiman = "Sit Zaind"
+				}
+				b_yining = { #Tang era Kunzhou
+				}
+				b_jinning = { #Tang era Kunzhou
+				}
+				b_anning = { #Tang era Kunzhou
+				}
+				b_qinzang = { #Tang era Kunzhou
+				}
+				b_wangshui = { #Tang era Gouzhou
+				}
+				b_tangfeng = { #Tang era Gouzhou
+				}
+			}
+			c_weichu = { #2434 Weichu
+				color={ 170 60 17 }
+				
+				b_weichu = {
+					han = "Weichu"
+					baiman = "Elushan"
+					wuman = "Elushan"
+				}
+				b_hezi = {
+				}
+				b_dejiang = {
+				}
+				b_dingyuan = {
+					han = "Dingyuan"
+					baiman = "Muzhishan"
+					wuman = "Muzhishan"
+				}
+				b_nanning = {
+					han = "Nanning"
+					baiman = "Huangpengjing"
+					wuman = "Huangpengjing"
+				}
+				b_zhennan = {
+					han = "Zhennan"
+					baiman = "Qianshe"
+					wuman = "Qianshe"
+				}
+				b_guangtong = {
+					han = "Guangtong"
+					baiman = "Lushan"
+					wuman = "Lushan"
+				}
+			}
+			c_xiushan = { #2436 Xiushan
+				color={ 44 66 18 }
+				
+				#han = "Zangzhou"
+				#wuman = "Tonghai"
+				#baiman = "Xiushan"
+				
+				b_hexi_xiushan = {
+					han = "Hexi"
+					wuman = "Xiula"
+					baiman = "Xiula"
+				}
+				b_mengzi = {
+					han = "Mengzi"
+					wuman = "Muze"
+					baiman = "Muze"
+				}
+				b_shezi = {
+					han = "Shezi"
+					wuman = "Baogu"
+					baiman = "Baogu"
+				}
+				b_jianshui = {
+					han = "Jianshui"
+					wuman = "Huili"
+					baiman = "Huili"
+				}
+				b_shiping = {
+				}
+				b_tonghai = {
+				}
+			}
+			c_dongchuan = { #2438 Dongchuan
+				color={ 128 72 19 }
+				
+				b_dongchuan = {
+				}
+			}
+			c_shicheng = { #2439 Shicheng
+				color={ 170 75 147 }
+				
+				#han = "Nanning"
+				
+				b_shicheng = {
+				}
+				b_wei_shicheng = {
+				}
+				b_shengma = {
+				}
+				b_tongqi = {
+				}
+				b_xinfeng = {
+				}
+				b_longdi = {
+				}
+				b_quanma = {
+				}
+			}
+			c_zuining = { #2440 Zuining
+				color={ 2 78 20 }
+				
+				b_zuining = {
+				}
+			}
+			allow = { title_duke_basic_allow = yes }
+		}
+		
+		allow = { title_king_basic_allow = yes }
+	} #end of k_yunnan
+	k_mongolia = {
+		color = { 100 100 250 }
+		capital = 2234 # Kara-khorum
+		culture = mongol
+		tengri_pagan_reformed = 500
+		muslim = 300
+		
+		d_turfan = {
+			color = { 220 220 255 }
+			
+			capital = 2227 # Altay
+			
+			uyghur = "Qocho"
+			tocharian = "Turtam"
+			han = "Beiting"
+			
+			c_kara_khoja = {
+				color = { 70 120 150 }
+				
+				uyghur = "Qocho"
+				tocharian = "Turtam"
+	
+				b_kara_khoja = {
+					tocharian = "Koto"
+				}
+				b_turfan = {
+					tocharian = "Turtam"
+				}
+				b_jiaohe = {
+					uyghur = "Yarkhoto"
+					tocharian = "Gauhar"
+				}
+				b_bezeklik = {
+					tocharian = "Biseklis"
+				}
+			}
+			c_luntai = {
+			
+				color = { 50 95 130 }
+				
+				uyghur = "Ürümqi"
+				mongol = "Örömci" 
+				tocharian = "Urabo"
+				
+				b_luntai = {
+					uyghur = "Ürumqi"
+					mongol = "Örömci"
+					tocharian = "Urabo"
+				}
+				b_fukang = {
+				}
+				b_danhuan = {
+				}
+				b_wutanzili = {
+				}
+				b_qiemi = {
+				}
+				b_manas = {
+				}
+				b_changji = {
+					uyghur = "Sanji"
+				}
+			}
+			c_altay = {
+				color = { 130 176 240 }
+				
+				b_altay = {
+				}
+				b_qinggil = {
+				}
+				b_koktokay = {
+				}
+				b_burqin = {
+				}
+				b_burultokay = {
+				}
+				b_kokagax = {
+				}
+				b_jeminay = {
+				}
+			}
+			c_dunkheger = {
+				color = { 130 172 240 }
+				
+				b_dunkheger = {
+				}
+				b_hou_pulei = {
+				}
+				b_yulishi = {
+				}
+				b_mori = {
+				}
+				b_hengling = { # Fictional, for prosperity
+				}
+				b_dawuqiao = { # Fictional, for prosperity
+				}
+				b_majiajie = { # Fictional, for prosperity
+				}
+			}
+			c_beshbaliq = {
+				color={ 135 162 240 }
+				
+				uyghur = "Beshbalik"
+
+				b_beshbalik = {
+					turkish = "Basboluk"
+				}
+				b_gucheng = {
+					uyghur = "Guqung"
+				}
+				b_jiangjunmiao = {
+				}
+				b_lishan = { # Fictional, for prosperity
+				}
+				b_liuwanxiang = { # Fictional, for prosperity
+				}
+				b_pinghu = { # Fictional, for prosperity
+				}
+				b_bashqorghan = { # Fictional, for prosperity
+				}
+			}
+		}
+		
+		d_altay = {
+			color = { 130 120 240 }
+			
+			capital = 2225 # Ikh Bogd
+			
+			mongol="Altai"
+			turkish="Altay"
+			uyghur="Altay"
+			kirghiz="Altay"
+			
+			c_barkul = {
+				color={ 120 120 250 }
+
+				b_barkul = {
+					turkish = "Barköl"
+					uyghur = "Barköl"
+				}
+				b_khoid = {
+				}
+				b_zhangpeng = { # Fictional, for prosperity
+				}
+				b_xiaoguantian = { # Fictional, for prosperity
+				}
+				b_jiuxian = { # Fictional, for prosperity
+				}
+				b_shiniu = { # Fictional, for prosperity
+				}
+				b_tiantoucun = { # Fictional, for prosperity
+				}
+			}
+			c_ejin = {
+				color={ 120 140 245 }
+				
+				tangut = "Zyrna"
+
+				b_khara_khoto = {
+					han = "Heishui"
+					mongol = "Qaraqoto"
+					tangut = "Zyrna"
+				}
+				b_mazongshan = {
+				}
+				b_jijiagou = { # Fictional, for prosperity
+				}
+				b_yuhe = { # Fictional, for prosperity
+				}
+				b_hwantsaopa = { # Fictional, for prosperity
+				}
+				b_zhugentan = { # Fictional, for prosperity
+				}
+				b_tongchongcha = { # Fictional, for prosperity
+				}
+			}
+			c_aj_bogd = {
+				color = { 130 168 240 }
+				
+				b_aj_bogd = {
+				}
+				b_balikun = {
+				}
+				b_qian_pulei = {
+				}
+				b_erdene = {
+				}
+				b_gurvantes = {
+				}
+				b_nanlizhuang = { # Fictional, for prosperity
+				}
+				b_changcun = { # Fictional, for prosperity
+				}
+			}
+			c_ikh_bogd = {
+				color = { 115 160 240 }
+				
+				b_ikh_bogd = {
+				}
+				b_gobi = {
+				}
+				b_khereid = {
+				}
+				b_zubu = {
+					turkish = "Suibu"
+				}
+				b_nuuruudyn_hondij = {
+				}
+				b_arguut = {
+				}
+				b_khuld = {
+				}
+			}
+			c_tsagaannuur = {
+				color = { 120 160 240 }
+				
+				b_tsagaannuur = {
+				}
+				b_naiman = {
+				}
+				b_khovd = {
+				}
+				b_khar = {
+				}
+				b_mankhan = {
+				}
+				b_darvi = {
+				}
+				b_khaliun = {
+				}
+			}
+			c_kyzyl = {
+				color = { 136 144 240 }
+				
+				b_kyzyl = {
+				}
+			
+				b_chadaana = {
+				}
+				b_ulala = {
+				}
+				b_ulagan = {
+				}
+				b_saikhan_zam = { # Fictional - For Prosperity
+				}
+				b_azarga = { # Fictional - For Prosperity
+				}
+			}
+			c_muztau = {
+				color = { 125 160 240 }
+				
+				b_muztau = {
+				}
+				b_zyryan = {
+				}
+				b_oskemen = {
+				}
+				b_urunkhayka = {
+				}
+				b_kurchum = {
+				}
+				b_uryl = {
+				}
+				b_khokh_khot = { # Fictional - For Prosperity
+				}
+			}
+			c_kirghiz = {
+				color={ 175 150 80 }
+				color2={ 255 255 255 }
+				
+				b_kirghiz = {}
+				#b_altay = {} moved to c_altay
+				b_abakan = {}
+				b_telengit = {}
+				b_tele = {}
+				b_osinniki = {}
+			}
+			c_gorgol = {
+				color = { 130 124 235 }
+				
+				b_gorgol = {
+				}
+				b_abaza = {
+				}
+				b_tashtyp = {
+				}
+				b_belcheeriin = { # Fictional - For Prosperity
+				}
+				b_tsetseg_moriin = { # Fictional - For Prosperity
+				}
+				b_altan_talbar = { # Fictional - For Prosperity
+				}
+				b_guunii_suu = { # Fictional - For Prosperity
+				}
+			}
+		}
+
+		d_orkhon = {
+			color = { 100 120 240 }
+			
+			capital = 2234 # Kara-khorum
+			
+			mongol = "Orkhon"
+			turkish="Orkhon"
+			uyghur="Orkhon"
+			kirghiz="Orkhon"
+			
+			c_khangai = { #2233
+				color = { 133 142 240 }
+				
+				b_khangai = {
+				}
+				b_terkhiin_tsagaan = {
+				}
+				b_tsetserleg = {
+				}
+				b_uliastai = {
+				}
+				b_orgil = {
+				}
+				b_erdenet = {
+				}
+			}
+			c_baygal = { #2235
+				color = { 139 146 240 }
+				
+				b_baygal = {
+				}
+				b_darkhan = {
+				}
+				b_bargujin = {
+				}
+				b_merkit = {
+					mongol = "Mergid"
+				}
+				b_kyakhta = {
+					mongol = "Khyaagta"
+				}
+				b_uda = {
+					mongol = "Üde"
+				}
+				b_galuuta = {
+				}
+			}
+			c_kara_khorum = { #2234
+				color = { 130 132 225 }
+				
+				turkish = "Ordu Baliq"
+				uyghur = "Karabalgasun"
+				
+				b_kara_khorum = {
+					turkish = "Ordu Baliq"
+					uyghur = "Karabalgasun"
+					khitan = "Ordo"
+				}
+				b_luut = {
+				}
+				b_noin_ula = {
+					mongol = "Noyon Uulyn"
+				}
+				b_zuunmod = {
+				}
+				b_khamag = {
+				}
+				b_lun = {
+				}
+			}
+			c_khilok = { #2425 Khilok
+				color={ 182 177 90 }
+				color2={ 255 255 255 }
+				
+				mongol="Kilgho"
+				
+				b_khilok = {
+					mongol="Kilgho"
+				}
+				b_bulgan = {
+				}
+				b_qanuy_gol = {
+				}
+			}
+			c_tuul = { #2426 Tuul
+				color={ 175 167 90 }
+				color2={ 255 255 255 }
+				
+				mongol="Tu'ula"
+				turkish="Tughla"
+				uyghur="Tughla"
+				kirghiz="Tughla"
+				
+				b_tuul = {
+					mongol="Tu'ula"
+					turkish="Tughla"
+					uyghur="Tughla"
+					kirghiz="Tughla"
+				}
+				b_ulja = {
+				}
+				b_serven_qalga = {
+				}
+			}
+			c_selenga = { #2428 Selenga
+				color={ 165 157 90 }
+				color2={ 255 255 255 }
+				
+				mongol="Selenge"
+				
+				b_selenga = {
+					mongol="Selenge"
+				}
+				b_tamir = {
+				}
+				b_ogii = {
+					mongol="Ögii"
+				}
+			}
+		}
+		
+		d_sayan = {
+			color = { 110 150 220 }
+			
+			capital = 2238 # Ötüken 
+			
+			turkish="Kögmän"
+			uyghur="Kögmän"
+			kirghiz="Kögmän"
+			#ötükän is Old Turkic. Khangai is Otukan. Altai is altay. Sayan is Kögmän, Yinshan is èoghay .
+			
+			c_ket = {
+				color={ 100 140 220 }
+				
+				b_ket = {}
+				b_asino = {}
+				b_ketkas = {}
+				b_sochur = {}
+				b_chachamga = {}
+			}
+			
+			c_otuken = {
+				color = { 130 136 220 }
+				
+				b_otuken = {
+				}
+				b_sayan = {
+					turkish = "Kogmen"
+				}
+				b_khori_tumed = {
+				}
+				b_kyren = {
+				}
+				b_kutulik = {
+				}
+				b_tulun = {
+				}
+				b_tenger = { # Fictional - For Prosperity
+				}
+			}
+			c_yenisei = { #2427 Kirghiz
+				color={ 90 130 220 }
+				
+				mongol="Sisigdu Ghuul"
+				kirghiz="Kem" #modern Khakas "Kim", Tuvinian "xem", Old Turkic kem (käm), 
+				
+				b_yenisei = {
+					mongol="Sisigdu Ghuul"
+					kirghiz="Kem" #modern Khakas "Kim", Tuvinian "xem", Old Turkic kem (käm), 
+				}
+			}	
+		}
+		d_kerulen = {
+			color = { 192 187 220 }
+			
+			capital = 2422 #Hulun
+
+			mongol="Kelüren"
+			turkish="Kiluran"
+			uyghur="Kiluran"
+			kirghiz="Kiluran"
+			
+			c_khalka = { #2419 Khalka
+				color={ 182 177 90 }
+				
+				mongol="Qalqa"
+				
+				b_khalka = {
+					mongol="Qalqa"
+				}
+				b_hailar = {
+					mongol="Qailar"
+				}
+			}
+			c_argun = { #2420 Argun
+				color={ 172 167 90 }
+				
+				mongol="Ergüne"
+			
+				b_argun = {
+					mongol="Ergüne"
+				}
+			}
+			c_onon = { #2421 Onon
+				color={ 162 157 90 }
+				
+				mongol="Onan"
+				turkish="Unan"
+				uyghur="Unan"
+				kirghiz="Unan"
+				
+				b_onon = {
+					mongol="Onan"
+					turkish="Unan"
+					uyghur="Unan"
+					kirghiz="Unan"
+				}
+			}
+			c_hulun = { #2422 Hulun
+				color={ 152 147 90 }
+				
+				mongol="Kölön" #Also appears as Khölön and Hölön.
+				
+				b_hulun = {
+					mongol="Kölön" #Also appears as Khölön and Hölön.
+				}
+				b_hedong_hulun = {
+				}
+				b_jingbian_hulun = {
+				}
+				b_jumugu = {
+				}
+			}
+			c_tatar = { #2423 Tatar #or make it Qalqa and Khalka Hailar (Qailar)?
+				color={ 142 137 90 }
+				
+				b_tatar = {
+				}
+				b_qarul = {
+				}
+				b_qanchile = {
+				}
+			}
+			c_khentii = { #2424 Khentii
+				color={ 132 127 90 }
+				
+				mongol="Burqan Qaldun"
+				
+				b_khentii = {
+					mongol="Burqan Qaldun"
+				}
+				b_bars_khentii = {
+				}
+				b_bulun_dara = {
+				}
+				b_bubei = {
+				}
+				b_talanzhu = {
+				}
+			}
+		}
+		
+		d_shangjing = {
+			color={ 100 10 100 }
+			
+			capital = 2359
+			
+			
+			c_yinshan = { #2346 Yinshan
+				color={ 115 20 100 }
+			
+				b_yinshan = {
+					shatuo = "Olon Süm"
+					tatar = "Olon Süm"
+				}
+			}
+			c_siliyin = { #2347 Siliyin
+				color={ 120 15 100 }
+			
+				b_siliyin = {
+				}
+			}
+			c_linhuang = { #2359 Linhuang
+				color={ 135 25 100 }
+
+				b_linhuang = {
+				}
+				b_zuzhou = {
+				}
+				b_huaizhou = {
+				}
+				b_qingzhou = {
+				}
+				b_wuzhou = {
+				}
+				b_raozhou = {
+				}
+				b_longhua = {
+				}
+			}
+			c_jingzhou_shangjing = { #2417 Jingzhou
+				color={ 155 45 100 }
+
+				b_jinshan_jingzhou = {
+				}
+			}
+			c_shiwei = { #2418 Shiwei
+				color={ 165 55 100 }
+				
+				xianbei = "Shirwi"
+				khitan = "Shirwi"
+				shiwei = "Shirwi"
+				
+				b_shiwei = {
+					xianbei = "Shirwi"
+					khitan = "Shirwi"
+					shiwei = "Shirwi"
+				}
+			}
+			c_jiangsheng = { #2634 Jiangsheng
+				color={ 185 75 100 }
+
+				b_yongan_jiangsheng = {
+				}
+				b_longhua_longhua = {
+				}
+				b_aimin = {
+				}
+			}
+			c_yongzhou_shangjing = { #2635 Yongzhou
+				color={ 195 85 100 }
+
+				b_changning_yongzhou = {
+				}
+				b_yifeng_yongzhou = {
+				}
+				b_ciren = {
+				}
+				b_guangyi = {
+				}
+			}
+			c_changchun = { #2636 Changchun
+				color={ 195 95 110 }
+
+				b_changchun = {
+				}
+				b_lekang = { #Taizhou
+				}
+				b_xingguo = { #Taizhou
+				}
+			}
+		}
+		d_zhongjing = {
+			color={ 200 10 43 }
+			
+			capital = 2358 #Dading
+			
+			
+			c_dading = { #2358 Dading
+				color={ 125 20 100 }
+
+				b_dading = {
+				}
+				b_changxing ={
+				}
+				b_fushu = {
+				}
+				b_quannong = {
+				}
+				b_wending = {
+				}
+				b_shengping = {
+				}
+				b_shenshui = {
+				}
+			}
+			c_xingzhong = { #2633 Xingzhong
+				color={ 175 65 100 }
+
+				b_bacheng = {
+				}
+				b_yingqiu ={
+				}
+				b_xianglei = {
+				}
+				b_lvshan = {
+				}
+				b_ande_ande = { #Ande
+				}
+				b_hongzheng = { #Yizhou
+				}
+				b_wenyi = { #Yizhou
+				}
+			}
+			c_songshan = { #2637 Songshan
+				color={ 195 105 120 }
+
+				b_songshan_songshan = {
+				}
+				b_enhua = { #Enzhou
+				}
+				b_huihe = { #Huizhou
+				}
+				b_sanhan = { #Gaozhou
+				}
+				b_woye = { #Wu'anzhou
+				}
+			}
+			c_zezhou_dading = { #2638 Zezhou
+				color={ 195 115 130 }
+
+				b_shenshan_zezhou = { #Zezhou
+				}
+				b_luanhe = { #Zezhou
+				}
+				b_fusu = { #Lizhou
+				}
+				b_hezhong = { #Yuzhou
+				}
+				b_yonghe_yuzhou = { #Yuzhou
+				}
+				b_longshan = { #Tanzhou
+				}
+			}
+			c_beian = { #2639 Bei'an
+				color={ 195 125 140 }
+
+				b_xinghua_beian = {
+				}
+			}
+		}
+		d_dongjing = {
+			color={ 18 98 144 }
+			
+			capital = 2628 #Liaoyang
+			
+			c_liaoyang = { #2628 Liaoyang
+				color={ 28 108 144 }
+				
+				bohai = "Ryoyang"
+				han = "Liaoyang"
+				
+				b_liaoyang = {
+					bohai = "Ryoyang"
+					han = "Liaoyang"
+				}
+				b_xianxiang = {
+					bohai = "Seonhyang"
+					han = "Xianxiang"
+				}
+				b_heye = {
+					bohai = "Hakya"
+					han = "Heye"
+				}
+				b_ximu = {
+					bohai = "Seokmok"
+					han = "Ximu"
+				}
+				b_zimeng = {
+					bohai = "Jamong"
+					han = "Zimeng"
+				}
+				b_xingliao = {
+					bohai = "Heungryo"
+					han = "Xingliao"
+				}
+				b_guihua_liaoyang = {
+					bohai = "Gwihwa"
+					han = "Guihua"
+				}
+			}
+			c_zhenhai = { #2629 Zhenhai
+				color={ 38 118 144 }
+				
+				bohai = "Jinhae"
+				han = "Zhenhai"
+				
+				b_pingnan = {
+					bohai = "Pyeongnam"
+					han = "Pingnan"
+				}
+				b_laiyuan = {
+					bohai = "Raewon"
+					han = "Liayuan"
+				}
+			}
+			c_chenzhou_liaodong = { #2630 Chenzhou
+				color={ 48 128 144 }
+				
+				bohai = "Jinju"
+				han = "Chenzhou"
+				khitan = "Chën Chëu"
+				
+				b_jianan_chenzhou = {
+					bohai = "Geon'an"
+					han = "Jian'an"
+				}
+				b_xinan_ningzhou = { #Ningzhou
+					bohai = "Sin'an"
+					han = "Xin'an"
+				}
+				b_laisu = { #Suzhou
+					bohai = "Raeso"
+					han = "Laisu"
+				}
+				b_huaihua = { #Suzhou
+					bohai = "Hoehwa"
+					han = "Huaihua"
+				}
+				b_yongning_fuzhou = { #Fuzhou
+					bohai = "Yeongnyeong"
+					han = "Yongning"
+				}
+				b_desheng = { #Fuzhou
+					bohai = "Deokseung"
+					han = "Desheng"
+				}
+			}
+			c_xianzhou_liaodong = { #2631 Xianzhou
+				color={ 58 138 144 }
+				
+				bohai = "Hyeonju"
+				han = "Xianzhou"
+				
+				b_fengxian = {
+					bohai = "Bongseon"
+					han = "Fengxian"
+				}
+				b_shandong = {
+					bohai = "Sandong"
+					han = "Shandong"
+				}
+				b_guiyi_xianzhou = {
+					bohai = "Gwiui"
+					han = "Guiyi"
+				}
+				b_fengling_qianzhou = { #Qianzhou
+					bohai = "Bongneung"
+					han = "Fengling"
+				}
+				b_yanchang_qianzhou = { #Qianzhou
+					bohai = "Yeonchang"
+					han = "Yanchang"
+				}
+				b_lingshan_qianzhou = { #Qianzhou
+					bohai = "Ryeongsan"
+					han = "Lingshan"
+				}
+				b_sinong_qianzhou = { #Qianzhou
+					bohai = "Sanong"
+					han = "Sinong"
+				}
+			}
+			c_yizhou_liaodong = { #2632 Yizhou
+				color={ 58 138 144 }
+				
+				bohai = "Uiju"
+				han = "Yizhou"
+				
+				b_ningchang = {
+					bohai = "Nyeongchang"
+					han = "Ningchang"
+				}
+				b_shunan = {
+					bohai = "Sun'an"
+					han = "Shun'an"
+				}
+			}
+		}
+		allow = { title_king_basic_allow = yes }
+	} # end k_mongolia
+	k_bohai = {
+		color = { 214 83 83 }
+		capital = 2086 # Ryongcheon
+		
+		khitan = "Dan Gur"
+		han = "Bohai"
+		bohai = "Balhae"
+		
+		allow = { title_king_basic_allow = yes }
+		d_bohai = {
+			color = { 214 83 83 }
+			capital = 2086 # Ryongcheon
+			
+			c_namhae = { #1497 Namhae
+				color={ 214 93 93 }
+				
+				han = "Nanhai"
+				bohai = "Namhae"
+				
+				b_okju = {
+					han = "Wozhou"
+					bohai = "Okju"
+				}
+				b_cheongju = {
+					han = "Qingzhou"
+					bohai = "Cheongju"
+				}
+				b_choju = {
+					han = "Jiaozhou"
+					bohai = "Choju"
+				}
+			}
+			c_ryongwon = { #1554 Ryongwon
+				color={ 214 103 103 }
+				
+				han = "Longyuan"
+				bohai = "Ryongwon"
+				
+				b_gyeongju = {
+					han = "Qingzhou"
+					bohai = "Gyeongju"
+				}
+				b_mokju = {
+					han = "Muzhou"
+					bohai = "Mokju"
+				}
+				b_yeomju = {
+					han = "Yanzhou"
+					bohai = "Yeomju"
+				}
+				b_haju = {
+					han = "Hezhou"
+					bohai = "Haju"
+				}
+			}
+			c_amrok = { #2067 Amrok
+				color={ 214 113 113 }
+				
+				han = "Yalu"
+				bohai = "Amrok"
+				
+				b_sinju = {
+					han = "Shenzhou"
+					bohai = "Sinju"
+				}
+				b_hwanju = {
+					han = "Huanzhou"
+					bohai = "Hwanju"
+				}
+				b_pungju = {
+					han = "Fengzhou"
+					bohai = "Pungju"
+				}
+				b_jeongju = {
+					han = "Zhengzhou"
+					bohai = "Jeongju"
+				}
+			}
+			c_jangryeong = { #2077 Jangryeong
+				color={ 214 123 123 }
+				
+				han = "Changling"
+				bohai = "Jangryeong"
+				
+				b_haju_jangryeong = {
+					han = "Xiazhou"
+					bohai = "Haju"
+				}
+				b_haju_jangryeong_2 = {
+					han = "Hezhou"
+					bohai = "Haju"
+				}
+			}
+			c_buyeo = { #2081 Buyeo
+				color={ 214 133 133 }
+				
+				han = "Fuyu"
+				bohai = "Buyeo"
+				
+				b_buju = {
+					han = "Fuzhou"
+					bohai = "Buju"
+				}
+				b_seonju = {
+					han = "Xianzhou"
+					bohai = "Seonju"
+				}
+			}
+			c_hyeondeok = { #2082 Hyeondeok
+				color={ 214 143 143 }
+				
+				han = "Xiande"
+				bohai = "Hyeondeok"
+				
+				b_hyeonju = {
+					han = "Xianzhou"
+					bohai = "Hyeonju"
+				}
+				b_roju = {
+					han = "Luzhou"
+					bohai = "Roju"
+				}
+				b_cheolju = {
+					han = "Tiezhou"
+					bohai = "Cheolju"
+				}
+				b_tangju = {
+					han = "Tangzhou"
+					bohai = "Tangju"
+				}
+				b_yeongju = {
+					han = "Rongzhou"
+					bohai = "Yeongju"
+				}
+				b_heungju = {
+					han = "Xingzhou"
+					bohai = "Heungju"
+				}
+			}
+			c_makhil = { #2085 Makhil
+				color={ 214 153 153 }
+				
+				han = "Moxie"
+				bohai = "Makhil"
+				
+				b_makju = {
+					han = "Mozhou"
+					bohai = "Makju"
+				}
+				b_goju = {
+					han = "Gaozhou"
+					bohai = "Goju"
+				}
+			}
+			c_ryongcheon = { #2086 Ryongcheon/Longquan
+				color={ 214 163 163 }
+				
+				han = "Longquan"
+				bohai = "Ryongcheon"
+				
+				b_ryongju = {
+					han = "Longzhou"
+					bohai = "Ryongju"
+				}
+				b_hoju = {
+					han = "Huzhou"
+					bohai = "Hoju"
+				}
+				b_balju = {
+					han = "Bozhou"
+					bohai = "Balju"
+				}
+				b_dongju = {
+					han = "Dongzhou"
+					bohai = "Dongju"
+				}
+				b_yeongju_ryongcheon = {
+					han = "Yingzhou"
+					bohai = "Yeongju"
+				}
+			}
+			c_solbin = { #2087 Solbin/Shuobin
+				color={ 214 173 173 }
+				
+				han = "Shuobin"
+				bohai = "Solbin"
+				
+				b_hwaju = {
+					han = "Huazhou"
+					bohai = "Hwaju"
+				}
+				b_ikju = {
+					han = "Yizhou"
+					bohai = "Ikju"
+				}
+				b_geonju = {
+					han = "Jianzhou"
+					bohai = "Geonju"
+				}
+			}
+			c_jeongri = { #2241 Jeongri/Dingli
+				color={ 214 183 183 }
+				
+				han = "Dingli"
+				bohai = "Jeongri"
+				
+				b_jeongju_jeongri = {
+					han = "Dingzhou"
+					bohai = "Jeongju"
+				}
+				b_banju = {
+					han = "Panzhou"
+					bohai = "Banju"
+				}
+			}
+			c_anbyeon = { #2614 Anbyeon/Anbian
+				color={ 214 193 193 }
+				
+				han = "Anbian"
+				bohai = "Anbyeon"
+				
+				b_anju_anbyeon = {
+					han = "Anzhou"
+					bohai = "Anju"
+				}
+				b_gyeongju_anbyeon = {
+					han = "Qiongzhou"
+					bohai = "Gyeongju"
+				}
+			}
+			c_anwon = { #2615 Anwon/Anyuan
+				color={ 214 203 203 }
+				
+				han = "Anyuan"
+				bohai = "Anwon"
+				
+				b_nyeongju = {
+					han = "Ningzhou"
+					bohai = "Nyeongju"
+				}
+				b_miju = {
+					han = "Meizhou"
+					bohai = "Miju"
+				}
+				b_gongju = {
+					han = "Gongzhou"
+					bohai = "Gongju"
+				}
+				b_sangju = {
+					han = "Changzhou"
+					bohai = "Sangju"
+				}
+			}
+			c_dongpyeong = { #2616 Dongpyeong/Dongping
+				color={ 214 213 213 }
+				
+				han = "Dongping"
+				bohai = "Dongpyeong"
+				
+				b_iju = {
+					han = "Yizhou"
+					bohai = "Iju"
+				}
+				b_mongju = {
+					han = "Mengzhou"
+					bohai = "Mongju"
+				}
+				b_taju = {
+					han = "Tuozhou"
+					bohai = "Taju"
+				}
+				b_heukju = {
+					han = "Heizhou"
+					bohai = "Heukju"
+				}
+				b_biju = {
+					han = "Bizhou"
+					bohai = "Biju"
+				}
+			}
+			c_hoewon = { #2617 Hoewon/Huaiyuan
+				color={ 214 223 223 }
+				
+				han = "Huaiyuan"
+				bohai = "Hoewon"
+				
+				b_dalju = {
+					han = "Dazhou"
+					bohai = "Dalju"
+				}
+				b_wolju = {
+					han = "Yuezhou"
+					bohai = "Wolju"
+				}
+				b_hoeju = {
+					han = "Huaizhou"
+					bohai = "Hoeju"
+				}
+				b_giju = {
+					han = "Jizhou"
+					bohai = "Giju"
+				}
+				b_buju_hoewon = {
+					han = "Fuzhou"
+					bohai = "Buju"
+				}
+				b_miju_hoewon = {
+					han = "Meizhou"
+					bohai = "Miju"
+				}
+				b_bokju = {
+					han = "Fuzhou"
+					bohai = "Bokju"
+				}
+			}
+			c_cheolli = { #2618 Cheolli/Tieli
+				color={ 214 83 83 }
+				
+				han = "Tieli"
+				bohai = "Cheolli"
+				
+				b_gwangju = {
+					han = "Guangju"
+					bohai = "Gwangju"
+				}
+				b_bunju = {
+					han = "Fenzhou"
+					bohai = "Bunju"
+				}
+				b_poju = {
+					han = "Puzhou"
+					bohai = "Poju"
+				}
+				b_haeju = {
+					han = "Haizhou"
+					bohai = "Haeju"
+				}
+				b_uiju = {
+					han = "Yizhou"
+					bohai = "Uiju"
+				}
+				b_gwiju = {
+					han = "Guizhou"
+					bohai = "Gwiju"
+				}
+			}
+			c_soju = { #2640 Soju/Suzhou
+				color={ 214 73 73 }
+			
+				han = "Suzhou"
+				bohai = "Soju"
+				jurchen = "Woje"
+					
+				b_soju = {
+					han = "Suzhou"
+					bohai = "Soju"
+					jurchen = "Woje"
+				}
+			}
+		}
+	}
+	k_silla = {
+		color = { 239 217 30 }
+		capital = 2658 # Gyeongju
+		
+		han = "Xinluo"
+		khitan = "Shulur"
+		
+		allow = { title_king_basic_allow = yes }
+		#d_gyeongsang = {
+		#	color = { 214 83 83 }
+		#	capital = 2658 # Gyeongju
+		#	
+		#	han = "Jingshang"
+		#	
+		#	c_gyeongju = { #2658 Gyoengju
+		#		color={ 214 93 93 }
+		#		
+		#		han = "Jingzhou"
+		#		bohai = "Gyeongju"
+		#		
+		#		b_okju = {
+		#			han = "Wozhou"
+		#			bohai = "Okju"
+		#		}
+		#	}
+		#}
+	}
+}
