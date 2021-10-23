@@ -1,0 +1,23 @@
+# -*- ck2.history.wars -*-
+
+name = "Duan Siping's conquest of Dali" 
+
+casus_belli = {
+	actor = 1417073 # Duan Siping
+	recipient = 1417022 # Yang Zhao
+	casus_belli = claim
+	landed_title=k_yunnan
+	date = 936.1.1
+}
+
+936.1.1 = {
+	add_attacker = 1417073 # Duan Siping
+	add_attacker = 1417118 # Gao Fang
+	add_defender = 1417022 # Yang Zhao
+}
+
+937.1.1 = {
+	rem_attacker = 1417073 # Duan Siping
+	rem_attacker = 1417118 # Gao Fang
+	rem_defender = 1417022 # Yang Zhao
+}

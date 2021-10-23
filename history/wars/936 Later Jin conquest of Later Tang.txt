@@ -1,0 +1,23 @@
+# -*- ck2.history.wars -*-
+
+name = "Later Jin conquest of Later Tang" 
+
+casus_belli = {
+	actor = 1412375 # Later Jin Taizu
+	recipient = 1412361 # Emperor Fei of Later Tang
+	casus_belli = offmap_submission
+	landed_title=e_later_tang
+	date = 936.5.26
+}
+
+936.5.26 = {
+	add_attacker = 1412375 # Later Jin Taizu
+	add_attacker = 194326  # Liao Taizong
+	add_defender = 1412361 # Emperor Fei of Later Tang
+}
+
+936.11.28 = {
+	rem_attacker = 194326  # Liao Taizong
+	rem_attacker = 1412375 # Later Jin Taizu
+	rem_defender = 1412361 # Emperor Fei of Later Tang
+}

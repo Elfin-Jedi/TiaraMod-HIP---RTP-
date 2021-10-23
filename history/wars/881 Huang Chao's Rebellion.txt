@@ -1,0 +1,21 @@
+# -*- ck2.history.wars -*-
+
+name = "Huang Chao's Rebellion" 
+
+casus_belli = {
+	actor = 1403799 # Huang Chao
+	recipient = 217718 # Tang Xizong
+	casus_belli = offmap_submission
+	landed_title=e_tang
+	date = 880.12.20
+}
+
+880.12.20 = {
+	add_attacker = 1403799 #Huang Chao
+	add_defender = 217718 # Tang Xizong
+}
+
+884.7.13 = {
+	rem_attacker = 1403799 #Huang Chao
+	rem_defender = 217718 # Tang Xizong
+}

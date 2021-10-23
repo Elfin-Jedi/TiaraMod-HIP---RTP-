@@ -1,0 +1,134 @@
+# -*- ck2.history.technology -*-
+
+
+#HIMALAYAS
+
+technology = {
+	titles = {
+		d_kashmir
+		d_pamir
+		d_ladakh
+		d_purang
+		d_shigatse
+		d_yarlung
+		d_lhasa
+		d_nagchu
+		d_sumparu
+		d_qamdo
+		d_dege
+		d_kham
+		d_nangqen
+		d_nagormo
+		d_qinghai
+		d_longyou
+		d_dome
+		d_nyingchi
+		d_ngari
+		d_uttaranchal
+		d_gorkha
+		d_kathmandu
+		d_bhutan
+
+	}
+
+	769 = {
+		military = 1.0
+		economy = 1.2
+		culture = 1.3
+	}
+		
+	1337 = {
+		military = 4.2
+		economy = 4.3
+		culture = 4.5
+	}
+}
+
+#INDIA and outer China
+
+technology = {
+	titles = {
+		d_sauvira
+		d_bhakkar
+		d_multan
+		d_gangavadi
+		d_vidharba
+		d_lahore
+		d_gandhara
+		d_trigarta
+		d_kuru
+		d_haritanaka
+		d_mathura
+		d_magadha
+		d_vodamayutja
+		d_nisada
+		d_gurjara_mandala
+		d_anartta
+		d_saurashtra
+		d_lata
+		d_maru
+		d_jangladesh
+		d_stravani
+		d_medapata
+		d_ajmer
+		d_dadhipadra
+		d_akara_dasarna
+		d_anupa
+		d_kanyakubja
+		d_saryupara
+		d_jejakabhukti
+		d_devagiri
+		d_dahala
+		d_nasikya
+		d_ratanpur
+		d_devagiri
+		d_rattapadi
+		d_konkana
+		d_raichur_doab
+		d_nulambavadi
+		d_chera_nadu
+		d_pandya_nadu
+		d_chola_nadu
+		d_tondai_nadu
+		d_sinhala
+		d_udayagiri
+		d_racakonda
+		d_kalyani
+		d_vengi
+		d_warangal
+		d_dandakaranya
+		d_daksina_kosala
+		d_kalinga
+		d_tosali
+		d_suhma
+		d_nadia
+		d_vanga
+		d_jharkand
+		d_kasi
+		d_tirabhukti
+		d_gauda
+		d_varendra
+		d_kamarupanagara
+		d_para_lauhitya
+		d_sutiya
+	}
+
+	769 = {
+		military = 1.0
+		economy = 1.3
+		culture = 1.5
+
+		TECH_FORTIFICATIONS_CONSTRUCTION = 0.85
+		TECH_CASTLE_CONSTRUCTION = 0.85
+		TECH_CONSTRUCTION = 1
+		TECH_SIEGE_EQUIPMENT = 1
+	}
+		
+	1337 = {
+		military = 4.5
+		economy = 4.5
+		culture = 4.7
+	}
+}
+
+

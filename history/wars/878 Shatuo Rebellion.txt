@@ -1,0 +1,23 @@
+# -*- ck2.history.wars -*-
+
+name = "Shatuo Rebellion" 
+
+casus_belli = {
+	actor = 217718 # Tang Xizong
+	recipient = 1412310 # Li Keyong
+	casus_belli = dejure_duchy_claim
+	landed_title=d_datong
+	date = 878.6.13
+}
+
+878.6.13 = {
+	add_attacker = 217718 # Tang Xizong
+	add_defender = 1412310 # Li Keyong
+	add_defender = 1412306 # Li Guochang
+}
+
+880.8.25 = {
+	rem_attacker = 217718 # Tang Xizong
+	rem_defender = 1412310 # Li Keyong
+	rem_defender = 1412306 # Li Guochang
+}

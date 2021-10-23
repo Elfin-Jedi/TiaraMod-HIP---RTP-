@@ -1,0 +1,21 @@
+# -*- ck2.history.wars -*-
+
+name = "Wang Xianzhi's Rebellion" 
+
+casus_belli = {
+	actor = 217718 # Tang Xizong
+	recipient = 1404569 # Wang Xianzhi
+	casus_belli = dejure_county_claim
+	landed_title=c_ruzhou
+	date = 876.9.23
+}
+
+876.9.23 = {
+	add_attacker = 217718 # Tang Xizong
+	add_defender = 1404569 # Wang Xianzhi
+}
+
+878.3.8 = {
+	rem_attacker = 217718 # Tang Xizong
+	rem_defender = 1404569 # Wang Xianzhi
+}

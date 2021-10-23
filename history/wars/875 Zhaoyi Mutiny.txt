@@ -1,0 +1,22 @@
+# -*- ck2.history.wars -*-
+
+name = "Zhaoyi Mutiny" 
+
+casus_belli = {
+	actor = 1401460 # Cao Xiang
+	recipient = 1401470 # Liu Guang
+	thirdparty = 217718 # Tang Xizong
+	casus_belli = other_claim
+	landed_title=d_zhaoyi
+	date = 875.11.2
+}
+
+875.11.2 = {
+	add_attacker = 217718 # Tang Xizong
+	add_defender = 1401470 # Liu Guang
+}
+
+876.1.1 = {
+	rem_attacker = 217718 # Tang Xizong
+	rem_defender = 1401470 # Liu Guang
+}

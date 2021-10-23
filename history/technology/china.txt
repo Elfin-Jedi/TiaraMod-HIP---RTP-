@@ -1,0 +1,150 @@
+# -*- ck2.history.technology -*-
+
+
+#China proper
+
+technology = {
+	titles = {
+		d_henan
+		d_fengxiang
+		d_yongxing
+		d_datong
+		d_hedong
+		d_nanjing
+		d_dongchuan
+		d_xichuan
+		d_shuofang
+		d_zhenwu
+		d_binning
+		d_jingyuan
+		d_wuxing
+		d_xiongwu
+		d_baoda
+		d_baosai
+		d_baoyi
+		d_hezhong
+		d_jinshang
+		d_kuangguo
+		d_zhenguo
+		d_zhangguo
+		d_zhaoyi
+		d_fenzhou
+		d_jianxiong
+		d_weisai
+		d_anguo
+		d_chengde
+		d_heyang
+		d_yiwu
+		d_zhangde
+		d_tianxiong
+		d_yongqing
+		d_yicheng
+		d_dongdu
+		d_weisheng
+		d_shannanxi
+		d_longjian
+		d_weirong
+		d_yongping
+		d_baoning
+		d_huaide
+		d_jingnan
+		d_ningjiang
+		d_wuding
+		d_wutai
+		d_wuxin
+		d_yongning
+		d_zhaowu
+		d_jingxinan
+		d_xingming
+		d_zhenning
+		d_yongqing
+		d_yichang
+		d_yicheng
+		d_dongdu
+		d_weisheng
+		d_jingxinan
+		d_tianping
+		d_zhangxin
+		d_pinglu
+		d_taining
+		d_xuanwu
+		d_guide
+		d_zhenan
+		d_zhongwu
+		d_fengguo
+		d_ganhua
+		d_huainan
+		d_eyue
+		d_anyuan
+		d_desheng
+		d_qinghuai
+		d_zhexi
+		d_xuanshe
+		d_zhedong
+		d_zhenhai
+		d_zhongwu_wuyue
+		d_hunan
+		d_jiangxi
+		d_anhua
+		d_baisheng
+		d_fenghua
+		d_wuping
+		d_fujian
+		d_qingyuan
+		d_yongan
+		d_lingnandong
+		d_qiongguan
+		d_rongguan
+		d_guiguan
+		d_lingnanxi
+		d_jinghai
+	}
+
+	769 = {
+		military = 1.4
+		economy = 1.7
+		culture = 1.7
+		
+		TECH_FORTIFICATIONS_CONSTRUCTION = 3.0
+		TECH_CASTLE_CONSTRUCTION = 2.0
+		TECH_CITY_CONSTRUCTION = 3.0
+		TECH_LEGALISM = 2.0
+	}
+		
+	1337 = {
+		military = 6.0
+		economy = 6.0
+		culture = 6.0
+		
+		TECH_FORTIFICATIONS_CONSTRUCTION = 5.0
+		TECH_CASTLE_CONSTRUCTION = 5.0
+		TECH_CITY_CONSTRUCTION = 5.0
+		TECH_LEGALISM = 7.0
+	}
+}
+
+#Yunnan
+
+technology = {
+	titles = {
+		d_dali
+		d_yunnan
+	}
+
+	769 = {
+		military = 1.0
+		economy = 1.3
+		culture = 1.5
+
+		TECH_FORTIFICATIONS_CONSTRUCTION = 0.85
+		TECH_CONSTRUCTION = 1
+	}
+		
+	1337 = {
+		military = 4.5
+		economy = 4.5
+		culture = 4.7
+	}
+}
+
+

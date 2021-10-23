@@ -1,0 +1,22 @@
+# -*- ck2.history.wars -*-
+
+name = "Dongchuan Mutiny" 
+
+casus_belli = {
+	actor = 1403279 # Gao Renhou
+	recipient = 1403278 # Yang Shili
+	thirdparty = 217718 # Tang Xizong
+	casus_belli = other_claim
+	landed_title=d_tongchuan
+	date = 884.4.2
+}
+
+884.4.2 = {
+	add_attacker = 217718 # Tang Xizong
+	add_defender = 1403278 # Yang Shili
+}
+
+884.6.29 = {
+	rem_attacker = 217718 # Tang Xizong
+	rem_defender = 1403278 # Yang Shili
+}

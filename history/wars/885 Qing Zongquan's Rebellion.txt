@@ -1,0 +1,24 @@
+# -*- ck2.history.wars -*-
+
+name = "Qin Zongquan's Rebellion" 
+
+casus_belli = {
+	actor = 1404919 # Qin Zongquan
+	recipient = 217718 # Tang Xizong
+	casus_belli = offmap_submission
+	landed_title=e_tang
+	date = 884.7.13
+}
+
+884.7.13 = {
+	add_attacker = 1404919 # Qin Zongquan 
+	add_defender = 217718 # Tang Xizong
+}
+888.4.20 = {
+	add_defender = 217719 # Tang Zhaozong
+	rem_defender = 217718 # Tang Xizong
+}
+889.4.1 = {
+	rem_attacker = 1404919 # Qin Zongquan
+	rem_defender = 217718 # Tang Xizong
+}
