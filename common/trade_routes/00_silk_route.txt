@@ -1,0 +1,197 @@
+# -*- ck2.trade_routes -*-
+
+# Every path must start either at a start province, or where another path ends.
+# Paths that try to branch off the middle of another path are not connected
+# and won't work right.
+
+silk_road = {
+	wealth = 197			# Total base wealth of silk route
+	trade_post_display_trigger = {
+		silk_road_trade_post_trigger = yes
+	}
+	
+	modifier = {			# How the trade route modifies the provinces it passes
+		castle_tax_modifier = 0.10
+		city_tax_modifier = 0.10
+		temple_tax_modifier = 0.10
+		tribal_tax_modifier = 0.10
+		trade_route_value = 15
+		local_movement_speed = 0.20
+		tech_growth_modifier = 0.20
+		icon = 4
+	}
+
+	start = {				# Start provinces of trade route
+		2276 #Chang'an
+		2336 #Akyab Bay
+		2401 #Chengdu
+	}
+	# Northern Silk Route
+	path = {	# Chang'an - Gongzhou
+		2276 2316 2321 2312 2066
+	}
+	path = {	# Gongzhou - Dunhuang
+		2066 2313 2196 2200 2198 2197 2199
+	}
+	path = {	# Gongzhou - Tsongkha -  Dunhuang
+		2066 2170 2172 2210 2201 2203 2206 2199
+	}
+	path = {	# Dunhuang - Yetisu
+		2199 2221 2227 2228 1574 1573
+	}
+	path = {	# Dunhuang - Qarashar
+		2199 2218 1570
+	}
+	path = {	# Qarashar - Kashgar
+		1570 1569 1568 1567
+	}
+	path = {	# Kashgar - Ferghana - Ustrushana
+		1567 1559 1564 1558 1557
+	}
+	path = {	# Qarashar - Khotan
+		1570 2217 2220 1968 1580
+	}
+	path = {	# Khotan - Yarkand
+		1580 1178
+	}
+	path = {	# Yarkand - Kashgar
+		1178 1567
+	}
+	path = {	# North bound to Ustrushana
+		1573 1572 1563 1562 1561 1557
+	}
+	path = {	# Ustrushana to Bukhara via Samarkand
+		1557 903 628
+	}
+	path = {	# Yarkand - Badakhshan - Bukhara
+		1178 1978 1553 1578 1546 904 1544 628
+	}
+	path = {	# Bukhara to Merv
+		628 1543 630
+	}
+	path = {	# Merv to Rayy
+		630 1538 634 907 660 663
+	}
+	path = {	# Rayy to Hamadan to Ahlat
+		663 658 665 650 667 686 682 702
+	}
+	path = {	# Bukhara to Khiva to Itil to Cherson
+		628 902 626 623 625 621 618 620 619 605 597 598 562 561 560
+	}
+	#path = {	# Khiva to Gilan
+	#	626 1467 1549 631 633 662 663
+	#}
+	path = {	# Merv - Herat - Kerman
+		630 1539 905 299 637 639
+	}
+	path = {	# Kerman - Isfahan
+		639 638 646
+	}
+	#path = {	# Hamadan to Isfahan
+	#	658 646
+	#}
+	#path = {	# Hamadan to Ahlat
+	#	658 665 650 667 686 682 702
+	#}
+	path = {	# Ahlat to Manbij
+		702 1482 1239 699 1240
+	}
+	path = {	# Kerman to Hormuz
+		639 853 641
+	}
+	path = {	# Shiraz to Baghdad to Manbij
+		644 645 648 2014 649 656 690 693 695 710 709 1240
+	}
+	path = {	# Rayy to Isfahan
+		663 659 646
+	}
+	path = {	# Isfahan to Shiraz
+		646 644
+	}
+	path = {	# Shiraz to Siraf
+		644 643 642
+	}
+	path = {	# Ahlat to Trebizond
+		702 1158 704 816 678
+	}
+	path = {	# Manbij to Aleppo
+		1240 733
+	}
+	#path = {	# Aleppo to Homs
+	#	733 1243 732 731
+	#}
+	path = {	# Aleppo to Homs to Acre
+		733 1243 732 731 768 728 712 727 773 772
+	}
+	path = {	# Aleppo to Antioch
+		733 1236 764
+	}
+	#path = {	# Homs to Acre
+	#	731 768 728 712 727 773 772
+	#}
+	# Indus and Red Sea routes
+	#path = {	# Nakhsheb to Indus via Kabul and Ghazna
+	#	1544 904 1546 1550 1547 1611 1626 1616
+	#}
+	path = {	# Malabar Coast to Debul
+		1498 2052 2060 2059 1845 1846 1848 1600
+	}
+	path = {	# Khotan to Leh
+		1580 1982
+	}
+	path = {	# Kashmir to Lahur
+		1628 1624 1627 1617 1620
+	}
+	path = {	# Lahur to Multan to Debul
+		1620  1618 1615 1613 1649 1606 1604 1603 1600
+	}
+	path = {	# Debul to Aden to Qusayr to the Nile to Alexandria
+		1600 1844 1944 1552 1943 1941 858 859 857 1940 1939 719 718 1283 1501 1593 794 1340 1339 795 1337 1336 1335 796 800 801 802
+	}
+	#path = {	# Aden to Suez to the Med to Alexandria
+	#	1482 788 1712 802
+	#}
+	path = {	# Bay of Bengal (Bengal) to Mathura
+		2338 2136 2139 2132 2114 2111 2112 2123 2214 1686 1682 1664 
+	}
+	path = {	# Mathura to Lahur
+		1664 1658 1662 1661 1620
+	}
+	path = {	# Chengdu to Dege
+		2401 2402 2404 2182 2187
+	}
+	path = {	# Dege to Dali
+		2187 2183 2186 2431 2429
+	}
+	path = {	# Dali to Kamatapur
+		2429 2432 2157 2156 2150 2151
+	}
+	path = {	# Dege to Mangyul
+		2187 2189 2194 2169 2167 2178
+	}
+	path = {	# Gyantze to Kamatapur
+		2178 2152 2151
+	}
+	path = {	# Kamatapur to Bikrampur
+		2151 2148 2147 2142
+	}
+	path = {	# Gyantze to Kamaru
+		2178 2179 2180
+	}
+	path = {	# Mangyul to Leh
+		2180 1986 1985 1983 1982
+	}
+	path = {	# Mangyul to Kashmir
+		1982 1976 1628
+	}
+	path = {	# Mangyul to Magadha (Pataliputra)
+		2180 2129 2130 2122 2120 2111
+	}
+	path = {	# Akyab Bay to Bay of Bengal
+		2336 2337 2338
+	}
+	path = {	#Bay of Bengal to Rameswaram Bay
+		2338 2339 2340 2341 2345 2344 1498
+	}
+
+}
