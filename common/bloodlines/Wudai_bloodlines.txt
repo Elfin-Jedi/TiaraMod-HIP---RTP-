@@ -1,0 +1,284 @@
+southern_liang_gaozu_bloodline = {
+	han_opinion = 2.5
+	taoist_opinion = 2.5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+southern_liang_mindi_bloodline = {
+	han_opinion = 2.5
+	taoist_opinion = 2.5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+tang_bloodline = {
+	han_opinion = 2.5
+	taoist_opinion = 2.5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+song_taizu_bloodline = {
+	han_opinion = 2.5
+	taoist_opinion = 2.5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+song_taizong_bloodline = {
+	han_opinion = 2.5
+	taoist_opinion = 2.5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+later_liang_bloodline = {
+	han_opinion = 2.5
+	taoist_opinion = 2.5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+later_tang_zhuangzong_bloodline = {
+	han_opinion = 2.5
+	taoist_opinion = 2.5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+later_tang_mingzong_bloodline = {
+	han_opinion = 2.5
+	taoist_opinion = 2.5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+later_jin_bloodline = {
+	han_opinion = 2.5
+	taoist_opinion = 2.5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+later_han_bloodline = {
+	han_opinion = 2.5
+	taoist_opinion = 2.5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+later_zhou_taizu_bloodline = {
+	han_opinion = 2.5
+	taoist_opinion = 2.5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+later_zhou_shizong_bloodline = {
+	han_opinion = 2.5
+	taoist_opinion = 2.5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+former_shu_bloodline = {
+	han_opinion = 2.5
+	taoist_opinion = 2.5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+later_shu_bloodline = {
+	han_opinion = 2.5
+	taoist_opinion = 2.5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+kongzi_bloodline = {
+	han_opinion = 10
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+yanzi_bloodline = {
+	han_opinion = 5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+southern_han_bloodline = {
+	han_opinion = 2.5
+	taoist_opinion = 2.5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+southern_tang_bloodline = {
+	han_opinion = 2.5
+	taoist_opinion = 2.5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+southern_chen_bloodline = {
+	han_opinion = 2.5
+	taoist_opinion = 2.5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+min_bloodline = {
+	han_opinion = 2.5
+	taoist_opinion = 2.5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+southern_wu_bloodline = {
+	han_opinion = 2.5
+	taoist_opinion = 2.5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
+shu_han_bloodline = {
+	han_opinion = 2.5
+	taoist_opinion = 2.5
+	tech_growth_modifier_culture = 0.01
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline }
+	active = {
+		emf_is_chinese_imperial_culture = yes
+	}
+}
