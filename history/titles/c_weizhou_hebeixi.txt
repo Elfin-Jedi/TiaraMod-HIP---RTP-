@@ -1,0 +1,105 @@
+#Northern Qi
+567.1.1 = { holder = 1408426 } #Cui Shuye - administrator at some point
+570.1.1 = { holder = 0 }
+#Tang
+731.1.1 = { holder = 1800512 } #Miao Yansi - prefect in 732.12.1
+734.1.1 = { holder = 1409287 } #Pei Ding - made prefect
+738.1.1 = { holder = 0 }
+813.1.1 = { holder = 1404969 } #Li Xian - made prefect
+815.1.1 = { holder = 0 }
+829.1.1 = { holder = 1412824 liege = d_tianxiong } #He Jintao
+840.1.1 = { holder = 1412825 } #He Hongjing
+866.4.2 = { holder = 1412826 } #He Quanhao
+870.9.1 = { holder = 1402027 } #Han Junxiong
+875.1.3 = { holder = 1402028 } #Han Jian
+883.4.3 = { holder = 1401161 } #Le Yanzhen
+888.3.17 = { holder = 1401166 } #Luo Hongxin
+898.10.11 = { holder = 1401167 } #Luo Shaowei
+#Later Liang
+910.7.4 = { holder = 1401169 } #Luo Zhouhan
+912.8.21 = { holder = 1404672 } #Mi Zhao - prefect until 916.4.12
+915.4.1 = { de_jure_liege = d_zhangde liege = d_zhangde }
+#Later Tang
+916.4.12 = { holder = 1404747 de_jure_liege = d_tianxiong liege = d_tianxiong } #Li Cunru - prefect until 922.8.25
+#Later Liang
+922.8.25 = { holder = 1404749 liege = e_later_liang } #Zhang Lang - prefect since 922.8.25
+#Later Tang
+923.5.13 = { holder = 1402030 liege = d_tianxiong } #Wang Zhengyan
+923.11.1 = { holder = 1412361 } #Li Congke - prefect in 925.3.13
+925.9.23 = { holder = 1402030 } #Wang Zhengyan
+927.1.23 = { holder = 1412347 } #Li Congrong
+927.12.29 = { holder = 1402031 } #Zhao Jingyi
+928.4.25 = { holder = 1412375 } #Shi Jingtang
+931.1.1 = { holder = 1404786 } #Wang Hongzhi - prefect in 934.5.16
+935.1.1 = { holder = 1412363 } #Li Chongmei
+935.8.2 = { holder = 1400823 } #Liu Yanhao
+936.6.17 = { holder = 1402032 } #Zhang Lingzhao
+#Later Jin
+936.8.10 = { holder = 1400824 } #Fan Yanguang
+938.12.2 = { holder = 1401917 de_jure_liege = d_zhangde liege = d_zhangde } #Wang Tingyin
+939.8.20 = { holder = 1401919 } #Sang Weihan
+940.1.1 = { holder = 1401922 } #Liu Churang
+942.1.1 = { holder = 1401923 } #Guo Jin
+944.1.1 = { holder = 1401660 } #Chen Sirang - prefect at some point 
+944.9.13 = { de_jure_liege = d_yicheng liege = d_yicheng } 
+945.1.1 = { holder = 1400285 } #Huangfu Yu
+#Liao
+947.1.6 = { holder = 1413044 } #Yelu Liugui (Louguo)
+#Later Han
+947.4.12 = { holder = 1412399 } #Liu Xin
+948.1.12 = { holder = 1401923 } #Guo Jin
+948.5.6 = { holder = 1412076 } #Bai Zairong
+949.10.24 = { holder = 1401098 } #Song Tingwo
+#Later Zhou
+951.3.10 = { holder = 1403237 } #Li Yun
+951.5.21 = { holder = 1412007 } #Zhe Congruan
+951.9.26 = { holder = 1400454 } #Hu Yanke
+953.4.16 = { holder = 1412472 } #Bai Chongzan
+954.5.1 = { holder = 1401054 } #Xiang Xun
+954.8.4 = { holder = 1401294 } #Zhang Yongde
+957.6.11 = { holder = 217721 } #Zhao Kuangyin
+958.5.31 = { holder = 1401283 } #No Jiedushi
+958.6.2 = { holder = 1401098 } #Song Tingwo
+959.1.30 = { holder = 1401660 } #Chen Sirang
+959.8.25 = { holder = 1401951 } #Shi Shouxin
+#Song
+960.2.20 = { holder = 1400260 } #Gao Huaide
+960.5.1 = { holder = 1401997 } #Wang Shenqi
+961.8.22 = { holder = 1402020 } #Zhang Jianfeng
+962.1.1 = { holder = 1401932 } #Han Chongbin
+967.1.1 = { holder = 1401303 } #Cao Bin
+976.3.16 = { holder = 1412436 } #Yang Xin
+977.1.1 = { holder = 217722 }
+997.5.8 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }
+1125.3.26 = { holder = 217731 }
+1135.2.9 = { holder = 217732 }
+1150.1.9 = { holder = 217734 }
+1161.10.27 = { holder = 217735 }
+1189.1.20 = { holder = 217736 }
+1208.12.29 = { holder = 217737 }
+1213.9.11 = { holder = 217738 }
+1224.1.14 = { holder = 217739 }
+
+1234.2.9 = { holder = 217740 }
+
+1234.2.10 = { holder = 172005 } # Ögedei Khan
+1241.12.11 = { holder = 172007 } # Güyük Khan  # Actual coronation 1246.8.24
+1248.4.20 = { holder = 217265 } # Möngke Khan  # Actual coronation 1251.7.1
+1259.8.11 = { holder = 125526 } #civil war between Ariq Boke and Kublai
+1264.8.21 = { holder = 217266 } # Kublai Khan
+1294.2.18 = { holder = 217269 } # Temür Khan
+1307.2.10 = { holder = 217271 } # Külüg Khan 
+1311.1.27 = { holder = 217272 } # Buyantu Khan
+1320.3.1 = { holder = 217274 } # Gegeen Khan 
+1323.9.4 = { holder = 217279 } # Yesün Temür Khan
+1328.8.15 = { holder = 217280 }  # Ragibagh Khan
+1328.11.14 = { holder = 217281 } # Jayaatu Khan
+1329.4.3 = { holder = 217282 } # Khutughtu Khan Kusala
+1329.9.8 = {  holder = 217281 } # Jayaatu Khan (again)
+1332.9.2 = { holder = 217283 } # Rinchinbal Khan
+1332.12.14 = { holder = 217284 } # Toghon Temür Khan

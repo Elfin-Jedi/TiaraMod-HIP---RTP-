@@ -1,0 +1,110 @@
+#Tanzhou, Changsha commandery, Xiangzhou (Southern dynasties)
+
+#Eastern Wu
+252.1.1 = { holder = 1407892 } #Sun He - made administrator
+253.1.1 = { holder = 0}
+#Eastern Jin
+323.1.1 = { holder = 1800613 } #Tao Kun - prefect around this time
+324.1.1 = { holder = 0 }
+#Southern Chen
+572.2.2 = { holder = 1406895 } #Chen Shuling - made inspector
+576.11.3 = { holder = 1406898 } #Chen Shuqing - made inspector
+584.7.10 = { holder = 1406902 } #Chen Shuwen - made inspector
+587.3.13 = { holder = 1406906 } #Chen Shushen - made inspector
+#Sui
+589.2.10 = { holder = 0 }
+#Tang
+769.1.1 = { holder = 0 liege = d_hunan } #Wei Jinzhi
+769.11.1 = { holder = 0 } #Cui Guan
+770.6.19 = { holder = 1408958 } #Xin Jingguo
+773.1.1 = { holder = 1415883 } #Dugu Wensu
+779.7.9 = { holder = 1402671 } #Xiao Fu
+780.1.1 = { holder = 0 } #Li Gao
+782.1.1 = { holder = 0 } #Li Cheng
+783.1.1 = { holder = 0 } #Zhao Jing
+786.1.1 = { holder = 0 } #Yuan Quanrou
+787.1.1 = { holder = 0 } #Chang Yue
+787.6.1 = { holder = 0 } #Pei Zhou
+791.1.1 = { holder = 0 } #Li Heng
+792.2.27 = { holder = 1404219 } #Qi Kang
+793.1.13 = { holder = 0 } #Li Qian
+797.1.1 = { holder = 0 } #Lü Wei
+800.1.1 = { holder = 0 } #No Jiedushi
+802.10.1 = { holder = 1405180 } #Yang Ping
+805.12.13 = { holder = 0 } #Xue Ping
+808.1.1 = { holder = 0 } #Li Zhong
+811.7.15 = { holder = 1402353 } #Liu Gongduo
+813.11.7 = { holder = 0 } #Zhang Zhengpu
+816.1.1 = { holder = 0 } #Wei Guanzhi
+817.1.1 = { holder = 0 } #Yuan Zi
+818.1.1 = { holder = 0 } #Cui Jun
+819.12.31 = { holder = 1403266 } #Cui Qun
+820.8.16 = { holder = 1404528 } #Kong Ji
+823.7.12 = { holder = 0 } #Shen Chuanshi
+826.1.1 = { holder = 0 } #Liu Zungu
+827.1.1 = { holder = 0 } #Wang Gongliang
+828.1.1 = { holder = 0 } #Wei Si
+830.1.1 = { holder = 0 } #Gao Chong
+833.1.1 = { holder = 0 } #Li Gao
+834.1.1 = { holder = 0 } #Li Rengshu
+835.1.1 = { holder = 0 } #Lu Zhaoren
+837.1.1 = { holder = 0 } #Li Yi
+840.9.16 = { holder = 1400791 } #Yang Sifu
+841.3.27 = { holder = 1409979 } #Lu Jianci
+842.1.1 = { holder = 1403449 } #Cui Yuanshi
+843.1.1 = { holder = 0 } #Pei Xiu
+848.3.3 = { holder = 1401540 } #Li Hui
+848.10.8 = { holder = 0 } #Pei Shi
+851.1.1 = { holder = 1400717 } #Cui An
+852.1.1 = { holder = 1403125 } #Cui Shenyou
+854.1.1 = { holder = 1402269 } #Li Dang
+856.1.1 = { holder = 1407617 } #Cui Han
+857.1.1 = { holder = 0 } #Du Yun
+858.1.1 = { holder = 0 } #Han Cong
+858.5.1 = { holder = 0 } #Cai Xi
+862.1.1 = { holder = 1402899 } #Liu Tong
+863.1.1 = { holder = 0 } #Ding Chen
+865.1.1 = { holder = 1407494 } #Li Zhang
+868.1.1 = { holder = 1408228 } #Li Cong
+869.1.1 = { holder = 1416262 } #Yu Gui
+872.1.1 = { holder = 1407612 } #Wang Ning
+873.1.1 = { holder = 1408244 } #Li Yu
+874.8.16 = { holder = 1407293 } #Pei Zan
+876.1.1 = { holder = 1408387 } #Cui Jin
+878.4.7 = { holder = 1402894 } #Gao Jie
+879.5.26 = { holder = 1406094 } #Li Xi
+879.11.15 = { holder = 1408450 } #Li Chao
+880.1.1 = { holder = 1408451 } #Li Yu
+881.12.25 = { holder = 1408452 } #Min Xu
+886.7.6 = { holder = 1417202 } #Zhou Yue
+894.1.11 = { holder = 1417203 } #Deng Chune
+894.6.13 = { holder = 1408090 } #Liu Jianfeng
+896.5.17 = { holder = 1406560 } #Ma Yin
+#Southern Chu
+930.12.2 = { holder = 1406565 } #Ma Xisheng
+932.8.15 = { holder = 1406566 } #Ma Xifan
+947.5.30 = { holder = 1406572 } #Ma Xiguang
+951.1.21 = { holder = 1406687 } #Ma Xi'e
+951.10.16 = { holder = 1406682 } #Ma Xichong
+#Southern Tang
+951.11.26 = { holder = 1408454 } #Bian Hao
+#Later Zhou
+952.11.13 = { holder = 1408457 } #Wang Kui
+954.6.4 = { holder = 1408462 } #Zhou Xingfeng - made prefect, later jiedushi
+956.4.13 = { holder = 1408465 } #Liao Jian - prefect until 962.11.16
+#Rebellion
+962.11.16 = { holder = 1408466 liege = 0 } #Zhang Wenbiao
+#Song
+963.2.23 = { holder = 1408463 liege = d_hunan } 
+963.4.4 = { holder = 217721 liege = e_song }
+963.4.14 = { holder = 1403165 } #Lu Yuqing - made prefect
+963.8.25 = { holder = 1403828 } #Pan Mei - made Tuanlianshi
+973.4.23 = { holder = 217721 }
+976.11.14 = { holder = 217722 }
+997.1.1 = { holder = 1401664 } #Chen Ruozhuo - prefect around this time
+999.1.1 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }

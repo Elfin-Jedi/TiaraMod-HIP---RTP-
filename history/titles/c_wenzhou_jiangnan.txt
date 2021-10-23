@@ -1,0 +1,50 @@
+#Northern Zhou
+568.1.1 = { holder = 1409246 } #Pei Kuan - made prefect
+569.1.1 = { holder = 0 }
+
+#Tang
+686.1.1 = { holder = 1800294 } #Feng Yandao - prefect around this time
+688.1.1 = { holder = 0 }
+776.1.1 = { holder = 1800453 } #Sun Hui - prefect  around this time
+780.1.1 = { holder = 0 }
+783.1.1 = { holder = 1409658 liege = d_zhedong } #Cui Xiu - prefect at some point
+787.1.1 = { holder = 0 }
+864.10.5 = { holder = 1405062 } #Yang Yan
+867.4.2 = { holder = 1403277 } #Wang Feng
+870.6.3 = { holder = 1402288 } #Li Wan
+871.12.1 = { holder = 1409946 } #Duan Qing - recently appointed prefect in 871.12.9
+874.1.1 = { holder = 1409949 } #Lu Shi - prefect until 877.1.18
+877.1.18 = { holder = 1407618 } #Cui Shao - prefect until 877.9.26
+877.9.26 = { holder = 1409951 } #Hu Fan - prefect around this time
+879.1.1 = { holder = 1409953 } #Zhu Dan - prefect around this time
+881.1.1 = { holder = 1409954 } #Zhu Bao - prefect until 902.6.13
+902.6.13 = { holder = 1409955 } #Zhu Ao - prefect until 903.1.9
+903.1.9 = { holder = 1409956 liege = d_xuanshe } #Ding Zhang - took over the prefecture
+903.5.8 = { holder = 1409957 liege = e_tang } #Zhang Hui - took over the prefecture
+905.9.14 = { holder = 1409960 } #Lu Ji - took over the prefecture
+#Wuyue
+907.5.26 = { holder = 1800030 liege = d_zhedong } #Wu Zhang - made prefect
+914.1.1 = { holder = 1406588 } #Qian Chuansui - prefect in 917.4.23
+920.1.1 = { holder = 1406583 } #Qian Hua - prefect during Qian Liu's reign
+924.4.11 = { holder = 1406611 } #Qian Chuanyuan - prefect at some point
+933.1.1 = { holder = 1406626 } #Qin Hongzun - prefect until 940.3.19
+#939.5.31 Jinghai Jiedushi
+940.3.19 = { holder = 1406623 } #Qian Yuangui - prefect at some point
+947.1.1 = { holder = 1406609 } #Qian Yuanyou - jiedushi around this time
+951.1.1 = { holder = 1407117 } #Sun Chengyou - jiedushi at some point
+953.4.16 = { holder = 1406627 } #Qian Hongxuan - made prefect
+965.1.1 = { holder = 1406600 } #Qian Renjun - prefect until 967.4.2
+967.4.2 = { holder = 1406631 } #Qian Yu - prefect around this time
+974.1.1 = { holder = 1409482 } #Du Shuzhang - jiedushi at some point
+977.1.1 = { holder = 1406661 } #Qian Weiyan - prefect in 977.1.30
+978.2.10 = { holder = 1409641 } #Pi Guangling - made prefect
+#Song
+978.6.9 = { holder = 217722 liege = e_song }
+997.5.8 = { holder = 217723 }
+1006.1.1 = { holder = 1401664 } #Chen Ruozhuo - prefect around this time
+1009.1.1 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }

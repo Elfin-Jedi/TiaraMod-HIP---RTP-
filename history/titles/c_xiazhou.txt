@@ -1,0 +1,58 @@
+#Northern Wei
+495.1.1 = { holder = 1416281 } #Yuan Huai - prefect
+498.1.1 = { holder = 0 }
+508.1.1 = { holder = 1800252 } #Feng Gui - administrator at some point
+514.1.1 = { holder = 1800239 } #Feng Chen - made prefect around this time
+517.1.1 = { holder = 0 }
+523.1.1 = { holder = 1416289 } #Yuan Ziyong - prefect
+525.1.1 = { holder = 0 }
+#Later Zhou
+574.1.1 = { holder = 1408748 } #Wei Shikang - prefect around this time
+577.2.28 = { holder = 0 }
+#Tang
+735.1.1 = { holder = 1406942 } #Chen Fuhua - prefect at some point
+740.1.1 = { holder = 0 }
+785.1.1 = { holder = 1415026 } #Tuoba Qianhui
+806.1.1 = { holder = 0 }
+865.1.1 = { holder = 1401450 liege = d_henan } #Li Yanyuan
+869.1.1 = { holder = 1401451 } #Hu Mou
+874.1.1 = { holder = 1401593 } #Li Xuanli
+880.11.6 = { holder = 1400617 } #Zhuge Shuang
+881.1.1 = { holder = 1415030 } #Li Sigong
+886.1.1 = { holder = 1415033 } #Li Sijian
+896.1.1 = { holder = 1415036 } #Li Chengqing
+900.1.1 = { holder = 1415033 } #Li Sijian
+#Later Liang
+908.12.2 = { holder = 1415039 } #Li Yichang
+909.5.5 = { holder = 1415037 } #Li Renfu
+#Later Tang
+933.3.10 = { holder = 1415046 } #Li Yichao
+935.3.19 = { holder = 1415045 } #Li Yiyin
+#Later Jin, Later Han, Later Zhou, Song
+967.1.1 = { holder = 1415047 } #Li Guangrui
+978.1.1 = { holder = 1415048 } #Li Jiyun
+980.1.1 = { holder = 1415049 } #Li Jipeng
+#Xi Xia
+982.1.1 = { holder = 206643 } #Wuzong, Li Jiqian
+1004.1.1 = { holder = 206674 } #Li Jiyuan - prefect
+1032.12.26 = { holder = 206650 } #Jingzong, Li Yuanhao
+1048.1.19 = { holder = 206651 } #Yizong, Li Liangzuo
+1067.1.27 = { holder = 206653 } #Huizong, Li Bingchang
+1086.8.21 = { holder = 206654 } #Chongzong, Li Qianshun
+1139.7.8 = { holder = 206657 } #Renzong, Li Renxiao
+1193.10.16 = { holder = 206659 } #Huanzong, Li Chunyou
+1206.3.1 = { holder = 206660 } #Xiangzong, Li Anquan
+1211.9.13 = { holder = 206666 } #Shenzong, Li Zunxu
+1223.1.1 = { holder = 206668 } #Xianzong, Li Dewang
+1226.1.1 = { holder = 206670 } #Li Xian
+#Yuan
+1227.2.1 = {
+	holder = 244013
+	
+}
+1264.12.10 = {
+	holder = 244014
+}
+1334.1.1 = {
+	holder = 244015
+}

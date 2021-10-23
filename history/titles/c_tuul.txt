@@ -1,0 +1,86 @@
+867.1.1 = { holder = 1417460 }
+890.1.1 = { holder = 1417461 }
+921.1.1 = { holder = 1417462 }
+941.1.1 = { holder = 1417463 }
+961.1.1 = { holder = 1417464 }
+987.1.1 = { holder = 1417465 }
+#Liao
+1000.1.1 = { liege = e_khitan }
+1011.1.1 = { holder = 1417466 }
+1050.1.1 = { holder = 1417467 }
+1085.1.1 = { holder = 1417468 }
+1101.1.1 = { holder = 1417469 }
+1105.1.1 = { holder = 1417470 }
+#Jin
+1125.3.26 = { liege = 0 }
+1135.1.1 = { holder = 1417471 }
+1189.1.1 = { holder = 1417472 }
+1190.1.1 = { holder = 1417473 } #Jamuqa
+#Mongols
+1205.1.1 = { holder = 125501 } #Temujin
+1227.12.2 = {
+	holder = 172005 # Ögedei Khan
+}
+1234.2.10 = {
+	holder = 172005 # Ögedei Khan ascends the throne of China
+}
+1241.12.11 = {
+	holder = 172007 # Güyük Khan ascends the throne of China
+}
+1248.1.1 = {
+	holder = 217265 # Möngke Khan
+}
+1248.4.20 = {
+	holder = 217265 # Möngke Khan ascends the throne of China (actual coronation 1251.7.1)
+}
+1259.8.11 = {
+	holder = 217266 # Kublai Khan
+}
+1260.5.5 = {
+	holder = 125526 # The Toluid civil war Arig-Boge controls this area.
+}
+1264.8.21 = {
+	holder = 217305 # civil war ends Kaidu takes over
+}
+1294.2.18 = {
+	holder = 217269 # Temür Khan ascends the throne of China
+}
+1307.2.10 = {
+	holder = 217271 # Külüg Khan ascends the throne of China
+}
+1311.1.27 = {
+	holder = 217272 # Buyantu Khan ascends the throne of China
+}
+1320.3.1 = {
+	holder = 217274 # Gegeen Khan ascends the throne of China
+}
+1323.9.4 = {
+	holder = 217279 # Yesün Temür Khan ascends the throne of China
+}
+1328.8.15 = {
+	holder = 217280 # Ragibagh Khan
+}
+1328.11.14 = {
+	holder = 217281 # Jayaatu Khan ascends the throne of China
+}
+1329.2.27 = {
+	holder = 217282 # Khutughtu Khan Kusala
+}
+1329.4.3 = {
+	holder = 217282 # Khutughtu Khan Kusala ascends the throne of China
+}
+1329.8.30 = { # Enthroned 1329.9.8
+	holder = 217281 # Jayaatu Khan
+}
+1329.9.8 = {
+	holder = 217281 # Jayaatu Khan ascends the throne of China (again)
+}
+1332.9.2 = { # Coronation 1332.10.23
+	holder = 217283 # Rinchinbal Khan ascends the throne of China
+}
+1332.12.14 = {
+	holder = 217284 # Toghon Temür Khan ascends the throne of China
+}
+1334.1.1 = {
+	holder = 244012 # The Western Governor is now holder (new character, the old one dies)
+}

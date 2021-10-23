@@ -1,0 +1,40 @@
+#Xiuzhou, carved out from Suzhou in 940.4.11 吳越備史/卷3
+
+#Tang - Suzhou
+863.2.22 = { holder = 1400415 liege = d_zhexi } #Du Shenquan
+870.4.5 = { holder = 1400424 } #Cao Que
+874.3.22 = { holder = 1407387 } #Zhao Yin
+875.5.9 = { holder = 1407292 } #Pei Xuan
+878.7.4 = { holder = 1402848 } #Gao Pian
+879.10.19 = { holder = 1404250 } #Zhou Bao
+886.10.31 = { holder = 1406398 liege = e_tang } #Zhang Xiong - self-declared prefect
+887.4.27 = { holder = 1409469 } #Xu Yue conquers
+889.4.8 = { holder = 1409470 liege = d_zhedong } #Shen Can - garrisoned
+889.10.28 = { holder = 1403749 } #Du Ruxiu - made prefect
+890.8.19 = { holder = 1409470 } #Shen Can
+890.8.31 = { holder = 1409471 liege = d_xuanshe } #Li You
+891.1.21 = { holder = 1409470 liege = d_huainan } #Shen Can - made prefect by Sun Ru
+892.3.3 = { holder = 1409473 liege = d_zhedong } #Qian Qiu - conquered
+893.6.18 = { liege = d_zhenhai }
+894.3.11 = { holder = 1408088 } #Cheng Ji - made prefect
+896.6.17 = { holder = 1407629 liege = d_huainan } #Tai Meng conquers
+898.10.6 = { holder = 1409480 liege = d_zhenhai } #Cao Gui - made prefect
+#Wuyue - Suzhou
+906.6.10 = { de_jure_liege = d_zhenhai }
+907.1.1 = { holder = 1409483 } #Sun Yan - prefect in 908
+913.12.30 = { holder = 1406590 } #Qian Chuanliao - made prefect, later jiedushi
+924.11.29 = { de_jure_liege = d_zhongwu_wuyue liege = d_zhongwu_wuyue }
+#Wuyue - Xiuzhou
+940.4.11 = { holder = 1406610 de_jure_liege = d_zhexi liege = d_zhenhai } #Qian Yuanbi - made prefect
+947.7.3 = { holder = 1406631 } #Qian Yu - made prefect
+955.1.1 = { holder = 1409634 } #Qian Hong'an - prefect at some point
+958.1.1 = { holder = 1409635 } #Lu Yanzhu - prefect in 958.4.8
+963.12.19 = { holder = 1406634 } #Qian Yu - made prefect
+#Song
+978.6.9 = { holder = 217722 liege = e_song }
+997.5.8 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }
