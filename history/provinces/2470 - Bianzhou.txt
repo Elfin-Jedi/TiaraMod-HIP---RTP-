@@ -1,0 +1,23 @@
+# County Title
+title = c_bianzhou
+
+# Settlements
+max_settlements = 7
+
+b_kaifeng = city
+b_junyi = city
+b_weishi = city
+b_fengqiu = city
+#b_yongqiu = city
+#b_chenliu = city
+#b_changyuan_bianzhou = city
+
+# Misc
+culture = han
+religion = taoist
+
+907.6.1 = { 
+	b_yongqiu = city
+	b_chenliu = city
+	b_changyuan_bianzhou = city
+}
