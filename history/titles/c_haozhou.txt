@@ -1,0 +1,53 @@
+#Tang
+710.1.1 = { holder = 1406184 } #Yan Yuansun - prefect at some point in time
+723.1.1 = { holder = 0 }
+749.1.1 = { holder = 1406445 } #Wei Zhi - administrator around this time
+751.1.1 = { holder = 0 }
+866.1.1 = { holder = 1406383 liege = d_ganhua } #Lu Wanghui - prefect until 868.11.8
+868.11.5 = { liege = e_tang }
+#Rebellion
+868.11.8 = { holder = 1406384 liege = d_ganhua } #Liu Xingji - took over prefecture
+869.10.14 = { holder = 1406386 liege = 0 } #Wu Jiong - holdouts
+#Tang
+869.11.24 = { holder = 1401460 liege = d_ganhua } #Cao Xiang
+870.12.26 = { holder = 1402287 de_jure_liege = d_huainan liege = d_huainan } #Li Yu
+877.11.13 = { holder = 1407181 } #Liu Ye
+879.10.19 = { holder = 1402848 } #Gao Pian
+887.5.1 = { holder = 1407184 } #Bi Shiduo
+887.11.18 = { holder = 1407163 } #Yang Xingmi
+888.5.19 = { holder = 1400619 } #Sun Ru
+890.1.1 = { holder = 1400882 } #Zhao Xu - prefect until 898.6.23
+898.6.23 = { holder = 1406070 } #Liu Jin - prefect until 905.10.30
+905.10.30 = { holder = 1406071 } #Liu Rengui - prefect after his father, unknown time of death
+#Wu
+917.1.1 = { de_jure_liege = d_qinghuai liege = d_qinghuai }
+927.11.29 = { de_jure_liege = d_huainan liege = d_huainan }
+933.1.1 = { holder = 1406072 } #Liu Chongjun - prefect since unknown date, in 943.4.8 as Jiedushi
+#Southern Tang
+937.10.11 = { liege = e_southern_tang }
+937.12.14 = { liege = d_huainan }
+943.4.8 = { de_jure_liege = d_dingyuan liege = d_dingyuan }
+944.9.13 = { holder = 1408041 } #Liu Yanzhen
+946.1.1 = { holder = 1408044 } #Guo Quanyi
+951.1.1 = { holder = 1408051 } #He Jingzhu
+953.8.12 = { holder = 1406216 } #No Jiedushi
+957.7.1 = { holder = 1408046 } #Guo Tingwei
+#Later Zhou
+957.12.7 = { holder = 1416271 de_jure_liege = d_huainan liege = d_huainan } #Murong Yanjian
+959.8.25 = { holder = 1401292 } #Li Chongjin
+#Song
+960.11.1 = { holder = 217721 } #No Jiedushi
+960.12.10 = { holder = 1401838 } #Li Chuyun
+963.1.1 = { holder = 1407193 } #Chu Zhaopu
+972.3.11 = { holder = 1407198 } #Bian Xu
+974.1.1 = { holder = 1404409 } #Duan Sigong
+975.3.29 = { holder = 1407203 } #Hou Zhi
+975.9.12 = { holder = 1407205 } #Huo Yun
+976.7.7 = { holder = 217722 liege = e_song }
+997.5.8 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }
+1125.3.26 = { holder = 217731 }

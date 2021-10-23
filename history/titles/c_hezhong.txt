@@ -1,0 +1,132 @@
+#Hezhong, Hedong commandery (Nanbeichao)
+
+#Western Wei
+540.1.1 = { holder = 1409005 } #Xin Qingzhi - made deputy administrator
+543.1.1 = { holder = 1408668 } #Wei Zhen - Congguan around this time
+546.1.1 = { holder = 0 }
+#Northern Zhou
+561.1.1 = { holder = 1405466 } #Wei Xiaokuan - prefect
+577.1.1 = { holder = 0 }
+578.1.1 = { holder = 1408670 } #Wei Shi - acting prefect around this time
+580.1.1 = { holder = 0 }
+#Tang
+661.1.1 = { holder = 1404991 liege = d_hezhong } #Liu Xiangdao - prefect 661-663
+663.1.1 = { holder = 0 }
+722.1.1 = { holder = 1406472 } #Wei Kang - prefect around this time
+723.1.1 = { holder = 0 }
+736.1.1 = { holder = 1407281 } #Pei Kuan - made prefect
+739.1.1 = { holder = 0 }
+747.1.1 = { holder = 1800476 } #Miao Junqing - made administrator
+750.1.1 = { holder = 0 }
+752.1.1 = { holder = 1406445 } #Wei Zhi - administrator until 754.12.19
+754.12.19 = { holder = 0 }
+758.7.4 = { holder = 1406198 } #Yan Zhenqing
+758.11.14 = { holder = 0 } #Zhao Pin
+759.1.1 = { holder = 0 } #Wang Yu
+760.1.1 = { holder = 0 } #Cui Yu
+760.5.17 = { holder = 1402645 } #Xiao Hua
+760.10.5 = { holder = 0 } #Wang Ang
+761.1.1 = { holder = 0 } #Li Guangbi
+762.1.1 = { holder = 0 } #Wang Ang
+764.1.1 = { holder = 0 } #Cui Yu
+764.2.26 = { holder = 1405776 } #Guo Ziyi
+769.9.30 = { holder = 0 } #Zhao Libai
+779.4.11 = { holder = 1407597 } #Wang Hong
+779.5.1 = { holder = 0 } #Li Huaiguang
+779.10.1 = { holder = 0 } #Zhang Yi
+779.12.1 = { holder = 0 } #Du Ya
+781.1.1 = { holder = 0 } #Zhao Libai
+781.5.1 = { holder = 0 } #Li Cheng
+781.10.1 = { holder = 0 } #Li Qiyun
+783.1.1 = { holder = 0 } #Lu Mingyue
+784.1.1 = { holder = 0 } #Li Huaiguang
+784.7.1 = { holder = 1404962 } #Li Sheng
+784.9.1 = { holder = 0 } #Hun Jian
+799.1.1 = { holder = 0 } #Du Que
+802.1.1 = { holder = 0 } #Zheng Yuan
+806.4.27 = { holder = 1406493 } #Wei Dan
+807.3.13 = { holder = 0 } #Du Huangdang
+808.1.1 = { holder = 0 } #Wang E
+810.1.1 = { holder = 0 } #Zhang Maozhao
+811.1.1 = { holder = 0 } #Zhang Hongjing
+814.1.1 = { holder = 0 } #Zhao Zongru
+817.1.1 = { holder = 0 } #Li Yuanying
+819.7.13 = { holder = 1407486 } #Li Jiang
+820.8.14 = { holder = 0 } #Han Hong
+822.1.1 = { holder = 1405852 } #Guo Qian
+824.1.1 = { holder = 1404963 } #Li Yuan
+825.1.1 = { holder = 0 } #Xue Ping
+830.3.28 = { holder = 1408268 } #Li Cheng
+832.8.4 = { holder = 0 } #Wang Qi
+833.12.16 = { holder = 1403354 } #Wang Zhixing
+835.6.30 = { holder = 1408268 } #Li Cheng
+836.7.3 = { holder = 1404974 } # Li Ting
+839.6.6 = { holder = 1409605 } #Zheng Su
+841.1.1 = { holder = 1407974 } #Sun Jian
+842.1.1 = { holder = 0 } #Li Guyan
+843.1.1 = { holder = 0 } #Chen Yixing
+843.5.1 = { holder = 1403449 } #Cui Yuanshi
+844.2.25 = { holder = 0 } #Shi Xiong
+845.1.12 = { holder = 0 } #Wei Gongfu
+846.1.1 = { holder = 1403451 } #Cui Xuan
+849.1.1 = { holder = 1407779 } #Cui Zao
+851.1.1 = { holder = 1406081 } #Zheng Guang
+853.1.1 = { holder = 1403553 } #Xu Shang
+856.1.1 = { holder = 0 } #Cui Yu
+859.1.1 = { holder = 1404168 } #Linghu Tao
+861.1.1 = { holder = 0 } #Jiang Shen
+863.1.1 = { holder = 0 } #Bi Xian
+864.1.1 = { holder = 1400372 } #Xiahou Zi
+870.1.1 = { holder = 1400415 } #Du Shenquan
+874.1.1 = { holder = 1400424 } #Cao Que
+876.1.1 = { holder = 1400428 } #Liu Mou
+877.11.9 = { holder = 1402300 } #Dou Jing
+878.10.13 = { holder = 1400430 } #Li Du
+#880.1.1 = { holder = 1400431 } #Dou Jue
+880.12.6 = { holder = 1400436 } #Wang Chongrong
+887.7.6 = { holder = 1400435 } #Wang Chongying
+895.2.12 = { holder = 1400438 } #Wang Ke
+#Later Liang
+901.3.8 = { holder = 1400445 } #Zhang Cunjing
+901.7.1 = { holder = 1400469 } #Zhu Quanzhong
+907.1.1 = { holder = 1400494 } #Zhu Youqian
+#Later Tang
+926.1.1 = { holder = 1412321  } #Li Cunba
+926.5.15 = { holder = 1412322 } #Li Cunwo
+926.5.27 = { holder = 1412361 } #Li Congke
+930.1.1 = { holder = 1400449 } #Suo Zitong
+931.1.1 = { holder = 1412447 } #An Chonghui
+931.6.25 = { holder = 1412454 } #Li Congzhang
+934.1.1 = { holder = 1400190 } #An Yanwei
+936.1.8 = { holder = 1400451 } #Han Zhaoyin
+#Later Jin
+936.1.1 = { holder = 1412429 } #An Shenxin
+940.4.17 = { holder = 1412460 } #Kang Fu
+942.1.1 = { holder = 1412427 } #An Shenqi
+945.1.1 = { holder = 1400271 } #Hou Yi
+#Liao
+947.2.20 = { holder = 1400363 } #Zhao Zan
+#Later Han
+947.8.2 = { holder = 1400452 } #Li Shouzhen
+949.8.17 = { holder = 1400454 } #Hu Yanke
+#Later Zhou
+951.9.26 = { holder = 1400455 } #Wang Jing
+953.6.3 = { holder = 1400343 } #Wang Yanchao
+954.8.4 = { holder = 1400459 } #Wang Renqiao
+956.1.1 = { holder = 1400460 } #Zhang Duo
+#Song
+960.1.1 = { holder = 1412436 } #Yang Chengxin
+964.7.18 = { holder = 1412465 } #Guo Congyi
+968.1.1 = { holder = 1401660 } #Chen Sirang
+975.1.30 = { holder = 217721 liege = e_song }
+976.11.14 = { holder = 217722 }
+997.5.8 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1024.1.1 = { holder = 1408411 } #Cui Lu - prefect at some point
+1028.1.1 = { holder = 1416378 } #Liu Ye - prefect at some point
+1030.1.1 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }
+

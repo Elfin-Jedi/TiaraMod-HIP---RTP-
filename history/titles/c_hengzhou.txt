@@ -1,0 +1,40 @@
+#Tang
+720.1.1 =  { holder = 1407008 liege = d_hunan } #Chen Xigu - prefect at some point
+725.1.1 = { holder = 0 }
+789.1.1 = { holder = 1404238 } #Qi Ying - prefect until 791.6.30
+791.6.30 = { holder = 0 }
+822.7.22 = { holder = 1407610 } #Wang Zhongzhong - made prefect
+825.1.1 = { holder = 0 }
+865.1.1 = { holder = 1407494 } #Li Zhang
+868.1.1 = { holder = 1408228 } #Li Cong
+869.1.1 = { holder = 1416262 } #Yu Gui
+872.1.1 = { holder = 1407612 } #Wang Ning
+873.1.1 = { holder = 1408245 } #Li Yanze - prefect at some point
+876.1.1 = { holder = 1408476 } #Wei Zhu - prefect until 880.9.29
+880.9.29 = { holder = 1408477 } #Xu Hao - prefect until 881.12.25
+881.12.25 = { holder = 1417202 } #Zhou Yue - made prefect, later jiedushi
+894.1.11 = { holder = 1408478 liege = e_tang } #Yang Shiyuan - prefect until 898.5.26
+898.5.26 = { holder = 1406560 liege = d_hunan } #Ma Yin
+#Southern Chu
+903.6.10 = { holder  = 1408461 } #Deng Jinzhong - made prefect
+925.1.1 = { holder = 1406560 } #Ma Yin
+930.12.2 = { holder = 1406565 } #Ma Xisheng
+931.1.1 = { holder = 1408068 } #Yang Zhaohui - prefect around this time
+951.1.21 = { holder = 1406687 } #Ma Xi'e
+951.10.16 = { holder = 1406682 } #Ma Xichong
+951.11.26 = { holder = 1408454 } #Bian Hao
+#Later Zhou
+952.11.13 = { holder = 1408466 } #Zhang Wenbiao - made prefect
+#Rebellion
+962.11.16 = { liege = 0 }
+#Song
+963.2.23 = { holder = 1408463 liege = d_hunan } 
+963.4.4 = { holder = 217721 liege = e_song }
+973.4.23 = { holder = 217721 }
+976.11.14 = { holder = 217722 }
+997.5.8 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }

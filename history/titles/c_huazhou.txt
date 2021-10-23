@@ -1,0 +1,153 @@
+#Northern Wei
+499.5.7 = { holder = 1800259 } #Feng Hui - made prefect
+502.1.1 = { holder = 0 }
+515.1.1 = { holder = 1400845 } #Yang Jin - prefect
+517.1.1 = { holder = 0 }
+534.1.1 = { holder = 1408835 } #Wang Pi - made prefect
+541.1.1 = { holder = 0 }
+#Northern Zhou
+568.1.1 = { holder = 1408669 } #Wei Jun - prefect at some point
+571.1.1 = { holder = 1405567 } #Zheng Wei - prefect
+571.5.26 = { holder = 0 }
+#Tang
+631.1.1 = { holder = 1405285 de_jure_liege = d_zhenguo } #Li Yuanchang - prefect
+634.1.1 = { holder = 0 }
+770.1.1 = { holder = 1405384 } #Li Chengzhao - prefect
+775.1.1 = { holder = 0 }
+778.1.1 = { holder = 1407953 } #Sun Su - prefect around this time
+780.1.1 = { holder = 0 }
+805.1.1 = { holder = 1400787 } #Yang Yuling - prefect until 805.11.5
+805.11.5 = { holder = 0 }
+814.7.11 = { holder = 1404526 } #Kong Kui - made prefect
+815.3.25 = { holder = 1407486 } #Li Jiang - made prefect
+816.3.20 = { holder = 0 }
+822.7.10 = { holder = 1407486 } #Li Jiang
+823.1.1 = { holder = 0 }
+827.1.1 = { holder = 1400599 } #Zheng Quan
+833.8.2 = { holder = 1800202 } #Cui Rong - made prefect
+834.5.7 = { holder = 0 } #Li Yangu - made prefect
+837.1.25 = { holder = 1408593 } #Cui Guicong - made prefect
+837.11.2 = { holder = 1407070 } #Li Jingrang - made prefect
+839.1.1 = { holder = 0 }
+840.1.1 = { holder = 1400716 } #Cui Li
+840.10.29 = { holder = 0 }
+841.1.1 = { holder = 1400592 } #Zheng Lang
+847.1.1 = { holder = 0 }
+852.9.17 = { holder = 1402661 } #Xiao Chu - prefect around this time
+854.1.1 = { holder = 0 }
+863.1.1 = { holder = 1403125 liege = e_tang } #Cui Shenyou
+864.1.1 = { holder = 217717 }
+869.1.1 = { holder = 1407395 } #Zhao Zhi - made prefect
+870.1.1 = { holder = 217717 } #Li Na - made prefect
+872.1.1 =  { holder = 1407071 } #Li Jingwen - prefect around this time
+873.1.1 = { holder = 1403808 } #Pei Tan - prefect until 874.3.15
+874.3.15 = { holder = 217718 }
+878.1.1 = { holder = 1403809 } #Pei Qianyu - prefect until 881.1.1
+881.1.1 = { holder = 0 liege = e_tang } #Prefect runs away
+#Qi
+881.1.6 = { holder = 1403801 liege = d_dongdu } #Huang Chao enters the prefecture
+881.1.16 = { liege = e_huang_qi }
+881.3.1 = { holder = 1403810 } #Qiao Qian - prefect
+#Tang
+881.6.17 = { holder = 1403809 liege = e_tang } #Wang Chongrong reconquers the prefecture
+#Qi
+881.9.10 = { holder = 1403811 liege = e_huang_qi } #Li Xiang - prefect
+#Tang
+882.11.1 = { holder = 1403801 } #Huang Siye - prefect
+#Tang
+882.12.14 = { holder = 1403807 liege = e_tang } #Wang Yu - prefect
+#Qi
+883.3.28 = { holder = 1403801 liege = e_huang_qi } #Huang Kui conquers
+#Tang
+883.5.7 = { holder = 1400434 de_jure_liege = d_zhenguo liege = d_zhenguo } #Wang Chongjian
+885.1.1 = { holder = 217718 }
+887.1.1 = { holder = 1401060 } #Han Jian
+901.12.22 = { holder = 1400469 de_jure_liege = d_kuangguo liege = d_kuangguo } #Li Cunquan - made prefect in 901.12.22
+903.1.1 = { holder = 1400164 de_jure_liege = d_zhenguo liege = d_zhenguo } #Li Cunshen
+903.3.22 = { holder = 1400475 } #Zhu Youyu
+904.11.24 = { holder = 1404364 } #Xu Huaiyu
+906.1.1 = { holder = 1404641 liege = k_jingxi } #Cai Jingsi - prefect until 909.6.21
+#Later Liang
+907.6.1 = { liege = e_later_liang }
+#Qi
+909.6.21 = { holder = 1401175 liege = d_zhenguo } #Liu Zhijun
+#Later Liang
+909.7.11 = { holder = 1400630 } #Kou Yanqing
+910.1.1 = { holder = 1401441 } #Kang Huaizhen
+914.3.6 = { holder = 1400442 } #Wang Zan
+915.1.1 = { holder = 1400665 } #Li Baoheng
+918.1.1 = { holder = 1401062 } #Tao Qing
+919.1.1 = { holder = 1401063 } #Yi Hao
+#Later Tang
+923.6.1 = { holder = 1401064 } #Gao Yunzhen
+924.1.1 = { holder = 1400223 } #Mao Zhang
+925.1.1 = { holder = 1412811 } #Shi Jingrong
+927.1.1 = { holder = 1400931 } #Liu Yancong
+928.1.1 = { holder = 1401066 } #Wang Jingkan
+929.1.1 = { holder = 1400637 } #Li Congchang
+931.1.1 = { holder = 1400314 } #Hua Wenqi
+933.1.1 = { holder = 1401067 } #Wang Wanrong
+934.1.1 = { holder = 1401068 } #Zhang Chengyou
+936.1.1 = { holder = 1400254 } #Huangfu Li
+#Later Jin
+937.1.1 = { holder = 1401071 } #Liu Suining
+938.1.1 = { holder = 1401805 } #Zhang Yanze
+939.7.1 = { holder = 1400254 } #Huangfu Li
+942.1.1 = { holder = 1401077 } #Yang Yanxun
+944.1.1 = { holder = 1401082 } #Zhao Ying
+945.1.1 = { holder = 1401085 } #Liu Jixun
+945.7.1 = { holder = 1412429 } #An Shenxin
+#Liao
+947.1.12 = { holder = 1412442 } #An Shuqian
+#Later Han
+947.3.20 = { holder = 1401086 } #Hou Zhang
+948.1.1 = { holder = 1400454 } #Hu Yanke
+949.8.23 = { holder = 1400912 } #Liu Ci
+950.4.24 = { holder = 1401088 } #Wang Rao
+#Later Zhou
+951.6.29 = { holder = 1401093 } #Sun Fanglian
+954.5.1 = { holder = 1401094 } #Shi Yanchao
+954.6.26 = { holder = 1404911 de_jure_liege = d_yongxing liege = e_later_zhou } #Wang Zuo - prefect
+957.3.1 = { holder = 1401283 }
+959.7.27 = { holder = 1401287 }
+#Song
+960.2.3 = { holder = 217721 de_jure_liege = d_zhenguo } #No Jiedushi
+964.1.1 = { holder = 1401098 liege = d_zhenguo } #Song Wo
+967.1.1 = { holder = 1401129 } #Luo Yangui
+969.4.1 = { holder = 1401130 } #Zhao Wendu
+972.1.1 = { holder = 1401131 } #Li Chongju
+973.1.1 = { holder = 217721 }
+976.11.14 = { holder = 217722 }
+997.5.8 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }
+1125.3.26 = { holder = 217731 }
+1135.2.9 = { holder = 217732 }
+1150.1.9 = { holder = 217734 }
+1161.10.27 = { holder = 217735 }
+1189.1.20 = { holder = 217736 }
+1208.12.29 = { holder = 217737 }
+1213.9.11 = { holder = 217738 }
+1224.1.14 = { holder = 217739 }
+
+1234.2.9 = { holder = 217740 }
+
+1234.2.10 = { holder = 172005 } # Ögedei Khan
+1241.12.11 = { holder = 172007 } # Güyük Khan  # Actual coronation 1246.8.24
+1248.4.20 = { holder = 217265 } # Möngke Khan  # Actual coronation 1251.7.1
+1259.8.11 = { holder = 125526 } #civil war between Ariq Boke and Kublai
+1264.8.21 = { holder = 217266 } # Kublai Khan
+1294.2.18 = { holder = 217269 } # Temür Khan
+1307.2.10 = { holder = 217271 } # Külüg Khan 
+1311.1.27 = { holder = 217272 } # Buyantu Khan
+1320.3.1 = { holder = 217274 } # Gegeen Khan 
+1323.9.4 = { holder = 217279 } # Yesün Temür Khan
+1328.8.15 = { holder = 217280 }  # Ragibagh Khan
+1328.11.14 = { holder = 217281 } # Jayaatu Khan
+1329.4.3 = { holder = 217282 } # Khutughtu Khan Kusala
+1329.9.8 = {  holder = 217281 } # Jayaatu Khan (again)
+1332.9.2 = { holder = 217283 } # Rinchinbal Khan
+1332.12.14 = { holder = 217284 } # Toghon Temür Khan

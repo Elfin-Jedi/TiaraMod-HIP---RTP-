@@ -1,0 +1,110 @@
+#Hongzhou, Yuzhang commandery
+
+#Eastern Han
+26.1.1 = { holder = 1408974 } #Xin Ziyan - administator at some point
+27.1.1 = { holder = 0 }
+199.1.1 = { holder = 1407812 } #Sun Ben - made administrator
+#Eastern Wu
+210.1.1 = { holder = 1407814 } #Sun Lin
+230.1.1 = { holder = 0 }
+
+#Tang
+630.1.1 = { holder = 1415192 } #Liu Zhenghui - prefect around this time
+635.1.1 = { holder = 0 }
+660.1.1 = { holder = 1415193 } #Liu Xuanyi - prefect at some point
+664.1.1 = { holder = 0 }
+690.1.1 = { holder = 1407318 } #Pei Tingzhi - prefect around this time
+694.1.1 = { holder = 0 }
+758.1.1 = { holder = 0 liege = d_jiangxi } #Wei Huan
+759.1.1 = { holder = 0 } #Wei Yuanpu
+762.1.1 = { holder = 0 } #Zhang Xiu
+762.6.1 = { holder = 0 } #Zhang Qiao
+764.1.1 = { holder = 1405353 } #Li Mian
+767.5.22 = { holder = 0 } #Wei Shaoyou
+771.1.1 = { holder = 0 } #Lu Sigong
+773.1.1 = { holder = 0 } #Li Zuo
+778.1.1 = { holder = 0 } #Du Ya
+779.1.1 = { holder = 0 } #Zhang Yi
+779.6.1 = { holder = 0 } #Cui Zhao
+780.1.1 = { holder = 1405025 } #Bao Fang
+782.1.1 = { holder = 0 } #Li Gao
+785.1.1 = { holder = 0 } #Li Qian
+791.1.1 = { holder = 1407311 } #Pei Zhou
+792.1.1 = { holder = 0 } #Li Heng
+792.7.24 = { holder = 1404238 } #Qi Ying
+795.8.15 = { holder = 0 } #Lu Huan
+797.1.1 = { holder = 0 } #Li Xun
+805.12.13 = { holder = 1405180 } #Yang Ping
+807.3.13 = { holder = 1406493 } #Wei Dan
+810.9.8 = { holder = 0 } #Li Shaohe
+811.1.1 = { holder = 0 } #Cui Peng
+813.1.5 = { holder = 1409543 } #Pei Kan
+818.1.1 = { holder = 0 } #Pei Ciyuan
+820.1.1 = { holder = 0 } #Wang Zhongshu
+823.1.1 = { holder = 0 } #Xue Fang
+825.1.1 = { holder = 0 } #Yin You
+826.9.22 = { holder = 1404969 } #Li Xian
+828.11.29 = { holder = 0 } #Shen Chuanshi
+830.1.1 = { holder = 0 } #Pei Yi
+833.1.1 = { holder = 0 } #Wu Shiju
+836.1.1 = { holder = 0 } #Luo Rang
+837.1.1 = { holder = 0 } #Jing Xin
+839.1.1 = { holder = 0 } #Li Kuan
+840.1.1 = { holder = 1409452 } #Pei Xiu
+843.1.1 = { holder = 0 } #Zhou Chi
+846.1.1 = { holder = 0 } #Hegan Zhong
+849.1.1 = { holder = 1409449 } #Pei Chou
+850.1.1 = { holder = 0 } #Zhou Jingfu
+853.1.1 = { holder = 0 } #Cui An
+854.1.1 = { holder = 0 } #Zheng Zhide
+855.1.1 = { holder = 0 } #Zhang Yifu
+857.1.1 = { holder = 0 } #Zheng Xian
+858.11.10 = { holder = 1406496 } #Wei Zhou
+861.1.1 = { holder = 1403808 } #Pei Tan
+865.6.19 = { holder = 1408141 } #Yan Zhuan
+868.6.10 = { holder = 1408144 } #Li Zhi
+871.1.1 = { holder = 1405188 } #Yang Dai
+872.1.1 = { holder = 1403127 } #Cui Anquan
+875.1.1 = { holder = 1416008 } #Dugu Yun
+877.1.1 = { holder = 1408165 } #Gao Xiang
+#Wang Xianzhi
+878.4.7 = { holder = 1408166 liege = 0 } #Wang Chongyin - took over the prefecture
+878.5.6 = { holder = 1408167 } #Xu Tangju - took over
+#Tang
+880.1.1 = { holder = 1408168 liege = d_jiangxi } #Gao Maoqing
+882.5.21 = { holder = 1408169 } #Zhong Chuan - takes over
+906.5.19 = { holder = 1408170 } #Zhong Kuangshi
+#Southern Wu
+906.10.7 = { holder = 1408175 } #Pei Qin
+907.1.1 = { holder = 1408008 } #Liu Wei
+914.1.1 = { holder = 1408039 } #Liu Xin
+925.1.1 = { holder = 1407211 } #Xu Zhihui
+925.12.1 = { holder = 1407208 liege = k_huainan } #No Jiedushi
+927.11.29 = { holder = 1407210 liege = e_southern_wu } #No Jiedushi
+929.1.1 = { holder = 1407214 liege = d_jiangxi } #Xu Zhijian
+931.10.28 = { holder = 1407210 } #Xu Zhixun
+934.7.7 = { holder = 1408077 } #Li Decheng
+#Southern Tang
+940.8.5 = { holder = 1407635 } #Xu Jie
+942.7.9 = { holder = 1408104 } #Song Qiqiu
+943.12.30 = { holder = 1406216 } #No Jiedushi
+944.2.2 = { holder = 1406249 } #Zhou Zong
+947.9.30 = { holder = 1408104 } #Song Qiqiu
+952.1.17 = { holder = 1406687 } #Ma Xi'e
+952.12.23 = { holder = 1408104 } #Song Qiqiu
+955.12.29 = { holder = 1406216 } #No Jiedushi
+958.3.28 = { holder = 1406218 } #Li Jingsui
+958.9.17 = { holder = 1406233 } #Li Congshan
+961.11.11 = { holder = 1406234 } #Li Congyi
+965.9.8 = { holder = 1407643 } #Lin Renzhao
+972.2.18 = { holder = 1407641 } #Zhu Lingyun
+974.1.1 = { holder = 1408114 } #Chai Kezhen
+#Song
+976.1.1 = { holder = 217721 liege = e_song }
+977.5.23 = { holder = 217722 }
+997.5.8 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }

@@ -1,0 +1,91 @@
+#Northern Wei
+445.1.1 = { holder = 1407323 } #Pei Zuan - administrator at some point
+451.1.1 = { holder = 0 }
+#Northern Zhou
+571.1.1 = { holder = 1408669 } #Wei Jun - prefect at some point
+573.1.1 = { holder = 0 }
+580.1.1 = { holder = 1408748 } #Wei Shikang - made prefect
+#Sui
+581.2.20 = { holder = 0 }
+596.1.1 = { holder = 1409299 } #Pei Wendu - prefect at some point
+599.1.1 = { holder = 0 }
+#Tang
+636.1.1 = { holder = 1405312 } #Li Yanjiu - made prefect
+637.1.1 = { holder = 0 }
+643.1.1 = { holder = 1405288 } #Li Yuanli - made prefect
+653.1.1 = { holder = 0 }
+686.1.1 = { holder = 1405296 } #Li Yuanjia - made prefect
+688.1.1 = { holder = 0 }
+758.1.1 = { holder = 1406445 } #Wei Zhi - prefect until 759
+759.1.1 = { holder = 0 }
+815.1.1 = { holder = 1404969 } #Li Xian - made prefect
+816.1.1 = { holder = 0 }
+828.1.1 = { holder = 1409324 } #Pei Rui - prefect in 829
+832.1.1 = { holder = 1403185 } #Liu Yuanding - prefect at some point
+835.1.1 = { holder = 0 }
+864.1.1 = { holder = 1400372 liege = d_hezhong } #Xiahou Zi
+869.1.1 = { holder = 1400794 } #Yang Sun - prefect until around 871.5.20
+871.1.1 = { holder = 1409546 } #Pei Defu - prefect until 871.7.21
+871.7.21 = { holder = 1400415 } #Du Shenquan
+874.1.1 = { holder = 1400424 } #Cao Que
+875.1.1 = { holder = 1404142 } #Zheng Tian - prefect around this time
+877.11.9 = { holder = 1402300 } #Dou Jing
+878.10.13 = { holder = 1400430 } #Li Du
+880.1.1 = { holder = 1410408 } #Qu Zhen - prefect in 883.3.4
+886.1.1 = { holder = 1404581 } #Wang Youyu - prefect in 888.3.17
+888.1.1 = { holder = 1404601 } #Zhang Xinggong - prefect until 890.12.16
+890.12.16 = { holder = 1400441 } #Wang Yao - prefect until 895.7.13
+895.7.13 = { holder = 1404625 } #Tao Jianzhao - prefect until 901.2.18
+#Later Liang
+901.2.18 = { holder = 1404627 } #He Yin - ruled the province since 901.2.18
+901.7.1 = { holder = 1400469 } #Zhu Quanzhong
+907.1.1 = { holder = 1400494 } #Zhu Youqian
+908.10.28 = { holder = 1401180 } #Niu Cunjie - prefect until 909.5.16
+909.5.16 = { holder = 1400494 } #Zhu Youqian
+910.5.24 = { holder = 1404259 liege = d_jianxiong de_jure_liege = d_jianxiong } #Han Gong - prefect
+912.1.1 = { liege = e_later_liang }
+915.1.1 = { holder = 1401063 liege = d_jianxiong } #Yi Hao - prefect in 915.9.12
+919.1.1 = { holder = 1400316 } #Liu Qi
+#Later Tang
+924.1.1 = { holder = 1412323 } #Li Cunyi
+924.6.1 = { de_jure_liege = d_hezhong liege = d_hezhong }
+926.1.1 = { holder = 1412321  } #Li Cunba
+926.5.15 = { holder = 1412322 } #Li Cunwo
+926.5.27 = { holder = 1412361 } #Li Congke
+926.7.5 = { holder = 1406695 } #Zhou Zhiyu - made prefect around this time
+928.1.1 = { holder = 1412361 } #Li Congke
+930.1.1 = { holder = 1400449 } #Suo Zitong
+931.1.1 = { holder = 1412447 } #An Chonghui
+931.6.25 = { holder = 1412454 } #Li Congzhang
+934.1.1 = { holder = 1400190 } #An Yanwei
+936.1.8 = { holder = 1400451 } #Han Zhaoyin
+#Later Jin
+936.1.1 = { holder = 1412429 } #An Shenxin
+940.4.17 = { holder = 1412460 } #Kang Fu
+942.1.1 = { holder = 1412427 } #An Shenqi
+945.1.1 = { holder = 1404885 } #Guo Yuanzhao - prefect around that time
+#Liao
+947.2.20 = { holder = 1404865 } #Li Conglang - prefect until 947.6.15
+#Later Han
+947.6.15 = { holder = 1404866 } #Xue Qiong - made prefect
+949.8.17 = { holder = 1400454 } #Hu Yanke
+#Later Zhou
+951.9.26 = { holder = 1400455 } #Wang Jing
+951.10.4 = { holder = 1401660 } #Chen Sirang - made prefect
+954.9.30 = { holder = 1400459 } #Wang Renqiao
+956.1.1 = { holder = 1400460 } #Zhang Duo
+#Song
+960.1.1 = { holder = 1412436 } #Yang Chengxin
+964.1.1 = { holder = 1408046 } #Guo Tingwei - made prefect
+966.1.1 = { holder = 1412465 } #Guo Congyi
+968.1.1 = { holder = 1401660 } #Chen Sirang
+975.1.30 = { holder = 217721 liege = e_song }
+997.5.8 = { holder = 217723 }
+1015.1.1 = { holder = 1406672 } #Qian Weiji - prefect until 1017.5.10
+1017.5.10 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }
+

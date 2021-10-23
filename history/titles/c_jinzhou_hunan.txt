@@ -1,0 +1,38 @@
+#Tang
+867.1.1 = { holder = 1403788 liege = d_wutai } #Qin Kuangmou
+873.6.22 = { holder = 1403744 liege = d_jingnan } #Du Cong - no jiedushi recorded so I gave it to Jingnan
+873.11.30 = { holder = 1402950 } #Lu Yan
+873.12.24 = { holder = 1403149 } #Cui Juan
+876.1.1 = { holder = 1400706 } #Yang Zhiwen
+878.2.19 = { holder = 1402848 } #Gao Pian
+878.7.4 = { holder = 1401154 } #Wang Duo
+879.5.26 = { holder = 1403767 } #Song Hao
+880.5.13 = { holder = 1403772 } #Chang Zi
+880.7.1 = { holder = 1403770 } #Duan Yanmo
+882.7.17 = { holder = 1403773 } #Li Sui
+882.9.16 = { holder = 1400607 } #Zheng Shaoye
+883.4.8 = { holder = 1403774 } #Chen Ru
+888.2.10 = { liege = e_tang }
+888.6.9 = { holder = 1403407 liege = d_wutai } #Wang Jianzhuo
+890.1.1 = { holder = 1417213 liege = e_tang } #Song Ye - local chieftain, in 912.3.17 prefect of Chenzhou
+898.1.1 = { de_jure_liege = d_wuping }
+#Southern Chu
+912.3.17 = [ liege = d_wuping }
+924.1.1 = { holder = 1406563 } #Ma Xizhen
+929.4.28 = { holder = 1406566 } #Ma Xifan
+934.4.24 = { holder = 1406568 } #Ma Xigao
+940.3.25 = { holder = 1408647 } #Liu Qing - made prefect
+950.1.1 = { holder = 1408648 } #Liu Tao - prefect until 954.12.25
+#Wuping
+954.12.25 = { holder = 1408457 } #Wang Kui
+956.4.13 = { holder = 1408462 } #Zhou Xingfeng
+962.10.10 = { holder = 1408463 } #Zhou Baoquan
+#Song
+963.4.4 = { holder = 217721 liege = e_song }
+977.1.1 = { holder = 217722 }
+997.5.8 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }

@@ -1,0 +1,87 @@
+#Western Jin
+322.4.13 = { holder = 1800613 } #Tao Kun - made prefect
+323.1.1 = { holder = 0 }
+397.5.19 = { holder = 1407555 } #Wang Yu - made inspector after Guobao's death
+398.8.29 = { holder = 0 }
+#Southern Chen
+574.1.1 = { holder = 1406865 } #Chen Boshan - made inspector
+579.1.1 = { holder = 0 }
+568.1.1 = { holder = 1406895 } #Chen Shuling - made inspector
+572.2.2 = { holder = 1406897 } #Chen Shujian - made inspector
+575.11.25 = { holder = 0 }
+579.9.27 = { holder = 1406896 } #Chen Boying - made inspector
+583.1.31 = { holder = 0 }
+582.2.26 = { holder = 1406895 } #Chen Shuling - made inspector
+583.1.31 = { holder = 1406897 } #Chen Shujian - made inspector
+583.5.18 = { holder = 1406902 } #Chen Shuwen - made inspector
+584.7.10 = { holder = 1406904 } #Chen Shuchong - made inspector
+588.1.1 = { holder = 1406997 } #Chen Yi - inspector in 588.7.2
+588.11.30 = { holder = 1406998 } #Chen Yan - made inspector
+#Sui
+589.2.10 = { holder = 1408755 } #Wei Guang - made prefect
+590.9.21 = { holder = 0 }
+#Tang
+650.1.1 = { holder = 1800654 } #Tao Rui - prefect at some point
+653.1.1 = { holder = 0 }
+789.1.1 = { holder = 1407369 } #Pei Peng - prefect at some point
+791.1.1 = { holder = 0 }
+804.1.1 = { holder = 1800482 } #Miao Dan - prefect around this time
+806.1.1 = { holder = 1404526 } #Kong Kui - prefect around this time
+810.1.1 = { holder = 0 }
+823.1.1 = { holder = 1401631 } #Li Jiangxin - prefect at some point
+829.1.1 = { holder = 0 }
+841.4.25 = { holder = 1800518 } #Miao Yin - prefect in 841.8.19
+842.1.1 = { holder = 0 }
+846.8.26 = { holder = 1400791 } #Yang Sifu - made prefect
+848.1.1 = { holder = 0 }
+855.1.1 = { holder = 1401366 liege = d_jiangxi } #Lu Jianfang - made prefect around this time
+864.1.1 = { holder = 1403808 } #Pei Tan
+865.6.19 = { holder = 1408141 } #Yan Zhuan
+867.1.1 = { holder = 1800495 } #Miao Shen - prefect in 867.5.15 and 868.12.30
+869.1.1 = { holder = 1403456 } #Cui Hang - prefect at some point
+871.1.1 = { holder = 1800606 } #Li Keren - prefect until 875.1.11
+875.1.11 = { holder = 1800610 } #Chen Nian - prefect in 876.11.26
+877.1.1 = { holder = 1800659 } #Tao Xiang - prefect until 877.7.15
+#Rebellion
+877.7.15 = { holder = 1800664 liege = 0 } #Liu Yanzhang - took over the prefecture
+#Tang
+878.1.7 = { holder = 1800665 liege = d_jiangxi } #Liu Bingren - retook the prefecture
+878.4.7 = { liege = e_tang }
+880.1.1. = { liege = d_jiangxi }
+882.1.1 = { holder = 1800666 } #Gao Ba - prefect at some point
+885.1.1 = { holder = 1800667 } #Tu Xiao - prefect around this time
+887.1.1 = { holder = 1800668 } #Zeng Xi - prefect until 890
+890.1.1 = { holder = 1800669 } #Chen Zhuo - prefect in 894
+896.1.1 = { holder = 1800670 } #Li Fengzong - prefect around this time
+902.1.1 = { holder = 1408173 } #Zhong Yangui - prefect in 906.5.19
+#Wu
+906.5.19 = { liege = k_huainan }
+918.9.5 = { holder = 1406215 } #Xu Zhigao - made prefect - in 921.11.15 Jiedushi
+921.11.15 = { liege = d_fenghua }
+#927.11.20 = { holder = 0 }
+937.10.11 = { holder = 1407215} #Xu Zhicheng
+940.5.10 = { holder = 1406249 } #Zhou Zong
+943.3.30 = { holder = 1408181 } #Du Changye
+946.12.18 = { holder = 1408180 } #Jia Chong
+949.1.1 = { holder = 1407655 } #Yan Xu
+952.1.1 = { holder = 1404771 } #Huangfu Hui
+956.3.19 = { holder = 1406216 } #No Jiedushi
+956.5.5 = { holder = 1408012 } #Chai Kehong
+957.1.1 = { holder = 1406216 } #No Jiedushi
+958.5.31 = { holder = 1406216 } #No Jiedushi
+958.6.16 = { holder = 1408022 } #Sun Hanwei
+962.8.3 = { holder = 1407639 } #Zhu Kuangye
+965.2.14 = { holder = 1408114 } #Chai Kezhen
+968.1.1 = { holder = 1406235 } #Li Congqian
+974.1.1 = { holder = 1408184 } #Xie Yanbin
+#Rebellion
+976.1.1 = { holder = 1408185 } #Hu Ze
+#Song
+976.5.22 = { holder = 217721 liege = e_song }
+977.5.23 = { holder = 217722 }
+997.5.8 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }

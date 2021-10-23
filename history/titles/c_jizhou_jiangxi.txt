@@ -1,0 +1,64 @@
+#Jizhou, Luling commandery
+
+#Eastern Wu
+199.1.1 = { holder = 1407813 } #Sun Fu - made administrator
+210.1.1 = { holder = 0 }
+#Eastern Jin
+360.1.1 = { holder = 1406133 } #Yan Qian - administrator during Eastern Jin
+370.1.1 = { holder = 0 }
+#Liu Song
+477.1.1 = { holder = 1406817 } #Chen Meng - administrator at some point
+479.1.1 = { holder = 0 }
+#Tang
+837.1.1 = { holder = 1800456 } #Sun Gong'ai - prefect around this time
+839.1.1 = { holder = 0 }
+865.6.19 = { holder = 1408141 liege = d_jiangxi } #Yan Zhuan
+868.1.1 = { holder = 1407644 } #Lu Zhao - prefect around this time
+869.1.1 = { holder = 1408144 } #Li Zhi
+871.1.1 = { holder = 1405188 } #Yang Dai
+872.1.1 = { holder = 1403127 } #Cui Anquan
+872.6.24 = { holder = 1416262 } #Yu Gui - made prefect
+875.1.1 = { holder = 1416008 } #Dugu Yun
+#Wang Xianzhi
+878.4.7 = { holder = 1408166 liege = 0 } #Wang Chongyin - took over the prefecture
+878.5.6 = { holder = 1408167 } #Xu Tangju - took over
+#Tang
+880.1.1 = { holder = 1408168 liege = d_jiangxi } #Gao Maoqing
+882.5.21 = { holder = 1408169 } #Zhong Chuan - takes over
+894.1.1 = { holder = 1417206 } #Peng Jian - prefect around this time
+895.1.1 = { holder = 1417205 } #Peng Gan - prefect until 909.8.5
+#Rebellion
+909.7.16 = { liege = 0 }
+#Wu
+909.8.5 = { holder = 1407635 liege = d_jiangxi } #Xu Jie - prefect around this time
+912.1.1 = { holder = 1408008 } #Li Wei
+914.1.1 = { holder = 1408039 } #Liu Xin
+925.1.1 = { holder = 1407211 } #Xu Zhihui
+925.12.1 = { holder = 1407208 liege = k_huainan } #No Jiedushi
+927.11.29 = { holder = 1407210 liege = e_southern_wu } #No Jiedushi
+929.1.1 = { holder = 1407214 liege = d_jiangxi } #Xu Zhijian
+931.10.28 = { holder = 1407210 } #Xu Zhixun
+934.7.7 = { holder = 1408077 } #Li Decheng
+940.1.1 = { holder = 1408021 } #Wang Chongwen - prefect around this time
+943.12.30 = { liege = e_southern_tang } 
+#Southern Tang
+945.1.1 = { holder = 1406249 liege = d_jiangxi } #Zhou Zong
+947.9.30 = { holder = 1408104 } #Song Qiqiu
+952.1.17 = { holder = 1800441 } #Gao Bi - prefect until 956.3.19
+955.12.29 = { liege = e_southern_tang }
+956.3.19 = { holder = 1406216 } #No Jiedushi
+958.3.28 = { holder = 1406218 liege = d_jiangxi } #Li Jingsui
+958.9.17 = { holder = 1406233 } #Li Congshan
+961.1.1 = { holder = 1408207 } #Yang Shouzhong - prefect until 966.5.23
+966.5.23 = { holder = 1407643 } #Lin Renzhao
+972.2.18 = { holder = 1407641 } #Zhu Lingyun
+974.1.1 = { holder = 1408114 } #Chai Kezhen
+#Song
+976.1.1 = { holder = 217721 liege = e_song }
+977.5.23 = { holder = 217722 }
+997.5.8 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }

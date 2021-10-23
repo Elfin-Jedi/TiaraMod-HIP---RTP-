@@ -1,0 +1,62 @@
+#Haizhou, Donghai commandery
+
+#Western Jin
+306.1.1 = { holder = 1407548 } #Wang Cheng - made administrator of Donghai
+308.1.1 = { holder = 0 }
+#Southern Qi
+#Northern Qi
+558.1.1 = { holder = 1800256 } #Feng Shu - prefect until 561
+561.1.1 = { holder = 0 }
+#Tang
+660.1.1 = { holder = 1407759 } #Cui Dafang - prefect at some point
+665.1.1 = { holder = 0 }
+749.1.1 = { holder = 1407281 } #Pei Kuan - administrator around this time
+751.1.1 =  { holder = 0 }
+867.1.1 = { holder = 1406082 liege = d_taining } #Zheng Hanzhang
+868.1.1 = { holder = 1401460 } #Cao Xiang
+872.1.1 = { holder = 1406210 } #Mr. Cui
+875.1.1 = { holder = 1401640 } #Yan Zuo - prefect at some point
+880.1.1 = { holder = 1404233 } #Qi Kerang
+886.1.1 = { holder = 1406062 } #Zhu Jin
+897.3.9 = { holder = 1400204 } #Ge Congzhou
+#Wu
+899.8.10 = { holder = 1408020 de_jure_liege = d_huainan liege = d_huainan } #Wang Wan - prefect in 899.11.7
+905.12.24 = { holder = 1407164 } #Yang Wo
+908.6.9 = { holder = 1407166 } #Yang Longyan
+920.7.21 = { holder = 1407169 } #Yang Pu
+930.8.30 = { holder = 1406217 } #Xu Jingqian - prefect until 934.12.9
+934.12.9 = { holder = 1407169 } #Yang Pu
+935.11.18 = { liege = k_jiangnan }
+#Southern Tang
+937.10.11 = [ holder = 1406215 liege = d_huainan } #No jiedushi
+937.12.14 = { holder = 1406218 } #Li Jingsui
+943.4.8 = { holder = 1406072 de_jure_liege = d_dingyuan liege = d_dingyuan } #Liu Chongjun
+944.9.13 = { holder = 1408041 } #Liu Yanzhen
+946.1.1 = { holder = 1408044 } #Guo Quanyi
+951.1.1 = { holder = 1408051 } #He Jingzhu
+953.8.12 = { holder = 1406216 } #No Jiedushi
+957.7.1 = { holder = 1408046 } #Guo Tingwei
+957.12.7 = { holder = 1406216 liege = e_southern_tang }
+#Later Zhou
+958.1.27 = { holder = 1416271 de_jure_liege = d_huainan liege = d_huainan } #Murong Yanjian
+959.8.25 = { holder = 1401292 } #Li Chongjin
+#Song
+960.11.1 = { holder = 217721 } #No Jiedushi
+960.12.10 = { holder = 1401838 } #Li Chuyun
+963.1.1 = { holder = 1407193 } #Chu Zhaopu
+972.3.11 = { holder = 1407198 } #Bian Xu
+974.1.1 = { holder = 1404409 } #Duan Sigong
+975.3.29 = { holder = 1407203 } #Hou Zhi
+975.9.12 = { holder = 1407205 } #Huo Yun
+976.7.7 = { holder = 217722 liege = e_song }
+997.5.8 = { holder = 217723 }
+1012.1.1 = { holder = 1407134 } #Chen Wenyi - prefect at some point
+1015.1.1 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1056.1.1 = { holder = 1800011 } #Shen Gao - prefect until 1059.6.7
+1059.6.7 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }
+1125.3.26 = { holder = 217731 }
