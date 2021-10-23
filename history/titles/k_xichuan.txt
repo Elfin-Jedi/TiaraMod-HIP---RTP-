@@ -1,0 +1,10 @@
+#Tang
+600.1.1 = { de_jure_liege = e_tang }
+903.9.6 = { holder = 1400667 name = "Shu" liege = e_tang effect = { set_coa = e_former_shu } } #Wang Jian
+907.11.3 = { holder = 0 name = "Xichuan" effect = { reset_coa = THIS } }
+#Later Tang
+933.3.15 = { holder = 1400030 name = "Shu" liege = e_later_tang effect = { set_coa = e_later_shu } } #Meng Zhixiang
+#Later Shu
+934.3.16 = { holder = 0 name = "Xichuan" effect = { reset_coa = THIS } }
+#Song
+1000.1.1 = { de_jure_liege = e_song }

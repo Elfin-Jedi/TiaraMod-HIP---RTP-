@@ -1,0 +1,12 @@
+#Tang
+600.1.1 = { de_jure_liege = e_tang }
+#Qi
+901.2.14 = { holder = 1400635 name = "Qi" liege = e_tang law = succ_primogeniture effect = { set_coa = e_china_qi } } #Li Maozhen
+#Independent
+907.6.1 = { liege = 0 }
+#Later Tang
+924.2.8 = { liege = e_later_tang }
+924.5.17 = { holder = 1400636 } #Li Jiyan
+946.11.26 = { holder = 0 name = "Qinfeng" effect = { reset_coa = THIS } }
+#Song
+1000.1.1 = { de_jure_liege = e_song }

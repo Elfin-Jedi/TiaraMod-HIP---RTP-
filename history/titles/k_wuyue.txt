@@ -1,0 +1,31 @@
+902.7.13 = { #Taizu, King Wusu
+	holder = 1406579
+	law = succ_primogeniture
+	liege = e_tang
+	name = "Yue" effect = { set_coa = e_china_yue }
+	effect = {
+		set_title_flag = uses_temple_names_by_script #Titles with this flag give their heirs a temple name via on_death event
+	}
+}
+907.6.1 = { set_tribute_suzerain = { who = e_later_liang type = permanent } }
+907.6.16 = { name = "Wuyue" effect = { reset_coa = THIS } }
+932.5.6 = { #Shizong, King Wenmu
+	holder = 1406598 
+	effect = { set_title_flag = temple_name_Taizu }
+} 
+923.11.18 = { set_tribute_suzerain = { who = e_later_tang type = permanent } clear_tribute_suzerain = e_later_liang }
+937.1.11 = { set_tribute_suzerain = { who = e_later_jin type = permanent } clear_tribute_suzerain = e_later_tang }
+941.9.19 = { #Chengzong, King Zhongxian
+	holder = 1406630
+	effect = { set_title_flag = temple_name_Shizong }
+} 
+947.1.11 = { clear_tribute_suzerain = e_later_jin }
+947.6.22 = { #Qian Zong, King Zhongxun
+	holder = 1406635
+	effect = { set_title_flag = temple_name_Chengzong }
+} 
+947.6.23 = { set_tribute_suzerain = { who = e_later_han type = permanent } clear_tribute_suzerain = e_later_han }
+948.2.12 = { holder = 1406646 } #Qian Chu, King Zhongyi
+951.2.5 = { set_tribute_suzerain = { who = e_later_zhou type = permanent } clear_tribute_suzerain = e_later_han }
+960.2.4 = { set_tribute_suzerain = { who = e_song type = permanent } clear_tribute_suzerain = e_later_zhou }
+978.6.9 = { holder = 0 clear_tribute_suzerain = e_song }

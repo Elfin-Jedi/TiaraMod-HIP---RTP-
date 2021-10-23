@@ -1,0 +1,24 @@
+#Former Shu
+907.11.3 = { #Emperor Gaozu
+	holder = 1400667
+	law = succ_primogeniture
+	law = crown_authority_2
+	law = administration_2
+	law = inheritance_1
+	law = imperial_kingdom_creation_2
+	law = ze_revokation_1
+	law = law_voting_power_1
+	government = chinese_imperial_government
+	effect = {
+		set_title_flag = temple_name_Shengzu
+	}
+}
+917.1.1 = { name = "Han" effect = { set_coa = e_china_han } }
+918.4.1 = { name = "Shu" effect = { reset_coa = THIS } }
+918.7.11 = { #Wang Zongyan
+	holder = 1400678 
+	effect = {
+		set_title_flag = temple_name_Gaozu
+	}
+}
+925.12.15 = { holder = 0 name = "Former Shu" }
