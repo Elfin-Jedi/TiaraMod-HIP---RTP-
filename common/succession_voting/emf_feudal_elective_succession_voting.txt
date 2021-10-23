@@ -1,0 +1,137 @@
+# -*- ck2.succession_voting -*-
+
+# The entry should be named in the same way that the elective succession law is named to define its voter's logic.
+# Root scope - Voter, the character voting in the election
+# From scope - Candidate, Character considered for the title
+# FromFrom scope - The title the nomination is for
+# FromFromFrom scope - The title owner's candidate
+# The voter will vote for the top score candidate calculated from this script.
+
+feudal_elective = {
+
+	elector_vote_strength = {
+		days = 1
+	}
+	
+	elector_selection = {
+		days = -5 		#If below 0, ROOT is not valid to be an Elector.
+		emf_succession_voting_elector_selection_default_head = yes
+		emf_succession_voting_elector_selection_basic_elective = yes
+		emf_succession_voting_elector_selection_default_prioritization = yes
+	}
+	candidate_vote_score = {
+		days = 0
+		##########################   Title holder votes for dynasts   ##########################
+		emf_succession_voting_holder_score = yes
+		
+		##########################   Elector voting himself   ##########################
+		emf_succession_voting_self_score = yes
+
+		##########################   Candidate's traits   ##########################
+
+		#Sexism
+		emf_succession_voting_candidate_gender_score = yes
+
+		#Ageism
+		emf_succession_voting_candidate_age_score = yes
+
+		#Culturism
+		emf_succession_voting_candidate_culture_score = yes
+
+		#Faithism
+		emf_succession_voting_candidate_religion_score = yes
+
+		#Barbarism/Tribalism
+		emf_succession_voting_candidate_government_score = yes
+
+		#Nepotism
+		emf_succession_voting_candidate_nepotism_score = yes
+
+		#Prestige
+		emf_succession_voting_candidate_prestige_score = yes
+
+		#Piety
+		emf_succession_voting_candidate_piety_score = yes
+
+		#Educational preferences
+		emf_succession_voting_candidate_education_score = yes
+		emf_succession_voting_candidate_warrior_score = yes
+
+		#Claims
+		emf_succession_voting_candidate_claims_score = yes
+
+		#All the Traits
+		emf_succession_voting_candidate_traits_score_common = yes
+		emf_succession_voting_candidate_traits_score_not_eldership = yes
+		emf_succession_voting_candidate_traits_score_not_byzantine_elective = yes
+		
+		additive_modifier = { #Shunned for being unproved courtier in the shadow of the ruler.
+			value = -10
+			localisation_key = tooltip_feudal_elector_vote_spoiled_courtier
+			NOT = { character = FROM } #Do not judge yourself.
+			FROM = {
+				NOR = {
+					is_ruler = yes
+					has_job_title = job_marshal
+					has_job_title = job_chancellor
+					has_job_title = job_treasurer
+					has_job_title = job_spiritual
+					has_job_title = job_spymaster
+				}
+				OR = {
+					trait = decadent
+					trait = slothful
+					trait = hedonist
+					trait = is_fat
+					trait = shy
+				}
+			}
+		}
+
+		##########################   Ruler's traits   ##########################
+		emf_succession_voting_ruler_traits_score = yes
+
+		##########################   Raw Opinion bonus towards Candidate   ##########################
+		emf_succession_voting_candidate_opinion_score = yes
+
+		##########################   Raw Opinion bonus towards Ruler   ##########################
+		emf_succession_voting_ruler_opinion_score = yes
+	}
+	
+	#ROOT = Current Title holder, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Null
+	candidate_trigger = {
+		emf_succession_voting_standard_candidate_triggers = yes
+		FROM = {
+			OR = {
+				has_claim = ROOT_FROMFROM
+				is_close_relative = ROOT
+				is_nibling_of = ROOT
+				is_aunt_uncle_of = ROOT
+				is_cousin_of = ROOT
+				AND = {
+					OR = { #Either defacto vassal, or independent ruler who is dejure vassal.
+						is_liege_or_above = ROOT
+						AND = {
+							independent = yes
+						 	any_demesne_title = { any_dejure_liege = { title = ROOT_FROMFROM } }
+						}
+					}
+					OR = {
+						higher_real_tier_than = COUNT  #Or Duke-tier...
+						AND = {
+							ROOT_FROMFROM = {
+								lower_tier_than = EMPEROR
+								higher_tier_than = COUNT
+							}
+							higher_real_tier_than = BARON #...Or Count-tier under a Duchy/Kingdom...
+						}
+						AND = {
+							ROOT_FROMFROM = { lower_tier_than = DUKE }
+							is_landed = yes #...Or Baron-tier under a County.
+						}
+					}
+				}
+			}
+		}
+	}
+}
