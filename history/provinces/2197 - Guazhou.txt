@@ -1,0 +1,17 @@
+# County Title
+title = c_guazhou
+
+# Settlements
+max_settlements = 2
+
+b_jinchang = city
+
+# Misc
+culture = han
+religion = taoist
+
+# History
+950.1.1 = {
+	culture = uyghur
+	religion = buddhist
+}#Ganzhou Uyghurs

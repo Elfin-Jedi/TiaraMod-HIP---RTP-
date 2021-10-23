@@ -1,0 +1,17 @@
+# County Title
+title = c_suzhou
+
+# Settlements
+max_settlements = 3
+
+b_jiuquan = city
+
+# Misc
+culture = han
+religion = taoist
+
+# History
+1000.1.1 = {
+	culture = uyghur
+	religion = buddhist
+}#Ganzhou Uyghurs

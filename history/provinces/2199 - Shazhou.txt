@@ -1,0 +1,17 @@
+# County Title
+title = c_shazhou
+
+# Settlements
+max_settlements = 2
+
+b_dunhuang = city
+
+# Misc
+culture = han
+religion = taoist
+
+# History
+1032.1.1 = {
+	culture = uyghur
+	religion = buddhist
+}#Western Xia

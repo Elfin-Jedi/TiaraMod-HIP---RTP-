@@ -1,0 +1,17 @@
+# 2211 - Ngawa
+
+# County Title
+title = c_ngawa
+
+# Settlements
+max_settlements = 1
+b_tuyuhun = tribal
+
+# Misc
+culture = tangut #qiang/baima di
+religion = bon
+
+# History
+800.1.1 = {
+	religion = buddhist # Buddhism spreads in Kham
+}

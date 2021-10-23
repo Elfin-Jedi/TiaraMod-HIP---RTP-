@@ -1,0 +1,21 @@
+# County Title
+title = c_liangzhou
+
+# Settlements
+max_settlements = 5
+
+b_wuwei = city
+b_guzang = city
+
+# Misc
+culture = han
+religion = taoist
+
+# History
+930.1.1 = {
+	culture = bodpa
+	religion = buddhist
+}#The city became mostly Tibetan
+1032.1.1 = {
+	culture = tangut
+}
