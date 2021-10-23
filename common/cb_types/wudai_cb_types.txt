@@ -1,0 +1,288 @@
+# -*- ck2.cb_types -*-
+# Audax Validator EnableCommentMetadata
+
+chinese_unification = {
+	name = CB_NAME_CHINESE_UNIFICATION
+	war_name = WAR_NAME_CHINESE_UNIFICATION
+	sprite = 34
+	truce_days = 1825
+	is_permanent = yes
+	check_de_jure_tier = DUKE
+	allowed_to_target_tributaries = no
+	sort_priority = 1900
+
+	can_use_gui = {
+		emf_cb_can_use_gui = yes
+		ROOT = {
+			show_scope_change = no
+			custom_tooltip = {
+				text = NEEDS_200_PRESTIGE_COST
+				OR = {
+					ai = yes
+					prestige >= 200
+				}
+			}
+			OR = {
+				culture_group = chinese_group
+				primary_title = { has_title_flag = pretender_chinese_empire }
+			}
+		}
+	}
+
+	can_use = {
+		emf_cb_can_use = yes
+		ROOT = {
+			independent = yes
+			NOT = { same_realm = FROM }
+			OR = {
+				culture_group = chinese_group
+				primary_title = { has_title_flag = pretender_chinese_empire }
+			}
+			mercenary = no
+		}
+	}
+
+	can_use_title = {
+		emf_cb_can_use_de_jure_title = yes
+		any_direct_de_jure_vassal_title = {
+			location = { 
+				region = world_china
+				any_neighbor_province = {
+					OR = {
+						owner_under_ROOT = yes
+						AND = {
+							is_land = no
+							any_neighbor_province = {
+								owner_under_ROOT = yes
+							}
+						}
+					}
+				}
+			}
+			owner_under_FROM = yes
+		}
+	}
+
+	is_valid = {
+		ROOT = {
+			independent = yes
+			NOT = { same_realm = FROM }
+			OR = {
+				primary_title = { has_title_flag = pretender_chinese_empire }
+				culture_group = chinese_group
+			}
+			mercenary = no
+		}
+	}
+
+	is_valid_title = {
+		any_direct_de_jure_vassal_title = { owner_under_FROM = yes }
+	}
+
+	on_add = {
+		log = "CB(Chinese Unification): START: title=[FromFrom.GetID]: [Root.EMF_GetDebugName] vs. [From.EMF_GetDebugName]"
+		if = {
+			limit = { ROOT = { ai = no } }
+			ROOT = { prestige = -200 }
+		}
+		emf_cb_on_add = yes
+	}
+
+	on_success = {
+		log = "CB(Chinese Unification): VICTORY: title=[FromFrom.GetID]: [Root.EMF_GetDebugName] vs. [From.EMF_GetDebugName]"
+		emf_cb_victory = yes
+		emf_imperial_decay_victory = yes
+		ROOT = {
+			show_scope_change = no
+			participation_scaled_prestige = 100
+		}
+		any_attacker = {
+			limit = { NOT = { character = ROOT } }
+			hidden_tooltip = { participation_scaled_prestige = 100 }
+		}
+		FROM = { prestige = -100 }
+	}
+
+	on_success_title = {
+		emf_cb_latb = yes
+		hidden_effect = {
+			if = {
+				limit = {
+					ROOT = { emf_imperial_government = yes }
+					FROM = { emf_imperial_government = no }
+				}
+				ROOT = {
+					any_realm_lord = {
+						set_flag = emf_prior_realm_lord_of_@ROOT
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					# Can't usurp duchy if the owner isn't in the target realm!
+					under_FROM = yes
+					OR = {
+						# Can safely usurp duchy, because owner has another title of at least the same tier
+						any_demesne_title = {
+							NOR = {
+								title = PREVPREV
+								lower_tier_than = PREVPREV
+							}
+						}
+						# Can safely usurp duchy, because owner subrealm is 100% contained within de jure duchy
+						NOT = {
+							any_realm_title = {
+								tier = COUNT
+								NOT = { de_jure_liege = PREVPREV }
+							}
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = ROOT_USURPS_THIS_TITLE_FROM_HOLDER }
+			set_flag = emf_usurp_tmp
+		}
+		else_if = {
+			limit = { has_holder = no }
+			grant_title = { target = ROOT type = created }
+		}
+		custom_tooltip = {
+			text = other_invasion_succ_tip
+			pf_liege_change_under_title_begin_effect = yes
+			ROOT = {
+				vassalize_or_take_under_title = {
+					title = PREV
+					enemy = FROM
+					type = invasion
+				}
+			}
+			pf_liege_change_under_title_end_effect = yes
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_flag = emf_usurp_tmp }
+				usurp_title = { target = ROOT type = invasion }
+			}
+			clr_flag = emf_usurp_tmp
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					ROOT = { emf_imperial_government = yes }
+					FROM = { emf_imperial_government = no }
+				}
+				ROOT = {
+					any_realm_lord = {
+						limit = {
+							OR = {
+								is_feudal = yes
+								is_tribal = yes
+							}
+							NOR = {
+								has_flag = emf_prior_realm_lord_of_@ROOT
+								primary_title = { has_flag = viceroy_exemption }
+							}
+						}
+						opinion = { who = ROOT modifier = opinion_forced_into_imperial_government }
+					}
+				}
+			}
+			ROOT = { any_realm_lord = { clr_flag = emf_prior_realm_lord_of_@ROOT } }
+		}
+	}
+
+	on_success_posttitle = { emf_cb_on_success_posttitle = yes }
+
+	on_fail = {
+		log = "CB(Chinese Unification): WHITEPEACE: title=[FromFrom.GetID]: [Root.EMF_GetDebugName] vs. [From.EMF_GetDebugName]"
+		ROOT = { prestige = -200 }
+	}
+
+	on_reverse_demand = {
+		log = "CB(Chinese Unification): DEFEAT: title=[FromFrom.GetID]: [Root.EMF_GetDebugName] vs. [From.EMF_GetDebugName]"
+		emf_cb_defeat = yes
+		emf_imperial_decay_loss = yes
+		ROOT = {
+			show_scope_change = no
+			transfer_scaled_wealth = { to = FROM value = 4.0 }
+			prestige = -300
+		}
+		FROM = {
+			show_scope_change = no
+			if = {
+				limit = { emf_hostile_religion_to_ROOT = yes }
+				participation_scaled_piety = 100
+			}
+			participation_scaled_prestige = 250
+			if = {
+				limit = { uses_decadence = yes }
+				participation_scaled_decadence = -10
+			}
+		}
+		any_defender = {
+			limit = { NOT = { character = FROM } }
+			hidden_tooltip = {
+				if = {
+					limit = { emf_hostile_religion_to_ROOT = yes }
+					participation_scaled_piety = 100
+				}
+				participation_scaled_prestige = 250
+				if = {
+					limit = { uses_decadence = yes }
+					participation_scaled_decadence = -10
+				}
+			}
+		}
+	}
+
+	on_invalidation_title = {
+		log = "CB(Chinese Unification): INVALIDATED: title=[This.GetID]: [Root.EMF_GetDebugName] vs. [From.EMF_GetDebugName]"
+		if = { # Prestige cost refund
+			limit = { ROOT = { ai = no } }
+			ROOT = { prestige = 200 }
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+
+	# ai importance placed on this CB: scope is the targeted title, ROOT is the attacking character, FROM is the defending character
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			any_direct_de_jure_vassal_title = {
+				owner_under_FROM = yes
+				location = { any_neighbor_province = { owner_under_ROOT = yes } }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_direct_de_jure_vassal_title = { owner_under_ROOT = yes }
+		}
+		modifier = {
+			factor = 1.5
+			ROOT = { trait = lucky_ruler }
+		}
+		modifier = {
+			factor = 0.5
+			FROM = { primary_title = { has_title_flag = pretender_chinese_empire } }
+			ROOT = { primary_title = { has_title_flag = pretender_chinese_empire } }
+		}
+	}
+}
