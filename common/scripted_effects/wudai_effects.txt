@@ -1,0 +1,337 @@
+# -*- ck2.scripted_effects -*-
+wudai_empire_new_title = {
+	set_title_flag = uses_temple_names_by_script #Titles with this flag give their heirs a temple name via on_death event
+	set_title_flag = pretender_chinese_empire #Blocks all grace interactions
+	set_title_flag = chinese_imperial_government_preserve
+	#adjective = e_china_west_governor_adj #Use WP adj as it is "Chinese" but also gives the right one in different languages
+	owner = { set_character_flag = emf_no_law_penalties }
+	
+	if = {
+		limit = {
+			has_law = revokation_2
+		}
+		add_law = {
+			law = revokation_1
+			cooldown = no
+			opinion_effect = no
+		}
+	}
+	if = {
+		limit = {
+			has_law = ze_revokation_2
+		}
+		add_law = {
+			law = ze_revokation_1
+			cooldown = no
+			opinion_effect = no
+		}
+	}
+	if = {
+		limit = {
+			NOT = { has_law = succ_primogeniture }
+		}
+		add_law = {
+			law = succ_primogeniture
+			cooldown = no
+			opinion_effect = no
+		}
+	}
+	owner = { 
+		clr_character_flag = emf_no_law_penalties 
+		set_government_type = chinese_imperial_government
+	}
+	save_event_target_as = temple_name_title
+}
+wudai_temple_name_father = {
+	set_character_flag = to_be_given_temple_name
+	father_even_if_dead = {
+		if = {
+			limit = {
+				is_alive = yes
+			}
+			set_character_flag = to_be_given_temple_name
+		}
+		else_if = {
+			limit = {
+				NOT = { has_character_flag = given_temple_name_by_script }
+			}
+			hidden_effect = {
+				random_list = { #Give a temple name
+					1 = {
+						trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Gaozu } } }
+						set_name = "Gaozu"
+						event_target:temple_name_title = { set_title_flag = temple_name_Gaozu }
+						set_character_flag = given_temple_name_by_script
+					}
+					1 = {
+						trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Taizu } } }
+						set_name = "Taizu"
+						event_target:temple_name_title = { set_title_flag = temple_name_Taizu }
+						set_character_flag = given_temple_name_by_script
+					}
+					1 = {
+						trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Shizu } } }
+						set_name = "Shizu"
+						event_target:temple_name_title = { set_title_flag = temple_name_Shizu }
+						set_character_flag = given_temple_name_by_script
+					}
+					1 = {
+						trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Zhaozu } } }
+						set_name = "Zhaozu"
+						event_target:temple_name_title = { set_title_flag = temple_name_Zhaozu }
+						set_character_flag = given_temple_name_by_script
+					}
+					1 = {
+						trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Jingzu } } }
+						set_name = "Jingzu"
+						event_target:temple_name_title = { set_title_flag = temple_name_Jingzu }
+						set_character_flag = given_temple_name_by_script
+					}
+					1 = {
+						trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Xianzu } } }
+						set_name = "Xianzu"
+						event_target:temple_name_title = { set_title_flag = temple_name_Xianzu }
+						set_character_flag = given_temple_name_by_script
+					}
+					1 = {
+						trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Liezu } } }
+						set_name = "Liezu"
+						event_target:temple_name_title = { set_title_flag = temple_name_Liezu }
+						set_character_flag = given_temple_name_by_script
+					}
+					1 = {
+						trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Chengzu } } }
+						set_name = "Chengzu"
+						event_target:temple_name_title = { set_title_flag = temple_name_Chengzu }
+						set_character_flag = given_temple_name_by_script
+					}
+					1 = {
+						trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Shengzu } } }
+						set_name = "Shengzu"
+						event_target:temple_name_title = { set_title_flag = temple_name_Shengzu }
+						set_character_flag = given_temple_name_by_script
+					}
+					1 = {
+						trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Yizu } } }
+						set_name = "Yizu"
+						event_target:temple_name_title = { set_title_flag = temple_name_Yizu }
+						set_character_flag = given_temple_name_by_script
+					}
+					1 = {
+						trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Xuanzu } } }
+						set_name = "Xuanzu"
+						event_target:temple_name_title = { set_title_flag = temple_name_Xuanzu }
+						set_character_flag = given_temple_name_by_script
+					}
+					1 = {
+						trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Suzu } } }
+						set_name = "Suzu"
+						event_target:temple_name_title = { set_title_flag = temple_name_Suzu }
+						set_character_flag = given_temple_name_by_script
+					}
+				}
+				father_even_if_dead = {
+					if = {
+						limit = {
+							NOT = { has_character_flag = given_temple_name_by_script }
+						}
+						random_list = {
+							1 = {
+								trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Gaozu } } }
+								set_name = "Gaozu"
+								event_target:temple_name_title = { set_title_flag = temple_name_Gaozu }
+								set_character_flag = given_temple_name_by_script
+							}
+							1 = {
+								trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Taizu } } }
+								set_name = "Taizu"
+								event_target:temple_name_title = { set_title_flag = temple_name_Taizu }
+								set_character_flag = given_temple_name_by_script
+							}
+							1 = {
+								trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Shizu } } }
+								set_name = "Shizu"
+								event_target:temple_name_title = { set_title_flag = temple_name_Shizu }
+								set_character_flag = given_temple_name_by_script
+							}
+							1 = {
+								trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Zhaozu } } }
+								set_name = "Zhaozu"
+								event_target:temple_name_title = { set_title_flag = temple_name_Zhaozu }
+								set_character_flag = given_temple_name_by_script
+							}
+							1 = {
+								trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Jingzu } } }
+								set_name = "Jingzu"
+								event_target:temple_name_title = { set_title_flag = temple_name_Jingzu }
+								set_character_flag = given_temple_name_by_script
+							}
+							1 = {
+								trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Xianzu } } }
+								set_name = "Xianzu"
+								event_target:temple_name_title = { set_title_flag = temple_name_Xianzu }
+								set_character_flag = given_temple_name_by_script
+							}
+							1 = {
+								trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Liezu } } }
+								set_name = "Liezu"
+								event_target:temple_name_title = { set_title_flag = temple_name_Liezu }
+								set_character_flag = given_temple_name_by_script
+							}
+							1 = {
+								trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Chengzu } } }
+								set_name = "Chengzu"
+								event_target:temple_name_title = { set_title_flag = temple_name_Chengzu }
+								set_character_flag = given_temple_name_by_script
+							}
+							1 = {
+								trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Shengzu } } }
+								set_name = "Shengzu"
+								event_target:temple_name_title = { set_title_flag = temple_name_Shengzu }
+								set_character_flag = given_temple_name_by_script
+							}
+							1 = {
+								trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Yizu } } }
+								set_name = "Yizu"
+								event_target:temple_name_title = { set_title_flag = temple_name_Yizu }
+								set_character_flag = given_temple_name_by_script
+							}
+							1 = {
+								trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Xuanzu } } }
+								set_name = "Xuanzu"
+								event_target:temple_name_title = { set_title_flag = temple_name_Xuanzu }
+								set_character_flag = given_temple_name_by_script
+							}
+							1 = {
+								trigger = { NOT = { event_target:temple_name_title = { has_title_flag = temple_name_Suzu } } }
+								set_name = "Suzu"
+								event_target:temple_name_title = { set_title_flag = temple_name_Suzu }
+								set_character_flag = given_temple_name_by_script
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+wudai_create_bloodline = {
+	if = {
+		limit = {
+			has_dlc = "Holy Fury"
+		}
+		if = {
+			limit = {
+				character = 217700
+			}
+			create_bloodline = { type = tang_bloodline }
+		}
+		else_if = {
+			limit = {
+				character = 1400469
+			}
+			create_bloodline = { type = later_liang_bloodline }
+		}
+		else_if = {
+			limit = {
+				character = 1412318
+			}
+			create_bloodline = { type = later_tang_zhuangzong_bloodline }
+		}
+		else_if = {
+			limit = {
+				character = 1412344
+			}
+			create_bloodline = { type = later_tang_mingzong_bloodline }
+		}
+		else_if = {
+			limit = {
+				character = 1412375
+			}
+			create_bloodline = { type = later_jin_bloodline }
+		}
+		else_if = {
+			limit = {
+				character = 1412397
+			}
+			create_bloodline = { type = later_han_bloodline }
+		}
+		else_if = {
+			limit = {
+				character = 1412375
+			}
+			create_bloodline = { type = later_zhou_taizu_bloodline }
+		}
+		else_if = {
+			limit = {
+				character = 1401283
+			}
+			create_bloodline = { type = later_zhou_shizong_bloodline }
+		}
+		else_if = {
+			limit = {
+				character = 1400667
+			}
+			create_bloodline = { type = former_shu_bloodline }
+		}
+		else_if = {
+			limit = {
+				character = 1400030
+			}
+			create_bloodline = { type = later_shu_bloodline }
+		}
+		else_if = {
+			limit = {
+				character = 217721
+			}
+			create_bloodline = { type = song_taizu_bloodline }
+		}
+		else_if = {
+			limit = {
+				character = 217722
+			}
+			create_bloodline = { type = song_taizong_bloodline }
+		}
+		else_if = {
+			limit = {
+				character = 1406526
+			}
+			create_bloodline = { type = southern_han_bloodline }
+		}
+		else_if = {
+			limit = {
+				character = 1406215
+			}
+			create_bloodline = { type = southern_tang_bloodline }
+		}
+		else_if = {
+			limit = {
+				character = 1406717
+			}
+			create_bloodline = { type = min_bloodline }
+		}
+		else_if = {
+			limit = {
+				character = 1407163
+			}
+			create_bloodline = { type = southern_wu_bloodline }
+		}
+		else = {
+			narrative_event = { id = HF.24240 tooltip = tooltip_evt_hf_24240 }
+		}
+	}
+}
+wudai_destroy_old_titles = {
+	event_target:wudai_old_title = { emf_destroy_title = yes }
+	any_demesne_title = {
+		limit = { 
+			OR = {
+				tier = EMPEROR
+				tier = KING
+			}
+			NOT = { has_title_flag = pretender_chinese_empire }
+			}
+		destroy_landed_title = THIS
+	}
+}
+	
