@@ -1,0 +1,30 @@
+#Kings of Bohai/Balhae/Dan Gur
+698.1.1 = { holder = 1414013 liege = k_bohai } #Dae Jo-yeong, King Go
+719.4.2 = { holder = 1414015 } #Dae Mu-ye, King Mu
+737.1.1 = { holder = 1414024 } #Dae Heum-mu, King Mun
+793.1.1 = { holder = 1414035 } #Dae Won-ui
+794.1.1 = { holder = 1414037 } #Dae Hwa-yeo, King Seong
+794.5.1 = { holder = 1414030 } #Dae Sung-rim, King Gang
+809.1.1 = { holder = 1414038 } #Dae Won-yu, King Jeong
+812.1.1 = { holder = 1414040 } #Dae Eon-ui, King Hui
+817.1.1 = { holder = 1414042 } #Dae Myeong-chung, King Gan
+818.1.1 = { holder = 1414048 } #Dae In-su, King Seon
+830.1.1 = { holder = 1414050 } #Dae I-jin
+857.1.1 = { holder = 1414051 } #Dae Geon-hwang
+871.1.1 = { holder = 1414060 } #Dae Hyeon-seok
+893.1.1 = { holder = 1414061 } #Dae Wi-hae
+906.1.1 = { holder = 1414062 } #Dae In-seon
+#Kingdom of Dongdan
+926.8.28 = { holder = 194327 } #Yelü Bei
+#Kingdom of Jeong'an
+930.1.21 = { holder = 1414079 liege = k_jeongan } #Yeol Manhwa
+976.1.1 = { holder = 1414080 } #O Hyeongmyeong
+986.1.1 = { holder = 1414081 } #O Taewon
+#Pulumaoduo tribe
+990.1.17 = { holder = 1419939 liege = 0 set_tribute_suzerain = { who = e_khitan type = nomadic }  }
+1010.1.1 = { holder = 1419940 }
+1033.1.1 = { holder = 1419941 } #Punian - Dawang in 1048.5.31
+1060.1.1 = { holder = 1419942 }
+1084.1.1 = { holder = 1419943 }
+1105.1.1 = { holder = 1419944 }
+1130.1.1 = { holder = 0 }

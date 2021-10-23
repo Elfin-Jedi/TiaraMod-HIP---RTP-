@@ -1,0 +1,51 @@
+#Northern Wei
+474.1.1 = { holder = 1400743 } #Cui Jian - prefect around this time
+477.1.1 = { holder = 0 }
+#Northern Qi
+580.1.1 = { holder = 1800257 } #Feng Xun - administrator around this time
+583.1.1 = { holder = 0 }
+#Tang
+656.1.1 = { holder = 1800294 } #Feng Yandao - made prefect
+663.1.1 = { holder = 0 }
+810.1.1 = { holder = 1409561 } #Pei Xingli - prefect until 813.9.1
+813.9.1 = { holder = 0 }
+866.1.1 = { holder = 1403075 liege = d_eyue } #Cui Liao
+868.1.1 = { holder = 1405008 } #Liu Junzhang
+870.1.1 = { holder = 1408198 } #Chen Yong
+874.1.1 = { holder = 1408200 } #Wei Chan
+877.1.1 = { holder = 1408201 } #Cui Shao
+877.4.17 = { holder = 1409460 } #Pei Wo - made prefect
+878.1.7 = { holder = 1408201 } #Cui Shao
+884.4.2 = { holder = 1408202 } #Lu Shenzhong
+886.1.1 = { holder = 1408203 } #Du Hong
+888.2.10 = { holder = 1408196 liege = d_eyue } #Feng Jingzhang
+#Southern Wu
+896.9.17 = { holder = 1408208 liege = d_huainan } #Shi Shan - prefect in 904
+905.3.17 = { liege = d_eyue }
+907.7.13 = { holder = 1408175 } #Qin Pei
+912.5.30 = { holder = 1408052 } #Li Jian
+929.9.6 = { holder = 1407169 } #No Jiedushi
+929.9.22 = { holder = 1408011 } #Chai Zaiyong
+932.1.1 = { holder = 1408204 } #Zhang Xuan
+#Southern Tang
+939.9.16 = { holder = 1408102 } #Wang Yu
+944.7.23 = { holder = 1408205 } #Wei Jian
+946.6.30 = { holder = 1800447 } #Xu Wenzhen - made prefect
+952.1.1 = { holder = 1800443 } #Wang Chengxi - prefect until 956.4.17
+#Later Zhou
+956.4.17 = { holder = 1800444 liege = e_later_zhou }
+#Southern Tang
+956.8.29 = { holder = 1800445 liege = d_eyue } #Li Ping - made prefect
+957.4.6 = { holder = 1408051 } #He Jingzhu
+#Later Zhou
+958.4.8 = { holder = 1401283 liege = e_later_zhou } #No Jiedushi
+959.7.27 = { holder = 1401287 } #No Jiedushi
+#Song
+960.2.4 = { holder = 217721 liege = e_song }
+976.11.14 = { holder = 217722 }
+997.5.8 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }

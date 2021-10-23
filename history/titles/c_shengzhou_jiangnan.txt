@@ -1,0 +1,54 @@
+#Shengzhou, Shangyuan commandery, Danyang commandery, Yangzhou (Southern Dynasties)
+#Eastern Han
+203.1.1 = { holder = 1407868 } #Sun Yi - made administrator
+204.1.1 = { holder = 0 }
+#Southern Chen
+561.2.1 = { holder = 1406865 } #Chen Bomao - made inspector
+562.7.17 = { holder = 0 }
+569.8.7 = { holder = 1406872 } #Chen Bogong - made inspector
+572.1.1 = { holder = 0 }
+574.1.1 = { holder = 1406876 } #Chen Boxin - made inspector
+577.3.3 = { holder = 1406895 } #Chen Shuling - made inspector
+579.1.1 = { holder = 0 }
+581.1.1 = { holder = 1406870 } #Chen Bogu - made inspector
+582.2.26 = { holder = 1406895 } #Chen Shuling - made inspector
+583.1.31 = { holder = 1406902 } #Chen Shuwen - made inspector
+583.3.7 = { holder = 1406904 } #Chen Shuchong - made inspector
+584.7.10 = { holder = 1406997 } #Chen Yi - made inspector
+588.1.1 = { holder = 1406999 } #Chen Yuan - inspector until 588.7.1
+588.7.2 = { holder = 1407003 } #Chen Zhuang - made inspector
+#Sui
+589.2.10 = { holder = 0 }
+#Tang
+863.2.22 = { holder = 1400415 liege = d_zhexi } #Du Shenquan
+870.4.5 = { holder = 1400424 } #Cao Que
+874.3.22 = { holder = 1407387 } #Zhao Yin
+875.5.9 = { holder = 1407292 } #Pei Xuan
+878.7.4 = { holder = 1402848 } #Gao Pian
+879.10.19 = { holder = 1404250 } #Zhou Bao
+887.4.15 = { holder = 1408084 } #Xue Lang
+888.1.6 = { holder = 1406398 liege = e_tang } #Zhang Xiong conquers, in 890 made prefect
+893.9.5 = { holder = 1406397 } #Feng Hongduo - prefect
+902.7.20 = { holder = 1408061 liege = d_huainan } #Li Shenfu - made prefect
+#Wu
+903.1.1 = { holder = 1408175 } #Qin Pei - prefect until 906.10.7
+906.6.10 = { liege = d_zhexi }
+906.10.7 = { holder = 1407208  } #Xu Wen
+912.5.30 = { holder = 1406215 } #Xu Zhigao - made prefect
+917.5.24 = { holder = 1407208 } #Xu Wen
+927.11.20 = { holder = 1406215 } #No Jiedushi
+927.11.29 = { holder = 1407210 } #Xu Zhixun
+931.10.28 = { holder = 1406215 liege = d_xuanshe } #No Jiedushi
+931.12.31 = { liege = d_zhexi } #Xu Zhigao
+#Southern Tang
+937.10.11 = { liege = e_southern_tang } #Liezu
+943.3.30 = { holder = 1406216 } #Yuanzong
+961.8.12 = { holder = 1406231 } #Li Yu
+#Song
+976.1.1 = { holder = 217722 liege = e_song }
+997.5.8 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }

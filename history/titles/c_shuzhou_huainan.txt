@@ -1,0 +1,90 @@
+#Northern Qi - Jiangzhou
+557.1.1 = { holder = 1409788 } #Lu Quan - prefect around this time
+560.1.1 = { holder = 0 }
+#Tang
+648.1.1 = { holder = 1409300 } #Pei Shu - prefect at some point
+652.1.1 = { holder = 0 }
+800.1.1 = { holder = 1407308 } #Pei Jing - prefect around this time
+803.1.1 = { holder = 0 }
+835.1.1 = { holder = 1405107 } #Yang Hangong - made prefect
+837.1.1 = { holder = 0 }
+845.5.4 = { holder = 1409877 } #Su Di - prefect until 846.3.21
+846.3.21 = { holder = 0 }
+862.1.1 = { holder = 1404168 liege = d_huainan } #Linghu Tao
+869.2.19 = { holder = 1406388 } #Ma Ju
+870.1.1 = { holder = 1404530 } #Kong Wei - prefect around this time
+874.1.1 = { holder = 1408058 } #Lang Youfu - prefect until 879.8.27
+879.8.27 = { holder = 1408059 } #Sun Duan - prefect around this time
+882.1.1 = { holder = 1402892 } #Gao Yu - prefect until 884.3.31
+884.3.31 = { holder = 1407649 } #Tao Ya - made prefect
+887.1.7 = { holder = 1408035 } #Xu Jing - conquers province
+887.5.1 = { holder = 1408060 } #Ni Zhang - prefect in 893.1.16
+893.1.16 = { liege = e_tang }
+893.11.15 = { holder = 1408061 liege = d_huainan } #Li Shenfu - made prefect
+902.7.20 = { holder = 1408062 } #Liu Cun - prefect in 903.12.22
+905.3.17 = { holder = 1407163 } #Yang Xingmi
+#Wu
+905.12.24 = { holder = 1407164 } #Yang Wo
+908.1.1 = { holder = 1408010 de_jure_liege = d_desheng liege = d_desheng } #Zhang Chong
+914.1.1 = { holder = 1407634 } #Chen Zhang - prefect around this time
+918.1.1 = { holder = 1408010 } #Zhang Chong
+920.5.21 = { holder = 1407168 } #Yang Meng - made prefect
+928.1.1 = { holder = 1408010 } #Zhang Chong
+932.1.1 = { holder = 1408011 } #Chai Zaiyong
+935.7.4 = { holder = 1408013 } #Zhou Ben
+#Southern Tang
+938.2.3 = { holder = 1408031 } #Li Zhang
+940.9.5 = { holder = 1408032 } #Ma Renyu
+942.3.28 = { holder = 1408014 } #Zhou Ye
+943.1.1 = { holder = 1408056 liege = e_southern_tang } #Sun Cheng - Yongtai Jiedushi 
+952.1.17 = { holder = 1406682 } #Ma Xichong - Yongtai Jiedushi
+954.1.1 = { holder = 1408015 } #Zhou Hongzuo - prefect until 956.4.17
+#Later Zhou
+956.4.17 = { holder = 1408063 liege = e_later_zhou } #Guo Lingtuan - made prefect
+#Southern Tang
+956.8.29 = { holder = 1408069 liege = e_southern_tang } #Zhu Yuan - made prefect
+957.4.6 = { holder = 1408071 } #Shi Renwang - prefect until 958.3.16
+#Later Zhou
+958.3.16 = { holder = 1400363 liege = d_desheng } #Zhao Zan
+#Song
+960.8.1 = { holder = 1401098 } #Song Yanwo
+964.1.1 = { holder = 1401660 } #Chen Derang
+969.1.1 = { holder = 217721 } #No Jiedushi
+971.6.10 = { holder = 1408025 } #Yin Chongke
+973.7.9 = { holder = 217721 liege = e_song }
+976.7.7 = { holder = 217722 }
+981.1.1 = { holder = 1407135 } #Chen Wenxiang - prefect around this time
+984.1.1 = { holder = 217722 }
+997.5.8 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }
+1125.3.26 = { holder = 217731 }
+1135.2.9 = { holder = 217732 }
+1150.1.9 = { holder = 217734 }
+1161.10.27 = { holder = 217735 }
+1189.1.20 = { holder = 217736 }
+1208.12.29 = { holder = 217737 }
+1213.9.11 = { holder = 217738 }
+1224.1.14 = { holder = 217739 }
+
+1234.2.9 = { holder = 217740 }
+
+1234.2.10 = { holder = 172005 } # Ögedei Khan
+1241.12.11 = { holder = 172007 } # Güyük Khan  # Actual coronation 1246.8.24
+1248.4.20 = { holder = 217265 } # Möngke Khan  # Actual coronation 1251.7.1
+1259.8.11 = { holder = 125526 } #civil war between Ariq Boke and Kublai
+1264.8.21 = { holder = 217266 } # Kublai Khan
+1294.2.18 = { holder = 217269 } # Temür Khan
+1307.2.10 = { holder = 217271 } # Külüg Khan 
+1311.1.27 = { holder = 217272 } # Buyantu Khan
+1320.3.1 = { holder = 217274 } # Gegeen Khan 
+1323.9.4 = { holder = 217279 } # Yesün Temür Khan
+1328.8.15 = { holder = 217280 }  # Ragibagh Khan
+1328.11.14 = { holder = 217281 } # Jayaatu Khan
+1329.4.3 = { holder = 217282 } # Khutughtu Khan Kusala
+1329.9.8 = {  holder = 217281 } # Jayaatu Khan (again)
+1332.9.2 = { holder = 217283 } # Rinchinbal Khan
+1332.12.14 = { holder = 217284 } # Toghon Temür Khan

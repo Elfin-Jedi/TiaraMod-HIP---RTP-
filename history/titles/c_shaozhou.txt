@@ -1,0 +1,46 @@
+#Shaozhou, Shaoling commandery
+510.1.1 = { holder = 1800649 } #Tao Ze - administrator at some point
+515.1.1 = { holder = 0 }
+#Tang
+662.1.1 = { holder = 1409009 } #Xin Sili - prefect at some point
+665.1.1 = { holder = 0 }
+865.1.1 = { holder = 1407494 liege = d_hunan } #Li Zhang
+867.4.2 = { holder = 1405062 } #Yang Yan - made prefect
+870.1.1 = { holder = 1416262 } #Yu Gui
+872.1.1 = { holder = 1407612 } #Wang Ning
+873.1.1 = { holder = 1408244 } #Li Yu
+874.8.16 = { holder = 1407293 } #Pei Zan
+876.1.1 = { holder = 1408387 } #Cui Jin
+878.4.7 = { holder = 1402894 } #Gao Jie
+879.5.26 = { holder = 1406094 } #Li Xi
+879.11.15 = { holder = 1408450 } #Li Chao
+880.1.1 = { holder = 1408451 } #Li Yu
+881.12.25 = { holder = 1417203 liege = e_tang } #Deng Chuna - made prefect, later jiedushi
+894.1.11 = { liege = d_hunan }
+894.6.13 = { holder = 1408090 } #Liu Jianfeng
+895.12.18 = { holder = 1408479 liege = e_tang } #Jiang Xun - took over the prefecture
+897.4.5 = { holder = 1406560 liege = d_hunan } #Ma Yin
+#Southern Chu
+930.12.2 = { holder = 1406565 } #Ma Xisheng
+932.8.15 = { holder = 1406566 } #Ma Xifan
+939.1.1 = { holder = 1408482 } #Liao Kuangji - made prefect
+940.1.3 = { holder = 1406566 } #Ma Xifan
+947.5.30 = { holder = 1406572 } #Ma Xiguang
+951.1.21 = { holder = 1406687 } #Ma Xi'e
+951.10.16 = { holder = 1406682 } #Ma Xichong
+#Southern Tang
+951.11.26 = { holder = 1408454 } #Bian Hao
+#Later Zhou
+952.11.13 = { holder = 1408457 } #Wang Kui
+954.6.4 = { holder = 1408462 } #Zhou Xingfeng
+956.4.13 = { holder = 1408465 } #Liao Jian
+#Song
+962.10.10 = { holder = 1408463 } #Zhou Baoquan
+963.4.4 = { holder = 217721 liege = e_song }
+976.11.14 = { holder = 217722 }
+997.5.8 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }

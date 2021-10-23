@@ -1,0 +1,53 @@
+#Tang
+637.1.1 = { holder = 1406869 } #Chen Junbin - prefect at some point
+640.1.1 = { holder = 0 }
+665.1.1 = { holder = 1800294 } #Feng Yandao - made prefect
+667.1.1 = { holder = 0 }
+765.1.1 = { holder = 1407282 liege = d_jiangxi } #Pei Xu - prefect around this time
+768.1.1 = { holder = 0 }
+822.1.1 = { holder = 1407356 } #Pei Xun - prefect in 823
+824.1.1 = { holder = 0 }
+827.1.1 = { holder = 1407355 } #Pei Ji - prefect at some point
+830.1.1 = { holder = 0 }
+865.6.19 = { holder = 1408141 } #Yan Zhuan
+868.6.10 = { holder = 1408144 } #Li Zhi
+871.1.1 = { holder = 1405188 } #Yang Dai
+872.1.1 = { holder = 1409602 } #Lu Hong - prefect around this time
+875.1.1 = { holder = 1416008 } #Dugu Yun
+877.1.1 = { holder = 1408165 } #Gao Xiang
+#Wang Xianzhi
+878.4.7 = { holder = 1408166 liege = 0 } #Wang Chongyin - took over the prefecture
+878.5.6 = { holder = 1408167 } #Xu Tangju - took over
+#Tang
+880.1.1 = { holder = 1408168 liege = d_jiangxi } #Gao Maoqing
+882.5.21 = { holder = 1408169 } #Zhong Chuan - takes over
+885.1.20 = { holder = 1408187 liege = e_tang } #Lu Guangchou
+#Later Liang
+907.6.1 = { liege = 0 set_tribute_suzerain = { who = e_later_liang type = permanent } }
+910.2.22 = { liege = d_baisheng de_jure_liege = d_baisheng clear_tribute_suzerain = e_later_liang }
+911.1.6 = { holder = 1408188 } #Lu Yanchang
+911.12.28 = { holder = 1408190 } #Li Qiu
+912.5.1 = { holder = 1408191 } #Li Yantu
+913.1.10 = { holder = 1408192 } #Tan Quanbo
+#Southern Wu
+918.2.18 = { holder = 1408020 } #Wang Guan
+921.1.1 = { holder = 1408077 } #Li Decheng
+934.7.7 = { holder = 1408031 } #Li Zhang
+#Southern Tang
+938.2.3 = { holder = 1408193 } #Wang Hui
+941.1.1 = { holder = 1408195 } #Jia Kuanghao
+943.11.5 = { holder = 1408197 } #Li Gao
+945.1.1 = { holder = 1408021 } #Wang Chongwen
+945.12.7 = { holder = 1406216 } #No Jiedushi
+959.1.12 = { holder = 1406220 } #Li Jingti
+964.1.1 = { holder = 1408114 } #Chai Kezhen
+965.2.14 = { holder = 1406231 } #No Jiedshui
+#Song
+976.1.1 = { holder = 217721 liege = e_song }
+976.11.14 = { holder = 217722 }
+997.5.8 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }

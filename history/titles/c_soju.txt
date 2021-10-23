@@ -1,0 +1,19 @@
+#Bohai/Balhae/Dan Gur - local chieftains of Wuzhe
+867.1.1 = { holder = 1414087 liege = k_bohai }
+900.1.1 = { holder = 1414088 }
+937.1.1 = { holder = 1414089 }
+#Qitai Gur - Wuzhe
+926.8.28 = { liege = k_bohai }
+937.1.1 = { holder = 1414088 }
+950.1.1 = { holder = 1414089 }
+953.1.17 = { liege = 0 set_tribute_suzerain = { who = e_khitan type = nomadic }  }
+969.1.1 = { holder = 1414084 }
+#Independence
+976.1.1 = { holder = 1414083 clear_tribute_suzerain = e_khitan } #Yan Pu - leader after 975.8.10
+980.1.1 = { holder = 1414085 } #Wu Zhaodu - leader in 995
+#Qitai Gur
+996.12.4 = { set_tribute_suzerain = { who = e_khitan type = nomadic } }
+998.1.1 = { holder = 1414086 } #Wu Zhaoqing - leader in 1004
+1010.1.1 = { holder = 0 }
+#Jin
+1114.12.29 = { clear_tribute_suzerain = e_khitan }
