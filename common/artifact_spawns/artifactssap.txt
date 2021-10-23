@@ -28,7 +28,6 @@ dragon_scale = {
 			value = 100
 			religion = tengri_pagan
 			is_landed = yes
-      only_playable = true
 		}
 	}
 
@@ -65,7 +64,6 @@ firebird_plumage = {
 			value = 100
 			religion = slavic_pagan
 			is_landed = yes
-      only_playable = true
 		}
 	}
 
@@ -97,7 +95,6 @@ baba_yaga_pestle_mortar = {
 				religion = slavic_pagan_reformed
 			}
 			is_landed = yes
-      only_playable = true
 		}
 		additive_modifier = {
 			value = 100
@@ -139,7 +136,6 @@ yadachy_cloak = {
 			value = 100
 			religion = tengri_pagan
 			is_landed = yes
-      only_playable = true
 		}
 	}
 
