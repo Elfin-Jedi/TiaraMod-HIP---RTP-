@@ -1,0 +1,47 @@
+#Tang
+781.4.20 = { holder = 1407597 } #Wang Hong
+782.1.1 = { holder = 0 }
+852.1.1 = { holder = 1410925 liege = e_tang } #Qibi Tong
+854.1.1 = { holder = 0 }
+865.1.1 = { holder = 1401447 } #Gao Hong
+870.12.6 = { holder = 1412306 } #Li Guochang
+#Rebellion
+878.6.13 = { liege = 0 }
+#Tang
+879.4.5 = { holder = 1401448 liege = e_tang } #Wu Shitai
+881.1.1 = { holder = 1410404 } #Helian Duo
+881.7.1 = { holder = 1410934 } #Qibi Zhang
+885.1.1 = { holder = 1401449 } #Wang Bian
+888.4.20 = { holder = 0 }
+893.1.1 = { holder = 1412477 } #Shi Shanyou
+896.1.1 = { liege = k_hedong }
+903.6.5 = { holder = 1410935 liege = e_tang } #Qibi Rang
+903.6.20  = { holder = 1412313 liege = k_hedong } #Li Kening
+#Prince of Jin/Later Tang
+908.3.25 = { holder = 1400301 } #Zhou Dewei
+914.1.1 = { holder = 1400305 } #Li Siben - the actual date is 1st of January
+916.9.23 = { holder = 1410401 } #Li Si'en
+923.1.1 = { holder = 1412319 } #Li Cunba
+923.5.13 = { liege = e_later_tang }
+924.1.1 = { holder = 1400306 } #Zhu Shouyin
+926.6.19 = { holder = 1412423 } #An Jinquan
+926.7.1 = { holder = 1400322 } #Zhang Wen
+928.3.1 = { holder = 1400308 } #Suo Baitong
+928.6.1 = { holder = 1400322 } #Zhang Wen
+929.1.1 = { holder = 1410904 } #Zhang Yanqiu
+930.1.1 = { holder = 1400259 } #Gao Xingzhou
+933.1.1 = { holder = 1412434 } #Yang Tan
+935.1.10 = { holder = 1412442 } #An Shuqian
+#Later Jin
+937.1.11 = { liege = e_later_jin }
+937.1.23 = { holder = 0 }
+945.1.1 = { holder = 1412007 } #She Congruan
+#Later Han
+947.5.2 = { name = "Yong'an" effect = { set_coa = d_yongan } liege = e_later_han }
+950.5.5 = { holder = 0 }
+#Later Zhou
+954.7.1 = { holder = 1412008 liege = e_later_zhou } #She Deyi
+#Song
+960.2.3 = { liege = e_song }
+963.1.1 = { holder = 1412008 } #She Yuxun
+977.1.1 = { holder = 0 }

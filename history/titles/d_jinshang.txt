@@ -1,0 +1,11 @@
+#Tang
+785.1.1 = { name = "Jinshang" liege = e_tang }
+886.3.10 = { holder = 1401255 } #Yang Shouliang
+887.1.1 = { holder = 1401255 } #Yang Shouzong
+887.7.1 = { holder = 1401257 } #Lu Mou
+891.1.1 = { holder = 1401258 name = "Zhaoxin" effect = { set_coa = d_zhaoxin } } #Feng Xingxi
+905.1.1 = { holder = 1401261 } #Quan Shilang
+905.10.31 = { name = "Rongzhao" effect = { set_coa = d_rongzhao } }
+905.4.1 = { holder = 1401258 } #Feng Xingxi
+905.12.1 = { name = "Dingwu" effect = { set_coa = d_dingwu } }
+906.5.1 = { holder = 0 } #Merged into Shannan Dong
