@@ -1,0 +1,21 @@
+# -*- ck2.traits -*-
+
+jinshi = {
+	customizer = no
+	random = no
+	
+	taoist_opinion = 10
+	liege_opinion = 5
+	monthly_character_prestige = 0.25
+	learning = 1
+}
+zhuangyuan = {
+	customizer = no
+	random = no
+	
+	taoist_opinion = 20
+	liege_opinion = 10
+	monthly_character_prestige = 1.0
+	learning = 2
+}
+
