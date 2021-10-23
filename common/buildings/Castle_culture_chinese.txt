@@ -1,0 +1,205 @@
+city = {
+	ct_culture_han_0 = {
+		desc = ct_culture_han_1_desc
+		potential = {
+			OR = {
+				culture = han
+				has_building = ct_culture_han_0
+			}
+		}
+		is_active_trigger = {
+			culture = han
+		}
+		trigger = {
+			TECH_CITY_CONSTRUCTION = 0
+			emf_is_building_construction_allowed = yes
+			culture = han
+		}
+		gold_cost = 100
+		build_time = 365
+		light_infantry = 120
+		pikemen = -10
+		heavy_infantry = -15
+		light_cavalry = -60
+		horse_archers = -15
+		light_infantry_offensive = 0.1
+		light_infantry_defensive = 0.1
+		retinuesize = 20
+		ai_creation_factor = 102
+
+		extra_tech_building_start = 0.0
+	}
+	ct_culture_han_1 = {
+		desc = ct_culture_han_1_desc
+		potential = {
+			OR = {
+				culture = han
+				has_building = ct_culture_han_0
+				has_building = ct_culture_han_1
+			}
+		}
+		is_active_trigger = {
+			culture = han
+		}
+		trigger = {
+			TECH_CITY_CONSTRUCTION = 1
+			emf_is_building_construction_allowed = yes
+			culture = han
+		}
+		upgrades_from = ct_culture_han_0
+		gold_cost = 200
+		build_time = 730
+		light_infantry = 160
+		pikemen = -10
+		heavy_infantry = -15
+		light_cavalry = -60
+		horse_archers = -15
+		light_infantry_offensive = 0.1
+		light_infantry_defensive = 0.1
+		retinuesize = 20
+		ai_creation_factor = 101
+
+		extra_tech_building_start = 1.0
+	}
+	ct_culture_han_2 = {
+		desc = ct_culture_han_1_desc
+		potential = {
+			OR = {
+				culture = han
+				has_building = ct_culture_han_0
+				has_building = ct_culture_han_1
+				has_building = ct_culture_han_2
+			}
+		}
+		is_active_trigger = {
+			culture = han
+		}
+		trigger = {
+			TECH_CITY_CONSTRUCTION = 2
+			emf_is_building_construction_allowed = yes
+			culture = han
+		}
+		upgrades_from = ct_culture_han_1
+		gold_cost = 300
+		build_time = 1095
+		light_infantry = 200
+		pikemen = -10
+		heavy_infantry = -15
+		light_cavalry = -60
+		horse_archers = -15
+		light_infantry_offensive = 0.1
+		light_infantry_defensive = 0.1
+		retinuesize = 20
+		ai_creation_factor = 100
+
+		extra_tech_building_start = 1.0
+	}
+	ct_culture_han_3 = {
+		desc = ct_culture_han_1_desc
+		potential = {
+			OR = {
+				culture = han
+				has_building = ct_culture_han_0
+				has_building = ct_culture_han_1
+				has_building = ct_culture_han_2
+				has_building = ct_culture_han_3
+			}
+		}
+		is_active_trigger = {
+			culture = han
+		}
+		trigger = {
+			TECH_CITY_CONSTRUCTION = 3
+			emf_is_building_construction_allowed = yes
+			culture = han
+		}
+		upgrades_from = ct_culture_han_2
+		gold_cost = 400
+		build_time = 1460
+		light_infantry = 140
+		fire_lancers = 100
+		pikemen = -10
+		heavy_infantry = -15
+		light_cavalry = -60
+		horse_archers = -15
+		light_infantry_offensive = 0.1
+		light_infantry_defensive = 0.1
+		retinuesize = 20
+		ai_creation_factor = 99
+
+		extra_tech_building_start = 1.0
+	}
+	ct_culture_han_4 = {
+		desc = ct_culture_han_1_desc
+		potential = {
+			OR = {
+				culture = han
+				has_building = ct_culture_han_0
+				has_building = ct_culture_han_1
+				has_building = ct_culture_han_2
+				has_building = ct_culture_han_3
+				has_building = ct_culture_han_4
+			}
+		}
+		is_active_trigger = {
+			culture = han
+		}
+		trigger = {
+			TECH_CITY_CONSTRUCTION = 4
+			emf_is_building_construction_allowed = yes
+			culture = han
+		}
+		upgrades_from = ct_culture_han_3
+		gold_cost = 500
+		build_time = 1825
+		light_infantry = 180
+		fire_lancers = 100
+		pikemen = -10
+		heavy_infantry = -15
+		light_cavalry = -60
+		horse_archers = -15
+		light_infantry_offensive = 0.1
+		light_infantry_defensive = 0.1
+		retinuesize = 20
+		ai_creation_factor = 98
+
+		extra_tech_building_start = 1.0
+	}
+	ct_culture_han_5 = {
+		desc = ct_culture_han_1_desc
+		potential = {
+			OR = {
+				culture = han
+				has_building = ct_culture_han_0
+				has_building = ct_culture_han_1
+				has_building = ct_culture_han_2
+				has_building = ct_culture_han_3
+				has_building = ct_culture_han_4
+				has_building = ct_culture_han_5
+			}
+		}
+		is_active_trigger = {
+			culture = han
+		}
+		trigger = {
+			TECH_CITY_CONSTRUCTION = 6
+			emf_is_building_construction_allowed = yes
+			culture = han
+		}
+		upgrades_from = ct_culture_han_4
+		gold_cost = 600
+		build_time = 2190
+		light_infantry = 160
+		fire_lancers = 160
+		pikemen = -10
+		heavy_infantry = -15
+		light_cavalry = -60
+		horse_archers = -15
+		light_infantry_offensive = 0.1
+		light_infantry_defensive = 0.1
+		retinuesize = 20
+		ai_creation_factor = 97
+
+		extra_tech_building_start = 1.0
+	}
+}
