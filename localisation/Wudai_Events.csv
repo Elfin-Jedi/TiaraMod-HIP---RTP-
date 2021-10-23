@@ -1,0 +1,45 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+wudai.001.t;Select the Dynasty Name;Select the Dynasty Name;Select the Dynasty Name;;Select the Dynasty Name;;;;;;;;;x
+wudai.001.d;A new era beigns with the ancension of [Root.GetDynName] and a new auspicious name for the state needs to be selected.;;;;;;;;;;;;;x
+wudai.001a;Cheng;Cheng;Cheng;;Cheng;;;;;;;;;x
+wudai.001b;Chu;Chu;Chu;;Chu;;;;;;;;;x
+wudai.001c;Dai;Dai;Dai;;Dai;;;;;;;;;x
+wudai.001d;Han;Han;Han;;Han;;;;;;;;;x
+wudai.001e;Ji;Ji;Ji;;Ji;;;;;;;;;x
+wudai.001f;Jin (Shanxi);Jin (Shanxi);Jin (Shanxi);;Jin (Shanxi};;;;;;;;;x
+wudai.001g;Jin (Jurchen);Jin (Jurchen);Jin (Jurchen);;Jin (Jurchen);;;;;;;;;x
+wudai.001h;Liang (Kaifeng);Liang (Kaifeng);Liang (Kaifeng);;Liang (Kaifeng);;;;;;;;;x
+wudai.001i;Liang (Hexi);Liang (Hexi);Liang (Hexi);;Liang (Hexi);;;;;;;;;x
+wudai.001j;Li;Li;Li;;Li;;;;;;;;;x
+wudai.001k;Liao;Liao;Liao;;Liao;;;;;;;;;x
+wudai.001l;Lu (Shandong);Lu (Shandong);Lu (Shandong);;Lu (Shandong);;;;;;;;;x
+wudai.001m;Lu (Hubei);Lu (Hubei);Lu (Hubei);;Lu (Hubei);;;;;;;;;x
+wudai.001n;Min;Min;Min;;Min;;;;;;;;;x
+wudai.001o;Ming;Ming;Ming;;Ming;;;;;;;;;x
+wudai.001p;Nan;Nan;Nan;;Nan;;;;;;;;;x
+wudai.001q;Qi (Qinfeng);Qi (Qinfeng);Qi (Qinfeng);;Qi (Qinfeng);;;;;;;;;x
+wudai.001r;Qi (Hebei);Qi (Hebei);Qi (Hebei);;Qi (Hebei);;;;;;;;;x
+wudai.001s;Qin;Qin;Qin;;Qin;;;;;;;;;x
+wudai.001t;Qing;Qing;Qing;;Qing;;;;;;;;;x
+wudai.001u;Shu;Shu;Shu;;Shu;;;;;;;;;x
+wudai.001v;Shun;Shun;Shun;;Shun;;;;;;;;;x
+wudai.001w;Song;Song;Song;;Song;;;;;;;;;x
+wudai.001x;Tang;Tang;Tang;;Tang;;;;;;;;;x
+wudai.001y;Wei;Wei;Wei;;Wei;;;;;;;;;x
+wudai.001z;Wu;Wu;Wu;;Wu;;;;;;;;;x
+wudai.001aa;Xi;Xi;Xi;;Xi;;;;;;;;;x
+wudai.001ab;Xia;Xia;Xia;;Xia;;;;;;;;;x
+wudai.001ac;Xu;Xu;Xu;;Xu;;;;;;;;;x
+wudai.001ad;Yan;Yan;Yan;;Yan;;;;;;;;;x
+wudai.001ae;Yin;Yin;Yin;;Yin;;;;;;;;;x
+wudai.001af;Ying;Ying;Ying;;Ying;;;;;;;;;x
+wudai.001ag;Yuan;Yuan;Yuan;;Yuan;;;;;;;;;x
+wudai.001ah;Yue;Yue;Yue;;Yue;;;;;;;;;x
+wudai.001ai;Zhao;Zhao;Zhao;;Zhao;;;;;;;;;x
+wudai.001aj;Zheng;Zheng;Zheng;;Zheng;;;;;;;;;x
+wudai.001ak;Zhou;Zhou;Zhou;;Zhou;;;;;;;;;x
+wudai.001al;More options;More options;More options;;More options;;;;;;;;;x
+wudai.001am;Keep current title;Keep current title;Keep current title;;Keep current title;;;;;;;;;x
+wudai.001an;Zhen;Zhen;Zhen;;Zhen;;;;;;;;;x
+
+EVTDESC_TOG_wudai;You have decided to visit the ancestral shrine of you clan and make a sacrifice in the honor of your Ancestors, hoping for their aid in return. What will you ask of your fore[Root.GetFatherMother]s?;;;;;;;;;;;;;x
