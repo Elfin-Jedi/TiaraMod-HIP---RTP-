@@ -1,0 +1,74 @@
+#Lanzhou, Jincheng commandery
+
+#Eastern Han
+143.1.1 = { holder = 1409835 } #Su Qian - administrator at some point
+146.1.1 = { holder = 0 }
+216.1.1 = { holder = 1409840 } #Su Ze - administrator around this time
+#Cao Wei
+220.1.1 = { holder = 0 }
+
+#Tuyuhun
+284.1.1={ liege="d_qinghai"	holder = 247346 }
+317.1.1={ holder = 247347 }
+329.1.1={ holder = 247348 }
+351.1.1={ holder = 247349 }
+371.1.1={ holder = 247350 }
+390.1.1={ holder = 247351 }
+400.1.1={ holder = 247352 }
+405.1.1={ holder = 247353 }
+417.1.1={ holder = 247355 }
+424.1.1={ holder = 247357 }
+436.1.1={ holder = 247358 }
+452.1.1={ holder = 247368 }
+481.1.1={ holder = 247371 }
+490.1.1={ holder = 247373 }
+529.1.1={ holder = 247375 }
+530.1.1={ holder = 247376 }
+534.1.1={ holder = 247377 }
+540.1.1={ holder = 247378 }
+591.1.1={ holder = 247381 }
+597.1.1={ holder = 247382 }
+635.1.1={ holder = 247384 }
+635.11.1={ holder = 247385 }
+663.1.1={ holder = 247386 }
+665.1.1={ holder = 247387 }
+840.1.1= { liege = 0 }
+#Local Chieftains placeholders
+867.1.1={ holder = 1412127 }
+899.1.1={ holder = 1412128 }
+931.1.1={ holder = 1412129 }
+963.1.1={ holder = 1412130 }
+977.1.1={ holder = 1412131 }
+1004.1.1={ holder = 1412132 }
+#Tsongkha
+1008.1.1={ holder = 1410020 liege = d_qinghai } #Gesiluo
+1032.1.1 = { holder = 1410022 } #Mozhanjiao
+1058.1.1 = { holder = 1410023 } #Dongzhan
+1073.1.1 = { holder = 1410025 } #Aligu
+1093.1.1 = { holder = 1410026 } #Xiazheng
+1099.1.1 = { holder = 1410030 } #Longzan
+1099.11.1 = { holder = 1410049 } #Shuluosan
+#Song
+1104.1.1 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }
+1125.3.26 = { holder = 217731 }
+1135.2.9 = { holder = 217732 }
+1150.1.9 = { holder = 217734 }
+1161.10.27 = { holder = 217735 }
+1189.1.20 = { holder = 217736 }
+1208.12.29 = { holder = 217737 }
+1213.9.11 = { holder = 217738 }
+1224.1.14 = { holder = 217739 }
+
+1234.2.9 = { holder = 217740 }
+
+1234.2.10 = { holder = 172005 } # Ögedei Khan
+1241.12.11 = { holder = 172007 } # Güyük Khan  # Actual coronation 1246.8.24
+1248.4.20 = { holder = 217265 } # Möngke Khan  # Actual coronation 1251.7.1
+1251.1.1={ liege=k_sakya_trizin } # Somewhere around this time Kublai grants authority over Tibet Sakya
+1254.1.1={ holder=1059988 }
+1300.1.1={ holder=1059996 }

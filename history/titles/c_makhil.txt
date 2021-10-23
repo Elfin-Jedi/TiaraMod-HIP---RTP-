@@ -1,0 +1,18 @@
+#Bohai/Balhae/Dan Gur - local chieftains of Wuzhe
+867.1.1 = { holder = 1414087 liege = k_bohai }
+900.1.1 = { holder = 1414088 }
+#Qitai Gur - Wanyan
+926.8.28 = { holder = 1419011 liege = k_bohai } #Wanyan Hanpu
+940.1.1 = { holder = 1419012 } #Wanyan Wulu
+953.1.17 = { liege = 0 set_tribute_suzerain = { who = e_khitan type = nomadic }  }
+960.1.1 = { holder = 1419015 } #Wanyan Bahai
+994.1.1 = { holder = 1419016 } #Wanyan Suike
+1030.1.1 = { holder = 1419017 } #Wanyan Xielihu
+1039.1.1 = { holder = 1419018 } #Wanyan Shilu
+1053.1.1 = { holder = 1419019 } #Wanyan Wugunai
+1074.1.1 = { holder = 1419020 } #Wanyan Polashu
+1094.1.1 = { holder = 1419021 } #Wanyan Yingge
+1103.1.1 = { holder = 1419022 } #Wanyan Wuyashu
+1113.1.1 = { holder = 217730 clear_tribute_suzerain = e_khitan } #Wanyan Aguda
+#Jin
+1123.9.19 = { holder = 0 }

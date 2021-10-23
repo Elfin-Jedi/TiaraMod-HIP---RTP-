@@ -1,0 +1,75 @@
+#Luzhou, Lujiang commandery
+
+#Eastern Han
+180.1.1 = { holder = 1409675 } #Lu Zhi - administrator at some point
+185.1.1 = { holder = 0 }
+#Cao Wei
+255.1.1 = { holder = 1406302 } #Li Ying - administrator at some point
+260.1.1=  { holder = 0 }
+#Western Jin
+275.1.1 = { holder = 1406128 } #Yan Mo - administrator around this time
+280.1.1 = { holder = 0 }
+#Eastern Jin
+326.1.1 = { holder = 1800615 } #Tao Zhan - administrator until 328.2.27
+328.2.27 = { holder = 0 }
+#Northern Qi
+556.1.1 = { holder = 1800261 } #Fei Zihui - made prefect
+558.1.1 = { holder = 0 }
+#Southern Chen
+576.7.17 = { holder = 1406897 } #Chen Shujian - made inspector
+576.12.16 = { holder = 0 }
+577.8.3 = { holder = 1406878 } #Chen Boyi - made inspector
+578.11.13 = { holder = 0 }
+#Sui
+589.2.10 = { holder = 0 }
+#Tang
+769.1.1 = { holder = 1407282 } #Pei Xu - prefect around this time
+771.1.1 = { holder = 0 }
+780.1.1 = { holder = 1800453 } #Sun Hui - prefect  around this time
+784.1.1 = { holder = 0 }
+803.1.1 = { holder = 1407308 } #Pei Jing - prefect around this time
+803.7.1 = { holder = 0 }
+843.10.11 = { holder = 1800456 } #Sun Gong'ai - made prefect
+846.5.29 = { holder = 0 }
+862.1.1 = { holder = 1404168 liege = d_huainan  } #Linghu Tao
+869.2.19 = { holder = 1406388 } #Ma Ju
+870.1.1 = { holder = 1402287 } #Li Yu
+875.3.12 = { holder = 1409581 } #Zhang Tuan - made prefect
+876.1.1 = { holder = 1402287 } #Li Yu
+877.11.13 = { holder = 1407181 } #Liu Ye
+879.10.19 = { holder = 1402848 } #Gao Pian
+883.4.28 = { holder = 1407163 } #Yang Xingmin - made prefect
+887.5.1 = { liege = e_tang }
+887.11.18 = { liege = d_huainan }
+888.5.19 = { holder = 1400619 } #Sun Ru
+892.7.3 = { holder = 1408008 } #Liu Wei - made prefect
+#Wu
+907.7.5 = { holder = 1407164 } #Yang Wo
+908.1.1 = { holder = 1408010 de_jure_liege = d_desheng liege = d_desheng } #Zhang Chong
+932.1.1 = { holder = 1408011 } #Chai Zaiyong
+935.7.4 = { holder = 1408013 } #Zhou Ben
+#Southern Tang
+938.2.3 = { holder = 1408031 } #Li Zhang
+940.9.5 = { holder = 1408032 } #Ma Renyu
+942.3.28 = { holder = 1408014 } #Zhou Ye
+948.5.12 = { holder = 1406216 } #No Jiedushi
+949.8.27 = { holder = 1408021 } #Wang Chongwen
+954.1.1 = { holder = 1408022 } #Sun Hanwei
+#Later Zhou
+958.4.8 = { holder = 1401283 liege = e_later_zhou } #No Jiedushi
+958.4.14 = { holder = 1400363 liege = d_desheng } #Zhao Zan
+#Song
+960.8.1 = { holder = 1401098 } #Song Yanwo
+964.1.1 = { holder = 1401660 } #Chen Derang
+969.1.1 = { holder = 217721 } #No Jiedushi
+971.6.10 = { holder = 1408025 } #Yin Chongke
+973.7.9 = { holder = 217721 liege = e_song }
+976.7.7 = { holder = 217722 }
+997.5.8 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }
+1125.3.26 = { holder = 217731 }
+ 
