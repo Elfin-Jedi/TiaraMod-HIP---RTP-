@@ -1,0 +1,202 @@
+#Don't forget to add new deaths to the scripted death triggers
+# Frames can be specified for individual death season, using "icon = 2" or similar. Defaults to 1 if not specified
+# Only the first frame gets recolored based on illness/known killer
+# Use "killer_icon = 2" or similar to have a different icon shown if there's a known killer. It'll default to using whatever you specified with "icon" otherwise
+# The icons themselves are defined in GFX_overlay_char_dead and GFX_overlay_char_dead_small
+# sound = no will prevent this death reason from playing a death sound
+# death_date_desc will define a different loc key than the default "DEATH_DATE_DESC" to use for descriptions of their date of death. E.G., to use "Went to China: $DATE|Y$ at age $AGE|Y$" instead of describing them as having died
+
+#GENERAL
+death_massacre = {
+	long_desc = "DEATH_MASSACRE"
+	can_nokiller = yes
+	sound_list = {
+		female = {
+			"female_violent_death_01"
+			"female_violent_death_02"
+			"female_violent_death_03"
+			"female_violent_death_04"
+		}
+		male = {
+			"male_violent_death_01"
+			"male_violent_death_02"
+			"male_violent_death_03"
+			"male_violent_death_04"
+			"male_violent_death_05"
+		}
+	}
+}
+death_execution_tear_apart = {
+	violent = yes
+	can_nokiller = yes
+	execution = yes
+	long_desc = "DEATH_EXECUTION_TEAR_APART"
+	sound_list = {
+		female = {
+			"female_violent_death_01"
+			"female_violent_death_02"
+			"female_violent_death_03"
+			"female_violent_death_04"
+		}
+		male = {
+			"male_violent_death_01"
+			"male_violent_death_02"
+			"male_violent_death_03"
+			"male_violent_death_04"
+			"male_violent_death_05"
+		}
+	}
+}
+death_execution_suicide = {
+	violent = yes
+	can_nokiller = yes
+	execution = yes
+	long_desc = "DEATH_EXECUTION_SUICIDE"
+	sound_list = {
+		female = {
+			"death_poisoning_female_01"
+			"death_poisoning_female_02"
+			"death_poisoning_female_03"
+		}
+		male = {
+			"death_poisoning_male_01"
+			"death_poisoning_male_02"
+			"death_poisoning_male_03"
+		}
+	}
+}
+death_mutiny = {
+	violent = yes
+	long_desc = "DEATH_MUTINY"
+	sound_list = {
+		female = {
+			"female_violent_death_01"
+			"female_violent_death_02"
+			"female_violent_death_03"
+			"female_violent_death_04"
+		}
+		male = {
+			"male_violent_death_01"
+			"male_violent_death_02"
+			"male_violent_death_03"
+			"male_violent_death_04"
+			"male_violent_death_05"
+		}
+	}
+}
+death_archer = {
+	violent = yes
+	can_nokiller = yes
+	long_desc = "DEATH_ARCHER"
+	sound_list = {
+		female = {
+			"female_violent_death_01"
+			"female_violent_death_02"
+			"female_violent_death_03"
+			"female_violent_death_04"
+		}
+		male = {
+			"male_violent_death_01"
+			"male_violent_death_02"
+			"male_violent_death_03"
+			"male_violent_death_04"
+			"male_violent_death_05"
+		}
+	}
+}
+death_execution_strangulation = {
+	violent = yes
+	execution = yes
+	long_desc = "DEATH_EXECUTION_STRANGULATION"
+	can_nokiller = yes
+	sound_list = {
+		female = {
+			"garroting_female_01"
+			"garroting_female_02"
+			"garroting_female_03"
+		}
+		male = {
+			"garroting_male_01"
+			"garroting_male_02"
+			"garroting_male_03"
+		}
+	}
+}
+death_execution_dismemberment = {
+	violent = yes
+	execution = yes
+	long_desc = "DEATH_EXECUTION_DISMEMBERMENT"
+	can_nokiller = yes
+	sound_list = {
+		female = {
+			"impaling_female_01"
+			"impaling_female_02"
+			"impaling_female_03"
+		}
+		male = {
+			"impaling_male_01"
+			"impaling_male_02"
+			"impaling_male_03"
+		}
+	}
+}
+death_starvation = {
+	execution = yes
+	long_desc = "DEATH_STARVATION"
+	can_nokiller = yes
+}
+death_suicide_immolation = {
+	violent = yes
+	long_desc = "DEATH_SUICIDE_IMMOLATION"
+	can_nokiller = yes
+	sound_list = {
+		female = {
+			"burning_female_01"
+			"burning_female_02"
+			"burning_female_03"
+		}
+		male = {
+			"burning_male_01"
+			"burning_male_02"
+			"burning_male_03"
+			"burning_male_04"
+		}
+	}
+}
+death_suicide_servant = {
+	violent = yes
+	long_desc = "DEATH_SUICIDE_SERVANT"
+	can_nokiller = yes
+	sound_list = {
+		female = {
+			"neutral_beheading_01"
+		}
+		male = {
+			"neutral_beheading_01"
+		}
+	}
+}
+death_suicide_drowning = {
+	violent = yes
+	long_desc = "DEATH_SUICIDE_DROWNING"
+	can_nokiller = yes
+	sound_list = {
+		female = {
+			"drowning_female_01"
+			"drowning_female_02"
+		}
+		male = {
+			"drowning_male_01"
+		}
+	}
+}
+#death_suicide_throat
+#death_execution_caning
+#death_murder_strangulation
+#death_execution_lingchi
+#death_execution_trampling
+#death_execution_pit
+#death_suicide_servant
+#death_fell_polo
+#death_meteor
+#death_anger
