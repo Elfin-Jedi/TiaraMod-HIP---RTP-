@@ -1605,7 +1605,7 @@ character_event = {
 			has_character_flag = pagan_oceania_religiontime
 		}
 		name = easyheresy.91b
-		set_secret_religion = melanesian_pagan
+		set_secret_religion = melanesian_religion
 	}
 	option = {
 		trigger = {
