@@ -1,0 +1,11 @@
+#Qay
+1123.1.31 = {
+	holder = 1410623
+	law = succ_primogeniture
+	effect={
+		set_title_flag = uses_temple_names_by_script #Titles with this flag give their heirs a temple name via on_death event
+		set_title_flag = pretender_chinese_empire #Blocks all grace interactions
+		set_title_flag = china_name_xi
+	}
+}
+1123.6.12 = { holder = 0 }

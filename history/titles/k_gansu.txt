@@ -1,0 +1,9 @@
+#Tang
+600.1.1 = { de_jure_liege = e_tang }
+#Song
+990.12.28 = { holder = 206643 name = "Xia" effect = { set_coa = e_china_xia } law = succ_primogeniture } #Li Jiqian
+1000.1.1 = { de_jure_liege = e_song }
+1004.1.26 = { holder = 206644 } #Li Deming
+1032.12.26 = { holder = 206650 } #Li Yuanhao
+1038.11.10 = { holder = 0 name = "Gansu" effect = { reset_coa = THIS } }
+1070.1.1 = { de_jure_liege = e_xixia }

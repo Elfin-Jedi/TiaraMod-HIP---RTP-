@@ -1,0 +1,25 @@
+#Tang
+600.1.1 = { de_jure_liege = e_tang }
+935.11.18 = { #Xu Zhigao
+	name = "Qi"
+	effect = { set_coa = e_china_qi_2 }
+	holder = 1406215
+	law = succ_primogeniture
+	liege = e_southern_wu
+}
+937.10.11  = { holder = 0 name = "Jiangnan" effect = { reset_coa = THIS } }
+
+
+958.5.31 = { #Yuanzong
+	holder = 1406216
+	name = "Tang" effect = { set_coa = e_southern_tang }
+	set_tribute_suzerain = { who = e_later_zhou type = permanent }
+}
+960.2.4 = { set_tribute_suzerain = { who = e_song type = permanent } clear_tribute_suzerain = e_later_zhou }
+961.8.12 = { #Li Yu
+	holder = 1406231
+}
+971.10.22 = { name = "Jiangnan" effect = { reset_coa = THIS } }
+976.1.1 = { holder = 0 clear_tribute_suzerain = e_song }
+#Song
+1000.1.1 = { de_jure_liege = e_song }

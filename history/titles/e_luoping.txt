@@ -1,0 +1,18 @@
+#Luoping or Da Yue Luoping
+
+895.3.3 = { #Dong Chang
+	holder = 1409467
+	law = succ_primogeniture
+	law = crown_authority_3
+	law = administration_2
+	law = inheritance_1
+	law = imperial_kingdom_creation_2
+	law = ze_revokation_1
+	law = law_voting_power_1
+	government = chinese_imperial_government
+	effect = {
+		set_title_flag = uses_temple_names_by_script #Titles with this flag give their heirs a temple name via on_death event
+		set_title_flag = pretender_chinese_empire #Blocks all grace interactions
+	}
+}
+896.6.15 = { holder = 0 }

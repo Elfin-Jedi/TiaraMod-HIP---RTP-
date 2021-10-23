@@ -1,0 +1,17 @@
+#Tang
+600.1.1 = { de_jure_liege = e_tang }
+902.5.1 = { #Yang Xingmi
+	name = "Wu"
+	effect = { set_coa = e_china_wu }
+	holder = 1407163
+	law = succ_primogeniture
+	liege = e_tang
+}
+905.12.24 = { holder = 1407164 } #Yang Wo
+907.6.1 = { set_tribute_suzerain = { who = e_later_liang type = permanent } }
+908.6.9 = { holder = 1407166 } #Yang Longyan
+920.7.21 = { holder = 1407169 } #Yang Pu
+923.11.18 = { clear_tribute_suzerain = e_later_liang }
+927.11.29 = { holder = 0 name = "Huainan" effect = { reset_coa = THIS } }
+#Song
+1000.1.1 = { de_jure_liege = e_song }

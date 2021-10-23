@@ -1,0 +1,37 @@
+#Tang
+600.1.1 = { de_jure_liege = e_tang }
+909.4.27 = { #Taizu
+	name = "Min"
+	effect = { set_coa = e_china_min }
+	holder = 1406717
+	law = succ_primogeniture
+	set_tribute_suzerain = { who = e_later_liang type = permanent }
+}
+923.11.18 = { clear_tribute_suzerain = e_later_liang set_tribute_suzerain = { who = e_later_tang type = permanent } }
+925.12.30 = { #Wang Yanhan
+	holder = 1406725
+}
+927.1.14 = {  #Huizong
+	holder = 1406726 
+}
+932.7.14 = { clear_tribute_suzerain = e_later_tang }
+933.2.8 = { 
+	name = "Fujian"
+	effect = { reset_coa = THIS }
+	holder = 0 
+}
+939.8.29 = { #Jingzong
+	name = "Min"
+	effect = { set_coa = e_china_min }
+	holder = 1406729
+	law = succ_primogeniture
+	set_tribute_suzerain = { who = e_later_jin type = permanent }
+}
+941.10.23 = {
+	name = "Fujian"
+	effect = { reset_coa = THIS }
+	holder = 0 
+}
+947.1.11 = { clear_tribute_suzerain = e_later_jin }
+#Song
+1000.1.1 = { de_jure_liege = e_song }

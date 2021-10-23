@@ -1,0 +1,15 @@
+943.4.5 = { #Wang Yanzheng
+	holder = 1406731
+	law = succ_primogeniture
+	government = chinese_imperial_government
+	effect = {
+		set_title_flag = uses_temple_names_by_script #Titles with this flag give their heirs a temple name via on_death event
+		set_title_flag = pretender_chinese_empire #Blocks all grace interactions
+	}
+}
+945.3.14 = { holder = 0 }
+
+945.4.16 = { #Zhuo Yanming
+	holder = 1406762
+}
+945.7.4 = { holder = 0 }

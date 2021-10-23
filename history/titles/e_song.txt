@@ -1,0 +1,138 @@
+#Song
+960.2.4 = { #Emperor Taizu
+	holder = 217721
+	law = succ_primogeniture
+	law = crown_authority_4
+	law = administration_2
+	law = inheritance_1
+	law = imperial_kingdom_creation_2
+	law = ze_revokation_1
+	law = law_voting_power_1
+	government = chinese_imperial_government
+	effect = {
+		set_title_flag = uses_temple_names_by_script #Titles with this flag give their heirs a temple name via on_death event
+		set_title_flag = pretender_chinese_empire #Blocks all grace interactions
+	}
+}
+960.10.2 = {
+	set_title_flag = temple_name_Xizu
+	set_title_flag = temple_name_Shuanzu
+	set_title_flag = temple_name_Yizu
+	set_title_flag = temple_name_Xuanzu
+}
+976.11.14 = { #Emperor Taizong
+	holder = 217722
+	effect = {
+		set_title_flag = temple_name_Taizu
+	}
+}
+997.5.8 = { #Emperor Zhenzong
+	holder = 217723
+	effect = {
+		set_title_flag = temple_name_Taizong
+	}
+}
+1012.11.17 = {
+	effect = {
+		set_title_flag = temple_name_Yizu
+		set_title_flag = temple_name_Shunzu
+		set_title_flag = temple_name_Xizu
+		set_title_flag = temple_name_Shengzu
+	}
+}
+1022.3.23 = { #Emperor Renzong
+	holder = 217724
+	effect = {
+		set_title_flag = temple_name_Zhenzong
+	}
+}
+1063.4.30 = { #Emperor Yinzong
+	holder = 217725
+	effect = {
+		set_title_flag = temple_name_Renzong
+	}
+}
+1067.1.25 = { #Emperor Shenzong
+	holder = 217726
+	effect = {
+		set_title_flag = temple_name_Yingzong
+	}
+}
+1085.4.1 = { #Emperor Zhezong
+	holder = 217727
+	effect = {
+		set_title_flag = temple_name_Shenzong
+	}
+}
+1100.2.23 = { #Emperor Huizong
+	holder = 217728
+	effect = {
+		set_title_flag = temple_name_Zhezong
+	}
+}
+1126.1.18 = { #Emperor Qinzong
+	#holder = 
+}
+1127.3.20 = { #Emperor Gaozong
+	#holder = 
+	effect = {
+		set_title_flag = temple_name_Qinzong
+	}
+}
+1135.6.24 = {
+	effect = {
+		set_title_flag = temple_name_Huizong
+	}
+}
+1162.4.24 = { #Emperor Xiaozong
+	#holder = 
+}
+1187.11.9 = {
+	effect = {
+		set_title_flag = temple_name_Gaozong
+	}
+}
+1189.2.18 = { #Emperor Guangzong
+	#holder = 
+}
+1194.6.28 = {
+	effect = {
+		set_title_flag = temple_name_Xiaozong
+	}
+}
+1194.7.24 = { #Emperor Ningzong
+	#holder = 
+}
+1200.9.17 = {
+	effect = {
+		set_title_flag = temple_name_Guangzong
+	}
+}
+1224.9.18 = { #Emperor Lizong
+	#holder = 
+	effect = {
+		set_title_flag = temple_name_Ningzong
+	}
+}
+1264.11.16 = { #Emperor Duzong
+	#holder = 
+	effect = {
+		set_title_flag = temple_name_Lizong
+	}
+}
+1274.8.12 = { #Emperor Gong
+	#holder = 
+	effect = {
+		set_title_flag = temple_name_Duzong
+	}
+}
+1276.2.4 = { #Emperor Duanzong
+	#holder = 
+}
+1278.5.8 = { #Emperor Shao
+	#holder = 
+	effect = {
+		set_title_flag = temple_name_Duanzong
+	}
+}
+1279.3.19 = { holder = 0 }

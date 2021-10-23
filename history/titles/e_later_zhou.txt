@@ -1,0 +1,32 @@
+951.2.5 = { #Taizu
+	holder = 1401268
+	law = succ_primogeniture
+	law = crown_authority_4
+	law = administration_2
+	law = inheritance_1
+	law = imperial_kingdom_creation_2
+	law = ze_revokation_1
+	law = law_voting_power_1
+	government = chinese_imperial_government
+	effect = {
+		set_title_flag = uses_temple_names_by_script #Titles with this flag give their heirs a temple name via on_death event
+		set_title_flag = pretender_chinese_empire #Blocks all grace interactions
+		set_title_flag = temple_name_Xinzu
+		set_title_flag = temple_name_Xizu
+		set_title_flag = temple_name_Aizu
+		set_title_flag = temple_name_Qingzu
+	}
+}
+954.2.22 = { #Shizong
+	holder = 1401283
+	effect = {
+		set_title_flag = temple_name_Taizu
+	}
+} 
+959.7.27 = { #Emperor Gong
+	holder = 1401287
+	effect = {
+		set_title_flag = temple_name_Shizong
+	}
+}
+960.2.4 = { holder = 0 name = "Later Zhou" }

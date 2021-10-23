@@ -1,0 +1,192 @@
+#Tang
+618.6.18 = { #Gaozu
+	holder = 217700
+	government = chinese_imperial_government
+	law = crown_authority_2
+	law = administration_2
+	law = inheritance_1
+	law = imperial_kingdom_creation_2
+	law = ze_revokation_1
+	law = law_voting_power_1
+	law = succ_primogeniture
+	effect = {
+		set_title_flag = uses_temple_names_by_script #Titles with this flag give their heirs a temple name via on_death event
+		set_title_flag = pretender_chinese_empire #Blocks all grace interactions
+		set_title_flag = temple_name_Taizu
+		set_title_flag = temple_name_Shizu
+	}
+}
+626.9.4 = { #Taizong
+	holder = 217701
+}
+635.6.25 = {
+	effect = {
+		set_title_flag = temple_name_Gaozu
+	}
+}
+649.7.10 = { #Gaozong
+	holder = 217702 
+	effect = {
+		set_title_flag = temple_name_Taizong
+	}
+}
+683.12.27 = { #Zhongzong
+	holder = 217799
+	effect = {
+		set_title_flag = temple_name_Gaozong
+	}
+}
+684.2.27 = { #Ruizong
+	holder = 217703
+}
+690.10.16 = { #Wu Zetian
+	holder = 217704 
+}
+705.12.16 = { #Zhongzong
+	holder = 217799
+	effect = {
+		set_title_flag = temple_name_Yizong
+	}
+}
+710.7.3 = { #Gongzong
+	holder = 217705
+}
+710.7.8 = { #Ruizong
+	holder = 217703 
+	effect = {
+		set_title_flag = temple_name_Zhongzong
+	}
+}
+712.9.8 = { #Xuanzong
+	holder = 217706
+}
+716.7.13 = {
+	effect = {
+		set_title_flag = temple_name_Ruizong
+	}
+}
+756.8.12 = { #Suzong
+	holder = 217707
+}
+762.5.16 = { #Daizong
+	holder = 217708
+	effect = {
+		set_title_flag = temple_name_Xuanzong
+		set_title_flag = temple_name_Suzong
+	}
+}
+779.5.23 = { #Dezong
+	holder = 217709
+	effect = {
+		set_title_flag = temple_name_Daizong
+	}
+}
+805.2.25 = { #Shunzong
+	holder = 217710
+}
+805.9.5 = { #Xianzong
+	holder = 217711
+	effect = {
+		set_title_flag = temple_name_Dezong
+		set_title_flag = temple_name_Shunzong
+	}
+}
+820.2.14 = { #Muzong
+	holder = 217712
+	effect = {
+		set_title_flag = temple_name_Xianzong
+	}
+}
+824.2.25 = { #Jingzong
+	holder = 217713
+	effect = {
+		set_title_flag = temple_name_Muzong
+	}
+}
+827.1.9 = { #Wenzong
+	holder = 217714
+	effect = {
+		set_title_flag = temple_name_Jingzong
+	}
+}
+840.2.10 = { #Wuzong
+	holder = 217715 
+	effect = {
+		set_title_flag = temple_name_Wenzong
+	}
+}
+846.4.22 = { #Xuanzong
+	holder = 217716
+	effect = {
+		set_title_flag = temple_name_Wuzong
+	}
+}
+859.9.7 = { #Yizong
+	holder = 217717
+	effect = {
+		set_variable = {
+			which = "imperial_decay"
+			value = 40
+		}
+	}
+	effect = {
+		set_title_flag = temple_name_Xuanzong
+	}
+}
+873.8.15 = { #Xizong
+	holder = 217718
+	effect = {
+		set_title_flag = temple_name_Yizong
+	}
+}
+881.1.8 = { #Huang Chao captures Chang'an
+	effect = {
+		set_variable = {
+			which = "imperial_decay"
+			value = 60
+		}
+	}
+}
+886.10.31 = { #Li Yun declares himself an Emperor
+	effect = {
+		set_variable = {
+			which = "imperial_decay"
+			value = 70
+		}
+	}
+}
+888.4.20 = { #Zhaozong
+	holder = 217719
+	effect = {
+		set_title_flag = temple_name_Xizong
+	}
+}
+900.12.1 = { #Usurpation
+	holder = 1404422
+	effect = {
+		set_variable = {
+			which = "imperial_decay"
+			value = 80
+		}
+	}
+}
+901.1.24 = { #Zhaozong restored
+	holder = 217719
+}
+904.9.22 = { #Emperor Ai
+	holder = 217720
+	effect = { #Zhaozong murdered and Emperor Ai put on the throne
+		set_title_flag = temple_name_Zhaozong
+		set_variable = {
+			which = "imperial_decay"
+			value = 95
+		}
+	}
+}
+905.11.11 = {
+	effect = {
+		clr_title_flag = temple_name_Zhaozong
+		set_title_flag = temple_name_Xiangzong
+	}
+}
+907.6.1 = { holder = 0 } #actually 907.5.12

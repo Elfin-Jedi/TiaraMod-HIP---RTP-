@@ -1,0 +1,11 @@
+#Tang
+600.1.1 = { de_jure_liege = e_tang }
+896.1.1 = { holder = 1412310 name = "Jin" liege = e_tang effect = { set_coa = e_china_jin } law = succ_primogeniture } #Li Keyong - it's actually 1st of January
+#Independent
+907.5.12 = { liege = 0 }
+908.2.24 = { holder = 1412318 } #Li Cunxu
+923.5.13 = { holder = 0 name = "Hedong" effect = { reset_coa = THIS } }
+936.5.26 = { holder = 1412375 } #A title for Jingtang to have Jiedushi as vassals.
+936.11.28 = { holder = 0 }
+#Song
+1000.1.1 = { de_jure_liege = e_song }

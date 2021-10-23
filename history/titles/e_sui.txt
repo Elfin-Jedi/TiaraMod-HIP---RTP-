@@ -1,0 +1,24 @@
+#Sui
+581.3.4 = { #Emperor Wen
+	holder = 247725
+	government = chinese_imperial_government
+	effect = {
+		set_title_flag = temple_name_Taizu
+	}
+}
+604.8.13 = { #Emperor Yang
+	holder = 247726
+	effect = {
+		set_title_flag = temple_name_Gaozu
+	}
+}
+618.4.11 = { #Emperor Gong (Yang You)
+	holder = 247728
+	effect = {
+		set_title_flag = temple_name_Shizu
+	}
+}
+618.6.12 = { #Emperor Gong (Yang Tong)
+	holder = 247760
+}
+619.5.23 = { holder = 0 }

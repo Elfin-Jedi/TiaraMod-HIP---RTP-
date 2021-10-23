@@ -1,0 +1,77 @@
+#Li Jiqian rebels against Song, foundations of Western Xia (Minyak) 982-1227
+
+1038.11.10={
+	holder=206650 # Yuanhao becomes emperor
+	law = succ_primogeniture
+	government = chinese_imperial_government
+	effect={
+		set_title_flag = uses_temple_names_by_script #Titles with this flag give their heirs a temple name via on_death event
+		set_title_flag = pretender_chinese_empire #Blocks all grace interactions
+		set_title_flag = temple_name_Taizu
+		set_title_flag = temple_name_Taizong
+	}
+}
+1048.1.19={
+	holder=206651
+	effect = {
+		set_title_flag = temple_name_Jingzong
+	}
+}
+1067.1.27={
+	holder=206653
+	effect = {
+		set_title_flag = temple_name_Yizong
+	}
+}
+1086.8.21={
+	holder=206654
+	effect = {
+		set_title_flag = temple_name_Huizong
+	}
+}
+1139.7.8={
+	holder=206657
+	effect = {
+		set_title_flag = temple_name_Chongzong
+	}
+}
+1193.10.16={
+	holder=206659
+	effect = {
+		set_title_flag = temple_name_Renzong
+	}
+}
+1206.3.1={
+	holder=206660 # coup
+	effect = {
+		set_title_flag = temple_name_Huanzong
+	}
+}
+1210.1.1={
+	set_tribute_suzerain = { who = e_mongol_empire type = nomadic }
+}#Subjugated by the Mongols
+1211.9.13={
+	holder=206666 # coup
+	effect = {
+		set_title_flag = temple_name_Xuanzong
+	}
+}
+1223.1.1={
+	holder=206668
+	effect = {
+		set_title_flag = temple_name_Shenzong
+	}
+}
+1226.1.1={
+	holder=206670 
+	effect = {
+		set_title_flag = temple_name_Xianzong
+	}
+}
+1227.1.1={
+	#liege=e_mongol_empire
+	clear_tribute_suzerain = e_mongol_empire
+}
+1227.8.28={
+	holder=0
+}#destroyed by the Mongols and emperor killed shortly afterwards

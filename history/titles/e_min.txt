@@ -1,0 +1,41 @@
+933.2.8 = { #Huizong
+	holder = 1406726
+	law = succ_primogeniture
+	law = crown_authority_4
+	law = administration_2
+	law = inheritance_1
+	law = imperial_kingdom_creation_2
+	law = ze_revokation_1
+	law = law_voting_power_1
+	government = chinese_imperial_government
+	effect = {
+		set_title_flag = uses_temple_names_by_script #Titles with this flag give their heirs a temple name via on_death event
+		set_title_flag = pretender_chinese_empire #Blocks all grace interactions
+		set_title_flag = temple_name_Taizu
+	}
+}
+935.11.17 = { #Kangzong
+	holder = 1406742
+	effect = {
+		set_title_flag = temple_name_Huizong
+	}
+}
+939.8.29 = { #Wang Yanxi claims only Princely title at first
+	holder = 0
+	effect = {
+		set_title_flag = temple_name_Kangzong
+	}
+}
+941.10.23 = { #Jingzong
+	holder = 1406729 
+}
+944.4.8 = { #Zhu Wenjin
+	holder = 1406758
+	effect = {
+		set_title_flag = temple_name_Jingzong
+	}
+}
+945.3.14 = { #Wang Yanzheng
+	holder = 1406731
+}
+945.10.2 = { holder = 0 }

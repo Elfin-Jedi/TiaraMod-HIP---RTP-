@@ -1,0 +1,37 @@
+917.9.5 = { #Gaozu
+	name = "Yue"
+	effect = { set_coa = e_china_yue }
+	holder = 1406526
+	law = succ_primogeniture
+	law = crown_authority_3
+	law = administration_2
+	law = inheritance_1
+	law = imperial_kingdom_creation_2
+	law = ze_revokation_1
+	law = law_voting_power_1
+	government = chinese_imperial_government
+	effect = {
+		set_title_flag = uses_temple_names_by_script #Titles with this flag give their heirs a temple name via on_death event
+		set_title_flag = pretender_chinese_empire #Blocks all grace interactions
+		set_title_flag = temple_name_Taizu
+		set_title_flag = temple_name_Daizu
+		set_title_flag = temple_name_Liezong
+	}
+}
+918.12.8 = { 
+	name = "Han"
+	effect = { reset_coa = THIS }
+}
+942.6.10 = { #Emperor Shang
+	holder = 1406529
+	effect = {
+		set_title_flag = temple_name_Gaozu
+	}
+} 
+943.4.15 = { #Zhongzong
+	holder = 1406530
+}
+958.9.18 = { #Liu Chang
+	holder = 1406546 
+}
+971.3.4 = { holder = 0 name = "Southern Han" }

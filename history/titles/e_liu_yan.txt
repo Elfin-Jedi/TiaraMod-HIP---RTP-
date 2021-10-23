@@ -1,0 +1,17 @@
+#Yan
+911.9.8 = { #Liu Shouguang
+	holder = 1401188
+	law = succ_primogeniture
+	law = crown_authority_2
+	law = administration_2
+	law = inheritance_1
+	law = imperial_kingdom_creation_2
+	law = ze_revokation_1
+	law = law_voting_power_1
+	government = chinese_imperial_government
+	effect = {
+		set_title_flag = uses_temple_names_by_script #Titles with this flag give their heirs a temple name via on_death event
+		set_title_flag = pretender_chinese_empire #Blocks all grace interactions
+	}
+}
+914.1.4 = { holder = 0 }
