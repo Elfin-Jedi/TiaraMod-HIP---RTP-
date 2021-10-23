@@ -1,0 +1,68 @@
+# -*- ck2.governments -*-
+
+feudal_governments = {
+
+	bureaucratic_government = {
+		preferred_holdings = { CITY CASTLE }
+		allowed_holdings = {
+			CITY
+			CASTLE
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			muslim_government
+			bogomilist_government
+			imperial_government
+			muslim_imperial_government
+			bogomilist_imperial_government
+			theocratic_feudal_government
+			chinese_imperial_government
+		}
+		free_revoke_on_tiers = {
+			duke
+			king
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+		frame_suffix = "_confucian"
+		potential = {
+			OR = {
+				top_liege = { primary_title = { has_title_flag = pretender_chinese_empire } }
+				capital_scope = { region = world_china }
+				culture_group = chinese_group
+				culture = xianbei
+				culture = tuhun
+				culture = shatuo
+				culture = bohai
+			}
+			NOT = { tier = EMPEROR }
+			is_patrician = no
+		}
+
+		color = { 123 93 107 }
+
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		can_be_granted_kingdoms_and_empires_by_other_government = yes
+		can_demand_religious_conversion = no
+		gets_religion_opinion_penalties = no
+		gives_religion_opinion_penalties = no
+		vassal_government_opinion_penalties = no
+		free_retract_vassalage = yes
+		marriage_ignore_religion = yes
+
+		can_build_tribal = no
+
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+		capital_move_delay = 600
+		court_size_modifier = 10
+	}
+}
+
