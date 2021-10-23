@@ -1,0 +1,17 @@
+# County Title
+title = c_qinzhou
+
+# Settlements
+max_settlements = 6
+
+b_chengji = city
+b_longcheng = city
+b_qingshui_qinzhou = city
+b_tianshui = city
+b_taiping = castle
+#b_fuqiang = castle
+#b_gangu = castle
+
+# Misc
+culture = han
+religion = taoist

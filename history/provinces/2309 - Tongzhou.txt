@@ -1,0 +1,17 @@
+# County Title
+title = c_tongzhou
+
+# Settlements
+max_settlements = 6
+
+b_fengyi_tongzhou = city
+b_dengcheng = city
+b_chaoyi = city
+b_heyang_tongzhou = city
+b_baishui = city
+#b_hancheng = city
+#b_shawan = castle
+
+# Misc
+culture = han
+religion = taoist
