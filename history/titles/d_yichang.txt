@@ -1,0 +1,75 @@
+#Tang
+784.1.1 = { holder = 0 liege = e_tang } #Cheng Rihua
+788.1.1 = { holder = 0 } #Cheng Huaizhi
+795.1.1 = { holder = 0 } #Cheng Huaixin
+805.1.1 = { holder = 0 } #Cheng Zhigong
+818.1.1 = { holder = 1400599 } #Zheng Quan
+819.2.5 = { holder = 0 } #Wu Chongyin
+821.1.1 = { holder = 0 } #Du Shuliang
+822.1.1 = { holder = 0 } #Li Quanlue
+822.3.1 = { holder = 0 } #Li Guangyan
+822.6.1 = { holder = 0 } #Li Quanlue
+826.1.1 = { holder = 0 } #Li Tongjie
+829.1.1 = { holder = 0 } #Fu Yi
+829.7.1 = { holder = 0 } #Yin You
+832.1.1 = { holder = 0 } #Li Yanzuo
+838.1.1 = { holder = 0 } #Liu Yue
+844.1.1 = { holder = 0 }
+849.1.1 = { holder = 0 } #Li Zhuo
+855.1.1 = { holder = 1406039 } #Du Zhongli
+860.1.1 = { holder = 0 } #Hun Kan
+864.7.1 = { holder = 1401366 } #Lu Jianfang
+869.1.1 = { holder = 1406043 } #Jing Conggao
+870.3.4 = { holder = 1401366 } #Lu Jianfang
+872.1.1 = { holder = 1406050 } #Zheng Hanqing
+874.1.1 = { holder = 1406051 } #Cheng Junshang
+879.1.1 = { holder = 1406052 } #Yang Quanmei
+884.10.23 = { holder = 1401154 } #Wang Duo
+885.1.5 = { holder = 1406052 } #Yang Quanmei
+885.8.14 = { holder = 1406077 } #Lu Yanwei
+898.4.14 = { holder = 1401195 } #Liu Shouwen
+#Later Liang
+907.12.22 = { liege = e_later_liang }
+909.6.10 = { holder = 1401196 } #Liu Yanzuo
+910.2.16 = { holder = 1401190 } #Liu Jiwei
+912.3.29 = { holder = 1410903 } #Zhang Wanjin
+912.4.15 = { name = "Shunhua" effect = { set_coa = d_shunhua } }
+913.6.17 = { holder = 1401189 } #Liu Shouqi
+913.11.1 = { holder = 1400929 } #Dai Siyuan
+#Jin/Later Tang
+916.9.30 = { holder = 1400164 liege = k_hedong name = "Henghai" effect = { set_coa = d_henghai } } #Li Cunshen
+923.3.24 = { holder = 1412344 } #Li Siyuan
+923.5.13 = { liege = e_later_tang }
+923.6.15 = { holder = 1401649 } #Fu Xi
+924.1.1 = { holder = 1402055 } #Li Shaobin
+925.3.8 = { holder = 1400253 } #An Yuanxin
+926.4.8 = { holder = 1401066 } #Wang Jingkan
+926.6.25 = { holder = 1401219 } #Zhao Zaili
+927.8.23 = { holder = 1412428 } #An Shentong
+928.1.1 = { holder = 1412431 } #Li Congmin
+929.1.1 = { holder = 1400160 } #Zhang Qianzhao
+930.4.19 = { holder = 1404426 } #Kong Xun
+931.4.4 = { holder = 1400887 } #Lu Zhi
+933.7.1 = { holder = 1410405 } #Li Jinquan
+935.12.22 = { holder = 1400287 } #Ma Quanjie
+#Later Jin
+937.1.11 = { liege = e_later_jin }
+939.1.1 = { holder = 1412442 } #An Shuqian
+940.1.1 = { holder = 1401793 } #Wang Tingyun
+944.1.1 = { holder = 1400290 } #Tian Wu
+946.1.1 = { holder = 1400455 } #Wang Jing
+#Liao
+947.2.20 = { holder = 1404847 liege = e_khitan } #Pan Yunian
+#Later Han
+947.5.5 = { holder = 1400455 liege = e_later_han } #Wang Jing
+#Later Zhou
+951.2.5 = { liege = e_later_zhou }
+951.9.6 = { holder = 1400910 } #Li Hui
+955.1.1 = { holder = 1406054 } #Yuan E
+958.4.28 = { holder = 1404391 } #Li Yanyun
+959.1.1 = { holder = 1401660 } #Chen Sirang
+#Song
+960.1.1 = { holder = 1406053 } #Li Wanjin
+960.2.4 = { liege = e_song }
+967.1.1 = { holder = 1401247 } #Zhang Mei
+976.1.1 = { holder = 0 }

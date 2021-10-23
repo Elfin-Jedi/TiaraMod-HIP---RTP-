@@ -1,0 +1,42 @@
+#Later Liang
+915.4.1 = { holder = 1401914 name = "Zhaode" effect = { set_coa = d_zhaode } liege = e_later_liang } #Zhang Yun
+916.9.23 = { holder = 0 } #No Jiedushi
+#Later Jin
+938.12.2 = { holder = 1401917 name = "Zhangde" effect = { reset_coa = THIS } liege = e_later_jin } #Wang Tingyin
+939.8.20 = { holder = 1401919 } #Sang Weihan
+940.1.1 = { holder = 1401922 } #Liu Churang
+942.1.1 = { holder = 1401923 } #Guo Jin
+945.1.1 = { holder = 1400338 } #Liu Zaiming
+945.7.1 = { holder = 1410905 } #Zhang Yanze
+#Liao
+947.1.4 = { liege = e_khitan }
+947.1.27 = { holder = 1401924 } #Gao Tangying
+#Later Han
+947.3.16 = { holder = 1401926 liege = e_later_han } #Liang Hui
+#Liao
+947.4.27 = { holder = 1401924 liege = e_khitan } #Gao Tangying
+947.7.16 = { holder = 1402056 } #Wang Jihong
+#Later Han
+947.7.1 = { liege = e_later_han }
+948.7.29 = { holder = 1401923 } #Guo Jin
+950.4.6 = { holder = 1401930 } #Zhang Yancheng
+#Later Zhou
+951.2.5 = { liege = e_later_zhou }
+951.5.21 = { holder = 1400296 } #Li Yun
+952.9.8 = { holder = 0 } #No Jiedushi
+952.10.15 = { holder = 1412472 } #Bai Chongzan
+953.4.16 = { holder = 1401931 } #Wang Jin
+954.8.26 = { holder = 1401088 } #Wang Rao
+958.6.2 = { holder = 1401245 } #Wang Hui
+959.11.29 = { holder = 1401666 } #Wang Quanbin
+#Song
+960.2.3 = { liege = e_song }
+961.1.1 = { holder = 1401129 } #Luo Yangui
+964.1.1 = { holder = 1400915 } #Qi Tingxun
+967.5.13 = { holder = 1401932 } #Han Chongyun
+974.1.1 = { holder = 0 }
+976.1.1 = { holder = 1401937 } #Jiao Jixun
+977.1.1 = { holder = 1401944 } #Li Hanqiong
+978.1.1 = { holder = 0 }
+982.1.1 = { holder = 1415049 } #Li Jipeng
+990.12.28 = { holder= 0 }

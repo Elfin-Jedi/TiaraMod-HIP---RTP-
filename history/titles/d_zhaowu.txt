@@ -1,0 +1,33 @@
+#Tang
+783.1.1 = { holder = 1402836 name = "Baoyi" liege = e_tang } #Wei Gao
+785.1.1 = { holder = 0 }
+886.2.20 = { holder = 1403316 name = "Ganyi" effect = { set_coa = d_ganyi } } #Yang Cheng
+888.8.11 = { holder = 1403315 name = "Fengzhou" effect = { set_coa = c_fengzhou_qinfeng } } #Man Cun
+892.7.30 = { holder = 1400622 } #Li Maozhen
+897.4.6 = { holder = 1401171 name = "Zhaowu" effect = { reset_coa = THIS } } #Su Wenjian
+898.1.1 = { holder = 1400214 } #Li Jizhong 
+902.4.9 = { holder = 1403314 } #Wang Zongwei
+902.10.24 = { holder = 1400635 } #Li Maozhen
+904.1.1 = { holder = 0 } #
+#Former Shu
+924.9.10 = { holder = 1403313 liege = e_former_shu } #Lin Si'e
+#Later Tang
+925.11.17 = { liege = e_later_tang }
+925.11.27 = { holder = 1401430 } #Zhang Jingxun
+926.12.29 = { holder = 1400322 } #Zhang Wen
+928.12.11 = { holder = 1401659 } #Chen Shenjiue - jiedushi at some point
+929.7.19 = { holder = 1400932 } #Kang Sili
+930.1.1 = { holder = 1403312 } #Li Yanqi
+931.1.1 = { holder = 1400932 } #Kang Sili
+931.2.23 = { holder = 1400077 } #Zhao Tingyin
+932.1.30 = { holder = 1400093 } #Li Zhao
+933.3.15 = { liege = k_xichuan }
+#Later Shu
+934.3.16 = { liege = e_later_shu }
+934.11.30 = { holder = 0 } #No Jiedushi
+943.5.7 = { holder = 1400147 } #Li Jixun
+948.8.24 = { holder = 1400090 } #Wang Chuhui
+949.10.1 = { holder = 1400147 } #Li Jixun
+959.1.21 = { holder = 1400034 } #Meng Yiye
+961.1.1 = { holder = 1400161 } #Yan Zhu
+962.1.1 = { holder = 0 }

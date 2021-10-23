@@ -1,0 +1,16 @@
+#Former Shu
+906.1.1 = { name = "Xingwen" effect = { set_coa = d_xingwen } liege = k_xichuan }
+907.11.3 = { liege = e_former_shu }
+916.1.28 = { holder = 1403341 name = "Wuxing" effect = { reset_coa = THIS } } #Wang Zonglu
+920.1.1 = { holder = 1403342 } # Wang Chengjie
+#925.11.7 = { holder = 0 }
+#Later Tang
+925.11.7 = { liege = e_later_tang }
+928.4.15 = { holder = 1403345 } #Chen Gao
+930.5.27 = { holder = 1403343 } #Sun Yue
+932.8.23 = { holder = 0 } #No Jiedushi
+#Later Shu
+947.1.1 = { name = "Fengzhou" effect = { set_coa = c_fengzhou_qinfeng } liege = e_later_shu }
+#Later Zhou
+955.2.13 = { holder = 1403383 name = "Weiwu" effect = { set_coa = d_weiwu } liege = e_later_zhou } #Wang Huan
+955.12.30 = { holder = 0 }

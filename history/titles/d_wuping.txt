@@ -1,0 +1,38 @@
+#Tang
+898.1.1 = { holder = 1417001 liege = e_tang name = "Wuzhen" effect = { set_coa = d_wuzhen } }
+902.1.13 = { holder = 1417002 } #Lei Yanwei
+903.2.1 = { holder = 1417003 } #Lei Yangong
+#Wuping
+907.6.1 = { set_tribute_suzerain = { who = k_huainan type = permanent } }
+#Southern Chu
+908.6.23 = { 
+	holder = 1408455 #Zhang Ji 
+	liege = k_jiangxi 
+	name = "Yongshun" 
+	effect = { set_coa = d_yongshun } 
+	capital = 2498
+	clear_tribute_suzerain = k_huainan 
+}
+911.1.1 = { holder = 1406561 } #Ma Cong
+912.1.1 = { holder = 1406562 } #Ma Cun
+920.1.1 = { holder = 1406563 } #Ma Xizhen
+922.1.1 = { name = "Wushun" effect = { set_coa = d_wushun } }
+924.1.1 = { name = "Wuzhen" effect = { set_coa = d_wuzhen } }
+928.1.1 = { name = "Wuping" effect = { reset_coa = THIS } }
+929.4.28 = { holder = 1406566 } #Ma Xifan
+932.8.5 = { holder = 0 } #No Jiedushi
+934.4.24 = { holder = 1406568 } #Ma Xigao
+945.8.11 = { holder = 1406687 } #Ma Xi'e
+949.8.27 = { liege = 0 }
+#Southern Tang
+950.10.30 = { set_tribute_suzerain = { who = e_southern_tang type = permanent } }
+951.1.28 = { holder = 1406688 liege = k_jiangxi clear_tribute_suzerain = e_southern_tang } #Ma Guangzan
+951.4.19 = { holder = 1406564 liege = 0 set_tribute_suzerain = { who = e_southern_tang type = permanent } } #Ma Guanghui
+#Later Zhou
+951.8.2 = { holder = 1408456 clear_tribute_suzerain = e_southern_tang set_tribute_suzerain = { who = e_later_zhou type = permanent } } #Liu Yan
+953.8.8 = { holder = 1408457 } #Wang Kui
+956.4.13 = { holder = 1408462 } #Zhou Xingfeng
+#Song
+960.2.4 = { clear_tribute_suzerain = e_later_zhou set_tribute_suzerain = { who = e_song type = permanent } }
+962.10.10 = { holder = 1408463 } #Zhou Baoquan
+963.4.4 = { holder = 0 clear_tribute_suzerain = e_song }

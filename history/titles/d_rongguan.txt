@@ -1,0 +1,59 @@
+#Tang
+742.1.1 = { holder = 0 liege = e_tang } #He Fuguang
+756.1.1 = { holder = 0 } #Chen Rensu
+760.1.1 = { holder = 0 } #Li Hang
+763.1.1 = { holder = 0 } #Hou Lingyi
+765.1.1 = { holder = 0 } #Geng Shengan
+768.1.1 = { holder = 0 } #Yuan Jie
+769.1.1 = { holder = 0 } #Changsun Quanzhu
+770.1.1 = { holder = 1407597 } #Wang Hong
+779.4.11 = { holder = 1403717 } #Du You
+780.1.1 = { holder = 0 } #Lu Yue
+781.1.1 = { holder = 0 } #Yuan Xiu
+782.1.1 = { holder = 0 } #Zheng Xiangong
+785.1.1 = { holder = 0 } #Li Fu
+787.1.1 = { holder = 0 } #Li Han
+788.1.1 = { holder = 0 } #Dai Shulun
+789.1.1 = { holder = 0 } #Wang E
+794.1.1 = { holder = 0 } #Fang Rufu
+797.1.1 = { holder = 0 } #Fang Ji
+801.1.1 = { holder = 1406493 } #Wei Dan
+805.6.9 = { holder = 0 } #Fang Bi
+813.1.1 = { holder = 0 } #Dou Qun
+814.1.1 = { holder = 0 } #Xu Shu
+815.1.1 = { holder = 0 } #Yang Min
+821.1.1 = { holder = 0 } #Yan Gongsu
+822.1.1 = { holder = 0 } #Gui Zhongwu
+825.1.1 = { holder = 0 } #Yan Gongsu
+828.1.1 = { holder = 0 } #Wang Maoyuan
+832.1.1 = { holder = 0 } #No Jiedushi
+835.1.1 = { holder = 0 } #Hu Shu
+840.1.1 = { holder = 1401632 } #Li Jingren
+844.1.1 = { holder = 0 } #Wei Jin
+849.1.1 = { holder = 0 } #Tang Chi
+851.1.1 = { holder = 0 } #Wang Qiu
+857.1.1 = { holder = 0 } #Song Ya
+858.1.1 = { holder = 0 } #No Jiedushi
+863.1.1 = { holder = 0 } #Zhang Yin
+864.1.1 = { holder = 1408926 } #Gao Qin
+877.1.1 = { holder = 1408927 } #Zhang Tong
+879.1.1 = { holder = 1408929 } #Xie Zhao
+880.1.1 = { holder = 1408930 } #Cui Zhuo
+882.10.16 = { holder = 1408931 } #He Ding
+892.1.1 = { holder = 1404663 } #Hu Zhen
+897.9.17 = { name = "Ningyuan" effect = { set_coa = d_ningyuan } } 
+898.1.1 = { holder = 1408933 } #Peng Juzhao
+#Later Liang
+907.6.1 = { liege = 0 }
+#Southern Chu
+910.1.1 = { holder = 1408934 liege = k_jiangxi } #Yao Yanzhang
+#Southern Han
+912.1.5 = { holder = 1406526 liege = k_lingnan } #No Jiedushi
+917.9.5 = { liege = e_southern_han }
+929.1.1 = { holder = 1408935 } #Wang Dingbao
+940.1.1 = { holder = 1406526 } #No Jiedushi
+942.6.10 = { holder = 1406529 } #No Jiedushi
+943.4.15 = { holder = 1406530 } #No Jiedushi
+958.9.18 = { holder = 1406546 } #No Jiedushi
+#Song
+971.3.4 = { holder = 0 liege = 0 }

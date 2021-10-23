@@ -1,0 +1,22 @@
+#Later Jin
+945.10.23 = { name = "Weixin" effect = { set_coa = d_weixin } }
+945.11.22 = { holder = 1412379 liege = e_later_jin } #Shi Yun
+947.1.1 = { holder = 1412391 } #Shi Yanbao
+#Later Han
+947.6.7 = { holder = 0 }
+#Later Zhou
+952.8.6 = { holder = 1401834 liege = e_later_zhou name = "Zhangxin" effect = { reset_coa = THIS } } #Cao Ying
+954.2.16 = { holder = 0 } #No Jiedushi
+954.2.18 = { holder = 1400450 } #Suo Wanjin
+954.8.2 = { holder = 1400989 } #Han Tong
+956.7.13 = { holder = 0 } #No Jiedushi
+956.11.30 = { holder = 1400997 } #Yuan Yan
+959.8.20 = { holder = 1400348 } #Yao Yuanfu
+#Song
+960.2.4 = { liege = e_song }
+960.9.20 = { holder = 1400997 } #Yuan Yan
+968.1.1 = { holder = 1406279 } #Dang Jin
+973.1.1 = { holder = 0 } #No Jiedushi
+976.1.1 = { holder = 1406282 } #Cui Yanjin
+977.1.1 = { holder = 1406287 } #Liu Yu
+979.1.1 = { holder = 0 }

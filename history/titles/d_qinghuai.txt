@@ -1,0 +1,19 @@
+#Prince of Hongnong/Wu
+917.1.1 = { holder = 1406071 liege = k_huainan } #Liu Rengui
+#Southern Wu
+927.11.29 = { holder = 1408013 capital = 2484 liege = e_southern_wu } #Zhou Ben
+934.1.1 = { holder = 1408038 } #Gao Shensi
+#Southern Tang
+937.10.11 = { liege = e_southern_tang }
+942.5.18 = { holder = 1408018 } #Yao Jing
+944.9.13 = { holder = 1406072 } #Liu Chongjun
+946.7.17 = { holder = 1408041 } #Liu Yanzhen
+955.1.1 = { holder = 1406074 } #Liu Renshan
+#Later Zhou
+957.4.21 = { holder = 0 liege = e_later_zhou name = "Zhongzheng" effect = { set_coa = d_zhongzheng } } 
+957.4.26 = { holder = 1412436 } #Yang Chengxin
+#Song
+960.2.4 = { liege = e_song }
+960.6.13 = { holder = 0 }
+961.8.22 = { holder = 1401997 } #Wang Shenqi
+970.4.16 = { holder = 0 }

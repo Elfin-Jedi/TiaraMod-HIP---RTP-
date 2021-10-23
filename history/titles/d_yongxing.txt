@@ -1,0 +1,67 @@
+#Tang
+867.1.1 = { name = "Jingji" effect = { set_coa = d_jingji } liege = e_tang }
+#Later Liang
+904.4.8 = { holder = 1401060 name = "Youguo" effect = { set_coa = d_youguo } liege = k_jingxi } #Han Jian
+906.6.26 = { holder = 1404414 } #Wang Chongshi
+907.6.1 = { liege = e_later_liang }
+909.5.26 = { holder = 1401175 } #Liu Zhijun
+#Qi 
+909.6.21 = { liege = k_qinfeng }
+#Later Liang
+909.7.16 = { holder = 1401070 liege =  e_later_liang } #Liu Xun
+909.7.26 = { name = "Yongping" effect = { set_coa = d_yongping } }
+914.3.6 = { holder = 1401441 } #Kang Huaiying
+918.7.25 = { holder = 1404256 } #Zhang Jun
+#Later Tang
+923.11.19 = { liege = e_later_tang }
+923.12.31 = { name = "Jingzhao" effect = { set_coa = c_jingzhao } }
+926.1.1 = { holder = 1404420 } #Zhang Cunhui
+#927.11.20 = { holder = 1404256 } #Zhang Jun
+928.3.9 = { holder = 1404420 } #Zhang Cunhui
+929.6.20 = { holder = 1400308 } #Suo Zitong
+930.5.23 = { holder = 1401183 } #Wang Sitong
+931.7.26 = { holder = 1412361 } #Li Congke
+932.8.24 = { holder = 1401183 } #Wang Sitong
+934.5.9 = { holder = 1401223 } #An Chongba
+935.3.7 = { holder = 1401791 } #Li Jingzhou
+936.8.22 = { holder = 0 }
+#Later Jin
+938.11.5 = { holder = 1412427 liege = e_later_jin name = "Jinchang" effect = { set_coa = d_jinchang } } #An Shenqi
+942.2.8 = { holder = 1401919 } #Seng Weihan
+943.4.8 = { holder = 1401082 } #Zhao Ying
+944.5.16 = { holder = 1400190 } #An Yanwei
+946.2.23 = { holder = 1401219 } #Zhao Zaili
+#Liao
+947.1.11 = { liege = e_khitan }
+947.2.20 = { holder = 1412505 } #Zhang Yanchao
+#Later Han
+947.7.1 = { liege = e_later_han }
+947.8.2 = { holder = 1400363 } #Zhao Kuangzan
+#Later Shu
+947.11.16 = { liege = e_later_shu }
+#Later Han
+948.3.9 = { liege = e_later_han }
+948.3.9 = { holder = 1404256 } #Zhang Jun
+948.4.12 = { name = "Yongxing" effect = { reset_coa = THIS } }
+#Rebellion
+948.5.5 = { holder = 1404415 liege = 0 } #Zhao Siwan
+#Later Han
+949.6.21 = { liege = e_later_han }
+949.8.7 = { holder = 1412465 } #Guo Congyi
+#Later Zhou
+951.2.5 = { liege = e_later_zhou }
+951.9.26 = { holder = 1400979 } #Li Hongxin
+952.4.9 = { holder = 1404418 } #Huo Guangye
+952.11.2 = { holder = 1404390 } #Yuan Yi
+954.2.22 = { holder = 1400459 } #Wang Renqiao
+955.7.30 = { holder = 1400912 } #Liu Ci
+956.7.15 = { holder = 1400343 } #Wang Yanchao
+959.7.21 = { holder = 1400982 } #Li Hongyi
+#Song
+960.2.3 = { liege = e_song }
+961.1.1 = { holder = 1400343 } #Wang Yanchao
+964.1.1 = { holder = 1401026 } #Wu Tingzuo
+971.1.1 = { holder = 0 }
+973.10.17 = { holder = 1800347 } #Zhao Yanmei
+976.11.14 = { holder = 1404421 } #Xu Zhongxuan
+977.1.1 = { holder = 0 }

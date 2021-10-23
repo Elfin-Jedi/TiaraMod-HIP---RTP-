@@ -1,0 +1,49 @@
+#Tang
+756.1.1 = { holder = 0 name = "Qianzhong" effect = { set_coa = d_qianzhong } liege = e_tang } #Zhao Guozhen
+756.7.1 = { holder = 0 } #Li Lin
+757.1.1 = { holder = 0 } #No Guanchashi
+799.9.29 = { holder = 1406434 } #Wei Shiwen
+801.4.23 = { holder = 0 } #No Jiedushi
+801.6.4 = { holder = 1409532 } #Pei Ji
+804.1.1 =  {holder = 0 }
+811.9.22 = { holder = 1403098 } #Cui Neng
+814.1.1 = { holder = 0 }
+821.3.3 = { holder = 1403447 } #Cui Yuanlüe
+823.1.1 = { holder = 0 }
+848.1.1 = { holder = 1409484 } #Li Bao
+849.1.1 = { holder = 0 }
+851.1.1 = { holder = 1403787 } #Nan Zhuo
+854.1.1 = { holder = 0 } #No Jiedushi
+867.1.1 = { holder = 1403788 } #Qin Kuangmou
+873.6.22 = { holder = 0 } #No Jiedushi
+888.6.9 = { holder = 1403407 } #Wang Jianzhuo
+890.1.1 = { name = "Wutai" effect = { reset_coa = THIS } }
+896.5.30 = { holder = 1403789 } #Zhao Wu
+900.1.1 = { holder = 1403443 } #Jin Hui
+#Former Shu
+903.10.30 = { holder = 1403790 capital = 2384 liege = k_xichuan } #Wang Zongben - moves capital to Fuzhou
+907.11.3 = { liege = e_former_shu }
+908.1.1 = { holder = 1403443 } #Jin Hui
+911.5.31 = { holder = 1403371 } #Pan Kang
+913.3.11 = { holder = 1403791 } #Wang Zongxun
+914.9.16 = { holder = 1403372 } #Pan Qiao
+916.2.6 = { holder = 1400641 } #Li Jichong
+#Later Tang
+925.11.18  = { holder = 1400250 liege = e_later_tang } #Li Chengyue
+927.1.1 = { holder = 1403792 } #Li Shaoyi
+929.3.1 = { holder = 1400222 } #An Chongruan
+929.6.26 = { holder = 1401238 } #Yang Hanbin
+930.12.17 = { holder = 1403793 } #Cui Shanquan
+931.1.1 = { holder = 1403312 } #Li Yanqi
+932.1.1 = { holder = 1401836 } #Li Zhao
+933.1.1 = { holder = 1400071 } #Zhao Jiliang
+933.5.15 = { liege = k_xichuan }
+#Later Shu
+934.3.16 = { liege = e_later_shu }
+934.4.14 = { holder = 1400154 } #An Siqian
+936.1.1 = { holder = 1400148 } #Hou Hongshi
+937.1.1 = { holder = 1400090 } #Wang Chuhui
+941.4.13 = { holder = 1400155 } #Xie Congzhi
+950.1.1 = { holder = 1400118 } #Yi Shenzheng
+960.1.1 = { capital = 2385 } #Capital moved back to Qianzhou
+965.1.11 = { holder = 0 liege = e_song }

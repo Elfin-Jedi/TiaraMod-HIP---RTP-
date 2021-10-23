@@ -1,0 +1,9 @@
+#Southern Tang
+949.1.1 = { holder = 1407124 liege = e_southern_tang } #Liu Cunxiao
+961.8.12 = { liege = k_jiangnan }
+962.5.1 = { holder = 1407126 } #Liu Shaozi
+962.5.6 = { holder = 1407129 } #Zhang Hansi
+963.5.17 = { holder = 1407131 } #Chen Hongjin
+#Song
+964.3.9 = { liege = e_song name = "Pinghai" effect = { set_coa = d_pinghai } }
+978.6.3 = { holder = 0 liege = e_song }

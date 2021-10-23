@@ -1,0 +1,64 @@
+#Tang
+761.1.1 = { name = "Guandong" liege = e_tang }
+763.1.1 = { name = "Tonghua" }
+784.1.1 = { name = "Tongguan" }
+800.1.1 = { name = "Huazhou" effect = { set_coa = c_huazhou } }
+883.1.1 = { holder = 1400434 } #Wang Chongjian
+885.1.1 = { holder = 0 }
+887.1.1 = { holder = 1401060 name = "Zhenguo" effect = { reset_coa = THIS } } #Han Jian
+901.12.22 = { holder = 0 }
+903.1.1 = { holder = 1400164 } #Li Cunshen
+903.3.22 = { holder = 1400475 } #Zhu Youyu
+904.11.24 = { holder = 1404364 } #Xu Huaiyu
+906.1.1 = { holder = 0 }
+#Later Liang
+907.6.1 = { liege = e_later_liang }
+909.1.1 = { holder = 1400630 name = "Ganhua" effect = { set_coa = d_ganhua } } #Kou Yanqing
+910.1.1 = { holder = 1401441 } #Kang Huaizhen
+914.3.6 = { holder = 1400442 } #Wang Zan
+915.5.30 = { holder = 1400665 } #Li Baoheng
+918.1.1 = { holder = 1401062 } #Tao Qing
+919.1.1 = { holder = 1401063 } #Yi Hao
+#Later Tang
+923.6.1 = { holder = 1401064 liege = e_later_tang } #Gao Yunzhen
+924.1.1 = { holder = 1400223 } #Mao Zhang
+924.1.11 = { name = "Zhenguo" effect = { reset_coa = THIS }  }
+925.12.25 = { holder = 1412811 } #Shi Jingrong
+926.1.1 = { holder = 1404768 } #Shi Yanrong
+926.5.28 = { holder = 1404767 } #Li Chong
+926.5.29 = { holder = 1404768 } #Shi Yanrong
+927.1.1 = { holder = 1400931 } #Liu Yancong
+928.1.1 = { holder = 1401066 } #Wang Jingkan
+929.1.1 = { holder = 1400637 } #Li Congchang
+931.1.1 = { holder = 1400314 } #Hua Wenqi
+933.1.1 = { holder = 1401067 } #Wang Wanrong
+934.1.1 = { holder = 1401068 } #Zhang Chengyou
+936.1.1 = { holder = 1400254 } #Huangfu Li
+#Later Jin
+937.1.11 = { holder = 1401071 liege = e_later_jin } #Liu Suining
+938.1.1 = { holder = 1410905 } #Zhang Yanze
+939.7.1 = { holder = 1400254 } #Huangfu Li
+942.1.1 = { holder = 1401077 } #Yang Yanxun
+944.1.1 = { holder = 1401082 } #Zhao Ying
+945.1.1 = { holder = 1401085 } #Liu Jixun
+945.7.1 = { holder = 1412429 } #An Shenxin
+#Liao
+947.1.12 = { holder = 1412442 liege = e_khitan } #An Shuqian
+#Later Han
+947.3.20 = { holder = 1401086 liege = e_later_han } #Hou Zhang
+948.9.8 = { holder = 1400454 } #Hu Yanke
+949.8.23 = { holder = 1400912 } #Liu Ci
+950.4.24 = { holder = 1401088 } #Wang Rao
+#Later Zhou
+951.2.5 = { liege = e_later_zhou }
+951.6.29 = { holder = 1401093 } #Sun Fanglian
+954.5.1 = { holder = 1401094 } #Shi Yanchao
+954.6.26 = { holder = 0 }
+#954.9.27 the Zhenguo army was disbanded
+#Song
+960.2.3 = { liege = e_song }
+964.1.1 = { holder = 1401098 } #Song Wo
+967.1.1 = { holder = 1401129 } #Luo Yangui
+969.4.1 = { holder = 1401130 } #Zhao Wendu
+972.1.1 = { holder = 1401131 } #Li Chongju
+973.1.1 = { holder = 0 }

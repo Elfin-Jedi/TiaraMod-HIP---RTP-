@@ -1,0 +1,92 @@
+#Tang
+762.1.1 = { holder = 1401771 name = "Zelu" liege = e_tang } #Li Baozhen
+777.1.1 = { name = "Zhaoyi" }
+794.7.2. = { holder = 0 }
+817.9.15 = { holder = 1409134 } #Xin Mi
+820.10.29 = { holder = 0 }
+857.12.20 = { holder = 1409452 } #Pei Xiu
+859.10.30 = { holder = 0 }
+863.1.1 = { holder = 1402899 } #Liu Tong
+864.1.1 = { holder = 0 }
+867.1.1 = { holder = 1401257 } #Mr. Lu, name unknown
+871.1.1 = { holder = 0 } #No Jiedushi
+872.1.1 = { holder = 1401471 } #Gao Shi
+#Rebellion
+875.11.2 = { holder = 1401470 liege = 0 } #Liu Guang
+#Tang
+876.1.1 = { holder = 1401460 liege = e_tang } #Cao Xiang
+877.1.18 = { holder = 1404921} #Li Jun
+879.3.17 = { holder = 1400926 } #Gao Xun
+881.12.12 = { holder = 1401452 } #Wu Quanxu
+882.1.1 = { holder = 1400027 } #Meng Fangli, from 881 controlled all prefectures apart from Luzhou until 889.
+884.7.25 = { holder = 1412368 } #Li Kexiu
+890.3.1 = { holder = 1412312 } #Li Kegong
+#Prince of Liang
+890.8.19 = { holder = 1400198 liege = k_jingxi } #An Jushou
+890.8.20 = { holder = 1400199 } #Feng Ba
+890.8.25 = { holder = 1400200 } #Zhu Chongjie
+890.11.1 = { holder = 1400204 } #Ge Congzhou
+890.12.1 = { holder = 1400205 } #Kang Junli
+894.1.1 = { holder = 1400206 } #Xue Zhiqin
+899.1.16 = { holder = 1400208 } #Li Hanzhi
+899.7.12 = { holder = 1400210 } #Ding Hui
+899.10.20 = { holder = 1400029 liege = k_hedong } #Meng Qian
+901.4.21 = { liege = k_jingxi }
+901.7.19 = { holder = 1400210 } #Ding Hui
+906.1.1 = { holder = 1400211 liege = k_hedong } #Li Sizhao
+#Prince of Jin/Later Tang
+923.5.13 = { liege = e_later_tang }
+922.5.23 = { holder = 1400213 name = "Anyi" effect = { set_coa = d_anyi } } #Li Jitao
+#Later Liang
+923.3.20 = { liege = e_later_liang name = "Kuangyi" effect = { set_coa = d_kuangyi } }
+#Later Tang
+923.11.19 = { liege = e_later_tang }
+#Rebellion
+924.1.20 = { holder = 1404756 liege = 0 } #Yang Li
+#Later Tang
+924.7.3 = { holder = 1412319 liege = e_later_tang } #Li Cunba
+924.1.11 = { name = "Anyi"  effect = { set_coa = d_anyi } }
+924.11.1 = { holder = 1400221 } #Kong Qing
+926.1.1 = { holder = 1400222 } #An Chongrui
+926.11.16 = { holder = 1400223 } #Mao Zhang
+927.1.1 = { holder = 1400165 } #Fu Yanchao
+929.1.1 = { holder = 1400224 } #Zhu Hanbin
+930.1.1 = { holder = 1400228 } #Wang Jianli
+930.4.13 = { name = "Zhaoyi" effect = { reset_coa = THIS } }
+930.7.1 = { holder = 1400229 } #Liu Zhongyin
+931.1.1 = { holder = 1400250 } #Li Chengyue
+933.1.1 = { holder = 1400251 } #Lu Wenjin
+934.1.1 = { holder = 1400253 } #An Yuanxin
+936.1.1 = { holder = 1400254 } #Huangfu Li
+936.7.29 = { holder = 1400259 } #Gao Xingzhao
+#Later Jin
+936.12.25 = { liege = e_later_jin }
+937.8.13 = { holder = 1400267 } #Du Chongwei
+938.12.7 = { holder = 1400271 } #Hou Yi
+939.7.23 = { holder = 1400285 } #Huangfu Yu
+940.4.17 = { holder = 1400228 } #Wang Jianli
+940.7.4 = { holder = 0 } #No Jiedushi
+940.8.8 = { holder = 1400287 } #Ma Quanjie
+941.1.1 = { holder = 1400288 } #Li Demin
+943.1.1 = { holder = 1412426 } #An Shenhui
+944.1.1 = { holder = 1412431 } #Li Congmin
+945.1.1 = { holder = 1400290 } #Tian Wu
+945.7.1 = { holder = 1410706 } #Zhang Cong'en
+#Liao
+947.1.11 = { liege = e_khitan }
+947.3.13 = { holder = 1400291 } #Geng Chongmei
+#Later Han
+947.3.20 = { holder = 1400294 liege = e_later_han } #Wang Shou'en
+947.9.1 = { holder = 1400295 } #Chang Si
+950.4.6 = { holder = 1400296 } #Li Yun
+#Later Zhou
+951.2.5 = { liege = e_later_zhou }
+#Song
+960.2.3 = { liege = e_song }
+#Rebellion
+960.5.30 = { liege = 0 }
+#Song
+960.7.9 = { holder = 1400147 liege = e_song } #Li Jixun
+970.1.1 = { holder = 1400299 } #Ding Deyu
+974.1.1 = { holder = 1400300 } #Yao Jineng
+977.1.1 = { holder = 0 }

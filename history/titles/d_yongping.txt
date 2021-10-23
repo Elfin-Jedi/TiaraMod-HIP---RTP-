@@ -1,0 +1,18 @@
+#Tang
+868.6.24 = { holder = 1403235 name = "Dingbian" effect = { set_coa = d_dingbian } liege = e_tang } #Li Shiwang
+870.2.24 = { holder = 0 } #No Jiedushi
+889.1.29 = { holder = 1400667 name = "Yongping" effect = { reset_coa = THIS } } #Wang Jian
+891.11.11 = { holder = 0 } #No Jiedushi
+#Former Shu
+920.7.15 = { holder = 1403236 liege = e_former_shu } #Zhou Xiang
+922.1.1 = { holder = 1403237 } #Li Yun
+925.1.1 = { holder = 1403238 } #Ma Jin
+925.12.15 = { holder = 0 } #No Jiedushi
+#Later Shu
+934.8.31 = { holder = 1400131 liege = e_later_shu } #Sun Hanshao
+943.3.3 = { holder = 1400145 } #Tian Jingquan
+948.4.5 = { holder = 1400144 } #Li Tinggui
+949.1.1 = { holder = 1400146 } #Wang Zhaoyuan
+949.4.1 = { holder = 1400147 } #Li Jixun
+958.1.1 = { holder = 1400034 } #Meng Zhiye
+965.2.23 = { holder = 0 }

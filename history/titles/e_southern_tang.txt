@@ -1,0 +1,61 @@
+937.10.11 = { #Liezu
+	name = "Qi"
+	effect = { set_coa = e_china_qi }
+	holder = 1406215
+	law = succ_primogeniture
+	law = crown_authority_4
+	law = administration_2
+	law = inheritance_1
+	law = imperial_kingdom_creation_2
+	law = ze_revokation_1
+	law = law_voting_power_1
+	government = chinese_imperial_government
+	effect = {
+		set_title_flag = uses_temple_names_by_script #Titles with this flag give their heirs a temple name via on_death event
+		set_title_flag = pretender_chinese_empire #Blocks all grace interactions
+		set_title_flag = temple_name_Taizu
+	}
+}
+939.2.14 = {
+	name = "Tang"
+	effect = {
+		reset_coa = THIS
+		set_title_flag = temple_name_Shizu
+		set_title_flag = temple_name_Gaozu
+		set_title_flag = temple_name_Taizong
+		set_title_flag = temple_name_Gaozong
+		set_title_flag = temple_name_Yizong
+		set_title_flag = temple_name_Zhongzong
+		set_title_flag = temple_name_Ruizong
+		set_title_flag = temple_name_Xuanzong
+		set_title_flag = temple_name_Suzong
+		set_title_flag = temple_name_Daizong
+		set_title_flag = temple_name_Dezong
+		set_title_flag = temple_name_Shunzong
+		set_title_flag = temple_name_Xianzong
+		set_title_flag = temple_name_Muzong
+		set_title_flag = temple_name_Jingzong
+		set_title_flag = temple_name_Wenzong
+		set_title_flag = temple_name_Jingzong
+		set_title_flag = temple_name_Wenzong
+		set_title_flag = temple_name_Wuzong
+		set_title_flag = temple_name_Xuanzong
+		set_title_flag = temple_name_Yizong
+		set_title_flag = temple_name_Xizong
+		set_title_flag = temple_name_Zhaozong
+		set_title_flag = temple_name_Dingzong
+		set_title_flag = temple_name_Chengzong
+		set_title_flag = temple_name_Qingzong
+		set_title_flag = temple_name_Huizong
+		set_title_flag = temple_name_Yizu
+	}
+}
+943.3.30 = { #Yuanzong
+	holder = 1406216
+	effect = {
+		set_title_flag = temple_name_Liezu
+	}
+} 
+958.5.31 = { set_tribute_suzerain = { who = e_later_zhou type = permanent } }
+960.2.4 = { set_tribute_suzerain = { who = e_song type = permanent } clear_tribute_suzerain = e_later_zhou }
+961.8.12 = { holder = 0 name = "Southern Tang" clear_tribute_suzerain = e_song }

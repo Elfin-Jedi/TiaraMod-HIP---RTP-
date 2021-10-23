@@ -1,0 +1,50 @@
+#Tang
+720.1.1 = { holder = 1403868 name = "Jiannan" liege = e_tang } #Li Jun
+720.4.1 = { holder = 0 }
+757.1.1 = { name = "Xichuan" }
+785.8.7 = { holder = 1402836 } #Wei Gao
+805.9.13 = { holder = 0 }
+806.11.20 = { holder = 1402844 } #Gao Chongwen
+807.11.16 = { holder = 0 }
+813.2.5 = { holder = 1405330 } #Li Yijian
+818.4.9 = { holder = 1401145 } #Wang Bo
+822.3.7 = { holder = 0 }
+823.11.14 = { holder = 1400410 } #Du Yuanying
+830.1.1 = { holder = 1405852 } #Gao Qian
+831.10.27 = { holder = 0 } #Li Deyu
+835.4.16 = { holder = 1400791 } #Yang Sifu
+837.1.1 = { holder = 0 }
+842.1.12 = { holder = 1408380 } #Cui Dan
+846.4.29 = { holder = 0 }
+847.9.16 = { holder = 1401540 } #Li Hui
+848.3.3 = { holder = 0 }
+858.1.1 = { holder = 1407070 } #Li Jingrang
+859.1.1 = { holder = 1403744 } #Du Cong
+860.12.15 = { holder = 1400372 } #Xiahao Zi
+862.8.7 = { holder = 1402579 } #Xiao Ye
+864.3.23 = { holder = 1404103 } #Li Fu
+866.3.22 = { holder = 1402899 } #Liu Tong
+868.9.27 = { holder = 1402900 } #Lu Dan
+870.6.28 = { holder = 1402901 } #Wu Xinglu
+871.5.20 = { holder = 1402950 } #Lu Yan
+873.12.31 = { holder = 1402979 } #Niu Cong
+875.2.11 = { holder = 1402848 } #Gao Pian
+878.2.19 = { holder = 1403128 } #Cui Anqian
+880.4.29 = { holder = 1403160 } #Chen Jingxuan
+891.11.11 = { holder = 1400667 } #Wang Jian
+#Former Shu
+907.11.3 = { liege = e_former_shu }
+918.7.11 = { holder = 1400678 } #Wang Zongyan
+925.12.5 = { holder = 1404761 } #Wang Zongbi
+#Later Tang
+925.12.28 = { holder = 1400030 liege = e_later_tang } #Meng Zhixiang
+#Later Shu
+933.3.15 = { liege = k_xichuan }
+934.3.16 = { liege = e_later_shu }
+934.9.7 = { holder = 1400035 } #Meng Chang
+#Song
+965.2.23 = { holder = 1403165 liege = e_song } #Lu Yuqing
+968.2.7 = { holder = 1403195 } #Liu Xigu
+973.1.1 = { holder = 1403197 } #Zheng Mu
+975.1.1 = { holder = 1403166 } #Lu Duan
+976.11.14 = { holder = 0 name = "Chengdu" }
