@@ -12,7 +12,7 @@ pagan_group = {
 		interface_skin = { indian_interface muslim_interface }
 		alternate_start = { always = no }
 
-		icon = 57
+		icon = 56
 		heresy_icon = 56
 		
 		color = { 1.0 0.4 0.5 }
@@ -81,7 +81,7 @@ pagan_group = {
 		secondary_event_pictures = west_african_pagan
 		interface_skin = { indian_interface muslim_interface }
 
-		icon = 57
+		icon = 56
 		heresy_icon = 56
 		
 		color = { 1.0 0.4 0.5 }
@@ -152,7 +152,7 @@ pagan_group = {
 		interface_skin = { indian_interface muslim_interface }
 		alternate_start = { always = no }
 
-		icon = 57
+		icon = 56
 		heresy_icon = 56
 		
 		color = { 87 0 70 }
@@ -219,7 +219,7 @@ pagan_group = {
 		secondary_event_pictures = sunni
 		interface_skin = { indian_interface muslim_interface }
 
-		icon = 57
+		icon = 56
 		heresy_icon = 56
 		
 		color = { 87 0 70 }
@@ -291,7 +291,7 @@ pagan_group = {
 		interface_skin = { taoist_interface indian_interface muslim_interface }
 		alternate_start = { always = no }
 
-		icon = 57
+		icon = 56
 		heresy_icon = 56
 		
 		color = { 109 150 0 }
@@ -361,7 +361,7 @@ pagan_group = {
 		secondary_event_pictures = sunni
 		interface_skin = { taoist_interface indian_interface muslim_interface }
 
-		icon = 57
+		icon = 56
 		heresy_icon = 56
 		
 		color = { 109 150 0 }

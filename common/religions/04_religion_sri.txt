@@ -9,8 +9,8 @@ pagan_group = {
 		
 		secondary_event_pictures = mesoamerican
 		
-		icon = 32
-		heresy_icon = 33
+		icon = 17
+		heresy_icon = 17
 		
 		ai_convert_other_group = 2 # always try to convert
 		
@@ -58,8 +58,8 @@ pagan_group = {
 	
 	inca_religion = {
 		graphical_culture = mesoamericangfx
-		icon = 31
-		heresy_icon = 33
+		icon = 17
+		heresy_icon = 17
 		color = { 0.17 0.07 0.85 }
 		
 		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } has_dlc = "Sunset Invasion" }

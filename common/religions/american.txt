@@ -5,8 +5,8 @@ pagan_group = {
 		alternate_start = { always = no }
 		secondary_event_pictures = finnish_pagan
 
-		icon = 32
-		heresy_icon = 33
+		icon = 25
+		heresy_icon = 25
 		
 		ai_convert_other_group = 2 # always try to convert
 		
@@ -80,8 +80,8 @@ pagan_group = {
 			}
 		}
 
-		icon = 31
-		heresy_icon = 33
+		icon = 25
+		heresy_icon = 25
 		
 		color = { 0.85 0.85 0.4 }
 		crusade_name = GREAT_HOLY_WAR

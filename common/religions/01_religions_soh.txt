@@ -20,8 +20,8 @@ pagan_group = {
 		secondary_event_pictures = tengri_pagan
 		alternate_start = { always = no }
 
-		icon = 29
-		heresy_icon = 30
+		icon = 54
+		heresy_icon = 54
 		
 		ai_convert_other_group = 2 # always try to convert
 		
@@ -86,8 +86,8 @@ pagan_group = {
 		graphical_culture = mongolgfx
 		secondary_event_pictures = tengri_pagan
 
-		icon = 28
-		heresy_icon = 30
+		icon = 54
+		heresy_icon = 54
 		
 		color = { 113 20 47 }
 		
@@ -160,7 +160,7 @@ pagan_group = {
 		interface_skin = { taoist_interface indian_interface muslim_interface }
 		alternate_start = { always = no }
 
-		icon = 53
+		icon = 54
 		heresy_icon = 54
 		
 		color = { 120 105 255 }
@@ -305,8 +305,8 @@ pagan_group = {
 		interface_skin = { taoist_interface indian_interface muslim_interface }
 		alternate_start = { always = no }
 
-		icon = 56
-		heresy_icon = 57
+		icon = 54
+		heresy_icon = 54
 		
 		color = { 229 66 33 }
 		
@@ -378,8 +378,8 @@ pagan_group = {
 		secondary_event_pictures = sunni
 		interface_skin = { taoist_interface indian_interface muslim_interface }
 
-		icon = 56
-		heresy_icon = 57
+		icon = 54
+		heresy_icon = 54
 		
 		color = { 229 66 33 }
 		
@@ -450,8 +450,8 @@ pagan_group = {
 		interface_skin = { taoist_interface indian_interface muslim_interface }
 		alternate_start = { always = no }
 
-		icon = 56
-		heresy_icon = 57
+		icon = 54
+		heresy_icon = 54
 		
 		color = { 187 20 67 }
 		
@@ -509,8 +509,8 @@ pagan_group = {
 		secondary_event_pictures = sunni
 		interface_skin = { taoist_interface indian_interface muslim_interface }
 
-		icon = 56
-		heresy_icon = 57
+		icon = 54
+		heresy_icon = 54
 		
 		color = { 187 20 67 }
 		
