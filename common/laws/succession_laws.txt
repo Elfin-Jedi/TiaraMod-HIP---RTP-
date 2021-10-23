@@ -19,6 +19,8 @@ succession_laws = {
 				}
 				NOT = { government = confucian_bureaucracy }
 				NOT = { government = amerindian_tribal_government }
+				NOT = { government = bureaucratic_government }
+				NOT = { government = chinese_imperial_government }
 			}
 			rebel = no
 		}
@@ -74,6 +76,8 @@ succession_laws = {
 					is_tribal = yes
 				}
 				NOT = { government = confucian_bureaucracy }
+				NOT = { government = bureaucratic_government }
+				NOT = { government = chinese_imperial_government }
 			}
 			rebel = no
 		}
@@ -135,7 +139,6 @@ succession_laws = {
 					has_religion_feature = religion_feature_west_african
 					has_religion_feature = religion_feature_slavic
 				}
-				NOT = { government = confucian_bureaucracy }
 			}
 			rebel = no
 		}
@@ -227,6 +230,8 @@ succession_laws = {
 					NOT = { PREV = { tier = BARON } }
 				}
 				NOT = { government = confucian_bureaucracy }
+				NOT = { government = bureaucratic_government }
+				NOT = { government = chinese_imperial_government }
 			}
 		}
 		allow = {
@@ -367,6 +372,7 @@ succession_laws = {
 					religion = hellenic_pagan
 				}
 				NOT = { government = confucian_bureaucracy }
+				NOT = { government = chinese_imperial_government }
 			}
 		}
 		allow = {
@@ -677,6 +683,8 @@ succession_laws = {
 					religion = hellenic_pagan
 				}
 				NOT = { government = confucian_bureaucracy }
+				NOT = { government = bureaucratic_government }
+				NOT = { government = chinese_imperial_government }
 			}
 		}
 		allow = {
@@ -723,6 +731,8 @@ succession_laws = {
 				NOR = {
 					religion_group = muslim
 					government = confucian_bureaucracy
+					government = bureaucratic_government
+					government = chinese_imperial_government
 				}
 				OR = {
 					independent = yes
@@ -1059,6 +1069,7 @@ gender_laws = {
 						}
 					}
 					religion = bon
+					religion = taoist
 					AND = {
 						religion = bon_reformed
 						has_religion_features = no
@@ -1220,6 +1231,17 @@ gender_laws = {
 								}
 							}
 						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { 
+					OR = {
+						religion = taoist
+						culture = han
+						culture = xianbei
+						culture = tuhun
 					}
 				}
 			}
@@ -1392,6 +1414,7 @@ gender_laws = {
 									}
 								}
 								religion = bon
+								religion = taoist
 								AND = {
 									religion = bon_reformed
 									has_religion_features = no
