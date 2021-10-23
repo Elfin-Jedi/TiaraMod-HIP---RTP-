@@ -3388,22 +3388,48 @@ altaic = {
 		color = { 0.775 0.5 0.15 }
 		alternate_start = { has_alternate_start_parameter = { key = culture value = full_random } }
 		male_names = {
-			Abagha Achigh Aguchu Ajai Ajinai Akhutai Alagh Alchi Alchidai Altan Ambaghai Arkhai Arasen
-			Badai Bagaridai Bala Barghujin Bartan Batu Bedugun Begter Belgutei Belgunutei Bilge Berke Bodonchar
-			Bogen Bogorchu Bolkhadar Borjigidai Boroghul Bughu Bugidai Bugunutei Bujeg Bukha Bulughan Buri
-			Burkhan Burundai Chagatai Chaghagan Chanai Chigu Chidukhul Chilagun Chiledu Chormakhan Chulgetei
-			Dagun Daritai Dayir Dodai Duua Eljigedei Ghazan Ghunan Guchu Kuchlug_Kutlug Guyug Harghasun Horkhudagh
-			Hulegu Husun Inalchi Inancha Iturgen Jajiradai Jamugha Jebe Jochi Jurchedei Khabichi Khachi Khachigun
-			Khadagh Khagatai Khaidu Khal Khorchi Khorilartai Khubilai Khudu Khutula Khuyildar Kogsegu Kokochu
-			Megetu Megujin Menggei Mongke Morokha Munglig Nakhu Narin Nayaga Nogai Odchigin Ogodei Okhotur
-			Oljaitu Oronartai Shiraghul Shirgugetu Subetei Suyiketu Taghai Tamachi Targhutai Temuge Temujin Temur_Timur
-			Todogen Toghoril_Toghrul Toghtoga Tokhtamis_Toktamish Tolui Torolchi Tumen Uighurtai Ukhuna Usun Yedi Yegu Yeke Yesugei
-			Yesunge Yokhunan
+			Aba "Aba Ebügen" Ababorgi Abaqa Abaghai Abdullah Abatai Adai Aduchi Ahmad Ajashiri Ajiki Ajul Alchi Alchidai "Alchu Bolad" "Alquncha" Altan "Altan Buqa" Alughui Alughchi Amuga Ananda Anton "Ar Bolad" Aratnashiri Arigabag Ariq "Ariq Böke" "Arslan Buqa" Arsu "Arsu Bolad" Aruqh "Arugh Temür" Arughtai Ashiqa Asudai Ayachi Ayurbarwada Ayurshiridara
+			Baba Babusha Badur "Bai Baraq" "Bai Temür" Baidaqan "Bak Temür" Baltu "Balu Doli" Barsu "Barsu Bolad" Batu "Batu Möngke" Batula Bayan "Bayan Möngke" "Bayan Temür" Bayanchar Belgütei Benyashiri "Berke Temür" Birigü Böchök Bodi Bodonchar Boghorchu Boladchi Bolai Bolot "Bolot Buqa" "Bolot Temür" Boloqan Bolunai Boroqul Büri Budashiri Buqa "Buqa Temür" "Bughan Temür" Bunyashiri Buqu Butu "Buyan Delger" "Buyan Temür"
+			Chaghan Chaqula Chabat Chapar "Chaqun Dorji" Cheche Chechektu "Cherik Temür" Chilaghun Chimbai Chinkim Chintum Chübei
+			"Dai Temür" Däishü Daisingnu Darmabala Darma Darmashiri "Dash Temür" Dayir Delbeg Delger "Delger Buqa" Dogholang Dörene Dorji Dorjibar "Doro Buqa" Dugha 
+			Ebügen Edigü "Edigü Buqa" Ejil "El Temür" Elbeg "Elbeg Nigülesügchi" Emegen Engke "Erdeni Baghatur" Esekü Esen "Esen Temür" Eseküi "Esen Emügen" Eshitai "Erchi Kumash"
+			"Gere Bolad" Geresenje Geretü Gooqai "Gömbo Dorji" Gulichi "Gün Temür" Güyük
+			"Habil Temür" Hantom Hingtom Hulachu Hulagu Hügechi Hümegei
+			Ilchidai Ishal Iragui Irijan Irgenjan Irinjibar
+			Jamuqa Jaughdu Jibik "Jibik Temür" Jibügen "Jilwadai" "Jöchi Qasar" Jörike Jürchedei
+			Kammala Kashin Kazan Kehetei Kereyidei "Kermish Aqa" Keshiq "Keshiq Öröq" Kitai Köden "Köke Temür" Kököchü "Konchek Buqa" Küchün Küchü "Kughun Buqa" "Kürlük" Kutulu Küyän
+			"Maidaribala" Mandughul Manghala "Mar Körgis" Melik "Melik Temür" Mergideii "Möchi Yebe" Möge Möghetüken Möngätü Möngke "Möngke Qalja" "Mönglik Echige" Morihai Muqali "Mulqar Qalja"
+			Naghachu Naimantai Naqu Naya Nayan Negübei Negüder Nelegü "Nima Sengi" Nomughan Noyantai
+			Ögedei "Ögölen Cherbi" Olqut Öljei "Öljei Ebügen" "Öljei Buqa" "Öljei Temür" Onggiradai Onoqui Orda Ordo Oros Örüg "Örüg Temür" "Ösh Temür" Oyiradai
+			Rinhinbal
+			"Qabil Temür" Qabul "Qachighun" Qada Qadai Qadan "Qadaghan" Qaidu Qaja "Qaja Oghur" Qaltuqu Qalusun "Qara Buqa" Qarachar Qarghuchagh Qayshan Qitadai Qongghur "Qongqo Temür" Qorgi Qorqosun Qoshai Qoshan Qoshila Qotan Qubilai Qucha Qulaqur Quliqachi Qunji Qurudai Qushiqi Qutuqtu "Qutuq Temür" Qutuluq "Qutuluq Temür" "Quq Temür" Qurachu Qutoqu Quyildar
+			Sadur Shingnaqar Sarban Sarman Sebilger Sebutai Sechektü Shidebala Shikdür Sigüsütei Shiremün Shirigi Sögedü Söse Sübüdäi "Süge Temür" Sünshan Sulqadu "Süyiketü Cherbi"
+			Tabila Taghachar Tangutai "Tash Temür" "Tegüs Buqa" Tekshi Temüder Temüge "Temüge Odchigi" Temüjin Temür Temürchi Toghanchar Toghan "Toghan Buqa" Toghoghan Toghon "Toghon Temür" Toghril "Tögüs Temür" Tölögen Tolui Töre "Töre Temür" Törö "Törö Bolad" "Toq Buqa" "Toq Temür" Toqtogha Toqu Torchan Tötaq Tübshin Tükme "Tulun Cherbi" "Tümen Temür" Tuman Tuqluq
+			Udai "Udus Buqa" Ügechi "Ügechi Qashqa" "Ürüg Temür" "Ürün Dash" "Ulus Buqa" "Ulus Bolad"
+			"Vajravarmi"
+			Ubasanja "Uchir Bolad" Ulintai "Ulintai Badan" Umasanja
+			Yanashiri Yangichar Yaqudu Yegü "Yeke Cheren" "Yeli Buqa" Yesüder Yesügei "Yesü Buqa" "Yesü Tukan" "Yesün Temür" Yesüngge "Yultus Temür"
 		}
 		female_names = {
-			Al-Alta Alan Altani Borte Botokhui Bulughan Chabi Chagur Chakha Checheyigen Chotan Doregene Doquz
-			Ebegei Gurbesu Hogelun Holuikhan Ibakha Khadagan Khogaghchin Khojin Khorijin Khugurchin Khulan
-			Mandukhai Mongoljin Nomolun Oghul Orbei Sokhatai Sorkhaghatani Tekine Temulun Töregene Yesugun Yesui
+			Aiyashiri Alagha Alajin Alaqai Alaltun Altagarjin Altani Altun Ando Anashishiri Asiqutuluq
+			Babukan Babusha "Bayan Qutuq" Bayarun Bayauchin Bolaguchin Börte Budashiri Buddhashiri Bülghan Bulgai Bulughan Buraruguchi "Buyan Kelmish"
+			Chabui Checheiqen Chenga
+			Danashiri Dariemishi Darmashiri Dumugan
+			Ergene
+			Koghajin
+			Hushujin
+			Ikires Irhaiya Irinchibal Irinjin
+			Kioregene Kökejin Kusei
+			Linkum
+			Maidi Mairaidai Manduqhai Möngküi Muge
+			Nambui Nugan
+			Öelün "Oghul Qaimish" Öljätäi "Öljei Qutuq" Orghana
+			Pikan
+			Qatungghai Qojin Qudadmish Qulan "Qutughu Kelmish" Qutulun
+			Shirindari Sölköktani Sugabala Sugabara Sugadari Sugashiri Sumire
+			Taji Temülün Tergen "Tesü Buqa"  Töregene Torolto Tümelün Tümügen
+			Urgu Uyighur
+			Yangaya Yelmish Yesui Yesulun Yesunjin Yürek
 		}
 		founder_named_dynasties = yes
 		modifier = mongol_culture_modifier
@@ -3713,34 +3739,77 @@ altaic = {
 		dynasty_name_first = yes
 		color = { 0.95 0.95 0.1 }
 		male_names = {
-			Abo Aerlu'on Aerlu'or An Anba An-in Agji Agjin Ago Agu Asar Auluon Baisbun Baisbur Baisha-an
-			Baishar Belbur Belbun Biæn Bi'en Bi'er Bug Chala Chalan Chauer Chaung Chugu Cha Chaqal
-			Cheu'er Chuburur Chugung Daujil Dauluor Dein Dileqa Dilug Dior Diorin Dænir Dile
-			Dilen Diolin Diluguin Dolbur Drola-an Dorhan Ja Ji'en Jirug Jirgu Jirugun Jobolin Joborin
-			Juburug Jirgung Ebege Ebegin Esbur Esen Esenin Gemin Gileg Gu Guju Guin Guinin Hail Hailin Haru
-			Harun Harubu Harubub Harubun Hede Hedeng Heugu Hua Hulji Inig Inigin Iri'en Iri'er Kail Kiænshinge
-			Kung-in Kung-ur Kuji Laugu Laugung Ma'an Mosa Moshan Moshar Muru'on Muruor Namsiha-an Narsin Niar
-			Niargu Niargun Niarin Niauraq Niauraqan Niomog Niomgu Niomgun Noilhan Noilhar Nomoshan Noyer Odula-an
-			Odu-on Ordelhan Ordu'on Orduor Paudin Paulir Peyen Pod Poden Poder Pul Pulin Purbu Pösöe'n Pösö'er
-			Qaju Qajung Qang Qan-in Qomol Qutug Qutugin Sabo Sabon Saqaji Sara Saradin Saulir Sha-ar Shilör
-			Shishial Shishialin Siaugu Sinelger Singen Singer Susaq Tabuyen Tabuye Tabuyer Tang-ur Telid Telin Telgen
-			Teme Temen Temer Tiænin Tud Tudin Tudedin Tugusir Turburur Udu'on Udu'or Ugul Ugulin Uljin Ulji Ulsi Ulsin Urel
-			Urelbun Urelbur Urilhar Uryen Uryer Uröer Uyen Uyer Yænge Yænin Yulgu-r Yuldugu Yuldugun Yundeshi
+			Abu Agujen An Anba Anin Arar Arlon Asar Asarin
+			Bain Baldë Bëgichi Bëlibën Bosëbën Byennu
+			Chala Chalan Chauji Chaun Chëgën Chëun Chiupën Choboren Chubur Chugul Chugun Chungud Churër
+			Dal'ër Dau’on Dilaq Dilë Dilën Dilug Dirud Dolbur Doron
+			Ëbëgë Ëbëgin Ëbëgin Enge Engqan Enle Ësën Ësënën Ëursi
+			Funggë
+			Gauba Gaugiu Gauliu Gëushi Gilig Gogë Gosam Guyënin Guyin Gwenim 
+			Hail Hailin Harbun Haru Harun Hëdëgin Heden Hëugu Hujli Hüran Hüsha 
+			Imër Iriyën Iriyër Ishiunu
+			Jau Jaugur Jaugus Ji’ën Jier Jilar Jirug Jiunu Jobolin Julje
+			Kungin Kuwr Kuyrgën
+			Liubën Liun Liusigë
+			Mang’a Modu Mui
+			Niar Niarin Nioraq
+			Naguji Naren Narqun Nugun
+			Odulhan Odulhar
+			Podin Puding Pudy Puguji Pul Pulug Pulugin Pulun Punun Pusanu Pusuën Pusuër
+			Sabon Sairin Salhan Sam Sarhadi Sarhadin Saugu Sauqu Senchi Si’in Sin’ën Singën Su Sunin
+			Shalqar Shar Shashal Shelun Shidun Shilu Shilun Shiunu Shuran 
+			Tabuyën Tabuyër Taishinu Talem Tëlbër Tëlëgën Tëmën Tëmër Tili Tiur Tiurin Tonin Toqosen Tudud Tu’ër Tumur Turbun
+			Qadi Qaju Qajun Qanin Qangianu Qiamaq Qugu Qumul Qurs Qutug Qutugin Qutuqun
+			Ugulin Ürdü’or Urug Urëlbun Urulben Ulji 
+			Yamuq Yënin Yu Yuënin Yundëshi
+			
+			#Abo Aerlu'on Aerlu'or An Anba An-in Agji Agjin Ago Agu Asar Auluon Baisbun Baisbur Baisha-an
+			#Baishar Belbur Belbun Biæn Bi'en Bi'er Bug Chala Chalan Chauer Chaung Chugu Cha Chaqal
+			#Cheu'er Chuburur Chugung Daujil Dauluor Dein Dileqa Dilug Dior Diorin Dænir Dile
+			#Dilen Diolin Diluguin Dolbur Drola-an Dorhan Ja Ji'en Jirug Jirgu Jirugun Jobolin Joborin
+			#Juburug Jirgung Ebege Ebegin Esbur Esen Esenin Gemin Gileg Gu Guju Guin Guinin Hail Hailin Haru
+			#Harun Harubu Harubub Harubun Hede Hedeng Heugu Hua Hulji Inig Inigin Iri'en Iri'er Kail Kiænshinge
+			#Kung-in Kung-ur Kuji Laugu Laugung Ma'an Mosa Moshan Moshar Muru'on Muruor Namsiha-an Narsin Niar
+			#Niargu Niargun Niarin Niauraq Niauraqan Niomog Niomgu Niomgun Noilhan Noilhar Nomoshan Noyer Odula-an
+			#Odu-on Ordelhan Ordu'on Orduor Paudin Paulir Peyen Pod Poden Poder Pul Pulin Purbu Pösöe'n Pösö'er
+			#Qaju Qajung Qang Qan-in Qomol Qutug Qutugin Sabo Sabon Saqaji Sara Saradin Saulir Sha-ar Shilör
+			#Shishial Shishialin Siaugu Sinelger Singen Singer Susaq Tabuyen Tabuye Tabuyer Tang-ur Telid Telin Telgen
+			#Teme Temen Temer Tiænin Tud Tudin Tudedin Tugusir Turburur Udu'on Udu'or Ugul Ugulin Uljin Ulji Ulsi Ulsin Urel
+			#Urelbun Urelbur Urilhar Uryen Uryer Uröer Uyen Uyer Yænge Yænin Yulgu-r Yuldugu Yuldugun Yundeshi
 		}
 		female_names = {
-			Abuq Aerlu'on An Agjin Ago Agu Agulin Aidan Aliju Amqa An'e Anu Arel Au'a Auye Auluon-agu Baisbun
-			Baish Baisha-an Baishan Balhan Be'el Be'en Belbun Biæn Bi'en Bugin Burelhan Cha Chadeilhan Charde Chöng Cheumuyang
-			Cheu'en Chubug Chudgji Chugu Chugurel Dali Daqal Dang Dauji
-			Dei Diamtshan Dile Dilen Dilug Dior Diori Diænir Dorla-an Durin Dorhan Ja Jaur Jaugui Jugu Ji'en
-			Jirugun Jobol Jobor Dæriai El Gem-shi Gileg Gonu Gu Guju Gugu Guinin Hail Hailin Harun Harur
-			Hediro Hio Hua Huri Inigin Irbu Irier Kuji Kun Kung-ur Kuren Labu Laugung Liaugu Libgu Limir Ma'an
-			Manir Masgu Mörö'en Moshan Mæn Mirig Moya Mo-sa Muru'on Naqai Namsiha-an Naihad Narsin Niarhari Niaur
-			None Nugur Niamgonen Niauraq Niargun Noilhan Nomoshan Noyen Niomgun Niar Niargung Niomgung Nosilhan
-			Odula-an Ordelhan Ordu'on Paril Paudin Paudun Paulin Peyen Poden Poliæn Pöselgen Pösö'en Purbu Purbun
-			Qaju Qag Qalaqa Qan Qanan Quguden Quru'on Qutug Sabo Sabon Saq Saqaji Sara Sarad Siaugu Sinelgen
-			Singen Shishial Shugur Shuru'ui Singer Song-ulhan Suirgen Tabuye Tabuyen Tadi Tang Talis Tang-ur Taug
-			Telbe Temeyen Telgen Telid Teme Temen Tiæn-ba To'o  Tiænba Tud Tuded Tug Tugusir Tulu'en Un Ugul Urilhan
-			Uryen Uröen Ulji Urel Uyen Yash Yudgu Yugu Yuldugu Yærel Yeugun Yogun
+			Agjin Aliju An 
+			Bigianiu
+			Chëumuyang Chugji
+			Dilë Dilën
+			Engingsi Ësën
+			Gugu Gwenim
+			Hagë Harur
+			Jaugui Jaur Jobol
+			Kung Kungur
+			Mudan
+			Niargun Neugin Nojilhan Ngingshi
+			Naurulun Niausie Nmugun
+			Ulji Urul
+			Pigë Poliusye Pu Pungshennu
+			Qan Qutuq
+			Sabo Shëlgë Siaulien Sinin Shishil
+			Tabuyën Tadi Tëlbë Tëmën Tyenë
+			Yangsye Yëm Yitang Yundëshi
+			
+			#Abuq Aerlu'on An Agjin Ago Agu Agulin Aidan Aliju Amqa An'e Anu Arel Au'a Auye Auluon-agu Baisbun
+			#Baish Baisha-an Baishan Balhan Be'el Be'en Belbun Biæn Bi'en Bugin Burelhan Cha Chadeilhan Charde Chöng Cheumuyang
+			#Cheu'en Chubug Chudgji Chugu Chugurel Dali Daqal Dang Dauji
+			#Dei Diamtshan Dile Dilen Dilug Dior Diori Diænir Dorla-an Durin Dorhan Ja Jaur Jaugui Jugu Ji'en
+			#Jirugun Jobol Jobor Dæriai El Gem-shi Gileg Gonu Gu Guju Gugu Guinin Hail Hailin Harun Harur
+			#Hediro Hio Hua Huri Inigin Irbu Irier Kuji Kun Kung-ur Kuren Labu Laugung Liaugu Libgu Limir Ma'an
+			#Manir Masgu Mörö'en Moshan Mæn Mirig Moya Mo-sa Muru'on Naqai Namsiha-an Naihad Narsin Niarhari Niaur
+			#None Nugur Niamgonen Niauraq Niargun Noilhan Nomoshan Noyen Niomgun Niar Niargung Niomgung Nosilhan
+			#Odula-an Ordelhan Ordu'on Paril Paudin Paudun Paulin Peyen Poden Poliæn Pöselgen Pösö'en Purbu Purbun
+			#Qaju Qag Qalaqa Qan Qanan Quguden Quru'on Qutug Sabo Sabon Saq Saqaji Sara Sarad Siaugu Sinelgen
+			#Singen Shishial Shugur Shuru'ui Singer Song-ulhan Suirgen Tabuye Tabuyen Tadi Tang Talis Tang-ur Taug
+			#Telbe Temeyen Telgen Telid Teme Temen Tiæn-ba To'o  Tiænba Tud Tuded Tug Tugusir Tulu'en Un Ugul Urilhan
+			#Uryen Uröen Ulji Urel Uyen Yash Yudgu Yugu Yuldugu Yærel Yeugun Yogun
 		}
 		modifier = default_culture_modifier
 		allow_looting = yes
@@ -7962,45 +8031,45 @@ tibetan_group = {
 		color = { 0.8 0.3 0.0  }
 		
 		male_names = {
-			Abaoji Abo Abugu Aguo Aguzhi Ala Dorjee Kalden Karma Lobsang Mingma Nawang Nima Chodak Changyuan 
-			Chucai Chun Chunyou Chuzhi Ci Cite Ciwang Dali Dao Daoyin Dashi Deguang Deming Dewang Deyuan 
-			Di Diela Dilie Dilu Dorlipun Du Duolubu Duoluo Duomi Fangde Fuguzhi Fuliu Fuyi Gan Gang Gaoligu
-			Gongmao Gongzao Guan Guang Guangbi Gui Guochang Guozhe Hao He Hechen Hongben Hongdao Hongfan 
-			Hongji Hongyong Hongzhen Hougu Huaijie Huaixiu Hudujin Hui Huiyuan Hunhe Jie Jin Jing Jingtang 
-			Jinzhong Jiqian Jiuli Jiushao Jiyuan Jue Jun Junshi Kaigu Kailuo Keda Keling Kenagan Ketuyu 
-			Keyong Kuan Kuge Kui Kuo Liangzuo Lihu Lin Linggong Lishan Liuge Loguo Longqing Longxian Longxu 
-			Longyou Louguo Lu Luju Luzhi Mada Mai Maozhen Min Ming Mingyi Mohui Naihe Nieli Nielieji Noulisi 
-			Nu Paolu Pedie Pusuwan Qi Qianshun Qinde Quchulu Quju Qulie Qulu Renxian Renxiao Ruan Sage Salade 
-			Saladi Sha Shao Sheng Shenmi Shi Shihuo Shilu Shinan Shizhong Shu Shulu Si Sicheng Sidao Side Song 
-			Songrui Suogu Tabuyan Tadun Tai Taishan Taishi Taiyi Temei Tianxiang Tingjian Tong Tuguci Tuyu Waihe 
-			Wangrong Wansi Wanxin Wei Wen Wenshunu Wenzao Wolila Wotela Wuge Wujun Wumo Wuyi Wuyu Wuzheng Xi Xian 
-			Xiangwen Xiaozheng Xiaozhong Xiazhen Xidi Xinie Xiu Xiuge Xunning Yali Yan Yangxi Yanxi Yanzhang 
-			Yaogu Yaoshinu Yi Yilie Yiliu Yixinning Yongning Yougui Youqing Youyu Yu Yuanhao Yunching Yundeshi Yuyu 
-			Zanhua Zao Zeduan Zengbo Zhangyuan Zhaosan Zhen Zhengchang Zhengyan Zhibuwu Zhigu Zhilugu Zhixian Zhiyuan 
-			Zhong Zhonggong Zhongji Zhongxuan Zhongyan Zhongyuan Zhulie Zongjiao Zongzhen Zuli Zunxu Zuqian Xjwa Khej 
-			Xwej Thjij-po Changyun Cheng Chengjun Chixin Chonggui Chongrong
+			Adoki Any
+			Be Beew Beki Buju Bydughwi
+			Chabe Chhada Chhaswew Chitshe Chonlhikhwy Chonlhigu Chyrphu
+			Donje Donjebe Donjechhwor Donjehun Donjely Donjeshon Donryrje Dwewrvu
+			Ewghwi
+			Gabu Gewzhi Ghavagu Ghavanew Ghwan Ghweghwever Ghwi Ghwitswyr Ghynevera Ghyshen Ghyva Ghyverghwi Gu Gurur Gururshen Gururwer Gysha
+			Jeswew Jwukir Jwuli Jwutshon
+			Khwy Khwyew Khwyki Khwylheshen Khwyly Khwylyver Khypu Khwyshen Khwyshu Khwytsha Khwyver Ki Kochon Kuge Kuly Ky Kytashon
+			Latsewr Lenlodze Lense Lewew Lhelon Longhyr Lyghon Lyky Lyvi Lyvina
+			Mylhewgu Merate
+			Naki Ne Newghon Newswew Newsy Ngwimi Ngwiu Nwyver
+			Opukhwy
+			Pazhale Phe Phu Phygu Ponu Pyne
+			Rerlhikhwy Rerphu
+			San Se Seden Semy Sengon Seo Seshen Shan Shenphon Shephon Shon Shonly Sithe Symyhon
+			Tata Tenmer Thitsan Ihon Thutshen Tsankhwa Tshikagu Tshikaly Tsirje Tsirse Twuje
+			Ujogu
+			Valy Vase Vati Vazi Vergu Vershan Vojin Voju
+			Zhyrbi Zhyrbu Zhyrchhadze Zhyrgu Zhyrja Zhyrkir Zhyrly Zhyrmi Zhyrnew Zhyrngon Zhyrphu Zhyrshen Zhyrswew Zhyrtsir Zhyrver Zighwi Zwinga Zymyhon
 		}
 
 		female_names = {
-			Ai Ankang Bage Bai Bohai Boshi Cao Chadan Chang Changshou Changshounu Chen Chonghua Chu Chunqin Chuo
-			Cui Cuiba Cuiluan Cuiping Da Daopo Daosheng Deng Deyao Dezhen Dianni Dong Duan Emei Feishan Fengcheng
-			Fu Fujin Gao Ge Guang Guanyinnu Guo Han Hanyue He Hongdu Hongfu Honghong Hou Hu Hua Huang Huarui Huiming
-			Jianchang Jiang Jin Jinfeng Jinluan Jiuge Lanling Li Liang Liao Liu Luanluan Ma Meizhu Meizi Meng Miaoniang
-			Miaoyin Nalan Neiming Noujin Nuoujin Panpan Ping Pucha Puci Puning Pusage Pusuwan Puwei Qian Qiao Qin Qinai
-			Qingnu Qingzhao Qungu Ren Renyi Ruishun Ruizhi Saige She Shen Shengtang Shi Shige Shiguang Shishi Shizhen
-			Shuge Shuiqiu Shuogu Shuzen Shuzheng Siao Song Su Sun Tabuyan Tabuye Taige Taihe Tangqiao Tao Taoge Tian
-			Tong Tudan Wa Wang Wenji Wu Wulinda Wuniang Xia Xiao Xiaoming Xiaoxiao Xingge Xingguo Xinyue Xu Xuanji 
-			Xuanyi Xueying Xunyang Yan Yange Yaniang Yanmu Yanshounu Yanxiu Yaonian Yaoniang Yaoying Ye Yi Yingtian Yingying 
-			Yongqing Yongxing Yu Yuan Yuanzhen Yuniang Yunying Yushan Zhai Zhang Zhaoyun Zheng Zhenjian Zhong 
-			Zhou Zhu Zhuzhu Zihe Ziye
+			Ghavaki
+			Kwakwako
+			Laulau Lochhamu Lysho
+			Muki
+			Santse Shenmu
+			Tishenswew
+			Zhyrtho Zimyfon
 		}
 		
-		pat_grf_name_chance = 50
-		mat_grf_name_chance = 25
-		father_name_chance = 25
+		from_dynasty_prefix = ""
 		
-		pat_grm_name_chance = 25
-		mat_grm_name_chance = 25
+		pat_grf_name_chance = 0
+		mat_grf_name_chance = 0
+		father_name_chance = 0
+		
+		pat_grm_name_chance = 0
+		mat_grm_name_chance = 0
 		mother_name_chance = 0
 		
 		dukes_called_kings = yes
@@ -8123,13 +8192,604 @@ chinese_group = {
 		color = { 211 44 44 }
 
 		male_names = {
-			Wên_Yuan Kien-chêng_Jiancheng Hsieh-min_Shimin Nguan-kiet_Yuanji Chieng-kien_Chengjian Chih-yüeh_Shihuo "T'ai_Tai" Chin_Zhen Chih_Zhi "Ts'iung_Zhong" So-tset_Sujie Hung_Hong Hên_Xian Tan_Dan "Ch'iu-lei_Shouli" "Ts'iong-nhun_Chongrun" "Ts'iong-pi'uk_Chongfu" "Ts'iong-tsun_Chongjun" "Ts'iong-mau_Chongmao" "Chêng-k'i_Chengqi" "Lung-ki_Longji" Chieng-hung_Chenghong "Ts'ung_Cong" Ying Hêng_Heng Lin Yu "T'an_Tan" Kuang_Guang "K'uat_Gua" Hsun_Xuan Tsung_Song "T'ai-hsieh_Taishi" Chün_Chun Yün_Yun Neng Ngo_Wu Chim_Chen "Ts'êm_Zhan" Ngang_Ang "Ts'au_Rong" Hiêm_Yan "Ts'ui_Cui" Tzu_Zi "P'uo_Pu" Chieng-mi_Chengmi "H'uieng_Yong" Hsüan_Xuan "H'iep_Yue" Tso_Yu "Ts'uk_Zhu" Hung-yin_Hongyin "K'ung-yin_Kuangyin" Kuang-nghie_Guangyi Têk-chieu_Dezhao "Têk-p'ung_Defang" Yuei-kiet_Weiji Yuei-hien_Weixian Hsiu-to_Shoudu "Ts'ung-uk_Congyu" Hsieh-kuat_Shikuo Hsieh-tsiang_Shijiang "Lin-k'a_Lingjia" Lin-hua_Linghua Tzu-hsiek_Zishi "Tzu-ch'eng_Zicheng" "P'êk-ngo_Bowu" Tsên_Shen Shi-yi_Shiyi Tun_Dun Hi-lu_Xilu Huang_Kuo Wan_Yun Yeh-nhuei_Yurui "M'êng-k'ei_Mengqi" "Ts'e_Shi" Hen_Xian Ping_Bing
-			#Yuan Jiancheng Shimin Yuanji Chengqian Shihuo Tai Zhen Zhi Zhong Sujie Hong Xian Dan Shouli Chongrun Chongfu Chongjun Chongmao Chengqi Longji Chenghong Cong Ying Heng Lin Yu Tan Guang Gua Xuan Song Taishi Chun Yun Neng Wu Chen Zhan Ang Rong (homophone of Run) Yan Cui Zi Pu Chengmei Yong Xuan Yue Yu Zhu Hongyin Kuangyin Guangyi Dezhao Defang Weiji Weixian Shoudu Congyu Shikuo Shijiang Lingjia Ling-hua Zishi Zicheng Bowu Shen Shiyi Dun Xilu Kuo Yun Yurui Mengqi Shi Xian Bing
+			A Aduan Agui Ani
+			Ai Aijing Aitong Aizhi
+			An Angu Anguo Anjing Anqi Anqian Anqin Anren Anshi Anshou Anxi Anzhen
+			Ang
+			Ao
+			Ba Ba'an Bacha Bage Baxian
+			Bai Baichu Baili Bailiang Bailun Baiqian Baiqin Baiqiu Baishan Baishang Baisi Baitong Baixia Baixuan Baiyan Baiyang Baiyin Baiyou
+			Ban
+			Bang Bangchang
+			Bao Bao'ai Baobin Baocong Baoding Baofan Baofu Baogai Baogang Baohe Baoheng Baohong Baoji Baojie Baojuan Baolan Baolin Baopu Baoqian Baoquan Baorong Baoshen Baosheng Baoxiang Baoxing Baoxu Baoxuan Baoxun Baoyan Baoyin Baoying Baoyou Baoyu Baoyuan Baozhen Baozheng Baozhi Baozhong
+			Bei
+			Bi Bicheng Bijiang Biqiang Bixie
+			Bian
+			Biao Biaohui
+			Bin Binji Binting Binyi
+			Bing Bingren Bingzhi
+			Bo Boda Bodang Bogong Bogu Boli Bomao Bomou Boqian Boqin Boqing Boren Boshan Boxin Boxuan Boyi Bozhen Bozhi Bozong
+			Cai Caixuan
+			Can
+			Cao
+			Ce
+			Ceng
+			Cha Chayan
+			Chan Chanzhi
+			Chang Changbi Changdi Changdu Changfu Changguang Changheng Changling Changlu Changmao Changming Changqian Changqing Changru Changshi Changshu Changshun Changsu Changsun Changtu Changwen Changxia Changxian Changxie Changxu Changyan Changyi Changyu Changyuan
+			Chao Chaocheng Chaofu Chaoguang Chaoxian Chaoye Chaoying
+			Che
+			Chen Chenzhi
+			Cheng Chengban Chengbing Chengcao Chengchuo Chengdang Chengdao Chengde Chengdu Chengduan Cheng'en Chengfeng Chengfu Chenggan Chenggao Chenggong Chenggui Chenghan Chenghao Chengji Chengjian Chengjiang Chengjie Chengjin Chengju Chengjuan Chengjun Chengkai Chengkan Chengkuang Chenglan Chengliang Chengluan Chengming Chengmo Chengmu Chengnao Chengpu Chengqian Chengqing Chengque Chengrang Chengrui Chengshi Chengshou Chengsi Chengtan Chengtiao Chengwang Chengwo Chengxi Chengxia Chengxian Chengxin Chengxing Chengxiu Chengxu Chengxuan Chengxun Chengya Chengyan Chengye Chengyi Chengyou Chengyu Chengyue Chengyun Chengze Chengzhan Chengzhao Chengzhen Chengzhi Chengzong Chengzun Chengzuo
+			Chi Chijin Chisong Chiyuan
+			Chong Chong'ai Chongba Chongbao Chongben Chongbi Chongbin Chongchan Chongchang Chongding Chongdu Chong'er Chonggao Chonggu Chongguang Chonggui Chonghou Chonghua Chonghui Chongji Chongjian Chongjie Chongjin Chongjing Chongju Chongjun Chongke Chongli Chongliang Chongmao Chongmei Chongqi Chongque Chongrong Chongruan Chongrui Chongshi Chongsi Chongsu Chongsui Chongtao Chongwei Chongwen Chongwu Chongxian Chongxin Chongxing Chongxu Chongxuan Chongxun Chongyan Chongye Chongyi Chongyin Chongying Chongyong Chongyou Chongyu Chongzan Chongze Chongzhang Chongzhao Chongzhe Chongzhen Chongzhi Chongzuo
+			Chou Chouqu
+			Chu Chuchong Chuchou Chucun Chugang Chugong Chuhong Chuhui Chuji Chujian Chujin Chujun Chuke Chulian Chule Chune Chuneng Chuqi Chuqian Chuqiu Churang Churen Churong Churen Chushi Chuxian Chuxiang Chuxin Chuyan Chuyi Chuyin Chuyun Chuzhen Chuzhi
+			Chun Chunqing Chunzhong
+			Chuo
+			Chuan Chuanchen Chuanda Chuandan Chuandang Chuande Chuanding Chuanfa Chuanfan Chuanguan Chuangui Chuanji Chuanjin Chuanjing Chuanju Chuankai Chuanli Chuanlian Chuanliao Chuanlin Chuanling Chuanpu Chuanqiu Chuanshou Chuanxi Chuanxian Chuanxiang Chuanxiu Chuanxu Chuanyi Chuanyin Chuanying Chuanyong Chuanyou Chuanyu Chuanyuan Chuanzen Chuanzhan Chuanzhen Chuanzhi Chuanzhuo
+			Ci Cidan Cigong Cili Ciming Cipeng Ciyu
+			Cong Cong'ai Congben Congbin Congbing Congcan Chongchang Congchu Congdang Congdu Congfa Conggao Conggui Conghai Conghou Conghui Congji Congjia Congjian Congjin Congke Conglang Congmin Congmou Congqian Congqing Congrang Congrong Congruan Congshan Congshen Congshi Congtong Congwen Congxiao Congxin Congxu Congxun Congyan Congyi Congyu  Congyuan Congyue Congze Congzhang Congzhi Congzhou
+			Cou
+			Cui Cuiran
+			Cun Cunba Cunfu Cungui Cunji Cunjie Cunjing Cunju Cunli Cunmei Cunquan Cunque Cunru Cunshi Cunwo Cunxian Cunxiao Cunxu Cunyi Cunyue Cunzhang Cunzhi
+			Da Dading Dafang Dahu Daji Dajiong Damo Dani Danian Dashi Daya Dazang Dazhi Dazhu Dazi
+			Dai Daichun Daidu Daijia Daipin Daixuan
+			Dan
+			Dao Daobi Daochao Daocheng Daochong Daochuan Daoci Daoda Daodu Daoduan Dao'en Daogong Daoguan Daoheng Daohong Daohu Daohui Daoji Daojian Daojiang Daoju Daoli Daoming Daomao Daomen Daomo Daopiao Daoqian Daoqin Daoqing Daosheng Daosu Daosui Daotan Daoxi Daoxian Daoxing Daoxuan Daoyan Daoyin Daoyong Daoyu Daoyuan Daoyun Daozhao Daozhen Daozhi Daozhong Daozi Daozong
+			Dang Dang'er
+			De De'an Deben Dechang Decheng Dechong Decong Defang Defen Degong Deguang Dehuan Dejing Dejun Deli Delin Delian Deliang Delun Demin Deming Dening Deqing Dequan Derang Deren Derou Deru Derun Desheng Deshi Deshou Deshu Dewei Dewen Dexian Dexiang Dexiu Dexuan Deyan Deyi Deyin Deyong Deyu Deyuan Deyun Dezhang
+			Deng Dengweng
+			Di Dijian
+			Ding Dingbao Dingge Dingnu
+			Dong
+			Du Dujin Dujiu Dushi
+			Duan Duanfu Duanli
+			Dun Dunfu Dunli Dunrou
+			Duo
+			E
+			En Enli
+			Erhe Erxuan
+			Fa Fadu Fahui Faxiang Fayan
+			Fan
+			Fang Fangda Fangdeng Fangguang Fanggui Fanghua Fangjian Fangjin Fangju Fangkuan Fangkuang Fangli Fangluo Fangqing Fangtai Fangyu Fangyuan Fangzhi Fangzhu
+			Fei Feixiong
+			Fen Fenzhi
+			Feng Fengchao Fengcheng Fengci Fengji Fengjin Fengli Fengming Fengqian Fengtao Fengxin Fengying Fengyun Fengzhi
+			Fu Fubing Fudao Fugong Fugui Fuguo Fuhua Fujiang Fujiao Fujin Fuli Fuqian Fuqing Fuqiu Fushan Fushun Fusi Fuyuan Fuzi Fuzhi Fuzuo
+			Gai
+			Gan
+			Gang
+			Gao Gaogao Gaoqing Gaoyan Gaoyang
+			Ge Genu Geqing
+			Gen
+			Geng
+			Gong Gong'ai Gong'an Gongbi Gongchuo Gongdu Gongduo Gongfu Gonghua Gonghui Gongji Gongli Gongliang Gongmin Gongqi Gongren Gongquan Gongshao Gongshi Gongshu Gongsi Gongsu Gongwei Gongxu Gongyan Gongye Gongyi Gongyu Gongzheng Gongzhuo
+			Gou
+			Gu Gulin Gushen Gutao
+			Gua
+			Guan Guansu Guanxiang
+			Guang Guangbao Guangchao Guangcheng Guangchou Guangcong Guangfan Guangfeng Guangfu Guanghan Guanghui Guangji Guangjin Guangli Guanglian Guanglie Guanglin Guangling Guangmei Guangpu Guangqi Guangqian Guangrui Guangshi Guangshou Guangshu Guangshuo Guangsi Guangsu Guangsui Guangtai Guangting Guangwen Guangxian Guangxin Guangxiu Guangxun Guangye Guangyi Guangyu Guangyuan Guangzan Guangzong
+			Gun
+			Guo Guobao Guochang Guoke Guoqing Guoting Guozhong
+			Gui Guiba Guibian Guibin Guicong Guihe Guihou Guiling Guilu Guinu Guiqi Guiseng Guitu Guiwen Guizang
+			Hai Hairang Haitong
+			Han Hanbin Hanchao Handing Hanfu Hangong Hanhe Hanhong Hanhuan Hanjie Hanlun Hanqing Hanqiong Hanrong Hanshao Hanshui Hansi Hanwei Hanxun Hanyin Hanyong Hanyou Hanyu Hanyun Hanzhang Hanzhen Hanzhi
+			Hang
+			Hao
+			He Heben Heji Hejing
+			Hei Hei'er Heige Heitou
+			Heng Heng'an Hengqing Hengzhi
+			Hong Hong'ai Hongbao Hongben Hongbi Hongcan Hongcao Hongchang Hongcheng Hongchu Hongdao Hongdu Hongfan Hongfu Honggao Honghui Hongji Hongjia Hongjian Hongli Honglian Honglong Honglu Honglun Hongmao Hongmian Hongmo Hongpi Hongqiu Hongrang Hongren Hongrong Hongru Hongshi Hongshu Hongsi Hongtai Hongwei Hongwen Hongwu Hongxin Hongxiu Hongxuan Hongya Hongyang Hongye Hongyi Hongyin Hongying Hongyu Hongze Hongzhang Hongzhao Hongzheng Hongzhi Hongzhou Hongzong Hongzun Hongzuo
+			Hui Huibao Huidu Huilong Huiyao Huizhen
+			Hun
+			Hou Houlu Houzhi
+			Hu
+			Hua Huaqing
+			Huai Huai'ai Huaibin Huaicao Huaicheng Huaide Huaiding Huaigui Huaijie Huaike Huaimin Huaimu Huaipu Huaiqian Huaiqing Huairang Huaishen Huaisu Huaiyi Huaiying Huaiyu Huaiyun Huaizhen Huaizheng Huaizhong Huaizu Huaizun
+			Huan Huan'er Huanlu Huanzhang
+			Huang Huangchang Huangzhong
+			Hui Hui'an Huichen Huici Huijia Huilong Huishang Huitong Huiyi Huiyuan Huizhao
+			Huo Huozhi
+			Hun Hunzhi
+			Ji Ji'an Jibi Jichan Jichang Jichao Jichong Jichou Jida Jideng Ji'en Jifang Jigong Jigu Jigua Jihe Jiheng Jihong Jihui Jiji Jijie Jijing Jijun Jikai Jikan Jikang Jikui Jilang Jiliang Jiliao Jilie Jilin Jiling Jiliu Jilong Jilun Jimei Jimi Jimin Jiming Jineng Jipeng Jiqin Jiqing Jiren Jirong Jirou Jishan Jishi Jisong Jisun Jitan Jitang Jitao Jitong Jitu Jiwei Jiwen Jiwo Jixi Jixia Jixian Jixing Jixiong Jixuan Jixun Jiyan Jiyao Jiye Jiyi Jiyin Jiying Jiyong Jiyou Jiyuan Jiyun Jizhao Jizhe Jizhen Jizhi Jizhong Jizu Jizuo
+			Jia Jiabin Jiahu Jialing Jiazhi
+			Jian Jianben Jiancheng Jianchong Jianci Jianfang Jianfeng Jianhui Jianji Jianjun Jiankang Jianke Jianli Jianneng Jianqiu Jianru Jianshou Jiantang Jianwu Jianxun Jianyan Jianyi Jianyuan Jianzhao Jianzhen Jianzhi Jianzhong
+			Jiang Jiangming Jiangtong
+			Jiao
+			Jie
+			Jin Jinbao Jinbin Jinchao Jincheng Jinchong Jin'er Jinjin Jinjun Jinke Jinqiang Jinquan Jinsi Jinshou Jintong Jinxian Jinyan Jinyou Jinzhi Jinzong
+			Jing Jing'ai Jing'an Jingbao Jingbo Jingchen Jingcheng Jingchong Jingchu Jingcun Jingda Jingdan Jingdao Jingde Jingfang Jingfu Jinggong Jingheng Jinghui Jinghuo Jingji Jingjian Jingjin Jingju Jingjuan Jingjun Jingkai Jingkan Jingke Jingli Jingliao Jinglin Jingling Jingmao Jingmei Jingmeng Jingqian Jingquan Jingrang Jingren Jingrong Jingrou Jingru Jingshan Jingshang Jingshu Jingsi Jingsu Jingtang Jingtong Jingwei Jingwen Jingwu Jingxi Jingxian Jingxiang Jingxin Jingxiu Jingxuan Jingxun Jingyan Jingyi Jingyong Jingyou Jingyu Jingyun Jingzhan Jingzhang Jingzhe Jingzhen Jingzhi Jingzhong Jingzhou Jingzhu Jingzhuang Jingzong
+			Jiong
+			Jiu Jiuchen Jiugong Jiuling Jiusi Jiutong Jiuyan Jiuzheng
+			Ju Judao Jufan Juhui Juji Jujie Jujing Juli Julun Juming Jumo Juqing Jurun Jushan Jushou Jusu Juyan Juye Juyi Juyuan Juyue Juyun Juzhan Juzhao Juzhi Juzuo
+			Juan
+			Jue
+			Jun Junbao Junbin Juncao Junchang Junche Junci Jundan Junde Jun'e Junfan Junfang Junfu Jungong Junhuai Junjing Junjue Junke Junli Junliang Junmei Junping Junqian Junqing Junru Junshang Junshe Junshi Junsu Juntong Junwu Junxiong Junyan Junyi Junying Junyu Junzan Junzhang Junzhao Junzhi Junzhong Junzuo
+			Kai Kaiwu
+			Kan
+			Kang Kangheng Kangye
+			Ke Kebao Kebiao Kechang Kechen Kecheng Kecong Kecun Keda Kedun Kefan Kefu Kegong Kegui Keji Kejian Kejin Kejing Kejiu Kejun Keli Kelian Kelin Kemei Keming Keni Kening Keping Kepu Keqi Keqian Keqin Keqing Keqiong Keqiu Kequan Kerang Keren Kerou Kerui Keshi Kesong Ketong Ketuan Kewei Kewen Kexi Kexian Kexie Kexin Kexing Kexiu Kexu Kexun Keyan Keyi Keyong Keyu Keyuan Kezheng Kezhi Kezhong Kezhu
+			Keng
+			Kuan Kuanfu
+			Kuang Kuangchan Kuangchou Kuangdao Kuangde Kuangfan Kuangfu Kuanghan Kuangji Kuanglin Kuangmei Kuangmin Kuangming Kuangmou Kuangning Kuangqi Kuangshi Kuangsi Kuangsu Kuangtu Kuangwei Kuangwen Kuangye Kuangyi Kuangyin Kuangyou Kuangzan Kuangzuo
+			Kui Kuizhi
+			Kun Kunyu Kunzhi
+			Kuo
+			Lang
+			Lao
+			Le Lezi
+			Lei
+			Li Liben Licheng Lijian Lijie Lixing Liyan Liye Liyong Lizhi
+			Lian Lianshan Lianshi Lianqing
+			Liang Liangbi Liangjian Liangke Liangsi
+			Liao
+			Lie
+			Lin Linfu Lingu Linghe Linji Linshi Linzong
+			Ling Lingben Lingde Lingduo Ling'er Lingfan Lingfang Linggui Lingjun Lingke Lingkui Lingkun Lingmao Lingqi Lingqian Lingqiu Lingsi Lingtong Lingwen Lingxi Lingxian Lingxun Lingyan Lingyi Lingyou Lingze Lingzhao Lingzhen Lingzhi Lingzhou Lingzhu Lingzi
+			Liu Liufu
+			Long Longdan Longdang Long'e Longgu Longhu Longhui Longji Longjian Longmi Longquan Longshen Longshuo Lingtu Lingtuan Longxun Longyi Longyin Longyun Longzheng Longzi Longzong
+			Lu Lu'er Lumiao Luqi Lushi
+			Lun
+			Lue
+			Luo
+			Luan
+			Mai Maizhi
+			Man Mancai
+			Mao Maoben Maoceng Maochen Maocheng Maohong Maojiang Maolin Maoquan Maorong Maoshi Maoxun Maoyuan Maozhen Maozhuang
+			Mei
+			Mi
+			Mian
+			Miao
+			Min Minchu Minfan Minling Minqiu Minsu Minxian Minya Minying
+			Ming Mingchen Mingjin Mingliang Mingmian Mingqi Mingsu Mingwei Mingxian Mingxiao Mingyi Mingyuan Mingzhen
+			Meng Meng'an Mengchou Mengkang Mengming Mengsou Mengsun Mengwei Mengwu Mengxi Mengxing Mengyin
+			Mo Mosi Moxun
+			Mou
+			Mu Muben Muyi
+			Na Nayu
+			Nan Nanrong Nansheng 
+			Ne
+			Neng
+			Ni
+			Nian
+			Nie
+			Ning Ningzhi
+			Nong
+			Pan Panyi
+			Pang Pangjin
+			Pei Peirong Peizhi
+			Pi
+			Pian
+			Pin
+			Ping Pingcheng Pingyuan Pingzhong
+			Po Po'er
+			Pu Puding
+			Qi Qican Qidou Qige Qiguan Qihui Qilang Qimin Qiqing Qisun Qitou Qixian Qiying Qiyou Qizhen Qizhi Qizhong
+			Qia
+			Qian Qianbo Qianfan Qianfu Qianhui Qianjun Qianli Qianpu Qiansong Qianxiong Qianxun Qianyou Qianyu Qianzhao Qianzhen Qianzhi Qianzuo
+			Qiang Qianguan Qiangming
+			Qiao Qiao'er Qiaoqing Qiaozhi
+			Qin Qingu Qingui Qinli Qinqi Qinren Qinrui Qinxun Qinzheng Qinzhi Qinzuo
+			Qing Qingbao Qingcun Qingdao Qingfu Qingge Qingji Qingjiang Qingming Qingrong Qingshen Qingshi Qingsun Qingxian Qingxing Qingxiong Qingyu Qingzhi Qingzi Qingzong Qingzuo
+			Qiong
+			Qiu Qiuluo
+			Qu Quning Quting  	
+			Quan Quanbao Quanbi Quanbin Quancao Quancheng Quande Quan'en Quanhui Quanjie Quanli Quanmei Quanqing Quanxu Quanyi Quanyu Quanzhao Quanzheng Quanzhong
+			Que
+			Qun
+			Ran
+			Rang Ranglang Rangneng
+			Rao Raodi
+			Ren Renba Renbao Rencan Rencao Renchao Renda Rendan Rendang Rendi Renfan Renfang Renfu Rengan Rengong Rengui Renhan Renhao Renhou Renhui Renjing Renju Renjun Renlu Renmei Renmin Renpu Renqi Renqian Renqiao Renqing Renshan Rensi Renwang Renxian Renxiang Renxing Renxu Renyan Renyi Renying Renyong Renyou Renyu Renyuan Renyue Renzan Renzhan Renzhang Renzhao Renzhi Renzong Renzuo
+			Ri Ridong Rigui Rixiu
+			Rong Rongcheng Rong'er
+			Rou Rouli Rouyu
+			Ru Rubi Rufu Rufan Rugui Ruhui Ruli Ruquan Rushi Rutong Ruxian Ruxiu Ruxuan Ruzhi
+			Rui
+			Ruan
+			Run Runzhi
+			Ruo Ruosi Ruozhuo
+			Sai Saiduo
+			San Sanfu Sange Sanhu Sanxia
+			Seng Seng'an Sengbian Seng'er Sengfu Senghu Senglang Sengru
+			Shai
+			Shan Shancheng Shanquan Shanyi Shanyou Shanzeng
+			Shang Shangbin Shanggong Shangshan Shangxian Shangzhi
+			Shao Shao'an Shaobi Shaobin Shaochen Shaocheng Shaode Shaofang Shaofu Shaogong Shaoguang Shaogui Shaohong Shaoji Shaojian Shaokang Shaolian Shaolong Shaomian Shaomu Shaopo Shaoqi Shaoqian Shaoqin Shaoquan Shaorong Shaoshi Shaosu Shaowei Shaowen Shaoxun Shaoya Shaoye Shaoyi Shaoying Shaoyong Shaoyuan Shaozhen Shaozhong Shaozi Shaozong
+			Shen Shenbo Shenfeng Shenfu Shengang Shengui Shenhui Shenjian Shenjiao Shenjin Shenjing Shenjue Shenjun Shenli Shenming Shenqi Shenqian Shenqiong Shenquan Shentong Shentuan Shenwei Shenxi Shenxian Shenxiang Shenxin Shenyan Shenyou Shenyu Shenyue Shenzhao Shenzheng Shengzhi
+			Sheng Shengzu
+			Shi Shi'an Shibai Shiben Shiceng Shichang Shicheng Shichong Shida Shidao Shidu Shifan Shifang Shifu Shigu Shigui Shihong Shihou Shihu Shihui Shiji Shijing Shiju Shijun Shikan Shikang Shike Shilang Shili Shilian Shilin Shilong Shilu Shimin Shiming Shimeng Shinan Shiqing Shiquan Shirong Shiru Shishi Shishu Shishuo Shisu Shisun Shitai Shiwan Shiwang Shiwei Shiwen Shixing Shixiong Shixuan Shixun Shiya Shiyan Shiyao Shiyi Shiyin Shiying Shiyu Shiyuan Shiyue Shiyun Shize Shizhan Shizhen Shizheng Shizhi Shizong
+			Shou Shoucong Shoudao Shoudu Shouduan Shou'en Shougu Shouguang Shougui Shouhou Shouhui Shouji Shoujie Shoujun Shouli Shoulian Shouliang Shoulin Shoune Shourang Shouren Shourou Shousu Shousuo Shouqi Shoutong Shoutuan Shouwen Shouxin Shouxun Shouyan Shouye Shouyuan Shouyue Shouyi Shouyin Shouying Shouze Shouzheng Shouzhen Shouzhi Shouzhong Shouzhou
+			Shu Shu'ao Shubao Shubiao Shucheng Shuchong Shucong Shuchu Shuchun Shuda Shu'er Shufeng Shuhong Shuji Shujian Shukuang Shulian Shuliang Shulin Shuling Shulong Shumao Shuming Shumo Shumu Shuping Shuqi Shuqian Shuqing Shuqu Shuquan Shurang Shuren Shurong Shurui Shushan Shushao Shutan Shutian Shuting Shuwen Shuwu Shuxia Shuxian Shuxing Shuxiong Shuxiu Shuxuan Shuxun Shuya Shuyan Shuye Shuyi Shuyin Shuying Shuyou Shuyu Shuzan Shuzhan Shuzhen Shuzhong Shuzong
+			Shuang Shuanghu
+			Shui
+			Shun Shunchen Shungong Shunli Shunmi Shunqing Shunzhi Shunzong
+			Shuo Shuodan
+			Song Songlao Songming Songnian Songren
+			Si Si'an Siben Sibi Sibin Sichong Sidao Side Siduan Si'e Sifang Sifu Sigu Siguang Sigong Siguo Sihe Sihou Sihu Sihui Siji Sijian Sijin Sijing Sili Shiliang Siling Silu Silun Simin Siming Simu Siqi Siqian Siqin Siqing Siquan Sirang Sishen Sisheng Sishi Sitai Sitong Siwan Siwen Sixiang Sixiao Sixun Siyan Siyao Siye Siyi Siyin Siying Siyuan Siyue Sizhao Sizhe Sizheng Sizhong Sizhou Sizhuang Sizong
+			Su Suchen Suwu
+			Sui Suicheng Suigong Suining Suiqing Suiying Suiyong Suizhen Suizheng Suizhi Suizhong
+			Sun Sunyan Sunzhi
+			Tai Taiqing Taiyi
+			Tan Tanxian Tanzhi
+			Tang Tangying
+			Tao Taogong Taoguang Taoyin Taozhang
+			Te Teqing
+			Teng Tengzhi
+			Ti Tiren
+			Tian Tianxi
+			Tiao
+			Ting Tingbin Tinggui Tinghan Tinghao Tinghui Tingluan Tingqian Tingrang Tingren Tingshuo Tingwan Tingwei Tingxin Tingxu Tingxun Tingyi Tingyin Tingyu Tingyu Tingyun Tingzan Tingzhang Tingzhao Tingzhi Tingzuo
+			Tong Tonglin Tongming Tongqing Tongxian Tongxiu Tongxun Tongyi Tongyuan Tongzhi
+			Tu
+			Tuan
+			Tui
+			Wan Wan'an Wanchao Wanhong Wanhu Wanjin Wanqian Wanqing Wanquan Wanrong Wanshi Wanshou Wanshun Wantong Wanxing Wanyou Wanzi
+			Wang Wangzhi
+			Wei Weibao Weibi Weibin Weibo Weichang Weicheng Weichong Weicui Weidao Weide Weifang Weige Weigeng Weigu Weiguan Weihan Weihao Weihe Weiji Weijin Weijian Weijun Weiming Weiqing Weirang Weishang Weishen Weishi Weixi Weixian Weixin Weixu Weiyi Weiyin Weiyou Weiyuan Weize Weizhen Weizheng Weizhi Weizhong
+			Wen Wen'ai Wenbai Wenbiao Wenbing Wencao Wenchang Wencheng Wenchu Wenchun Wenda Wendan Wendi Wendu Wenduo Wenfang Wenfeng Wenfu Wengong Wengou Wenguang Wenhao Wenji Wenjian Wenjie Wenjin Wenjing Wenju Wenkai Wenke Wenlang Wenli Wenlian Wenliang Wenmian Wenming Wenpu Wenqi Wenquan Wenrou Wenru Wensheng Wenshou Wensi Wensou Wentai Wentong Wenwan Wenwei Wenxi Wenxian Wenxiang Wenxiu Wenxuan Wenxun Wenya Wenye Wenyi Wenying Wenyou Wenyu Wenyun Wenyuan Wenzan Wenzhen Wenzheng Wenzhi Wenzhong Wenzhou Wenzhuo
+			Weng Wenggui
+			Wo
+			Wu Wu'an Wuchang Wuchen Wudai Wugai Wugan Wuge Wuhui Wuji Wuling Wuqing Wusheng Wushu Wuwei Wuxian Wuxuan Wuxu Wuzi Wuzong
+			Xi Xichong Xidai Xidun Xi'e Xifan Xifu Xigan Xigao Xigu Xiguan Xiguang Xihui Xiji Xijin Xijun Xilang Xiliang Ximian Xineng Xirang Xishi Xishu Xishuang Xiwang Xixi Xixian Xiyan Xiyao Xiye Xiyin Xiyu Xiyuan Xizhan Xizhen Xizhi Xizhuang
+			Xia Xialing Xiashi
+			Xian Xianbo Xianchen Xiande Xiangui Xianhe Xianhu Xianhui Xianjie Xianke Xianli Xianpu Xianshun Xiansun Xiantong Xianxiang Xianyu Xianyue Xianzhi Xianzong
+			Xiang Xiangbin Xiangdan Xiangdao Xiang'er Xiangfan Xiangfu Xianggu Xiangqiu Xiangru Xiangshi Xiangxian Xiangxiang Xiangyu Xiangyuan Xiangzhi Xiangzhong Xiangzu
+			Xiao Xiaobin Xiaobo Xiaochang Xiaochun Xiaoding Xiaodu Xiaofan Xiaofang Xiaofeng Xiaogong Xiaogui Xiaohui Xiaoji Xiaojia Xiaojiang Xiaojie Xiaojin Xiaojing Xiaokai Xiaokan Xiaoke Xiaoli Xiaolian Xiaolao Xiaomeng Xiaomin Xiaomo Xiaoqi Xiaorou Xiaoru Xiaoruo Xiaoshu Xiaosi Xiaosun Xiaotan Xiaotong Xiaowan Xiaowei Xiaoxiang Xiaoxie Xiaoxiu Xiaoxu Xiaoyan Xiaoyi Xiaoyin Xiaoyuan Xiaoyue Xiaozhan Xiaozhang Xiaozhe Xiaozhi Xiaozhu Xiaozu Xiaozuan
+			Xie Xieyi
+			Xin Xintao Xinxian Xinze Xinzu
+			Xing Xingbin Xingben Xingchen Xingcong Xingcun Xingda Xingde Xing'er Xingfeng Xinggao Xinggong Xinggu Xingguan Xinggui Xinghui Xingjian Xingjun Xingli Xinglu Xingmin Xingming Xingqi Xingqian Xingqin Xingquan Xingqun Xingshen Xingshi Xingsi Xingtong Xingxi Xingxian Xingxiu Xingyi Xingyou Xingyu Xingyue Xingze Xingzhang Xingzhi Xingzhou
+			Xiu Xiufu Xiugu Xiuji Xiujiang Xiujie Xiuke Xiuming Xiumu Xiunian Xiurang Xiuren Xiushi Xiutou Xiuxian Xiuyi Xiuzan Xiuzheng Xiuzhi
+			Xu Xuji Xulun Xuqing Xuzhi Xuzhou
+			Xuan Xuanba Xuanbao Xuanbi Xuanbian Xuanbo Xuandan Xuandao Xuande Xuan'e Xuangan Xuangui Xuanji Xuanjiang Xuanjiao Xuanjie Xuanjin Xuanjue Xuanlan Xuanli Xuanliang Xuanming Xuansi Xuantai Xuanting Xuantong Xuanwei Xuanxi Xuanxiao Xuanxing Xuanyan Xuanyu Xuanzhang Xuanzhao Xuanzhe Xuanzhen Xuanzhi Xuanzong
+			Xun Xunji Xunmei Xunru
+			Ya Yacheng Ya'er Yashun Yaxiang
+			Yan Yan'an Yanbai Yanbao Yanbin Yanbing Yanbo Yanchang Yanchao Yanchen Yancheng Yanchong Yanchou Yanchuo Yanci Yancong Yancun Yandao Yande Yandu Yan'er Yanfan Yanfang Yanfeng Yanfu Yangao Yange Yangong Yangou Yanguang Yangui Yangun Yanhao Yanhong Yanhou Yanhua Yanhui Yanji Yanjiao Yanjin Yanjing Yanjun Yankang Yankao Yanke Yanlang Yanli Yanlin Yanling Yanlu Yanlun Yanmei Yanmian Yanmo Yanneng Yannian Yanping Yanqi Yanqiao Yanqin Yanqing Yanqiong Yanqiu Yanrao Yanrong Yanru Yanrui Yanruo Yanseng Yanshang Yanshen Yansheng Yanshi Yanshou Yanshun Yansi Yansun Yantao Yante Yantong Yantu Yanwang Yanwei Yanwen Yanwo Yanwu Yanxian Yanxiao Yanxing Yanxi Yanxiu Yanxu Yanxun Yanyang Yanye Yanyi Yanyin Yanying Yanyong Yanyou Yanyu Yanyuan Yanyun Yanzai Yanzan Yanze Yanzeng Yanzhang Yanzhao Yanzhen Yanzheng Yanzhi Yanzhu Yanzi Yanzong Yanzuo
+			Yang Yangshi Yangting Yangwu
+			Yao Yaochang Yaochen Yaofu Yaoguang Yaoqing Yaoshu Yaoxin Yaoyi Yaozhi
+			Ye Yexian
+			Yi Yi'an Yichang Yichao Yicheng Yicong Yidao Yide Yidu Yidun Yifan Yifang Yige Yiheng Yihong Yijian Yijin Yijing Yiju Yijun Yili Yiliang Yimin Yipu Yiren Yiru Yishan Yishen Yishi Yisun Yitan Yiwang Yiwen Yixi Yixian Yixing Yixiong Yixiu Yixuan Yiye Yiyin Yiying Yiyong Yiyu Yiyuan Yiyun Yize Yizhen Yizhi
+			Yin Yinchao Yinmeng Yinpu Yinqing Yinrui Yinzhang Yinzhao Yinzhi
+			Ying Yingda Yingdao Yingfu Yingqi Yingshi Yingtu Yingzhe Yingzhi Yingzhou
+			Yong Yongcan Yongde Yonggan Yonggu Yonghao Yonghe Yongji Yongli Yonglin Yongsheng Yongshou Yongsi Yongsong Yongxi Yongyi Yongzai Yongzhen Yongzhong
+			You Youcheng Youchong Youdao Youdi Yougong Yougui Youhui Youjing Youlan Youliang Youlie Youlin Youlun Youming Youmu Youneng Youning Youqian Youqin Youqing Yourang Youru Youshi Youshun Yousun Youwen Youxian Youyan Youye Youyi Youyong Youyu Youze Youzhang Youzhen Youzhi
+			Yu Yubi Yuchen Yude Yujie Yujun Yuke Yuling Yumiao Yumo Yunian Yuqing Yuru Yuxi Yuxian Yuxun Yuyan Yuzhi
+			Yuan Yuan'an Yuanbao Yuanbiao Yuanbin Yuanbo Yuancao Yuanchang Yuanchao Yuanchen Yuancheng Yuandang Yuande Yuanding Yuandu Yuanfan Yuanfang Yuanfu Yuangao Yuangong Yuanguan Yuanguang Yuangui Yuanhan Yuanheng Yuanhu Yuanhui Yuanji Yuanjia Yuanjian Yuanjin Yuanjing Yuanjiu Yuanju Yuanjun Yuankai Yuankan Yuankao Yuankui Yuanlao Yuanli Yuanlian Yuanliang Yuanliao Yuanlin Yuanlong Yuanlue Yuanman Yuanming Yuanpu Yuanqi Yuanqing Yuanqiu Yuanquan Yuanru Yuanrui Yuanshan Yuanshang Yuanshen Yuansheng Yuanshi Yuanshou Yuanshun Yuansi Yuansu Yuansun Yuantan Yuantong Yuanwen Yuanxi Yuanxian Yuanxiang Yuanxin Yuanxiu Yuanxu Yuanyan Yuanye Yuanyi Yuanying Yuanyou Yuanyu Yuanyuan Yuanyue Yuanzai Yuanze Yuanzhang Yuanzhao Yuanzhe Yuanzhen Yuanzheng Yuanzhi Yuanzhong Yuanzhou Yuanzhuo Yuanzuo
+			Yue Yuehuang 
+			Yun Yunbiao Yunchi Yungao Yungong Yunhan Yunjiang Yunjing Yunlang Yunmo Yunping Yunqi Yunqin Yunqing Yunquan Yunshen Yunsheng Yunshu Yuntao Yunxian Yunyu Yunzhen Yunzhong
+			Zai Zaifeng Zaihui Zaili Zaiming Zaiqin Zairong Zaiwei Zaixun Zaiyan Zaiying Zaiyu
+			Zan Zanluan Zanming Zanning Zantu Zanwen Zanyu
+			Zang Zangqi Zangzhi
+			Zao
+			Ze Zecong Zeyan Zezheng Zezhi
+			Zha
+			Zhan Zhanzhi
+			Zhang
+			Zhao Zhaobai Zhaocan Zhaodao Zhaode Zhaodu Zhao'er Zhaofu Zhaohua Zhaoji Zhaojian Zhaojing Zhaoju Zhongkan Zhongkang Zhaoliang Zhaomin Zhaopei Zhaopu Zhaoqing Zhaoshou Zhaowei Zhaowen Zhaoxin Zhaoxiu Zhaoxu Zhaoxun Zhaoye Zhaoyi Zhaoyin Zhaoying Zhaoyong Zhaoyou Zhaoyuan Zhaoyun Zhaozhou
+			Zhen Zhenchang Zhenfan Zhenhui Zhenjia Zhenjian Zhenqing Zhenshu Zhenti Zhenxiang Zhenxing Zhenxun Zhenyi Zhenzhi Zhenzhou
+			Zheng Zhengbiao Zhengbin Zhengchen Zhengci Zhengda Zhengdao Zhengde Zhengfan Zhenggong Zhengguan Zhengli Zhenglun Zhengqi Zhengren Zhengrou Zhengsi Zhengshan Zhengshi Zhengtong Zhengxin Zhengxuan Zhengxue Zhengya Zhengyan Zhengyi Zhengyuan Zhengzang Zhengze Zhengzhong
+			Zhi Zhibao Zhiben Zhichang Zhichou Zhide Zhi'e Zhifang Zhigu Zhigui Zhihan Zhihui Zhijian Zhijie Zhijin Zhijing Zhijiu Zhijun Zhili Zhilian Zhiliang Zhipu Zhiqian Zhiqin Zhiquan Zhirang Zhirou Zhishan Zhishuang Zhishun Zhiti Zhitui Zhiwan Zhiwang Zhiwei Zhiwen Zhixian Zhixiang Zhixin Zhixing Zhixiong Zhixuan Zhiyan Zhiye Zhiyi Zhiyin Zhiying Zhiyou Zhiyu Zhiyuan Zhiyue Zhiyun Zhize Zhizhang Zhizhi Zhizhong Zhizong
+			Zhong Zhongbao Zhongci Zhongda Zhongfang Zhonggong Zhonghe Zhongheng Zhonghu Zhongjiang Zhongjie Zhongjing Zhongju Zhongli Zhonglian Zhongliang Zhongkui Zhonglin Zhongming Zhongmou Zhongqian Zhongruan Zhongrui Zhongshang Zhongsu Zhongsun Zhongwen Zhongwu Zhongxi Zhongxian  Zhongxu Zhongxuan Zhongyan Zhongyi Zhongyin Zhongying Zhongyong Zhongyu Zhongzhen Zhongzhi Zhongzhong Zhongzun Zhongzuo
+			Zhou Zhouhan Zhoujing Zhoushu Zhouyi Zhongyuan Zhongzhou Zhouzi
+			Zhu Zhuyuan
+			Zhuan Zhuanzheng
+			Zhuang
+			Zhui
+			Zhun
+			Zhuo Zhuozhi
+			Zi Zi'an Zibao Zibi Zibin Zicao Zichang Zicheng Zida Zidu Zifan Zifu Zigong Ziguang Zihan Ziheng Zihong Zihua Zihui Ziji Zijia Zijian Zijin Zijing Zijun Zikai Zikan Zikang Zike Zili Ziliang Ziling Zilong Zilun Zimao Zimei Zimeng Zimian Zimin Ziming Ziping Ziqi Ziqing Zirang Zirong Zisheng Zishi Zitan Zitong Ziwei Ziwen Ziwu Zixia Zixian Zixiang Zixiao Zixing Zixiu Zixu Ziyan Ziyi Ziying Ziyong Ziyou Ziyu Ziyuan Ziyue Ziyun Zizhang Zizhang Zizhen Zizheng Zizhi
+			Zong Zongba Zongben Zongbi Zongbian Zongbo Zongcan Zongchang Zongcheng Zongchou Zongchu Zongdan Zongdao Zongdi Zongding Zongdu Zongduo Zongfan Zongfu Zongguang Zonggui Zonghan Zonghao Zonghe Zongheng Zonghou Zonghui Zongji Zongjian Zongjie Zongjin Zongju Zongkan Zongkui Zonglang Zongliang Zonglu Zongmin Zongping Zongran Zongrang Zongruan Zongqing Zongquan Zongren Zongshi Zongshou Zongshu Zongshuang Zongte Zongwan Zongwei Zongxia Zongxian Zongxun Zongyan Zongyi Zongyong Zongyou Zongyu Zongyuan Zongyue Zongzan Zongze Zongzhi
+			Zu Zuling Zusi Zuyu Zuyue Zuzheng
+			Zuan
+			Zui
+			Zun Zundu Zunfan Zunfu Zunhui Zunji Zunqing Zunxian Zunxu Zunye Zunyu Zunyue
+			Zuo Zuofang Zuogong Zuoyuan Zuozhi
 		} 
 		female_names = {
-			"Ts'ieu" "T'ai-bing" Nha-lin Kua-nhie "Ts'iang-sha" Sêng-tsêng Lang-tsia Kuei-yang "Mun-ch'un" "H'uieng-ka" "Ku-k'ung" Lü-ling Nêm-ch'ang An-ping Huei-nêm Chin-teng Hêng-yang Tan-yang Lim-hei Kuan-tao "Ch'en-kim" "Ch'ang-lak" Lei-chut Kieng "Ch'uk" Min-tat Sian-huei Kuei-kung Hua Hua-chêng "T'i-ying" Kuei-ying Huei Sieu-lin Siu-ying Nha-teng Nha-mun Nha-tsuk 
-			#Zhao (Wu Zetian's birth name) Taiping Yalian Guo'er Changsha Xiangyang Langxie Guiyang Wanchun Yongjia Jiujiang Luling Namchang Anping Huainan Zhending Hengyang Danyang Linhai Guantao Qianjin Changle Lize Jing Shu Mingda Xianhui Jijiang Hua Huazhuang Chiying Guiying Hua Hui Xiaolian Xiuying Yating Yawen Yazhu
+			A Amo Anong Anu Aquan Ayuan Awu
+			Ai
+			An
+			Ang
+			Ao
+			Ba Bashi
+			Bai
+			Bao Baohua Baoli Baoshou Baoxiang Baoyan Baozhu
+			Bei Beiniang
+			Bi
+			Bian
+			Biao
+			Bin Binyuan
+			Bing Bingyi
+			Bo Bozi
+			Cai Caipin
+			Can
+			Cao
+			Ce
+			Ceng
+			Cha
+			Chan Channiang
+			Chang Changfei Changhui Changying
+			Chao
+			Che
+			Chen
+			Cheng Chengxia
+			Chi Chiyi
+			Chong Chongniang Chongyan Chongze
+			Chou
+			Chu Chuying
+			Chun Chunluo Chunyan
+			Chuo
+			Chuan Chuanzhu
+			Ci
+			Cong
+			Cou
+			Cun
+			Da Dache
+			Dai
+			Dan
+			Dao Daoniang Daosheng Daoqing Daoyin
+			Dang
+			De Defan Defu Derong Derou
+			Deng
+			Di
+			Ding
+			Dong
+			Du
+			Duan
+			Dun
+			Duo Duofu
+			E Ehuang
+			En
+			Erniang
+			Fa
+			Fan
+			Fang Fangmei
+			Fei Feishan
+			Fen 
+			Feng Fenghua Fengniang
+			Fu Fu'ai Fubao Fujin Funiang Funu Fuyou
+			Gai
+			Gan Gan'er
+			Gang
+			Gao
+			Ge
+			Gen
+			Geng
+			Gong
+			Gou
+			Gu Gu'er
+			Gua
+			Guan Guanyinbi
+			Guang Guangxiang
+			Gun
+			Gui
+			Guo
+			Hai Hainü
+			Han Hanhua Hanyue
+			Hang
+			Hao
+			He
+			Hei
+			Heng Hengniang
+			Hong
+			Hun 
+			Hou
+			Hu Hu'er Hunu
+			Hua Huaguang Huashan Huawan Huazhuang
+			Huai
+			Huan
+			Huang
+			Hui Huigu Huiheng Huihua Huijing Huijuan Huimei Huiming Huirong Huishu Huiti Huitong Huiwan Huiweng Huixuan Huiyan Huiyi Huiyuan Huizhao Huizheng
+			Huo Huoche
+			Hun
+			Ji Ji'e Jihua Jijiang Jiniang Jiying
+			Jia
+			Jian Jianrong
+			Jiang
+			Jiao
+			Jie
+			Jin Jinding Jin'er Jinfeng Jingu Jinhui Jinling Jinluan Jinluo Jinnu Jinxian Jinyin Jinzhu
+			Jing Jinghui Jingling Jingmei Jingnü Jingwen Jingyan Jingyao Jingyi
+			Jiong
+			Jiu Jiushi
+			Ju
+			Juan
+			Jue
+			Jun Junhua
+			Kai
+			Kan
+			Kang
+			Ke Kenü Kezheng
+			Keng
+			Kuan
+			Kuang
+			Kui
+			Kun
+			Kuo
+			Lan Lanbin
+			Lang
+			Lao Laoshi
+			Le
+			Lei
+			Li Lifang Lihua Liyi Lizhi
+			Lian Lianbei Lianpei Lianshi
+			Liang Liangyuan
+			Liao
+			Lie
+			Lin
+			Ling Ling'e Lingfei Lingling Lingyi Lingyuan Lingyue
+			Long
+			Lou Lousi
+			Lu Luzhen
+			Lun Lun'er
+			Lue
+			Luo Luoyao
+			Luan
+			Mai
+			Man Mandang
+			Mao 
+			Mei
+			Mi
+			Mian
+			Miao Miaorong Miaoyu
+			Min 
+			Ming Mingda
+			Meng Mengyu
+			Mo
+			Mou
+			Mu
+			Nan Nandi
+			Ne
+			Nei Neiming
+			Neng
+			Ni Nizi
+			Nian
+			Nie
+			Ning
+			Nong
+			Nou
+			Nu Nuying
+			Nü Nüjie Nüwang Nüying
+			Pan
+			Pang
+			Pei
+			Pi Pili
+			Pian
+			Pin
+			Ping
+			Po
+			Pu
+			Qi Qiniang Qiyi Qizi
+			Qia
+			Qian Qianjin
+			Qiang
+			Qiao Qiaoyun
+			Qin
+			Qing Qinghui Qingniang Qingyu Qingwu
+			Qiong Qiongxian Qiongzhi
+			Qiu Qiu'er Qiuniang
+			Qu
+			Quan
+			Que
+			Qun
+			Ran
+			Rang
+			Rao
+			Ren
+			Ri
+			Rong Rongrong
+			Rou Rouyi
+			Ru Ruyi
+			Rui Ruirong
+			Ruan
+			Run
+			Ruo
+			Sai Saiyue
+			San Sanjin Sanniang
+			Sao Saoniang
+			Seng Sengbi
+			Shai
+			Shan Shanli Shanxiang
+			Shang Shanggui Shangxuan
+			Shao 
+			She Sheniang
+			Shen  Shenyou
+			Sheng Shengxiang
+			Shi Shifei Shiguang Shigui Shirong
+			Shou Shouying
+			Shu Shu'e Shulan Shumo Shuzhen
+			Shuang
+			Shui
+			Shun Shunxuan
+			Shuo
+			Song
+			Si Sifan
+			Su Suzhen
+			Sui
+			Sun
+			Tai Taihua Taizhang Taizhen
+			Tan Tante
+			Tang
+			Tao Taotao
+			Te
+			Ti
+			Tian
+			Tiao
+			Ting
+			Tong
+			Tu
+			Tuan
+			Tui
+			Wan Wan'er Wanwan
+			Wang
+			Wei
+			Wen
+			Weng
+			Wo
+			Wu Wuhua
+			Xi Xi'er Xijie
+			Xia Xiayu
+			Xian Xianhui Xianlang Xianming Xianniang Xianshen Xianwan
+			Xiang Xiang'e Xiangyun
+			Xiao Xiaojin Xiaoshi Xiaozan
+			Xie
+			Xin Xinniang Xinyue
+			Xing
+			Xiu Xiurong Xiuying
+			Xu
+			Xuan Xuanchuo Xuandeng Xuan'e Xuangui Xuanji Xuanmei Xuanmiao Xuanshu Xuanwei Xuanxuan Xuanyao Xuanyi Xuanying Xuanyuan
+			Xun
+			Ya
+			Yan Yanqi Yanxiang
+			Yang Yangniang Yangshi
+			Yao Yao'ai Yao'e Yaofei Yaohua Yaoji Yaolan Yaolu Yaoying 
+			Ye Yeshu
+			Yi Yi'an
+			Yin Yinping Yinyin Yinzhang
+			Ying Ying'er Yingluo
+			Yong
+			You You'e Youfei Youwu Youzhi
+			Yu Yudie Yu'e Yufeng Yuhua Yuhuai Yuhuan Yuliang Yuling Yuniang Yunu Yupan Yuwan Yuxiu Yuyao Yuying Yuzhi
+			Yuan Yuanhua Yuantong Yuanyuan Yuanzhu
+			Yue Yuejing Yuexiang
+			Yun Yun'e Yun'er
+			Zai
+			Zan
+			Zang
+			Zao
+			Ze
+			Zha
+			Zhan
+			Zhang
+			Zhao Zhaoming Zhaorong Zhaoxiang Zhaoxun Zhaoyi
+			Zhen Zhending Zhen'er Zhenfan Zhenhui Zhenniang Zhenxiang Zhenxin Zhenxing Zhenyi
+			Zheng Zhengnan
+			Zhi Zhichong Zhifan Zhifei Zhihua Zhilan Zhiniang Zhiying
+			Zhong Zhongniang Zhongyu
+			Zhou
+			Zhu Zhuzhu
+			Zhuan
+			Zhuang
+			Zhui
+			Zhun
+			Zhuo
+			Zi Zigui Zizhang
+			Zong Zongongzhi Zongmiao
+			Zu Zu'e
+			Zuan
+			Zui Zuimei
+			Zun
+			Zuo
 		}
+		
+		pat_grf_name_chance = 0
+		mat_grf_name_chance = 0
+		father_name_chance = 0
+		
+		pat_grm_name_chance = 0
+		mat_grm_name_chance = 0
+		mother_name_chance = 0
 		
 		dynasty_title_names = no
 		
