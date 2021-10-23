@@ -1,0 +1,66 @@
+# -*- ck2 -*-
+
+###########################################
+#										 #
+# Maintenance events				     #
+#										 #
+# ID wudai_maintenance.001				 #
+#										 #
+###########################################
+
+namespace = wudai_maintenance
+
+#Written by: 
+#Daniel Wyszynski
+
+#Kills immortal characters who should stay dead, like Confucius or Yan Hui
+#Fired from on_startup
+character_event = {
+	id = wudai_maintenance.001
+	
+	is_triggered_only = yes
+	
+	religion = hip_religion
+
+	trigger = {
+		has_landed_title = e_hip
+		is_save_game = no
+	}
+	
+	option = {
+		name = OK
+		any_character = {
+			limit = {
+				culture = han
+				ai = yes
+				immortal_age > 5				
+			}
+			death = {
+				death_reason = death_natural
+			}
+		}
+	}
+}
+#Removed claims from Jiedushi on game start
+character_event = {
+	id = wudai_maintenance.002
+	
+	is_triggered_only = yes
+	
+	religion = hip_religion
+
+	trigger = {
+		has_landed_title = e_hip
+		is_save_game = no
+	}
+	
+	option = {
+		name = OK
+		any_character = {
+			limit = {
+				government = bureaucratic_government
+			}
+			any_claim = { remove_claim = PREV }
+		}
+	}
+}

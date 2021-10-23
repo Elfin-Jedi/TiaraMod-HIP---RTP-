@@ -21,6 +21,19 @@ character_event = {
 	picture = GFX_evt_tribal_shrine
 
 	is_triggered_only = yes
+	
+	desc = { 
+		text = EVTDESC_TOG_7000
+		trigger = { #The father is alive and a spouse
+			NOT = { religion = taoist }
+		}
+	}
+	desc = { 
+		text = EVTDESC_TOG_wudai
+		trigger = { #The father is alive and a spouse
+			religion = taoist
+		}
+	}
 
 	trigger = {
 		OR = {
@@ -303,6 +316,7 @@ character_event = {
 				}
 			}
 			NOT = { trait = maimed }
+			NOT = { religion = taoist } #Self-mutialtion was considered unfilial, as that was damaging the body your parents gave you
 		}
 
 		set_character_flag = ancestors_limb

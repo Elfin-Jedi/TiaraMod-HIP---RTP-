@@ -1,0 +1,2212 @@
+# -*- ck2 -*-
+
+###########################################
+#										 #
+# Chinese Invasions					     #
+#										 #
+# ID wudai.001							 #
+#										 #
+###########################################
+
+namespace = wudai
+
+#Written by: 
+#Daniel Wyszynski
+
+#Rebel General's Empire continues temple names, triggers for any title with the uses_temple_names_by_script title flag
+#Fired from various on_new_holder on actions
+character_event = {
+	id = wudai.001
+	title = wudai.001.t
+	desc = wudai.001.d
+	picture = GFX_evt_china_rebel_general
+	window = EventWindowOffmap
+	background = GFX_event_window_news_from_china
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				ai = yes
+			}
+			#event_target:temple_name_title = { #Random Empire name that China doesn't have
+				random_list = { #Random Empire name that China doesn't have
+					10 = { 
+						modifier = {
+							factor = 20
+							dynasty = 1000049851 #Zhuye
+							dynasty = 1000049852 #Li
+							dynasty = 1051150 #Li
+						}
+						modifier = {
+							factor = 10
+							capital_scope = { 
+								OR = {
+									de_jure_liege = d_yongxing 
+									de_jure_liege = d_hedong
+									de_jure_liege = d_jianxiong
+								}
+							}
+						}
+						modifier = {
+							factor = 0 
+							event_target:wudai_old_title = { title = e_tang }
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_tang
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Tang"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					10 = { 
+						modifier = {
+							factor = 20
+							dynasty = 1000049854 #Shi
+						}
+						modifier = {
+							factor = 10
+							capital_scope = {
+								OR = {
+									de_jure_liege = d_hezhong 
+									de_jure_liege = d_heyang
+									de_jure_liege = d_hedong
+									de_jure_liege = d_jianxiong
+								}
+							}
+						}
+						modifier = {
+							factor = 0 
+							event_target:wudai_old_title = { title = e_later_jin }
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_jin
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Jin"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					8 = { 
+						modifier = {
+							factor = 10
+							capital_scope = {
+								OR = {
+									de_jure_liege = d_yongxing 
+									de_jure_liege = d_dongdu
+									de_jure_liege = d_zhenwu
+									de_jure_liege = d_datong
+									de_jure_liege = d_hedong
+								}
+							}
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_wei
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Wei"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = { 
+						modifier = {
+							factor = 10
+							capital_scope = {
+								de_jure_liege = d_qinfeng 
+							}
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_qi
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Qi"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					10 = { 
+						modifier = {
+							factor = 20
+							OR = {
+								dynasty = 1000048291 #Chai
+								dynasty = 1000048290 #Guo
+							}
+						}
+						modifier = {
+							factor = 10
+							capital_scope = {
+								OR = {
+									de_jure_liege = d_dongdu 
+									de_jure_liege = d_yongxing
+									de_jure_liege = d_yicheng
+								}
+							}
+						}
+						modifier = {
+							factor = 0 
+							event_target:wudai_old_title = { title = e_later_zhou }
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_zhou
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Zhou"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					20 = { 
+						modifier = {
+							factor = 20
+							dynasty = 1000049855 #Liu
+						}
+						modifier = {
+							factor = 0 
+							event_target:wudai_old_title = { title = e_later_han }
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_han
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Han"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					10 = { 
+						modifier = {
+							factor = 10
+							capital_scope = {
+								OR = {
+									de_jure_liege = d_yongxing
+									de_jure_liege = d_qinfeng
+									de_jure_liege = d_binning
+								}
+							}
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_qin
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Qin"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					10 = { 
+						modifier = {
+							factor = 20
+							de_jure_liege = d_nanjing
+						}
+						modifier = {
+							factor = 0 
+							event_target:wudai_old_title = { title = e_liu_yan }
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_yan
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Yan"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					10 = { 
+						modifier = {
+							factor = 10
+							capital_scope = {
+								OR = {
+									de_jure_liege = d_anguo
+									de_jure_liege = d_chengde
+									de_jure_liege = d_yiwu
+									de_jure_liege = d_zhangyi
+								}
+							}
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_zhao
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Zhao"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = { 
+						modifier = {
+							factor = 10
+							culture = khitan
+						}
+						modifier = {
+							factor = 10
+							capital_scope = {
+								de_jure_liege = d_dongjing
+							}
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_liao
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Liao"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = { 
+						modifier = {
+							factor = 10
+							OR = {
+								culture = mongol
+								culture = bohai
+							}
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_yuan
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Yuan"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					10 = { 
+						modifier = {
+							factor = 20
+							dynasty = 1029302 #Weiming
+						}
+						modifier = {
+							factor = 10
+							capital_scope = {
+								de_jure_liege = d_henan
+							}
+						}
+						modifier = {
+							factor = 0 
+							event_target:wudai_old_title = { title = e_xixia }
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_xia
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Xia"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = { 
+						
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_qing
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Qing"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = { 
+						modifier = {
+							factor = 10
+							capital_scope = {
+								de_jure_liege = d_datong
+							}
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_dai
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Dai"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = { 
+						modifier = {
+							factor = 0
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_cheng
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Cheng"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					10 = { 
+						modifier = {
+							factor = 20
+							dynasty = 1000048157 #Zhu
+						}
+						modifier = {
+							factor = 10
+							capital_scope = {
+								OR = {
+									de_jure_liege = d_dongdu
+									de_jure_liege = d_yicheng
+								}
+							}
+						}
+						modifier = {
+							factor = 0 
+							event_target:wudai_old_title = { title = e_later_liang }
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_liang
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Liang"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					10 = { 
+						modifier = {
+							factor = 20
+							dynasty = 1051151 #Zhao
+						}
+						modifier = {
+							factor = 10
+							capital_scope = {
+								OR = {
+									de_jure_liege = d_dongdu
+									de_jure_liege = d_yicheng
+								}
+							}
+						}
+						modifier = {
+							factor = 0 
+							event_target:wudai_old_title = { title = e_song }
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_song
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Song"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = { 
+						#modifier = {
+						#	factor = 20
+						#	dynasty = 1051151 #Zhu
+						#}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_ming
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Ming"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					10 = {
+						modifier = {
+							factor = 20
+							OR = {
+								dynasty = 1000048184 #Wang
+								dynasty = 1000048031 #Meng
+							}
+						}
+						modifier = {
+							factor = 10
+							capital_scope = {
+								OR = {
+									de_jure_liege = d_xichuan
+									de_jure_liege = d_dongchuan
+									de_jure_liege = d_shannanxi
+									de_jure_liege = d_longjian
+									de_jure_liege = d_weirong
+									de_jure_liege = d_yongping
+									de_jure_liege = d_baoning
+									de_jure_liege = d_wuding
+									de_jure_liege = d_wuxin
+									de_jure_liege = d_yongning
+									de_jure_liege = d_zhaowu
+								}
+							}
+						}
+						modifier = {
+							factor = 0 
+							OR = {
+								event_target:wudai_old_title = { title = e_later_shu }
+								event_target:wudai_old_title = { title = e_former_shu }
+							}
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_shu
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Shu"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = {
+						modifier = {
+							factor = 20
+							OR = {
+								dynasty = 1000048933 #Yang
+								dynasty = 1000048462 #Sun
+							}
+						}
+						modifier = {
+							factor = 10
+							capital_scope = {
+								OR = {
+									de_jure_liege = d_huainan
+									de_jure_liege = d_zhexi
+									de_jure_liege = d_xuanshe
+									de_jure_liege = d_zhedong
+								}
+							}
+						}
+						modifier = {
+							factor = 0 
+							event_target:wudai_old_title = { title = e_southern_wu }
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_wu
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Wu"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = {
+						modifier = {
+							factor = 20
+								dynasty = 1000048897 #Ma
+						}
+						modifier = {
+							factor = 10
+							capital_scope = {
+								OR = {
+									de_jure_liege = d_jingnan
+									de_jure_liege = d_jingxinan
+									de_jure_liege = d_weisheng
+									de_jure_liege = d_hunan
+								}
+							}
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_chu
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Chu"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = {
+						modifier = {
+							factor = 20
+							OR = {
+								dynasty = 1000048895 #Liu
+								dynasty = 1000050128 #Dong
+							}
+						}
+						modifier = {
+							factor = 10
+							capital_scope = {
+								OR = {
+									de_jure_liege = d_zhedong
+									de_jure_liege = d_lingnandong
+								}
+							}
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_yue
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Yue"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = { 
+						modifier = {
+							factor = 20
+							dynasty = 1000048906 #Wang
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_yin
+							short_name = yes
+							
+						}
+						modifier = {
+							factor = 0 
+							event_target:wudai_old_title = { title = e_yin }
+						}
+						new_title = {
+							set_name = "Yin"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = { 
+						#modifier = {
+						#	factor = 20
+						#	OR = {
+						#		dynasty = 1000048184 #Wang
+						#		dynasty = 1000048031 #Meng
+						#	}
+						#}
+						#modifier = {
+						#	factor = 10
+						#	capital_scope = {
+						#		OR = {
+						#			de_jure_liege = d_jingnan
+						#		}
+						#	}
+						#}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_shun
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Shun"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = { 
+						modifier = {
+							factor = 10
+							capital_scope = {
+								de_jure_liege = d_chengde
+							}
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_ji
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Ji"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = {
+						modifier = {
+							factor = 10
+							culture = jurchen
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_jin
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Jin"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					5 = { 
+						modifier = {
+							factor = 10
+							capital_scope = {
+								de_jure_liege = d_hexi
+							}
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_liang
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Liang"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = { 
+						modifier = {
+							factor = 10
+							culture = liao
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_li
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Li"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = { 
+						modifier = {
+							factor = 10
+							capital_scope = {
+								de_jure_liege = d_pinglu
+								de_jure_liege = d_tianping
+							}
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_lu
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Lu"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = { 
+						modifier = {
+							factor = 5
+							capital_scope = {
+								de_jure_liege = d_jingnan
+							}
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_lu_2
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Lu"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = {
+						modifier = {
+							factor = 20
+							dynasty = 1000048906 #Wang
+						}
+						modifier = {
+							factor = 10
+							capital_scope = {
+								de_jure_liege = d_fujian
+							}
+						}
+						modifier = {
+							factor = 0 
+							event_target:wudai_old_title = { title = e_min }
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_min
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Min"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = { 
+						modifier = {
+							factor = 10
+							culture = liao
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_nan
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Nan"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					10 = { 
+						modifier = {
+							factor = 10
+							capital_scope = {
+								OR = {
+									de_jure_liege = d_tianxiong
+									de_jure_liege = d_yicheng
+									de_jure_liege = d_dongdu
+								}
+							}
+						}
+						modifier = {
+							factor = 0 
+							event_target:wudai_old_title = { title = e_huang_qi }
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_qi_2
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Qi"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = { 
+						modifier = {
+							factor = 10
+							culture = qay
+						}
+						modifier = {
+							factor = 0
+							culture = han
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_xi
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Xi"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = { 
+						modifier = {
+							factor = 5
+							capital_scope = {
+								de_jure_liege = d_yichang
+							}
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_xu
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Xu"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = { 
+						#modifier = {
+						#	factor = 5
+						#	capital_scope = {
+						#		de_jure_liege = d_liaoxing
+						#	}
+						#}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_ying
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Ying"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = { 
+						modifier = {
+							factor = 5
+							OR = { 
+								capital_scope = {
+									de_jure_liege = d_bohai
+								}
+								culture = bohai
+							}
+						}
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_zhen
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Zhen"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+					1 = {
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							base_title = e_china_zheng
+							short_name = yes
+							
+						}
+						new_title = {
+							set_name = "Zheng"
+							copy_title_laws = event_target:wudai_old_title
+							wudai_empire_new_title = yes
+						}
+					}
+				}
+				wudai_create_bloodline = yes
+				wudai_destroy_old_titles = yes
+			#}
+		}
+	}
+	
+	option = {
+		name = wudai.001a
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_cheng
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Cheng"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001b
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_chu
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Chu"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}	
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001c
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_dai
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Dai"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}	
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = { #More options
+		name = wudai.001al
+		character_event = { id = wudai.002 }
+	}
+}
+character_event = {
+	id = wudai.002
+	title = wudai.001.t
+	desc = wudai.001.d
+	picture = GFX_evt_china_rebel_general
+	window = EventWindowOffmap
+	background = GFX_event_window_news_from_china
+	is_triggered_only = yes
+	
+	option = {
+		name = wudai.001d
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_han
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Han"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}	
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001e
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_ji
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Ji"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}	
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001f
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_jin
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Jin"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}	
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = { #More options
+		name = wudai.001al
+		character_event = { id = wudai.003 }
+	}
+}
+character_event = {
+	id = wudai.003
+	title = wudai.001.t
+	desc = wudai.001.d
+	picture = GFX_evt_china_rebel_general
+	window = EventWindowOffmap
+	background = GFX_event_window_news_from_china
+	is_triggered_only = yes
+	
+	option = {
+		name = wudai.001g
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_jin_2
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Jin"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}	
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001h
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_liang
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Liang"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}	
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001i
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_liang_2
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Liang"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}	
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = { #More options
+		name = wudai.001al
+		character_event = { id = wudai.004 }
+	}
+}
+character_event = {
+	id = wudai.004
+	title = wudai.001.t
+	desc = wudai.001.d
+	picture = GFX_evt_china_rebel_general
+	window = EventWindowOffmap
+	background = GFX_event_window_news_from_china
+	is_triggered_only = yes
+	
+	option = {
+		name = wudai.001j
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_li
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Li"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}	
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001k
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_liao
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Liao"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}	
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001l
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_lu
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Lu"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}	
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = { #More options
+		name = wudai.001al
+		character_event = { id = wudai.005 }
+	}
+}
+character_event = {
+	id = wudai.005
+	title = wudai.001.t
+	desc = wudai.001.d
+	picture = GFX_evt_china_rebel_general
+	window = EventWindowOffmap
+	background = GFX_event_window_news_from_china
+	is_triggered_only = yes
+	
+	option = {
+		name = wudai.001m
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_lu_2
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Lu"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}	
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001n
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_min
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Min"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}	
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001o
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_ming
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Ming"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}	
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = { #More options
+		name = wudai.001al
+		character_event = { id = wudai.006 }
+	}
+}
+character_event = {
+	id = wudai.006
+	title = wudai.001.t
+	desc = wudai.001.d
+	picture = GFX_evt_china_rebel_general
+	window = EventWindowOffmap
+	background = GFX_event_window_news_from_china
+	is_triggered_only = yes
+	
+	option = {
+		name = wudai.001p
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_nan
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Nan"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}	
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001q
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_qi
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Qi"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}	
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001r
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_qi_2
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Qi"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = { #More options
+		name = wudai.001al
+		character_event = { id = wudai.007 }
+	}
+}
+character_event = {
+	id = wudai.007
+	title = wudai.001.t
+	desc = wudai.001.d
+	picture = GFX_evt_china_rebel_general
+	window = EventWindowOffmap
+	background = GFX_event_window_news_from_china
+	is_triggered_only = yes
+	
+	option = {
+		name = wudai.001s
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_qin
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Qin"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001t
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_qing
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Qing"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001u
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_shu
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Shu"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = { #More options
+		name = wudai.001al
+		character_event = { id = wudai.008 }
+	}
+}
+character_event = {
+	id = wudai.008
+	title = wudai.001.t
+	desc = wudai.001.d
+	picture = GFX_evt_china_rebel_general
+	window = EventWindowOffmap
+	background = GFX_event_window_news_from_china
+	is_triggered_only = yes
+	
+	option = {
+		name = wudai.001v
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_shun
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Shun"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001w
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_song
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Song"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001x
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_tang
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Tang"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = { #More options
+		name = wudai.001al
+		character_event = { id = wudai.009 }
+	}
+}
+character_event = {
+	id = wudai.009
+	title = wudai.001.t
+	desc = wudai.001.d
+	picture = GFX_evt_china_rebel_general
+	window = EventWindowOffmap
+	background = GFX_event_window_news_from_china
+	is_triggered_only = yes
+	
+	option = {
+		name = wudai.001y
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_wei
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Wei"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001z
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_wu
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Wu"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001aa
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_xi
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Xi"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = { #More options
+		name = wudai.001al
+		character_event = { id = wudai.010 }
+	}
+}
+character_event = {
+	id = wudai.010
+	title = wudai.001.t
+	desc = wudai.001.d
+	picture = GFX_evt_china_rebel_general
+	window = EventWindowOffmap
+	background = GFX_event_window_news_from_china
+	is_triggered_only = yes
+	
+	option = {
+		name = wudai.001ab
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_xia
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Xia"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001ac
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_xu
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Xu"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001ad
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_yan
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Yan"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = { #More options
+		name = wudai.001al
+		character_event = { id = wudai.011 }
+	}
+}
+character_event = {
+	id = wudai.011
+	title = wudai.001.t
+	desc = wudai.001.d
+	picture = GFX_evt_china_rebel_general
+	window = EventWindowOffmap
+	background = GFX_event_window_news_from_china
+	is_triggered_only = yes
+	
+	option = {
+		name = wudai.001ae
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_yin
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Yin"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001af
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_ying
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Ying"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001ag
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_yuan
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Yuan"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = { #More options
+		name = wudai.001al
+		character_event = { id = wudai.012 }
+	}
+}
+character_event = {
+	id = wudai.012
+	title = wudai.001.t
+	desc = wudai.001.d
+	picture = GFX_evt_china_rebel_general
+	window = EventWindowOffmap
+	background = GFX_event_window_news_from_china
+	is_triggered_only = yes
+	
+	option = {
+		name = wudai.001ah
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_yue
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Yue"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001ai
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_zhao
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Zhao"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}	
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001aj
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_zheng
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Zheng"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = { #More options
+		name = wudai.001al
+		character_event = { id = wudai.013 }
+	}
+}
+character_event = {
+	id = wudai.013
+	title = wudai.001.t
+	desc = wudai.001.d
+	picture = GFX_evt_china_rebel_general
+	window = EventWindowOffmap
+	background = GFX_event_window_news_from_china
+	is_triggered_only = yes
+	
+	option = {
+		name = wudai.001ak
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_zhou
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Zhou"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = {
+		name = wudai.001an
+		trigger = {
+			ai = no
+		}
+		create_title = {
+			tier = EMPEROR
+			landless = no
+			temporary = no
+			custom_created = yes
+			culture = ROOT
+			holder = ROOT
+			base_title = e_china_zhen
+			short_name = yes
+			
+		}
+		new_title = {
+			set_name = "Zhen"
+			copy_title_laws = event_target:wudai_old_title
+			wudai_empire_new_title = yes
+		}
+		wudai_create_bloodline = yes
+		wudai_destroy_old_titles = yes
+	}
+	option = { #Don't change
+		name = wudai.001am
+		wudai_create_bloodline = yes
+	}
+	option = { #More options
+		name = wudai.001al
+		trigger = {
+			ai = no
+		}
+		character_event = { id = wudai.001 }
+	}
+}
