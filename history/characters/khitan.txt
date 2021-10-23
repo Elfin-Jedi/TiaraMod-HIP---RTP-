@@ -1,0 +1,565 @@
+# -*- ck2.history.characters -*-
+
+188905 = { #耶律大石 Yelü Dashi
+	name="Dashi" #Yelü Dashi
+	dynasty=1000102400
+	religion=buddhist
+	culture="khitan"
+	learning=7
+	martial=8
+	trait="skilled_tactician"
+	trait="unyielding_leader"
+	trait="mahayana_buddhist"
+	trait="patient"
+	trait="diligent"
+	trait="ambitious"
+	trait="proud"
+	father=1231532 #fictional father
+	1087.5.5={
+		birth = yes
+	}
+	1127.1.1={
+		add_spouse=188906
+	}
+	1144.6.6={
+		death = yes
+		name = "Dezong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+
+188906 = { #蕭塔不煙 Xiao Tabuyan
+	name="Tabuy�n"
+	female = yes
+	dynasty=1000102401
+	religion=buddhist
+	culture="khitan"
+	trait="mahayana_buddhist"
+	father=1231510 #fictional relation
+	1110.5.5={
+		birth = yes
+	}
+	1127.1.1={
+		add_spouse=188905
+	}
+	1144.1.1={
+		effect = {
+			give_minor_title = title_appointed_regent
+		}
+	}
+	1151.5.5={
+		effect = {
+			remove_title = title_appointed_regent
+		}
+	}
+	1151.6.6={
+		death = yes
+	}
+}
+
+188907 = { #耶律夷列 Yelü Yilie
+	name="Iriy�r" #Yelü Yilie
+	dynasty=1000102400
+	religion=buddhist
+	culture="khitan"
+	trait="mahayana_buddhist"
+	father = 188905
+	mother = 188906
+	1135.5.5={
+		birth = yes
+	}
+	1163.6.6={
+		death = yes
+		name = "Renzong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+
+188908 = { #耶律普速完 Yelü Pusuwan
+	name="Pusu�n"
+	female = yes
+	dynasty=1000102400
+	religion=buddhist
+	culture="khitan"
+	trait="mahayana_buddhist"
+	trait="deceitful"
+	trait="lustful"
+	father = 188905
+	mother = 188906
+	1136.8.8={
+		birth = yes
+	}
+	1153.1.1={
+		add_spouse=188910
+	}
+	1177.6.6={
+		death={
+			death_reason=death_execution
+			killer=188909
+		}
+	}
+}
+
+188909 = { #　蕭斡里剌 Xiao Wolila
+	name="Orila" #Khitan transliteration guesswork; Wolila; Duolubu's father
+	dynasty=1000102409
+	religion=buddhist
+	culture="khitan"
+	trait="mahayana_buddhist"
+	trait="tough_soldier"
+	1110.5.5={
+		birth = yes
+	}
+	1177.11.11={
+		death={
+			death_reason=death_murder
+			killer=188912
+		}
+	}
+}
+
+188910 = { #蕭朵魯不 Xiao Duolubu
+	name="D�rub" #Khitan transliteration guesswork; Duolubu; Pusuwan's husband
+	dynasty=1000102409
+	religion=buddhist
+	culture="khitan"
+	trait="mahayana_buddhist"
+	father = 188909
+	1134.5.5={
+		birth = yes
+	}
+	1153.1.1={
+		add_spouse=188908 
+	}
+	1163.1.1={
+		employer = 188907
+	}
+	1163.6.6={
+		employer = 188912
+	}
+	1177.3.3={
+		death={
+			death_reason=death_murder
+			killer=188908
+		}
+	}
+}
+
+188911 = { #蕭朴古只 Xiao Fuguzhi
+	name="Boguji" #Khitan transliteration guesswork; Fuguzhi; Duolubu's brother, Pusuwan's lover
+	dynasty=1000102409
+	religion=buddhist
+	culture="khitan"
+	trait="mahayana_buddhist"
+	trait="lustful"
+	father = 188909
+	1136.5.5={
+		birth = yes
+	}
+	1177.6.6={
+		death={
+			death_reason=death_execution
+			killer=188909
+		}
+	}
+}
+
+188912 = { #耶律直魯古 Yelü Zhilugu
+	name="Jirug" #Zhilugu
+	dna = eboqtsnbtbn
+	properties = fm00gd000000000000
+	dynasty=1000102400
+	religion=buddhist
+	culture="khitan"
+	trait="mahayana_buddhist"
+	father = 188907
+	1157.5.5={
+		birth = yes
+	}
+	1213.6.6={
+		death = yes
+	}
+}
+
+188913 = { #渾忽公主 Princess Hunhu
+	name="Hon-hu" #Khitan transliteration guesswork; Zhilugu's daughter, wife of K�chl�g, the Naiman usurper
+	female=yes
+	dynasty=1000102400
+	religion=buddhist
+	culture="khitan"
+	trait="mahayana_buddhist"
+	father = 188912
+	mother = 1231501
+	1186.5.5={
+		birth = yes
+	}
+	1208.5.5={
+		add_spouse = 1410763
+	}
+	1228.6.6={
+		death = yes
+	}
+}
+194325 = { #耶律啜裏只 Yelü Chuolizhi, courtesy name 阿保機 Abaoji or 阿保堇 Abaojin (Ëbëgiñ in Khitan), Chinese name 億 Yi. 遼太祖 Taizu of Liao.
+	name="�b�gi�" # Abaoji
+	dynasty=1000102400 # Liao Dynasty
+	religion="tengri_pagan"
+	culture=khitan
+	trait="skilled_tactician"
+	trait="brave"
+	father=1413015 #Yelü Sala(de)/Chala
+	mother=1413604
+	872.6.6 = {
+		birth = yes
+		create_bloodline = {
+			type = abaoji
+			has_dlc = "Holy Fury"
+		}
+	}
+	926.9.6 = {
+		trait = ill
+		death={ death_reason = death_trait }
+		name="Taizu"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+194326 = { #耶律德光 Yelü Deguang, Khitan name 堯骨 Yaogu, courtesy name 德謹 Dejin. 遼太宗 Taizong of Liao.
+	name="Yeugur" #Khitan transliteration guesswork; Yaogu
+	dynasty=1000102400 # Liao Dynasty
+	religion="tengri_pagan"
+	culture=khitan
+	father=194325
+	mother=1231519
+	trait = skilled_tactician
+	trait = bright
+	trait = ambitious
+	trait = brave
+	trait = proud
+	902.11.25 = {
+		birth = yes
+	}
+	936.8.7 = {
+		# Boost the strength of Khitans in Iron Century bookmark
+		effect = {
+			spawn_unit = {
+				province = 2359 # Linhuang
+				owner = ROOT
+				#leader = ROOT
+				troops = {
+					light_cavalry = { 1350 1350 }
+					horse_archers = { 3600 3600 }
+				}
+				attrition = 0.5
+				earmark = start_troops
+			}
+			spawn_unit = {
+				province = 2359 # Linhuang
+				owner = ROOT
+				troops = {
+					light_cavalry = { 45 45 }
+					horse_archers = { 120 120 }
+				}
+				attrition = 0.5
+				earmark = start_troops
+			}
+			spawn_unit = {
+				province = 2359 # Linhuang
+				owner = ROOT
+				troops = {
+					light_cavalry = { 45 45 }
+					horse_archers = { 120 120 }
+				}
+				attrition = 0.5
+				earmark = start_troops
+			}
+		}
+	}
+	947.5.1 = {
+		trait = ill
+	}
+	947.5.15 = {
+		death={death_reason = death_trait }
+		name="Taizong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+194327 = { #耶律倍 Yelü Bei, Khitan name 突欲 Tuyu or 圖欲 Tuyu. Also knowns as 李贊華 Li Zanhua. 遼義宗 Liao Yizong. In 926.8.28 made 東丹人皇王 (資治通鑑/卷275) or in 926.4.4. (遼史/卷2) In 929.1.26 Dongdan was transfered to Liaoyang. (遼史/卷3) In 930.11.23 fled to Later Tang. (資治通鑑/卷277) In 931.3.24 given surname 東丹, name 慕華. and made honorary 懷化節度使. In 931.10.28 given surname 李, name 贊華. (資治通鑑/卷277) 932.5.19 made 義成節度使. 933.10.18 made 昭信節度使.
+	name="Tur�r" # Khitan transliteration guesswork
+	dynasty=1000102400 # Liao Dynasty
+	religion="tengri_pagan"
+	culture=khitan
+	father=194325
+	mother=1231519
+	899.6.6 = {
+		birth = yes
+	}
+	917.1.1 = { effect={ROOT={add_consort=c_1413612}} }
+	923.1.1 = { effect={ROOT={add_consort=c_1414006}} }
+	930.11.23 = {
+		employer = 1412344
+	}
+	931.3.34 = {
+		name = "Muhua"
+	}
+	931.10.28 = {
+		name = "Zanhua"
+	}
+	932.1.1 = { effect={ROOT={add_consort=c_1400903}} }
+	933.12.15 = { employer = 1412350 }
+	934.5.24 = { employer = 1412361 }
+	937.1.7 = {
+		death={death_reason = death_murder killer = 1401675 }
+	}
+	1051.1.1={
+		name="Yizong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+194328 = { #耶律阮 Yelü Ruan, Khitan name 兀欲 Wuyu. 遼世宗 Liao Shizong.
+	name="Urel" # Khitan transliteration guesswork; Shizong
+	dynasty=1000102400 # Liao Dynasty
+	religion="tengri_pagan"
+	culture=khitan
+	father=194327
+	mother=1413612
+	919.1.29 = {
+		birth = yes
+	}
+	951.10.7 = {
+		death={death_reason=death_murder killer = 1403029 }
+		name="Shizong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+194329 = { #耶律璟 Yelü Jing, Khitan name 述律 Shulu. 遼穆宗 Liao Muzong.
+	name="Shulu" # Jing, Muzong
+	dynasty=1000102400 # Liao Dynasty
+	religion="tengri_pagan"
+	culture=khitan
+	father=194326
+	mother=1413510
+	trait=indulgent_wastrel
+	trait=drunkard
+	trait=lustful
+	trait=hedonist
+	931.9.19 = {
+		birth = yes
+	}
+	969.3.12 = {
+		death={death_reason = death_murder }
+		name="Muzong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+194330 = { #耶律賢 Yelü Xian, Khitan name 明扆 Mingyi, courtesy name 賢寧 Xianning. 遼景宗 Liao Jingzong.
+	name="M�n" # Khitan transliteration guesswork; Jingzong
+	dynasty=1000102400 # Liao Dynasty
+	religion=buddhist
+	culture=khitan
+	father=194328
+	mother=1413508
+	trait=thrifty_clerk
+	trait=mahayana_buddhist
+	948.9.1 = {
+		birth = yes
+	}
+	976.1.1 = { add_consort = 1414009 }
+	982.10.13 = {
+		death=yes
+		name="Jingzong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+194331 = { #耶律隆緒 Yelü Longxu, Khitan name 文殊奴 Wenshunu. 遼聖宗 Liao Shengzong.
+	name="Munjunu" #Khitan transliteration guesswork; Longxu, Shengzong
+	dynasty=1000102400 # Liao Dynasty
+	martial=7
+	diplomacy=8
+	stewardship=8
+	religion=buddhist
+	culture=khitan
+	father=194330
+	mother=1413617
+	trait=skilled_tactician
+	trait=ambitious
+	trait=patient
+	trait=just
+	trait=gregarious
+	trait=mahayana_buddhist
+	972.1.16 = {
+		birth = yes
+	}
+	980.1.1={ effect={ROOT={add_consort=c_1406238}} }
+	1004.1.1 = { effect={ROOT={add_consort=c_1400293}} }
+	1031.6.25 = {
+		death = yes
+		name="Shengzong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+194332 = { #耶律宗真 Yelü Zongzhen, Khitan name 只骨, courtesy name 夷不菫 Yibujin (興宗皇帝哀冊) (Ëbëgin in Khitan). 遼興宗 Liao Xingzong.
+	name="Jirgu" # Khitan transliteration guesswork; Xingzong
+	dynasty=1000102400 # Liao Dynasty
+	religion=buddhist
+	culture=khitan
+	father=194331
+	mother=1413540
+	trait=tough_soldier
+	trait=greedy
+	trait=mahayana_buddhist
+	1016.4.3 = {
+		birth = yes
+	}
+	1031.4.3={ effect={ROOT={add_consort=c_1413517}} }
+	1032.1.1={
+		remove_spouse=1413625
+		add_consort=1413625
+	}
+	1035.3.1={
+		remove_consort=1413517
+		add_spouse=1413517
+	}
+	1055.8.28 = {
+		death = yes
+		name="Xingzong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+194333 = { #耶律洪基 Yelü Hongji, Khitan name 查剌 Chala, courtesy name 涅鄰 Nielin (契丹仁聖大孝文帝哀冊文). 遼道宗 Liao Daozong.
+	name="Chala" # Daozong
+	dynasty=1000102400 # Liao Dynasty
+	religion=buddhist
+	culture=khitan
+	father=194332
+	mother=1413517
+	trait=thrifty_clerk
+	trait=trusting
+	trait=arbitrary
+	trait=mahayana_buddhist
+	1032.9.14 = {
+		birth = yes
+	}
+	1101.2.12 = {
+		death = yes
+		name="Daozong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+194401 = { #耶律濬 Yelü Jun, Khitan name 耶魯斡 Yelüwo. 遼順宗 Liao Shunzong. In 1077.6.30 imprisoned and stripped of titles. (遼史/卷23) In 1077.11.19 murdered by Yelü Yixin. (遼史/卷23)
+	name="Y�ru-on" #Khitan transliteration guesswork; Jun
+	dynasty=1000102400 # Liao Dynasty
+	religion=buddhist
+	culture=khitan
+	father=194333
+	mother=194402
+	#spouse = 1413796
+	trait=gregarious #????
+	trait=diligent #????
+	trait=mahayana_buddhist
+	1058.1.1 = {
+		birth = yes
+	}
+	1077.6.30 = { effect = { imprison = 194333 } }
+	1077.11.19 = {
+		death={death_reason=death_murder killer=1413952 }
+	}
+	1101.2.12 = {
+		name="Shunzong"
+	}
+}
+194402 = { #蕭觀音 Xiao Guanyin, 懿德皇后 Empress Yide, 宣懿皇后 Empress Xuanyi.
+	name="Guanin" #Khitan transliteration guesswork
+	female=yes
+	dynasty=1000102403 # Shulu or Bali?
+	religion=buddhist
+	culture=khitan
+	father = 1413534 #Xiaozhong was the husband of Guanyin's mother and his name is present on her eulogy. However, according to 遼史 Hui was the father. Most likely her mater married Hui after Zhong's death in a levirate tradition, and as Guanyin was a small child, she was adopted by Hui.
+	mother = 1413091
+	trait="fair"
+	trait="poet"
+	trait=mahayana_buddhist
+	1040.5.5 = {
+		birth = yes
+	}
+	1055.1.1 = {
+		add_spouse=194333
+		father = 1413535
+	}
+	1075.6.6 = {
+		death=yes
+	}
+}
+194334 = { #耶律延禧 Yelü Yanxi, Khitan name 阿果 Agua, courtesy name 延寧 Yanning. In 1125.3.7 captured by Jin. (遼史/卷30)
+	name="Ago" # Tianzuo
+	dynasty=1000102400 # Liao Dynasty
+	religion=buddhist
+	culture=khitan
+	father=194401
+	mother = 1413796
+	#spouse = 1413997
+	trait="indulgent_wastrel"
+	trait="arbitrary"
+	trait=mahayana_buddhist
+	1075.6.5 = {
+		birth = yes
+	}
+	1092.1.1 = { effect={ROOT={add_consort=c_1413932}} }
+	1125.3.26 = {
+		name="Tianzuo"
+	}
+	1125.3.7 = { effect = { imprison = 217731 } }
+	1128.6.6 = {
+		death = yes
+	}
+}
+
+248238 = {
+	name="Chin-Temur" #Basqaq of Urgench, governor of Khorasan and Mazandaran
+	dynasty=1059033
+	martial=6
+	stewardship=7
+	diplomacy=6
+	religion=buddhist
+	culture=khitan
+	trait=mahayana_buddhist
+	#trait="sympathy_christendom"
+	#trait="sympathy_islam"
+	#trait="sympathy_zoroastrianism"
+	#trait="sympathy_judaism"
+	#trait="sympathy_indian"
+	trait=thrifty_clerk
+	1190.1.1={
+		birth=yes
+	}
+	1215.1.1 = {
+		employer=125501
+	}
+	1221.1.1 = {
+		employer=0
+	}
+	1236.1.1={
+		death=yes
+	}
+}

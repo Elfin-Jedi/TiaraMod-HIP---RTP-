@@ -1,0 +1,5505 @@
+217700 = { #李淵 Li Yuan. Emperor Gaozu of Tang (lived 566-635)(reigned 617-626)
+	dynasty = 1051150 #Longxi Li
+	name = "Yuan" 
+	religion = taoist
+	culture = han
+	trait = grey_eminence
+	father = 247763 #Li Bing
+	mother = 247744 #Lady Dugu
+	# spouse = Empress Dou
+	556.4.7 = {
+		birth = yes
+	}
+	586.1.1 = {
+		add_spouse = 247831
+	}
+	587.1.1 = {
+		effect={c_1404325={add_consort=ROOT}}
+	}
+	618.6.18 = {
+		create_bloodline = {
+			type = tang_bloodline
+			has_dlc = "Holy Fury"
+		}
+	}
+	624.1.1 =  {
+		effect={c_1405041={add_consort=ROOT}}
+	}
+	635.6.25 = {
+		trait=ill
+		death=death_trait
+		name = "Gaozu"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+217701 = { #李世民 Li Shimin. Emperor Taizong of Tang (lived 598-649)(reigned 626-649)
+	dynasty = 1051150 #Longxi Li
+	name = "Shimin"
+	religion = taoist
+	culture = han
+	trait = fortune_builder
+	trait = genius
+	trait = erudite
+	father = 217700 # Emperor Gaozu
+	mother = 247831 # Empress Dou
+	# spouse = Empress Wende
+	598.1.28 = {
+		birth = yes
+	}
+	#613 - real date of marriage to Empress Wende
+	617.1.1 = {
+		add_spouse = 247866
+	}
+	617.6.1 = {
+			effect={c_247770={add_consort=ROOT}}
+	}#Consort Yin
+	618.6.18 = {
+			effect={c_247757={add_consort=ROOT}}
+	}#Consort Yang
+	619.1.1 = {
+			effect={c_247769={add_consort=ROOT}}
+	}#Consort Wei
+	619.1.1 = {
+			effect={c_247771={add_consort=ROOT}}
+	}#Consort Yan
+	637.1.1 = {
+			effect={c_217704={add_consort=ROOT}}
+	}#Wu Cairen
+	641.1.1 = {
+			effect={c_247868={add_consort=ROOT}}
+	}#Xu Cairen
+	642.1.1 = {
+			effect={c_1405037={add_consort=ROOT}}
+	}#Consort Tang
+	649.7.10 = {
+		death=yes
+		name = "Taizong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+217702 = { #李治 Li Zhi. Emperor Gaozong of Tang (lived 628-683)(reigned 649-683)
+	dynasty = 1051150 #Longxi Li
+	name = "Zhi"
+	religion = taoist
+	culture = han
+	trait = weak
+	trait = naive_appeaser
+	father = 217701 # Emperor Taizong
+	mother = 247866 # Empress Wende
+	# spouse = Empress Wang
+	# consort = Wu Zetian
+	# consort = Consort Xiao
+	628.7.21 = {
+		birth = yes
+	}
+	644.1.1 = {
+		add_spouse = 247903
+	} # Empress Wang
+	644.2.1 = {
+			effect={c_247905={add_consort=ROOT}}
+	} # Consort Liu
+	644.5.1 = {
+			effect={c_247904={add_consort=ROOT}}
+	} # Consort Xiao
+	648.1.1 = {
+			effect={c_217704={add_lover=ROOT}}
+	}#reported affair with Wu Zetian while his father was still alive
+	650.1.1 = {
+			effect={c_217704={add_consort=ROOT}}
+	}#Wu Zhaoyi (Wu Zetian)
+	655.12.1 = {
+			add_spouse = 217704
+	}#Wu Zetian made Empress Consort
+	683.12.27 = {
+		death=yes
+		name = "Gaozong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+217799 = { #李顯 Li Xian or	李哲 Li Zhe. Emperor Zhongzong of Tang (lived 656-710)(reigned 684; 705-710)
+	dynasty = 1051150 #Longxi Li
+	name = "Xian"
+	religion = taoist
+	culture = han
+	trait = detached_priest
+	father = 217702 # Emperor Gaozong
+	mother = 217704 # Wu Zetian
+	# spouse = Princess Zhao
+	# spouse = Empress Wei
+	# consort = Shangguan Wan'er
+	656.11.26 = {
+		birth = yes
+	}
+	673.1.1 = {
+		add_spouse = 247923
+	}
+	677.1.1 = {
+		name = "Zhe"
+	}
+	681.1.1 = {
+		add_spouse = 247924
+	}
+	698.10.1={
+		name = "Xian"
+	}
+	705.3.1 = {
+			effect={c_247927={add_consort=ROOT}}
+	}
+	710.7.3 = {
+		death = {
+			death_reason = death_murder_unknown_poison
+			killer = 247924
+		}
+		name = "Zhongzong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+217703 = { #李旭輪 Li Xulun or 李輪 Li Lun or 李旦 Li Dan. Emperor Ruizong of Tang (lived 662-716)(reigned 684-690; 710)
+	dynasty = 1051150 #Longxi Li
+	name = "Xulun"
+	religion = taoist
+	culture = han
+	trait = scholarly_theologian
+	trait = humble
+	father = 217702 # Emperor Gaozong
+	mother = 217704 # Wu Zetian
+	#spouse = Empress Liu
+	662.6.22 = {
+		birth = yes
+	}
+	669.1.1 = {
+		name = "Lun"
+	}
+	678.1.1 = {
+		name = "Dan"
+		add_spouse = 247931
+			effect={c_247946={add_consort=ROOT}}
+	} # Empress Liu and Consort Dou (really at an earlier date)
+	679.1.1 = {
+			effect={c_247945={add_consort=ROOT}}
+	}# Consort Doulu (really 676)
+	690.1.1={
+		name = "Lun"
+	}
+	698.1.1={
+		name= "Dan"
+	}
+	716.7.16 = {
+		death=yes
+		name = "Ruizong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+217704 = { #武曌 Wu Zhao, 武則天 Empress Wu Zetian (lived c.625-705)(reigned formally 690-705)
+	dynasty = 1051152 # Wu
+	name = "Zhao"
+	religion = taoist
+	culture = han
+	trait = elusive_shadow
+	trait = fair
+	trait = poet
+	trait = erudite
+	female = yes
+	father = 247803 #Wu Shiyue
+	mother = 247802 #Lady Yang
+	#spouse = Gaozong
+	624.2.17 = {
+		birth = yes
+	}
+	690.10.16 = {
+		name = "Zhao"
+	}
+	705.12.16 = {
+		death = yes
+		name = "Zetian"
+	}
+}
+217705 = { #李重茂 Li Chongmao. Emperor Shang of Tang (lived 695/698(?)-714)(reigned 710)
+	dynasty = 1051150 #Longxi Li
+	name = "Chongmao"
+	religion = taoist
+	culture = han
+	father = 217799 # Emperor Zhongzong
+	trait = child_of_consort
+	695.1.1 = {
+		birth = yes
+	}
+	714.9.5 = {
+		death = yes
+	}
+}
+217706 = { #李隆基 Li Longji. Emperor Xuanzong of Tang (lived 685-756)(reigned 712-756)
+	dynasty = 1051150 #Longxi Li
+	name = "Longji"
+	religion = taoist
+	culture = han
+	father = 217703 # Emperor Ruizong
+	mother = 247946 # consort Dou
+	#spouse = Empress Wang
+	#consort = Consort Wu
+	#consort = Consort Mei
+	#consort = Yang Guifei
+	trait = child_of_consort
+	685.9.8 = {
+		birth = yes
+	}
+	702.1.1 = {
+		add_spouse = 247964
+	}
+	710.1.1 = {
+			effect={c_247970={add_consort=ROOT}}
+	}# Consort Yang
+	713.1.1 = {
+			effect={c_247967={add_consort=ROOT}}
+	}# Consort Wu
+	726.1.1 = {
+			effect={c_247971={add_consort=ROOT}}
+	}# Consort Mei
+	745.1.1 = {
+			effect={c_247972={add_consort=ROOT}}
+	}# Consort Yang Guifei
+	762.5.3 = {
+		trait = ill
+		death = death_trait
+		name = "Xuanzong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+217707 = { #李嗣升 Li Sisheng or 李浚 Li Jun or 李璵 Li Yu or 李紹 Li Shao or 李亨 Li Heng. Emperor Suzong of Tang (lived 711-762)(reigned 756-762)
+	dynasty = 1051150 #Longxi Li
+	name = "Sisheng"
+	religion = taoist
+	culture = han
+	father = 217706 # Emperor Xuanzong
+	mother = 247970 # Consort Yang (not Yang Guifei)
+	# spouses = # Crown Princess Wei and Empress Zhang
+	trait = child_of_consort
+	711.2.21 = {
+		birth = yes
+	}
+	725.1.1 = {
+		name = "Jun"
+		effect={c_247993={add_consort=ROOT}}
+	} # Consort Wu
+	728.1.1 = {
+			add_spouse = 247992
+	}# Crown Princess Wei
+	736.1.1 = {
+		name = "Yu"
+	}
+	738.1.1 = {
+		name = "Shao"
+	}
+	738.6.1 = {
+		name = "Heng"
+	}
+	744.1.1 = {
+			effect={c_247991={add_consort=ROOT}}
+	}# Empress Zhang as Consort
+	746.1.1 = {
+			remove_spouse = 247992
+			add_spouse = 247991
+	}# Divorce from Crown Princess Wei and promotion of Empress Zhang
+	762.5.16 = {
+		trait = ill
+		death = death_trait
+		name = "Suzong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+217708 = { #李俶 Li Chu or 李豫 Li Yu. Emperor Daizong of Tang (lived 727-779)(reigned 762-779)
+	dynasty = 1051150 #Longxi Li
+	name = "Chu"
+	religion = taoist
+	culture = han
+	father = 217707 # Emperor Suzong
+	mother = 247993 # Consort Wu
+	# spouses = # Consort Shen, Consort Cui and Consort Dugu
+	trait = child_of_consort
+	727.1.9 = {
+		birth = yes
+	}
+	741.1.1 = {
+			effect={c_247994={add_consort=ROOT}}
+	}# Consort Shen
+	746.1.1 = {
+			effect={c_247995={add_consort=ROOT}}
+	}# Consort Cui
+	757.1.1 = {
+			effect={c_247997={add_consort=ROOT}}
+	}# Consort Dugu
+	758.1.1 = {
+		name = "Yu"
+	}
+	779.5.23 = {
+		death = yes
+		name = "Daizong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+217709 = { #李适 Li Kuo. Emperor Dezong of Tang (lived 742-805)(reigned 779-805)
+	dynasty = 1051150 #Longxi Li
+	name = "Kuo"
+	religion = taoist
+	culture = han
+	father = 217708 # Emperor Daizong
+	mother = 247994 # Consort Shen
+	# spouses = # Empress Wang and Consort Wei
+	trait = child_of_consort
+	742.5.27 = {
+		birth = yes
+	}
+	760.1.1 = {
+			effect={c_247998={add_consort=ROOT}}
+	}# Consort Wang, later Empress
+	762.1.1 = {
+			effect={c_247999={add_consort=ROOT}}
+	}# Consort Wei
+	786.12.3 = {
+		add_spouse = 247998
+	} # Consort Zhang declared Empress three days before her death
+	805.2.25 = {
+		death = yes
+		name = "Dezong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+217710 = { #李誦 Li Song. Emperor Shunzong of Tang (lived 761-806)(reigned 805)
+	dynasty = 1051150 #Longxi Li
+	name = "Song"
+	religion = taoist
+	culture = han
+	father = 217709 # Emperor Dezong
+	mother = 247998 # (Consort) Empress Wang
+	#spouse = 1409356
+	trait = child_of_consort
+	761.1.1 = {
+		birth = yes
+	}
+	806.2.11 = {
+		death = yes
+		name = "Shunzong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+
+217711 = { #李淳/李純 Li Chun. Emperor Xianzong of Tang (lived 778-820)(reigned 805-820)
+	dynasty = 1051150 #Longxi Li
+	name = "Chun"
+	religion = taoist
+	culture = han
+	father = 217710 # Emperor Shunzong
+	#mother = 
+	778.3.17 = {
+		birth = yes
+	}
+	820.2.14 = {
+		death = yes
+		name = "Xianzong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+
+217712 = { #李宥 Li You or 李恆 Li Heng Emperor Muzong of Tang (lived 795-824)(reigned 820-824)
+	dynasty = 1051150 #Longxi Li
+	name = "You"
+	religion = taoist
+	culture = han
+	father = 217711 # Emperor Xianzong
+	mother = 1405863
+	795.1.1 = {
+		birth = yes
+	}
+	812.1.1 = {
+		name = "Heng"
+	}
+	824.2.25 = {
+		trait = ill
+		death = death_trait
+		name = "Muzong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+
+217713 = { #李湛 Li Zhan. Emperor Jingzong of Tang (lived 809-827)(reigned 824-827)
+	dynasty = 1051150 #Longxi Li
+	name = "Zhan"
+	religion = taoist
+	culture = han
+	father = 217712 # Emperor Muzong
+	#mother = 
+	809.7.22 = {
+		birth = yes
+	}
+	823.1.1 = {
+		effect={c_1405977={add_consort=ROOT}}
+	}
+	827.1.9 = {
+		death = {
+			death_reason = death_murder_unknown
+		} #Liu Keming
+		name = "Jingzong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+
+217714 = { #李涵 Li Han or 李昂 Li Ang. Emperor Wenzong of Tang (lived 809-840)(reigned 827-840)
+	dynasty = 1051150 #Longxi Li
+	name = "Ang"
+	religion = taoist
+	culture = han
+	father = 217712 # Emperor Muzong
+	#mother = 
+	809.10.20 = {
+		birth = yes
+	}
+	827.1.13 = {
+		name = "Ang"
+	}
+	840.2.10 = {
+		death = yes
+		name = "Wenzong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+
+217715 = { #李瀍 Li Chan or 李炎 Li Yan. Emperor Wuzong of Tang (lived 814-846)(reigned 840-846)
+	dynasty = 1051150 #Longxi Li
+	name = "Chan"
+	religion = taoist
+	culture = han
+	father = 217712 # Emperor Muzong
+	#mother = 
+	814.7.2 = {
+		birth = yes
+	}
+	846.1.1 = {
+		name = "Yan"
+	}
+	846.4.22 = {
+		death = yes
+		name = "Wuzong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+
+217716 = { #李怡 Li Yi or 李忱 Li Chen. Emperor Xuanzong of Tang (lived 810-859)(reigned 846-859)
+	dynasty = 1051150 #Longxi Li
+	name = "Yi"
+	religion = taoist
+	culture = han
+	father = 217711 # Emperor Xianzong
+	mother = 1406080
+	#mother = 
+	810.7.27 = {
+		birth = yes
+	}
+	846.1.1 = {
+		name = "Chen"
+	}
+	859.1.1 = {
+		trait = infirm
+	}
+	859.9.7 = {
+		death = death_trait
+		name = "Xuanzong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+
+217717 = { #李溫 Li Wen or 李漼 Li Cui. Emperor Yizong of Tang (lived 833-873)(reigned 853-873)
+	dynasty = 1051150 #Longxi Li
+	name = "Wen"
+	religion = buddhist #clearly favored Buddhism and sponsored many Buddhist rituals towards the end of his reign
+	culture = han
+	father = 217716 # Emperor Xuanzong
+	#mother = 元昭皇后晁氏
+	trait = "indulgent_wastrel" #recorded as an incapable and wasteful ruler
+	trait = "slothful" #left state matters into the hands of the eunuchs and made no effort to remedy it
+	trait = "trusting" #rampant favoritism in the court and the bureaucracy during his reign
+	trait = "content"
+	trait = mahayana_buddhist
+	833.12.28 = {
+		birth = yes
+	}
+	859.1.1= { 
+		name = "Cui"
+	}
+	873.8.15 = {
+		trait = ill
+		death = death_trait
+		name = "Yizong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+
+217718 = { #李儼 Li Yan or 李儇 Li Xuan. Emperor Xizong of Tang (lived 862-888)(reigned 873-888)
+	dynasty = 1051150 #Longxi Li
+	name = "Yan"
+	religion = taoist
+	culture = han
+	father = 217717 # Emperor Yizong
+	#mother = 
+	862.6.8 = {
+		birth = yes
+	}
+	873.8.16 = {
+		name = "Xuan"
+	}
+	888.4.20 = {
+		trait = ill
+		death = death_trait
+		name = "Xizong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+
+217719 = { #李傑 Li Jie or 李敏 Li Min or 李曄 Li Ye. Emperor Zhaozong of Tang (lived 867-904)(reigned 888-900)
+	dynasty = 1051150 #Longxi Li
+	name = "Jie"
+	religion = taoist
+	culture = han
+	father = 217717 # Emperor Yizong
+	#mother = 
+	867.3.31 = {
+		birth = yes
+	}
+	888.4.20 = {
+		name = "Min"
+	}
+	889.1.1 = {
+		name = "Ye"
+	}
+	904.9.22 = {
+		death = { death_reason = death_murder killer = 1400469 }
+		name = "Zhaozong"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+	905.11.11 = {
+		name = "Xiangzong"
+	}
+	923.1.1 = {
+		name = "Zhaozong"
+	}
+}
+
+217720 = { #李祚 Li Zuo or 李柷 Li Chu. Emperor Aidi of Tang (lived 892-908)(reigned 904-907). 929.6.29 given temple name Jingzong by Later Tang Mingzong.
+	dynasty = 1051150 #Longxi Li
+	name = "Zuo"
+	religion = taoist
+	culture = han
+	father = 217719 # Emperor Zhaozong
+	#mother = 
+	892.9.27 = {
+		birth = yes
+	}
+	904.9.26 = {
+		name = "Chu"
+	}
+	907.1.6 = {
+		effect = { imprison = 1400469 }
+		effect = { add_character_modifier = { modifier = house_arrest duration = -1 } }
+	}
+	908.3.26 = {
+		death = { death_reason = death_murder_poison killer = 1400469 }
+	}
+	929.6.26 = {
+		name = "Jingzong"
+	}
+}
+
+215596 = { #趙弘殷 Zhao Hongyin, 宋宣祖 Emperor Xuanzu of Song. First served under 王鎔, when Rong supported Later Tang Zhuangzong he gained much merit and was picked by Zhuangzong to be his officer. (宋史/卷001) Then served under the following dynasties as general. (宋史/卷001) Several days after 956.3.19 named 馬軍副都指揮使. (資治通鑑/卷292)
+	dynasty = 1051151 #Zhuojun Zhao
+	name = "Hongyin"
+	religion = taoist
+	culture = han
+	father = 1300046
+	mother = 1300049
+	trait = skilled_tactician
+	trait = skilled_warrior
+	trait = brave
+	899.1.1 = {
+		birth = yes
+	}
+	899.1.1 = { employer = 1401186 } #Liu Rengong
+	907.5.12 = { employer = 1401188 } #Liu Shouguang
+	913.12.24 = { employer = 1400301 } #Zhou Dewei
+	915.1.1 = { employer = 1410725 } #Wang Rong
+	920.1.1 = { employer = 1412318 } #Li Cunxu
+	926.5.15 = { employer = 1412344 }
+	933.12.15 = { employer = 1412350 }
+	934.5.24 = { employer = 1412361 }
+	937.1.11 = { employer = 1412375 }
+	942.7.28 = { employer = 1412389 }
+	947.1.11 = { employer = 1412397 }
+	948.3.10 = { employer = 1412401 }
+	951.1.2 = { employer = 1401268 }
+	954.2.22 = { employer = 1401283 }
+	956.9.3 = {
+		death = yes
+	}
+	960.10.2 = {
+		name = "Xuanzu"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+
+217721 = { #趙匡胤 Zhao Kuangyin. Emperor Taizu of Song (lived 927-976)(reigned 960-976). In 951 made 滑州副指揮. (宋史/卷001) When Chai Rong was made 開封尹, Kuangyin was made 開封府馬直軍使. (宋史/卷001) In 954.5.1 made 嚴州刺史.  In 956.3.19 captured 滁州. (資治通鑑/卷292) In 956.11.30 made 定國節度使. In 957.6.11 made 義成節度使. (資治通鑑/卷293) In 958.5.31 made 忠武節度使. In 959.8.25 made 歸德節度使. (資治通鑑/卷294)
+	dynasty = 1051151 #Zhuojun Zhao
+	name = "Kuangyin"
+	religion = taoist
+	culture = han
+	father = 215596 # Zhao Hongyin
+	mother = 1401006 # Du
+	#spouse = 1800408 1401091 1401104
+	trait = "skilled_tactician" #military background
+	trait = skilled_warrior
+	trait = "quick"
+	trait = "kind" #remarkable absence of bloodshed in dealing with the former emperor and military commanders
+	trait = "honest" #upfront about his position when dealing with issues
+	trait = "ambitious"
+	trait = "just"
+	927.3.21 = {
+		birth = yes
+	}
+	926.5.15 = { employer = 1412344 }
+	933.12.15 = { employer = 1412350 }
+	934.5.24 = { employer = 1412361 }
+	937.1.11 = { employer = 1412375 }
+	942.7.28 = { employer = 1412389 }
+	947.1.11 = { employer = 1412397 }
+	948.3.10 = { employer = 1412401 }
+	951.1.2 = { employer = 1401098 } #Song Tingwo - 滑州副指揮
+	951.3.10 = { employer = 1403237 } #Li Yun - 滑州副指揮
+	951.5.21 = { employer = 1412007 } #Zhe Congruan - 滑州副指揮
+	951.9.26 = { employer = 1400454 } #Hu Yanke - 滑州副指揮
+	953.4.16 = { employer = 1412472 } #Bai Chongzan - 滑州副指揮
+	953.4.20 = { employer = 1401283 } #Chai Rong - 開封府馬直軍使
+	959.7.27 = { employer = 1401287 }
+	960.2.4 = {
+		create_bloodline = {
+			type = song_taizu_bloodline
+			has_dlc = "Holy Fury"
+		}
+	}
+	976.11.14 = {
+		death = yes
+		name = "Taizu"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+
+217722 = { #趙匡義/趙匡乂 Zhao Kuangyi or 趙光義 Zhao Guangyi or 趙炅 Zhao Jiong. 宋太宗 Emperor Taizong of Song. In 960.2.23 changed name to 趙光義 and made 睦州防禦使. (續資治通鑑長編/卷001) 睦州防禦使 until 960.9.8, on that day made 泰寧軍節度使. (續資治通鑑長編/卷001)
+	dynasty = 1051151 #Zhuojun Zhao
+	name = "Kuangyi"
+	religion = taoist
+	culture = han
+	father = 215596 # Zhao Hongyin
+	mother = 1401006 # Du
+	trait = "skilled_tactician" #military background
+	trait = "ambitious" #suspicious circumstances behind the death of his brother and nephews
+	trait = "just"
+	939.11.20 = {
+		birth = yes
+	}
+	942.7.28 = { employer = 1412389 }
+	947.1.11 = { employer = 1412397 }
+	948.3.10 = { employer = 1412401 }
+	951.1.2 = { employer = 1401268 }
+	954.2.22 = { employer = 1401283 }
+	959.7.27 = { employer = 1401287 }
+	960.2.23 = {
+		name = "Guangyi"
+	}
+	976.11.15={
+		name = "Jiong"
+		create_bloodline = {
+			type = song_taizong_bloodline
+			has_dlc = "Holy Fury"
+		}
+	}
+	997.5.8 = {
+		name = "Taizong"
+		death = yes
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+
+217723 = { #趙德昌 Zhao Dechang or 趙元休 Zhao Yuanxiu or 趙元侃 Zhao Yuankan or 趙恆 Zhao Heng. Emperor Zhenzong of Song (lived 968-1022)(reigned 997-1022)
+	dynasty = 1051151 #Zhuojun Zhao
+	name = "Dechang"
+	religion = taoist
+	culture = han
+	father = 217722 # Emperor Taizong
+	#mother = Li Yuande
+	trait = "fortune_builder" #economic boom
+	trait = "diligent"
+	trait = "patient"
+	968.12.23 = {
+		birth = yes
+	}
+	983.1.1= { 
+		name = "Yuanxiu"
+	}
+	986.1.1= {
+		name = "Yuankan"
+	}
+	995.1.1={
+		name = "Heng"
+	}
+	999.1.1 = { effect={ROOT={add_consort=c_1401325}} }
+	1020.1.1={
+		trait = infirm
+	}
+	1022.3.23 = {
+		name = "Zhenzong"
+		death = death_trait
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+
+217724 = { #趙受益 Zhao Shouyi or 趙禎 Zhao Zhen. Emperor Renzong of Song (lived 1010-1063)(reigned 1022-1063)
+	dynasty = 1051151 #Zhuojun Zhao
+	name = "Shouyi"
+	religion = taoist
+	culture = han
+	father = 217723 # Emperor Zhenzong
+	#mother = # consort Li
+	trait = "thrifty_clerk" #did not deviate much from his father's policy
+	trait = "kind" #known for gentle qualities
+	trait = "humble" #known for frugality
+	1010.5.30 = {
+		birth = yes
+	}
+	1018.1.1 = {
+		name = "Zhen"
+	}
+	1023.1.1 = { effect={ROOT={add_consort=c_1401249}} }
+	1063.3.30 = {
+		name = "Renzong"
+		death = yes
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+
+217725 = { #趙宗實 Zhao Zongshi or 趙曙 Zhao Shu. Emperor Yingzong of Song (lived 1032-1067)(reigned 1063-1067)
+	dynasty = 1051151 #Zhuojun Zhao
+	name = "Zongshi"
+	religion = taoist
+	culture = han
+	#father = X # Zhao Yunrang (996-1059)
+	#mother = # Ren
+	trait = "thrifty_clerk"
+	trait = "weak" #died young
+	1032.2.16 = {
+		birth = yes
+	}
+	1062.1.1 = {
+		name = "Shu"
+		father = 217724 # Adopted by Emperor Renzong
+	}
+	1066.1.1={
+		trait = ill
+	}
+	1067.1.25 = {
+		name = "Yingzong"
+		death = death_trait
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+
+217726 = { #趙仲鍼 Zhao Zhongzhen. Emperor Shenzong of Song (lived 1048-1085)(reigned 1067-1085)
+	dynasty = 1051151 #Zhuojun Zhao
+	name = "Zhongzhen"
+	religion = taoist
+	culture = han
+	father = 217725 # Emperor Yinzong
+	mother = 1401359 # Empress Gao
+	trait = "thrifty_clerk" #supported Wang Anshi's political reforms, but with many backlashes
+	trait = "diligent" #but tried consistently
+	1048.5.25 = {
+		birth = yes
+	}
+	1067.1.25 = {
+		name = "Xu"
+	}
+	1085.4.1 = {
+		name = "Shenzong"
+		trait = ill
+		death = death_trait
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+
+217727 = { #趙傭 Zhao Yong or 趙煦 Zhao Xu. Emperor Zhezong of Song (lived 1076-1100)(reigned 1085-1100)
+	dynasty = 1051151 #Zhuojun Zhao
+	name = "Yong"
+	religion = taoist
+	culture = han
+	father = 217726 # Emperor Shenzong
+	#mother = 
+	trait = "thrifty_clerk" #victim of polarized political scenes from his father's reign
+	trait = "weak" #died young
+	1077.1.4 = {
+		birth = yes
+	}
+	1085.4.1 = {
+		name = "Xu"
+	}
+	1099.5.18={
+		trait = ill
+	}
+	1100.2.23 = {
+		name = "Zhezong"
+		death = death_trait
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+
+217728 = { #趙佶 Zhao Ji. Emperor Huizong of Song (lived 1082-1135)(reigned 1100-1126)
+	dynasty = 1051151 #Zhuojun Zhao
+	name = "Ji"
+	religion = taoist
+	culture = han
+	father = 217726 # Emperor Shenzong
+	#mother = # Empress Chen
+	trait = "indulgent_wastrel" #indeed wasteful
+	trait = "greedy" #exploitation of the populace to support his artistic efforts
+	trait = "poet" #inarguably the most talented emperor-artist of the Song dynasty
+	trait = "trusting" #rampant favoritism in his court
+	trait = "slothful" #rampant favoritism in his court
+	trait = "perceptive" #inarguably the most talented emperor-artist of the Song dynasty
+	1082.6.7 = {
+		birth = yes
+	}
+	1135.6.4 = {
+		name = "Huizong"
+		death = {
+			death_reason = death_dungeon
+			death_reason = death_offmap 
+			killer = 217729 #Emperor Taizong of Jin
+		}
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+}
+
+### Chinese Western Protectorate ###
+244001 = { # (762�787)
+	dynasty = 1055001 #Guo
+	name = "Xin"
+	religion = taoist
+	culture = han
+	trait = fortune_builder
+
+	730.7.28 = {
+		birth = yes
+	}
+	#769.1.1 = {
+	#	add_claim = d_kumul
+	#	add_claim = c_yungguan
+	#	add_claim = c_kumtag
+	#	add_claim = c_lopnor
+	#	add_claim = c_loulan
+	#	add_claim = c_yuni
+	#	add_claim = c_charkliq
+	#	add_claim = c_cherchen
+	#	add_claim = c_cadota
+	#	add_claim = c_mingoi
+	#	add_claim = c_karashar
+	#	add_claim = c_yumen
+	#}
+	787.9.16 = {
+		death = yes
+	}	
+}
+244002 = { # (actually 747�751)
+	dynasty = 1055002 #Gao
+	name = "Xianzhi"
+	religion = taoist
+	culture = han
+
+	747.5.18 = {
+		birth = yes
+	}
+	820.4.23 = {
+		death = yes
+	}	
+}
+244003 = { # (actually 741�747)
+	dynasty = 1055003 #Ye
+	name = "Wenguan"
+	religion = taoist
+	culture = han
+
+	795.1.16 = {
+		birth = yes
+	}
+	867.3.22 = {
+		death = yes
+	}	
+}
+244004 = {
+	dynasty = 1055006 #ZHANG
+	name = "Huaishen"
+	religion = taoist
+	culture = han
+
+	#father=206811 # really his nephew
+	840.6.26 = {
+		birth = yes
+	}
+	910.2.21 = {
+		death = yes
+	}	
+}
+244005 = { # fictitious
+	dynasty = 1055002 #Gao
+	name = "Jiahui"
+	religion = taoist
+	culture = han
+
+	890.1.1 = {
+		birth = yes
+	}
+	970.1.1 = {
+		death = yes
+	}	
+}
+244006 = { # fictitious
+	dynasty = 1055000 #Feng
+	name = "Yizhen"
+	religion = taoist
+	culture = han
+
+	955.1.1 = {
+		birth = yes
+	}
+	1045.1.1 = {
+		death = yes
+	}	
+}
+#244007 unused
+
+#244020-244041 unused
+
+######## /END OF PROTECTOR GENERALS ##############
+
+
+#Heqin to Tibet and Tuyuhun
+247081 = { #文成公主 Princess Wencheng
+	name="Wencheng"
+	female=yes
+	dynasty = 1051150 #Longxi Li
+	religion=buddhist
+	culture="han"
+	father= 247772 #Li Daozong
+	trait="mahayana_buddhist"
+	623.1.1={
+		birth=yes
+	}
+	680.11.1={
+		death=yes
+	}
+}
+
+247099 = { #金城公主 Princess Jincheng
+	name="Jincheng"
+	female=yes
+	dynasty = 1051150 #Longxi Li
+	religion=buddhist
+	culture="han"
+	father = 247916 # Li Shouli, Prince of Bin
+	trait="mahayana_buddhist"
+	698.1.1={
+		birth=yes
+	}
+	739.1.1={
+		death=yes
+	}
+}
+
+247101 = { #姜墀尊 Qiang Chizun, བཙུན་མོ་ལྗངམོ་ཁྲི་བཙུན  btsun mo ljangamo khri btsun/tsün mo jangmo tri tsün
+	name="Tritsün"
+	female=yes
+	dynasty=1000049702 #Meng
+	culture = wuman
+	religion = buddhist
+	father = 1417007
+	trait=mahayana_buddhist
+	710.1.1={
+		birth=yes
+	}
+	757.1.1={
+		death=yes
+	}
+}
+
+247388 = { #光化公主 Princess Guanghua
+	name="Guanghua"
+	female=yes
+	dynasty= 105837 #Yang
+	religion="taoist"
+	culture="han"
+	father= 247737 #Yang Hong
+	trait=fair
+	580.1.1={
+		birth=yes
+	}
+	622.1.1={
+		death=yes
+	}
+}
+
+247389 = { #弘化公主 Princess Honghua
+	name="Honghua"
+	female=yes
+	dynasty = 1051150 #Longxi Li
+	religion="taoist"
+	culture="han"
+	father= 247775 #Li Daoming
+	trait=fair
+	623.1.1={
+		birth=yes
+	}
+	698.4.18={
+		death=yes
+	}
+}
+
+247390 = { #李季英 Li Jiying, 金城縣主 princess of Jincheng
+	name="Jiying" #Lady Jincheng
+	female=yes
+	dynasty = 1051150 #Longxi Li
+	religion="taoist"
+	culture="han"
+	father= 247777 #Li Dao'en, Prince of Guiji
+	642.1.1={
+		birth=yes
+	}
+	718.1.1={
+		death=yes
+	}
+}
+
+247391 = { #金明縣主 Princess Jinming
+	name="Xiao"
+	female=yes
+	dynasty = 1051150 #Longxi Li
+	religion="taoist"
+	culture="han"
+	father= 247785 #Li Chongyi
+	#birth and death dates unknown
+	646.1.1={
+		birth=yes
+	}
+	703.1.1={
+		death=yes
+	}
+}
+
+#Qocho
+
+#248079 unused
+#242100 unused
+#242101-242102 unused
+
+#Governors and military advisors in 769 start
+
+#248148-248157 unused
+
+#marriages to Tuyuhun heirs in exile
+247722 = { #姑臧縣主 Princess Guzang
+	name="Guzang" #Lady Guzang
+	female=yes
+	dynasty = 1051150 #Longxi Li
+	religion="taoist"
+	culture="han"
+	father= 247788 #Li Rong
+	673.1.1={
+		birth=yes
+	}
+	718.1.1={
+		death=yes
+	}
+}
+
+247723 = { #太原郡夫人 Lady of Taiyuan 
+	name=" "
+	female=yes
+	dynasty = 1051152 # Wu
+	religion="taoist"
+	culture="han"
+	father= 247813 #Wu Yanshou
+	703.1.1={
+		birth=yes
+	}
+	725.1.1={
+		add_spouse = 247399
+	}
+	735.1.1={
+		death=yes
+	}
+}
+
+#Sui dynasty
+
+247725 = { #楊堅 Yang Jian. Emperor Wen of Sui (lived 541-604)(reigned 581-604)
+	dynasty = 105837 # Hongnong Yang
+	name = "Jian" 
+	religion = buddhist
+	culture = han
+	trait = diligent
+	father = 247730 #Yang Zhong, Duke of Sui
+	mother = 247732 #L� Gutao
+	# spouse = Dugu Qieluo, Empress Wenxian
+	541.7.21 = {
+		birth = yes
+	}
+	#557 - Real date of marriage to Empress Wenxian
+	560.1.1 = {
+		add_spouse = 247742
+		effect={c_247742={add_lover=ROOT}}
+	}
+	604.8.13 = {
+		death = { death_reason = death_murder killer = 247726 }
+		name = "Gaozu"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+} 
+247726 = { #楊英 Yang Ying or 楊廣 Yang Guang. Emperor Yang(di) of Sui (lived 569-618)(reigned 604-618)
+	dynasty = 105837 # Hongnong Yang
+	name = "Ying" 
+	religion = buddhist
+	culture = han
+	trait = cruel
+	trait = deceitful
+	father = 247725 #Emperor Wen of Sui
+	mother = 247742 #Dugu Qieluo, Empress Wenxian
+	# spouse = Princess Xiao of Western Liang
+	569.1.1 = {
+		birth = yes
+	}
+	569.4.1 = {
+		name = "Guang"
+	} #father has name changed after consulting with oracles
+	582.1.1 = {
+		add_spouse = 247754
+	}
+	618.4.11 = {
+		death = { death_reason = death_murder killer = "令狐行達" }
+		name = "Shizu"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+} 
+247727 = { #楊昭 Yang Zhao, Crown Prince Yuande
+	dynasty = 105837 # Hongnong Yang
+	name = "Zhao" 
+	religion = buddhist
+	culture = han
+	father = 247726 #Emperor Yang(di) of Sui
+	mother = 247754 #Princess Xiao of Western Liang
+	# spouse = Crown Princess Wei, daughter of Wei Shou
+	584.1.1 = {
+		birth = yes
+	}
+	606.7.1 = {
+		death = yes
+	}
+	618.6.22 = {
+		name = "Shizong"
+	}
+} 
+247728 = { #楊侑 Yang You. Emperor Gong of Sui (lived 605-619)(reigned 617-618)
+	dynasty = 105837 # Hongnong Yang
+	name = "You" 
+	religion = buddhist
+	culture = han
+	father = 247727 #Crown Prince Yuande
+	# mother = Crown Princess Wei, daughter of Wei Shou
+	605.1.1 = {
+		birth = yes
+	}
+	619.9.14 = {
+		death = { death_reason = death_murder_unknown }
+	}
+} 
+247729 = { #楊禎 Yang Zhen, Duke of Sui
+	dynasty = 105837 # Hongnong Yang
+	name = "Zhen" 
+	religion = buddhist
+	culture = han
+	father = 247789 #Yang Lie, Duke of Sui
+	#birth date unknown
+	476.1.1 = {
+		birth = yes
+	}
+	528.1.1 = {
+		death = { death_reason = death_battle killer = "鮮于修禮" }
+	}
+} 
+247730 = { #楊忠 Yang Zhong, Duke of Sui
+	dynasty = 105837 # Hongnong Yang
+	name = "Zhong" 
+	religion = buddhist
+	culture = han
+	father = 247729 #Yang Zhen, Duke of Sui
+	# spouse = L� Gutao
+	507.1.1 = {
+		birth = yes
+	}
+	538.1.1 = {
+		add_spouse = 247732
+	}
+	568.8.17 = {
+		trait = ill
+		death = death_trait
+	}
+	581.3.4 = {
+		name = "Taizu"
+	}
+} 
+247731 = { #楊愛敬 Yang Aijing
+	dynasty = 105837 # Hongnong Yang
+	name = "Aijing"
+	religion = buddhist
+	culture = han
+	father = 247789 #Yang Lie, Duke of Sui
+	#birth and death dates unknown, died young
+	480.1.1 = {
+		birth = yes
+	}
+	534.1.1 = {
+		death = yes
+	}
+} 
+247732 = { #呂苦桃 L� Gutao
+	female=yes
+	dynasty = 1055033 # L�
+	name = "Gutao" 
+	religion = taoist
+	culture = han
+	# father = L� Shangzhou
+	# mother = Lady Yao
+	# spouse = Yang Zhong, Duke of Sui
+	#birth and death dates unknown
+	519.1.1 = {
+		birth = yes
+	}
+	569.1.1 = {
+		death = yes
+	}
+} 
+247733 = { #楊瓚 Yang Zan or 楊慧 Yang Hui
+	dynasty = 105837 # Hongnong Yang
+	name = "Zan" 
+	religion = buddhist
+	culture = han
+	father = 247730 #Yang Zhong, Duke of Sui
+	mother = 247732 #L� Gutao
+	# spouse = Princess Shunyang
+	549.1.1 = {
+		birth = yes
+	}
+	591.9.16 = {
+		death = yes
+	}
+} 
+247734 = { #楊嵩 Yang Song
+	dynasty = 105837 # Hongnong Yang
+	name = "Song" 
+	religion = buddhist
+	culture = han
+	father = 247730 #Yang Zhong, Duke of Sui
+	#mother = 247732 #L� Gutao
+	#birth and death dates unknown. Died young
+	553.1.1 = {
+		birth = yes
+	}
+	570.1.1 = {
+		death = yes
+	}
+} 
+247735 = { #楊爽 Yang Shuang
+	dynasty = 105837 # Hongnong Yang
+	name = "Shuang" 
+	religion = buddhist
+	culture = han
+	father = 247730 #Yang Zhong, Duke of Sui
+	#mother = 247732 #L� Gutao
+	563.1.1 = {
+		birth = yes
+	}
+	587.8.25 = {
+		trait = ill
+		death = death_trait
+	}
+} 
+247736 = { #楊元孫 Yang Yuansun
+	dynasty = 105837 # Hongnong Yang
+	name = "Yuansun" 
+	religion = buddhist
+	culture = han
+	father = 247731 #Yang Aijing
+	#birth and death dates unknown
+	517.1.1 = {
+		birth = yes
+	}
+	580.1.1 = {
+		death = yes
+	}
+} 
+247737 = { #楊弘 Yang Hong
+	name = "Hong" 
+	dynasty = 105837 # Hongnong Yang
+	religion = buddhist
+	culture = han
+	father = 247736 #Yang Yuansun
+	#birth date unknown
+	550.1.1 = {
+		birth = yes
+	}
+	607.1.1 = {
+		death = yes
+	}
+} 
+247738 = { #楊整 Yang Zheng
+	dynasty = 105837 # Hongnong Yang
+	name = "Zheng" 
+	religion = buddhist
+	culture = han
+	father = 247730 #Yang Zhong, Duke of Sui
+	mother = 247732 #L� Gutao
+	#birth date unknown
+	543.1.1 = {
+		birth = yes
+	}
+	576.1.1 = {
+		death = yes
+	}
+} 
+247739 = { #萬安公主 Princess Wan'an or 安成公主 Princess Ancheng
+	female=yes
+	dynasty = 105837 # Hongnong Yang
+	name = "Wan'an" 
+	religion = buddhist
+	culture = han
+	father = 247730 #Yang Zhong, Duke of Sui
+	mother = 247732 #L� Gutao
+	# spouse = 竇榮定
+	#birth and death dates unknown
+	548.1.1 = {
+		birth = yes
+	}
+	589.1.1 = {
+		death = yes
+	}
+} 
+247740 = { #昌樂公主 Princess Changle
+	female=yes
+	dynasty = 105837 # Hongnong Yang
+	name = "Changle" 
+	religion = buddhist
+	culture = han
+	father = 247730 #Yang Zhong, Duke of Sui
+	mother = 247732 #L� Gutao
+	# spouse = 豆盧通
+	#birth and death dates unknown
+	558.1.1 = {
+		birth = yes
+	}
+	597.1.1 = {
+		death = yes
+	}
+} 
+247741 = { #楊氏 Lady Yang
+	female=yes
+	dynasty = 105837 # Hongnong Yang
+	name = " " 
+	religion = buddhist
+	culture = han
+	father = 247730 #Yang Zhong, Duke of Sui
+	mother = 247732 #L� Gutao
+	#birth and death dates unknown
+	545.1.1 = {
+		birth = yes
+	}
+	573.1.1 = {
+		add_spouse = 1402205
+	}
+	603.1.1 = {
+		death = yes
+	}
+} 
+247742 = { #獨孤伽羅 Empress Wenxian, Dugu Qieluo
+	female=yes
+	dynasty = 1055114 # Dugu
+	name = "Qieluo" 
+	religion = taoist
+	culture = xianbei
+	father = 247743 #General Dugu Xin
+	# mother = Lady Cui
+	544.1.1 = {
+		birth = yes
+	}
+	602.9.10 = {
+		death = yes
+	}
+} 
+247743 = { #獨孤信 General Dugu Xin
+	dynasty = 1055114 # Dugu
+	name = "Xin" 
+	religion = taoist
+	culture = xianbei
+	# father = Dugu Ku
+	# spouses = Lady Cui and Lady Guo
+	502.1.1 = {
+		birth = yes
+	}
+	557.1.1 = {
+		death = yes
+	}
+} 
+247744 = { #獨孤氏 Lady Dugu, mother of Gaozu of Tang
+	female=yes
+	dynasty = 1055114 # Dugu
+	name = "Shi" 
+	religion = taoist
+	culture = xianbei
+	father = 247743 #General Dugu Xin
+	# mother = Lady Cui
+	530.1.1 = {
+		birth = yes
+	}
+	608.1.1 = {
+		death = yes
+	}
+} 
+247745 = { #楊勇 Yang Yong
+	dynasty = 105837 # Hongnong Yang
+	name = "Yong" 
+	religion = buddhist
+	culture = han
+	father = 247725 #Emperor Wen of Sui
+	mother = 247742 #Dugu Qieluo, Empress Wenxian
+	# spouse = Lady Yuan Shi
+	#birth date unknown
+	568.1.1 = {
+		birth = yes
+	}
+	604.1.1 = {
+		death = { death_reason = death_execution_strangulation killer = "楊約" }
+	}
+} 
+247746 = { #楊麗華 Yang Lihua, 樂平公主 Princess Leping
+	female=yes
+	dynasty = 105837 # Hongnong Yang
+	name = "Lihua" 
+	religion = buddhist
+	culture = han
+	father = 247725 #Emperor Wen of Sui
+	mother = 247742 #Dugu Qieluo, Empress Wenxian
+	# spouse = Emperor Xuan of Northern Zhou
+	561.1.1 = {
+		birth = yes
+	}
+	609.1.1 = {
+		death = yes
+	}
+} 
+247747 = { #襄國公主 Princess Xiangguo
+	female=yes
+	dynasty = 105837 # Hongnong Yang
+	name = "Xiangguo" 
+	religion = buddhist
+	culture = han
+	father = 247725 #Emperor Wen of Sui
+	mother = 247742 #Dugu Qieluo, Empress Wenxian
+	# spouse = 李長雅
+	#birth and death dates unknown
+	564.1.1 = {
+		birth = yes
+	}
+	580.1.1 = { add_spouse = 1406354 }
+	612.1.1 = {
+		death = yes
+	}
+} 
+247748 = { #廣平公主 Princess Guangping
+	female=yes
+	dynasty = 105837 # Hongnong Yang
+	name = "Guangping" 
+	religion = buddhist
+	culture = han
+	father = 247725 #Emperor Wen of Sui
+	mother = 247742 #Dugu Qieluo, Empress Wenxian
+	# spouse = 宇文靜禮
+	566.1.1 = {
+		birth = yes
+	}
+	606.1.1 = {
+		death = yes
+	}
+} 
+247749 = { #楊俊 Yang Jun
+	dynasty = 105837 # Hongnong Yang
+	name = "Jun" 
+	religion = buddhist
+	culture = han
+	father = 247725 #Emperor Wen of Sui
+	mother = 247742 #Dugu Qieluo, Empress Wenxian
+	# spouse = Princess Cui
+	571.1.1 = {
+		birth = yes
+	}
+	600.8.4 = {
+		death = yes
+	}
+} 
+247750 = { #楊慶 Yang Qing
+	dynasty = 105837 # Hongnong Yang
+	name = "Qing" 
+	religion = buddhist
+	culture = han
+	father = 247737 #Yang Hong
+	#birth and death dates unknown
+	573.12.1 = {
+		birth = yes
+	}
+	604.1.1 = {
+		death = yes
+	}
+} 
+247751 = { #楊秀 Yang Xiu
+	dynasty = 105837 # Hongnong Yang
+	name = "Xiu" 
+	religion = buddhist
+	culture = han
+	father = 247725 #Emperor Wen of Sui
+	mother = 247742 #Dugu Qieluo, Empress Wenxian
+	# spouse = Concubine Dong Mei (m. 578-597.8.31)
+	#birth date unknown
+	574.1.1 = {
+		birth = yes
+	}
+	618.1.1 = {
+		death = yes
+	}
+} 
+247752 = { #楊阿五 Yang Awu, 蘭陵公主 Princess of Lanling
+	female=yes
+	dynasty = 105837 # Hongnong Yang
+	name = "Awu" 
+	religion = buddhist
+	culture = han
+	father = 247725 #Emperor Wen of Sui
+	mother = 247742 #Dugu Qieluo, Empress Wenxian
+	# spouses = Wang Fengxiao, Liu Shu
+	573.12.1 = {
+		birth = yes
+	}
+	604.1.1 = {
+		death = yes
+	}
+} 
+247753 = { #楊諒 Yang Liang
+	dynasty = 105837 # Hongnong Yang
+	name = "Liang" 
+	religion = buddhist
+	culture = han
+	father = 247725 #Emperor Wen of Sui
+	mother = 247742 #Dugu Qieluo, Empress Wenxian
+	# spouse = Dou Lushi, daughter of Dou Luji
+	#birth date unknown
+	575.1.1 = {
+		birth = yes
+	}
+	605.1.1 = {
+		death = yes
+	}
+} 
+247754 = { #皇后蕭氏 Empress Xiao
+	female=yes
+	dynasty = 1055084 #Lanling Xiao
+	name = " "
+	religion = taoist
+	culture = han
+	father = 1402608
+	#mother = #Lady Zhang
+	# spouses = Emperor Yang of Sui
+	567.1.1 = {
+		birth = yes
+	}
+	647.4.17 = {
+		death = yes
+	}
+} 
+247755 = { #楊暕 Yang Jian
+	dynasty = 105837 # Hongnong Yang
+	name = "Jian" 
+	religion = buddhist
+	culture = han
+	father = 247726 #Emperor Yang(di) of Sui
+	mother = 247754 #Princess Xiao of Western Liang
+	#spouse = 1408784
+	585.1.1 = {
+		birth = yes
+	}
+	618.1.1 = {
+		death = yes
+	}
+} 
+247756 = { #南陽公主 Princess Nanyang
+	female=yes
+	dynasty = 105837 # Hongnong Yang
+	name = "Nanyang" 
+	religion = buddhist
+	culture = han
+	father = 247726 #Emperor Yang(di) of Sui
+	mother = 247754 #Princess Xiao of Western Liang
+	# spouse = Yuwen Shiji
+	#death date unknown
+	586.1.1 = {
+		birth = yes
+	}
+	630.1.1 = {
+		death = yes
+	}
+} 
+247757 = { #皇女楊氏 Consort Yang of Emperor Taizong of Tang
+	female=yes
+	dynasty = 105837 # Hongnong Yang
+	name = "Shi" 
+	religion = buddhist
+	culture = han
+	father = 247726 #Emperor Yang(di) of Sui
+	# spouse = Emperor Taizong of Tang
+	trait = child_of_consort
+	600.1.1 = {
+		birth = yes
+	}
+	643.1.1 = {
+		death = yes
+	}
+} 
+247758 = { #楊杲 Yang Gao
+	dynasty = 105837 # Hongnong Yang
+	name = "Gao" 
+	religion = buddhist
+	culture = han
+	father = 247726 #Emperor Yang(di) of Sui
+	# mother = # Consort Xiao
+	trait = child_of_consort
+	607.1.1 = {
+		birth = yes
+	}
+	618.6.1 = {
+		death = yes
+	}
+} 
+247759 = { #楊倓 Yang Tan
+	dynasty = 105837 # Hongnong Yang
+	name = "Tan" 
+	religion = buddhist
+	culture = han
+	father = 247727 #Crown Prince Yuande
+	# mother = Consort Liu
+	trait = child_of_consort
+	603.1.1 = {
+		birth = yes
+	}
+	618.4.11 = {
+		death = yes
+	}
+} 
+247760 = { #楊侗 Yang Tong
+	dynasty = 105837 # Hongnong Yang
+	name = "Tong" 
+	religion = buddhist
+	culture = han
+	father = 247727 #Crown Prince Yuande
+	# mother = Consort Liu
+	trait = child_of_consort
+	604.1.1 = {
+		birth = yes
+	}
+	619.7.1 = {
+		death = { death_reason = death_murder_poison killer = "王世充" }
+	}
+} 
+247761 = { #楊浩 Yang Hao
+	dynasty = 105837 # Hongnong Yang
+	name = "Hao" 
+	religion = buddhist
+	culture = han
+	father = 247749 #Prince Xiao of Qin
+	# mother = #Princess Cui
+	587.11.22 = {
+		birth = yes
+	}
+	618.10.1 = {
+		death = yes
+	}
+} 
+
+#Extended Tang family members
+247762 = { #李虎 Li Hu
+	dynasty = 1051150 #Longxi Li
+	name = "Hu" 
+	religion = taoist
+	culture = han
+	father = 1402082
+	# mother = #Lady Jia
+	504.1.1 = {
+		birth = yes
+	}
+	551.6.1 = {
+		death = yes
+	}
+	618.6.9 = {
+		name = "Taizu"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+} 
+247763 = { #李昞 Li Bing
+	dynasty = 1051150 #Longxi Li
+	name = "Bing" 
+	religion = taoist
+	culture = han
+	father = 247762 #Li Hu
+	528.1.1 = {
+		birth = yes
+	}
+	528.1.1 = {
+		add_spouse = 247744 #Lady Dugu
+	}
+	572.1.1 = {
+		death = yes
+	}
+	618.6.9 = {
+		name = "Shizu"
+		effect = {
+			set_character_flag = given_temple_name_by_script
+		}
+	}
+} 
+247764 = { #李澄 Li Cheng
+	dynasty = 1051150 #Longxi Li
+	name = "Cheng" 
+	religion = taoist
+	culture = han
+	father = 247763 #Li Bing
+	mother = 247744 #Lady Dugu
+	#birth and death dates unknown
+	547.1.1 = {
+		birth = yes
+	}
+	593.1.1 = {
+		death = yes
+	}
+} 
+247765 = { #李湛 Li Zhan
+	dynasty = 1051150 #Longxi Li
+	name = "Zhan" 
+	religion = taoist
+	culture = han
+	father = 247763 #Li Bing
+	mother = 247744 #Lady Dugu
+	549.1.1 = {
+		birth = yes
+	}
+	608.1.1 = {
+		death = yes
+	}
+} 
+247766 = { # Li Boyi
+	dynasty = 1051150 #Longxi Li
+	name = "Boyi" 
+	religion = taoist
+	culture = han
+	father = 247765 #Li Zhan
+	592.1.1 = {
+		birth = yes
+	}
+	671.1.1 = {
+		death = yes
+	}
+} 
+247767 = { #李奉慈 Li Fengci
+	dynasty = 1051150 #Longxi Li
+	name = "Fengci" 
+	religion = taoist
+	culture = han
+	father = 247765 #Li Zhan
+	595.1.1 = {
+		birth = yes
+	}
+	664.1.1 = {
+		death = yes
+	}
+} 
+247768 = { #李洪 Li Hong
+	dynasty = 1051150 #Longxi Li
+	name = "Hong" 
+	religion = taoist
+	culture = han
+	father = 247763 #Li Bing
+	mother = 247744 #Lady Dugu
+	553.1.1 = {
+		birth = yes
+	}
+	618.1.1 = {
+		death = yes
+	}
+} 
+247769 = { #同安公主 Princess Tong'an
+	female=yes
+	dynasty = 1051150 #Longxi Li
+	name = "Tong'an" 
+	religion = taoist
+	culture = han
+	father = 247763 #Li Bing
+	mother = 247744 #Lady Dugu
+	# spouse = Wang Yu
+	559.1.1 = {
+		birth = yes
+	}
+	612.1.1 = {
+		death = yes
+	}
+} 
+247770 = { #李璋 Li Zhang. First 汴州刺史, later 梁州刺史. 
+	dynasty = 1051150 #Longxi Li
+	name = "Zhang" 
+	religion = taoist
+	culture = han
+	father = 247762 #Li Hu
+	#birth date unknown
+	532.1.1 = {
+		birth = yes
+	}
+	580.1.1 = {
+		death = {death_reason = death_execution killer = 247725 }
+	}
+} 
+247771 = { #李韶 Li Shao
+	dynasty = 1051150 #Longxi Li
+	name = "Shao" 
+	religion = taoist
+	culture = han
+	father = 247773 #Li Hui
+	#birth and death dates unknown
+	572.1.1 = {
+		birth = yes
+	}
+	615.1.1 = {
+		death = yes
+	}
+} 
+247772 = { #李道宗 Li Daozong
+	dynasty = 1051150 #Longxi Li
+	name = "Daozong" 
+	religion = taoist
+	culture = han
+	father = 247771 #Li Shao
+	600.1.1 = {
+		birth = yes
+	}
+	653.1.1 = {
+		death = yes
+	}
+} 
+247773 = { #李繪 Li Hui. Married a daughter of 竇榮定 and 安成郡長公主. During Sui 鄭州瀛洲刺史.
+	dynasty = 1051150 #Longxi Li
+	name = "Hui" 
+	religion = taoist
+	culture = han
+	father = 247762 #Li Hu
+	#birth ad dteath dates unknown.
+	533.1.1 = {
+		birth = yes
+	}
+	600.1.1 = {
+		death = yes
+	}
+} 
+247774 = { #李贄 Li Zhi
+	dynasty = 1051150 #Longxi Li
+	name = "Zhi" 
+	religion = taoist
+	culture = han
+	father = 247773 #Li Hui
+	#birth ad dteath dates unknown.
+	574.1.1 = {
+		birth = yes
+	}
+	620.1.1 = {
+		death = yes
+	}
+} 
+247775 = { #李道明 Li Daoming. Before death made 鄆州刺史.
+	dynasty = 1051150 #Longxi Li
+	name = "Daoming" 
+	religion = taoist
+	culture = han
+	father = 247774 #Li Zhi
+	#birth and death dates unknown
+	606.1.1 = {
+		birth = yes
+	}
+	658.1.1 = {
+		death = yes
+	}
+} 
+247776 = { #李道玄 Li Daoxuan. In 618 made 洛州刺史.
+	dynasty = 1051150 #Longxi Li
+	name = "Daoxuan" 
+	religion = taoist
+	culture = han
+	father = 247774 #Li Zhi
+	604.1.1 = {
+		birth = yes
+	}
+	622.11.25 = {
+		death = {death_reason = death_battle killer = "劉黑闥" }
+	}
+} 
+247777 = { #李道恩 Li Dao'en, 会稽郡王 Prince of Kuaiji
+	dynasty = 1051150 #Longxi Li
+	name = "Dao'en" 
+	religion = taoist
+	culture = han
+	father = 247771 #unknown, but possible
+	#birth and death dates unknown
+	620.1.1 = {
+		birth = yes
+	}
+	678.1.1 = {
+		death = yes
+	}
+} 
+247778 = { #李蔚 Li Wei
+	dynasty = 1051150 #Longxi Li
+	name = "Wei" 
+	religion = taoist
+	culture = han
+	father = 247762 #Li Hu
+	#birth and death dates unknown
+	535.1.1 = {
+		birth = yes
+	}
+	598.1.1 = {
+		death = yes
+	}
+} 
+247779 = { #李安 Li An
+	dynasty = 1051150 #Longxi Li
+	name = "An" 
+	religion = taoist
+	culture = han
+	father = 247778 #Li Wei
+	#birth and death dates unknown
+	558.1.1 = {
+		birth = yes
+	}
+	623.1.1 = {
+		death = yes
+	}
+} 
+247780 = { #李瓊 Li Qiong
+	dynasty = 1051150 #Longxi Li
+	name = "Qiong" 
+	religion = taoist
+	culture = han
+	father = 247779 #Li An
+	#birth and death dates unknown
+	567.1.1 = {
+		birth = yes
+	}
+	600.1.1 = {
+		death = yes
+	}
+} 
+247781 = { #李琛 Li Chen
+	dynasty = 1051150 #Longxi Li
+	name = "Chen" 
+	religion = taoist
+	culture = han
+	father = 247779 #Li An
+	#birth date unknown
+	569.1.1 = {
+		birth = yes
+	}
+	620.1.1 = {
+		death = yes
+	}
+} 
+247782 = { #李孝恭 Li Xiaogong
+	dynasty = 1051150 #Longxi Li
+	name = "Xiaogong" 
+	religion = taoist
+	culture = han
+	father = 247779 #Li An
+	591.1.1 = {
+		birth = yes
+	}
+	640.1.1 = {
+		death = yes
+	}
+} 
+247783 = { #李瑊 Li Jian
+	dynasty = 1051150 #Longxi Li
+	name = "Jian" 
+	religion = taoist
+	culture = han
+	father = 247779 #Li An
+	#birth and death dates unknown
+	593.1.1 = {
+		birth = yes
+	}
+	638.1.1 = {
+		death = yes
+	}
+}
+247784 = { #李瓌 Li Gui
+	dynasty = 1051150 #Longxi Li
+	name = "Gui" 
+	religion = taoist
+	culture = han
+	father = 247779 #Li An
+	#birth date unknown
+	596.1.1 = {
+		birth = yes
+	}
+	630.1.1 = {
+		death = yes
+	}
+} 
+247785 = { #李崇義 Li Chongyi. 蒲同絳陝幽夏六州刺史、益州長史
+	dynasty = 1051150 #Longxi Li
+	name = "Chongyi" 
+	religion = taoist
+	culture = han
+	father = 247782 #Li Xiaogong
+	#birth and death dates unknown
+	625.1.1 = {
+		birth = yes
+	}
+	682.1.1 = {
+		death = yes
+	}
+} 
+247786 = { #李崇晦 Li Chonghui or 李晦 Li Hui
+	dynasty = 1051150 #Longxi Li
+	name = "Chonghui" 
+	religion = taoist
+	culture = han
+	father = 247782 #Li Xiaogong
+	628.1.1 = {
+		birth = yes
+	}
+	689.3.23 = {
+		death = yes
+	}
+} 
+247787 = { #李崇真 Li Chongzhen
+	dynasty = 1051150 #Longxi Li
+	name = "Chongzhen" 
+	religion = taoist
+	culture = han
+	father = 247782 #Li Xiaogong
+	#birth and death dates unknown
+	631.1.1 = {
+		birth = yes
+	}
+	693.1.1 = {
+		death = yes
+	}
+} 
+247788 = { #李榮 Li Rong
+	dynasty = 1051150 #Longxi Li
+	name = "Rong" 
+	religion = taoist
+	culture = han
+	father = 247786 #Li Hui
+	645.1.1 = {
+		birth = yes
+	}
+	699.1.1 = {
+		death = yes
+	}
+} 
+
+#Extended family members of Sui dynasty
+247789 = { #楊烈 Yang Lie
+	dynasty = 105837 # Hongnong Yang
+	name = "Lie" 
+	religion = buddhist
+	culture = han
+	father = 1404936
+	#birth and death dates unknown
+	470.1.1 = {
+		birth = yes
+	}
+	501.1.1 = {
+		death = yes
+	}
+} 
+#247790 = { # Yang Zhongkui
+#	dynasty = 105837 # Hongnong Yang
+#	name = "Zhongkui" 
+#	religion = buddhist
+#	culture = han
+#	father = 247789 #Yang Lie, Duke of Sui
+#	479.1.1 = {
+#		birth = yes
+#	}
+#	520.1.1 = {
+#		death = yes
+#	}
+#} 
+247791 = { #楊興 Yang Xing
+	dynasty = 105837 # Hongnong Yang
+	name = "Xing" 
+	religion = buddhist
+	culture = han
+	father = 1405258
+	#birth and death dates unknown
+	437.1.1 = {
+		birth = yes
+	}
+	500.1.1 = {
+		death = yes
+	}
+} 
+247792 = { #楊國 Yang Guo
+	dynasty = 105837 # Hongnong Yang
+	name = "Guo" 
+	religion = buddhist
+	culture = han
+	father = 247791 #Yang Xing
+	#birth and death dates unknown
+	462.1.1 = {
+		birth = yes
+	}
+	531.1.1 = {
+		death = yes
+	}
+} 
+247793 = { #楊紹 Yang Shao
+	dynasty = 105837 # Hongnong Yang
+	name = "Shao" 
+	religion = buddhist
+	culture = han
+	father = 1405259 #Yang Ding
+	#birth date unknown
+	521.1.1 = {
+		birth = yes
+	}
+	572.1.1 = {
+		death = yes
+	}
+} 
+247794 = { #楊雄 Yang Xiong or 楊士雄 Yang Shixiong
+	dynasty = 105837 # Hongnong Yang
+	name = "Xiong" 
+	religion = buddhist
+	culture = han
+	father = 247793 #Yang Shao
+	542.1.1 = {
+		birth = yes
+	}
+	612.3.19 = {
+		trait=ill
+		death = death_trait
+	}
+} 
+247795 = { #楊達 Yang Da
+	dynasty = 105837 # Hongnong Yang
+	name = "Da" 
+	religion = buddhist
+	culture = han
+	father = 247793 #Yang Shao
+	548.1.1 = {
+		birth = yes
+	}
+	612.6.7 = {
+		death = yes
+	}
+} 
+247796 = { #楊貴 Yang Gui or 楊士貴 Yang Shigui
+	dynasty = 105837 # Hongnong Yang
+	name = "Gui" 
+	religion = buddhist
+	culture = han
+	father = 247793 #Yang Shao
+	#birth and death dates unknown
+	550.1.1 = {
+		birth = yes
+	}
+	618.1.1 = {
+		death = yes
+	}
+} 
+247797 = { #楊恭仁 Yang Gongren
+	dynasty = 105837 # Hongnong Yang
+	name = "Gongren" 
+	religion = buddhist
+	culture = han
+	father = 247794 #Yang Xiong
+	568.1.1 = {
+		birth = yes
+	}
+	639.12.30 = {
+		death = yes
+	}
+} 
+247798 = { #楊師道 Yang Shidao
+	dynasty = 105837 # Hongnong Yang
+	name = "Shidao" 
+	religion = buddhist
+	culture = han
+	father = 247794 #Yang Xiong
+	#birth date unknown
+	570.1.1 = {
+		birth = yes
+	}
+	647.1.1 = {
+		death = yes
+	}
+} 
+247799 = { #楊則 Yang Ze
+	dynasty = 105837 # Hongnong Yang
+	name = "Ze" 
+	religion = buddhist
+	culture = han
+	father = 247795 #Yang Da
+	#birth and death dates unknown
+	565.1.1 = {
+		birth = yes
+	}
+	618.1.1 = {
+		death = yes
+	}
+} 
+247800 = { #楊緘 Yang Jian
+	dynasty = 105837 # Hongnong Yang
+	name = "Jian" 
+	religion = buddhist
+	culture = han
+	father = 247795 #Yang Da
+	#birth and death dates unknown
+	569.1.1 = {
+		birth = yes
+	}
+	619.1.1 = {
+		death = { death_reason = death_murder killer = "王世充" }
+	}
+} 
+247801 = { #楊寶 Yang Bao
+	female=yes
+	dynasty = 105837 # Hongnong Yang
+	name = "Bao" 
+	religion = buddhist
+	culture = han
+	father = 247795 #Yang Da
+	#spouse = 郭倫
+	#birth and death dates unknown
+	575.1.1 = {
+		birth = yes
+	}
+	623.1.1 = {
+		death = yes
+	}
+} 
+247802 = { #孝明高皇后 Empress Xiaominggao
+	female=yes
+	dynasty = 105837 # Hongnong Yang
+	name = "Shi" 
+	religion = buddhist
+	culture = han
+	father = 247795 #Yang Da
+	#spouse = #Wu Shiyue
+	579.1.1 = {
+		birth = yes
+	}
+	670.10.3 = {
+		death = yes
+	}
+} 
+
+#Extended family members of Wu Zetian
+247803 = { #武士彠 Wu Shiyue
+	dynasty = 1051152 # Wu
+	name = "Shiyue"
+	religion = taoist
+	culture = han
+	father = 247815 #Wu Hua
+	#mother = Lady Zhao
+	#spouses = Lady Xiangli and Lady Yang
+	559.1.1 = {
+		birth = yes
+	}
+	619.1.1 = {
+		add_spouse = 247802
+	}
+	635.1.1 = {
+		death = yes
+	}
+}
+247804 = { #武元慶 Wu Yuanqing
+	dynasty = 1051152 # Wu
+	name = "Yuanqing"
+	religion = taoist
+	culture = han
+	father = 247803 #Wu Shiyue
+	#mother = Lady Xiangli
+	#birth and death dates unknown
+	597.1.1 = {
+		birth = yes
+	}
+	665.1.1 = {
+		death = yes
+	}
+}
+247805 = { #武三思 Wu Sansi
+	dynasty = 1051152 # Wu
+	name = "Sansi"
+	religion = taoist
+	culture = han
+	father = 247804 #Wu Yuanqing
+	#birth date unknown
+	632.1.1 = {
+		birth = yes
+	}
+	707.1.1 = {
+		death = yes
+	}
+}
+247806 = { #武崇訓 Wu Chongxun
+	dynasty = 1051152 # Wu
+	name = "Chongxun"
+	religion = taoist
+	culture = han
+	father = 247805 #Wu Sansi
+	#spouse = Princess Anle
+	683.1.1 = {
+		birth = yes
+	}
+	701.10.1 = {
+		add_spouse = 247939
+	}
+	707.1.1 = {
+		death = yes
+	}
+}
+247807 = { #武繼植 Wu Jizhi
+	dynasty = 1051152 # Wu
+	name = "Jizhi"
+	religion = taoist
+	culture = han
+	father = 247806 #Wu Chongxun
+	mother = 247939 # Princess Anle
+	#birth and death dates unknown
+	701.6.1 = {
+		birth = yes
+	}
+	749.1.1 = {
+		death = yes
+	}
+}
+247808 = { #武元爽 Wu Yuanshuang
+	dynasty = 1051152 # Wu
+	name = "Yuanshuang"
+	religion = taoist
+	culture = han
+	father = 247803 #Wu Shiyue
+	#mother = Lady Xiangli
+	#birth and death dates unknown
+	604.1.1 = {
+		birth = yes
+	}
+	672.1.1 = {
+		death = yes
+	}
+}
+247809 = { #武承嗣 Wu Chengsi
+	dynasty = 1051152 # Wu
+	name = "Chengsi"
+	religion = taoist
+	culture = han
+	father = 247808 #Wu Yuanshuang
+	649.1.1 = {
+		birth = yes
+	}
+	698.7.22 = {
+		death = yes
+	}
+}
+247810 = { #武延基 Wu Yanji
+	dynasty = 1051152 # Wu
+	name = "Yanji"
+	religion = taoist
+	culture = han
+	father = 247809 #Wu Chengsi
+	# spouse = Princess Yongtai
+	679.1.1 = {
+		birth = yes
+	}
+	701.1.1 = {
+		add_spouse = 247938
+	}
+	701.10.9 = {
+		death = yes
+	}
+}
+247811 = { #武延義 Wu Yanyi
+	dynasty = 1051152 # Wu
+	name = "Yanyi"
+	religion = taoist
+	culture = han
+	father = 247809 #Wu Chengsi
+	#birth and death dates unknown
+	680.1.1 = {
+		birth = yes
+	}
+	730.1.1 = {
+		death = yes
+	}
+}
+247812 = { #武延安 Wu Yan'an
+	dynasty = 1051152 # Wu
+	name = "Yan'an"
+	religion = taoist
+	culture = han
+	father = 247809 #Wu Chengsi
+	#birth and death dates unknown
+	681.1.1 = {
+		birth = yes
+	}
+	728.1.1 = {
+		death = yes
+	}
+}
+247813 = { #武延壽 Wu Yanshou
+	dynasty = 1051152 # Wu
+	name = "Yanshou"
+	religion = taoist
+	culture = han
+	father = 247809 #Wu Chengsi
+	#birth and death dates unknown
+	682.1.1 = {
+		birth = yes
+	}
+	724.1.1 = {
+		death = yes
+	}
+}
+247814 = { #武延秀 Wu Yanxiu
+	dynasty = 1051152 # Wu
+	name = "Yanxiu"
+	religion = taoist
+	culture = han
+	father = 247809 #Wu Chengsi
+	#spouse = Princess Anle
+	685.1.1 = {
+		birth = yes
+	}
+	707.8.17 = {
+		add_spouse = 247939
+	}
+	710.7.21 = {
+		death = yes
+	}
+}
+247815 = { #武華 Wu Hua
+	dynasty = 1051152 # Wu
+	name = "Hua"
+	religion = taoist
+	culture = han
+	#father = Wu Jian
+	#mother = Lady Song
+	#spouse = Lady Zhao
+	#birth and death dates unknown
+	524.1.1 = {
+		birth = yes
+	}
+	590.1.1 = {
+		death = yes
+	}
+}
+247816 = { #武士稜 Wu Shileng
+	dynasty = 1051152 # Wu
+	name = "Shileng"
+	religion = taoist
+	culture = han
+	father = 247815 #Wu Hua
+	#mother = Lady Zhao
+	#birth and death dates unknown
+	547.1.1 = {
+		birth = yes
+	}
+	603.1.1 = {
+		death = yes
+	}
+}
+247817 = { #武沖 Wu Chong Wu
+	dynasty = 1051152 # Wu
+	name = "Chong"
+	religion = taoist
+	culture = han
+	father = 247815 #Wu Hua
+	#mother = Lady Zhao
+	#birth and death dates unknown
+	550.1.1 = {
+		birth = yes
+	}
+	618.1.1 = {
+		death = yes
+	}
+}
+247818 = { #武弘度 Wu Hongdu
+	dynasty = 1051152 # Wu
+	name = "Hongdu"
+	religion = taoist
+	culture = han
+	father = 247817 #Wu Chong
+	#birth and death dates unknown
+	614.1.1 = {
+		birth = yes
+	}
+	673.1.1 = {
+		death = yes
+	}
+}
+247819 = { #武攸暨 Wu Youji
+	dynasty = 1051152 # Wu
+	name = "Youji"
+	religion = taoist
+	culture = han
+	father = 247818 #Wu Hong
+	#spouse = Princess Taiping
+	#birth date unknown
+	656.1.1 = {
+		birth = yes
+	}
+	690.1.1 = {
+		add_spouse = 247920
+	}
+	712.7.17 = {
+		death = yes
+	}
+}
+247820 = { #武崇敏 Wu Chongmin
+	dynasty = 1051152 # Wu
+	name = "Chongmin"
+	religion = taoist
+	culture = han
+	father = 247819 #Wu Youji
+	mother = 247920 #Princess Taiping
+	#birth and death dates unknown
+	691.1.1 = {
+		birth = yes
+	}
+	713.8.2 = {
+		death = yes
+	}
+}
+247821 = { #武崇行 Wu Chongxing
+	dynasty = 1051152 # Wu
+	name = "Chongxing"
+	religion = taoist
+	culture = han
+	father = 247819 #Wu Youji
+	mother = 247920 # Princess Taiping
+	#birth and death dates unknown
+	693.1.1 = {
+		birth = yes
+	}
+	713.8.2 = {
+		death = yes
+	}
+}
+247822 = { #武氏 Lady Wu
+	female=yes
+	dynasty = 1051152 # Wu
+	name = " "
+	religion = taoist
+	culture = han
+	father = 247819 #Wu Youji
+	mother = 247920 # Princess Taiping
+	#birth and death dates unknown
+	695.1.1 = {
+		birth = yes
+	}
+	734.1.1 = {
+		death = yes
+	}
+}
+247823 = { #永和縣主 Princess Yonghe. Married 崔瑤.
+	female=yes
+	dynasty = 1051152 # Wu
+	name = "Yonghe"
+	religion = taoist
+	culture = han
+	father = 247819 #Wu Youji
+	mother = 247920 # Princess Taiping
+	#birth and death dates unknown
+	697.1.1 = {
+		birth = yes
+	}
+	738.1.1 = {
+		death = yes
+	}
+}
+247824 = { #武順 Wu Shun
+	female = yes
+	dynasty = 1051152 # Wu
+	name = "Shun"
+	religion = taoist
+	culture = han
+	father = 247803 #Wu Shiyue
+	mother = 247802 #Lady Yang
+	#spouse = Helan Yueshi
+	#death date unknown
+	623.1.1 = {
+		birth = yes
+	}
+	665.10.1 = {
+		death = yes
+	}
+}
+247825 = { #賀蘭越石 Helan Yueshi or 賀蘭安石 Helan Anshi
+	dynasty = 105853 # Helan
+	name = "Yueshi"
+	religion = taoist
+	culture = han
+	#spouse = Wu Shun
+	#birth and death dates unknown
+	620.1.1 = {
+		birth = yes
+	}
+	640.1.1 = {
+		add_spouse = 247824
+	}
+	663.1.1 = {
+		death = yes
+	}
+}
+247826 = { #賀蘭敏之 Helan Minzhi
+	dynasty = 105853 # Helan
+	name = "Minzhi"
+	religion = taoist
+	culture = han
+	father = 247825 #Helan Yueshi
+	mother = 247824 #Wu Shun
+	642.1.1 = {
+		birth = yes
+	}
+	671.1.1 = {
+		death = yes
+	}
+}
+247827 = { # Helan Wuwen
+	dynasty = 105853 # Helan
+	name = "Wuwen"
+	religion = taoist
+	culture = han
+	father = 247825 #Helan Yueshi
+	mother = 247824 #Wu Shun
+	657.1.1 = {
+		birth = yes
+	}
+	721.1.1 = {
+		death = yes
+	}
+}
+247828 = { #賀蘭氏 Lady Helan
+	female=yes
+	dynasty = 105853 # Helan
+	name = " "
+	religion = taoist
+	culture = han
+	father = 247825 #Helan Yueshi
+	mother = 247824 #Wu Shun
+	#birth date unknown
+	644.1.1 = {
+		birth = yes
+	}
+	666.9.1 = {
+		death = yes
+	}
+}
+247829 = { #賀蘭琬 Helan Wan
+	dynasty = 105853 # Helan
+	name = "Wan"
+	religion = taoist
+	culture = han
+	father = 247826 #Helan Minzhi
+	662.1.1 = {
+		birth = yes
+	}
+	732.1.1 = {
+		death = yes
+	}
+}
+247830 = { #武氏 Lady Wu, younger sister of Wu Zetian
+	female = yes
+	dynasty = 1051152 # Wu
+	name = " "
+	religion = taoist
+	culture = han
+	father = 247803 #Wu Shiyue
+	mother = 247802 #Lady Yang
+	#spouse = Guo Xiaoshen
+	625.1.1 = {
+		birth = yes
+	}
+	689.1.1 = {
+		death = yes
+	}
+}
+
+#Close Tang family members
+247831 = { #太穆皇后 Empress Taimu Duchess Dou, wife of Gaozu
+	female = yes
+	dynasty = 1055047 # Dou
+	name = "Taimu"
+	religion = taoist
+	culture = han
+	#father = #Dou Yi
+	#mother = #Princess Xiangyang of Northern Zhou
+	#spouse = Emperor Gaozu of Tang
+	569.1.1 = {
+		birth = yes
+	}
+	613.1.1 = {
+		death = yes
+	}
+}
+247832 = { #李建成 Li Jiancheng, Crown Prince Yin
+	dynasty = 1051150 #Longxi Li
+	name = "Jiancheng"
+	religion = taoist
+	culture = han
+	father = 217700 # Emperor Gaozu
+	mother = 247831 # Empress Dou
+	# spouse = Zheng Guanyin
+	589.1.1 = {
+		birth = yes
+	}
+	614.1.1 = {
+		add_spouse = 247833
+	}
+	626.7.2 = {
+		death = yes
+	}
+}
+247833 = { #鄭觀音 Zheng Guanyin
+	female=yes
+	#dynasty = 1055022 # Zheng
+	name = "Guanyin"
+	religion = taoist
+	culture = han
+	#	father = 217700 # Zheng Jibo
+	# spouse = Li Jiancheng
+	599.1.1 = {
+		birth = yes
+	}
+	676.1.1 = {
+		death = yes
+	}
+}
+247834 = { #李承宗 Li Chengzong
+	dynasty = 1051150 #Longxi Li
+	name = "Chengzong"
+	religion = taoist
+	culture = han
+	father = 247832 # Li Jiancheng
+	mother = 247833 # Zheng Guanyin
+	#birth and death dates unknown
+	615.1.1 = {
+		birth = yes
+	}
+	617.1.1 = {
+		death = yes
+	}
+}
+247835 = { #李承道 Li Chengdao
+	dynasty = 1051150 #Longxi Li
+	name = "Chengdao"
+	religion = taoist
+	culture = han
+	father = 247832 # Li Jiancheng
+	mother = 247833 # Zheng Guanyin
+	#birth date unknown
+	618.1.1 = {
+		birth = yes
+	}
+	626.7.2 = {
+		death = yes
+	}
+}
+247836 = { # Li Chengde
+	dynasty = 1051150 #Longxi Li
+	name = "Chengde"
+	religion = taoist
+	culture = han
+	father = 247832 # Li Jiancheng
+	mother = 247833 # Zheng Guanyin
+	620.1.1 = {
+		birth = yes
+	}
+	626.7.2 = {
+		death = yes
+	}
+}
+247837 = { # Li Chengxun
+	dynasty = 1051150 #Longxi Li
+	name = "Chengxun"
+	religion = taoist
+	culture = han
+	father = 247832 # Li Jiancheng
+	mother = 247833 # Zheng Guanyin
+	621.1.1 = {
+		birth = yes
+	}
+	626.7.2 = {
+		death = yes
+	}
+}
+247838 = { # Li Chengming
+	dynasty = 1051150 #Longxi Li
+	name = "Chengming"
+	religion = taoist
+	culture = han
+	father = 247832 # Li Jiancheng
+	mother = 247833 # Zheng Guanyin
+	622.1.1 = {
+		birth = yes
+	}
+	626.7.2 = {
+		death = yes
+	}
+}
+247839 = { # Li Chengyi
+	dynasty = 1051150 #Longxi Li
+	name = "Chengyi"
+	religion = taoist
+	culture = han
+	father = 247832 # Li Jiancheng
+	mother = 247833 # Zheng Guanyin
+	624.1.1 = {
+		birth = yes
+	}
+	626.7.2 = {
+		death = yes
+	}
+}
+247840 = { # Li Wanshun
+	female=yes
+	dynasty = 1051150 #Longxi Li
+	name = "Wanshun"
+	religion = taoist
+	culture = han
+	father = 247832 # Li Jiancheng
+	mother = 247833 # Zheng Guanyin
+	# spouse = Liu Yingdao
+	622.1.1 = {
+		birth = yes
+	}
+	661.7.8 = {
+		death = yes
+	}
+}
+247841 = { #李玄霸 Li Xuanba
+	dynasty = 1051150 #Longxi Li
+	name = "Xuanba"
+	religion = taoist
+	culture = han
+	father = 217700 # Emperor Gaozu
+	mother = 247831 # Empress Dou
+	599.1.1 = {
+		birth = yes
+	}
+	614.1.1 = {
+		death = yes
+	}
+}
+247842 = { #李元吉 Li Yuanji
+	dynasty = 1051150 #Longxi Li
+	name = "Yuanji"
+	religion = taoist
+	culture = han
+	father = 217700 # Emperor Gaozu
+	mother = 247831 # Empress Dou
+	# spouse = Princess Yang
+	603.1.1 = {
+		birth = yes
+	}
+	617.1.1 = {
+		add_spouse = 247843
+	}
+	626.7.2 = {
+		death = yes
+	}
+}
+247843 = { #巢王妃楊氏 Princess Yang. 楊恭仁、楊師道兄弟的從侄女. Not a daughter of Gongren, but a daughter of his cousin
+	female=yes
+	dynasty = 105837 # Hongnong Yang
+	name = "Shi" 
+	religion = taoist
+	culture = han
+	father = 247800 #Yang Jian - unknown, but possible
+	601.1.1 = {
+		birth = yes
+	}
+	637.1.1 = {
+		death = yes
+	}
+} 
+247844 = { #李承業 Li Chengye
+	dynasty = 1051150 #Longxi Li
+	name = "Chengye"
+	religion = taoist
+	culture = han
+	father = 247842 # Li Yuanji
+	mother = 247843 # Princess Yang
+	#birth date unknown
+	618.1.1 = {
+		birth = yes
+	}
+	626.7.2 = {
+		death = yes
+	}
+}
+247845 = { #李承鸞 Li Chengluan
+	dynasty = 1051150 #Longxi Li
+	name = "Chengluan"
+	religion = taoist
+	culture = han
+	father = 247842 # Li Yuanji
+	mother = 247843 # Princess Yang
+	#birth date unknown
+	619.1.1 = {
+		birth = yes
+	}
+	626.7.2 = {
+		death = yes
+	}
+}
+247846 = { #李承獎 Li Chengjiang
+	dynasty = 1051150 #Longxi Li
+	name = "Chengjiang"
+	religion = taoist
+	culture = han
+	father = 247842 # Li Yuanji
+	mother = 247843 # Princess Yang
+	#birth date unknown
+	620.1.1 = {
+		birth = yes
+	}
+	626.7.2 = {
+		death = yes
+	}
+}
+247847 = { #李承裕 Li Chengyu
+	dynasty = 1051150 #Longxi Li
+	name = "Chengyu"
+	religion = taoist
+	culture = han
+	father = 247842 # Li Yuanji
+	mother = 247843 # Princess Yang
+	#birth date unknown
+	622.1.1 = {
+		birth = yes
+	}
+	626.7.2 = {
+		death = yes
+	}
+}
+247848 = { #李承度 Li Chengdu
+	dynasty = 1051150 #Longxi Li
+	name = "Chengdu"
+	religion = taoist
+	culture = han
+	father = 247842 # Li Yuanji
+	mother = 247843 # Princess Yang
+	#birth date unknown
+	626.1.1 = {
+		birth = yes
+	}
+	626.7.2 = {
+		death = yes
+	}
+}
+247849 = { #文安縣主 Princess Wen'an
+	female=yes
+	dynasty = 1051150 #Longxi Li
+	name = "Wen'an"
+	religion = taoist
+	culture = han
+	father = 247842 # Li Yuanji
+	mother = 247843 # Princess Yang
+	623.1.1 = {
+		birth = yes
+	}
+	648.1.1 = {
+		death = yes
+	}
+}
+247850 = { #李令 Li Ling, 新野縣主 Princess Xinye. Married 裴重暉.
+	female=yes
+	dynasty = 1051150 #Longxi Li
+	name = "Ling"
+	religion = taoist
+	culture = han
+	father = 247842 #Li Yuanji
+	mother = 247843 #Princess Yang
+	624.1.1 = {
+		birth = yes
+	}
+	638.1.1 = {
+		#add_spouse = 裴重暉
+	}
+	662.1.1 = {
+		death = yes
+	}
+}
+247851 = { #平陽公主 Princess Pingyang
+	female=yes
+	dynasty = 1051150 #Longxi Li
+	name = "Pingyang"
+	religion = taoist
+	culture = han
+	father = 217700 # Emperor Gaozu
+	mother = 247831 # Empress Dou
+	# spouse = Chai Shao (588�638)
+	598.1.1 = {
+		birth = yes
+	}
+	623.3.14 = {
+		death = yes
+	}
+}
+247852 = { # Chai Shao
+	dynasty = 105854 # Chai
+	name = "Shao"
+	religion = taoist
+	culture = han
+	# father = # Chai Shen
+	# spouse = # Princess Pingyang
+	588.1.1 = {
+		birth = yes
+	}
+	614.1.1 = {
+		add_spouse = 247851
+	}
+	638.1.1 = {
+		death = yes
+	}
+}
+247853 = { # Chai Zhewei
+	dynasty = 105854 # Chai
+	name = "Zhewei"
+	religion = taoist
+	culture = han
+	father = 247852 # Chai Shao
+	mother = 247851 # Princess Pingyang
+	615.1.1 = {
+		birth = yes
+	}
+	659.1.1 = {
+		death = yes
+	}
+}
+247854 = { # Chai Lingwu
+	dynasty = 105854 # Chai
+	name = "Lingwu"
+	religion = taoist
+	culture = han
+	father = 247852 # Chai Shao
+	mother = 247851 # Princess Pingyang
+	# spouse = # Princess Baling
+	617.1.1 = {
+		birth = yes
+	}
+	639.1.1 = {
+		add_spouse = 247895
+	}
+	653.3.6 = {
+		death = yes
+	}
+}
+247855 = { #襄陽公主 Princess Xiangyang
+	female=yes
+	dynasty = 1051150 #Longxi Li
+	name = "Xiangyang"
+	religion = taoist
+	culture = han
+	father = 217700 # Emperor Gaozu
+	# spouse = Dao Dan
+	625.1.1 = {
+		birth = yes
+	}
+	659.1.1 = {
+		death = yes
+	}
+}
+247856 = { # Dao Dan
+	dynasty = 105855 # Dao
+	name = "Dan"
+	religion = taoist
+	culture = han
+	# spouse = # Princess Pingyang
+	614.1.1 = {
+		birth = yes
+	}
+	641.1.1 = {
+		add_spouse = 247855
+	}
+	664.1.1 = {
+		death = yes
+	}
+}
+247857 = { # Dao Xiaochen
+	dynasty = 105855 # Dao
+	name = "Xiaochen"
+	religion = taoist
+	culture = han
+	father = 247856 # Dao Dan
+	mother = 247855 # Princess Pingyang
+	# spouse = # Lady Ping
+	643.1.1 = {
+		birth = yes
+	}
+	690.1.1 = {
+		death = yes
+	}
+}
+247858 = { # Consort Dao
+	female = yes
+	dynasty = 105855 # Dao
+	name = "Shi"
+	religion = taoist
+	culture = han
+	father = 247856 # Xiaochen
+	# mother = # Lady Ping
+	# spouse = # Emperor Ruizong of Tang
+	663.1.1 = {
+		birth = yes
+	}
+	693.1.1 = {
+		death = yes
+	}
+}
+247859 = { #李智雲 Li Zhiyun
+	dynasty = 1051150 #Longxi Li
+	name = "Zhiyun"
+	religion = taoist
+	culture = han
+	father = 217700 # Emperor Gaozu
+	605.1.1 = {
+		birth = yes
+	}
+	617.1.1 = {
+		death = yes
+	}
+}
+247860 = { # Zhangsun Sheng
+	dynasty = 1055110 # Zhangsun
+	name = "Sheng"
+	religion = taoist
+	culture = han
+	# father = # Zhangsun Si
+	# spouse = # Lady Gao, daughter of Gao Jingde
+	557.1.1 = {
+		birth = yes
+	}
+	617.1.1 = {
+		death = yes
+	}
+}
+247861 = { # Zhangsun Xingbu
+	dynasty = 1055110 # Zhangsun
+	name = "Xingbu"
+	religion = taoist
+	culture = han
+	father = 247860 # Zhangsun Sheng
+	# mother = # Lady Gao, daughter of Gao Jingde
+	585.1.1 = {
+		birth = yes
+	}
+	604.1.1 = {
+		death = yes
+	}
+}
+247862 = { # Zhangsun Heng'an
+	dynasty = 1055110 # Zhangsun
+	name = "Heng'an"
+	religion = taoist
+	culture = han
+	father = 247860 # Zhangsun Sheng
+	# mother = # Lady Gao, daughter of Gao Jingde
+	588.1.1 = {
+		birth = yes
+	}
+	627.1.1 = {
+		death = yes
+	}
+}
+247863 = { # Zhangsun Anye
+	dynasty = 1055110 # Zhangsun
+	name = "Anye"
+	religion = taoist
+	culture = han
+	father = 247860 # Zhangsun Sheng
+	# mother = # Lady Gao, daughter of Gao Jingde
+	591.1.1 = {
+		birth = yes
+	}
+	632.1.1 = {
+		death = yes
+	}
+}
+247864 = { # Zhangsun Wuji
+	dynasty = 1055110 # Zhangsun
+	name = "Wuji"
+	religion = taoist
+	culture = han
+	father = 247860 # Zhangsun Sheng
+	# mother = # Lady Gao, daughter of Gao Jingde
+	594.1.1 = {
+		birth = yes
+	}
+	659.1.1 = {
+		death = yes
+	}
+}
+247865 = { # Zhangsun Chong
+	dynasty = 1055110 # Zhangsun
+	name = "Chong"
+	religion = taoist
+	culture = han
+	father = 247864 # Zhangsun Wuji
+	# spouse = # Tang Princess Changle
+	612.1.1 = {
+		birth = yes
+	}
+	637.1.1 = {
+		add_spouse = 247894
+	}
+	659.1.1 = {
+		death = yes
+	}
+}
+247866 = { # Empress Wende
+	female = yes
+	dynasty = 1055110 # Zhangsun
+	name = "Wende"
+	religion = taoist
+	culture = han
+	father = 247860 # Zhangsun Sheng
+	# mother = # Lady Gao, daughter of Gao Jingde
+	# spouse = Emperor Taizong of Tang
+	601.1.1 = {
+		birth = yes
+	}
+	636.7.28 = {
+		death = yes
+	}
+}
+247867 = { # Xu Xiaode
+	dynasty = 1055031 # Xu
+	name = "Xiaode"
+	religion = taoist
+	culture = han
+	599.1.1 = {
+		birth = yes
+	}
+	662.1.1 = {
+		death = yes
+	}
+}
+247868 = { # Xu Hui
+	female = yes
+	dynasty = 1055031 # Xu
+	name = "Hui"
+	religion = taoist
+	culture = han
+	father = 247867 # Xu Xiaode
+	trait = fair
+	trait = poet
+	626.1.1 = {
+		birth = yes
+	}
+	650.1.1 = {
+		death = yes
+	}
+}
+247869 = { #韋珪 Wei Gui, 貴妃 Consort
+	female = yes
+	dynasty = 1055025 # Wei
+	name = "Gui"
+	religion = taoist
+	culture = han
+	father = 1405620
+	# mother = # Lady Yang
+	597.1.1 = {
+		birth = yes
+	}
+	665.9.28 = {
+		death = yes
+	}
+}
+247870 = { # Consort Yin
+	female = yes
+	dynasty = 1055069 # Yin
+	name = "Fei"
+	religion = taoist
+	culture = han
+	# father = # Yin Shishi
+	599.1.1 = {
+		birth = yes
+	}
+	643.1.1 = {
+		death = yes
+	}
+}
+247871 = { # Consort Yan
+	female = yes
+	dynasty = 1055037 # Yan
+	name = "Shi"
+	religion = taoist
+	culture = han
+	609.1.1 = {
+		birth = yes
+	}
+	671.7.2 = {
+		death = yes
+	}
+}
+247872 = { #李承乾 Crown Prince Li Chengqian
+	dynasty = 1051150 #Longxi Li
+	name = "Chengqian"
+	religion = taoist
+	culture = han
+	father = 217701 # Emperor Taizong
+	mother = 247866 # Empress Wende
+	# spouse = Lady Su
+	618.1.1 = {
+		birth = yes
+	}
+	645.1.5 = {
+		death = yes
+	}
+}
+247873 = { #李象 Li Xiang
+	dynasty = 1051150 #Longxi Li
+	name = "Xiang"
+	religion = taoist
+	culture = han
+	father = 247872 # Crown Prince Li Chengqian
+	# mother = # Lady Su
+	# spouse = Lady Su
+	638.5.16 = {
+		birth = yes
+	}
+	687.1.1 = {
+		death = yes
+	}
+}
+247874 = { #李寬 Li Kuan
+	dynasty = 1051150 #Longxi Li
+	name = "Kuan"
+	religion = taoist
+	culture = han
+	father = 217701 # Emperor Taizong
+	# mother = # mother unknown
+	trait = child_of_consort
+	619.1.1 = {
+		birth = yes
+	}
+	630.1.1 = {
+		death = yes
+	}
+}
+247875 = { #李恪 Li Ke
+	dynasty = 1051150 #Longxi Li
+	name = "Ke"
+	religion = taoist
+	culture = han
+	father = 217701 # Emperor Taizong
+	mother = 247757 # Consort Yang
+	trait = child_of_consort
+	trait = duelist
+	trait = strong
+	619.1.1 = {
+		birth = yes
+	}
+	653.3.10 = {
+		death = yes
+	}
+}
+247876 = { #李千里 Li Qianli
+	dynasty = 1051150 #Longxi Li
+	name = "Qianli"
+	religion = taoist
+	culture = han
+	father = 247875 # Li Ke
+	646.1.1 = {
+		birth = yes
+	}
+	707.8.6 = {
+		death = yes
+	}
+}
+247877 = { #李瑋 Li Wei
+	dynasty = 1051150 #Longxi Li
+	name = "Wei"
+	religion = taoist
+	culture = han
+	father = 247875 # Li Ke
+	647.1.1 = {
+		birth = yes
+	}
+	682.4.4 = {
+		death = yes
+	}
+}
+247878 = { #李琨 Li Kun
+	dynasty = 1051150 #Longxi Li
+	name = "Kun"
+	religion = taoist
+	culture = han
+	father = 247875 # Li Ke
+	649.1.1 = {
+		birth = yes
+	}
+	702.1.1 = {
+		death = yes
+	}
+}
+247879 = { #李禕 Li Yi
+	dynasty = 1051150 #Longxi Li
+	name = "Yi"
+	religion = taoist
+	culture = han
+	father = 247878 # Li Kun
+	665.1.1 = {
+		birth = yes
+	}
+	743.1.1 = {
+		death = yes
+	}
+}
+247880 = { #李璄 Li Jing
+	dynasty = 1051150 #Longxi Li
+	name = "Jing"
+	religion = taoist
+	culture = han
+	father = 247875 # Li Ke
+	653.1.1 = {
+		birth = yes
+	}
+	713.1.1 = {
+		death = yes
+	}
+}
+247881 = { #新安公主 Princess Xin'an
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Xin'an"
+	religion = taoist
+	culture = han
+	father = 247875 # Li Ke
+	# spouse = # Yuan Sizhong
+	648.1.1 = {
+		birth = yes
+	}
+	717.1.1 = {
+		death = yes
+	}
+}
+247882 = { #李泰 Li Tai
+	dynasty = 1051150 #Longxi Li
+	name = "Tai"
+	religion = taoist
+	culture = han
+	father = 217701 # Emperor Taizong
+	mother = 247866 # Empress Wende
+	# spouse = # Yan Wan (622-690)
+	620.1.1 = {
+		birth = yes
+	}
+	653.1.20 = {
+		death = yes
+	}
+}
+247883 = { #李欣 Li Xin
+	dynasty = 1051150 #Longxi Li
+	name = "Xin"
+	religion = taoist
+	culture = han
+	father = 247882 # Li Tai
+	# mother = # Yan Wan (622-690)
+	633.1.1 = {
+		birth = yes
+	}
+	685.1.1 = {
+		death = yes
+	}
+}
+247884 = { #李徽 Li Hui
+	dynasty = 1051150 #Longxi Li
+	name = "Hui"
+	religion = taoist
+	culture = han
+	father = 247882 # Li Tai
+	# mother = # Yan Wan (622-690)
+	644.1.1 = {
+		birth = yes
+	}
+	683.1.1 = {
+		death = yes
+	}
+}
+247885 = { #李祐 Li You
+	dynasty = 1051150 #Longxi Li
+	name = "You"
+	religion = taoist
+	culture = han
+	father = 217701 # Emperor Taizong
+	mother = 247870 # Consort Yin
+	#spouse = 1408792
+	trait = child_of_consort
+	621.1.1 = {
+		birth = yes
+	}
+	643.1.1 = {
+		death = yes
+	}
+}
+247886 = { #李愔 Li Yin
+	dynasty = 1051150 #Longxi Li
+	name = "Yin"
+	religion = taoist
+	culture = han
+	father = 217701 # Emperor Taizong
+	mother = 247757 # Consort Yang
+	trait = child_of_consort
+	621.1.1 = {
+		birth = yes
+	}
+	667.1.1 = {
+		death = yes
+	}
+}
+247887 = { #李惲 Li Yun
+	dynasty = 1051150 #Longxi Li
+	name = "Yun"
+	religion = taoist
+	culture = han
+	father = 217701 # Emperor Taizong
+	# mother = # Consort Wang
+	trait = child_of_consort
+	622.1.1 = {
+		birth = yes
+	}
+	674.1.1 = {
+		death = yes
+	}
+}
+247888 = { #李貞 Li Zhen
+	dynasty = 1051150 #Longxi Li
+	name = "Zhen"
+	religion = taoist
+	culture = han
+	father = 217701 # Emperor Taizong
+	mother = 247871 # Consort Yan
+	trait = child_of_consort
+	627.12.1 = {
+		birth = yes
+	}
+	688.10.12 = {
+		death = yes
+	}
+}
+247889 = { #李慎 Li Shen
+	dynasty = 1051150 #Longxi Li
+	name = "Shen"
+	religion = taoist
+	culture = han
+	father = 217701 # Emperor Taizong
+	mother = 247869 # Consort Wei
+	trait = child_of_consort
+	629.1.1 = {
+		birth = yes
+	}
+	689.1.1 = {
+		death = yes
+	}
+}
+247890 = { #李囂 Li Xiao
+	dynasty = 1051150 #Longxi Li
+	name = "Xiao"
+	religion = taoist
+	culture = han
+	father = 217701 # Emperor Taizong
+	mother = 247871 # Consort Yan
+	trait = child_of_consort
+	630.1.1 = {
+		birth = yes
+	}
+	632.1.1 = {
+		death = yes
+	}
+}
+247891 = { #李簡 Li Jian
+	dynasty = 1051150 #Longxi Li
+	name = "Jian"
+	religion = taoist
+	culture = han
+	father = 217701 # Emperor Taizong
+	trait = child_of_consort
+	631.1.1 = {
+		birth = yes
+	}
+	632.1.1 = {
+		death = yes
+	}
+}
+247892 = { #李福 Li Fu
+	dynasty = 1051150 #Longxi Li
+	name = "Fu"
+	religion = taoist
+	culture = han
+	father = 217701 # Emperor Taizong
+	mother = 247757 # Consort Yang
+	trait = child_of_consort
+	634.1.1 = {
+		birth = yes
+	}
+	670.9.13 = {
+		death = yes
+	}
+}
+247893 = { #李明 Li Ming
+	dynasty = 1051150 #Longxi Li
+	name = "Ming"
+	religion = taoist
+	culture = han
+	father = 217701 # Emperor Taizong
+	mother = 247757 # Consort Yang
+	trait = child_of_consort
+	640.1.1 = {
+		birth = yes
+	}
+	682.1.1 = {
+		death = {death_reason = death_suicide }
+	}
+}
+247894 = { #李麗質 Li Lizhi, 長樂公主 Princess Changle
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Lizhi"
+	religion = taoist
+	culture = han
+	father = 217701 # Emperor Taizong
+	mother = 247866 # Empress Wende
+	# spouse = # Zhangsun Chong
+	621.1.1 = {
+		birth = yes
+	}
+	643.9.28 = {
+		death = yes
+	}
+}
+247895 = { #巴陵公主[ Princess Baling
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Baling"
+	religion = taoist
+	culture = han
+	father = 217701 # Emperor Taizong
+	# spouse = # Chai Lingwu
+	trait = child_of_consort
+	621.1.1 = {
+		birth = yes
+	}
+	653.3.6 = {
+		death = yes
+	}
+}
+247896 = { #城陽公主 Princess Chengyang
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Chengyang"
+	religion = taoist
+	culture = han
+	father = 217701 # Emperor Taizong
+	mother = 247866 # Empress Wende
+	# spouses = # Du He and Xue Yao
+	626.1.1 = {
+		birth = yes
+	}
+	638.1.1 = { add_spouse = 1400396 }	
+	671.5.16 = {
+		death = yes
+	}
+}
+247897 = { #薛瓘 Xue Yao
+	dynasty = 1055065 #Hedong Xue
+	name = "Yao"
+	religion = taoist
+	culture = han
+	father = 1405440
+	# spouse = # Princess Chengyang
+	617.1.1 = {
+		birth = yes
+	}
+	645.1.1 = {
+		add_spouse = 247896
+	}
+	671.1.1 = {
+		death = yes
+	}
+}
+247898 = { #薛顗 Xue Shao
+	dynasty = 1055065 #Hedong Xue
+	name = "Shao"
+	religion = taoist
+	culture = han
+	father = 247897 # Xue Yao
+	mother = 247896 # Princess Chengyang
+	# spouse = # Princess Taiping
+	652.1.1 = {
+		birth = yes
+	}
+	681.1.1 = {
+		add_spouse = 247920
+	}
+	688.1.1 = {
+		death = yes
+	}
+}
+247899 = { #高陽公主 Princess Gaoyang
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Gaoyang"
+	religion = taoist
+	culture = han
+	trait = deceitful
+	trait = wroth
+	father = 217701 # Emperor Taizong
+	# spouse = # Fang Yi'ai
+	# lover = Bianji
+	627.1.1 = {
+		birth = yes
+	}
+	653.3.6 = {
+		death = yes
+	}
+}
+247900 = { #房玄齡 Fang Xuanling
+	dynasty = 1055058 # Fang
+	name = "Xuanling"
+	religion = taoist
+	culture = han
+	579.1.1 = {
+		birth = yes
+	}
+	648.8.18 = {
+		death = yes
+	}
+}
+247901 = { #房遺愛 Fang Yi'ai
+	dynasty = 1055058 # Fang
+	name = "Yi'ai"
+	religion = taoist
+	culture = han
+	father = 247900 # Fang Xuanling
+	# spouse = # Princess Gaoyang
+	620.1.1 = {
+		birth = yes
+	}
+	648.1.1 = {
+		add_spouse = 247899
+	}
+	653.3.6 = {
+		death = yes
+	}
+}
+247902 = { #王仁佑 Wang Renyou
+	dynasty = 1055005 # Wang
+	name = "Renyou"
+	religion = taoist
+	culture = han
+	# father = # Wang Sizheng
+	597.1.1 = {
+		birth = yes
+	}
+	659.1.1 = {
+		death = yes
+	}
+}
+247903 = { #王皇后 Empress Wang
+	female = yes
+	dynasty = 1055005 # Wang
+	name = " "
+	religion = taoist
+	culture = han
+	father = 247902 # Wang Renyou
+	# spouse = # Emperor Gaozong of Tang
+	628.1.1 = {
+		birth = yes
+	}
+	655.11.27 = {
+		death = { death_reason = death_execution killer = 217704 }
+	}
+}
+247904 = { #蕭淑妃 Consort Xiao
+	female = yes
+	dynasty = 1055084 # Xiao
+	name = " "
+	religion = taoist
+	culture = han
+	father = 1402789 #unknown
+	# spouse = # Emperor Gaozong of Tang
+	#birth date unknown
+	627.1.1 = {
+		birth = yes
+	}
+	655.11.27 = {
+		death = { death_reason = death_execution killer = 217704 }
+	}
+}
+247905 = { # Consort Liu
+	female = yes
+	dynasty = 1000048824 # Liu
+	name = "Shi"
+	religion = taoist
+	culture = han
+	# spouse = # Emperor Gaozong of Tang
+	627.1.1 = {
+		birth = yes
+	}
+	652.1.1 = {
+		death = yes
+	} # Possibly poisoned by Empress Wang
+}
+247906 = { # Crown Prince Li Zhong
+	dynasty = 1051150 #Longxi Li
+	name = "Zhong"
+	religion = taoist
+	culture = han
+	father = 217702 # Emperor Gaozong
+	mother = 247905 # Consort Liu
+	trait = child_of_consort
+	644.8.1 = {
+		birth = yes
+	}# Real dob in 643
+	665.1.6 = {
+		death = yes 
+	}
+}
+247907 = { # Li Xiao
+	dynasty = 1051150 #Longxi Li
+	name = "Xiao"
+	religion = taoist
+	culture = han
+	father = 217702 # Emperor Gaozong
+	# mother = # Consort Zheng
+	trait = child_of_consort
+	645.1.1 = {
+		birth = yes
+	}
+	664.1.1 = {
+		death = yes 
+	}
+}
+247908 = { # Li Shangjin
+	dynasty = 1051150 #Longxi Li
+	name = "Shangjin"
+	religion = taoist
+	culture = han
+	father = 217702 # Emperor Gaozong
+	# mother = # Consort Yang
+	trait = child_of_consort
+	646.1.1 = {
+		birth = yes
+	}
+	690.1.1 = {
+		death = yes 
+	}
+}
+247909 = { # Li Sujie
+	dynasty = 1051150 #Longxi Li
+	name = "Sujie"
+	religion = taoist
+	culture = han
+	father = 217702 # Emperor Gaozong
+	mother = 247904 # Consort Xiao
+	trait = child_of_consort
+	648.1.1 = {
+		birth = yes
+	}
+	690.6.24 = {
+		death = yes 
+	}
+}
+247910 = { # Princess Yiyang
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Xiayu"
+	religion = taoist
+	culture = han
+	father = 217702 # Emperor Gaozong
+	mother = 247904 # Consort Xiao
+	trait = child_of_consort
+	# spouse = # Quan Yi
+	646.1.1 = {
+		birth = yes
+	}
+	691.1.1 = {
+		death = yes 
+	}
+}
+247911 = { # Princess Gao'an
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Xuancheng"
+	religion = taoist
+	culture = han
+	father = 217702 # Emperor Gaozong
+	mother = 247904 # Consort Xiao
+	trait = child_of_consort
+	# spouse = # Wang Xu
+	649.1.1 = {
+		birth = yes
+	}
+	671.1.1 = {
+		name = "Gao'an"
+	}
+	714.1.1 = {
+		death = yes 
+	}
+}
+247912 = { #李弘 Li Hong
+	dynasty = 1051150 #Longxi Li
+	name = "Hong"
+	religion = taoist
+	culture = han
+	trait = honest
+	trait = just
+	trait = kind
+	trait = diligent
+	trait = child_of_consort
+	father = 217702 # Emperor Gaozong
+	mother = 217704 # Wu Zetian
+	# spouse = 1409267
+	652.1.1 = {
+		birth = yes
+	}
+	655.12.1 = {
+			remove_trait = child_of_consort
+	}#mother made Empress Consort
+	675.5.25 = {
+		death = yes 
+	} # Poisoned, possibly by Lady Helan, his brother Li Xian, or his mother
+}
+247913 = { # Princess Anding
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Anding"
+	religion = taoist
+	culture = han
+	father = 217702 # Emperor Gaozong
+	mother = 217704 # Wu Zetian
+	trait = child_of_consort
+	654.1.1 = {
+		birth = yes
+	}
+	654.6.1 = {
+		death = yes 
+	} # Possibly killed by Empress Wang, Consort Xiao, Princess Gaoyang, or her mother
+}
+247914 = { # Crown Prince Zhanghuai, Li Xian
+	dynasty = 1051150 #Longxi Li
+	name = "Xian" # different tone than younger brother's name
+	religion = taoist
+	culture = han
+	father = 217702 # Emperor Gaozong
+	mother = 217704 # Wu Zetian
+	# spouse = # Lady Fang
+	655.1.1 = {
+		birth = yes
+	}
+	684.1.1 = {
+		death = yes 
+	}
+}
+247915 = { # Li Guangshun
+	dynasty = 1051150 #Longxi Li
+	name = "Guangshun" # different tone than younger brother's name
+	religion = taoist
+	culture = han
+	father = 247914 # Li Xian
+	# mother = # Consort Zhang
+	trait = child_of_consort
+	671.1.1 = {
+		birth = yes
+	}
+	693.1.1 = {
+		death = yes 
+	}
+}
+247916 = { # Li Shouli
+	dynasty = 1051150 #Longxi Li
+	name = "Guangren" # different tone than younger brother's name
+	religion = taoist
+	culture = han
+	father = 247914 # Li Xian
+	# mother = # Consort Zhang
+	trait = child_of_consort
+	672.1.1 = {
+		birth = yes
+	}
+	675.1.1 = {
+		name = "Shouli"
+	}
+	741.1.1 = {
+		death = yes 
+	}
+}
+247917 = { # Li Shouyi
+	dynasty = 1051150 #Longxi Li
+	name = "Shouyi" # different tone than younger brother's name
+	religion = taoist
+	culture = han
+	father = 247914 # Li Xian
+	# mother = # Consort Zhang
+	trait = child_of_consort
+	675.1.1 = {
+		birth = yes
+	}
+	703.1.1 = {
+		death = yes 
+	}
+}
+247918 = { # Lady Changxin
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Changxin" # different tone than younger brother's name
+	religion = taoist
+	culture = han
+	father = 247914 # Li Xian
+	# mother = # Consort Zhang
+	trait = child_of_consort
+	674.1.1 = {
+		birth = yes
+	}
+	706.1.1 = {
+		death = yes 
+	}
+}
+247919 = { # Li Chenghong (Declared Emperor by invading Tibetans 763.11.18-763.11.30)
+	dynasty = 1051150 #Longxi Li
+	name = "Chenghong" # different tone than younger brother's name
+	religion = taoist
+	culture = han
+	father = 247916 # Li Shouli
+	trait = child_of_consort
+	700.1.1 = {
+		birth = yes
+	}
+	766.1.1 = {
+		death = yes 
+	}
+}
+247920 = { # Princess Taiping
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Taiping"
+	religion = taoist
+	culture = han
+	father = 217702 # Emperor Gaozong
+	mother = 217704 # Wu Zetian
+	# spouses = Xue Shao and Wu Youji
+	665.1.1 = {
+		birth = yes
+	}
+	713.8.2 = {
+		death = yes 
+	}
+}
+247921 = { #常樂公主 Princess Changle, daughter of Emperor Gaozu of Tang
+	female=yes
+	dynasty = 1051150 #Longxi Li
+	name = "Changle"
+	religion = taoist
+	culture = han
+	father = 217700 # Emperor Gaozu
+	# spouse = Zhao Gui
+	620.1.1 = {
+		birth = yes
+	}
+	688.1.1 = {
+		death = yes
+	}
+}
+247922 = { #趙瑰 Zhao Gui
+	dynasty = 1000048813 # Zhao
+	name = "Gui"
+	religion = taoist
+	culture = han
+	father = 1400195
+	# spouse = Princess Changle
+	#birth and death dates unknown
+	618.1.1 = {
+		birth = yes
+	}
+	638.1.1 = {
+		add_spouse = 247921
+	}
+	680.1.1 = {
+		death = yes
+	}
+}
+247923 = { # 和思皇后 Empress Hesi
+	female = yes
+	dynasty = 1000048813 # Zhao
+	name = "Hesi"
+	religion = taoist
+	culture = han
+	father = 247922 # Zhao Gui
+	mother = 247921 # Princess Changle
+	# spouse = Emperor Zhongzong of Tang
+	#birth date unknown
+	655.1.1 = {
+		birth = yes
+	}
+	675.5.7 = {
+		death = yes
+	}
+}
+247924 = { #韋皇后 Empress Wei
+	female = yes
+	dynasty = 1055025 # Wei
+	name = " "
+	religion = taoist
+	culture = han
+	father = 1405679
+	# mother = # Lady Cui
+	#birth date unknown
+	664.1.1 = {
+		birth = yes
+	}
+	710.7.21 ={
+		death = { death_reason = death_execution killer = 217706 }
+	}
+}
+247925 = { # Shangguan Yi
+	dynasty = 1055095 # Shangguan
+	name = "Yi"
+	religion = taoist
+	culture = han
+	# father = # Shangguan Hong
+	608.1.1 = {
+		birth = yes
+	}
+	665.1.4 = {
+		death = yes
+	}
+}
+247926 = { # Shangguan Tingzhi
+	dynasty = 1055095 # Shangguan
+	name = "Tingzhi"
+	religion = taoist
+	culture = han
+	father = 247925 # Shangguan Yi
+	630.1.1 = {
+		birth = yes
+	}
+	665.1.4 = {
+		death = yes
+	}
+}
+247927 = { # Shangguan Wan'er
+	female = yes
+	dynasty = 1055095 # Shangguan
+	name = "Wan'er"
+	religion = taoist
+	culture = han
+	father = 247926 # Shangguan Tingzhi
+	# mother = # Lady Zheng
+	664.11.24 = {
+		birth = yes
+	}
+	710.7.21 = {
+		death = yes
+	}
+}
+247928 = { #李重潤 Li Chongrun or 李重照 Li Chongzhao
+	dynasty = 1051150 #Longxi Li
+	name = "Chongzhao"
+	religion = taoist
+	culture = han
+	father = 217799 # Emperor Zhongzong
+	mother = 247924 # Empress Wei
+	682.1.1 = {
+		birth = yes
+	}
+	684.1.1 = {
+		name = "Chongrun"
+	}
+	701.10.8 = {
+		death = yes 
+	}
+}
+247929 = { #李重俊 Li Chongjun
+	dynasty = 1051150 #Longxi Li
+	name = "Chongjun"
+	religion = taoist
+	culture = han
+	father = 217799 # Emperor Zhongzong
+	# spouse = # Lady Yang
+	trait = child_of_consort
+	683.1.1 = {
+		birth = yes
+	}
+	707.8.7 = {
+		death = yes 
+	}
+}
+247930 = { # Li Zonghui
+	dynasty = 1051150 #Longxi Li
+	name = "Zonghui"
+	religion = taoist
+	culture = han
+	father = 247929 # Li Chongjun
+	# mother = # Lady Yang
+	trait = child_of_consort
+	700.1.1 = {
+		birth = yes
+	}
+	761.1.1 = {
+		death = yes 
+	}
+}
+247931 = { # Empress Liu
+	female = yes
+	dynasty = 1055009 # Liu
+	name = "Suming"
+	religion = taoist
+	culture = han
+	# father = # Liu Yanjing
+	662.1.1 = {
+		birth = yes
+	}
+	693.1.1 = {
+		death = yes 
+	}
+}
+247932 = { #新都公主 Princess Xindu, married 武延暉
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Xindu"
+	religion = taoist
+	culture = han
+	father = 217799 # Emperor Zhongzong
+	trait = child_of_consort
+	#birth and death dates unknown
+	679.1.1 = {
+		birth = yes
+	}
+	711.1.1 = {
+		death = yes 
+	}
+}
+247933 = { #宜城公主 Princess Yicheng, married 裴巽
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Yicheng"
+	religion = taoist
+	culture = han
+	father = 217799 # Emperor Zhongzong
+	trait = child_of_consort
+	#birth and death dates unknown
+	681.1.1 = {
+		birth = yes
+	}
+	698.1.1 = { add_spouse = 1409283 }
+	720.1.1 = {
+		death = yes 
+	}
+}
+247934 = { #定安公主 Princess Ding'an. First married 王同皎. Then married 韋濯. Finally married 崔銑.
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Ding'an"
+	religion = taoist
+	culture = han
+	father = 217799 # Emperor Zhongzong
+	trait = child_of_consort
+	#birth date unknown
+	684.1.1 = {
+		birth = yes
+	}
+	706.1.1 = {
+		add_spouse = 1405662
+	}
+	733.3.1 = {
+		death = yes 
+	}
+}
+247935 = { #長寧公主 Princess Changning. First married 楊慎交, later married 蘇彥伯
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Changning"
+	religion = taoist
+	culture = han
+	father = 217799 # Emperor Zhongzong
+	mother = 247924 # Empress Wei
+	#birth and death dates unknown
+	683.1.1 = {
+		birth = yes
+	}
+	736.1.1 = {
+		death = yes 
+	}
+}
+247936 = { #永壽公主 Princess Yongshou. Married 韋鐬.
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Yongshou"
+	religion = taoist
+	culture = han
+	father = 217799 # Emperor Zhongzong
+	mother = 247924 # Empress Wei
+	#birth and death dates unknown
+	684.1.1 = {
+		birth = yes
+	}
+	703.1.1 = {
+		death = yes 
+	}
+}
+247937 = { #成安公主 Princess Cheng'an. Married 韋捷.
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Jijiang"
+	religion = taoist
+	culture = han
+	father = 217799 # Emperor Zhongzong
+	trait = child_of_consort
+	#birth and death dates unknown
+	688.1.1 = {
+		birth = yes
+	}
+	700.1.1 = {
+		add_spouse = 1405677
+	}
+	719.1.1 = {
+		death = yes 
+	}
+}
+247938 = { #李仙蕙 Li Xianhui, 永泰公主 Princess Yongtai. Married 武延基.
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Xianhui"
+	religion = taoist
+	culture = han
+	father = 217799 # Emperor Zhongzong
+	mother = 247924 # Empress Wei
+	# spouse = Wu Yanji
+	685.1.1 = {
+		birth = yes
+	}
+	701.10.9 = {
+		death = yes 
+	}
+}
+247939 = { #李裹兒 Li Guo'er, 安樂公主 Princess Anle. First married 武崇訓, later 武延秀.
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Guo'er"
+	religion = taoist
+	culture = han
+	father = 217799 # Emperor Zhongzong
+	mother = 247924 # Empress Wei
+	trait = fair
+	# spouses = Wu Chongxun and Wu Yanxiu
+	685.9.1 = {
+		birth = yes
+	}
+	710.7.21 = {
+		death = yes 
+	}
+}
+247940 = { #李成器 Li Chengqi or 李憲 Li Xian. Married 恭皇后, daughter of 元大簡.
+	dynasty = 1051150 #Longxi Li
+	name = "Chengqi"
+	religion = taoist
+	culture = han
+	trait = kind
+	trait = honest
+	trait = just
+	father = 217703 # Emperor Ruizong
+	mother = 247931 # Empress Liu
+	#spouse = Lady Yuan
+	679.1.1 = {
+		birth = yes
+	}
+	716.1.1 = {
+		name = "Xian"
+	}
+	742.1.15 = {
+		death = yes
+	}
+}
+247941 = { # Li Jin
+	dynasty = 1051150 #Longxi Li
+	name = "Jin"
+	religion = taoist
+	culture = han
+	trait = poet
+	father = 247940 # Li Chengqi
+	# mother = # Lady Yuan
+	696.1.1 = {
+		birth = yes
+	}
+	750.1.1 = {
+		death = yes
+	}
+}
+247942 = { # Li Sizhuang
+	dynasty = 1051150 #Longxi Li
+	name = "Sizhuang"
+	religion = taoist
+	culture = han
+	trait = poet
+	father = 247940 # Li Chengqi
+	# mother = # Lady Yuan
+	704.1.1 = {
+		birth = yes
+	}
+	721.1.1 = {
+		death = yes
+	}
+}
+247943 = { # Li Yu
+	dynasty = 1051150 #Longxi Li
+	name = "Yu"
+	religion = taoist
+	culture = han
+	father = 247940 # Li Chengqi
+	trait = child_of_consort
+	718.1.1 = {
+		birth = yes
+	}
+	773.1.1 = {
+		death = yes
+	}
+}
+247944 = { # Li Bin
+	dynasty = 1051150 #Longxi Li
+	name = "Bin"
+	religion = taoist
+	culture = han
+	father = 247940 # Li Chengqi
+	trait = child_of_consort
+	720.1.1 = {
+		birth = yes
+	}
+	784.1.1 = {
+		death = yes
+	}
+}
+247945 = { # Consort Doulu
+	female = yes
+	dynasty = 105856 # Doulu
+	name = "Jinshan"
+	religion = taoist
+	culture = han
+	# father = # Doulu Qinsu
+	# spouse = # Emperor Ruizong of Tang
+	661.1.1 = {
+		birth = yes
+	}
+	740.1.1 = {
+		death = yes
+	}
+}
+247946 = { # Consort Dou
+	female = yes
+	dynasty = 1055047 # Dou
+	name = "Shi"
+	religion = taoist
+	culture = han
+	#father = #Dou Xiaochen
+	#spouse = # Emperor Ruizong of Tang
+	663.1.1 = {
+		birth = yes
+	}
+	693.1.1 = {
+		death = yes
+	}
+}
+247947 = { #壽昌公主 Princess Shouchang. Married 崔珍 or 崔真.
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Shouchang"
+	religion = taoist
+	culture = han
+	father = 217703 # Emperor Ruizong
+	mother = 247931 # Empress Liu
+	#birth and death dates unknown
+	684.1.1 = {
+		birth = yes
+	}
+	729.1.1 = {
+		death = yes
+	}
+}
+247948 = { #李華 Li Hua. 永昌公主 Princess Yongchang or 代國長公主 Princess Dai. In 705 married 鄭萬鈞 and gave birth to sons 鄭潛曜, 鄭明 and daughter 鄭璜. (代國長公主碑)
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Hua"
+	religion = taoist
+	culture = han
+	father = 217703 # Emperor Ruizong
+	mother = 247931 # Empress Liu
+	689.1.1 = {
+		birth = yes
+	}
+	734.8.2 = {
+		death = yes
+	}
+}
+247949 = { #李撝 Li Hui or 李成義 Li Chengyi.
+	dynasty = 1051150 #Longxi Li
+	name = "Chengyi"
+	religion = taoist
+	culture = han
+	father = 217703 # Emperor Ruizong
+	# mother = # Consort Liu
+	trait = child_of_consort
+	#birth date unknown
+	680.1.1 = {
+		birth = yes
+	}
+	687.1.1 = {
+		name = "Hui"
+	}
+	724.12.15 = {
+		death = yes
+	}
+}
+247950 = { #金仙公主 Princess Jinxian or 李無上道 Li Wushangdao
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Jinxian"
+	religion = taoist
+	culture = han
+	father = 217703 # Emperor Ruizong
+	mother = 247946 # consort Dou
+	trait = child_of_consort
+	689.1.1 = {
+		birth = yes
+	}
+	715.1.1 = { trait = nun }
+	732.8.14 = {
+		death = yes
+	}
+}
+247951 = { #玉真公主 Princess Yuzhen
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Xuanxuan"
+	religion = taoist
+	culture = han
+	father = 217703 # Emperor Ruizong
+	mother = 247946 # consort Dou
+	trait = child_of_consort
+	#birth date unknown
+	690.1.1 = {
+		birth = yes
+	}
+	715.1.1 = { trait = nun }
+	762.4.1 = {
+		death = yes
+	}
+}
+247952 = { #霍國公主 Princess Huoguo. Married with 裴虛己 until 720.11.13.
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Huoguo"
+	religion = taoist
+	culture = han
+	father = 217703 # Emperor Ruizong
+	trait = child_of_consort
+	#birth date unknown
+	692.1.1 = {
+		birth = yes
+	}
+	710.1.1 = { add_spouse = 1409335 } #Pei Xuji
+	720.11.13 = { remove_spouse = 1409335 }
+	756.8.15 = {
+		death = { death_reason = death_murder killer = "An Lushan" }
+	} # Killed by An Lushan
+}
+247953 = { #李範 Li Fan or 李隆範 Li Longfan
+	dynasty = 1051150 #Longxi Li
+	name = "Longfan"
+	religion = taoist
+	culture = han
+	father = 217703 # Emperor Ruizong
+	# mother = # consort Cui
+	trait = child_of_consort
+	686.1.1 = {
+		birth = yes
+	}
+	712.9.8 = { name = "Fan" }
+	726.5.25 = {
+		death = yes
+	}
+}
+247954 = { #鄎國公主 Princess Xiguo. First married 薛儆. In 720 she married 鄭孝義.
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Xiguo"
+	religion = taoist
+	culture = han
+	father = 217703 # Emperor Ruizong
+	# mother = # consort Cui
+	trait = child_of_consort
+	689.1.1 = {
+		birth = yes
+	}
+	725.4.3 = {
+		death = yes
+	}
+}
+247955 = { #安興昭懷公主 Princess Zhaohuai of Anxing
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Zhaohuai"
+	religion = taoist
+	culture = han
+	father = 217703 # Emperor Ruizong
+	trait = child_of_consort
+	#birth date unknown, died young
+	685.1.1 = {
+		birth = yes
+	}
+	692.1.1 = {
+		death = yes
+	}
+}
+#247956 = { #荊山公主 Princess Jingshan. Married 薛伯陽.
+#	female = yes
+#	dynasty = 1051150 #Longxi Li
+#	name = "Jingshan"
+#	religion = taoist
+#	culture = han
+#	father = 217703 # Emperor Ruizong
+#	trait = child_of_consort
+#	#birth and death dates unknown
+#	685.1.1 = {
+#		birth = yes
+#	}
+#	718.1.1 = {
+#		death = yes
+#	}
+#}
+247957 = { #李花山 Li Huashan, 淮陽公主 Princess Huaiyang. Married 王承慶.
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Huashan"
+	religion = taoist
+	culture = han
+	father = 217703 # Emperor Ruizong
+	# mother = # Consort Wang
+	trait = child_of_consort
+	trait = twin
+	686.1.1 = {
+		birth = yes
+	}
+	704.11.17 = {
+		death = yes
+	}
+}
+247958 = { #李業 Li Ye or 李隆業 Li Longye
+	dynasty = 1051150 #Longxi Li
+	name = "Longye"
+	religion = taoist
+	culture = han
+	father = 217703 # Emperor Ruizong
+	# mother = # Consort Wang
+	trait = child_of_consort
+	trait = twin
+	686.1.1 = {
+		birth = yes
+	}
+	734.8.13 = {
+		death = yes
+	}
+	756.8.1 = { name = "Ye" }
+}
+247959 = { #李隆悌 Li Longti
+	dynasty = 1051150 #Longxi Li
+	name = "Longti"
+	religion = taoist
+	culture = han
+	father = 217703 # Emperor Ruizong
+	trait = child_of_consort
+	692.1.1 = {
+		birth = yes
+	}
+	702.5.9 = {
+		death = yes
+	}
+}
+247960 = { #李㝹/李䨲 Li Nou, 涼國公主 Princess Liangguo. First married 薛伯陽 and later 溫曦.
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Nou"
+	religion = taoist
+	culture = han
+	father = 217703 # Emperor Ruizong
+	# mother = # Consort Wang
+	trait = child_of_consort
+	687.1.1 = {
+		birth = yes
+	}
+	724.1.1 = {
+		death = yes
+	}
+}
+247961 = { #薛國公主 Princess of Xue or 蔡國公主 Princess of Cha. First married 王守一 and later 裴巽.
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Xueguo"
+	religion = taoist
+	culture = han
+	father = 217703 # Emperor Ruizong
+	trait = child_of_consort
+	#birth and death dates unknown
+	688.1.1 = {
+		birth = yes
+	}
+	723.1.1 = { add_spouse = 1409283 }
+	742.1.1 = {
+		death = yes
+	}
+}
+247962 = { # Wang Renjiao
+	dynasty = 1055005 # Wang
+	name = "Renjiao"
+	religion = taoist
+	culture = han
+	651.1.1 = {
+		birth = yes
+	}
+	719.5.13 = {
+		death = yes
+	}
+}
+247963 = { # Wang Shouyi
+	dynasty = 1055005 # Wang
+	name = "Shouyi"
+	religion = taoist
+	culture = han
+	father = 247962 # Wang Renjiao
+	# spouse = # Princess Xueguo
+	680.1.1 = {
+		birth = yes
+	}
+	704.1.1 = {
+		add_spouse = 247961
+	}
+	725.1.1 = {
+		death = yes
+	}
+}
+247964 = { # Empress Wang (Xuanzong)
+	female = yes
+	dynasty = 1055005 # Wang
+	name = "Shi"
+	religion = taoist
+	culture = han
+	father = 247962 # Wang Renjiao
+	# spouse = # Emperor Xuanzong
+	684.1.1 = {
+		birth = yes
+	}
+	725.5.1 = {
+		death = yes
+	}
+}
+247965 = { #武攸寧 Wu Youning
+	dynasty = 1051152 # Wu
+	name = "Youning"
+	religion = taoist
+	culture = han
+	father = 247818 #Wu Hong
+	#birth and death dates unknown
+	661.1.1 = {
+		birth = yes
+	}
+	709.1.1 = {
+		death = yes
+	}
+}
+247966 = { #武攸止 Wu Youzhi
+	dynasty = 1051152 # Wu
+	name = "Youzhi"
+	religion = taoist
+	culture = han
+	father = 247818 #Wu Hong
+	#spouse = Lady Guo
+	#birth and death dates unknown
+	666.1.1 = {
+		birth = yes
+	}
+	708.1.1 = {
+		death = yes
+	}
+}
+247967 = { #貞順皇后 Empress Wushun
+	female = yes
+	dynasty = 1051152 # Wu
+	name = "Wushun"
+	religion = taoist
+	culture = han
+	father = 247966 #Wu Youzhi
+	#mother= # Lady Guo
+	#spouse = # Emperor Xuanzong
+	#birth date unknown
+	696.1.1 = {
+		birth = yes
+	}
+	738.1.1 = {
+		death = yes
+	}
+}
+247968 = { #楊全節 Yang Quanjie
+	dynasty = 105837 # Hongnong Yang
+	name = "Quanjie" 
+	religion = taoist
+	culture = han
+	father = 247800 #Yang Jian
+	#birth and death dates unknown
+	600.1.1 = {
+		birth = yes
+	}
+	663.1.1 = {
+		death = yes
+	}
+} 
+247969 = { #楊知慶 Yang Zhiqing
+	dynasty = 105837 # Hongnong Yang
+	name = "Zhiqing" 
+	religion = taoist
+	culture = han
+	father = 247968 #Yang Quanjie
+	#birth and death dates unknown
+	649.1.1 = {
+		birth = yes
+	}
+	710.1.1 = {
+		death = yes
+	}
+} 
+247970 = { #楊貴嬪 Consort Yang (Xuanzong)
+	female = yes
+	dynasty = 105837 # Hongnong Yang
+	name = "Guipin" 
+	religion = taoist
+	culture = han
+	father = 247969 #Yang Zhiqing
+	689.1.1 = {
+		birth = yes
+	}
+	729.1.1 = {
+		death = yes
+	}
+} 
+247971 = { # Consort Mei (Xuanzong)
+	female = yes
+	dynasty = 1055011 # Jiang
+	name = "Zaiping" 
+	religion = taoist
+	culture = han
+	# father = #Jiang Zhongxun
+	710.1.1 = {
+		birth = yes
+	}
+	756.1.1 = {
+		death = yes
+	} # Killed by An Lushan
+}
+247973 = { #李琮 Li Cong or 李嗣直 Li Sizhi or 李潭 Li Tan
+	dynasty = 1051150 #Longxi Li
+	name = "Sizhi"
+	religion = taoist
+	culture = han
+	father = 217706 # Emperor Xuanzong
+	# mother = 劉華妃
+	trait = child_of_consort
+	#birth date unknown
+	700.1.1 = {
+		birth = yes
+	}
+	725.1.1 = {
+		name = "Tan"
+	}
+	736.1.1 = {
+		name = "Cong"
+	}
+	752.1.1 = {
+		death = yes
+	}
+}
+247974 = { #李瑛 Li Ying or 李嗣謙 Li Siqian or 李鴻 Li Hong
+	dynasty = 1051150 #Longxi Li
+	name = "Siqian"
+	religion = taoist
+	culture = han
+	father = 217706 # Emperor Xuanzong
+	# mother = 趙麗妃
+	trait = child_of_consort
+	#birth date unknown
+	701.1.1 = {
+		birth = yes
+	}
+	725.1.1 = {
+		name = "Hong"
+	}
+	736.1.1 = {
+		name = "Ying"
+	}
+	737.1.1 = {
+		death = yes
+	}
+}
+247975 = { #李琰 Li Yan or 李嗣真 Li Sizhen or 李洽 Li Qia
+	dynasty = 1051150 #Longxi Li
+	name = "Sizhen"
+	religion = taoist
+	culture = han
+	father = 217706 # Emperor Xuanzong
+	# mother = 錢妃
+	trait = child_of_consort
+	#birth date unknown
+	709.1.1 = {
+		birth = yes
+	}
+	725.1.1 = {
+		name = "Qia"
+	}
+	736.1.1 = {
+		name = "Yan"
+	}
+	752.1.1 = {
+		death = yes
+	}
+}
+247976 = { #李瑤 Li Yao or 李嗣初 Li Sichu or 李涓 Li Juan
+	dynasty = 1051150 #Longxi Li
+	name = "Sichu"
+	religion = taoist
+	culture = han
+	father = 217706 # Emperor Xuanzong
+	# mother = 皇甫德儀
+	trait = child_of_consort
+	#birth date unknown
+	710.1.1 = {
+		birth = yes
+	}
+	725.1.1 = {
+		name = "Juan"
+	}
+	736.1.1 = {
+		name = "Yao"
+	}
+	737.1.1 = {
+		death = yes
+	}
+}
+247977 = { #李琬 Li Wan or 李嗣玄 Li Sixuan or 李滉 Li Huang
+	dynasty = 1051150 #Longxi Li
+	name = "Sixuan"
+	religion = taoist
+	culture = han
+	father = 217706 # Emperor Xuanzong
+	# mother = 劉華妃
+	trait = child_of_consort
+	#birth date unknown
+	711.1.1 = {
+		birth = yes
+	}
+	725.1.1 = {
+		name = "Huang"
+	}
+	736.1.1 = {
+		name = "Wan"
+	}
+	755.1.1 = {
+		death = yes
+	}
+}
+247978 = { #李琚/李涺 Li Ju
+	dynasty = 1051150 #Longxi Li
+	name = "Ju"
+	religion = taoist
+	culture = han
+	father = 217706 # Emperor Xuanzong
+	# mother = # Consort Liu
+	trait = child_of_consort
+	#birth date unknown
+	712.1.1 = {
+		birth = yes
+	}
+	725.1.1 = {
+		name = "Ju"
+	} # different tone
+	737.1.1 = {
+		death = yes
+	}
+}
+247979 = { #李一 Li Yi
+	dynasty = 1051150 #Longxi Li
+	name = "Yi"
+	religion = taoist
+	culture = han
+	father = 217706 # Emperor Xuanzong
+	mother = 247967 # Consort Wu
+	trait = child_of_consort
+	716.1.1 = {
+		birth = yes
+	}
+	717.1.1 = {
+		death = yes
+	}
+}
+247980 = { #李璲 Li Sui or 李濰 Li Wei
+	dynasty = 1051150 #Longxi Li
+	name = "Wei"
+	religion = taoist
+	culture = han
+	father = 217706 # Emperor Xuanzong
+	# mother = 劉華妃
+	trait = child_of_consort
+	#birth date unknown
+	717.1.1 = {
+		birth = yes
+	}
+	736.1.1 = {
+		name = "Sui"
+	}
+	765.1.1 = {
+		death = yes
+	}
+}
+247981 = { #李璬 Li Jiao or 李澐 Li Yun
+	dynasty = 1051150 #Longxi Li
+	name = "Yun"
+	religion = taoist
+	culture = han
+	father = 217706 # Emperor Xuanzong
+	# mother = 高婕妤
+	trait = child_of_consort
+	718.1.1 = {
+		birth = yes
+	}
+	736.1.1 = {
+		name = "Jiao"
+	}
+	783.1.1 = {
+		death = yes
+	}
+}
+247982 = { #李敏 Li Min
+	dynasty = 1051150 #Longxi Li
+	name = "Min"
+	religion = taoist
+	culture = han
+	father = 217706 # Emperor Xuanzong
+	mother = 247967 # Consort Wu
+	trait = child_of_consort
+	719.1.1 = {
+		birth = yes
+	}
+	720.1.1 = {
+		death = yes
+	}
+}
+247983 = { #李璘 Li Lin or 李澤 Li Ze
+	dynasty = 1051150 #Longxi Li
+	name = "Ze"
+	religion = taoist
+	culture = han
+	father = 217706 # Emperor Xuanzong
+	# mother = 郭順儀
+	trait = child_of_consort
+	#birth date unknown
+	720.1.1 = {
+		birth = yes
+	}
+	736.1.1 = {
+		name = "Lin"
+	}
+	757.3.14 = {
+		death = { death_reason = death_execution killer = "皇甫侁" }
+	}
+}
+247984 = { #李瑁 Li Mao or 李清 Li Qing
+	dynasty = 1051150 #Longxi Li
+	name = "Qing"
+	religion = taoist
+	culture = han
+	father = 217706 # Emperor Xuanzong
+	mother = 247967 # Consort Wu
+	# spouses = # Yang Guifei and Lady Wei
+	trait = child_of_consort
+	720.1.1 = {
+		birth = yes
+	}
+	#733 - real date of marriage to Yang Guifei
+	736.1.1 = {
+		name = "Mao"
+		add_spouse = 247972
+	} #Yang Guifei
+	737.6.1 = {
+		remove_spouse = 247972
+	} #Emperor Xuanzong covets Yang Guifei and makes her a Taoist nun
+	775.1.1 = {
+		death = yes
+	}
+}
+247985 = { #李玢 Li Bin or 李洄 Li Hui
+	dynasty = 1051150 #Longxi Li
+	name = "Hui"
+	religion = taoist
+	culture = han
+	father = 217706 # Emperor Xuanzong
+	# mother = 柳婕妤
+	trait = child_of_consort
+	721.1.1 = {
+		birth = yes
+	}
+	736.1.1 = {
+		name = "Bin"
+	}
+	784.1.1 = {
+		death = yes
+	}
+}
+247986 = { #李琦 Li Qi or 李沐 Li Mu
+	dynasty = 1051150 #Longxi Li
+	name = "Mu"
+	religion = taoist
+	culture = han
+	father = 217706 # Emperor Xuanzong
+	mother = 247967 # Consort Wu
+	trait = child_of_consort
+	#birth date unknown
+	722.1.1 = {
+		birth = yes
+	}
+	736.1.1 = {
+		name = "Qi"
+	}
+	764.1.1 = {
+		death = yes
+	}
+}
+247987 = { #寧親公主 Princess Ningqin or 興信公主 Princess Xingxin or 齊國公主 Princess of Qi. In 728 married 張垍. Later married 裴潁, a grandson of 裴巽. Later married 楊敷
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Xinxing"
+	religion = taoist
+	culture = han
+	father = 217706 # Emperor Xuanzong
+	mother = 247970 # Consort Yang (not Yang Guifei)
+	trait = child_of_consort
+	#birth and death dates unknown
+	708.1.1 = {
+		birth = yes
+	}
+	736.1.1 = {
+		name = "Ningqin"
+	}
+	755.1.1 = { add_spouse = 1409293 }
+	760.1.1 = { add_spouse = 1404928 }
+	764.1.1 = {
+		death = yes
+	}
+}
+247988 = { #上仙公主 Princess Shangxian
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Shangxian"
+	religion = taoist
+	culture = han
+	father = 217706 # Emperor Xuanzong
+	mother = 247967 # Consort Wu
+	trait = child_of_consort
+	#birth and death dates unknown, died young
+	710.1.1 = {
+		birth = yes
+	}
+	720.1.1 = {
+		death = yes
+	}
+}
+247989 = { #咸宜公主 Princess Xianyi. In 735 married 楊洄. In 761 崔嵩.
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Xianyi"
+	religion = taoist
+	culture = han
+	father = 217706 # Emperor Xuanzong
+	mother = 247967 # Consort Wu
+	# spouses = # Yang Hui and Cui Song
+	trait = child_of_consort
+	#birth date unknown
+	728.1.1 = {
+		birth = yes
+	}
+	784.1.1 = {
+		death = yes
+	}
+}
+247990 = { #太華公主 Princess Taihua. Married 楊錡
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Taihua"
+	religion = taoist
+	culture = han
+	father = 217706 # Emperor Xuanzong
+	mother = 247967 # Consort Wu
+	trait = child_of_consort
+	#birth and death dates unknown
+	725.1.1 = {
+		birth = yes
+	}
+	745.9.18 = { add_spouse = 1400865 }
+	756.1.1 = {
+		death = yes
+	}
+}
+247991 = { # Empress Zhang (Suzong)
+	female = yes
+	dynasty = 1055014 # Zhang
+	name = "Shi"
+	religion = taoist
+	culture = han
+	# father = # Zhang Quyi
+	# spouse = # Emperor Suzong
+	728.1.1 = {
+		birth = yes
+	}
+	762.5.16 = {
+		death = yes
+	}
+}
+247992 = { #韋太子妃 Crown Princess Wei
+	female = yes
+	dynasty = 1055025 # Wei
+	name = " "
+	religion = taoist
+	culture = han
+	father = 1405701
+	# spouse = # Emperor Suzong
+	#birth date unknown
+	712.1.1 = {
+		birth = yes
+	}
+	727.1.1 = {
+		add_spouse = 217707
+	}
+	745.1.1 ={
+		remove_spouse = 217707
+	}
+	757.1.1 = {
+		death = yes
+	}
+}
+247993 = { # Consort Wu (Suzong)
+	female = yes
+	dynasty = 1051208 # Wu (different from Wu Zetian's surname)
+	name = "Shi"
+	religion = taoist
+	culture = han
+	# father = # Wu Linggui
+	# spouse = # Emperor Suzong
+	709.1.1 = {
+		birth = yes
+	} # real dob 713
+	740.1.1 = {
+		death = yes
+	}
+}
+247994 = { #睿真皇后 Empress Ruizhen
+	female = yes
+	dynasty = 1055026 # Shen
+	name = "Shi"
+	religion = taoist
+	culture = han
+	# father = # Shen Yizhi
+	# spouse = # Emperor Daizong
+	726.1.1 = {
+		birth = yes
+	}
+	759.1.1 = {
+		death = yes
+	} # Disappeared, not officially declared dead until 805
+}
+247995 = { #崔貴妃 Consort Cui (Daizong)
+	female = yes
+	dynasty = 1000048478 #Boling Cui
+	name = " "
+	religion = taoist
+	culture = han
+	mother = 1400862
+	# spouse = # Emperor Daizong
+	730.1.1 = {
+		birth = yes
+	}
+	757.1.1 = {
+		death = yes
+	}
+}
+247996 = { #昇平公主 Princess Shengping.
+	female = yes
+	dynasty = 1051150 #Longxi Li
+	name = "Shengping"
+	religion = taoist
+	culture = han
+	father = 217708 # Emperor Daizong
+	mother = 247995 # Consort Cui
+	trait = child_of_consort
+	#birth date unknown
+	750.1.1 = {
+		birth = yes
+	}
+	765.7.26 = { add_spouse = 1405782 }
+	810.11.1 = {
+		death = yes
+	}
+}
+247997 = { # Consort Dugu (Daizong)
+	female = yes
+	dynasty = 1055114 # Dugu
+	name = "Shi"
+	religion = taoist
+	culture = han
+	# father = # Dugu Ying
+	# spouse = # Emperor Daizong
+	735.1.1 = {
+		birth = yes
+	}
+	775.11.3 = {
+		death = yes
+	}
+}
+247998 = { # Empress Wang (Dezong)
+	female = yes
+	dynasty = 1055005 # Wang
+	name = "Shi"
+	religion = taoist
+	culture = han
+	# father = # Wang Yu
+	# spouse = # Emperor Dezong
+	744.1.1 = {
+		birth = yes
+	}
+	786.12.6 = {
+		death = yes
+	}
+}
+247999 = { #韋賢妃 Consort Wei
+	female = yes
+	dynasty = 1055025 # Wei
+	name = " "
+	religion = taoist
+	culture = han
+	father = 1405663
+	mother = 1405702
+	# spouse = # Emperor Dezong
+	#birth dates unknown
+	750.1.1 = {
+		birth = yes
+	}
+	809.1.1 = {
+		death = yes
+	}
+}
+# Outlaws - easter eggs (removed)
+
+
+#242300-242348 unused
