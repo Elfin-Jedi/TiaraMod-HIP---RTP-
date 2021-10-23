@@ -344,7 +344,10 @@ decisions = {
 			prisoner = no
 			num_of_vassals = 1
 			capital_scope = {
-				region = world_india
+				OR = {
+					region = world_india
+					region = world_china
+				}
 			}
 		}
 		allow = {
@@ -1254,10 +1257,12 @@ decisions = {
 				religion = slavic_pagan_reformed
 				religion = tengri_pagan
 				religion = tengri_pagan_reformed
+				religion = taoist
 				has_religion_feature = religion_beatification
 				has_religion_feature = religion_feature_baltic
 				has_religion_feature = religion_feature_slavic
 				has_religion_feature = religion_syncretic_christian
+				has_religion_feature = religion_feature_egyptian
 			}
 			emf_hiprio_decision_basic_potential = yes
 		}
@@ -2286,7 +2291,10 @@ decisions = {
 				is_republic = yes
 			}
 			prisoner = no
-			religion = buddhist
+			AND = {
+				religion = buddhist
+				NOT = { capital_scope = { region = world_china } }
+			}
 			is_incapable = no
 			NOT = {
 				has_character_modifier = holding_diwali_feast
