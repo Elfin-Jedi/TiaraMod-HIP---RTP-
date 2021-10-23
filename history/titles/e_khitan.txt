@@ -1,0 +1,142 @@
+# -*- ck2.history.titles -*-
+
+700.1.1 = {
+	law = status_of_women_1
+	capital = 2359 # Linhuang
+}
+730.1.1 = { #Wa Khaghan
+	holder = 1413692
+	historical_nomad = yes
+}
+734.7.5 = { #Li Guozhe
+	holder = 1413801
+}
+735.1.1 = { #Zuwu Khaghan
+	holder = 1413693
+}
+745.1.1 = { #Hula Khaghan
+	holder = 1413694
+}
+790.1.1 = { #Su Khaghan
+	holder = 1413695
+}
+842.1.1 = { #Xianzhi Khaghan
+	holder = 1413696
+}
+880.1.1 = { #Zhaogu Khaghan
+	holder = 1413697
+}
+892.1.1 = { #Yelan Khaghan
+	holder = 1413698
+}
+901.1.1 = { #Bala Khaghan
+	holder = 1413699
+}
+901.4.1 = { #Qinde Khaghan
+	holder = 1413700
+}
+906.12.1 = { #Liao Taizu
+	holder = 194325
+}
+916.3.27 = {
+	historical_nomad = no
+	law = succ_primogeniture
+	effect={
+		set_title_flag = uses_temple_names_by_script #Titles with this flag give their heirs a temple name via on_death event
+		set_title_flag = pretender_chinese_empire #Blocks all grace interactions
+		set_title_flag = china_name_liao
+	}
+}#Abaoji proclaims himself an Emperor
+926.9.6 = { #Liao Taizong
+	holder = 194326
+	effect = {
+		set_title_flag = temple_name_Taizu
+	}
+}
+947.5.15 = { #Liao Shizong
+	holder = 194328
+	effect = {
+		set_title_flag = temple_name_Taizong
+	}
+}
+951.10.7 = { #Liao Muzong
+	holder = 194329
+	effect = {
+		set_title_flag = temple_name_Shizong
+	}
+}
+969.3.12 = { #Liao Jingzong
+	holder = 194330
+	effect = {
+		set_title_flag = temple_name_Muzong
+	}
+}
+982.10.13 = { #Liao Shengzong
+	holder = 194331
+	effect = {
+		set_title_flag = temple_name_Jingzong
+	}
+}
+1031.6.25 = { #Liao Xingzong
+	holder = 194332
+	effect = {
+		set_title_flag = temple_name_Shengzong
+	}
+}
+1052.7.1 = {
+	effect = {
+		set_title_flag = temple_name_Xuanzu
+		set_title_flag = temple_name_Dezu
+		set_title_flag = temple_name_Yizong
+	}
+}
+1055.8.28 = { #Liao Daozong
+	holder = 194333
+	effect = {
+		set_title_flag = temple_name_Xingzong
+	}
+}
+1101.2.12 = { #Yelu Tianzuo
+	holder = 194334
+	effect = {
+		set_title_flag = temple_name_Daozong
+	}
+}
+1103.11.1 = { 
+	effect = {
+		set_title_flag = temple_name_Suzu
+		set_title_flag = temple_name_Yizu
+		set_title_flag = temple_name_Xuanzu
+	}
+}
+1125.3.26 = { #Liao Dezong
+	historical_nomad = yes
+	holder = 188905
+	capital = 1572 # Balasaghun
+}
+#1134.1.1 = {
+#	historical_nomad = no
+#	law = succ_primogeniture
+#}
+1144.6.6 = { #Liao Renzong
+	holder = 188907
+}
+#1151.6.6 = {
+#	holder = 188907
+#}
+1163.6.6 = { #Yelu Pusuwan
+	holder = 188908
+}
+1177.6.6 = {
+	holder = 1231500
+}
+1177.11.11 = { #Yelu Zhilugu
+	holder = 188912
+}
+1211.1.1 = { #Guchulug
+	holder = 188914
+}
+# Mongol conquest
+1218.1.1 = {
+	holder = 0
+}

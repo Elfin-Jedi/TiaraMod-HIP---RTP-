@@ -1,0 +1,27 @@
+#Tang
+759.1.1 = { name = "Kuizhong" effect = { set_coa = d_kuizhong } liege = e_tang }
+#Former Shu
+906.1.1 = { name = "Zhenjiang" effect = { set_coa = d_zhenjiang } }
+907.1.1 = { holder = 1403414 liege = k_xichuan } #Wang Zongju
+907.11.3 = { liege = e_former_shu }
+912.1.1 = { holder = 1403308 } #Wang Zongshou - In 914 recorded as Jiedushi
+916.1.1 = { holder = 1403417 } #Zhang Wu - In 919 recored as Jiedushi
+#Later Tang
+925.11.18  = { holder = 1403309 liege = e_later_tang } #Li Shaowen
+927.4.8 = { holder = 1403442 name = "Ningjiang" effect = { reset_coa = THIS } } #Xifang Ye
+929.6.17 = { holder = 1400222 } #An Chongruan
+931.3.25 = { holder = 1400088 } #Zhang Zhiye
+933.3.15 = { liege = k_xichuan }
+#Later Shu
+934.3.16 = { liege = e_later_shu }
+935.1.1 = { holder = 1400148 } #Hou Hongshi
+941.4.13 = { holder = 1400149 } #Zhang Zan
+945.1.1 = { holder = 1400116 } #Zhang Gongduo
+945.3.1 = { holder = 1400150 } #Ouyang Lin
+950.1.1 = { holder = 1400146 } #Wang Zhaoyuan
+951.1.1 = { holder = 1400120 } #Han Baozhan
+952.1.1 = { holder = 1400118 } #Yi Shenzhang
+955.1.1 = { holder = 1400152 } #Gao Yanchou
+#Song
+964.12.7 = { holder = 1404741 liege = e_song }
+967.3.11 = { holder = 0 }
