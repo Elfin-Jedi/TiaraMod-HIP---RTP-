@@ -35,41 +35,43 @@ silver_torque;Torque of the Silvery Moon;;;;;;;;;;;;;x
 silver_torque_desc;This open loop of silver is decorated with small diamonds embedded in the twisted strands. Each diamond represents a different phase of the moon.;;;;;;;;;;;;;x
 #### Severed Heads ;;;;;;;;;;;;;;x
 immortal_skull;Immortal Head;;;;;;;;;;;;;x
-immortal_head_name;Immortal Head of [Prev.GetBestName];;;;;;;;;;;;;x
-immortal_head_desc;[PrevPrev.GetTitledName], apparently, defeated this immortal [This.GetManWoman] in a duel to the death. The head still speaks, giving advice to it's owner. Or so it is said.;;;;;;;;;;;;;x
-alexander_skull;Glorious Head;;;;;;;;;;;;;x
-alexander_head_name;Glorious Head of [Prev.GetDynName];;;;;;;;;;;;;x
-alexander_head_desc;The head of [Prev.GetTitledNameWithNick], slain in personal combat by [Prev.GetTitledNameWithNick]. The [This.GetManWoman] to convince the world that they are the direct descendant of Alexander the Great himself, [Prev.GetHerHis] head is a worthy trophy for any [PrevPrev.Religion.GetAdjective] warrior.;;;;;;;;;;;;;x
+immortal_skull_name;Immortal Head of [Prev.GetBestName];;;;;;;;;;;;;x
+immortal_skull_desc;[PrevPrev.GetTitledName], apparently, defeated this immortal [This.GetManWoman] in a duel to the death. The head still speaks, giving advice to it's owner. Or so it is said.;;;;;;;;;;;;;x
+alexanders_skull;Glorious Head;;;;;;;;;;;;;x
+alexanders_skull_name;Glorious Head of [Prev.GetDynName];;;;;;;;;;;;;x
+alexanders_skull_desc;The head of [Prev.GetTitledNameWithNick], slain in personal combat by [Prev.GetTitledNameWithNick]. The [This.GetManWoman] to convince the world that they are the direct descendant of Alexander the Great himself, [Prev.GetHerHis] head is a worthy trophy for any [PrevPrev.Religion.GetAdjective] warrior.;;;;;;;;;;;;;x
 karl_skull2;Glorious Head of Charlemagne;;;;;;;;;;;;;x
 karl_skull2_desc;The preserved head of Charlemagne, patriarch of the Karling dynasty and first Holy Roman Emperor. Truly a worthy foe.;;;;;;;;;;;;;x
+karl_skull1;Preserved head of a Karling King;;;;;;;;;;;;;x
+karl_skull1_desc;The preserved head of a king of the Karling dynasty. Truly a worthy foe.;;;;;;;;;;;;;x
 great_priest_skull;Honored Head;;;;;;;;;;;;;x
-great_priest_head_name;Honored Head of [Prev.GetTitledFirstName];;;;;;;;;;;;;x
-great_priest_head_desc;A vessel containing the preserved head of [Prev.GetDynName], [Prev.GetTitle] of [Prev.PrimaryTitle.GetBaseName]. Defeated in battle by [PrevPrev.GetBestName], who took their head to commemorate the victory.;;;;;;;;;;;;;x
+great_priest_skull_name;Honored Head of [Prev.GetTitledFirstName];;;;;;;;;;;;;x
+great_priest_skull_desc;A vessel containing the preserved head of [Prev.GetDynName], [Prev.GetTitle] of [Prev.PrimaryTitle.GetBaseName]. Defeated in battle by [PrevPrev.GetBestName], who took their head to commemorate the victory.;;;;;;;;;;;;;x
 roman_pretender_skull;Imperious Head;;;;;;;;;;;;;x
-roman_pretender_head_name;Imperious Head of [Prev.GetTitledFirstName];;;;;;;;;;;;;x
-roman_pretender_head_desc;The preserved head of [Prev.GetBestName], a claimant to the title of true Roman successor.;;;;;;;;;;;;;x
-roman_skull;August Head;;;;;;;;;;;;;x
-roman_head_name;August Head of [Prev.GetDynName];;;;;;;;;;;;;x
-roman_head_desc;In this vessel is the head of a true Roman Emperor. A worthy trophy for any [PrevPrev.Religion.GetAdjective] warrior.;;;;;;;;;;;;;x
+roman_pretender_skull_name;Imperious Head of [Prev.GetTitledFirstName];;;;;;;;;;;;;x
+roman_pretender_skull_desc;The preserved head of [Prev.GetBestName], a claimant to the title of true Roman successor.;;;;;;;;;;;;;x
+true_roman_skull;August Head;;;;;;;;;;;;;x
+true_roman_skull_name;August Head of [Prev.GetDynName];;;;;;;;;;;;;x
+true_roman_skull_desc;In this vessel is the head of a true Roman Emperor. A worthy trophy for any [PrevPrev.Religion.GetAdjective] warrior.;;;;;;;;;;;;;x
 williams_skull;Head of The Conqueror;;;;;;;;;;;;;x
-williams_head_desc;William the Conqueror, once the Duke of Normandy, then a King. An able warrior and leader of men. An honorable trophy for any warrior.;;;;;;;;;;;;;x
+williams_skull_desc;William the Conqueror, once the Duke of Normandy, then a King. An able warrior and leader of men. An honorable trophy for any warrior.;;;;;;;;;;;;;x
 prestige_skull2;Exalted Head;;;;;;;;;;;;;x
-prestige_head2_name;Exalted Head of [Prev.GetTitledFirstName];;;;;;;;;;;;;x
-prestige_head2_desc;This head once belonged to [Prev.GetTitledFirstNameWithNick], an exceptionally famous and respected individual, [Prev.GetSheHe] as exalted among men.;;;;;;;;;;;;;x
+prestige_skull2_name;Exalted Head of [Prev.GetTitledFirstName];;;;;;;;;;;;;x
+prestige_skull2_desc;This head once belonged to [Prev.GetTitledFirstNameWithNick], an exceptionally famous and respected individual, [Prev.GetSheHe] as exalted among men.;;;;;;;;;;;;;x
 piety_skull2;Sanctified Head;;;;;;;;;;;;;x
-piety_head2_name;Sanctified Head of [Prev.GetTitledFirstName];;;;;;;;;;;;;x
-piety_head2_desc;[Prev.GetTitledFirstNameWithNick] was an exceptionally pious individual, a paragon of [Prev.Religion.GetAdjective] virtue. Now [Prev.GetHerHis] head honors it's owner as a trophy.;;;;;;;;;;;;;x
+piety_skull2_name;Sanctified Head of [Prev.GetTitledFirstName];;;;;;;;;;;;;x
+piety_skull2_desc;[Prev.GetTitledFirstNameWithNick] was an exceptionally pious individual, a paragon of [Prev.Religion.GetAdjective] virtue. Now [Prev.GetHerHis] head honors it's owner as a trophy.;;;;;;;;;;;;;x
 purple_skull;Purpleborn Head;;;;;;;;;;;;;x
-purple_head_name;Purpleborn Head of [Prev.GetTitledFirstName];;;;;;;;;;;;;x
-purple_head_desc;This is the preserved head of [Prev.GetTitledFirstNameWithNick], who was "porphyrogenitos" or "born in the purple", a prestigous status in the Byzantine court.;;;;;;;;;;;;;x
+purple_skull_name;Purpleborn Head of [Prev.GetTitledFirstName];;;;;;;;;;;;;x
+purple_skull_desc;This is the preserved head of [Prev.GetTitledFirstNameWithNick], who was "porphyrogenitos" or "born in the purple", a prestigous status in the Byzantine court.;;;;;;;;;;;;;x
 prestige_skull1;Prestigous Head;;;;;;;;;;;;;x
-prestige_head1_name;Prestigous Head of [Prev.GetTitledFirstName];;;;;;;;;;;;;x
-prestige_head1_desc;The preserved head of [Prev.GetTitledFirstNameWithNick], a character of some renown.;;;;;;;;;;;;;x
+prestige_skull1_name;Prestigous Head of [Prev.GetTitledFirstName];;;;;;;;;;;;;x
+prestige_skull1_desc;The preserved head of [Prev.GetTitledFirstNameWithNick], a character of some renown.;;;;;;;;;;;;;x
 piety_skull1;Pious Head;;;;;;;;;;;;;x
-piety_head1_name;Pious Head of [Prev.GetTitledFirstName];;;;;;;;;;;;;x
-piety_head1_desc;The preserved head of [Prev.GetTitledFirstNameWithNick], a pious [Prev.Religion.GetAdherentName].;;;;;;;;;;;;;x
+piety_skull1_name;Pious Head of [Prev.GetTitledFirstName];;;;;;;;;;;;;x
+piety_skull1_desc;The preserved head of [Prev.GetTitledFirstNameWithNick], a pious [Prev.Religion.GetAdherentName].;;;;;;;;;;;;;x
 schmuck_skull;Head;;;;;;;;;;;;;x
-schmuck_head_name;Head of [Prev.GetTitledFirstName];;;;;;;;;;;;;x
+schmuck_skull_name;Head of [Prev.GetTitledFirstName];;;;;;;;;;;;;x
 schmuck_skull_desc;The preserved head of an unremarkable individual. Evidently they were accomplished enough to warrant a trophy, but history has not bothered to remember why.;;;;;;;;;;;;;x
 #### Hellenic Artifacts ;;;;;;;;;;;;;;x
 nimean_lion_skin;Nimean Lionskin;;;;;;;;;;;;;x
