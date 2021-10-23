@@ -1,0 +1,97 @@
+#Tang
+704.1.1 = { holder = 1800016 } #Su Weidao - prefect around this time
+704.8.1 = { holder = 0 }
+808.1.1 = { holder = 1404970 } #Li Su - prefect at some point in time before 817
+812.1.1 = { holder = 0 }
+814.1.1 = { holder = 1407349 } #Pei Ai - prefect around this time
+817.1.1 = { holder = 0 }
+866.1.1 = { holder = 1402300 liege = d_baoda } #Dou Jing
+869.11.24 = { holder = 1412306 } #Li Guochang
+874.1.1 = { holder = 1412806 } #Kang Chuanye
+879.1.1 = { holder = 1404356 } #Li Xiaochang
+881.1.1 = { holder = 1404357 } #Dongfang Kui
+886.1.1 = { holder = 1415032 } #Li Sixiao
+896.4.17 = { holder = 1412101 } #Li Sijing
+899.1.1 = { holder = 1403346 } #Li Jiyan
+901.1.1 = { holder = 1400661 } #Li Maoxun
+902.1.1 = { holder = 1404358 } #Li Jiliao
+902.12.14 = { holder = 1404359 } #Li Hui
+903.1.1 = { holder = 1404360 } #Shi Shucong
+904.5.13 = { holder = 1401070 } #Liu Xun
+#Qi
+905.1.1 = { holder = 1401441 } #Kang Huaizheng
+905.1.1 = { holder = 1404638 } #Liu Yanhui - prefect until 906.9.21
+906.9.21 = { holder = 1404640 } #Li Yanyu - prefect until 909.5.8
+#Later Liang
+909.5.8 = { holder = 1401180 } #Niu Cun
+909.3.1 = { holder = 1404364 } #Xu Huaiyu
+912.7.21 = { holder = 1401655 } #Gao Wanjin
+918.5.19 = { holder = 1401654 } #Gao Wanxing
+#Later Tang
+926.1.28 = { holder = 1401656 } #Gao Yuntao
+926.2.2 = { holder = 1412323 } #Li Cunyi
+926.3.9 = { holder = 1400229 } #Liu Zhongyin
+930.8.19 = { holder = 1404361 } #Sun Zhang
+930.10.1 = { holder = 1412812 } #Mi Junli
+930.10.27 = { holder = 1400935 liege = e_later_tang } #Liu Jingyan - prefect
+932.4.5 = { liege = d_baoda }
+936.11.28 = { holder = 1412426 } #An Shenhui
+#Later Jin
+938.10.21 = { holder = 1404821 } #Li Yanxun - made prefect
+942.4.30 = { holder = 1400168 } #Fu Yanqing
+942.9.13 = { holder = 1401660 } #Chen Sirang - made prefect after pacification of An Congjin
+943.4.14 = { holder = 1400298 } #Ding Shenqi
+944.12.5 = { holder = 1401923 } #Guo Jin
+945.9.21 = { holder = 1401795 } #Li Yin
+946.6.20 = { holder = 1401923 } #Guo Jin
+#Liao
+947.2.20 = { holder = 1401937 } #Jiao Jixun
+#Later Han
+947.8.2 = { holder = 1412505 } #Zhang Yanchao
+949.4.27 = { holder = 1401088 } #Wang Rao
+#Later Zhou
+950.4.24 = { holder = 1412436 } #Yang Xin
+954.5.1 = { holder = 1412472 } #Bai Chongzan
+954.8.4 = { holder = 1404362 } #Li Wanjin
+956.7.15 = { holder = 1401658 } #Tian Jingxian
+958.6.2 = { holder = 1400909 } #Wu Xingde
+#Song
+961.1.1 = { holder = 1400982 } #Li Hongyi
+966.1.1 = { holder = 1400355 } #Yang Tingzhang
+969.1.1 = { holder = 1406708 } #Wang Yansheng - made prefect, until 970.1.22
+970.1.22 = { holder = 1400997 } #Yuan Yan
+972.1.1 = { holder = 1400363 } #Zhao Zan
+977.1.1 = { holder = 217722 }
+997.5.8 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }
+1125.3.26 = { holder = 217731 }
+1135.2.9 = { holder = 217732 }
+1150.1.9 = { holder = 217734 }
+1161.10.27 = { holder = 217735 }
+1189.1.20 = { holder = 217736 }
+1208.12.29 = { holder = 217737 }
+1213.9.11 = { holder = 217738 }
+1224.1.14 = { holder = 217739 }
+
+1234.2.9 = { holder = 217740 }
+
+1234.2.10 = { holder = 172005 } # Ögedei Khan
+1241.12.11 = { holder = 172007 } # Güyük Khan  # Actual coronation 1246.8.24
+1248.4.20 = { holder = 217265 } # Möngke Khan  # Actual coronation 1251.7.1
+1259.8.11 = { holder = 125526 } #civil war between Ariq Boke and Kublai
+1264.8.21 = { holder = 217266 } # Kublai Khan
+1294.2.18 = { holder = 217269 } # Temür Khan
+1307.2.10 = { holder = 217271 } # Külüg Khan 
+1311.1.27 = { holder = 217272 } # Buyantu Khan
+1320.3.1 = { holder = 217274 } # Gegeen Khan 
+1323.9.4 = { holder = 217279 } # Yesün Temür Khan
+1328.8.15 = { holder = 217280 }  # Ragibagh Khan
+1328.11.14 = { holder = 217281 } # Jayaatu Khan
+1329.4.3 = { holder = 217282 } # Khutughtu Khan Kusala
+1329.9.8 = {  holder = 217281 } # Jayaatu Khan (again)
+1332.9.2 = { holder = 217283 } # Rinchinbal Khan
+1332.12.14 = { holder = 217284 } # Toghon Temür Khan

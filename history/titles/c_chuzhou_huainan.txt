@@ -1,0 +1,61 @@
+#Tang
+642.1.1 = { holder = 1800654 } #Tao Rui - prefect at some point
+646.1.1 = { holder = 0 }
+688.1.1 = { holder = 1800294 } #Feng Yandao - prefect around this time
+689.1.1 = { holder = 0 }
+700.1.1 = { holder = 1406184 liege = d_huainan } #Yan Yuansun - prefect at some point in time
+705.1.1 = { holder = 0 }
+799.1.1 = { holder = 1409873 } #Su Bian - prefect around this time
+801.1.1 = { holder = 0 }
+812.1.1 = { holder = 1408261 } #Li Su - prefect at some point
+816.1.1 = { holder = 0 } 
+862.1.1 = { holder = 1404168 } #Linghu Tao
+865.1.1 = { holder = 1800196 } #Gao Xiwang - prefect until 868.12.22
+#Pang Xun
+868.12.22 = { holder = 1406381 liege = d_ganhua } #Pang Xun
+#Tang
+869.10.14 = { holder = 1406388 liege = d_huainan } #Ma Ju
+870.1.1 = { holder = 1408723 } #Wei Xun - prefect at some point
+873.1.1 = { holder = 1402287 } #Li Yu
+877.11.13 = { holder = 1407181 } #Liu Ye
+879.10.19 = { holder = 1402848 } #Gao Pian
+885.1.1 = { holder = 1408034 } #Xu Jing - prefect in 887.1.7
+887.5.1 = { holder = 1407163 liege = e_tang } #Yang Xingmi
+887.11.18 = { liege = d_huainan } #Yang Xingmi
+888.5.19 = { holder = 1400619 } #Sun Ru
+891.8.6 = { holder = 1407163 liege = d_xuanshe } #Yang Xingmi
+892.7.3 = { liege = d_huainan } #Yang Xingmi
+#Wu
+908.1.1 = { holder = 1408010 de_jure_liege = d_desheng liege = d_desheng } #Zhang Chong
+908.8.2 = { holder = 1406247 } #Zhong Taizhang - made prefect
+908.10.1 = { holder = 1412517 } #Shi Yan - prefect in 908.11.27
+915.1.1 = { holder = 1408036 } #Wang Nian - prefect until 923.12.8
+923.12.8 = { holder = 1408010 } #Zhang Chong
+932.1.1 = { holder = 1408011 } #Chai Zaiyong
+935.7.4 = { holder = 1408013 } #Zhou Ben
+#Southern Tang
+937.10.11 = [ holder = 1408014 } #Zhou Ye - prefect until 942.3.28, then jiedushi
+948.5.12 = { holder = 1406216 } #No Jiedushi
+949.8.27 = { holder = 1408021 } #Wang Chongwen
+950.1.1 = { holder = 1800437 } #Wang Shaoying - prefect until 956.3.19
+#Later Zhou
+956.3.19 = { holder = 1404845 liege = e_later_zhou } #Ma Chongzhuo - made prefect
+#Southern Tang
+957.6.11 = { holder = 1408046 liege = d_desheng } #Guo Tingwei
+#Later Zhou
+958.1.2 = { holder = 1400363 liege = e_later_zhou } #Zhao Zan
+958.4.14 = { liege = d_desheng }
+#Song
+960.8.1 = { holder = 1401098 } #Song Yanwo
+964.1.1 = { holder = 1401660 } #Chen Derang
+969.1.1 = { holder = 217721 } #No Jiedushi
+971.6.10 = { holder = 1408025 } #Yin Chongke
+973.7.9 = { holder = 217721 liege = e_song }
+976.7.7 = { holder = 217722 }
+997.5.8 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }
+1125.3.26 = { holder = 217731 }

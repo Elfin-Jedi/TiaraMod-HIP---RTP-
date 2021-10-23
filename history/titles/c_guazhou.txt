@@ -1,0 +1,46 @@
+#Northern Zhou
+556.1.1 = { holder = 1408668 } #Wei Zhen - made prefect
+557.1.1 = { holder = 0 }
+576.1.1 = { holder = 1408874 } #Wang Yue - prefect at some point
+579.1.1 = { holder = 0 }
+#Tang
+848.1.1 = { holder = 1400001 liege = d_hexi } #Zhang Yichao
+867.3.10 = { holder = 1400003 } #Zhang Huaishen
+890.1.1 = { holder = 1400004 } #Zhang Huaiding
+892.1.1 = { holder = 1400007 } #Suo Xun
+894.1.1 = { holder = 1400012 } #Zhang Chengfeng
+#Later Liang
+914.1.1 = { holder = 1400013 } #Cao Yijin
+#Later Tang
+935.1.1 = { holder = 1400014 } #Cao Yuande
+#Later Jin
+939.1.1 = { holder = 1400015 } #Cao Yuanshen
+944.1.1 = { holder = 1400016 } #Cao Yuanzhong
+#Later Han, Later Zhou, Song
+974.1.1 = { holder = 1400017 } #Cao Yangong
+976.1.1 = { holder = 1400018 } #Cao Yanlu
+1002.1.1 = { holder = 1400023 } #Cao Zongshou
+1014.1.1 = { holder = 1400024 } #Cao Xianshun
+1035.1.1 = {
+	holder = 206650
+	liege=k_xixia
+}#Conquered by the Tangut Empire
+1048.1.19 = { holder = 206651 } #Yizong, Li Liangzuo
+1067.1.27 = { holder = 206653 } #Huizong, Li Bingchang
+1086.8.21 = { holder = 206654 } #Chongzong, Li Qianshun
+1139.7.8 = { holder = 206657 } #Renzong, Li Renxiao
+1193.10.16 = { holder = 206659 } #Huanzong, Li Chunyou
+1206.3.1 = { holder = 206660 } #Xiangzong, Li Anquan
+1211.9.13 = { holder = 206666 } #Shenzong, Li Zunxu
+1223.1.1 = { holder = 206668 } #Xianzong, Li Dewang
+1226.1.1 = { holder = 206670 } #Li Xian
+1227.2.1 = {
+	holder = 244013
+	
+}
+1264.12.10 = {
+	holder = 244014
+}
+1334.1.1 = {
+	holder = 244015
+}

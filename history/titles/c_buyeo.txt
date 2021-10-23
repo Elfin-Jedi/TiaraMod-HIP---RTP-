@@ -1,0 +1,34 @@
+#Kings of Bohai/Balhae/Dan Gur
+698.1.1 = { holder = 1414013 liege = k_bohai } #Dae Jo-yeong, King Go
+719.4.2 = { holder = 1414015 } #Dae Mu-ye, King Mu
+737.1.1 = { holder = 1414024 } #Dae Heum-mu, King Mun
+793.1.1 = { holder = 1414035 } #Dae Won-ui
+794.1.1 = { holder = 1414037 } #Dae Hwa-yeo, King Seong
+794.5.1 = { holder = 1414030 } #Dae Sung-rim, King Gang
+809.1.1 = { holder = 1414038 } #Dae Won-yu, King Jeong
+812.1.1 = { holder = 1414040 } #Dae Eon-ui, King Hui
+817.1.1 = { holder = 1414042 } #Dae Myeong-chung, King Gan
+818.1.1 = { holder = 1414048 } #Dae In-su, King Seon
+830.1.1 = { holder = 1414050 } #Dae I-jin
+857.1.1 = { holder = 1414051 } #Dae Geon-hwang
+871.1.1 = { holder = 1414060 } #Dae Hyeon-seok
+893.1.1 = { holder = 1414061 } #Dae Wi-hae
+906.1.1 = { holder = 1414062 } #Dae In-seon
+#Kingdom of Dongdan
+926.8.28 = { holder = 194327 } #Yelü Bei
+930.11.23 = { holder = 1413512 } #Empress Duanshun
+940.8.20 = { holder = 194328 } #Yelü Wuyu
+947.11.1 = { holder = 1413028 } #Yelü Anduan
+#Liao
+953.1.17 = { holder = 194329 liege = e_khitan }
+969.3.12 = { holder = 194330 }
+970.1.1 = { holder = 1414083 } #Yan Pu - general until 975.8.10
+#Rebellion of Wuzhe
+975.8.10 = { liege = 0 }
+#Liao
+976.1.1 = { holder = 194330 liege = e_khitan }
+982.10.13 = { holder = 194331 }
+1031.6.25 = { holder = 194332 }
+1055.8.28 = { holder = 194333 }
+1101.2.12 = { holder = 194334 }
+1125.1.1 = { holder = 0 }

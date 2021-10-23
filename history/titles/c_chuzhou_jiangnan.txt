@@ -1,0 +1,66 @@
+#Sui
+588.1.1 = { holder = 1408779 } #Wei Chong - deputy Congguan at some point
+591.1.1 = { holder = 0 }
+#Tang
+766.1.1 = { holder = 1408581 } #Cui Qian - prefect around this time
+768.1.1 = { holder = 0 }
+789.1.1 = { holder = 1404219 } #Qi Kang - prefect in 789.9.6
+790.1.1 = { holder = 0 }
+818.1.1 = { holder = 1406344 } #Li Fan - made prefect
+819.1.1 = { holder = 0 }
+864.10.5 = { holder = 1405062 liege = d_zhedong } #Yang Yan - no prefect
+867.4.2 = { holder = 1403277 } #Wang Feng - no prefect
+870.6.3 = { holder = 1402288 } #Li Wan - no prefect
+872.12.4 = { holder = 1401151 } #Wang Gui - no prefect
+872.1.1 = { holder = 1409981 } #Lu Qianguan - prefect in 873.9.24
+875.1.1 = { holder = 1409451 } #Pei Yanlu - no prefect
+877.4.17 = { holder = 1408391 } #Cui Qian - no prefect
+878.1.1 = { holder = 1409995 } #Chen Shen - prefect until 881
+881.11.25 = { holder = 1409959 liege = e_tang } #Lu Yue - took over the prefecture
+#Wuyue
+907.7.5 = { holder = 1409996 liege = d_zhenhai } #Yu Zuo - made prefect
+920.1.1 = { holder = 1407121 } #Chen Shenli - prefect at some point
+930.1.1 = { holder = 1409481 } #Cui Hongda - prefect until 932.5.6
+932.5.6 = { holder = 1409640 } #Pi Guangye - no prefect
+937.5.26 = { holder = 1406600 } #Qian Renjun - no prefect
+944.11.19 = { holder = 1406635 } #Qian Hongzong - no prefect
+947.4.14 = { holder = 1406627 } #Qian Hongxuan - no prefect
+950.7.18 = { holder = 1409998 } #Shao Keqian - prefect in 958.4.8
+963.1.1 = { holder = 1406648 } #Qian Hongyi - no prefect
+#Song
+978.6.9 = { holder = 217722 liege = e_song }
+995.1.1 = { holder = 1800446 } #Shu Zhixiong - made prefect at some point
+1002.7.15 = { holder = 1401664 } #Chen Ruozhuo - made prefect
+1006.1.1 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }
+1125.3.26 = { holder = 217731 }
+1135.2.9 = { holder = 217732 }
+1150.1.9 = { holder = 217734 }
+1161.10.27 = { holder = 217735 }
+1189.1.20 = { holder = 217736 }
+1208.12.29 = { holder = 217737 }
+1213.9.11 = { holder = 217738 }
+1224.1.14 = { holder = 217739 }
+
+1234.2.9 = { holder = 217740 }
+
+1234.2.10 = { holder = 172005 } # Ögedei Khan
+1241.12.11 = { holder = 172007 } # Güyük Khan  # Actual coronation 1246.8.24
+1248.4.20 = { holder = 217265 } # Möngke Khan  # Actual coronation 1251.7.1
+1259.8.11 = { holder = 125526 } #civil war between Ariq Boke and Kublai
+1264.8.21 = { holder = 217266 } # Kublai Khan
+1294.2.18 = { holder = 217269 } # Temür Khan
+1307.2.10 = { holder = 217271 } # Külüg Khan 
+1311.1.27 = { holder = 217272 } # Buyantu Khan
+1320.3.1 = { holder = 217274 } # Gegeen Khan 
+1323.9.4 = { holder = 217279 } # Yesün Temür Khan
+1328.8.15 = { holder = 217280 }  # Ragibagh Khan
+1328.11.14 = { holder = 217281 } # Jayaatu Khan
+1329.4.3 = { holder = 217282 } # Khutughtu Khan Kusala
+1329.9.8 = {  holder = 217281 } # Jayaatu Khan (again)
+1332.9.2 = { holder = 217283 } # Rinchinbal Khan
+1332.12.14 = { holder = 217284 } # Toghon Temür Khan

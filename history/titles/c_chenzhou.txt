@@ -1,0 +1,132 @@
+#Northern Wei
+522.1.1 = { holder = 1409104 } #Xin Kun - prefect at some point
+526.1.1 = { holder = 0 }
+#Northern Qi
+550.1.1 = { holder = 1407447 } #Li Xili - prefect until 559.9.11
+556.9.11 = { holder = 0 }
+#Tang
+620.1.1 = { holder = 1800652 } #Tao Cong - Dudu at some point
+622.1.1 = { holder = 0 }
+667.1.1 = { holder = 1408360 } #Cui Xuanji - prefect at some point
+672.1.1 = { holder = 1409274 } #Pei Xizhuang - prefect at some point
+676.1.1 = { holder = 0 }
+757.1.1 = { holder = 1415795 } #Dugu Jun - prefect around this time
+758.5.1 = { holder = 0 }
+799.10.8 = { holder = 1403815 liege = d_zhongwu } #Liu Changyi - made prefect
+867.1.1 = { holder = 1400615 liege = d_zhongwu } #Li Zhuo
+869.1.1 = { holder = 1400425 } #Cao Fen
+873.1.1 = { holder = 1400415 } #Du Shenquan
+874.1.1 = { holder = 1409812 } #Xu Ke - prefect until 876
+877.6.15 = { holder = 1400880 } #Zhao Chou - prefect until 899.5.1
+881.1.15 = { liege = e_tang }
+881.5.17 = { liege = d_zhongwu }
+886.8.4 = { liege = e_tang }
+887.6.3 = { liege = d_zhongwu }
+888.12.9 = { liege = e_tang }
+889.1.6 = { liege = d_zhongwu }
+899.5.1 = { holder = 1400881 } #Zhao Chang
+898.6.23 = { holder = 1400882 } #Zhao Xu
+901.12.22 = { holder = 1401060 } #Han Jian
+#Prince of Dongping/Liang
+904.4.8 = { holder = 1400469 } #Zhu Quanzhong
+904.11.16 = { holder = 1400505 } #Zhang Quanyi
+904.12.1 = { holder = 1406293 } #Zhang Shensi
+906.1.28 = { holder = 1404388 } #Yuan Xiangxian - made prefect
+910.7.1 = { holder = 1401258 } #Feng Xingru
+#Later Liang
+910.7.31 = { holder = 1406296 } #Li Ting
+911.4.2 = { holder = 1401060 } #Han Jian
+912.8.15 = { holder = 1400476 } #No Jiedushi
+912.8.21 = { holder = 1406379 } #Han Qiong
+914.1.1 = { holder = 1400477 } #Zhu Youzhang
+914.5.1 = { holder = 1401648 } #Wang Tan
+915.6.16 = { holder = 1401170 } #Luo Zhoujing
+918.7.29 = { holder = 1400871 } #Xie Yanzhang
+919.1.5 = { holder = 1406090 } #Zhu Gui
+919.1.18 = { holder = 1400481 } #No Jiedushi
+919.6.1 = { holder = 1404666 } #Wang Yanzhang
+921.2.27 = { holder = 1404423 } #Wen Shaotu
+#Later Tang
+924.7.23 = { holder = 1400496 } #Li Lingxi
+926.3.9 = { holder = 1400505 } #Zhang Quanyi
+926.4.9 = { holder = 1404126 } #Tao Qi
+926.5.21 = { holder = 1412344 } #No Jiedushi
+926.12.24 = { holder = 1400885 } #Xia Luqi
+928.1.14 = { holder = 1412344 } #No Jiedushi
+928.3.13 = { holder = 1404426 } #Kong Jun
+930.4.19 = { holder = 1400358 } #Zhang Yanlang
+930.7.23 = { holder = 1412366 } #Li Congwen
+931.11.1 = { holder = 1412344 } #No Jiedushi
+931.11.16 = { holder = 1400189 } #Feng Yun
+932.12.3 = { holder = 1404783 } #Meng Hu
+933.8.4 = { holder = 1412344 } #No Jiedushi
+933.9.5 = { holder = 1400637 } #Li Congchang
+935.4.12 = { holder = 1400362 } #Zhao Yanshou
+#Later Jin
+937.1.17 = { holder = 1400890 } #Zhang Congjian
+937.9.8 = { holder = 1412397 } #Liu Zhiyuan
+938.12.7 = { holder = 1400267 } #Du Chongwei
+940.4.19 = { holder = 1412429 } #An Shenxin
+941.7.31 = { holder = 1401219 } #Zhao Zaili
+943.5.9 = { holder = 1412366 } #Li Congwen
+945.2.2 = { holder = 1400168 } #Fu Yanqing
+945.6.7 = { holder = 1412427 } #An Shenqi
+945.12.7 = { de_jure_liege = d_zhenan liege = d_zhenan }
+945.12.28 = { holder = 1406707 } #Li Yantao
+947.1.11 = { holder = 1412387 } #Shi Chongrui
+#Liao
+947.2.20 { holder = 1404125 } #Liu Yanseng
+#Later Han
+947.4.18 = { holder  = 1400979 } #Li Hongxin - made prefect
+947.7.6 = { de_jure_liege = d_zhongwu liege = d_zhongwu }
+948.1.12 = { holder = 1412399 } #Liu Xin
+950.5.12 = { holder = 1404843 } #Li Gu - made prefect until 951.3.13
+#Later Zhou
+951.3.13 = { holder = 1400348 } #Yao Yuanfu - prefect in 952.2.5 until 952.8.6
+952.8.6 = { holder = 1412488  de_jure_liege = d_zhenan liege = d_zhenan } #Guo Chong
+954.2.16 = { holder = 1401268 } #No Jiedushi
+954.2.22 = { holder = 1401910 } #Wang Lingwen
+955.1.1 = { holder = 1401054 } #Xiang Xun
+956.7.13 = { holder = 1401283 } #No Jiedushi
+957.6.11 = { holder = 1401872 } #Han Lingkun
+#Song
+961.2.20 = { holder = 1400460 } #Zhang Lingze
+961.8.22 = { holder = 217721 } #No Jiedushi
+967.3.11 = { holder = 1404741 } #Liu Guangyi
+973.1.1 = { holder = 1406279 } #Dang Jin
+977.12.25 = { holder = 217722 liege = e_song }
+980.1.1 = { holder = 1410001 } #Shen Zhili - prefect at some point
+984.1.1 = { holder = 217722 }
+997.5.8 = { holder = 217723 } 
+1022.3.23 = { holder = 217724 } 
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }
+
+#Jin
+1142.1.1 = { holder = 217732 }
+1150.1.9 = { holder = 217734 }
+1161.10.27 = { holder = 217735 }
+1189.1.20 = { holder = 217736 }
+1208.12.29 = { holder = 217737 }
+1213.9.11 = { holder = 217738 }
+1224.1.14 = { holder = 217739 }
+1234.2.9 = { holder = 217740 }
+#Yuan
+1234.2.10 = { holder = 172005 } # Ögedei Khan
+1241.12.11 = { holder = 172007 } # Güyük Khan  # Actual coronation 1246.8.24
+1248.4.20 = { holder = 217265 } # Möngke Khan  # Actual coronation 1251.7.1
+1259.8.11 = { holder = 125526 } #civil war between Ariq Boke and Kublai
+1264.8.21 = { holder = 217266 } # Kublai Khan
+1294.2.18 = { holder = 217269 } # Temür Khan
+1307.2.10 = { holder = 217271 } # Külüg Khan 
+1311.1.27 = { holder = 217272 } # Buyantu Khan
+1320.3.1 = { holder = 217274 } # Gegeen Khan 
+1323.9.4 = { holder = 217279 } # Yesün Temür Khan
+1328.8.15 = { holder = 217280 }  # Ragibagh Khan
+1328.11.14 = { holder = 217281 } # Jayaatu Khan
+1329.4.3 = { holder = 217282 } # Khutughtu Khan Kusala
+1329.9.8 = {  holder = 217281 } # Jayaatu Khan (again)
+1332.9.2 = { holder = 217283 } # Rinchinbal Khan
+1332.12.14 = { holder = 217284 } # Toghon Temür Khan

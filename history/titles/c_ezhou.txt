@@ -1,0 +1,94 @@
+#Ezhou, Wuchang commandery, Yingzhou (Southern dynasties), Jiangxia commandery
+
+#Eastern Wu
+229.1.1 = { holder = 1407887 } #Sun Deng - made administrator
+234.1.1 = { holder = 0 }
+#Western Jin
+306.1.1 = { holder = 1800613 } #Tao Kun - made administrator
+312.1.1 = { holder = 0 }
+#Eastern Jin
+325.1.1 = { holder = 1800615 } #Tao Zhan - administrator around this time
+326.1.1 = { holder = 0 }
+339.1.1 = { holder = 1800627 } #Tao Cheng - made administrator
+341.1.1 = { holder = 0 }
+343.1.1 = { holder = 1800630 } #Tao Mao - administrator at some point
+346.1.1 = { holder = 0 }
+#Southern Chen
+575.11.25 = { holder = 1406897 } #Chen Shujian - made inspector
+576.1.22 = { holder = 1406898 } #Chen Shuqing - made inspector
+576.11.3 = { holder = 0 }
+576.12.16 = { holder = 1406897 } #Chen Shujian - made inspector
+579.1.1 = { holder = 0 }
+588.11.30 = { holder = 1406997 } #Chen Yi - made inspector
+#Sui
+589.2.10 = { holder = 0 }
+#Tang
+731.1.1 = { holder = 1403199 } #Lu Yi - made prefect
+731.11.17 = { holder = 0 }
+757.1.1 = { holder = 0 liege = d_eyue } #Wei Liangzai
+759.1.1 = { holder = 0 } #Mr. Li
+761.1.1 = { holder = 0 } #Wang Zheng
+764.1.1 = { holder = 0 } #Mu Ning
+769.1.1 = { holder = 1415883 } #Dugu Wensu
+772.1.1 = { holder = 0 } #Wu Zhongru
+778.1.1 = { holder = 0 } #Li Qian
+785.1.1 = { holder = 0 } #Lu Yuanqing
+786.1.1 = { holder = 0 } #Li Song
+788.1.1 = { holder = 0 } #He Shihan
+802.1.1 = { holder = 0 } #Zheng Shen
+805.1.1 = { holder = 0 } #Han Gao
+808.1.1 = { holder = 0 } #Chi Shimei
+810.1.1 = { holder = 0 } #Lu Yuanying
+813.11.7 = { holder = 1402353 } #Liu Gongchuo
+816.1.1 = { holder = 0 } #Li Daogu
+817.7.18 = { holder = 1408268 } #Li Cheng
+823.2.11 = { holder = 1403447 } #Cui Yuanlüe
+824.1.1 = { holder = 0 } #Cui Zhi
+825.2.2 = { holder = 1402977 } #Niu Sengru
+830.2.12 = { holder = 0 } #Yuan Zhen
+831.9.22 = { holder = 1408376 } #Cui Yan
+835.8.15 = { holder = 0 } #Gao Zhong
+838.1.1 = { holder = 0 } #Gao Kai
+840.10.29 = { holder = 1400716 } #Cui Li
+842.1.1 = { holder = 0 } #No Jiedushi
+846.1.1 = { holder = 1400592 } #Zheng Lang
+847.2.19 = { holder = 1403215 } #Lu Shang
+849.1.1 = { holder = 0 } #Wei Sun
+852.1.1 = { holder = 0 } #Wei Que
+853.1.1 = { holder = 0 } #No Jiedushi
+855.1.1 = { holder = 1408385 } #Cui Yao
+857.1.1 = { holder = 0 } #Zhang Yifu
+860.1.1 = { holder = 1416220 } #Yu Desun
+864.1.1 = { holder = 0 } #No Jiedushi
+866.1.1 = { holder = 1403075 } #Cui Liao
+868.1.1 = { holder = 1405008 } #Liu Junzhang
+870.1.1 = { holder = 1408198 } #Chen Yong
+874.1.1 = { holder = 1408200 } #Wei Chan
+877.1.1 = { holder = 1408201 } #Cui Shao
+884.4.2 = { holder = 1408202 } #Lu Shenzhong
+886.1.1 = { holder = 1408203 } #Du Hong
+#Southern Wu
+905.3.17 = { holder = 1408062 } #Liu Cun
+907.7.13 = { holder = 1408175 } #Qin Pei
+912.5.30 = { holder = 1408052 } #Li Jian
+929.9.6 = { holder = 1407169 } #No Jiedushi
+929.9.22 = { holder = 1408011 } #Chai Zaiyong
+932.1.1 = { holder = 1408204 } #Zhang Xuan
+#Southern Tang
+939.9.16 = { holder = 1408102 } #Wang Yu
+944.7.23 = { holder = 1408205 } #Wei Jian
+947.1.1 = { holder = 1406074 } #Liu Renshan
+953.8.12 = { holder = 1408051 } #He Jingzhu
+959.12.12 = { holder = 1408021 } #Wang Chongwen
+961.9.13 = { holder = 1408206 } #Huang Yanqian
+964.4.15 = { holder = 1407643 } #Lin Renzhao
+965.9.8 = { holder = 1408207 } #Yang Shouzhong
+#Song
+976.1.1 = {  holder = 217721 liege = e_song }
+976.11.14 = { holder = 217722 }
+997.5.8 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }

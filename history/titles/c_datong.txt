@@ -1,0 +1,74 @@
+#Datong, Dai commandery
+#Northern Wei
+510.1.1 = { holder = 1408667 } #Wei Ying - administrator at some point
+515.1.1 = { holder = 0 }
+#Tang
+866.3.21 = { holder = 1400533 liege = d_hedong } #Zheng Congdang
+869.11.24 = { holder = 1412306 liege = d_datong } #Li Guochang
+876.1.1 = { holder = 1401383 } #Zhi Mo
+876.1.30 = { holder = 1401415 } #Duan Wenchu
+878.3.11 = { holder = 1412310 } #Li Keyong
+880.8.25 = { holder = 1410404 } #Helian Duo
+891.1.1 = { holder = 1412477 } #Shi Shanyou
+891.7.1 = { holder = 1400206 } #Xue Zhiqin
+#Prince of Jin/Later Tang
+894.10.3 = { holder = 1412313 } #Li Kening
+895.1.1 = { holder = 1404636 liege = d_hedong } #Liu Zaili - prefect until 903.6.5
+903.6.5 = { holder = 1404637 liege = d_nanjing } #Wang Jinghui - rebel
+903.7.1 = { holder = 1412310 liege = d_hedong } #No Jiedushi owned by Hedong
+908.2.24 = { holder = 1412318 } #No Jiedushi, owned by Hedong
+915.7.15 = { holder = 1401427 liege = d_datong } #He Delun
+916.3.23 = { holder = 1404677 } #Zhang Chengye
+916.9.30 = { holder = 1412478 } #Li Cunzhang
+922.1.1 = { holder = 1400253 liege = d_hedong } #An Yuanxin - prefect
+924.9.11 = { liege = d_datong }
+926.1.1 = { holder = 1400258 } #Gao Xingrui
+927.5.24 = { holder = 1401430 } #Zhang Jingxun
+928.10.19  = { holder = 1400449 } #Suo Zitong
+928.12.11 = { holder = 1400322 } #Zhang Wen
+929.7.13 = { holder = 1404371 } #Yang Hanzhang
+930.12.3 = { holder = 1400324 } #Zhang Jingda
+933.4.9 = { holder = 1400322 } #Zhang Wen
+935.3.7 = { holder = 1401223 } #An Chongba
+935.8.13 = { holder = 1401432 } #Sha Yanxun
+#Rebellion
+937.3.15 = { holder = 1401911 } #Wu Luan
+#Liao
+937.7.30 = { holder = 1412505 } #Zhang Yanchao
+946.1.1 = { holder = 1400907 } #Cui Tingxun
+951.1.1 = { holder = 1800034 } #Gao Xun
+958.1.1 = { holder = 1413739 } #Ala
+969.3.12 = { holder = 1413740 } #Yelü Shanpu
+982.1.1 = { holder = 1800050 } #Liu Yangou
+985.8.13 = { holder = 1800110 } #Liu Jing
+988.3.17 = { holder = 194331 } #No deputy
+988.9.11 = { holder = 1413317 } #Yelü Mozhi
+1000.1.1 = { holder = 1413742 } #Yelü Guoyin
+1012.5.1 = { holder = 1800122 } #Xing Baozhi
+1013.12.30 = { holder = 1413247 } #Yelü Huage
+1020.1.1 = { holder = 1401695 } #Han Dening
+1026.1.1 = { holder = 1800128 } #Zhang Jian
+1026.3.22 = { holder = 194331 } #No deputy
+1031.6.25 = { holder = 194332 } #No deputy
+1044.12.1 = { holder = 1413744 } #Yelü Maliu
+1046.7.10 = { holder = 1413137 } #Yelü Tiebu
+1050.12.18 = { holder = 1413798 } #Xiao Dilie
+1055.8.28 = { holder = 194333 } #No deputy
+1059.9.7 = { holder = 1413137 } #Yelü Tiebu
+1063.8.20 = { holder = 1413746 } #Yelü Heshu
+1067.1.5 = { holder = 1413110 } #Yelü Alian
+1073.1.1 = { holder = 1413917 } #Xiao Yanliu
+1076.1.13 = { holder = 194333 } #No deputy
+1087.1.1 = { holder = 1413413 } #Yelü Yange
+1095.1.1 = { holder = 194333 } #No deputy
+1101.2.12 = { holder = 194334 } #No deputy
+1103.1.1 = { holder = 1413759 } #Xiao Duola
+1108.1.1 = { holder = 194334 } #No deputy
+1116.7.1 = {  holder = 1413760 } #Xiao Yixue
+1118.1.17 = { holder = 1413761 } #Xiao Chala
+1119.9.7 = { holder = 1413120 } #Yelü Xinielie
+1121.12.13 = { holder = 194334 } #No deputy
+#Northern Liao
+1122.4.22 = { holder = 1413109 liege = d_nanjing } #Yelü Chun
+#Jin
+1122.5.10 = { holder = 0 }
