@@ -2595,10 +2595,8 @@ rosetta_stone = { #109 was found in Rosetta, port city of Nile Delta
 	learning = 3
 	quality = 5
 	active = {
-		OR = {
 			learning = 10
 			culture = egyptian_arabic
-		}
 	}
 	allowed_gift = {
 		culture = egyptian_arabic
