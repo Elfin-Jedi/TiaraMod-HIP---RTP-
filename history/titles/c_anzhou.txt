@@ -1,0 +1,76 @@
+#Northern Zhou
+562.1.1 = { holder = 1407723 } #Cui Qian - made prefect
+566.1.1 = { holder = 0 }
+#Sui
+570.1.1 = { holder = 1408759 } #Wei Guan - prefect at some point
+573.1.1 = { holder = 0 }
+586.2.13 = { holder = 1408755 } #Wei Guang - made prefect
+589.2.23 = { holder = 1408748 } #Wei Shikang - made prefect
+589.5.21 = { holder = 0 }
+#Tang
+720.1.1 = { holder = 1406472 } #Wei Kang - made Dudu
+722.1.1 = { holder = 0 }
+855.1.1 = { holder = 1403469 } #Cui Zhu - prefect at some point
+860.1.1 = { holder = 0 }
+866.1.1 = { holder = 1403075 liege = d_eyue } #Cui Liao
+868.1.1 = { holder = 1405008 } #Liu Junzhang
+870.1.1 = { holder = 1408198 } #Chen Yong
+874.1.1 = { holder = 1408200 } #Wei Chan
+877.1.1 = { holder = 1408201 } #Cui Shao
+884.4.2 = { holder = 1408202 } #Lu Shenzhong
+886.1.1 = { holder = 1408203 } #Du Hong
+#Prince of Dongping
+898.10.21  = { holder = 1400469 liege = k_jingxi } #No Jiedushi
+#Later Liang
+907.6.1 = { liege = e_later_liang }
+912.7.18 = { holder = 1400476 } #No Jiedushi
+913.3.27 = { holder = 1400481 } #No Jiedushi
+920.2.17 = { holder = 1400224 de_jure_liege = d_anyuan liege = d_anyuan } #Zhu Hanbin
+#Later Tang
+924.1.11 = { holder = 1412318 } #No Jiedushi
+926.5.15 = { holder = 1412344 } #No Jiedushi
+926.9.26 = { holder = 1412811 } #Shi Jingrong
+928.3.13 = { holder = 1400258 } #Wang Xinggui
+930.6.4 = { holder = 1406695 } #Zhou Zhiyu
+931.4.12 = { holder = 1404371 } #Yang Hanzhang
+933.4.20 = { holder = 1400165 } #Fu Yanchao
+934.2.23 = { holder = 1406696 } #Wang Xiquan
+934.2.24 = { holder = 1406697 } #Li Duan
+934.3.26 = { holder = 1401791 } #Li Jingzhou
+934.10.27 = [ holder = 1400251 } #Lu Wenjin
+#Later Jin
+937.1.31 = { holder = 1412375 } #No Jiedushi
+937.4.6 = { holder = 1401242 } #Zhou Gui
+#Rebellion
+937.9.1 = { holder = 1401243 } #Wang Hui
+#Later Jin
+937.9.5 = { holder = 1410405 } #Li Jinquan
+#Southern Tang
+940.7.16 = { holder = 1406698 } #Li Chengyu
+#Later Jin
+940.7.21 = { holder = 1400287 } #Ma Quanjie
+940.8.8 = { holder = 1412375 } #No Jiedushi
+942.7.28 = { holder = 1412389 } #No Jiedushi
+#Liao
+947.1.11 = { holder = 194326 } #No Jiedushi
+947.3.22 = { holder = 1401071 } #Liu Suining
+#Later Han
+947.8.10 = { holder = 1412436 } #Yang Chengxin
+950.4.24 = { holder = 1401910 } #Wang Lingwen
+#Later Zhou
+951.12.14 = { holder = 1400982 } #Li Hongyi
+954.11.3 = { holder = 1406699 liege = e_later_zhou } #No Jiedushi
+956.1.22 = { holder = 1401283 } #No Jiedushi
+959.7.27 = { holder = 1401287 } #No Jiedushi
+#Song
+960.2.4 = { holder = 1400340 liege = d_anyuan } #Wang Yan
+964.3.31 = { holder = 1400909 } #Wu Xingde
+969.10.9 = { holder = 1401054 } #Xiang Xun
+977.5.23 = { holder = 217722 }
+997.5.8 = { holder = 217723 }
+1022.3.23 = { holder = 217724 }
+1063.3.30 = { holder = 217725 }
+1067.1.25 = { holder = 217726 }
+1085.4.1 = { holder = 217727 }
+1100.2.23 = { holder = 217728 }
+
