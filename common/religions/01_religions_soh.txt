@@ -20,7 +20,7 @@ pagan_group = {
 		secondary_event_pictures = tengri_pagan
 		alternate_start = { always = no }
 
-		icon = 54
+		icon = 53
 		heresy_icon = 54
 		
 		ai_convert_other_group = 2 # always try to convert
@@ -86,7 +86,7 @@ pagan_group = {
 		graphical_culture = mongolgfx
 		secondary_event_pictures = tengri_pagan
 
-		icon = 54
+		icon = 53
 		heresy_icon = 54
 		
 		color = { 113 20 47 }
@@ -160,7 +160,7 @@ pagan_group = {
 		interface_skin = { taoist_interface indian_interface muslim_interface }
 		alternate_start = { always = no }
 
-		icon = 54
+		icon = 53
 		heresy_icon = 54
 		
 		color = { 120 105 255 }
@@ -233,7 +233,7 @@ pagan_group = {
 		secondary_event_pictures = sunni
 		interface_skin = { taoist_interface indian_interface muslim_interface }
 
-		icon = 54
+		icon = 53
 		heresy_icon = 54
 		
 		color = { 120 105 255 }
@@ -305,7 +305,7 @@ pagan_group = {
 		interface_skin = { taoist_interface indian_interface muslim_interface }
 		alternate_start = { always = no }
 
-		icon = 54
+		icon = 53
 		heresy_icon = 54
 		
 		color = { 229 66 33 }
@@ -378,7 +378,7 @@ pagan_group = {
 		secondary_event_pictures = sunni
 		interface_skin = { taoist_interface indian_interface muslim_interface }
 
-		icon = 54
+		icon = 53
 		heresy_icon = 54
 		
 		color = { 229 66 33 }
@@ -450,7 +450,7 @@ pagan_group = {
 		interface_skin = { taoist_interface indian_interface muslim_interface }
 		alternate_start = { always = no }
 
-		icon = 54
+		icon = 53
 		heresy_icon = 54
 		
 		color = { 187 20 67 }
@@ -509,7 +509,7 @@ pagan_group = {
 		secondary_event_pictures = sunni
 		interface_skin = { taoist_interface indian_interface muslim_interface }
 
-		icon = 54
+		icon = 53
 		heresy_icon = 54
 		
 		color = { 187 20 67 }
@@ -588,8 +588,8 @@ indian_group = { # Eastern
 		ai_convert_same_group = 1 # try to convert if ai_zeal is high # While not proselytizing, fully blocking conversion does not seem ideal
 		ai_convert_other_group = 1	# try to convert if ai_zeal is high # While not proselytizing, fully blocking conversion does not seem ideal
 		
-		icon = 49
-		heresy_icon = 49
+		icon = 48
+		heresy_icon = 50
 		
 		color = { 157 0 47 }
 		
