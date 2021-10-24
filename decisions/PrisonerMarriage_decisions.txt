@@ -1,0 +1,430 @@
+targetted_decisions = {
+
+	PM_forced_marriage = {
+		ai_check_interval = 12 #check once a year
+		filter = court
+		ai_target_filter = none
+		third_party_filter = home_court_including_me
+		ai_third_party_filter = home_court
+		third_party = FROM
+
+		from_potential = {
+			ai = no
+			is_playable = yes
+			is_adult = yes
+			prisoner = no
+		}
+
+		potential = {
+			prisoner = yes
+			host = { character = FROM }
+			NOT = {	any_spouse = { character = FROM } } # Can't use this on your current wife.
+		}
+
+		allow = {
+			show_only_failed_conditions = yes
+			is_marriage_adult = yes
+			is_ruler = no #For consistency with forced concubinage and logic.
+		}
+
+		third_party_potential = {
+			show_only_failed_conditions = yes
+			FROMFROM = {
+				show_scope_change = no
+				is_adult = yes
+				prisoner = no
+				OR = { # Used to disqualify landed councilors. They can manage their own marriages.
+					is_ruler = no
+					ai = no
+				}
+				NOR = { 
+					trait = incapable
+					trait = eunuch
+					same_sex = ROOT
+					any_spouse = { character = ROOT } # Already married to the prisoner.
+				}
+				OR = {
+					AND = {
+						is_betrothed = no
+						is_married = no
+					}
+					AND = {
+						is_betrothed = no
+						has_polygamy = yes
+						is_female = no # Polygamy only works for men.
+						NOT =  { any_spouse = { count = 4 } } # has 3 wives max
+					}
+					AND = { # This one becomes relevant if FROMFROM is already betrothed.
+						has_polygamy = yes
+						is_female = no # Polygamy only works for men.
+						NOT =  { any_spouse = { count = 3 } } # has 2 wives max
+					}
+				}
+			}
+		}
+
+		third_party_allow = {
+			show_only_failed_conditions = yes
+			FROMFROM = {
+				# The can_marry condition will return FALSE if the character is already married or betrothed, even if the character has polygamy.	
+				# Because of that we have to get tricky and figure out why the condition returned FALSE.
+				# If the character can't marry, but is married/betrothed the condition likely returned FALSE because of an existing marriage.
+				# We can then make a fairly safe guess the character doesn't have any traits that forbid marriage and allow the forced marriage.
+				custom_tooltip = {
+					text = PM_can_marry
+					OR = {
+						can_marry = yes
+						AND = {
+							can_marry = no
+							OR = {
+								is_married = yes
+								is_betrothed = yes
+							}
+							has_polygamy = yes
+							is_female = no # Polygamy only works for men.
+							OR = { # Now we just have to make sure the character doesn't already have too many wives.
+								AND = {
+									is_betrothed = no
+									NOT =  { any_spouse = { count = 4 } } # has 3 wives max
+								}
+								AND = {
+									is_betrothed = yes
+									NOT =  { any_spouse = { count = 3 } } # is betrothed and has 2 wives max
+								}
+							}
+						}
+					}
+				}
+				custom_tooltip = {
+					text = PM_incest_religion
+					OR = { # incest requires specific religions that allow it
+						NOR = {
+							is_parent_of = prev
+							is_child_of = prev
+							sibling = prev
+						}
+						religion = zoroastrian
+						religion = messalian
+						has_religion_feature = religion_holy_family
+						has_religion_feature = religion_feature_zun
+						religion = egyptian_pagan
+						religion = aten_pagan
+						religion = winter_religion
+						AND = {
+							religion = valyrian_rel
+							sibling = prev
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				spouse = {
+					opinion = {
+						modifier = opinion_forced_wife_consort
+						who = FROM
+					}
+					opinion = {
+						modifier = opinion_forced_wife_consort
+						who = FROMFROM
+					}
+					remove_spouse = ROOT
+				}
+				any_close_relative = {
+					opinion = {
+						modifier = opinion_forced_relative_consort
+						who = FROM
+					}
+					opinion = {
+						modifier = opinion_forced_relative_consort
+						who = FROMFROM
+					}
+				}
+				opinion = {
+					modifier = opinion_forced_consort
+					who = FROM
+				}
+				opinion = {
+					modifier = opinion_forced_consort
+					who = FROMFROM
+				}
+			}
+			if = {
+				limit = { is_female = yes }
+				add_spouse = FROMFROM
+			}
+			else = {
+				add_spouse_matrilineal = FROMFROM
+			}
+			imprison = no
+			custom_tooltip = { text = PM_angry_family }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { # AI doesn't use this decision.
+				factor = 0
+			}
+		}
+	}
+
+	PM_forced_marriage_AI = { # the original decision, so the AI can get in on the action
+		ai_check_interval = 12 #check once a year
+		filter = court
+		ai_target_filter = court
+
+		from_potential = {
+			ai = yes # hide it from players who have a better decision available
+			is_playable = yes
+			is_adult = yes
+			prisoner = no
+			NOR = { 
+				trait = incapable
+				trait = eunuch
+			}
+			OR = {
+				is_married = no
+				AND = {
+					has_polygamy = yes
+					NOT =  { any_spouse = { count = 4 } }
+				}
+			}
+		}
+		potential = {
+			prisoner = yes
+			host = { character = FROM }
+			NOT = { same_sex = FROM }
+		}
+		allow = {
+			is_marriage_adult = yes
+			is_ruler = no #For consistency with forced concubinage and logic.
+			FROM = {
+				NOT = {
+					trait = celibate # Not much point, really.
+				}
+				OR = {
+					NOR = {
+						is_parent_of = prev
+						is_child_of = prev
+						sibling = prev
+					}
+					religion = zoroastrian
+					religion = messalian
+					has_religion_feature = religion_holy_family
+				}
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				spouse = {
+					opinion = {
+						modifier = opinion_forced_wife_consort
+						who = FROM
+					}
+					remove_spouse = ROOT
+				}
+				any_close_relative = {
+					opinion = {
+						modifier = opinion_forced_relative_consort
+						who = FROM
+					}
+				}
+				opinion = {
+					modifier = opinion_forced_consort
+					who = FROM
+				}
+			}
+			if = {
+				limit = { is_female = yes }
+				add_spouse = FROM
+			}
+			else = {
+				add_spouse_matrilineal = FROM
+			}
+			imprison = no
+			custom_tooltip = { text = PM_angry_family }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { # AI is reluctant to use the decision. Basic chance is 1% per prisoner per year.
+				factor = 0.01
+			}
+			modifier = { # AI will completely refuse to use the decision if it's nice or doesn't really want a spouse.
+				factor = 0
+				FROM = {
+					NOR = {	
+						trait = kind
+						trait = just
+						trait = chaste
+						trait = celibate
+					}
+				}
+			}
+			modifier = { # AI doesn't want a spouse who is unattractive, infertile, or a dirty peasant.
+				factor = 0
+				ROOT = {
+					OR = {	
+						trait = ugly
+						trait = hunchback
+						trait = celibate
+						trait = eunuch
+						AND = {
+							is_female = yes
+							age = 40
+						}
+						dynasty = none
+					}
+				}
+			}
+			modifier = { # AI will not use the decision on close relatives unless it follows a religion that encourages it or is highly impulsive.
+				factor = 0
+				FROM = {
+					is_close_relative = ROOT
+					NOR = {	
+						religion = zoroastrian
+						religion = messalian
+						has_religion_feature = religion_holy_family
+						trait = arbitrary
+						trait = possessed
+						trait = lunatic
+					}
+				}
+			}
+			modifier = { # AI has increased chance to use the decision on close relatives if religion encourages it.
+				factor = 10
+				FROM = {
+					is_close_relative = ROOT
+					OR = {	
+						religion = zoroastrian
+						religion = messalian
+						has_religion_feature = religion_holy_family
+					}
+				}
+			}
+			modifier = { # AI will use the decision more often if it's impulsive.
+				factor = 10
+				FROM = {
+					OR = {	
+						trait = arbitrary
+						trait = possessed
+						trait = lunatic
+					}
+				}
+			}
+			modifier = { # AI will use the decision more often if the prisoner is of noble birth.
+				factor = 10
+				ROOT = {
+					any_parent = {
+						tier = higher_than_baron
+					}
+				}
+			}
+			modifier = { # AI will use the decision even more often if the prisoner is a prince or princess.
+				factor = 10
+				ROOT = {
+					any_parent = {
+						tier = higher_than_duke
+					}
+				}
+			}
+			modifier = { # Dukes and counts don't like marrying their lessers.
+				factor = 0.1
+				FROM = {
+					OR = {
+						tier = higher_than_baron
+						any_parent = { tier = higher_than_baron }
+					}
+				}
+			}
+			modifier = { # Emperors and kings like marrying their lessers even less.
+				factor = 0.1
+				FROM = {
+					OR = {
+						tier = higher_than_duke
+						any_parent = { tier = higher_than_duke }
+					}
+				}
+			}
+			modifier = { # AI will use the decision more often if the prisoner is very young.
+				factor = 10
+				NOT = { age = 26 }
+			}
+			modifier = { # AI will use the decision less often if the prisoner is middle aged.
+				factor = 0.1
+				age = 36
+			}
+			modifier = { # AI will use the decision less often if the prisoner is getting old.
+				factor = 0.1
+				age = 46
+			}
+			modifier = { # AI will use the decision more often if it's barbaric.
+				factor = 10
+				FROM = {
+					OR = {	
+						is_tribal = yes
+						is_nomadic = yes
+					}
+				}
+			}
+			modifier = { # AI will use the decision more often if it's randy and attracted to the prisoner.
+				factor = 10
+				FROM = {
+					OR = {	
+						trait = lustful
+						trait = hedonist
+					}
+					OR = {	
+						trait = homosexual
+						NOT = { same_sex = ROOT }
+					}
+				}
+				ROOT = {
+					is_attractive_trigger = yes
+					NOT = { age = 40 }
+				}
+			}
+			modifier = { # AI will use the decision more often if the prisoner has good genetic material.
+				factor = 10
+				ROOT = {
+					NOR = {
+						trait = inbred
+						trait = imbecile
+					}
+					OR = {	
+						trait = genius
+						trait = quick
+					}
+				}
+			}
+			modifier = { # AI will use the decision more often if the prisoner has good genetic material.
+				factor = 10
+				ROOT = {
+					NOR = {
+						trait = inbred
+						trait = imbecile
+					}
+					OR = {
+						trait = strong
+						trait = fair
+					}
+				}
+			}
+			modifier = { # Glitterhoof! You shall be mine!
+				factor = 100
+				ROOT = {
+					trait = horse
+				}
+				FROM = {
+					trait = lunatic
+				}
+			}
+		}
+	}
+}
