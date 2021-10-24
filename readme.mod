@@ -19,6 +19,7 @@ Contains:
 "Enatic Kingdoms"
 "Extra Bloodlines 1.4"
 "Friend Mod"
+"HIP - Comprehensive Annals of Five Dynasties"
 "HIP - Forge Unlimited Bloodlines"
 "HIP - More Bloodlines"
 "Idiosyncrasy"
@@ -41,6 +42,7 @@ Contains:
 "Non-Dynastic Inheritance"
 "Normal Retreat"
 "Play As Anyone"
+"Prisoner Marriage"
 "Religious Trinity"
 "Rename Anyone"
 "Rich Childhood"
@@ -62,15 +64,12 @@ Contains:
 "WOWGAG's More Artifacts & Bloodlines" [Contains "Historical and Fantastical Artifacts" & "Mythic Artifacts"]
 
 Next:
-"HIP - Comprehensive Annals of Five Dynasties"
+"The Rise of the New Churches"
 --- More Goals:
-"Prisoner Marriage"
 "African Religions Overhaul"
 "Dido's Legacy - Carthage Expansion"
-"The Rise of the New Churches"
 "Pharaohs & Consuls 0.5A Public Build"
 "When the World Stopped Making Sense"
-"Blind/Castrate/Torture everyone no piety loss/cruel trait 3.3"
 "More Ambitions - Find Purpose"
 "Extended Bloodlines (HF)"
 "Expanded Traits"
