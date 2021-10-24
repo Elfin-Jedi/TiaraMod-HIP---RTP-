@@ -65,11 +65,15 @@ Contains:
 
 Next:
 "The Rise of the New Churches"
---- More Goals:
 "African Religions Overhaul"
+--- More Goals:
+"Reformation Reform"
+"Piety Based Reformation"
 "Dido's Legacy - Carthage Expansion"
 "Pharaohs & Consuls 0.5A Public Build"
 "When the World Stopped Making Sense"
+"CleanSlate"
+"CK2Plus"
 "More Ambitions - Find Purpose"
 "Extended Bloodlines (HF)"
 "Expanded Traits"
