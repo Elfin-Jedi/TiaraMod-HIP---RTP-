@@ -1,0 +1,82 @@
+minor_holy_order_check_active_trigger = {
+	FROM = {
+		OR = {
+			AND = {
+				OR = {
+					religion = catholic
+					religion = cathar
+					religion = fraticelli
+					religion = waldensian
+					religion = lollard
+				}
+				any_title = {
+					religion = FROM
+					has_title_flag = minor_holy_order
+				}
+			}
+			AND = {
+				OR = {
+					religion = orthodox
+					religion = bogomilist
+					religion = monothelite
+					religion = iconoclast
+					religion = paulician
+				}
+				any_title = {
+					religion = FROM
+					has_title_flag = minor_holy_order
+				}
+			}
+			AND = {
+				OR = {
+					religion = miaphysite
+					religion = monophysite
+				}
+				any_title = {
+					religion = FROM
+					has_title_flag = minor_holy_order
+				}
+			}
+			AND = {
+				OR = {
+					religion = nestorian
+					religion = messalian
+				}
+				any_title = {
+					religion = FROM
+					has_title_flag = minor_holy_order
+				}
+			}
+		}
+	}
+}
+
+roman_legion_check_active_trigger = {
+	FROM = {
+		OR = {
+			AND = {
+				OR = {
+					religion = orthodox
+					religion = bogomilist
+					religion = monothelite
+					religion = iconoclast
+					religion = paulician
+				}
+				any_title = {
+					religion = FROM
+					has_title_flag = roman_legion
+				}
+			}
+			AND = {
+				OR = {
+					religion = hellenic_pagan_reformed
+					religion = hellenic_pagan
+				}
+				any_title = {
+					religion = FROM
+					has_title_flag = roman_legion
+				}
+			}
+		}
+	}
+}
