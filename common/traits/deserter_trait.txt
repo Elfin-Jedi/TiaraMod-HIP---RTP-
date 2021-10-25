@@ -1,0 +1,35 @@
+deserter = {
+
+	cannot_inherit = yes
+	
+	general_opinion = -10
+	vassal_opinion = -10
+	dynasty_opinion = -15
+	vassal_opinion = -5
+	same_opinion = 5
+	diplomacy_penalty = -4
+		
+	monthly_character_prestige = -0.3
+	
+	global_levy_size = -0.1
+	
+	command_modifier = {
+		morale_defence = -0.2
+		morale_offence = -0.2
+	}
+	
+	customizer = no
+}
+
+guardian_of_faith_denied = {
+
+	cannot_inherit = yes
+	
+	church_opinion = -30
+	same_opinion_if_same_religion = -25
+	vassal_opinion = -20
+	monthly_character_prestige = -0.5
+	monthly_character_piety = -4
+	
+	customizer = no
+}

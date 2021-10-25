@@ -1,0 +1,805 @@
+guardian_of_faith_christian = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_orthodox = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_miaphysite = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_nestorian = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_syriac = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_maronite = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_apostolic = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_chalcedonian = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_sunni = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_shiite = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_ibadi = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_zaydi = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_druze = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_jewish = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_zoroastrian = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_manichean = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_yazidi = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_norse_pagan = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	ai_ambition = 10
+	
+	customizer = no
+}
+
+guardian_of_faith_tengri_pagan = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	ai_ambition = 10
+	
+	customizer = no
+}
+
+guardian_of_faith_baltic_pagan = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	ai_ambition = 10
+	
+	customizer = no
+}
+
+guardian_of_faith_finnish_pagan = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	ai_ambition = 10
+	
+	customizer = no
+}
+
+guardian_of_faith_slavic_pagan = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	ai_ambition = 10
+	
+	customizer = no
+}
+
+guardian_of_faith_west_african_pagan = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	ai_ambition = 10
+	
+	customizer = no
+}
+
+guardian_of_faith_zun_pagan = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_hellenic_pagan = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_hindu = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_buddhist = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_jain = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_bon = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_taoist = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_ainu_pagan = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_chinese_pagan = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_korean_pagan = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_ryukyuan_pagan = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_confucian = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_nihon_shinto = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_ryukyu_shinto = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_ainu_pantheism = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_celtic = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
+guardian_of_faith_egyptian = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
