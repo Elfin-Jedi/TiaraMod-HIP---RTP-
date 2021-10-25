@@ -1,0 +1,1561 @@
+namespace = OLDORDER
+
+character_event = {
+    id = OLDORDER.0020
+    
+	hide_window = yes
+	
+	trigger = {
+		OR = {
+			primary_title = {
+				NOT = { government = order_government }
+				NOT = { has_law = minor_holy_order_elective }
+				has_title_flag = minor_holy_order
+			}
+			any_demesne_title = {
+				NOT = { has_law = minor_holy_order_elective }
+				has_title_flag = minor_holy_order
+			}
+		}
+	}
+	
+	immediate = {
+		primary_title = {
+			if = {
+				limit = {
+					has_title_flag = minor_holy_order
+				}
+				set_goverment_type = order_government
+				add_law = minor_holy_order_elective
+			}
+		}
+		any_demesne_title = {
+			if = {
+				limit = {
+					has_title_flag = minor_holy_order
+				}
+				add_law = minor_holy_order_elective
+			}
+		}
+	}
+}
+
+character_event = {
+    id = OLDORDER.0001
+    picture = GFX_book_carolingian_script_cm
+	title = EVTTITLEOLDORDER.0001
+	desc = EVTDESCOLDORDER.0001
+	
+	trigger = {
+		NOT = { has_character_flag = guardian_of_faith_event }
+		NAND = {
+			trait = celibate 
+			trait = guardian_of_faith_christian
+		}
+		primary_title = {
+			OR = {
+				has_title_flag = minor_holy_order
+				holy_order = yes
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = EVTOPTAOLDORDER.0001
+		if = {
+			limit = {
+				NOT = { trait = celibate }
+			}
+			add_trait = celibate
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = catholic
+					religion = cathar
+					religion = fraticelli
+					religion = waldensian
+					religion = lollard
+				}
+				NOT = { trait = guardian_of_faith_christian }
+			}
+			add_trait = guardian_of_faith_christian
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = orthodox
+					religion = bogomilist
+					religion = monothelite
+					religion = iconoclast
+				}
+				NOT = { trait = guardian_of_faith_orthodox }
+			}
+			add_trait = guardian_of_faith_orthodox
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = miaphysite
+					religion = monophysite
+				}
+				NOT = { trait = guardian_of_faith_miaphysite }
+			}
+			add_trait = guardian_of_faith_miaphysite
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = nestorian
+					religion = messalian
+				}
+				NOT = { trait = guardian_of_faith_nestorian }
+			}
+			add_trait = guardian_of_faith_nestorian
+		}
+		if = {
+			limit = {
+					religion = syriac
+				NOT = { trait = guardian_of_faith_syriac }
+			}
+			add_trait = guardian_of_faith_syriac
+		}
+		if = {
+			limit = {
+					religion = maronite
+				NOT = { trait = guardian_of_faith_maronite }
+			}
+			add_trait = guardian_of_faith_maronite
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = apostolic
+					religion = paulician
+					religion = tondrakian
+				}
+				NOT = { trait = guardian_of_faith_apostolic }
+			}
+			add_trait = guardian_of_faith_apostolic
+		}
+		if = {
+			limit = {
+					religion = chalcedonian
+				NOT = { trait = guardian_of_faith_chalcedonian }
+			}
+			add_trait = guardian_of_faith_chalcedonian
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = jewish
+					religion = samaritan
+					religion = karaite
+				}
+				NOT = { trait = guardian_of_faith_jewish }
+			}
+			add_trait = guardian_of_faith_jewish
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = sunni
+					religion = zikri
+					religion = yazidi
+				}
+				NOT = { trait = guardian_of_faith_sunni }
+			}
+			add_trait = guardian_of_faith_sunni
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = shiite
+					religion = druze
+					religion = hurufi
+					religion = qarmatian
+				}
+				NOT = { trait = guardian_of_faith_shiite }
+			}
+			add_trait = guardian_of_faith_shiite
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = ibadi
+					religion = kharijite
+				}
+				NOT = { trait = guardian_of_faith_ibadi }
+			}
+			add_trait = guardian_of_faith_ibadi
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = norse_pagan # If Jomvikings are created before the Reformation
+					religion = norse_pagan_reformed
+				}
+				NOT = { trait = guardian_of_faith_norse_pagan }
+			}
+			add_trait = guardian_of_faith_norse_pagan
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = tengri_pagan
+					religion = tengri_pagan_reformed
+				}
+				NOT = { trait = guardian_of_faith_tengri_pagan }
+			}
+			add_trait = guardian_of_faith_tengri_pagan
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = baltic_pagan
+					religion = baltic_pagan_reformed
+				}
+				NOT = { trait = guardian_of_faith_baltic_pagan }
+			}
+			add_trait = guardian_of_faith_baltic_pagan
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = finnish_pagan
+					religion = finnish_pagan_reformed
+				}
+				NOT = { trait = guardian_of_faith_finnish_pagan }
+			}
+			add_trait = guardian_of_faith_finnish_pagan
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = slavic_pagan
+					religion = slavic_pagan_reformed
+				}
+				NOT = { trait = guardian_of_faith_slavic_pagan }
+			}
+			add_trait = guardian_of_faith_slavic_pagan
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = west_african_pagan
+					religion = west_african_pagan_reformed
+				}
+				NOT = { trait = guardian_of_faith_west_african_pagan }
+			}
+			add_trait = guardian_of_faith_west_african_pagan
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = bon
+					religion = bon_reformed
+				}
+				NOT = { trait = guardian_of_faith_bon }
+			}
+			add_trait = guardian_of_faith_bon
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = zun_pagan
+					religion = zun_pagan_reformed
+				}
+				NOT = { trait = guardian_of_faith_zun_pagan }
+			}
+			add_trait = guardian_of_faith_zun_pagan
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = hellenic_pagan
+					religion = hellenic_pagan_reformed
+					religion = promethean_pagan
+					religion = titan_pagan
+				}
+				NOT = { trait = guardian_of_faith_hellenic_pagan }
+			}
+			add_trait = guardian_of_faith_hellenic_pagan
+		}	
+		if = {
+			limit = {
+				OR = {
+					religion = ainu_pagan
+					religion = ainu_pagan_reformed
+				}
+				NOT = { trait = guardian_of_faith_ainu_pagan }
+			}
+			add_trait = guardian_of_faith_ainu_pagan
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = chinese_pagan
+					religion = chinese_pagan_reformed
+				}
+				NOT = { trait = guardian_of_faith_chinese_pagan }
+			}
+			add_trait = guardian_of_faith_chinese_pagan
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = korean_pagan
+					religion = korean_pagan_reformed
+				}
+				NOT = { trait = guardian_of_faith_korean_pagan }
+			}
+			add_trait = guardian_of_faith_korean_pagan
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = ryukyuan_pagan
+					religion = ryukyuan_pagan_reformed
+				}
+				NOT = { trait = guardian_of_faith_ryukyuan_pagan }
+			}
+			add_trait = guardian_of_faith_ryukyuan_pagan
+		}
+		if = { 
+			limit = {
+				religion = taoist
+				NOT = { trait = guardian_of_faith_taoist }
+			}
+			add_trait = guardian_of_faith_taoist
+		}
+		if = { 
+			limit = {
+				religion = hindu
+				NOT = { trait = guardian_of_faith_hindu }
+			}
+			add_trait = guardian_of_faith_hindu
+		}
+		if = { 
+			limit = {
+				religion = buddhist
+				NOT = { trait = guardian_of_faith_buddhist }
+			}
+			add_trait = guardian_of_faith_buddhist
+		}
+		if = { 
+			limit = {
+				religion = jain
+				NOT = { trait = guardian_of_faith_jain }
+			}
+			add_trait = guardian_of_faith_jain
+		}
+		if = { 
+			limit = {
+				religion = confucian
+				NOT = { trait = guardian_of_faith_confucian }
+			}
+			add_trait = guardian_of_faith_confucian
+		}
+		if = { 
+			limit = {
+				religion = nihon_shinto
+				NOT = { trait = guardian_of_faith_nihon_shinto }
+			}
+			add_trait = guardian_of_faith_nihon_shinto
+		}
+		if = { 
+			limit = {
+				religion = ryukyu_shinto
+				NOT = { trait = guardian_of_faith_ryukyu_shinto }
+			}
+			add_trait = guardian_of_faith_ryukyu_shinto
+		}
+		if = { 
+			limit = {
+				religion = ainu_pantheism_reformed
+				NOT = { trait = guardian_of_faith_ainu_pantheism }
+			}
+			add_trait = guardian_of_faith_ainu_pantheism
+		}	
+		if = { 
+			limit = {
+				OR = {
+					religion = celtic_pagan_reformed
+					religion = britannic_pagan
+				}
+				NOT = { trait = guardian_of_faith_celtic }
+			}
+			add_trait = guardian_of_faith_celtic
+		}
+		if = { 
+			limit = {
+				OR = {
+					religion = egyptian_pagan_reformed
+					religion = aten_pagan
+				}
+				NOT = { trait = guardian_of_faith_egyptian }
+			}
+			add_trait = guardian_of_faith_egyptian
+		}
+		set_character_flag = guardian_of_faith_event
+	}
+}
+
+character_event = {
+    id = OLDORDER.0004
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = catholic
+			religion = cathar
+			religion = fraticelli
+			religion = waldensian
+			religion = lollard
+		}
+		trait = guardian_of_faith_christian
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_christian
+	}
+}
+
+character_event = {
+    id = OLDORDER.0005
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = orthodox
+			religion = bogomilist
+			religion = monothelite
+			religion = iconoclast
+			religion = paulician
+		}
+		trait = guardian_of_faith_orthodox
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_orthodox
+	}
+}
+
+character_event = {
+    id = OLDORDER.0006
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = miaphysite
+			religion = monophysite
+		}
+		trait = guardian_of_faith_miaphysite
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_miaphysite
+	}
+}
+
+character_event = {
+    id = OLDORDER.0007
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = nestorian
+			religion = messalian
+		}
+		trait = guardian_of_faith_nestorian
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_nestorian
+	}
+}
+
+character_event = {
+    id = OLDORDER.0008
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = sunni
+			religion = zikri
+			religion = yazidi
+		}
+		trait = guardian_of_faith_sunni
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_sunni
+	}
+}
+
+character_event = {
+    id = OLDORDER.0009
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = shiite
+			religion = druze
+			religion = hurufi
+			religion = qarmatian
+		}
+		trait = guardian_of_faith_shiite
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_shiite
+	}
+}
+
+character_event = {
+    id = OLDORDER.0010
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = ibadi
+			religion = kharijite
+		}
+		trait = guardian_of_faith_ibadi
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_ibadi
+	}
+}
+
+character_event = {
+    id = OLDORDER.0011
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = norse_pagan
+			religion = norse_pagan_reformed
+		}
+		trait = guardian_of_faith_norse_pagan
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_norse_pagan
+	}
+}
+
+character_event = {
+    id = OLDORDER.0012
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = tengri_pagan
+			religion = tengri_pagan_reformed
+		}
+		trait = guardian_of_faith_tengri_pagan
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_tengri_pagan
+	}
+}
+
+character_event = {
+    id = OLDORDER.0013
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = baltic_pagan
+			religion = baltic_pagan_reformed
+		}
+		trait = guardian_of_faith_baltic_pagan
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_baltic_pagan
+	}
+}
+
+character_event = {
+    id = OLDORDER.0014
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = finnish_pagan
+			religion = finnish_pagan_reformed
+		}
+		trait = guardian_of_faith_finnish_pagan
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_finnish_pagan
+	}
+}
+
+character_event = {
+    id = OLDORDER.0015
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = slavic_pagan
+			religion = slavic_pagan_reformed
+		}
+		trait = guardian_of_faith_slavic_pagan
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_slavic_pagan
+	}
+}
+
+character_event = {
+    id = OLDORDER.0016
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = west_african_pagan
+			religion = west_african_pagan_reformed
+		}
+		trait = guardian_of_faith_west_african_pagan
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_west_african_pagan
+	}
+}
+
+character_event = {
+    id = OLDORDER.0017
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = zun_pagan
+			religion = zun_pagan_reformed
+		}
+		trait = guardian_of_faith_zun_pagan
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_zun_pagan
+	}
+}
+
+character_event = {
+    id = OLDORDER.0018
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = promethean_pagan
+			religion = titan_pagan
+			religion = hellenic_pagan
+			religion = hellenic_pagan_reformed
+		}
+		trait = guardian_of_faith_hellenic_pagan
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_hellenic_pagan
+	}
+}
+
+character_event = {
+    id = OLDORDER.0019
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = bon
+			religion = bon_reformed
+		}
+		trait = guardian_of_faith_bon
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_bon
+	}
+}
+
+character_event = {
+    id = OLDORDER.0042
+    
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			religion = taoist
+		}
+		trait = guardian_of_faith_taoist
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_taoist
+	}
+}
+
+character_event = {
+    id = OLDORDER.0043
+    
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			religion = hindu
+		}
+		trait = guardian_of_faith_hindu
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_hindu
+	}
+}
+
+character_event = {
+    id = OLDORDER.0044
+    
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			religion = buddhist
+		}
+		trait = guardian_of_faith_buddhist
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_buddhist
+	}
+}
+
+character_event = {
+    id = OLDORDER.0045
+    
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			religion = jain
+		}
+		trait = guardian_of_faith_jain
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_jain
+	}
+}
+
+character_event = { #For "Umbra Spherae"
+    id = OLDORDER.0021
+    
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			religion = confucian
+		}
+		trait = guardian_of_faith_confucian
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_confucian
+	}
+}
+
+character_event = { #For "Umbra Spherae"
+    id = OLDORDER.0022
+    
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			religion = nihon_shinto
+		}
+		trait = guardian_of_faith_nihon_shinto
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_nihon_shinto
+	}
+}
+
+character_event = { #For "Umbra Spherae"
+    id = OLDORDER.0023
+    
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			religion = ryukyu_shinto
+		}
+		trait = guardian_of_faith_ryukyu_shinto
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_ryukyu_shinto
+	}
+}
+
+character_event = { #For "Umbra Spherae"
+    id = OLDORDER.0024
+    
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			religion = ainu_pantheism
+			religion = ainu_pantheism_reformed
+		}
+		trait = guardian_of_faith_ainu_pantheism
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_ainu_pantheism
+	}
+}
+
+character_event = { #For "Ancient Religions Reborn"
+    id = OLDORDER.0025
+    
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			religion = britannic_pagan
+			religion = celtic_pagan
+			religion = celtic_pagan_reformed
+		}
+		trait = guardian_of_faith_celtic
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_celtic
+	}
+}
+
+character_event = { #For "Ancient Religions Reborn"
+    id = OLDORDER.0026
+    
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			religion = aten_pagan
+			religion = egyptian_pagan
+			religion = egyptian_pagan_reformed
+		}
+		trait = guardian_of_faith_egyptian
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_egyptian
+	}
+}
+
+### Minor Holy Orders Management ###
+
+character_event = {
+    id = OLDORDER.0027
+    
+	hide_window = yes
+	
+	trigger = {
+		OR = {
+			trait = guardian_of_faith_christian
+			trait = guardian_of_faith_orthodox
+			trait = guardian_of_faith_miaphysite
+			trait = guardian_of_faith_nestorian
+			trait = guardian_of_faith_sunni
+			trait = guardian_of_faith_shiite
+			trait = guardian_of_faith_ibadi
+			trait = guardian_of_faith_norse_pagan
+			trait = guardian_of_faith_tengri_pagan
+			trait = guardian_of_faith_baltic_pagan
+			trait = guardian_of_faith_finnish_pagan
+			trait = guardian_of_faith_slavic_pagan
+			trait = guardian_of_faith_west_african_pagan
+			trait = guardian_of_faith_zun_pagan
+			trait = guardian_of_faith_hellenic_pagan
+			trait = guardian_of_faith_bon
+			trait = guardian_of_faith_taoist
+			trait = guardian_of_faith_hindu
+			trait = guardian_of_faith_buddhist
+			trait = guardian_of_faith_jain
+			trait = guardian_of_faith_confucian
+			trait = guardian_of_faith_egyptian
+			trait = guardian_of_faith_celtic
+			trait = guardian_of_faith_ainu_pantheism
+			trait = guardian_of_faith_nihon_shinto
+			trait = guardian_of_faith_ryukyu_shinto
+		}
+		NOT = { trait = guardian_of_faith_denied }
+		OR = {
+			AND = {
+				NOR = {
+					trait = pilgrim
+					trait = hajjaj
+					trait = indian_pilgrim
+					trait = monk
+					trait = nun
+					trait = muni
+					trait = aryika
+					trait = bhikkhu
+					trait = bhikkhuni
+					trait = sanyasi
+					trait = sanyasini
+					trait = viking # Raiding is a way to prove themselves in the Viking society 
+					trait = ravager # Raiding is a way to prove themselves in the Viking society 
+					trait = seaking # Raiding is a way to prove themselves in the Viking society 
+					trait = sea_queen # Raiding is a way to prove themselves in the Viking society 
+					trait = ares_own
+					trait = crusader
+					trait = crusader_king
+					trait = crusader_queen
+					trait = eagle_warrior
+					trait = gondi_shahansha
+					trait = romuvas_own
+					trait = shaddai
+					trait = mujahid
+					trait = nyames_shield
+					trait = peruns_chosen
+					trait = tengri_warrior
+					trait = ukkos_shield
+					trait = valhalla_bound
+					trait = sun_warrior
+					trait = kailash_guardian
+					has_character_flag = not_so_bad_guardian_of_faith
+					has_character_flag = do_not_disturb
+				}
+				OR = {
+					trait = lustful
+					trait = gluttonous
+					trait = greedy
+					trait = slothful
+					trait = wroth
+					trait = envious
+					trait = proud
+					trait = cannibal_trait
+					trait = bad_priest_zoroastrian
+					trait = bad_priest_aztec
+					trait = bad_priest_norse
+					trait = bad_priest_tengri
+					trait = bad_priest_muslim
+					trait = bad_priest_christian
+				}
+			}
+			OR = {
+				trait = excommunicated
+				trait = decadent
+			}
+		}
+	}
+	
+	immediate = {
+		character_event = { id = OLDORDER.0028 }
+	}
+}
+
+character_event = {
+    id = OLDORDER.0028
+    desc = EVTDESCOLDORDER.0028
+	picture = GFX_evt_heretic
+	title = EVTTITLEOLDORDER.0028
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAOLDORDER.0028
+		trigger = {
+			NOT = { trait = excommunicated }
+			religion_group = christian
+			NOT = { trait = pilgrim }
+			prisoner = no
+			war = no
+		}
+		ai_chance = {
+			factor = 90
+		}
+		set_character_flag = activated_pilgrimage
+		set_character_flag = do_not_disturb
+		hidden_tooltip = {
+			character_event = { id = SoA.5000 }
+		}
+	}
+	option = {
+		name = EVTOPTBOLDORDER.0028
+		trigger = {
+			has_dharmic_religion_trigger = yes
+			NOT = { trait = indian_pilgrim }
+			prisoner = no
+			war = no
+		}
+		ai_chance = {
+			factor = 90
+		}
+		set_character_flag = activated_pilgrimage
+		set_character_flag = do_not_disturb
+		hidden_tooltip = {
+			character_event = { id = MNM.8000 }
+		}
+	}
+	option = {
+		name = EVTOPTCOLDORDER.0028
+		trigger = {
+			NOT = {	has_character_flag = ramadan }
+			religion_group = muslim
+			NOT = { trait = trait = hajjaj }
+			prisoner = no
+			war = no
+		}
+		ai_chance = {
+			factor = 90
+		}
+		set_character_flag = activated_hajj
+		set_character_flag = do_not_disturb
+		hidden_tooltip = {
+			letter_event = { id = 86000 }
+		}
+	}
+	option = {
+		name = EVTOPTFOLDORDER.0028
+		trigger = {
+			NOT = { has_character_modifier = held_blot_timer }
+			NOT = {	has_character_flag = holding_blot }
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			prisoner = no
+			war = no
+		}
+		ai_chance = {
+			factor = 90
+		}
+		set_character_flag = holding_blot
+		set_character_flag = recent_minor_decision
+		set_character_flag = do_not_disturb
+		set_character_flag = not_so_bad_guardian_of_faith
+		hidden_tooltip = { 
+			character_event = { id = TOG.699 days = 150 } # Safety catch flag clearing
+		} 
+		custom_tooltip = {
+			text = prepare_blot
+			hidden_tooltip = { 
+				character_event = { id = TOG.600 } 
+			}
+		}
+	}
+	option = {
+		name = EVTOPTGOLDORDER.0028
+		trigger = {
+			NOT = { has_character_modifier = worshipped_ancestors_timer }
+			OR = {
+				religion = finnish_pagan
+				religion = finnish_pagan_reformed
+				religion = west_african_pagan
+				religion = west_african_pagan_reformed
+				religion = baltic_pagan
+				religion = baltic_pagan_reformed
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+				religion = tengri_pagan
+				religion = tengri_pagan_reformed
+				has_religion_feature = religion_beatification
+			}
+			prisoner = no
+			war = no
+		}
+		ai_chance = {
+			factor = 90
+		}
+		set_character_flag = recent_minor_decision
+		set_character_flag = do_not_disturb
+		set_character_flag = not_so_bad_guardian_of_faith
+		custom_tooltip = {
+			text = prepare_worship_ancestors
+			hidden_tooltip = { 
+				character_event = { id = TOG.7000 } 
+				add_character_modifier = {
+					name = worshipped_ancestors_timer
+					years = 10
+					hidden = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTDOLDORDER.0028
+		trigger = {
+			controls_religion = no
+			religion_head = {
+				is_title_active = THIS
+			}
+			NOT = { trait = excommunicated }
+			NOT = { trait = decadent }
+			wealth = 150
+			prestige = 100
+		}
+		ai_chance = {
+			factor = 90
+		}
+		wealth = -150
+		prestige = -100
+		set_character_flag = not_so_bad_guardian_of_faith 
+		religion_head = {
+			wealth = 150
+		}
+	}
+	option = {
+		name = EVTOPTEOLDORDER.0028
+		ai_chance = {
+			factor = 0
+		}
+		add_trait = guardian_of_faith_denied
+	}
+}
+
+character_event = { 
+    id = OLDORDER.0029
+    
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = not_so_bad_guardian_of_faith
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	effect = {
+		clr_character_flag = not_so_bad_guardian_of_faith
+	}
+}
+
+character_event = {
+    id = OLDORDER.0030
+    
+	hide_window = yes
+	
+	trigger = {
+		OR = {
+			trait = guardian_of_faith_christian
+			trait = guardian_of_faith_orthodox
+			trait = guardian_of_faith_miaphysite
+			trait = guardian_of_faith_nestorian
+			trait = guardian_of_faith_sunni
+			trait = guardian_of_faith_shiite
+			trait = guardian_of_faith_ibadi
+			trait = guardian_of_faith_norse_pagan
+			trait = guardian_of_faith_tengri_pagan
+			trait = guardian_of_faith_baltic_pagan
+			trait = guardian_of_faith_finnish_pagan
+			trait = guardian_of_faith_slavic_pagan
+			trait = guardian_of_faith_west_african_pagan
+			trait = guardian_of_faith_zun_pagan
+			trait = guardian_of_faith_hellenic_pagan
+			trait = guardian_of_faith_bon
+			trait = guardian_of_faith_taoist
+			trait = guardian_of_faith_hindu
+			trait = guardian_of_faith_buddhist
+			trait = guardian_of_faith_jain
+			trait = guardian_of_faith_confucian
+			trait = guardian_of_faith_egyptian
+			trait = guardian_of_faith_celtic
+			trait = guardian_of_faith_ainu_pantheism
+			trait = guardian_of_faith_nihon_shinto
+			trait = guardian_of_faith_ryukyu_shinto
+		}
+		trait = guardian_of_faith_denied
+		OR = {
+			OR = {
+				trait = pilgrim
+				trait = hajjaj
+				trait = indian_pilgrim
+				trait = monk
+				trait = nun
+				trait = muni
+				trait = aryika
+				trait = bhikkhu
+				trait = bhikkhuni
+				trait = sanyasi
+				trait = sanyasini
+				trait = ares_own
+				trait = crusader
+				trait = crusader_king
+				trait = crusader_queen
+				trait = eagle_warrior
+				trait = gondi_shahansha
+				trait = romuvas_own
+				trait = shaddai
+				trait = mujahid
+				trait = nyames_shield
+				trait = peruns_chosen
+				trait = tengri_warrior
+				trait = ukkos_shield
+				trait = valhalla_bound
+				trait = sun_warrior
+				trait = kailash_guardian
+				has_character_flag = not_so_bad_guardian_of_faith
+			}
+			NOR = {
+				trait = lustful
+				trait = gluttonous
+				trait = greedy
+				trait = slothful
+				trait = wroth
+				trait = envious
+				trait = proud
+				trait = cannibal_trait
+				trait = bad_priest_zoroastrian
+				trait = bad_priest_aztec
+				trait = bad_priest_norse
+				trait = bad_priest_tengri
+				trait = bad_priest_muslim
+				trait = bad_priest_christian
+			}
+		}
+		NOT = { trait = excommunicated }
+		NOT = { trait = decadent }
+	}
+	
+	immediate = {
+		character_event = { id = OLDORDER.0031 }
+	}
+}
+
+character_event = {
+    id = OLDORDER.0031
+    desc = EVTDESCOLDORDER.0031
+	picture = GFX_evt_heretic
+	title = EVTTITLEOLDORDER.0031
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAOLDORDER.0031
+		remove_trait = guardian_of_faith_denied
+	}
+}
+
+character_event = {
+    id = OLDORDER.0032
+    
+	hide_window = yes
+	
+	trigger = {
+		any_demesne_title = {
+			has_title_flag = minor_holy_order
+		}
+		NOT = { piety = 0 }
+		NOT = { has_character_flag = potential_end_minor_order }
+	}
+	
+	immediate = {
+		character_event = { id = OLDORDER.0033 }
+	}
+}
+
+character_event = {
+    id = OLDORDER.0033
+    desc = EVTDESCOLDORDER.0033
+	picture = GFX_end_minor_order
+	title = EVTTITLEOLDORDER.0033
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAOLDORDER.0033
+		set_character_flag = potential_end_minor_order
+		liege = {
+			hidden_tooltip = {
+				character_event = { id = OLDORDER.0039 }
+			}
+		}
+	}
+}
+
+character_event = { 
+    id = OLDORDER.0034
+    
+	hide_window = yes
+	
+	trigger = {
+		any_demesne_title = {
+			has_title_flag = minor_holy_order
+		}
+		has_character_flag = potential_end_minor_order
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	effect = {
+		character_event = { id = OLDORDER.0035 }
+		hidden_tooltip = {
+			any_character = {
+				if = {
+					limit = {
+						is_ruler = yes
+						higher_real_tier_than = BARON
+					}
+					narrative_event = { id = OLDORDER.0041 }
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+    id = OLDORDER.0035
+    desc = EVTDESCOLDORDER.0035
+	picture = GFX_end_minor_order
+	title = EVTTITLEOLDORDER.0035
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAOLDORDER.0035
+		any_desmene_title = {
+			if = {
+				limit = {
+					has_title_flag = minor_holy_order
+				}
+				destroy_landed_title = THIS
+			}
+		}
+	}
+}
+
+character_event = {
+    id = OLDORDER.0036
+    
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = potential_end_minor_order
+		piety = 0
+	}
+	
+	immediate = {
+		clr_character_flag = potential_end_minor_order
+	}
+}
+
+# Liege is informed of the danger for the minor holy order
+character_event = {
+	id = OLDORDER.0039
+    desc = EVTDESCOLDORDER.0039
+	picture = GFX_end_minor_order
+	title = EVTTITLEOLDORDER.0039
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAOLDORDER.0039
+	}
+}
+
+# The formation of the minor holy order
+narrative_event = {
+	id = OLDORDER.0040
+    desc = EVTDESCOLDORDER.0040
+	picture = GFX_new_minor_holy_order
+	title = EVTTITLEOLDORDER.0040
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAOLDORDER.0040
+	}
+}
+
+# The end of the minor holy order
+narrative_event = {
+	id = OLDORDER.0041
+    desc = EVTDESCOLDORDER.0041
+	picture = GFX_end_minor_order
+	title = EVTTITLEOLDORDER.0041
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAOLDORDER.0041
+	}
+}
+
+# The Grandmaster is forced to abdicate by the Pope 
+letter_event = {
+	id = OLDORDER.0042
+    desc = EVTDESCOLDORDER.0042
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAOLDORDER.0042
+		abdicate = yes
+		hidden_tooltip = {
+			any_character = {
+				if = {
+					limit = {
+						is_ruler = yes
+						higher_real_tier_than = BARON
+						religion = ROOT 
+					}
+					narrative_event = { id = OLDORDER.0043 }
+				}
+			}
+		}
+	}
+}
+
+# The Grandmaster of a Holy Order is replaced
+narrative_event = {
+	id = OLDORDER.0043
+    desc = EVTDESCOLDORDER.0043
+	picture = GFX_end_minor_order
+	title = EVTTITLEOLDORDER.0043
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAOLDORDER.0043
+	}
+}
+
+# The Grandmaster is forced to abdicate by the Caliph 
+letter_event = {
+	id = OLDORDER.0044
+    desc = EVTDESCOLDORDER.0042
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAOLDORDER.0042
+		abdicate = yes
+		hidden_tooltip = {
+			any_character = {
+				if = {
+					limit = {
+						is_ruler = yes
+						higher_real_tier_than = BARON
+						religion = ROOT 
+					}
+					narrative_event = { id = OLDORDER.0045 }
+				}
+			}
+		}
+	}
+}
+
+# The Grandmaster of a Muslim Brotherhood is replaced
+narrative_event = {
+	id = OLDORDER.0045
+    desc = EVTDESCOLDORDER.0045
+	picture = GFX_end_minor_order
+	title = EVTTITLEOLDORDER.0045
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAOLDORDER.0045
+	}
+}
+
+# The Holy Warchief is forced to abdicate by the Religious Head 
+letter_event = {
+	id = OLDORDER.0046
+    desc = EVTDESCOLDORDER.0042
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAOLDORDER.0042
+		abdicate = yes
+		hidden_tooltip = {
+			any_character = {
+				if = {
+					limit = {
+						is_ruler = yes
+						higher_real_tier_than = BARON
+						religion = ROOT 
+					}
+					narrative_event = { id = OLDORDER.0047 }
+				}
+			}
+		}
+	}
+}
+
+# The Warchief of a Sacred Band is replaced
+narrative_event = {
+	id = OLDORDER.0047
+    desc = EVTDESCOLDORDER.0047
+	picture = GFX_end_minor_order
+	title = EVTTITLEOLDORDER.0047
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAOLDORDER.0047
+	}
+}
+
+# The formation of the minor holy order - Rulers Version
+narrative_event = {
+	id = OLDORDER.0048
+    desc = EVTDESCOLDORDER.0048
+	picture = GFX_new_minor_holy_order
+	title = EVTTITLEOLDORDER.0040
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAOLDORDER.0040
+	}
+}
+
+# The formation of the Roman Legions 
+narrative_event = {
+	id = OLDORDER.0049
+    desc = EVTDESCOLDORDER.0049
+	picture = GFX_new_minor_holy_order
+	title = EVTTITLEOLDORDER.0049
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAOLDORDER.0040
+	}
+}
