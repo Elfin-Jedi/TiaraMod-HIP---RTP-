@@ -950,10 +950,18 @@ feudal_governments = {
 
 		potential = {
 			OR = {
+				primary_title = {
+					has_title_flag = minor_holy_order
+				}
 				holy_order = yes
 				AND = {
 					any_liege = {
-						holy_order = yes
+						OR = {
+							holy_order = yes
+							primary_title = {
+								has_title_flag = minor_holy_order
+							}
+						}
 						religion = ROOT
 					}
 					ai = yes
