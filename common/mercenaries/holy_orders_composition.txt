@@ -1,0 +1,14 @@
+minor_holy_order_composition = {
+	levy_size = 4
+	light_infantry = 100
+	heavy_infantry = 300
+	knights = 50
+	archers = 300
+}
+
+imperial_legion_composition = {
+	levy_size = 6
+	light_infantry = 400
+	heavy_infantry = 500
+	archers = 600
+}
