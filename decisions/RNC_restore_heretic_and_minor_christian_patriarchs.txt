@@ -1,0 +1,422 @@
+decisions = {
+
+	restore_monothelite_patriarchate_in_Antioch = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 36
+		
+		potential = {
+			is_playable = yes
+			has_dlc = "Sons of Abraham"
+			higher_real_tier_than = DUKE
+			religion = monothelite
+			independent = yes
+			d_monothelite = {
+				owner = {
+					NOT = {
+						has_landed_title = b_antiocheia
+					}
+				}
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		
+		allow = {
+			piety = 1000
+			OR = {
+				owns = 764 # Antioch
+				any_realm_lord = {
+					owns = 764 # Antioch
+				}
+			}
+			c_antiocheia = {
+				location = {
+					religion = monothelite
+				}
+			}
+		}
+		
+		effect = {
+			piety = -1000
+			hidden_tooltip = {
+				d_monothelite = {
+					owner = {
+						b_antiocheia = {
+							grant_title = PREV
+						}
+					}
+					wealth = 500
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				d_monothelite = {
+					owner = {
+						NOT = { culture = ROOT }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = cynical
+			}
+		}
+	}
+	
+	restore_paulician_patriarchate_in_Constantinople = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 36
+		
+		potential = {
+			is_playable = yes
+			has_dlc = "Sons of Abraham"
+			higher_real_tier_than = DUKE
+			religion = paulician
+			independent = yes
+			d_paulician = {
+				owner = {
+					NOT = { 
+						has_landed_title = b_hagiasophia 
+					}
+				}
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		
+		allow = {
+			piety = 1000
+			OR = {
+				owns = 496 # Constantinople
+				any_realm_lord = {
+					owns = 496 # Constantinople
+				}
+			}
+			c_byzantion = {
+				location = {
+					religion = paulician
+				}
+			}
+		}
+		
+		effect = {
+			piety = -1000
+			hidden_tooltip = {
+				d_paulician = {
+					owner = {
+						b_hagiasophia = {
+							grant_title = PREV
+						}
+					}
+					wealth = 500
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				d_paulician = {
+					owner = {
+						NOT = { culture = ROOT }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = cynical
+			}
+		}
+	}
+	
+	restore_ecumenical_patriarchate_alternative = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 36
+		
+		potential = {
+			is_playable = yes
+			has_dlc = "Sons of Abraham"
+			religion = orthodox
+			has_landed_title = c_byzantion
+			independent = yes
+			k_orthodox = {
+				owner = {
+					NOT = { 
+						has_landed_title = b_hagiasophia 
+					}
+				}
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			piety = 1000
+			OR = {
+				has_landed_title = b_hagiasophia
+				any_realm_lord = {
+					has_landed_title = b_hagiasophia
+				}
+			}
+		}
+		effect = {
+			piety = -1000
+			hidden_tooltip = {
+				if = {
+					limit = {
+						NOT = { is_title_active = k_orthodox }
+					}
+					activate_title = { title = k_orthodox status = yes }
+				}
+				create_random_priest = {
+					random_traits = yes
+					religion = ROOT
+					female = no
+					dynasty = none
+				}
+				k_orthodox = {
+					owner = {
+						b_hagiasophia = {
+							grant_title = PREV
+						}
+					}
+					wealth = 500
+				}
+			}
+			hidden_effect = {
+				long_character_event = { id = 39706 }
+			}
+		}
+	}
+	
+	create_iconoclast_patriarchy_alternative = {
+		only_playable = yes
+		
+		is_high_prio = yes
+		ai_check_interval = 36
+	
+		potential = {
+			is_playable = yes
+			has_dlc = "Sons of Abraham"
+			religion = iconoclast
+			has_landed_title = c_byzantion
+			independent = yes
+			d_iconoclast = {
+				owner = {
+					NOT = { 
+						has_landed_title = b_hagiasophia 
+					}
+				}
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		
+		allow = {
+			piety = 1000
+			OR = {
+				has_landed_title = b_hagiasophia
+				any_realm_lord = {
+					has_landed_title = b_hagiasophia
+				}
+			}
+		}
+		
+		effect = {
+			activate_title = { title = d_iconoclast status = yes }
+			hidden_tooltip = {
+				create_random_priest = {
+					random_traits = yes
+					religion = ROOT
+					female = no
+					dynasty = none
+				}
+				d_iconoclast = {
+					owner = {
+						b_hagiasophia = {
+							grant_title = PREV
+						}
+					}
+					wealth = 500
+				}
+			}
+			hidden_effect = {
+				long_character_event = { id = 39704 }
+			}
+			piety = 1000
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	restore_monophysite_pope_in_Alexandria = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 36
+		
+		potential = {
+			is_playable = yes
+			has_dlc = "Sons of Abraham"
+			higher_real_tier_than = DUKE
+			religion = monophysite
+			independent = yes
+			d_monophysite = {
+				owner = {
+					NOT = { 
+						has_landed_title = b_alexandria 
+					}
+				}
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		
+		allow = {
+			piety = 1000
+			OR = {
+				owns = 802 # Alexandria
+				any_realm_lord = {
+					owns = 802 # Alexandria
+				}
+			}
+			c_alexandria = {
+				location = {
+					religion = monophysite
+				}
+			}
+		}
+		
+		effect = {
+			piety = -1000
+			hidden_tooltip = {
+				d_monophysite = {
+					owner = {
+						b_alexandria = {
+							grant_title = PREV
+						}
+					}
+					wealth = 500
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				d_monophysite = {
+					owner = {
+						NOT = { culture = ROOT }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = cynical
+			}
+		}
+	}
+	
+	restore_miaphysite_pope_in_Alexandria = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 36
+		
+		potential = {
+			is_playable = yes
+			has_dlc = "Sons of Abraham"
+			higher_real_tier_than = DUKE
+			religion = miaphysite
+			independent = yes
+			d_miaphysite = {
+				owner = {
+					NOT = { 
+						has_landed_title = b_alexandria 
+					}
+				}
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		
+		allow = {
+			piety = 1000
+			OR = {
+				owns = 802 # Alexandria
+				any_realm_lord = {
+					owns = 802 # Alexandria
+				}
+			}
+			c_alexandria = {
+				location = {
+					religion = miaphysite
+				}
+			}
+		}
+		
+		effect = {
+			piety = -1000
+			hidden_tooltip = {
+				d_miaphysite = {
+					owner = {
+						b_alexandria = {
+							grant_title = PREV
+						}
+					}
+					wealth = 500
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				d_miaphysite = {
+					owner = {
+						NOT = { culture = ROOT }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = cynical
+			}
+		}
+	}
+}

@@ -1,0 +1,75 @@
+targeted_decisions = {
+	
+	exchange_land_for_hospital_with_minor_holy_orders = {
+		filter = all
+		ai_target_filter = all
+
+		from_potential = {
+			has_dlc = "Reapers"
+			#capital has space and no hospital
+			capital_scope = {
+				num_of_empty_holdings = 1
+				NOT = {
+					hospital_level = 1
+				}
+			}
+			NOR = {
+				is_nomadic = yes
+				is_tribal = yes
+			}
+		}
+		potential = {
+			is_adult = yes
+			#owns minor holy order, this religion
+			primary_title = { has_title_flag = minor_holy_order }
+			religion = FROM
+		}
+		allow = {
+			FROM = {
+				piety = 250
+				capital_scope = {
+					any_province_holding = {
+						is_occupied = no
+					}
+				}
+			}
+		}
+		effect = {
+			#lose piety, holy order builds castle and hospital
+			FROM = {
+				piety = -250
+				capital_scope = {
+					build_holding = {
+						type = castle
+						holder = ROOT
+					}
+					build_holding = {
+						type = hospital
+						holder = FROM
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0.00001
+			modifier = {
+				factor = 0
+				ROOT = {
+					AND = {
+						independent = no
+						NOT = { is_vassal_or_below_of = FROM }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.0005
+				ROOT = {
+					is_vassal_or_below_of = FROM
+				}
+			}
+		}
+	}
+}

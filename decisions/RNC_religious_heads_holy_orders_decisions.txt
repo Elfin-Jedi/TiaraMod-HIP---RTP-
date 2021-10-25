@@ -1,0 +1,175 @@
+targeted_decisions = {
+	
+	force_repudiated_grandmasters_to_abdicate_christian = {
+		filter = all
+		ai_target_filter = all
+
+		from_potential = {
+			OR = {
+				has_landed_title = k_papal_state
+				has_landed_title = k_orthodox
+				has_landed_title = d_miaphysite
+				has_landed_title = d_monophysite
+				has_landed_title = d_nestorian
+				has_landed_title = d_paulician
+				has_landed_title = d_monothelite
+				has_landed_title = d_fraticelli
+				has_landed_title = d_iconoclast 
+			}
+		}
+		potential = {
+			is_adult = yes
+			#owns minor holy order, this religion
+			primary_title = { holy_order = yes }
+			religion = FROM
+		}
+		allow = {
+			FROM = {
+				war = no 
+				is_incapable = no
+			}
+			ROOT = {
+				trait = guardian_of_faith_denied
+			}
+		}
+		effect = {
+			ROOT = { letter_event = { id = OLDORDER.0042 } } 
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	force_repudiated_grandmasters_to_abdicate_muslim = {
+		filter = all
+		ai_target_filter = all
+
+		from_potential = {
+			OR = {
+				has_landed_title = d_sunni
+				has_landed_title = d_shiite
+				has_landed_title = d_yazidi
+				has_landed_title = d_ibadi
+				has_landed_title = d_kharijite
+				has_landed_title = d_hurufi
+				has_landed_title = d_qarmatian
+			}
+		}
+		potential = {
+			is_adult = yes
+			#owns minor holy order, this religion
+			primary_title = { holy_order = yes }
+			religion = FROM
+		}
+		allow = {
+			FROM = {
+				war = no 
+				is_incapable = no
+			}
+			ROOT = {
+				trait = guardian_of_faith_denied
+			}
+		}
+		effect = {
+			ROOT = { letter_event = { id = OLDORDER.0044 } } 
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	force_repudiated_grandmasters_to_abdicate_pagan = {
+		filter = all
+		ai_target_filter = all
+
+		from_potential = {
+			OR = {
+				AND = {
+					religion = norse_pagan_reformed
+					has_landed_title = d_norse_pagan_reformed
+				}
+				AND = {
+					religion = tengri_pagan_reformed
+					has_landed_title = d_tengri_pagan_reformed
+				}
+				AND = {
+					religion = baltic_pagan_reformed
+					has_landed_title = d_baltic_pagan_reformed
+				}
+				AND = {
+					religion = finnish_pagan_reformed
+					has_landed_title = d_finnish_pagan_reformed
+				}
+				AND = {
+					religion = slavic_pagan_reformed
+					has_landed_title = d_slavic_pagan_reformed
+				}
+				AND = {
+					religion = west_african_pagan_reformed
+					has_landed_title = d_west_african_pagan_reformed
+				}
+				AND = {
+					religion = bon_reformed
+					has_landed_title = d_bon_reformed
+				}
+				AND = {
+					OR = {
+						religion = hellenic_pagan_reformed
+						religion = hellenic_pagan
+					}
+					has_landed_title = k_hellenic_pagan
+					NAND = {
+						has_landed_title = e_roman_empire
+						culture = roman
+					}
+				}
+				AND = {
+					religion = ainu_pagan_reformed
+					has_landed_title = d_ainu_pagan_reformed
+				}
+				AND = {
+					religion = chinese_pagan_reformed
+					has_landed_title = chinese_pagan_reformed
+				}
+				AND = {
+					religion = korean_reformed
+					has_landed_title = d_korean_reformed
+				}
+				AND = {
+					religion = ryukyuan_reformed
+					has_landed_title = d_ryukyuan_reformed
+				}
+			}
+		}
+		potential = {
+			is_adult = yes
+			#owns minor holy order, this religion
+			primary_title = { holy_order = yes }
+			religion = FROM
+		}
+		allow = {
+			FROM = {
+				war = no 
+				is_incapable = no
+			}
+			ROOT = {
+				trait = guardian_of_faith_denied
+			}
+		}
+		effect = {
+			ROOT = { letter_event = { id = OLDORDER.0046 } } 
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

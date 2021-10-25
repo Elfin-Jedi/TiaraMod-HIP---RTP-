@@ -1,0 +1,4075 @@
+title_decisions = {
+	form_new_holy_order_christian = {
+		filter = owned
+		ai_target_filter = owned
+		only_playable = yes
+		is_high_prio = yes
+		
+		from_potential = {
+			is_landed = yes
+			mercenary = no
+			holy_order = no
+			OR = {
+				any_owned_bloodline = {
+					OR = {
+						has_bloodline_flag = first_guardian_of_faith_catholic
+						has_bloodline_flag = first_guardian_of_faith_orthodox
+						has_bloodline_flag = first_guardian_of_faith_miaphysite
+						has_bloodline_flag = first_guardian_of_faith_nestorian
+						has_bloodline_flag = first_guardian_of_faith_syriac
+						has_bloodline_flag = first_guardian_of_faith_maronite
+						has_bloodline_flag = first_guardian_of_faith_apostalic
+						has_bloodline_flag = first_guardian_of_faith_chalcedonian
+					}
+					bloodline_is_active_for = PREV
+				}
+				trait = guardian_of_faith_christian
+				trait = guardian_of_faith_orthodox
+				trait = guardian_of_faith_miaphysite
+				trait = guardian_of_faith_nestorian
+				has_landed_title = k_papal_state
+				has_landed_title = k_orthodox
+				has_landed_title = d_miaphysite
+				has_landed_title = d_monophysite
+				has_landed_title = d_nestorian
+				has_landed_title = d_paulician
+				has_landed_title = d_monothelite
+				has_landed_title = d_fraticelli
+				has_landed_title = d_iconoclast
+			}
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			NOT = { tier = BARON } 
+			NOT = { higher_tier_than = COUNT }
+			NOT = { has_title_flag = home_holy_order }
+		}
+		
+		allow = {
+			FROM = {
+				independent = yes
+				prisoner = no
+				war = no
+				wealth = 250
+				prestige = 250
+				piety = 500
+			}
+		}
+		effect = {
+			FROM = {
+				hidden_tooltip = {
+					any_character = {
+						if = {
+							limit = {
+								is_ruler = yes
+								higher_real_tier_than = BARON
+							}
+						narrative_event = { id = OLDORDER.0048 }
+						}
+					}
+				}
+				wealth = -250
+				prestige = -250
+				piety = -500
+				if = {
+					limit = {
+						OR = {
+							religion = catholic
+							religion = cathar
+							religion = fraticelli
+							religion = waldensian
+							religion = lollard
+							religion = adoptionist
+							religion = arian
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_catholic }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_catholic
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = orthodox
+							religion = bogomilist
+							religion = monothelite
+							religion = iconoclast
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_orthodox }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_orthodox
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = miaphysite
+							religion = monophysite
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_miaphysite }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_miaphysite
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = nestorian
+							religion = messalian
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_nestorian }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_nestorian
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = syriac
+						NOT = { has_global_flag = first_guardian_of_faith_syriac }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_syriac
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = maronite
+						NOT = { has_global_flag = first_guardian_of_faith_maronite }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_maronite
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = apostolic
+							religion = paulician
+							religion = tondrakian
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_apostolic }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_apostolic
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = chalcedonian
+						NOT = { has_global_flag = first_guardian_of_faith_chalcedonian }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_chalcedonian
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				custom_tooltip = {
+					hidden_tooltip = {
+						ROOT = {
+							create_title = {
+								tier = DUKE
+								name = DYNAMIC_HOLY_ORDER_FAITH_CHRISTIAN
+								short_name = yes
+								landless = yes
+								mercenary = yes
+								mercenary_type = minor_holy_order_composition
+								custom_created = yes
+								culture = FROM 
+								religion = ROOT
+								holder = FROM
+								base_title = THIS
+								ruler = "GRANDMASTER"
+								foa = "GRANDMASTER_FOA"
+							}
+							new_title = {
+								set_title_flag = minor_holy_order
+							}
+							set_title_flag = home_holy_order
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = catholic
+										religion = cathar
+										religion = fraticelli
+										religion = waldensian
+										religion = lollard
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_catholic }
+							}
+							set_global_flag = first_guardian_of_faith_catholic
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = orthodox
+										religion = bogomilist
+										religion = monothelite
+										religion = iconoclast
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_orthodox }
+							}
+							set_global_flag = first_guardian_of_faith_orthodox
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = miaphysite
+										religion = monophysite
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_miaphysite }
+							}
+							set_global_flag = first_guardian_of_faith_miaphysite
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = nestorian
+										religion = messalian
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_nestorian }
+							}
+							set_global_flag = first_guardian_of_faith_nestorian
+						}
+						if = { 
+							limit = {
+								FROM = {
+									religion = syriac
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_syriac }
+							}
+							set_global_flag = first_guardian_of_faith_syriac
+						}
+						if = { 
+							limit = {
+								FROM = {
+									religion = maronite
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_maronite }
+							}
+							set_global_flag = first_guardian_of_faith_maronite
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = apostolic
+										religion = paulician
+										religion = tondrakian
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_apostolic }
+							}
+							set_global_flag = first_guardian_of_faith_apostolic
+						}
+						if = { 
+							limit = {
+								FROM = {
+									religion = chalcedonian
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_chalcedonian }
+							}
+							set_global_flag = first_guardian_of_faith_chalcedonian
+						}
+					}
+				}
+				set_character_flag = created_new_holy_order
+			}
+		}
+		ai_will_do = {
+			factor = 0.01
+			modifier = {
+				factor = 1
+				FROM = {
+					trait = zealous
+				}
+			}
+			modifier = {
+				factor = 0.00000001
+				FROM = {
+					has_character_flag = created_new_holy_order
+				}
+			}
+		}
+	}
+	
+	form_new_holy_order_jewish = {
+		filter = owned
+		ai_target_filter = owned
+		only_playable = yes
+		is_high_prio = yes
+		
+		from_potential = {
+			is_landed = yes
+			mercenary = no
+			holy_order = no
+			OR = {
+				any_owned_bloodline = {
+					has_bloodline_flag = first_guardian_of_faith_jewish
+					bloodline_is_active_for = PREV
+				}
+				trait = guardian_of_faith_jewish
+				has_landed_title = d_jewish
+			}
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			NOT = { tier = BARON } 
+			NOT = { higher_tier_than = COUNT }
+			NOT = { has_title_flag = home_holy_order }
+		}
+		
+		allow = {
+			FROM = {
+				independent = yes
+				prisoner = no
+				war = no
+				wealth = 250
+				prestige = 250
+				piety = 500
+			}
+		}
+		effect = {
+			FROM = {
+				hidden_tooltip = {
+					any_character = {
+						if = {
+							limit = {
+								is_ruler = yes
+								higher_real_tier_than = BARON
+							}
+						narrative_event = { id = OLDORDER.0048 }
+						}
+					}
+				}
+				wealth = -250
+				prestige = -250
+				piety = -500
+				if = {
+					limit = {
+						OR = {
+							religion = jewish
+							religion = karaite
+							religion = samaritan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_catholic }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_jewish
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				custom_tooltip = {
+					hidden_tooltip = {
+						ROOT = {
+							create_title = {
+								tier = DUKE
+								name = DYNAMIC_HOLY_ORDER_FAITH_JEWISH
+								short_name = yes
+								landless = yes
+								mercenary = yes
+								mercenary_type = minor_holy_order_composition
+								custom_created = yes
+								culture = FROM 
+								religion = ROOT
+								holder = FROM
+								base_title = THIS
+								ruler = "GRANDMASTER"
+								foa = "GRANDMASTER_FOA"
+							}
+							new_title = {
+								set_title_flag = minor_holy_order
+							}
+							set_title_flag = home_holy_order
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = jewish
+										religion = karaite
+										religion = samaritan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_jewish }
+							}
+							set_global_flag = first_guardian_of_faith_jewish
+						}
+					}
+				}
+				set_character_flag = created_new_holy_order
+			}
+		}
+		ai_will_do = {
+			factor = 0.01
+			modifier = {
+				factor = 1
+				FROM = {
+					trait = zealous
+				}
+			}
+			modifier = {
+				factor = 0.00000001
+				FROM = {
+					has_character_flag = created_new_holy_order
+				}
+			}
+		}
+	}
+	
+	form_new_holy_order_muslim = {
+		filter = home_court
+		ai_target_filter = home_court
+		
+		from_potential = {
+			is_landed = yes
+			mercenary = no
+			holy_order = no
+			OR = {
+				any_owned_bloodline = {
+					OR = {
+						has_bloodline_flag = first_guardian_of_faith_sunni
+						has_bloodline_flag = first_guardian_of_faith_shiite
+						has_bloodline_flag = first_guardian_of_faith_ibadi
+						has_bloodline_flag = first_guardian_of_faith_zaydi
+						has_bloodline_flag = first_guardian_of_faith_druze
+					}
+					bloodline_is_active_for = PREV
+				}
+				trait = guardian_of_faith_sunni
+				trait = guardian_of_faith_shiite
+				trait = guardian_of_faith_ibadi
+				trait = guardian_of_faith_zaydi
+				trait = guardian_of_faith_druze
+				has_landed_title = d_sunni
+				has_landed_title = d_shiite
+				has_landed_title = d_ibadi
+				has_landed_title = d_kharijite
+				has_landed_title = d_hurufi
+				has_landed_title = d_qarmatian
+			}
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			NOT = { tier = BARON } 
+			NOT = { higher_tier_than = COUNT }
+			NOT = { has_title_flag = home_holy_order }
+		}
+		
+		allow = {
+			FROM = {
+				independent = yes
+				prisoner = no
+				war = no
+				wealth = 250
+				prestige = 250
+				piety = 500
+			}
+		}
+		effect = {
+			FROM = {
+				hidden_tooltip = {
+					any_character = {
+						if = {
+							limit = {
+								is_ruler = yes
+								higher_real_tier_than = BARON
+							}
+						narrative_event = { id = OLDORDER.0048 }
+						}
+					}
+				}
+				wealth = -250
+				prestige = -250
+				piety = -500
+				if = {
+					limit = {
+						OR = {
+							religion = sunni
+							religion = zikri
+							religion = mahdiyya
+							religion = nabawiyya
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_sunni }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_sunni
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = shiite
+							religion = hurufi
+							religion = waqifi
+							religion = ismaili
+							religion = qarmatian
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_shiite }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_shiite
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = ibadi
+							religion = kharijite
+							religion = haruri
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_ibadi }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_ibadi
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = zaydi
+						NOT = { has_global_flag = first_guardian_of_faith_zaydi }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_zaydi
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = druze
+						NOT = { has_global_flag = first_guardian_of_faith_druze }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_druze
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				custom_tooltip = {
+					hidden_tooltip = {
+						ROOT = {
+							create_title = {
+								tier = DUKE
+								name = DYNAMIC_HOLY_ORDER_FAITH_MUSLIM
+								short_name = yes
+								landless = yes
+								mercenary = yes
+								mercenary_type = minor_holy_order_composition
+								custom_created = yes
+								culture = FROM 
+								religion = ROOT
+								holder = FROM
+								base_title = THIS
+								ruler = "GRANDMASTER"
+								foa = "GRANDMASTER_FOA"
+							}
+							new_title = {
+								set_title_flag = minor_holy_order
+							}
+							set_title_flag = home_holy_order
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = sunni
+										religion = zikri
+										religion = mahdiyya
+										religion = nabawiyya
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_sunni }
+							}
+							set_global_flag = first_guardian_of_faith_sunni
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = shiite
+										religion = hurufi
+										religion = waqifi
+										religion = ismaili
+										religion = qarmatian
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_shiite }
+							}
+							set_global_flag = first_guardian_of_faith_shiite
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = ibadi
+										religion = kharijite
+										religion = haruri
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_ibadi }
+							}
+							set_global_flag = first_guardian_of_faith_ibadi
+						}
+					}
+				}
+				set_character_flag = created_new_holy_order
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				NOT = { trait = zealous }
+			}
+			modifier = {
+				factor = 0.001
+				has_character_flag = created_new_holy_order
+			}
+		}
+	}
+	
+	form_new_holy_order_mazdan = {
+		filter = home_court
+		ai_target_filter = home_court
+		
+		from_potential = {
+			is_landed = yes
+			mercenary = no
+			holy_order = no
+			OR = {
+				any_owned_bloodline = {
+					OR = {
+						has_bloodline_flag = first_guardian_of_faith_zoroastrian
+						has_bloodline_flag = first_guardian_of_faith_manichean
+						has_bloodline_flag = first_guardian_of_faith_yazidi
+					}
+					bloodline_is_active_for = PREV
+				}
+				trait = guardian_of_faith_zoroastrian
+				trait = guardian_of_faith_manichean
+				trait = guardian_of_faith_yazidi
+				has_landed_title = d_zoroastrian
+				has_landed_title = d_manichean
+				has_landed_title = d_mandaean
+				has_landed_title = d_yazidi
+			}
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			NOT = { tier = BARON } 
+			NOT = { higher_tier_than = COUNT }
+			NOT = { has_title_flag = home_holy_order }
+		}
+		
+		allow = {
+			FROM = {
+				independent = yes
+				prisoner = no
+				war = no
+				wealth = 250
+				prestige = 250
+				piety = 500
+			}
+		}
+		effect = {
+			FROM = {
+				hidden_tooltip = {
+					any_character = {
+						if = {
+							limit = {
+								is_ruler = yes
+								higher_real_tier_than = BARON
+							}
+						narrative_event = { id = OLDORDER.0048 }
+						}
+					}
+				}
+				wealth = -250
+				prestige = -250
+				piety = -500
+				if = {
+					limit = {
+						OR = {
+							religion = zoroastrian
+							religion = mazdaki
+							religion = zurvanist
+							religion = khurmazta
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_zoroastrian }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_zoroastrian
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = manichean
+							religion = mandaean
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_manichean }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_manichean
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = yazidi
+						NOT = { has_global_flag = first_guardian_of_faith_yazidi }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_yazidi
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				custom_tooltip = {
+					hidden_tooltip = {
+						ROOT = {
+							create_title = {
+								tier = DUKE
+								name = DYNAMIC_HOLY_ORDER_FAITH_MAZDAN
+								short_name = yes
+								landless = yes
+								mercenary = yes
+								mercenary_type = minor_holy_order_composition
+								custom_created = yes
+								culture = FROM 
+								religion = ROOT
+								holder = FROM
+								base_title = THIS
+								ruler = "GRANDMASTER"
+								foa = "GRANDMASTER_FOA"
+							}
+							new_title = {
+								set_title_flag = minor_holy_order
+							}
+							set_title_flag = home_holy_order
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = zoroastrian
+										religion = mazdaki
+										religion = zurvanist
+										religion = khurmazta
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_zoroastrian }
+							}
+							set_global_flag = first_guardian_of_faith_zoroastrian
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = manichean
+										religion = mandaean
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_manichean }
+							}
+							set_global_flag = first_guardian_of_faith_manichean
+						}
+						if = { 
+							limit = {
+								FROM = {
+									religion = yazidi
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_yazidi }
+							}
+							set_global_flag = first_guardian_of_faith_yazidi
+						}
+					}
+				}
+				set_character_flag = created_new_holy_order
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				NOT = { trait = zealous }
+			}
+			modifier = {
+				factor = 0.001
+				has_character_flag = created_new_holy_order
+			}
+		}
+	}
+	
+	form_new_holy_order_pagan = {
+		filter = home_court
+		ai_target_filter = home_court
+		
+		from_potential = {
+			is_landed = yes
+			mercenary = no
+			holy_order = no
+			OR = {
+				trait = guardian_of_faith_norse_pagan
+				trait = guardian_of_faith_tengri_pagan
+				trait = guardian_of_faith_baltic_pagan
+				trait = guardian_of_faith_finnish_pagan
+				trait = guardian_of_faith_slavic_pagan
+				trait = guardian_of_faith_west_african_pagan
+				trait = guardian_of_faith_bon
+				trait = guardian_of_faith_zun_pagan
+				trait = guardian_of_faith_ainu_pagan
+				trait = guardian_of_faith_chinese_pagan
+				trait = guardian_of_faith_korean_pagan
+				trait = guardian_of_faith_ryukyuan_pagan
+				AND = {
+					trait = guardian_of_faith_hellenic_pagan
+					NAND = {
+						has_landed_title = e_roman_empire
+						culture = roman
+					}
+				}
+				AND = {
+					religion = norse_pagan_reformed
+					has_landed_title = d_norse_pagan_reformed
+				}
+				AND = {
+					religion = tengri_pagan_reformed
+					has_landed_title = d_tengri_pagan_reformed
+				}
+				AND = {
+					religion = baltic_pagan_reformed
+					has_landed_title = d_baltic_pagan_reformed
+				}
+				AND = {
+					religion = finnish_pagan_reformed
+					has_landed_title = d_finnish_pagan_reformed
+				}
+				AND = {
+					religion = slavic_pagan_reformed
+					has_landed_title = d_slavic_pagan_reformed
+				}
+				AND = {
+					religion = west_african_pagan_reformed
+					has_landed_title = d_west_african_pagan_reformed
+				}
+				AND = {
+					religion = bon_reformed
+					has_landed_title = d_bon_reformed
+				}
+				AND = {
+					OR = {
+						religion = hellenic_pagan_reformed
+						religion = hellenic_pagan
+					}
+					has_landed_title = k_hellenic_pagan
+					NAND = {
+						has_landed_title = e_roman_empire
+						culture = roman
+					}
+				}
+				AND = { 
+					religion = promethean_pagan
+					has_landed_title = d_promethean_pagan
+				}
+				AND = { 
+					religion = titan_pagan
+					has_landed_title = d_titan_pagan
+				}
+				AND = { 
+					religion = ainu_pagan_reformed
+					has_landed_title = d_ainu_pagan_reformed
+				}
+				AND = { 
+					religion = chinese_pagan_reformed
+					has_landed_title = d_chinese_pagan_reformed
+				}
+				AND = { 
+					religion = korean_pagan_reformed
+					has_landed_title = d_korean_pagan_reformed
+				}
+				AND = { 
+					religion = ryukyuan_pagan_reformed
+					has_landed_title = d_ryukyuan_pagan_reformed
+				}
+				any_owned_bloodline = {
+					OR = {
+					has_bloodline_flag = first_guardian_of_faith_norse_pagan
+					has_bloodline_flag = first_guardian_of_faith_tengri_pagan
+					has_bloodline_flag = first_guardian_of_faith_baltic_pagan
+					has_bloodline_flag = first_guardian_of_faith_finnish_pagan
+					has_bloodline_flag = first_guardian_of_faith_slavic_pagan
+					has_bloodline_flag = first_guardian_of_faith_west_african_pagan
+					has_bloodline_flag = first_guardian_of_faith_zun_pagan
+					has_bloodline_flag = first_guardian_of_faith_hellenic_pagan
+					has_bloodline_flag = first_guardian_of_faith_ainu_pagan
+					has_bloodline_flag = first_guardian_of_faith_chinese_pagan
+					has_bloodline_flag = first_guardian_of_faith_korean_pagan
+					has_bloodline_flag = first_guardian_of_faith_ryukyuan_pagan
+					}
+					bloodline_is_active_for = PREV
+				}
+			}
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			NOT = { tier = BARON } 
+			NOT = { higher_tier_than = COUNT }
+			NOT = { has_title_flag = home_holy_order }
+		}
+		
+		allow = {
+			FROM = {
+				independent = yes
+				prisoner = no
+				war = no
+				wealth = 250
+				prestige = 250
+				piety = 500
+			}
+		}
+		effect = {
+			FROM = {
+				hidden_tooltip = {
+					any_character = {
+						if = {
+							limit = {
+								is_ruler = yes
+								higher_real_tier_than = BARON
+							}
+						narrative_event = { id = OLDORDER.0048 }
+						}
+					}
+				}
+				wealth = -250
+				prestige = -250
+				piety = -500
+				if = {
+					limit = {
+						OR = {
+							religion = norse_pagan_reformed
+							religion = norse_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_norse_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_norse_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = tengri_pagan_reformed
+							religion = tengri_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_tengri_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_tengri_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = baltic_pagan_reformed
+							religion = baltic_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_baltic_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_baltic_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = finnish_pagan_reformed
+							religion = finnish_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_finnish_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_finnish_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = slavic_pagan_reformed
+							religion = slavic_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_slavic_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_slavic_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = west_african_pagan_reformed
+							religion = west_african_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_west_african_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_west_african_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = bon_reformed
+							religion = bon
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_bon }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_bon
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = zun_pagan_reformed
+							religion = zun_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_zun_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_zun_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = hellenic_pagan_reformed
+							religion = hellenic_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_hellenic_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_hellenic_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = ainu_pagan_reformed
+							religion = ainu_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_ainu_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_ainu_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = chinese_pagan_reformed
+							religion = chinese_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_chinese_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_chinese_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = korean_pagan_reformed
+							religion = korean_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_korean_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_korean_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = ryukyuan_pagan_reformed
+							religion = ryukyuan_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_ryukyuan_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_ryukyuan_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				custom_tooltip = {
+					hidden_tooltip = {
+						ROOT = {
+							create_title = {
+								tier = DUKE
+								name = DYNAMIC_HOLY_ORDER_FAITH_PAGAN
+								short_name = yes
+								landless = yes
+								mercenary = yes
+								mercenary_type = minor_holy_order_composition
+								custom_created = yes
+								culture = FROM 
+								religion = ROOT
+								holder = FROM
+								base_title = THIS
+								ruler = "WARCHIEF"
+								foa = "WARCHIEF_FOA"
+							}
+							new_title = {
+								set_title_flag = minor_holy_order
+							}
+							set_title_flag = home_holy_order
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = norse_pagan_reformed
+										religion = norse_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_norse_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_norse_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = tengri_pagan_reformed
+										religion = tengri_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_tengri_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_tengri_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = baltic_pagan_reformed
+										religion = baltic_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_baltic_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_baltic_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = finnish_pagan_reformed
+										religion = finnish_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_finnish_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_finnish_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = slavic_pagan_reformed
+										religion = slavic_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_slavic_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_slavic_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = west_african_pagan_reformed
+										religion = west_african_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_west_african_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_west_african_pagan
+						}
+						if = {
+							limit = {
+								OR = {
+									religion = bon_reformed
+									religion = bon
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_bon }
+							}
+							set_global_flag = first_guardian_of_faith_bon
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = zun_pagan_reformed
+										religion = zun_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_zun_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_zun_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = hellenic_pagan_reformed
+										religion = hellenic_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_hellenic_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_hellenic_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = ainu_pagan_reformed
+										religion = ainu_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_ainu_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_ainu_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = chinese_pagan_reformed
+										religion = chinese_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_chinese_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_chinese_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = korean_pagan_reformed
+										religion = korean_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_korean_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_korean_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = ryukyuan_pagan_reformed
+										religion = ryukyuan_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_ryukyuan_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_ryukyuan_pagan
+						}
+					}
+				}
+				set_character_flag = created_new_holy_order
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				NOT = { trait = zealous }
+			}
+			modifier = {
+				factor = 0.001
+				has_character_flag = created_new_holy_order
+			}
+		}
+	}
+	
+	form_new_holy_order_roman_empire = {
+		filter = home_court
+		ai_target_filter = home_court
+		
+		from_potential = {
+			is_landed = yes
+			mercenary = no
+			holy_order = no
+			AND = {
+				OR = {
+					trait = guardian_of_faith_hellenic_pagan
+					has_landed_title = k_hellenic_pagan
+					any_owned_bloodline = {
+						has_bloodline_flag = restorer_of_the_legions
+						bloodline_is_active_for = PREV
+					}
+				}
+				culture = roman
+				has_landed_title = e_roman_empire
+			}
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			NOT = { tier = BARON } 
+			NOT = { higher_tier_than = COUNT }
+			NOT = { has_title_flag = home_holy_order }
+		}
+		
+		allow = {
+			FROM = {
+				independent = yes
+				prisoner = no
+				war = no
+				wealth = 250
+				prestige = 250
+				piety = 500
+			}
+		}
+		effect = {
+			FROM = {
+				hidden_tooltip = {
+					any_character = {
+						if = {
+							limit = {
+								is_ruler = yes
+								higher_real_tier_than = BARON
+							}
+						narrative_event = { id = OLDORDER.0049 }
+						}
+					}
+				}
+				wealth = -250
+				prestige = -250
+				piety = -500
+				if = {
+					limit = {
+						NOT = { has_global_flag = restorer_of_the_legions }
+					}
+					create_bloodline = {
+						type = restorer_of_the_legions
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				custom_tooltip = {
+					hidden_tooltip = {
+						ROOT = {
+							create_title = {
+								tier = DUKE
+								name = DYNAMIC_HOLY_ORDER_FAITH_ROMAN_EMPIRE
+								short_name = yes
+								landless = yes
+								mercenary = yes
+								mercenary_type = imperial_legion_composition
+								custom_created = yes
+								culture = FROM 
+								religion = ROOT
+								holder = FROM
+								base_title = THIS
+								ruler = "LEGATUS"
+								foa = "WARCHIEF_FOA"
+							}
+							new_title = {
+								set_title_flag = minor_holy_order
+								set_title_flag = roman_legion
+							}
+							set_title_flag = home_holy_order
+						}
+						if = { 
+							limit = {
+								NOT = { has_global_flag = restorer_of_the_legions }
+							}
+							set_global_flag = restorer_of_the_legions
+						}
+					}
+				}
+				set_character_flag = created_new_holy_order
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				NOT = { trait = zealous }
+			}
+			modifier = {
+				factor = 0.001
+				has_character_flag = created_new_holy_order
+			}
+		}
+	}
+	
+	# For "Umbra Spherae"
+	
+	form_new_holy_order_eastern = { 
+		filter = home_court
+		ai_target_filter = home_court
+		
+		from_potential = {
+			is_landed = yes
+			mercenary = no
+			holy_order = no
+			OR = {
+				trait = guardian_of_faith_hindu
+				trait = guardian_of_faith_buddhist
+				trait = guardian_of_faith_jain
+				trait = guardian_of_faith_taoist
+				trait = guardian_of_faith_confucian
+				trait = guardian_of_faith_nihon_shinto
+				trait = guardian_of_faith_ryukyu_shinto
+				trait = guardian_of_faith_ainu_pantheism
+				AND = {
+					religion = confucian
+					has_landed_title = k_confucian
+				}
+				AND = {
+					religion = nihon_shinto
+					has_landed_title = d_shinto
+				}
+				AND = {
+					religion = ryukyu_shinto
+					has_landed_title = d_ryukyu_shinto
+				}
+				AND = {
+					religion = ainu_pantheism_reformed
+					has_landed_title = d_ainu_pantheism_reformed
+				}
+			}
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			NOT = { tier = BARON } 
+			NOT = { higher_tier_than = COUNT }
+			NOT = { has_title_flag = home_holy_order }
+		}
+		
+		allow = {
+			FROM = {
+				independent = yes
+				prisoner = no
+				war = no
+				wealth = 250
+				prestige = 250
+				piety = 500
+			}
+		}
+		effect = {
+			FROM = {
+				hidden_tooltip = {
+					any_character = {
+						if = {
+							limit = {
+								is_ruler = yes
+								higher_real_tier_than = BARON
+							}
+						narrative_event = { id = OLDORDER.0048 }
+						}
+					}
+				}
+				wealth = -250
+				prestige = -250
+				piety = -500
+				if = {
+					limit = {
+						religion = taoist
+						NOT = { has_global_flag = first_guardian_of_faith_taoist }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_taoist
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				custom_tooltip = {
+					hidden_tooltip = {
+						ROOT = {
+							create_title = {
+								tier = DUKE
+								name = DYNAMIC_HOLY_ORDER_FAITH_EASTERN
+								short_name = yes
+								landless = yes
+								mercenary = yes
+								mercenary_type = minor_holy_order_composition
+								custom_created = yes
+								culture = FROM 
+								religion = ROOT
+								holder = FROM
+								base_title = THIS
+								ruler = "WARCHIEF"
+								foa = "WARCHIEF_FOA"
+							}
+							new_title = {
+								set_title_flag = minor_holy_order
+							}
+							set_title_flag = home_holy_order
+						}
+						if = { 
+							limit = {
+								FROM = {
+									religion = taoist
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_taoist }
+							}
+							set_global_flag = first_guardian_of_faith_taoist
+						}
+					}
+				}
+				set_character_flag = created_new_holy_order
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				NOT = { trait = zealous }
+			}
+			modifier = {
+				factor = 0.001
+				has_character_flag = created_new_holy_order
+			}
+		}
+	}
+	
+	#For "Ancient Religions Reborn"
+	
+	form_new_holy_order_ancient = { 
+		filter = home_court
+		ai_target_filter = home_court
+		
+		from_potential = {
+			is_landed = yes
+			mercenary = no
+			holy_order = no
+			OR = {
+				trait = guardian_of_faith_celtic
+				trait = guardian_of_faith_egyptian
+				AND = {
+					religion = celtic_pagan_reformed
+					has_landed_title = d_celtic_pagan_reformed
+				}
+				AND = {
+					religion = britannic_pagan
+					has_landed_title = k_britannic_pagan
+				}
+				AND = {
+					religion = egyptian_pagan_reformed
+					has_landed_title = d_egyptian_pagan_reformed
+				}
+				AND = {
+					religion = aten_pagan
+					has_landed_title = k_aten_pagan
+				}
+			}
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			NOT = { tier = BARON } 
+			NOT = { higher_tier_than = COUNT }
+			NOT = { has_title_flag = home_holy_order }
+		}
+		
+		allow = {
+			FROM = {
+				independent = yes
+				prisoner = no
+				war = no
+				wealth = 250
+				prestige = 250
+				piety = 500
+			}
+		}
+		effect = {
+			FROM = {
+				hidden_tooltip = {
+					any_character = {
+						if = {
+							limit = {
+								is_ruler = yes
+								higher_real_tier_than = BARON
+							}
+						narrative_event = { id = OLDORDER.0048 }
+						}
+					}
+				}
+				wealth = -250
+				prestige = -250
+				piety = -500
+				custom_tooltip = {
+					hidden_tooltip = {
+						ROOT = {
+							create_title = {
+								tier = DUKE
+								name = DYNAMIC_HOLY_ORDER_FAITH_ANCIENT
+								short_name = yes
+								landless = yes
+								mercenary = yes
+								mercenary_type = minor_holy_order_composition
+								custom_created = yes
+								culture = FROM 
+								religion = ROOT
+								holder = FROM
+								base_title = THIS
+								ruler = "WARCHIEF"
+								foa = "WARCHIEF_FOA"
+							}
+							new_title = {
+								set_title_flag = minor_holy_order
+							}
+							set_title_flag = home_holy_order
+						}
+					}
+				}
+				set_character_flag = created_new_holy_order
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				NOT = { trait = zealous }
+			}
+			modifier = {
+				factor = 0.001
+				has_character_flag = created_new_holy_order
+			}
+		}
+	}
+}
+
+######## For AI only ###########
+
+
+decisions = {   
+	increase_minor_holy_order_size = {
+		ai_check_interval = 18
+		
+		potential = {
+			is_playable = yes
+			prisoner = no
+			wealth = 50
+			piety = 25
+			primary_title = {
+				has_title_flag = minor_holy_order
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			wealth = -50
+			piety = -25
+			primary_title = {
+				change_title_army_size = 0.1 # Increase of percentage
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				NOT = { wealth = 75 }
+			}
+		}
+	}
+	
+	form_new_holy_order_christian_unlanded = {
+		filter = home_court
+		ai_target_filter = home_court
+		is_high_prio = yes
+		
+		potential = {
+			is_ruler = no
+			liege = {
+				mercenary = no
+				holy_order = no
+			}
+			OR = {
+				any_owned_bloodline = {
+					OR = {
+						has_bloodline_flag = first_guardian_of_faith_catholic
+						has_bloodline_flag = first_guardian_of_faith_orthodox
+						has_bloodline_flag = first_guardian_of_faith_miaphysite
+						has_bloodline_flag = first_guardian_of_faith_nestorian
+					}
+					bloodline_is_active_for = PREV
+				}
+				trait = guardian_of_faith_christian
+				trait = guardian_of_faith_orthodox
+				trait = guardian_of_faith_miaphysite
+				trait = guardian_of_faith_nestorian
+			}
+			NOT = { trait = guardian_of_faith_denied }
+			location = {
+				NOT = { has_title_flag = home_holy_order }
+			}
+		}
+		
+		allow = {
+			ROOT = {
+				is_adult = yes
+				is_married = no
+				is_heir = no
+				prisoner = no
+				is_incapable = no
+				wealth = 250
+				OR = {
+					AND = {
+						OR = { 
+							trait = guardian_of_faith_christian
+							trait = guardian_of_faith_orthodox
+							trait = guardian_of_faith_miaphysite
+							trait = guardian_of_faith_nestorian
+						}
+						prestige = 250
+						piety = 500
+					}
+					AND = {
+						prestige = 375
+						piety = 750
+					}
+				}
+			}
+			liege = {
+				religion_group = ROOT 
+			}
+		}
+		effect = {			
+			ROOT = {
+				hidden_tooltip = {
+					any_character = {
+						if = {
+							limit = {
+								is_ruler = yes
+								higher_real_tier_than = BARON
+							}
+						narrative_event = { id = OLDORDER.0040 }
+						}
+					}
+				}
+				wealth = -250
+				if = {
+					limit = {
+						OR = { 
+							trait = guardian_of_faith_christian
+							trait = guardian_of_faith_orthodox
+							trait = guardian_of_faith_miaphysite
+							trait = guardian_of_faith_nestorian
+						}
+					}
+					prestige = -250
+					piety = -500
+				}
+				if = {
+					limit = {
+						NOR = { 
+							trait = guardian_of_faith_christian
+							trait = guardian_of_faith_orthodox
+							trait = guardian_of_faith_miaphysite
+							trait = guardian_of_faith_nestorian
+						}
+					}
+					prestige = -375
+					piety = -750
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = catholic
+							religion = cathar
+							religion = fraticelli
+							religion = waldensian
+							religion = lollard
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_catholic }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_catholic
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = orthodox
+							religion = bogomilist
+							religion = monothelite
+							religion = iconoclast
+							religion = paulician
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_orthodox }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_orthodox
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = miaphysite
+							religion = monophysite
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_miaphysite }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_miaphysite
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = nestorian
+							religion = messalian
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_nestorian }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_nestorian
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				custom_tooltip = {
+					hidden_tooltip = {
+						location = {
+							create_title = {
+								tier = DUKE
+								name = DYNAMIC_HOLY_ORDER_FAITH_CHRISTIAN_UNLANDED
+								short_name = yes
+								landless = yes
+								mercenary = yes
+								mercenary_type = minor_holy_order_composition
+								custom_created = yes
+								religion = ROOT
+								culture = ROOT 
+								holder = ROOT
+								base_title = THIS
+								ruler = "GRANDMASTER"
+								foa = "GRANDMASTER_FOA"
+							}
+							new_title = {
+								set_title_flag = minor_holy_order
+							}
+							set_title_flag = home_holy_order
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = catholic
+										religion = cathar
+										religion = fraticelli
+										religion = waldensian
+										religion = lollard
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_catholic }
+							}
+							set_global_flag = first_guardian_of_faith_catholic
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = orthodox
+										religion = bogomilist
+										religion = monothelite
+										religion = iconoclast
+										religion = paulician
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_orthodox }
+							}
+							set_global_flag = first_guardian_of_faith_orthodox
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = miaphysite
+										religion = monophysite
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_miaphysite }
+							}
+							set_global_flag = first_guardian_of_faith_miaphysite
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = nestorian
+										religion = messalian
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_nestorian }
+							}
+							set_global_flag = first_guardian_of_faith_nestorian
+						}
+					}
+				}
+				set_character_flag = created_new_holy_order
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				NOT = { trait = zealous }
+			}
+			modifier = {
+				factor = 0.001
+				has_character_flag = created_new_holy_order
+			}
+		}
+	}
+	
+	form_new_holy_order_muslim_unlanded = {
+		filter = home_court
+		ai_target_filter = home_court
+		is_high_prio = yes
+		
+		potential = {
+			is_ruler = no
+			liege = {
+				mercenary = no
+				holy_order = no
+			}
+			OR = {
+				any_owned_bloodline = {
+					OR = {
+						has_bloodline_flag = first_guardian_of_faith_sunni
+						has_bloodline_flag = first_guardian_of_faith_shiite
+						has_bloodline_flag = first_guardian_of_faith_ibadi
+					}
+					bloodline_is_active_for = PREV
+				}
+				trait = guardian_of_faith_sunni
+				trait = guardian_of_faith_shiite
+				trait = guardian_of_faith_ibadi
+			}
+			NOT = { trait = guardian_of_faith_denied }
+			location = {
+				NOT = { has_title_flag = home_holy_order }
+			}
+		}
+		
+		allow = {
+			ROOT = {
+				is_adult = yes
+				is_heir = no
+				is_married = no
+				prisoner = no
+				is_incapable = no
+				wealth = 250
+				OR = {
+					AND = {
+						OR = { 
+							trait = guardian_of_faith_sunni
+							trait = guardian_of_faith_shiite
+							trait = guardian_of_faith_ibadi
+						}
+						prestige = 250
+						piety = 500
+					}
+					AND = {
+						prestige = 375
+						piety = 750
+					}
+				}
+			}
+			liege = {
+				religion_group = ROOT 
+			}
+		}
+		effect = {
+			ROOT = {
+				hidden_tooltip = {
+					any_character = {
+						if = {
+							limit = {
+								is_ruler = yes
+								higher_real_tier_than = BARON
+							}
+						narrative_event = { id = OLDORDER.0040 }
+						}
+					}
+				}
+				wealth = -250
+				if = {
+					limit = {
+						OR = { 
+							trait = guardian_of_faith_sunni
+							trait = guardian_of_faith_shiite
+							trait = guardian_of_faith_ibadi
+						}
+					}
+					prestige = -250
+					piety = -500
+				}
+				if = {
+					limit = {
+						NOR = { 
+							trait = guardian_of_faith_sunni
+							trait = guardian_of_faith_shiite
+							trait = guardian_of_faith_ibadi
+						}
+					}
+					prestige = -375
+					piety = -750
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = sunni
+							religion = zikri
+							religion = yazidi
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_sunni }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_sunni
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = shiite
+							religion = druze
+							religion = hurufi
+							religion = qarmatian
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_shiite }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_shiite
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = ibadi
+							religion = kharijite
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_ibadi }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_ibadi
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				custom_tooltip = {
+					hidden_tooltip = {
+						location = {
+							create_title = {
+								tier = DUKE
+								name = DYNAMIC_HOLY_ORDER_FAITH_MUSLIM_UNLANDED
+								short_name = yes
+								landless = yes
+								mercenary = yes
+								mercenary_type = minor_holy_order_composition
+								custom_created = yes
+								culture = ROOT
+								religion = ROOT
+								holder = ROOT
+								base_title = THIS
+								ruler = "GRANDMASTER"
+								foa = "GRANDMASTER_FOA"
+							}
+							new_title = {
+								set_title_flag = minor_holy_order
+							}
+							set_title_flag = home_holy_order
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = sunni
+										religion = zikri
+										religion = yazidi
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_sunni }
+							}
+							set_global_flag = first_guardian_of_faith_sunni
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = shiite
+										religion = druze
+										religion = hurufi
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_shiite }
+							}
+							set_global_flag = first_guardian_of_faith_shiite
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = ibadi
+										religion = kharijite
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_ibadi }
+							}
+							set_global_flag = first_guardian_of_faith_ibadi
+						}
+					}
+				}
+				set_character_flag = created_new_holy_order
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				NOT = { trait = zealous }
+			}
+			modifier = {
+				factor = 0.001
+				has_character_flag = created_new_holy_order
+			}
+		}
+	}
+	
+	form_new_holy_order_pagan_unlanded = {
+		filter = home_court
+		ai_target_filter = home_court
+		is_high_prio = yes
+		
+		potential = {
+			is_ruler = no
+			liege = {
+				mercenary = no
+				holy_order = no
+			}
+			OR = {
+				any_owned_bloodline = {
+					OR = {
+						has_bloodline_flag = first_guardian_of_faith_norse_pagan
+						has_bloodline_flag = first_guardian_of_faith_tengri_pagan
+						has_bloodline_flag = first_guardian_of_faith_baltic_pagan
+						has_bloodline_flag = first_guardian_of_faith_finnish_pagan
+						has_bloodline_flag = first_guardian_of_faith_slavic_pagan
+						has_bloodline_flag = first_guardian_of_faith_west_african_pagan
+						has_bloodline_flag = first_guardian_of_faith_zun_pagan
+						has_bloodline_flag = first_guardian_of_faith_hellenic_pagan
+					}
+					bloodline_is_active_for = PREV
+				}
+				trait = guardian_of_faith_norse_pagan
+				trait = guardian_of_faith_tengri_pagan
+				trait = guardian_of_faith_baltic_pagan
+				trait = guardian_of_faith_finnish_pagan
+				trait = guardian_of_faith_slavic_pagan
+				trait = guardian_of_faith_west_african_pagan
+				trait = guardian_of_faith_zun_pagan
+				trait = guardian_of_faith_hellenic_pagan
+			}
+			NOT = { trait = guardian_of_faith_denied }
+			location = {
+				NOT = { has_title_flag = home_holy_order }
+			}
+		}
+		
+		allow = {
+			ROOT = {
+				is_adult = yes
+				is_heir = no
+				is_married = no
+				prisoner = no
+				is_incapable = no
+				wealth = 250
+				OR = {
+					AND = {
+						OR = { 
+							trait = guardian_of_faith_norse_pagan
+							trait = guardian_of_faith_tengri_pagan
+							trait = guardian_of_faith_baltic_pagan
+							trait = guardian_of_faith_finnish_pagan
+							trait = guardian_of_faith_slavic_pagan
+							trait = guardian_of_faith_west_african_pagan
+							trait = guardian_of_faith_zun_pagan
+							trait = guardian_of_faith_hellenic_pagan
+						}
+						prestige = 250
+						piety = 500
+					}
+					AND = {
+						prestige = 375
+						piety = 750
+					}
+				}
+			}
+			liege = {
+				OR = {
+					religion = ROOT
+					is_heresy_of = ROOT
+				}
+			}
+		}
+		effect = {
+			ROOT = {
+				hidden_tooltip = {
+					any_character = {
+						if = {
+							limit = {
+								is_ruler = yes
+								higher_real_tier_than = BARON
+							}
+						narrative_event = { id = OLDORDER.0040 }
+						}
+					}
+				}
+				wealth = -250
+				if = {
+					limit = {
+						OR = { 
+							trait = guardian_of_faith_norse_pagan
+							trait = guardian_of_faith_tengri_pagan
+							trait = guardian_of_faith_baltic_pagan
+							trait = guardian_of_faith_finnish_pagan
+							trait = guardian_of_faith_slavic_pagan
+							trait = guardian_of_faith_west_african_pagan
+							trait = guardian_of_faith_zun_pagan
+							trait = guardian_of_faith_bon
+							trait = guardian_of_faith_hellenic_pagan
+						}
+					}
+					prestige = -250
+					piety = -500
+				}
+				if = {
+					limit = {
+						NOR = { 
+							trait = guardian_of_faith_norse_pagan
+							trait = guardian_of_faith_tengri_pagan
+							trait = guardian_of_faith_baltic_pagan
+							trait = guardian_of_faith_finnish_pagan
+							trait = guardian_of_faith_slavic_pagan
+							trait = guardian_of_faith_west_african_pagan
+							trait = guardian_of_faith_zun_pagan
+							trait = guardian_of_faith_bon
+							trait = guardian_of_faith_hellenic_pagan
+						}
+					}
+					prestige = -375
+					piety = -750
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = norse_pagan_reformed
+							religion = norse_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_norse_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_norse_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = tengri_pagan_reformed
+							religion = tengri_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_tengri_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_tengri_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = baltic_pagan_reformed
+							religion = baltic_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_baltic_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_baltic_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = finnish_pagan_reformed
+							religion = finnish_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_finnish_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_finnish_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = slavic_pagan_reformed
+							religion = slavic_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_slavic_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_slavic_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = west_african_pagan_reformed
+							religion = west_african_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_west_african_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_west_african_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = zun_pagan_reformed
+							religion = zun_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_zun_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_zun_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = hellenic_pagan_reformed
+							religion = hellenic_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_hellenic_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_hellenic_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				custom_tooltip = {
+					hidden_tooltip = {
+						location = {
+							create_title = {
+								tier = DUKE
+								name = DYNAMIC_HOLY_ORDER_FAITH_PAGAN_UNLANDED
+								short_name = yes
+								landless = yes
+								mercenary = yes
+								mercenary_type = minor_holy_order_composition
+								custom_created = yes
+								culture = ROOT
+								religion = ROOT
+								holder = ROOT
+								base_title = THIS
+								ruler = "WARCHIEF"
+								foa = "WARCHIEF_FOA"
+							}
+							new_title = {
+								set_title_flag = minor_holy_order
+							}
+							set_title_flag = home_holy_order
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = norse_pagan_reformed
+										religion = norse_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_norse_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_norse_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = tengri_pagan_reformed
+										religion = tengri_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_tengri_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_tengri_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = baltic_pagan_reformed
+										religion = baltic_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_baltic_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_baltic_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = finnish_pagan_reformed
+										religion = finnish_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_finnish_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_finnish_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = slavic_pagan_reformed
+										religion = slavic_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_slavic_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_slavic_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = west_african_pagan_reformed
+										religion = west_african_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_west_african_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_west_african_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = zun_pagan_reformed
+										religion = zun_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_zun_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_zun_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = hellenic_pagan_reformed
+										religion = hellenic_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_hellenic_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_hellenic_pagan
+						}
+					}
+				}
+			set_character_flag = created_new_holy_order
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				NOT = { trait = zealous }
+			}
+			modifier = {
+				factor = 0.001
+				has_character_flag = created_new_holy_order
+			}
+		}
+	}
+
+	form_new_holy_order_eastern_unlanded = {
+		filter = home_court
+		ai_target_filter = home_court
+		is_high_prio = yes
+		
+		potential = {
+			is_ruler = no
+			liege = {
+				mercenary = no
+				holy_order = no
+			}
+			OR = {
+				any_owned_bloodline = {
+					OR = {
+						has_bloodline_flag = first_guardian_of_faith_bon
+						has_bloodline_flag = first_guardian_of_faith_taoist
+					}
+					bloodline_is_active_for = PREV
+				}
+				trait = guardian_of_faith_hindu
+				trait = guardian_of_faith_buddhist
+				trait = guardian_of_faith_jain
+				trait = guardian_of_faith_bon
+				trait = guardian_of_faith_taoist
+			}
+			NOT = { trait = guardian_of_faith_denied }
+			location = {
+				NOT = { has_title_flag = home_holy_order }
+			}
+		}
+		
+		allow = {
+			ROOT = {
+				is_adult = yes
+				is_heir = no
+				is_married = no
+				prisoner = no
+				is_incapable = no
+				wealth = 250
+				OR = {
+					AND = {
+						OR = {
+							trait = guardian_of_faith_bon
+							trait = guardian_of_faith_taoist
+						}
+						prestige = 250
+						piety = 500
+					}
+					AND = {
+						prestige = 375
+						piety = 750
+					}
+				}
+			}
+			liege = {
+				OR = {
+					religion = ROOT
+					is_heresy_of = ROOT
+				}
+			}
+		}
+		effect = {
+			ROOT = {
+				hidden_tooltip = {
+					any_character = {
+						if = {
+							limit = {
+								is_ruler = yes
+								higher_real_tier_than = BARON
+							}
+						narrative_event = { id = OLDORDER.0040 }
+						}
+					}
+				}
+				wealth = -250
+				if = {
+					limit = {
+						OR = { 
+							trait = guardian_of_faith_bon
+							trait = guardian_of_faith_taoist
+						}
+					}
+					prestige = -250
+					piety = -500
+				}
+				if = {
+					limit = {
+						NOR = { 
+							trait = guardian_of_faith_bon
+							trait = guardian_of_faith_taoist
+						}
+					}
+					prestige = -375
+					piety = -750
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = bon_reformed
+							religion = bon
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_bon }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_bon
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = taoist
+						NOT = { has_global_flag = first_guardian_of_faith_taoist }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_taoist
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				custom_tooltip = {
+					hidden_tooltip = {
+						location = {
+							create_title = {
+								tier = DUKE
+								name = DYNAMIC_HOLY_ORDER_FAITH_EASTERN_UNLANDED
+								short_name = yes
+								landless = yes
+								mercenary = yes
+								mercenary_type = minor_holy_order_composition
+								custom_created = yes
+								culture = ROOT
+								religion = ROOT
+								holder = ROOT
+								base_title = THIS
+								ruler = "WARCHIEF"
+								foa = "WARCHIEF_FOA"
+							}
+							new_title = {
+								set_title_flag = minor_holy_order
+							}
+							set_title_flag = home_holy_order
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = bon_reformed
+										religion = bon
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_bon }
+							}
+							set_global_flag = first_guardian_of_faith_bon
+						}
+						if = { 
+							limit = {
+								FROM = {
+									religion = taoist
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_taoist }
+							}
+							set_global_flag = first_guardian_of_faith_taoist
+						}
+					}
+				}
+			set_character_flag = created_new_holy_order
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				NOT = { trait = zealous }
+			}
+			modifier = {
+				factor = 0.001
+				has_character_flag = created_new_holy_order
+			}
+		}
+	}
+
+############ For AI Rulers ##############
+
+
+	form_new_holy_order_christian_AI = { 
+		
+		potential = {
+			ai = yes
+			mercenary = no
+			holy_order = no
+			OR = {
+				any_owned_bloodline = {
+					OR = {
+						has_bloodline_flag = first_guardian_of_faith_catholic
+						has_bloodline_flag = first_guardian_of_faith_orthodox
+						has_bloodline_flag = first_guardian_of_faith_miaphysite
+						has_bloodline_flag = first_guardian_of_faith_nestorian
+					}
+					bloodline_is_active_for = PREV
+				}
+				trait = guardian_of_faith_christian
+				trait = guardian_of_faith_orthodox
+				trait = guardian_of_faith_miaphysite
+				trait = guardian_of_faith_nestorian
+				has_landed_title = k_papal_state
+				has_landed_title = k_orthodox
+				has_landed_title = d_miaphysite
+				has_landed_title = d_monophysite
+				has_landed_title = d_nestorian
+				has_landed_title = d_paulician
+				has_landed_title = d_monothelite
+				has_landed_title = d_fraticelli
+				has_landed_title = d_iconoclast
+			}
+			any_demesne_title = {
+				NOT = { tier = BARON } 
+				NOT = { higher_tier_than = COUNT }
+				NOT = { has_title_flag = home_holy_order }
+			}
+		}
+		
+		allow = {
+			ROOT = {
+				independent = yes
+				prisoner = no
+				war = no
+				wealth = 250
+				prestige = 250
+				piety = 500
+			}
+		}
+		effect = {
+			ROOT = {
+				hidden_tooltip = {
+					any_character = {
+						if = {
+							limit = {
+								is_ruler = yes
+								higher_real_tier_than = BARON
+							}
+						narrative_event = { id = OLDORDER.0048 }
+						}
+					}
+				}
+				wealth = -250
+				prestige = -250
+				piety = -500
+				if = {
+					limit = {
+						OR = {
+							religion = catholic
+							religion = cathar
+							religion = fraticelli
+							religion = waldensian
+							religion = lollard
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_catholic }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_catholic
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = orthodox
+							religion = bogomilist
+							religion = monothelite
+							religion = iconoclast
+							religion = paulician
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_orthodox }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_orthodox
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = miaphysite
+							religion = monophysite
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_miaphysite }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_miaphysite
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = nestorian
+							religion = messalian
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_nestorian }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_nestorian
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				custom_tooltip = {
+					hidden_tooltip = {
+						random_demesne_title = {
+							limit = {
+								NOT = { tier = BARON } 
+								NOT = { higher_tier_than = COUNT }
+								NOT = { has_title_flag = home_holy_order }
+							}
+							create_title = {
+								tier = DUKE
+								name = DYNAMIC_HOLY_ORDER_FAITH_CHRISTIAN
+								short_name = yes
+								landless = yes
+								mercenary = yes
+								mercenary_type = minor_holy_order_composition
+								custom_created = yes
+								culture = ROOT 
+								religion = ROOT
+								holder = ROOT
+								base_title = THIS
+								ruler = "GRANDMASTER"
+								foa = "GRANDMASTER_FOA"
+							}
+							new_title = {
+								set_title_flag = minor_holy_order
+							}
+							set_title_flag = home_holy_order
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
+										religion = catholic
+										religion = cathar
+										religion = fraticelli
+										religion = waldensian
+										religion = lollard
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_catholic }
+							}
+							set_global_flag = first_guardian_of_faith_catholic
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
+										religion = orthodox
+										religion = bogomilist
+										religion = monothelite
+										religion = iconoclast
+										religion = paulician
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_orthodox }
+							}
+							set_global_flag = first_guardian_of_faith_orthodox
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
+										religion = miaphysite
+										religion = monophysite
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_miaphysite }
+							}
+							set_global_flag = first_guardian_of_faith_miaphysite
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
+										religion = nestorian
+										religion = messalian
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_nestorian }
+							}
+							set_global_flag = first_guardian_of_faith_nestorian
+						}
+					}
+				}
+				set_character_flag = created_new_holy_order
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				ROOT = {
+					NOT = { trait = zealous }
+				}
+			}
+			modifier = {
+				factor = 0.001
+				AND = {
+					OR = {
+						has_landed_title = k_papal_state
+						has_landed_title = k_orthodox
+						has_landed_title = d_miaphysite
+						has_landed_title = d_monophysite
+						has_landed_title = d_nestorian
+						has_landed_title = d_paulician
+						has_landed_title = d_monothelite
+						has_landed_title = d_fraticelli
+						has_landed_title = d_iconoclast
+					}
+					NOR = {
+						trait = guardian_of_faith_christian
+						trait = guardian_of_faith_orthodox
+						trait = guardian_of_faith_miaphysite
+						trait = guardian_of_faith_nestorian
+					}
+				}
+			}
+			modifier = {
+				factor = 0.000001
+				any_demesne_title = {
+					has_title_flag = minor_holy_order
+				}
+			}
+			modifier = {
+				factor = 0.00000001
+				ROOT = {
+					has_character_flag = created_new_holy_order
+				}
+			}
+		}
+	}
+	
+	form_new_holy_order_muslim_AI = {
+		
+		potential = {
+			ai = yes
+			mercenary = no
+			holy_order = no
+			OR = {
+				any_owned_bloodline = {
+					OR = {
+						has_bloodline_flag = first_guardian_of_faith_sunni
+						has_bloodline_flag = first_guardian_of_faith_shiite
+						has_bloodline_flag = first_guardian_of_faith_ibadi
+					}
+					bloodline_is_active_for = PREV
+				}
+				trait = guardian_of_faith_sunni
+				trait = guardian_of_faith_shiite
+				trait = guardian_of_faith_ibadi
+				has_landed_title = d_sunni
+				has_landed_title = d_shiite
+				has_landed_title = d_yazidi
+				has_landed_title = d_ibadi
+				has_landed_title = d_kharijite
+				has_landed_title = d_hurufi
+				has_landed_title = d_qarmatian
+			}
+			any_demesne_title = {
+				NOT = { tier = BARON } 
+				NOT = { higher_tier_than = COUNT }
+				NOT = { has_title_flag = home_holy_order }
+			}
+		}
+		
+		allow = {
+			ROOT = {
+				independent = yes
+				prisoner = no
+				war = no
+				wealth = 250
+				prestige = 250
+				piety = 500
+			}
+		}
+		effect = {
+			ROOT = {
+				hidden_tooltip = {
+					any_character = {
+						if = {
+							limit = {
+								is_ruler = yes
+								higher_real_tier_than = BARON
+							}
+						narrative_event = { id = OLDORDER.0048 }
+						}
+					}
+				}
+				wealth = -250
+				prestige = -250
+				piety = -500
+				if = {
+					limit = {
+						OR = {
+							religion = sunni
+							religion = zikri
+							religion = yazidi
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_sunni }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_sunni
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = shiite
+							religion = druze
+							religion = hurufi
+							religion = qarmatian
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_shiite }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_shiite
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = ibadi
+							religion = kharijite
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_ibadi }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_ibadi
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				custom_tooltip = {
+					hidden_tooltip = {
+						random_demesne_title = {
+							limit = {
+								NOT = { tier = BARON } 
+								NOT = { higher_tier_than = COUNT }
+								NOT = { has_title_flag = home_holy_order }
+							}
+							create_title = {
+								tier = DUKE
+								name = DYNAMIC_HOLY_ORDER_FAITH_MUSLIM
+								short_name = yes
+								landless = yes
+								mercenary = yes
+								mercenary_type = minor_holy_order_composition
+								custom_created = yes
+								culture = ROOT 
+								religion = ROOT
+								holder = ROOT
+								base_title = THIS
+								ruler = "GRANDMASTER"
+								foa = "GRANDMASTER_FOA"
+							}
+							new_title = {
+								set_title_flag = minor_holy_order
+							}
+							set_title_flag = home_holy_order
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
+										religion = sunni
+										religion = zikri
+										religion = yazidi
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_sunni }
+							}
+							set_global_flag = first_guardian_of_faith_sunni
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
+										religion = shiite
+										religion = druze
+										religion = hurufi
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_shiite }
+							}
+							set_global_flag = first_guardian_of_faith_shiite
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
+										religion = ibadi
+										religion = kharijite
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_ibadi }
+							}
+							set_global_flag = first_guardian_of_faith_ibadi
+						}
+					}
+				}
+				set_character_flag = created_new_holy_order
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				NOT = { trait = zealous }
+			}
+			modifier = {
+				factor = 0.01
+				AND = {
+					OR = {
+						has_landed_title = d_sunni
+						has_landed_title = d_shiite
+						has_landed_title = d_yazidi
+						has_landed_title = d_ibadi
+						has_landed_title = d_kharijite
+						has_landed_title = d_hurufi
+						has_landed_title = d_qarmatian
+					}
+					NOR = {
+						trait = guardian_of_faith_sunni
+						trait = guardian_of_faith_shiite
+						trait = guardian_of_faith_ibadi
+					}
+				}
+			}
+			modifier = {
+				factor = 0.000001
+				any_demesne_title = {
+					has_title_flag = minor_holy_order
+				}
+			}
+			modifier = {
+				factor = 0.00000001
+				has_character_flag = created_new_holy_order
+			}
+		}
+	}
+	
+	form_new_holy_order_pagan_AI = {
+		
+		potential = {
+			ai = yes
+			mercenary = no
+			holy_order = no
+			OR = {
+				trait = guardian_of_faith_norse_pagan
+				trait = guardian_of_faith_tengri_pagan
+				trait = guardian_of_faith_baltic_pagan
+				trait = guardian_of_faith_finnish_pagan
+				trait = guardian_of_faith_slavic_pagan
+				trait = guardian_of_faith_west_african_pagan
+				trait = guardian_of_faith_zun_pagan
+				AND = {
+					trait = guardian_of_faith_hellenic_pagan
+					NAND = {
+						has_landed_title = e_roman_empire
+						culture = roman
+					}
+				}
+				AND = {
+					religion = norse_pagan_reformed
+					has_landed_title = d_norse_pagan_reformed
+				}
+				AND = {
+					religion = tengri_pagan_reformed
+					has_landed_title = d_tengri_pagan_reformed
+				}
+				AND = {
+					religion = baltic_pagan_reformed
+					has_landed_title = d_baltic_pagan_reformed
+				}
+				AND = {
+					religion = finnish_pagan_reformed
+					has_landed_title = d_finnish_pagan_reformed
+				}
+				AND = {
+					religion = slavic_pagan_reformed
+					has_landed_title = d_slavic_pagan_reformed
+				}
+				AND = {
+					religion = west_african_pagan_reformed
+					has_landed_title = d_west_african_pagan_reformed
+				}
+				AND = {
+					religion = bon_reformed
+					has_landed_title = d_bon_reformed
+				}
+				AND = {
+					OR = {
+						religion = hellenic_pagan_reformed
+						religion = hellenic_pagan
+					}
+					has_landed_title = k_hellenic_pagan
+					NAND = {
+						has_landed_title = e_roman_empire
+						culture = roman
+					}
+				}
+				AND = { 
+					religion = promethean_pagan
+					has_landed_title = d_promethean_pagan
+				}
+				any_owned_bloodline = {
+					OR = {
+					has_bloodline_flag = first_guardian_of_faith_norse_pagan
+					has_bloodline_flag = first_guardian_of_faith_tengri_pagan
+					has_bloodline_flag = first_guardian_of_faith_baltic_pagan
+					has_bloodline_flag = first_guardian_of_faith_finnish_pagan
+					has_bloodline_flag = first_guardian_of_faith_slavic_pagan
+					has_bloodline_flag = first_guardian_of_faith_west_african_pagan
+					has_bloodline_flag = first_guardian_of_faith_zun_pagan
+					has_bloodline_flag = first_guardian_of_faith_hellenic_pagan
+					}
+					bloodline_is_active_for = PREV
+				}
+			}
+			any_demesne_title = {
+				NOT = { tier = BARON } 
+				NOT = { higher_tier_than = COUNT }
+				NOT = { has_title_flag = home_holy_order }
+			}
+		}
+		
+		
+		allow = {
+			ROOT = {
+				independent = yes
+				prisoner = no
+				war = no
+				wealth = 250
+				prestige = 250
+				piety = 500
+			}
+		}
+		effect = {
+			ROOT = {
+				hidden_tooltip = {
+					any_character = {
+						if = {
+							limit = {
+								is_ruler = yes
+								higher_real_tier_than = BARON
+							}
+						narrative_event = { id = OLDORDER.0048 }
+						}
+					}
+				}
+				wealth = -250
+				prestige = -250
+				piety = -500
+				if = {
+					limit = {
+						OR = {
+							religion = norse_pagan_reformed
+							religion = norse_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_norse_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_norse_pagan
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = tengri_pagan_reformed
+							religion = tengri_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_tengri_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_tengri_pagan
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = baltic_pagan_reformed
+							religion = baltic_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_baltic_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_baltic_pagan
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = finnish_pagan_reformed
+							religion = finnish_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_finnish_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_finnish_pagan
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = slavic_pagan_reformed
+							religion = slavic_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_slavic_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_slavic_pagan
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = west_african_pagan_reformed
+							religion = west_african_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_west_african_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_west_african_pagan
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = zun_pagan_reformed
+							religion = zun_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_zun_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_zun_pagan
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = hellenic_pagan_reformed
+							religion = hellenic_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_hellenic_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_hellenic_pagan
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				custom_tooltip = {
+					hidden_tooltip = {
+						random_demesne_title = {
+							limit = {
+								NOT = { tier = BARON } 
+								NOT = { higher_tier_than = COUNT }
+								NOT = { has_title_flag = home_holy_order }
+							}
+							create_title = {
+								tier = DUKE
+								name = DYNAMIC_HOLY_ORDER_FAITH_PAGAN
+								short_name = yes
+								landless = yes
+								mercenary = yes
+								mercenary_type = minor_holy_order_composition
+								custom_created = yes
+								culture = ROOT 
+								religion = ROOT
+								holder = ROOT
+								base_title = THIS
+								ruler = "WARCHIEF"
+								foa = "WARCHIEF_FOA"
+							}
+							new_title = {
+								set_title_flag = minor_holy_order
+							}
+							set_title_flag = home_holy_order
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
+										religion = norse_pagan_reformed
+										religion = norse_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_norse_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_norse_pagan
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
+										religion = tengri_pagan_reformed
+										religion = tengri_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_tengri_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_tengri_pagan
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
+										religion = baltic_pagan_reformed
+										religion = baltic_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_baltic_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_baltic_pagan
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
+										religion = finnish_pagan_reformed
+										religion = finnish_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_finnish_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_finnish_pagan
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
+										religion = slavic_pagan_reformed
+										religion = slavic_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_slavic_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_slavic_pagan
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
+										religion = west_african_pagan_reformed
+										religion = west_african_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_west_african_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_west_african_pagan
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
+										religion = zun_pagan_reformed
+										religion = zun_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_zun_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_zun_pagan
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
+										religion = hellenic_pagan_reformed
+										religion = hellenic_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_hellenic_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_hellenic_pagan
+						}
+					}
+				}
+				set_character_flag = created_new_holy_order
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				NOT = { trait = zealous }
+			}
+			modifier = {
+				factor = 0.000001
+				any_demesne_title = {
+					has_title_flag = minor_holy_order
+				}
+			}
+			modifier = {
+				factor = 0.00000000000001
+				has_character_flag = created_new_holy_order
+			}
+		}
+	}
+	
+	form_new_holy_order_roman_empire = {
+		
+		potential = {
+			ai = yes
+			mercenary = no
+			holy_order = no
+			AND = {
+				OR = {
+					trait = guardian_of_faith_hellenic_pagan
+					has_landed_title = k_hellenic_pagan
+					any_owned_bloodline = {
+						has_bloodline_flag = restorer_of_the_legions
+						bloodline_is_active_for = PREV
+					}
+				}
+				culture = roman
+				has_landed_title = e_roman_empire
+			}
+			any_demesne_title = {
+				NOT = { tier = BARON } 
+				NOT = { higher_tier_than = COUNT }
+				NOT = { has_title_flag = home_holy_order }
+			}
+		}
+		
+		allow = {
+			ROOT = {
+				independent = yes
+				prisoner = no
+				war = no
+				wealth = 250
+				prestige = 250
+				piety = 500
+			}
+		}
+		effect = {
+			ROOT = {
+				hidden_tooltip = {
+					any_character = {
+						if = {
+							limit = {
+								is_ruler = yes
+								higher_real_tier_than = BARON
+							}
+						narrative_event = { id = OLDORDER.0049 }
+						}
+					}
+				}
+				wealth = -250
+				prestige = -250
+				piety = -500
+				if = {
+					limit = {
+						NOT = { has_global_flag = restorer_of_the_legions }
+					}
+					create_bloodline = {
+						type = restorer_of_the_legions
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				custom_tooltip = {
+					hidden_tooltip = {
+						random_demesne_title = {
+							limit = {
+								NOT = { tier = BARON } 
+								NOT = { higher_tier_than = COUNT }
+								NOT = { has_title_flag = home_holy_order }
+							}
+							create_title = {
+								tier = DUKE
+								name = DYNAMIC_HOLY_ORDER_FAITH_ROMAN_EMPIRE
+								short_name = yes
+								landless = yes
+								mercenary = yes
+								mercenary_type = imperial_legion_composition
+								custom_created = yes
+								culture = ROOT 
+								religion = ROOT
+								holder = ROOT
+								base_title = THIS
+								ruler = "LEGATUS"
+								foa = "WARCHIEF_FOA"
+							}
+							new_title = {
+								set_title_flag = minor_holy_order
+								set_title_flag = roman_legion
+							}
+							set_title_flag = home_holy_order
+						}
+						if = { 
+							limit = {
+								NOT = { has_global_flag = restorer_of_the_legions }
+							}
+							set_global_flag = restorer_of_the_legions
+						}
+					}
+				}
+				set_character_flag = created_new_holy_order
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				NOT = { trait = zealous }
+			}
+			modifier = {
+				factor = 0.000001
+				any_demesne_title = {
+					has_title_flag = minor_holy_order
+				}
+			}
+			modifier = {
+				factor = 0.0000000000001
+				has_character_flag = created_new_holy_order
+			}
+		}
+	}
+	
+	# For "Umbra Spherae"
+	
+	form_new_holy_order_eastern_AI = { 
+		
+		potential = {
+			ai = yes
+			mercenary = no
+			holy_order = no
+			OR = {
+				trait = guardian_of_faith_hindu
+				trait = guardian_of_faith_buddhist
+				trait = guardian_of_faith_jain
+				trait = guardian_of_faith_bon
+				trait = guardian_of_faith_taoist
+				trait = guardian_of_faith_confucian
+				trait = guardian_of_faith_nihon_shinto
+				trait = guardian_of_faith_ryukyu_shinto
+				trait = guardian_of_faith_ainu_pantheism
+				AND = {
+					religion = confucian
+					has_landed_title = k_confucian
+				}
+				AND = {
+					religion = nihon_shinto
+					has_landed_title = d_shinto
+				}
+				AND = {
+					religion = ryukyu_shinto
+					has_landed_title = d_ryukyu_shinto
+				}
+				AND = {
+					religion = ainu_pantheism_reformed
+					has_landed_title = d_ainu_pantheism_reformed
+				}
+			}
+			any_demesne_title = {
+				NOT = { tier = BARON } 
+				NOT = { higher_tier_than = COUNT }
+				NOT = { has_title_flag = home_holy_order }
+			}
+		}
+		
+		
+		allow = {
+			ROOT = {
+				independent = yes
+				prisoner = no
+				war = no
+				wealth = 250
+				prestige = 250
+				piety = 500
+			}
+		}
+		effect = {
+			ROOT = {
+				hidden_tooltip = {
+					any_character = {
+						if = {
+							limit = {
+								is_ruler = yes
+								higher_real_tier_than = BARON
+							}
+						narrative_event = { id = OLDORDER.0048 }
+						}
+					}
+				}
+				wealth = -250
+				prestige = -250
+				piety = -500
+				if = {
+					limit = {
+						OR = {
+							religion = bon_reformed
+							religion = bon
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_bon }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_bon
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = taoist
+						NOT = { has_global_flag = first_guardian_of_faith_taoist }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_taoist
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				custom_tooltip = {
+					hidden_tooltip = {
+						random_demesne_title = {
+							limit = {
+								NOT = { tier = BARON } 
+								NOT = { higher_tier_than = COUNT }
+								NOT = { has_title_flag = home_holy_order }
+							}
+							create_title = {
+								tier = DUKE
+								name = DYNAMIC_HOLY_ORDER_FAITH_EASTERN
+								short_name = yes
+								landless = yes
+								mercenary = yes
+								mercenary_type = minor_holy_order_composition
+								custom_created = yes
+								culture = ROOT 
+								religion = ROOT
+								holder = ROOT
+								base_title = THIS
+								ruler = "WARCHIEF"
+								foa = "WARCHIEF_FOA"
+							}
+							new_title = {
+								set_title_flag = minor_holy_order
+							}
+							set_title_flag = home_holy_order
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
+										religion = bon_reformed
+										religion = bon
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_bon }
+							}
+							set_global_flag = first_guardian_of_faith_bon
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									religion = taoist
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_taoist }
+							}
+							set_global_flag = first_guardian_of_faith_taoist
+						}
+					}
+				}
+				set_character_flag = created_new_holy_order
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				NOT = { trait = zealous }
+			}
+			modifier = {
+				factor = 0.000001
+				any_demesne_title = {
+					has_title_flag = minor_holy_order
+				}
+			}
+			modifier = {
+				factor = 0.00000000001
+				has_character_flag = created_new_holy_order
+			}
+		}
+	}
+	
+	#For "Ancient Religions Reborn"
+	
+	form_new_holy_order_ancient_AI = { 
+		
+		potential = {
+			ai = yes
+			mercenary = no
+			holy_order = no
+			OR = {
+				trait = guardian_of_faith_celtic
+				trait = guardian_of_faith_egyptian
+				AND = {
+					religion = celtic_pagan_reformed
+					has_landed_title = d_celtic_pagan_reformed
+				}
+				AND = {
+					religion = britannic_pagan
+					has_landed_title = k_britannic_pagan
+				}
+				AND = {
+					religion = egyptian_pagan_reformed
+					has_landed_title = d_egyptian_pagan_reformed
+				}
+				AND = {
+					religion = aten_pagan
+					has_landed_title = k_aten_pagan
+				}
+			}
+			any_demesne_title = {
+				NOT = { tier = BARON } 
+				NOT = { higher_tier_than = COUNT }
+				NOT = { has_title_flag = home_holy_order }
+			}
+		}
+		
+		allow = {
+			ROOT = {
+				independent = yes
+				prisoner = no
+				war = no
+				wealth = 250
+				prestige = 250
+				piety = 500
+			}
+		}
+		effect = {
+			ROOT = {
+				hidden_tooltip = {
+					any_character = {
+						if = {
+							limit = {
+								is_ruler = yes
+								higher_real_tier_than = BARON
+							}
+						narrative_event = { id = OLDORDER.0048 }
+						}
+					}
+				}
+				wealth = -250
+				prestige = -250
+				piety = -500
+				custom_tooltip = {
+					hidden_tooltip = {
+						random_demesne_title = {
+							limit = {
+								NOT = { tier = BARON } 
+								NOT = { higher_tier_than = COUNT }
+								NOT = { has_title_flag = home_holy_order }
+							}
+							create_title = {
+								tier = DUKE
+								name = DYNAMIC_HOLY_ORDER_FAITH_ANCIENT
+								short_name = yes
+								landless = yes
+								mercenary = yes
+								mercenary_type = minor_holy_order_composition
+								custom_created = yes
+								culture = ROOT 
+								religion = ROOT
+								holder = ROOT
+								base_title = THIS
+								ruler = "WARCHIEF"
+								foa = "WARCHIEF_FOA"
+							}
+							new_title = {
+								set_title_flag = minor_holy_order
+							}
+							set_title_flag = home_holy_order
+						}
+					}
+				}
+				set_character_flag = created_new_holy_order
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				NOT = { trait = zealous }
+			}
+			modifier = {
+				factor = 0.000001
+				any_demesne_title = {
+					has_title_flag = minor_holy_order
+				}
+			}
+			modifier = {
+				factor = 0.00000001
+				has_character_flag = created_new_holy_order
+			}
+		}
+	}
+}

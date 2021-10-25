@@ -1,0 +1,488 @@
+targetted_decisions = {
+
+	order_to_join_legion = {
+		only_playable = yes
+		filter = court
+		ai_target_filter = court
+		third_party_filter = all
+		show_third_party_potential = no
+		ai_check_interval = 1200 #Check every 1200 months
+
+		from_potential = {
+			is_playable = yes
+			has_regent = no
+			prisoner = no
+			is_adult = yes
+			is_heretic = no
+		}
+
+		third_party_potential = {
+			FROMFROM = {
+				religion = FROM
+				primary_title = {
+					AND = {
+						has_title_flag = minor_holy_order
+						has_title_flag = roman_legion
+					}
+				}
+			}
+		}
+		
+		potential = {
+			is_adult = yes
+			is_ruler = no
+			is_female = no
+			religion = FROM
+			NOT = { 
+				trait = incapable 
+			}
+			host = { character = FROM }
+			roman_legion_check_active_trigger = yes
+		}
+		
+		allow = {
+			OR = { 
+				AND = { 
+					is_married = no
+					custom_tooltip = {
+						text = NOT_HEIR_TITLE_TT
+
+						NOT = {
+                        	any_heir_title = { 
+                            	always = yes
+                            }
+                        }
+                    }
+				}
+				prisoner = yes
+			}
+			FROM = { piety = 50 }
+		}
+
+		effect = {
+			FROM = {
+				piety = -50
+			}
+			prisoner = no
+			if = {
+				limit = {
+					OR = {
+						trait = content
+						trait = monk
+						trait = nun
+						trait = zealous
+						trait = humble
+						trait = brave
+						trait = crusader
+						trait = celibate
+					}
+				}
+				move_character = FROMFROM
+				hidden_tooltip = {
+					add_trait = celibate
+				}
+			}
+			else = {
+				random_list = {
+					80 = {
+						# Intrigue based chance modifiers for FROM
+						modifier = {
+							factor = 0.5
+							NOT = {
+								FROM = {
+									intrigue = 5
+								}
+							}
+						}
+						modifier = {
+							factor = 1.5
+							FROM = {
+								intrigue = 10
+							}
+						}
+						modifier = {
+							factor = 1.5
+							FROM = {
+								intrigue = 15
+							}
+						}
+						modifier = {
+							factor = 1.5
+							FROM = {
+								intrigue = 20
+							}
+						}
+						custom_tooltip = {
+							text = join_holy_order_success_TT
+
+							move_character = FROMFROM
+							add_trait = celibate
+							if = {
+								limit = {
+									trait = deserter
+								}
+								remove_trait = deserter
+							}
+						}
+					}
+					20 = {
+						# Traits making ROOT more likely to join a Holy Order
+						modifier = {
+							factor = 0.5
+							trait = diligent
+						}
+						modifier = {
+							factor = 0.5
+							trait = temperate
+						}
+						modifier = {
+							factor = 0.5
+							trait = brave
+						}
+						modifier = {
+							factor = 0.5
+							is_married = no
+						}
+						modifier = { #For Hellenic Legions
+							factor = 0.5
+							trait = hellenic_leader
+						}
+						modifier = { #For Hellenic Legions
+							factor = 0.5
+							trait = zodiac_aries
+						}
+						modifier = { #For Hellenic Legions
+							factor = 0.3
+							trait = zodiac_gemini
+						}
+						modifier = { #For Hellenic Legions
+							factor = 0.3
+							trait = zodiac_pisces
+						}
+						modifier = {
+							factor = 0.2
+							trait = bastard
+						}
+						# Traits making ROOT less likely to join a Holy order
+						modifier = {
+							factor = 2.5
+							trait = craven
+						}
+						modifier = {
+							factor = 1.5
+							trait = greedy
+						}
+						modifier = {
+							factor = 1.5
+							trait = cynical
+						}
+						modifier = {
+							factor = 1.5
+							trait = envious
+						}
+						modifier = {
+							factor = 1.5
+							trait = proud
+						}
+						modifier = {
+							factor = 1.5
+							trait = paranoid
+						}
+						modifier = { #For Hellenic Legions
+							factor = 1.5
+							trait = zodiac_libra
+						}
+						modifier = { #For Hellenic Legions
+							factor = 1.25
+							trait = zodiac_virgo
+						}
+						# Intrigue based chance modifiers for ROOT
+						modifier = {
+							factor = 0.5
+							NOT = {
+								intrigue = 5
+							}
+						}
+						modifier = {
+							factor = 1.5
+							intrigue = 10
+						}
+						modifier = {
+							factor = 1.5
+							intrigue = 15
+						}
+						modifier = {
+							factor = 1.5
+							intrigue = 20
+						}
+						modifier = {
+							factor = 1.5
+							intrigue = 25
+						}
+						# Tooltip
+						custom_tooltip = {
+							text = join_holy_order_flee_TT
+
+							banish = yes
+							add_rival = FROM
+							add_trait = deserter
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.3
+				FROM = {
+					NOT = { trait = zealous }
+				}
+			}
+			modifier = {
+				factor = 0.7
+				ROOT = {
+					NOT = { is_rival = FROM }
+				}
+			}
+		}
+	}
+	
+	order_to_join_minor_holy_order = {
+		only_playable = yes
+		filter = court
+		ai_target_filter = court
+		third_party_filter = all
+		show_third_party_potential = no
+		ai_check_interval = 1200 #Check every 1200 months
+
+		from_potential = {
+			is_playable = yes
+			has_regent = no
+			prisoner = no
+			is_adult = yes
+			is_heretic = no
+		}
+
+		third_party_potential = {
+			FROMFROM = {
+				religion = FROM
+				primary_title = {
+					AND = {
+						has_title_flag = minor_holy_order
+						NOT = { has_title_flag = roman_legion }
+					}
+				}
+			}
+		}
+		
+		potential = {
+			is_adult = yes
+			is_ruler = no
+			is_female = no
+			religion = FROM
+			NOT = { 
+				trait = incapable 
+			}
+			host = { character = FROM }
+			NOT = {
+				liege = {
+					primary_title = {
+						has_title_flag = minor_holy_order 
+					}
+				}
+			}
+		}
+		
+		allow = {
+			OR = { 
+				AND = { 
+					is_married = no
+					custom_tooltip = {
+						text = NOT_HEIR_TITLE_TT
+
+						NOT = {
+                        	any_heir_title = { 
+                            	always = yes
+                            }
+                        }
+                    }
+				}
+				prisoner = yes
+			}
+			FROM = { piety = 25 }
+		}
+
+		effect = {
+			FROM = {
+				piety = -25
+			}
+			prisoner = no
+			if = {
+				limit = {
+					OR = {
+						trait = content
+						trait = monk
+						trait = nun
+						trait = zealous
+						trait = humble
+						trait = brave
+						trait = crusader
+						trait = celibate
+					}
+				}
+				move_character = FROMFROM
+				hidden_tooltip = {
+					add_trait = celibate
+				}
+			}
+			else = {
+				random_list = {
+					80 = {
+						# Intrigue based chance modifiers for FROM
+						modifier = {
+							factor = 0.5
+							NOT = {
+								FROM = {
+									intrigue = 5
+								}
+							}
+						}
+						modifier = {
+							factor = 1.5
+							FROM = {
+								intrigue = 10
+							}
+						}
+						modifier = {
+							factor = 1.5
+							FROM = {
+								intrigue = 15
+							}
+						}
+						modifier = {
+							factor = 1.5
+							FROM = {
+								intrigue = 20
+							}
+						}
+						custom_tooltip = {
+							text = join_holy_order_success_TT
+
+							move_character = FROMFROM
+							add_trait = celibate
+						}
+					}
+					20 = {
+						# Traits making ROOT more likely to join a Holy Order
+						modifier = {
+							factor = 0.5
+							trait = zealous
+						}
+						modifier = {
+							factor = 0.5
+							trait = temperate
+						}
+						modifier = {
+							factor = 0.5
+							trait = brave
+						}
+						modifier = {
+							factor = 0.5
+							is_married = no
+						}
+						modifier = {
+							factor = 0.2
+							trait = bastard
+						}
+						# Traits making ROOT less likely to join a Holy order
+						modifier = {
+							factor = 2.5
+							trait = craven
+						}
+						modifier = {
+							factor = 1.5
+							trait = greedy
+						}
+						modifier = {
+							factor = 1.5
+							trait = cynical
+						}
+						modifier = {
+							factor = 1.5
+							trait = envious
+						}
+						modifier = {
+							factor = 1.5
+							trait = proud
+						}
+						modifier = {
+							factor = 1.5
+							trait = paranoid
+						}
+						modifier = {
+							factor = 1.5
+							FROM {
+								NOT = { piety = 50 } # Doesn't respect him, and just want to send him away 
+							}
+						}
+						# Intrigue based chance modifiers for ROOT
+						modifier = {
+							factor = 0.5
+							NOT = {
+								intrigue = 5
+							}
+						}
+						modifier = {
+							factor = 1.5
+							intrigue = 10
+						}
+						modifier = {
+							factor = 1.5
+							intrigue = 15
+						}
+						modifier = {
+							factor = 1.5
+							intrigue = 20
+						}
+						modifier = {
+							factor = 1.5
+							intrigue = 25
+						}
+						# Tooltip
+						custom_tooltip = {
+							text = join_holy_order_flee_TT
+
+							banish = yes
+							add_rival = FROM
+						}
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.7
+				ROOT = {
+					NOT = { is_rival = FROM }
+				}
+			}
+			modifier = {
+				factor = 0.4
+				ROOT = {
+					NOT = { trait = zealous }
+				}
+			}
+			modifier = {
+				factor = 0.2
+				FROM = {
+					NOT = { trait = zealous }
+				}
+			}
+		}
+	}
+}
