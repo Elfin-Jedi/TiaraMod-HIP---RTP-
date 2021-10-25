@@ -1030,7 +1030,7 @@ character_event = {
 		trigger = {
 			NOT = {	has_character_flag = ramadan }
 			religion_group = muslim
-			NOT = { trait = trait = hajjaj }
+			NOT = { trait = hajjaj }
 			prisoner = no
 			war = no
 		}
