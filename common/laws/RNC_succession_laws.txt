@@ -1,0 +1,27 @@
+succession_laws = {
+
+	minor_holy_order_elective = {
+		potential = {
+			any_demesne_title = {
+				has_title_flag = minor_holy_order
+			}
+		}
+		allow = {
+		}
+		default_selection = {
+			factor = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = minor_holy_order_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+}
