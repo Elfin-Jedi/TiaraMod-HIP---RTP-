@@ -1,0 +1,752 @@
+# Catholic (and heresies)
+
+first_guardian_of_faith_catholic = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_catholic }
+	picture = GFX_bloodlines_symbol_cross_1
+	active = {
+		OR = {
+			religion = catholic
+			religion = cathar
+			religion = fraticelli
+			religion = waldensian
+			religion = lollard
+			religion = adoptionist
+			religion = arian
+		}
+	}
+}
+
+# Orthodox (and heresies)
+
+first_guardian_of_faith_orthodox = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_orthodox }
+	picture = GFX_bloodlines_symbol_cross_orthodox
+	active = {
+		OR = {
+			religion = orthodox
+			religion = bogomilist
+			religion = monothelite
+			religion = iconoclast
+		}
+	}
+}
+
+# Miaphysite (and heresies)
+
+first_guardian_of_faith_miaphysite = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_miaphysite }
+	picture = GFX_bloodlines_symbol_cross_miaphysite
+	active = {
+		OR = {
+			religion = miaphysite
+			religion = monophysite
+		}
+	}
+}
+
+# Nestorian (and heresies)
+
+first_guardian_of_faith_nestorian = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_nestorian }
+	picture = GFX_bloodlines_symbol_cross_nestorian
+	active = {
+		OR = {
+			religion = nestorian
+			religion = messalian
+		}
+	}
+}
+
+# West Syriac
+
+first_guardian_of_faith_syriac = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_syriac }
+	picture = GFX_bloodlines_symbol_cross_1
+	active = {
+		religion = syriac
+	}
+}
+
+# Maronite
+
+first_guardian_of_faith_maronite = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_maronite }
+	picture = GFX_bloodlines_symbol_cross_1
+	active = {
+		religion = maronite
+	}
+}
+
+# Apostolic (and heresies)
+
+first_guardian_of_faith_apostolic = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_apostolic }
+	picture = GFX_bloodlines_symbol_cross_1
+	active = {
+		OR = {
+			religion = apostolic
+			religion = paulician
+			religion = tondrakian
+		}
+	}
+}
+
+# Chalcedonian
+
+first_guardian_of_faith_chalcedonian = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_chalcedonian }
+	picture = GFX_bloodlines_symbol_cross_1
+	active = {
+		religion = chalcedonian
+	}
+}
+
+# Sunni (and heresies)
+
+first_guardian_of_faith_sunni = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_sunni }
+	picture = GFX_bloodlines_symbol_sunni
+	active = {
+		OR = {
+			religion = sunni
+			religion = zikri
+			religion = mahdiyya
+			religion = nabawiyya
+		}
+	}
+}
+
+# Shiite (and heresies)
+
+first_guardian_of_faith_shiite = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_shiite }
+	picture = GFX_bloodlines_symbol_guardian_faith_shiite
+	active = {
+		OR = {
+			religion = shiite
+			religion = hurufi
+			religion = waqifi
+			religion = ismaili
+			religion = qarmatian
+		}
+	}
+}
+
+# Ibadi (and heresies)
+
+first_guardian_of_faith_ibadi = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_ibadi }
+	picture = GFX_bloodlines_symbol_guardian_faith_ibadi
+	active = {
+		OR = {
+			religion = ibadi
+			religion = kharijite
+			religion = haruri
+		}
+	}
+}
+
+# Zaydi
+
+first_guardian_of_faith_zaydi = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_zaydi }
+	picture = GFX_bloodlines_symbol_sunni
+	active = {
+		religion = zaydi
+	}
+}
+
+# Druze
+
+first_guardian_of_faith_druze = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_druze }
+	picture = GFX_bloodlines_symbol_sunni
+	active = {
+		religion = druze
+	}
+}
+
+# Zoroastrian (and heresies)
+
+first_guardian_of_faith_zoroastrian = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_zoroastrian }
+	picture = GFX_bloodlines_symbol_zoroastrian
+	active = {
+		OR = {
+			religion = zoroastrian
+			religion = mazdaki
+			religion = zurvanist
+			religion = khurmazta
+		}
+	}
+}
+
+# Manichean (and heresies)
+
+first_guardian_of_faith_manichean = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_manichean }
+	picture = GFX_bloodlines_symbol_zoroastrian
+	active = {
+		OR = {
+			religion = manichean
+			religion = mandaean
+		}
+	}
+}
+
+# Yazidi
+
+first_guardian_of_faith_yazidi = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_yazidi }
+	picture = GFX_bloodlines_symbol_zoroastrian
+	active = {
+		religion = yazidi
+	}
+}
+
+# Norse (reformed or not)
+
+first_guardian_of_faith_norse_pagan = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_norse_pagan }
+	picture = GFX_bloodlines_symbol_norse
+	active = {
+		OR = {
+			religion = norse_pagan_reformed
+			religion = norse_pagan
+		}
+	}
+}
+
+# Tengri (reformed or not)
+
+first_guardian_of_faith_tengri_pagan = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_tengri_pagan }
+	picture = GFX_bloodlines_symbol_tengri_eagle
+	active = {
+		OR = {
+			religion = tengri_pagan_reformed
+			religion = tengri_pagan
+		}
+	}
+}
+
+# Romuva (reformed or not)
+
+first_guardian_of_faith_baltic_pagan = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_baltic_pagan }
+	picture = GFX_bloodlines_symbol_guardian_faith_romuva
+	active = {
+		OR = {
+			religion = baltic_pagan_reformed
+			religion = baltic_pagan
+		}
+	}
+}
+
+# Suomenusko (reformed or not)
+
+first_guardian_of_faith_finnish_pagan = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_finnish_pagan }
+	picture = GFX_bloodlines_symbol_finnish_bearpaw
+	active = {
+		OR = {
+			religion = finnish_pagan_reformed
+			religion = finnish_pagan
+		}
+	}
+}
+
+# Slavic (reformed or not)
+
+first_guardian_of_faith_slavic_pagan = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_slavic_pagan }
+	picture = GFX_bloodlines_symbol_guardian_faith_slavic
+	active = {
+		OR = {
+			religion = slavic_pagan_reformed
+			religion = slavic_pagan
+		}
+	}
+}
+
+# West African (reformed or not)
+
+first_guardian_of_faith_west_african_pagan = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_west_african_pagan }
+	picture = GFX_bloodlines_symbol_african
+	active = {
+		OR = {
+			religion = west_african_pagan_reformed
+			religion = west_african_pagan
+		}
+	}
+}
+
+# Zunist (reformed or not)
+
+first_guardian_of_faith_zun_pagan = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_zun_pagan }
+	picture = GFX_bloodlines_symbol_zun_sun
+	active = {
+		OR = {
+			religion = zun_pagan_reformed
+			religion = zun_pagan
+		}
+	}
+}
+
+# Hellenic (reformed or not)
+
+first_guardian_of_faith_hellenic_pagan = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_hellenic_pagan }
+	picture = GFX_bloodlines_symbol_stoics
+	active = {
+		OR = {
+			religion = hellenic_pagan_reformed
+			religion = hellenic_pagan
+		}
+	}
+}
+
+# Roman Legion (reformed or not)
+
+restorer_of_the_legions = {
+	monthly_character_piety = 0.1
+	monthly_character_prestige = 0.5
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_restorer_of_the_legions = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith restorer_of_the_legions }
+	picture = GFX_bloodlines_symbol_restorer_of_the_legions
+	active = {
+		culture = roman
+	}
+}
+
+# Bön (reformed or not)
+
+first_guardian_of_faith_bon = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_bon }
+	picture = GFX_bloodlines_symbol_bon_candle
+	active = {
+		OR = {
+			religion = bon_reformed
+			religion = bon
+		}
+	}
+}
+
+# Aztec (reformed or not)
+
+first_guardian_of_faith_aztec = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_aztec }
+	picture = GFX_bloodlines_symbol_bon_candle
+	active = {
+		OR = {
+			religion = aztec_reformed
+			religion = aztec
+		}
+	}
+}
+
+# Hindu
+
+first_guardian_of_faith_hinduism = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_hinduism }
+	picture = GFX_bloodlines_symbol_hindu
+	active = {
+		religion = hinduism
+	}
+}
+
+# Buddhist
+
+first_guardian_of_faith_buddhism = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_buddhism }
+	picture = GFX_bloodlines_symbol_buddhist
+	active = {
+		religion = buddhism
+	}
+}
+
+# Jain
+
+first_guardian_of_faith_jain = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_jain }
+	picture = GFX_bloodlines_symbol_peace_builder
+	active = {
+		religion = jain
+	}
+}
+
+# Taoist
+
+first_guardian_of_faith_taoist = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_taoist }
+	picture = GFX_bloodlines_symbol_taoist
+	active = {
+		religion = taoist
+	}
+}
+
+# Ainu (reformed or not)
+
+first_guardian_of_faith_ainu_pagan = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_ainu_pagan }
+	picture = GFX_bloodlines_symbol_generic_pagan
+	active = {
+		OR = {
+			religion = ainu_pagan_reformed
+			religion = ainu_pagan
+		}
+	}
+}
+
+# Chinese (reformed or not)
+
+first_guardian_of_faith_chinese_pagan = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_chinese_pagan }
+	picture = GFX_bloodlines_symbol_generic_pagan
+	active = {
+		OR = {
+			religion = chinese_pagan_reformed
+			religion = chinese_pagan
+		}
+	}
+}
+
+# Korean (reformed or not)
+
+first_guardian_of_faith_korean_pagan = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_korean_pagan }
+	picture = GFX_bloodlines_symbol_generic_pagan
+	active = {
+		OR = {
+			religion = korean_pagan_reformed
+			religion = korean_pagan
+		}
+	}
+}
+
+# Ryukyuan (reformed or not)
+
+first_guardian_of_faith_ryukyuan_pagan = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_ryukyuan_pagan }
+	picture = GFX_bloodlines_symbol_generic_pagan
+	active = {
+		OR = {
+			religion = ryukyuan_pagan_reformed
+			religion = ryukyuan_pagan
+		}
+	}
+}
