@@ -422,7 +422,7 @@ targetted_decisions = {
 						}
 						modifier = {
 							factor = 1.5
-							FROM {
+							FROM = {
 								NOT = { piety = 50 } # Doesn't respect him, and just want to send him away 
 							}
 						}
