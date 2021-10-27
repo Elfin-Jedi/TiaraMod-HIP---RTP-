@@ -2339,8 +2339,8 @@ pagan_group = {
 		secondary_event_pictures = west_african_pagan
 		alternate_start = { always = no }
 
-		icon = 37
-		heresy_icon = 38
+		icon = 35
+		heresy_icon = 36
 		
 		ai_convert_other_group = 2 # always try to convert
 		
@@ -2386,8 +2386,8 @@ pagan_group = {
 		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
 		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
-		icon = 36
-		heresy_icon = 38
+		icon = 34
+		heresy_icon = 36
 		
 		color = { 0.23 0.13 0.57 }
 
