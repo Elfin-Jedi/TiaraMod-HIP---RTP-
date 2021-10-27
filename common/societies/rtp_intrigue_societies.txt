@@ -27,8 +27,6 @@ rtp_intrigue_norse = {
 		OR = {
 			religion = norse_pagan
 			religion = norse_pagan_reformed
-			religion_group = pagan_group
-			religion_group = dark
 		}
 		NOR = {
 			AND = {
@@ -59,8 +57,6 @@ rtp_intrigue_norse = {
 		OR = {
 			religion = norse_pagan
 			religion = norse_pagan_reformed
-			religion_group = pagan_group
-			religion_group = dark
 		}
 	}
 
@@ -207,8 +203,6 @@ rtp_intrigue_norse = {
 			OR = {
 				religion = norse_pagan
 				religion = norse_pagan_reformed
-				religion_group = pagan_group
-				religion_group = dark
 			}
 		}
 	}
@@ -237,6 +231,28 @@ rtp_intrigue_tengri = {
 		OR = {
 			religion = tengri_pagan
 			religion = tengri_pagan_reformed
+			religion_group = pagan_group
+			religion_group = dark
+		}
+		NOR = {
+			religion = norse_pagan
+			religion = norse_pagan_reformed
+			religion = baltic_pagan
+			religion = baltic_pagan_reformed
+			religion = finnish_pagan
+			religion = finnish_pagan_reformed
+			religion = slavic_pagan
+			religion = slavic_pagan_reformed
+			religion = west_african_pagan
+			religion = west_african_pagan_reformed
+			religion = zun_pagan
+			religion = zun_pagan_reformed
+			religion = bon
+			religion = bon_reformed
+			religion = hellenic_pagan
+			religion = hellenic_pagan_reformed
+			religion = aztec
+			religion = aztec_reformed
 		}
 		NOR = {
 			AND = {
@@ -257,6 +273,28 @@ rtp_intrigue_tengri = {
 		OR = {
 			religion = tengri_pagan
 			religion = tengri_pagan_reformed
+			religion_group = pagan_group
+			religion_group = dark
+		}
+		NOR = {
+			religion = norse_pagan
+			religion = norse_pagan_reformed
+			religion = baltic_pagan
+			religion = baltic_pagan_reformed
+			religion = finnish_pagan
+			religion = finnish_pagan_reformed
+			religion = slavic_pagan
+			religion = slavic_pagan_reformed
+			religion = west_african_pagan
+			religion = west_african_pagan_reformed
+			religion = zun_pagan
+			religion = zun_pagan_reformed
+			religion = bon
+			religion = bon_reformed
+			religion = hellenic_pagan
+			religion = hellenic_pagan_reformed
+			religion = aztec
+			religion = aztec_reformed
 		}
 	}
 
@@ -265,6 +303,28 @@ rtp_intrigue_tengri = {
 		OR = {
 			religion = tengri_pagan
 			religion = tengri_pagan_reformed
+			religion_group = pagan_group
+			religion_group = dark
+		}
+		NOR = {
+			religion = norse_pagan
+			religion = norse_pagan_reformed
+			religion = baltic_pagan
+			religion = baltic_pagan_reformed
+			religion = finnish_pagan
+			religion = finnish_pagan_reformed
+			religion = slavic_pagan
+			religion = slavic_pagan_reformed
+			religion = west_african_pagan
+			religion = west_african_pagan_reformed
+			religion = zun_pagan
+			religion = zun_pagan_reformed
+			religion = bon
+			religion = bon_reformed
+			religion = hellenic_pagan
+			religion = hellenic_pagan_reformed
+			religion = aztec
+			religion = aztec_reformed
 		}
 	}
 
@@ -411,6 +471,28 @@ rtp_intrigue_tengri = {
 			OR = {
 				religion = tengri_pagan
 				religion = tengri_pagan_reformed
+				religion_group = pagan_group
+				religion_group = dark
+			}
+			NOR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+				religion = baltic_pagan
+				religion = baltic_pagan_reformed
+				religion = finnish_pagan
+				religion = finnish_pagan_reformed
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+				religion = west_african_pagan
+				religion = west_african_pagan_reformed
+				religion = zun_pagan
+				religion = zun_pagan_reformed
+				religion = bon
+				religion = bon_reformed
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+				religion = aztec
+				religion = aztec_reformed
 			}
 		}
 	}

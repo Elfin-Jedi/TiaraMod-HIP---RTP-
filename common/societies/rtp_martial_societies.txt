@@ -31,8 +31,6 @@ rtp_martial_norse = {
 		OR = {
 			religion = norse_pagan
 			religion = norse_pagan_reformed
-			religion_group = pagan_group
-			religion_group = dark
 		}
 		NOR = {
 			AND = {
@@ -53,8 +51,6 @@ rtp_martial_norse = {
 		OR = {
 			religion = norse_pagan
 			religion = norse_pagan_reformed
-			religion_group = pagan_group
-			religion_group = dark
 		}
 	}
 
@@ -63,8 +59,6 @@ rtp_martial_norse = {
 		OR = {
 			religion = norse_pagan
 			religion = norse_pagan_reformed
-			religion_group = pagan_group
-			religion_group = dark
 		}
 	}
 
@@ -238,6 +232,28 @@ rtp_martial_tengri = {
 		OR = {
 			religion = tengri_pagan
 			religion = tengri_pagan_reformed
+			religion_group = pagan_group
+			religion_group = dark
+		}
+		NOR = {
+			religion = norse_pagan
+			religion = norse_pagan_reformed
+			religion = baltic_pagan
+			religion = baltic_pagan_reformed
+			religion = finnish_pagan
+			religion = finnish_pagan_reformed
+			religion = slavic_pagan
+			religion = slavic_pagan_reformed
+			religion = west_african_pagan
+			religion = west_african_pagan_reformed
+			religion = zun_pagan
+			religion = zun_pagan_reformed
+			religion = bon
+			religion = bon_reformed
+			religion = hellenic_pagan
+			religion = hellenic_pagan_reformed
+			religion = aztec
+			religion = aztec_reformed
 		}
 		NOR = {
 			AND = {
@@ -258,6 +274,28 @@ rtp_martial_tengri = {
 		OR = {
 			religion = tengri_pagan
 			religion = tengri_pagan_reformed
+			religion_group = pagan_group
+			religion_group = dark
+		}
+		NOR = {
+			religion = norse_pagan
+			religion = norse_pagan_reformed
+			religion = baltic_pagan
+			religion = baltic_pagan_reformed
+			religion = finnish_pagan
+			religion = finnish_pagan_reformed
+			religion = slavic_pagan
+			religion = slavic_pagan_reformed
+			religion = west_african_pagan
+			religion = west_african_pagan_reformed
+			religion = zun_pagan
+			religion = zun_pagan_reformed
+			religion = bon
+			religion = bon_reformed
+			religion = hellenic_pagan
+			religion = hellenic_pagan_reformed
+			religion = aztec
+			religion = aztec_reformed
 		}
 	}
 
@@ -266,6 +304,8 @@ rtp_martial_tengri = {
 		OR = {
 			religion = tengri_pagan
 			religion = tengri_pagan_reformed
+			religion_group = pagan_group
+			religion_group = dark
 		}
 	}
 
@@ -411,6 +451,28 @@ rtp_martial_tengri = {
 			OR = {
 				religion = tengri_pagan
 				religion = tengri_pagan_reformed
+				religion_group = pagan_group
+				religion_group = dark
+			}
+			NOR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+				religion = baltic_pagan
+				religion = baltic_pagan_reformed
+				religion = finnish_pagan
+				religion = finnish_pagan_reformed
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+				religion = west_african_pagan
+				religion = west_african_pagan_reformed
+				religion = zun_pagan
+				religion = zun_pagan_reformed
+				religion = bon
+				religion = bon_reformed
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+				religion = aztec
+				religion = aztec_reformed
 			}
 		}
 	}
@@ -2266,6 +2328,8 @@ rtp_martial_catholic = {
 			religion = fraticelli
 			religion = waldensian
 			religion = lollard
+			religion = adoptionist
+			religion = arian
 		}
 		NOR = {
 			AND = {
@@ -2289,6 +2353,8 @@ rtp_martial_catholic = {
 			religion = fraticelli
 			religion = waldensian
 			religion = lollard
+			religion = adoptionist
+			religion = arian
 		}
 	}
 
@@ -2300,6 +2366,8 @@ rtp_martial_catholic = {
 			religion = fraticelli
 			religion = waldensian
 			religion = lollard
+			religion = adoptionist
+			religion = arian
 		}
 	}
 
@@ -2448,6 +2516,8 @@ rtp_martial_catholic = {
 				religion = fraticelli
 				religion = waldensian
 				religion = lollard
+				religion = adoptionist
+				religion = arian
 			}
 		}
 	}
@@ -2486,7 +2556,9 @@ rtp_martial_orthodox = {
 			religion = bogomilist
 			religion = monothelite
 			religion = iconoclast
+			religion = apostolic
 			religion = paulician
+			religion = tondrakian
 		}
 		NOR = {
 			AND = {
@@ -2509,7 +2581,9 @@ rtp_martial_orthodox = {
 			religion = bogomilist
 			religion = monothelite
 			religion = iconoclast
+			religion = apostolic
 			religion = paulician
+			religion = tondrakian
 		}
 	}
 
@@ -2520,7 +2594,9 @@ rtp_martial_orthodox = {
 			religion = bogomilist
 			religion = monothelite
 			religion = iconoclast
+			religion = apostolic
 			religion = paulician
+			religion = tondrakian
 		}
 	}
 
@@ -2668,7 +2744,9 @@ rtp_martial_orthodox = {
 				religion = bogomilist
 				religion = monothelite
 				religion = iconoclast
+				religion = apostolic
 				religion = paulician
+				religion = tondrakian
 			}
 		}
 	}
@@ -2898,6 +2976,8 @@ rtp_martial_nestorian = {
 		OR = {
 			religion = nestorian
 			religion = messalian
+			religion = syriac
+			religion = maronite
 		}
 		NOR = {
 			AND = {
@@ -2918,6 +2998,8 @@ rtp_martial_nestorian = {
 		OR = {
 			religion = nestorian
 			religion = messalian
+			religion = syriac
+			religion = maronite
 		}
 	}
 
@@ -2926,6 +3008,8 @@ rtp_martial_nestorian = {
 		OR = {
 			religion = nestorian
 			religion = messalian
+			religion = syriac
+			religion = maronite
 		}
 	}
 
@@ -3071,6 +3155,8 @@ rtp_martial_nestorian = {
 			OR = {
 				religion = nestorian
 				religion = messalian
+				religion = syriac
+				religion = maronite
 			}
 		}
 	}
@@ -3297,7 +3383,8 @@ rtp_martial_sunni = {
 		OR = {
 			religion = sunni
 			religion = zikri
-			religion = yazidi
+			religion = mahdiyya
+			religion = nabawiyya
 		}
 		NOR = {
 			AND = {
@@ -3318,7 +3405,8 @@ rtp_martial_sunni = {
 		OR = {
 			religion = sunni
 			religion = zikri
-			religion = yazidi
+			religion = mahdiyya
+			religion = nabawiyya
 		}
 	}
 
@@ -3327,7 +3415,8 @@ rtp_martial_sunni = {
 		OR = {
 			religion = sunni
 			religion = zikri
-			religion = yazidi
+			religion = mahdiyya
+			religion = nabawiyya
 		}
 	}
 
@@ -3473,7 +3562,8 @@ rtp_martial_sunni = {
 			OR = {
 				religion = sunni
 				religion = zikri
-				religion = yazidi
+				religion = mahdiyya
+				religion = nabawiyya
 			}
 		}
 	}
@@ -3502,9 +3592,12 @@ rtp_martial_shiite = {
 		rtp_is_capable_adult = yes
 		OR = {
 			religion = shiite
-			religion = druze
 			religion = hurufi
+			religion = waqifi
+			religion = ismaili
 			religion = qarmatian
+			religion = zaydi
+			religion = druze
 		}
 		NOR = {
 			AND = {
@@ -3524,9 +3617,12 @@ rtp_martial_shiite = {
 	show_society = {
 		OR = {
 			religion = shiite
-			religion = druze
 			religion = hurufi
+			religion = waqifi
+			religion = ismaili
 			religion = qarmatian
+			religion = zaydi
+			religion = druze
 		}
 	}
 
@@ -3534,9 +3630,12 @@ rtp_martial_shiite = {
 		lower_tier_than = KING
 		OR = {
 			religion = shiite
-			religion = druze
 			religion = hurufi
+			religion = waqifi
+			religion = ismaili
 			religion = qarmatian
+			religion = zaydi
+			religion = druze
 		}
 	}
 
@@ -3681,9 +3780,12 @@ rtp_martial_shiite = {
 			is_in_society = no
 			OR = {
 				religion = shiite
-				religion = druze
 				religion = hurufi
+				religion = waqifi
+				religion = ismaili
 				religion = qarmatian
+				religion = zaydi
+				religion = druze
 			}
 		}
 	}
@@ -3713,6 +3815,7 @@ rtp_martial_ibadi = {
 		OR = {
 			religion = ibadi
 			religion = kharijite
+			religion = haruri
 		}
 		NOR = {
 			AND = {
@@ -3733,6 +3836,7 @@ rtp_martial_ibadi = {
 		OR = {
 			religion = ibadi
 			religion = kharijite
+			religion = haruri
 		}
 	}
 
@@ -3741,6 +3845,7 @@ rtp_martial_ibadi = {
 		OR = {
 			religion = ibadi
 			religion = kharijite
+			religion = haruri
 		}
 	}
 
@@ -3886,6 +3991,7 @@ rtp_martial_ibadi = {
 			OR = {
 				religion = ibadi
 				religion = kharijite
+				religion = haruri
 			}
 		}
 	}
