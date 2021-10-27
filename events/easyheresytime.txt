@@ -747,14 +747,14 @@ character_event = {
 			has_character_flag = indian_religiontime
 		}
 		name = easyheresy.41a
-		set_secret_religion = hinduism
+		set_secret_religion = hindu
 	}
 	option = {
 		trigger = {
 			has_character_flag = indian_religiontime
 		}
 		name = easyheresy.41b
-		set_secret_religion = buddhism
+		set_secret_religion = buddhist
 	}
 	option = {
 		trigger = {
