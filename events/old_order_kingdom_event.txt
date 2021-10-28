@@ -1,4 +1,4 @@
-namespace = OLDORDER
+namespace = OLDORDER # latest 0079
 
 character_event = {
     id = OLDORDER.0020
@@ -284,7 +284,17 @@ character_event = {
 				NOT = { trait = guardian_of_faith_hellenic_pagan }
 			}
 			add_trait = guardian_of_faith_hellenic_pagan
-		}	
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = aztec
+					religion = aztec_reformed
+				}
+				NOT = { trait = guardian_of_faith_aztec }
+			}
+			add_trait = guardian_of_faith_aztec
+		}
 		if = {
 			limit = {
 				OR = {
@@ -325,12 +335,145 @@ character_event = {
 			}
 			add_trait = guardian_of_faith_ryukyuan_pagan
 		}
-		if = { 
+		if = {
 			limit = {
-				religion = taoist
-				NOT = { trait = guardian_of_faith_taoist }
+				OR = {
+					religion = dayak_pagan
+					religion = dayak_pagan_reformed
+				}
+				NOT = { trait = guardian_of_faith_dayak_pagan }
 			}
-			add_trait = guardian_of_faith_taoist
+			add_trait = guardian_of_faith_dayak_pagan
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = melanesian_religion
+					religion = melanesian_religion_reformed
+				}
+				NOT = { trait = guardian_of_faith_melanesian_religion }
+			}
+			add_trait = guardian_of_faith_melanesian_religion
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = sanamahi_pagan
+					religion = sanamahi_pagan_reformed
+				}
+				NOT = { trait = guardian_of_faith_sanamahi_pagan }
+			}
+			add_trait = guardian_of_faith_sanamahi_pagan
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = viet_pagan
+					religion = viet_pagan_reformed
+				}
+				NOT = { trait = guardian_of_faith_viet_pagan }
+			}
+			add_trait = guardian_of_faith_viet_pagan
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = inca_religion
+					religion = inca_religion_reformed
+				}
+				NOT = { trait = guardian_of_faith_inca_religion }
+			}
+			add_trait = guardian_of_faith_inca_religion
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = mayan
+					religion = mayan_reformed
+				}
+				NOT = { trait = guardian_of_faith_mayan }
+			}
+			add_trait = guardian_of_faith_mayan
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = jurchen_pagan
+					religion = jurchen_pagan_reformed
+				}
+				NOT = { trait = guardian_of_faith_jurchen_pagan }
+			}
+			add_trait = guardian_of_faith_jurchen_pagan
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = taiwanese_religion
+					religion = taiwanese_religion_reformed
+				}
+				NOT = { trait = guardian_of_faith_taiwanese_religion }
+			}
+			add_trait = guardian_of_faith_taiwanese_religion
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = philippine_religion
+					religion = philippine_religion_reformed
+				}
+				NOT = { trait = guardian_of_faith_philippine_religion }
+			}
+			add_trait = guardian_of_faith_philippine_religion
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = bornean_religion
+					religion = bornean_religion_reformed
+				}
+				NOT = { trait = guardian_of_faith_bornean_religion }
+			}
+			add_trait = guardian_of_faith_bornean_religion
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = sulawesi_religion
+					religion = sulawesi_religion_reformed
+				}
+				NOT = { trait = guardian_of_faith_sulawesi_religion }
+			}
+			add_trait = guardian_of_faith_sulawesi_religion
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = flores_religion
+					religion = flores_religion_reformed
+				}
+				NOT = { trait = guardian_of_faith_flores_religion }
+			}
+			add_trait = guardian_of_faith_flores_religion
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = java_religion
+					religion = java_religion_reformed
+				}
+				NOT = { trait = guardian_of_faith_java_religion }
+			}
+			add_trait = guardian_of_faith_java_religion
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = sumatran_religion
+					religion = sumatran_religion_reformed
+				}
+				NOT = { trait = guardian_of_faith_sumatran_religion }
+			}
+			add_trait = guardian_of_faith_sumatran_religion
 		}
 		if = { 
 			limit = {
@@ -352,6 +495,20 @@ character_event = {
 				NOT = { trait = guardian_of_faith_jain }
 			}
 			add_trait = guardian_of_faith_jain
+		}
+		if = { 
+			limit = {
+				religion = taoist
+				NOT = { trait = guardian_of_faith_taoist }
+			}
+			add_trait = guardian_of_faith_taoist
+		}
+		if = { 
+			limit = {
+				religion = shinto
+				NOT = { trait = guardian_of_faith_shinto }
+			}
+			add_trait = guardian_of_faith_shinto
 		}
 		if = { 
 			limit = {
@@ -484,6 +641,76 @@ character_event = {
 }
 
 character_event = {
+    id = OLDORDER.0050
+    
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			religion = syriac
+		}
+		trait = guardian_of_faith_syriac
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_syriac
+	}
+}
+
+character_event = {
+    id = OLDORDER.0051
+    
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			religion = maronite
+		}
+		trait = guardian_of_faith_maronite
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_maronite
+	}
+}
+
+character_event = {
+    id = OLDORDER.0052
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = apostolic
+			religion = paulician
+			religion = tondrakian
+		}
+		trait = guardian_of_faith_apostolic
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_apostolic
+	}
+}
+
+character_event = {
+    id = OLDORDER.0053
+    
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			religion = chalcedonian
+		}
+		trait = guardian_of_faith_chalcedonian
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_chalcedonian
+	}
+}
+
+character_event = {
     id = OLDORDER.0008
     
 	hide_window = yes
@@ -492,7 +719,8 @@ character_event = {
 		NOR = {
 			religion = sunni
 			religion = zikri
-			religion = yazidi
+			religion = mahdiyya
+			religion = nabawiyya
 		}
 		trait = guardian_of_faith_sunni
 	}
@@ -510,8 +738,9 @@ character_event = {
 	trigger = {
 		NOR = {
 			religion = shiite
-			religion = druze
 			religion = hurufi
+			religion = waqifi
+			religion = ismaili
 			religion = qarmatian
 		}
 		trait = guardian_of_faith_shiite
@@ -531,12 +760,102 @@ character_event = {
 		NOR = {
 			religion = ibadi
 			religion = kharijite
+			religion = haruri
 		}
 		trait = guardian_of_faith_ibadi
 	}
 	
 	immediate = {
 		remove_trait = guardian_of_faith_ibadi
+	}
+}
+
+character_event = {
+    id = OLDORDER.0054
+    
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			religion = zaydi
+		}
+		trait = guardian_of_faith_zaydi
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_zaydi
+	}
+}
+
+character_event = {
+    id = OLDORDER.0055
+    
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			religion = druze
+		}
+		trait = guardian_of_faith_druze
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_druze
+	}
+}
+
+character_event = {
+    id = OLDORDER.0056
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = zoroastrian
+			religion = mazdaki
+			religion = zurvanist
+			religion = khurmazta
+		}
+		trait = guardian_of_faith_zoroastrian
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_zoroastrian
+	}
+}
+
+character_event = {
+    id = OLDORDER.0057
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = manichean
+			religion = mandaean
+		}
+		trait = guardian_of_faith_manichean
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_manichean
+	}
+}
+
+character_event = {
+    id = OLDORDER.0058
+    
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			religion = yazidi
+		}
+		trait = guardian_of_faith_yazidi
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_yazidi
 	}
 }
 
@@ -705,19 +1024,362 @@ character_event = {
 }
 
 character_event = {
-    id = OLDORDER.0042
+    id = OLDORDER.0059
     
 	hide_window = yes
 	
 	trigger = {
-		NOT = {
-			religion = taoist
+		NOR = {
+			religion = aztec
+			religion = aztec_reformed
 		}
-		trait = guardian_of_faith_taoist
+		trait = guardian_of_faith_aztec
 	}
 	
 	immediate = {
-		remove_trait = guardian_of_faith_taoist
+		remove_trait = guardian_of_faith_aztec
+	}
+}
+
+character_event = {
+    id = OLDORDER.0060
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = ainu_pagan
+			religion = ainu_pagan_reformed
+		}
+		trait = guardian_of_faith_ainu_pagan
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_ainu_pagan
+	}
+}
+
+character_event = {
+    id = OLDORDER.0061
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = chinese_pagan
+			religion = chinese_pagan_reformed
+		}
+		trait = guardian_of_faith_chinese_pagan
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_chinese_pagan
+	}
+}
+
+character_event = {
+    id = OLDORDER.0062
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = korean_pagan
+			religion = korean_pagan_reformed
+		}
+		trait = guardian_of_faith_korean_pagan
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_korean_pagan
+	}
+}
+
+character_event = {
+    id = OLDORDER.0063
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = korean_pagan
+			religion = korean_pagan_reformed
+		}
+		trait = guardian_of_faith_korean_pagan
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_korean_pagan
+	}
+}
+
+character_event = {
+    id = OLDORDER.0064
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = ryukyuan_pagan
+			religion = ryukyuan_pagan_reformed
+		}
+		trait = guardian_of_faith_ryukyuan_pagan
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_kyukyuan_pagan
+	}
+}
+
+character_event = {
+    id = OLDORDER.0066
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = dayak_pagan
+			religion = dayak_pagan_reformed
+		}
+		trait = guardian_of_faith_dayak_pagan
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_dayak_pagan
+	}
+}
+
+character_event = {
+    id = OLDORDER.0067
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = melanesian_religion
+			religion = melanesian_religion_reformed
+		}
+		trait = guardian_of_faith_melanesian_religion
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_melanesian_religion
+	}
+}
+
+character_event = {
+    id = OLDORDER.0068
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = sanamahi_pagan
+			religion = sanamahi_pagan_reformed
+		}
+		trait = guardian_of_faith_sanamahi_pagan
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_sanamahi_pagan
+	}
+}
+
+character_event = {
+    id = OLDORDER.0069
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = viet_pagan
+			religion = viet_pagan_reformed
+		}
+		trait = guardian_of_faith_viet_pagan
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_viet_pagan
+	}
+}
+
+character_event = {
+    id = OLDORDER.0070
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = inca_religion
+			religion = inca_religion_reformed
+		}
+		trait = guardian_of_faith_inca_religion
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_inca_religion
+	}
+}
+
+character_event = {
+    id = OLDORDER.0071
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = mayan
+			religion = mayan_reformed
+		}
+		trait = guardian_of_faith_mayan
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_mayan
+	}
+}
+
+character_event = {
+    id = OLDORDER.0072
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = jurchen_pagan
+			religion = jurchen_pagan_reformed
+		}
+		trait = guardian_of_faith_jurchen_pagan
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_jurchen_pagan
+	}
+}
+
+character_event = {
+    id = OLDORDER.0073
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = taiwanese_religion
+			religion = taiwanese_religion_reformed
+		}
+		trait = guardian_of_faith_taiwanese_religion
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_taiwanese_religion
+	}
+}
+
+character_event = {
+    id = OLDORDER.0074
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = philippine_religion
+			religion = philippine_religion_reformed
+		}
+		trait = guardian_of_faith_philippine_religion
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_philippine_religion
+	}
+}
+
+character_event = {
+    id = OLDORDER.0075
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = bornean_religion
+			religion = bornean_religion_reformed
+		}
+		trait = guardian_of_faith_bornean_religion
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_bornean_religion
+	}
+}
+
+character_event = {
+    id = OLDORDER.0076
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = sulawesi_religion
+			religion = sulawesi_religion_reformed
+		}
+		trait = guardian_of_faith_sulawesi_religion
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_sulawesi_religion
+	}
+}
+
+character_event = {
+    id = OLDORDER.0077
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = flores_religion
+			religion = flores_religion_reformed
+		}
+		trait = guardian_of_faith_flores_religion
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_flores_religion
+	}
+}
+
+character_event = {
+    id = OLDORDER.0078
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = java_religion
+			religion = java_religion_reformed
+		}
+		trait = guardian_of_faith_java_religion
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_java_religion
+	}
+}
+
+character_event = {
+    id = OLDORDER.0079
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = sumatran_religion
+			religion = sumatran_religion_reformed
+		}
+		trait = guardian_of_faith_sumatran_religion
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_sumatran_religion
 	}
 }
 
@@ -769,6 +1431,40 @@ character_event = {
 	
 	immediate = {
 		remove_trait = guardian_of_faith_jain
+	}
+}
+
+character_event = {
+    id = OLDORDER.0042
+    
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			religion = taoist
+		}
+		trait = guardian_of_faith_taoist
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_taoist
+	}
+}
+
+character_event = {
+    id = OLDORDER.0065
+    
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			religion = shinto
+		}
+		trait = guardian_of_faith_shinto
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_shinto
 	}
 }
 
@@ -892,9 +1588,18 @@ character_event = {
 			trait = guardian_of_faith_orthodox
 			trait = guardian_of_faith_miaphysite
 			trait = guardian_of_faith_nestorian
+			trait = guardian_of_faith_syriac
+			trait = guardian_of_faith_maronite
+			trait = guardian_of_faith_apostolic
+			trait = guardian_of_faith_chalcedonian
 			trait = guardian_of_faith_sunni
 			trait = guardian_of_faith_shiite
 			trait = guardian_of_faith_ibadi
+			trait = guardian_of_faith_zaydi
+			trait = guardian_of_faith_druze
+			trait = guardian_of_faith_zoroastrian
+			trait = guardian_of_faith_manichean
+			trait = guardian_of_faith_yazidi
 			trait = guardian_of_faith_norse_pagan
 			trait = guardian_of_faith_tengri_pagan
 			trait = guardian_of_faith_baltic_pagan
@@ -904,10 +1609,30 @@ character_event = {
 			trait = guardian_of_faith_zun_pagan
 			trait = guardian_of_faith_hellenic_pagan
 			trait = guardian_of_faith_bon
-			trait = guardian_of_faith_taoist
+			trait = guardian_of_faith_aztec
+			trait = guardian_of_faith_ainu_pagan
+			trait = guardian_of_faith_chinese_pagan
+			trait = guardian_of_faith_korean_pagan
+			trait = guardian_of_faith_ryukyuan_pagan
+			trait = guardian_of_faith_dayak_pagan
+			trait = guardian_of_faith_melanesian_religion
+			trait = guardian_of_faith_sanamahi_pagan
+			trait = guardian_of_faith_viet_pagan
+			trait = guardian_of_faith_inca_religion
+			trait = guardian_of_faith_mayan
+			trait = guardian_of_faith_jurchen_pagan
+			trait = guardian_of_faith_taiwanese_religion
+			trait = guardian_of_faith_philippine_religion
+			trait = guardian_of_faith_bornean_religion
+			trait = guardian_of_faith_sulawesi_religion
+			trait = guardian_of_faith_flores_religion
+			trait = guardian_of_faith_java_religion
+			trait = guardian_of_faith_sumatran_religion
 			trait = guardian_of_faith_hindu
 			trait = guardian_of_faith_buddhist
 			trait = guardian_of_faith_jain
+			trait = guardian_of_faith_shinto
+			trait = guardian_of_faith_taoist
 			trait = guardian_of_faith_confucian
 			trait = guardian_of_faith_egyptian
 			trait = guardian_of_faith_celtic
@@ -1170,9 +1895,18 @@ character_event = {
 			trait = guardian_of_faith_orthodox
 			trait = guardian_of_faith_miaphysite
 			trait = guardian_of_faith_nestorian
+			trait = guardian_of_faith_syriac
+			trait = guardian_of_faith_maronite
+			trait = guardian_of_faith_apostolic
+			trait = guardian_of_faith_chalcedonian
 			trait = guardian_of_faith_sunni
 			trait = guardian_of_faith_shiite
 			trait = guardian_of_faith_ibadi
+			trait = guardian_of_faith_zaydi
+			trait = guardian_of_faith_druze
+			trait = guardian_of_faith_zoroastrian
+			trait = guardian_of_faith_manichean
+			trait = guardian_of_faith_yazidi
 			trait = guardian_of_faith_norse_pagan
 			trait = guardian_of_faith_tengri_pagan
 			trait = guardian_of_faith_baltic_pagan
@@ -1182,10 +1916,30 @@ character_event = {
 			trait = guardian_of_faith_zun_pagan
 			trait = guardian_of_faith_hellenic_pagan
 			trait = guardian_of_faith_bon
-			trait = guardian_of_faith_taoist
+			trait = guardian_of_faith_aztec
+			trait = guardian_of_faith_ainu_pagan
+			trait = guardian_of_faith_chinese_pagan
+			trait = guardian_of_faith_korean_pagan
+			trait = guardian_of_faith_ryukyuan_pagan
+			trait = guardian_of_faith_dayak_pagan
+			trait = guardian_of_faith_melanesian_religion
+			trait = guardian_of_faith_sanamahi_pagan
+			trait = guardian_of_faith_viet_pagan
+			trait = guardian_of_faith_inca_religion
+			trait = guardian_of_faith_mayan
+			trait = guardian_of_faith_jurchen_pagan
+			trait = guardian_of_faith_taiwanese_religion
+			trait = guardian_of_faith_philippine_religion
+			trait = guardian_of_faith_bornean_religion
+			trait = guardian_of_faith_sulawesi_religion
+			trait = guardian_of_faith_flores_religion
+			trait = guardian_of_faith_java_religion
+			trait = guardian_of_faith_sumatran_religion
 			trait = guardian_of_faith_hindu
 			trait = guardian_of_faith_buddhist
 			trait = guardian_of_faith_jain
+			trait = guardian_of_faith_shinto
+			trait = guardian_of_faith_taoist
 			trait = guardian_of_faith_confucian
 			trait = guardian_of_faith_egyptian
 			trait = guardian_of_faith_celtic
