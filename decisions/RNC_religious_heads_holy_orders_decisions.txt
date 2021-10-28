@@ -51,11 +51,47 @@ targeted_decisions = {
 			OR = {
 				has_landed_title = d_sunni
 				has_landed_title = d_shiite
-				has_landed_title = d_yazidi
 				has_landed_title = d_ibadi
 				has_landed_title = d_kharijite
 				has_landed_title = d_hurufi
-				has_landed_title = d_qarmatian
+			}
+		}
+		potential = {
+			is_adult = yes
+			#owns minor holy order, this religion
+			primary_title = { holy_order = yes }
+			religion = FROM
+		}
+		allow = {
+			FROM = {
+				war = no 
+				is_incapable = no
+			}
+			ROOT = {
+				trait = guardian_of_faith_denied
+			}
+		}
+		effect = {
+			ROOT = { letter_event = { id = OLDORDER.0044 } } 
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	force_repudiated_grandmasters_to_abdicate_mazdan = {
+		filter = all
+		ai_target_filter = all
+
+		from_potential = {
+			OR = {
+				has_landed_title = d_zoroastrian
+				has_landed_title = d_manichean
+				has_landed_title = d_mandaean
+				has_landed_title = d_yazidi
 			}
 		}
 		potential = {
@@ -130,6 +166,10 @@ targeted_decisions = {
 					}
 				}
 				AND = {
+					religion = aztec_reformed
+					has_landed_title = d_aztec_reformed
+				}
+				AND = {
 					religion = ainu_pagan_reformed
 					has_landed_title = d_ainu_pagan_reformed
 				}
@@ -138,12 +178,68 @@ targeted_decisions = {
 					has_landed_title = chinese_pagan_reformed
 				}
 				AND = {
-					religion = korean_reformed
-					has_landed_title = d_korean_reformed
+					religion = korean_pagan_reformed
+					has_landed_title = d_korean_pagan_reformed
 				}
 				AND = {
-					religion = ryukyuan_reformed
-					has_landed_title = d_ryukyuan_reformed
+					religion = ryukyuan_pagan_reformed
+					has_landed_title = d_ryukyuan_pagan_reformed
+				}
+				AND = {
+					religion = dayak_pagan_reformed
+					has_landed_title = d_dayak_pagan_reformed
+				}
+				AND = {
+					religion = melanesian_religion_reformed
+					has_landed_title = d_melanesian_religion_reformed
+				}
+				AND = {
+					religion = sanamahi_pagan_reformed
+					has_landed_title = d_sanamahi_pagan_reformed
+				}
+				AND = {
+					religion = viet_pagan_reformed
+					has_landed_title = d_viet_pagan_reformed
+				}
+				AND = {
+					religion = inca_religion_reformed
+					has_landed_title = d_inca_religion_reformed
+				}
+				AND = {
+					religion = mayan_reformed
+					has_landed_title = d_mayan_reformed
+				}
+				AND = {
+					religion = jurchen_pagan_reformed
+					has_landed_title = d_jurchen_pagan_reformed
+				}
+				AND = {
+					religion = taiwanese_religion_reformed
+					has_landed_title = d_taiwanese_religion_reformed
+				}
+				AND = {
+					religion = philippine_religion_reformed
+					has_landed_title = d_philippine_religion_reformed
+				}
+				AND = {
+					religion = bornean_religion_reformed
+					has_landed_title = d_bornean_religion_reformed
+				}
+				AND = {
+					religion = sulawesi_religion_reformed
+					has_landed_title = d_sulawesi_religion_reformed
+				}
+				AND = {
+					religion = flores_religion_reformed
+					has_landed_title = d_flores_religion_reformed
+				}
+				AND = {
+					religion = java_religion_reformed
+					has_landed_title = d_java_religion_reformed
+				}
+				AND = {
+					religion = sumatran_religion_reformed
+					has_landed_title = d_sumatran_religion_reformed
 				}
 			}
 		}

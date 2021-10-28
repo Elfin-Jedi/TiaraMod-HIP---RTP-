@@ -18,7 +18,7 @@ title_decisions = {
 						has_bloodline_flag = first_guardian_of_faith_nestorian
 						has_bloodline_flag = first_guardian_of_faith_syriac
 						has_bloodline_flag = first_guardian_of_faith_maronite
-						has_bloodline_flag = first_guardian_of_faith_apostalic
+						has_bloodline_flag = first_guardian_of_faith_apostolic
 						has_bloodline_flag = first_guardian_of_faith_chalcedonian
 					}
 					bloodline_is_active_for = PREV
@@ -27,6 +27,10 @@ title_decisions = {
 				trait = guardian_of_faith_orthodox
 				trait = guardian_of_faith_miaphysite
 				trait = guardian_of_faith_nestorian
+				trait = guardian_of_faith_syriac
+				trait = guardian_of_faith_maronite
+				trait = guardian_of_faith_apostolic
+				trait = guardian_of_faith_chalcedonian
 				has_landed_title = k_papal_state
 				has_landed_title = k_orthodox
 				has_landed_title = d_miaphysite
@@ -476,7 +480,6 @@ title_decisions = {
 				has_landed_title = d_ibadi
 				has_landed_title = d_kharijite
 				has_landed_title = d_hurufi
-				has_landed_title = d_qarmatian
 			}
 		}
 		
@@ -866,10 +869,25 @@ title_decisions = {
 				trait = guardian_of_faith_west_african_pagan
 				trait = guardian_of_faith_bon
 				trait = guardian_of_faith_zun_pagan
+				trait = guardian_of_faith_aztec
 				trait = guardian_of_faith_ainu_pagan
 				trait = guardian_of_faith_chinese_pagan
 				trait = guardian_of_faith_korean_pagan
 				trait = guardian_of_faith_ryukyuan_pagan
+				trait = guardian_of_faith_dayak_pagan
+				trait = guardian_of_faith_melanesian_religion
+				trait = guardian_of_faith_sanamahi_pagan
+				trait = guardian_of_faith_viet_pagan
+				trait = guardian_of_faith_inca_religion
+				trait = guardian_of_faith_mayan
+				trait = guardian_of_faith_jurchen_pagan
+				trait = guardian_of_faith_taiwanese_religion
+				trait = guardian_of_faith_philippine_religion
+				trait = guardian_of_faith_bornean_religion
+				trait = guardian_of_faith_sulawesi_religion
+				trait = guardian_of_faith_flores_religion
+				trait = guardian_of_faith_java_religion
+				trait = guardian_of_faith_sumatran_religion
 				AND = {
 					trait = guardian_of_faith_hellenic_pagan
 					NAND = {
@@ -925,6 +943,10 @@ title_decisions = {
 					has_landed_title = d_titan_pagan
 				}
 				AND = { 
+					religion = aztec
+					has_landed_title = d_aztec
+				}
+				AND = { 
 					religion = ainu_pagan_reformed
 					has_landed_title = d_ainu_pagan_reformed
 				}
@@ -940,6 +962,62 @@ title_decisions = {
 					religion = ryukyuan_pagan_reformed
 					has_landed_title = d_ryukyuan_pagan_reformed
 				}
+				AND = { 
+					religion = dayak_pagan_reformed
+					has_landed_title = d_dayak_pagan_reformed
+				}
+				AND = { 
+					religion = melanesian_religion_reformed
+					has_landed_title = d_melanesian_religion_reformed
+				}
+				AND = { 
+					religion = sanamahi_pagan_reformed
+					has_landed_title = d_sanamahi_pagan_reformed
+				}
+				AND = { 
+					religion = viet_pagan_reformed
+					has_landed_title = d_viet_pagan_reformed
+				}
+				AND = { 
+					religion = inca_religion_reformed
+					has_landed_title = d_inca_religion_reformed
+				}
+				AND = { 
+					religion = mayan_reformed
+					has_landed_title = d_mayan_reformed
+				}
+				AND = { 
+					religion = jurchen_pagan_reformed
+					has_landed_title = d_jurchen_pagan_reformed
+				}
+				AND = { 
+					religion = taiwanese_religion_reformed
+					has_landed_title = d_taiwanese_religion_reformed
+				}
+				AND = { 
+					religion = philippine_religion_reformed
+					has_landed_title = d_philippine_religion_reformed
+				}
+				AND = { 
+					religion = bornean_religion_reformed
+					has_landed_title = d_bornean_religion_reformed
+				}
+				AND = { 
+					religion = sulawesi_religion_reformed
+					has_landed_title = d_sulawesi_religion_reformed
+				}
+				AND = { 
+					religion = flores_religion_reformed
+					has_landed_title = d_flores_religion_reformed
+				}
+				AND = { 
+					religion = java_religion_reformed
+					has_landed_title = d_java_religion_reformed
+				}
+				AND = { 
+					religion = sumatran_religion_reformed
+					has_landed_title = d_sumatran_religion_reformed
+				}
 				any_owned_bloodline = {
 					OR = {
 					has_bloodline_flag = first_guardian_of_faith_norse_pagan
@@ -950,10 +1028,26 @@ title_decisions = {
 					has_bloodline_flag = first_guardian_of_faith_west_african_pagan
 					has_bloodline_flag = first_guardian_of_faith_zun_pagan
 					has_bloodline_flag = first_guardian_of_faith_hellenic_pagan
+					has_bloodline_flag = first_guardian_of_faith_bon
+					has_bloodline_flag = first_guardian_of_faith_aztec
 					has_bloodline_flag = first_guardian_of_faith_ainu_pagan
 					has_bloodline_flag = first_guardian_of_faith_chinese_pagan
 					has_bloodline_flag = first_guardian_of_faith_korean_pagan
 					has_bloodline_flag = first_guardian_of_faith_ryukyuan_pagan
+					has_bloodline_flag = first_guardian_of_faith_dayak_pagan
+					has_bloodline_flag = first_guardian_of_faith_melanesian_religion
+					has_bloodline_flag = first_guardian_of_faith_sanamahi_pagan
+					has_bloodline_flag = first_guardian_of_faith_viet_pagan
+					has_bloodline_flag = first_guardian_of_faith_inca_religion
+					has_bloodline_flag = first_guardian_of_faith_mayan
+					has_bloodline_flag = first_guardian_of_faith_jurchen_pagan
+					has_bloodline_flag = first_guardian_of_faith_taiwanese_religion
+					has_bloodline_flag = first_guardian_of_faith_philippine_religion
+					has_bloodline_flag = first_guardian_of_faith_bornean_religion
+					has_bloodline_flag = first_guardian_of_faith_sulawesi_religion
+					has_bloodline_flag = first_guardian_of_faith_flores_religion
+					has_bloodline_flag = first_guardian_of_faith_java_religion
+					has_bloodline_flag = first_guardian_of_faith_sumatran_religion
 					}
 					bloodline_is_active_for = PREV
 				}
@@ -1122,6 +1216,20 @@ title_decisions = {
 				if = {
 					limit = {
 						OR = {
+							religion = aztec_reformed
+							religion = aztec
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_aztec }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_aztec
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
 							religion = ainu_pagan_reformed
 							religion = ainu_pagan
 						}
@@ -1171,6 +1279,202 @@ title_decisions = {
 					}
 					create_bloodline = {
 						type = first_guardian_of_faith_ryukyuan_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = dayak_pagan_reformed
+							religion = dayak_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_dayak_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_dayak_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = melanesian_religion_reformed
+							religion = melanesian_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_melanesian_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_melanesian_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = sanamahi_pagan_reformed
+							religion = sanamahi_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_sanamahi_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_sanamahi_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = viet_pagan_reformed
+							religion = viet_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_viet_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_viet_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = inca_religion_reformed
+							religion = inca_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_inca_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_inca_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = mayan_reformed
+							religion = mayan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_mayan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_mayan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = jurchen_pagan_reformed
+							religion = jurchen_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_jurchen_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_jurchen_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = taiwanese_religion_reformed
+							religion = taiwanese_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_taiwanese_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_taiwanese_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = philippine_religion_reformed
+							religion = philippine_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_philippine_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_philippine_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = bornean_religion_reformed
+							religion = bornean_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_bornean_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_bornean_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = sulawesi_religion_reformed
+							religion = sulawesi_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_sulawesi_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_sulawesi_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = flores_religion_reformed
+							religion = flores_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_flores_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_flores_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = java_religion_reformed
+							religion = java_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_java_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_java_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = sumatran_religion_reformed
+							religion = sumatran_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_sumatran_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_sumatran_religion
 						religion = FROM
 						inheritance = patrilineal
 					}
@@ -1308,6 +1612,18 @@ title_decisions = {
 							limit = {
 								FROM = {
 									OR = {
+										religion = aztec_reformed
+										religion = aztec
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_aztec }
+							}
+							set_global_flag = first_guardian_of_faith_aztec
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
 										religion = ainu_pagan_reformed
 										religion = ainu_pagan
 									}
@@ -1351,6 +1667,174 @@ title_decisions = {
 								NOT = { has_global_flag = first_guardian_of_faith_ryukyuan_pagan }
 							}
 							set_global_flag = first_guardian_of_faith_ryukyuan_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = dayak_pagan_reformed
+										religion = dayak_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_dayak_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_dayak_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = melanesian_religion_reformed
+										religion = melanesian_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_melanesian_religion }
+							}
+							set_global_flag = first_guardian_of_faith_melanesian_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = sanamahi_pagan_reformed
+										religion = sanamahi_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_sanamahi_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_sanamahi_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = viet_pagan_reformed
+										religion = viet_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_viet_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_viet_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = inca_religion_reformed
+										religion = inca_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_inca_religion }
+							}
+							set_global_flag = first_guardian_of_faith_inca_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = mayan_reformed
+										religion = mayan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_mayan }
+							}
+							set_global_flag = first_guardian_of_faith_mayan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = jurchen_pagan_reformed
+										religion = jurchen_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_jurchen_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_jurchen_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = taiwanese_religion_reformed
+										religion = taiwanese_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_taiwanese_religion }
+							}
+							set_global_flag = first_guardian_of_faith_taiwanese_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = philippine_religion_reformed
+										religion = philippine_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_philippine_religion }
+							}
+							set_global_flag = first_guardian_of_faith_philippine_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = bornean_religion_reformed
+										religion = bornean_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_bornean_religion }
+							}
+							set_global_flag = first_guardian_of_faith_bornean_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = sulawesi_religion_reformed
+										religion = sulawesi_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_sulawesi_religion }
+							}
+							set_global_flag = first_guardian_of_faith_sulawesi_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = flores_religion_reformed
+										religion = flores_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_flores_religion }
+							}
+							set_global_flag = first_guardian_of_faith_flores_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = java_religion_reformed
+										religion = java_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_java_religion }
+							}
+							set_global_flag = first_guardian_of_faith_java_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = sumatran_religion_reformed
+										religion = sumatran_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_sumatran_religion }
+							}
+							set_global_flag = first_guardian_of_faith_sumatran_religion
 						}
 					}
 				}
@@ -1504,6 +1988,7 @@ title_decisions = {
 				trait = guardian_of_faith_buddhist
 				trait = guardian_of_faith_jain
 				trait = guardian_of_faith_taoist
+				trait = guardian_of_faith_shinto
 				trait = guardian_of_faith_confucian
 				trait = guardian_of_faith_nihon_shinto
 				trait = guardian_of_faith_ryukyu_shinto
@@ -1514,7 +1999,7 @@ title_decisions = {
 				}
 				AND = {
 					religion = nihon_shinto
-					has_landed_title = d_shinto
+					has_landed_title = d_nihon_shinto
 				}
 				AND = {
 					religion = ryukyu_shinto
@@ -1562,11 +2047,55 @@ title_decisions = {
 				piety = -500
 				if = {
 					limit = {
+						religion = hindu
+						NOT = { has_global_flag = first_guardian_of_faith_hindu }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_hindu
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = buddhist
+						NOT = { has_global_flag = first_guardian_of_faith_buddhist }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_buddhist
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = jain
+						NOT = { has_global_flag = first_guardian_of_faith_jain }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_jain
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
 						religion = taoist
 						NOT = { has_global_flag = first_guardian_of_faith_taoist }
 					}
 					create_bloodline = {
 						type = first_guardian_of_faith_taoist
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = shinto
+						NOT = { has_global_flag = first_guardian_of_faith_shinto }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_shinto
 						religion = FROM
 						inheritance = patrilineal
 					}
@@ -1597,11 +2126,47 @@ title_decisions = {
 						if = { 
 							limit = {
 								FROM = {
+									religion = hindu
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_hindu}
+							}
+							set_global_flag = first_guardian_of_faith_hindu
+						}
+						if = { 
+							limit = {
+								FROM = {
+									religion = buddhist
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_buddhist }
+							}
+							set_global_flag = first_guardian_of_faith_buddhist
+						}
+						if = { 
+							limit = {
+								FROM = {
+									religion = jain
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_jain }
+							}
+							set_global_flag = first_guardian_of_faith_jain
+						}
+						if = { 
+							limit = {
+								FROM = {
 									religion = taoist
 								}
 								NOT = { has_global_flag = first_guardian_of_faith_taoist }
 							}
 							set_global_flag = first_guardian_of_faith_taoist
+						}
+						if = { 
+							limit = {
+								FROM = {
+									religion = shinto
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_shinto }
+							}
+							set_global_flag = first_guardian_of_faith_shinto
 						}
 					}
 				}
@@ -1790,6 +2355,10 @@ decisions = {
 						has_bloodline_flag = first_guardian_of_faith_orthodox
 						has_bloodline_flag = first_guardian_of_faith_miaphysite
 						has_bloodline_flag = first_guardian_of_faith_nestorian
+						has_bloodline_flag = first_guardian_of_faith_syriac
+						has_bloodline_flag = first_guardian_of_faith_maronite
+						has_bloodline_flag = first_guardian_of_faith_apostolic
+						has_bloodline_flag = first_guardian_of_faith_chalcedonian
 					}
 					bloodline_is_active_for = PREV
 				}
@@ -1797,6 +2366,10 @@ decisions = {
 				trait = guardian_of_faith_orthodox
 				trait = guardian_of_faith_miaphysite
 				trait = guardian_of_faith_nestorian
+				trait = guardian_of_faith_syriac
+				trait = guardian_of_faith_maronite
+				trait = guardian_of_faith_apostolic
+				trait = guardian_of_faith_chalcedonian
 			}
 			NOT = { trait = guardian_of_faith_denied }
 			location = {
@@ -1819,6 +2392,10 @@ decisions = {
 							trait = guardian_of_faith_orthodox
 							trait = guardian_of_faith_miaphysite
 							trait = guardian_of_faith_nestorian
+							trait = guardian_of_faith_syriac
+							trait = guardian_of_faith_maronite
+							trait = guardian_of_faith_apostolic
+							trait = guardian_of_faith_chalcedonian
 						}
 						prestige = 250
 						piety = 500
@@ -1854,6 +2431,10 @@ decisions = {
 							trait = guardian_of_faith_orthodox
 							trait = guardian_of_faith_miaphysite
 							trait = guardian_of_faith_nestorian
+							trait = guardian_of_faith_syriac
+							trait = guardian_of_faith_maronite
+							trait = guardian_of_faith_apostolic
+							trait = guardian_of_faith_chalcedonian
 						}
 					}
 					prestige = -250
@@ -1866,6 +2447,10 @@ decisions = {
 							trait = guardian_of_faith_orthodox
 							trait = guardian_of_faith_miaphysite
 							trait = guardian_of_faith_nestorian
+							trait = guardian_of_faith_syriac
+							trait = guardian_of_faith_maronite
+							trait = guardian_of_faith_apostolic
+							trait = guardian_of_faith_chalcedonian
 						}
 					}
 					prestige = -375
@@ -1879,6 +2464,8 @@ decisions = {
 							religion = fraticelli
 							religion = waldensian
 							religion = lollard
+							religion = adoptionist
+							religion = arian
 						}
 						NOT = { has_global_flag = first_guardian_of_faith_catholic }
 					}
@@ -1895,7 +2482,6 @@ decisions = {
 							religion = bogomilist
 							religion = monothelite
 							religion = iconoclast
-							religion = paulician
 						}
 						NOT = { has_global_flag = first_guardian_of_faith_orthodox }
 					}
@@ -1933,6 +2519,54 @@ decisions = {
 						inheritance = patrilineal
 					}
 				}
+				if = {
+					limit = {
+						religion = syriac
+						NOT = { has_global_flag = first_guardian_of_faith_syriac }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_syriac
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = maronite
+						NOT = { has_global_flag = first_guardian_of_faith_maronite }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_maronite
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = apostolic
+							religion = paulician
+							religion = tondrakian
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_apostolic }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_apostolic
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = chalcedonian
+						NOT = { has_global_flag = first_guardian_of_faith_chalcedonian }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_chalcedonian
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
 				custom_tooltip = {
 					hidden_tooltip = {
 						location = {
@@ -1965,6 +2599,8 @@ decisions = {
 										religion = fraticelli
 										religion = waldensian
 										religion = lollard
+										religion = adoptionist
+										religion = arian
 									}
 								}
 								NOT = { has_global_flag = first_guardian_of_faith_catholic }
@@ -1979,7 +2615,6 @@ decisions = {
 										religion = bogomilist
 										religion = monothelite
 										religion = iconoclast
-										religion = paulician
 									}
 								}
 								NOT = { has_global_flag = first_guardian_of_faith_orthodox }
@@ -2009,6 +2644,46 @@ decisions = {
 								NOT = { has_global_flag = first_guardian_of_faith_nestorian }
 							}
 							set_global_flag = first_guardian_of_faith_nestorian
+						}
+						if = { 
+							limit = {
+								FROM = {
+									religion = syriac
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_syriac }
+							}
+							set_global_flag = first_guardian_of_faith_syriac
+						}
+						if = { 
+							limit = {
+								FROM = {
+									religion = maronite
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_maronite }
+							}
+							set_global_flag = first_guardian_of_faith_maronite
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = apostolic
+										religion = paulician
+										religion = tondrakian
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_apostolic }
+							}
+							set_global_flag = first_guardian_of_faith_apostolic
+						}
+						if = { 
+							limit = {
+								FROM = {
+									religion = chalcedonian
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_chalcedonian }
+							}
+							set_global_flag = first_guardian_of_faith_chalcedonian
 						}
 					}
 				}
@@ -2048,12 +2723,16 @@ decisions = {
 						has_bloodline_flag = first_guardian_of_faith_sunni
 						has_bloodline_flag = first_guardian_of_faith_shiite
 						has_bloodline_flag = first_guardian_of_faith_ibadi
+						has_bloodline_flag = first_guardian_of_faith_zaydi
+						has_bloodline_flag = first_guardian_of_faith_druze
 					}
 					bloodline_is_active_for = PREV
 				}
 				trait = guardian_of_faith_sunni
 				trait = guardian_of_faith_shiite
 				trait = guardian_of_faith_ibadi
+				trait = guardian_of_faith_zaydi
+				trait = guardian_of_faith_druze
 			}
 			NOT = { trait = guardian_of_faith_denied }
 			location = {
@@ -2075,6 +2754,8 @@ decisions = {
 							trait = guardian_of_faith_sunni
 							trait = guardian_of_faith_shiite
 							trait = guardian_of_faith_ibadi
+							trait = guardian_of_faith_zaydi
+							trait = guardian_of_faith_druze
 						}
 						prestige = 250
 						piety = 500
@@ -2109,6 +2790,8 @@ decisions = {
 							trait = guardian_of_faith_sunni
 							trait = guardian_of_faith_shiite
 							trait = guardian_of_faith_ibadi
+							trait = guardian_of_faith_zaydi
+							trait = guardian_of_faith_druze
 						}
 					}
 					prestige = -250
@@ -2120,6 +2803,8 @@ decisions = {
 							trait = guardian_of_faith_sunni
 							trait = guardian_of_faith_shiite
 							trait = guardian_of_faith_ibadi
+							trait = guardian_of_faith_zaydi
+							trait = guardian_of_faith_druze
 						}
 					}
 					prestige = -375
@@ -2130,7 +2815,8 @@ decisions = {
 						OR = {
 							religion = sunni
 							religion = zikri
-							religion = yazidi
+							religion = mahdiyya
+							religion = nabawiyya
 						}
 						NOT = { has_global_flag = first_guardian_of_faith_sunni }
 					}
@@ -2144,8 +2830,9 @@ decisions = {
 					limit = {
 						OR = {
 							religion = shiite
-							religion = druze
 							religion = hurufi
+							religion = waqifi
+							religion = ismaili
 							religion = qarmatian
 						}
 						NOT = { has_global_flag = first_guardian_of_faith_shiite }
@@ -2161,11 +2848,34 @@ decisions = {
 						OR = {
 							religion = ibadi
 							religion = kharijite
+							religion = haruri
 						}
 						NOT = { has_global_flag = first_guardian_of_faith_ibadi }
 					}
 					create_bloodline = {
 						type = first_guardian_of_faith_ibadi
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = zaydi
+						NOT = { has_global_flag = first_guardian_of_faith_zaydi }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_zaydi
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = druze
+						NOT = { has_global_flag = first_guardian_of_faith_druze }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_druze
 						religion = FROM
 						inheritance = patrilineal
 					}
@@ -2199,7 +2909,8 @@ decisions = {
 									OR = {
 										religion = sunni
 										religion = zikri
-										religion = yazidi
+										religion = mahdiyya
+										religion = nabawiyya
 									}
 								}
 								NOT = { has_global_flag = first_guardian_of_faith_sunni }
@@ -2211,8 +2922,10 @@ decisions = {
 								FROM = {
 									OR = {
 										religion = shiite
-										religion = druze
 										religion = hurufi
+										religion = waqifi
+										religion = ismaili
+										religion = qarmatian
 									}
 								}
 								NOT = { has_global_flag = first_guardian_of_faith_shiite }
@@ -2225,11 +2938,248 @@ decisions = {
 									OR = {
 										religion = ibadi
 										religion = kharijite
+										religion = haruri
 									}
 								}
 								NOT = { has_global_flag = first_guardian_of_faith_ibadi }
 							}
 							set_global_flag = first_guardian_of_faith_ibadi
+						}
+						if = { 
+							limit = {
+								FROM = {
+									religion = zaydi
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_zaydi }
+							}
+							set_global_flag = first_guardian_of_faith_zaydi
+						}
+						if = { 
+							limit = {
+								FROM = {
+										religion = druze
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_druze }
+							}
+							set_global_flag = first_guardian_of_faith_druze
+						}
+					}
+				}
+				set_character_flag = created_new_holy_order
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				NOT = { trait = zealous }
+			}
+			modifier = {
+				factor = 0.001
+				has_character_flag = created_new_holy_order
+			}
+		}
+	}
+	
+	form_new_holy_order_mazdan_unlanded = {
+		filter = home_court
+		ai_target_filter = home_court
+		is_high_prio = yes
+		
+		potential = {
+			is_ruler = no
+			liege = {
+				mercenary = no
+				holy_order = no
+			}
+			OR = {
+				any_owned_bloodline = {
+					OR = {
+						has_bloodline_flag = first_guardian_of_faith_zoroastrian
+						has_bloodline_flag = first_guardian_of_faith_manichean
+						has_bloodline_flag = first_guardian_of_faith_yazidi
+					}
+					bloodline_is_active_for = PREV
+				}
+				trait = guardian_of_faith_zoroastrian
+				trait = guardian_of_faith_manichean
+				trait = guardian_of_faith_yazidi
+				has_landed_title = d_zoroastrian
+				has_landed_title = d_manichean
+				has_landed_title = d_mandaean
+				has_landed_title = d_yazidi
+			}
+			NOT = { trait = guardian_of_faith_denied }
+			location = {
+				NOT = { has_title_flag = home_holy_order }
+			}
+		}
+		
+		allow = {
+			ROOT = {
+				is_adult = yes
+				is_heir = no
+				is_married = no
+				prisoner = no
+				is_incapable = no
+				wealth = 250
+				OR = {
+					AND = {
+						OR = { 
+							trait = guardian_of_faith_zoroastrian
+							trait = guardian_of_faith_manichean
+							trait = guardian_of_faith_yazidi
+						}
+						prestige = 250
+						piety = 500
+					}
+					AND = {
+						prestige = 375
+						piety = 750
+					}
+				}
+			}
+			liege = {
+				religion_group = ROOT 
+			}
+		}
+		effect = {
+			ROOT = {
+				hidden_tooltip = {
+					any_character = {
+						if = {
+							limit = {
+								is_ruler = yes
+								higher_real_tier_than = BARON
+							}
+						narrative_event = { id = OLDORDER.0040 }
+						}
+					}
+				}
+				wealth = -250
+				if = {
+					limit = {
+						OR = { 
+							trait = guardian_of_faith_zoroastrian
+							trait = guardian_of_faith_manichean
+							trait = guardian_of_faith_yazidi
+						}
+					}
+					prestige = -250
+					piety = -500
+				}
+				if = {
+					limit = {
+						NOR = { 
+							trait = guardian_of_faith_zoroastrian
+							trait = guardian_of_faith_manichean
+							trait = guardian_of_faith_yazidi
+						}
+					}
+					prestige = -375
+					piety = -750
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = zoroastrian
+							religion = mazdaki
+							religion = zurvanist
+							religion = khurmazta
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_zoroastrian }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_zoroastrian
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = manichean
+							religion = mandaean
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_manichean }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_manichean
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = yazidi
+						NOT = { has_global_flag = first_guardian_of_faith_yazidi }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_yazidi
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				custom_tooltip = {
+					hidden_tooltip = {
+						location = {
+							create_title = {
+								tier = DUKE
+								name = DYNAMIC_HOLY_ORDER_FAITH_MAZDAN_UNLANDED
+								short_name = yes
+								landless = yes
+								mercenary = yes
+								mercenary_type = minor_holy_order_composition
+								custom_created = yes
+								culture = ROOT
+								religion = ROOT
+								holder = ROOT
+								base_title = THIS
+								ruler = "GRANDMASTER"
+								foa = "GRANDMASTER_FOA"
+							}
+							new_title = {
+								set_title_flag = minor_holy_order
+							}
+							set_title_flag = home_holy_order
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = zoroastrian
+										religion = mazdaki
+										religion = zurvanist
+										religion = khurmazta
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_zoroastrian }
+							}
+							set_global_flag = first_guardian_of_faith_zoroastrian
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = manichean
+										religion = mandaean
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_manichean }
+							}
+							set_global_flag = first_guardian_of_faith_manichean
+						}
+						if = { 
+							limit = {
+								FROM = {
+									religion = yazidi
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_yazidi }
+							}
+							set_global_flag = first_guardian_of_faith_yazidi
 						}
 					}
 				}
@@ -2274,6 +3224,26 @@ decisions = {
 						has_bloodline_flag = first_guardian_of_faith_west_african_pagan
 						has_bloodline_flag = first_guardian_of_faith_zun_pagan
 						has_bloodline_flag = first_guardian_of_faith_hellenic_pagan
+						has_bloodline_flag = first_guardian_of_faith_bon
+						has_bloodline_flag = first_guardian_of_faith_aztec
+						has_bloodline_flag = first_guardian_of_faith_ainu_pagan
+						has_bloodline_flag = first_guardian_of_faith_chinese_pagan
+						has_bloodline_flag = first_guardian_of_faith_korean_pagan
+						has_bloodline_flag = first_guardian_of_faith_ryukyuan_pagan
+						has_bloodline_flag = first_guardian_of_faith_dayak_pagan
+						has_bloodline_flag = first_guardian_of_faith_melanesian_religion
+						has_bloodline_flag = first_guardian_of_faith_sanamahi_pagan
+						has_bloodline_flag = first_guardian_of_faith_viet_pagan
+						has_bloodline_flag = first_guardian_of_faith_inca_religion
+						has_bloodline_flag = first_guardian_of_faith_mayan
+						has_bloodline_flag = first_guardian_of_faith_jurchen_pagan
+						has_bloodline_flag = first_guardian_of_faith_taiwanese_religion
+						has_bloodline_flag = first_guardian_of_faith_philippine_religion
+						has_bloodline_flag = first_guardian_of_faith_bornean_religion
+						has_bloodline_flag = first_guardian_of_faith_sulawesi_religion
+						has_bloodline_flag = first_guardian_of_faith_flores_religion
+						has_bloodline_flag = first_guardian_of_faith_java_religion
+						has_bloodline_flag = first_guardian_of_faith_sumatran_religion
 					}
 					bloodline_is_active_for = PREV
 				}
@@ -2285,6 +3255,26 @@ decisions = {
 				trait = guardian_of_faith_west_african_pagan
 				trait = guardian_of_faith_zun_pagan
 				trait = guardian_of_faith_hellenic_pagan
+				trait = guardian_of_faith_bon
+				trait = guardian_of_faith_aztec
+				trait = guardian_of_faith_ainu_pagan
+				trait = guardian_of_faith_chinese_pagan
+				trait = guardian_of_faith_korean_pagan
+				trait = guardian_of_faith_ryukyuan_pagan
+				trait = guardian_of_faith_dayak_pagan
+				trait = guardian_of_faith_melanesian_religion
+				trait = guardian_of_faith_sanamahi_pagan
+				trait = guardian_of_faith_viet_pagan
+				trait = guardian_of_faith_inca_religion
+				trait = guardian_of_faith_mayan
+				trait = guardian_of_faith_jurchen_pagan
+				trait = guardian_of_faith_taiwanese_religion
+				trait = guardian_of_faith_philippine_religion
+				trait = guardian_of_faith_bornean_religion
+				trait = guardian_of_faith_sulawesi_religion
+				trait = guardian_of_faith_flores_religion
+				trait = guardian_of_faith_java_religion
+				trait = guardian_of_faith_sumatran_religion
 			}
 			NOT = { trait = guardian_of_faith_denied }
 			location = {
@@ -2311,6 +3301,26 @@ decisions = {
 							trait = guardian_of_faith_west_african_pagan
 							trait = guardian_of_faith_zun_pagan
 							trait = guardian_of_faith_hellenic_pagan
+							trait = guardian_of_faith_bon
+							trait = guardian_of_faith_aztec
+							trait = guardian_of_faith_ainu_pagan
+							trait = guardian_of_faith_chinese_pagan
+							trait = guardian_of_faith_korean_pagan
+							trait = guardian_of_faith_ryukyuan_pagan
+							trait = guardian_of_faith_dayak_pagan
+							trait = guardian_of_faith_melanesian_religion
+							trait = guardian_of_faith_sanamahi_pagan
+							trait = guardian_of_faith_viet_pagan
+							trait = guardian_of_faith_inca_religion
+							trait = guardian_of_faith_mayan
+							trait = guardian_of_faith_jurchen_pagan
+							trait = guardian_of_faith_taiwanese_religion
+							trait = guardian_of_faith_philippine_religion
+							trait = guardian_of_faith_bornean_religion
+							trait = guardian_of_faith_sulawesi_religion
+							trait = guardian_of_faith_flores_religion
+							trait = guardian_of_faith_java_religion
+							trait = guardian_of_faith_sumatran_religion
 						}
 						prestige = 250
 						piety = 500
@@ -2353,7 +3363,26 @@ decisions = {
 							trait = guardian_of_faith_west_african_pagan
 							trait = guardian_of_faith_zun_pagan
 							trait = guardian_of_faith_bon
+							trait = guardian_of_faith_aztec
 							trait = guardian_of_faith_hellenic_pagan
+							trait = guardian_of_faith_ainu_pagan
+							trait = guardian_of_faith_chinese_pagan
+							trait = guardian_of_faith_korean_pagan
+							trait = guardian_of_faith_ryukyuan_pagan
+							trait = guardian_of_faith_dayak_pagan
+							trait = guardian_of_faith_melanesian_religion
+							trait = guardian_of_faith_sanamahi_pagan
+							trait = guardian_of_faith_viet_pagan
+							trait = guardian_of_faith_inca_religion
+							trait = guardian_of_faith_mayan
+							trait = guardian_of_faith_jurchen_pagan
+							trait = guardian_of_faith_taiwanese_religion
+							trait = guardian_of_faith_philippine_religion
+							trait = guardian_of_faith_bornean_religion
+							trait = guardian_of_faith_sulawesi_religion
+							trait = guardian_of_faith_flores_religion
+							trait = guardian_of_faith_java_religion
+							trait = guardian_of_faith_sumatran_religion
 						}
 					}
 					prestige = -250
@@ -2371,6 +3400,25 @@ decisions = {
 							trait = guardian_of_faith_zun_pagan
 							trait = guardian_of_faith_bon
 							trait = guardian_of_faith_hellenic_pagan
+							trait = guardian_of_faith_aztec
+							trait = guardian_of_faith_ainu_pagan
+							trait = guardian_of_faith_chinese_pagan
+							trait = guardian_of_faith_korean_pagan
+							trait = guardian_of_faith_ryukyuan_pagan
+							trait = guardian_of_faith_dayak_pagan
+							trait = guardian_of_faith_melanesian_religion
+							trait = guardian_of_faith_sanamahi_pagan
+							trait = guardian_of_faith_viet_pagan
+							trait = guardian_of_faith_inca_religion
+							trait = guardian_of_faith_mayan
+							trait = guardian_of_faith_jurchen_pagan
+							trait = guardian_of_faith_taiwanese_religion
+							trait = guardian_of_faith_philippine_religion
+							trait = guardian_of_faith_bornean_religion
+							trait = guardian_of_faith_sulawesi_religion
+							trait = guardian_of_faith_flores_religion
+							trait = guardian_of_faith_java_religion
+							trait = guardian_of_faith_sumatran_religion
 						}
 					}
 					prestige = -375
@@ -2484,6 +3532,286 @@ decisions = {
 					}
 					create_bloodline = {
 						type = first_guardian_of_faith_hellenic_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = bon_reformed
+							religion = bon
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_bon }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_bon
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = aztec_reformed
+							religion = aztec
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_aztec }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_aztec
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = ainu_pagan_reformed
+							religion = ainu_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_ainu_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_ainu_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = chinese_pagan_reformed
+							religion = chinese_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_chinese_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_chinese_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = korean_pagan_reformed
+							religion = korean_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_korean_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_korean_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = ryukyuan_pagan_reformed
+							religion = ryukyuan_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_ryukyuan_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_ryukyuan_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = dayak_pagan_reformed
+							religion = dayak_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_dayak_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_dayak_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = melanesian_religion_reformed
+							religion = melanesian_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_melanesian_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_melanesian_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = sanamahi_pagan_reformed
+							religion = sanamahi_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_sanamahi_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_sanamahi_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = viet_pagan_reformed
+							religion = viet_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_viet_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_viet_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = inca_religion_reformed
+							religion = inca_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_inca_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_inca_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = mayan_reformed
+							religion = mayan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_mayan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_mayan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = jurchen_pagan_reformed
+							religion = jurchen_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_jurchen_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_jurchen_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = taiwanese_religion_reformed
+							religion = taiwanese_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_taiwanese_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_taiwanese_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = philippine_religion_reformed
+							religion = philippine_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_philippine_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_philippine_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = bornean_religion_reformed
+							religion = bornean_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_bornean_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_bornean_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = sulawesi_religion_reformed
+							religion = sulawesi_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_sulawesi_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_sulawesi_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = flores_religion_reformed
+							religion = flores_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_flores_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_flores_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = java_religion_reformed
+							religion = java_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_java_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_java_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = sumatran_religion_reformed
+							religion = sumatran_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_sumatran_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_sumatran_religion
 						religion = FROM
 						inheritance = patrilineal
 					}
@@ -2607,6 +3935,246 @@ decisions = {
 							}
 							set_global_flag = first_guardian_of_faith_hellenic_pagan
 						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = bon_reformed
+										religion = bon
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_bon }
+							}
+							set_global_flag = first_guardian_of_faith_bon
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = aztec_reformed
+										religion = aztec
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_aztec }
+							}
+							set_global_flag = first_guardian_of_faith_aztec
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = ainu_pagan_reformed
+										religion = ainu_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_ainu_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_ainu_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = chinese_pagan_reformed
+										religion = chinese_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_chinese_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_chinese_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = korean_pagan_reformed
+										religion = korean_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_korean_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_korean_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = ryukyuan_pagan_reformed
+										religion = ryukyuan_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_ryukyuan_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_ryukyuan_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = dayak_pagan_reformed
+										religion = dayak_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_dayak_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_dayak_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = melanesian_religion_reformed
+										religion = melanesian_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_melanesian_religion }
+							}
+							set_global_flag = first_guardian_of_faith_melanesian_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = sanamahi_pagan_reformed
+										religion = sanamahi_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_sanamahi_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_sanamahi_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = viet_pagan_reformed
+										religion = viet_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_viet_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_viet_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = inca_religion_reformed
+										religion = inca_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_inca_religion }
+							}
+							set_global_flag = first_guardian_of_faith_inca_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = mayan_reformed
+										religion = mayan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_mayan }
+							}
+							set_global_flag = first_guardian_of_faith_mayan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = jurchen_pagan_reformed
+										religion = jurchen_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_jurchen_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_jurchen_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = taiwanese_religion_reformed
+										religion = taiwanese_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_taiwanese_religion }
+							}
+							set_global_flag = first_guardian_of_faith_taiwanese_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = philippine_religion_reformed
+										religion = philippine_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_philippine_religion }
+							}
+							set_global_flag = first_guardian_of_faith_philippine_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = bornean_religion_reformed
+										religion = bornean_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_bornean_religion }
+							}
+							set_global_flag = first_guardian_of_faith_bornean_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = sulawesi_religion_reformed
+										religion = sulawesi_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_sulawesi_religion }
+							}
+							set_global_flag = first_guardian_of_faith_sulawesi_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = flores_religion_reformed
+										religion = flores_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_flores_religion }
+							}
+							set_global_flag = first_guardian_of_faith_flores_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = java_religion_reformed
+										religion = java_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_java_religion }
+							}
+							set_global_flag = first_guardian_of_faith_java_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = sumatran_religion_reformed
+										religion = sumatran_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_sumatran_religion }
+							}
+							set_global_flag = first_guardian_of_faith_sumatran_religion
+						}
 					}
 				}
 			set_character_flag = created_new_holy_order
@@ -2642,16 +4210,19 @@ decisions = {
 			OR = {
 				any_owned_bloodline = {
 					OR = {
-						has_bloodline_flag = first_guardian_of_faith_bon
+						has_bloodline_flag = first_guardian_of_faith_hindu
+						has_bloodline_flag = first_guardian_of_faith_buddhist
+						has_bloodline_flag = first_guardian_of_faith_jain
 						has_bloodline_flag = first_guardian_of_faith_taoist
+						has_bloodline_flag = first_guardian_of_faith_shinto
 					}
 					bloodline_is_active_for = PREV
 				}
 				trait = guardian_of_faith_hindu
 				trait = guardian_of_faith_buddhist
 				trait = guardian_of_faith_jain
-				trait = guardian_of_faith_bon
 				trait = guardian_of_faith_taoist
+				trait = guardian_of_faith_shinto
 			}
 			NOT = { trait = guardian_of_faith_denied }
 			location = {
@@ -2670,8 +4241,11 @@ decisions = {
 				OR = {
 					AND = {
 						OR = {
-							trait = guardian_of_faith_bon
+							trait = guardian_of_faith_hindu
+							trait = guardian_of_faith_buddhist
+							trait = guardian_of_faith_jain
 							trait = guardian_of_faith_taoist
+							trait = guardian_of_faith_shinto
 						}
 						prestige = 250
 						piety = 500
@@ -2706,8 +4280,11 @@ decisions = {
 				if = {
 					limit = {
 						OR = { 
-							trait = guardian_of_faith_bon
+							trait = guardian_of_faith_hindu
+							trait = guardian_of_faith_buddhist
+							trait = guardian_of_faith_jain
 							trait = guardian_of_faith_taoist
+							trait = guardian_of_faith_shinto
 						}
 					}
 					prestige = -250
@@ -2716,8 +4293,11 @@ decisions = {
 				if = {
 					limit = {
 						NOR = { 
-							trait = guardian_of_faith_bon
+							trait = guardian_of_faith_hindu
+							trait = guardian_of_faith_buddhist
+							trait = guardian_of_faith_jain
 							trait = guardian_of_faith_taoist
+							trait = guardian_of_faith_shinto
 						}
 					}
 					prestige = -375
@@ -2725,14 +4305,31 @@ decisions = {
 				}
 				if = {
 					limit = {
-						OR = {
-							religion = bon_reformed
-							religion = bon
-						}
-						NOT = { has_global_flag = first_guardian_of_faith_bon }
+						religion = hindu
+						NOT = { has_global_flag = first_guardian_of_faith_hindu }
 					}
 					create_bloodline = {
-						type = first_guardian_of_faith_bon
+						type = first_guardian_of_faith_hindu
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}if = {
+					limit = {
+						religion = buddhist
+						NOT = { has_global_flag = first_guardian_of_faith_buddhist }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_buddhist
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}if = {
+					limit = {
+						religion = jain
+						NOT = { has_global_flag = first_guardian_of_faith_jain }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_jain
 						religion = FROM
 						inheritance = patrilineal
 					}
@@ -2744,6 +4341,17 @@ decisions = {
 					}
 					create_bloodline = {
 						type = first_guardian_of_faith_taoist
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = shinto
+						NOT = { has_global_flag = first_guardian_of_faith_shinto }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_shinto
 						religion = FROM
 						inheritance = patrilineal
 					}
@@ -2774,14 +4382,29 @@ decisions = {
 						if = { 
 							limit = {
 								FROM = {
-									OR = {
-										religion = bon_reformed
-										religion = bon
-									}
+									religion = hindu
 								}
-								NOT = { has_global_flag = first_guardian_of_faith_bon }
+								NOT = { has_global_flag = first_guardian_of_faith_hindu }
 							}
-							set_global_flag = first_guardian_of_faith_bon
+							set_global_flag = first_guardian_of_faith_hindu
+						}
+						if = { 
+							limit = {
+								FROM = {
+									religion = buddhist
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_buddhist }
+							}
+							set_global_flag = first_guardian_of_faith_buddhist
+						}
+						if = { 
+							limit = {
+								FROM = {
+									religion = jain
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_jain }
+							}
+							set_global_flag = first_guardian_of_faith_jain
 						}
 						if = { 
 							limit = {
@@ -2791,6 +4414,15 @@ decisions = {
 								NOT = { has_global_flag = first_guardian_of_faith_taoist }
 							}
 							set_global_flag = first_guardian_of_faith_taoist
+						}
+						if = { 
+							limit = {
+								FROM = {
+									religion = shinto
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_shinto }
+							}
+							set_global_flag = first_guardian_of_faith_shinto
 						}
 					}
 				}
@@ -2829,6 +4461,10 @@ decisions = {
 						has_bloodline_flag = first_guardian_of_faith_orthodox
 						has_bloodline_flag = first_guardian_of_faith_miaphysite
 						has_bloodline_flag = first_guardian_of_faith_nestorian
+						has_bloodline_flag = first_guardian_of_faith_syriac
+						has_bloodline_flag = first_guardian_of_faith_maronite
+						has_bloodline_flag = first_guardian_of_faith_apostolic
+						has_bloodline_flag = first_guardian_of_faith_chalcedonian
 					}
 					bloodline_is_active_for = PREV
 				}
@@ -2836,6 +4472,10 @@ decisions = {
 				trait = guardian_of_faith_orthodox
 				trait = guardian_of_faith_miaphysite
 				trait = guardian_of_faith_nestorian
+				trait = guardian_of_faith_syriac
+				trait = guardian_of_faith_maronite
+				trait = guardian_of_faith_apostolic
+				trait = guardian_of_faith_chalcedonian
 				has_landed_title = k_papal_state
 				has_landed_title = k_orthodox
 				has_landed_title = d_miaphysite
@@ -2887,6 +4527,8 @@ decisions = {
 							religion = fraticelli
 							religion = waldensian
 							religion = lollard
+							religion = adoptionist
+							religion = arian
 						}
 						NOT = { has_global_flag = first_guardian_of_faith_catholic }
 					}
@@ -2903,7 +4545,6 @@ decisions = {
 							religion = bogomilist
 							religion = monothelite
 							religion = iconoclast
-							religion = paulician
 						}
 						NOT = { has_global_flag = first_guardian_of_faith_orthodox }
 					}
@@ -2937,6 +4578,54 @@ decisions = {
 					}
 					create_bloodline = {
 						type = first_guardian_of_faith_nestorian
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = syriac
+						NOT = { has_global_flag = first_guardian_of_faith_syriac }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_syriac
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = maronite
+						NOT = { has_global_flag = first_guardian_of_faith_maronite }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_maronite
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = apostolic
+							religion = paulician
+							religion = tondrakian
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_apostolic }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_apostolic
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = chalcedonian
+						NOT = { has_global_flag = first_guardian_of_faith_chalcedonian }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_chalcedonian
 						religion = ROOT
 						inheritance = patrilineal
 					}
@@ -2978,6 +4667,8 @@ decisions = {
 										religion = fraticelli
 										religion = waldensian
 										religion = lollard
+										religion = adoptionist
+										religion = arian
 									}
 								}
 								NOT = { has_global_flag = first_guardian_of_faith_catholic }
@@ -2992,7 +4683,6 @@ decisions = {
 										religion = bogomilist
 										religion = monothelite
 										religion = iconoclast
-										religion = paulician
 									}
 								}
 								NOT = { has_global_flag = first_guardian_of_faith_orthodox }
@@ -3022,6 +4712,46 @@ decisions = {
 								NOT = { has_global_flag = first_guardian_of_faith_nestorian }
 							}
 							set_global_flag = first_guardian_of_faith_nestorian
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									religion = syriac
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_syriac }
+							}
+							set_global_flag = first_guardian_of_faith_syriac
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									religion = maronite
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_maronite }
+							}
+							set_global_flag = first_guardian_of_faith_maronite
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
+										religion = apostolic
+										religion = paulician
+										religion = tondrakian
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_apostolic }
+							}
+							set_global_flag = first_guardian_of_faith_apostolic
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									religion = chalcedonian
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_chalcedonian }
+							}
+							set_global_flag = first_guardian_of_faith_chalcedonian
 						}
 					}
 				}
@@ -3055,6 +4785,10 @@ decisions = {
 						trait = guardian_of_faith_orthodox
 						trait = guardian_of_faith_miaphysite
 						trait = guardian_of_faith_nestorian
+						trait = guardian_of_faith_syriac
+						trait = guardian_of_faith_maronite
+						trait = guardian_of_faith_apostolic
+						trait = guardian_of_faith_chalcedonian
 					}
 				}
 			}
@@ -3085,19 +4819,22 @@ decisions = {
 						has_bloodline_flag = first_guardian_of_faith_sunni
 						has_bloodline_flag = first_guardian_of_faith_shiite
 						has_bloodline_flag = first_guardian_of_faith_ibadi
+						has_bloodline_flag = first_guardian_of_faith_zaydi
+						has_bloodline_flag = first_guardian_of_faith_druze
 					}
 					bloodline_is_active_for = PREV
 				}
 				trait = guardian_of_faith_sunni
 				trait = guardian_of_faith_shiite
 				trait = guardian_of_faith_ibadi
+				trait = guardian_of_faith_zaydi
+				trait = guardian_of_faith_druze
 				has_landed_title = d_sunni
 				has_landed_title = d_shiite
 				has_landed_title = d_yazidi
 				has_landed_title = d_ibadi
 				has_landed_title = d_kharijite
 				has_landed_title = d_hurufi
-				has_landed_title = d_qarmatian
 			}
 			any_demesne_title = {
 				NOT = { tier = BARON } 
@@ -3137,7 +4874,8 @@ decisions = {
 						OR = {
 							religion = sunni
 							religion = zikri
-							religion = yazidi
+							religion = mahdiyya
+							religion = nabawiyya
 						}
 						NOT = { has_global_flag = first_guardian_of_faith_sunni }
 					}
@@ -3151,8 +4889,9 @@ decisions = {
 					limit = {
 						OR = {
 							religion = shiite
-							religion = druze
 							religion = hurufi
+							religion = waqifi
+							religion = ismaili
 							religion = qarmatian
 						}
 						NOT = { has_global_flag = first_guardian_of_faith_shiite }
@@ -3168,11 +4907,34 @@ decisions = {
 						OR = {
 							religion = ibadi
 							religion = kharijite
+							religion = haruri
 						}
 						NOT = { has_global_flag = first_guardian_of_faith_ibadi }
 					}
 					create_bloodline = {
 						type = first_guardian_of_faith_ibadi
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = zaydi
+						NOT = { has_global_flag = first_guardian_of_faith_zaydi }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_zaydi
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = druze
+						NOT = { has_global_flag = first_guardian_of_faith_druze }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_druze
 						religion = ROOT
 						inheritance = patrilineal
 					}
@@ -3211,7 +4973,8 @@ decisions = {
 									OR = {
 										religion = sunni
 										religion = zikri
-										religion = yazidi
+										religion = mahdiyya
+										religion = nabawiyya
 									}
 								}
 								NOT = { has_global_flag = first_guardian_of_faith_sunni }
@@ -3223,8 +4986,10 @@ decisions = {
 								ROOT = {
 									OR = {
 										religion = shiite
-										religion = druze
 										religion = hurufi
+										religion = waqifi
+										religion = ismaili
+										religion = qarmatian
 									}
 								}
 								NOT = { has_global_flag = first_guardian_of_faith_shiite }
@@ -3237,11 +5002,30 @@ decisions = {
 									OR = {
 										religion = ibadi
 										religion = kharijite
+										religion = haruri
 									}
 								}
 								NOT = { has_global_flag = first_guardian_of_faith_ibadi }
 							}
 							set_global_flag = first_guardian_of_faith_ibadi
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									religion = zaydi
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_zaydi }
+							}
+							set_global_flag = first_guardian_of_faith_zaydi
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									religion = druze
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_druze }
+							}
+							set_global_flag = first_guardian_of_faith_druze
 						}
 					}
 				}
@@ -3267,12 +5051,216 @@ decisions = {
 						has_landed_title = d_ibadi
 						has_landed_title = d_kharijite
 						has_landed_title = d_hurufi
-						has_landed_title = d_qarmatian
 					}
 					NOR = {
 						trait = guardian_of_faith_sunni
 						trait = guardian_of_faith_shiite
 						trait = guardian_of_faith_ibadi
+						trait = guardian_of_faith_zaydi
+						trait = guardian_of_faith_druze
+					}
+				}
+			}
+			modifier = {
+				factor = 0.000001
+				any_demesne_title = {
+					has_title_flag = minor_holy_order
+				}
+			}
+			modifier = {
+				factor = 0.00000001
+				has_character_flag = created_new_holy_order
+			}
+		}
+	}
+	
+	form_new_holy_order_mazdan_AI = {
+		
+		potential = {
+			ai = yes
+			mercenary = no
+			holy_order = no
+			OR = {
+				any_owned_bloodline = {
+					OR = {
+						has_bloodline_flag = first_guardian_of_faith_zoroastrian
+						has_bloodline_flag = first_guardian_of_faith_manichean
+						has_bloodline_flag = first_guardian_of_faith_yazidi
+					}
+					bloodline_is_active_for = PREV
+				}
+				trait = guardian_of_faith_zoroastrian
+				trait = guardian_of_faith_manichean
+				trait = guardian_of_faith_yazidi
+				has_landed_title = d_zoroastrian
+				has_landed_title = d_manichean
+				has_landed_title = d_mandaean
+				has_landed_title = d_yazidi
+			}
+			any_demesne_title = {
+				NOT = { tier = BARON } 
+				NOT = { higher_tier_than = COUNT }
+				NOT = { has_title_flag = home_holy_order }
+			}
+		}
+		
+		allow = {
+			ROOT = {
+				independent = yes
+				prisoner = no
+				war = no
+				wealth = 250
+				prestige = 250
+				piety = 500
+			}
+		}
+		effect = {
+			ROOT = {
+				hidden_tooltip = {
+					any_character = {
+						if = {
+							limit = {
+								is_ruler = yes
+								higher_real_tier_than = BARON
+							}
+						narrative_event = { id = OLDORDER.0048 }
+						}
+					}
+				}
+				wealth = -250
+				prestige = -250
+				piety = -500
+				if = {
+					limit = {
+						OR = {
+							religion = zoroastrian
+							religion = mazdaki
+							religion = zurvanist
+							religion = khurmazta
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_zoroastrian }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_zoroastrian
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = manichean
+							religion = mandaean
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_manichean }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_manichean
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+							religion = yazidi
+						NOT = { has_global_flag = first_guardian_of_faith_yazidi }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_yazidi
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				custom_tooltip = {
+					hidden_tooltip = {
+						random_demesne_title = {
+							limit = {
+								NOT = { tier = BARON } 
+								NOT = { higher_tier_than = COUNT }
+								NOT = { has_title_flag = home_holy_order }
+							}
+							create_title = {
+								tier = DUKE
+								name = DYNAMIC_HOLY_ORDER_FAITH_MAZDAN
+								short_name = yes
+								landless = yes
+								mercenary = yes
+								mercenary_type = minor_holy_order_composition
+								custom_created = yes
+								culture = ROOT 
+								religion = ROOT
+								holder = ROOT
+								base_title = THIS
+								ruler = "GRANDMASTER"
+								foa = "GRANDMASTER_FOA"
+							}
+							new_title = {
+								set_title_flag = minor_holy_order
+							}
+							set_title_flag = home_holy_order
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
+										religion = zoroastrian
+										religion = mazdaki
+										religion = zurvanist
+										religion = khurmazta
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_zoroastrian }
+							}
+							set_global_flag = first_guardian_of_faith_zoroastrian
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
+										religion = manichean
+										religion = mandaean
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_manichean }
+							}
+							set_global_flag = first_guardian_of_faith_manichean
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									religion = yazidi
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_yazidi }
+							}
+							set_global_flag = first_guardian_of_faith_yazidi
+						}
+					}
+				}
+				set_character_flag = created_new_holy_order
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				NOT = { trait = zealous }
+			}
+			modifier = {
+				factor = 0.01
+				AND = {
+					OR = {
+						has_landed_title = d_zoroastrian
+						has_landed_title = d_manichean
+						has_landed_title = d_mandaean
+						has_landed_title = d_yazidi
+					}
+					NOR = {
+						trait = guardian_of_faith_zoroastrian
+						trait = guardian_of_faith_manichean
+						trait = guardian_of_faith_yazidi
 					}
 				}
 			}
@@ -3303,6 +5291,26 @@ decisions = {
 				trait = guardian_of_faith_slavic_pagan
 				trait = guardian_of_faith_west_african_pagan
 				trait = guardian_of_faith_zun_pagan
+				trait = guardian_of_faith_bon
+				trait = guardian_of_faith_aztec
+				trait = guardian_of_faith_ainu_pagan
+				trait = guardian_of_faith_chinese_pagan
+				trait = guardian_of_faith_korean_pagan
+				trait = guardian_of_faith_ryukyuan_pagan
+				trait = guardian_of_faith_dayak_pagan
+				trait = guardian_of_faith_melanesian_religion
+				trait = guardian_of_faith_sanamahi_pagan
+				trait = guardian_of_faith_viet_pagan
+				trait = guardian_of_faith_inca_religion
+				trait = guardian_of_faith_mayan
+				trait = guardian_of_faith_jurchen_pagan
+				trait = guardian_of_faith_taiwanese_religion
+				trait = guardian_of_faith_philippine_religion
+				trait = guardian_of_faith_bornean_religion
+				trait = guardian_of_faith_sulawesi_religion
+				trait = guardian_of_faith_flores_religion
+				trait = guardian_of_faith_java_religion
+				trait = guardian_of_faith_sumatran_religion
 				AND = {
 					trait = guardian_of_faith_hellenic_pagan
 					NAND = {
@@ -3353,6 +5361,86 @@ decisions = {
 					religion = promethean_pagan
 					has_landed_title = d_promethean_pagan
 				}
+				AND = { 
+					religion = titan_pagan
+					has_landed_title = d_titan_pagan
+				}
+				AND = { 
+					religion = aztec
+					has_landed_title = d_aztec
+				}
+				AND = { 
+					religion = ainu_pagan_reformed
+					has_landed_title = d_ainu_pagan_reformed
+				}
+				AND = { 
+					religion = chinese_pagan_reformed
+					has_landed_title = d_chinese_pagan_reformed
+				}
+				AND = { 
+					religion = korean_pagan_reformed
+					has_landed_title = d_korean_pagan_reformed
+				}
+				AND = { 
+					religion = ryukyuan_pagan_reformed
+					has_landed_title = d_ryukyuan_pagan_reformed
+				}
+				AND = { 
+					religion = dayak_pagan_reformed
+					has_landed_title = d_dayak_pagan_reformed
+				}
+				AND = { 
+					religion = melanesian_religion_reformed
+					has_landed_title = d_melanesian_religion_reformed
+				}
+				AND = { 
+					religion = sanamahi_pagan_reformed
+					has_landed_title = d_sanamahi_pagan_reformed
+				}
+				AND = { 
+					religion = viet_pagan_reformed
+					has_landed_title = d_viet_pagan_reformed
+				}
+				AND = { 
+					religion = inca_religion_reformed
+					has_landed_title = d_inca_religion_reformed
+				}
+				AND = { 
+					religion = mayan_reformed
+					has_landed_title = d_mayan_reformed
+				}
+				AND = { 
+					religion = jurchen_pagan_reformed
+					has_landed_title = d_jurchen_pagan_reformed
+				}
+				AND = { 
+					religion = taiwanese_religion_reformed
+					has_landed_title = d_taiwanese_religion_reformed
+				}
+				AND = { 
+					religion = philippine_religion_reformed
+					has_landed_title = d_philippine_religion_reformed
+				}
+				AND = { 
+					religion = bornean_religion_reformed
+					has_landed_title = d_bornean_religion_reformed
+				}
+				AND = { 
+					religion = sulawesi_religion_reformed
+					has_landed_title = d_sulawesi_religion_reformed
+				}
+				AND = { 
+					religion = flores_religion_reformed
+					has_landed_title = d_flores_religion_reformed
+				}
+				AND = { 
+					religion = java_religion_reformed
+					has_landed_title = d_java_religion_reformed
+				}
+				AND = { 
+					religion = sumatran_religion_reformed
+					has_landed_title = d_sumatran_religion_reformed
+				}
 				any_owned_bloodline = {
 					OR = {
 					has_bloodline_flag = first_guardian_of_faith_norse_pagan
@@ -3363,6 +5451,26 @@ decisions = {
 					has_bloodline_flag = first_guardian_of_faith_west_african_pagan
 					has_bloodline_flag = first_guardian_of_faith_zun_pagan
 					has_bloodline_flag = first_guardian_of_faith_hellenic_pagan
+					has_bloodline_flag = first_guardian_of_faith_bon
+					has_bloodline_flag = first_guardian_of_faith_aztec
+					has_bloodline_flag = first_guardian_of_faith_ainu_pagan
+					has_bloodline_flag = first_guardian_of_faith_chinese_pagan
+					has_bloodline_flag = first_guardian_of_faith_korean_pagan
+					has_bloodline_flag = first_guardian_of_faith_ryukyuan_pagan
+					has_bloodline_flag = first_guardian_of_faith_dayak_pagan
+					has_bloodline_flag = first_guardian_of_faith_melanesian_religion
+					has_bloodline_flag = first_guardian_of_faith_sanamahi_pagan
+					has_bloodline_flag = first_guardian_of_faith_viet_pagan
+					has_bloodline_flag = first_guardian_of_faith_inca_religion
+					has_bloodline_flag = first_guardian_of_faith_mayan
+					has_bloodline_flag = first_guardian_of_faith_jurchen_pagan
+					has_bloodline_flag = first_guardian_of_faith_taiwanese_religion
+					has_bloodline_flag = first_guardian_of_faith_philippine_religion
+					has_bloodline_flag = first_guardian_of_faith_bornean_religion
+					has_bloodline_flag = first_guardian_of_faith_sulawesi_religion
+					has_bloodline_flag = first_guardian_of_faith_flores_religion
+					has_bloodline_flag = first_guardian_of_faith_java_religion
+					has_bloodline_flag = first_guardian_of_faith_sumatran_religion
 					}
 					bloodline_is_active_for = PREV
 				}
@@ -3502,6 +5610,20 @@ decisions = {
 				if = {
 					limit = {
 						OR = {
+							religion = bon_reformed
+							religion = bon
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_bon }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_bon
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
 							religion = hellenic_pagan_reformed
 							religion = hellenic_pagan
 						}
@@ -3510,6 +5632,272 @@ decisions = {
 					create_bloodline = {
 						type = first_guardian_of_faith_hellenic_pagan
 						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = aztec_reformed
+							religion = aztec
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_aztec }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_aztec
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = ainu_pagan_reformed
+							religion = ainu_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_ainu_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_ainu_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = chinese_pagan_reformed
+							religion = chinese_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_chinese_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_chinese_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = korean_pagan_reformed
+							religion = korean_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_korean_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_korean_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = ryukyuan_pagan_reformed
+							religion = ryukyuan_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_ryukyuan_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_ryukyuan_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = dayak_pagan_reformed
+							religion = dayak_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_dayak_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_dayak_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = melanesian_religion_reformed
+							religion = melanesian_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_melanesian_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_melanesian_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = sanamahi_pagan_reformed
+							religion = sanamahi_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_sanamahi_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_sanamahi_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = viet_pagan_reformed
+							religion = viet_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_viet_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_viet_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = inca_religion_reformed
+							religion = inca_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_inca_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_inca_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = mayan_reformed
+							religion = mayan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_mayan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_mayan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = jurchen_pagan_reformed
+							religion = jurchen_pagan
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_jurchen_pagan }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_jurchen_pagan
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = taiwanese_religion_reformed
+							religion = taiwanese_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_taiwanese_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_taiwanese_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = philippine_religion_reformed
+							religion = philippine_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_philippine_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_philippine_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = bornean_religion_reformed
+							religion = bornean_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_bornean_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_bornean_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = sulawesi_religion_reformed
+							religion = sulawesi_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_sulawesi_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_sulawesi_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = flores_religion_reformed
+							religion = flores_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_flores_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_flores_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = java_religion_reformed
+							religion = java_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_java_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_java_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion = sumatran_religion_reformed
+							religion = sumatran_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_sumatran_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_sumatran_religion
+						religion = FROM
 						inheritance = patrilineal
 					}
 				}
@@ -3629,6 +6017,18 @@ decisions = {
 							limit = {
 								ROOT = {
 									OR = {
+										religion = bon_reformed
+										religion = bon
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_bon }
+							}
+							set_global_flag = first_guardian_of_faith_bon
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
 										religion = hellenic_pagan_reformed
 										religion = hellenic_pagan
 									}
@@ -3636,6 +6036,234 @@ decisions = {
 								NOT = { has_global_flag = first_guardian_of_faith_hellenic_pagan }
 							}
 							set_global_flag = first_guardian_of_faith_hellenic_pagan
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									OR = {
+										religion = aztec_reformed
+										religion = aztec
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_aztec }
+							}
+							set_global_flag = first_guardian_of_faith_aztec
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = ainu_pagan_reformed
+										religion = ainu_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_ainu_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_ainu_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = chinese_pagan_reformed
+										religion = chinese_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_chinese_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_chinese_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = korean_pagan_reformed
+										religion = korean_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_korean_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_korean_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = ryukyuan_pagan_reformed
+										religion = ryukyuan_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_ryukyuan_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_ryukyuan_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = dayak_pagan_reformed
+										religion = dayak_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_dayak_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_dayak_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = melanesian_religion_reformed
+										religion = melanesian_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_melanesian_religion }
+							}
+							set_global_flag = first_guardian_of_faith_melanesian_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = sanamahi_pagan_reformed
+										religion = sanamahi_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_sanamahi_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_sanamahi_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = viet_pagan_reformed
+										religion = viet_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_viet_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_viet_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = inca_religion_reformed
+										religion = inca_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_inca_religion }
+							}
+							set_global_flag = first_guardian_of_faith_inca_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = mayan_reformed
+										religion = mayan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_mayan }
+							}
+							set_global_flag = first_guardian_of_faith_mayan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = jurchen_pagan_reformed
+										religion = jurchen_pagan
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_jurchen_pagan }
+							}
+							set_global_flag = first_guardian_of_faith_jurchen_pagan
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = taiwanese_religion_reformed
+										religion = taiwanese_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_taiwanese_religion }
+							}
+							set_global_flag = first_guardian_of_faith_taiwanese_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = philippine_religion_reformed
+										religion = philippine_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_philippine_religion }
+							}
+							set_global_flag = first_guardian_of_faith_philippine_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = bornean_religion_reformed
+										religion = bornean_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_bornean_religion }
+							}
+							set_global_flag = first_guardian_of_faith_bornean_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = sulawesi_religion_reformed
+										religion = sulawesi_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_sulawesi_religion }
+							}
+							set_global_flag = first_guardian_of_faith_sulawesi_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = flores_religion_reformed
+										religion = flores_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_flores_religion }
+							}
+							set_global_flag = first_guardian_of_faith_flores_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = java_religion_reformed
+										religion = java_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_java_religion }
+							}
+							set_global_flag = first_guardian_of_faith_java_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = sumatran_religion_reformed
+										religion = sumatran_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_sumatran_religion }
+							}
+							set_global_flag = first_guardian_of_faith_sumatran_religion
 						}
 					}
 				}
@@ -3799,8 +6427,8 @@ decisions = {
 				trait = guardian_of_faith_hindu
 				trait = guardian_of_faith_buddhist
 				trait = guardian_of_faith_jain
-				trait = guardian_of_faith_bon
 				trait = guardian_of_faith_taoist
+				trait = guardian_of_faith_shinto
 				trait = guardian_of_faith_confucian
 				trait = guardian_of_faith_nihon_shinto
 				trait = guardian_of_faith_ryukyu_shinto
@@ -3811,7 +6439,7 @@ decisions = {
 				}
 				AND = {
 					religion = nihon_shinto
-					has_landed_title = d_shinto
+					has_landed_title = d_nihon_shinto
 				}
 				AND = {
 					religion = ryukyu_shinto
@@ -3858,14 +6486,33 @@ decisions = {
 				piety = -500
 				if = {
 					limit = {
-						OR = {
-							religion = bon_reformed
-							religion = bon
-						}
-						NOT = { has_global_flag = first_guardian_of_faith_bon }
+						religion = hindu
+						NOT = { has_global_flag = first_guardian_of_faith_hindu }
 					}
 					create_bloodline = {
-						type = first_guardian_of_faith_bon
+						type = first_guardian_of_faith_hindu
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = buddhist
+						NOT = { has_global_flag = first_guardian_of_faith_buddhist }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_buddhist
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = jain
+						NOT = { has_global_flag = first_guardian_of_faith_jain }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_jain
 						religion = ROOT
 						inheritance = patrilineal
 					}
@@ -3877,6 +6524,17 @@ decisions = {
 					}
 					create_bloodline = {
 						type = first_guardian_of_faith_taoist
+						religion = ROOT
+						inheritance = patrilineal
+					}
+				}
+				if = {
+					limit = {
+						religion = shinto
+						NOT = { has_global_flag = first_guardian_of_faith_shinto }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_shinto
 						religion = ROOT
 						inheritance = patrilineal
 					}
@@ -3912,14 +6570,29 @@ decisions = {
 						if = { 
 							limit = {
 								ROOT = {
-									OR = {
-										religion = bon_reformed
-										religion = bon
-									}
+									religion = hindu
 								}
-								NOT = { has_global_flag = first_guardian_of_faith_bon }
+								NOT = { has_global_flag = first_guardian_of_faith_hindu }
 							}
-							set_global_flag = first_guardian_of_faith_bon
+							set_global_flag = first_guardian_of_faith_hindu
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									religion = buddhist
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_buddhist }
+							}
+							set_global_flag = first_guardian_of_faith_buddhist
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									religion = jain
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_jain }
+							}
+							set_global_flag = first_guardian_of_faith_jain
 						}
 						if = { 
 							limit = {
@@ -3929,6 +6602,15 @@ decisions = {
 								NOT = { has_global_flag = first_guardian_of_faith_taoist }
 							}
 							set_global_flag = first_guardian_of_faith_taoist
+						}
+						if = { 
+							limit = {
+								ROOT = {
+									religion = shinto
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_shinto }
+							}
+							set_global_flag = first_guardian_of_faith_shinto
 						}
 					}
 				}
