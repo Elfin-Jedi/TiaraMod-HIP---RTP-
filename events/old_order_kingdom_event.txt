@@ -1,4 +1,4 @@
-namespace = OLDORDER # latest 0079
+namespace = OLDORDER # latest 0080
 
 character_event = {
     id = OLDORDER.0020
@@ -474,6 +474,16 @@ character_event = {
 				NOT = { trait = guardian_of_faith_sumatran_religion }
 			}
 			add_trait = guardian_of_faith_sumatran_religion
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = malagasy_religion
+					religion = malagasy_religion_reformed
+				}
+				NOT = { trait = guardian_of_faith_malagasy_religion }
+			}
+			add_trait = guardian_of_faith_malagasy_religion
 		}
 		if = { 
 			limit = {
@@ -1384,6 +1394,24 @@ character_event = {
 }
 
 character_event = {
+    id = OLDORDER.0080
+    
+	hide_window = yes
+	
+	trigger = {
+		NOR = {
+			religion = malagasy_religion
+			religion = malagasy_religion_reformed
+		}
+		trait = guardian_of_faith_malagasy_religion
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_malagasy_religion
+	}
+}
+
+character_event = {
     id = OLDORDER.0043
     
 	hide_window = yes
@@ -1628,6 +1656,7 @@ character_event = {
 			trait = guardian_of_faith_flores_religion
 			trait = guardian_of_faith_java_religion
 			trait = guardian_of_faith_sumatran_religion
+			trait = guardian_of_faith_malagasy_religion
 			trait = guardian_of_faith_hindu
 			trait = guardian_of_faith_buddhist
 			trait = guardian_of_faith_jain
@@ -1935,6 +1964,7 @@ character_event = {
 			trait = guardian_of_faith_flores_religion
 			trait = guardian_of_faith_java_religion
 			trait = guardian_of_faith_sumatran_religion
+			trait = guardian_of_faith_malagasy_religion
 			trait = guardian_of_faith_hindu
 			trait = guardian_of_faith_buddhist
 			trait = guardian_of_faith_jain
