@@ -1004,6 +1004,26 @@ guardian_of_faith_sumatran_religion = {
 	customizer = no
 }
 
+guardian_of_faith_malagasy_religion = {
+	
+	cannot_inherit = yes
+	
+	martial = 1
+	learning = 2 
+	
+	infidel_opinion = -25
+	church_opinion = 10
+	vassal_opinion = 10
+	same_opinion_if_same_religion = 25
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 1
+	
+	ai_rationality = -5
+	ai_zeal = 100
+	
+	customizer = no
+}
+
 guardian_of_faith_confucian = {
 	
 	cannot_inherit = yes
