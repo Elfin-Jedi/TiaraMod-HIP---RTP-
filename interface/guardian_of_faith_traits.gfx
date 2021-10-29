@@ -246,6 +246,13 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	spriteType = {
+		name = "GFX_trait_guardian_of_faith_malagasy_religionn"
+		texturefile = "gfx/interface/guardian_of_faith_ainu_pantheism_reformed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
 		name = "GFX_trait_guardian_of_faith_hindu"
 		texturefile = "gfx/interface/guardian_of_faith_hindu.dds"
 		noOfFrames = 1
