@@ -241,6 +241,10 @@ targeted_decisions = {
 					religion = sumatran_religion_reformed
 					has_landed_title = d_sumatran_religion_reformed
 				}
+				AND = {
+					religion = malagasy_religion_reformed
+					has_landed_title = d_malagasy_religion_reformed
+				}
 			}
 		}
 		potential = {

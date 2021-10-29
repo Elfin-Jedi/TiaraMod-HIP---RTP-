@@ -888,6 +888,7 @@ title_decisions = {
 				trait = guardian_of_faith_flores_religion
 				trait = guardian_of_faith_java_religion
 				trait = guardian_of_faith_sumatran_religion
+				trait = guardian_of_faith_malagasy_religion
 				AND = {
 					trait = guardian_of_faith_hellenic_pagan
 					NAND = {
@@ -1018,6 +1019,10 @@ title_decisions = {
 					religion = sumatran_religion_reformed
 					has_landed_title = d_sumatran_religion_reformed
 				}
+				AND = { 
+					religion = malagasy_religion_reformed
+					has_landed_title = d_malagasy_religion_reformed
+				}
 				any_owned_bloodline = {
 					OR = {
 					has_bloodline_flag = first_guardian_of_faith_norse_pagan
@@ -1048,6 +1053,7 @@ title_decisions = {
 					has_bloodline_flag = first_guardian_of_faith_flores_religion
 					has_bloodline_flag = first_guardian_of_faith_java_religion
 					has_bloodline_flag = first_guardian_of_faith_sumatran_religion
+					has_bloodline_flag = first_guardian_of_faith_malagasy_religion
 					}
 					bloodline_is_active_for = PREV
 				}
@@ -1479,6 +1485,20 @@ title_decisions = {
 						inheritance = patrilineal
 					}
 				}
+				if = {
+					limit = {
+						OR = {
+							religion = malagasy_religion_reformed
+							religion = malagasy_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_malagasy_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_malagasy_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
 				custom_tooltip = {
 					hidden_tooltip = {
 						ROOT = {
@@ -1835,6 +1855,18 @@ title_decisions = {
 								NOT = { has_global_flag = first_guardian_of_faith_sumatran_religion }
 							}
 							set_global_flag = first_guardian_of_faith_sumatran_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = malagasy_religion_reformed
+										religion = malagasy_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_malagasy_religion }
+							}
+							set_global_flag = first_guardian_of_faith_malagasy_religion
 						}
 					}
 				}
@@ -3244,6 +3276,7 @@ decisions = {
 						has_bloodline_flag = first_guardian_of_faith_flores_religion
 						has_bloodline_flag = first_guardian_of_faith_java_religion
 						has_bloodline_flag = first_guardian_of_faith_sumatran_religion
+						has_bloodline_flag = first_guardian_of_faith_malagasy_religion
 					}
 					bloodline_is_active_for = PREV
 				}
@@ -3275,6 +3308,7 @@ decisions = {
 				trait = guardian_of_faith_flores_religion
 				trait = guardian_of_faith_java_religion
 				trait = guardian_of_faith_sumatran_religion
+				trait = guardian_of_faith_malagasy_religion
 			}
 			NOT = { trait = guardian_of_faith_denied }
 			location = {
@@ -3321,6 +3355,7 @@ decisions = {
 							trait = guardian_of_faith_flores_religion
 							trait = guardian_of_faith_java_religion
 							trait = guardian_of_faith_sumatran_religion
+							trait = guardian_of_faith_malagasy_religion
 						}
 						prestige = 250
 						piety = 500
@@ -3383,6 +3418,7 @@ decisions = {
 							trait = guardian_of_faith_flores_religion
 							trait = guardian_of_faith_java_religion
 							trait = guardian_of_faith_sumatran_religion
+							trait = guardian_of_faith_malagasy_religion
 						}
 					}
 					prestige = -250
@@ -3419,6 +3455,7 @@ decisions = {
 							trait = guardian_of_faith_flores_religion
 							trait = guardian_of_faith_java_religion
 							trait = guardian_of_faith_sumatran_religion
+							trait = guardian_of_faith_malagasy_religion
 						}
 					}
 					prestige = -375
@@ -3816,6 +3853,20 @@ decisions = {
 						inheritance = patrilineal
 					}
 				}
+				if = {
+					limit = {
+						OR = {
+							religion = malagasy_religion_reformed
+							religion = malagasy_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_malagasy_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_malagasy_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
 				custom_tooltip = {
 					hidden_tooltip = {
 						location = {
@@ -4174,6 +4225,18 @@ decisions = {
 								NOT = { has_global_flag = first_guardian_of_faith_sumatran_religion }
 							}
 							set_global_flag = first_guardian_of_faith_sumatran_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = malagasy_religion_reformed
+										religion = malagasy_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_malagasy_religion }
+							}
+							set_global_flag = first_guardian_of_faith_malagasy_religion
 						}
 					}
 				}
@@ -5311,6 +5374,7 @@ decisions = {
 				trait = guardian_of_faith_flores_religion
 				trait = guardian_of_faith_java_religion
 				trait = guardian_of_faith_sumatran_religion
+				trait = guardian_of_faith_malagasy_religion
 				AND = {
 					trait = guardian_of_faith_hellenic_pagan
 					NAND = {
@@ -5441,6 +5505,10 @@ decisions = {
 					religion = sumatran_religion_reformed
 					has_landed_title = d_sumatran_religion_reformed
 				}
+				AND = { 
+					religion = malagasy_religion_reformed
+					has_landed_title = d_malagasy_religion_reformed
+				}
 				any_owned_bloodline = {
 					OR = {
 					has_bloodline_flag = first_guardian_of_faith_norse_pagan
@@ -5471,6 +5539,7 @@ decisions = {
 					has_bloodline_flag = first_guardian_of_faith_flores_religion
 					has_bloodline_flag = first_guardian_of_faith_java_religion
 					has_bloodline_flag = first_guardian_of_faith_sumatran_religion
+					has_bloodline_flag = first_guardian_of_faith_malagasy_religion
 					}
 					bloodline_is_active_for = PREV
 				}
@@ -5901,6 +5970,20 @@ decisions = {
 						inheritance = patrilineal
 					}
 				}
+				if = {
+					limit = {
+						OR = {
+							religion = malagasy_religion_reformed
+							religion = malagasy_religion
+						}
+						NOT = { has_global_flag = first_guardian_of_faith_malagasy_religion }
+					}
+					create_bloodline = {
+						type = first_guardian_of_faith_malagasy_religion
+						religion = FROM
+						inheritance = patrilineal
+					}
+				}
 				custom_tooltip = {
 					hidden_tooltip = {
 						random_demesne_title = {
@@ -6264,6 +6347,18 @@ decisions = {
 								NOT = { has_global_flag = first_guardian_of_faith_sumatran_religion }
 							}
 							set_global_flag = first_guardian_of_faith_sumatran_religion
+						}
+						if = { 
+							limit = {
+								FROM = {
+									OR = {
+										religion = malagasy_religion_reformed
+										religion = malagasy_religion
+									}
+								}
+								NOT = { has_global_flag = first_guardian_of_faith_malagasy_religion }
+							}
+							set_global_flag = first_guardian_of_faith_malagasy_religion
 						}
 					}
 				}
