@@ -1078,3 +1078,25 @@ first_guardian_of_faith_sumatran_religion = {
 		}
 	}
 }
+
+# Andrianerinerinan (reformed or not)
+
+first_guardian_of_faith_malagasy_religion = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_malagasy_religion }
+	picture = GFX_bloodlines_symbol_icel
+	active = {
+		OR = {
+			religion = malagasy_religion_reformed
+			religion = malagasy_religion
+		}
+	}
+}
