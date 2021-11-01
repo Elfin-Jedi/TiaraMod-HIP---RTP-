@@ -1,0 +1,411 @@
+# -*- ck2.succession_voting -*-
+
+# The entry should be named in the same way that the elective succession law is named to define its voter's logic.
+# Root scope - Voter, the character voting in the election
+# From scope - Candidate, Character considered for the title
+# FromFrom scope - The title the nomination is for
+# FromFromFrom scope - The title owner's candidate
+# The voter will vote for the top score candidate calculated from this script.
+
+eldership_rules = {
+	elector_stances = {
+		elder_ruler = {
+			icon = 2
+			days = 1
+			additive_modifier = {
+				value = 500
+				localisation_key = tooltip_eldership_stance_ruler_is_ruler
+				FROMFROM = {
+					holder_scope = {
+						character = ROOT
+					}
+				}
+			}
+		}
+		elder_ecstatic = {
+			icon = 2
+			days = 1
+			additive_modifier = {
+				value = 1
+				trait = content
+				localisation_key = tooltip_eldership_stance_elder_content
+			}
+			additive_modifier = {
+				value = 2
+				localisation_key = tooltip_eldership_stance_elder_councilor
+				OR = {
+				 	has_job_title = job_chancellor
+				 	has_job_title = job_treasurer
+				 	has_job_title = job_spiritual
+				}
+				FROMFROM = {
+					holder_scope = {
+						is_liege_of = ROOT
+					}
+				}
+			}
+			additive_modifier = {
+				value = 10
+				localisation_key = tooltip_eldership_stance_elder_ecstatic_opinion
+				FROMFROM = {
+					holder_scope = {
+						OR = {
+							reverse_opinion = { who = ROOT value = 80 }
+							is_friend = ROOT
+							is_lover = ROOT
+						}
+					}
+				}
+			}
+			additive_modifier = {
+				value = 5
+				localisation_key = tooltip_eldership_stance_elder_ecstatic_fulfilled_demand
+				FROMFROM = {
+					holder_scope = {
+						reverse_opinion = { who = ROOT value = 25 }
+						reverse_has_opinion_modifier = { who = ROOT modifier = opinion_elder_fulfilled_demand }
+					}
+				}
+			}
+		}
+		elder_pleased = {
+			icon = 3
+			days = 2
+			additive_modifier = {
+				value = 2
+				localisation_key = tooltip_eldership_stance_elder_councilor
+				OR = {
+				 	has_job_title = job_chancellor
+				 	has_job_title = job_treasurer
+				 	has_job_title = job_spiritual
+				}
+				FROMFROM = {
+					holder_scope = {
+						is_liege_of = ROOT
+					}
+				}
+			}
+			additive_modifier = {
+				value = 4
+				localisation_key = tooltip_eldership_stance_elder_pleased_opinion
+				FROMFROM = {
+					holder_scope = {
+						reverse_opinion = { who = ROOT value = 0 }
+						NOR = {
+							reverse_opinion = { who = ROOT value = 60 }
+							is_rival = ROOT
+						}
+					}
+				}
+			}
+			additive_modifier = {
+				value = 2
+				localisation_key = tooltip_eldership_stance_elder_stubborn_opinion
+				trait = stubborn
+			}
+			additive_modifier = {
+				value = 4
+				localisation_key = tooltip_eldership_stance_elder_ecstatic_fulfilled_demand
+				FROMFROM = {
+					holder_scope = {
+						NOT = { reverse_opinion = { who = ROOT value = 0 } }
+						reverse_has_opinion_modifier = { who = ROOT modifier = opinion_elder_fulfilled_demand }
+					}
+				}
+			}
+		}
+		elder_displeased = {
+			icon = 1
+			days = 1
+			additive_modifier = {
+				value = 5
+				localisation_key = tooltip_eldership_stance_elder_stubborn_opinion
+				trait = stubborn
+			}
+			additive_modifier = {
+				value = 4
+				localisation_key = tooltip_eldership_stance_elder_negative_opinion
+				FROMFROM = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOR = {
+								reverse_opinion = { who = ROOT value = 0 }
+								is_friend = ROOT
+								is_lover = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	elector_vote_strength = {
+		days = 1
+		additive_modifier = {
+			value = 99
+			localisation_key = tooltip_elder_vote_strength_elders_ruler_too_young
+			OR = {
+				has_elector_stance = { stance = elder_ecstatic title = FROMFROM }
+				has_elector_stance = { stance = elder_pleased title = FROMFROM }
+				has_elector_stance = { stance = elder_displeased title = FROMFROM }
+			}
+			FROMFROM = { owner = { NOT = { age = 40 } } }
+		}
+	}
+	
+	elector_selection = {
+		days = -5
+		max_amount = 8
+		emf_succession_voting_elector_selection_default_head = yes
+		emf_succession_voting_elector_selection_age_eldership = yes
+		additive_modifier = {
+			value = 4
+			has_job_title = job_spiritual
+			FROMFROM = { holder_scope = { is_liege_of = ROOT } }
+		}
+		additive_modifier = {
+			value = 8
+			vassal_of = FROMFROM
+			age = 30
+			FROMFROM = {
+				holder_scope = {
+					culture = ROOT
+					religion = ROOT
+				}
+			}
+			OR = {
+				has_job_title = job_chancellor
+				has_job_title = job_spiritual
+			}
+		}
+		additive_modifier = {
+			value = -5
+			NOT = { FROMFROM = { holder_scope = { culture = ROOT } } }
+		}
+		additive_modifier = {
+			value = -3
+			NOT = {
+				FROMFROM = {
+					holder_scope = {
+						OR = {
+							has_religion_feature = religion_cosmopolitan
+							religion = hellenic_pagan
+							AND = {
+								religion = hellenic_pagan_reformed
+								has_religion_features = no
+							}
+						}
+					}
+				}
+			}
+			NOT = { FROMFROM = { holder_scope = { religion = ROOT } } }
+			FROMFROM = { holder_scope = { religion_group = ROOT } }
+		}
+		additive_modifier = {
+			value = -10
+			NOT = { FROMFROM = { holder_scope = { culture_group = ROOT } } }
+		}
+		additive_modifier = {
+			value = -5
+			NOT = {
+				FROMFROM = {
+					holder_scope = {
+						OR = {
+							has_religion_feature = religion_cosmopolitan
+							religion = hellenic_pagan
+							AND = {
+								religion = hellenic_pagan_reformed
+								has_religion_features = no
+							}
+						}
+					}
+				}
+			}
+			NOT = { FROMFROM = { holder_scope = { religion_group = ROOT } } }
+		}
+		additive_modifier = {
+			value = 4
+			is_vassal_or_below_of = FROMFROM
+			is_ruler = no
+		}
+		additive_modifier = {
+			value = -100
+			is_vassal_or_below_of = FROMFROM
+			OR = {
+				is_incapable = yes
+				is_adult = no
+			}
+		}
+		additive_modifier = { #Try to avoid having long-lived rulers seeing their children become "Elders".
+			value = -25
+			NOT = { age = 50 }
+			FROMFROM = { holder_scope = { is_parent_of = ROOT } }
+		}
+		additive_modifier = { #Try to avoid having young Elders when older options are available.
+			value = -15
+			NOT = { age = 40 }
+			FROMFROM = {
+				holder_scope = {
+					any_courtier_or_vassal = {
+						age = 40
+						NOT = { has_character_modifier = elder_long_life_modifier }
+					}
+				}
+			}
+		}
+	}
+	candidate_vote_score = {
+		days = 0
+		#The title holder (who also gets a vote), calculates his chosen heir using a very similar behavior to that of the Elective Gavelkind Electors.
+		#Elder AI behavior on the other hand uses an entirely different set of modifiers.
+		
+		##########################   Elder-Only Logic for voting (Listed first for visibility)   ##########################
+		
+		##########################   Elder is Ecstatic + Title holder has selected a Candidate   ##########################
+		additive_modifier = {
+			value = 1000
+			localisation_key = tooltip_elder_elector_vote_ecstatic_candidate
+			has_elector_stance = { stance = elder_ecstatic title = FROMFROM }
+			FROM = { character = ROOT_FROMFROMFROM }
+		}
+		additive_modifier = {
+			value = -1000
+			localisation_key = tooltip_elder_elector_vote_ecstatic_candidate_bad
+			has_elector_stance = { stance = elder_ecstatic title = FROMFROM }
+			FROM = {
+				character = ROOT_FROMFROMFROM
+				OR = {
+					is_foe = ROOT
+					trait = inbred
+					trait = imbecile
+					is_incapable = yes
+					is_adult = no
+				}
+			}
+		}
+		
+		##########################   Title holder votes for dynasts   ##########################
+		emf_succession_voting_holder_score = yes
+
+		##########################   Candidate's traits   ##########################
+
+		##########################   Elector voting himself - Less likely for Elders   ##########################
+		emf_succession_voting_self_score_eldership = yes
+
+		#Elders voting other elders.
+		additive_modifier = {
+			value = -25
+			localisation_key = tooltip_elder_elector_vote_pleased_elder_candidate
+			FROM = { has_character_modifier = elder_long_life_modifier }
+			NOT = { character = FROM } #Don't judge yourself.
+			NOT = { has_elector_stance = { stance = elder_displeased title = FROMFROM } }
+			OR = {
+				has_elector_stance = { stance = elder_ecstatic title = FROMFROM }
+				AND = {
+					FROM = {
+						NOR = {
+							is_friend = ROOT
+							is_lover = ROOT
+							AND = {
+								is_close_relative = ROOT
+								NOT = { is_foe = ROOT }
+							}
+						}
+					}
+					FROMFROM = {
+						holder_scope = {
+							ROOT = {
+								opinion_diff = {
+									first = ROOT_FROM
+									second = PREV
+									value = 0
+									as_if_liege = yes
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		##########################   Elder is Displeased   ##########################
+		additive_modifier = { #If Displeased, the Elder will not be likely to pick the ruler's candidate on purpose.
+			value = -1000
+			localisation_key = tooltip_elder_elector_vote_displeased_ruler_candidate
+			has_elector_stance = { stance = elder_displeased title = FROMFROM }
+			NOT = { character = FROM } #But not if it's me.
+			FROMFROM = { holder_scope = { dynasty = ROOT_FROM } }
+		}
+		additive_modifier = {
+			value = 10
+			localisation_key = tooltip_elder_elector_vote_displeased_elder
+			has_elector_stance = { stance = elder_displeased title = FROMFROM }
+			NOT = { character = FROM } #Do not judge yourself.
+			FROM = { has_character_modifier = elder_long_life_modifier }
+		}
+		
+		##########################   Ruler and Elder Logic for voting   ##########################
+
+		##########################   Candidate's traits   ##########################
+
+		#Sexism
+		emf_succession_voting_candidate_gender_score = yes
+
+		#Ageism
+		emf_succession_voting_candidate_age_score_prefer_older = yes
+
+		#Culturism
+		emf_succession_voting_candidate_culture_score = yes
+
+		#Faithism - Eldership is more about choosing a good Dynastic member, so faith bias is slightly reduced.
+		emf_succession_voting_candidate_religion_score_unimportant = yes
+
+		#Barbarism/Tribalism
+		emf_succession_voting_candidate_government_score = yes
+		
+		#Nepotism
+		emf_succession_voting_candidate_nepotism_score_eldership = yes
+		
+		#Prestige
+		emf_succession_voting_candidate_prestige_score = yes
+
+		#Piety
+		emf_succession_voting_candidate_piety_score = yes
+
+		#Educational preferences
+		emf_succession_voting_candidate_education_score_eldership = yes
+		emf_succession_voting_candidate_warrior_score = yes
+
+		#Claims
+		emf_succession_voting_candidate_claims_score = yes
+
+		#All the Traits
+		emf_succession_voting_candidate_traits_score_common = yes
+		emf_succession_voting_candidate_traits_score_special_eldership = yes
+		emf_succession_voting_candidate_traits_score_not_byzantine_elective = yes
+		
+		##########################   Ruler's traits   ##########################
+		emf_succession_voting_ruler_traits_score = yes
+		
+		##########################   Raw Opinion bonus towards Candidate - Boosted for Eldership   ##########################
+		emf_succession_voting_candidate_opinion_score_eldership = yes
+		
+		##########################   Raw Opinion bonus towards Ruler - Boosted for Eldership   ##########################
+		emf_succession_voting_ruler_opinion_score_eldership = yes
+	}
+	
+	#ROOT = Current Title holder, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Null
+	candidate_trigger = {
+		emf_succession_voting_standard_candidate_triggers = yes
+		FROM = {
+			OR = {
+				has_claim = ROOT_FROMFROM
+				dynasty = ROOT
+				emf_is_cadet_dynasty_of_ROOT = yes
+				emf_is_parent_dynasty_of_ROOT = yes
+			}
+		}
+	}
+}
