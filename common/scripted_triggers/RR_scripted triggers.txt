@@ -1,0 +1,192 @@
+######################################
+# Scripted Triggers for Reformation Reform mod
+######################################
+
+#Anti-feudal religions
+is_antifeudal_religion_trigger = {
+	OR = {
+		religion = cathar
+		religion = waldensian
+		religion = bogomilist
+		has_religion_feature = RR_religion_community
+	}
+	OR = { #If religions are randomized, you need the feature.
+		has_religion_feature = RR_religion_community
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+	}
+}
+
+has_3_doctrines_selected_trigger = {
+	calc_true_if = {
+		amount = 3
+		has_selected_religion_feature = religion_proselytizing
+		has_selected_religion_feature = RR_religion_community
+		has_selected_religion_feature = RR_religion_holywar
+		has_selected_religion_feature = religion_dogmatic
+		has_selected_religion_feature = religion_cosmopolitan
+		has_selected_religion_feature = religion_syncretic
+		has_selected_religion_feature = religion_peaceful
+		has_selected_religion_feature = RR_religion_unity
+		has_selected_religion_feature = RR_religion_family
+		has_selected_religion_feature = religion_holy_family
+		has_selected_religion_feature = RR_religion_feature_concubines
+		has_selected_religion_feature = religion_harems
+		has_selected_religion_feature = RR_religion_sexual
+		has_selected_religion_feature = RR_religion_joy
+		has_selected_religion_feature = religion_meritocratic
+		has_selected_religion_feature = religion_stable
+		has_selected_religion_feature = religion_jizya
+		has_selected_religion_feature = religion_monastic
+		has_selected_religion_feature = RR_religion_feature_templebuilders
+		has_selected_religion_feature = religion_beatification
+		has_selected_religion_feature = religion_animistic
+		has_selected_religion_feature = religion_haruspicy
+		has_selected_religion_feature = religion_astrology
+		has_selected_religion_feature = religion_patriarchal
+		has_selected_religion_feature = religion_equal
+		has_selected_religion_feature = religion_matriarchal
+		has_selected_religion_feature = religion_defensive
+		has_selected_religion_feature = religion_warlike
+		has_selected_religion_feature = religion_ritual_sacrifice
+		has_selected_religion_feature = RR_religion_untamed
+		has_selected_religion_feature = religion_seafaring
+		has_selected_religion_feature = religion_adventuring
+		has_selected_religion_feature = religion_relentless
+		has_selected_religion_feature = RR_religion_feature_cavalry
+		has_selected_religion_feature = RR_religion_feature_elite
+		has_selected_religion_feature = RR_religion_feature_infantry
+		has_selected_religion_feature = RR_religion_feature_retinues
+		has_selected_religion_feature = religion_feature_norse
+		has_selected_religion_feature = religion_feature_tengri
+		has_selected_religion_feature = religion_feature_baltic
+		has_selected_religion_feature = religion_feature_slavic
+		has_selected_religion_feature = religion_feature_finnish
+		has_selected_religion_feature = religion_feature_west_african
+		has_selected_religion_feature = religion_feature_zun
+		has_selected_religion_feature = religion_feature_bon
+		has_selected_religion_feature = religion_feature_aztec
+		has_selected_religion_feature = religion_feature_hellenic
+		has_selected_religion_feature = religion_feature_pyramids
+	}
+}
+
+has_4_doctrines_selected_trigger = {
+	calc_true_if = {
+		amount = 4
+		has_selected_religion_feature = religion_proselytizing
+		has_selected_religion_feature = RR_religion_community
+		has_selected_religion_feature = RR_religion_holywar
+		has_selected_religion_feature = religion_dogmatic
+		has_selected_religion_feature = religion_cosmopolitan
+		has_selected_religion_feature = religion_syncretic
+		has_selected_religion_feature = religion_peaceful
+		has_selected_religion_feature = RR_religion_unity
+		has_selected_religion_feature = RR_religion_family
+		has_selected_religion_feature = religion_holy_family
+		has_selected_religion_feature = RR_religion_feature_concubines
+		has_selected_religion_feature = religion_harems
+		has_selected_religion_feature = RR_religion_sexual
+		has_selected_religion_feature = RR_religion_joy
+		has_selected_religion_feature = religion_meritocratic
+		has_selected_religion_feature = religion_stable
+		has_selected_religion_feature = religion_jizya
+		has_selected_religion_feature = religion_monastic
+		has_selected_religion_feature = RR_religion_feature_templebuilders
+		has_selected_religion_feature = religion_beatification
+		has_selected_religion_feature = religion_animistic
+		has_selected_religion_feature = religion_haruspicy
+		has_selected_religion_feature = religion_astrology
+		has_selected_religion_feature = religion_patriarchal
+		has_selected_religion_feature = religion_equal
+		has_selected_religion_feature = religion_matriarchal
+		has_selected_religion_feature = religion_defensive
+		has_selected_religion_feature = religion_warlike
+		has_selected_religion_feature = religion_ritual_sacrifice
+		has_selected_religion_feature = RR_religion_untamed
+		has_selected_religion_feature = religion_seafaring
+		has_selected_religion_feature = religion_adventuring
+		has_selected_religion_feature = religion_relentless
+		has_selected_religion_feature = RR_religion_feature_cavalry
+		has_selected_religion_feature = RR_religion_feature_elite
+		has_selected_religion_feature = RR_religion_feature_infantry
+		has_selected_religion_feature = RR_religion_feature_retinues
+		has_selected_religion_feature = religion_feature_norse
+		has_selected_religion_feature = religion_feature_tengri
+		has_selected_religion_feature = religion_feature_baltic
+		has_selected_religion_feature = religion_feature_slavic
+		has_selected_religion_feature = religion_feature_finnish
+		has_selected_religion_feature = religion_feature_west_african
+		has_selected_religion_feature = religion_feature_zun
+		has_selected_religion_feature = religion_feature_bon
+		has_selected_religion_feature = religion_feature_aztec
+		has_selected_religion_feature = religion_feature_hellenic
+		has_selected_religion_feature = religion_feature_pyramids
+	}
+}
+
+#cultural building/retinue grants light cavalry, horse archers, or camel cavalry
+is_lightcavalry_culture_trigger = {
+	OR = {
+		culture_group = iberian
+		culture = arberian
+		culture = alan
+		culture_group = altaic
+		culture_group = arabic
+		culture_group = west_slavic
+		culture_group = south_slavic
+		culture_group = magyar
+		culture_group = iranian
+	}
+}
+
+#cultural building/retinue grants lught infantry, archers, or pikemen
+is_light_culture_trigger = {
+	OR = {
+		culture = suebi
+		culture = english
+		culture = dutch
+		culture = italian
+		culture = dalmatian
+		culture = roman
+		culture = coptic
+		culture = welsh
+		culture = scottish
+		culture = pictish
+		culture_group = east_african
+		culture_group = west_african
+		culture_group = central_african
+		culture_group = tibetan_group
+		culture_group = chinese_group
+	}
+}
+
+#cultural building/retinue grants heavy infantry, heavy cavalry, or war elephants
+is_heavy_culture_trigger = {
+	OR = {
+		culture_group = north_germanic
+		culture_group = central_germanic
+		NOT = { culture = suebi }
+		culture_group = west_germanic
+		NOT = { culture = english }
+		NOT = { culture = dutch }
+		culture_group = latin
+		NOT = { culture = italian }
+		NOT = { culture = dalmatian }
+		NOT = { culture = roman }
+		culture_group = byzantine
+		NOT = { culture = arberian }
+		NOT = { culture = alan }
+		NOT = { culture = coptic }
+		culture = irish
+		culture = breton
+		culture_group = finno_ugric
+		culture_group = baltic
+		culture_group = east_slavic
+		culture_group = mesoamerican #event troops are mainly HI
+		culture_group = israelite
+		culture_group = indo_aryan_group
+		culture_group = dravidan_group
+	}
+}
