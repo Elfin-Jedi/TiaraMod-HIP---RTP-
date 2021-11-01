@@ -326,9 +326,6 @@ emf_astrology_religion = {
 						has_religion_feature = religion_astrology
 					}
 				}
-				trigger_else = {
-					religion = hellenic_pagan_reformed
-				}
 			}
 		}
 	}
@@ -1607,9 +1604,6 @@ emf_is_chinese_imperial_culture = {
 		culture = khitan
 		culture = tangut
 		culture = jurchen
-		culture = bohai
-		culture = korean
-		culture = vietnamese
 	}
 }
 
