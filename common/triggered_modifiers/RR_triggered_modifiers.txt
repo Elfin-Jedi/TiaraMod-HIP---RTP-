@@ -1,0 +1,51 @@
+##################################################
+#
+# STRATEGIC EFFECTS - A.K.A. "TRIGGERED MODIFIERS"
+#
+##################################################
+
+# God-king
+RR_godking_opinion_effect_male = {
+	potential = {
+		controls_religion = yes
+		is_ruler = yes
+		has_religion_feature = RR_religion_godking
+	}
+	
+	trigger = {
+		controls_religion = yes
+		is_ruler = yes
+		has_religion_feature = RR_religion_godking
+		is_female = no
+	}
+	
+	icon = 7
+	
+	same_religion_opinion = 50
+	general_opinion = -25
+	#ai_ambition = 50
+	#ai_zeal = 50
+}
+
+# God-queen
+RR_godking_opinion_effect_female = {
+	potential = {
+		controls_religion = yes
+		is_ruler = yes
+		has_religion_feature = RR_religion_godking
+	}
+	
+	trigger = {
+		controls_religion = yes
+		is_ruler = yes
+		has_religion_feature = RR_religion_godking
+		is_female = yes
+	}
+	
+	icon = 7
+	
+	same_religion_opinion = 50
+	general_opinion = -25
+	#ai_ambition = 50
+	#ai_zeal = 50
+}
