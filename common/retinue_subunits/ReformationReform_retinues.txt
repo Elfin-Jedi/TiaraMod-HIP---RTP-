@@ -1,0 +1,248 @@
+# Types:
+# 0 - Light Infantry
+# 1 - Heavy Infantry
+# 2 - Pikemen
+# 3 - Light Cavalry
+# 4 - Heavy Cavalry
+# 5 - Archers
+# 6 - Special troops
+
+# Doctrine retinues
+
+ReformationReformPietyRetinueLI = {
+	first_type = 0
+	first_amount = 500
+	
+	potential = {
+		is_nomadic = no
+		has_religion_feature = RR_religion_feature_retinues
+		capital_scope = {
+			OR = {
+				terrain = mountain
+				terrain = jungle
+				terrain = arctic
+				terrain = desert
+				terrain = marsh
+				terrain = coastal_desert
+			}
+		}
+	}
+	
+	hire_cost = 125
+	costs_piety = yes
+	
+	modifier = {
+		light_infantry_morale = 0.5
+	}
+}
+
+ReformationReformPietyRetinueAR = {
+	first_type = 5
+	first_amount = 250
+	
+	potential = {
+		is_nomadic = no
+		has_religion_feature = RR_religion_feature_retinues
+		capital_scope = {
+			OR = {
+				terrain = forest
+				terrain = jungle
+				terrain = arctic
+				terrain = marsh
+				terrain = woods
+			}
+		}
+	}
+	
+	hire_cost = 125
+	costs_piety = yes
+	
+	modifier = {
+		archers_morale = 0.5
+	}
+}
+
+ReformationReformPietyRetinueHI = {
+	first_type = 1
+	first_amount = 250
+	
+	potential = {
+		is_nomadic = no
+		has_religion_feature = RR_religion_feature_retinues
+		capital_scope = {
+			OR = {
+				terrain = hills
+				terrain = mountain
+				terrain = farmlands
+			}
+		}
+	}
+	
+	hire_cost = 250
+	costs_piety = yes
+	
+	modifier = {
+		heavy_infantry_morale = 0.5
+	}
+}
+
+ReformationReformPietyRetinuePI = {
+	first_type = 2
+	first_amount = 250
+	
+	potential = {
+		is_nomadic = no
+		has_religion_feature = RR_religion_feature_retinues
+		capital_scope = {
+			OR = {
+				terrain = hills
+				terrain = forest
+				terrain = woods
+			}
+		}
+	}
+	
+	hire_cost = 125
+	costs_piety = yes
+	
+	modifier = {
+		pikemen_morale = 0.5
+	}
+}
+
+ReformationReformPietyRetinueLC = {
+	first_type = 3
+	first_amount = 250
+	
+	potential = {
+		is_nomadic = no
+		has_religion_feature = RR_religion_feature_retinues
+		capital_scope = {
+			OR = {
+				terrain = plains
+				terrain = steppe
+			}
+		}
+	}
+	
+	hire_cost = 250
+	costs_piety = yes
+	
+	modifier = {
+		light_cavalry_morale = 0.5
+	}
+}
+
+ReformationReformPietyRetinueHA = {
+	first_type = 6
+	first_amount = 250
+
+	special_troops = horse_archers
+	
+	potential = {
+		is_nomadic = no
+		has_religion_feature = RR_religion_feature_retinues
+		capital_scope = {
+			OR = {
+				terrain = steppe
+			}
+		}
+	}
+	
+	hire_cost = 250
+	costs_piety = yes
+	
+	modifier = {
+		horse_archers_morale = 0.5
+	}
+}
+
+ReformationReformPietyRetinueHC = {
+	first_type = 4
+	first_amount = 250
+	
+	potential = {
+		is_nomadic = no
+		has_religion_feature = RR_religion_feature_retinues
+		capital_scope = {
+			OR = {
+				terrain = plains
+				terrain = farmlands
+			}
+		}
+	}
+	
+	hire_cost = 500
+	costs_piety = yes
+	
+	modifier = {
+		knights_morale = 0.5
+	}
+}
+
+ReformationReformPietyRetinueCC = {
+	first_type = 6
+	first_amount = 250
+
+	special_troops = camel_cavalry
+	
+	potential = {
+		is_nomadic = no
+		has_religion_feature = RR_religion_feature_retinues
+		capital_scope = {
+			OR = {
+				terrain = desert
+				terrain = coastal_desert
+			}
+		}
+	}
+	
+	hire_cost = 250
+	costs_piety = yes
+	
+	modifier = {
+		camel_cavalry_morale = 0.5
+	}
+}
+
+ReformationReformAmazonRetinueAR = {
+	first_type = 5
+	first_amount = 250
+	
+	potential = {
+		is_nomadic = no
+		has_religion_feature = RR_religion_feature_retinues
+		has_religion_feature = religion_matriarchal
+	}
+	
+	#hire_cost = 125
+	#costs_prestige = yes
+	
+	modifier = {
+		archers_offensive = 0.4
+		archers_defensive = 0.2
+		archers_morale = 0.2
+	}
+}
+
+ReformationReformAmazonRetinueHA = {
+	first_type = 6
+	first_amount = 250
+
+	special_troops = horse_archers
+	
+	potential = {
+		is_nomadic = no
+		has_religion_feature = RR_religion_feature_retinues
+		has_religion_feature = religion_matriarchal
+	}
+	
+	#hire_cost = 250
+	#costs_prestige = yes
+	
+	modifier = {
+		horse_archers_offensive = 0.4
+		horse_archers_defensive = 0.2
+		horse_archers_morale = 0.2
+	}
+}
