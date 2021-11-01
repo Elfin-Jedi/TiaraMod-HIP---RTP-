@@ -1,0 +1,288 @@
+targetted_decisions = {
+
+	RR_religion_sexual_decision_self = {
+		ai_check_interval = 12 #check once a year
+		filter = self
+		ai_target_filter = self
+
+		potential = {
+			has_religion_feature = RR_religion_sexual
+			NOT = { trait = lustful }
+			age = 16
+		}
+		allow = {
+			NOT = { trait = chaste }
+		}
+		effect = {
+			piety = 50
+			add_trait = lustful
+			if = {
+				limit = { 
+					ai = no
+					NOT = { trait = arbitrary }
+				}
+				random = {
+					chance = 5
+					add_trait = arbitrary
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5 #Every year half of the eligible AI characters that aren't yet lustful will take the decision.
+			}
+		}
+	}
+
+
+	RR_religion_replace_high_priest = {
+		ai_check_interval = 12 #check once a year
+		filter = vassals
+		ai_target_filter = vassals
+
+		from_potential = {
+			is_liege_of = ROOT
+		}
+		potential = {
+				controls_religion = yes
+				independent = no
+				government = theocracy_government
+				liege = { religion = prev }
+				OR = {
+					has_religion_feature = religion_autocephaly
+					religion = orthodox
+					religion = monothelite
+					religion = iconoclast
+					religion = paulician
+					religion = miaphysite
+					religion = monophysite
+				}
+		}
+		allow = {
+			FROM = { prestige = 1000 }
+		}
+		effect = {
+			abdicate = yes
+			FROM = { piety = -500 }
+			ROOT = { prestige = -500 }
+			opinion = {
+				modifier = opinion_revoked_my_title
+				who = FROM
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { # AI will not replace vassal priests if priest and liege both have positive opinion of each other.
+				factor = 0
+				opinion = {
+					who = ROOT
+					value = 1
+				}
+				reverse_opinion = {
+					who = ROOT
+					value = 1
+				}
+			}
+			modifier = { # AI lieges are less likely to repalce a vassal priest that they like.
+				factor = 0.1
+				opinion = {
+					who = ROOT
+					value = 0
+				}
+			}
+			modifier = { # AI lieges are less likely to repalce a vassal priest that likes them.
+				factor = 0.1
+				reverse_opinion = {
+					who = ROOT
+					value = 0
+				}
+			}
+		}
+	}
+
+}
+
+decisions = {
+
+	RR_religion_joy_decision = {
+		is_high_prio = yes
+		ai_check_interval = 1 #check once a year
+
+		potential = {
+			OR = {
+				has_religion_feature = RR_religion_joy
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+			}
+		}
+		allow = {
+			age = 16
+			OR = {
+				trait = depressed
+				trait = stressed
+				NOR = { # The bonuses you get if you take the decision and you aren't stressed/depressed.
+					has_character_modifier = RR_modifier_joy
+					has_character_modifier = RR_modifier_joy_family
+					has_character_modifier = RR_modifier_joy_friends
+				}
+			}
+		}
+		effect = {
+			hidden_tooltip = { character_event = { id = RR.100 } }
+			custom_tooltip = { text = RR_religion_joy_decision_custom_tooltip }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	RR_religion_cosmopolitan_syncretic_synergy_vassal_decision = {
+		is_high_prio = yes
+		ai_check_interval = 12 #check once a year
+
+		potential = {
+			independent = no
+			liege = {
+				NOT = { religion = prev }
+				has_religion_feature = religion_cosmopolitan
+				OR = {
+                    has_religion_feature = religion_syncretic
+                    religion = zun_pagan_reformed
+                }
+			}
+			NOR = {
+				trait = zealous
+				trait = sympathy_christendom
+				trait = sympathy_islam
+				trait = sympathy_judaism
+				trait = sympathy_pagans
+				trait = sympathy_zoroastrianism
+				trait = sympathy_indian
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					liege = { religion_group = christian }
+				}
+				add_trait = sympathy_christendom
+			}
+			else_if = {
+				limit = {
+					liege = { religion_group = muslim }
+				}
+				add_trait = sympathy_islam
+			}
+			else_if = {
+				limit = {
+					liege = { religion_group = jewish_group }
+				}
+				add_trait = sympathy_judaism
+			}
+			else_if = {
+				limit = {
+					liege = { religion_group = pagan_group }
+				}
+				add_trait = sympathy_pagans
+			}
+			else_if = {
+				limit = {
+					liege = { religion_group = zoroastrian_group }
+				}
+				add_trait = sympathy_zoroastrianism
+			}
+			else_if = {
+				limit = {
+					liege = { religion_group = indian_group }
+				}
+				add_trait = sympathy_indian
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.2
+			}
+			modifier = {
+				factor = 2
+				trait = cynical
+			}
+		}
+	}
+
+	RR_charity_decision = {
+		is_high_prio = yes
+		ai_check_interval = 6 #check twice a year
+
+		potential = {
+			OR = {
+				religion = waldensian
+				religion = fraticelli
+			}
+		}
+		allow = {
+			wealth = 500
+		}
+		effect = {
+			wealth = -500
+			piety = 200
+			if = {
+				limit = { trait = greedy }
+				random = {
+					chance = 5
+					remove_trait = greedy
+				}
+			}
+			else_if = {
+				limit = { NOT = { trait = charitable } }
+				random = {
+					chance = 5
+					add_trait = charitable
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				NOT = { wealth = 600 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { wealth = 800 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { wealth = 1000 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { wealth = 1200 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { wealth = 1600 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { wealth = 2000 }
+			}
+			modifier = {
+				factor = 10
+				trait = charitable
+			}
+			modifier = {
+				factor = 0.1
+				trait = greedy
+			}
+		}
+	}
+
+}

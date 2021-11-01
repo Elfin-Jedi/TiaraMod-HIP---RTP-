@@ -104,6 +104,11 @@ targetted_decisions = {
 				has_religion_feature = religion_feature_slavic
 				has_religion_feature = religion_feature_finnish
 				has_religion_feature = religion_syncretic_indian
+				has_religion_feature = religion_feature_egyptian
+				religion = lollard
+				religion = zun_pagan
+				religion = bon
+				religion = taoist
 			}
 			has_dlc = "Holy Fury"
 		}
@@ -350,6 +355,11 @@ targetted_decisions = {
 				has_religion_feature = religion_feature_slavic
 				has_religion_feature = religion_feature_finnish
 				has_religion_feature = religion_syncretic_indian
+				has_religion_feature = religion_feature_egyptian
+				religion = lollard
+				religion = zun_pagan
+				religion = bon
+				religion = taoist
 			}
 			has_dlc = "Holy Fury"
 		}
@@ -462,8 +472,11 @@ decisions = {
 				has_character_flag = flag_picking_sympathy
 			}
 			OR = {
-				has_religion_feature = religion_cosmopolitan
 				religion = hellenic_pagan
+				religion = west_african_pagan
+				religion = zun_pagan
+				religion = zun_pagan_reformed
+				has_religion_feature = religion_cosmopolitan
 				AND = {
 					religion = hellenic_pagan_reformed
 					has_religion_features = no
@@ -475,8 +488,10 @@ decisions = {
 		allow = {
 			prisoner = no
 			OR = {
-				has_religion_feature = religion_cosmopolitan
 				religion = hellenic_pagan
+				religion = west_african_pagan
+				religion = zun_pagan
+				has_religion_feature = religion_cosmopolitan
 				AND = {
 					religion = hellenic_pagan_reformed
 					has_religion_features = no
@@ -1496,7 +1511,8 @@ decisions = {
 				is_tribal = yes
 				is_nomadic = yes
 			}
-			OR = { 
+			OR = {
+				religion = promethean_pagan
 				religion = hellenic_pagan 
 				religion = hellenic_pagan_reformed
 				AND = { 
@@ -1649,8 +1665,7 @@ decisions = {
 				any_player = {
 					limit = {
 						OR = {
-							religion = hellenic_pagan_reformed
-							religion = hellenic_pagan
+							religion_openly_in_hellenic_subgroup_trigger = yes
 							culture = roman
 							is_within_diplo_range = ROOT
 						}
@@ -1679,7 +1694,10 @@ decisions = {
 			independent = yes
 			NOT = { has_any_opinion_modifier = opinion_blood_games_guest }
 			NOT = { has_religion_feature = religion_peaceful }
-			emf_ritual_sacrifice_religion = yes
+			OR = {
+				religion = titan_pagan
+				emf_ritual_sacrifice_religion = yes
+			}
 		}
 		
 		allow = {
@@ -1771,7 +1789,10 @@ decisions = {
 			is_landed = yes
 			independent = yes
 			NOT = { has_religion_feature = religion_peaceful } #Aztecs could reform as Peaceful.
-			emf_ritual_sacrifice_religion = yes
+			OR = {
+				religion = titan_pagan
+				emf_ritual_sacrifice_religion = yes
+			}
 		}
 		
 		allow = {
@@ -1852,7 +1873,7 @@ title_decisions = {
 		from_potential = {
 			has_dlc = "Mystics"
 			is_ruler = yes
-			society_member_of = monastic_order_stoics
+			is_hellenic_monastic_order_member_trigger = yes
 			society_rank == 4
 		}
 		
@@ -1886,7 +1907,7 @@ title_decisions = {
 				culture = FROM
 				add_province_modifier = {
 					name = peasant_unrest
-					years = 2
+					duration = 730
 				}
 			}
 			hidden_tooltip = {
@@ -2002,7 +2023,7 @@ settlement_decisions = {
 			is_playable = yes
 			is_tribal = yes
 			higher_tier_than = COUNT 
-			is_reformed_religion = no
+			is_organized_religion_trigger = no
 			independent = yes
 			OR = { 
 				religion = norse_pagan
@@ -2289,7 +2310,7 @@ settlement_decisions = {
 		
 		from_potential = {
 			has_dlc = "Holy Fury"
-			emf_unreformed_pagan = no
+			is_organized_religion_trigger = yes
 			is_playable = yes
 			is_tribal = no
 			is_nomadic = no

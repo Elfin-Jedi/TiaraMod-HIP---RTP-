@@ -1839,6 +1839,19 @@ decisions = {
 					limit = { religion = bogomilist }
 					chronicle = { entry = CHRONICLE_ADOPTED_BOGOMILIST picture = GFX_evt_castle_construction }
 				}
+				else_if = {
+					OR = {
+						is_antifeudal_religion_trigger = yes
+						has_religion_feature = RR_religion_community
+					}
+					set_government_type = RR_religious_community_government
+					
+					any_demesne_title = {
+						add_law = succ_RR_pious_elective
+						cooldown = no
+						opinion_effect = no
+					}
+				}
 				else = {
 					chronicle = { entry = CHRONICLE_ADOPTED_FEUDALISM picture = GFX_evt_castle_construction }
 				}
@@ -2087,6 +2100,19 @@ decisions = {
 					limit = { religion = bogomilist }
 					chronicle = { entry = CHRONICLE_ADOPTED_BOGOMILIST picture = GFX_evt_castle_construction }
 				}
+				else_if = {
+					OR = {
+						is_antifeudal_religion_trigger = yes
+						has_religion_feature = RR_religion_community
+					}
+					set_government_type = RR_religious_community_government
+					
+					any_demesne_title = {
+						add_law = succ_RR_pious_elective
+						cooldown = no
+						opinion_effect = no
+					}
+				}
 				else = {
 					chronicle = { entry = CHRONICLE_ADOPTED_FEUDALISM picture = GFX_evt_castle_construction }
 				}
@@ -2324,7 +2350,6 @@ decisions = {
 		}
 		allow = {
 			war = no
-			is_female = no
 			higher_tier_than = COUNT
 			primary_title = { has_law = tribal_organization_4 }
 			capital_scope = {
@@ -2364,7 +2389,6 @@ decisions = {
 					any_unique_dynasty_vassal = { # gives random vassals a family palace
 						count = 4
 						limit = {
-							is_female = no
 							OR = {
 								is_republic = yes
 								is_tribal = yes
