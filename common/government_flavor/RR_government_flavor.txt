@@ -1,0 +1,68 @@
+#########################
+# Standard Flavor Names #
+#########################
+
+government_flavor = {
+	name = gov_religious_community
+	graphics = GFX_evt_stone_church
+	priority = 3
+	trigger = {
+		government = RR_religious_community_government
+	}
+}
+
+government_flavor = {
+	name = gov_godking
+	graphics = GFX_evt_sun_temple
+	priority = 4
+	trigger = {
+		NOT = { tier = emperor }
+		is_female = no
+		OR = {
+			government = RR_temporal_feudal_government	
+			government = RR_temporal_tribal_government
+		}
+	}		
+}
+
+government_flavor = {
+	name = gov_godqueen
+	graphics = GFX_evt_matriarchy_throne_room
+	priority = 4
+	trigger = {
+		NOT = { tier = emperor }
+		is_female = yes
+		OR = {
+			government = RR_temporal_feudal_government	
+			government = RR_temporal_tribal_government
+		}
+	}		
+}
+
+government_flavor = {
+	name = gov_godemperor
+	graphics = GFX_evt_sun_temple
+	priority = 4
+	trigger = {
+		tier = emperor
+		is_female = no
+		OR = {
+			government = RR_temporal_feudal_government	
+			government = RR_temporal_tribal_government
+		}
+	}		
+}
+
+government_flavor = {
+	name = gov_godempress
+	graphics = GFX_evt_matriarchy_throne_room
+	priority = 4
+	trigger = {
+		tier = emperor
+		is_female = yes
+		OR = {
+			government = RR_temporal_feudal_government	
+			government = RR_temporal_tribal_government
+		}
+	}		
+}
