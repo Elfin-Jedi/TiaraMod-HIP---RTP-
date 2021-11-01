@@ -36,7 +36,7 @@ deciding_upon_saint_effect = {
         }
         # Reduced chance for Popes / Antipopes to become Saints
         modifier = {
-            factor = 0.8
+            factor = 0.4
             OR = {
                 has_landed_title = k_papal_state
                 has_landed_title = d_fraticelli
@@ -140,7 +140,7 @@ deciding_upon_saint_effect = {
         }
         #Players who don't have a saintly bloodline have a higher chance of becoming a Saint
         modifier = {
-            factor = 4
+            factor = 2
             event_target:saint_person  = {
                 ai = no
             }
@@ -203,20 +203,20 @@ deciding_upon_saint_effect = {
             }
         }
         modifier = {
-            factor = 1.5
+            factor = 1.2
             event_target:saint_person = {
                 trait = just
             }
         }
         modifier = {
-            factor = 1.5
+            factor = 1.2
             event_target:saint_person = {
                 has_crusade_trait_trigger = yes
             }
         }
         #Having the bloodline of a Saint severely decrease your chance of becoming a Saint
         modifier = {
-            factor = 0.5
+            factor = 0.2
             event_target:saint_person = {
                 any_owned_bloodline = {
                     OR = {
@@ -450,67 +450,75 @@ deciding_upon_saint_effect = {
 
 check_if_ancestor_worship_worthy_effect = {
     random = {
-        chance = 3
+        chance = 1 # Down from 2 because they were a bit too common.
+	
+		#RR change: unreformed pagans have half the normal chance, unless they have Ancestor Veneration doctrine (random world religions)
+        modifier = {
+            factor = 0.5
+            NOT = { has_religion_feature = religion_beatification }
+            religion_group = pagan_group
+            is_reformed_religion = no
+        }
 
         ### Prestige based modifiers ### 
         modifier = {
-            factor = 1.2
+            factor = 1.3
             prestige = 1500
         }
         modifier = {
-            factor = 1.2
+            factor = 1.3
             prestige = 2000
         }
         modifier = {
-            factor = 1.2
+            factor = 1.3
             prestige = 2500
         }
         modifier = {
-            factor = 1.2
+            factor = 1.3
             prestige = 3000
         }
         modifier = {
-            factor = 1.2
+            factor = 1.3
             prestige = 3500
         }
         modifier = {
-            factor = 1.2
+            factor = 1.3
             prestige = 4000
         }
         modifier = {
-            factor = 1.2
+            factor = 1.3
             prestige = 4500
         }
         modifier = {
-            factor = 1.2
+            factor = 1.3
             prestige = 5000
         }
         modifier = {
-            factor = 1.2
+            factor = 1.3
             prestige = 6000
         }
         modifier = {
-            factor = 1.2
+            factor = 1.3
             prestige = 7000
         }
         modifier = {
-            factor = 1.2
+            factor = 1.3
             prestige = 8000
         }
         modifier = {
-            factor = 1.2
+            factor = 1.3
             prestige = 9000
         }
         modifier = {
-            factor = 1.2
+            factor = 1.3
             prestige = 10000
         }
         modifier = {
-            factor = 1.2
+            factor = 1.3
             prestige = 15000
         }
         modifier = {
-            factor = 1.2
+            factor = 1.3
             prestige = 20000
         }
 
@@ -1425,6 +1433,256 @@ check_if_ancestor_worship_worthy_effect = {
                 has_any_leadership_trait_trigger = yes
             }
         }
+		
+		
+		### Reformation Reform ###
+
+        ## God King ##
+        # Positive
+        modifier = {
+            factor = 3 # God kings are commonly venerated.
+            has_religion_feature = RR_religion_godking
+            controls_religion = yes
+        }
+        modifier = {
+            factor = 100 # First god king always spawns a bloodline.
+            has_religion_feature = RR_religion_godking
+            controls_religion = yes
+            any_owned_bloodline = {
+                has_bloodline_flag = ancestor_worship_bloodline
+                count = 0
+            }
+        }
+        modifier = {
+            factor = 1.5 # Close family still has a good chance.
+            has_religion_feature = RR_religion_godking
+            any_close_relative = { controls_religion = yes }
+        }
+        # Negative
+        modifier = {
+            factor = 0.1 # Cynics are not appreciated.
+            has_religion_feature = RR_religion_godking
+            trait = cynical
+        }
+
+        ## Religious Community ##
+        # Positive
+        modifier = {
+            factor = 1.5
+            has_religion_feature = RR_religion_community
+            learning = 20
+        }
+        modifier = {
+            factor = 1.5
+            has_religion_feature = RR_religion_community
+            learning = 15
+        }
+        # Negative
+        modifier = {
+            factor = 0.65
+            has_religion_feature = RR_religion_community
+            NOT = {
+                learning = 10
+            }
+        }
+        modifier = {
+            factor = 0.65
+            has_religion_feature = RR_religion_community
+            has_impious_trait_trigger = yes
+        }
+
+        ## Unity ##
+        # Positive
+        modifier = {
+            factor = 1.5
+            has_religion_feature = RR_religion_family
+            has_focus = focus_family
+        }
+        # Negative
+        modifier = {
+            factor = 0.1
+            has_religion_feature = RR_religion_family
+            OR = {
+                trait = kinslayer
+				trait = familial_kinslayer
+				trait = dynastic_kinslayer
+				trait = tribal_kinslayer
+            }
+        }
+
+        ## Concubinage ##
+        # Positive
+        modifier = {
+            factor = 1.5
+            has_religion_feature = RR_religion_feature_concubines
+            any_consort	 = {
+                count = 2
+            }
+        }
+        # Negative 
+        modifier = {
+            factor = 0.65
+            has_religion_feature = RR_religion_feature_concubines
+            NOT = {
+                any_consort	 = {
+                    count = 1
+                }
+            }
+        }
+        modifier = {
+            factor = 0.65
+            any_consort	 = RR_religion_feature_concubines
+            trait = chaste
+        }
+        modifier = {
+            factor = 0.65
+            any_consort	 = RR_religion_feature_concubines
+            trait = celibate
+        }
+
+        ## Free Love ##
+        # Positive
+        modifier = {
+            factor = 1.5
+            has_religion_feature = RR_religion_sexual
+            any_lover = {
+                count = 2 # One lover is taken for granted, two are comendable.
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_religion_feature = RR_religion_sexual
+            has_focus = focus_seduction
+        }
+        # Negative
+        modifier = {
+            factor = 0.65
+            has_religion_feature = RR_religion_sexual
+            trait = celibate
+        }
+        modifier = {
+            factor = 0.65
+            has_religion_feature = RR_religion_sexual
+            trait = chaste
+        }
+
+        ## Joy of Life ##
+        # Positive
+        modifier = {
+            factor = 1.5
+            OR = {
+				has_religion_feature = RR_religion_joy
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+			}
+            has_focus = focus_carousing
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+				has_religion_feature = RR_religion_joy
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+			}
+            any_friend = {
+				count = 3
+			}
+        }
+        # Negative
+        modifier = {
+            factor = 0.65
+            OR = {
+				has_religion_feature = RR_religion_joy
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+			}
+            trait = stressed
+        }
+        modifier = {
+            factor = 0.65
+            OR = {
+				has_religion_feature = RR_religion_joy
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+			}
+            trait = depressed
+        }
+
+        ## Temple Builders ##
+        # Positive
+        modifier = {
+            factor = 1.5
+            has_religion_feature = RR_religion_feature_templebuilders
+            trait = architect
+        }
+        modifier = {
+            factor = 1.5
+            has_religion_feature = RR_religion_feature_templebuilders
+            trait = zealous
+        }
+        # Negative
+        modifier = {
+            factor = 0.65
+            has_religion_feature = RR_religion_feature_templebuilders
+            trait = cynical
+        }
+
+        ## Untamed ##
+        # Positive
+        modifier = {
+            factor = 1.5
+            has_religion_feature = RR_religion_untamed
+            martial = 20
+        }
+        modifier = {
+            factor = 1.5
+            has_religion_feature = RR_religion_untamed
+            trait = brave
+        }
+        # Negative
+        modifier = {
+            factor = 0.65
+            has_religion_feature = RR_religion_untamed
+            NOT = {
+                martial = 15
+            }
+        }
+        modifier = {
+            factor = 0.65
+            has_religion_feature = RR_religion_untamed
+            trait = craven
+        }
+
+        ## Horse Cult ##
+        # Positive
+        modifier = {
+            factor = 1.5
+            has_religion_feature = RR_religion_feature_cavalry
+            trait = cavalry_leader
+        }
+
+        ## Warrior Elite ##
+        # Positive
+        modifier = {
+            factor = 1.5
+            has_religion_feature = RR_religion_feature_elite
+            trait = heavy_infantry_leader
+        }
+        modifier = {
+            factor = 1.5
+            has_religion_feature = RR_religion_feature_elite
+            trait = war_elephant_leader
+        }
+
+        ## Populist ##
+        # Positive
+        modifier = {
+            factor = 1.5
+            has_religion_feature = RR_religion_feature_infantry
+            trait = light_foot_leader
+        }
+		
+		
         #### Reduce chance if already have other Ancestor Worshipping Bloodlines ####
         modifier = {
             factor = 0.4
@@ -1463,8 +1721,302 @@ check_if_ancestor_worship_worthy_effect = {
         }
 
         set_character_flag = blessed_ancestor_prestige
-        rightful_religious_head_scope = {
-            character_event = { id = HF.40101 days = 3 }
+	#   rightful_religious_head_scope = {
+    #		character_event = { id = HF.40101 days = 3 }
+	#	}
+		custom_tooltip = {
+        	text = pagan_pope_cannonize_choice_TT
+
+        	# Titles and Bloodlines
+        	event_target:saint_person = {
+        		set_special_character_title = BLESSED_TITLE
+
+        		random_list = {
+        			10 = {
+        				modifier = {
+        					factor = 0.4
+        					any_owned_bloodline = {
+        						has_bloodline_flag = bloodline_heroes
+        					}
+        				}
+        				if = {
+        					limit = {
+        						is_female = yes
+        					}
+        					create_bloodline = {
+        						type = ancestor_worship_bloodline_01
+                                religion = event_target:saint_person
+        						inheritance = matrilineal
+        					}
+        				}
+        				else = {
+        					create_bloodline = {
+        						type = ancestor_worship_bloodline_01
+                                religion = event_target:saint_person
+        					}
+        				}
+        				if = {
+        					limit = {
+        						can_apply_average_nickname_trigger = yes
+        					}
+        					give_nickname = nick_the_great
+        				}
+        			}
+        			30 = {
+        				trigger = {
+        					OR = {
+        						trait = bastard
+        						trait = legit_bastard
+        					}
+        				}
+        				modifier = {
+        					factor = 0.1
+        					any_owned_bloodline = {
+        						has_bloodline_flag = bloodline_legitimize
+        					}
+        				}
+        				if = {
+    						limit = {
+    							is_female = yes
+    						}
+    						create_bloodline = {
+    							type = ancestor_worship_bloodline_02
+                                religion = event_target:saint_person
+    							inheritance = matrilineal
+    						}
+    					}
+    					else = {
+    						create_bloodline = {
+    							type = ancestor_worship_bloodline_02
+                                religion = event_target:saint_person
+    						}
+    					}
+    					if = {
+    						limit = {
+    							can_apply_lame_nickname_trigger = yes
+    						}
+    						give_nickname = nick_the_bastard
+    					}
+        			}
+        			20 = {
+        				trigger = {
+        					OR = {
+        						AND = {
+        							government = nomadic_government
+        							OR = {
+        								religion = tengri_pagan
+        								religion = tengri_pagan_reformed
+        							}
+        						}
+        						religion = bon
+        						religion = bon_reformed
+        					}
+        				}
+        				modifier = {
+        					factor = 0.2
+        					any_owned_bloodline = {
+        						has_bloodline_flag = bloodline_sky_burial
+        					}
+        				}
+        				if = {
+        					limit = {
+        						is_female = yes
+        					}
+        					create_bloodline = {
+        						type = ancestor_worship_bloodline_03
+                                religion = event_target:saint_person
+        						inheritance = matrilineal
+        					}
+        				}
+        				else = {
+        					create_bloodline = {
+        						type = ancestor_worship_bloodline_03
+                                religion = event_target:saint_person
+        					}
+        				}
+        				if = {
+        					limit = {
+        						can_apply_average_nickname_trigger = yes
+        					}
+        					give_nickname = nick_the_guide
+        				}
+        			}
+        			20 = {
+        				trigger = {
+        					government = nomadic_government
+        				}
+        				modifier = {
+        					factor = 0.1
+        					any_owned_bloodline = {
+        						has_bloodline_flag = bloodline_mercenary_traditions
+        					}
+        				}
+        				if = {
+        					limit = {
+        						is_female = yes
+        					}
+        					create_bloodline = {
+        						type = ancestor_worship_bloodline_04
+                                religion = event_target:saint_person
+        						inheritance = matrilineal
+        					}
+        				}
+        				else = {
+        					create_bloodline = {
+        						type = ancestor_worship_bloodline_04
+                                religion = event_target:saint_person
+        					}
+        				}
+        				if = {
+        					limit = {
+        						can_apply_cool_nickname_trigger = yes
+        					}
+        					give_nickname = nick_the_scourge
+        				}
+        			}
+        			30 = {
+        				trigger = {
+        					has_law = succ_tanistry
+        				}
+        				modifier = {
+        					factor = 0.1
+        					any_owned_bloodline = {
+        						has_bloodline_flag = bloodline_tanistry
+        					}
+        				}
+        				if = {
+        					limit = {
+        						is_female = yes
+        					}
+        					create_bloodline = {
+        						type = ancestor_worship_bloodline_05
+                                religion = event_target:saint_person
+        						inheritance = matrilineal
+        					}
+        				}
+        				else = {
+        					create_bloodline = {
+        						type = ancestor_worship_bloodline_05
+                                religion = event_target:saint_person
+        					}
+        				}
+        				if = {
+        					limit = {
+        						can_apply_cool_nickname_trigger = yes
+        					}
+        					give_nickname = nick_the_lawgiver
+        				}
+        			}
+        			30 = {
+        				trigger = {
+        					OR = {
+        						trait = pirate
+        						trait = viking
+        						trait = ravager
+        						trait = sea_queen
+        						trait = seaking
+        					}
+        				}
+        				modifier = {
+        					factor = 0.1
+        					any_owned_bloodline = {
+                                has_bloodline_flag = more_raiders_bloodline
+                                bloodline_is_active_for = PREV
+        					}
+        				}
+        				if = {
+        					limit = {
+        						is_female = yes
+        					}
+        					create_bloodline = {
+        						type = ancestor_worship_bloodline_06
+                                religion = event_target:saint_person
+        						inheritance = matrilineal
+        					}
+        				}
+        				else = {
+        					create_bloodline = {
+        						type = ancestor_worship_bloodline_06
+                                religion = event_target:saint_person
+        					}
+        				}
+        				if = {
+        					limit = {
+        						can_apply_cool_nickname_trigger = yes
+        						is_female = yes
+        					}
+        					give_nickname = nick_the_valkyrie
+        				}
+        				if = {
+        					limit = {
+        						can_apply_cool_nickname_trigger = yes
+        						is_female = no
+        					}
+        					give_nickname = the_unrestrained
+        				}
+        			}
+        			20 = {
+        				trigger = {
+        					trait = duelist 
+        				}
+        				modifier = {
+        					factor = 0.1
+        					any_owned_bloodline = {
+        						has_bloodline_flag = duelist_bloodline
+        					}
+        				}
+        				if = {
+        					limit = {
+        						is_female = yes
+        					}
+        					create_bloodline = {
+        						type = ancestor_worship_bloodline_07
+                                religion = event_target:saint_person
+        						inheritance = matrilineal
+        					}
+        				}
+        				else = {
+        					create_bloodline = {
+        						type = ancestor_worship_bloodline_07
+                                religion = event_target:saint_person
+        					}
+        				}
+        				if = {
+        					limit = {
+        						can_apply_average_nickname_trigger = yes
+        					}
+        					give_nickname = nick_bloodaxe
+        				}
+        			}
+        		}
+        		new_bloodline = {
+                    set_name = blessed_bloodline_name
+                    set_description = blessed_bloodline_description
+                }
+        	}
+        	hidden_tooltip = {
+                # Messages
+            	any_playable_ruler = {
+                    limit = {
+                        NOT = {
+                            family = event_target:saint_person
+                        }
+                        religion = ROOT
+                    }
+                    narrative_event = { id = HF.40025 }
+                }
+                event_target:saint_person = {
+                    any_dynasty_member = {
+                        limit = {
+                            religion_group = ROOT
+                        }
+                        narrative_event = { id = HF.40025 }
+                    }
+                }
+                ROOT = {
+                    narrative_event = { id = HF.40025 }
+                }
+            }
         }
     }
 }
