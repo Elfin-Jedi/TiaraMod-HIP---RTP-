@@ -1,0 +1,82 @@
+# Supported types:
+# character, spouse, rivals, friends, liege_titles, vassal_titles, realm_titles, realm_characters, realm_characters_plus, independent_rulers
+
+###############
+# AMBITIONS
+###############
+
+obj_RR_truth = {
+	type = character
+	
+	potential = {
+		OR = {
+			religion = zoroastrian
+			religion = lollard
+			has_religion_feature = RR_religion_truth
+		}
+		NAND = {
+			trait = honest
+			trait = just
+			trait = diligent
+		}
+	}
+	
+	allow = {
+		is_adult = yes
+		NOT = { trait = incapable }
+	}
+	
+	chance = {
+		factor = 100
+		
+		modifier = {
+			factor = 2
+			trait = zealous
+		}
+		modifier = {
+			factor = 2
+			trait = honest
+		}
+		modifier = {
+			factor = 2
+			trait = just
+		}
+		modifier = {
+			factor = 2
+			trait = diligent
+		}
+		modifier = {
+			factor = 0.5
+			trait = cynical
+		}
+		modifier = {
+			factor = 0.5
+			trait = deceitful
+		}
+		modifier = {
+			factor = 0.5
+			trait = arbitrary
+		}
+		modifier = {
+			factor = 0.5
+			trait = slothful
+		}
+	}
+	success = {
+		trait = honest
+		trait = just
+		trait = diligent
+	}
+	abort = {
+		NOR = {
+			religion = zoroastrian
+			religion = lollard
+			has_religion_feature = RR_religion_truth
+		}
+	}
+	abort_effect = {
+	}
+	effect = {
+		piety = 100
+	}
+}
