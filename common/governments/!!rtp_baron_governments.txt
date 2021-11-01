@@ -50,6 +50,8 @@ feudal_governments = {
 		title_prefix = "order_"
 		capital_move_delay = 600
 		can_inherit = no
+		have_gender_laws = yes
+		allows_matrilineal_marriage = yes
 		barons_need_dynasty = yes
 		can_build_holdings = no
 		can_create_kingdoms = no
@@ -111,6 +113,8 @@ feudal_governments = {
 		title_prefix = "mercenary_"
 		capital_move_delay = 600
 		can_build_holdings = no
+		have_gender_laws = yes
+		allows_matrilineal_marriage = yes
 		can_create_kingdoms = no
 		can_usurp_kingdoms_and_empires = no
 		can_be_granted_kingdoms_and_empires_by_other_government = no
@@ -184,7 +188,9 @@ feudal_governments = {
 		}
 		commander_limit = -1
 		court_size_modifier = -5
-
+		
+		have_gender_laws = yes
+		allows_matrilineal_marriage = yes
 		can_create_kingdoms = no
 		can_usurp_kingdoms_and_empires = no
 		can_be_granted_kingdoms_and_empires_by_other_government = no
@@ -255,7 +261,9 @@ feudal_governments = {
 		}
 		commander_limit = -1
 		court_size_modifier = -5
-
+		
+		have_gender_laws = yes
+		allows_matrilineal_marriage = yes
 		can_create_kingdoms = no
 		can_usurp_kingdoms_and_empires = no
 		can_be_granted_kingdoms_and_empires_by_other_government = no
@@ -339,6 +347,8 @@ feudal_governments = {
 		color = { 91 133 207 }
 		frame_suffix = "_baron"
 		capital_move_delay = 600
+		have_gender_laws = yes
+		allows_matrilineal_marriage = yes
 		can_build_holdings = no
 		can_create_kingdoms = no
 		can_usurp_kingdoms_and_empires = no
@@ -418,6 +428,9 @@ feudal_governments = {
 
 			nomadic_government
 		}
+		
+		have_gender_laws = yes
+		allows_matrilineal_marriage = yes
 		
 		color = { 10 138 57 }
 		frame_suffix = "_baroniqta"
@@ -512,6 +525,8 @@ feudal_governments = {
 		color = { 207 145 90 }
 		frame_suffix = "_baronmonastic"
 		capital_move_delay = 600
+		have_gender_laws = yes
+		allows_matrilineal_marriage = yes
 		can_build_holdings = no
 		can_create_kingdoms = no
 		can_usurp_kingdoms_and_empires = no

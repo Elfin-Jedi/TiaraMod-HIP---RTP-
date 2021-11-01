@@ -54,6 +54,7 @@ feudal_governments = {
 		frame_suffix = "_lowborn"
 		allow_looting = yes
 		free_levies_in_offensive_war = yes
+		have_gender_laws = yes
 		allows_matrilineal_marriage = yes
 		uses_bride_price = yes
 		can_create_kingdoms = no
@@ -113,6 +114,7 @@ feudal_governments = {
 		frame_suffix = "_noble"
 		allow_looting = yes
 		free_levies_in_offensive_war = yes
+		have_gender_laws = yes
 		allows_matrilineal_marriage = yes
 		uses_bride_price = yes
 		can_create_kingdoms = no
@@ -168,6 +170,7 @@ feudal_governments = {
 		allow_looting = yes
 		free_levies_in_offensive_war = yes
 		court_size_modifier = -10
+		have_gender_laws = yes
 		allows_matrilineal_marriage = yes
 		marriage_ignore_religion = yes
 		uses_bride_price = yes
@@ -235,6 +238,7 @@ feudal_governments = {
 		title_prefix = "order_"
 		allow_looting = yes
 		free_levies_in_offensive_war = yes
+		have_gender_laws = yes
 		allows_matrilineal_marriage = yes
 		uses_bride_price = yes
 		can_create_kingdoms = no
@@ -277,7 +281,9 @@ feudal_governments = {
 		allowed_holdings = {
 			CASTLE
 		}
-
+		have_gender_laws = yes
+		allows_matrilineal_marriage = yes
+		
 		color = { 91 133 207 }
 		frame_suffix = "_landlessadventurer"
 		capital_move_delay = 600

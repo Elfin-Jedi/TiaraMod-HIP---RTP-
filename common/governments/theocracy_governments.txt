@@ -1,0 +1,68 @@
+# -*- ck2.governments -*-
+
+theocracy_governments = {
+
+	theocracy_government = {
+		preferred_holdings = { TEMPLE }
+		allowed_holdings = {
+			TEMPLE
+			CASTLE
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+		accepts_liege_governments = {
+			feudal_government
+			bogomilist_government
+			muslim_government
+			theocratic_feudal_government
+			republic_government
+			merchant_republic_government
+			muslim_merchant_republic_government
+			bogomilist_merchant_republic_government
+			imperial_government
+			muslim_imperial_government
+			bogomilist_imperial_government
+			theocratic_imperial_government
+			chinese_imperial_government
+			RR_temporal_feudal_government
+			RR_temporal_tribal_government
+		}
+		frame_suffix = "_theocracy"
+		title_prefix = "temple_"
+		potential = {
+			OR = {
+				NAND = {
+					higher_tier_than = baron
+					OR = {
+						is_antifeudal_religion_trigger = yes
+						religion = lollard
+						has_religion_feature = religion_temporal_head
+						religion_group = muslim
+					}
+				}
+				controls_religion = yes
+			}
+			emf_theocracy_softcoded_potential = yes
+		}
+
+		color = { 220 220 220 }
+
+		can_create_kingdoms = no
+		have_gender_laws = no
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+		capital_move_delay = 600
+	}
+
+}

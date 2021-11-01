@@ -93,9 +93,9 @@ republic_governments = {
 		can_imprison_without_reason = no
 		can_revoke_without_reason = no
 		can_usurp_kingdoms_and_empires = no
-		have_gender_laws = no
+		have_gender_laws = yes
 		can_grant_kingdoms_and_empires_to_other_government = yes
-		allows_matrilineal_marriage = no
+		allows_matrilineal_marriage = yes
 		uses_bride_price = yes
 
 		can_build_tribal = no
@@ -202,9 +202,9 @@ republic_governments = {
 		can_imprison_without_reason = no
 		can_revoke_without_reason = no
 		can_usurp_kingdoms_and_empires = no
-		have_gender_laws = no
+		have_gender_laws = yes
 		can_grant_kingdoms_and_empires_to_other_government = yes
-		allows_matrilineal_marriage = no
+		allows_matrilineal_marriage = yes
 		uses_bride_price = yes
 
 		can_build_tribal = no
@@ -318,9 +318,9 @@ republic_governments = {
 		can_imprison_without_reason = no
 		can_revoke_without_reason = no
 		can_usurp_kingdoms_and_empires = no
-		have_gender_laws = no
+		have_gender_laws = yes
 		can_grant_kingdoms_and_empires_to_other_government = yes
-		allows_matrilineal_marriage = no
+		allows_matrilineal_marriage = yes
 		uses_bride_price = yes
 		can_be_granted_kingdoms_and_empires_by_other_government = yes
 
@@ -363,6 +363,10 @@ republic_governments = {
 		title_prefix = "city_"
 		potential = {
 			NAND = {
+				higher_tier_than = baron
+				is_antifeudal_religion_trigger = yes
+			}
+			NAND = {
 				controls_religion = yes
 				NOT = { religion_group = muslim }
 			}
@@ -379,6 +383,8 @@ republic_governments = {
 
 		can_imprison_without_reason = no
 		can_revoke_without_reason = no
+		have_gender_laws = yes
+		allows_matrilineal_marriage = yes
 
 		can_build_tribal = no
 
@@ -407,7 +413,9 @@ republic_governments = {
 			feudal_government
 			bogomilist_government
 			muslim_government
+			chinese_imperial_government
 			theocracy_government
+			tribal_government
 			merchant_republic_government
 			muslim_merchant_republic_government
 			bogomilist_merchant_republic_government
@@ -434,6 +442,8 @@ republic_governments = {
 		
 		can_imprison_without_reason = no
 		can_revoke_without_reason = no
+		have_gender_laws = yes
+		allows_matrilineal_marriage = yes
 		
 		can_build_tribal = no
 		

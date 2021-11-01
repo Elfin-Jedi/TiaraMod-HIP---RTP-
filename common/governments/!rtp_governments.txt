@@ -103,6 +103,8 @@ feudal_governments = {
 		}
 
 		uses_prestige_for_law_change = yes
+		have_gender_laws = yes
+		allows_matrilineal_marriage = yes
 		can_grant_kingdoms_and_empires_to_other_government_group = yes
 		gets_religion_opinion_penalties = no
 		can_demand_religious_conversion = no
@@ -167,6 +169,8 @@ feudal_governments = {
 
 		allow_looting = yes
 		free_levies_in_offensive_war = yes
+		have_gender_laws = yes
+		allows_matrilineal_marriage = yes
 		uses_bride_price = yes
 		can_create_kingdoms = no
 		can_usurp_kingdoms_and_empires = no
@@ -231,6 +235,8 @@ feudal_governments = {
 		can_build_tribal = no
 		aggression = 0.25
 
+		have_gender_laws = yes
+		allows_matrilineal_marriage = yes
 		marriage_ignore_religion = yes
 		gives_religion_opinion_penalties = no
 		gets_religion_opinion_penalties = no
@@ -455,6 +461,8 @@ republic_governments = {
 		can_usurp_kingdoms_and_empires = no
 		can_be_granted_kingdoms_and_empires_by_other_government = no
 		can_demand_religious_conversion = no
+		have_gender_laws = yes
+		allows_matrilineal_marriage = yes
 		uses_bride_price = yes
 	}
 }

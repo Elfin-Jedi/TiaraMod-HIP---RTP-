@@ -21,19 +21,30 @@ feudal_governments = {
 			bogomilist_imperial_government
 			theocratic_imperial_government
 			chinese_imperial_government
+			RR_religious_community_government
+			RR_temporal_feudal_government #godking
+			RR_temporal_tribal_government
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
 		}
 		potential = {
+			NAND = {
+				higher_tier_than = baron
+				has_religion_feature = RR_religion_community
+			}
+			NOT = { is_government_potential = RR_temporal_feudal_government }
+			NOT = { is_government_potential = RR_religious_community_government }
 			OR = {
 				controls_religion = no
 				religion_group = muslim
 				has_religion_feature = religion_temporal_head
 				AND = {
 					OR = {
-						religion = norse_pagan_reformed
-						religion = aztec_reformed
+						AND = {
+							religion = norse_pagan_reformed
+							religion = aztec_reformed
+						}
 					}
 					has_religion_features = no
 				}
@@ -86,7 +97,8 @@ feudal_governments = {
 			}
 		}
 
-		color = { 91 133 207 }
+		color = { 80 110 200 }
+		#color = { 91 133 207 }
 
 		dukes_called_kings = yes
 		barons_need_dynasty = yes
@@ -121,6 +133,9 @@ feudal_governments = {
 			bogomilist_imperial_government
 			theocratic_imperial_government
 			chinese_imperial_government
+			RR_temporal_feudal_government #godking
+			RR_temporal_tribal_government
+			RR_religious_community_government
 		}
 		free_revoke_on_tiers = {
 			duke
@@ -130,6 +145,12 @@ feudal_governments = {
 		}
 		frame_suffix = "_iqta"
 		potential = {
+			NOT = { is_government_potential = RR_temporal_feudal_government }
+			NOT = { is_government_potential = RR_religious_community_government }
+			NAND = {
+				higher_tier_than = baron
+				is_antifeudal_religion_trigger = yes
+			}
 			OR = {
 				controls_religion = no
 				religion_group = muslim
@@ -225,16 +246,20 @@ feudal_governments = {
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
 			muslim_government
+			theocracy_government
 			feudal_government
 			theocratic_feudal_government
 			imperial_government
 			muslim_imperial_government
 			bogomilist_imperial_government
 			theocratic_imperial_government
+			chinese_imperial_government
+			RR_temporal_feudal_government #godking
+			RR_temporal_tribal_government
+			RR_religious_community_government
 		}
-		free_revoke_on_governments_religion = { # vassals of other religions can have their titles revoked for free
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
-			theocracy_government
 		}
 		potential = {
 			OR = {
@@ -330,16 +355,25 @@ feudal_governments = {
 			bogomilist_imperial_government
 			theocratic_imperial_government
 			chinese_imperial_government
+			RR_temporal_feudal_government #godking
+			RR_temporal_tribal_government
+			RR_religious_community_government
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
 		}
 		frame_suffix = "_theocraticfeudal"
 		potential = {
+			#NOT = { is_government_potential = RR_temporal_feudal_government }
+			NAND = {
+				higher_tier_than = baron
+				is_antifeudal_religion_trigger = yes
+			}
 			OR = {
 				controls_religion = no
 				religion_group = muslim
 				has_religion_feature = religion_temporal_head
+				has_religion_feature = RR_religion_godking
 				AND = {
 					OR = {
 						religion = norse_pagan_reformed
@@ -363,6 +397,10 @@ feudal_governments = {
 					religion = bon
 					religion = bon_reformed
 					religion = buddhist
+					religion = hindu
+					religion = jain
+					has_religion_feature = religion_monastic
+					religion_group = christian
 				}
 				higher_tier_than = BARON
 			}
@@ -429,6 +467,9 @@ feudal_governments = {
 			muslim_imperial_government
 			bogomilist_imperial_government
 			theocratic_imperial_government
+			RR_temporal_feudal_government #godking
+			RR_temporal_tribal_government
+			RR_religious_community_government
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
@@ -536,6 +577,9 @@ feudal_governments = {
 			muslim_imperial_government
 			bogomilist_imperial_government
 			theocratic_imperial_government
+			RR_temporal_feudal_government #godking
+			RR_temporal_tribal_government
+			RR_religious_community_government
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
@@ -651,6 +695,9 @@ feudal_governments = {
 			muslim_imperial_government
 			bogomilist_imperial_government
 			theocratic_imperial_government
+			RR_temporal_feudal_government #godking
+			RR_temporal_tribal_government
+			RR_religious_community_government
 		}
 		free_revoke_on_governments_religion = { # vassals of other religions can have their titles revoked for free
 			tribal_government
@@ -758,6 +805,9 @@ feudal_governments = {
 			muslim_imperial_government
 			bogomilist_imperial_government
 			chinese_imperial_government
+			RR_temporal_feudal_government #godking
+			RR_temporal_tribal_government
+			RR_religious_community_government
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
@@ -866,6 +916,9 @@ feudal_governments = {
 			muslim_imperial_government
 			bogomilist_imperial_government
 			theocratic_imperial_government
+			RR_temporal_feudal_government #godking
+			RR_temporal_tribal_government
+			RR_religious_community_government
 		}
 		free_revoke_on_tiers = {
 			duke
@@ -911,7 +964,6 @@ feudal_governments = {
 		character_modifier = {
 			monthly_character_piety = 1
 		}
-		court_size_modifier = 15
 	}
 
 	order_government = {
@@ -934,6 +986,9 @@ feudal_governments = {
 			bogomilist_imperial_government
 			theocratic_imperial_government
 			chinese_imperial_government
+			RR_temporal_feudal_government #godking
+			RR_temporal_tribal_government
+			RR_religious_community_government
 		}
 		free_revoke_on_governments = {
 			order_government
@@ -993,7 +1048,7 @@ feudal_governments = {
 
 		color = { 169 169 169 }
 
-		have_gender_laws = no
+		have_gender_laws = yes
 		can_create_kingdoms = no
 		can_create_empires = no
 		can_imprison_without_reason = no
@@ -1003,6 +1058,7 @@ feudal_governments = {
 		can_usurp_kingdoms_and_empires = no
 		can_grant_kingdoms_and_empires_to_other_government = no
 		can_be_granted_kingdoms_and_empires_by_other_government = no
+		allows_matrilineal_marriage = yes
 		can_inherit = no
 		free_retract_vassalage = yes
 		
@@ -1039,6 +1095,186 @@ feudal_governments = {
 		}
 
 		color = { 0 0 0 }
+
+		capital_move_delay = 600
+	}
+
+	RR_religious_community_government = {
+		preferred_holdings = { CASTLE }
+		allowed_holdings = { 
+			CASTLE 
+			TEMPLE
+			CITY
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			feudal_government
+			muslim_government
+			theocratic_feudal_government
+			chinese_imperial_government
+			roman_imperial_government
+			RR_temporal_feudal_government #godking
+			RR_temporal_tribal_government
+			theocracy_government
+		}
+		vassal_call_to_arms = {
+			RR_religious_community_government
+			feudal_government
+			muslim_government
+			theocratic_feudal_government
+			chinese_imperial_government
+			roman_imperial_government
+			RR_temporal_feudal_government
+			tribal_government
+			RR_temporal_tribal_government
+			merchant_republic_government
+			republic_government
+			theocracy_government			
+		}
+		no_vassal_tax = {
+			RR_religious_community_government
+			feudal_government
+			muslim_government
+			theocratic_feudal_government
+			chinese_imperial_government
+			roman_imperial_government
+			RR_temporal_feudal_government
+			tribal_government
+			RR_temporal_tribal_government
+			merchant_republic_government
+			republic_government
+			theocracy_government
+		}
+		potential = {
+			is_antifeudal_religion_trigger = yes
+			#higher_tier_than = baron
+			OR = {
+				NOT = {	religion_group = muslim	}
+				religion = qarmatian
+				has_religion_feature = RR_religion_community
+			}
+			NOT = { is_government_potential = roman_imperial_government }
+			NOT = { is_government_potential = order_government }
+			NOT = { is_government_potential = RR_temporal_feudal_government }
+			NAND = { 
+				culture_group = tibetan_group
+				OR = {
+					religion = bon
+					religion = bon_reformed
+					religion = buddhist
+					religion = hindu
+					religion = jain
+					religion_group = christian
+				}
+				higher_tier_than = BARON
+			}
+			NAND = { 
+				tier = EMPEROR
+				primary_title = { has_title_flag = pretender_chinese_empire }
+				OR = {
+					culture_group = chinese_group
+					culture = khitan
+					culture = tangut
+					culture = jurchen
+					has_character_flag = chinese_imperial_government_preserve
+				}
+			}
+			is_patrician = no
+		}
+		
+		
+		color = { 240 160 160 }
+		
+		can_imprison_without_reason = no
+		ignores_de_jure_laws = yes
+		can_create_kingdoms = no
+		can_create_empires = no
+		can_usurp_kingdoms_and_empires = no
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+		dukes_called_kings = yes
+		#barons_need_dynasty = yes
+
+		can_build_tribal = no
+
+		vassal_limit = 20
+		
+	#	ignore_in_vassal_limit_calculation = {
+	#		tribal_government
+	#	}
+		capital_move_delay = 600
+	}
+
+	RR_temporal_feudal_government = { #God king
+		preferred_holdings = { CASTLE }
+		allowed_holdings = { 
+			CASTLE 
+			TEMPLE
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			# A god-king does not accept a liege of any sort.
+		}
+		free_revoke_on_tiers = {
+			baron
+			count
+			duke
+			king
+		}
+		potential = {
+			NAND = {
+				higher_tier_than = baron
+				is_antifeudal_religion_trigger = yes
+			}
+			has_religion_feature = RR_religion_godking
+			controls_religion = yes
+			NOT = { is_government_potential = order_government }
+			NAND = { 
+				culture_group = tibetan_group
+				OR = {
+					religion = bon
+					religion = bon_reformed
+					religion = buddhist
+					religion = hindu
+					religion = jain
+                    religion_group = christian
+				}
+				higher_tier_than = BARON
+			}
+			NAND = { 
+				tier = EMPEROR
+				primary_title = { has_title_flag = pretender_chinese_empire }
+				OR = {
+					culture_group = chinese_group
+					culture = khitan
+					culture = tangut
+					culture = jurchen
+					has_character_flag = chinese_imperial_government_preserve
+				}
+			}
+			is_patrician = no
+		}
+		
+		color = { 240 240 160 } # pale yellow
+		#color = { 150 175 210 } # pale blue
+		
+		uses_piety_for_law_change = yes
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		free_retract_vassalage = yes
+
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
 
 		capital_move_delay = 600
 	}
