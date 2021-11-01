@@ -1,0 +1,15 @@
+#character
+on_startup = {
+	events = {
+		RR.1 # Set up proper succession for anti-feudal.
+	}
+}
+
+
+
+#character
+on_yearly_pulse = {
+	random_events = {
+		1000 = RR.200 # Divine truth master event.
+	}
+}
