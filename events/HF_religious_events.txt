@@ -17055,9 +17055,12 @@ character_event = {
 				OR = {
 					has_religion_feature = religion_stable
 					has_religion_feature = religion_feature_egyptian
-					has_religion_feature = religion_feature_slavic
-					has_religion_feature = religion_feature_finnish
+					#has_religion_feature = religion_feature_slavic
+					#has_religion_feature = religion_feature_finnish
 					has_religion_feature = religion_syncretic_indian
+					religion = zun_pagan
+					religion = bon
+					religion = taoist
 				}
 			}
 			trigger_else = {
@@ -19261,6 +19264,11 @@ character_event = {
 		OR = {
 			emf_animistic_religion = yes
 			has_religion_feature = religion_feature_celtic
+			religion = finnish_pagan
+			religion = finnish_pagan_reformed
+			religion = baltic_pagan
+			religion = slavic_pagan
+			religion = tengri_pagan
 		}
 	}
 	
@@ -19449,7 +19457,11 @@ character_event = {
 		custom_tooltip = { text = tooltip_EVTOPTAHF23774 }
 		if = { 
 			limit = { 
-				has_character_flag = flag_african_initiation_high
+				NOR = {
+					has_character_flag = flag_african_initiation_high
+					has_character_flag = flag_african_initiation_medium
+					has_character_flag = flag_african_initiation_low
+				}
 			}
 			add_character_modifier = {
 				name = african_adulthood_rites_1
@@ -19458,11 +19470,20 @@ character_event = {
 		}
 		if = { 
 			limit = { 
+				has_character_flag = flag_african_initiation_high
+			}
+			add_character_modifier = {
+				name = african_adulthood_rites_1
+				years = 30
+			} 
+		}
+		if = { 
+			limit = { 
 				has_character_flag = flag_african_initiation_medium
 			}
 			add_character_modifier = {
 				name = african_adulthood_rites_1
-				years = 10
+				years = 20
 			} 
 		}
 		if = { 
@@ -19471,27 +19492,28 @@ character_event = {
 			}
 			add_character_modifier = {
 				name = african_adulthood_rites_1
-				years = 5
+				years = 10
 			} 
 		} 
 		hidden_tooltip = { #Tattoos
-			if = {
-				limit = {
-					OR = {
-						religion = west_african_pagan
-						religion = west_african_pagan_reformed
+			random_list = { 
+				100 = { 
+					trigger = { 
+						NOR = {
+							religion = west_african_pagan
+							religion = west_african_pagan_reformed
+						}
 					}
+					add_trait = slavic_tattoo_6
 				}
-				random_list = { 
-					25 = { 
-						add_trait = african_tattoo_12
-					}
-					25 = { 
-						add_trait = african_tattoo_8
-					}
-					50 = { 
-						add_trait = african_tattoo_2
-					}
+				1 = { 
+					add_trait = african_tattoo_12
+				}
+				1 = { 
+					add_trait = african_tattoo_8
+				}
+				2 = { 
+					add_trait = african_tattoo_2
 				}
 			}
 		} 
@@ -19520,7 +19542,11 @@ character_event = {
 		custom_tooltip = { text = tooltip_EVTOPTBHF23774 }
 		if = { 
 			limit = { 
-				has_character_flag = flag_african_initiation_high
+				NOR = {
+					has_character_flag = flag_african_initiation_high
+					has_character_flag = flag_african_initiation_medium
+					has_character_flag = flag_african_initiation_low
+				}
 			}
 			add_character_modifier = {
 				name = african_adulthood_rites_2
@@ -19529,11 +19555,20 @@ character_event = {
 		}
 		if = { 
 			limit = { 
+				has_character_flag = flag_african_initiation_high
+			}
+			add_character_modifier = {
+				name = african_adulthood_rites_2
+				years = 30
+			} 
+		}
+		if = { 
+			limit = { 
 				has_character_flag = flag_african_initiation_medium
 			}
 			add_character_modifier = {
 				name = african_adulthood_rites_2
-				years = 10
+				years = 20
 			} 
 		}
 		if = { 
@@ -19542,32 +19577,37 @@ character_event = {
 			}
 			add_character_modifier = {
 				name = african_adulthood_rites_2
-				years = 5
+				years = 10
 			} 
 		} 
 		hidden_tooltip = { #Tattoos
-			if = {
-				limit = {
-					OR = {
-						religion = west_african_pagan
-						religion = west_african_pagan_reformed
+			random_list = { 
+				100 = { 
+					trigger = { 
+						NOR = {
+							religion = west_african_pagan
+							religion = west_african_pagan_reformed
+						}
 					}
+					add_trait = norse_tattoo_1
 				}
-				random_list = {
-					25 = { 
-						add_trait = african_tattoo_10
-					}
-					25 = { 
-						add_trait = african_tattoo_7
-					}
-					50 = { 
-						add_trait = african_tattoo_1
-					}
+				1 = { 
+					add_trait = african_tattoo_10
+				}
+				1 = { 
+					add_trait = african_tattoo_7
+				}
+				2 = { 
+					add_trait = african_tattoo_1
 				}
 			}
 		}
 		ai_chance = { 
 			factor = 25
+			modifier = {
+				factor = 0
+				NOT = { higher_tier_than = baron }
+			}
 			modifier = { 
 				factor = 1.5
 				trait = wroth
@@ -19591,7 +19631,11 @@ character_event = {
 		custom_tooltip = { text = tooltip_EVTOPTCHF23774 }
 		if = { 
 			limit = { 
-				has_character_flag = flag_african_initiation_high
+				NOR = {
+					has_character_flag = flag_african_initiation_high
+					has_character_flag = flag_african_initiation_medium
+					has_character_flag = flag_african_initiation_low
+				}
 			}
 			add_character_modifier = {
 				name = african_adulthood_rites_3
@@ -19600,11 +19644,20 @@ character_event = {
 		}
 		if = { 
 			limit = { 
+				has_character_flag = flag_african_initiation_high
+			}
+			add_character_modifier = {
+				name = african_adulthood_rites_3
+				years = 30
+			} 
+		}
+		if = { 
+			limit = { 
 				has_character_flag = flag_african_initiation_medium
 			}
 			add_character_modifier = {
 				name = african_adulthood_rites_3
-				years = 10
+				years = 20
 			} 
 		}
 		if = { 
@@ -19613,27 +19666,28 @@ character_event = {
 			}
 			add_character_modifier = {
 				name = african_adulthood_rites_3
-				years = 5
+				years = 10
 			} 
 		} 
 		hidden_tooltip = { #Tattoos
-			if = {
-				limit = {
-					OR = {
-						religion = west_african_pagan
-						religion = west_african_pagan_reformed
+			random_list = { 
+				100 = { 
+					trigger = { 
+						NOR = {
+							religion = west_african_pagan
+							religion = west_african_pagan_reformed
+						}
 					}
+					add_trait = norse_tattoo_4
 				}
-				random_list = { 
-					25 = { 
-						add_trait = african_tattoo_9
-					}
-					25 = { 
-						add_trait = african_tattoo_6
-					}
-					50 = { 
-						add_trait = african_tattoo_3
-					}
+				1 = { 
+					add_trait = african_tattoo_9
+				}
+				1 = { 
+					add_trait = african_tattoo_6
+				}
+				2 = { 
+					add_trait = african_tattoo_3
 				}
 			}
 		}
@@ -19662,7 +19716,11 @@ character_event = {
 		custom_tooltip = { text = tooltip_EVTOPTDHF23774 }
 		if = { 
 			limit = { 
-				has_character_flag = flag_african_initiation_high
+				NOR = {
+					has_character_flag = flag_african_initiation_high
+					has_character_flag = flag_african_initiation_medium
+					has_character_flag = flag_african_initiation_low
+				}
 			}
 			add_character_modifier = {
 				name = african_adulthood_rites_4
@@ -19671,11 +19729,20 @@ character_event = {
 		}
 		if = { 
 			limit = { 
+				has_character_flag = flag_african_initiation_high
+			}
+			add_character_modifier = {
+				name = african_adulthood_rites_4
+				years = 30
+			} 
+		}
+		if = { 
+			limit = { 
 				has_character_flag = flag_african_initiation_medium
 			}
 			add_character_modifier = {
 				name = african_adulthood_rites_4
-				years = 10
+				years = 20
 			} 
 		}
 		if = { 
@@ -19684,27 +19751,28 @@ character_event = {
 			}
 			add_character_modifier = {
 				name = african_adulthood_rites_4
-				years = 5
+				years = 10
 			} 
 		} 
 		hidden_tooltip = { #Tattoos
-			if = {
-				limit = {
-					OR = {
-						religion = west_african_pagan
-						religion = west_african_pagan_reformed
+			random_list = { 
+				100 = { 
+					trigger = { 
+						NOR = {
+							religion = west_african_pagan
+							religion = west_african_pagan_reformed
+						}
 					}
+					add_trait = norse_tattoo_4
 				}
-				random_list = { 
-					25 = { 
-						add_trait = african_tattoo_11
-					}
-					25 = { 
-						add_trait = african_tattoo_5
-					}
-					50 = { 
-						add_trait = african_tattoo_4
-					}
+				1 = { 
+					add_trait = african_tattoo_11
+				}
+				1 = { 
+					add_trait = african_tattoo_5
+				}
+				2 = { 
+					add_trait = african_tattoo_2
 				}
 			}
 		}
@@ -19751,6 +19819,11 @@ character_event = {
 		OR = {
 			emf_animistic_religion = yes
 			has_religion_feature = religion_feature_celtic
+			religion = finnish_pagan
+			religion = baltic_pagan
+			religion = slavic_pagan
+			religion = tengri_pagan
+			religion = finnish_pagan_reformed
 		}
 	}
 	
@@ -19773,148 +19846,163 @@ character_event = {
 	trigger = { 
 		ai = yes
 		is_save_game = no
-		emf_animistic_religion = yes
+		OR = { 
+			emf_animistic_religion = yes
+			religion = finnish_pagan
+			religion = baltic_pagan
+			religion = slavic_pagan
+			religion = tengri_pagan
+		}
 	}
 	immediate = {
-		if = { # Assign African face paint
+		if = {
 			limit = {
 				OR = {
 					religion = west_african_pagan
-					AND = {
-						religion = west_african_pagan_reformed
-						emf_animistic_religion = yes
-					}
+					religion = west_african_pagan_reformed
+					emf_animistic_religion = yes
 				}
 			}
-			random_list = {
-				25 = { #Nothing
+			random_list = { 
+				80 = { #Nothing
+					modifier = {
+						factor = 0.75
+						NOT = { higher_tier_than = baron }
+					}
 				}
-				15 = { 
+				10 = { 
+					modifier = {
+						factor = 0
+						NOT = { higher_tier_than = baron }
+					}
 					add_trait = african_tattoo_1
 				}
-				15 = { 
+				10 = { 
 					add_trait = african_tattoo_2
 				}
-				15 = { 
+				10 = { 
 					add_trait = african_tattoo_3
 				}
-				15 = { 
+				10 = { 
 					add_trait = african_tattoo_4
 				}
 				5 = { 
 					add_trait = african_tattoo_5
 				}
-				4 = { 
+				5 = { 
 					add_trait = african_tattoo_6
 				}
-				3 = { 
+				5 = { 
+					modifier = {
+						factor = 0
+						NOT = { higher_tier_than = baron }
+					}
 					add_trait = african_tattoo_7
 				}
-				2 = { 
+				5 = { 
 					add_trait = african_tattoo_8
 				}
-				10 = { 
+				5 = { 
 					add_trait = african_tattoo_9
 				}
-				10 = { 
+				5 = { 
+					modifier = {
+						factor = 0
+						NOT = { higher_tier_than = baron }
+					}
 					add_trait = african_tattoo_10
 				}
-				10 = { 
+				5 = { 
 					add_trait = african_tattoo_11
 				}
-				10 = { 
+				5 = { 
 					add_trait = african_tattoo_12
 				}
 			}
 		}
-		if = { 
-			limit = {
-				emf_animistic_religion = yes
-				NOT = { age = 23 }
+		else = {
+			random_list = { 
+				80 = { #Nothing
+					modifier = {
+						factor = 0.75
+						NOT = { higher_tier_than = baron }
+					}
+				}
+				20 = {
+					add_trait = slavic_tattoo_1
+				}
+				20 = {
+					modifier = {
+						factor = 0
+						NOT = { higher_tier_than = baron }
+					}
+					add_trait = norse_tattoo_1
+				}
+				20 = {
+					add_trait = norse_tattoo_4
+				}
+				20 = {
+					add_trait = norse_tattoo_2
+				}
 			}
-			random_list = { #Modifier, if young enough.
-				10 = { #Nothing
-				}
-				25 = { 
-					trigger = {
-						OR = {
-							trait = african_tattoo_12
-							trait = african_tattoo_8
-							trait = african_tattoo_2
-							NOR = {
-								religion = west_african_pagan
-								AND = {
-									religion = west_african_pagan_reformed
-									emf_animistic_religion = yes
-								}
-							}
-						}
+		}
+		if = { 
+			limit = { NOT = { age = 36 } }
+			if = { 
+				limit = {
+					OR = {
+						trait = african_tattoo_12
+						trait = african_tattoo_8
+						trait = african_tattoo_2
+						trait = slavic_tattoo_1
 					}
-					add_character_modifier = {
-						name = african_adulthood_rites_1
-						years = 6
-					} 
 				}
-				25 = { 
-					trigger = {
-						OR = {
-							trait = african_tattoo_10
-							trait = african_tattoo_7
-							trait = african_tattoo_1
-							NOR = {
-								religion = west_african_pagan
-								AND = {
-									religion = west_african_pagan_reformed
-									emf_animistic_religion = yes
-								}
-							}
-						}
+				add_character_modifier = {
+					name = african_adulthood_rites_1
+					years = 10
+				} 
+			}
+			if = { 
+				limit = {
+					OR = {
+						trait = african_tattoo_10
+						trait = african_tattoo_7
+						trait = african_tattoo_1
+						trait = norse_tattoo_1
 					}
-					add_character_modifier = {
-						name = african_adulthood_rites_2
-						years = 6
-					} 
 				}
-				25 = { 
-					trigger = {
-						OR = {
-							trait = african_tattoo_9
-							trait = african_tattoo_6
-							trait = african_tattoo_3
-							NOR = {
-								religion = west_african_pagan
-								AND = {
-									religion = west_african_pagan_reformed
-									emf_animistic_religion = yes
-								}
-							}
-						}
+				add_character_modifier = {
+					name = african_adulthood_rites_2
+					years = 10
+				} 
+			}
+			if = { 
+				limit = {
+					OR = {
+						trait = african_tattoo_9
+						trait = african_tattoo_6
+						trait = african_tattoo_3
+						trait = norse_tattoo_4
 					}
-					add_character_modifier = {
-						name = african_adulthood_rites_3
-						years = 6
-					} 
 				}
-				25 = { 
-					trigger = {
-						OR = {
-							trait = african_tattoo_11
-							trait = african_tattoo_5
-							trait = african_tattoo_4
-							NOR = {
-								religion = west_african_pagan
-								AND = {
-									religion = west_african_pagan_reformed
-									emf_animistic_religion = yes
-								}
-							}
-						}
+				add_character_modifier = {
+					name = african_adulthood_rites_3
+					years = 10
+				} 
+			}
+			if = { 
+				limit = {
+					OR = {
+						trait = african_tattoo_11
+						trait = african_tattoo_5
+						trait = african_tattoo_4
+						trait = norse_tattoo_2
 					}
 					add_character_modifier = {
 						name = african_adulthood_rites_4
-						years = 6
-					} 
-				}
+						years = 10
+					}
+				} 
 			}
 		}
 	}
@@ -20071,30 +20159,32 @@ character_event = {
 	trigger = {
 		controls_religion = yes
 		religion_scope = {
-			has_religion_feature = religion_holy_family
-			has_religion_feature = religion_dogmatic
-			has_religion_feature = religion_temporal_head
+			has_religion_feature = RR_religion_godking
 			OR = {
 				religion_openly_in_egyptian_subgroup_trigger = yes
 			}
-		}
-	}
-	# Appropriate gender to become the (high) god
-	OR = { 
-		AND = {
-			is_female = no
-			NOT = { has_religion_feature = religion_matriarchal }
-		}
-		AND = {
-			is_female = yes
-			NOT = { has_religion_feature = religion_patriarchal }
+			controls_religion = yes
 		}
 	}
 	
 	immediate = {
-		remove_god_names = yes
-		set_high_god_name = string_religious_head_god
-		add_god_name = string_religious_head_god_2
+		set_high_god_name = string_reformer_god
+		
+		if = {
+			limit = { tier = emperor }
+			if = {
+				limit = { is_female = yes }
+				set_special_character_title = title_godempress
+			}
+			else = { set_special_character_title = title_godemperor }
+		}
+		else = {
+			if = {
+				limit = { is_female = yes }
+				set_special_character_title = title_godqueen
+			}
+			else = { set_special_character_title = title_godking }
+		}
 	}
 }
 
@@ -20109,27 +20199,31 @@ character_event = {
 	trigger = {
 		controls_religion = yes
 		religion_scope = {
-			has_religion_feature = religion_holy_family
-			has_religion_feature = religion_dogmatic
-			has_religion_feature = religion_temporal_head
+			has_religion_feature = RR_religion_godking
 			religion_openly_in_egyptian_subgroup_trigger = no
+			
+			#religion = FROMFROM
+			controls_religion = yes
 		}
-	}
-	# Appropriate gender to become the (high) god
-	OR = { 
-		AND = {
-			is_female = no
-			NOT = { has_religion_feature = religion_matriarchal }
-		}
-		AND = {
-			is_female = yes
-			NOT = { has_religion_feature = religion_patriarchal }
-		}
-	}
 	
-	immediate = {
-		remove_god_names = yes
-		set_high_god_name = string_religious_head_god
-		add_god_name = string_religious_head_god_2
+		immediate = {
+			set_high_god_name = string_reformer_god
+		
+			if = {
+				limit = { tier = emperor }
+				if = {
+					limit = { is_female = yes }
+					set_special_character_title = title_godempress
+				}
+				else = { set_special_character_title = title_godemperor }
+			}
+			else = {
+				if = {
+					limit = { is_female = yes }
+					set_special_character_title = title_godqueen
+				}
+				else = { set_special_character_title = title_godking }
+			}
+		}
 	}
 }

@@ -1,0 +1,463 @@
+###################################
+#
+# REFORMATION REFORM 
+# - Various Events
+#
+###################################
+
+namespace = RR
+
+### Start-up Events
+
+character_event = { # Give Pious Elective succession to those that should have it.
+	id = RR.1
+	hide_window = yes
+	
+	only_rulers = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_save_game = no
+		is_feudal = yes
+		is_landed = yes
+		primary_title = {
+			holder_scope = {
+				is_nomadic = no
+				OR = {
+					independent = yes
+					NOT = {
+						any_liege = {
+							holy_order = yes
+						}
+					}
+				}
+				is_merchant_republic = no
+				is_patrician = no
+				OR = {
+					independent = yes
+					NOT = {
+						any_demesne_title = {
+							is_vice_royalty = yes
+						}
+					}
+				}
+			}
+			rebel = no
+			is_primary_type_title = no
+			NOT = { holder_scope = { government = confucian_bureaucracy } }
+			NOT = { holder_scope = { government = chinese_imperial_government } }
+			holder_scope = {
+				OR = {
+					is_antifeudal_religion_trigger = yes
+					#religion = qarmatian
+					has_religion_feature = RR_religion_community
+				}
+			}
+		}
+	}
+
+	immediate = {
+		ROOT = { 
+			any_demesne_title = { #First apply law.
+				add_law = {
+					law = succ_RR_pious_elective
+					cooldown = no
+					opinion_effect = no
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = RR.2
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	only_rulers = yes
+	
+	trigger = {
+		is_save_game = no
+		is_feudal = yes
+		OR = {
+			is_antifeudal_religion_trigger = yes
+			religion = qarmatian
+			has_religion_feature = RR_religion_community
+		}
+	}
+	immediate = {
+		ROOT = {
+		any_demesne_title = {
+			if = {
+				limit = { 
+					OR = {
+						tier = prev
+						tier = higher_than_duke
+					}
+				}
+				add_law = succ_RR_pious_elective
+				cooldown = no
+				opinion_effect = no
+			}
+		}
+		any_vassal = {
+			remove_opinion = { modifier = good_succ_law_change who = ROOT }
+			remove_opinion = { modifier = bad_succ_law_change who = ROOT }
+			remove_opinion = { modifier = succ_law_change who = ROOT }
+		}
+		}
+	}
+}
+
+
+### Doctrine Events
+
+# Joy of Life
+
+character_event = {
+	id = RR.100
+	desc = EVTDESC_joy
+	picture = GFX_evt_feast
+	
+	is_triggered_only = yes
+	
+	option = { #party with food and drink
+		name = EVTOPT_joy_party
+		if = {
+			limit = { trait = depressed }
+			remove_trait = depressed
+		}
+		else_if = {
+			limit = { trait = stressed }
+			remove_trait = stressed
+		}
+		else = {
+			add_character_modifier = {
+				name = RR_modifier_joy
+				years = 5
+			}
+		}
+		
+		if = {
+			limit = { trait = temperate }
+			random = {
+				chance = 15
+				remove_trait = temperate
+			}
+		}
+		else_if = {
+			limit = { NOT = { trait = gluttonous } }
+			random = {
+				chance = 15
+				add_trait = gluttonous
+			}
+		}
+		else_if = {
+			limit = { NOT = { trait = drunkard } }
+			random = {
+				chance = 15
+				add_trait = drunkard
+			}
+		}
+	}
+	
+	option = { #party with family
+		name = EVTOPT_joy_family
+		trigger = {
+			any_close_relative = {
+				same_liege = ROOT
+				opinion = { who = ROOT value = 50 }
+				reverse_opinion = { who = ROOT value = 50 }
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.1
+				OR = { 
+					trait = gluttonous
+					trait = drunkard
+					trait = hedonist
+				}
+			}
+		}
+		any_close_relative = {
+			limit = {
+				same_liege = ROOT
+				opinion = { who = ROOT value = 50 }
+				reverse_opinion = { who = ROOT value = 50 }
+			}
+		}
+		if = {
+			limit = { trait = depressed }
+			remove_trait = depressed
+		}
+		else_if = {
+			limit = { trait = stressed }
+			remove_trait = stressed
+		}
+		else = {
+			add_character_modifier = {
+				name = RR_modifier_joy_family
+				years = 5
+			}
+		}
+	}
+	
+	option = { #party with friends
+		name = EVTOPT_joy_friends
+		trigger = {
+			any_friend = { same_liege = ROOT }
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.1
+				OR = { 
+					trait = gluttonous
+					trait = drunkard
+					trait = hedonist
+				}
+			}
+		}
+		any_friend = { 
+			limit = { same_liege = ROOT }
+		}
+		if = {
+			limit = { trait = depressed }
+			remove_trait = depressed
+		}
+		else_if = {
+			limit = { trait = stressed }
+			remove_trait = stressed
+		}
+		else = {
+			add_character_modifier = {
+				name = RR_modifier_joy_friends
+				years = 5
+			}
+		}
+	}
+}
+
+
+# Truth
+
+# Truth master event, triggers other events.
+character_event = {
+	id = RR.200
+	hide_window = yes
+
+	#only_rulers = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_ambition = obj_RR_truth # We trust that if a character has the ambition, all other conditions have been met first.
+	}
+	
+	immediate = { #Pick the appropriate event.
+		if = {
+			limit = { 
+				NOT = { trait = honest }
+			}
+			character_event = { id = RR.210 random = 360 } # Trigger event that either removes Deceitful or adds Honest.
+		}
+		else_if = {
+			limit = { 
+				NOT = { trait = just }
+			}
+			character_event = { id = RR.220 random = 360 } # Trigger event that either removes Arbitrary or adds Just.
+		}
+		else = {
+			limit = { 
+				NOT = { trait = diligent }
+			}
+			character_event = { id = RR.230 random = 360 } # Trigger event that either removes Slothful or adds Diligent.
+		}
+	}
+}
+
+#Honesty event
+character_event = {
+	id = RR.210
+	desc = EVTDESC_RR_truth_honest
+	picture = GFX_evt_open_book_hf
+
+	#only_rulers = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_ambition = obj_RR_truth # We trust that if a character has the ambition, all other conditions have been met first.
+		NOT = { trait = honest }
+	}
+	
+	option = { # Become more honest.
+		name = EVTOPT_RR_truth_honest
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				trait = cynical
+			}
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+		}
+		if = {
+			limit = { trait = deceitful }
+			remove_trait = deceitful
+		}
+		else = {
+			add_trait = honest
+		}
+	}	
+	
+	option = { # To hell with honesty.
+		name = EVTOPT_RR_truth_reject
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = cynical
+			}
+			modifier = {
+				factor = 0.5
+				trait = zealous
+			}
+		}
+	}	
+}
+
+#Justice event
+character_event = {
+	id = RR.220
+	desc = EVTDESC_RR_truth_just
+	picture = GFX_evt_elder_council
+
+	#only_rulers = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_ambition = obj_RR_truth # We trust that if a character has the ambition, all other conditions have been met first.
+		NOT = { trait = just }
+	}
+	
+	option = { # Become more just.
+		name = EVTOPT_RR_truth_just
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				trait = cynical
+			}
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+		}
+		if = {
+			limit = { trait = arbitrary }
+			remove_trait = arbitrary
+		}
+		else = {
+			add_trait = just
+		}
+	}	
+	
+	option = { # To hell with justice.
+		name = EVTOPT_RR_truth_reject
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = cynical
+			}
+			modifier = {
+				factor = 0.5
+				trait = zealous
+			}
+		}
+	}	
+}
+
+#Diligence event
+character_event = {
+	id = RR.230
+	desc = EVTDESC_RR_truth_diligent
+	picture = GFX_evt_religious_exultation
+
+	#only_rulers = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_ambition = obj_RR_truth # We trust that if a character has the ambition, all other conditions have been met first.
+		NOT = { trait = diligent }
+	}
+	
+	option = { # Become more diligent.
+		name = EVTOPT_RR_truth_diligent
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				trait = cynical
+			}
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+		}
+		if = {
+			limit = { trait = slothful }
+			remove_trait = slothful
+		}
+		else = {
+			add_trait = diligent
+		}
+	}	
+	
+	option = { # To hell with diligence.
+		name = EVTOPT_RR_truth_reject
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = cynical
+			}
+			modifier = {
+				factor = 0.5
+				trait = zealous
+			}
+		}
+	}	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

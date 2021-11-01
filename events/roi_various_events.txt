@@ -1388,6 +1388,7 @@ character_event = {
 			religion = manichean
 			religion = west_african_pagan
 			religion = west_african_pagan_reformed
+			religion = cathar
 		}
 		OR = {
 			has_dlc = "Rajas of India"

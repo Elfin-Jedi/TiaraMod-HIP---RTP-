@@ -42,20 +42,16 @@ character_event = {
 			religion = algic_pagan
 			religion = algic_pagan_reformed
 			religion = finnish_pagan
-			religion = finnish_pagan_reformed
 			religion = west_african_pagan
-			religion = west_african_pagan_reformed
 			religion = baltic_pagan
-			religion = baltic_pagan_reformed
 			religion = slavic_pagan
-			religion = slavic_pagan_reformed
 			religion = tengri_pagan
-			religion = tengri_pagan_reformed
 			has_religion_feature = religion_beatification
 			has_religion_feature = religion_feature_baltic
 			has_religion_feature = religion_feature_slavic
 			has_religion_feature = religion_syncretic_christian
 			has_religion_feature = religion_feature_egyptian
+			religion = baltic_pagan_reformed
 		}
 	}
 
