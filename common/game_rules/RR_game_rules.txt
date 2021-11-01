@@ -1,0 +1,53 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	group = "TEXT_KEY_FOR_GROUP"					# Used for filtering. A single rule can be in multiple groups 
+#	alt_start_default = option_name					# Default value in alt start. If not set, defaults 
+#	option = {										# please note that the first option is always the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		achievements = no							# by default achievements = yes, allows or disallows achievements
+#		alt_start_achievements = no					# by default alt_start_achievements = yes, allows or disallows achievements in alt start. Note that it defaults to yes even when achievements = no
+#	}
+# }
+
+RR_doctrine_slots = {
+	name = "RULE_RR_4_DOCTRINES"
+	group = "RULE_GROUP_RELIGION"
+	alt_start_default = RR_4_doctrines_autonomous
+	option = {
+		name = RR_4_doctrines_autonomous
+		text = "RULE_OPTION_4_DOCTRINES_AUTONOMOUS"
+		desc = "RULE_OPTION_4_DOCTRINES_AUTONOMOUS_DESC"
+	}
+	option = {
+		name = RR_4_doctrines_always
+		text = "RULE_OPTION_O4_DOCTRINES_ALWAYS"
+		desc = "RULE_OPTION_O4_DOCTRINES_ALWAYS_DESC"
+	}
+}
+
+#generate_families = {
+#	name = "RULE_GENERATE_FAMILIES"
+#	group = "RULE_GROUP_VARIOUS"
+#	alt_start_default = off
+#	option = {
+#		name = on
+#		text = "RULE_OPTION_ON"
+#		desc = "RULE_GENERATE_FAMILIES_ON_DESC"
+#	}
+#	option = {
+#		name = off
+#		text = "RULE_OPTION_OFF"
+#		desc = "RULE_GENERATE_FAMILIES_OFF_DESC"
+#	}
+#	option = {
+#		name = ai_only
+#		text = "RULE_OPTION_AI_ONLY"
+#		desc = "RULE_GENERATE_FAMILIES_AI_ONLY_DESC"
+#	}
+#}

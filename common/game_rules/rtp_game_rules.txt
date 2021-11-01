@@ -6,7 +6,7 @@
 
 rtp_start_r = {
 	name = "rtp_start_r"
-	group = rtp_start_r
+	group = rtp_rules
 	option = {
 		name = default
 		text = "rtp_start_default"
@@ -31,7 +31,7 @@ rtp_start_r = {
 
 rtp_chalcedonian_r = {
 	name = "rtp_chalcedonian_r"
-	group = rtp_chalcedonian_r
+	group = rtp_rules
 	option = {
 		name = split
 		text = "rtp_chalcedonian_split"
@@ -46,7 +46,7 @@ rtp_chalcedonian_r = {
 
 rtp_beasts_r = {
 	name = "rtp_beasts_r"
-	group = rtp_beasts_r
+	group = rtp_rules
 	option = {
 		name = no
 		text = "rtp_beasts_no"
@@ -61,7 +61,7 @@ rtp_beasts_r = {
 
 rtp_tutorial_r = {
 	name = "rtp_tutorial_r"
-	group = rtp_tutorial_r
+	group = rtp_rules
 	option = {
 		name = yes
 		text = "rtp_tutorial_yes"
