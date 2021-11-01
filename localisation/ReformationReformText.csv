@@ -1,0 +1,305 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+#### GAME RULES #####
+
+RULE_RR_4_DOCTRINES;§BReformation Reform§!: Fourth Doctrine;§BReformation Reform§!: Quatrième doctrine;§BReformation Reform§!: Vierte Doktrin;;§BReformation Reform§!: Cuarta Doctrina;;;;;;;;;x
+
+RULE_OPTION_4_DOCTRINES_AUTONOMOUS;Restricted;Restreint;Eingeschränkt;;Restringido;;;;;;;;;x
+RULE_OPTION_4_DOCTRINES_AUTONOMOUS_DESC;The fourth doctrine slot is only available if you reform with Autonomous ledership.;La quatrième doctrine n'est disponible que si vous vous réformez avec Autonome hiérarchie.;Die vierte Doktrin ist nur verfügbar, wenn die reformierte Religion Autonom als Anführer hat.;;La cuarta doctrina sólo está disponible si la religión reformada tiene el liderazgo Autónoma.;;;;;;;;;x
+
+RULE_OPTION_O4_DOCTRINES_ALWAYS;Unrestricted;Sans restriction;Uneingeschränkt;;Sin restricciones;;;;;;;;;x
+RULE_OPTION_O4_DOCTRINES_ALWAYS_DESC;The fourth doctrine is always available.;La quatrième doctrine est toujours disponible.;Die vierte Doktrin ist immer verfügbar.;;La cuarta doctrina está siempre disponible.;;;;;;;;;x
+
+RR_religion_4th_slot_dummy;Religious Head;Chef religieux;Religiöses Oberhaupt;;Líder espiritual;;;;;;;;;x
+RR_religion_4th_slot_dummy_desc;There will be a religious head to guide the believers.;Il y aura un chef religieux pour guider les croyants.;Es wird ein religiöses Oberhaupt geben, das die Gläubigen führt.;;Habrá un líder espiritual para guiar a los creyentes.;;;;;;;;;x
+
+RR_tooltip_religion_no_effect;§YThis doctrine has no effect. If you choose Autonomous leadership you will be able to use this slot for a real doctrine.§!;§YCette doctrine n'a aucun effet. Si vous choisissez Autonome hiérarchie, vous pourrez choisir une véritable quatrième doctrine.§!;§YDiese Doktrin hat keine Wirkung. Wenn Sie Autonom fur Anführer wählen, können Sie eine echte vierte Doktrin auswählen.§!;;§YEsta doctrina no tiene efecto. Si eliges la Autónoma liderazgo podrás seleccionar una cuarta doctrina real.§!;;;;;;;;;x
+
+RR_tooltip_religion_bonus_doctrine;§GYou can select a 4th doctrine§!;§GVous pouvez choisir une quatrième doctrine§!;§GSie können eine vierte Doktrin auswählen§!;;§GPuede seleccionar una cuarta doctrina§!;;;;;;;;;x
+
+RR_tooltip_religion_lose_bonus_doctrine;§RYou will have to repalce one of your doctrines with the Religious Head doctrine that has no effect§!;§RVous devrez remplacer une de vos doctrines par la doctrine Chef religieux qui n'a aucun effet§!;§Sie mussen eine euren Doktrinen mit der Religiöses Oberhaupt Doktrin ersetzen, die keine Wirkung hat§!;;§RTendrás que repalzar una de tus doctrinas contigo Líder espiritual doctrina que no tiene efecto§!;;;;;;;;;x
+
+#### MISC FEATURES #####
+
+RR_tooltip_no_priests;§YPriests cannot ruler provinces and will become feudal if promoted to count tier or higher§!;§YLes prêtres ne peuvent pas gouverner les provinces et deviendront féodaux s'ils sont promus au rang de comte ou à un rang supérieur§!;§YPriester können keine Provinzen regieren und werden feudal, wenn sie auf die Grafschaft oder höher befördert werden§!;;§YLos sacerdotes no pueden gobernar provincias y se convertirán en feudales si son promovidos a nivel de conde o superior§!;;;;;;;;;x
+
+RR_tooltip_imperial_vote_strength_emperor_heir_designation;The [Root.GetTitle]'s religion allows §Yheir designation§!;La religion [Root.GetDuDela] [Root.GetTitle] permet la §Ydésignation de son héritier§!;Die Religion [Root.Getdesder] [Root.GetTitle][Root.GetsMale] erlaubt §YErbenbezeichnung§!;;La religión [Root.GetDelDela] [Root.GetTitle] permite la §Ydesignación de heredero§!;;;;;;;;;x
+
+religion_dogmatic_feature;Religious doctrine is strictly enforced;La doctrine religieuse est strictement appliquée;Die Religiöse Doktrin wird streng durchgesetzt;;La doctrina religiosa se aplica estrictamente;;;;;;;;;x
+
+RR_tooltip_religion_monastic_order;§GFollowers can join a monastic order§!;§GLes adeptes peuvent rejoindre un ordre monastique§!;§GAnhänger können sich einer Mönchsordnung anschließen§!;;§GLos seguidores pueden unirse a una orden monástica§!;;;;;;;;;x
+
+RR_tooltip_religion_monastic_feudal;§GMonastic Feudal government is enabled for Tibetan rulers§!;§GLe gouvernement féodal monastique est activé pour les dirigeants tibétains§!;§GDie monastischfeudale Regierung wird für tibetische Herrscher aktiviert§!;;§GEl gobierno feudal monástico está habilitado para los gobernantes tibetanos§!;;;;;;;;;x
+
+EVTDESC_RR_200;[saint_person.GetFirstName] was a true exemplar of the [saint_person.Religion.GetName] faith, living a pious and inspiring life. Many tales are told about the feats [saint_person.GetSheHe] did in life, and [saint_person.GetSheHe] will be an inspiration for our descendants in the years to come.\n\nIt is a great honor for the family of the blessed one, and may we all aspire to follow in [saint_person.GetHerHis] footsteps.;[saint_person.GetFirstName] était un exemple pour la foi [saint_person.Religion.GetName], tant sa vie fut pieuse et inspirante. De nombreux contes sont racontés sur ses exploits et [saint_person.GetIlElle] sera une source d'inspiration pour nos descendants.\n\nC'est un grand honneur pour la famille [saint_person.GetDuDela] bienheureu[saint_person.GetXSe] et nous pouvons tous aspirer à suivre ses traces.;[saint_person.GetFirstName] war ein wahres Vorbild für den [saint_person.Religion.GetName]en Glauben und lebte ein frommes und inspirierendes Leben. Man erzählt sich viele Geschichten über die Taten, die [saint_person.GetSheHe] im Leben vollbracht hat und [saint_person.GetSheHe] wird für unsere Nachkommen eine große inspiration sein.\n\nFür die Familie des Gesegneten ist es eine große Ehrte und wir alle mögen danach streben [saint_person.GetHerHis]en Schritten zu folgen.;;[saint_person.GetFirstName] fue un verdadero ejemplo del credo [saint_person.Religion.GetName], con una vida piadosa e inspiradora. Muchas historias se cuentan de los logros que consiguió en vida y será una inspiración para nuestros descendientes en años venideros.\n\nEs un gran honor para la familia [saint_person.GetDelDela] bendit[saint_person.GetOA] y ojalá todos podamos seguir sus pasos.;;;;;x
+
+RR_religion_untamed;Untamed;Sauvage;Ungezähmt;;Salvaje;;;;;;;;;x
+RR_religion_untamed_desc;The gods do not want us to forget the old ways and become soft and weak.;Les dieux ne veulent pas que nous oublions les anciennes méthodes et que nous devenions mous et faibles.;Die Götter wollen nicht, dass wir die alten Wege vergessen und weich und schwach werden.;;Los dioses no quieren que olvidemos los viejos caminos y nos volvamos suaves y débiles.;;;;;;;;;x
+
+RR_tooltip_religion_feature_raiding;§GLooting is allowed§!;§GPiller est permis§!;§GPlünderungen sind erlaubt§!;;§GSe permite el saqueo§!;;;;;;;;;x
+
+RR_charity_decision;Give Large Donation;Faire un don important;Große Spende geben;;Dar gran donación;;;;;;;;;x
+
+RR_charity_decision_desc;It would be sinful to keep all this money for myself when there are so many people in need;Ce serait un péché de garder tout cet argent pour moi alors qu'il y a tant de personnes dans le besoin.;Es wäre sündig, all dieses Geld für mich zu behalten, wenn so viele Menschen in Not sind.;;Sería pecaminoso guardar todo este dinero para mí cuando hay tanta gente necesitada;;;;;;;;;;x
+
+RR_religion_cosmopolitan_syncretic_synergy_vassal_decision;Adopt Cosmopolitan Religious Sympathy;Adoptez la sympathie religieuse cosmopolite;Kosmopolitische religiöse Sympathie annehmen;;Adoptar la simpatía religiosa cosmopolita;;;;;;;;;x
+
+RR_religion_cosmopolitan_syncretic_synergy_vassal_decision_desc;There is no reason for any religious tensions between me and my liege.;Il n'y a pas de raison de tensions religieuses entre moi et mon suzerain.;Es gibt keinen Grund für religiöse Spannungen zwischen mir und meinem Lehnsherrn.;;No hay ninguna razón para que haya tensiones religiosas entre mi señor y yo.;;;;;;;;;x
+
+RR_religion_replace_high_priest;Replace Religious Head;Remplacer le chef religieux;Religiösen Oberhaupt ersetzen;;Reemplazar el líder espiritual;;;;;;;;;x
+
+RR_religion_replace_high_priest_desc;You can use your authority to force [Root.GetFirstNameWithNick] to step down as [Root.GetTitle] and let another priest take over all [Root.GetHerHis] titles.;Vous pouvez utiliser votre autorité pour forcer [Root.GetFirstNameWithNick] à démissionner en tant que [Root.GetTitle] et à laisser un autre prêtre prendre en charge tous ses titres.;Sie können Ihre Autorität verwenden, um [Root.GetFirstNameWithNick] zu zwingen, als [Root.GetTitle] zurückzutreten und einen anderen Priester alle [Root.GetHerHis] Titel übernehmen zu lassen.;;Puedes usar tu autoridad para forzar a [Root.GetFirstNameWithNick] a renunciar como [Root.GetTitle] y dejar que otro sacerdote tome todos sus títulos;;;;;;;;;x
+
+RR_tooltip_replace_high_priest;§GRulers can force the religious head to abdicate§!;§GLes dirigeants peuvent forcer le chef religieux à abdiquer§!;§GHerrscher können das religiöse Oberhaupt zum abdizieren zwingen§!;;§GLos gobernantes pueden forzar al líder espiritual a abdicar§!;;;;;;;;;x
+
+
+#### SYNERGY FEATURES #####
+
+RR_tooltip_synergy_cosmopolitan_syncretic;§GSynergy: vassals who follow a different religion can become sympathetic towards the religion of their liege §!;§GSynergie: les vassaux qui suivent une religion différente peuvent devenir sympathiques envers la religion de leur liege§!;§GSynergie: Vasallen, die einer anderen Religion folgen, können Sympathie für die Religion ihres Lehnsherren bekommen§!;;§GSinergia: los vasallos que siguen una religión diferente pueden llegar a simpatizar con la religión de su señor§!;;;;;;;;;x
+
+
+#### OPINION FEATURES #####
+
+RR_godking_opinion_effect_male;High God;Dieu suprême;Hoher Gott;;Dios superior;;;;;;;;;x
+RR_godking_opinion_effect_female;High Goddess;Déesse suprême;Hohe Göttin;;Diosa suprema;;;;;;;;;x
+
+religion_cosmopolitan_feature;Rulers can gain Sympathy towards another religious group;Les seigneurs peuvent avoir de la sympathie envers un autre groupe religieux;Herrscher können Sympathie gegenüber einer anderen Religionsgruppe gewinnen;;Los gobernantes pueden ganar simpatía hacia otro grupo religioso;;;;;;;;;x
+
+RR_religion_unity;Unity;Unité;Einheit;;Unidad;;;;;;;;;x
+RR_religion_unity_desc;For too long we have squabbled against each other while our real enemies besieged us from outside. We must stand united or disappear forever!;Pendant trop longtemps, nous se sont disputées tandis que nos vrais ennemis nous assiégeaient. Nous devons rester unis ou disparaître pour toujours !;Zu lange stritten wir, während unsere wirklichen Feine uns von außen belagerten. Wir müssen vereint bleiben oder für immer untergehen.;;Demasiado tiempo nosotros se han enfrentado entre ellas mientras nuestros verdaderos enemigos nos asediaban desde fuera. ¡Debemos permanecer unidos o desaparecer para siempre!;;;;;;;;;x
+RR_tooltip_religion_feature_unity;§GFollowers of this religion gain +10 opinion towards each other§!;§GLes adeptes de cette religion ont +10 opinion l'un envers l'autre§!;§GAnhänger dieser Religion haben +10 Meinungen zueinander§!;;§GLos seguidores de esta religión tienen +10 opiniones entre ellos.§!;;;;;;;;;x
+
+RR_religion_authority;Ruler Authority;Autorité souveraine;Herrscherautorität;;Autoridad gobernante;;;;;;;;;x
+RR_religion_authority_desc;Priests are responsible for the well-being of people's souls, but in all earthly matters they should faithfully serve their lords.;Les prêtres sont responsables du bien-être de l'âme des gens, mais dans toutes les affaires terrestres, ils devraient servir fidèlement leurs seigneurs.;Priester sind für das Wohlergehen der Seelen der Menschen verantwortlich, aber in allen irdischen Angelegenheiten sollten sie ihren Herren treu dienen.;;Los sacerdotes son responsables del bienestar de las almas de las personas, pero en todos los asuntos terrenales deben servir fielmente a sus señores.;;;;;;;;;x
+
+RR_religion_authority_feature;;Priest are obedient servants of their liege lord;Les prêtres sont des serviteurs obéissants de leur suzerain;Priester sind gehorsame Diener ihres Lehnsherrn;;Los sacerdotes son siervos obedientes de su señor;;;;;;;;;x
+
+RR_tooltip_religion_feature_secular;§GTemple vassals have +20 opinion of their liege§!;§GLes vassaux du temple ont +20 opinion de leur liege§!;§GTempel Vasallen haben +20 Meinung über ihren Lehnsherrn§!;;§GLos vasallos del templo tienen +20 opiniones de su señor§!;;;;;;;;;x
+
+RR_tooltip_religion_feature_templebuilders_opinion;§GTemple vassals have +10 opinion of their liege§!;§GLes vassaux du temple ont +10 opinion de leur liege§!;§GTempel Vasallen haben +10 Meinung über ihren Lehnsherrn§!;;§GLos vasallos del templo tienen +10 opiniones de su señor§!;;;;;;;;;x
+
+RR_religion_family;Kinship;Parenté;Verwandtschaft;;Parentesco;;;;;;;;;x
+RR_religion_family_desc;A family that holds together is blessed by the gods and the bedrock on which a strong society can be built.;Une famille qui tient ensemble est bénie par les dieux et constitue le fondement sur lequel une société forte peut être construite.;Eine Familie, die zusammenhält, wird von den Göttern gesegnet und ist das Fundament, auf dem eine starke Gesellschaft aufgebaut werden kann.;;Una familia que se mantiene unida es bendecida por los dioses y es la base sobre la cual se puede construir una sociedad fuerte.;;;;;;;;;x
+RR_religion_family_feature;Family is very important;La famille est très importante;Familie ist sehr wichtig;;La familia es muy importante;;;;;;;;;x
+RR_tooltip_religion_family;§GFollowers of this religion gain +10 dynasty opinion§!;§GLes fidèles obtiennent +10 opinion de la dynastie§!;§GAnhänger dieser Religion erhalten +10 Meinung der Dynastiemitglieder§!;;§GLos seguidores de esta religión ganan +10 opinión de la dinastía§!;;;;;;;;;x
+
+#### BUILDING FEATURES #####
+
+RR_religion_nature;Nature Worship;Culte de la nature;Naturanbetung;;Culto a la naturaleza;;;;;;;;;x
+RR_religion_nature_desc;Nature is a sacred mother that will nurture us if we honor her properly and destroy us if we provoke her wrath.;La nature est une mère sacrée qui nous nourrira si nous l'honorons correctement et nous détruisons si nous provoquons sa colère.;Die Natur ist eine heilige Mutter, die uns nähren wird, wenn wir sie richtig ehren und uns zerstören, wenn wir ihren Zorn provozieren.;;La naturaleza es una madre sagrada que nos cuidará si la honramos adecuadamente y nos destruye si provocamos su ira.;;;;;;;;;x
+
+RR_tooltip_religion_nature;§GSacred Groves that grant Piety to the owner of the province can be built in temples§!;§GBosquets sacrés qui accordent piété au propriétaire de la province peut être construit dans les temples§!;§GHeilige Haine, die dem Besitzer der Provinz Pietät gewähren, können in Tempeln errichtet werden§!;;§GArboledas sagradas que otorgan la piedad al propietario de la provincia se pueden construir en templos.§!;;;;;;;;;x
+
+RR_religion_nature_feature;Sacred groves can be built in temples;Les bois sacrés peuvent être construits dans les temples;Heilige Haine können in Tempeln errichtet werden;;Arboledas sagradas se pueden construir en templos;;;;;;;;;x
+
+RR_sacred_grove_1;Sacred Grove;Bois sacré;Heiliger Hain;;Arboledo sagrado;;;;;;;;;x
+RR_sacred_grove_2;Sacred Grove;Bois sacré;Heiliger Hain;;Arboledo sagrado;;;;;;;;;x
+RR_sacred_grove_3;Sacred Grove;Bois sacré;Heiliger Hain;;Arboledo sagrado;;;;;;;;;x
+RR_sacred_grove_4;Sacred Grove;Bois sacré;Heiliger Hain;;Arboledo sagrado;;;;;;;;;x
+
+
+RR_sacred_grove_desc;A grove of trees that have special religious importance.;Un bosquet d'arbres qui ont une importance religieuse particulière.;Ein Baumhain von besonderer religiöser Bedeutung.;;Un bosque de árboles que tienen especial importancia religiosa.;;;;;;;;;x
+
+#### STAT BOOST FEATURES #####
+
+RR_religion_truth;Truthfulness;Véracité;Warheit;;Veracidad;;;;;;;;;x
+
+RR_religion_truth_desc;The pursuit of the divine begins with the pursuit of the true truth. By knowing truth we will know justice and justice will inspire us to do our duty.;La poursuite du divin commence par la recherche de la vraie vérité. En connaissant la vérité, nous saurons que la justice et la justice nous inspireront à faire notre devoir.;Die Suche nach dem Göttlichen beginnt mit der Suche nach der wahren Wahrheit. Indem wir die Wahrheit kennen, werden wir Gerechtigkeit kennen. Und Gerechtigkeit wird uns inspirieren, unsere Pflicht zu tun.;;La búsqueda de lo divino comienza con la búsqueda de la verdad verdadera. Al conocer la verdad conoceremos la justicia, y la justicia nos inspirará a cumplir con nuestro deber.;;;;;;;;;x
+
+RR_religion_truth_feature;Followers are devoted to truthfulness;Les adeptes sont dévoués à la véracité;Anhänger sind der Wahrhaftigkeit verpflichtet;;Los seguidores se dedican a la veracidad;;;;;;;;;x
+
+RR_tooltip_religion_feature_truth;§GFollowers can select an ambition to become honest, just, and diligent.§!;§GLes adeptes peuvent choisir l'ambition de devenir honnêtes, justes et diligents§!;§GAnhänger können einen Ehrgeiz wählen, ehrlich, gerecht und gewissenhaft zu werden§!;;§GLos seguidores pueden seleccionar una ambición para ser honestos, justos y diligentes§!;;;;;;;;;x
+
+RR_religion_feature_templebuilders;Temple Builders;Constructeurs de temples;Tempelbauer;;Constructores de templos;;;;;;;;;x
+
+RR_religion_feature_templebuilders_desc;In order to properly honor the gods we must build them many great temples. Only then will they be satisfied.;Afin d'honorer correctement les dieux, nous devons leur construire de nombreux grands temples. Alors seulement, ils seront satisfaits.;Um die Götter richtig zu ehren, müssen wir ihnen viele großartige Tempel bauen. Nur dann werden sie zufrieden sein.;;Para honrar adecuadamente a los dioses debemos construirles muchos templos grandes. Sólo entonces estarán satisfechos.;;;;;;;;;x
+
+RR_religion_feature_templebuilders_feature;Temple construction cost is reduced;Le coût de construction du temple est réduit;Tempelbaukosten werden reduziert;;Se reduce el costo de construcción del templo;;;;;;;;;x
+
+RR_tooltip_religion_feature_fertility_boost;§GFollowers of this religion gain +10% Fertility§!;§GLes fidèles obtiennent +10% de fertilité§!;§GAnhänger dieser Religion erhalten +10% Fruchtbarkeit§!;;§GSeguidores de esta religión ganan +10% de fertilidad§!;;;;;;;;;x
+
+RR_tooltip_religion_feature_stewardship_boost;§GFollowers of this religion gain +2 base Stewardship§!;§GLes fidèles obtiennent +2 en intendance de base§!;§GAnhänger dieser Religion erhalten +2 auf ihre Grundverwaltung§!;;§GSeguidores de esta religión ganan +2 administración básico§!;;;;;;;;;x
+
+RR_tooltip_religion_feature_cheaptemples;§GTemple construction cost is reduced by 25%§!;§GLe coût de construction du temple est réduit de 25%§!;§GDie Tempelbaukosten werden um 25% reduziert§!;;§GEl costo de construcción del templo se reduce en un 25%§!;;;;;;;;;x
+
+RR_KEY_RELIGION;[Root.Religion.GetFullName];[Root.Religion.GetFullName];[Root.Religion.GetFullName];;[Root.Religion.GetFullName];;;;;;;;;x
+
+
+#### SEXY FEATURES #####
+
+RR_tooltip_religion_feature_polygamy2;§GHusbands can influence their wives to become more pleasing§!;§GLes maris peuvent influencer leurs épouses pour qu'elles deviennent plus agréables§!;§GEhemänner können ihre Frauen beeinflussen, um angenehmer zu werden§!;;§GLos esposos pueden influir en sus esposas para que sean más agradables.§!;;;;;;;;;x
+
+RR_religion_feature_concubines;Consorts;Consorts;Gefährten;;Consortes;;;;;;;;;x
+RR_religion_feature_concubines_desc;Rulers should have the right to take consorts in addition to their spouse.;Les dirigeants devraient avoir le droit de prendre des consorts en plus de leur conjoint.;Herrscher sollten das Recht haben, zusätzlich zu ihrem Ehepartner eine Gefährtin zu nehmen.;;Los gobernantes deben tener el derecho de tomar consortes además de su cónyuge.;;;;;;;;;x
+RR_tooltip_religion_feature_concubines;§GRulers can take consorts.§!;§GLes dirigeants peuvent prendre des consorts.§!;§GHerrscher können Konsorten nehmen.§!;;§GLos gobernantes pueden tomar consortes.§!;;;;;;;;;x
+
+
+RR_religion_sexual;Free Love;Amour libre;Freie Liebe;;Amor libre;;;;;;;;;x
+
+RR_religion_sexual_desc;Love is a gift from the gods and should be given freely and generously.;L'amour est un cadeau des dieux et doit être donné librement et généreusement.;Liebe ist ein Geschenk der Götter und sollte frei und großzügig gegeben werden.;;El amor es un regalo de los dioses y se debe dar libre y generosamente.;;;;;;;;;x
+
+RR_religion_sexual_feature;Followers are usually lustful;Les fidèles sont généralement lubriques;Anhänger sind üblich lüstern;;Los seguidores suelen ser lujuriosos;;;;;;;;;x
+
+RR_tooltip_religion_sexual;§GFollowers of this religion can choose to become lustful (right-click your character's portrait to use the decision)§!;§GLes fidèles euvent choisir de devenir lascifs (faites un clic droit sur votre portrait pour utiliser la décision)§!;§GAnhänger dieser Religion können sich dafür entscheiden, lüstern zu werden (klicken Sie mit der rechten Maustaste auf Ihr Porträt, um die Entscheidung zu verwenden)§!;;§GLos seguidores de esta religión pueden optar por volverse lujuriosos (haga clic derecho en su retrato para usar la decisión)§!;;;;;;;;;x
+
+RR_religion_sexual_decision;Embrace Free Love;Amour libre;Freie Liebe;;Amor libre;;;;;;;;;x
+RR_religion_sexual_decision_desc;The gods want us to follow our passion.;Les dieux veulent que nous suivions notre passion.;Die Götter wollen, dass wir unserer Leidenschaft folgen.;;Los dioses quieren que sigamos nuestra pasión.;;;;;;;;;x
+
+RR_religion_sexual_decision_self;Embrace Free Love;Accepter l'amour libre;Freie Liebe anerkenen;;Aceptar el amor libre;;;;;;;;;x
+RR_religion_sexual_decision_self_desc;The gods want us to follow our passion. And so I shall.;Les dieux veulent que nous suivions notre passion. Et je le ferai.;Die Götter wollen, dass wir unserer Leidenschaft folgen. Und so werde ich.;;Los dioses quieren que sigamos nuestra pasión. Y así lo haré.;;;;;;;;;x
+
+#### BUFF FEATURES #####
+
+RR_religion_joy;Joy of Life;Joie de vie;Lebensfreude;;Alegría de la vida;;;;;;;;;x
+RR_religion_joy_desc;The gods have given us one short life on earth and we must live it to it's fullest.;Les dieux nous ont donné une courte vie sur terre et nous devons en profiter au maximum.;Die Götter haben uns ein kurzes Leben auf der Erde gegeben, und wir müssen es so viel wie möglich genießen.;;Los dioses nos han dado una vida corta en la tierra y debemos disfrutarla lo más posible.;;;;;;;;;x
+
+RR_religion_joy_feature;Followers enjoy the pleasures of life;Les fidèles profitent des plaisirs de la vie;Anhänger genießen die Freuden des Lebens;;Los seguidores disfrutan de los placeres de la vida.;;;;;;;;;x
+
+RR_tooltip_religion_joy;§GFollowers of this religion can overcome stress and depression through drink, food, and companionship§!;§GLes fidèles peuvent surmonter le stress et la dépression grâce à la boisson, à la nourriture et à la compagnie§!;§GAnhänger dieser Religion können Stress und Depression durch Trinken, Essen und Gesellschaft überwinden§!;;§GLos seguidores de esta religión pueden superar el estrés y la depresión a través de la bebida, la comida y la compañía§!;;;;;;;;;x
+
+RR_religion_joy_decision;Enjoy Life;Profiter de la vie;Das Leben genießen;;Disfrutando de la vida;;;;;;;;;x
+
+RR_religion_joy_decision_desc;The gods have given us one short life on earth and we must live it to it's fullest.;Les dieux nous ont donné une courte vie sur terre et nous devons en profiter au maximum.;Die Götter haben uns ein kurzes Leben auf der Erde gegeben, und wir müssen es so viel wie möglich genießen.;;Los dioses nos han dado una vida corta en la tierra y debemos disfrutarla lo más posible.;;;;;;;;;x
+
+RR_religion_joy_decision_custom_tooltip;[Root.GetBestName] spends some quality time with friends, with family, or with food and drink in order to overcome stress or depression.;[Root.GetBestName] passe du temps de qualité avec des amis, en famille, ou avec des aliments et des boissons afin de surmonter le stress ou la dépression.;[Root.GetBestName] verbringt einige Zeit mit Freunden, der Familie oder mit Speisen und Getränken um Stress oder Depressionen zu überwinden.;;[Root.GetBestName] pasa tiempo de calidad con amigos, con la familia o con comida y bebida para superar el estrés o la depresión..;;;;;;;;;x
+
+EVTDESC_joy;The gods allegedly want us all to be happy, but I for one certainly haven't felt very happy for some time now. Perhaps there is something I can do about it?;Les dieux voudraient que nous soyons tous heureux, mais je ne me suis certainement pas senti très heureux depuis un moment. Peut-être que je peux faire quelque chose à ce sujet?;Die Götter wollen angeblich, dass wir alle glücklich sind, aber ich habe mich seit einiger Zeit sicher nicht sehr glücklich gefühlt. Vielleicht kann ich etwas dagegen tun?;;Los dioses supuestamente quieren que todos seamos felices, pero yo, desde luego, no me he sentido muy feliz por un tiempo. Tal vez hay algo que pueda hacer al respecto?;;;;;;;;;x
+
+RR_modifier_joy;Joy of Life;Joie de vie;Lebensfreude;;Alegría de la vida;;;;;;;;;x
+RR_modifier_joy_family;Joy of family;Joie de la familie;Familienfreude;;Alegría de la familia;;;;;;;;;x
+RR_modifier_joy_friends;Joy of Friendship;Joie de l'amitié;Freundschaftsfreude;;Alegría de amistad;;;;;;;;;x
+
+EVTOPT_joy_party1;I will drink away my troubles.;Je vais boire mes ennuis.;Ich werde meine Sorgen wegtrinken.;;Me quitaré mis problemas.;;;;;;;;;x
+
+EVTOPT_joy_party;I will eat, drink, and be merry!;Je vais manger, boire et être joyeux!;Ich werde essen, trinken und fröhlich sein!;;¡Comeré, beberé, y seré feliz!;;;;;;;;;x
+
+EVTOPT_joy_family;I will spend some time with my dearest relatives.;Je vais passer du temps avec mes plus chers parents.;Ich werde einige Zeit mit meinen geliebten Verwandten verbringen.;;Pasaré algún tiempo con mis parientes más queridos.;;;;;;;;;x
+
+EVTOPT_joy_friends;I will spend some time with my best friends.;Je vais passer du temps avec mes meilleurs amis.;Ich werde einige Zeit mit meinen besten Freunden verbringen.;;Pasaré un tiempo con mis mejores amigos.;;;;;;;;;x
+
+EVTOPT_joy_nature;I will go for a nice long walk in the wilderness.;Je vais faire une longue promenade dans le désert.;Ich werde einen schönen langen Spaziergang in der Wildnis machen.;;Voy a dar un largo paseo por el desierto.;;;;;;;;;x
+
+obj_RR_truth;Understand Divine Truth;Comprendre la vérité divine;Die göttliche Wahrheit verstehen;;Entender la verdad divina;;;;;;;;;x
+obj_RR_truth_title;Understand the Divine Truth;Comprendre la vérité divine;Die göttliche Wahrheit verstehen;;Entender la verdad divina;;;;;;;;;x
+obj_RR_truth_desc;[Root.GetTitledFirstName] wants to understand the nature of truth and the divine.;[Root.GetTitledFirstName] veut comprendre la nature de la vérité et du divin;[Root.GetTitledFirstName] will die Natur der Wahrheit und des Göttlichen verstehen.;;[Root.GetTitledFirstName] quiere entender la naturaleza de la verdad y lo divino;;;;;;;;;x
+
+EVTDESC_RR_truth_honest;What is truth? That is a question that has lately been on your mind. Are there as many truths as there are people or is there only one single truth, the truth of [Root.Religion.GetHighGodName]? The priests would certainly have you believe that. According to them to deny truth is to deny the divine. And that would be a terrible thing.;Qu'est-ce que la vérité ? C'est une question qui vous préoccupe depuis quelque temps. Y a-t-il autant de vérités qu'il y a de personnes ou n'y a-t-il qu'une seule vérité, la vérité de [Root.Religion.GetHighGodName] ? Les prêtres voudraient certainement que vous le croyiez. Selon eux, nier la vérité, c'est nier le divin. Et ce serait une chose terrible.;Was ist Wahrheit? Das ist eine Frage, an die Sie in letzter Zeit gedacht haben. Gibt es so viele Wahrheiten wie es Menschen gibt oder gibt es nur eine einzige Wahrheit, die Wahrheit von [Root.Religion.GetHighGodName]? Die Priester würden sicherlich wollen, dass Sie das glauben. Nach ihnen ist es, die Wahrheit zu leugnen, das Göttliche zu leugnen. Und das wäre eine schreckliche Sache.;;¿Qué es la verdad? Esa es una pregunta que últimamente ha estado en su mente. ¿Hay tantas verdades como personas o hay una sola verdad, la verdad de [Root.Religion.GetHighGodName]? A los sacerdotes les gustaría que creyeras eso. Según ellos, negar la verdad es negar lo divino. Y eso sería algo terrible.;;;;;;;;;x
+EVTOPT_RR_truth_honest;I should speak the truth more often.;Je devrais dire la vérité plus souvent.;Ich sollte die Wahrheit öfter sagen.;;Debería decir la verdad más a menudo.;;;;;;;;;x
+
+EVTDESC_RR_truth_just;There is only one truth, the truth of [Root.Religion.GetHighGodName]. By accepting this we accept the will of the divine. And by speaking the truth we learn to distinguish right from wrong. Acting unjustly is very much like lying. It is the denial of truth through action instead of denial of truth through words.;Il n'y a qu'une seule vérité, la vérité de [Root.Religion.GetHighGodName]. En acceptant cela, nous acceptons la volonté du divin. Et en disant la vérité, nous apprenons à distinguer le bien du mal. Agir injustement, c'est comme mentir. C'est le déni de la vérité par l'action au lieu du déni de la vérité par les mots.;Es gibt nur eine Wahrheit, die Wahrheit von [Root.Religion.GetHighGodName]. Indem wir dies annehmen, akzeptieren wir den Willen des Göttlichen. Und indem wir die Wahrheit sagen, lernen wir, richtig von falsch zu unterscheiden. Unrecht zu handeln ist sehr ähnlich wie zu lügen. Es ist die Verleugnung der Wahrheit durch Handeln statt der Verleugnung der Wahrheit durch Worte.;;Sólo hay una verdad, la verdad de [Root.Religion.GetHighGodName]. Al aceptar esto aceptamos la voluntad de lo divino. Y al decir la verdad aprendemos a distinguir el bien del mal. Actuar injustamente es muy parecido a mentir. Es la negación de la verdad a través de la acción en lugar de la negación de la verdad a través de las palabras.;;;;;;;;;x
+EVTOPT_RR_truth_just;I should try to more often do what is right.;Je devrais essayer de faire plus souvent ce qui est juste.;Ich sollte versuchen, öfter das Richtige zu tun.;;Debería tratar de hacer más a menudo lo que es correcto.;;;;;;;;;x
+
+EVTDESC_RR_truth_diligent;To speak the truth is to know the will of [Root.Religion.GetHighGodName] and to know right from wrong. Naturally we must not do what is wrong. But we also must do what is right. Doing nothing when there is something that needs to be done is acting wrongly. And so by speaking the truth we learn justice and through justice we learn duty and then we live our lives in accordance with the divine truth.;Dire la vérité, c'est connaître la volonté de [Root.Religion.GetHighGodName] et savoir distinguer le bien du mal. Naturellement, nous ne devons pas faire ce qui est mal. Mais nous devons aussi faire ce qui est juste. Ne rien faire quand il y a quelque chose à faire, c'est mal agir. Ainsi, en disant la vérité, nous apprenons la justice et, par la justice, nous apprenons le devoir, puis nous vivons notre vie en accord avec la vérité divine;Die Wahrheit zu sagen bedeutet, den Willen von[Root.Religion.GetHighGodName] zu kennen und richtig von falsch zu unterscheiden. Natürlich dürfen wir nicht das tun, was falsch ist. Aber wir müssen auch das Richtige tun. Nichts zu tun, wenn es etwas zu tun gibt, was getan werden muss, bedeutet, falsch zu handeln. Und so lernen wir durch das Sprechen der Wahrheit Gerechtigkeit und durch Gerechtigkeit lernen wir Pflicht und dann leben wir unser Leben in Übereinstimmung mit der göttlichen Wahrheit.;;Decir la verdad es conocer la voluntad de[Root.Religion.GetHighGodName] y distinguir el bien del mal. Naturalmente, no debemos hacer lo que está mal. Pero también debemos hacer lo que es correcto. No hacer nada cuando hay algo que hay que hacer es actuar mal. Y así, al hablar la verdad aprendemos la justicia y a través de la justicia aprendemos el deber y luego vivimos nuestras vidas de acuerdo con la verdad divina.;;;;;;;;;x
+EVTOPT_RR_truth_diligent;I should do my duty more often.;Je devrais faire mon devoir plus souvent.;Ich sollte meine Pflicht öfter tun.;;Debería cumplir con mi deber más a menudo.;;;;;;;;;x
+
+EVTOPT_RR_truth_reject;That is just silly religious nonsense.;C'est juste une stupide absurdité religieuse.;Das ist nur ein alberner religiöser Unsinn.;;Eso es sólo una tontería religiosa.;;;;;;;;;x
+
+
+#### BATTLE FEATURES #####
+
+RR_tooltip_religion_feature_levy;§GRulers have +20% levy size§!;§GLes dirigeants ont une taille des levées de +20%§!;§GHerrscher haben +20% Aufgebotsgröße§!;;§GLos gobernantes tienen un tamaño leva de +20%§!;;;;;;;;;x
+
+religion_warlike_feature;Rulers have +20% levy size;Les dirigeants ont une taille des levées de +20%;Herrscher haben +20% Aufgebotsgröße;;Los gobernantes tienen un tamaño leva de +20%;;;;;;;;;x
+
+religion_defensive_feature;Armies get +100% morale when fighting in home provinces;Les armées obtiennent + 100% de moral lors des combats dans leurs provinces d'origine;Armeen erhalten + 100% Moral, wenn sie in Heimatprovinzen kämpfen;;Los ejércitos obtienen un 100% de moral cuando luchan en las provincias de origen;;;;;;;;;x
+
+RR_religion_feature_retinues;Holy Warriors;Guerriers sacrés;Heilige Krieger;;Guerreros santos;;;;;;;;;x
+RR_religion_feature_retinues_desc;The gods look with favor upon any man who will take up arms in their name.;Les dieux considèrent avec faveur tout homme qui prendra les armes en son nom.;Die Götter werden jeden Mann belohnen, der in ihrem Namen die Waffen ergreift.;;Los dioses miran con agrado a cualquier hombre que tome las armas en su nombre.;;;;;;;;;x
+RR_religion_feature_retinues_feature;Special retinues can be hired with Piety based on the terrain of the capital;L'escrote spécial peut être embauché avec piété;Besondere Gefolgtruppen können mit Pietät gebildet werden;;Séquitos especial puede ser contratado con piedad;;;;;;;;;x
+RR_tooltip_religion_feature_retinue;§GSpecial retinues can be hired with Piety based on the terrain of your capital§!;§GL'escrote spécial peut être embauché avec piété§!;§GBesondere Gefolgtruppen können mit Pietät gebildet werden§!;;§GSéquitos especial puede ser contratado con piedad§!;;;;;;;;;x
+
+ReformationReformPietyRetinueLI;[Root.Religion.GetFullName] Zealots;Fanatiques de l'[Root.Religion.GetFullName];[Root.Religion.GetFullName]e Eiferer;;Fanáticos del [Root.Religion.GetFullName];;;;;;;;;x
+ReformationReformPietyRetinueHI;Swords of [Root.Religion.GetHighGodName];Épées de [Root.Religion.GetHighGodName];Schwerter von [Root.Religion.GetHighGodName];;Espadas de [Root.Religion.GetHighGodName];;;;;;;;;x
+ReformationReformPietyRetinuePI;Spears of [Root.Religion.GetHighGodName];Lances d'[Root.Religion.GetHighGodName];Speere von [Root.Religion.GetHighGodName];;Lanzas de [Root.Religion.GetHighGodName];;;;;;;;;x
+ReformationReformPietyRetinueLC;[Root.Religion.GetHighGodName]'s Raiders;Raiders d'[Root.Religion.GetHighGodName];[Root.Religion.GetHighGodName]s Plünderer;;Asalantes de [Root.Religion.GetHighGodName];;;;;;;;;x
+ReformationReformPietyRetinueHC;Champions of [Root.Religion.GetHighGodName];Champions d'[Root.Religion.GetHighGodName];Auserwählten von [Root.Religion.GetHighGodName];;Campeones de [Root.Religion.GetHighGodName];;;;;;;;;x
+ReformationReformPietyRetinueAR;Arrows of [Root.Religion.GetHighGodName];Flèches d'[Root.Religion.GetHighGodName];Pfeile von [Root.Religion.GetHighGodName];;Flechas de [Root.Religion.GetHighGodName];;;;;;;;;x
+ReformationReformPietyRetinueHA;Riders of [Root.Religion.GetHighGodName];Cavaliers d'[Root.Religion.GetHighGodName];Reiter von [Root.Religion.GetHighGodName];;Jinetes de [Root.Religion.GetHighGodName];;;;;;;;;x
+ReformationReformPietyRetinueCC;[Root.Religion.GetHighGodName]'s Camels;Chameaux d'[Root.Religion.GetHighGodName];[Root.Religion.GetHighGodName]s Kamelen;;Camellos de [Root.Religion.GetHighGodName];;;;;;;;;x
+
+ReformationReformAmazonRetinueAR;Amazon Archers;Archers amazoniens;Amazonische Bogenschützen;;Arqueros amazónicos;;;;;;;;;x
+ReformationReformAmazonRetinueHA;Amazon Cavalry;Cavalerie amazonienne;Amazonische Kavallerie;;Caballería amazónica;;;;;;;;;x
+RR_tooltip_religion_feature_retinue_amazon;§GRulers can hire special Amazon retinues§!;§GLes dirigeants peuvent former l'escrotes spéciales d'Amazones§!;§GHerrscher können spezielle Amazonische Gefolgtruppen bilden§!;;§GLos gobernantes pueden formar a séquitos amazónicos especiales§!;;;;;;;;;x
+
+RR_religion_feature_infantry;Populism;Populisme;Populismus;;Populismo;;;;;;;;;x
+RR_religion_feature_infantry_desc;All men equal before the gods and woe to the king that forgets it.;Tous les hommes sont égaux devant les dieux et malheur au roi qui l'oublie.;Alle Menschen sind vor den Göttern gleich und wehe dem König, der es vergisst.;;Todos los hombres son iguales ante los dioses y ¡ay del rey que lo olvida!;;;;;;;;;x
+RR_religion_feature_infantry_feature;Light Infantry, Archers, and Pikemen gain combat bonuses;L'infanterie légère, les archers et les piquiers gagnent des bonus de combat;Leichte Infanterie, Bogenschützen und Pikeniere erhalten Kampfboni;;Infantería ligera, arqueros y piqueros obtienen bonificaciones de combate;;;;;;;;;x
+RR_tooltip_religion_feature_infantry_bonus;§GLight Infantry, Archers, and Pikemen gain combat bonuses§!;§GL'infanterie légère, les archers et les piquiers gagnent des bonus de combat§!;§GLeichte Infanterie, Bogenschützen und Pikeniere erhalten Kampfboni§!;;§GInfantería ligera, arqueros y piqueros obtienen bonificaciones de combate§!;;;;;;;;;x
+
+RR_religion_feature_elite;Warrior Elite;Élite guerrière;Krieger Elite;;Élite guerrera;;;;;;;;;x
+RR_religion_feature_elite_desc;The gods have raised the noble warrior above other men. In return it is the duty of this nobility to hone their martial craft to perfection.;Les dieux ont élevé le noble guerrier au-dessus des autres hommes. En retour, cette noblesse a le devoir de parfaire son art martial à la perfection.;Die Götter haben den edlen Krieger über andere Männer erhoben. Im Gegenzug ist es die Pflicht dieses Adels, sein Kampfhandwerk zur Perfektion zu bringen.;;Los dioses han elevado al noble guerrero por encima de otros hombres. A cambio, el deber de esta nobleza es perfeccionar sus naves marciales a la perfección.;;;;;;;;;x
+RR_religion_feature_elite_feature;Heavy Infantry, Heavy Cavalry, and War Elephants gain combat bonuses;L'infanterie lourde, la cavalerie lourde, et les eléphants de guerre gagnent des bonus de combat;Schwere Infanterie, Schwere Kavalerie und Kriegselefanten erhalten Kampfboni;;Infantería pesada, caballeria pesada, y elefantes de guerra obtienen bonificaciones de combate;;;;;;;;;x
+RR_tooltip_religion_feature_elite_bonus;§GHeavy Infantry, Heavy Cavalry, and War Elephants gain combat bonuses§!;§GL'infanterie lourde, la cavalerie lourde, et les eléphants de guerre gagnent des bonus de combat§!;§GSchwere Infanterie, Schwere Kavalerie und Kriegselefanten erhalten Kampfboni§!;;§GInfantería pesada, caballeria pesada, y elefantes de guerra obtienen bonificaciones de combate§!;;;;;;;;;x
+
+RR_religion_feature_cavalry;Horse Cult;Culte des chevaux;Pferdekult;;Culto del caballos;;;;;;;;;x
+RR_religion_feature_cavalry_desc;Horses are sacred animals, blessed by the gods with strength and speed. With their aid we will overcome any enemy!;Les chevaux sont des animaux sacrés, bénis par les dieux avec force et rapidité. Avec leur aide, nous vaincrons tous les ennemis!;Pferde sind heilige Tiere, gesegnet von den Göttern mit Kraft und Geschwindigkeit. Mit ihrer Hilfe werden wir jeden Feind überwinden!;;Los caballos son animales sagrados, bendecidos por los dioses con fuerza y velocidad. ¡Con su ayuda venceremos a cualquier enemigo!;;;;;;;;;x
+RR_religion_feature_cavalry_feature;Light Cavalry, Horse Archers, and Camel Cavalry gain combat bonuses;L'Cavalerie Légère, les Archers à Cheval et les Chameaux gagnent des bonus de combat;Leichte Kavallerie, Ber. Bogenschützen, und Kamelkavallerie erhalten Kampfboni;;Caballería ligera, arqueros a caballo, y caballería camellos obtienen bonificaciones de combate;;;;;;;;;x
+RR_tooltip_religion_feature_cavalry_bonus;§GLight Cavalry, Horse Archers, and Camel Cavalry gain combat bonuses§!;§GL'Cavalerie Légère, les Archers à Cheval et les Chameaux gagnent des bonus de combat§!;§GLeichte Kavallerie, Ber. Bogenschützen, und Kamelkavallerie erhalten Kampfboni§!;;§GCaballería ligera, arqueros a caballo, y caballería camellos obtienen bonificaciones de combate§!;;;;;;;;;x
+
+
+#### CB FEATURES #####
+
+RR_subjugation_desc;Taoists and unreformed pagans can once per life subjugate any ruler of lower rank.;Les taoïstes et les païens non réformés peuvent, une fois par vie, assujettir n'importe quel chef de rang inférieur.;Taoisten und nicht reformierte Heiden können einmal pro Leben einen Herrscher von niedrigerem Rang unterwerfen.;;Los taoístas y los paganos no reformados pueden, una vez por vida, subyugar a cualquier gobernante de rango inferior.;;;;;;;;;x
+
+RR_religion_holywar;Great Holy Wars;Grandes guerres saintes;Große Heilige Kriege;;Grandas guerras santas;;;;;;;;;x
+
+RR_religion_holywar_desc;The faithful shall work together to spread the worship of the gods by the sword. To this end a great holy war may be declared by the god king.;Les fidèles travailleront ensemble pour répandre le culte des dieux par l'épée. À cette fin, le roi-dieu peut déclarer une grande guerre sainte.;Die Gläubigen sollen zusammenarbeiten, um die Verehrung der Götter durch das Schwert zu verbreiten. Zu diesem Zweck kann der Gottkönig einen großen heiligen Krieg erklären.;;Los fieles trabajarán juntos para difundir la adoración de los dioses por la espada. Para este fin, una gran guerra santa puede ser declarada por el dios rey.;;;;;;;;;x
+
+RR_tooltip_religion_feature_invasion;§GPious rulers can use a special invasion casus belli§!;§GLes dirigeants peuvent conquérir des royaumes infidèles§!;§GHerrscher können ungläubige Königreiche erobern§!;;§GLos gobernantes pueden conquistar reinos infieles§!;;;;;;;;;x
+
+RR_tooltip_religion_feature_freeinvasion;§GOnce per lifetime rulers can conquer an infidel kingdom§!;§GUne fois par vie, les dirigeants peuvent conquérir un royaume d'infidèles§!;§GEinmal im Leben können Herrscher ein Königreich der Ungläubigen erobern§!;;§GUna vez en la vida, los gobernantes pueden conquistar un reino infiel§!;;;;;;;;;x
+
+RR_pagan_invasion_once_per_lifetime_desc;§Y$TARGET$§! is not of the True Faith - which is all the cause §Y$CLAIMANT$§! needs to invade the §Y$TITLE$§!. If successful, everything §Y$TARGET$§! controls within the §Y$TITLE$§! will be taken or vassalized.;§Y$TARGET$§! ne suit pas la vraie foi - c'est suffisant pour que §Y$CLAIMANT$§! envahisse le §Y$TITLE$§!. En cas de succès, tout ce que contrôle §Y$TARGET$§! dans le §Y$TITLE$§! sera capturé ou vassalisé.;§Y$TARGET$§! gehört nicht dem wahren Glauben an, was Grund genug für §Y$CLAIMANT$§! ist, um eine Invasion gegenüber §Y$TITLE$§! zu starten. Sollte er Erfolg haben, so wird aller Besitz von §Y$TARGET$§! innerhalb vom §Y$TITLE$§! übernommen oder vasallisiert.;;§Y$TARGET$§! no es de la verdadera fe - por lo cual §Y$CLAIMANT$§! debe invadir el §Y$TITLE$§!. De tener éxito, todo lo que §Y$TARGET$§! controle dentro del §Y$TITLE$§! será anexionado o vasallizado.;;;;;;;;;x
+
+RR_pagan_invasion_invaders_desc;§Y$TARGET$§! is not of the True Faith - which is all the cause §Y$CLAIMANT$§! needs to invade the §Y$TITLE$§!. If successful, everything §Y$TARGET$§! controls within the §Y$TITLE$§! will be taken or vassalized.;§Y$TARGET$§! ne suit pas la vraie foi - c'est suffisant pour que §Y$CLAIMANT$§! envahisse le §Y$TITLE$§!. En cas de succès, tout ce que contrôle §Y$TARGET$§! dans le §Y$TITLE$§! sera capturé ou vassalisé.;§Y$TARGET$§! gehört nicht dem wahren Glauben an, was Grund genug für §Y$CLAIMANT$§! ist, um eine Invasion gegenüber §Y$TITLE$§! zu starten. Sollte er Erfolg haben, so wird aller Besitz von §Y$TARGET$§! innerhalb vom §Y$TITLE$§! übernommen oder vasallisiert.;;§Y$TARGET$§! no es de la verdadera fe - por lo cual §Y$CLAIMANT$§! debe invadir el §Y$TITLE$§!. De tener éxito, todo lo que §Y$TARGET$§! controle dentro del §Y$TITLE$§! será anexionado o vasallizado.;;;;;;;;;x
+
+#### GOVERNMENT STUFF #####
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+title_godking;God King;Roi Dieu;Gottkönig;;Dios Rey;;;;;;;;;x
+title_godqueen;God Queen;Reine Dieu;Gottkönigin;;Diosa Reina;;;;;;;;;x
+
+title_godemperor;God Emperor;Dieu Empereur;Gotteskaisers;;Dios Emparador;;;;;;;;;x
+title_godempress;God Empress;Dieu Impératrice;Gottkaiserin;;Diosa Emperatriz;;;;;;;;;x
+
+gov_godking;Realm of the God-King;Royaume du roi-dieu;Reich des Gottkönigs;;Reino de dios rey;;;;;;;;;x
+gov_godqueen;Realm of the God-Queen;Royaume de la reine-dieu;Reich der Gottkönigin;;Reino de la reina de dios;;;;;;;;;x
+
+gov_godemperor;Realm of the God-Emperor;Royaume du dieu-empereur;Reich des Gotteskaisers;;Reino de dios emparador;;;;;;;;;x
+gov_godempress;Realm of the God-Empress;Royaume du dieu-impératrice;Reich der Gottkaiserin;;Reino de la emperatriz de dios;;;;;;;;;x
+
+gov_religious_community;Egalitarian Religious Community;Communauté religieuse;Religiose Gemeinschaft;;Comunidad religiosa igualitaria;;;;;;;;;x
+
+RR_religious_community_government;Religious Community;Communauté religieuse égalitaire;Egalitäre religiose Gemeinschaft;;Comunidad religiosa;;;;;;;;;x
+RR_religious_community_government_desc;Religious communities are highly egalitarian though not entirely so. Leaders are elected, but typically come from an respected family. Vassals are not obliged to provide taxes or levies, but can be called to arms instead.;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+RR_religion_community;Anti-feudal;Anti-féodal;Antifeudal;;Antifeudal;;;;;;;;;x
+RR_religion_community_desc;Instead of having feudal lords rule over peasants we will establish religious communities where all shall be united in their faith as brothers and sisters.;Au lieu de laisser les seigneurs féodaux régner sur les paysans, nous établirons des communautés religieuses où tous seront unis dans leur foi en tant que frères et soeurs.;Anstatt Feudalherren über Bauern zu regieren, werden wir Religionsgemeinschaften errichten, in denen alle als Brüder und Schwestern in ihrem Glauben vereint sein sollen.;;En lugar de que los señores feudales dominen a los campesinos, estableceremos comunidades religiosas donde todos se unirán en su fe como hermanos y hermanas.;;;;;;;;;x
+RR_religion_community_feature;Followers live in religious communities and elect their leaders;Les disciples vivent dans des communautés religieuses et élisent leurs dirigeants;Anhänger leben in religiösen Gemeinschaften und wählen ihre Führer;;Los seguidores viven en comunidades religiosas y eligen a sus líderes;;;;;;;;;x
+
+RR_tooltip_religion_feature_community;§GAll characters above baron tier use a special government that allows owning castle, temples, and cities and having more vassals, but forces you to use elective succession law§!;§GTous les personnages au-dessus de baron utilisent un gouvernement spécial qui permet de posséder un château, des temples et des villes et d'avoir plus de vassaux, mais vous oblige à utiliser le droit de succession électif.§!;§GAlle Charaktere oberhalb der Stufe des Barons verwenden eine spezielle Regierung, die es erlaubt, Schloss, Tempel und Städte zu besitzen und mehr Vasallen zu haben, zwingt Sie jedoch zum Wahlrechtswahlrecht§!;;§GTodos los personajes que se encuentran por encima del nivel de barón utilizan un gobierno especial que permite poseer castillos, templos y ciudades y tener más vasallos, pero te obliga a usar la ley de sucesión electiva§!;;;;;;;;;x
+
+RR_tooltip_religion_feature_community2;§YTribes, nomads, and merchant republics are not affected and use their normal government type§!;§YLes tribus, les nomads et les républiques marchandes ne sont pas touchées et utilisent leur type de gouvernement habituel§!;§YStämme, Nomaden und Handelsrepubliken sind nicht betroffen und verwenden ihren normalen Regierungsform§!;;§YLas tribus, los nómadas y las repúblicas mercantiles no se ven afectadas y utilizan su tipo de gobierno normal§!;;;;;;;;;x
+
+RR_tooltip_vote_strength_learning;[Root.GetFirstName] is wise;[Root.GetFirstName] est sage;[Root.GetFirstName] ist weise;;[Root.GetFirstName] es sabi[Root.GetOA];;;;;;x
+
+RR_pious_elective;Pious Elective;Électif pieux;Frömmige Wahl;;Piadoso electivo;;;;;;;;;x
+succ_RR_pious_elective;Pious Elective;Électif pieux;Frömmige Wahl;;Piadoso electivo;;;;;;;;;x
+
+succ_RR_pious_elective_desc;The ruler, the councilors, and all the vassals in the realm choose the heir. Only those who match the ruler's religion are eligible for both nomination and voting. The choice of heir is primarily based on the candidate's wisdom and piety and pious electors similarly have a stronger vote.;Le souverain, les conseillers et tous les vassaux du royaume choisissent l'héritier. Seuls ceux qui correspondent à la religion du dirigeant sont admissibles à la fois à l'investiture et au vote. Le choix de l'héritier se fonde principalement sur la sagesse et la piété du candidat et les électeurs pieux ont également un vote plus fort.;Der Herrscher, die Ratsherren und alle Vasallen im Reich wählen den Erben. Nur diejenigen, die der Religion des Herrschers entsprechen, sind sowohl zur Nominierung als auch zur Abstimmung berechtigt. Die Wahl des Erben richtet sich in erster Linie nach der Weisheit und Frömmigkeit des Kandidaten, und fromme Wähler haben gleichermaßen eine stärkere Stimme.;;El gobernante, el consejo y todos los vasallos del reino eligen al heredero. Sólo aquellos que coinciden con la religión del gobernante son elegibles tanto para la nominación como para la votación. La elección del heredero se basa principalmente en la sabiduría y la piedad del candidato y los electores piadosos tienen un voto más fuerte.;;;;;;;;;x
+
+RR_religion_godking;God-king;Roi-dieu;Gottkönig;;Dios rey;;;;;;;;;x
+RR_religion_godking_desc;It has become self-evident through my great deeds that I am the living embodiment of the divine. I shall be worshipped as the chief god of our pantheon.;Il est devenu évident, à travers mes grandes actions, que je suis l'incarnation vivante du divin. Je serai vénéré comme le dieu principal de notre panthéon.;Durch meine großen Taten ist es selbstverständlich geworden, dass ich die lebendige Verkörperung des Göttlichen bin. Ich werde als der Hauptgott unseres Pantheons verehrt.;;Se ha hecho evidente por medio de mis grandes obras que soy la encarnación viva de lo divino. Seré adorado como el dios principal de nuestro panteón.;;;;;;;;;x
+RR_religion_godking_feature;The religious head is worshipped as the high god;Le chef religieux est vénéré comme le dieu suprême;Das religiöse Oberhaupt wird als Hauptgott verehrt;;La cabeza religiosa es adorada como el dios supremo;;;;;;;;;x
+
+RR_tooltip_religion_feature_godking;§GEnables a special government for the head of the religion, which allows owning temples and revoking titles from all vassals§!;§GPermet un gouvernement spécial pour le chef de la religion, qui permet de posséder des temples et de révoquer les titres de tous les vassaux§!;§GErmöglicht eine spezielle Regierung für das religiöses Oberhaupt, die es erlaubt, Tempel zu besitzen und Titel von allen Vasallen zu widerrufen§!;;§GHabilita un gobierno especial para el lider de la religión, que permite poseer templos y revocar títulos de todos los vasallos§!;;;;;;;;;x
+
+RR_temporal_feudal_government;Hereditary Theocracy;Théocratie héréditaire;Erbliche Theokratie;;Teocracia hereditaria;;;;;;;;;x
+
+RR_temporal_feudal_government_desc;Feudal government revolves around the oath between liege and vassal, and Feudal lords can only directly own so many Holdings before they must start to rely on vassals - whose loyalty may vary... There are several Succession Laws to pick between - each with its own merits. The Centralization Law controls the maximum size of your Demesne and the number of direct vassals you can have. If you should convert to a religion in the [muslim.GetGroupName] group, your government form will change to Iqta.;Un gouvernement féodal repose sur un serment entre un seigneur et son vassal, et les seigneurs féodaux ne peuvent posséder directement qu'un nombre limité de propriétés avant de devoir s'appuyer sur des vassaux – dont la loyauté peut laisser à désirer... Vous pouvez choisir une loi de succession, chacune ayant ses propres mérites. La loi de centralisation contrôle la taille maximale de votre domaine et le nombre de vassaux directs que vous pouvez avoir. Si vous vous convertissez à une religion du groupe [muslim.GetGroupName], votre gouvernement se changera en iqtâ.;Im Zentrum einer Feudalregierung steht der Eid zwischen Lehnsherr und Vasall, wobei ein feudaler Fürst nur eine begrenze Anzahl an Besitztümern direkt halten kann, bevor er sich auf seine Vasallen verlassen muss, dessen Loyalität variiert... Für die Erbfolge stehen verschiedene Gesetze zur Wahl, von denen jedes seine Vorzüge hat. In den Zentralisierungsgesetzen ist die maximale Größe der Domäne und die mögliche Anzahl der direkten Vasallen festgelegt. Wenn Ihr zu einer Religion der [muslim.GetGroupName]en Religionsgruppe konvertieren solltet, wird Eure Regierungsform zur Iqta geändert.;;El gobierno feudal gira alrededor del juramento entre señor y vasallo, y los señores feudales solo pueden poseer directamente un cierto número de posesiones antes de empezar a confiar en sus vasallos - cuya lealtad puede variar… Hay varias leyes de sucesión para elegir, cada una con sus propios méritos. La ley de centralización controla el tamaño máximo de tu domino y el número de vasallos directos que puedes tener. Si te conviertes a una religión del grupo [muslim.GetGroupName], tu forma del gobierno cambiará a Iqta.;;;;;;;;;x
+
+RR_temporal_republic_government;Republican Theocracy;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+RR_temporal_tribal_government;Tribal Theocracy;Théocratie tribale;Stammes-Theokratie;;Teocracia tribal;;;;;;;;;x
+
+RR_temporal_tribal_government_desc;Tribes are settled but agrarian. Each county can only have one Tribal 'Holding', representing the entire local tribal population - the more empty Holding slots, the more powerful the Tribal Holding. Tribal rulers are limited to the 'Elective Gavelkind' Succession Law, which tends to fragment the realm between sons on the death of the chief.;Les tribus sont sédentaires mais agraires. Chaque comté ne peut disposer que d'une seule propriété tribale, qui représente la population locale entière de la tribu – plus vous avez d'emplacements de propriété vides, plus la propriété tribale gagne en puissance. Les seigneurs tribaux sont limités à la succession par partage salique électif, ce qui a tendance à fragmenter le territoire contrôlé entre les fils à la mort du chef.;Stämme sind sesshaft, aber landwirtschaftlich ausgerichtet. Jede Grafschaft kann nur ein "Stammesbesitztum" haben. Dort befindet sich die gesamte Stammesbevölkerung. Je mehr freie Bauplätze vorhanden sind, desto mächtiger ist der dortige Stamm. Stammesherrscher sind bei der Erbfolge eingeschränkt: Nur die "Wahlweise Erbteilung" ist möglich. Hierdurch wird das Reich unter den Söhnen des Häuptlings aufgeteilt und zerfällt zumeist.;;Las tribus están establecidas, pero agrarias. Cada condado sólo puede tener una 'posesión' tribal, representando a la población tribal local entera - cuantas más ranuras de posesiones vacías haya, más poderosa será la posesión tribal. Los gobernantes tribales se limitan a la ley de sucesión 'reparto electivo', que tiende a fragmentar el reino entre hijos a la muerte del jefe.;;;;;;;;;x
