@@ -1834,7 +1834,11 @@ monastic_order_buddhist = {
 			}
 		}
 		is_adult = yes
-		religion = buddhist
+		OR = {
+            religion = buddhist
+            religion = bon
+            religion = bon_reformed
+        }
 		custom_tooltip = {
 			text = did_not_betray_society
 			NOT = { has_character_flag = betrayed_monastic_order_buddhist }
