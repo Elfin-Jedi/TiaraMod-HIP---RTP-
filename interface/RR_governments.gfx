@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_icon_RR_temporal_feudal_government"
+		texturefile = "gfx\\interface\\RR_government_icon_feudal_temporal.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_RR_temporal_tribal_government"
+		texturefile = "gfx\\interface\\RR_government_icon_tribal_temporal.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_RR_religious_community_government"
+		texturefile = "gfx\\interface\\RR_government_icon_religious_community.dds"
+	}
+}

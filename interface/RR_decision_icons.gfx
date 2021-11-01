@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_RR_charity_decision"
+		texturefile = "gfx\\interface\\decision_icon_donate_charity.dds"
+	}
+	spriteType = {
+		name = "GFX_RR_religion_joy_decision"
+		texturefile = "gfx\\interface\\decision_icon_feast.dds"
+	}
+	spriteType = {
+		name = "GFX_RR_religion_cosmopolitan_syncretic_synergy_vassal_decision"
+		texturefile = "gfx\\interface\\decision_icon_syncretic_sympathy_decision.dds"
+	}
+}
