@@ -1,0 +1,86 @@
+# 482 - Atheniai
+
+# County Title
+title = c_atheniai
+
+# Settlements
+max_settlements = 4
+
+b_athens = castle
+b_megara = city
+b_piraeaus = temple # Orthodox Holy Site
+
+#b_soula = castle
+#b_daphni = castle
+#b_karydi = castle
+#b_salamis = castle
+#b_marathon = castle
+
+# Misc
+culture = greek
+religion = orthodox
+
+# History
+1.1.1 = {
+	build_wonder = wonder_city_of_wonders_athens
+	set_wonder_stage = 5
+	build_wonder_upgrade = upgrade_cow_district_port_of_piraeus
+	build_wonder_upgrade = upgrade_cow_district_parthenon_athens
+	build_wonder_upgrade = upgrade_cow_district_colossus_athena
+	build_wonder_upgrade = upgrade_cow_district_odeon_athens
+}
+
+267.1.1 = { # 1st Sack of Athens (Heruli)
+	destroy_wonder_upgrade = upgrade_cow_district_odeon_athens
+	add_custom_history = String_athens_sacked_by_heruli
+	set_wonder_stage = 3
+}
+
+396.1.1 = { # 2nd Sack of Athens' area (Alaric)
+	destroy_wonder_upgrade = upgrade_cow_district_port_of_piraeus
+	add_custom_history = String_athens_sacked_by_alaric
+	set_wonder_stage = 2
+}
+
+466.1.1 = { # Athena Promachos moved to Constantinople
+	destroy_wonder_upgrade = upgrade_cow_district_colossus_athena
+	add_custom_history = String_athena_promachos_moved_to_byz
+}
+
+484.1.1 = { # Hellenic Parthenon was closed down
+	destroy_wonder_upgrade = upgrade_cow_district_parthenon_athens
+	add_custom_history = String_hellenic_parthenon_closed_down
+}
+
+582.1.1 = { # 3rd Sack of Athens (Slavs)
+	add_custom_history = String_athens_sacked_by_slavs
+	set_wonder_stage = 1
+}
+
+1145.1.1 = { trade_post = b_morosini }
+
+# 4th crusade
+
+#1205.1.1 = { culture = frankish }
+#1205.1.1 = { religion = catholic } 
+
+1205.1.1 = { b_megara = castle }
+
+# Conquest by the Catalan Company
+
+#1311.15.3 = { culture = catalan }
+
+1337.1.1 = { b_daphni = castle }
+
+# Athens bought by the Florentine Acciaiolli family
+
+#1388.1.1 = { culture = italian }
+
+# Venetians take over Athens
+
+#1395.1.1 = { b_athens = city } 
+
+
+# Acciaiolli restored
+
+#1402.1.1 = { b_athens = castle } 

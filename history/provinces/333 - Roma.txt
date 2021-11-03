@@ -1,0 +1,100 @@
+# 333 - Roma
+
+# County Title
+title = c_roma
+
+# Settlements
+max_settlements = 7
+b_roma = temple
+b_tusculum = castle
+b_viterbo = city
+#b_terracina = castle
+b_tivoli = castle
+#b_aragni = castle
+#b_ostia = castle
+#b_sutri = castle
+
+# Misc
+culture = italian
+religion = catholic
+
+# History (Eternal City)
+
+1.1.1 = { # Eternal City
+	build_wonder = wonder_city_of_wonders_roma
+	set_wonder_stage = 10
+	build_wonder_upgrade = upgrade_cow_circus_maximus
+	# build_wonder_upgrade = upgrade_cow_district_forum_romanum
+}
+
+68.1.1 = { # Colossus Neronis/Solis was built during the reign of Nero
+	build_wonder_upgrade = upgrade_cow_district_colossus_solis
+}
+
+80.1.1 = { # Colosseum/"Amphitheatrum Flavium" was completed during the reign of Titus
+	build_wonder_upgrade = upgrade_cow_district_colosseum
+}
+
+114.1.1 = { # The Bibliotheca Ulpia was founded by the Emperor Trajan in AD 114
+	build_wonder_upgrade = upgrade_cow_district_bibliotheca_ulpia
+}
+
+125.1.1 = { # The Pantheon was completed during the reign of Hadrian
+	build_wonder_upgrade = upgrade_cow_district_pantheon_roma
+}
+
+313.10.2 = { # Lateran Palace granted to the Papacy
+	build_wonder_upgrade = upgrade_cow_district_lateran_palace
+}
+
+360.1.1 = { # Old St. Peter's Basilica consecrated c. 360
+	build_wonder_upgrade = upgrade_cow_district_old_st_peter
+}
+
+410.8.24 = { # Sacked by King Alaric (Visigoths)
+	set_wonder_stage = 8
+}
+
+455.6.16 = { # Sacked by the Vandels
+	destroy_wonder_upgrade = upgrade_cow_district_bibliotheca_ulpia
+	add_custom_history = String_bibliotheca_ulpia_destroyed_roma
+	set_wonder_stage = 6
+}
+
+537.1.1 = { # Gothic Siege of Rome (537–538)
+	set_wonder_stage = 4
+}
+
+600.1.1 = { # Circus Maximus gradually decayed into oblivion
+	destroy_wonder_upgrade = upgrade_cow_circus_maximus
+	add_custom_history = String_circus_maximus_destroyed_roma
+}
+
+609.5.13 = { # The Pantheon was converted into just another Christian church in Roma
+	destroy_wonder_upgrade = upgrade_cow_district_pantheon_roma
+	add_custom_history = String_pantheon_destroyed_roma
+}
+
+770.1.1 = { # Colossus Solis was most likely gone or in ruins after this date (Bede c. 672–735)
+	destroy_wonder_upgrade = upgrade_cow_district_colossus_solis
+	add_custom_history = String_colossus_solis_destroyed_roma
+}
+
+# History
+867.1.1 = { 
+	b_tusculum = ca_keep_1
+	b_tusculum = ca_stable_1
+	b_tusculum = ca_militia_barracks_1
+	b_tusculum = ca_wall_1
+	b_tusculum = ca_wall_2
+	b_roma = tp_monastery_1
+	b_roma = tp_monastery_2
+	b_roma = tp_barracks_1
+	b_roma = tp_wall_1
+	b_roma = tp_wall_2
+	b_roma = tp_town_1
+}
+1091.1.1 = { trade_post = b_dappiano }
+1187.1.1 = { b_ostia = city }
+1285.1.1 = { trade_post = b_doria }
+1337.1.1 = { b_aragni = temple }

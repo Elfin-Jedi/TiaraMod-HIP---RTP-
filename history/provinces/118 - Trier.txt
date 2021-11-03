@@ -1,0 +1,38 @@
+# 118 - Trier
+
+# County Title
+title = c_trier
+
+# Settlements
+max_settlements = 4
+b_trier = temple
+b_coblenz = city
+b_sponheim = castle
+
+#b_andernach = castle
+#b_wittlich = castle
+#b_gerolstein = castle
+#b_laach = castle
+#b_bitburg = castle
+
+# Misc
+culture = old_frankish
+religion = catholic
+
+# History
+270.1.1 = {
+	build_wonder = wonder_trier_cathedral
+	set_wonder_stage = 1
+}
+400.1.1 = {
+	set_wonder_stage = 2
+}
+769.1.1 = {
+	set_wonder_stage = 3
+}
+
+790.1.1 = { culture = german }
+
+800.1.1 = {
+	set_wonder_stage = 3
+}

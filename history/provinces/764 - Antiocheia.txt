@@ -1,0 +1,77 @@
+# 764 - Antiocheia
+
+# County Title
+title = c_antiocheia
+
+# Settlements
+max_settlements = 6
+
+b_stsymeon = castle
+b_antiocheia = temple
+b_latakiah = city
+
+b_darbsak = castle
+#b_hazart = castle
+#b_saone = castle
+#b_baghras = castle
+#b_harenc = castle
+
+# Misc
+culture = greek
+religion = orthodox
+
+# History
+
+1.1.1 = {
+	build_wonder = wonder_city_of_wonders_anti
+	set_wonder_stage = 8
+	build_wonder_upgrade = upgrade_cow_district_akra_anti
+	build_wonder_upgrade = upgrade_cow_district_circus_anti
+}
+
+341.1.6 = {
+	build_wonder_upgrade = upgrade_cow_district_domus_aurea_anti
+}
+
+526.1.1 = {
+	add_custom_history = String_great_earthquake_anti
+	set_wonder_stage = 4
+	set_wonder_damaged = yes
+	set_wonder_description = wonder_city_of_wonders_anti_ruined_desc
+}
+
+540.1.1 = {
+	add_custom_history = String_deported_by_khosrau_anti
+	set_wonder_stage = 3
+}
+
+588.10.31 = {
+	destroy_wonder_upgrade = upgrade_cow_district_domus_aurea_anti
+	add_custom_history = String_major_earthquake_aurea_anti
+}
+
+637.1.1 = {
+	add_custom_history = String_conqured_by_arabs_anti
+	set_wonder_stage = 2
+}
+
+1099.1.1 = { b_harenc = castle }
+1099.1.2 = { capital = b_harenc }
+
+1110.1.1 = { b_saone = castle } 
+
+# Mongol invasion 
+
+1222.1.1 = { remove_settlement = b_saone }
+1222.1.1 = { remove_settlement = b_stsymeon }
+
+# Conquered by the Mamluks
+
+1268.1.1 = { culture = levantine_arabic }
+1268.1.1 = { religion = sunni } 
+1268.1.1 = { destroy_wonder = yes } # Mongols completely destroys Antioch, and either killed or enslaved the entire city's population
+1272.1.1 = { trade_post = b_faliero }
+
+
+
+
