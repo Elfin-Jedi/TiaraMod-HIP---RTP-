@@ -49,7 +49,6 @@ pagan_group = {
 		
 ###########################################		
 		priests_can_marry = yes
-		allow_looting = yes
 		female_temple_holders = yes
 		can_call_crusade = yes
 		join_crusade_if_bordering_hostile = yes
@@ -67,7 +66,6 @@ pagan_group = {
 		
 		allow_in_ruler_designer = no
 		intermarry = tuniit_pagan
-		feminist = yes
 		defensive_attrition = yes
 	}	
 	

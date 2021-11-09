@@ -2010,7 +2010,7 @@ muslim = {
 		can_call_crusade = no
 
 		color = { 0.0 0.9 0.4 }
-		can_call_crusade = no
+		
 		priests_can_marry = yes
 		psc_marriage = no
 		max_wives = 1
@@ -3174,7 +3174,6 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 8 150 131 }
-		alternate_start = { always = no }
 		
 		scripture_name = MDODUS
 		priest_title = LAMA
@@ -3332,6 +3331,7 @@ zoroastrian_group = {
 
 		character_modifier = {
 			persian_opinion = 5
+			intrigue = -1
 		}
 
 		can_grant_divorce = yes
@@ -3345,10 +3345,6 @@ zoroastrian_group = {
 		divine_blood = yes # Sacred Xwedodah close-kin marriage mechanics
 		pc_marriage = yes # Parent/child marriage allowed
 		bs_marriage = yes # Brother/sister marriage allowed
-
-		character_modifier = {
-			intrigue = -1
-		}
 		
 		allow_rivermovement = yes
 

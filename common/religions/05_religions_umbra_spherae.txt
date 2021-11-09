@@ -140,7 +140,6 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 0.6 0.2 0.85 }
-		alternate_start = { always = no }
 		
 		high_god_name = GOD_ABKA_HEHE
 		
@@ -243,7 +242,6 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 0.6 0.4 0.3 }
-		alternate_start = { always = no }
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
@@ -360,7 +358,6 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 0.6 0.5 0.2 }
-		alternate_start = { always = no }
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
@@ -472,7 +469,6 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 0.4 0.3 0.3 }
-		alternate_start = { always = no }
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
@@ -584,7 +580,6 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 1.0 0.4 1.0 }
-		alternate_start = { always = no }
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
@@ -696,7 +691,6 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 0.3 0.4 0.1 }
-		alternate_start = { always = no }
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
@@ -808,7 +802,6 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 0.9 0.7 0.7 }
-		alternate_start = { always = no }
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
@@ -920,7 +913,6 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 1.0 0.8 0.1 }
-		alternate_start = { always = no }
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
@@ -1032,7 +1024,6 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 0.6 0.3 0.3 }
-		alternate_start = { always = no }
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
@@ -1138,7 +1129,6 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 0.7 0.7 0.1 }
-		alternate_start = { always = no }
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
@@ -1245,12 +1235,12 @@ pagan_group = {
 		heresy_icon = 41
 		
 		color = { 0.75 0.5 0.35 }
-		alternate_start = { always = no }
 		
 		can_call_crusade = yes
 		join_crusade_if_bordering_hostile = yes
 		ai_convert_other_group = 2 # always try to convert
 		
+		crusade_name = GREAT_HOLY_WAR
 		high_god_name = GOD_KANDAKORO
 		god_names = {
 			GOD_KAMUY GOD_FUCHI GOD_KANNA GOD_HASH-INAU-UK GOD_KANDAKORO GOD_WAKA-USH GOD_MINTAKORO GOD_RUKORO GOD_CHIKAP
@@ -1260,7 +1250,7 @@ pagan_group = {
 			PAUCHI
 		}
 
-		scripture_name =THE_KAMUY_YUKAR
+		scripture_name = THE_KAMUY_YUKAR
 		priest_title = SHAMAN
 
 		priests_can_marry = yes
@@ -1269,7 +1259,6 @@ pagan_group = {
 		priests_can_inherit = no
 		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		female_temple_holders = yes
-		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		women_can_take_consorts = yes
 		max_consorts = 3
 
@@ -1302,7 +1291,7 @@ pagan_group = {
 			PAUCHI
 		}
 
-		scripture_name =THE_KAMUY_YUKAR
+		scripture_name = THE_KAMUY_YUKAR
 		priest_title = SHAMAN
 
 		unit_modifier = {
@@ -1320,7 +1309,6 @@ pagan_group = {
 		priests_can_inherit = no
 		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		female_temple_holders = yes
-		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		women_can_take_consorts = yes
 		max_consorts = 3
 		reformed = ainu_pantheism_reformed
@@ -1347,7 +1335,6 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 0.4 0.3 0.2 }
-		alternate_start = { always = no }
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
@@ -1455,7 +1442,6 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 0.4 0.5 0.2 }
-		alternate_start = { always = no }
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
@@ -1562,7 +1548,6 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 0.7 0.5 0.2 }
-		alternate_start = { always = no }
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
@@ -1670,7 +1655,6 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 0.7 0.5 0.4 }
-		alternate_start = { always = no }
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
@@ -1778,7 +1762,6 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 0.2 0.5 0.2 }
-		alternate_start = { always = no }
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
@@ -1886,7 +1869,6 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 0.2 0.5 0.2 }
-		alternate_start = { always = no }
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
@@ -2225,7 +2207,6 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 0.6 0.4 0.3 }
-		alternate_start = { always = no }
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
@@ -2345,7 +2326,6 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 0.4 0.3 0.2 }
-		alternate_start = { always = no }
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
@@ -2462,13 +2442,12 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 0.66 0.44 0.15 }
-		alternate_start = { always = no }
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
 		priest_title = NANGA
 		
-		high_god_name = "Inti"
+		high_god_name = GOD_INTI
 		
 		god_names = {
 			GOD_THE_SPIRITS GOD_THE_ANCESTORS
@@ -2511,7 +2490,7 @@ pagan_group = {
 		scripture_name = THE_LEGENDS
 		priest_title = NANGA
 		
-		high_god_name = "Inti"
+		high_god_name = GOD_INTI
 		
 		god_names = {
 			GOD_THE_SPIRITS GOD_THE_ANCESTORS
@@ -2579,7 +2558,6 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 0.56 0.23 0.11 }
-		alternate_start = { always = no }
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
@@ -2694,13 +2672,12 @@ pagan_group = {
 		ai_convert_other_group = 2 # always try to convert
 		
 		color = { 0.22 0.88 0.55 }
-		alternate_start = { always = no }
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
 		priest_title = SHAMAN
 		
-		high_god_name = "Lo"
+		high_god_name = GOD_LO
 		
 		god_names = {
 			GOD_THE_SPIRITS GOD_THE_ANCESTORS
@@ -2745,7 +2722,7 @@ pagan_group = {
 		scripture_name = THE_LEGENDS
 		priest_title = SHAMAN
 		
-		high_god_name = "Lo"
+		high_god_name = GOD_LO
 		
 		god_names = {
 			GOD_THE_SPIRITS GOD_THE_ANCESTORS
