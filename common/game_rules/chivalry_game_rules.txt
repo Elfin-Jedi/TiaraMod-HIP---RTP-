@@ -34,6 +34,12 @@ chivalry_rule_fight = {
 	name = "CHIVALRY_RULE_FIGHT_NAME"
 	group = "CHIVALRY_RULE_GROUP"
 	option = {
+		name = extra
+		# achievements = no
+		text = "CHIVALRY_RULE_FIGHT_EXTRA"
+		desc = "CHIVALRY_RULE_FIGHT_EXTRA_DESC"
+	}
+	option = {
 		name = europe
 		# achievements = no
 		text = "CHIVALRY_RULE_FIGHT_EUROPE"
@@ -44,12 +50,6 @@ chivalry_rule_fight = {
 		# achievements = no
 		text = "CHIVALRY_RULE_FIGHT_EUROPEXTRA"
 		desc = "CHIVALRY_RULE_FIGHT_EUROPEXTRA_DESC"
-	}
-	option = {
-		name = extra
-		# achievements = no
-		text = "CHIVALRY_RULE_FIGHT_EXTRA"
-		desc = "CHIVALRY_RULE_FIGHT_EXTRA_DESC"
 	}
 	option = {
 		name = none
@@ -63,16 +63,16 @@ chivalry_rule_holy = {
 	name = "CHIVALRY_RULE_HOLY_NAME"
 	group = "CHIVALRY_RULE_GROUP"
 	option = {
-		name = default
-		# achievements = no
-		text = "CHIVALRY_RULE_HOLY_DEFAULT"
-		desc = "CHIVALRY_RULE_HOLY_DEFAULT_DESC"
-	}
-	option = {
 		name = none
 		# achievements = no
 		text = "CHIVALRY_RULE_HOLY_NONE"
 		desc = "CHIVALRY_RULE_HOLY_NONE_DESC"
+	}
+	option = {
+		name = default
+		# achievements = no
+		text = "CHIVALRY_RULE_HOLY_DEFAULT"
+		desc = "CHIVALRY_RULE_HOLY_DEFAULT_DESC"
 	}
 }
 
