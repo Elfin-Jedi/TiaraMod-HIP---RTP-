@@ -335,17 +335,6 @@ culture = {
 		{ 255 255 255 } #138 white
 	}
 	
-	color = {
-		{ 250 180 20 }		#0 		Gold
-		{ 220 220 220 } 	#1 		White
-		{ 20 70 180 } 		#2 		Blue
-		{ 200 20 50 } 		#3 		Red
-		{ 30 30 30 } 		#4 		Black
-		{ 40 150 100 }		#5 		Green
-		{ 240 70 50 }		#6 		Orange
-		{ 200 200 150 }		#7 		Sand
-	}
-	
 	rebel_colors = { 0 3 5 }
 	
 	banned_colors = { 
