@@ -1,0 +1,34 @@
+# -*- ck2.history.provinces -*-
+
+# 785 - Sinai#Nekhel
+
+# County Title
+title = c_sinai
+
+# Settlements
+max_settlements = 4
+
+b_qalaatalgindi = castle
+b_rassidr = temple
+b_nekhel = city
+#b_nekhelcastle = castle
+
+# Misc
+culture = bedouin_arabic
+religion = sunni
+
+# History
+
+550.1.1 = {
+	build_wonder = wonder_sinai_cathedral
+	set_wonder_stage = 1
+}
+600.1.1 = {
+	set_wonder_stage = 2
+}
+769.1.1 = {
+	set_wonder_stage = 3
+}
+
+909.1.1 = { religion = shiite }
+1171.1.1 = { religion = sunni } 

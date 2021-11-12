@@ -1,0 +1,40 @@
+# 1380 -  Traungau
+
+# County Title
+title = c_traungau
+
+# Settlements
+max_settlements = 5
+
+b_steyr = castle 
+b_kremsmunster = temple
+
+#b_wels = city
+#b_traun = castle
+#b_enns = city 
+
+#b_rebgau = castle 
+#b_reichersberg = temple 
+
+# Misc
+culture = bavarian
+religion = catholic
+
+# History
+351.1.1 = {
+	build_wonder = wonder_traungau_unique
+	set_wonder_stage = 4
+}
+
+400.1.1 = {
+	set_wonder_stage = 3
+}
+
+500.1.1 = {
+	set_wonder_damaged = yes
+}
+
+1114.1.1 = { b_traun = castle }
+1170.1.1 = { culture = german }
+1212.1.1 = { b_enns = city }
+1222.1.1 = { b_wels = city }

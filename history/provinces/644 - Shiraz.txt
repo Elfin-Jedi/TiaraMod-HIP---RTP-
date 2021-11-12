@@ -1,0 +1,37 @@
+# -*- ck2.history.provinces -*-
+
+# 644 - Shíráz
+
+# County Title
+title = c_shiraz
+
+# Settlements
+max_settlements = 6
+b_shiraz = castle
+b_bayda_shiraz = temple
+b_kazarun = city
+b_nawbandajan = city
+b_khubdhan = castle
+b_khabr = temple
+
+# Misc
+culture = pahlavi
+religion = zoroastrian
+
+# History
+
+1.1.1 = {
+	build_wonder = wonder_shiraz_mausoleum
+	set_wonder_stage = 3
+}
+
+1.1.1 = {
+	build_wonder = wonder_city_of_wonders_parsa
+	set_wonder_stage = 1
+	set_wonder_damaged = yes
+	set_wonder_description = wonder_city_of_wonders_parsa_ruined_desc
+}
+
+937.1.1 = { culture = persian }
+937.1.1 = { religion = sunni }
+

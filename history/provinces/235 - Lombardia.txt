@@ -1,23 +1,29 @@
-# 235 - Lombardia
+# -*- ck2.history.provinces -*-
+
+# 235 - Lombardia # Burgaria
 
 # County Title
 title = c_lombardia
 
 # Settlements
-max_settlements = 6
-b_lodi = castle
-b_milano = city
-b_monza = temple
-b_maggiore = castle
-#b_vigevano = castle
-#b_legnano = castle
-#b_chiavenna = castle
+max_settlements = 7
+
+b_parabiago = castle
+b_milano = temple
+b_lodi = city
+b_monza = castle
+#b_rosate = city
+b_cassina_aliprandi = castle
+#b_trezzo = castle
+b_bissano = castle
 
 # Misc
-culture = lombard
+culture = italian
 religion = catholic
+terrain = farmlands
 
 # History
+
 100.1.1 = {
 	build_wonder = wonder_lombardia_unique
 	add_custom_history = cw_lombardia_1
@@ -29,6 +35,8 @@ religion = catholic
 300.1.1 = {
 	add_custom_history = cw_lombardia_2
 	set_wonder_stage = 3
-}
-869.1.1 = { culture = italian }
-1240.1.1 = { b_chiavenna = castle }
+	
+#1193.12.25 = { capital = b_lodi} # ct
+#1200.1.1 = { b_trezzo = castle }
+#1240.1.1 = { capital = b_monza} # ca
+
