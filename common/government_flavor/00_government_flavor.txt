@@ -1681,7 +1681,7 @@ government_flavor = {
 }
 
 government_flavor = {
-	name = gov_roman_imperial_government
+	name = gov_imperial_government
 	graphics = GFX_evt_victory_arch_byzantine
 	priority = 3
 	trigger = {
@@ -1691,7 +1691,7 @@ government_flavor = {
 }
 # ERE remnant states in EMF do not have Imperial Elective, so this flavor would disrupt submods
 #government_flavor = {
-#	name = gov_roman_imperial_government_decayed
+#	name = gov_imperial_government_decayed
 #	graphics = GFX_evt_rome_falls
 #	priority = 3
 #	trigger = {
