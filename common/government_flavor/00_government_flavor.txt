@@ -1033,14 +1033,6 @@ government_flavor = {
 	}
 }
 
-government_flavor = {
-	name = gov_mercenary
-	graphics = GFX_evt_steppe_mercenaries
-	priority = 1
-	trigger = {
-		mercenary = yes
-	}
-}
 #####################################
 # Special Flavor Names (priority 2) #
 #####################################
