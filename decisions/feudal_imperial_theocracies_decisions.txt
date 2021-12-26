@@ -1,0 +1,88 @@
+decisions = {
+	#TODO - Add costs
+	revert_to_feudal = {
+		ai = no		# Player only for now
+		is_high_prio = no
+		
+		potential = {
+			is_theocracy = no
+			OR = {
+				government = feudal_theocratic_government
+				government = imperial_theocratic_government
+			}
+		}
+		
+		allow = {
+			is_theocracy = no
+			OR = {
+				government = feudal_theocratic_government
+				government = imperial_theocratic_government
+			}
+		}		
+		effect = { set_government_type = feudal_government }
+	}
+
+	adopt_feudal_theocracy = {	
+		ai = no		# Player only for now
+		is_high_prio = yes
+		
+		potential = { 
+			can_convert_to_feudal_theocracy_trigger = yes
+			
+			government = feudal_government
+			NOT = { government = imperial_theocratic_government }
+			is_theocracy = no
+		}
+	
+		allow = {
+			can_convert_to_feudal_theocracy_trigger = yes
+			
+			government = feudal_government
+			NOT = { government = imperial_theocratic_government }
+			is_theocracy = no
+			
+			can_pay_for_feudal_theocracy_trigger = yes
+		}
+		effect = { 
+			set_government_type = feudal_theocratic_government
+			pay_for_feudal_theocracy_effect = yes
+		}
+	}
+	
+	adopt_imperial_theocracy = {	
+		ai = no		# Player only for now
+		is_high_prio = yes
+		
+		potential = {
+			can_convert_to_imperial_theocracy_trigger = yes
+			
+			NOT = { government = imperial_theocratic_government }
+			OR = {
+				government = feudal_theocratic_government
+				government = chinese_imperial_government
+				government = imperial_government				
+			}
+			is_theocracy = no
+		}
+	
+		allow = {
+			can_convert_to_imperial_theocracy_trigger = yes
+			
+			NOT = { government = imperial_theocratic_government }
+			OR = {
+				government = feudal_theocratic_government
+				government = chinese_imperial_government
+				government = imperial_government				
+			}
+			is_theocracy = no
+			
+			can_pay_for_imperial_theocracy_trigger = yes
+		}
+		effect = { 
+			set_government_type = imperial_theocratic_government
+			pay_for_imperial_theocracy_effect = yes
+		}
+	}
+	
+}
+	
