@@ -56,17 +56,6 @@ hohenzollern = {
 
 #New Patch 1.4
 
-abbasid = {
-	picture = GFX_bloodlines_symbol_sunni
-	inheritance = patrilineal
-	allow_bastards = yes
-	monthly_character_prestige = 0.25
-	monthly_character_piety = 0.1
-	muslim_opinion = 5
-	muslim_church_opinion = 5
-	flags = { historical_bloodline bloodline_abbasid }
-}
-
 asturias = {
 	picture = GFX_bloodlines_symbol_asturias
 	inheritance = patrilineal
