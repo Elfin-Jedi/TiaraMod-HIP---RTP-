@@ -1,0 +1,123 @@
+can_use_feudal_theocracy_trigger = {
+	can_use_feudal_imperial_theocracy_base_trigger = yes
+	
+	AND = {
+		# Religion head
+		OR = {
+			controls_religion = yes
+			AND = {
+				TECH_RELIGIOUS_CUSTOMS = 3
+				TECH_CITY_CONSTRUCTION  = 2
+			}
+		}
+		
+		# Feudal or Imperial theocracy law
+		OR = {
+			has_law = feudal_imperial_theocracy_1
+			has_law = feudal_imperial_theocracy_2
+			any_demesne_title = { has_title_flag = feudal_imperial_theocracy_1_law }
+			any_demesne_title = { has_title_flag = feudal_imperial_theocracy_2_law }
+		}
+	}
+}
+
+can_convert_to_feudal_theocracy_trigger = {
+	can_use_feudal_theocracy_trigger = yes		# Basically re-using existing trigger in new, matching namescheme
+}
+
+can_use_imperial_theocracy_trigger = {
+	can_use_feudal_imperial_theocracy_base_trigger = yes
+	
+	OR = {
+		# Religion head
+		AND = {
+			controls_religion = yes	
+			TECH_RELIGIOUS_CUSTOMS = 4
+			TECH_CITY_CONSTRUCTION  = 3
+		}
+		
+		# Imperial theocracy law + proper rank
+		AND = {
+			OR = {
+				has_law = feudal_imperial_theocracy_2
+				any_demesne_title = { has_title_flag = feudal_imperial_theocracy_2_law }
+			}
+			OR = { 
+				tier = EMPEROR
+				tier = KING		# Allow king-ranked titles to use imperial theocracy
+			}
+		}
+	}
+}
+
+can_convert_to_imperial_theocracy_trigger = {
+	can_use_feudal_imperial_theocracy_base_trigger = yes
+	
+	OR = {
+		has_law = feudal_imperial_theocracy_2
+		any_demesne_title = { has_title_flag = feudal_imperial_theocracy_2_law }
+	}
+	OR = {
+		# Religion head
+		AND = {
+			controls_religion = yes	
+			TECH_RELIGIOUS_CUSTOMS = 4
+			TECH_CITY_CONSTRUCTION  = 3
+		}
+
+		# Imperial administration + proper tier
+		OR = {
+			has_law = ze_administration_laws_2
+			AND = {
+				tier = KING
+				TECH_LEGALISM = 3
+				TECH_MAJESTY = 5
+			}
+		}
+		
+		# Existing imperial government + proper tier
+		AND = {
+			OR = {
+				government = chinese_imperial_government
+				government = imperial_government
+			}
+			OR = { 
+				tier = EMPEROR
+				tier = KING		# Allow king-ranked titles to use imperial theocracy
+			}
+		}
+	}	
+}
+
+can_use_feudal_imperial_theocracy_base_trigger = {
+	AND = {
+		is_patrician = no
+		mercenary = no
+		holy_order = no
+		is_feudal = yes
+	}
+}
+
+can_pay_for_feudal_theocracy_trigger = {
+	OR = {
+		piety = 500
+		controls_religion = yes
+	}
+}
+
+can_pay_for_imperial_theocracy_trigger = {
+	trigger_if = {
+		limit = {
+			OR = {
+				AND = {
+					piety = 750
+					controls_religion = no
+				}
+				AND = {
+					piety = 500
+					controls_religion = yes
+				}
+			}
+		}
+	}
+}
