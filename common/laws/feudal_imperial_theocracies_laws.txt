@@ -1,0 +1,172 @@
+law_groups = {
+	feu_imp_theo_laws = {
+		law_type = realm
+	}
+}
+
+laws = {
+	# Plain old feudalism
+	feudal_imperial_theocracy_0 = {
+		group = feu_imp_theo_laws
+		default = yes
+		potential = {
+			has_dlc = "Zeus"
+			holder_scope = {
+				is_tribal = no
+				is_nomadic = no
+				is_republic = no
+				is_theocracy = no
+				
+				ai = no
+				is_feudal = yes
+			}
+		}
+		
+		allow = {
+			NOT = {
+				has_law = feudal_imperial_theocracy_1
+				has_law = feudal_imperial_theocracy_2
+				#has_global_flag = feudal_imperial_theocracy_1_law
+				#has_global_flag = feudal_imperial_theocracy_2_law
+				has_title_flag = feudal_imperial_theocracy_1_law
+				has_title_flag = feudal_imperial_theocracy_2_law
+			}
+		}
+		
+		effect = {
+			revoke_law = feudal_imperial_theocracy_1
+			revoke_law = feudal_imperial_theocracy_2
+			
+			#holder_scope = { set_global_flag = feudal_imperial_theocracy_0_law }	
+			set_title_flag = feudal_imperial_theocracy_0_law
+			clr_title_flag = feudal_imperial_theocracy_1_law
+			clr_title_flag = feudal_imperial_theocracy_2_law
+		}
+	}
+	# Access to feudal_theocracy
+	feudal_imperial_theocracy_1 = {
+		group = feu_imp_theo_laws
+		
+		potential = {
+			has_dlc = "Zeus"
+			holder_scope = {
+				is_tribal = no
+				is_nomadic = no
+				is_republic = no
+				is_theocracy = no
+				
+				ai = no
+				is_feudal = yes
+			}
+		}
+		
+		allow = {
+			has_law = feudal_imperial_theocracy_0			
+			
+			#NOT = { has_global_flag = feudal_imperial_theocracy_2_law }
+			NOT = { has_title_flag = feudal_imperial_theocracy_2_law }
+			
+			OR = {
+				controls_religion = yes
+				AND = {
+					TECH_RELIGIOUS_CUSTOMS = 3
+					TECH_CITY_CONSTRUCTION  = 2
+				}
+			}
+			
+		}
+		effect = {
+			revoke_law = feudal_imperial_theocracy_0
+			revoke_law = feudal_imperial_theocracy_2
+		
+			#holder_scope = { set_global_flag = feudal_imperial_theocracy_1_law }	
+			set_title_flag = feudal_imperial_theocracy_1_law
+			clr_title_flag = feudal_imperial_theocracy_0_law
+			clr_title_flag = feudal_imperial_theocracy_2_law
+		}
+	}
+	# Access to imperial theocracy
+	feudal_imperial_theocracy_2 = {
+		group = feu_imp_theo_laws
+		
+		potential = {
+			has_dlc = "Zeus"
+			holder_scope = {
+				is_tribal = no
+				is_nomadic = no
+				is_republic = no
+				is_theocracy = no
+				
+				ai = no
+				is_feudal = yes
+			}
+		}
+		
+		allow = {
+			has_law = feudal_imperial_theocracy_1
+			
+			OR = {
+				AND = {
+					controls_religion = yes	
+					TECH_RELIGIOUS_CUSTOMS = 4
+					TECH_CITY_CONSTRUCTION  = 3
+				}	
+				AND = {
+					TECH_RELIGIOUS_CUSTOMS = 5
+					TECH_CITY_CONSTRUCTION  = 3
+				}
+			}
+			
+			OR = {
+				# Religion head
+				holder_scope = { controls_religion = yes }
+				
+				# Imperial administration + proper tier
+				OR = {
+					has_law = ze_administration_laws_2
+					AND = {
+						tier = KING
+						TECH_LEGALISM = 3
+						TECH_MAJESTY = 5
+					}
+				}
+				
+				# Existing imperial government
+				holder_scope = {
+					AND = {
+						OR = {
+							government = chinese_imperial_government
+							government = imperial_government
+						}
+						OR = { 
+							tier = EMPEROR
+							tier = KING		# Allow king-ranked titles to use imperial theocracy
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			revoke_law = feudal_imperial_theocracy_0
+			revoke_law = feudal_imperial_theocracy_1
+			
+			#holder_scope = { set_global_flag = feudal_imperial_theocracy_2_law }	
+			set_title_flag = feudal_imperial_theocracy_2_law
+			clr_title_flag = feudal_imperial_theocracy_0_law
+			clr_title_flag = feudal_imperial_theocracy_1_law
+
+			holder_scope = {
+				any_demesne_title = {
+					limit = { 
+						NOR = {
+							has_title_flag = feudal_imperial_theocracy_2_law
+							has_title_flag = feudal_imperial_theocracy_1_law
+						}
+					}
+					set_title_flag = feudal_imperial_theocracy_1_law
+					clr_title_flag = feudal_imperial_theocracy_0_law
+				}
+			}
+		}
+	}
+}
