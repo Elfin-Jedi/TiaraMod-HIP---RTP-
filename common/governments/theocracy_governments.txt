@@ -10,6 +10,10 @@ theocracy_governments = {
 			FORT
 			HOSPITAL
 		}
+		
+		builds_with_piety = {
+			TEMPLE
+		}
 		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
 			TRIBAL
 		}
@@ -32,6 +36,21 @@ theocracy_governments = {
 			chinese_imperial_government
 			RR_temporal_feudal_government
 			RR_temporal_tribal_government
+			order_government
+			rtp_republic_g
+			rtp_theocracy_g
+			tribal_government
+			nomadic_government
+		}
+		vassal_call_to_arms = {
+			tribal_government
+			rtp_mercenary_g
+			rtp_baron_mercenary_g
+		}
+		no_vassal_tax = {
+			order_government
+			rtp_baron_order_g
+			rtp_landless_order_g
 		}
 		frame_suffix = "_theocracy"
 		title_prefix = "temple_"
@@ -58,7 +77,12 @@ theocracy_governments = {
 		can_be_granted_kingdoms_and_empires_by_other_government = no
 
 		can_build_tribal = no
-		
+		aggression = 0.75
+
+		character_modifier = {
+			learning = 1
+			stewardship = -1
+		}
 		ignore_in_vassal_limit_calculation = {
 			tribal_government
 		}

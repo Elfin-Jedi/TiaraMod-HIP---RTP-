@@ -11,7 +11,7 @@ feudal_governments = {
 			independent = yes
 			rtp_is_confederation = yes
 			NOR = {
-				is_government_potential = roman_imperial_government
+				is_government_potential = imperial_government
 				is_government_potential = confucian_bureaucracy
 				is_government_potential = chinese_imperial_government
 			}
@@ -119,7 +119,7 @@ feudal_governments = {
 				rtp_is_mercenary = yes
 			}
 			NOR = {
-				is_government_potential = roman_imperial_government
+				is_government_potential = imperial_government
 				is_government_potential = confucian_bureaucracy
 				is_government_potential = chinese_imperial_government
 				is_government_potential = rtp_baron_mercenary_g
@@ -199,7 +199,7 @@ feudal_governments = {
 				}
 			}
 			NOR = {
-				is_government_potential = roman_imperial_government
+				is_government_potential = imperial_government
 				is_government_potential = confucian_bureaucracy
 				is_government_potential = chinese_imperial_government
 				is_government_potential = rtp_baron_republic_g
@@ -256,7 +256,7 @@ feudal_governments = {
 			rtp_is_theocracy = yes
 			NOR = {
 				religion_group = muslim
-				is_government_potential = roman_imperial_government
+				is_government_potential = imperial_government
 				is_government_potential = confucian_bureaucracy
 				is_government_potential = chinese_imperial_government
 				is_government_potential = rtp_baron_theocracy_g
@@ -338,7 +338,7 @@ republic_governments = {
 	rtp_privateer_g = {
 		potential = {
 			NOR = {
-				is_government_potential = roman_imperial_government
+				is_government_potential = imperial_government
 				is_government_potential = confucian_bureaucracy
 				is_government_potential = chinese_imperial_government
 			}

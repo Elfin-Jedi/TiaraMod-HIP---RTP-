@@ -19,6 +19,15 @@ republic_governments = {
 			republic_government
 			muslim_merchant_republic_government
 			bogomilist_merchant_republic_government
+			chinese_imperial_government
+
+			confucian_bureaucracy
+			rtp_republic_g
+		}
+		vassal_call_to_arms = {
+			tribal_government
+			rtp_mercenary_g
+			rtp_baron_mercenary_g
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
@@ -31,6 +40,12 @@ republic_governments = {
 				NOT = { religion = bogomilist }
 				d_bogomilist = { has_flag = bogomilist_formalized }
 			}
+			NOR = {
+				is_government_potential = imperial_government
+				is_government_potential = confucian_bureaucracy
+				is_government_potential = chinese_imperial_government
+			}
+			rtp_has_title = no
 			OR = {
 				controls_religion = no
 				religion_group = muslim
@@ -130,6 +145,15 @@ republic_governments = {
 			republic_government
 			muslim_merchant_republic_government
 			bogomilist_merchant_republic_government
+			chinese_imperial_government
+
+			confucian_bureaucracy
+			rtp_republic_g
+		}
+		vassal_call_to_arms = {
+			tribal_government
+			rtp_mercenary_g
+			rtp_baron_mercenary_g
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
@@ -140,6 +164,12 @@ republic_governments = {
 			NOT = { religion_group = muslim }
 			religion = bogomilist
 			NOT = { d_bogomilist = { has_flag = bogomilist_formalized } }
+			NOR = {
+				is_government_potential = imperial_government
+				is_government_potential = confucian_bureaucracy
+				is_government_potential = chinese_imperial_government
+			}
+			rtp_has_title = no
 			OR = {
 				controls_religion = no
 				religion_group = muslim
@@ -237,8 +267,17 @@ republic_governments = {
 		}
 		accepts_liege_governments = { # Accepts other republics
 			republic_government
-			merchant_republic_government
+			muslim_merchant_republic_government
 			bogomilist_merchant_republic_government
+			chinese_imperial_government
+
+			confucian_bureaucracy
+			rtp_republic_g
+		}
+		vassal_call_to_arms = {
+			tribal_government
+			rtp_mercenary_g
+			rtp_baron_mercenary_g
 		}
 		free_revoke_on_tiers = {
 			duke
@@ -254,6 +293,12 @@ republic_governments = {
 				NOT = { religion = bogomilist }
 				d_bogomilist = { has_flag = bogomilist_formalized }
 			}
+			NOR = {
+				is_government_potential = imperial_government
+				is_government_potential = confucian_bureaucracy
+				is_government_potential = chinese_imperial_government
+			}
+			rtp_has_title = no
 			OR = {
 				controls_religion = no
 				religion_group = muslim
@@ -352,9 +397,18 @@ republic_governments = {
 			TRIBAL
 		}
 		accepts_liege_governments = { # Accepts other republics
-			merchant_republic_government
+			republic_government
 			muslim_merchant_republic_government
 			bogomilist_merchant_republic_government
+			chinese_imperial_government
+
+			confucian_bureaucracy
+			rtp_republic_g
+		}
+		vassal_call_to_arms = {
+			tribal_government
+			rtp_mercenary_g
+			rtp_baron_mercenary_g
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
@@ -427,6 +481,11 @@ republic_governments = {
 			theocratic_feudal_government
 			theocratic_imperial_government
 			chinese_imperial_government
+		}
+		vassal_call_to_arms = {
+			tribal_government
+			rtp_mercenary_g
+			rtp_baron_mercenary_g
 		}
 		gets_religion_opinion_penalties = no
 		vassal_government_opinion_penalties = no

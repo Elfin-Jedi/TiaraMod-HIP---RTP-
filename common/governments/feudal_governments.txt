@@ -28,6 +28,11 @@ feudal_governments = {
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
 		}
+		no_vassal_tax = {
+			order_government
+			rtp_baron_order_g
+			rtp_landless_order_g
+		}
 		potential = {
 			NAND = {
 				higher_tier_than = baron
@@ -41,10 +46,8 @@ feudal_governments = {
 				has_religion_feature = religion_temporal_head
 				AND = {
 					OR = {
-						AND = {
-							religion = norse_pagan_reformed
-							religion = aztec_reformed
-						}
+						religion = norse_pagan_reformed
+						religion = aztec_reformed
 					}
 					has_religion_features = no
 				}
@@ -58,8 +61,21 @@ feudal_governments = {
 				NOT = { religion = bogomilist }
 				d_bogomilist = { has_flag = bogomilist_formalized }
 			}
-			NOT = { is_government_potential = order_government }
-			NOT = { is_government_potential = bureaucratic_government }
+			NOR = {
+				is_government_potential = imperial_government
+				is_government_potential = confucian_bureaucracy
+				is_government_potential = chinese_imperial_government
+				is_government_potential = rtp_confederation_g
+				is_government_potential = rtp_mercenary_g
+				is_government_potential = rtp_republic_g
+				is_government_potential = rtp_theocracy_g
+				is_government_potential = order_government
+				is_government_potential = bureaucratic_government
+				is_government_potential = rtp_baron_g
+				is_government_potential = rtp_landless_mercenary_g
+				is_government_potential = rtp_landless_order_g
+				is_government_potential = rtp_landless_adventurer_g
+			}
 			NAND = {
 				culture_group = tibetan_group
 				OR = {
@@ -103,6 +119,12 @@ feudal_governments = {
 		dukes_called_kings = yes
 		barons_need_dynasty = yes
 		can_be_granted_kingdoms_and_empires_by_other_government = yes
+		
+		character_modifier = {
+			diplomacy = 1
+
+			martial = -1
+		}
 
 		can_build_tribal = no
 
@@ -143,10 +165,33 @@ feudal_governments = {
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
 		}
+		vassal_call_to_arms = {
+			tribal_government
+			rtp_mercenary_g
+			rtp_baron_mercenary_g
+		}
+		no_vassal_tax = {
+			order_government
+			rtp_baron_order_g
+			rtp_landless_order_g
+		}
 		frame_suffix = "_iqta"
 		potential = {
-			NOT = { is_government_potential = RR_temporal_feudal_government }
-			NOT = { is_government_potential = RR_religious_community_government }
+			NOR = {
+				is_government_potential = imperial_government
+				is_government_potential = confucian_bureaucracy
+				is_government_potential = chinese_imperial_government
+				is_government_potential = rtp_confederation_g
+				is_government_potential = rtp_mercenary_g
+				is_government_potential = rtp_republic_g
+				is_government_potential = order_government
+				is_government_potential = rtp_baron_iqta_g
+				is_government_potential = rtp_landless_mercenary_g
+				is_government_potential = rtp_landless_order_g
+				is_government_potential = rtp_landless_adventurer_g
+				is_government_potential = RR_temporal_feudal_government
+				is_government_potential = RR_religious_community_government
+			}
 			NAND = {
 				higher_tier_than = baron
 				is_antifeudal_religion_trigger = yes
@@ -221,6 +266,12 @@ feudal_governments = {
 
 		free_levies_in_offensive_war = yes # Took away the hardcoded stuff for muslims where they could raise levies without pissing off vassals if in an offensive war.
 
+		character_modifier = {
+			diplomacy = 1
+
+			martial = -1
+		}
+
 		can_build_tribal = no
 
 		ignore_in_vassal_limit_calculation = {
@@ -261,7 +312,32 @@ feudal_governments = {
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
 		}
+		vassal_call_to_arms = {
+			tribal_government
+			rtp_mercenary_g
+			rtp_baron_mercenary_g
+		}
+		no_vassal_tax = {
+			order_government
+			rtp_baron_order_g
+			rtp_landless_order_g
+		}
 		potential = {
+			NOR = {
+				is_government_potential = imperial_government
+				is_government_potential = confucian_bureaucracy
+				is_government_potential = chinese_imperial_government
+				is_government_potential = rtp_confederation_g
+				is_government_potential = rtp_mercenary_g
+				is_government_potential = rtp_republic_g
+				is_government_potential = order_government
+				is_government_potential = rtp_baron_iqta_g
+				is_government_potential = rtp_landless_mercenary_g
+				is_government_potential = rtp_landless_order_g
+				is_government_potential = rtp_landless_adventurer_g
+				is_government_potential = RR_temporal_feudal_government
+				is_government_potential = RR_religious_community_government
+			}
 			OR = {
 				controls_religion = no
 				religion_group = muslim
@@ -325,6 +401,12 @@ feudal_governments = {
 		barons_need_dynasty = yes
 		can_be_granted_kingdoms_and_empires_by_other_government = yes
 
+		character_modifier = {
+			diplomacy = 1
+
+			martial = -1
+		}
+		
 		can_build_tribal = no
 
 		ignore_in_vassal_limit_calculation = {
@@ -345,11 +427,25 @@ feudal_governments = {
 		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
 			TRIBAL
 		}
-		accepts_liege_governments = { # Gets the wrong religion modifier instead
-			muslim_government
-			theocracy_government
+		accepts_liege_governments_religion = {
 			feudal_government
+			muslim_government
+			theocratic_feudal_government
+			order_government
+
+			merchant_republic_government
+			republic_government
+			rtp_republic_g
+
+			rtp_theocracy_g
+
+			tribal_government
+
+			nomadic_government
+			
+			theocracy_government
 			bogomilist_government
+			
 			imperial_government
 			muslim_imperial_government
 			bogomilist_imperial_government
@@ -365,6 +461,19 @@ feudal_governments = {
 		frame_suffix = "_theocraticfeudal"
 		potential = {
 			#NOT = { is_government_potential = RR_temporal_feudal_government }
+			NOR = {
+				is_government_potential = imperial_government
+				is_government_potential = confucian_bureaucracy
+				is_government_potential = chinese_imperial_government
+				is_government_potential = rtp_confederation_g
+				is_government_potential = rtp_mercenary_g
+				is_government_potential = rtp_republic_g
+				is_government_potential = order_government
+				is_government_potential = rtp_baron_monastic_g
+				is_government_potential = rtp_landless_mercenary_g
+				is_government_potential = rtp_landless_order_g
+				is_government_potential = rtp_landless_adventurer_g
+			}
 			NAND = {
 				higher_tier_than = baron
 				is_antifeudal_religion_trigger = yes
@@ -385,8 +494,6 @@ feudal_governments = {
 				religion = waldensian
 				religion = yazidi
 			}
-			NOT = { is_government_potential = order_government }
-			NOT = { religion_group = muslim }
 			OR = {
 				NOT = { religion = bogomilist }
 				d_bogomilist = { has_flag = bogomilist_formalized }
@@ -438,7 +545,13 @@ feudal_governments = {
 		uses_piety_for_law_change = yes
 		dukes_called_kings = yes
 		barons_need_dynasty = yes
+		
+		character_modifier = {
+			diplomacy = 1
 
+			martial = -1
+		}
+		
 		can_build_tribal = no
 		
 		ignore_in_vassal_limit_calculation = {
@@ -477,6 +590,11 @@ feudal_governments = {
 		free_revoke_on_tiers = {
 			duke
 			king
+		}
+		vassal_call_to_arms = {
+			tribal_government
+			rtp_mercenary_g
+			rtp_baron_mercenary_g
 		}
 		frame_suffix = "_imperial"
 		title_prefix = "imperial_"
@@ -587,6 +705,11 @@ feudal_governments = {
 		free_revoke_on_tiers = {
 			duke
 			king
+		}
+		vassal_call_to_arms = {
+			tribal_government
+			rtp_mercenary_g
+			rtp_baron_mercenary_g
 		}
 		frame_suffix = "_imperial"
 		title_prefix = "imperial_"
@@ -707,6 +830,11 @@ feudal_governments = {
 			duke
 			king
 		}
+		vassal_call_to_arms = {
+			tribal_government
+			rtp_mercenary_g
+			rtp_baron_mercenary_g
+		}
 		frame_suffix = "_imperial"
 		title_prefix = "imperial_"
 		potential = {
@@ -815,6 +943,11 @@ feudal_governments = {
 		free_revoke_on_tiers = {
 			duke
 			king
+		}
+		vassal_call_to_arms = {
+			tribal_government
+			rtp_mercenary_g
+			rtp_baron_mercenary_g
 		}
 		frame_suffix = "_imperial"
 		title_prefix = "imperial_"
@@ -927,6 +1060,11 @@ feudal_governments = {
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
 		}
+		vassal_call_to_arms = {
+			tribal_government
+			rtp_mercenary_g
+			rtp_baron_mercenary_g
+		}
 		frame_suffix = "_chineseimperial"
 		potential = {
 			tier = EMPEROR
@@ -975,17 +1113,24 @@ feudal_governments = {
 			FORT
 			HOSPITAL
 		}
-		accepts_liege_governments = {
+		accepts_liege_governments_religion = {
 			feudal_government
 			muslim_government
 			bogomilist_government
-			theocracy_government
 			theocratic_feudal_government
-			imperial_government
-			muslim_imperial_government
-			bogomilist_imperial_government
-			theocratic_imperial_government
-			chinese_imperial_government
+			order_government
+
+			merchant_republic_government
+			republic_government
+			rtp_republic_g
+
+			theocracy_government
+			rtp_theocracy_g
+
+			tribal_government
+
+			nomadic_government
+			
 			RR_temporal_feudal_government #godking
 			RR_temporal_tribal_government
 			RR_religious_community_government
@@ -999,16 +1144,32 @@ feudal_governments = {
 		forced_contract = {
 			order_government
 		}
+		vassal_call_to_arms = {
+			tribal_government
+			rtp_mercenary_g
+			rtp_baron_mercenary_g
+		}
 
 		frame_suffix = "_order"
 		title_prefix = "order_"
 
 		potential = {
 			OR = {
-				primary_title = {
-					has_title_flag = minor_holy_order
+				AND = {
+					OR = {
+						holy_order = yes
+						rtp_is_holy_order = yes
+						primary_title = {
+							has_title_flag = minor_holy_order
+						}
+					}
+					NOR = {
+						is_government_potential = imperial_government
+						is_government_potential = confucian_bureaucracy
+						is_government_potential = chinese_imperial_government
+						is_government_potential = rtp_baron_order_g
+					}
 				}
-				holy_order = yes
 				AND = {
 					any_liege = {
 						OR = {
