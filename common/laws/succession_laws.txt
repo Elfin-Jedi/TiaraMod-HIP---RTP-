@@ -30,7 +30,7 @@ succession_laws = {
 				show_scope_change = no
 				OR = {
 					is_tribal = no
-					has_law = tribal_organization_4
+					emf_not_unreformed_pagan = yes
 					culture = hungarian
 					culture = old_hungarian
 				}
@@ -238,11 +238,9 @@ succession_laws = {
 						has_religion_feature = religion_matriarchal
 						has_religion_feature = religion_patriarchal
 					}
-					is_patrician = yes
 					OR = {
 						is_feudal = yes
 						is_patrician = yes
-						has_law = tribal_organization_4
 					}
 					OR = {
 						is_republic = no
@@ -289,7 +287,6 @@ succession_laws = {
 				show_scope_change = no
 				is_feudal = yes
 			}
-			has_law = tribal_organization_4
 		}
 		effect = {
 			#tooltip = {
