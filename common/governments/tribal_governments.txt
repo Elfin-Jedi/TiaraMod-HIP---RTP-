@@ -25,15 +25,26 @@ tribal_governments = {
 			chinese_imperial_government
 			RR_temporal_feudal_government
 			RR_temporal_tribal_government
+			rtp_mercenary_g
+			rtp_republic_g
+			rtp_privateer_g
+			theocracy_government
+			rtp_theocracy_g
+			nomadic_government
 		}
 		accepts_liege_governments_culture_and_religion = { 	# Tribals have no opinion penalty towards their liege if of the same culture and religion
 			order_government
 		}
 		vassal_call_to_arms = {
 			tribal_government
+			rtp_mercenary_g
+			rtp_baron_mercenary_g
 		}
 		no_vassal_tax = {
 			tribal_government
+			order_government
+			rtp_baron_order_g
+			rtp_landless_order_g
 		}
 		builds_with_prestige = {
 			TRIBAL
