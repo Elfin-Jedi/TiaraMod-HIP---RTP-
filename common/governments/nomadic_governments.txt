@@ -35,6 +35,8 @@ nomadic_governments = {
 		character_modifier = {
 			vassal_opinion = -10
 			max_population = 1550 # Compensates for the capital taking up one holding slot
+			martial = 1
+			diplomacy = -1
 		}
 
 		preferred_holdings = {
@@ -76,15 +78,7 @@ nomadic_governments = {
 		color = { 201 179 36 }
 		frame_suffix = "_nomadic"
 		title_prefix = "nomadic_"
-		capital_move_delay = 120
-		can_build_holdings = no
 		aggression = 1.75
-		
-		character_modifier = {
-			martial = 1
-
-			diplomacy = -1
-		}
 
 		uses_prestige_for_law_change = yes
 		allow_title_revokation = yes

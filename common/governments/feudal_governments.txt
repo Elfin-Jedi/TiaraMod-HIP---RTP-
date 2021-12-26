@@ -38,13 +38,11 @@ feudal_governments = {
 				higher_tier_than = baron
 				has_religion_feature = RR_religion_community
 			}
-			NOT = { is_government_potential = RR_temporal_feudal_government }
-			NOT = { is_government_potential = RR_religious_community_government }
 			OR = {
 				controls_religion = no
 				religion_group = muslim
 				has_religion_feature = religion_temporal_head
-				AND = {
+				OR = {
 					OR = {
 						religion = norse_pagan_reformed
 						religion = aztec_reformed
@@ -75,6 +73,8 @@ feudal_governments = {
 				is_government_potential = rtp_landless_mercenary_g
 				is_government_potential = rtp_landless_order_g
 				is_government_potential = rtp_landless_adventurer_g
+				is_government_potential = RR_temporal_feudal_government
+				is_government_potential = RR_religious_community_government
 			}
 			NAND = {
 				culture_group = tibetan_group
@@ -1277,7 +1277,7 @@ feudal_governments = {
 			muslim_government
 			theocratic_feudal_government
 			chinese_imperial_government
-			roman_imperial_government
+			imperial_government
 			RR_temporal_feudal_government #godking
 			RR_temporal_tribal_government
 			theocracy_government
@@ -1288,7 +1288,7 @@ feudal_governments = {
 			muslim_government
 			theocratic_feudal_government
 			chinese_imperial_government
-			roman_imperial_government
+			imperial_government
 			RR_temporal_feudal_government
 			tribal_government
 			RR_temporal_tribal_government
@@ -1302,7 +1302,7 @@ feudal_governments = {
 			muslim_government
 			theocratic_feudal_government
 			chinese_imperial_government
-			roman_imperial_government
+			imperial_government
 			RR_temporal_feudal_government
 			tribal_government
 			RR_temporal_tribal_government
@@ -1318,7 +1318,7 @@ feudal_governments = {
 				religion = qarmatian
 				has_religion_feature = RR_religion_community
 			}
-			NOT = { is_government_potential = roman_imperial_government }
+			NOT = { is_government_potential = imperial_government }
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = RR_temporal_feudal_government }
 			NAND = { 
