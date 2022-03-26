@@ -79,7 +79,7 @@ pagan_group = {
 		intermarry = ainu_pagan
 		intermarry = tengri_pagan
 		intermarry = tengri_pagan_reformed
-		intermarry = shinto
+		intermarry = nihon_shinto
 	}
 
 	ainu_pagan = {
@@ -151,7 +151,7 @@ pagan_group = {
 		intermarry = ainu_pagan_reformed
 		intermarry = tengri_pagan
 		intermarry = tengri_pagan_reformed
-		intermarry = shinto
+		intermarry = nihon_shinto
 	}
 
 	chinese_pagan_reformed = { # Shenist/Wuist/Nuoist
@@ -495,7 +495,7 @@ pagan_group = {
 		religious_clothing_priest = 10
 		
 		intermarry = ryukyuan_pagan
-		intermarry = shinto
+		intermarry = nihon_shinto
 		intermarry = korean_pagan
 		intermarry = korean_pagan_reformed
 		intermarry = buddhist
@@ -549,7 +549,7 @@ pagan_group = {
 		religious_clothing_priest = 10
 		
 		intermarry = ryukyuan_pagan_reformed
-		intermarry = shinto
+		intermarry = nihon_shinto
 		intermarry = korean_pagan
 		intermarry = korean_pagan_reformed
 		intermarry = buddhist
@@ -579,58 +579,3 @@ indian_group = { # Eastern
 	}
 	female_names = {
 	}
-	
-	shinto = {
-		graphical_culture = chinesegfx
-		#graphical_culture = buddhistgfx
-		secondary_event_pictures = sunni
-		interface_skin = { taoist_interface indian_interface muslim_interface }
-		ai_convert_same_group = 1 # try to convert if ai_zeal is high # While not proselytizing, fully blocking conversion does not seem ideal
-		ai_convert_other_group = 1	# try to convert if ai_zeal is high # While not proselytizing, fully blocking conversion does not seem ideal
-		
-		icon = 48
-		heresy_icon = 50
-		
-		color = { 157 0 47 }
-		
-		high_god_name = GOD_KAMI
-
-		god_names = {
-			GOD_KAMI AMATSUKAMI AMATERASU GOD_THE_ANCESTORS
-		}
-		evil_god_names = {
-			ONI MAGATSUKAMI
-		}
-		character_modifier = {
-			intrigue = 3
-		}
-		
-		crusade_name = GREAT_HOLY_WAR
-		scripture_name = THE_RIKKOKUSHI
-		priest_title = JOKAI
-		piety_name = PURITY
-		
-		can_call_crusade = no
-		can_grant_claim = no
-		
-		rel_head_defense = yes # In the event it becomes relevant...
-		
-		has_heir_designation = yes
-		priests_can_inherit = yes
-		priests_can_marry = yes
-		max_consorts = 3
-		women_can_take_consorts = yes
-		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
-		
-		female_temple_holders = yes
-		
-		religious_clothing_head = 5
-		religious_clothing_priest = 10
-		
-		intermarry = buddhist
-		intermarry = ainu_pagan
-		intermarry = ainu_pagan_reformed
-		intermarry = ryukyuan_pagan
-		intermarry = ryukyuan_pagan_reformed
-	}
-}
