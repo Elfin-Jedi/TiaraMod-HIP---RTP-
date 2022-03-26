@@ -245,6 +245,62 @@ targeted_decisions = {
 					religion = malagasy_religion_reformed
 					has_landed_title = d_malagasy_religion_reformed
 				}
+				AND = {
+					religion = ainu_pantheism_reformed
+					has_landed_title = d_ainu_pantheism_reformed
+				}
+				AND = {
+					religion = south_bantu_mythology_reformed
+					has_landed_title = d_south_bantu_mythology_reformed
+				}
+				AND = {
+					religion = east_bantu_mythology_reformed
+					has_landed_title = d_east_bantu_mythology_reformed
+				}
+				AND = {
+					religion = omotic_pagan_reformed
+					has_landed_title = d_omotic_pagan_reformed
+				}
+				AND = {
+					religion = cushitic_pagan_reformed
+					has_landed_title = d_cushitic_pagan_reformed
+				}
+				AND = {
+					religion = nilotic_pagan_reformed
+					has_landed_title = d_nilotic_pagan_reformed
+				}
+				AND = {
+					religion = khoi_san_mythology_reformed
+					has_landed_title = d_khoi_san_mythology_reformed
+				}
+				AND = {
+					religion = inuit_pagan_reformed
+					has_landed_title = d_inuit_pagan_reformed
+				}
+				AND = {
+					religion = algic_pagan_reformed
+					has_landed_title = d_algic_pagan_reformed
+				}
+				AND = {
+					religion = dreamtime_religion_reformed
+					has_landed_title = d_dreamtime_religion_reformed
+				}
+				AND = {
+					religion = animism_reformed
+					has_landed_title = d_animism_reformed
+				}
+				AND = {
+					religion = inti_reformed
+					has_landed_title = d_inti_reformed
+				}
+				AND = {
+					religion = south_american_reformed
+					has_landed_title = d_south_american_reformed
+				}
+				AND = {
+					religion = maori_religion_reformed
+					has_landed_title = d_maori_religion_reformed
+				}
 			}
 		}
 		potential = {

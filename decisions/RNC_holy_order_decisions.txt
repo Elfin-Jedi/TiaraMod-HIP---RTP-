@@ -27,6 +27,8 @@ decisions = {
 				religion = fraticelli
 				religion = waldensian
 				religion = lollard
+				religion = adoptionist
+				religion = arian
 			}
 
 			OR = {
@@ -235,6 +237,8 @@ decisions = {
 				religion = fraticelli
 				religion = waldensian
 				religion = lollard
+				religion = adoptionist
+				religion = arian
 			}
 			is_heretic = no
 
@@ -434,6 +438,8 @@ decisions = {
 				religion = fraticelli
 				religion = waldensian
 				religion = lollard
+				religion = adoptionist
+				religion = arian
 			}
 			OR = {
 				has_landed_title = e_hre
@@ -562,7 +568,6 @@ decisions = {
 				religion = bogomilist
 				religion = monothelite
 				religion = iconoclast
-				religion = paulician
 			}
 
 			is_heretic = no
@@ -833,6 +838,8 @@ decisions = {
 						OR = {
 							is_theocracy = yes 
 							government = theocratic_feudal_government
+							government = feudal_theocratic_government
+							government = imperial_theocratic_government
 						}
 						higher_real_tier_than = COUNT
 					}
@@ -847,9 +854,18 @@ decisions = {
 				trait = guardian_of_faith_orthodox
 				trait = guardian_of_faith_miaphysite
 				trait = guardian_of_faith_nestorian
+				trait = guardian_of_faith_syriac
+				trait = guardian_of_faith_maronite
+				trait = guardian_of_faith_apostolic
+				trait = guardian_of_faith_chalcedonian
 				trait = guardian_of_faith_sunni
 				trait = guardian_of_faith_shiite
 				trait = guardian_of_faith_ibadi
+				trait = guardian_of_faith_zaydi
+				trait = guardian_of_faith_druze
+				trait = guardian_of_faith_zoroastrian
+				trait = guardian_of_faith_manichean
+				trait = guardian_of_faith_yazidi
 				trait = guardian_of_faith_norse_pagan
 				trait = guardian_of_faith_tengri_pagan
 				trait = guardian_of_faith_baltic_pagan
@@ -859,10 +875,63 @@ decisions = {
 				trait = guardian_of_faith_zun_pagan
 				trait = guardian_of_faith_hellenic_pagan
 				trait = guardian_of_faith_bon
-				trait = guardian_of_faith_taoist
+				trait = guardian_of_faith_aztec
+				trait = guardian_of_faith_ainu_pagan
+				trait = guardian_of_faith_chinese_pagan
+				trait = guardian_of_faith_korean_pagan
+				trait = guardian_of_faith_ryukyuan_pagan
+				trait = guardian_of_faith_dayak_pagan
+				trait = guardian_of_faith_melanesian_religion
+				trait = guardian_of_faith_sanamahi_pagan
+				trait = guardian_of_faith_viet_pagan
+				trait = guardian_of_faith_inca_religion
+				trait = guardian_of_faith_mayan
+				trait = guardian_of_faith_jurchen_pagan
+				trait = guardian_of_faith_taiwanese_religion
+				trait = guardian_of_faith_philippine_religion
+				trait = guardian_of_faith_bornean_religion
+				trait = guardian_of_faith_sulawesi_religion
+				trait = guardian_of_faith_flores_religion
+				trait = guardian_of_faith_java_religion
+				trait = guardian_of_faith_sumatran_religion
+				trait = guardian_of_faith_malagasy_religion
+				trait = guardian_of_faith_ainu_pantheism
+				trait = guardian_of_faith_south_bantu_mythology
+				trait = guardian_of_faith_east_bantu_mythology
+				trait = guardian_of_faith_omotic_pagan
+				trait = guardian_of_faith_cushitic_pagan
+				trait = guardian_of_faith_nilotic_pagan
+				trait = guardian_of_faith_khoi_san_mythology
+				trait = guardian_of_faith_inuit_pagan
+				trait = guardian_of_faith_algic_pagan
+				trait = guardian_of_faith_dreamtime_religion
+				trait = guardian_of_faith_animism
+				trait = guardian_of_faith_inti
+				trait = guardian_of_faith_south_american
+				trait = guardian_of_faith_maori_religion
+				trait = guardian_of_faith_tuniit_pagan
 				trait = guardian_of_faith_hindu
 				trait = guardian_of_faith_buddhist
 				trait = guardian_of_faith_jain
+				trait = guardian_of_faith_taoist
+				trait = guardian_of_faith_shinto
+				trait = guardian_of_faith_nat
+				trait = guardian_of_faith_sastsana_phi
+				trait = guardian_of_faith_rmagao
+				trait = guardian_of_faith_shenjiao
+				trait = guardian_of_faith_benzhujiao
+				trait = guardian_of_faith_bimojiao
+				trait = guardian_of_faith_ua_dab
+				trait = guardian_of_faith_nugyauq
+				trait = guardian_of_faith_thangiao
+				trait = guardian_of_faith_shingyo
+				trait = guardian_of_faith_nihon_shinto
+				trait = guardian_of_faith_ryukyu_shinto
+				trait = guardian_of_faith_confucian
+				trait = guardian_of_faith_egyptian
+				trait = guardian_of_faith_celtic
+				trait = guardian_of_faith_luciferian
+				trait = guardian_of_faith_hadesian
 			}
 		}
 		
@@ -890,6 +959,8 @@ decisions = {
 						religion = fraticelli
 						religion = waldensian
 						religion = lollard
+						religion = adoptionist
+						religion = arian
 					}
 				}
 				add_trait = guardian_of_faith_christian
@@ -901,7 +972,6 @@ decisions = {
 						religion = bogomilist
 						religion = monothelite
 						religion = iconoclast
-						religion = paulician
 					}
 				}
 				add_trait = guardian_of_faith_orthodox
@@ -926,10 +996,39 @@ decisions = {
 			}
 			if = {
 				limit = {
+					religion = syriac
+				}
+				add_trait = guardian_of_faith_syriac
+			}
+			if = {
+				limit = {
+					religion = maronite
+				}
+				add_trait = guardian_of_faith_maronite
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = apostolic
+						religion = paulician
+						religion = tondrakian
+					}
+				}
+				add_trait = guardian_of_faith_apostolic
+			}
+			if = {
+				limit = {
+					religion = chalcedonian
+				}
+				add_trait = guardian_of_faith_chalcedonian
+			}
+			if = {
+				limit = {
 					OR = {
 						religion = sunni
 						religion = zikri
-						religion = yazidi
+						religion = mahdiyya
+						religion = nabawiyya
 					}
 				}
 				add_trait = guardian_of_faith_sunni
@@ -938,8 +1037,10 @@ decisions = {
 				limit = {
 					OR = {
 						religion = shiite
-						religion = druze
 						religion = hurufi
+						religion = waqifi
+						religion = ismaili
+						religion = qarmatian
 					}
 				}	
 				add_trait = guardian_of_faith_shiite
@@ -949,60 +1050,464 @@ decisions = {
 					OR = {
 						religion = ibadi
 						religion = kharijite
+						religion = haruri
 					}
 				}
 				add_trait = guardian_of_faith_ibadi
 			}
 			if = {
 				limit = {
-					religion = norse_pagan_reformed
+					religion = zaydi
+				}
+				add_trait = guardian_of_faith_zaydi
+			}
+			if = {
+				limit = {
+					religion = druze
+				}
+				add_trait = guardian_of_faith_druze
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = zoroastrian
+						religion = mazdaki
+						religion = zurvanist
+						religion = khurmazta
+					}
+				}
+				add_trait = guardian_of_faith_zoroastrian
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = manichean
+						religion = mandaean
+					}
+				}
+				add_trait = guardian_of_faith_manichean
+			}
+			if = {
+				limit = {
+					religion = yazidi
+				}
+				add_trait = guardian_of_faith_yazidi
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = norse_pagan
+						religion = norse_pagan_reformed
+					}
 				}
 				add_trait = guardian_of_faith_norse_pagan
 			}
 			if = {
 				limit = {
-					religion = tengri_pagan_reformed
+					OR = {
+						religion = tengri_pagan
+						religion = tengri_pagan_reformed
+					}
 				}
 				add_trait = guardian_of_faith_tengri_pagan
 			}
 			if = {
 				limit = {
-					religion = baltic_pagan_reformed
+					OR = {
+						religion = baltic_pagan
+						religion = baltic_pagan_reformed
+					}
 				}
 				add_trait = guardian_of_faith_baltic_pagan
 			}
 			if = {
 				limit = {
-					religion = finnish_pagan_reformed
+					OR = {
+						religion = finnish_pagan
+						religion = finnish_pagan_reformed
+					}
 				}
 				add_trait = guardian_of_faith_finnish_pagan
 			}
 			if = {
 				limit = {
-					religion = slavic_pagan_reformed
+					OR = {
+						religion = slavic_pagan
+						religion = slavic_pagan_reformed
+					}
 				}
 				add_trait = guardian_of_faith_slavic_pagan
 			}
 			if = {
 				limit = {
-					religion = west_african_pagan_reformed
+					OR = {
+						religion = west_african_pagan
+						religion = west_african_pagan_reformed
+					}
 				}
 				add_trait = guardian_of_faith_west_african_pagan
 			}
 			if = {
 				limit = {
-					religion = zun_pagan_reformed
+					OR = {
+						religion = zun_pagan
+						religion = zun_pagan_reformed
+					}
 				}
 				add_trait = guardian_of_faith_zun_pagan
 			}
 			if = {
 				limit = {
 					OR = {
+						religion = hellenic_pagan
 						religion = hellenic_pagan_reformed
 						religion = promethean_pagan
+						religion = titan_pagan
 					}
 				}
 				add_trait = guardian_of_faith_hellenic_pagan
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = bon
+						religion = bon_reformed
+					}
+				}
+				add_trait = guardian_of_faith_bon
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = aztec
+						religion = aztec_reformed
+					}
+				}
+				add_trait = guardian_of_faith_aztec
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = ainu_pagan
+						religion = ainu_pagan_reformed
+					}
+				}
+				add_trait = guardian_of_faith_ainu_pagan
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = chinese_pagan
+						religion = chinese_pagan_reformed
+					}
+				}
+				add_trait = guardian_of_faith_chinese_pagan
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = korean_pagan
+						religion = korean_pagan_reformed
+					}
+				}
+				add_trait = guardian_of_faith_korean_pagan
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = ryukyuan_pagan
+						religion = ryukyuan_pagan_reformed
+					}
+				}
+				add_trait = guardian_of_faith_ryukyuan_pagan
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = dayak_pagan
+						religion = dayak_pagan_reformed
+					}
+				}
+				add_trait = guardian_of_faith_dayak_pagan
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = melanesian_religion
+						religion = melanesian_religion_reformed
+					}
+				}
+				add_trait = guardian_of_faith_melanesian_religion
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = melanesian_religion
+						religion = melanesian_religion_reformed
+					}
+				}
+				add_trait = guardian_of_faith_melanesian_religion
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = sanamahi_pagan
+						religion = sanamahi_pagan_reformed
+					}
+				}
+				add_trait = guardian_of_faith_sanamahi_pagan
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = viet_pagan
+						religion = viet_pagan_reformed
+					}
+				}
+				add_trait = guardian_of_faith_viet_pagan
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = inca_religion
+						religion = inca_religion_reformed
+					}
+				}
+				add_trait = guardian_of_faith_inca_religion
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = mayan
+						religion = mayan_reformed
+					}
+				}
+				add_trait = guardian_of_faith_mayan
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = jurchen_pagan
+						religion = jurchen_pagan_reformed
+					}
+				}
+				add_trait = guardian_of_faith_jurchen_pagan
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = taiwanese_religion
+						religion = taiwanese_religion_reformed
+					}
+				}
+				add_trait = guardian_of_faith_taiwanese_religion
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = philippine_religion
+						religion = philippine_religion_reformed
+					}
+				}
+				add_trait = guardian_of_faith_philippine_religion
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = bornean_religion
+						religion = bornean_religion_reformed
+					}
+				}
+				add_trait = guardian_of_faith_bornean_religion
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = sulawesi_religion
+						religion = sulawesi_religion_reformed
+					}
+				}
+				add_trait = guardian_of_faith_sulawesi_religion
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = flores_religion
+						religion = flores_religion_reformed
+					}
+				}
+				add_trait = guardian_of_faith_flores_religion
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = java_religion
+						religion = java_religion_reformed
+					}
+				}
+				add_trait = guardian_of_faith_java_religion
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = sumatran_religion
+						religion = sumatran_religion_reformed
+					}
+				}
+				add_trait = guardian_of_faith_sumatran_religion
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = malagasy_religion
+						religion = malagasy_religion_reformed
+					}
+				}
+				add_trait = guardian_of_faith_malagasy_religion
+			}
+			if = { 
+				limit = {
+					OR = {
+						religion = ainu_pantheism
+						religion = ainu_pantheism_reformed
+					}
+				}
+				add_trait = guardian_of_faith_ainu_pantheism
+			}
+			if = { 
+				limit = {
+					OR = {
+						religion = south_bantu_mythology
+						religion = south_bantu_mythology_reformed
+					}
+				}
+				add_trait = guardian_of_faith_south_bantu_mythology
+			}
+			if = { 
+				limit = {
+					OR = {
+						religion = south_bantu_mythology
+						religion = south_bantu_mythology_reformed
+					}
+				}
+				add_trait = guardian_of_faith_south_bantu_mythology
+			}
+			if = { 
+				limit = {
+					OR = {
+						religion = east_bantu_mythology
+						religion = east_bantu_mythology_reformed
+					}
+				}
+				add_trait = guardian_of_faith_east_bantu_mythology
+			}
+			if = { 
+				limit = {
+					OR = {
+						religion = omotic_pagan
+						religion = omotic_pagan_reformed
+					}
+				}
+				add_trait = guardian_of_faith_omotic_pagan
+			}
+			if = { 
+				limit = {
+					OR = {
+						religion = cushitic_pagan
+						religion = cushitic_pagan_reformed
+					}
+				}
+				add_trait = guardian_of_faith_cushitic_pagan
+			}
+			if = { 
+				limit = {
+					OR = {
+						religion = nilotic_pagan
+						religion = nilotic_pagan_reformed
+					}
+				}
+				add_trait = guardian_of_faith_nilotic_pagan
+			}
+			if = { 
+				limit = {
+					OR = {
+						religion = khoi_san_mythology
+						religion = khoi_san_mythology_reformed
+					}
+				}
+				add_trait = guardian_of_faith_khoi_san_mythology
+			}
+			if = { 
+				limit = {
+					OR = {
+						religion = inuit_pagan
+						religion = inuit_pagan_reformed
+					}
+				}
+				add_trait = guardian_of_faith_inuit_pagan
+			}
+			if = { 
+				limit = {
+					OR = {
+						religion = algic_pagan
+						religion = algic_pagan_reformed
+					}
+				}
+				add_trait = guardian_of_faith_algic_pagan
+			}
+			if = { 
+				limit = {
+					OR = {
+						religion = dreamtime_religion
+						religion = dreamtime_religion_reformed
+					}
+				}
+				add_trait = guardian_of_faith_dreamtime_religion
+			}
+			if = { 
+				limit = {
+					OR = {
+						religion = animism
+						religion = animism_reformed
+					}
+				}
+				add_trait = guardian_of_faith_animism
+			}
+			if = { 
+				limit = {
+					OR = {
+						religion = inti
+						religion = inti_reformed
+					}
+				}
+				add_trait = guardian_of_faith_inti
+			}
+			if = { 
+				limit = {
+					OR = {
+						religion = south_american
+						religion = south_american_reformed
+					}
+				}
+				add_trait = guardian_of_faith_south_american
+			}
+			if = { 
+				limit = {
+					OR = {
+						religion = maori_religion
+						religion = maori_religion_reformed
+					}
+				}
+				add_trait = guardian_of_faith_maori_religion
+			}
+			if = { 
+				limit = {
+					OR = {
+						religion = tuniit_pagan
+						religion = tuniit_pagan_reformed
+					}
+				}
+				add_trait = guardian_of_faith_tuniit_pagan
 			}
 			if = {
 				limit = {
@@ -1030,15 +1535,63 @@ decisions = {
 			}
 			if = {
 				limit = {
-					religion = bon_reformed
+					religion = nat
 				}
-				add_trait = guardian_of_faith_bon
-			}	
-			if = { 
+				add_trait = guardian_of_faith_nat
+			}
+			if = {
 				limit = {
-					religion = confucian
+					religion = sastsana_phi
 				}
-				add_trait = guardian_of_faith_confucian
+				add_trait = guardian_of_faith_sastsana_phi
+			}
+			if = {
+				limit = {
+					religion = rmagao
+				}
+				add_trait = guardian_of_faith_rmagao
+			}
+			if = {
+				limit = {
+					religion = shenjiao
+				}
+				add_trait = guardian_of_faith_shenjiao
+			}
+			if = {
+				limit = {
+					religion = benzhujiao
+				}
+				add_trait = guardian_of_faith_benzhujiao
+			}
+			if = {
+				limit = {
+					religion = bimojiao
+				}
+				add_trait = guardian_of_faith_bimojiao
+			}
+			if = {
+				limit = {
+					religion = ua_dab
+				}
+				add_trait = guardian_of_faith_ua_dab
+			}
+			if = {
+				limit = {
+					religion = nugyauq
+				}
+				add_trait = guardian_of_faith_nugyauq
+			}
+			if = {
+				limit = {
+					religion = thangiao
+				}
+				add_trait = guardian_of_faith_thangiao
+			}
+			if = {
+				limit = {
+					religion = shingyo
+				}
+				add_trait = guardian_of_faith_shingyo
 			}
 			if = { 
 				limit = {
@@ -1054,13 +1607,14 @@ decisions = {
 			}
 			if = { 
 				limit = {
-					religion = ainu_pantheism_reformed
+					religion = confucian
 				}
-				add_trait = guardian_of_faith_ainu_pantheism
+				add_trait = guardian_of_faith_confucian
 			}	
 			if = { 
 				limit = {
 					OR = {
+						religion = celtic_pagan
 						religion = celtic_pagan_reformed
 						religion = britannic_pagan
 					}
@@ -1070,11 +1624,24 @@ decisions = {
 			if = { 
 				limit = {
 					OR = {
+						religion = egyptian_pagan
 						religion = egyptian_pagan_reformed
 						religion = aten_pagan
 					}
 				}
 				add_trait = guardian_of_faith_egyptian
+			}
+			if = { 
+				limit = {
+					religion = luciferian
+				}
+				add_trait = guardian_of_faith_luciferian
+			}
+			if = { 
+				limit = {
+					religion = hadesian
+				}
+				add_trait = guardian_of_faith_hadesian
 			}
 		}
 		
@@ -1101,6 +1668,10 @@ decisions = {
 					trait = guardian_of_faith_orthodox
 					trait = guardian_of_faith_miaphysite
 					trait = guardian_of_faith_nestorian
+					trait = guardian_of_faith_syriac
+					trait = guardian_of_faith_maronite
+					trait = guardian_of_faith_apostolic
+					trait = guardian_of_faith_chalcedonian
 				}
 			}
 		}
@@ -1129,6 +1700,8 @@ decisions = {
 						religion = fraticelli
 						religion = waldensian
 						religion = lollard
+						religion = adoptionist
+						religion = arian
 					}
 				}
 				add_trait = guardian_of_faith_christian
@@ -1140,7 +1713,6 @@ decisions = {
 						religion = bogomilist
 						religion = monothelite
 						religion = iconoclast
-						religion = paulician
 					}
 				}
 				add_trait = guardian_of_faith_orthodox
@@ -1162,6 +1734,34 @@ decisions = {
 					}
 				}
 				add_trait = guardian_of_faith_nestorian
+			}
+			if = {
+				limit = {
+					religion = syriac
+				}
+				add_trait = guardian_of_faith_syriac
+			}
+			if = {
+				limit = {
+					religion = maronite
+				}
+				add_trait = guardian_of_faith_maronite
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = apostolic
+						religion = paulician
+						religion = tondrakian
+					}
+				}
+				add_trait = guardian_of_faith_apostolic
+			}
+			if = {
+				limit = {
+					religion = chalcedonian
+				}
+				add_trait = guardian_of_faith_chalcedonian
 			}
 		}
 		
