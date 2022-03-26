@@ -1,3 +1,3 @@
 name="TiaraMod (HIP - RTP)"
-path="mod/TiaraMod (HIP - RTP)"
+archive="mod/TiaraMod-HIP---RTP--master.zip"
 dependencies = { "HIP - Historical Immersion Project" }
