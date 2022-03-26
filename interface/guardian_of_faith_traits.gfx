@@ -253,6 +253,111 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	spriteType = {
+		name = "GFX_trait_guardian_of_faith_ainu_pantheism"
+		texturefile = "gfx/interface/guardian_of_faith_ainu_pantheism_reformed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_south_bantu_mythology"
+		texturefile = "gfx/interface/guardian_of_faith_ainu_pantheism_reformed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_east_bantu_mythology"
+		texturefile = "gfx/interface/guardian_of_faith_ainu_pantheism_reformed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_omotic_pagan"
+		texturefile = "gfx/interface/guardian_of_faith_ainu_pantheism_reformed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_cushitic_pagan"
+		texturefile = "gfx/interface/guardian_of_faith_ainu_pantheism_reformed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_nilotic_pagan"
+		texturefile = "gfx/interface/guardian_of_faith_ainu_pantheism_reformed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_khoi_san_mythology"
+		texturefile = "gfx/interface/guardian_of_faith_ainu_pantheism_reformed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_inuit_pagan"
+		texturefile = "gfx/interface/guardian_of_faith_ainu_pantheism_reformed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_algic_pagan"
+		texturefile = "gfx/interface/guardian_of_faith_ainu_pantheism_reformed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_dreamtime_religion"
+		texturefile = "gfx/interface/guardian_of_faith_ainu_pantheism_reformed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_animism"
+		texturefile = "gfx/interface/guardian_of_faith_ainu_pantheism_reformed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_inti"
+		texturefile = "gfx/interface/guardian_of_faith_ainu_pantheism_reformed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_south_american"
+		texturefile = "gfx/interface/guardian_of_faith_ainu_pantheism_reformed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_maori_religion"
+		texturefile = "gfx/interface/guardian_of_faith_ainu_pantheism_reformed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_tuniit_pagan"
+		texturefile = "gfx/interface/guardian_of_faith_ainu_pantheism_reformed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
 		name = "GFX_trait_guardian_of_faith_hindu"
 		texturefile = "gfx/interface/guardian_of_faith_hindu.dds"
 		noOfFrames = 1
@@ -281,15 +386,78 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	spriteType = {
-		name = "GFX_trait_guardian_of_faith_shinto"
-		texturefile = "gfx/interface/guardian_of_faith_nihon_shinto.dds"
+		name = "GFX_trait_guardian_of_faith_nat"
+		texturefile = "gfx/interface/guardian_of_faith_hindu.dds"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	spriteType = {
-		name = "GFX_trait_guardian_of_faith_confucian"
-		texturefile = "gfx/interface/guardian_of_faith_confucian.dds"
+		name = "GFX_trait_guardian_of_faith_sastsana_phi"
+		texturefile = "gfx/interface/guardian_of_faith_hindu.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_rmagao"
+		texturefile = "gfx/interface/guardian_of_faith_hindu.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_shenjiao"
+		texturefile = "gfx/interface/guardian_of_faith_hindu.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_benzhujiao"
+		texturefile = "gfx/interface/guardian_of_faith_hindu.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_bimojiao"
+		texturefile = "gfx/interface/guardian_of_faith_hindu.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_ua_dab"
+		texturefile = "gfx/interface/guardian_of_faith_hindu.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_nugyauq"
+		texturefile = "gfx/interface/guardian_of_faith_hindu.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_thangiao"
+		texturefile = "gfx/interface/guardian_of_faith_hindu.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_shingyo"
+		texturefile = "gfx/interface/guardian_of_faith_hindu.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_nihon_shinto"
+		texturefile = "gfx/interface/guardian_of_faith_nihon_shinto.dds"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -302,8 +470,8 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	spriteType = {
-		name = "GFX_trait_guardian_of_faith_ainu_pantheism"
-		texturefile = "gfx/interface/guardian_of_faith_ainu_pantheism_reformed.dds"
+		name = "GFX_trait_guardian_of_faith_confucian"
+		texturefile = "gfx/interface/guardian_of_faith_confucian.dds"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -318,6 +486,20 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_trait_guardian_of_faith_egyptian"
 		texturefile = "gfx/interface/guardian_of_faith_egyptian.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_luciferian"
+		texturefile = "gfx/interface/guardian_of_faith_orthodox.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_hadesian"
+		texturefile = "gfx/interface/guardian_of_faith_hellenic_pagan.dds"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
