@@ -1,0 +1,491 @@
+###Church Influence INTERACTION DECISIONS FOR CHURCH
+
+
+offmap_decisions = {
+	#voting
+	offmap_church_vote_yes = {
+		only_playable = yes
+		button_name = vote_for_button
+		ai = no
+		potential = {
+		}
+
+		from_potential = {
+			ai = no
+			is_landed = yes
+			PDP_is_theocracy = yes
+			offmap_church_voting_active = yes
+			offmap_church_is_elector = yes
+			offmap_church_has_vote_left = yes
+		}
+		allow = {
+			FROM = {
+				prisoner = no
+			}
+		}
+		effect = {
+			FROM = {
+				offmap_church_vote_for = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+	}
+	offmap_church_vote_no = {
+		only_playable = yes
+		button_name = vote_against_button
+		ai = no
+		potential = {
+		}
+
+		from_potential = {
+			ai = no
+			is_landed = yes
+			PDP_is_theocracy = yes
+			offmap_church_voting_active = yes
+			offmap_church_is_elector = yes
+			offmap_church_has_vote_left = yes
+		}
+		allow = {
+			FROM = {
+				prisoner = no
+			}
+		}
+		effect = {
+			FROM = {
+				offmap_church_vote_contra = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+	}
+
+
+	#making proposals
+
+	#status & policy
+	#flags
+	#offmap_church_topic_status_to_reform
+	#offmap_church_topic_policy_to_scholarship
+	#offmap_church_topic_policy_to_warfare
+	#offmap_church_topic_policy_to_charity
+	#offmap_church_topic_policy_to_monumentality
+	#offmap_church_topic_policy_to_conversion
+	offmap_church_propose_status_to_reform = {
+		only_playable = yes
+		button_name = vote_proposal_button
+		ai = no
+		from_potential = {
+			ai = no
+			offmap_church_this_can_propose_condition = yes
+		}
+		allow = {
+			FROM = {
+				prisoner = no
+				offmap_church_has_proposal_currency = yes
+			}
+		}
+		effect = {
+			k_papal_state = {
+				set_title_flag = offmap_church_topic_status_to_reform
+			}
+			FROM = {
+				offmap_church_this_initiate_proposal = yes
+			}
+		}
+		revoke_allowed = {always = no}
+	}
+
+	offmap_church_propose_policy_to_scholarship = {
+		only_playable = yes
+		button_name = vote_proposal_button
+		ai = no
+		from_potential = {
+			ai = no
+			offmap_church_this_can_propose_condition = yes
+		}
+		allow = {
+			FROM = {
+				prisoner = no
+				offmap_church_has_proposal_currency = yes
+			}
+		}
+		effect = {
+			k_papal_state = {
+				set_title_flag = offmap_church_topic_policy_to_scholarship
+			}
+			FROM = {
+				offmap_church_this_initiate_proposal = yes
+			}
+		}
+		revoke_allowed = {always = no}
+	}
+
+	offmap_church_propose_policy_to_warfare = {
+		only_playable = yes
+		button_name = vote_proposal_button
+		ai = no
+		from_potential = {
+			ai = no
+			offmap_church_this_can_propose_condition = yes
+		}
+		allow = {
+			FROM = {
+				prisoner = no
+				offmap_church_has_proposal_currency = yes
+			}
+		}
+		effect = {
+			k_papal_state = {
+				set_title_flag = offmap_church_topic_policy_to_warfare
+			}
+			FROM = {
+				offmap_church_this_initiate_proposal = yes
+			}
+		}
+		revoke_allowed = {always = no}
+	}
+
+	offmap_church_propose_policy_to_charity = {
+		only_playable = yes
+		button_name = vote_proposal_button
+		ai = no
+		from_potential = {
+			ai = no
+			offmap_church_this_can_propose_condition = yes
+		}
+		allow = {
+			FROM = {
+				prisoner = no
+				offmap_church_has_proposal_currency = yes
+			}
+		}
+		effect = {
+			k_papal_state = {
+				set_title_flag = offmap_church_topic_policy_to_charity
+			}
+			FROM = {
+				offmap_church_this_initiate_proposal = yes
+			}
+		}
+		revoke_allowed = {always = no}
+	}
+
+
+	offmap_church_propose_policy_to_monumentality = {
+		only_playable = yes
+		button_name = vote_proposal_button
+		ai = no
+		from_potential = {
+			ai = no
+			offmap_church_this_can_propose_condition = yes
+		}
+		allow = {
+			FROM = {
+				prisoner = no
+				offmap_church_has_proposal_currency = yes
+			}
+		}
+		effect = {
+			k_papal_state = {
+				set_title_flag = offmap_church_topic_policy_to_monumentality
+			}
+			FROM = {
+				offmap_church_this_initiate_proposal = yes
+			}
+		}
+		revoke_allowed = {always = no}
+	}
+
+	offmap_church_propose_policy_to_conversion = {
+		only_playable = yes
+		button_name = vote_proposal_button
+		ai = no
+		from_potential = {
+			ai = no
+			offmap_church_this_can_propose_condition = yes
+		}
+		allow = {
+			FROM = {
+				prisoner = no
+				offmap_church_has_proposal_currency = yes
+			}
+		}
+		effect = {
+			k_papal_state = {
+				set_title_flag = offmap_church_topic_policy_to_conversion
+			}
+			FROM = {
+				offmap_church_this_initiate_proposal = yes
+			}
+		}
+		revoke_allowed = {always = no}
+	}
+
+
+
+	#religion properties
+	offmap_church_propose_close_marriage = {
+		only_playable = yes
+		button_name = vote_proposal_button
+		ai = no
+		from_potential = {
+			ai = no
+			offmap_church_this_can_propose_condition = yes
+			NOT = {has_global_flag = offmap_church_close_marriage_allowed}
+		}
+		allow = {
+			FROM = {
+				prisoner = no
+				offmap_church_has_proposal_currency = yes
+			}
+		}
+		effect = {
+			k_papal_state = {
+				set_title_flag = offmap_church_topic_close_marriage
+			}
+			FROM = {
+				offmap_church_this_initiate_proposal = yes
+			}
+		}
+		revoke_allowed = {always = no}
+	}
+
+	offmap_church_propose_divine_marriage = {
+		only_playable = yes
+		button_name = vote_proposal_button
+		ai = no
+		from_potential = {
+			ai = no
+			offmap_church_this_can_propose_condition = yes
+			NOT = {has_global_flag = offmap_church_divine_blood_allowed}
+		}
+		allow = {
+			FROM = {
+				prisoner = no
+				offmap_church_has_proposal_currency = yes
+			}
+			custom_tooltip = {
+				text = offmap_voting_has_close_marriage
+				has_global_flag = offmap_church_close_marriage_allowed
+			}
+		}
+		effect = {
+			k_papal_state = {
+				set_title_flag = offmap_church_topic_divine_blood
+			}
+			FROM = {
+				offmap_church_this_initiate_proposal = yes
+			}
+		}
+		revoke_allowed = {always = no}
+	}
+
+	offmap_church_propose_raiding = {
+		only_playable = yes
+		button_name = vote_proposal_button
+		ai = no
+		from_potential = {
+			ai = no
+			offmap_church_this_can_propose_condition = yes
+			NOT = {has_global_flag = offmap_church_raiding_allowed}
+		}
+		allow = {
+			FROM = {
+				prisoner = no
+				offmap_church_has_proposal_currency = yes
+			}
+		}
+		effect = {
+			k_papal_state = {
+				set_title_flag = offmap_church_topic_raiding
+			}
+			FROM = {
+				offmap_church_this_initiate_proposal = yes
+			}
+		}
+		revoke_allowed = {always = no}
+	}
+
+
+
+	##spending influence for Votes
+
+
+	offmap_church_influence_voting = {
+		button_name = vote_deal_button
+		ai = no
+		potential = {
+			offmap_church_voting_active = yes
+			FROM = {
+				offmap_church_initiated_voting = yes
+				show_scope_change = no
+			}
+		}
+		allow = {
+			FROM = {
+				custom_tooltip = {
+					text = PDP_not_recently
+					NOT = { has_character_modifier = offmap_church_influence_voting_timer }
+				}
+				custom_tooltip = {
+					text = PDP_influence_voting_not_maxed_out
+					NOT = {has_character_flag = offmap_church_voting_proposer_spend_influence_high_flag}
+				}
+				prisoner = no
+				OR = {
+					AND = {
+						has_offmap_currency = { offmap = offmap_PDP_church value = 900 }
+						NOR = {
+							has_character_flag = offmap_church_voting_proposer_spend_influence_low_flag
+							has_character_flag = offmap_church_voting_proposer_spend_influence_medium_flag
+							has_character_flag = offmap_church_voting_proposer_spend_influence_high_flag
+						}
+					}
+					AND = {
+						has_offmap_currency = { offmap = offmap_PDP_church value = 1800 }
+						has_character_flag = offmap_church_voting_proposer_spend_influence_low_flag
+					}
+					AND = {
+						has_offmap_currency = { offmap = offmap_PDP_church value = 3600 }
+						has_character_flag = offmap_church_voting_proposer_spend_influence_medium_flag
+					}
+				}
+			}
+		}
+		effect = {
+			FROM = {
+				hidden_effect = {
+					add_character_modifier = {
+						hidden = yes
+						name = offmap_church_influence_voting_timer
+						days = 1
+					}
+				}
+				if = {
+					limit = {
+						NOR = {
+							has_character_flag = offmap_church_voting_proposer_spend_influence_low_flag
+							has_character_flag = offmap_church_voting_proposer_spend_influence_medium_flag
+							has_character_flag = offmap_church_voting_proposer_spend_influence_high_flag
+						}
+					}
+					set_character_flag = offmap_church_voting_proposer_spend_influence_low_flag
+					add_offmap_currency = {offmap = offmap_PDP_church value = -900}
+				}
+				else_if = {
+					limit = {has_character_flag = offmap_church_voting_proposer_spend_influence_low_flag}
+					set_character_flag = offmap_church_voting_proposer_spend_influence_medium_flag
+					clr_character_flag = offmap_church_voting_proposer_spend_influence_low_flag
+					add_offmap_currency = {offmap = offmap_PDP_church value = -1800}
+				}
+				else_if = {
+					limit = {has_character_flag = offmap_church_voting_proposer_spend_influence_medium_flag}
+					set_character_flag = offmap_church_voting_proposer_spend_influence_high_flag
+					clr_character_flag = offmap_church_voting_proposer_spend_influence_medium_flag
+					add_offmap_currency = {offmap = offmap_PDP_church value = -3600}
+				}
+			}
+		}
+	}
+
+
+	offmap_church_influence_succession = {
+		button_name = offmap_church_boons
+		ai = no
+		potential = {
+			FROM = {
+				PDP_is_theocracy = yes
+				NOT = {has_landed_title = k_papal_state}
+			}
+		}
+		allow = {
+			FROM = {
+				custom_tooltip = {
+					text = PDP_not_recently
+					NOT = { has_character_modifier = offmap_church_influence_succession_timer }
+				}
+				custom_tooltip = {
+					text = PDP_influence_voting_not_maxed_out
+					NOT = {has_character_flag = offmap_church_succession_spend_influence_high_flag}
+				}
+				prisoner = no
+				OR = {
+					AND = {
+						has_offmap_currency = { offmap = offmap_PDP_church value = 400 }
+						NOR = {
+							has_character_flag = offmap_church_succession_spend_influence_low_flag
+							has_character_flag = offmap_church_succession_spend_influence_medium_flag
+							has_character_flag = offmap_church_succession_spend_influence_high_flag
+						}
+					}
+					AND = {
+						has_offmap_currency = { offmap = offmap_PDP_church value = 600 }
+						has_character_flag = offmap_church_succession_spend_influence_low_flag
+					}
+					AND = {
+						has_offmap_currency = { offmap = offmap_PDP_church value = 1000 }
+						has_character_flag = offmap_church_succession_spend_influence_medium_flag
+					}
+				}
+			}
+		}
+		effect = {
+			FROM = {
+				hidden_effect = {
+					add_character_modifier = {
+						hidden = yes
+						name = offmap_church_influence_succession_timer
+						years = 3
+					}
+				}
+				if = {
+					limit = {
+						NOR = {
+							has_character_flag = offmap_church_succession_spend_influence_low_flag
+							has_character_flag = offmap_church_succession_spend_influence_medium_flag
+							has_character_flag = offmap_church_succession_spend_influence_high_flag
+						}
+					}
+					set_character_flag = offmap_church_succession_spend_influence_low_flag
+					add_offmap_currency = {offmap = offmap_PDP_church value = -400}
+				}
+				else_if = {
+					limit = {has_character_flag = offmap_church_succession_spend_influence_low_flag}
+					set_character_flag = offmap_church_succession_spend_influence_medium_flag
+					clr_character_flag = offmap_church_succession_spend_influence_low_flag
+					add_offmap_currency = {offmap = offmap_PDP_church value = -600}
+				}
+				else_if = {
+					limit = {has_character_flag = offmap_church_succession_spend_influence_medium_flag}
+					set_character_flag = offmap_church_succession_spend_influence_high_flag
+					clr_character_flag = offmap_church_succession_spend_influence_medium_flag
+					add_offmap_currency = {offmap = offmap_PDP_church value = -1000}
+				}
+			}
+		}
+	}
+
+
+
+	#show Votes
+
+	offmap_church_show_votes = {
+		button_name = vote_topic_button
+		ai = no
+		potential = {
+			FROM = {ai = no}
+			offmap_church_voting_active = yes
+			#Conditions for the decision to appear
+		}
+		effect = {
+			FROM = {
+				character_event = {id = PDPVOTE.120 days = 0}
+			}
+			#Commands executed when taking the decision
+		}
+	}
+
+}

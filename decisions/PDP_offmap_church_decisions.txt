@@ -1,0 +1,1042 @@
+###Church Influence INTERACTION DECISIONS FOR CHURCH
+
+
+offmap_decisions = {
+
+	offmap_church_corruption_officials = {
+		only_playable = yes
+		button_name = offmap_church_corruption
+		ai_check_interval = 120
+
+		potential = {
+			#is_offmap_tag = offmap_PDP_church
+			#for some reason, that does not work...
+			ROOT = {
+				has_landed_title = k_papal_state
+			}
+		}
+
+		from_potential = {
+			is_landed = yes
+			PDP_is_theocracy = yes
+		}
+
+		allow = {
+			show_only_failed_conditions = yes
+			FROM = {
+				show_scope_change = no
+				wealth = 200
+				custom_tooltip = {
+					text = PDP_not_recently
+					NOT = { has_character_modifier = offmap_church_corruption_officials_timer }
+				}
+				prisoner = no
+				NOT = { trait = incapable }
+				is_inaccessible_trigger = no
+			}
+		}
+		effect = {
+			FROM = {
+				sound_effect = china_grace_gain
+				wealth = -200
+				hidden_effect = {
+					add_character_modifier = {
+						hidden = yes
+						name = offmap_church_corruption_officials_timer
+						months = 1
+					}
+				}
+				if = {
+					limit = {
+						offmap_PDP_church = {
+							has_status = PDP_church_status_corrupt
+						}
+					}
+					add_offmap_currency = { offmap = offmap_PDP_church value = 100 }
+				}
+				else_if = {
+					limit = {
+						offmap_PDP_church = {
+							has_status = PDP_church_status_reform
+						}
+					}
+					add_offmap_currency = { offmap = offmap_PDP_church value = 75 }
+				}
+				else = {
+					add_offmap_currency = { offmap = offmap_PDP_church value = 125 }
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.33 #don't spend all you money instantly!
+			}
+			modifier = {
+				factor = 0.1
+				FROM = {
+					NOR = {
+						monthly_income = 9 #I.e. it would take more than 2 years to collect the 200 gold
+						wealth = 1000 #don't know how to spend it
+						AND = {
+							wealth = 800
+							trait = ambitious
+						}
+					}
+				}
+			}
+		}
+	}
+
+	offmap_church_send_money = {
+		only_playable = yes
+		button_name = offmap_church_gifts
+		ai_check_interval = 120
+
+		potential = {
+			#is_offmap_tag = offmap_PDP_church
+			#for some reason, that does not work...
+			ROOT = {
+				has_landed_title = k_papal_state
+			}
+			FROM = {
+				NOT = {has_landed_title = k_papal_state} #the pope cant do this - he would give money to himself.
+			}
+		}
+
+		from_potential = {
+			is_landed = yes
+			PDP_is_theocracy = yes
+		}
+
+		allow = {
+			show_only_failed_conditions = yes
+			FROM = {
+				show_scope_change = no
+				wealth = 100
+				custom_tooltip = {
+					text = PDP_not_recently
+					NOT = { has_character_modifier = offmap_church_send_money_timer }
+				}
+				prisoner = no
+				NOT = { trait = incapable }
+				is_inaccessible_trigger = no
+			}
+		}
+		effect = {
+			FROM = {
+				sound_effect = china_grace_gain
+				transfer_scaled_wealth = { to = ROOT value = 0.25 min = 100 max = 100}
+				#make event and send it to the pope
+				hidden_effect = {
+					#send the money back, will be handled in his event
+					ROOT = {
+						transfer_scaled_wealth = { to = PREV value = 0.25 min = 100 max = 100}
+					}
+					add_character_modifier = {
+						hidden = yes
+						name = offmap_church_send_money_timer
+						years = 1
+					}
+				}
+				if = {
+					limit = {
+						offmap_PDP_church = {
+							has_status = PDP_church_status_reform
+						}
+					}
+					add_offmap_currency = { offmap = offmap_PDP_church value = 80 }
+					piety = 25
+				}
+				else_if = {
+					limit = {
+						has_status = PDP_church_status_corrupt
+					}
+					add_offmap_currency = { offmap = offmap_PDP_church value = 120 }
+					piety = 25
+				}
+				else = {
+					add_offmap_currency = { offmap = offmap_PDP_church value = 100 }
+					piety = 50
+				}
+				save_event_target_as = bishop
+			}
+			ROOT = {
+				character_event = {id = PDPOFF.5}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				FROM = {
+					trait = greedy
+				}
+			}
+			modifier = {
+				factor = 0
+				governor = {
+					NOR = {
+						is_friend = FROM
+						is_lover = FROM
+						reverse_opinion = { who = FROM value = 80}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					NOT = {
+						wealth = 1000
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5 #don't spend all you money instantly!
+			}
+		}
+	}
+
+	offmap_church_spend_piety = {
+		only_playable = yes
+		button_name = offmap_church_gifts
+		ai_check_interval = 720
+		potential = {
+			#offmap_power = {is_offmap_tag = offmap_PDP_church}
+			ROOT = {
+				has_landed_title = k_papal_state
+			}
+		}
+		from_potential = {
+			is_landed = yes
+			PDP_is_theocracy = yes
+		}
+
+		allow = {
+			show_only_failed_conditions = yes
+			FROM = {
+				show_scope_change = no
+				piety = 400
+				custom_tooltip = {
+					text = PDP_not_recently
+					NOT = { has_character_modifier = offmap_church_spend_piety_timer }
+				}
+				prisoner = no
+				NOT = { trait = incapable }
+			}
+		}
+		effect = {
+			FROM = {
+				sound_effect = china_grace_gain
+				piety = -400
+				#make event and send it to the pope
+				hidden_effect = {
+					add_character_modifier = {
+						hidden = yes
+						name = offmap_church_spend_piety_timer
+						years = 2
+					}
+				}
+				if = {
+					limit = {
+						offmap_PDP_church = {
+							has_status = PDP_church_status_reform
+						}
+					}
+					add_offmap_currency = { offmap = offmap_PDP_church value = 125 }
+				}
+				else = {
+					add_offmap_currency = { offmap = offmap_PDP_church value = 100 }
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0.33
+			modifier = {
+				factor = 0.1
+				FROM = {
+					NOT = {
+						piety = 1000
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				FROM = {
+					NOT = {
+						piety = 1500
+					}
+				}
+			}
+		}
+	}
+
+	offmap_church_write_paper = {
+		only_playable = yes
+		button_name = offmap_church_gifts
+		ai_check_interval = 720
+		potential = {
+			#offmap_power = {is_offmap_tag = offmap_PDP_church}
+			#is_offmap_governor = offmap_PDP_church
+			ROOT = {
+				has_landed_title = k_papal_state
+			}
+		}
+		from_potential = {
+			is_landed = yes
+			PDP_is_theocracy = yes
+			NOT  = {has_character_flag = offmap_church_writing_paper_flag }
+		}
+
+		allow = {
+			show_only_failed_conditions = yes
+			FROM = {
+				show_scope_change = no
+				prisoner = no
+				NOT = { trait = incapable }
+			}
+		}
+		effect = {
+			FROM = {
+				sound_effect = china_grace_gain
+				character_event = {id = PDPOFF.50 days = 0}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0.33
+			modifier = {
+				factor = 0.1
+				FROM = {
+					NOT = {
+						learning = 10
+					}
+				}
+			}
+			modifier = {
+				factor = 0.25
+				FROM = {
+					NOR = {
+						trait = diligent
+						trait = erudite
+						trait = poet
+					}
+				}
+			}
+		}
+	}
+
+	offmap_church_hand_in_paper = {
+		only_playable = yes
+		button_name = offmap_church_gifts
+		third_party_filter = artifacts
+  		ai_third_party_filter = artifacts
+		ai_check_interval = 720
+		potential = {
+			#is_offmap_governor =offmap_PDP_church
+			ROOT = {
+				has_landed_title = k_papal_state
+			}
+			#offmap_power = {is_offmap_tag = offmap_PDP_church}
+		}
+		from_potential = {
+			is_landed = yes
+			PDP_is_theocracy = yes
+		}
+		third_party_potential = {
+			FROMFROM = {
+				OR = {
+					has_artifact_flag = paper
+					has_artifact_flag = book
+				}
+				has_artifact_flag = about_religion
+			}
+		}
+		allow = {
+			show_only_failed_conditions = yes
+			FROM = {
+				show_scope_change = no
+				custom_tooltip = {
+					text = PDP_not_recently
+					NOT = { has_character_modifier = offmap_church_give_paper_timer }
+				}
+				prisoner = no
+				NOT = { trait = incapable }
+			}
+		}
+		effect = {
+			FROMFROM = { #destroy the book (fixed bug)
+				destroy_artifact = yes
+			}
+			FROM = {
+				sound_effect = china_grace_gain
+				if = {
+					limit = {ROOT_FROMFROM = {has_artifact_flag = paper}}
+					if = {
+						limit = {ROOT_FROMFROM = {quality == 1}}
+						add_offmap_currency = { offmap = offmap_PDP_church value = 50 }
+					}
+					if = {
+						limit = {ROOT_FROMFROM = {quality == 2}}
+						add_offmap_currency = { offmap = offmap_PDP_church value = 100 }
+					}
+					if = {
+						limit = {ROOT_FROMFROM = {quality == 3}}
+						add_offmap_currency = { offmap = offmap_PDP_church value = 200 }
+					}
+				}
+				if = {
+					limit = {ROOT_FROMFROM = {has_artifact_flag = book}}
+					if = {
+						limit = {ROOT_FROMFROM = {quality == 1}}
+						add_offmap_currency = { offmap = offmap_PDP_church value = 75 }
+					}
+					if = {
+						limit = {ROOT_FROMFROM = {quality == 2}}
+						add_offmap_currency = { offmap = offmap_PDP_church value = 150 }
+					}
+					if = {
+						limit = {ROOT_FROMFROM = {quality == 3}}
+						add_offmap_currency = { offmap = offmap_PDP_church value = 250 }
+					}
+					if = {
+						limit = {ROOT_FROMFROM = {quality >= 4}}
+						add_offmap_currency = { offmap = offmap_PDP_church value = 350 }
+					}
+				}
+				hidden_effect = {
+					add_character_modifier = {
+						hidden = yes
+						name = offmap_church_give_paper_timer
+						months = 6
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0.25
+		}
+	}
+
+
+	offmap_church_suggest_palatinus = {
+		only_playable = yes
+		button_name = offmap_church_boons
+		ai_check_interval = 1
+		ai_third_party_filter = home_court
+		third_party_filter = home_court
+		third_party = FROM
+		show_third_party_potential = yes
+		potential = {
+			ROOT = {
+				has_landed_title = k_papal_state #ai is somehow able to ask the western protectorate...
+			}
+			FROM = {
+				OR = {
+					ai = no
+					k_papal_state = {
+						OR = {
+							NOT = {has_title_flag = offmap_church_ask_palatinus_ai_timer}
+							had_title_flag = {flag = offmap_church_ask_palatinus_ai_timer days = 180}
+						}
+					}
+				}
+			}
+		}
+		from_potential = {
+			is_landed = yes
+			PDP_is_theocracy = yes
+		}
+		third_party_potential = {
+			hidden_tooltip = {OR = {
+				FROM = {ai = no}
+				FROMFROM = {
+					culture = italian
+					learning = 13
+				}
+				FROMFROM = {
+					learning = 17
+				}
+			}}
+			FROMFROM = {
+				prisoner = no
+				religion = catholic
+				is_adult = yes
+				is_female = no
+				is_ruler = no
+				NOT = {trait = excommunicated}
+				NOT = {has_minor_title = title_PDP_papal_palatinus}
+			}
+	  	}
+		third_party_allow = {
+		}
+		third_party_score = {
+			factor = 1
+			additive_modifier = {
+				value = 100
+				FROMFROM = {
+					dynasty = ROOT_FROM
+				}
+			}
+			additive_modifier = {
+				value = 10
+				FROMFROM = {
+					learning = 10
+				}
+			}
+			additive_modifier = {
+				value = 10
+				FROMFROM = {
+					learning = 16
+				}
+			}
+			additive_modifier = {
+				value = 20
+				FROMFROM = {
+					is_friend = ROOT_FROM
+				}
+			}
+			additive_modifier = {
+				value = 10
+				FROMFROM = {
+					learning = 20
+				}
+			}
+		}
+		allow = {
+			#show_only_failed_conditions = yes
+			FROM = {
+				has_offmap_currency = { offmap = offmap_PDP_church value = 1440 }
+				prisoner = no
+			}
+			ROOT = {
+				custom_tooltip = {
+					text = offmap_church_free_palatinus_condition
+					NOT = {has_assigned_minor_title = { title = title_PDP_papal_palatinus count = 5 } }
+				}
+			}
+		}
+		effect = {
+			FROM = {
+				add_offmap_currency = { offmap = offmap_PDP_church value = -1440 }
+				save_event_target_as = bishop
+				if = {
+					limit = {
+						ai = yes
+					}
+					k_papal_state = {
+						clr_title_flag = offmap_church_ask_palatinus_ai_timer
+						set_title_flag = offmap_church_ask_palatinus_ai_timer
+					}
+				}
+			}
+			FROMFROM = {
+				save_event_target_as = palatinus
+			}
+			ROOT = {
+				character_event = {id = PDPOFF.2}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5 #some randomness
+			}
+			modifier = {
+				factor = 0.1
+				FROM = {
+					NAND = {
+						culture = italian
+						learning = 10
+					}
+				}
+			}
+			modifier = {
+				factor = 0.2
+				FROM = {
+					NOT = {culture_group = latin}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					NOT = {learning = 10}
+				}
+			}
+		}
+	}
+
+	offmap_church_ask_for_cardinal_office = {
+		only_rulers = yes #also barons (if that works at all)
+		button_name = offmap_church_boons
+		ai_check_interval = 11
+		potential = {
+			ROOT = {
+				has_landed_title = k_papal_state
+			}
+			FROM = {
+				is_landed = yes
+				PDP_is_theocracy = yes
+				OR = {#restrict ai so that the college will stay as it usually is: italians, learned, etc.
+					ai = no
+					AND = {
+						ai = yes
+						learning = 13
+						culture_group = latin
+						k_papal_state = {
+							OR = {
+								NOT = {has_title_flag = offmap_church_ask_for_cardinal_office_ai_timer}
+								had_title_flag = {flag = offmap_church_ask_for_cardinal_office_ai_timer days = 180}
+							}
+						}
+					}
+				}
+				NOT = {has_minor_title = title_cardinal}
+				NOT = {has_landed_title = k_papal_state}
+			}
+		}
+		from_potential = {
+		}
+		allow = {
+			FROM = {
+				has_offmap_currency = { offmap = offmap_PDP_church value = 3600 }
+				prisoner = no
+				PDP_basic_cardinal_requirements = yes
+				NOT = {has_minor_title = title_cardinal}
+			}
+			ROOT = {
+				custom_tooltip = {
+					text = offmap_church_free_cardinal_condition
+					NOT = {has_assigned_minor_title = { title = title_cardinal count = 9 } }
+				}
+			}
+		}
+		effect = {
+			FROM = {
+				if = {
+					limit = {
+						ai = yes
+					}
+					k_papal_state = {
+						clr_title_flag = offmap_church_ask_for_cardinal_office_ai_timer
+						set_title_flag = offmap_church_ask_for_cardinal_office_ai_timer
+					}
+				}
+				add_offmap_currency = { offmap = offmap_PDP_church value = -3600 }
+				save_event_target_as = bishop
+			}
+			ROOT = {
+				character_event = {id = PDPOFF.10}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { #more italians
+				factor = 0.33
+				FROM = {
+					NOT = {culture = italian}
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					trait = ambitious
+				}
+			}
+			modifier = { #highly learned
+				factor = 0.5
+				FROM = {
+					NOT = {learning = 17}
+				}
+			}
+			modifier = { #highly learned
+				factor = 3
+				FROM = {
+					learning = 23
+				}
+			}
+		}
+	}
+
+
+	offmap_church_influence_to_money = {
+		only_playable = yes
+		button_name = offmap_church_boons
+		ai_check_interval = 24
+
+		potential = {
+			#is_offmap_tag = offmap_PDP_church
+			#for some reason, that does not work...
+			ROOT = {
+				has_landed_title = k_papal_state
+			}
+		}
+
+		from_potential = {
+			is_landed = yes
+			PDP_is_theocracy = yes
+		}
+
+		allow = {
+			show_only_failed_conditions = yes
+			FROM = {
+				show_scope_change = no
+				has_offmap_currency = { offmap = offmap_PDP_church value = 200 }
+				custom_tooltip = {
+					text = PDP_not_recently
+					NOT = { has_character_modifier = offmap_church_influence_to_money_timer }
+				}
+				prisoner = no
+			}
+		}
+		effect = {
+			FROM = {
+				sound_effect = china_grace_gain
+				add_offmap_currency = {offmap = offmap_PDP_church value = -200}
+				hidden_effect = {
+					add_character_modifier = {
+						hidden = yes
+						name = offmap_church_influence_to_money_timer
+						years = 1
+					}
+				}
+				if = {
+					limit = {
+						offmap_PDP_church = {
+							has_status = PDP_church_status_corrupt
+						}
+					}
+					wealth = 60
+				}
+				else_if = {
+					limit = {
+						offmap_PDP_church = {
+							has_status = PDP_church_status_reform
+						}
+					}
+					wealth = 40
+				}
+				else = {
+					wealth = 50
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0.1
+			modifier = {
+				factor = 2
+				FROM = {
+					NOT = {wealth = 0}
+				}
+			}
+			modifier = {
+				factor = 3
+				FROM = {
+					NOT = {wealth = -75}
+				}
+			}
+			modifier = { #no money and at war
+				factor = 3
+				FROM = {
+					NOT = {wealth = 0}
+					war = yes
+				}
+			}
+			modifier = { #wants to become a cardinal some day - safe your influence
+				factor = 0.1
+				FROM = {
+					trait = ambitious
+					culture_group = latin
+					NOT = {has_minor_title = title_cardinal}
+				}
+			}
+		}
+	}
+
+
+	offmap_church_hire_architects = {
+		button_name = offmap_church_boons
+		ai_check_interval = 72
+		potential = {
+			ROOT = {
+				has_landed_title = k_papal_state
+			}
+			offmap_PDP_church = {
+				has_policy = PDP_church_policy_monumentality
+			}
+			FROM = {
+				custom_tooltip = {
+					text = PDP_not_recently
+					NOT = { has_character_modifier = offmap_church_hire_architects_timer }
+				}
+			}
+		}
+		allow = {
+			FROM = {
+				has_offmap_currency = {offmap = offmap_PDP_church value = 1200}
+			}
+		}
+		effect = {
+			FROM = {
+				add_offmap_currency = {offmap = offmap_PDP_church value = -1200}
+				hidden_effect = {
+					add_character_modifier = {
+						hidden = yes
+						name = offmap_church_hire_architects_timer
+						years = 10
+					}
+				}
+				add_character_modifier = {
+					name = offmap_church_architects
+					years = 5
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0.33
+			modifier = {#you like building stuff
+				factor = 3
+				FROM = {
+					trait = architect
+				}
+			}
+			modifier = {#want to become cardinal
+				factor = 0.2
+				FROM = {
+					trait = ambitious
+					NOT = {has_minor_title = title_cardinal}
+					learning = 15
+					culture = italian
+				}
+			}
+			modifier = {#dont hire them if you won't build in the future anyways.
+				factor = 0.1
+				FROM = {
+					NOT = {wealth = 250}
+				}
+			}
+		}
+	}
+
+	offmap_church_hire_theologian = {
+		button_name = offmap_church_boons
+		ai_check_interval = 481
+		potential = {
+			ROOT = {
+				has_landed_title = k_papal_state
+			}
+			FROM = {
+				custom_tooltip = {
+					text = PDP_not_recently
+					NOT = { has_character_modifier = offmap_church_hire_theologian_timer }
+				}
+			}
+		}
+		allow = {
+			FROM = {
+				has_offmap_currency = {offmap = offmap_PDP_church value = 1200}
+			}
+		}
+		effect = {
+			FROM = {
+				add_offmap_currency = {offmap = offmap_PDP_church value = -1200}
+				hidden_effect = {
+					add_character_modifier = {
+						hidden = yes
+						name = offmap_church_hire_theologian_timer
+						years = 2
+					}
+				}
+				create_random_priest = {
+					random_traits = yes
+					dynasty = random
+					female = no
+					attributes = {
+						diplomacy = 5
+						learning = 10
+						stewardship = 5
+						intrigue = 2
+						martial = 2
+					}
+				}
+				new_character = {
+					set_character_flag = offmap_church_theologian #remove from succession (otherwise no one would hire one)
+					add_trait = monk
+
+					remove_trait = slow
+					remove_trait = imbecile
+					remove_trait = dull
+
+					remove_trait = mystic
+					remove_trait = socializer
+					remove_trait = gamer
+					remove_trait = hedonist
+					remove_trait = duelist
+					remove_trait = hunter
+					remove_trait = strategist
+					remove_trait = administrator
+					remove_trait = architect
+					remove_trait = gardener
+					remove_trait = schemer
+					remove_trait = impaler
+					remove_trait = seducer
+					remove_trait = seductress
+					remove_trait = theologian
+					remove_trait = scholar
+
+					random_list = { # Flavor Randomization
+						5 = {  } # Nothing
+						10 = { change_learning = 2 }
+					     5 = { change_learning = 4 }
+						 1 = { change_learning = 6 }
+						20 = { add_trait = theologian }
+						20 = { add_trait = scholar }
+					}
+
+					#If we have a wonder upgrade with "inpires_learning" flag, the priest will be better
+					if = {
+						limit = { ROOT = { realm_wonder_or_upgrade_has_flag_inspires_learning_trigger = yes } }
+						random_list = {
+							15 = { add_trait = scholar change_learning = 1 }
+							10 = { add_trait = scholar change_learning = 2 }
+							 5 = { add_trait = scholar change_learning = 3 }
+							10 = { add_trait = erudite }
+							10 = { add_trait = physician }
+							10 = { add_trait = scholarly_theologian }
+							10 = { add_trait = mastermind_theologian }
+						}
+						random_list = {
+							50 = {  } # Nothing
+							10 = { add_trait = genius }
+							10 = { add_trait = chaste }
+							10 = { add_trait = poet }
+							10 = { add_trait = proud }
+							10 = { add_trait = humble }
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0.1
+			modifier = {#you like theology
+				factor = 2
+				FROM = {
+					trait = theologian
+				}
+			}
+			modifier = {#want to become cardinal
+				factor = 0
+				FROM = {
+					trait = ambitious
+					NOT = {has_minor_title = title_cardinal}
+					learning = 15
+					culture = italian
+				}
+			}
+			modifier = {#does not like learning
+				factor = 0.1
+				FROM = {
+					NOT = {learning = 20}
+				}
+			}
+		}
+	}
+
+	PDP_suggest_cardinal = {
+		button_name = offmap_church_papal_button
+		ai = no
+		potential = {
+			FROM = {
+				ai = no
+				has_landed_title = k_papal_state
+			}
+		}
+		allow = {
+			PDP_college_of_cardinals_full = no
+		}
+		effect = {
+			FROM = {
+				character_event = {id = PDPHF.400 days = 0}
+			}
+		}
+	}
+
+	PDP_decide_indulgence_policy = {
+		button_name = offmap_church_papal_button
+		ai = no
+		only_playable = yes
+		diplomacy_icon = GFX_pdp_papal_hat_icon
+		potential = {
+			FROM = {
+				PDP_is_player_pope = yes
+			}
+		}
+		allow = {
+		}
+		effect = {
+			FROM = {
+				character_event = {id = PDP.201}
+			}
+		}
+	}
+
+	offmap_church_decide_baptism = {
+		button_name = offmap_church_papal_button
+		ai = no
+		only_playable = yes
+		potential = {
+			FROM = {
+				PDP_is_player_pope = yes
+			}
+		}
+		allow = {
+		}
+		effect = {
+			FROM = {
+				character_event = {id = PDPHF.3}
+			}
+		}
+	}
+
+
+	offmap_church_show_office_holders = {
+		button_name = offmap_church_info_button
+		ai = no
+		potential = {
+			FROM = {ai = no}
+			#Conditions for the decision to appear
+		}
+		effect = {
+			FROM = {
+				character_event = {id = PDPOFF.30 days = 0}
+			}
+			#Commands executed when taking the decision
+		}
+	}
+}

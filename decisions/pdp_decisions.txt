@@ -1,0 +1,392 @@
+decisions = {
+	PDP_become_real_theocracy = {
+	  is_high_prio = yes
+	  only_rulers = yes
+	  potential = {
+		ai = yes
+		government = playable_theocracy_government
+	  }
+	  allow = {
+	  }
+	  effect = {
+		set_government_type = theocracy_government
+		if = {
+			limit = {
+				religion = catholic
+			}
+			primary_title = {
+				succession = catholic_bishopric
+			}
+		}
+	  }
+	  ai_will_do = {
+		factor = 1
+	  }
+	}
+
+	PDP_create_a_dynasty = {
+	  is_high_prio = yes # Will show an alert once decision is enabled
+	  only_rulers = yes
+	  potential = {
+		ai = no
+		dynasty = None
+	  }
+	  allow = {
+	  }
+	  effect = {
+		hidden_tooltip = {dynasty = father_bastard}
+	  }
+	  ai_will_do = {
+		factor = 1
+	  }
+	}
+	PDP_create_dynasty_members = {
+	  is_high_prio = yes # Will show an alert once decision is enabled
+	  only_rulers = yes
+	  potential = {
+		ai = no
+		has_game_rule = { name = PDP_spawn_family value = on }
+		NOT = {has_dynasty_flag = PDP_spawned_dynasty}
+		NOT = {dynasty = None}
+		NOT = {num_of_dynasty_members = 5}
+	  }
+	  allow = {
+	  }
+	  effect = {
+		create_character = {
+			random_traits = yes
+			dynasty = ROOT
+			religion = ROOT
+			culture = ROOT
+			female = no
+			race = ROOT
+			health = 5
+			fertility = 0.5
+			genetic_father = ROOT
+		}
+		new_character = {
+			save_event_target_as = brother
+		}
+		if = {#create child for brother
+			limit = {
+				event_target:brother = {age = 30}
+			}
+			if = {#young child for brother
+				limit = {
+					NOT = {event_target:brother = {age = 40}}
+				}
+				create_character = {
+					random_traits = yes
+					dynasty = ROOT
+					religion = ROOT
+					culture = ROOT
+					female = no
+					age = 10
+					health = 5
+					fertility = 0.5
+					genetic_father = event_target:brother
+					race = ROOT
+				}
+			}
+			else = {#adult child for brother
+				create_character = {
+					random_traits = yes
+					dynasty = ROOT
+					religion = ROOT
+					culture = ROOT
+					female = no
+					health = 5
+					fertility = 0.5
+					age = 25
+					genetic_father = event_target:brother
+					race = ROOT
+				}
+			}
+			new_character = {
+				set_father = event_target:brother
+			}
+
+		}
+		if = {
+			limit = {NOT = {father_even_if_dead = {always = yes}}}
+			create_character = {
+				random_traits = yes
+				dynasty = ROOT
+				religion = ROOT
+				culture = ROOT
+				female = no
+				age = 80
+				race = Root
+				genetic_father = ROOT #your father looks similar to you
+			}
+			new_character = {
+				save_event_target_as = father
+			}
+			set_father = event_target:father
+		}
+		ROOT = {
+			father_even_if_dead = {
+				event_target:brother = {set_father = PREV}
+			}
+		}
+		set_dynasty_flag = PDP_spawned_dynasty
+	  }
+	  ai_will_do = {
+		factor = 1
+	  }
+	}
+
+	PDP_become_theocracy = {
+	  is_high_prio = yes # Will show an alert once decision is enabled
+	  only_rulers = yes
+	  potential = {
+		ai = no
+		NOT = {government = playable_theocracy_government}
+		NOT = {government = order_government}
+		is_adult = yes
+		is_female = no
+		religion = catholic
+	  }
+	  allow = {
+		trait = zealous
+		has_children = no
+		NOR = {
+			trait = lustful
+			trait = gluttonous
+			trait = greedy
+			trait = slothful
+			trait = wroth
+			trait = envious
+			trait = proud
+			trait = excommunicated
+		}
+	  }
+	  effect = {
+		character_event = {id = PDP.85 days = 0}
+	  }
+	  ai_will_do = {
+		factor = 0
+	  }
+	}
+
+	PDP_allow_cardinals = {
+	  is_high_prio = yes # Will show an alert once decision is enabled
+	  only_rulers = yes
+	  potential = {
+		ai = no
+		NOT = {has_global_flag = PDP_cardinals_allowed}
+	  }
+	  allow = {
+	  }
+	  effect = {
+		set_global_flag = PDP_cardinals_allowed
+	  }
+	  ai_will_do = {
+		factor = 0
+	  }
+	}
+
+
+	PDP_enable_all_theocracies = {
+		only_rulers = yes
+		potential = {
+			ai = no
+			has_game_rule = { name = PDP_play_as_rule value = on }
+		}
+		allow = {
+		}
+		effect = {
+			any_independent_ruler = {
+				any_realm_lord = {
+					limit = {
+						OR = {
+							government = playable_theocracy_government
+							is_theocracy = yes
+						}
+					}
+					set_government_type = playable_theocracy_government
+				}
+				if = {
+					limit = {
+						OR = {
+							government = playable_theocracy_government
+							is_theocracy = yes
+						}
+					}
+					set_government_type = playable_theocracy_government
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	PDP_restore_elective_investiture = { #only primary title
+		only_rulers = yes
+		 is_high_prio = yes
+		potential = {
+			ai = no
+			OR = {
+				government = playable_theocracy_government
+				government = order_government
+			}
+			primary_title = {
+				NOT = {has_law = succ_playable_catholic_bishopric}
+			}
+			NOT = {has_landed_title = k_papal_state}
+			religion = catholic
+		}
+		allow = {
+		}
+		effect = {
+			primary_title = {
+				add_law = succ_playable_catholic_bishopric #in case the other doesn't work
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	#schism
+	# PDP_mend_schism = {
+		# only_rulers = yes
+		# is_high_prio = yes
+		# potential = {
+			# PDP_is_theocracy = yes
+			# has_landed_title = k_papal_state
+			# religion = catholic
+			# NOT = {has_global_flag = PDP_schism_mended_catholic}
+		# }
+		# allow = {
+			# k_orthodox = {
+				# OR = {
+					# holder_scope = {
+						# prisoner = yes
+						# host = {character = ROOT}
+					# }
+					# liege = {
+						# religion = catholic
+					# }
+				# }
+			# }
+			# custom_tooltip = {
+				# text = PDP_control_all_pentarchs
+				# has_global_flag = PDP_pat_antioch
+				# has_global_flag = PDP_pat_jerusalem
+				# has_global_flag = PDP_pat_alexandria
+				# has_global_flag = PDP_pat_rome
+			# }
+			# c_antiocheia = {holder_scope ={
+				# top_liege = {religion = catholic}
+			# }}
+			# c_jerusalem = {holder_scope ={
+				# top_liege = {religion = catholic}
+			# }}
+			# c_alexandria = {holder_scope ={
+				# top_liege = {religion = catholic}
+			# }}
+			# c_roma = {holder_scope ={
+				# top_liege = {religion = catholic}
+			# }}
+		# }
+		# effect = {
+			# narrative_event = {id = PDPSchism.100 days = 0}
+		# }
+		# ai_will_do = {
+			# factor = 0.01
+		# }
+	# }
+
+	#########################
+	#Cheat decisions:
+	#(For easier testing)
+	#########################
+	# PDP_mend_schism_cheat = {
+		# only_rulers = yes
+		# is_high_prio = yes
+		# potential = {
+			# ai = no
+			# PDP_is_theocracy = yes
+			# has_landed_title = k_papal_state
+			# religion = catholic
+		# }
+		# allow = {
+			# always = yes
+		# }
+		# effect = {
+			# set_global_flag = qa_testing
+			# c_antiocheia = {holder_scope ={
+				# set_defacto_liege = ROOT
+			# }}
+			# c_jerusalem = {holder_scope ={
+				# set_defacto_liege = ROOT
+			# }}
+			# c_alexandria = {holder_scope ={
+				# set_defacto_liege = ROOT
+			# }}
+			# k_orthodox = {
+				# holder_scope = {
+					# imprison = ROOT
+				# }
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 0.0
+		# }
+	# }
+
+	# PDP_make_me_cardinal = {
+	#   is_high_prio = yes # Will show an alert once decision is enabled
+	#   only_rulers = yes
+	#   potential = {
+	# 	ai = no
+	#   }
+	#   allow = {
+	#   }
+	#   effect = {
+	# 	give_minor_title = title_cardinal
+	#   }
+	#   ai_will_do = {
+	# 	factor = 0
+	#   }
+	# }
+	#
+	# PDP_create_family_member = {
+	#   is_high_prio = yes # Will show an alert once decision is enabled
+	#   only_rulers = yes
+	#   potential = {
+	# 	ai = no
+	#   }
+	#   allow = {
+	#   }
+	#   effect = {
+	# 	create_character = {
+	# 		random_traits = yes
+	# 		dynasty = ROOT
+	# 		culture = ROOT
+	# 		religion = ROOT
+	# 	}
+	#   }
+	#   ai_will_do = {
+	# 	factor = 0
+	#   }
+	# }
+	# PDP_votes_please = {
+	#   is_high_prio = yes # Will show an alert once decision is enabled
+	#   only_rulers = yes
+	#   potential = {
+	# 	ai = no
+	#   }
+	#   allow = {
+	#
+	#   }
+	#   effect = {
+	# 	change_variable = { which = PDP_votes_for_me value = 1 }
+	#   }
+	#   ai_will_do = {
+	# 	factor = 0
+	#   }
+	# }
+}

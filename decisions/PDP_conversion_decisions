@@ -1,0 +1,83 @@
+#for some reason, this does crash the game.
+
+
+# title_decisions = {
+# 	PDP_convert_province_decision = {
+# 		only_playable = yes
+# 	#	ai = no
+# 		ai_target_filter = realm_owned
+# 		filter = realm_owned
+#
+# 		from_potential = {
+# 			PDP_is_theocracy = yes
+# 		}
+#
+# 		potential = {
+# 			tier = COUNT
+# 			holder_scope = {
+# 				character = FROM
+# 			}
+# 			location = {
+# 				NOT = {religion = catholic}
+# 			}
+# 			offmap_PDP_church = {
+# 				has_policy = PDP_church_policy_conversion
+# 			}
+# 		}
+#
+# 		allow = {
+# 			FROM = {
+# 				prisoner = no
+# 				NOT = { trait = incapable }
+# 				NOT = { is_inaccessible_trigger = yes }
+# 				has_offmap_currency = {offmap = offmap_PDP_church value = 600}
+# 			}
+# 			custom_tooltip = {
+# 				text = PDP_not_already_converting
+# 				hidden_trigger = {
+# 					location = {
+# 						NOT = {has_province_modifier = PDP_currently_converted}
+# 					}
+# 				}
+# 			}
+# 		}
+#
+# 		effect = {
+# 			FROM = {
+# 				add_offmap_currency = {offmap = offmap_PDP_church value = -600}
+# 			}
+# 			location = {
+# 				add_province_modifier = { name = PDP_currently_converted duration = -1 }
+# 			}
+# 			location = {
+# 				#problems with conversion
+# 				#debug all values smaller...
+# 				province_event = {id = PDP.9991 days = 36 random = 120}
+# 				province_event = {id = PDP.9992 days = 1 random = 120}
+# 				province_event = {id = PDP.9993 days = 1 random = 120}
+# 				#conversion complete (2 to 6 years)
+# 				province_event = {id = PDP.99910 days = 120 random = 146}
+#
+# 			}
+# 		}
+#
+# 		ai_will_do = {
+# 			factor = 0.1
+# 			modifier = {
+# 				factor = 0.1
+# 			}
+# 			modifier = {
+# 				factor = 5
+# 				FROM = {
+# 					has_landed_title = k_papal_state
+# 				}
+# 			}
+# 			modifier = {
+# 				factor = 2
+# 				FROM = {
+# 					trait = zealous
+# 				}
+# 			}
+# 		}
+# 	}
+# }

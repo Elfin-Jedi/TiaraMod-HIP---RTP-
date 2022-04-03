@@ -1,0 +1,1053 @@
+targetted_decisions = {
+
+	PDP_mark_as_player_heir = { #in case you loose your title, decide which dynasty member to play as next
+		ai = no
+		ai_target_filter = none
+		filter = dynasty
+		#diplomacy_icon = GFX_pdp_papal_hat_icon
+		from_potential  = { #the player
+			is_ruler = yes
+			ai = no
+			OR = {
+				religion = catholic
+				#religion = fraticelli
+			}
+			OR = {
+				is_theocracy = yes
+				government = playable_theocracy_government
+				government = order_government
+			}
+			OR = {
+				had_character_flag = { flag = PDP_marked_heir days = 1}
+				NOT = {has_character_flag = PDP_marked_heir}
+			}
+		}
+		potential = { #the "heir"
+			religion = FROM
+			is_ruler = yes
+			higher_real_tier_than = BARON
+			OR = {
+				is_theocracy = yes
+				government = playable_theocracy_government
+				government = order_government
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			FROM = {
+				clr_character_flag = PDP_marked_heir
+				set_character_flag = PDP_marked_heir
+				any_dynasty_member = {
+					if = {
+						limit = {has_character_flag = PDP_playerheir_of_@FROM}
+						clr_character_flag = PDP_playerheir_of_@FROM
+					}
+				}
+			}
+			ROOT = {
+				set_character_flag = PDP_playerheir_of_@FROM
+			}
+		}
+	}
+
+
+	PDP_ask_nominate_successor = {
+		ai = no
+		ai_target_filter = none
+		filter = all
+		third_party_filter = dynasty
+		diplomacy_icon = GFX_pdp_papal_hat_icon
+		potential = {
+			FROM = {#decision taker has to be theocracy
+				government = playable_theocracy_government
+			}
+			OR = {
+				FROM = {
+					rightful_religious_head = ROOT
+					OR = {
+						independent = yes
+						crownlaw_title = {
+							has_law = investiture_law_0 #papal investiture
+						}
+					}
+				}
+				AND = {
+					ROOT = {
+						is_liege_of = FROM
+					}
+					FROM = {
+						independent = no
+						crownlaw_title = {
+							has_law = investiture_law_1
+						}
+					}
+				}
+			}
+			FROM = {
+				OR = {
+					had_character_flag = { flag = PDP_asked_nomination days = 365 }
+					NOT = {has_character_flag = PDP_asked_nomination}
+				}
+				NOT = {
+					has_assigned_minor_title = title_PDP_archdeacon
+					#any_dynasty_member = {
+					#	has_character_flag = PDP_heir_of_@FROM
+					#}
+				}
+			}
+		}
+		third_party_potential = {
+			FROMFROM = {
+				is_adult = yes
+				religion = catholic
+				is_female = no
+				OR = {
+					is_landed = no
+					OR = {
+						is_theocracy = yes
+						government = playable_theocracy_government
+					}
+				}
+			}
+		}
+		allow = {
+			#FROM = {
+			#	rightful_religious_head = ROOT
+			#}
+		}
+  		third_party_allow = {
+			FROM = {
+				OR = {
+					is_liege_of = FROMFROM
+					AND = {
+						is_landed = no
+						is_heir = no
+					}
+				}
+			}
+			custom_tooltip = {text = PDP_courtier_or_vassal}
+ 		}
+		effect = {
+			FROMFROM = {
+				save_event_target_as = potential_heir
+			}
+			ROOT = {
+				save_event_target_as = appointer
+			}
+			FROM = {
+				clr_character_flag = PDP_asked_nomination
+				set_character_flag = PDP_asked_nomination
+				piety = -30
+				character_event = {id = PDP.8}
+			}
+		}
+	}
+
+	PDP_bribe_theocracy_elector = {
+		ai = no
+		ai_target_filter = none
+		filter = all
+		#icon for cash
+		#diplomacy_icon = GFX_papal_button_money
+		potential  = {
+			FROM = {#decision taker has to be theocracy
+				OR = {
+					government = playable_theocracy_government
+					government = order_government
+				}
+
+				OR = {
+					had_character_flag = { flag = PDP_bribed_@ROOT days = 10 }
+					NOT = {has_character_flag = PDP_bribed_@ROOT }
+				}
+			}
+			OR = {
+				FROM = {
+					rightful_religious_head = ROOT
+				}
+				ROOT = {
+					is_liege_of = FROM
+				}
+			}
+		}
+		allow = {
+			ROOT = {
+				NOT = { war_with = FROM }
+			}
+			FROM = {
+				prisoner = no
+			}
+		}
+		effect = {
+			ROOT = {
+				save_event_target_as = elector
+			}
+			FROM = {
+				save_event_target_as = bishop
+				clr_character_flag = PDP_bribed_@ROOT
+				set_character_flag = PDP_bribed_@ROOT
+				character_event = {id = PDP.220 days = 0}
+			}
+		}
+	}
+
+	PDP_nominate_cardinal = {
+		ai = no
+		ai_target_filter = none
+		filter = all
+		diplomacy_icon = GFX_pdp_cardinal_icon
+		from_potential  = { #the pope (from)
+			PDP_is_player_pope = yes
+			PDP_college_of_cardinals_full = no
+		}
+		potential = { #the future cardinal (root)
+			PDP_fulfills_cardinal_requirement = yes
+			NOT = {has_minor_title = title_cardinal} #not already cardinal?
+		}
+		allow = {
+			ROOT = {
+				NOT = { war_with = FROM }
+				prisoner = no
+				rightful_religious_head = FROM
+			}
+		}
+		effect = {
+			ROOT = {
+				give_minor_title = title_cardinal
+			}
+		}
+	}
+
+	PDP_nominate_cardinal_dean = {
+		ai = no
+		ai_target_filter = none
+		filter = all
+		diplomacy_icon = GFX_pdp_cardinal_icon
+		from_potential  = { #the pope (from)
+			PDP_is_player_pope = yes
+			NOT = {has_assigned_minor_title  = { title = title_cardinal_dean count = 1 }}
+		}
+		potential = { #the future cardinal-dean (root)
+			religion = catholic
+			has_minor_title = title_cardinal
+		}
+		allow = {
+			ROOT = {
+				NOT = { war_with = FROM }
+				prisoner = no
+				rightful_religious_head = FROM
+			}
+		}
+		effect = {
+			ROOT = {
+				give_minor_title = title_cardinal_dean
+			}
+		}
+	}
+	PDP_nominate_cardinal_nephew = {
+		ai = no
+		ai_target_filter = none
+		filter = all
+		diplomacy_icon = GFX_pdp_cardinal_icon
+		from_potential  = { #the pope (from)
+			PDP_is_player_pope = yes
+			NOT = {has_assigned_minor_title  = { title = title_cardinal_nephew count = 1 }}
+		}
+		potential = { #the future cardinal-nephew (root)
+			religion = catholic
+			has_minor_title = title_cardinal
+			religion_head = {
+				dynasty = ROOT
+			}
+		}
+		allow = {
+			ROOT = {
+				NOT = { war_with = FROM }
+				prisoner = no
+				rightful_religious_head = FROM
+			}
+		}
+		effect = {
+			ROOT = {
+				give_minor_title = title_cardinal_nephew
+			}
+		}
+	}
+
+	PDP_nominate_papal_legate = {
+		ai = no
+		ai_target_filter = none
+		filter = all
+		diplomacy_icon = GFX_pdp_cardinal_icon
+		from_potential  = { #the pope (from)
+			PDP_is_player_pope = yes
+			NOT = {has_assigned_minor_title  = { title = title_papal_legate count = 1 }}
+		}
+		potential = { #the future legate (root)
+			religion = catholic
+			NOT = {
+				trait = excommunicated
+			}
+			PDP_is_theocracy = yes
+			liege = {
+				religion = catholic
+				higher_tier_than = DUKE
+				NOT = {has_landed_title = k_papal_state}
+			}
+			NOT = {
+				has_minor_title = title_papal_legate
+			}
+		}
+		allow = {
+			ROOT = {
+				NOT = { war_with = FROM }
+				prisoner = no
+				rightful_religious_head = FROM
+			}
+		}
+		effect = {
+			ROOT = {
+				give_minor_title = title_papal_legate
+			}
+		}
+	}
+
+	PDP_pre_nominate_cardinal = { #college has to accept him as a cardinal first
+		ai = no
+		ai_target_filter = none
+		filter = all
+		diplomacy_icon = GFX_pdp_cardinal_icon
+		from_potential  = { #the pope (from)
+			PDP_is_player_pope = yes
+			NOT = {has_character_flag = PDP_currently_asking_for_nomination}
+		}
+		potential = { #the future cardinal candidate (root)
+			religion = catholic
+			is_landed = yes
+			OR = {
+				is_theocracy = yes
+				government = playable_theocracy_government
+			}
+			NOT = {trait = excommunicated}
+			NOT = {has_minor_title = title_cardinal}
+			NOT = {has_character_flag = PDP_disallowed_to_be_cardinal}
+		}
+		allow = {
+			ROOT = {
+				prisoner = no
+				NOT = { war_with = FROM }
+				rightful_religious_head = FROM
+				NOT = {custom_tooltip = {
+					text = PDP_tooltip_already_accepted
+					has_character_flag = PDP_college_supported_as_cardinal
+				}}
+				custom_tooltip = {
+					text = PDP_tooltip_not_declined_lately
+					OR = {
+						had_character_flag = { flag = PDP_college_declined days = 1825} #5 years
+						NOT = {has_character_flag = PDP_college_declined}
+					}
+				}
+			}
+		}
+		effect = {
+			ROOT = {
+				save_event_target_as = bishop
+				clr_character_flag = PDP_college_declined
+			}
+			FROM = {
+				save_event_target_as = triggered_by
+				set_character_flag = PDP_currently_asking_for_nomination
+				character_event = {id = PDP.67 days = 0}
+			}
+		}
+	}
+
+
+
+	#pope invest bishop
+	PDP_pope_invest_bishop = {
+		ai = no
+		ai_target_filter = none
+		filter = all
+		third_party_filter = home_court
+		diplomacy_icon = GFX_pdp_papal_hat_icon
+		potential = {
+			FROM = {#decision taker has to be theocracy
+				government = playable_theocracy_government
+				has_landed_title = k_papal_state
+			}
+			ROOT = {
+				rightful_religious_head = FROM
+				OR = {
+					is_theocracy = yes
+					government = playable_theocracy_government
+				}
+			}
+			ROOT = {
+				NOT = {
+					has_assigned_minor_title = title_PDP_archdeacon
+				}
+			}
+		}
+		third_party_potential = {
+			FROMFROM = {
+				is_adult = yes
+				religion = catholic
+				is_female = no
+				is_landed = no
+			}
+		}
+		allow = {
+			FROM = {
+				piety = 30
+				has_offmap_currency = { offmap = offmap_PDP_church value = 1200 }
+			}
+			ROOT = {
+				OR = {
+					independent = yes
+					crownlaw_title = {
+						has_law = investiture_law_0
+					}
+				}
+			}
+		}
+  		third_party_allow = {
+ 		}
+		effect = {
+			FROMFROM = {
+				save_event_target_as = archdeacon
+			}
+			ROOT = {
+				save_event_target_as = bishop
+			}
+			FROM = {
+				save_event_target_as = pope
+				add_offmap_currency = { offmap = offmap_PDP_church value = -1200 }
+				piety = -30
+				character_event = {id = PDP.50}
+			}
+		}
+	}
+
+	PDP_switch_become_pope_wish = {
+		only_rulers = yes
+		ai = no
+		ai_target_filter = none
+		filter = self
+		diplomacy_icon = GFX_pdp_papal_hat_icon
+		potential  = { #the cardinal
+			has_minor_title = title_cardinal
+			NOT = {PDP_is_player_pope = yes}
+		}
+		allow = {
+		}
+		effect = {
+			character_event = {id = PDP.81}
+		}
+	}
+
+	PDP_conclave_vote_for = {
+		ai = no
+		ai_target_filter = none
+		filter = all_including_me
+		diplomacy_icon = GFX_pdp_papal_hat_icon
+		from_potential  = {
+			#trait = PDP_in_conclave
+			has_character_flag = PDP_player_cardinal_can_vote
+			NAND = {
+                has_character_flag = PDP_conclave_promised_vote
+                PDP_cardinal = {
+                    limit = {
+                        is_alive = yes
+                        has_character_flag = PDP_vote_from_@ROOT
+                    }
+                    always = yes
+                }
+            }
+		}
+		potential = {
+			has_minor_title = title_cardinal
+		}
+		allow = {
+			ROOT = { #the cardinal
+				custom_tooltip ={
+					text = PDP_tooltip_no_dont_vote_for_me_flag
+					NOT = {has_character_flag = PDP_dont_vote_for_me}
+				}
+			}
+		}
+		effect = {
+			ROOT = {#cardinal
+				change_variable = { which = PDP_votes_for_me value = 1 } #vote for him
+			}
+			FROM = {#player
+				clr_character_flag = PDP_player_cardinal_can_vote
+			}
+		}
+	}
+
+	PDP_conclave_ask_to_vote_for = {
+		ai = no
+		ai_target_filter = all
+		filter = all
+		third_party_filter = all_including_me
+		#show_third_party_potential = yes
+		diplomacy_icon = GFX_pdp_papal_hat_icon
+		only_rulers = yes
+		from_potential  = {
+			trait = PDP_in_conclave
+			NOT = {has_character_flag = PDP_player_cardinal_can_vote}
+		}
+		potential = {
+			has_minor_title = title_cardinal
+			trait = PDP_in_conclave
+			NOT = {has_character_flag = PDP_conclave_promised_vote} #already promised his vote
+			OR = {
+				had_character_flag = { flag = PDP_asked_to_vote_by_@FROM days = 20 }
+				NOT = {has_character_flag = PDP_asked_to_vote_by_@FROM}
+			}
+		}
+		third_party_potential = {
+			FROMFROM = {
+				trait = PDP_cardinal
+			}
+		}
+		third_party_score = {
+		    factor = 1
+		    additive_modifier = {
+		      value = 2
+			  FROMFROM = {
+				  character = FROM
+			  }
+		    }
+			additive_modifier = {
+		      value = 10
+			  FROMFROM = {
+				  character = ROOT_FROM
+			  }
+		    }
+			additive_modifier = {
+		      value = 10
+			  FROMFROM = {
+				  ai = no #multiplayer? if it works at all...
+			  }
+		    }
+			additive_modifier = {
+		      value = 5
+			  FROMFROM = {
+				  dynasty = ROOT_FROM
+			  }
+		    }
+		  }
+		allow = {
+			ROOT = { #the cardinal
+				ai = yes
+			}
+			FROM = {
+				has_offmap_currency = { offmap = offmap_PDP_church value = 100 }
+			}
+		}
+		third_party_allow = {
+			FROMFROM = {
+				NOT = {
+					has_trait = incapable
+				}
+				custom_tooltip ={
+					text = PDP_tooltip_no_dont_vote_for_me_flag
+					NOT = {has_character_flag = PDP_dont_vote_for_me}
+				}
+			}
+		}
+		effect = {
+			ROOT = {#cardinal
+				save_event_target_as = cardinal
+				clr_character_flag = PDP_asked_to_vote_by_@FROM
+				set_character_flag = PDP_asked_to_vote_by_@FROM
+				#set_character_flag = PDP_conclave_promised_vote
+			}
+			FROMFROM = { #vote for this guy
+				save_event_target_as = voting_target
+			}
+			FROM = {#player
+				save_event_target_as = asking_cardinal
+				add_offmap_currency = { offmap = offmap_PDP_church value = -100 }
+				character_event = {id = PDP.255 days = 0}
+				#set_character_flag = PDP_vote_from_@ROOT
+			}
+		}
+		ai_acceptance = {
+			factor = -10	# The base score
+			yes_threshold = 100 #never show yes, only maybe
+			additive_modifier = {
+				value = -1000
+				localisation_key = PDP_ImPreferatus
+				ROOT = {
+					NOT = {has_character_flag = PDP_dont_vote_for_me}
+				}
+				OR = {
+					rightful_religious_head_scope = {#is preferatus
+						current_heir = {character = ROOT}
+					}
+					ROOT = {
+						OR = {
+							check_variable = { which = PDP_votes_for_me_last_round value = 2 }
+							check_variable = { which = PDP_votes_for_me value = 2 }
+						}
+					}
+				}
+			}
+			additive_modifier = {
+				value = -10
+				localisation_key = PDP_ambitious_cardinal
+				ROOT = {
+					NOT = {has_character_flag = PDP_dont_vote_for_me}
+					trait = ambitious
+				}
+			}
+			additive_modifier = {
+				value = 5
+				localisation_key = PDP_like_you
+				ROOT = {
+					opinion = {who = FROM value = 25}
+				}
+			}
+			additive_modifier = {
+				value = 5
+				localisation_key = PDP_like_fromfrom
+				ROOT = {
+					opinion = {who = FROMFROM value = 25}
+				}
+				NOT = {FROMFROM = {character = ROOT_FROM}}
+			}
+			additive_modifier = {
+				value = 10
+				localisation_key = PDP_like_fromfrom
+				ROOT = {
+					opinion = {who = FROMFROM value = 75}
+				}
+				NOT = {FROMFROM = {character = ROOT_FROM}}
+			}
+			additive_modifier = {
+				value = 10
+				localisation_key = PDP_like_you
+				ROOT = {
+					opinion = {who = FROM value = 40}
+				}
+			}
+			additive_modifier = {
+				value = 50
+				localisation_key = PDP_withdrew
+				ROOT = {
+					has_character_flag = PDP_dont_vote_for_me
+				}
+			}
+			additive_modifier = {
+				value = 25
+				localisation_key = PDP_same_dynasty
+				ROOT = {
+					dynasty = FROM
+					opinion = {who = FROM value = 20}
+				}
+			}
+		}
+	}
+
+	# PDP_conclave_ask_to_vote_for = {
+	# 	ai = no
+	# 	ai_target_filter = none
+	# 	filter = all
+	# 	#third_party_filter = all
+	# 	diplomacy_icon = GFX_pdp_papal_hat_icon
+	# 	from_potential  = {
+	# 		trait = PDP_in_conclave
+	# 		NOT = {has_character_flag = PDP_player_cardinal_can_vote}
+	# 	}
+	# 	potential = {
+	# 		has_minor_title = title_cardinal
+	# 		trait = PDP_in_conclave
+	# 		NOT = {has_character_flag = PDP_conclave_promised_vote} #already promised his vote
+	# 		OR = {
+	# 			had_character_flag = { flag = PDP_asked_to_vote_by_@FROM days = 20 }
+	# 			NOT = {has_character_flag = PDP_asked_to_vote_by_@FROM}
+	# 		}
+	# 	}
+	# 	allow = {
+	# 		ROOT = { #the cardinal
+	# 			ai = yes
+	# 		}
+	# 		FROM = {
+	# 			has_offmap_currency = { offmap = offmap_PDP_church value = 100 }
+	# 		}
+	# 	}
+	# 	effect = {
+	# 		ROOT = {#cardinal
+	# 			save_event_target_as = cardinal
+	# 			clr_character_flag = PDP_asked_to_vote_by_@FROM
+	# 			set_character_flag = PDP_asked_to_vote_by_@FROM
+	# 			#set_character_flag = PDP_conclave_promised_vote
+	# 		}
+	# 		FROM = {#player
+	# 			save_event_target_as = asking_cardinal
+	# 			add_offmap_currency = { offmap = offmap_PDP_church value = -100 }
+	# 			character_event = {id = PDP.255 days = 0}
+	# 			#set_character_flag = PDP_vote_from_@ROOT
+	# 		}
+	# 	}
+	# 	ai_acceptance = {
+	# 		factor = -10	# The base score
+	# 		yes_threshold = 100 #never show yes, only maybe
+	# 		additive_modifier = {
+	# 			value = -1000
+	# 			localisation_key = PDP_ImPreferatus
+	# 			ROOT = {
+	# 				NOT = {has_character_flag = PDP_dont_vote_for_me}
+	# 			}
+	# 			OR = {
+	# 				rightful_religious_head_scope = {#is preferatus
+	# 					current_heir = {character = ROOT}
+	# 				}
+	# 				ROOT = {
+	# 					OR = {
+	# 						check_variable = { which = PDP_votes_for_me_last_round value = 2 }
+	# 						check_variable = { which = PDP_votes_for_me value = 2 }
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 		additive_modifier = {
+	# 			value = -10
+	# 			localisation_key = PDP_ambitious_cardinal
+	# 			ROOT = {
+	# 				NOT = {has_character_flag = PDP_dont_vote_for_me}
+	# 				trait = ambitious
+	# 			}
+	# 		}
+	# 		additive_modifier = {
+	# 			value = 5
+	# 			localisation_key = PDP_like_you
+	# 			ROOT = {
+	# 				opinion = {who = FROM value = 25}
+	# 			}
+	# 		}
+	# 		additive_modifier = {
+	# 			value = 10
+	# 			localisation_key = PDP_like_you
+	# 			ROOT = {
+	# 				opinion = {who = FROM value = 40}
+	# 			}
+	# 		}
+	# 		additive_modifier = {
+	# 			value = 50
+	# 			localisation_key = PDP_withdrew
+	# 			ROOT = {
+	# 				has_character_flag = PDP_dont_vote_for_me
+	# 			}
+	# 		}
+	# 		additive_modifier = {
+	# 			value = 25
+	# 			localisation_key = PDP_same_dynasty
+	# 			ROOT = {
+	# 				dynasty = FROM
+	# 				opinion = {who = FROM value = 20}
+	# 			}
+	# 		}
+	# 	}
+	# }
+
+	PDP_end_antipapacy = {
+		only_rulers = yes
+		ai = no
+		diplomacy_icon = GFX_pdp_papal_hat_icon
+		ai_target_filter = none
+		filter = court
+		from_potential  = { #player
+		}
+		potential = {#root - the one we ask
+			ROOT = {
+				prisoner = yes
+				OR = {
+					has_claim = k_papal_state
+					AND = { #independent ruler of antipope
+						is_ruler = yes
+						independent = yes
+						any_realm_lord = {
+							has_claim = k_papal_state
+						}
+					}
+				}
+			}
+		}
+		allow = {
+		}
+		effect = {
+
+			ROOT = {
+				imprisoned = no
+				if = {
+					limit = {has_claim = k_papal_state}
+					remove_claim = k_papal_state
+					religion_authority = { modifier = deposed_antipope }
+				}
+				any_realm_lord = {
+					limit = {has_claim = k_papal_state}
+					remove_claim = k_papal_state
+					religion_authority = { modifier = deposed_antipope }
+				}
+			}
+		}
+	}
+
+
+	PDP_join_holy_order = {
+		only_rulers = yes
+		ai = no
+		ai_target_filter = none
+		filter = court
+		#diplomacy_icon = GFX_trait_celibate
+		from_potential  = { #the grandmaster
+			government = order_government
+		}
+		allow = {
+			NOT = {trait = celibate}
+			is_female = no
+			age = 16
+			is_ruler = no
+		}
+		effect = {
+			add_trait = celibate
+			piety = 25
+		}
+	}
+
+	#cardinal wants to be on council
+	PDP_cardinal_petition_for_council = {
+		only_rulers = yes
+		ai = no
+		ai_target_filter = liege
+		filter = liege
+		from_potential  = { #the cardinal
+			has_minor_title = title_cardinal
+			independent = no
+			prisoner = no
+			is_councillor = no
+		}
+		potential = { #liege
+			religion = FROM
+			job_spiritual = {
+				always = yes
+			}
+			job_spiritual = {
+				NOT = {
+					OR = {
+						government = playable_theocracy_government
+						is_theocracy = yes
+					}
+				}
+			}
+			has_regent = no
+			OR = {
+				had_character_flag = { flag = PDP_cardinal_petitioned_for_position days = 1825 }#5years
+				NOT = {has_character_flag = PDP_cardinal_petitioned_for_position}
+			}
+		}
+		allow = {
+		}
+		effect = {
+			FROM = {
+				clr_character_flag = PDP_cardinal_petitioned_for_position #reset timer
+				set_character_flag = PDP_cardinal_petitioned_for_position
+				character_event = { id = PDP.30 days = 0}
+			}
+			ROOT = {
+				clr_character_flag = PDP_cardinal_petitioned_for_position #reset timer
+				set_character_flag = PDP_cardinal_petitioned_for_position
+			}
+		}
+	}
+
+
+	PDP_request_papal_investiture = {
+		ai = no
+		ai_target_filter = none
+		filter = all
+		diplomacy_icon = GFX_pdp_papal_hat_icon
+		from_potential  = {  #the pope
+			PDP_is_player_pope = yes
+			prisoner = no
+			year = 1000
+			NOT = {	has_character_flag = pope_currently_demanding	}
+		}
+		potential = {
+			religion = FROM
+			rightful_religious_head = FROM
+			primary_title = {
+				OR = {
+					tier = KING
+					tier = EMPEROR
+				}
+			}
+		}
+		allow = {
+			ROOT = {
+				NOT = {
+					custom_tooltip = {
+						text = PDP_already_asked_investiture
+						has_character_flag = pope_wants_our_law_changed
+						has_character_flag = pope_respects_our_law
+					}
+				}
+				primary_title = {
+					has_law = investiture_law_1
+				}
+			}
+			FROM = {
+				NOT = { war_with = FROM }
+				religion_authority = 0.35
+				piety = 150
+			}
+		}
+		effect = {
+			ROOT = {#ruler
+				save_event_target_as = PDP_ruler
+			}
+			FROM = {#the pope
+				character_event = { id = PDP.261 days = 0 tooltip = EVTTOOLTIP67001 }
+				piety = -150 #some kind of payment to avoid spamming
+			}
+		}
+	}
+
+	demand_to_join_court = { #ruler can invite his old coutiers
+		ai = no
+		ai_target_filter = none
+		filter = dynasty #has to be of same dynasty
+		from_potential  = {
+			#is_ruler = yes
+			PDP_is_theocracy = yes
+		}
+		potential = {
+			NOT = {
+				FROM = {
+					is_liege_of = ROOT
+				}
+			}
+			ROOT = {
+				is_ruler = no  #Rulers can't leave
+				OR = { #only your friends & dynasty
+					dynasty = FROM
+					#is_friend = FROM
+				}
+			}
+		}
+		allow = { #Only obedient dynasty members can be forced
+			FROM = {
+				wealth = 20
+			}
+			prisoner = no  #Prisoners can't just leave...
+			is_heir = no #heirs don't want to leave
+			#Does need to like you a little or be your underaged child
+			OR = {
+				opinion = { who = FROM value = 10 }
+				FROM = {has_landed_title = k_papal_state} #everyone wants to join the pope
+				AND = {
+					is_child_of = FROM
+					NOT = {age = 16}
+				}
+			}
+			OR = {
+				NOT = {spouse = { always = yes}} #no spouse
+				spouse = { is_ruler = no} #Will not leave if married to ruler
+			}
+		}
+		effect = { #Join decision takers court
+			ROOT = {
+				move_character = FROM
+				wealth = 5
+			}
+			FROM = { #Pay for costs of travel, and to somewhat balance it (vs. invite to court)
+				wealth = -20
+			}
+		}
+	}
+
+	#########################
+	#Cheat decisions:
+	#(For easier testing)
+	#########################
+
+	PDP_play_as = {
+		ai = no
+		ai_target_filter = none
+		filter = all
+		#diplomacy_icon = GFX_trait_amateurish_plotter
+		from_potential  = {
+		}
+		potential = {
+			is_ruler = yes
+			higher_tier_than = baron
+			has_game_rule = { name = PDP_play_as_rule value = on }
+		}
+		allow = {
+		}
+		effect = {
+			ROOT = {
+				save_event_target_as = new_player
+				if = {
+					limit = {
+						is_theocracy = yes
+						religion = catholic
+					}
+					set_government_type = playable_theocracy_government
+				}
+				if = {
+					limit = {
+						is_theocracy = yes
+						NOT = {religion = catholic}
+					}
+					set_government_type = playable_non_catholic_theocracy_government
+				}
+				character_event = {id = PDP.3 days = 1}
+			}
+			FROM = {
+				set_player_character = event_target:new_player
+			}
+		}
+	}
+	# PDP_kill = {
+	# 	ai = no
+	# 	ai_target_filter = none
+	# 	filter = all
+	# 	diplomacy_icon = GFX_trait_amateurish_plotter
+	# 	from_potential  = {
+	# 	}
+	# 	potential = {
+	# 	}
+	# 	allow = {
+	# 	}
+	# 	effect = {
+	# 		ROOT = {
+	# 			death = { death_reason = death_poor_health }
+	# 		}
+	# 	}
+	# }
+
+	# PDP_make_theocracy = {
+		# ai = no
+		# ai_target_filter = none
+		# filter = all
+		# from_potential  = {
+		# }
+		# potential = {
+		# }
+		# allow = {
+		# }
+		# effect = {
+			# ROOT = {
+				# set_government_type = playable_theocracy_government
+			# }
+		# }
+	# }
+}
