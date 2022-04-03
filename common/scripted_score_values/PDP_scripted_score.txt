@@ -1,0 +1,44 @@
+# Can be utilized in ai_chance, ai_will_do, random list weighting and anything that utilizes the triggered modifiers to calculate a value.
+
+
+#gives boost to likelyhood for good relations with proposer.
+offmap_church_proposer_good_relations_score = {
+	modifier = {
+		factor = 20
+		offmap_church_voting_obedient_to_proposer = yes
+	}
+	modifier = {
+		factor = 2
+		offmap_church_voting_likes_proposer_much = yes
+	}
+	modifier = {
+		factor = 1.3
+		offmap_church_voting_likes_proposer = yes
+	}
+}
+
+offmap_church_spend_influence_score = {
+	modifier = {
+		factor = 1.2
+		offmap_church_voting_proposer_spend_influence_low = yes
+	}
+	modifier = {
+		factor = 1.5
+		offmap_church_voting_proposer_spend_influence_medium = yes
+	}
+	modifier = {
+		factor = 1.7
+		offmap_church_voting_proposer_spend_influence_high = yes
+	}
+}
+
+offmap_church_proposer_bad_relations_score = {
+	modifier = {
+		factor = 1.5
+		offmap_church_voting_dislikes_proposer = yes
+	}
+	modifier = {
+		factor = 3
+		offmap_church_voting_hates_proposer = yes
+	}
+}
