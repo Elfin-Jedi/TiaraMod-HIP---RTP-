@@ -1,0 +1,20 @@
+#--------------------------------------------------
+#------------------
+#------ Auto-generated sprite list for bloodline tier traits 
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_create_ebl_hf_bloodline"
+		texturefile = "gfx/decision_pictures/ebl_hf_create_bloodline.png"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_create_ebl_hf_bloodline_two"
+		texturefile = "gfx/decision_pictures/ebl_hf_create_bloodline.png"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}
