@@ -1,3 +1,5 @@
+# -*- ck2.scripted_effects -*-
+
 setting_up_saintly_burial_site_effect = {
 	save_persistent_event_target = {
 		name = province_saint
@@ -10,7 +12,11 @@ setting_up_saintly_burial_site_effect = {
 deciding_upon_saint_effect = {
     random = {
         chance = 1
-
+		
+		modifier = {
+			factor = 10000
+			has_character_modifier = PDP_guaranteed_sainthood
+		}
         #Lower chance when there is more Saints around
         modifier = {
             factor = 0.8
@@ -56,8 +62,29 @@ deciding_upon_saint_effect = {
                     event_target:saint_person = {
                         religion = fraticelli
                     }
+					event_target:saint_person = {
+                        religion = waldensian
+                    }
+					event_target:saint_person = {
+                        religion = lollard
+                    }
+					event_target:saint_person = {
+                        religion = cathar
+                    }
+					event_target:saint_person = {
+                        religion = adoptionist
+                    }
+					event_target:saint_person = {
+                        religion = arian
+                    }
                     event_target:saint_person = {
                         religion = orthodox
+                    }
+					event_target:saint_person = {
+                        religion = bogomilist
+                    }
+					event_target:saint_person = {
+                        religion = monothelite
                     }
                     event_target:saint_person = {
                         religion = iconoclast
@@ -65,17 +92,29 @@ deciding_upon_saint_effect = {
                     event_target:saint_person = {
                         religion = nestorian
                     }
+					event_target:saint_person = {
+                        religion = syriac
+                    }
+					event_target:saint_person = {
+                        religion = maronite
+                    }
+					event_target:saint_person = {
+                        religion = messalian
+                    }
                     event_target:saint_person = {
                         religion = miaphysite
+                    }
+					event_target:saint_person = {
+                        religion = apostolic
                     }
                     event_target:saint_person = {
                         religion = monophysite
                     }
                     event_target:saint_person = {
-                        religion = monothelite
+                        religion = paulician
                     }
                     event_target:saint_person = {
-                        religion = paulician
+                        religion = tondrakian
                     }
                     event_target:saint_person = {
                         OR = {
@@ -83,6 +122,15 @@ deciding_upon_saint_effect = {
                             has_religion_feature = religion_feature_egyptian
                         }
                     }
+					event_target:saint_person = {
+						has_religion_feature = religion_feature_baltic
+					}
+					event_target:saint_person = {
+						has_religion_feature = religion_feature_slavic
+					}
+					event_target:saint_person = {
+						has_religion_feature = religion_syncretic_christian
+					}
                 }
                 NOR = {
                     event_target:saint_person = {
@@ -94,6 +142,15 @@ deciding_upon_saint_effect = {
                             has_religion_feature = religion_feature_egyptian
                         }
                     }
+					event_target:saint_person = {
+						has_religion_feature = religion_feature_baltic
+					}
+					event_target:saint_person = {
+						has_religion_feature = religion_feature_slavic
+					}
+					event_target:saint_person = {
+						has_religion_feature = religion_syncretic_christian
+					}
                 }
             }
         }
@@ -116,25 +173,43 @@ deciding_upon_saint_effect = {
             factor = 0.8
             OR = {
                 event_target:saint_person = {
+					religion = orthodox
+                }
+				event_target:saint_person = {
+                    religion = bogomilist
+                }
+				event_target:saint_person = {
+					religion = monothelite
+                }
+				event_target:saint_person = {
                     religion = iconoclast
                 }
                 event_target:saint_person = {
                     religion = nestorian
                 }
+				event_target:saint_person = {
+                    religion = syriac
+                }
+				event_target:saint_person = {
+                    religion = maronite
+                }
+				event_target:saint_person = {
+                    religion = messalian
+                }
                 event_target:saint_person = {
                     religion = miaphysite
+                }
+				event_target:saint_person = {
+                    religion = apostolic
                 }
                 event_target:saint_person = {
                     religion = monophysite
                 }
                 event_target:saint_person = {
-                    religion = monothelite
-                }
-                event_target:saint_person = {
                     religion = paulician
                 }
                 event_target:saint_person = {
-                    religion = orthodox
+                    religion = tondrakian
                 }
             }
         }
@@ -385,10 +460,52 @@ deciding_upon_saint_effect = {
                         has_global_flag = fraticelli_saint
                     }
                 }
+				AND = {
+                    religion = waldensian
+                    NOT = {
+                        has_global_flag = waldensian_saint
+                    }
+                }
+				AND = {
+                    religion = lollard
+                    NOT = {
+                        has_global_flag = lollard_saint
+                    }
+                }
+				AND = {
+                    religion = cathar
+                    NOT = {
+                        has_global_flag = cathar_saint
+                    }
+                }
+				AND = {
+                    religion = adoptionist
+                    NOT = {
+                        has_global_flag = adoptionist_saint
+                    }
+                }
+				AND = {
+                    religion = arian
+                    NOT = {
+                        has_global_flag = arian_saint
+                    }
+                }
                 AND = {
                     religion = orthodox
                     NOT = {
                         has_global_flag = orthodox_saint
+                    }
+                }
+				AND = {
+                    religion = bogomilist
+                    NOT = {
+                        has_global_flag = bogomilist_saint
+                    }
+                }
+				AND = {
+                    religion = monothelite
+                    NOT = {
+                        has_global_flag = monothelite_saint
                     }
                 }
                 AND = {
@@ -398,21 +515,27 @@ deciding_upon_saint_effect = {
                     }
                 }
                 AND = {
-                    religion = paulician
-                    NOT = {
-                        has_global_flag = paulician_saint
-                    }
-                }
-                AND = {
-                    religion = monothelite
-                    NOT = {
-                        has_global_flag = monothelite_saint
-                    }
-                }
-                AND = {
                     religion = nestorian
                     NOT = {
                         has_global_flag = nestorian_saint
+                    }
+                }
+                AND = {
+                    religion = syriac
+                    NOT = {
+                        has_global_flag = syriac_saint
+                    }
+                }
+				AND = {
+                    religion = maronite
+                    NOT = {
+                        has_global_flag = maronite_saint
+                    }
+                }
+				AND = {
+                    religion = messalian
+                    NOT = {
+                        has_global_flag = messalian_saint
                     }
                 }
                 AND = {
@@ -421,10 +544,28 @@ deciding_upon_saint_effect = {
                         has_global_flag = miaphysite_saint
                     }
                 }
+				AND = {
+                    religion = apostolic
+                    NOT = {
+                        has_global_flag = apostolic_saint
+                    }
+                }
                 AND = {
                     religion = monophysite
                     NOT = {
                         has_global_flag = monophysite_saint
+                    }
+                }
+				AND = {
+                    religion = paulician
+                    NOT = {
+                        has_global_flag = paulician_saint
+                    }
+                }
+				AND = {
+                    religion = tondrakian
+                    NOT = {
+                        has_global_flag = tondrakian_saint
                     }
                 }
             }
@@ -437,20 +578,31 @@ deciding_upon_saint_effect = {
             on_trigger = religion 
             catholic = { set_global_flag = catholic_saint }
             fraticelli = { set_global_flag = fraticelli_saint }
+			waldensian = { set_global_flag = waldensian_saint }
+			lollard = { set_global_flag = lollard_saint }
+			cathar = { set_global_flag = cathar_saint }
+			adoptionist = { set_global_flag = adoptionist_saint }
+			arian = { set_global_flag = arian_saint }
             orthodox = { set_global_flag = orthodox_saint }
+			bogomilist = { set_global_flag = bogomilist_saint }
+			monothelite = { set_global_flag = monothelite_saint }
             iconoclast = { set_global_flag = iconoclast_saint }
-            paulician = { set_global_flag = paulician_saint }
-            monothelite = { set_global_flag = monothelite_saint }
             nestorian = { set_global_flag = nestorian_saint }
+			syriac = { set_global_flag = syriac_saint }
+			maronite = { set_global_flag = maronite_saint }
+			messalian = { set_global_flag = messalian_saint }
             miaphysite = { set_global_flag = miaphysite_saint }
+			apostolic = { set_global_flag = apostolic_saint }
             monophysite = { set_global_flag = monophysite_saint }
+			paulician = { set_global_flag = paulician_saint }
+			tondrakian = { set_global_flag = tondrakian_saint }
         }
     }
 }
 
 check_if_ancestor_worship_worthy_effect = {
     random = {
-        chance = 1 # Down from 2 because they were a bit too common.
+        chance = 3
 	
 		#RR change: unreformed pagans have half the normal chance, unless they have Ancestor Veneration doctrine (random world religions)
         modifier = {
@@ -1166,6 +1318,7 @@ check_if_ancestor_worship_worthy_effect = {
 				has_religion_feature = religion_feature_egyptian
 				has_religion_feature = religion_feature_slavic
 				has_religion_feature = religion_feature_finnish
+				has_religion_feature = religion_syncretic_indian
 			}
             trait = just
         }
@@ -1176,6 +1329,7 @@ check_if_ancestor_worship_worthy_effect = {
 				has_religion_feature = religion_feature_egyptian
 				has_religion_feature = religion_feature_slavic
 				has_religion_feature = religion_feature_finnish
+				has_religion_feature = religion_syncretic_indian
 			}
             trait = administrator
         }
@@ -1186,6 +1340,7 @@ check_if_ancestor_worship_worthy_effect = {
 				has_religion_feature = religion_feature_egyptian
 				has_religion_feature = religion_feature_slavic
 				has_religion_feature = religion_feature_finnish
+				has_religion_feature = religion_syncretic_indian
 			}
             trait = diligent
         }
@@ -1197,6 +1352,7 @@ check_if_ancestor_worship_worthy_effect = {
 				has_religion_feature = religion_feature_egyptian
 				has_religion_feature = religion_feature_slavic
 				has_religion_feature = religion_feature_finnish
+				has_religion_feature = religion_syncretic_indian
 			}
             trait = arbitrary
         }
@@ -1207,13 +1363,14 @@ check_if_ancestor_worship_worthy_effect = {
 				has_religion_feature = religion_feature_egyptian
 				has_religion_feature = religion_feature_slavic
 				has_religion_feature = religion_feature_finnish
+				has_religion_feature = religion_syncretic_indian
 			}
             OR = {
                 trait = slothful
                 trait = envious
             }
         }
-        ## Jizya ##
+		## Jizya ##
         # Positive
         modifier = {
             factor = 1.5
@@ -1238,23 +1395,39 @@ check_if_ancestor_worship_worthy_effect = {
         # Positive
         modifier = {
             factor = 1.5
-            has_religion_feature = religion_monastic
+            OR = {
+				has_religion_feature = religion_monastic
+				has_religion_feature = religion_feature_west_african
+				has_religion_feature = religion_syncretic_christian
+			}
             learning = 20
         }
         modifier = {
             factor = 1.5
-            has_religion_feature = religion_monastic
+            OR = {
+				has_religion_feature = religion_monastic
+				has_religion_feature = religion_feature_west_african
+				has_religion_feature = religion_syncretic_christian
+			}
             trait = celibate
         }
         modifier = {
             factor = 1.5
-            has_religion_feature = religion_monastic
+            OR = {
+				has_religion_feature = religion_monastic
+				has_religion_feature = religion_feature_west_african
+				has_religion_feature = religion_syncretic_christian
+			}
             trait = erudite
         }
         # Negative
         modifier = {
             factor = 0.65
-            has_religion_feature = religion_monastic
+            OR = {
+				has_religion_feature = religion_monastic
+				has_religion_feature = religion_feature_west_african
+				has_religion_feature = religion_syncretic_christian
+			}
             NOT = {
                 learning = 15
             }
@@ -1279,6 +1452,7 @@ check_if_ancestor_worship_worthy_effect = {
         modifier = {
             factor = 1.5
             OR = {
+				emf_haruspicy_religion = yes
                 has_religion_feature = religion_haruspicy
                 has_religion_feature = religion_feature_celtic
             }
@@ -1287,6 +1461,7 @@ check_if_ancestor_worship_worthy_effect = {
         modifier = {
             factor = 1.5
             OR = {
+				emf_haruspicy_religion = yes
                 has_religion_feature = religion_haruspicy
                 has_religion_feature = religion_feature_celtic
             }
@@ -1295,6 +1470,7 @@ check_if_ancestor_worship_worthy_effect = {
         modifier = {
             factor = 1.5
             OR = {
+				emf_haruspicy_religion = yes
                 has_religion_feature = religion_haruspicy
                 has_religion_feature = religion_feature_celtic
             }
@@ -1305,6 +1481,7 @@ check_if_ancestor_worship_worthy_effect = {
         modifier = {
             factor = 0.65
             OR = {
+				emf_haruspicy_religion = yes
                 has_religion_feature = religion_haruspicy
                 has_religion_feature = religion_feature_celtic
             }
@@ -1313,6 +1490,7 @@ check_if_ancestor_worship_worthy_effect = {
         modifier = {
             factor = 0.65
             OR = {
+				emf_haruspicy_religion = yes
                 has_religion_feature = religion_haruspicy
                 has_religion_feature = religion_feature_celtic
             }
@@ -1325,13 +1503,13 @@ check_if_ancestor_worship_worthy_effect = {
         # Positive
         modifier = {
             factor = 1.5
-            has_religion_feature = religion_astrology
+            emf_astrology_religion = yes
             has_any_astrology_trait_trigger = yes
         }
         # Negative
         modifier = {
             factor = 0.65
-            has_religion_feature = religion_astrology
+            emf_astrology_religion = yes
             NOT = {
                 has_any_astrology_trait_trigger = yes
             }
@@ -1340,17 +1518,17 @@ check_if_ancestor_worship_worthy_effect = {
         # Positive
         modifier = {
             factor = 1.5
-            has_religion_feature = religion_ritual_sacrifice
+            emf_ritual_sacrifice_religion = yes
             trait = impaler
         }
         modifier = {
             factor = 1.5
-            has_religion_feature = religion_ritual_sacrifice
+            emf_ritual_sacrifice_religion = yes
             trait = cruel
         }
         modifier = {
             factor = 1.5
-            has_religion_feature = religion_ritual_sacrifice
+            emf_ritual_sacrifice_religion = yes
             OR = { 
                 trait = bloodthirsty_gods_1
                 trait = bloodthirsty_gods_2
@@ -1360,7 +1538,7 @@ check_if_ancestor_worship_worthy_effect = {
         # Negative
         modifier = {
             factor = 0.65
-            has_religion_feature = religion_ritual_sacrifice
+            emf_ritual_sacrifice_religion = yes
             NOR = {
                 trait = impaler
                 trait = cruel
@@ -1368,7 +1546,7 @@ check_if_ancestor_worship_worthy_effect = {
         }
         modifier = {
             factor = 0.2
-            has_religion_feature = religion_ritual_sacrifice
+            emf_ritual_sacrifice_religion = yes
             NOR = {
                 trait = bloodthirsty_gods_1
                 trait = bloodthirsty_gods_2
@@ -1381,7 +1559,7 @@ check_if_ancestor_worship_worthy_effect = {
             factor = 1.5
             OR = {
                 has_religion_feature = religion_adventuring
-                has_religion_feature = religion_seafaring
+                emf_seafaring_religion = yes
             }
             OR = { 
                 trait = pirate
@@ -1396,7 +1574,7 @@ check_if_ancestor_worship_worthy_effect = {
             factor = 0.65
             OR = {
                 has_religion_feature = religion_adventuring
-                has_religion_feature = religion_seafaring
+                emf_seafaring_religion = yes
             }
             NOR = {
                 trait = pirate
@@ -1721,9 +1899,11 @@ check_if_ancestor_worship_worthy_effect = {
         }
 
         set_character_flag = blessed_ancestor_prestige
-	#   rightful_religious_head_scope = {
-    #		character_event = { id = HF.40101 days = 3 }
-	#	}
+		e_hip = {
+			holder_scope = {
+				character_event = { id = HF.40102 days = 3 }
+			}
+		}
 		custom_tooltip = {
         	text = pagan_pope_cannonize_choice_TT
 
