@@ -1,0 +1,68 @@
+PDP_spawn_family = {
+	name = "PDP_spawn_family"
+	group = "PDP_RULE_GROUP"
+	option = {
+		name = on
+		text = "PDP_spawn_family_on"
+		desc = "PDP_spawn_family_on_desc"
+	}
+	option = {
+		name = off
+		text = "PDP_spawn_family_off"
+		desc = "PDP_spawn_family_off_desc"
+	}
+}
+PDP_play_as_rule = {
+	name = "PDP_play_as_rule"
+	group = "PDP_RULE_GROUP"
+	option = {
+		name = off
+		text = "PDP_play_as_off"
+		desc = "PDP_play_as_off_desc"
+	}
+    option = {
+        name = on
+        text = "PDP_play_as_on"
+        desc = "PDP_play_as_on_desc"
+    }
+}
+
+PDP_non_dynastic_play = {
+	name = "PDP_non_dynastic_play_rule"
+	group = "PDP_RULE_GROUP"
+	option = {
+		name = off
+		text = "PDP_non_dynastic_play_off"
+		desc = "PDP_non_dynastic_play_off_desc"
+	}
+    option = {
+        name = on
+        text = "PDP_non_dynastic_play_on"
+        desc = "PDP_non_dynastic_play_on_desc"
+    }
+}
+
+PDP_difficulty_rule = {
+	name = "PDP_difficulty_rule"
+	group = "PDP_RULE_GROUP"
+	option = {
+        name = normal
+        text = "PDP_difficulty_normal"
+        desc = "PDP_difficulty_normal_desc"
+    }
+	option = {
+		name = very_easy
+		text = "PDP_difficulty_very_easy"
+		desc = "PDP_difficulty_very_easy_desc"
+	}
+    option = {
+        name = easy
+        text = "PDP_difficulty_easy"
+        desc = "PDP_difficulty_easy_desc"
+    }
+	option = {
+        name = hard
+        text = "PDP_difficulty_hard"
+        desc = "PDP_difficulty_hard_desc"
+    }
+}
