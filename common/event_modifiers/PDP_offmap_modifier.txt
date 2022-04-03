@@ -1,0 +1,23 @@
+offmap_church_corruption_officials_timer = { icon = 1 }
+offmap_church_send_money_timer = { icon = 1 }
+offmap_church_hire_architects_timer = {icon = 1}
+offmap_church_spend_piety_timer = {icon = 1}
+offmap_church_give_paper_timer = {icon = 1}
+offmap_church_influence_voting_timer = {icon = 1}
+offmap_church_influence_voting_timer = {icon = 1}
+offmap_church_influence_succession_timer = {icon = 1}
+offmap_church_hire_theologian_timer = {icon = 1}
+
+offmap_church_architects = {
+    build_cost_modifier = -0.1
+    build_time_modifier = -0.1
+    wonder_build_cost_modifier = -0.2
+    wonder_build_time_modifier = -0.1
+    icon = 79
+}
+
+offmap_church_writing_paper = {
+    learning = -1
+    diplomacy = -1
+    icon = 20
+}
