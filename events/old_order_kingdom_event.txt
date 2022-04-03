@@ -1,4 +1,4 @@
-namespace = OLDORDER # latest 0105
+namespace = OLDORDER # latest 0107
 
 character_event = {
     id = OLDORDER.0020
@@ -840,6 +840,20 @@ character_event = {
 				NOT = { trait = guardian_of_faith_hadesian }
 			}
 			add_trait = guardian_of_faith_hadesian
+		}
+		if = { 
+			limit = {
+				religion = osirisian
+				NOT = { trait = guardian_of_faith_osirisian }
+			}
+			add_trait = guardian_of_faith_osirisian
+		}
+		if = { 
+			limit = {
+				religion = satanism
+				NOT = { trait = guardian_of_faith_satanism }
+			}
+			add_trait = guardian_of_faith_satanism
 		}
 		set_character_flag = guardian_of_faith_event
 	}
@@ -2315,6 +2329,41 @@ character_event = {
 	}
 }
 
+
+character_event = {
+    id = OLDORDER.0106
+    
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			religion = osirisian
+		}
+		trait = guardian_of_faith_osirisian
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_osirisian
+	}
+}
+
+character_event = {
+    id = OLDORDER.0107
+    
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			religion = satanism
+		}
+		trait = guardian_of_faith_satanism
+	}
+	
+	immediate = {
+		remove_trait = guardian_of_faith_satanism
+	}
+}
+
 ### Minor Holy Orders Management ###
 
 character_event = {
@@ -2405,6 +2454,8 @@ character_event = {
 			trait = guardian_of_faith_celtic
 			trait = guardian_of_faith_luciferian
 			trait = guardian_of_faith_hadesian
+			trait = guardian_of_faith_osirisian
+			trait = guardian_of_faith_satanism
 		}
 		NOT = { trait = guardian_of_faith_denied }
 		OR = {
@@ -2740,6 +2791,8 @@ character_event = {
 			trait = guardian_of_faith_celtic
 			trait = guardian_of_faith_luciferian
 			trait = guardian_of_faith_hadesian
+			trait = guardian_of_faith_osirisian
+			trait = guardian_of_faith_satanism
 		}
 		trait = guardian_of_faith_denied
 		OR = {
