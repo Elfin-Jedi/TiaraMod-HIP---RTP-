@@ -1,0 +1,138 @@
+##########################################
+# COUNCILLOR ACTIONS
+##########################################
+# attribute = [diplomacy/stewardship/intrigue/martial/learning] - Character attribute is multiplied with the modifiers
+# trigger = Province scope trigger to determine if the action is meaningful in a province (the player character is FROM, the councillor is in 'new_character')
+# Events that can trigger off this action. This info is only used by the GUI.
+# All modifiers (like 'local_build_time_modifier') are multiplied by the attribute
+
+# display_on_map = {
+#	tooltip = JOB_PROSELYTIZE_DIFFERENT_RELIGION  # Key of the loc to add to the tooltip
+#	trigger = {                                   # Trigger for when this should happen. Same scopes as the allow/potential for the job action itself
+#		NOT = { religion = FROM }
+#	}
+#	color = { 255 0 0 }                           # What color to use on the map
+# }
+
+# Court Chaplain
+action_global_inquisition = {
+	attribute = learning
+
+	potential = {
+        FROM = {
+            OR = {
+                has_landed_title = k_papal_state
+                AND = {
+                    has_minor_title = title_cardinal
+                    offmap_PDP_church = {
+        				has_policy = PDP_church_policy_conversion
+        			}
+                }
+            }
+        }
+	}
+
+	trigger = {
+		num_of_settlements = 1
+		owner = {
+            religion = catholic
+            top_liege = {
+                religion = catholic
+            }
+            PDP_has_no_antipope = yes
+            OR = {
+                FROM = {has_landed_title = k_papal_state}
+                NOR = {
+                    is_liege_or_above = k_papal_state
+                    has_landed_title = k_papal_state
+                }
+            }
+        }
+		OR = {
+			FROM = {ai = no} #is a player
+			owner = {
+				same_realm = FROM
+			}
+		}
+	}
+    display_on_map = {
+        trigger = {
+            owner = {character = FROM}
+        }
+        color = { 75 255 75 }
+    }
+	display_on_map = {
+		trigger = {
+            NOT = {owner = {character = FROM} }
+			any_province_lord = {
+				OR = {
+					character = FROM
+					top_liege = {
+                        character = FROM
+                    }
+				}
+			}
+		}
+		color = { 50 200 50 }
+	}
+
+	display_on_map = {
+		trigger = {
+            owner = {
+                PDP_is_theocracy = no
+            }
+			NOT = {
+                any_province_lord = {
+    				OR = {
+    					character = FROM
+                        top_liege = {
+                            character = FROM
+                        }
+    				}
+	            }
+            }
+		}
+		color = { 50 50 200 }
+	}
+    display_on_map = {
+		trigger = {
+            owner = {
+                PDP_is_theocracy = yes
+                has_minor_title = title_cardinal
+            }
+			NOT = {
+                any_province_lord = {
+    				OR = {
+    					character = FROM
+                        top_liege = {
+                            character = FROM
+                        }
+    				}
+	            }
+            }
+		}
+		color = { 200 200 255 }
+	}
+
+    display_on_map = {
+		trigger = {
+            owner = {
+                PDP_is_theocracy = yes
+                NOT = {has_minor_title = title_cardinal}
+            }
+			NOT = {
+                any_province_lord = {
+    				OR = {
+    					character = FROM
+                        top_liege = {
+                            character = FROM
+                        }
+    				}
+	            }
+            }
+		}
+		color = { 100 100 255 }
+	}
+
+	events = { PDPJA.1 }
+}
