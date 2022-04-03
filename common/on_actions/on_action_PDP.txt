@@ -1,0 +1,83 @@
+on_rel_head_chosen = {
+	events = {
+		#List of events that must always fire.
+		#PDP.1
+	}
+	random_events = {
+		#List of events that may fire. Weight multiplier of each event will impact the probability of the event being selected.
+		#100 = <event3>
+		#50 = <event4>
+		#1 = <event5>
+	}
+}
+on_new_holder = {
+	events = {
+		PDP.6
+	}
+}
+on_new_holder_inheritance = {
+	events = {
+		PDP.6
+	}
+}
+on_death = {
+	events = {
+		PDP.100 #keep the holy see 'alive'
+		PDP.7
+	}
+}
+on_birth = {
+	events = {
+		PDP.40
+	}
+}
+
+on_chronicle_start = {
+	events = {
+		PDP.6 #make sure that the player cannot marry if theocracy
+		PDP.59
+		PDP.60 #allow cardinals to be appointed
+	}
+}
+
+on_character_convert_religion = {
+	events = {
+		PDP.6
+	}
+}
+on_rel_elector_chosen = {
+	events = {
+		#PDP.78 #player notified - did not work here...
+	}
+}
+on_bi_yearly_pulse = {
+	events = {
+		PDP.76 #check if college has enough members.
+		PDPOFF.20 #add religion modifiers for corruption / reform
+	}
+}
+on_five_year_pulse = {
+	events = {
+		#PDP.29 #yet untested, therefore disabled
+	}
+}
+on_offmap_yearly_pulse = {
+	events = {
+		PDPOFF.40 #change church status
+		PDPOFF.70 #look for cardinal dean
+		PDPOFF.72 #look for legates
+		PDPVOTE.200 #propose some random stuff
+	}
+}
+
+on_wonder_stage_finish = {
+	events = {
+		PDPOFF.81
+	}
+}
+
+on_wonder_upgrade_finish = {
+	events = {
+		PDPOFF.80
+	}
+}
