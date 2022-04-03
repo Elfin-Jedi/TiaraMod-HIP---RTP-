@@ -1,0 +1,1535 @@
+offmap_PDP_church = {
+	#real name:  offmap_PDP_church
+	name = PDP_offmap_church #localisation key
+	window_name = church_domestic_offmaps_window
+	button_name = icon_offmaps_church
+	currency_name = PDP_offmap_church_grace
+	currency_gain = monthly_church_influence
+	currency_reset_on_dynasty_change = no
+	currency_below_zero = no
+	holder_title = title_PDP_church_holder			# minor title used to identify a character as holder of this offmap power
+	governor_title = k_papal_state
+	tier = emperor
+	#non_aggression_modifier = peace_deal_with_china
+	coa_religion = catholic
+	government = theocracy
+	beginning_of_history = 1.1.1
+	sound = china_interaction_interface
+	display_trigger = {
+		FROM = {
+			religion = catholic
+			PDP_has_no_antipope = yes #todo: allow player to force antipopes to step down via intrigue
+			PDP_is_theocracy = yes
+		}
+	}
+	policies = {
+		PDP_church_policy_scholarship
+		PDP_church_policy_warfare
+		PDP_church_policy_charity
+		PDP_church_policy_monumentality
+		PDP_church_policy_conversion
+	}
+	statuses = {
+		PDP_church_status_stable
+		PDP_church_status_corrupt
+		PDP_church_status_thriving
+		PDP_church_status_reform
+		#PDP_church_status_aggressive #no good idea for it yet
+	}
+	buttons = {
+		offmap_church_corruption = {
+		}
+		offmap_church_gifts = {
+		}
+		offmap_church_boons = {
+		}
+
+		offmap_church_papal_button = {
+			is_active_trigger = {
+				hidden_tooltip = {FROM = {
+					ai = no
+					has_landed_title = k_papal_state
+				}}
+			}
+		}
+
+		offmap_church_info_button = {}
+
+		vote_topic_button = {
+			is_active_trigger = {
+				hidden_tooltip = {FROM = {ai = no}}
+			}
+		}
+		vote_for_button = {
+			is_active_trigger = {
+				hidden_tooltip = {FROM = {
+					ai = no
+					offmap_church_voting_active = yes
+					offmap_church_is_elector = yes
+					offmap_church_has_vote_left = yes
+				}}
+			}
+		}
+		vote_against_button = {
+			is_active_trigger = {
+				hidden_tooltip = {FROM = {
+					ai = no
+					offmap_church_voting_active = yes
+					offmap_church_is_elector = yes
+					offmap_church_has_vote_left = yes
+				}}
+			}
+		}
+		vote_proposal_button = {
+			is_active_trigger = {
+				hidden_tooltip = {FROM = {
+					ai = no
+					offmap_church_voting_active = no
+					offmap_church_can_make_proposal = yes
+					offmap_church_proposal_allowed = yes
+				}}
+			}
+		}
+		vote_deal_button = {
+			is_active_trigger = {
+				FROM = {
+					offmap_church_initiated_voting = yes
+				}
+				hidden_tooltip = {FROM = {
+					ai = no
+					offmap_church_voting_active = yes
+					offmap_church_initiated_voting = yes
+				}}
+			}
+		}
+
+		offmap_hostility = {
+		}
+	}
+
+	#These conditions only effect the appearance of the button, it does not actually disable them from being clickable. The same triggers are used in all tribute/boon decisions respectively
+
+	icon_triggers = {
+		church_corruption_officials_cd = {
+			frame = 10
+			trigger = {
+				hidden_tooltip = {
+					has_character_modifier = offmap_church_corruption_officials_timer
+				}
+			}
+		}
+		church_send_money_cd = {
+			frame = 10
+			trigger = {
+				hidden_tooltip = {
+					has_character_modifier = offmap_church_send_money_timer
+				}
+			}
+		}
+		church_money_to_influence_cd = {
+			frame = 19
+			trigger = {
+				hidden_tooltip = {
+					has_character_modifier = offmap_church_money_to_influence_timer
+				}
+			}
+		}
+		offmap_church_hire_architects_cd = {
+			frame = 20
+			trigger = {
+				hidden_tooltip = {
+					has_character_modifier = offmap_church_hire_architects_timer
+				}
+			}
+		}
+		offmap_church_hire_theologian_cd = {
+			frame = 17
+			trigger = {
+				hidden_tooltip = {
+					has_character_modifier = offmap_church_hire_theologian_timer
+				}
+			}
+		}
+		offmap_church_recent_voting_cd = {
+			frame = 13
+			trigger = {
+				hidden_tooltip = {
+					offmap_church_no_recent_voting = no
+				}
+			}
+		}
+		offmap_church_influence_succession_cd = {
+			frame = 14
+			trigger = {
+				hidden_tooltip = {
+					has_character_modifier = offmap_church_influence_succession_timer
+				}
+			}
+		}
+		offmap_church_spend_piety_cd = {
+			frame = 11
+			trigger = {
+				hidden_tooltip = {
+					has_character_modifier = offmap_church_spend_piety_timer
+				}
+			}
+		}
+
+		offmap_church_hand_in_paper_cd = {
+			frame = 12
+			trigger = {
+				hidden_tooltip = {
+					has_character_modifier = offmap_church_give_paper_timer
+				}
+			}
+		}
+
+
+	}
+
+	monthly_currency_gain = {  #ROOT = Governor, FROM = Character who gets the currency
+		church_influence_ai = { #the player will find his ways to get a lot of currency anyways...
+			value = 1
+			FROM = {
+				PDP_is_theocracy = yes
+				ai = yes
+			}
+		}
+		church_influence_ai_italian = { #the player will find his ways to get a lot of currency anyways...
+			value = 2
+			FROM = {
+				PDP_is_theocracy = yes
+				ai = yes
+				culture = italian
+			}
+		}
+
+		church_influence_same_dynasty = {
+			value = 5
+			#FROM = {PDP_is_theocracy = yes}
+			k_papal_state = {
+				holder_scope = {
+					dynasty = FROM
+					NOT = {
+						character = FROM
+					}
+				}
+			}
+			#offmap_china = { offmap_ruler = { dynasty = FROM } }
+		}
+		church_influence_is_pope = {
+			value = 20
+			FROM = {PDP_is_theocracy = yes}
+			character = FROM
+		}
+
+		church_influence_friend_cardinal = {
+			value = 3
+			FROM = {PDP_is_theocracy = yes}
+			character = FROM
+			OR = {
+				any_friend = {
+					has_minor_title = title_cardinal
+					NOT = {has_minor_title = title_cardinal_dean}
+				}
+				any_lover = {
+					has_minor_title = title_cardinal
+					NOT = {has_minor_title = title_cardinal_dean}
+				}
+			}
+		}
+		church_influence_friend_cardinal_dean = {
+			value = 4
+			FROM = {PDP_is_theocracy = yes}
+			character = FROM
+			OR = {
+				any_friend = {
+					has_minor_title = title_cardinal_dean
+				}
+				any_lover = {
+					has_minor_title = title_cardinal_dean
+				}
+			}
+		}
+
+		#pope gets negative influence for having rivals in the college...
+		church_influence_rival_cardinal_dean = {
+			value = -10
+			FROM = {PDP_is_theocracy = yes}
+			character = FROM
+			any_rival = {
+				has_minor_title = title_cardinal_dean
+			}
+		}
+		church_influence_rival_cardinal_few = {
+			value = -5
+			FROM = {PDP_is_theocracy = yes}
+			character = FROM
+			any_rival = {
+				has_minor_title = title_cardinal
+				NOT = {has_minor_title = title_cardinal_dean}
+			}
+			NOT = {
+				any_rival = {
+					count = 3
+					has_minor_title = title_cardinal
+				}
+			}
+		}
+		church_influence_rival_cardinal_many = {
+			value = -10
+			FROM = {PDP_is_theocracy = yes}
+			character = FROM
+			any_rival = {
+				count = 3
+				has_minor_title = title_cardinal
+			}
+			NOT = {
+				any_rival = {
+					count = 5
+					has_minor_title = title_cardinal
+				}
+			}
+		}
+		church_influence_rival_cardinal_majority = {
+			value = -20
+			FROM = {PDP_is_theocracy = yes}
+			character = FROM
+			any_rival = {
+				count = 5
+				has_minor_title = title_cardinal
+			}
+		}
+
+		#punish player pope for gamey things
+		church_influence_no_cardinals = {
+			value = -40
+			FROM = {PDP_is_theocracy = yes}
+			character = FROM
+			has_character_modifier = PDP_not_appointed_any_cardinals
+		}
+		church_influence_appointed_cardinal_no_consent = {
+			value = -20
+			FROM = {PDP_is_theocracy = yes}
+			character = FROM
+			has_character_modifier = ignored_college_of_cardinals
+		}
+		church_influence_excommunicated_cardinal = {
+			value = -10
+			FROM = {PDP_is_theocracy = yes}
+			character = FROM
+			has_character_modifier = PDP_excommunicated_cardinal
+		}
+		#indirect ma (corruption) for pope
+		church_influence_bad_authority = {
+			value = -5
+			offmap_PDP_church = {
+				NOT = { has_status = PDP_church_status_reform }
+			}
+			NOT = {religion_authority = 0.25}
+			FROM = {character = ROOT}
+		}
+
+
+		church_influence_vassal_of_pope = {
+			value = 1
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				independent = no
+				liege = {
+					has_landed_title = k_papal_state
+				}
+			}
+		}
+		church_influence_city_guard = {
+			value = 3
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				has_minor_title = title_PDP_city_guard_of_rome
+			}
+		}
+		church_influence_city_guard_friend = {
+			value = 2
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				OR = {
+					any_friend = {
+						has_minor_title = title_PDP_city_guard_of_rome
+					}
+					any_lover = {
+						has_minor_title = title_PDP_city_guard_of_rome
+					}
+				}
+			}
+		}
+
+		church_influence_in_vatican = {
+			value = 3
+			FROM = {PDP_is_theocracy = yes}
+			capital_scope = { #(of governor = pope) = rome (probably)
+				FROM = {
+					at_location = PREV
+				}
+			}
+		}
+		church_influence_friends_in_vatican = {
+			value = 3
+			FROM = {
+				PDP_is_theocracy = yes
+				OR = {
+					any_friend = {
+						prisoner = no
+						is_female = no
+						is_adult = yes
+						host = {
+							character = ROOT
+						}
+					}
+					any_lover = {
+						prisoner = no
+						is_female = no
+						is_adult = yes
+						host = {
+							character = ROOT
+						}
+					}
+				}
+			}
+		}
+		church_influence_controlled_officials = {
+			value = 5
+			FROM = {
+				PDP_is_theocracy = yes
+			}
+			any_courtier = { #of the pope
+				has_minor_title = title_PDP_papal_palatinus
+				prisoner = no
+				OR = {
+					is_friend = FROM
+					is_lover = FROM
+					AND = {
+						opinion = { who = FROM value = 0 } #not changed his mind through negative opinion
+						has_opinion_modifier = { who = FROM  modifier = PDP_helped_me_into_office }
+					}
+				}
+			}
+		}
+
+		church_influence_ambitious = {
+			value = 1
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				trait = ambitious
+			}
+		}
+		church_influence_diligent = {
+			value = 1
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				trait = diligent
+			}
+		}
+		church_influence_scandalous = {
+			value = -5
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				trait = bad_priest_christian
+			}
+		}
+		church_influence_low_learning = {
+			value = -3
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				NOT = {learning = 5}
+			}
+		}
+		church_influence_high_learning = {
+			value = 1
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				learning = 10
+				NOT = {learning = 15}
+			}
+		}
+		church_influence_very_high_learning = {
+			value = 3
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				learning = 15
+				NOT = {learning = 25}
+			}
+		}
+		church_influence_super_high_learning = {
+			value = 5
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				learning = 25
+			}
+		}
+		church_influence_legate_rank = {
+			value = 4
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				has_minor_title = title_papal_legate
+			}
+		}
+		church_influence_cardinal_rank = {
+			value = 8
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				trait = PDP_cardinal
+			}
+		}
+		church_influence_cardinal_dean_rank = {
+			value = 4
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				has_minor_title = title_cardinal_dean
+			}
+		}
+		church_influence_church_rank_b = {
+			value = 3
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				real_tier = BARON
+			}
+		}
+		church_influence_church_rank_c = {
+			value = 4
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				real_tier = COUNT
+			}
+		}
+		church_influence_church_rank_d = {
+			value = 6
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				real_tier = DUKE
+				NOT = {num_of_duke_titles = 2}
+			}
+		}
+		church_influence_church_rank_gd = {
+			value = 8
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				real_tier = DUKE
+				num_of_duke_titles = 2
+			}
+		}
+		church_influence_church_rank_k = {
+			value = 10
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				real_tier = KING
+			}
+		}
+		church_influence_church_rank_e = {
+			value = 12
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				real_tier = EMPEROR
+			}
+		}
+
+
+		#policies and status
+
+		##policy
+
+		#scholarship
+		church_influence_scholarship_trait = {
+			value = 3
+			offmap_PDP_church = {
+				has_policy  = PDP_church_policy_scholarship
+			}
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				PDP_has_scholarship_traits = yes
+			}
+		}
+
+		#warfare
+		church_influence_war_with_infidels = {
+			value = 5
+			offmap_PDP_church = {
+				has_policy  = PDP_church_policy_warfare
+			}
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				any_current_enemy = {
+					OR  = {
+						NOT = {religion_group = christian}
+						is_heresy_of = ROOT
+					}
+				}
+			}
+		}
+
+		#charity
+		church_influence_virtuous = {
+			value = 1
+			offmap_PDP_church = {
+				has_policy  = PDP_church_policy_charity
+			}
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				has_virtue_trigger = yes
+			}
+		}
+		church_influence_charitable = {
+			value = 1
+			offmap_PDP_church = {
+				has_policy  = PDP_church_policy_charity
+			}
+			FROM = {PDP_is_theocracy = yes}
+			FROM = {
+				trait = charitable
+			}
+		}
+
+		#statuses
+
+		#reform
+		church_influence_reform = {
+			value = -2
+			offmap_PDP_church = {
+				has_status  = PDP_church_status_reform
+			}
+			FROM = {
+				PDP_is_theocracy = yes
+				NOT = {has_landed_title = k_papal_state}
+			}
+		}
+		church_influence_reform_pope = {
+			value = -15
+			offmap_PDP_church = {
+				has_status  = PDP_church_status_reform
+			}
+			FROM = {
+				PDP_is_theocracy = yes
+				has_landed_title = k_papal_state
+			}
+		}
+		#thriving
+		church_influence_thriving = {
+			value = 2
+			offmap_PDP_church = {
+				has_status  = PDP_church_status_thriving
+			}
+			FROM = {PDP_is_theocracy = yes}
+		}
+
+
+		#old ones
+		offmap_war_with_me = {
+			value = -10
+			war_with = FROM
+		}
+	}
+
+	temple_names = {
+		{ # Founder names
+			God
+		}
+		{ # Successor names
+			God
+		}
+	}
+	holder_succession = {
+		is_female = {					# chances of getting a female holder, as a percentage: if the total is >= 100, the new holder will always be female. If the total is <= 0, the new holder will always be male
+			value = 0
+			additive_modifier = {
+				value = 0
+				has_game_rule = {
+					name = gender
+					value = all
+				}
+			}
+		}
+		culture = {
+			italian = { # default culture for new emperor
+				value = 99 # if any other value reaches 100, it will be picked instead
+			}
+			FROM = { # default culture for new emperor
+								# the left side here (and for culture, religion, graphical_culture and dynasty) can be a right hand side value (FROM, ROOT, a culture name, etc). and the right hand side / inside the brackets is a standard MTTH evaluation. Only the one with the highest weight will be used. If there's a tie, one of the tied values is picked at random
+				value = 0
+				additive_modifier = { #the new emperor will keep current culture if things are great
+					value = 100
+					#china_is_fine_trigger = yes
+					FROM = { culture_scope = { always = yes } } # Essentially a check that the previous emperor actually exists
+				}
+			}
+		}
+
+		graphical_culture = {
+			FROM = {
+				value = 100
+			}
+		}
+
+		religion = {
+			catholic = { # default religion for new emperor
+				value = 99 # if any other value reaches 100, it will be picked instead (unless equal, then it will randomize)
+			}
+			FROM = {
+				value = 0
+				additive_modifier = { # the new emperor will keep current religion if things are great
+					value = 100
+					#china_is_fine_trigger = yes
+					FROM = { religion_scope = { always = yes } } # Essentially a check that the previous emperor actually exists
+				}
+			}
+		}
+
+		dynasty = {
+			FROM = { #default dynasty for new emperor
+				value = 99 #might drop from modifiers -- highest value will be picked instead (unless equal, then it will randomize)
+			}
+			actually_culture = {
+				value = 0
+				additive_modifier = {
+					value = 100
+					NOT = { FROM = { character = yes } }
+				}
+				additive_modifier = { #Fix for simulating Chinese history on old save boot-up
+					value = 100
+					random < 12
+					has_game_started = no
+				}
+			}
+		}
+
+		likes = {
+			likes_concubines = {
+				value = 300
+				modifier = {
+					factor = 0.1
+					FROMFROM = { is_female = yes }
+				}
+			}
+			likes_eunuchs = {
+				value = 300
+			}
+			likes_wealth = {
+				value = 300
+			}
+			likes_tributaries = {
+				value = 100
+			}
+			likes_indians = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = indo_aryan_group
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+			}
+			likes_dravidians = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = dravidian_group
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+			}
+			likes_tibetans = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = tibetan_group
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+			}
+
+			likes_germanics = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_germanics = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+			}
+			likes_latino_iberians = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_latino_iberians = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+			}
+			likes_byzantines = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_byzantines = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+			}
+			likes_celts = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_celts = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+			}
+			likes_finno_ugrics = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_finno_ugrics = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+			}
+			likes_altaics = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_altaics = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+			}
+			likes_balto_slavics = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_balto_slavics = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+			}
+			likes_arabs = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_arabs = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+			}
+			likes_iranians = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_iranians = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+			}
+			likes_africans = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_africans = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+			}
+			likes_mesoamericans = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_mesoamericans = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+			}
+
+			likes_muslims = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion_group = muslim
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					FROMFROM = { religion_group = muslim }
+				}
+			}
+			likes_christians = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion_group = christian
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					FROMFROM = { religion_group = christian }
+				}
+			}
+			likes_jews = {
+				value = 100
+				# modifier = {
+				# 	factor = 0
+				# 	NOT = {
+				# 		any_province = {
+				# 			religion_group = jewish_group
+				# 			is_within_diplo_range = offmap_china
+				# 		}
+				# 	}
+				# }
+				# modifier = {
+				# 	factor = 0.5
+				# 	FROMFROM = { likes_jews = yes }
+				# }
+			}
+			likes_zoroastrians = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion = zoroastrian
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					FROMFROM = { religion = zoroastrian }
+				}
+			}
+			likes_mazdakis = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion = mazdaki
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					FROMFROM = { religion = mazdaki }
+				}
+			}
+			likes_manicheans = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion = manichean
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					FROMFROM = { religion = manichean }
+				}
+			}
+			likes_khurmaztans = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion = khurmazta
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					FROMFROM = { religion = khurmazta }
+				}
+			}
+			likes_buddhists = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion = buddhist
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					FROMFROM = { religion = buddhist }
+				}
+			}
+			likes_hindus = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion = hindu
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					FROMFROM = { religion = hindu }
+				}
+			}
+			likes_jains = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion = jain
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					FROMFROM = { religion = jain }
+				}
+			}
+			likes_tengris = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_tengris = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					FROMFROM = { likes_tengris = yes }
+				}
+			}
+			likes_zunists = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_zunists = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					FROMFROM = { likes_zunists = yes }
+				}
+			}
+			likes_bon = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_bon = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					FROMFROM = { likes_bon = yes }
+				}
+			}
+		}
+
+		dislikes = {
+			likes_concubines = {
+				value = 100
+				modifier = {
+					factor = 5.0
+					FROMFROM = { is_female = yes }
+				}
+			}
+			likes_eunuchs = {
+				value = 100
+			}
+			likes_tributaries = {
+				value = 100
+			}
+			likes_wealth = {
+				value = 100
+			}
+			likes_indians = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = indo_aryan_group
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = {
+						culture_group = indo_aryan_group
+					}
+				}
+			}
+			likes_dravidians = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = dravidian_group
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = {
+						culture_group = dravidian_group
+					}
+				}
+			}
+			likes_tibetans = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							culture_group = tibetan_group
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = {
+						culture_group = tibetan_group
+					}
+				}
+			}
+			likes_germanics = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_germanics = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = {
+						likes_germanics = yes
+					}
+				}
+			}
+			likes_latino_iberians = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_latino_iberians = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = {
+						likes_latino_iberians = yes
+					}
+				}
+			}
+			likes_byzantines = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_byzantines = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = {
+						likes_byzantines = yes
+					}
+				}
+			}
+			likes_celts = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_celts = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = {
+						likes_celts = yes
+					}
+				}
+			}
+			likes_finno_ugrics = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_finno_ugrics = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = {
+						likes_finno_ugrics = yes
+					}
+				}
+			}
+			likes_altaics = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_altaics = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = {
+						likes_altaics = yes
+					}
+				}
+			}
+			likes_balto_slavics = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_balto_slavics = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = {
+						likes_balto_slavics = yes
+					}
+				}
+			}
+			likes_arabs = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_arabs = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = {
+						likes_arabs = yes
+					}
+				}
+			}
+			likes_iranians = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_iranians = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = {
+						likes_iranians = yes
+					}
+				}
+			}
+			likes_africans = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_africans = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = {
+						likes_africans = yes
+					}
+				}
+			}
+			likes_mesoamericans = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_mesoamericans = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = {
+						likes_mesoamericans = yes
+					}
+				}
+			}
+			likes_muslims = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion_group = muslim
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = { religion_group = muslim }
+				}
+			}
+			likes_christians = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion_group = christian
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = { religion_group = christian }
+				}
+			}
+			likes_jews = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion_group = jewish_group
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = { religion_group = jewish_group }
+				}
+			}
+			likes_mazdans = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion_group = zoroastrian_group
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = { religion_group = zoroastrian_group }
+				}
+			}
+			likes_buddhists = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion = buddhist
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = { religion = buddhist }
+				}
+			}
+			likes_hindus = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion = hindu
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = { religion = hindu }
+				}
+			}
+			likes_jains = {
+				value = 25
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion = jain
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = { religion = jain }
+				}
+			}
+			likes_tengris = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_tengris = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = { likes_tengris = yes }
+				}
+			}
+			likes_zunists = {
+				value = 5
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_zunists = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = { likes_zunists = yes }
+				}
+			}
+			likes_bon = {
+				value = 10
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_bon = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = { likes_bon = yes }
+				}
+			}
+		}
+	}
+
+    diplomatic_range = { #Already includes the western governor's "normal" diplo range
+		religion_group = christian
+    }
+}

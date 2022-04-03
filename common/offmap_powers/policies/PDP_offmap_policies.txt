@@ -1,0 +1,23 @@
+### Policies are modifiers so they can contain the same things are other modifiers
+# however they are not applied to a character but to the offmap_power
+# they can also have flags that can be tested from the offmap_power scope
+
+PDP_church_policy_scholarship = {
+	frame = 1
+}
+
+PDP_church_policy_warfare = {
+	frame = 2
+}
+
+PDP_church_policy_charity = {
+	frame = 3
+}
+
+PDP_church_policy_monumentality = {
+	frame = 4
+}
+
+PDP_church_policy_conversion = {
+	frame = 5
+}

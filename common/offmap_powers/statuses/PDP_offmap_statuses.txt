@@ -1,0 +1,23 @@
+### Statuses are modifiers so they can contain the same things are other modifiers
+# however they are not applied to a character but to the offmap_power
+# they can also have flags that can be tested from the offmap_power scope
+
+PDP_church_status_stable = {
+	frame = 1
+}
+
+PDP_church_status_corrupt = {
+	frame = 2
+}
+
+PDP_church_status_thriving = {
+	frame = 3
+}
+
+PDP_church_status_reform = {
+	frame = 4
+}
+
+PDP_church_status_aggressive = {
+	frame = 5
+}
