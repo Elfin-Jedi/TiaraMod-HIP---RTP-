@@ -932,6 +932,8 @@ decisions = {
 				trait = guardian_of_faith_celtic
 				trait = guardian_of_faith_luciferian
 				trait = guardian_of_faith_hadesian
+				trait = guardian_of_faith_osirisian
+				trait = guardian_of_faith_satanism
 			}
 		}
 		
@@ -1642,6 +1644,18 @@ decisions = {
 					religion = hadesian
 				}
 				add_trait = guardian_of_faith_hadesian
+			}
+			if = { 
+				limit = {
+					religion = osirisian
+				}
+				add_trait = guardian_of_faith_osirisian
+			}
+			if = { 
+				limit = {
+					religion = satanism
+				}
+				add_trait = guardian_of_faith_satanism
 			}
 		}
 		
