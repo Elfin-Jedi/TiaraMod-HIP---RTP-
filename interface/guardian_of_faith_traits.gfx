@@ -505,6 +505,20 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	spriteType = {
+		name = "GFX_trait_guardian_of_faith_osirisian"
+		texturefile = "gfx/interface/guardian_of_faith_egyptian.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_guardian_of_faith_satanism"
+		texturefile = "gfx/interface/guardian_of_faith_orthodox.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
 		name = "GFX_trait_deserter"
 		texturefile = "gfx/traits/deserter.dds"
 		noOfFrames = 1
