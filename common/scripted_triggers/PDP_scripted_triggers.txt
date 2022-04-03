@@ -1,0 +1,261 @@
+
+#THIS has to be a catholic character
+PDP_college_of_cardinals_full = {
+	religion_head = {
+			has_assigned_minor_title  = { title = title_cardinal count = 9 }
+	}
+}
+
+#THIS has to be a catholic character
+PDP_college_of_cardinals_empty = {
+	religion_head = {
+			NOT = {has_assigned_minor_title  = { title = title_cardinal count = 1 }}
+	}
+}
+
+#checks current scope
+PDP_is_player_pope = {
+	is_ruler = yes
+	ai = no
+	has_landed_title = k_papal_state
+	religion = catholic
+}
+
+PDP_can_attend_conclave = {
+	prisoner = no
+	is_incapable = no
+}
+
+PDP_basic_cardinal_requirements = {
+	religion = catholic
+	is_ruler = yes
+	OR = {
+		is_theocracy = yes
+		government = playable_theocracy_government
+	}
+	NOT = {has_minor_title = title_cardinal}
+	NOT = {has_landed_title = k_papal_state}
+	rightful_religious_head_scope = {
+		has_landed_title = k_papal_state #not under rule of antipope
+		is_within_diplo_range = ROOT
+	}
+	NOT = {trait = excommunicated}
+	NOT = {has_character_flag = PDP_disallowed_to_be_cardinal}
+}
+
+PDP_possible_cardinal_candidate = {
+	PDP_basic_cardinal_requirements = yes
+	NOT = {has_minor_title = title_cardinal}
+	health = 4 #has to be somewhat healthy...
+	prisoner = no
+}
+
+#checks current scope
+PDP_fulfills_cardinal_requirement_without_excommunication = {
+	religion = catholic
+	OR = {
+		AND = {
+			is_ruler = yes
+			OR = {
+				is_theocracy = yes
+				government = playable_theocracy_government
+			}
+			NOT = {has_landed_title = k_papal_state}
+			rightful_religious_head_scope = {
+				has_landed_title = k_papal_state #not under rule of antipope
+				is_within_diplo_range = PREV #prevent game from not appointing cardinals any more (india)
+			}
+			OR = {#Pope allowed to grant Cardinal title...
+				rightful_religious_head_scope = {#ai pope is always allowed, since it takes the "best" one. Holy see may not do so
+					ai = yes
+					NOT = {trait = PDP_the_holy_see}
+				}
+				OR = {
+					has_character_flag = PDP_college_supported_as_cardinal
+					PDP_college_of_cardinals_empty = yes #no cardinals -> pope doesn't have to aks anyone.
+				}
+			}
+		}
+		has_character_flag = PDP_players_heir_during_inheritance
+	}
+	NOT = {has_character_flag = PDP_disallowed_to_be_cardinal}
+}
+
+PDP_fulfills_cardinal_requirement = {
+	PDP_fulfills_cardinal_requirement_without_excommunication = yes
+	NOT = {trait = excommunicated}
+}
+
+
+PDP_evil_deeds = {
+	OR = {
+		#has_character_modifier = known_murderer #its ck2 - everybody is a murderer
+		has_character_modifier = known_witch
+		has_character_modifier = known_sodomite
+		has_character_modifier = known_satanist
+		has_character_modifier = voice_of_satan
+	}
+}
+
+PDP_has_no_antipope = {
+	rightful_religious_head_scope = {
+		has_landed_title = k_papal_state #not under rule of antipope
+		#is_within_diplo_range = PREV
+	}
+}
+
+PDP_is_theocracy = { #only catholics included
+	OR = {
+		government = playable_theocracy_government
+		government = playable_non_catholic_theocracy_government
+		is_theocracy = yes
+	}
+}
+
+
+PDP_has_scholarship_traits = {
+	OR = {
+		trait = theologian
+		trait = scholar
+		trait = erudite
+	}
+}
+
+offmap_church_voting_active = {
+	k_papal_state = {
+		has_title_flag = offmap_church_voting_active
+	}
+}
+
+offmap_church_has_vote_left = {
+	has_character_flag = offmap_church_has_not_voted
+}
+
+offmap_church_no_recent_voting = {
+	k_papal_state =  {
+		OR = {
+			NOT = {has_title_flag = offmap_church_recent_voting}
+			had_title_flag = {flag = offmap_church_recent_voting days = 3650} #make it a ten years pause
+		}
+	}
+}
+
+offmap_church_proposal_allowed = {
+	k_papal_state = {
+		NOT = {has_title_flag = offmap_church_voting_active}
+		offmap_church_no_recent_voting = yes
+	}
+}
+
+offmap_church_initiated_voting = {
+	k_papal_state = {
+		persistent_event_target:offmap_church_voting_initiator = {
+			character = PREVPREV
+		}
+	}
+}
+
+offmap_church_is_elector = {
+	prisoner = no
+	OR = {
+		has_landed_title = k_papal_state
+		has_minor_title = title_cardinal
+		has_minor_title = title_PDP_papal_palatinus
+		AND = {
+			liege = {
+				has_landed_title = k_papal_state
+			}
+			has_job_title = job_spiritual
+		}
+	}
+}
+
+offmap_church_can_make_proposal = {
+	OR = {
+		has_landed_title = k_papal_state
+		has_minor_title = title_cardinal_dean
+	}
+}
+
+offmap_church_result_pro = {
+	k_papal_state = {
+		#check_variable = { which = offmap_church_contra_votes which = offmap_church_pro_votes } #contra >= pro
+		check_variable = { which = offmap_church_pro_votes which = offmap_church_contra_votes } #pro >= contra
+		#NOT = {check_variable = { which = offmap_church_pro_votes which = offmap_church_contra_votes }}
+	}
+}
+
+offmap_church_has_proposal_currency = {
+	has_offmap_currency = { offmap = offmap_PDP_church value = 4800 }
+}
+
+offmap_church_this_can_propose_condition = {
+	offmap_church_voting_active = no
+	offmap_church_can_make_proposal = yes
+	offmap_church_proposal_allowed = yes
+}
+
+offmap_church_voting_obedient_to_proposer = {
+	k_papal_state = {
+		persistent_event_target:offmap_church_voting_initiator = {
+			OR = {
+				AND = {
+					is_friend = PREVPREV
+					reverse_opinion = { who = PREVPREV value = 60 }
+				}
+				AND = {
+					is_lover = PREVPREV
+					reverse_opinion = { who = PREVPREV value = 60 }
+				}
+				PREVPREV = {
+					obedient = PREV
+				}
+				reverse_opinion = { who = PREVPREV value = 100 }
+			}
+		}
+	}
+}
+
+offmap_church_voting_likes_proposer_much = {
+	k_papal_state = {
+		persistent_event_target:offmap_church_voting_initiator = {
+			reverse_opinion = { who = PREVPREV value = 75 }
+		}
+	}
+}
+
+offmap_church_voting_likes_proposer = {
+	k_papal_state = {
+		persistent_event_target:offmap_church_voting_initiator = {
+			reverse_opinion = { who = PREVPREV value = 40 }
+		}
+	}
+}
+
+offmap_church_voting_dislikes_proposer = {
+	k_papal_state = {
+		persistent_event_target:offmap_church_voting_initiator = {
+			NOT = {reverse_opinion = { who = PREVPREV value = -25 }}
+		}
+	}
+}
+
+offmap_church_voting_hates_proposer = {
+	k_papal_state = {
+		persistent_event_target:offmap_church_voting_initiator = {
+			NOT = {reverse_opinion = { who = PREVPREV value = -80 }}
+		}
+	}
+}
+
+offmap_church_voting_proposer_spend_influence_low = {
+	has_character_flag = offmap_church_voting_proposer_spend_influence_low_flag
+}
+
+offmap_church_voting_proposer_spend_influence_medium = {
+	has_character_flag = offmap_church_voting_proposer_spend_influence_medium_flag
+}
+
+offmap_church_voting_proposer_spend_influence_high = {
+	has_character_flag = offmap_church_voting_proposer_spend_influence_high_flag
+}
