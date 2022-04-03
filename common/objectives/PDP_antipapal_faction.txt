@@ -1,0 +1,68 @@
+faction_PDP_depose_antipope = {
+	type = liege_titles
+	rel_head_loyalist = yes # Members consider the "real" pope to be the rightful religious head
+	cancel_on_leader_death = yes # The faction will not automatically continue under a new leader
+
+	# Plotter scope
+	potential = {
+		primary_title = { higher_tier_than = COUNT }
+		liege = {
+			primary_title = {has_title_flag = PDP_depose_antipope_now}
+			religion = ROOT
+			rightful_religious_head_scope = {
+				OR = {
+					has_claim = k_papal_state
+					has_claim = d_fraticelli
+				}
+			}
+			NOT = {
+				any_demesne_title = {
+					temporary = yes
+				}
+			}
+		}
+	}
+
+	# Target scope
+	allow = {
+		higher_tier_than = DUKE
+		is_primary_holder_title = yes
+		holder_scope = {
+			independent = yes
+		}
+	}
+
+	# If false, shows the faction entry for players, but disabled
+	player_allow = {
+		always = yes
+	}
+
+	# Faction member scope (ROOT = joiner, FROM = target)
+	allow_join = {
+		always = yes
+	}
+
+	# AI creation weight
+	chance = {
+		factor = 0
+	}
+
+	# AI membership weight: ROOT is the prospective member. FROM is the faction leader. FROMFROM is the target title or character.
+	membership = {
+		factor = 0
+	}
+
+	success = {
+		always = no
+	}
+
+	abort = {
+		always = no
+	}
+
+	abort_effect = {
+	}
+
+	effect = {
+	}
+}
