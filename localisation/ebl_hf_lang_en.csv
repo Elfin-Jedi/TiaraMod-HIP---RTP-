@@ -1,0 +1,164 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+#;;;;;;;;;;;;;;x
+# Available strings
+# get[Stat]LevelEffects
+# 
+# getEblCreatorPicture
+# getEblCreatorInheritance
+# getEblCreatorMatrilinealOverride
+# getEblCreatorAllowBastards
+# getEblCreatorName
+# getEblCreatorEffects
+
+#--------------------------------------------------
+#------------------
+#------ Decision description for founding a bloodline
+create_ebl_hf_bloodline;Create a new Bloodline;;;;;;;;;;;;;x
+create_ebl_hf_bloodline_desc;Create a bloodline for your descendants.;;;;;;;;;;;;;x
+create_ebl_hf_bloodline_two;Create a new Bloodline;;;;;;;;;;;;;x
+create_ebl_hf_bloodline_two_desc;Create a bloodline for your descendants.;;;;;;;;;;;;;x
+rename_ebl_hf_bloodline;Rename ebl founded bloodline;;;;;;;;;;;;;x
+rename_ebl_hf_bloodline_desc;Allows you to change the name of your founded bloodline.;;;;;;;;;;;;;x
+#--------------------------------------------------
+#------------------
+#------ Bloodline names and descriptions
+generic_bloodline_name;Generic Bloodline;;;;;;;;;;;;;x
+generic_bloodline_description;Generic Bloodline Description;;;;;;;;;;;;;x
+
+#--------------------------------------------------
+#------------------
+#------ GUI
+ebl_hf_next_page;Next Page;;;;;;;;;;;;;x
+ebl_hf_ok;Ok!;;;;;;;;;;;;;x
+ebl_hf_tooltip_next_page;Go to the next page;;;;;;;;;;;;;x
+ebl_hf_select_option_tooltip;Selects the option and returns to the previous menu.;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_preview;Preview of your selected bloodline picture;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_8000;Would you like to manually enter a name for your newly created bloodline?;;;;;;;;;;;;;x
+
+
+# Main creator menu
+EVTDESC_ebl_hf_9000;Current bloodline settings: \nPicture: [getEblCreatorPicture]\nName: [getEblCreatorName]\nEffects: [getEblCreatorEffects]\nInheritance: [getEblCreatorInheritance]\nMatrilineal override: [getEblCreatorMatrilinealOverride]\nAllow bastards: [getEblCreatorAllowBastards]\nAre you sure you want to create a bloodline with these settings?;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9001;Current bloodline settings: \nPicture: [getEblCreatorPicture]\nName: [getEblCreatorName]\nEffects: [getEblCreatorEffects]\nInheritance: [getEblCreatorInheritance]\nMatrilineal override: [getEblCreatorMatrilinealOverride]\nAllow bastards: [getEblCreatorAllowBastards]\n\npg. 1 of 3;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9002;Current bloodline settings: \nPicture: [getEblCreatorPicture]\nName: [getEblCreatorName]\nEffects: [getEblCreatorEffects]\nInheritance: [getEblCreatorInheritance]\nMatrilineal override: [getEblCreatorMatrilinealOverride]\nAllow bastards: [getEblCreatorAllowBastards]\n\npg. 2 of 3;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9003;Current bloodline settings: \nPicture: [getEblCreatorPicture]\nName: [getEblCreatorName]\nEffects: [getEblCreatorEffects]\nInheritance: [getEblCreatorInheritance]\nMatrilineal override: [getEblCreatorMatrilinealOverride]\nAllow bastards: [getEblCreatorAllowBastards]\n\npg. 3 of 3;;;;;;;;;;;;;x
+
+# Change bloodline picture category selection menu
+EVTDESC_ebl_hf_9101;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\n\nPlease select a category below.\n\npg. 1 of 2;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9102;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\n\nPlease select a category below.\n\npg. 2 of 2;;;;;;;;;;;;;x
+
+# Cultural picture category
+EVTDESC_ebl_hf_9111;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nCULTURAL CATEGORY\nPlease select a picutre from the list below.\n\npg. 1 of 3;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9112;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nCULTURAL CATEGORY\nPlease select a picutre from the list below.\n\npg. 2 of 3;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9113;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nCULTURAL CATEGORY\nPlease select a picutre from the list below.\n\npg. 3 of 3;;;;;;;;;;;;;x
+
+# Building picture category
+EVTDESC_ebl_hf_9121;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nBUILDING CATEGORY\nPlease select a picutre from the list below.\n\npg. 1 of 3;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9122;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nBUILDING CATEGORY\nPlease select a picutre from the list below.\n\npg. 2 of 3;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9123;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nBUILDING CATEGORY\nPlease select a picutre from the list below.\n\npg. 3 of 3;;;;;;;;;;;;;x
+
+# Religion picture category
+EVTDESC_ebl_hf_9131;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nRELIGION CATEGORY\nPlease select a picutre from the list below.\n\npg. 1 of 6;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9132;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nRELIGION CATEGORY\nPlease select a picutre from the list below.\n\npg. 2 of 6;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9133;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nRELIGION CATEGORY\nPlease select a picutre from the list below.\n\npg. 3 of 6;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9134;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nRELIGION CATEGORY\nPlease select a picutre from the list below.\n\npg. 4 of 6;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9135;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nRELIGION CATEGORY\nPlease select a picutre from the list below.\n\npg. 5 of 6;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9136;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nRELIGION CATEGORY\nPlease select a picutre from the list below.\n\npg. 6 of 6;;;;;;;;;;;;;x
+
+# Animal picture category
+EVTDESC_ebl_hf_9141;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nANIMAL CATEGORY\nPlease select a picutre from the list below.\n\npg. 1 of 3;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9142;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nANIMAL CATEGORY\nPlease select a picutre from the list below.\n\npg. 2 of 3;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9143;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nANIMAL CATEGORY\nPlease select a picutre from the list below.\n\npg. 3 of 3;;;;;;;;;;;;;x
+
+# Character picture category
+EVTDESC_ebl_hf_9151;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nCHARACTER CATEGORY\nPlease select a picutre from the list below.\n\npg. 1 of 2;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9152;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nCHARACTER CATEGORY\nPlease select a picutre from the list below.\n\npg. 2 of 2;;;;;;;;;;;;;x
+
+# Other picture category
+EVTDESC_ebl_hf_9161;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nOTHER CATEGORY\nPlease select a picutre from the list below.\n\npg. 1 of 7;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9162;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nOTHER CATEGORY\nPlease select a picutre from the list below.\n\npg. 2 of 7;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9163;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nOTHER CATEGORY\nPlease select a picutre from the list below.\n\npg. 3 of 7;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9164;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nOTHER CATEGORY\nPlease select a picutre from the list below.\n\npg. 4 of 7;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9165;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nOTHER CATEGORY\nPlease select a picutre from the list below.\n\npg. 5 of 7;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9166;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nOTHER CATEGORY\nPlease select a picutre from the list below.\n\npg. 6 of 7;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9167;\n\nChange your bloodline picture\nCurrently selected: [getEblCreatorPicture]\nOTHER CATEGORY\nPlease select a picutre from the list below.\n\npg. 7 of 7;;;;;;;;;;;;;x
+
+# Change inheritance style menu
+EVTDESC_ebl_hf_9201;\n\nChange your inheritance style\nCurrently selected: [getEblCreatorInheritance]\n\n\n\npg. 1 of 2;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9202;\n\nChange your inheritance style\nCurrently selected: [getEblCreatorInheritance]\n\n\n\npg. 2 of 2;;;;;;;;;;;;;x
+
+# Enable/disable matrilineal override
+EVTDESC_ebl_hf_9301;\n\nEnable or disable matrilineal override\nCurrently selected: [getEblCreatorMatrilinealOverride]\n\n\n\npg. 1 of 1;;;;;;;;;;;;;x
+
+# Allow/disallow bastards
+EVTDESC_ebl_hf_9401;\n\nAllow or disallow bastards\nCurrently selected: [getEblCreatorAllowBastards]\n\n\n\npg. 1 of 1;;;;;;;;;;;;;x
+
+# Change bloodline name menu
+EVTDESC_ebl_hf_9501;\n\nChange your bloodline's name\nCurrently selected: [getEblCreatorName]\n\n\n\npg. 1 of 1;;;;;;;;;;;;;x
+
+# Change bloodline name menu
+EVTDESC_ebl_hf_9601;\n\nChange your bloodline's effects\nCurrently selected: [getEblCreatorEffects]\n\n\n\npg. 1 of 2;;;;;;;;;;;;;x
+EVTDESC_ebl_hf_9602;\n\nChange your bloodline's effects\nCurrently selected: [getEblCreatorEffects]\n\n\n\npg. 2 of 2;;;;;;;;;;;;;x
+
+# Options
+ebl_hf_opt_generate_bloodline;Create bloodline;;;;;;;;;;;;;x
+ebl_hf_tooltip_generate_bloodline;Creates a bloodline using the defined parameters.;;;;;;;;;;;;;x
+
+ebl_hf_opt_change_picture;Change bloodline picture;;;;;;;;;;;;;x
+ebl_hf_tooltip_change_picture;Opens the menu for changing bloodline pictures.;;;;;;;;;;;;;x
+
+ebl_hf_opt_picture_cultural;Cultural category;;;;;;;;;;;;;x
+ebl_hf_tooltip_picture_cultural;Opens the menu containing 'Cultural' pictures.;;;;;;;;;;;;;x
+
+ebl_hf_opt_picture_building;Building category;;;;;;;;;;;;;x
+ebl_hf_tooltip_picture_building;Opens the menu containing 'Building' pictures.;;;;;;;;;;;;;x
+
+ebl_hf_opt_picture_religion;Religion category;;;;;;;;;;;;;x
+ebl_hf_tooltip_picture_religion;Opens the menu containing 'Religion' pictures.;;;;;;;;;;;;;x
+
+ebl_hf_opt_picture_animal;Animal category;;;;;;;;;;;;;x
+ebl_hf_tooltip_picture_animal;Opens the menu containing 'Animal' pictures.;;;;;;;;;;;;;x
+
+ebl_hf_opt_picture_character;Character category;;;;;;;;;;;;;x
+ebl_hf_tooltip_picture_character;Opens the menu containing 'Character' pictures.;;;;;;;;;;;;;x
+
+ebl_hf_opt_picture_other;Other category;;;;;;;;;;;;;x
+ebl_hf_tooltip_picture_other;Opens the menu containing 'other' pictures.;;;;;;;;;;;;;x
+
+ebl_hf_opt_change_inheritance;Change inheritance style;;;;;;;;;;;;;x
+ebl_hf_tooltip_change_inheritance;Opens the menu for changing inheritance styles.;;;;;;;;;;;;;x
+
+ebl_hf_opt_change_matrilineal_override;Enable/disable matrilineal override;;;;;;;;;;;;;x
+ebl_hf_tooltip_change_matrilineal_override;Opens the menu for enabling/disabling matrilineal override.;;;;;;;;;;;;;x
+
+ebl_hf_opt_change_allow_bastards;Allow/disallow bastards;;;;;;;;;;;;;x
+ebl_hf_tooltip_change_allow_bastards;Opens the menu for allowing/disallowing bastards.;;;;;;;;;;;;;x
+
+ebl_hf_opt_change_name;Change bloodline name;;;;;;;;;;;;;x
+ebl_hf_tooltip_change_name;Opens the menu for changing the bloodline name.;;;;;;;;;;;;;x
+
+ebl_hf_opt_change_effect;Change bloodline effects;;;;;;;;;;;;;x
+ebl_hf_tooltip_change_effect;Opens the menu for changing the bloodline's effects.;;;;;;;;;;;;;x
+
+#--------------------------------------------------
+#------------------
+#------ Text to display in bloodline info screen
+ebl_bloodline_effect_martial;Martial [getMartialLevelEffects];;;;;;;;;;;;;x
+ebl_bloodline_effect_diplomacy;Diplomacy [getDiplomacyLevelEffects];;;;;;;;;;;;;x
+ebl_bloodline_effect_intrigue;Intrigue [getIntrigueLevelEffects];;;;;;;;;;;;;x
+ebl_bloodline_effect_learning;Learning [getLearningLevelEffects];;;;;;;;;;;;;x
+ebl_bloodline_effect_stewardship;Stewardship [getStewardshipLevelEffects];;;;;;;;;;;;;x
+ebl_bloodline_effect_personal_skill;Personal Combat Skill [getPersonalSkillLevelEffects];;;;;;;;;;;;;x
+ebl_bloodline_effect_piety;Monthly Piety [getPietyLevelEffects];;;;;;;;;;;;;x
+ebl_bloodline_effect_prestige;Monthly Prestige [getPrestigeLevelEffects];;;;;;;;;;;;;x
+
+#--------------------------------------------------
+#------------------
+#------ Text templates
+# \n\nCurrent bloodline settings:\n
+# Picture: [getEblCreatorPicture]\n
+# Name: [getEblCreatorName]\n
+# Effects: [getEblCreatorEffects]\n
+# Inheritance: [getEblCreatorInheritance]\n
+# Matrilineal override: [getEblCreatorMatrilinealOverride]\n
+# Allow bastards: [getEblCreatorAllowBastards]\n\n
+# pg. 1 of 3
