@@ -3,6 +3,40 @@
 nomadic_governments = {
 
 	nomadic_government = {
+		preferred_holdings = { NOMAD }
+		allowed_holdings = { NOMAD }
+		vassal_call_to_arms = {
+			nomadic_government
+		}
+		no_vassal_tax = {
+			nomadic_government
+		}
+		
+		forced_contract = {
+			feudal_government
+			muslim_government
+			theocratic_feudal_government
+			order_government
+			rtp_mercenary_g
+
+			merchant_republic_government
+			republic_government
+			rtp_republic_g
+			rtp_privateer_g
+
+			theocracy_government
+			rtp_theocracy_g
+
+			tribal_government
+
+			nomadic_government
+		}
+		
+		ignore_in_vassal_limit_calculation = {
+			nomadic_government
+		}
+		frame_suffix = "_nomadic"
+		title_prefix = "nomadic_"
 		potential = {
 			OR = {
 				controls_religion = no
@@ -35,50 +69,9 @@ nomadic_governments = {
 		character_modifier = {
 			vassal_opinion = -10
 			max_population = 1550 # Compensates for the capital taking up one holding slot
-			martial = 1
-			diplomacy = -1
-		}
-
-		preferred_holdings = {
-			NOMAD
-		}
-
-		allowed_holdings = {
-			NOMAD
-		}
-
-		vassal_call_to_arms = {
-			nomadic_government
-		}
-
-		no_vassal_tax = {
-			nomadic_government
-		}
-
-		forced_contract = {
-			feudal_government
-			muslim_government
-			theocratic_feudal_government
-			order_government
-			rtp_mercenary_g
-
-			merchant_republic_government
-			republic_government
-			rtp_republic_g
-			rtp_privateer_g
-
-			theocracy_government
-			rtp_theocracy_g
-
-			tribal_government
-
-			nomadic_government
 		}
 
 		color = { 201 179 36 }
-		frame_suffix = "_nomadic"
-		title_prefix = "nomadic_"
-		aggression = 1.75
 
 		uses_prestige_for_law_change = yes
 		allow_title_revokation = yes
