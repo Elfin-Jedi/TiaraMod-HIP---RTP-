@@ -1,0 +1,21 @@
+PDP_papal_bloodline = {
+	monthly_character_piety = -0.2
+	monthly_character_prestige = 1.0
+	fertility = 0.05
+	lustful_opinion = 2
+	zealous_opinion  = -2
+	inheritance = patrilineal
+	allow_bastards = yes
+	flags = { PDP_papal }
+	picture = GFX_bloodlines_symbol_cross_wicked
+	active = {
+		custom_tooltip = {
+			text = saintly_bloodline_same_religion_TT
+			FROM = {
+				founder = {
+					religion = ROOT
+				}
+			}
+		}
+	}
+}
