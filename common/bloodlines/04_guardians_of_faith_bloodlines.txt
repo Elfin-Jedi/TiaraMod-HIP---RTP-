@@ -1254,6 +1254,27 @@ first_guardian_of_faith_maori_religion = {
 	}
 }
 
+# High Arctic
+
+first_guardian_of_faith_tuniit_pagan = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = all_descendants
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_tuniit_pagan }
+	picture = GFX_bloodlines_symbol_icel
+	active = {
+		OR = {
+			religion = tuniit_pagan_reformed
+			religion = tuniit_pagan
+		}
+	}
+}
+
 # Hindu
 
 first_guardian_of_faith_hindu = {
@@ -1560,27 +1581,6 @@ first_guardian_of_faith_confucian = {
 	}
 }
 
-# High Arctic
-
-first_guardian_of_faith_tuniit_pagan = {
-	monthly_character_piety = 0.5
-	monthly_character_prestige = 0.25
-	command_modifier = {
-		religious_enemy = 0.3
-	}	
-	the_first_guardian_of_faith = 1
-	inheritance = all_descendants
-	allow_bastards = yes
-	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_tuniit_pagan }
-	picture = GFX_bloodlines_symbol_icel
-	active = {
-		OR = {
-			religion = tuniit_pagan_reformed
-			religion = tuniit_pagan
-		}
-	}
-}
-
 # Luciferian
 
 first_guardian_of_faith_luciferian = {
@@ -1614,5 +1614,41 @@ first_guardian_of_faith_hadesian = {
 	picture = GFX_bloodlines_symbol_stoics
 	active = {
 		religion = hadesian
+	}
+}
+
+# Cult of Osiris
+
+first_guardian_of_faith_osirisian = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = all_descendants
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_osirisian }
+	picture = GFX_bloodlines_symbol_longship
+	active = {
+		religion = osirisian
+	}
+}
+
+# Satanic
+
+first_guardian_of_faith_satanism = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	the_first_guardian_of_faith = 1
+	inheritance = all_descendants
+	allow_bastards = yes
+	flags = { saintly_bloodline defender_of_the_faith first_guardian_of_faith_satanism }
+	picture = GFX_bloodlines_symbol_cross_crusader_wicked
+	active = {
+		religion = satanism
 	}
 }
