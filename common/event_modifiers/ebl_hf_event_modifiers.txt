@@ -1,0 +1,427 @@
+#--------------------------------------------------
+#------------------
+#------ Auto-generated bloodline stat event_modifiers
+#--------------------------------------------------
+#------------------
+#------ Martial bloodline stats
+ebl_bloodline_martial_1 = { 
+	martial = 1
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_martial_2 = { 
+	martial = 2
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_martial_3 = { 
+	martial = 3
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_martial_4 = { 
+	martial = 4
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_martial_5 = { 
+	martial = 5
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_martial_6 = { 
+	martial = 6
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_martial_7 = { 
+	martial = 7
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_martial_8 = { 
+	martial = 8
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_martial_9 = { 
+	martial = 9
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_martial_10 = { 
+	martial = 10
+	is_visible = { always = no }
+	icon = 1
+}
+#--------------------------------------------------
+#------------------
+#------ Diplomacy bloodline stats
+ebl_bloodline_diplomacy_1 = { 
+	diplomacy = 1
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_diplomacy_2 = { 
+	diplomacy = 2
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_diplomacy_3 = { 
+	diplomacy = 3
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_diplomacy_4 = { 
+	diplomacy = 4
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_diplomacy_5 = { 
+	diplomacy = 5
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_diplomacy_6 = { 
+	diplomacy = 6
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_diplomacy_7 = { 
+	diplomacy = 7
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_diplomacy_8 = { 
+	diplomacy = 8
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_diplomacy_9 = { 
+	diplomacy = 9
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_diplomacy_10 = { 
+	diplomacy = 10
+	is_visible = { always = no }
+	icon = 1
+}
+#--------------------------------------------------
+#------------------
+#------ Intrigue bloodline stats
+ebl_bloodline_intrigue_1 = { 
+	intrigue = 1
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_intrigue_2 = { 
+	intrigue = 2
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_intrigue_3 = { 
+	intrigue = 3
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_intrigue_4 = { 
+	intrigue = 4
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_intrigue_5 = { 
+	intrigue = 5
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_intrigue_6 = { 
+	intrigue = 6
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_intrigue_7 = { 
+	intrigue = 7
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_intrigue_8 = { 
+	intrigue = 8
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_intrigue_9 = { 
+	intrigue = 9
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_intrigue_10 = { 
+	intrigue = 10
+	is_visible = { always = no }
+	icon = 1
+}
+#--------------------------------------------------
+#------------------
+#------ Learning bloodline stats
+ebl_bloodline_learning_1 = { 
+	learning = 1
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_learning_2 = { 
+	learning = 2
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_learning_3 = { 
+	learning = 3
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_learning_4 = { 
+	learning = 4
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_learning_5 = { 
+	learning = 5
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_learning_6 = { 
+	learning = 6
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_learning_7 = { 
+	learning = 7
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_learning_8 = { 
+	learning = 8
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_learning_9 = { 
+	learning = 9
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_learning_10 = { 
+	learning = 10
+	is_visible = { always = no }
+	icon = 1
+}
+#--------------------------------------------------
+#------------------
+#------ Stewardship bloodline stats
+ebl_bloodline_stewardship_1 = { 
+	stewardship = 1
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_stewardship_2 = { 
+	stewardship = 2
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_stewardship_3 = { 
+	stewardship = 3
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_stewardship_4 = { 
+	stewardship = 4
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_stewardship_5 = { 
+	stewardship = 5
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_stewardship_6 = { 
+	stewardship = 6
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_stewardship_7 = { 
+	stewardship = 7
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_stewardship_8 = { 
+	stewardship = 8
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_stewardship_9 = { 
+	stewardship = 9
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_stewardship_10 = { 
+	stewardship = 10
+	is_visible = { always = no }
+	icon = 1
+}
+#--------------------------------------------------
+#------------------
+#------ Personal Skill bloodline stats
+ebl_bloodline_personal_skill_1 = { 
+	combat_rating = 4
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_personal_skill_2 = { 
+	combat_rating = 8
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_personal_skill_3 = { 
+	combat_rating = 12
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_personal_skill_4 = { 
+	combat_rating = 16
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_personal_skill_5 = { 
+	combat_rating = 20
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_personal_skill_6 = { 
+	combat_rating = 24
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_personal_skill_7 = { 
+	combat_rating = 28
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_personal_skill_8 = { 
+	combat_rating = 32
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_personal_skill_9 = { 
+	combat_rating = 36
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_personal_skill_10 = { 
+	combat_rating = 40
+	is_visible = { always = no }
+	icon = 1
+}
+#--------------------------------------------------
+#------------------
+#------ Piety bloodline stats
+ebl_bloodline_piety_1 = { 
+	monthly_character_piety = 0.2
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_piety_2 = { 
+	monthly_character_piety = 0.4
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_piety_3 = { 
+	monthly_character_piety = 0.6
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_piety_4 = { 
+	monthly_character_piety = 0.8
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_piety_5 = { 
+	monthly_character_piety = 1
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_piety_6 = { 
+	monthly_character_piety = 1.2
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_piety_7 = { 
+	monthly_character_piety = 1.4
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_piety_8 = { 
+	monthly_character_piety = 1.6
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_piety_9 = { 
+	monthly_character_piety = 1.8
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_piety_10 = { 
+	monthly_character_piety = 2
+	is_visible = { always = no }
+	icon = 1
+}
+#--------------------------------------------------
+#------------------
+#------ Prestige bloodline stats
+ebl_bloodline_prestige_1 = { 
+	monthly_character_prestige = 0.2
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_prestige_2 = { 
+	monthly_character_prestige = 0.4
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_prestige_3 = { 
+	monthly_character_prestige = 0.6
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_prestige_4 = { 
+	monthly_character_prestige = 0.8
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_prestige_5 = { 
+	monthly_character_prestige = 1
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_prestige_6 = { 
+	monthly_character_prestige = 1.2
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_prestige_7 = { 
+	monthly_character_prestige = 1.4
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_prestige_8 = { 
+	monthly_character_prestige = 1.6
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_prestige_9 = { 
+	monthly_character_prestige = 1.8
+	is_visible = { always = no }
+	icon = 1
+}
+ebl_bloodline_prestige_10 = { 
+	monthly_character_prestige = 2
+	is_visible = { always = no }
+	icon = 1
+}
