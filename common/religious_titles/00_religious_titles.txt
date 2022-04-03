@@ -12,45 +12,78 @@
 #	message: should fire a message to the its owner when set
 #	The other fields are all character modifiers.
 
+
+#Titles other than cardinal are not displayed on character sheet, but do influence the full title of the characters. Don't know why...
 title_cardinal = {
 	religion = catholic
 	can_elect_head = yes
+	revoke_allowed = no
 	
 	grant_limit = 9
+	realm_in_name = no
 	
 	show_as_title = yes
 	
-	opinion_effect = 20
+	opinion_effect = -10 #Cardinals get +15 when appointed. However they dislike other Popes...
 	dignity = 0.9
 	
-	monthly_salary = 0.1
-	monthly_prestige = 0.5
-	
-	allowed_to_grant = {
-		always = no
-	}
+	monthly_salary = 0.25
+	monthly_prestige = 1.0
+	monthly_piety = 0.25
 
 	allow = {
-		religion = catholic
-		rtp_is_theocracy_government = yes
-		k_papal_state = {
-			holder_scope = {
-				is_within_diplo_range = ROOT
-			}
+		has_global_flag = PDP_cardinals_allowed #to make sure there are not cardinals at game start.
+		PDP_fulfills_cardinal_requirement = yes
+	}
+	gain_effect = {
+		add_trait = PDP_cardinal
+		set_character_flag = PDP_college_supported_as_cardinal #in case the player takes over the papacy.
+		#if the player is a cardinal, send him a fake event where he can decide if he agrees.
+		if = {
+			limit = {had_global_flag = {flag = PDP_cardinals_allowed days = 5}} #The college starts out without any Cardinals, therefore the voting is disabled for the first few days
+			character_event = {id = PDP.69} #(looks for player cardinal and dispatches event)
 		}
-		
-		NOT = {
-			top_liege = {
-				any_vassal = {
-					any_claim = {
-						title = k_papal_state
-					}
+		rightful_religious_head_scope = {
+			reverse_opinion = {modifier = opinion_supported_cardinal who = ROOT years = 150}
+			clr_character_flag = PDP_vacant_seats_in_college #track if player appointed cardinals.
+		rtp_is_theocracy_government = yes
+		}
+		character_event = {id = PDP.78} #inform player that he's elected.
+		if = {
+			limit = {
+				independent = no
+				rightful_religious_head_scope = {ai = no} #since ai's decisions are not always final
+			}
+			liege = {
+				rightful_religious_head_scope = { #always the same, since only independents can have antipope
+					reverse_opinion = {modifier = opinion_merciful who = PREV years = 10}
 				}
 			}
 		}
 	}
+	lose_effect = {
+		remove_trait = PDP_cardinal
+		clr_character_flag = PDP_attends_conclave
+		if = { #player excommunicated him (without good reason) to stop him from being a cardinal
+			limit = {
+				has_global_flag = PDP_cardinals_allowed
+				PDP_fulfills_cardinal_requirement_without_excommunication = yes
+				trait = excommunicated
+				is_impious_trigger = no
+				PDP_evil_deeds = no
+				rightful_religious_head_scope = {
+					PDP_is_player_pope = yes
+				}
+			}
+		}
+		rightful_religious_head_scope = { #inform the player that he's a bad sneaky player and has to stop.
+			character_event = {id = PDP.300 days = 0}
+		}
+	}
 	
 	death_effect = {
+		remove_trait = PDP_cardinal
+		clr_character_flag = PDP_attends_conclave
 		k_papal_state = {
 			holder_scope = {
 				subtract_variable = {
@@ -72,7 +105,9 @@ title_cardinal = {
 		}
 	}
 
-	retire_effect = {
+	retire_effect = { #dont know if actually working/needed
+		remove_trait = PDP_cardinal
+		clr_character_flag = PDP_attends_conclave
 		k_papal_state = {
 			holder_scope = {
 				subtract_variable = {
@@ -89,39 +124,34 @@ title_cardinal = {
 title_fraticelli_cardinal = {
 	religion = fraticelli
 	can_elect_head = yes
-	
+	revoke_allowed = no
 	grant_limit = 9
-	
+	realm_in_name = no
 	show_as_title = yes
 	
 	opinion_effect = 20
-	dignity = 0.9
+	dignity = 0.9 #2.0
 	
-	monthly_salary = 0.1
-	monthly_prestige = 0.5
-	
-	allowed_to_grant = {
-		always = no
-	}
+	monthly_salary = 0.25
+	monthly_prestige = 1.0
+	monthly_piety = 0.25
 	
 	allow = {
 		religion = fraticelli
+		OR = {
+			is_theocracy = yes
+			government = playable_theocracy_government
+		}
 		rtp_is_theocracy_government = yes
-		d_fraticelli = {
-			holder_scope = {
-				is_within_diplo_range = ROOT
-			}
+		rightful_religious_head_scope = {
+			has_landed_title = d_fraticelli #not under rule of antipope
+			#I think I forgot that fraticelli has a different title, so events don't work...
+			is_within_diplo_range = ROOT #prevent game from not appointing cardinals any more (india)
 		}
-		
-		NOT = {
-			top_liege = {
-				any_vassal = {
-					any_claim = {
-						title = d_fraticelli
-					}
-				}
-			}
-		}
+	}
+	
+	gain_effect = {
+		add_trait = PDP_cardinal
 	}
 	
 	death_effect = {
@@ -134,18 +164,7 @@ title_fraticelli_cardinal = {
 			}
 		}
 	}
-
-	lose_effect = {
-		k_papal_state = {
-			holder_scope = {
-				subtract_variable = {
-					which = rtp_cardinals
-					value = 1
-				}
-			}
-		}
-	}
-
+	
 	retire_effect = {
 		k_papal_state = {
 			holder_scope = {
@@ -157,5 +176,95 @@ title_fraticelli_cardinal = {
 		}
 	}
 
+	lose_effect = {
+		remove_trait = PDP_cardinal
+		k_papal_state = {
+			holder_scope = {
+				subtract_variable = {
+					which = rtp_cardinals
+					value = 1
+				}
+			}
+		}
+	}
+	message = yes
+}
+
+title_cardinal_dean = {
+	religion = catholic
+	revoke_allowed = no
+	grant_limit = 1
+	realm_in_name = no
+	show_as_title = yes
+	opinion_effect = 10
+	dignity = 0.92	#must be higher than cardinal (and nephew)
+	monthly_salary = 0.5
+	monthly_prestige = 0.5
+	monthly_piety = 0.25
+	allow = {
+		religion = catholic
+		has_minor_title = title_cardinal
+		# NOT = {
+			# PDP_cardinal = {
+				# AND = {
+					# is_older_than = ROOT
+					# age_diff = {who = ROOT years = 1}
+				# }
+			# }
+		# }
+	}
+	gain_effect = { #apparently, the AI appoints multiple cardinal deans. This might fix it?!
+		while = {
+			count = 9 #just in case...
+			limit = {
+				PDP_cardinal = {
+					has_minor_title = title_cardinal_dean
+					NOT = {character = PREV}
+				}
+			}
+			PDP_cardinal = {
+				limit = {
+					has_minor_title = title_cardinal_dean
+					NOT = {character = PREV}
+				}
+				remove_title = title_cardinal_dean
+			}
+		}
+	}
+	lose_effect = {
+	}
+	message = yes
+}
+
+
+title_papal_legate = {
+	religion = catholic
+	revoke_allowed = no
+	grant_limit = 3
+	realm_in_name = yes
+	show_as_title = yes
+	opinion_effect = 5
+	dignity = 0.1
+	monthly_salary = 0.2
+	monthly_prestige = 0.2
+	monthly_piety = 0.1
+	allow = {
+		religion = catholic
+		NOT = {
+			trait = excommunicated
+		}
+		PDP_is_theocracy = yes
+		independent = no
+		liege = {
+			religion = catholic
+			higher_tier_than = DUKE
+			NOT = {has_landed_title = k_papal_state}
+		}
+		PDP_has_no_antipope = yes
+	}
+	gain_effect = {
+	}
+	lose_effect = {
+	}
 	message = yes
 }
