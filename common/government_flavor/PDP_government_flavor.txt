@@ -1,0 +1,12 @@
+government_flavor = {
+	name = gov_theocracy
+	graphics = GFX_evt_heretic
+	priority = 2
+	trigger = {
+		OR = {
+			is_theocracy = yes
+			government = playable_theocracy_government
+			government = playable_non_catholic_theocracy_government
+		}
+	}
+}
