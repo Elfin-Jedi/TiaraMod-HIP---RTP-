@@ -1,0 +1,27 @@
+opinion_PDP_became_theocracy = {
+	opinion = 25
+	months = 12
+}
+PDP_opinion_rival_cardinal_excommunicated = {
+	opinion = 20
+	years = 10
+}
+PDP_opinion_vassal_cardinal_excommunicated = {
+	opinion = -40
+	years = 10
+}
+
+
+PDP_opinion_paid_curia_service = {
+	opinion = 10
+	years = 5
+}
+PDP_opinion_not_paid_curia_service = {
+	opinion = -15
+	years = 5
+}
+
+PDP_helped_me_into_office = {
+	opinion = 10
+	years = 100
+}
