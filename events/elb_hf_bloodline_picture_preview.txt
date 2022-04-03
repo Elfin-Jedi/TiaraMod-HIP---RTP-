@@ -1,0 +1,797 @@
+#--------------------------------------------------
+#------------------
+#------ Auto-generated events for previewing bloodline pictures
+namespace = ebl_hf_preview
+
+character_event = {
+	id = ebl_hf_preview.0
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_slavic_arrow
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.1
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_romuva_tree
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.2
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_roman
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.3
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_norse
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.4
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_midgard
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.5
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_african
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.6
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_longship
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.7
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_stoics
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.8
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_architect
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.9
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_builder
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.10
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_peace_builder
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.11
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_murder_builder
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.12
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_monumental
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.13
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_castellan
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.14
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_virgin
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.15
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_cross_1
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.16
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_cross_2
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.17
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_cross_wicked
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.18
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_cross_nestorian
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.19
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_cross_orthodox
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.20
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_cross_crusader
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.21
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_cross_crusader_wicked
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.22
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_cross_miaphysite
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.23
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_generic_pagan
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.24
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_hindu
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.25
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_buddhist
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.26
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_bacchant
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.27
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_zoroastrian
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.28
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_zun_sun
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.29
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_taoist
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.30
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_sunni
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.31
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_jewish
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.32
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_finnish_bearpaw
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.33
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_bull
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.34
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_horse
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.35
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_tengri_eagle
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.36
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_norse_wolf
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.37
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_lion
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.38
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_bucephalus
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.39
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_ashoka_lion
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.40
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_bloodthirsty
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.41
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_war_child
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.42
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_war_knight
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.43
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_murder_jester
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.44
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_murder_child
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.45
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_blessed_child
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.46
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_carolingian
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.47
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_fleur_de_lis_gold
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.48
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_fleur_de_lis
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.49
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_bon_candle
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.50
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_generic_hero
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.51
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_teutonic
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.52
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_african_waves
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.53
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_placeholder_symbol
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.54
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_placeholder_symbol_2
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.55
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_murder_peace
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.56
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_murder_rose
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.57
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_murder_war
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.58
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_peace
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.59
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_war
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.60
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_murder
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.61
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_ruthless
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.62
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_technology
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.63
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_munificent
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.64
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_family
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}
+character_event = {
+	id = ebl_hf_preview.65
+	desc = EVTDESC_ebl_hf_preview
+	picture = GFX_bloodlines_symbol_benevolent
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = ebl_hf_ok
+	}
+}

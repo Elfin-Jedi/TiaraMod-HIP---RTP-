@@ -1,0 +1,1392 @@
+namespace = ebl_hf
+# ebl_hf.8000 ~ 8999 Misc.
+character_event = {
+	id = ebl_hf.8000
+	
+	desc = EVTDESC_ebl_hf_8000
+	picture = GFX_evt_battle
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		# Create bloodline and generate event_target
+		character_event = { id = ebl_hf.5 }
+	}
+	
+	option = { # Yes manually enter a name
+		name = ebl_bloodline_yes_no_1
+		hidden_effect = {
+			event_target:ebl_bloodline_target = { prompt_name = { player = from type = RENAME_CHARACTER_MESSAGE } }
+		}
+	}
+	
+	option = { # Don't manually enter a name
+		name = ebl_bloodline_yes_no_0
+	}
+}
+
+# ebl_hf.9000 ~ 9999 Used for GUI
+#------------------------------------------------------
+#------------------
+#------- Confirm creation
+narrative_event = {
+	id = ebl_hf.9000
+	
+	desc = EVTDESC_ebl_hf_9000
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+
+	option = {
+		name = ebl_bloodline_yes_no_1
+		character_event = { id = ebl_hf.8000 }
+	}
+	
+	option = {
+		name = ebl_bloodline_yes_no_0
+		narrative_event = { id = ebl_hf.9001  }
+	}
+	
+}
+#------------------------------------------------------
+#------------------
+#------- Creator main menu pg.1
+narrative_event = {
+	id = ebl_hf.9001
+	
+	desc = EVTDESC_ebl_hf_9001
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+
+	option = {
+		name = ebl_hf_opt_generate_bloodline
+		# Create bloodline and generate event_target
+		narrative_event = { id = ebl_hf.9000 tooltip = ebl_hf_tooltip_generate_bloodline}
+	}
+	
+	option = {
+		name = ebl_hf_opt_change_picture
+		narrative_event = { id = ebl_hf.9101 tooltip = ebl_hf_tooltip_change_picture }
+	}
+	
+	option = {
+		name = ebl_hf_opt_change_inheritance
+		narrative_event = { id = ebl_hf.9201 tooltip = ebl_hf_tooltip_change_inheritance }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9002 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+
+#------------------------------------------------------
+#------------------
+#------- Creator main menu pg.2
+narrative_event = {
+	id = ebl_hf.9002
+	
+	desc = EVTDESC_ebl_hf_9002
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_hf_opt_change_matrilineal_override
+		narrative_event = { id = ebl_hf.9301 tooltip = ebl_hf_tooltip_change_matrilineal_override }
+	}
+	
+	option = {
+		name = ebl_hf_opt_change_allow_bastards
+		narrative_event = { id = ebl_hf.9401 tooltip = ebl_hf_tooltip_change_allow_bastards }
+	}
+	
+	option = {
+		name = ebl_hf_opt_change_name
+		narrative_event = { id = ebl_hf.9501 tooltip = ebl_hf_tooltip_change_name }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9003 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+
+#------------------------------------------------------
+#------------------
+#------- Creator main menu pg.3
+narrative_event = {
+	id = ebl_hf.9003
+	
+	desc = EVTDESC_ebl_hf_9003
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_hf_opt_change_effect
+		narrative_event = { id = ebl_hf.9601 tooltip = ebl_hf_tooltip_change_effect }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture category pg. 1
+narrative_event = {
+	id = ebl_hf.9101
+	
+	desc = EVTDESC_ebl_hf_9101
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_hf_opt_picture_cultural		
+		narrative_event = { id = ebl_hf.9111 tooltip = ebl_hf_tooltip_picture_cultural }
+	}
+	
+	option = {
+		name = ebl_hf_opt_picture_building
+		narrative_event = { id = ebl_hf.9121 tooltip = ebl_hf_tooltip_picture_building }
+	}
+	
+	option = {
+		name = ebl_hf_opt_picture_religion
+		narrative_event = { id = ebl_hf.9131 tooltip = ebl_hf_tooltip_picture_religion }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9102 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture category pg. 2
+narrative_event = {
+	id = ebl_hf.9102
+	
+	desc = EVTDESC_ebl_hf_9102
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_hf_opt_picture_animal
+		narrative_event = { id = ebl_hf.9141 tooltip = ebl_hf_tooltip_picture_animal }
+	}
+	
+	option = {
+		name = ebl_hf_opt_picture_character
+		narrative_event = { id = ebl_hf.9151 tooltip = ebl_hf_tooltip_picture_character }
+	}
+	
+	option = {
+		name = ebl_hf_opt_picture_other
+		narrative_event = { id = ebl_hf.9161 tooltip = ebl_hf_tooltip_picture_other }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9101 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Cultural Category pg. 1
+narrative_event = {
+	id = ebl_hf.9111
+	
+	desc = EVTDESC_ebl_hf_9111
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_0
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 0 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.0 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_1
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 1 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.1 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_2
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 2 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.2 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9112 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Cultural Category pg. 2
+narrative_event = {
+	id = ebl_hf.9112
+	
+	desc = EVTDESC_ebl_hf_9112
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_3
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 3 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.3 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_4
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 4 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.4 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_5
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 5 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.5 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9113 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Cultural Category pg. 3
+narrative_event = {
+	id = ebl_hf.9113
+	
+	desc = EVTDESC_ebl_hf_9113
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_6
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 6 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.6 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9111 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Building Category pg. 1
+narrative_event = {
+	id = ebl_hf.9121
+	
+	desc = EVTDESC_ebl_hf_9121
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_7
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 7 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.7 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_8
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 8 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.8 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_9
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 9 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.9 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9122 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Building Category pg. 2
+narrative_event = {
+	id = ebl_hf.9122
+	
+	desc = EVTDESC_ebl_hf_9122
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_10
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 10 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.10 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_11
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 11 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.11 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_12
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 12 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.12 }
+
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9123 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Building Category pg. 3
+narrative_event = {
+	id = ebl_hf.9123
+	
+	desc = EVTDESC_ebl_hf_9123
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_13
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 13 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.13 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9121 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Religion Category pg. 1
+narrative_event = {
+	id = ebl_hf.9131
+	
+	desc = EVTDESC_ebl_hf_9131
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_14
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 14 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.14 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_15
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 15 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.15 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_16
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 16 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.16 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9132 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Religion Category pg. 2
+narrative_event = {
+	id = ebl_hf.9132
+	
+	desc = EVTDESC_ebl_hf_9132
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_17
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 17 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.17 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_18
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 18 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.18 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_19
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 19 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.19 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9133 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Religion Category pg. 3
+narrative_event = {
+	id = ebl_hf.9133
+	
+	desc = EVTDESC_ebl_hf_9133
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_20
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 20 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.20 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_21
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 21 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.21 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_22
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 22 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.22 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9134 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Religion Category pg. 4
+narrative_event = {
+	id = ebl_hf.9134
+	
+	desc = EVTDESC_ebl_hf_9134
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_23
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 23 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.23 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_24
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 24 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.24 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_25
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 25 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.25 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9135 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Religion Category pg. 5
+narrative_event = {
+	id = ebl_hf.9135
+	
+	desc = EVTDESC_ebl_hf_9135
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_26
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 26 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.26 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_27
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 27 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.27 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_28
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 28 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.28 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9136 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Religion Category pg. 6
+narrative_event = {
+	id = ebl_hf.9136
+	
+	desc = EVTDESC_ebl_hf_9136
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_29
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 29 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.29 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_30
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 30 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.30 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_31
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 31 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.31 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9131 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Animal Category pg. 1
+narrative_event = {
+	id = ebl_hf.9141
+	
+	desc = EVTDESC_ebl_hf_9141
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_32
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 32 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.32 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_33
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 33 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.33 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_34
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 34 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.34 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9142 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Animal Category pg. 2
+narrative_event = {
+	id = ebl_hf.9142
+	
+	desc = EVTDESC_ebl_hf_9142
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_35
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 35 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.35 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_36
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 36 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.36 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_37
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 37 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.37 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9143 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Animal Category pg. 3
+narrative_event = {
+	id = ebl_hf.9143
+	
+	desc = EVTDESC_ebl_hf_9143
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_38
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 38 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.38 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_39
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 39 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		
+		character_event = { id = ebl_hf_preview.39 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9141 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Character Category pg. 1
+narrative_event = {
+	id = ebl_hf.9151
+	
+	desc = EVTDESC_ebl_hf_9151
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_40
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 40 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.40 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_41
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 41 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.41 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_42
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 42 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.42 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9152 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Character Category pg. 2
+narrative_event = {
+	id = ebl_hf.9152
+	
+	desc = EVTDESC_ebl_hf_9152
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_43
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 43 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.43 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_44
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 44 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.44 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_45
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 45 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.45 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9151 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Other Category pg. 1
+narrative_event = {
+	id = ebl_hf.9161
+	
+	desc = EVTDESC_ebl_hf_9161
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_46
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 46 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.46 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_47
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 47 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.47 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_48
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 48 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.48 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9162 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Other Category pg. 2
+narrative_event = {
+	id = ebl_hf.9162
+	
+	desc = EVTDESC_ebl_hf_9162
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_49
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 49 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.49 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_50
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 50 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.50 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_51
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 51 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.51 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9163 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Other Category pg. 3
+narrative_event = {
+	id = ebl_hf.9163
+	
+	desc = EVTDESC_ebl_hf_9163
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_52
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 52 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.52 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_53
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 53 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.53 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_54
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 54 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.54 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9164 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Other Category pg. 4
+narrative_event = {
+	id = ebl_hf.9164
+	
+	desc = EVTDESC_ebl_hf_9164
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_55
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 55 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.55 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_56
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 56 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.56 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_57
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 57 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.57 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9165 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Other Category pg. 5
+narrative_event = {
+	id = ebl_hf.9165
+	
+	desc = EVTDESC_ebl_hf_9165
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_58
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 58 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.58 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_59
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 59 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.59 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_60
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 60 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		
+		character_event = { id = ebl_hf_preview.60 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9166 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Other Category pg. 6
+narrative_event = {
+	id = ebl_hf.9166
+	
+	desc = EVTDESC_ebl_hf_9166
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_61
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 61 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.61 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_62
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 62 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.62 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_63
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 63 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.63 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9167 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select picture Other Category pg. 7
+narrative_event = {
+	id = ebl_hf.9167
+	
+	desc = EVTDESC_ebl_hf_9167
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_picture_64
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 64 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.64 }
+	}
+	
+	option = {
+		name = ebl_bloodline_picture_65
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_picture value = 65 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+		character_event = { id = ebl_hf_preview.65 }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9161 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select inheritance pg. 1
+narrative_event = {
+	id = ebl_hf.9201
+	
+	desc = EVTDESC_ebl_hf_9201
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_inheritance_0
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_inheritance value = 0 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+	}
+	
+	option = {
+		name = ebl_bloodline_inheritance_1
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_inheritance value = 1 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+	}
+	
+	option = {
+		name = ebl_bloodline_inheritance_2
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_inheritance value = 2 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+	}
+	
+	# Next page
+	#option = {
+	#	name = ebl_hf_next_page
+	#	narrative_event = { id = ebl_hf.9202 tooltip = ebl_hf_tooltip_next_page }
+	#}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select inheritance pg. 2
+narrative_event = {
+	id = ebl_hf.9202
+	
+	desc = EVTDESC_ebl_hf_9202
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	#option = {
+	#	name = ebl_bloodline_inheritance_3
+	#	hidden_effect = { set_variable = { which = ebl_generate_bloodline_inheritance value = 3 } }
+	#	narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+	#}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9201 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator enable/disable matrilineal_override pg. 1
+narrative_event = {
+	id = ebl_hf.9301
+	
+	desc = EVTDESC_ebl_hf_9301
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_yes_no_0
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_matrilineal_override value = 0 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+	}
+	
+	option = {
+		name = ebl_bloodline_yes_no_1
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_matrilineal_override value = 1 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator allow/disallow bastards pg. 1
+narrative_event = {
+	id = ebl_hf.9401
+	
+	desc = EVTDESC_ebl_hf_9401
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_yes_no_0
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_allow_bastards value = 0 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+	}
+	
+	option = {
+		name = ebl_bloodline_yes_no_1
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_allow_bastards value = 1 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select name pg. 1
+narrative_event = {
+	id = ebl_hf.9501
+	
+	desc = EVTDESC_ebl_hf_9501
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_name_0
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_name value = 0 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+	}
+	
+	option = {
+		name = ebl_bloodline_name_1
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_name value = 1 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+	}
+	option = {
+		name = ebl_bloodline_name_2
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_name value = 2 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+	}
+	# Next page
+	#option = {
+	#	name = ebl_hf_next_page
+	#	narrative_event = { id = ebl_hf.9502 tooltip = ebl_hf_tooltip_next_page }
+	#}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select effects pg. 1
+narrative_event = {
+	id = ebl_hf.9601
+	
+	desc = EVTDESC_ebl_hf_9601
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_effect_0
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_effects value = 0 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+	}
+	
+	option = {
+		name = ebl_bloodline_effect_1
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_effects value = 1 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+	}
+	
+	option = {
+		name = ebl_bloodline_effect_2
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_effects value = 2 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9602 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- Creator Select effects pg. 2
+narrative_event = {
+	id = ebl_hf.9602
+	
+	desc = EVTDESC_ebl_hf_9602
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = ebl_bloodline_effect_3
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_effects value = 3 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+	}
+	
+	option = {
+		name = ebl_bloodline_effect_4
+		hidden_effect = { set_variable = { which = ebl_generate_bloodline_effects value = 4 } }
+		narrative_event = { id = ebl_hf.9001 tooltip = ebl_hf_select_option_tooltip }
+	}
+	
+	# Next page
+	option = {
+		name = ebl_hf_next_page
+		narrative_event = { id = ebl_hf.9601 tooltip = ebl_hf_tooltip_next_page }
+	}
+}
+#------------------------------------------------------
+#------------------
+#------- BLANK
+

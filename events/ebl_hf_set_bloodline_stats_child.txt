@@ -1,0 +1,415 @@
+#--------------------------------------------------
+#------------------
+#------ Auto-generated events for assigning bloodline stats to children
+namespace = ebl_hf
+
+# Requires global event_target:ebl_bloodline_target to be set
+character_event = {
+	id = ebl_hf.101
+	hide_window = yes
+	is_triggered_only = yes
+
+	# Requires global event_target:ebl_bloodline_target to be set
+	immediate = {
+		remove_character_modifier = ebl_bloodline_diplomacy_1
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_diplomacy_1 } }
+			add_character_modifier = { name = ebl_bloodline_diplomacy_1 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_martial_1
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_martial_1 } }
+			add_character_modifier = { name = ebl_bloodline_martial_1 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_stewardship_1
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_stewardship_1 } }
+			add_character_modifier = { name = ebl_bloodline_stewardship_1 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_intrigue_1
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_intrigue_1 } }
+			add_character_modifier = { name = ebl_bloodline_intrigue_1 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_learning_1
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_learning_1 } }
+			add_character_modifier = { name = ebl_bloodline_learning_1 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_personal_skill_1
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_personal_skill_1 } }
+			add_character_modifier = { name = ebl_bloodline_personal_skill_1 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_piety_1
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_piety_1 } }
+			add_character_modifier = { name = ebl_bloodline_piety_1 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_prestige_1
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_prestige_1 } }
+			add_character_modifier = { name = ebl_bloodline_prestige_1 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_diplomacy_2
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_diplomacy_2 } }
+			add_character_modifier = { name = ebl_bloodline_diplomacy_2 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_martial_2
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_martial_2 } }
+			add_character_modifier = { name = ebl_bloodline_martial_2 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_stewardship_2
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_stewardship_2 } }
+			add_character_modifier = { name = ebl_bloodline_stewardship_2 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_intrigue_2
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_intrigue_2 } }
+			add_character_modifier = { name = ebl_bloodline_intrigue_2 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_learning_2
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_learning_2 } }
+			add_character_modifier = { name = ebl_bloodline_learning_2 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_personal_skill_2
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_personal_skill_2 } }
+			add_character_modifier = { name = ebl_bloodline_personal_skill_2 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_piety_2
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_piety_2 } }
+			add_character_modifier = { name = ebl_bloodline_piety_2 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_prestige_2
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_prestige_2 } }
+			add_character_modifier = { name = ebl_bloodline_prestige_2 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_diplomacy_3
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_diplomacy_3 } }
+			add_character_modifier = { name = ebl_bloodline_diplomacy_3 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_martial_3
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_martial_3 } }
+			add_character_modifier = { name = ebl_bloodline_martial_3 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_stewardship_3
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_stewardship_3 } }
+			add_character_modifier = { name = ebl_bloodline_stewardship_3 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_intrigue_3
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_intrigue_3 } }
+			add_character_modifier = { name = ebl_bloodline_intrigue_3 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_learning_3
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_learning_3 } }
+			add_character_modifier = { name = ebl_bloodline_learning_3 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_personal_skill_3
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_personal_skill_3 } }
+			add_character_modifier = { name = ebl_bloodline_personal_skill_3 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_piety_3
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_piety_3 } }
+			add_character_modifier = { name = ebl_bloodline_piety_3 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_prestige_3
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_prestige_3 } }
+			add_character_modifier = { name = ebl_bloodline_prestige_3 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_diplomacy_4
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_diplomacy_4 } }
+			add_character_modifier = { name = ebl_bloodline_diplomacy_4 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_martial_4
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_martial_4 } }
+			add_character_modifier = { name = ebl_bloodline_martial_4 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_stewardship_4
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_stewardship_4 } }
+			add_character_modifier = { name = ebl_bloodline_stewardship_4 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_intrigue_4
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_intrigue_4 } }
+			add_character_modifier = { name = ebl_bloodline_intrigue_4 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_learning_4
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_learning_4 } }
+			add_character_modifier = { name = ebl_bloodline_learning_4 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_personal_skill_4
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_personal_skill_4 } }
+			add_character_modifier = { name = ebl_bloodline_personal_skill_4 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_piety_4
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_piety_4 } }
+			add_character_modifier = { name = ebl_bloodline_piety_4 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_prestige_4
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_prestige_4 } }
+			add_character_modifier = { name = ebl_bloodline_prestige_4 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_diplomacy_5
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_diplomacy_5 } }
+			add_character_modifier = { name = ebl_bloodline_diplomacy_5 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_martial_5
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_martial_5 } }
+			add_character_modifier = { name = ebl_bloodline_martial_5 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_stewardship_5
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_stewardship_5 } }
+			add_character_modifier = { name = ebl_bloodline_stewardship_5 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_intrigue_5
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_intrigue_5 } }
+			add_character_modifier = { name = ebl_bloodline_intrigue_5 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_learning_5
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_learning_5 } }
+			add_character_modifier = { name = ebl_bloodline_learning_5 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_personal_skill_5
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_personal_skill_5 } }
+			add_character_modifier = { name = ebl_bloodline_personal_skill_5 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_piety_5
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_piety_5 } }
+			add_character_modifier = { name = ebl_bloodline_piety_5 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_prestige_5
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_prestige_5 } }
+			add_character_modifier = { name = ebl_bloodline_prestige_5 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_diplomacy_6
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_diplomacy_6 } }
+			add_character_modifier = { name = ebl_bloodline_diplomacy_6 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_martial_6
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_martial_6 } }
+			add_character_modifier = { name = ebl_bloodline_martial_6 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_stewardship_6
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_stewardship_6 } }
+			add_character_modifier = { name = ebl_bloodline_stewardship_6 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_intrigue_6
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_intrigue_6 } }
+			add_character_modifier = { name = ebl_bloodline_intrigue_6 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_learning_6
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_learning_6 } }
+			add_character_modifier = { name = ebl_bloodline_learning_6 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_personal_skill_6
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_personal_skill_6 } }
+			add_character_modifier = { name = ebl_bloodline_personal_skill_6 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_piety_6
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_piety_6 } }
+			add_character_modifier = { name = ebl_bloodline_piety_6 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_prestige_6
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_prestige_6 } }
+			add_character_modifier = { name = ebl_bloodline_prestige_6 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_diplomacy_7
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_diplomacy_7 } }
+			add_character_modifier = { name = ebl_bloodline_diplomacy_7 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_martial_7
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_martial_7 } }
+			add_character_modifier = { name = ebl_bloodline_martial_7 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_stewardship_7
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_stewardship_7 } }
+			add_character_modifier = { name = ebl_bloodline_stewardship_7 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_intrigue_7
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_intrigue_7 } }
+			add_character_modifier = { name = ebl_bloodline_intrigue_7 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_learning_7
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_learning_7 } }
+			add_character_modifier = { name = ebl_bloodline_learning_7 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_personal_skill_7
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_personal_skill_7 } }
+			add_character_modifier = { name = ebl_bloodline_personal_skill_7 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_piety_7
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_piety_7 } }
+			add_character_modifier = { name = ebl_bloodline_piety_7 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_prestige_7
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_prestige_7 } }
+			add_character_modifier = { name = ebl_bloodline_prestige_7 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_diplomacy_8
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_diplomacy_8 } }
+			add_character_modifier = { name = ebl_bloodline_diplomacy_8 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_martial_8
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_martial_8 } }
+			add_character_modifier = { name = ebl_bloodline_martial_8 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_stewardship_8
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_stewardship_8 } }
+			add_character_modifier = { name = ebl_bloodline_stewardship_8 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_intrigue_8
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_intrigue_8 } }
+			add_character_modifier = { name = ebl_bloodline_intrigue_8 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_learning_8
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_learning_8 } }
+			add_character_modifier = { name = ebl_bloodline_learning_8 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_personal_skill_8
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_personal_skill_8 } }
+			add_character_modifier = { name = ebl_bloodline_personal_skill_8 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_piety_8
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_piety_8 } }
+			add_character_modifier = { name = ebl_bloodline_piety_8 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_prestige_8
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_prestige_8 } }
+			add_character_modifier = { name = ebl_bloodline_prestige_8 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_diplomacy_9
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_diplomacy_9 } }
+			add_character_modifier = { name = ebl_bloodline_diplomacy_9 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_martial_9
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_martial_9 } }
+			add_character_modifier = { name = ebl_bloodline_martial_9 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_stewardship_9
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_stewardship_9 } }
+			add_character_modifier = { name = ebl_bloodline_stewardship_9 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_intrigue_9
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_intrigue_9 } }
+			add_character_modifier = { name = ebl_bloodline_intrigue_9 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_learning_9
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_learning_9 } }
+			add_character_modifier = { name = ebl_bloodline_learning_9 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_personal_skill_9
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_personal_skill_9 } }
+			add_character_modifier = { name = ebl_bloodline_personal_skill_9 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_piety_9
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_piety_9 } }
+			add_character_modifier = { name = ebl_bloodline_piety_9 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_prestige_9
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_prestige_9 } }
+			add_character_modifier = { name = ebl_bloodline_prestige_9 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_diplomacy_10
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_diplomacy_10 } }
+			add_character_modifier = { name = ebl_bloodline_diplomacy_10 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_martial_10
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_martial_10 } }
+			add_character_modifier = { name = ebl_bloodline_martial_10 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_stewardship_10
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_stewardship_10 } }
+			add_character_modifier = { name = ebl_bloodline_stewardship_10 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_intrigue_10
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_intrigue_10 } }
+			add_character_modifier = { name = ebl_bloodline_intrigue_10 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_learning_10
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_learning_10 } }
+			add_character_modifier = { name = ebl_bloodline_learning_10 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_personal_skill_10
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_personal_skill_10 } }
+			add_character_modifier = { name = ebl_bloodline_personal_skill_10 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_piety_10
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_piety_10 } }
+			add_character_modifier = { name = ebl_bloodline_piety_10 days = -1 }
+		}
+		remove_character_modifier = ebl_bloodline_prestige_10
+		if = {
+			limit = { event_target:ebl_bloodline_target = { has_bloodline_flag = ebl_prestige_10 } }
+			add_character_modifier = { name = ebl_bloodline_prestige_10 days = -1 }
+		}
+	}
+}

@@ -1,0 +1,219 @@
+namespace = ebl_hf
+
+character_event = {
+	id = ebl_hf.1
+	
+	hide_window = yes	
+	is_triggered_only = yes
+	
+	immediate = {
+		# Declare variables to be used for generation
+		set_variable = { which = ebl_generate_bloodline_picture value = 50 }
+		set_variable = { which = ebl_generate_bloodline_inheritance value = 0 }
+		set_variable = { which = ebl_generate_bloodline_matrilineal_override value = 0 }
+		set_variable = { which = ebl_generate_bloodline_allow_bastards value = 0 }
+		set_variable = { which = ebl_generate_bloodline_name value = 0 }
+		set_variable = { which = ebl_generate_bloodline_effects value = 0 }
+		
+		# Mark as bloodline founder
+		set_character_flag = ebl_bloodline_founder
+		
+		if = {
+			limit = { ai = no }
+			# Launch GUI
+			narrative_event = { id = ebl_hf.9001 }
+		}
+		else = {
+			# Let AI randomly create a bloodline
+			character_event = { id = ebl_hf.10 }
+		}
+		
+	}
+}
+
+# Event ebl_hf.2 => Auto-generated event for assigning ebl_bloodline_id flags to bloodlines
+# Event ebl_hf.3 => Auto-generated event for assigning event_targets to bloodlines
+# Event ebl_hf.9001 => Opens GUI for bloodline creation user input
+# Event ebl_hf.5 ~ 9 => Auto generated event for creating bloodline and assigning event_target
+# Evebt ebl_hf.10 => Auto generated event for AI's bloodline creation (fully random)
+# ebl_hf.9000 ~ 9999 Used for GUI
+
+#------------------------------------------------------
+#------------------
+#------- Pass on bloodline on birth
+character_event = {
+	id = ebl_hf.1000
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = handle_bloodline_passing
+		if = {
+			limit = {
+				OR = {
+					father = { any_owned_bloodline = { has_bloodline_flag = is_ebl_bloodline } }
+					mother = { any_owned_bloodline = { has_bloodline_flag = is_ebl_bloodline } }
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						father = { any_owned_bloodline = { has_bloodline_flag = is_ebl_bloodline } }
+						mother = { any_owned_bloodline = { has_bloodline_flag = is_ebl_bloodline } }
+					}
+				}
+				father = {
+					set_variable = { which = global_fa_ebl which = active_ebl_bloodline }
+					any_child = {
+						limit = {
+							has_character_flag = handle_bloodline_passing
+						}				
+						set_variable = { which = f_bloodline_id which = global_fa_ebl }				
+					}
+				}
+				mother = {
+					set_variable = { which = global_mo_ebl which = active_ebl_bloodline }
+					any_child = {
+						limit = {
+							has_character_flag = handle_bloodline_passing
+						}				
+						set_variable = { which = m_bloodline_id which = global_mo_ebl }				
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { which = f_bloodline_id which = m_bloodline_id }
+					}
+					character_event = {
+						id = ebl_hf.1001
+					}
+				}
+				else = {
+					character_event = {
+						id = ebl_hf.1003
+					}
+				}				
+			}
+			else_if = {
+				limit = {
+					father = { any_owned_bloodline = { has_bloodline_flag = is_ebl_bloodline } }
+				}
+				# Pass on the bloodline
+				father = {
+					set_variable = { which = global_fa_ebl which = active_ebl_bloodline }
+					any_child = {
+						limit = {
+							has_character_flag = handle_bloodline_passing
+						}				
+						set_variable = { which = f_bloodline_id which = global_fa_ebl }				
+					}
+				}
+				character_event = {
+					id = ebl_hf.1001
+				}
+	
+			}
+			else_if = {
+				limit = {
+					mother = { any_owned_bloodline = { has_bloodline_flag = is_ebl_bloodline } }
+				}
+				# Pass on the bloodline
+				mother = {
+					set_variable = { which = global_mo_ebl which = active_ebl_bloodline }
+					any_child = {
+						limit = {
+							has_character_flag = handle_bloodline_passing
+						}				
+						set_variable = { which = m_bloodline_id which = global_mo_ebl }				
+					}
+				}
+				character_event = {
+					id = ebl_hf.1002
+				}
+			}
+		}
+		clr_character_flag = handle_bloodline_passing		
+	}
+}
+
+#------------------------------------------------------
+#------------------
+#------- Pass on bloodline from father's side
+character_event = {
+	id = ebl_hf.1001
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {	
+		# Set-up active_ebl_bloodline
+		set_variable = { which = active_ebl_bloodline which = f_bloodline_id }
+		
+		character_event = {
+			id = ebl_hf.1004
+		}
+	}
+}
+
+#------------------------------------------------------
+#------------------
+#------- Pass on bloodline from mother's side
+character_event = {
+	id = ebl_hf.1002
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {	
+		# Set-up active_ebl_bloodline
+		set_variable = { which = active_ebl_bloodline which = m_bloodline_id }
+		
+		character_event = {
+			id = ebl_hf.1004
+		}
+	}
+}
+
+#------------------------------------------------------
+#------------------
+#------- Both parents have bloodlines to pass on
+#TODO
+character_event = {
+	id = ebl_hf.1003
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+		  50 = { #-- Father's bloodline
+			character_event = {
+				id = ebl_hf.1001
+			}
+		  }
+		  50 = { #-- Mother's bloodline
+			character_event = {
+				id = ebl_hf.1002
+			}
+		  }
+		}
+	}
+}
+
+#------------------------------------------------------
+#------------------
+#------- Finalize bloodline inheritance
+character_event = {
+	id = ebl_hf.1004
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {				
+		# Remove parent bloodline values to free space
+		set_variable = { which = f_bloodline_id value = 0 }
+		set_variable = { which = m_bloodline_id value = 0 }
+		
+		# Get active bloodline
+		character_event = { id = ebl_hf.99 }
+		
+		# Distribute stats
+		character_event = { id = ebl_hf.101 }
+	}
+}
