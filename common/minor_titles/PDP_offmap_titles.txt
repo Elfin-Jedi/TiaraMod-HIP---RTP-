@@ -1,0 +1,6 @@
+title_PDP_church_holder = {			# this title is not granted by a character to another, it is automatically obtained						# when one character becomes emperor of china. It is used solely to identify them as such
+	is_offmap_holder = yes
+	offmap_power = offmap_PDP_church
+	show_as_title = yes
+	dignity = 1000 				# this should always be higher than 0, or it won't be applied in all cases
+}

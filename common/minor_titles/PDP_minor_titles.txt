@@ -1,0 +1,183 @@
+########################################################
+# MINOR TITLES
+# Characters can have any number of these
+########################################################
+#	grant_limit: Max number of holders.
+#	realm_in_name: Append the name of the country after the title (Queen [of Sweden])
+#	allowed_to_hold: conditions for the character to hold the title
+#	allowed_to_grant: conditions for a ruler to grant the title
+#	regent: This is the title for regents (not really "minor")
+#	gain_effect: fires when the title is granted
+#	lose_effect: fires when a title is lost through most causes
+#	retire_effect: fires when a title is lost due to the character stepping down
+#	death_effect: fires when a title is lost due to the character dying
+#	message: should fire a message to the its owner when set
+#	The other fields are all character modifiers.
+
+title_PDP_archdeacon = {
+	is_high_prio = yes
+	dignity = 1.0
+	realm_in_name = yes
+	show_as_title = yes
+	grant_limit = 1
+	revoke_allowed = no
+	opinion_effect = 10
+
+	monthly_salary = 0.1
+	monthly_prestige = 0.3
+	allowed_to_hold = {
+		is_adult = yes
+		is_female = no
+		religion = catholic
+		NOT = { trait = excommunicated }
+		custom_tooltip = {
+			text = PDP_archdeacon_condition
+			has_character_flag = PDP_heir_of_@FROM
+		}
+	}
+	allowed_to_grant = {
+		ai = no
+		government = playable_theocracy_government
+		NOT = {has_landed_title = k_papal_state}
+	}
+	gain_effect = {
+		add_trait = cannot_marry
+		add_trait = PDP_archdeacon
+	}
+	lose_effect = {
+		remove_trait = PDP_archdeacon
+		remove_trait = cannot_marry
+	}
+	message = yes
+}
+
+
+title_PDP_papal_palatinus = {
+	is_high_prio = no
+	dignity = 0.9
+	realm_in_name = no
+	show_as_title = no
+	grant_limit = 5
+	revoke_allowed = no
+	opinion_effect = 5
+
+	monthly_salary = 0.5
+	monthly_prestige = 0.5
+	monthly_piety = 0.5
+	allowed_to_hold = {
+		is_adult = yes
+		is_female = no
+		is_ruler = no
+		religion = catholic
+		NOT = {trait = excommunicated}
+		custom_tooltip = {
+			text = PDP_papal_palatinus_condition
+			has_character_flag = PDP_allowed_as_palatinus
+		}
+		#NOT = {has_job_title = job_spiritual}
+	}
+	allowed_to_grant = {
+		has_landed_title = k_papal_state
+		religion = catholic
+	}
+	revoke_trigger = {
+		OR = {
+			trait = excommunicated
+			NOT = {religion = catholic}
+		}
+	}
+	gain_effect = {
+	}
+	lose_effect = {
+		any_player = {
+			character_event = {id = PDPOFF.1}
+		}
+	}
+	death_effect = {
+		any_player = {
+			character_event = {id = PDPOFF.1}
+		}
+	}
+	retire_effect = {
+		any_player = {
+			character_event = {id = PDPOFF.1}
+		}
+	}
+	message = yes
+}
+
+
+title_PDP_city_guard_of_rome = {
+	is_high_prio = no
+	dignity = 0.7
+	realm_in_name = no
+	show_as_title = no
+	grant_limit = 1
+	revoke_allowed = yes
+	opinion_effect = 10
+
+	monthly_salary = 0.3
+	monthly_prestige = 0.5
+	monthly_piety = 0.1
+	allowed_to_hold = {
+		is_adult = yes
+		is_female = no
+		#is_ruler = no
+		religion = catholic
+		NOT = {trait = excommunicated}
+	}
+	allowed_to_grant = {
+		has_landed_title = k_papal_state
+		religion = catholic
+	}
+	revoke_trigger = {
+		OR = {
+			trait = excommunicated
+			NOT = {religion = catholic}
+		}
+	}
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+	death_effect = {
+	}
+	retire_effect = {
+	}
+	message = yes
+}
+
+title_PDP_canon = {
+	is_high_prio = yes
+	dignity = 0.1
+	realm_in_name = yes
+	show_as_title = no
+	grant_limit = 3
+	revoke_allowed = no
+	opinion_effect = 5
+
+	monthly_salary = 0.1
+	monthly_prestige = 0.25
+	allowed_to_hold = {
+		is_adult = yes
+		is_female = no
+		is_ruler = yes
+		OR = {
+			is_theocracy = yes
+			government = playable_theocracy_government
+		}
+	}
+	allowed_to_grant = {
+		higher_tier_than = BARON
+		OR = {
+			is_theocracy = yes
+			government = playable_theocracy_government
+		}
+		NOT = {has_landed_title = k_papal_state}
+	}
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+	message = yes
+}
