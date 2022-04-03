@@ -1,0 +1,138 @@
+#######################################
+#
+# PDP Conversion Events
+# (Flavour for Conversion Church Policy)
+# Currently disabled since its full of bugs. Weird.
+# 1. PDP.9991 seems to be fired for now reason whatsoever
+# 2. PDP.9993 crashes the game
+#######################################
+#
+# namespace = PDP
+#
+#
+# province_event = {
+# 	id = PDP.9991
+# 	desc = EVTDESCPDP.9991_a
+# 	desc = EVTDESCPDP.9991_b
+# 	desc = EVTDESCPDP.9991_c
+# 	desc = EVTDESCPDP.9991_d
+# 	picture = GFX_evt_bishop_byzantine
+#     is_triggered_only = yes
+# 	trigger = {
+#         has_province_modifier = PDP_currently_converted
+#         owner = {
+#             PDP_is_theocracy = yes
+#             religion = catholic
+#         }
+# 	}
+#     option = {
+# 		name = "ok"
+# 	}
+# 	option = {
+# 		name = EVTOPT_a_PDP.9991
+#         owner = {
+#     		wealth = -100
+#             piety = 20
+#         }
+# 	}
+#     option = {
+# 		name = EVTOPT_b_PDP.9991
+#         remove_province_modifier = {modifier = PDP_currently_converted}
+#
+# 	}
+# }
+#
+#
+# province_event = {
+# 	id = PDP.9992
+# 	desc = EVTDESCPDP.9992
+# 	picture = GFX_evt_bishop_byzantine
+#     is_triggered_only = yes
+# 	trigger = {
+#         has_province_modifier = PDP_currently_converted
+#         owner = {
+#             PDP_is_theocracy = yes
+#             religion = catholic
+#         }
+# 	}
+# 	option = {
+# 		name = EVTOPT_a_PDP.9992
+#         add_province_modifier = {name = highway_robber_band duration = -1}
+#         owner = {
+# 		    piety = -20
+#         }
+# 	}
+#     option = {
+# 		name = EVTOPT_b_PDP.9992
+#         remove_province_modifier = {modifier = PDP_currently_converted}
+# 	}
+#     after = {
+#         #can fire again...
+#         #province_event = {id = PDP.9992 days = 3650 random = 3650}
+#     }
+# }
+#
+#
+# province_event = {
+# 	id = PDP.9993
+# 	desc = EVTDESCPDP.9993
+# 	picture = GFX_evt_bishop_byzantine
+#     is_triggered_only = yes
+# 	trigger = {
+#         has_province_modifier = PDP_currently_converted
+#         owner = {
+#             PDP_is_theocracy = yes
+#             religion = catholic
+#             NOT = {trait = stressed}
+#         }
+# 	}
+# 	option = {
+# 		name = EVTOPT_a_PDP.9993
+#         owner = {
+#             add_trait = stressed
+#             random = {
+#                 chance = 10
+#                 change_learning  = 1
+#             }
+#     		piety = 20
+#         }
+# 	}
+#     option = {
+# 		name = EVTOPT_b_PDP.9993
+#         remove_province_modifier = {modifier = PDP_currently_converted}
+# 	}
+#     after = {
+#         #can fire again...
+#         #province_event = {id = PDP.9993 days = 3650 random = 3650}
+#     }
+# }
+#
+# province_event = {
+# 	id = PDP.99910
+# 	desc = EVTDESCPDP.99910
+# 	picture = GFX_evt_bishop_byzantine
+#     is_triggered_only = yes
+# 	trigger = {
+#         has_province_modifier = PDP_currently_converted
+#         owner = {
+#             PDP_is_theocracy = yes
+#             religion = catholic
+#         }
+# 	}
+# 	option = {
+# 		name = EVTOPT_a_PDP.99910
+#         religion = catholic
+#         remove_province_modifier = PDP_currently_converted
+#         owner = {
+#     		piety = 100
+#             if = {
+#                 limit = {
+#                     offmap_PDP_church = {
+#                         has_policy = PDP_church_policy_conversion
+#                     }
+#                 }
+#                 add_offmap_currency = {offmap = offmap_PDP_church value = 250}
+#             }
+#         }
+# 	}
+# }

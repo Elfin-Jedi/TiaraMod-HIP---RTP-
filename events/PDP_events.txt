@@ -1,0 +1,5583 @@
+#--------------------------------------------PDP------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------POPE_SUCCESSION-
+#-----------------------------------------------------------------------------------------------------
+namespace = PDP
+
+character_event = { #you've died
+    id = PDP.1
+	desc = EVTDESCPDP.1
+	only_rulers = yes
+	is_triggered_only = yes
+	picture = GFX_evt_death
+    option = {
+		name = EVTOPTAPDP.1
+    }
+}
+
+character_event = {
+    id = PDP.2 #non dynastic succession - enforce game over
+	desc = EVTDESCPDP.2
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_window = yes
+	picture = GFX_evt_council
+	immediate = {
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			culture = italian
+			religion = ROOT
+			female = no
+			age = 80
+		}
+		new_character = {
+			save_event_target_as = placeholder
+		}
+		any_demesne_title = { #give away all titles -> should result in game over
+			grant_title_no_opinion = event_target:placeholder
+		}
+	}
+    option = {
+		name = EVTOPTAPDP.2 #never visible...
+    }
+}
+#game over (non dynastic heir)
+
+character_event = {
+    id = PDP.3
+	desc = EVTDESCPDP.3
+	only_rulers = yes
+	ai = no
+	hide_window = yes
+	is_triggered_only = yes
+	picture = GFX_evt_council
+    option = {
+		name = OK
+		if = {
+			limit = {
+                OR = {
+    				government = playable_theocracy_government
+    				government = order_government
+    			}
+				ai = no
+				NOT = {has_law = succ_playable_catholic_bishopric}
+				NOT = {has_landed_title = k_papal_state}
+			}
+			primary_title = {
+				add_law = succ_playable_catholic_bishopric
+			}
+		}
+        if = {
+            limit = {
+                OR = {
+                    government = playable_non_catholic_theocracy_government
+                }
+                #NOT = {has_law = succ_playable_non_catholic_bishopric}
+                NOT = {religion = catholic}
+            }
+            primary_title = {
+                add_law = succ_playable_non_catholic_bishopric
+            }
+        }
+    }
+}
+#set playable bishopric succession
+
+character_event = {
+    id = PDP.5 #new pope elected, inform him
+	desc = EVTDESCPDP.5
+	is_triggered_only = yes
+	only_rulers = yes
+	picture = GFX_evt_papal_coronation
+	immediate = {
+		remove_trait = PDP_cardinal
+		add_trait = PDP_pope
+        remove_title = title_cardinal
+        remove_title = title_cardinal_dean
+        remove_title = title_cardinal_nephew
+		character_event = {id = PDP.270 days = 1}
+	}
+    option = {
+		name = EVTOPTAPDP.5
+		character_event = {id = PDP.61 days = 2}
+    }
+}
+#inform pope of election
+
+#trigger on: on_new_holder #wrong, also trigger on chronicle start...
+	#ROOT is the character
+    #FROM is the title
+    #FROMFROM is the old holder
+character_event = {
+    id = PDP.6 #new theocratic ruler
+	desc = EVTDESCPDP.6
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_window = yes
+	picture = GFX_evt_council
+    option = {
+		name = EVTOPTAPDP.6
+        if = {
+            limit = {
+                government = playable_theocracy_government
+                NOT = {religion = catholic}
+            }
+            set_government_type = playable_non_catholic_theocracy_government
+        }
+        if = {
+            limit = {
+                government = playable_non_catholic_theocracy_government
+                religion = catholic
+            }
+            set_government_type = playable_theocracy_government
+        }
+
+		if = { #only for theocracy government
+			limit = {
+				government = playable_theocracy_government
+			}
+			add_trait = PDP_playable_theocracy_ruler
+			remove_spouse = spouse
+			character_event = {id = PDP.3 days = 2} #2 day delay to wait for succession...
+	    }
+        if = { #only for order government
+			limit = {
+				government = order_government
+			}
+			remove_spouse = spouse
+            add_trait = celibate
+			character_event = {id = PDP.3 days = 2} #2 day delay to wait for succession...
+		}
+		if = { #only for papacy
+			limit = {
+				has_landed_title = k_papal_state
+			}
+			remove_trait = PDP_cardinal
+			add_trait = PDP_pope
+		}
+        if = { #only for non catholic theocracy government
+            limit = {
+                government = playable_non_catholic_theocracy_government
+            }
+            add_trait = PDP_playable_theocracy_ruler
+			remove_spouse = spouse
+            character_event = {id = PDP.3 days = 2} #2 day delay to wait for succession...
+        }
+    }
+}
+#new bishop cannot marry
+
+#trigger on: on_death
+	#ROOT is the dead character
+character_event = {
+    id = PDP.7 #implement own succession
+	desc = EVTDESCPDP.7
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_window = yes
+	picture = GFX_evt_council
+	immediate = {
+		remove_trait = PDP_cardinal #he is dead now...
+		if = { #is a theocracy
+			limit = {#only for theocracies
+				OR = {
+					is_theocracy = yes
+					government = playable_theocracy_government
+					government = playable_non_catholic_theocracy_government
+                    government = order_government
+				}
+			}
+			#Papal succession
+			if = {#is pope
+				limit = {
+					has_landed_title = k_papal_state
+				}
+				if = {
+					limit = {ai = no}
+					set_character_flag = PDP_i_used_to_be_a_player
+				}
+				activate_holy_see = yes
+				PDP_the_holy_see = {
+					save_event_target_as = the_holy_see
+					wealth = ROOT
+				}
+				clear_wealth = yes
+				abdicate_to = event_target:the_holy_see
+				any_artifact = {
+					transfer_artifact = {from = ROOT to = event_target:the_holy_see}
+				}
+				event_target:the_holy_see = {
+					set_name = "The Holy See"
+					character_event = {id = PDP.111 days = 2} #start conclave
+				}
+				any_player = { #inform of vacant seat.
+					limit = {religion = catholic}
+					character_event = {id = PDP.110 days = 1}
+				}
+				set_character_flag = PDP_this_was_the_last_pope
+			}
+
+			#Theocracy Succession
+			if = {#other ai catholic theocracy (player invested successor)
+				limit = {
+					NOT = {has_landed_title = k_papal_state}
+					ai = yes
+					#has_character_flag = PDP_human_pope_invested_successor
+                    #not a requirement anymore, since that covers more edge cases.
+				}
+				if = {
+					limit = {
+						any_courtier_or_vassal = {has_minor_title = title_PDP_archdeacon}
+					}
+					random_courtier_or_vassal = {
+						limit = {
+							has_minor_title = title_PDP_archdeacon
+						}
+						wealth = ROOT
+						ROOT = {
+							any_artifact = {
+								transfer_artifact = {from = ROOT to = PREV}
+							}
+							clear_wealth = yes
+							abdicate_to = PREV
+						}
+						character_event = {id = PDP.1} #inform of inheritance
+					}
+				}
+			}
+			if = {#a player ruled this theocracy
+				limit = {
+					#NOT = {has_landed_title = k_papal_state}
+					OR = {
+						has_character_flag = PDP_i_used_to_be_a_player
+						ai = no
+					}
+				}
+				if = {#successor is of same dynasty -> everything is fine...
+					limit = {
+						NOT = {has_character_flag = PDP_this_was_the_last_pope} #not for pope since he has a special succession mechanic
+						current_heir = {
+							dynasty = ROOT
+						}
+					}
+				}
+				else_if = {#any ruling family member alive
+					limit = {
+						any_dynasty_member = {
+							is_ruler = yes
+							higher_real_tier_than = BARON
+						}
+					}
+					#try to take the preferred heir, if there's any. Otherwise just pick someone suitable
+					random_dynasty_member = { #choose players heir
+						limit = { #has to be a ruler
+							is_ruler = yes
+							higher_real_tier_than = BARON
+						}
+						preferred_limit = { #prefer dedicated heir
+							religion = ROOT
+							OR = {
+								government = playable_theocracy_government
+                                government = playable_non_catholic_theocracy_government
+                                government = order_government
+								is_theocracy = yes
+							}
+							has_character_flag = PDP_playerheir_of_@ROOT
+						}
+						preferred_limit = { #prefer other theocrat (high rank first) (emperor)
+							tier = emperor
+							religion = ROOT
+							OR = {
+								government = playable_theocracy_government
+                                government = playable_non_catholic_theocracy_government
+								is_theocracy = yes
+							}
+						}
+						preferred_limit = { #prefer other theocrat (king)
+							tier = king
+							religion = ROOT
+							OR = {
+								government = playable_theocracy_government
+                                government = playable_non_catholic_theocracy_government
+								is_theocracy = yes
+							}
+						}
+						preferred_limit = { #prefer other theocrat (duke)
+							tier = duke
+							religion = ROOT
+							OR = {
+								government = playable_theocracy_government
+                                government = playable_non_catholic_theocracy_government
+								is_theocracy = yes
+							}
+						}
+						preferred_limit = { #prefer other theocrat (count)
+							tier = count
+							religion = ROOT
+							OR = {
+								government = playable_theocracy_government
+                                government = playable_non_catholic_theocracy_government
+								is_theocracy = yes
+							}
+						}
+                        preferred_limit = {
+                            religion_group = ROOT
+                            PDP_is_theocracy = yes
+                        }
+                        preferred_limit = {
+                            tier = emperor
+                            PDP_is_theocracy = yes
+                        }
+                        preferred_limit = {
+                            tier = king
+                            PDP_is_theocracy = yes
+                        }
+                        preferred_limit = {
+                            tier = duke
+                            PDP_is_theocracy = yes
+                        }
+						preferred_limit = {tier = emperor} #prefer high ranked dynasty members
+						preferred_limit = {tier = king}
+						preferred_limit = {tier = duke}
+						preferred_limit = { #rather a close relative
+							is_close_relative = ROOT
+						}
+						preferred_limit = { #rather not in serious problems
+							wealth = 0
+							war = no
+							NOT = {trait = incapable}
+                            prisoner = no
+						}
+						save_event_target_as = landed_dynast
+                        set_global_flag = PDP_landed_dynast_inherited #allows easier conversion to theocracy
+						if = {#make playable
+							limit = {is_theocracy = yes}
+							set_government_type = playable_theocracy_government
+						}
+					}
+
+					if = {#this was not the pope -> normal theocracy and we still need to install the heir
+						limit = {NOT = {has_character_flag = PDP_this_was_the_last_pope}}
+						if = {
+							limit = {current_heir = {always = yes}} #if you have an heir scope
+							current_heir = {
+								save_event_target_as = real_heir
+							}
+						}
+						else = { #no heir scope
+							create_character = { #thus create heir
+								random_traits = yes
+								dynasty = random
+								culture = ROOT
+								religion = ROOT
+								female = no
+								age = 42
+							}
+							new_character = {
+								save_event_target_as = real_heir
+							}
+						}
+						primary_title = {
+							succession = catholic_bishopric #otherwise non dynastic inheritance causes game over
+							save_event_target_as = players_title
+						}
+						abdicate_to = event_target:real_heir #player now plays real_heir
+						event_target:real_heir = {wealth = ROOT} #inherit rulers money...
+						clear_wealth = yes
+					}
+					else = {
+						event_target:the_holy_see = {
+							save_event_target_as = real_heir #the one the player is currently playing
+						}
+					}
+					event_target:landed_dynast = { #make playable
+						if = {
+							limit = {is_theocracy = yes}
+							set_government_type = playable_theocracy_government
+						}
+						character_event = {id = PDP.6 days = 1} #set succession
+						character_event = {id = PDP.3 days = 1} #set succession
+						character_event = {id = PDP.1 days = 1} #inform of death
+					}
+					event_target:real_heir = {
+                        if = {#default case
+                            limit = {
+                                has_game_rule = { name = PDP_non_dynastic_play value = off }
+                            }
+                            set_player_character = event_target:landed_dynast
+                        }
+					}
+					# any_demesne_title = {
+						# set_title_flag = PDP_belongs_to_real_heir
+					# }
+					# event_target:landed_dynast = {
+						# liege = {
+							# save_event_target_as = dynasts_liege
+						# }
+						# any_demesne_title = {
+							# grant_title_no_opinion = ROOT
+						# }
+					# }
+					# any_artifact = {
+						# transfer_artifact = {from = ROOT to = event_target:landed_dynast}
+					# }
+					# abdicate_to = event_target:landed_dynast
+					# event_target:landed_dynast = {
+						# any_demesne_title = {
+							# if = {
+								# limit = {has_title_flag = PDP_belongs_to_real_heir}
+								# grant_title_no_opinion = event_target:real_heir
+								# clr_title_flag = PDP_belongs_to_real_heir
+							# }
+						# }
+						# event_target:real_heir = {
+							# set_government_type = playable_theocracy_government
+						# }
+						# set_defacto_liege = event_target:dynasts_liege
+						# character_event = {id = PDP.1} #inform of inheritance
+					# }
+				}
+				else = {#no dynastic heir
+                    if = {#default case
+                        limit = {#can deactivate game over using game rule
+                            has_game_rule = { name = PDP_non_dynastic_play value = off }
+                        }
+    					if = {#we used to play the pope, but we have no heir
+    						limit = {
+    							has_character_flag = PDP_this_was_the_last_pope
+    						}
+    						event_target:the_holy_see = {
+    							set_player_character = ROOT
+    						}
+    					}
+    					event_target:the_holy_see = {character_event = {id = PDP.2}} #game over (if pope)
+    					character_event = {id = PDP.2} #game over
+                    }
+                    else_if = {#play as your heir - non dynastic (only if game rule allowes it)
+                        limit = {
+                            has_game_rule = { name = PDP_non_dynastic_play value = on }
+                        }
+                        if = {
+							limit = {current_heir = {always = yes}} #if you have an heir scope
+							current_heir = {
+								save_event_target_as = real_heir
+							}
+						}
+						else = { #no heir scope
+							create_character = { #thus create heir
+								random_traits = yes
+								dynasty = random
+								culture = ROOT
+								religion = ROOT
+								female = no
+								age = 42
+							}
+							new_character = {
+								save_event_target_as = real_heir
+							}
+						}
+						primary_title = {
+							succession = catholic_bishopric #otherwise non dynastic inheritance causes game over
+							save_event_target_as = players_title
+						}
+						abdicate_to = event_target:real_heir #player now plays real_heir
+						event_target:real_heir = {wealth = ROOT} #inherit rulers money...
+						clear_wealth = yes
+                    }
+				}
+			}
+		}
+	}
+    option = {
+		name = OK
+    }
+}
+#succession workaround
+
+
+character_event = {
+    id = PDP.8 #Root asked head to nominate successor
+	desc = EVTDESCPDP.8
+	is_triggered_only = yes
+	picture = GFX_evt_council
+	immediate = {
+		ROOT = {
+			save_event_target_as = incumbent
+			#rightful_religious_head_scope = {save_event_target_as = appointer}
+			# if = {
+				# limit = {#liege appoints
+					# independent = no
+					# liege = {has_law = investiture_law}
+				# }
+				# liege = {save_event_target_as = appointer}
+			# }
+			# else = {
+				# rightful_religious_head_scope = {save_event_target_as = appointer}
+			# }
+		}
+	}
+    option = {
+		name = EVTOPTAPDP.8
+		event_target:potential_heir = {} #just show portrait
+		event_target:appointer = {
+			character_event = {id = PDP.9 days = 3 random = 7} #ask to appoint potential_heir
+		}
+    }
+}
+#ask for heir nomination
+
+character_event = {
+    id = PDP.9 #appointer decides
+	desc = EVTDESCPDP.9
+	is_triggered_only = yes
+	picture = GFX_evt_council
+    option = {
+		name = EVTOPTAPDP.9 #don't appoint him
+		event_target:incumbent = {
+			opinion = {modifier = opinion_disappointed  who = ROOT years = 5 }
+			character_event = {id = PDP.10}#inform failure
+		}
+		event_target:potential_heir = {
+			opinion = {modifier = opinion_disappointed  who = ROOT years = 10 }
+		}
+		ai_chance = {
+			factor = 43
+			modifier = {
+				factor = 0.5
+				opinion = {who = event_target:incumbent value = 75 }
+			}
+			modifier = { #dynasty accepts almost always.
+				factor = 0
+				AND = {
+					OR = {
+						opinion = {who = event_target:potential_heir value = -5 }
+						opinion = {who = event_target:incumbent value = -5 }
+					}
+					dynasty = event_target:incumbent
+				}
+			}
+		}
+    }
+	option = {
+		name = EVTOPTBPDP.9 #ask for bribe
+		event_target:incumbent = {
+			character_event = {id = PDP.11}#ask
+		}
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 40
+				trait = greedy
+			}
+			modifier = { #dynasty accepts almost always.
+				factor = 0
+				AND = {
+					opinion = {who = event_target:incumbent value = 25 }
+					dynasty = event_target:incumbent
+				}
+			}
+		}
+    }
+	option = {
+		name = EVTOPTCPDP.9 #appoint him
+		event_target:incumbent = {
+			character_event = {id = PDP.12}#inform success
+			opinion = {modifier = opinion_merciful who = ROOT years = 5 }
+		}
+		event_target:potential_heir = {
+			opinion = {modifier = opinion_merciful who = ROOT years = 10 }
+		}
+		ai_chance = {
+			factor = 23
+			modifier = {
+				factor = 1.5
+				trait = kind
+			}
+			modifier = {
+				factor = 1.5
+				trait = slothful
+			}
+			modifier = {
+				factor = 1.5
+				NOT = {diplomacy = 7}
+			}
+			modifier = {
+				factor = 1.25
+				event_target:potential_heir = {
+					learning = 5
+				}
+			}
+			modifier = {
+				factor = 1.5
+				event_target:potential_heir = {
+					learning = 10
+				}
+			}
+			modifier = {
+				factor = 1.75
+				event_target:potential_heir = {
+					learning = 16
+				}
+			}
+			modifier = {
+				factor = 1.25
+				event_target:potential_heir = {
+					learning = 20
+				}
+			}
+			modifier = {
+				factor = 1.25
+				event_target:potential_heir = {
+					learning = 25
+				}
+			}
+			modifier = {
+				factor = 10
+				event_target:potential_heir = {
+					trait = PDP_cardinal
+				}
+			}
+			modifier = {
+				factor = 2
+				event_target:incumbent = {
+					trait = PDP_cardinal
+				}
+			}
+			modifier = {
+				factor = 1.2
+				event_target:incumbent = {
+					diplomacy = 10
+				}
+			}
+			modifier = {
+				factor = 1.5
+				event_target:incumbent = {
+					diplomacy = 15
+				}
+			}
+			modifier = {
+				factor = 1.5
+				event_target:incumbent = {
+					diplomacy = 23
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {opinion = {who = event_target:incumbent value = -25 }}
+			}
+			modifier = {
+				factor = 0.2
+				NOT = {opinion = {who = event_target:incumbent value = 0 }}
+			}
+			modifier = {
+				factor = 1.25
+				opinion = {who = event_target:incumbent value = 25 }
+			}
+			modifier = {
+				factor = 2
+				opinion = {who = event_target:incumbent value = 75 }
+			}
+			modifier = {
+				factor = 0
+				NOT = {opinion = {who = event_target:potential_heir value = -50 }}
+			}
+			modifier = {
+				factor = 0.2
+				NOT = {opinion = {who = event_target:potential_heir value = -25 }}
+			}
+			modifier = {
+				factor = 1.25
+				opinion = {who = event_target:potential_heir value = 25 }
+			}
+			modifier = {
+				factor = 2
+				opinion = {who = event_target:potential_heir value = 75 }
+			}
+		}
+    }
+}
+#appointer decides
+
+character_event = {
+    id = PDP.10 #declined appointment
+	desc = EVTDESCPDP.10
+	is_triggered_only = yes
+	picture = GFX_evt_council
+    option = {
+		name = EVTOPTAPDP.10
+		prestige = -10
+		piety = -10
+		event_target:potential_heir = {
+			prestige = -10
+			clr_character_flag = PDP_potential_heir_of_@ROOT
+		}
+    }
+}
+#appointer declined
+
+character_event = {
+    id = PDP.11 #asked for bribe
+	desc = EVTDESCPDP.11
+	is_triggered_only = yes
+	picture = GFX_evt_council
+    option = {
+		name = EVTOPTAPDP.11 #pay
+		transfer_scaled_wealth = {to = event_target:appointer value = 0.25 min = 40}
+		event_target:appointer = {
+			character_event = {id = PDP.13 days = 3}#inform success
+		}
+		character_event = {id = PDP.12 days = 5}#accepted appointment
+    }
+	option = {
+		name = EVTOPTBPDP.11 #refuse
+		event_target:appointer = {
+			character_event = {id = PDP.14 days = 3}#inform refused
+		}
+		character_event = {id = PDP.10 days = 5}#declined appointment
+    }
+}
+#appointer asked for bribe
+
+character_event = {
+    id = PDP.12 #accepted appointment
+	desc = EVTDESCPDP.12
+	is_triggered_only = yes
+	picture = GFX_evt_council
+    option = {
+		name = EVTOPTAPDP.12
+		event_target:potential_heir = {
+			piety = 10
+			set_character_flag = PDP_heir_of_@ROOT
+			hidden_tooltip = {move_character = ROOT}
+			give_minor_title = title_PDP_archdeacon
+		}
+    }
+}
+#appointer accepts
+
+character_event = {
+    id = PDP.13 #accepted to bribe
+	desc = EVTDESCPDP.13
+	is_triggered_only = yes
+	picture = GFX_evt_council
+    option = {
+		name = EVTOPTAPDP.13
+    }
+}
+#bribing accepted
+
+character_event = {
+    id = PDP.14 #declined to bribe
+	desc = EVTDESCPDP.14
+	is_triggered_only = yes
+	picture = GFX_evt_council
+    option = {
+		name = EVTOPTAPDP.14
+    }
+}
+#bribing refused
+
+
+##Decision: Cardinal petitioned for council position
+
+character_event = {
+    id = PDP.29
+	desc = EVTDESCPDP.29
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no
+	only_playable = yes
+	picture = GFX_evt_council
+	immediate = {
+		save_event_target_as = target_cardinal
+	}
+    option = {
+		if = {
+			limit = {
+				trait = PDP_cardinal
+				independent = no
+				prisoner = no
+				is_councillor = no
+				liege = {
+					religion = ROOT
+					job_spiritual = {
+						always = yes
+					}
+					job_spiritual = {
+						NOT = {
+							trait = PDP_cardinal
+							OR = {
+								government = playable_theocracy_government
+								is_theocracy = yes
+							}
+						}
+					}
+					has_regent = no
+					OR = {
+						had_character_flag = { flag = PDP_cardinal_petitioned_for_position days = 1825 }#5years
+						NOT = {has_character_flag = PDP_cardinal_petitioned_for_position}
+					}
+				}
+
+			}
+			random = {
+				chance = 10
+				character_event = {id = PDP.30 days = 0}
+				modifier = {
+					factor = 8
+					trait = ambitious
+				}
+			}
+		}
+    }
+}
+#ai pulse event
+
+character_event = {
+    id = PDP.30
+	desc = EVTDESCPDP.30
+	is_triggered_only = yes
+	picture = GFX_evt_council
+	immediate = {
+		save_event_target_as = target_cardinal
+	}
+    option = {
+		name = EVTOPT_a_PDP.30
+		liege = {
+			character_event = {id = PDP.31 days = 2 random = 3}
+		}
+    }
+}
+#cardinal asks for position
+#todo: create event to start chain for ai cardinals once every five years
+
+character_event = {
+    id = PDP.31
+	desc = EVTDESCPDP.31
+	is_triggered_only = yes
+	picture = GFX_evt_council
+    option = {#accept
+		name = EVTOPT_a_PDP.31
+		piety = 10
+		event_target:target_cardinal = {
+			give_job_title = job_spiritual
+			character_event = {id = PDP.32 days = 0}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+			modifier = {
+				factor = 4
+				job_spiritual = {
+					ROOT = { likes_better_than = { who = event_target:target_cardinal than = PREV} }
+				}
+			}
+			modifier = {
+				factor = 0.02
+				NOT = {opinion = { who = event_target:target_cardinal value = -5 }}
+			}
+		}
+    }
+	option = {#decline
+		name = EVTOPT_b_PDP.31
+		piety = -10
+		event_target:target_cardinal = {
+			character_event = {id = PDP.33 days = 0}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = cynical
+			}
+			modifier = {
+				factor = 2
+				job_spiritual = {
+					ROOT = { likes_better_than = {who = PREV than = event_target:target_cardinal} }
+				}
+			}
+		}
+    }
+}
+#liege gets to decide
+
+character_event = {
+    id = PDP.32
+	desc = EVTDESCPDP.32
+	is_triggered_only = yes
+	picture = GFX_evt_council
+    option = {
+		name = EVTOPT_a_PDP.32
+		prestige = 5
+		piety = 5
+    }
+}
+#liege accepted
+
+character_event = {
+    id = PDP.33
+	desc = EVTDESCPDP.33
+	is_triggered_only = yes
+	picture = GFX_evt_council
+    option = { #be sad and live with it
+		name = EVTOPT_a_PDP.33
+		prestige = -10
+    }
+	option = { #try to get backing from pope
+		trigger = {
+			NOT = {
+				liege = {
+					rightful_religious_head = ROOT
+				}
+			}
+		}
+		name = EVTOPT_b_PDP.33
+		rightful_religious_head_scope = {
+			character_event = {id = PDP.34 days = 2 random = 3}
+		}
+    }
+}
+#liege declined
+
+character_event = {
+    id = PDP.34
+	desc = EVTDESCPDP.34
+	is_triggered_only = yes
+	picture = GFX_evt_council
+    option = { #accept
+		name = EVTOPT_a_PDP.34
+		event_target:target_cardinal = {
+			opinion = {modifier = opinion_merciful who = ROOT years = 5 }
+			liege = {
+				character_event = {id = PDP.35 days = 1}
+			}
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				event_target:target_cardinal = {
+					liege = {job_spiritual = {
+						ROOT = { likes_better_than = { who = event_target:target_cardinal than = PREV} }
+					}}
+				}
+			}
+			modifier = {
+				factor = 2
+				event_target:target_cardinal = {
+					liege = {
+						ROOT = { likes_better_than = { who = event_target:target_cardinal than = PREV} }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {opinion = { who = event_target:target_cardinal value = 10 }}
+			}
+			modifier = {
+				factor = 2
+				opinion = { who = event_target:target_cardinal value = 75 }
+			}
+		}
+
+    }
+	option = { #decline
+		name = EVTOPT_b_PDP.34
+		event_target:target_cardinal = {
+			character_event = {id = PDP.36 days = 1}
+		}
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 4
+				event_target:target_cardinal = {
+					liege = {job_spiritual = {
+						ROOT = { likes_better_than = { who = PREV than = event_target:target_cardinal} }
+					}}
+				}
+			}
+			modifier = {
+				factor = 4
+				event_target:target_cardinal = {
+					liege = {
+						ROOT = { likes_better_than = { who = PREV than = event_target:target_cardinal} }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				NOT = {opinion = { who = event_target:target_cardinal value = 25 }}
+			}
+			modifier = {
+				factor = 0.5
+				opinion = { who = event_target:target_cardinal value = 95 }
+			}
+		}
+    }
+}
+#pope decides
+
+character_event = {
+    id = PDP.35
+	desc = EVTDESCPDP.35
+	is_triggered_only = yes
+	picture = GFX_evt_council
+    option = {#accept
+		name = EVTOPT_a_PDP.35
+		prestige = -25
+		event_target:target_cardinal = {
+			give_job_title = job_spiritual #does this fire the old councillor (opinion modifier)?
+			character_event = {id = PDP.37 days = 0}
+		}
+		ai_chance = {
+			factor = 99
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+		}
+    }
+	option = {#decline
+		name = EVTOPT_b_PDP.35
+		prestige = 25
+		add_trait = excommunicated
+		event_target:target_cardinal = {
+			character_event = {id = PDP.38 days = 0}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				trait = cynical
+			}
+
+			modifier = {
+				factor = 2
+				trait = wroth
+			}
+
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+		}
+    }
+}
+#pope asks liege (accepted)
+
+character_event = {
+    id = PDP.36
+	desc = EVTDESCPDP.36
+	is_triggered_only = yes
+	picture = GFX_evt_council
+    option = {
+		name = EVTOPT_a_PDP.36
+		prestige = -25
+		piety = -5
+    }
+}
+#pope declines
+
+character_event = {
+    id = PDP.37
+	desc = EVTDESCPDP.37
+	is_triggered_only = yes
+	picture = GFX_evt_council
+    option = {
+		name = EVTOPT_a_PDP.37
+		prestige = 5
+    }
+}
+#pope convinced liege
+
+character_event = {
+    id = PDP.38
+	desc = EVTDESCPDP.38
+	is_triggered_only = yes
+	picture = GFX_evt_council
+    option = {
+		name = EVTOPT_a_PDP.38
+		prestige = -5
+    }
+}
+#liege refused popes request
+
+
+#triggers on_birth, root is child
+character_event = {
+    id = PDP.40
+	desc = EVTDESCPDP.40
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = { #copied from vanilla event 300
+		was_conceived_a_bastard = yes
+		NOT = { real_father = { always = yes } } # There is no 'real_father' set, i.e. this is not a hidden, cuckoo bastard
+		father = {
+			is_ruler = yes
+			OR = {
+				is_theocracy = yes
+				government = playable_theocracy_government
+                government = order_government
+			}
+			religion = catholic
+		}
+	}
+    option = {
+		name = OK
+		piety = -25
+		father = {
+			character_event = {id = PDP.41}
+		}
+		#idea: scope to mother and start event where she can be branded as a witch.
+    }
+}
+#bastard born in theocracy
+
+character_event = {
+    id = PDP.41
+	desc = EVTDESCPDP.41
+	is_triggered_only = yes
+	picture = GFX_evt_birth
+    option = { #Default option
+		name = EVTOPT_a_PDP.41
+		piety = -30
+		prestige = -30
+		if = {
+			limit = {NOT = {has_character_modifier = adulterous_priest}}
+			add_character_modifier = {name = adulterous_priest duration = 3650}
+			if = {
+				limit = {has_landed_title = k_papal_state}
+				random = {
+					chance = 20
+					modifier = {
+						factor = 1.6
+						NOT = {diplomacy = 8}
+					}
+					modifier = {
+						factor = 1.6
+						NOT = {intrigue = 8}
+					}
+					modifier = {
+						factor = 0.95
+						diplomacy = 17
+					}
+					modifier = {
+						factor = 0.95
+						intrigue = 17
+					}
+					add_trait = bad_priest_christian #possibly triggering cadaver synode
+                    if = {
+                        limit = {
+                            NOT = {any_bloodline = {has_bloodline_flag = PDP_papal}}
+                        }
+                        create_bloodline = {
+                            type = PDP_papal_bloodline
+                        }
+                    }
+				}
+			}
+		}
+		else = {
+			hidden_tooltip = {add_character_modifier = {name = adulterous_priest duration = 3650}} #refresh duration
+            if = {
+                limit = {has_landed_title = k_papal_state}
+                if = {
+                    limit = {
+                        NOT = {any_bloodline = {has_bloodline_flag = PDP_papal}}
+                    }
+                    create_bloodline = {
+                        type = PDP_papal_bloodline
+                    }
+                }
+            }
+			if = {
+				limit = {
+					has_dlc = "Sons of Abraham"
+					NOT = {trait = bad_priest_christian}
+				}
+				random = {
+					chance = 66
+					modifier = {
+						factor = 1.2
+						has_landed_title = k_papal_state
+					}
+					modifier = {
+						factor = 0.95
+						diplomacy = 17
+					}
+					modifier = {
+						factor = 0.95
+						intrigue = 17
+					}
+					add_trait = bad_priest_christian #possibly triggering cadaver synode
+				}
+			}
+		}
+		ai_chance = {
+			factor = 80
+		}
+    }
+	option = { #I made a great mistake
+		trigger = {
+			NOT = {trait = celibate}
+		}
+		name = EVTOPT_b_PDP.41
+		piety = -50
+		add_trait = celibate
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 2
+				trait = diligent
+			}
+			modifier = {
+				factor = 4
+				trait = chaste
+			}
+		}
+    }
+	option = { #There's only one way to prevent me from sinning again...
+		trigger = {
+			NOT = {trait = eunuch}
+		}
+		name = EVTOPT_c_PDP.41
+		piety = -50
+		prestige = 25
+		add_trait = eunuch
+		add_trait = wounded
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 5
+				trait = just
+			}
+			modifier = {
+				factor = 5
+				trait = zealous
+			}
+		}
+    }
+    option = { #brothers child option
+        name = EVTOPT_d_PDP.41
+        trigger = {
+            intrigue = 15
+            any_sibling = {
+                is_landed = no
+                NOT = {trait = celibate}
+                NOT = {trait = eunuch}
+                NOT = {trait = chaste}
+                NOT = {has_minor_title = title_PDP_archdeacon}
+                is_female = no
+                age = 18
+                NOT = {age = 50}
+            }
+        }
+        random_sibling = {
+            limit = {
+                is_landed = no
+                NOT = {trait = celibate}
+                NOT = {trait = eunuch}
+                NOT = {trait = chaste}
+                NOT = {has_minor_title = title_PDP_archdeacon}
+                is_female = no
+                age = 18
+                NOT = {age = 50}
+            }
+            save_event_target_as = brother
+        }
+        event_target:brother = {
+            piety = -100
+        }
+        tooltip_info = intrigue
+        random_list = {
+            50 = {
+                modifier = {
+                    factor = 1.2
+                    event_target:brother = {
+                        trait = lustful
+                    }
+                }
+                modifier = {
+                    factor = 1.2
+                    event_target:brother = {
+                        trait = hedonist
+                    }
+                }
+                modifier = {
+                    factor = 1.33
+                    trait = chaste
+                }
+                modifier = {
+                    factor = 1.2
+                    OR = {
+                        trait = quick
+                        trait = genius
+                    }
+                }
+                modifier = {
+                    factor = 1.5
+                    intrigue = 20
+                }
+                modifier = {
+                    factor = 1.5
+                    intrigue = 30
+                }
+                modifier = {
+                    factor = 0.1
+                    NOT = {reverse_opinion = {who = event_target:brother value = 15}}
+                }
+                FROM = {
+                    set_father = event_target:brother
+                }
+            }
+            50 = {
+                modifier = {
+                    factor = 1.2
+                    trait = lustful
+                }
+                modifier = {
+                    factor = 1.23
+                    trait = hedonist
+                }
+                modifier = {
+                    factor = 0.89
+                    trait = chaste
+                }
+                modifier = {
+                    factor = 0.8
+                    intrigue = 25
+                }
+                modifier = {
+                    factor = 1.2
+                    NOT = {reverse_opinion = {who = event_target:brother value = 40}}
+                }
+                piety = -60
+                prestige = -60
+                if = {
+                    limit = {NOT = {has_character_modifier = adulterous_priest}}
+                    add_character_modifier = {name = adulterous_priest duration = 3650}
+                    if = {
+                        limit = {has_landed_title = k_papal_state}
+                        random = {
+                            chance = 20
+                            modifier = {
+                                factor = 1.6
+                                NOT = {diplomacy = 8}
+                            }
+                            modifier = {
+                                factor = 1.6
+                                NOT = {intrigue = 8}
+                            }
+                            modifier = {
+                                factor = 0.95
+                                diplomacy = 17
+                            }
+                            modifier = {
+                                factor = 0.95
+                                intrigue = 17
+                            }
+                            if = {
+                                limit = {
+                                    NOT = {any_bloodline = {has_bloodline_flag = PDP_papal}}
+                                }
+                                create_bloodline = {
+                                    type = PDP_papal_bloodline
+                                }
+                            }
+                            add_trait = bad_priest_christian #possibly triggering cadaver synode
+                        }
+                    }
+                }
+                else = {
+                    hidden_tooltip = {add_character_modifier = {name = adulterous_priest duration = 3650}} #refresh duration
+                    if = {
+                        limit = {has_landed_title = k_papal_state}
+                        if = {
+                            limit = {
+                                NOT = {any_bloodline = {has_bloodline_flag = PDP_papal}}
+                            }
+                            create_bloodline = {
+                                type = PDP_papal_bloodline
+                            }
+                        }
+                    }
+                    if = {
+                        limit = {
+                            has_dlc = "Sons of Abraham"
+                            NOT = {trait = bad_priest_christian}
+                        }
+                        random = {
+                            chance = 66
+                            modifier = {
+                                factor = 1.2
+                                has_landed_title = k_papal_state
+                            }
+                            modifier = {
+                                factor = 0.95
+                                diplomacy = 17
+                            }
+                            modifier = {
+                                factor = 0.95
+                                intrigue = 17
+                            }
+                            add_trait = bad_priest_christian #possibly triggering cadaver synode
+                        }
+                    }
+                }
+            }
+        }
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+#father notified of bastard
+
+
+character_event = {
+    id = PDP.50
+	desc = EVTDESCPDP.50
+	is_triggered_only = yes
+	picture = GFX_evt_bishop
+    option = {
+		name = EVTOPT_a_PDP.50
+		event_target:archdeacon = {
+			move_character = event_target:bishop
+			give_minor_title = title_PDP_archdeacon
+			opinion = { modifier = opinion_investiture who = ROOT years = 50 }
+		}
+		event_target:bishop = {
+			set_character_flag = PDP_human_pope_invested_successor
+		}
+	}
+}
+#player pope invests in bishop
+
+#maintenance
+#triggered on chronicle start
+character_event = {
+    id = PDP.59
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_window = yes
+	trigger = {
+		has_landed_title = k_papal_state
+	}
+	immediate = {
+		set_character_flag = flag_crowned_by_bishop
+		THIS = {save_persistent_event_target = { name = coronation_priest_per scope = THIS }}
+		add_trait = crowned_by_bishop
+        offmap_PDP_church = {
+            offmap_ruler = {
+                dynasty = 3000666
+            }
+        }
+        character_event = {id = PDPAnti.1 days = 1}
+
+	}
+	option = {
+		name = ok
+	}
+}
+#on chronicle start
+character_event = {
+    id = PDP.60
+	desc = EVTDESCPDP.60
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_window = yes
+	picture = GFX_evt_pope
+	trigger = {
+		NOT = {has_global_flag = PDP_cardinals_allowed}
+	}
+    option = {
+		name = OK
+    }
+    after = {
+        set_global_flag = PDP_cardinals_allowed
+    }
+}
+#allow cardinals and initialize college of cardinals
+
+#fire after popes election
+character_event = {
+    id = PDP.61
+	desc = EVTDESCPDP.61
+	is_triggered_only = yes
+	only_rulers = yes
+	picture = GFX_evt_papal_coronation
+	hide_new = yes
+    option = { #Learning&Piety
+		name = EVTOPT_a_PDP.61
+		change_learning = 1
+		piety = 50
+    }
+	option = { #Infidels Crumble&Prestige
+		name = EVTOPT_b_PDP.61
+		change_martial = 1
+		prestige = 50
+    }
+	option = { #good relations between the people
+		name = EVTOPT_c_PDP.61
+		change_diplomacy = 1
+    }
+	option = { #Upholding civil order - stewardship
+		name = EVTOPT_d_PDP.61
+		change_stewardship = 1
+    }
+}
+#new pope - option to choose focus for rule
+
+character_event = {
+    id = PDP.62
+	desc = EVTDESCPDP.62
+	is_triggered_only = yes
+	hide_window = yes
+	picture = GFX_evt_pope
+    option = {
+		name = OK
+		set_character_flag = PDP_cardinal_counted
+		event_target:triggered_by = {
+			change_variable = { which = num_cardinals value = 1 } #increment num_cardinals
+		}
+		#side effects
+		if = {
+			limit = { event_target:triggered_by={has_character_flag = PDP_do_event_PDP.65} }
+			character_event = {id = PDP.65 days = 0}
+		}
+		#distribute event to other cardinals
+
+		#other idea: send event in like 8 days which will remove the flag.
+		#test if the counting event (80 or so) does work for köln pope.
+		#maybe the is_alive trigger helps???
+
+		if = {#there's a cardinal we haven't counted yet
+			limit = {
+				PDP_cardinal = {#scopes to all characters, cannot use count = N
+					NOT = {has_character_flag = PDP_cardinal_counted}
+					is_alive = yes
+				}
+			}
+			PDP_cardinal = {#scopes to a random cardinal
+				limit = {
+					NOT = {has_character_flag = PDP_cardinal_counted}
+					is_alive = yes
+				}
+				#repeat_event = repeat_event = {id = PDP.62 days = 0}
+				repeat_event = {id = PDP.62 days = 0}
+			}
+		}
+		else = {#all cardinals done
+			PDP_cardinal = {#random one
+				character_event = {id = PDP.63 days = 0} #clear flags
+			}
+		}
+    }
+}
+#flag all cardinals
+
+character_event = {
+    id = PDP.63
+	desc = EVTDESCPDP.63
+	is_triggered_only = yes
+	hide_window = yes
+	picture = GFX_evt_pope
+    option = {
+		name = OK
+		clr_character_flag = PDP_cardinal_counted
+		if = {#there's a cardinal we haven't counted yet
+			limit = {
+				PDP_cardinal = {#scopes to all characters, cannot use count = N
+					has_character_flag = PDP_cardinal_counted
+					is_alive = yes
+				}
+			}
+			PDP_cardinal = {#scopes to a random cardinal
+				limit = {
+					has_character_flag = PDP_cardinal_counted
+					is_alive = yes
+				}
+				#repeat_event = repeat_event = {id = PDP.63 days = 0}
+				repeat_event = {id = PDP.63 days = 0}
+			}
+		}
+		else = {#all cardinals done
+		}
+    }
+}
+#unflag all cardinals
+
+#cardinal decides if he would appoint event_target:bishop as a cardinal. event_target:triggered_by wants the answer
+#triggered by needs to execute "set_variable = { which = PDP_votes_yes value = 0 }" first.
+character_event = {
+    id = PDP.65
+	desc = EVTDESCPDP.65
+	is_triggered_only = yes
+	only_rulers = yes
+	picture = GFX_evt_pope
+	trigger = {
+		event_target:bishop = {always = yes} #makes no sense otherwise
+	}
+    option = { #accept
+		name = EVTOPT_a_PDP.65
+		event_target:bishop = {
+			opinion = {modifier = opinion_supported_cardinal who = ROOT years = 10}
+		}
+		event_target:triggered_by = {
+			opinion = {modifier = opinion_merciful who = ROOT years = 2}
+			hidden_tooltip = {change_variable = {which = PDP_votes_yes value = 1}}
+			letter_event = {id = PDP.66 days = 5 random = 2}
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {#not to popes benefit and a good candidate-> don't care that much
+				factor = 10
+				AND = {
+					event_target:bishop = {
+						piety = 100
+						learning = 17
+						age = 45
+						NOT = {trait = bad_priest_christian}
+						NOT = {trait = cynical}
+						NOT = {trait = lustful}
+						NOT = {trait = slothful}
+						NOT = {dynasty = event_target:triggered_by}
+						NOT = {liege = {character = event_target:triggered_by}}
+					}
+					opinion = { who = event_target:bishop value = 15}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				event_target:bishop = {
+					higher_tier_than = baron
+				}
+			}
+			modifier = {
+				factor = 2
+				event_target:bishop = {
+					higher_tier_than = count
+				}
+			}
+			modifier = {#same culture
+				factor = 1.5
+				event_target:bishop = {
+					culture = ROOT
+				}
+			}
+			modifier = {#same culture
+				factor = 0.5
+				event_target:bishop = {
+					NOT = {culture = ROOT}
+				}
+			}
+			modifier = {#hates both of them
+				factor = 0
+				NOT = {opinion = { who = event_target:triggered_by value = -99}}
+				NOT = {opinion = { who = event_target:bishop value = -99}}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {opinion = { who = event_target:triggered_by value = -80}}
+			}
+			modifier = {
+				factor = 0.1
+				NOT = {opinion = { who = event_target:bishop value = -80}}
+			}
+			modifier = {
+				factor = 0.75
+				NOT = {opinion = { who = event_target:triggered_by value = -50}}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {opinion = { who = event_target:bishop value = -50}}
+			}
+			modifier = {
+				factor = 0.75
+				NOT = {opinion = { who = event_target:triggered_by value = -25}}
+			}
+			modifier = {
+				factor = 0.75
+				NOT = {opinion = { who = event_target:bishop value = -25}}
+			}
+			modifier = {
+				factor = 0.9
+				NOT = {opinion = { who = event_target:triggered_by value = 0}}
+			}
+			modifier = {
+				factor = 0.7
+				NOT = {event_target:bishop = {piety = 0}}
+			}
+			modifier = {
+				factor = 1.5
+				event_target:bishop = {piety = 1000}
+			}
+			modifier = {
+				factor = 0.001
+				NOT = {event_target:bishop = {learning = 1}}
+			}
+			modifier = {
+				factor = 0.025
+				NOT = {event_target:bishop = {learning = 5}}
+			}
+			modifier = {
+				factor = 0.3
+				NOT = {event_target:bishop = {learning = 9}}
+			}
+			modifier = {
+				factor = 1.25
+				event_target:bishop = {learning = 12}
+			}
+			modifier = {
+				factor = 2
+				event_target:bishop = {learning = 15}
+			}
+			modifier = {
+				factor = 2
+				event_target:bishop = {learning = 18}
+			}
+			modifier = {
+				factor = 2
+				event_target:bishop = {learning = 21}
+			}
+			modifier = {
+				factor = 2
+				event_target:bishop = {learning = 25}
+			}
+			modifier = {
+				factor = 1.25
+				event_target:bishop = {culture = italian} #since that's good for real cardinals too
+			}
+			modifier = {
+				factor = 0.25
+				NOT = {event_target:bishop = {age = 20}}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {event_target:bishop = {age = 25}}
+			}
+			modifier = {
+				factor = 0.8
+				NOT = {event_target:bishop = {age = 35}}
+			}
+			modifier = {
+				factor = 0.75
+				NOT = {event_target:bishop = {diplomacy = 7}}
+			}
+			modifier = {
+				factor = 1.5
+				event_target:bishop = {diplomacy = 13}
+			}
+			modifier = {
+				factor = 1.5
+				event_target:bishop = {diplomacy = 20}
+			}
+			modifier = {
+				factor = 1.2
+				event_target:bishop = {age = 45}
+			}
+			modifier = {
+				factor = 1.5
+				event_target:bishop = {age = 55}
+			}
+			modifier = {
+				factor = 1.5
+				event_target:bishop = {age = 65}
+			}
+			modifier = {
+				factor = 1.25
+				event_target:bishop = {trait = zealous}
+			}
+			modifier = {
+				factor = 1.25
+				event_target:bishop = {trait = diligent}
+			}
+			modifier = {
+				factor = 1.5
+				event_target:bishop = {trait = ambitious}
+			}
+			modifier = {
+				factor = 0.8
+				event_target:bishop = {trait = slothful}
+			}
+			modifier = {
+				factor = 0.2
+				event_target:bishop = {trait = cynical}
+			}
+			modifier = {
+				factor = 0.1
+				event_target:bishop = {trait = bad_priest_christian}
+			}
+			modifier = {
+				factor = 0.4
+				event_target:bishop = {trait = lustful}
+			}
+			modifier = {#wants to prevent nepotism
+				factor = 0.05
+				AND = {
+					NOR = {
+						trait = arbitrary
+						trait = slothful
+					}
+					NOT = {
+						dynasty = event_target:triggered_by
+					}
+					event_target:bishop = {dynasty = event_target:triggered_by}
+					PDP_cardinal = {#any dynasty member already cardinal -> so you get one nephew for free.
+						is_alive = yes
+						dynasty = event_target:triggered_by
+					}
+					NOR = {
+						opinion = { who = event_target:triggered_by value = 50}
+						opinion = { who = event_target:bishop value = 60}
+					}
+				}
+			}
+
+		}
+	}
+	option = { #decline
+		name = EVTOPT_b_PDP.65
+		event_target:bishop = {
+			opinion = {modifier = opinion_very_disappointed who = ROOT years = 10}
+		}
+		event_target:triggered_by = {
+			opinion = {modifier = opinion_very_disappointed who = ROOT years = 10}
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {#likes you
+				factor = 0
+				opinion = { who = event_target:triggered_by value = 95}
+			}
+			modifier = {#likes bishop
+				factor = 0.01
+				opinion = { who = event_target:bishop value = 75}
+			}
+			modifier = {#wants to promote nepotism
+				factor = 0
+				AND = {
+					NOT = {trait = just}
+					dynasty = event_target:triggered_by
+					event_target:bishop = {dynasty = event_target:triggered_by}
+					OR = {
+						opinion = { who = event_target:triggered_by value = 1}
+						opinion = { who = event_target:bishop value = 1}
+					}
+				}
+			}
+			modifier = { #if we just asked player to appoint more cardinals, don't stop him from doing so.
+				factor = 0.1
+				event_target:triggered_by = {
+					has_character_flag = PDP_vacant_seats_in_college
+				}
+			}
+			modifier = {
+				factor = 0.25
+				OR = {
+					opinion = { who = event_target:triggered_by value = 50}
+					opinion = { who = event_target:bishop value = 50}
+				}
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					opinion = { who = event_target:triggered_by value = 25}
+					opinion = { who = event_target:bishop value = 25}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				NOT = {opinion = { who = event_target:triggered_by value = 0}}
+			}
+			modifier = {
+				factor = 1.25
+				NOT = {opinion = { who = event_target:triggered_by value = -25}}
+			}
+			modifier = {
+				factor = 1.25
+				NOT = {opinion = { who = event_target:triggered_by value = -50}}
+			}
+			modifier = {
+				factor = 1.3
+				NOT = {opinion = { who = event_target:bishop value = 0}}
+			}
+			modifier = {
+				factor = 1.25
+				NOT = {opinion = { who = event_target:bishop value = -35}}
+			}
+		}
+	}
+}
+
+letter_event = {
+	id = PDP.66
+	desc = EVTDESCPDP.66
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_religion
+	only_rulers = yes
+    option = {
+		name = EVTOPT_a_PDP.66
+    }
+}
+#cardinal accepted bishop
+
+character_event = {
+	id = PDP.67
+	desc = EVTDESCPDP.67
+	is_triggered_only = yes
+	hide_window = yes
+	picture = GFX_evt_pope
+	only_rulers = yes
+    option = {
+		name = OK
+		#targets already saved by decisions
+		set_variable = { which = PDP_votes_yes value = 0 }
+		set_variable = { which = num_cardinals value = 0 }
+		set_character_flag = PDP_do_event_PDP.65
+		PDP_cardinal = {#random one
+			limit = {is_alive = yes} #in case some dead ones have their trait
+			character_event = {id = PDP.62 days = 0}
+		}
+		character_event = {id = PDP.68 days = 8} #watch out when letters arrive! (PDP.65->66)
+    }
+}
+
+character_event = {
+	id = PDP.68
+	#desc = EVTDESCPDP.68
+	desc = {
+		trigger = {
+			#NOT = {check_variable = {which = num_cardinals value = 1}} #50% is a majority, therefore 1
+			check_variable = {which = PDP_votes_yes which = half_number_cardinals}
+		}
+		text = EVTDESCPDP.68_accepted
+	}
+	desc = {
+		trigger = {
+			#check_variable = {which = num_cardinals value = 1} #50% is a majority, therefore 1
+			NOT = {check_variable = {which = PDP_votes_yes which = half_number_cardinals}}
+		}
+		text = EVTDESCPDP.68_declined
+	}
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	only_rulers = yes
+	immediate = {
+		set_variable = {which = half_number_cardinals which = num_cardinals}
+		multiply_variable = {which = half_number_cardinals value = 0.5}
+		#subtract_variable = {which = num_cardinals value = PDP_votes_yes}
+	}
+    option = { #accepted
+		name = EVTOPT_a_PDP.68
+		trigger = {
+			check_variable = {which = PDP_votes_yes which = half_number_cardinals}
+		}
+		event_target:bishop = {
+			set_character_flag = PDP_college_supported_as_cardinal
+			custom_tooltip = {text = PDP_will_be_allowed_as_cardinal}
+		}
+    }
+	option = { #then make him cardinal please...
+		name = EVTOPT_a2_PDP.68
+		trigger = {
+			check_variable = {which = PDP_votes_yes which = half_number_cardinals}
+			PDP_college_of_cardinals_full = no
+			event_target:bishop = {
+				religion = catholic
+				is_landed = yes
+				OR = {
+					is_theocracy = yes
+					government = playable_theocracy_government
+				}
+				NOT = { war_with = FROM }
+			}
+		}
+		event_target:bishop = {
+			set_character_flag = PDP_college_supported_as_cardinal
+			custom_tooltip = {text = PDP_will_be_made_cardinal}
+			give_minor_title = title_cardinal
+		}
+    }
+	option = { #declined
+		name = EVTOPT_b_PDP.68
+		trigger = {
+			NOT = {check_variable = {which = PDP_votes_yes which = half_number_cardinals}}
+		}
+		prestige = -5
+		event_target:bishop = {
+			set_character_flag = PDP_college_declined
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					ai = no
+					NOT = {has_global_flag = PDP_papal_infallible_event}
+				}
+				random = {
+					chance = 1
+					modifier = {
+						factor = 2
+						trait = ambitious
+					}
+					modifier = {
+						factor = 1.5
+						OR = {
+							trait = erudite
+							trait = scholar
+							trait = mastermind_theologian
+						}
+					}
+					modifier = {
+						factor = 2
+						OR = {
+							trait = quick
+							trait = genius
+						}
+					}
+					modifier = {
+						factor = 2
+						year = 1200
+					}
+					set_global_flag = PDP_papal_infallible_event
+					character_event = {id = PDP.250 days = 3 random = 14}
+				}
+			}
+		}
+    }
+	option = { #declined, don't care
+		name = EVTOPT_c_PDP.68
+		trigger = {
+			NOT = {check_variable = {which = PDP_votes_yes which = half_number_cardinals}}
+		}
+		prestige = 50
+		piety = -250
+		event_target:bishop = {
+			set_character_flag = PDP_college_supported_as_cardinal
+			custom_tooltip = {text = PDP_will_be_made_cardinal}
+			piety = -200
+			give_minor_title = title_cardinal
+		}
+		if = {
+			limit = {NOT = {trait = arbitrary}}
+			add_trait = arbitrary
+		}
+		add_character_modifier = {name = ignored_college_of_cardinals years = 10}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					ai = no
+					NOT = {has_global_flag = PDP_papal_infallible_event}
+				}
+				random = {
+					chance = 2
+					modifier = {
+						factor = 2
+						trait = ambitious
+					}
+					modifier = {
+						factor = 1.5
+						OR = {
+							trait = erudite
+							trait = scholar
+							trait = mastermind_theologian
+						}
+					}
+					modifier = {
+						factor = 2
+						OR = {
+							trait = quick
+							trait = genius
+						}
+					}
+					set_global_flag = PDP_papal_infallible_event
+					character_event = {id = PDP.250 days = 3 random = 14}
+				}
+			}
+		}
+    }
+	after = {
+		hidden_tooltip = {
+			set_variable = { which = PDP_votes_yes value = 0 }
+			set_variable = { which = num_cardinals value = 0 }
+			set_variable = { which = half_number_cardinals value = 0}
+			clr_character_flag = PDP_do_event_PDP.65
+			clr_character_flag = PDP_currently_asking_for_nomination
+		}
+	}
+}
+
+#prep for PDP.70
+character_event = {
+    id = PDP.69
+	desc = EVTDESCPDP.69
+	hide_window = yes
+	is_triggered_only = yes
+	only_rulers = yes
+	trigger = {
+		ai = yes
+		any_player = {
+			trait = PDP_cardinal
+		}
+	}
+	option = {
+		save_event_target_as = bishop
+		set_character_flag = PDP_new_cardinal
+		rightful_religious_head_scope = {
+			save_event_target_as = triggered_by
+		}
+		any_player = {
+			if = {
+				limit = {
+					trait = PDP_cardinal
+				}
+				character_event = {id = PDP.70 days = 0}
+			}
+		}
+	}
+}
+
+#fake 65 for player only.
+character_event = {
+    id = PDP.70
+	desc = EVTDESCPDP.70
+	is_triggered_only = yes
+	only_rulers = yes
+	picture = GFX_evt_pope
+	trigger = {
+		event_target:bishop = {always = yes} #makes no sense otherwise
+	}
+    option = { #accept
+		name = EVTOPT_a_PDP.70
+		event_target:bishop = {
+			opinion = {modifier = opinion_supported_cardinal who = ROOT years = 10}
+		}
+		event_target:triggered_by = {
+			opinion = {modifier = opinion_merciful who = ROOT years = 2}
+		}
+	}
+	option = { #decline
+		name = EVTOPT_b_PDP.70
+		event_target:bishop = {
+			opinion = {modifier = opinion_very_disappointed who = ROOT years = 10}
+		}
+		event_target:triggered_by = {
+			opinion = {modifier = opinion_very_disappointed who = ROOT years = 10}
+		}
+		random = { #small chance that the other cardinals vote against him too...
+			chance = 1
+			modifier = {
+				factor = 5
+				event_target:triggered_by = {opinion = {who = ROOT value = 75}}
+			}
+			modifier = { #if you/your dynasty controls all cardinal seats and they like you.
+				factor = 100
+				NOT = { #no one disagrees
+					PDP_cardinal = {#any scope
+						ai = yes
+						is_alive = yes
+						OR = {
+							NOT = {dynasty = ROOT}
+							NOT = {opinion = {who = ROOT value = 10}}
+						}
+						NOT = {has_character_flag = PDP_new_cardinal} #he has no vote yet...
+					}
+				}
+			}
+			character_event = {id = PDP.71 days = 2 random = 3 tooltip = PDP_chance_that_others_cardinals_accept}
+		}
+	}
+	after = {
+		event_target:bishop = {
+			clr_character_flag = PDP_new_cardinal
+		}
+	}
+}
+#fake version of PDP.65
+
+character_event = {
+    id = PDP.71
+	desc = EVTDESCPDP.71
+	is_triggered_only = yes
+	only_rulers = yes
+	picture = GFX_evt_pope
+    option = {
+		name = EVTOPT_a_PDP.71
+		event_target:bishop = {
+			set_character_flag = PDP_disallowed_to_be_cardinal
+		}
+	}
+}
+#fake PDP.65 ai cardinals disagreed too
+
+character_event = {
+    id = PDP.76
+	#desc = EVTDESCPDP.76
+	is_triggered_only = yes
+    hide_window = yes
+	only_rulers = yes
+	ai = no
+	#picture = GFX_evt_pope
+    trigger = {
+        ai = no
+        has_landed_title = k_papal_state
+        had_global_flag = {flag = PDP_cardinals_allowed days = 365}
+        any_character = {
+            religion = catholic
+            is_ruler = yes
+            NOT = {has_minor_title = title_cardinal}
+            OR = {
+                is_theocracy = yes
+                government = playable_theocracy_government
+            }
+            NOT = {has_landed_title = k_papal_state}
+            rightful_religious_head_scope = {
+                has_landed_title = k_papal_state #not under rule of antipope
+                is_within_diplo_range = ROOT #prevent game from not appointing cardinals any more (india)
+            }
+            NOT = {trait = excommunicated}
+            NOT = {has_character_flag = PDP_disallowed_to_be_cardinal}
+            health = 4
+            prisoner = no
+        }
+    }
+    immediate = {
+        #remove flags First
+        while = {
+            limit = {
+                PDP_cardinal = {
+                    has_character_flag = PDP_counting_cardinal
+                }
+            }
+            count = 9
+            PDP_cardinal = {
+                limit = {
+                    has_character_flag = PDP_counting_cardinal
+                }
+                clr_character_flag = PDP_counting_cardinal
+            }
+        }
+        #start counting
+        set_variable = { which = num_cardinals value = 0 }
+        while = {
+            limit = {
+                PDP_cardinal = {
+                    NOT = {has_character_flag = PDP_counting_cardinal}
+                }
+            }
+            count = 9
+            change_variable = { which = num_cardinals value = 1 }
+            PDP_cardinal = {
+                limit = {
+                    NOT = {has_character_flag = PDP_counting_cardinal}
+                }
+                set_character_flag = PDP_counting_cardinal
+            }
+        }
+        #remove_flags again
+        while = {
+            limit = {
+                PDP_cardinal = {
+                    has_character_flag = PDP_counting_cardinal
+                }
+            }
+            count = 9
+            PDP_cardinal = {
+                limit = {
+                    has_character_flag = PDP_counting_cardinal
+                }
+                clr_character_flag = PDP_counting_cardinal
+            }
+        }
+    }
+    option = {
+		name = EVTOPT_a_PDP.76
+        if = {
+            limit = {
+                NOT = {check_variable = { which = num_cardinals value = 7 }} #allow for 2 empty spots...
+            }
+            character_event = {id = PDP.79 days = 0}
+        }
+	}
+}
+#are there enough cardinals?
+
+
+character_event = {
+    id = PDP.77
+	desc = EVTDESCPDP.77
+	is_triggered_only = yes
+	only_rulers = yes
+	ai = no
+	trigger = {
+		ai = no
+		has_landed_title = k_papal_state
+		has_character_flag = PDP_vacant_seats_in_college #not removed yet -> no one appointed
+	}
+	picture = GFX_evt_scandal
+    option = {
+		name = EVTOPT_a_PDP.77
+		piety = -250
+		add_character_modifier = { name = PDP_not_appointed_any_cardinals years = 20 }
+	}
+}
+#you didn't appoint any cardinals at all...
+
+character_event = {
+    id = PDP.78
+	desc = EVTDESCPDP.78
+	is_triggered_only = yes
+	only_rulers = yes
+	ai = no
+	trigger = {
+		ai = no
+	}
+	picture = GFX_evt_cardinal_vatican
+    option = {
+		name = EVTOPT_a_PDP.78
+		prestige = 10
+	}
+	option = {
+		name = EVTOPT_b_PDP.78
+		trigger = {ai = no}
+		set_character_flag = PDP_disallowed_to_be_cardinal
+		piety = 10
+		custom_tooltip = {text = EVTOPT_b_PDP.78_tooltip}
+	}
+}
+#player became cardinal
+
+character_event = {
+    id = PDP.79
+	desc = EVTDESCPDP.76
+	is_triggered_only = yes
+	only_rulers = yes
+	ai = no
+	picture = GFX_evt_pope
+	trigger = {
+        ai = no
+        has_landed_title = k_papal_state
+        had_global_flag = {flag = PDP_cardinals_allowed days = 365}
+        NOT = {
+            religion_head = {
+                has_assigned_minor_title  = { title = title_cardinal count = 8 }
+            }
+        }
+	}
+	immediate = {
+		set_character_flag = PDP_vacant_seats_in_college
+		random_character = {
+			limit = {
+				PDP_possible_cardinal_candidate = yes
+			}
+			preferred_limit = {
+                learning = 25
+                culture = italian
+            }
+            preferred_limit = {
+                learning = 20
+                culture = italian
+            }
+            preferred_limit = {learning = 20}
+			preferred_limit = {learning = 15}
+			preferred_limit = {culture = italian}
+			save_event_target_as = possible_cardinal
+		}
+	}
+    option = {
+		name = EVTOPT_a_PDP.76
+        #less than 8 cardinals...
+        event_target:possible_cardinal = { #in case the college doesn't agree with you...
+            set_character_flag = PDP_college_supported_as_cardinal
+        }
+        custom_tooltip = {text = PDP_pope_has_to_appoint_cardinals}
+        character_event = {id = PDP.77 days = 365} #one year of time
+    }
+}
+#not enough cardinals event.
+
+character_event = {
+    id = PDP.80
+	desc = EVTDESCPDP.80
+	is_triggered_only = yes
+	only_rulers = yes
+	ai = no
+	picture = GFX_evt_pope
+    option = {
+		name = EVTOPT_a_PDP.80
+		event_target:nextPope = {
+		#show portrait
+		}
+	}
+}
+#player didn't want to become pope
+
+character_event = {
+    id = PDP.81
+	desc = {
+		trigger = {
+			NOT = {has_character_flag = PDP_player_doesnot_want_papacy}
+		}
+		text = EVTDESCPDP.81_declining
+	}
+	desc = {
+		trigger = {
+			has_character_flag = PDP_player_doesnot_want_papacy
+		}
+		text = EVTDESCPDP.81_accepting
+	}
+	is_triggered_only = yes
+	only_rulers = yes
+	ai = no
+	picture = GFX_evt_pope
+    option = {
+		name = EVTOPT_a_PDP.81
+		if = {
+			limit = {has_character_flag = PDP_player_doesnot_want_papacy}
+			clr_character_flag = PDP_player_doesnot_want_papacy
+			clr_character_flag = PDP_dont_vote_for_me
+		}
+		else = {
+			set_character_flag = PDP_player_doesnot_want_papacy
+			set_character_flag = PDP_dont_vote_for_me
+		}
+	}
+}
+
+character_event = {
+    id = PDP.85
+	desc = EVTDESCPDP.85
+	is_triggered_only = yes
+	only_rulers = yes
+	picture = GFX_evt_pope
+    option = {
+		name = EVTOPT_a_PDP.85
+		piety = 500
+		set_government_type = playable_theocracy_government
+		random_list = {
+			34 = {give_nickname = nick_the_holy}
+			33 = {give_nickname = nick_the_saint}
+			33 = {give_nickname = nick_the_rel_group}
+		}
+		rightful_religious_head_scope = {
+			opinion = {modifier = opinion_PDP_became_theocracy  who = ROOT years = 25}
+		}
+		capital_scope = {
+			any_province_holding = {
+				if = {
+					limit = {holding_type = temple}
+					grant_title_no_opinion = ROOT
+				}
+			}
+			random_province_holding = {
+				limit = {holding_type = temple}
+				make_capital_holding = yes
+			}
+		}
+		hidden_tooltip = {
+			character_event = {id = PDP.6} #became theocracy, add trait for portrait, remove spouse, etc.
+		}
+	}
+	option = {
+		name = EVTOPT_b_PDP.85
+		remove_trait = zealous
+		piety = -50
+		prestige = -50
+		random = {
+			chance = 20
+			add_trait = lustful
+		}
+	}
+}
+
+character_event = {
+    id = PDP.100
+	desc = EVTDESCPDP.100
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		trait = PDP_the_holy_see
+	}
+    option = {
+		name = EVTOPT_a_PDP.100
+		remove_trait = PDP_the_holy_see
+		create_character = { #create the holy see
+			random_traits = no
+			name = "The Holy See"
+			dynasty = none
+			culture = italian
+			religion = catholic
+			female = no
+			age = 42
+			attributes = {
+				martial = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+			}
+			health = 15
+			fertility = 0.0
+			trait = PDP_the_holy_see
+		}
+		any_artifact = {
+			transfer_artifact = {from = ROOT to = new_character}
+		}
+		new_character = {
+			wealth = ROOT
+		}
+		clear_wealth = yes
+		abdicate_to = new_character
+	}
+}
+#holy see character died - create a new one
+
+character_event = {
+    id = PDP.110
+	desc = EVTDESCPDP.110
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_new = yes
+	picture = GFX_evt_death
+	#hide_new = yes
+	trigger = {
+		religion = catholic
+	}
+    option = {
+		name = EVTOPT_a_PDP.110
+		rightful_religious_head_scope = {}
+	}
+}
+#inform catholics: the pope died
+
+character_event = {
+    id = PDP.111
+	desc = EVTDESCPDP.111
+	is_triggered_only = yes
+	hide_window = yes
+    option = {
+		name = EVTOPT_a_PDP.111
+		dynasty = none #make sure the chair has no dynasty
+		#character_event = {id = PDP.149 days = 10} #conclave starts after 10 days
+		character_event = {id = PDP.114 days = 11 random = 2} #conclave starts after 10 days, so days must be greater than 10
+		character_event = {id = PDP.125 days = 90 random = 40} #event for conclave lasted 3 months
+		save_event_target_as = holy_see
+		#inform all cardinals
+		while = {
+			limit = { #any cardinal not informed
+				PDP_cardinal = {
+					is_alive = yes
+					NOT = {has_character_flag = PDP_cardinal_informed_dead_pope}
+				}
+			}
+			PDP_cardinal = {
+				limit = {
+					is_alive = yes
+					NOT = {has_character_flag = PDP_cardinal_informed_dead_pope}
+				}
+				set_character_flag = PDP_cardinal_informed_dead_pope
+				character_event = {id = PDP.112 days = 0}
+			}
+		}
+		while = { #clear flags again
+			limit = { #any cardinal has informed flag
+				PDP_cardinal = {
+					is_alive = yes
+					has_character_flag = PDP_cardinal_informed_dead_pope
+				}
+			}
+			PDP_cardinal = {
+				limit = {
+					is_alive = yes
+					has_character_flag = PDP_cardinal_informed_dead_pope
+				}
+				clr_character_flag = PDP_cardinal_informed_dead_pope
+			}
+		}
+	}
+}
+#pope died - holy see active
+
+character_event = {
+    id = PDP.112
+	desc = EVTDESCPDP.112
+	is_triggered_only = yes
+	hide_new = yes
+	picture = GFX_evt_cardinal_vatican
+	trigger = {
+		religion = catholic
+		has_minor_title = title_cardinal
+	}
+    option = {
+		trigger = {
+			PDP_can_attend_conclave = yes
+		}
+		name = EVTOPT_a_PDP.112
+		rightful_religious_head_scope = {}
+		set_character_flag = PDP_attends_conclave
+		character_event = {id = PDP.113 days = 10}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	 option = {
+		name = EVTOPT_b_PDP.112
+		rightful_religious_head_scope = {}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				PDP_can_attend_conclave = yes
+			}
+		}
+	}
+}
+#pope died - cardinals asked to come to rome
+
+character_event = {
+    id = PDP.113
+	desc = EVTDESCPDP.113
+	is_triggered_only = yes
+	hide_new = yes
+	picture = GFX_evt_cardinal_vatican
+    option = {
+		name = EVTOPT_a_PDP.113
+		set_character_flag = do_not_disturb
+		clr_global_flag = PDP_conclave_began
+		set_global_flag = PDP_conclave_began
+		add_trait = PDP_in_conclave
+		#vote variable initialized
+		set_variable = { which = PDP_votes_for_me value = 0 }
+		set_variable = { which = PDP_votes_for_me_last_round value = 0 }
+		#you got x days to try and convince the other cardinals of your suitability...
+	}
+}
+#pope died - conclave begins (each cardinal)
+
+character_event = {
+    id = PDP.114
+	desc = EVTDESCPDP.114
+	is_triggered_only = yes
+	hide_new = yes
+	hide_window = yes
+	picture = GFX_evt_pope
+    option = {
+		set_variable = { which = global_PDP_total_votes value = 0 }
+		if = {#no one in conclave
+			limit = {
+				NOT = {PDP_in_conclave = {is_alive = yes}}
+			}
+			if = {#no cardinal at all
+				limit = {
+					NOT = {PDP_cardinal = {is_alive = yes}}
+				}
+				random_character = {
+					limit = {
+						is_theocracy = yes
+						religion = catholic
+						preferred_limit = {learning = 15}
+					}
+					add_trait = zealous
+					add_trait = scholar
+					give_minor_title = title_cardinal
+					add_trait = PDP_in_conclave
+				}
+			}
+			else = {#no one is in the conclave
+				PDP_cardinal = {#send a random one in the conclave
+					preferred_limit = {prisoner = no}
+					add_trait = PDP_in_conclave
+				}
+			}
+		}
+		while = {
+			limit = { #any cardinal not informed
+				PDP_in_conclave = {
+					is_alive = yes
+					NOT = {has_character_flag = PDP_cardinal_informed}
+				}
+			}
+			PDP_in_conclave = {
+				limit = {
+					is_alive = yes
+					NOT = {has_character_flag = PDP_cardinal_informed}
+				}
+				set_character_flag = PDP_cardinal_informed
+				set_variable = { which = PDP_votes_for_me_last_round which = PDP_votes_for_me }
+				set_variable = { which = PDP_votes_for_me value = 0 } #reset all votes
+			}
+		}
+		while = { #clear flags again
+			limit = { #any cardinal has informed flag
+				PDP_in_conclave = {
+					is_alive = yes
+					has_character_flag = PDP_cardinal_informed
+				}
+			}
+			PDP_in_conclave = {
+				limit = {
+					is_alive = yes
+					has_character_flag = PDP_cardinal_informed
+				}
+				clr_character_flag = PDP_cardinal_informed
+				character_event = {id = PDP.115 days = 0} #start voting now
+			}
+		}
+		character_event = {id = PDP.120 days = 1} #collect the result
+	}
+}
+#pope died - conclave voting begins (holy see) - informs all voters and resets votes
+
+
+character_event = {
+    id = PDP.115
+    desc = EVTDESCPDP.115
+    is_triggered_only = yes
+    hide_new = yes
+    picture = GFX_evt_cardinal_discussion2
+    immediate = {
+    	if = {
+    		limit = {ai = no}
+    		set_character_flag = PDP_player_cardinal_can_vote
+    	}
+    }
+    option = {
+        trigger = {
+            ai = no
+            NAND = {
+                has_character_flag = PDP_conclave_promised_vote
+                PDP_cardinal = {
+                    is_alive = yes
+                    has_character_flag = PDP_vote_from_@ROOT
+                }
+            }
+        }
+        name = EVTOPT_a_PDP.115
+        #Player need to use targ_des to cast his vote now.
+        #make sure that the player actually casted a vote
+        if = {	#player has voted
+        	limit = {NOT = {has_character_flag = PDP_player_cardinal_can_vote}}
+        	change_variable = { which = global_PDP_total_votes value = 1 }
+        }
+        else = {
+        	clr_character_flag = PDP_player_cardinal_can_vote
+        	#character_event = {id = PDP.115 days = 0} #fire this event again.
+        }
+    }
+    option = {
+        trigger = {
+            ai = no
+            has_character_flag = PDP_player_cardinal_can_vote
+            NAND = {
+                has_character_flag = PDP_conclave_promised_vote
+                PDP_cardinal = {
+                    is_alive = yes
+                    has_character_flag = PDP_vote_from_@ROOT
+                }
+            }
+        }
+        name = EVTOPT_b_PDP.115
+        #Player votes for himself
+        if = {	#player has not cast his vote for someone else yet...
+        	limit = {has_character_flag = PDP_player_cardinal_can_vote}
+        	change_variable = { which = global_PDP_total_votes value = 1 }
+            change_variable = { which = PDP_votes_for_me value = 1 }
+        }
+        clr_character_flag = PDP_player_cardinal_can_vote
+    }
+    option = {
+        trigger = {
+            ai = no
+            AND = {
+                has_character_flag = PDP_conclave_promised_vote
+                PDP_cardinal = {
+                    is_alive = yes
+                    has_character_flag = PDP_vote_from_@ROOT
+                }
+            }
+        }
+        name = EVTOPT_p_PDP.115
+        #Player votes for promised target
+        change_variable = { which = global_PDP_total_votes value = 1 }
+        PDP_cardinal = {
+            limit = {
+                is_alive = yes
+            }
+            preferred_limit = {has_character_flag = PDP_vote_from_@ROOT}
+            change_variable = { which = PDP_votes_for_me value = 1 }
+            #clr_character_flag = PDP_vote_from_@PREV #promised vote is permanent
+        }
+        clr_character_flag = PDP_player_cardinal_can_vote
+    }
+    option = {
+    	name = EVTOPT_c_PDP.115 #ai only
+    	trigger = {ai = yes}
+    	change_variable = { which = global_PDP_total_votes value = 1 }
+    	#AI cardinals need to cast their vote.
+    	if = { #has promised to vote for someone -> vote for that guy
+    		limit = {
+    			has_character_flag = PDP_conclave_promised_vote
+    		}
+    		PDP_cardinal = {
+    			limit = {
+    				is_alive = yes
+    			}
+    			preferred_limit = {has_character_flag = PDP_vote_from_@PREV}
+    			change_variable = { which = PDP_votes_for_me value = 1 }
+    			#clr_character_flag = PDP_vote_from_@PREV #promised vote is permanent
+    		}
+    	}
+    	else_if = { #is preferatus himself (and not too content) or got a lot of votes in the last election-> vote for yourself
+    		limit = {
+    			NOT = {has_character_flag = PDP_dont_vote_for_me}
+    			NAND = { #not really interested in papacy
+    				trait = content
+    				OR = {
+    					trait = shy
+    					trait = slothful
+    				}
+    			}
+    			OR = {
+    				event_target:holy_see = {#is preferatus
+    					current_heir = {character = ROOT}
+    				}
+    				check_variable = { which = PDP_votes_for_me_last_round value = 3 } #lots of votes
+    				AND = { #ambitious characters have a lower threshold
+    					trait = ambitious
+    					check_variable = { which = PDP_votes_for_me_last_round value = 2 } #some votes
+    				}
+    			}
+    		}
+    		change_variable = { which = PDP_votes_for_me value = 1 } #vote for yourself
+    	}
+    	else_if = { #likes preferatus -> vote for preferatus
+    		limit = {
+    			event_target:holy_see = {
+    				current_heir = {
+    					NOT = {has_character_flag = PDP_dont_vote_for_me}
+    					NOT = {character = ROOT} #not yourself
+    					reverse_opinion = { who = ROOT value = 50}
+    				}
+    			}
+    		}
+    		event_target:holy_see = {
+    			current_heir = {
+    				change_variable = { which = PDP_votes_for_me value = 1 } #vote for preferatus
+    			}
+    		}
+    	}
+    	else_if = { #is ambitious -> vote for yourself
+    		limit = {
+    			trait = ambitious
+    			NOT = {has_character_flag = PDP_dont_vote_for_me}
+    		}
+    		change_variable = { which = PDP_votes_for_me value = 1 } #vote for yourself
+    	}
+    	else = { #just vote for someone you could like
+    		PDP_cardinal = {
+    			limit = {
+    				is_alive = yes
+    			}
+    			preferred_limit = { #member of dynasty you like (players first)
+    				reverse_opinion = { who = ROOT value = 25}
+    				dynasty = ROOT
+    				ai = no
+    				NOT = {is_rival = ROOT}
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    			}
+    			preferred_limit = { #member of dynasty you really like
+    				reverse_opinion = { who = ROOT value = 75}
+    				dynasty = ROOT
+    				NOT = {is_rival = ROOT}
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    			}
+    			preferred_limit = { #really good friends & lovers (in case of homosexual cardinals...)
+    				reverse_opinion = { who = ROOT value = 75}
+    				OR = {
+    					is_friend = ROOT
+    					is_lover = ROOT
+    				}
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    			}
+    			preferred_limit = { #member of dynasty you like
+    				reverse_opinion = { who = ROOT value = 25}
+    				dynasty = ROOT
+    				NOT = {is_rival = ROOT}
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    			}
+    			preferred_limit = { #any family ties
+    				reverse_opinion = { who = ROOT value = 25}
+    				OR = {
+    					is_close_relative = ROOT
+    					is_cousin_of = ROOT
+    					is_aunt_uncle_of = ROOT
+    					is_nibling_of = ROOT
+    				}
+    				NOT = {is_rival = ROOT}
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    			}
+    			preferred_limit = { #any friends & lovers (in case of homosexual cardinals...)
+    				reverse_opinion = { who = ROOT value = 25}
+    				OR = {
+    					is_friend = ROOT
+    					is_lover = ROOT
+    				}
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    			}
+    			preferred_limit = { #preferatus I like & highly learned
+    				reverse_opinion = { who = ROOT value = 30}
+    				NOT = {is_rival = ROOT}
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    				event_target:holy_see = { #is preferatus
+    					current_heir = {
+    						character = PREVPREV
+    					}
+    				}
+    				learning = 15
+    			}
+    			preferred_limit = { #same culture and like him & learned
+    				reverse_opinion = { who = ROOT value = 50}
+    				culture = ROOT
+    				NOT = {is_rival = ROOT}
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    				learning = 15
+    			}
+    			preferred_limit = { #someone I like & learned
+    				reverse_opinion = { who = ROOT value = 50}
+    				NOT = {is_rival = ROOT}
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    				learning = 15
+    			}
+                preferred_limit = { #someone I like & saintly blood
+                    reverse_opinion = { who = ROOT value = 40}
+                    NOT = {is_rival = ROOT}
+                    NOT = {has_character_flag = PDP_dont_vote_for_me}
+                    any_bloodline = {
+                        has_bloodline_flag = saintly_bloodline
+                        founder = {
+                        religion = catholic
+                        }
+                    }
+                }
+    			preferred_limit = { #preferatus I like
+    				reverse_opinion = { who = ROOT value = 25}
+    				NOT = {is_rival = ROOT}
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    				event_target:holy_see = { #is preferatus
+    					current_heir = {
+    						character = PREVPREV
+    					}
+    				}
+    			}
+    			preferred_limit = { #same culture & learned
+    				reverse_opinion = { who = ROOT value = 35}
+    				culture = ROOT
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    				learning = 15
+    			}
+    			preferred_limit = { #same culture and like him
+    				reverse_opinion = { who = ROOT value = 50}
+    				culture = ROOT
+    				NOT = {is_rival = ROOT}
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    			}
+    			preferred_limit = { #someone I like
+    				reverse_opinion = { who = ROOT value = 50}
+    				NOT = {is_rival = ROOT}
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    			}
+    			preferred_limit = { #same culture
+    				reverse_opinion = { who = ROOT value = 35}
+    				culture = ROOT
+    				NOT = {is_rival = ROOT}
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    			}
+    			preferred_limit = { #preferatus I like a little
+    				reverse_opinion = { who = ROOT value = 15}
+    				NOT = {is_rival = ROOT}
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    				event_target:holy_see = { #is preferatus
+    					current_heir = {
+    						character = PREVPREV
+    					}
+    				}
+    			}
+    			preferred_limit = { #same culture
+    				reverse_opinion = { who = ROOT value = 10}
+    				culture = ROOT
+    				NOT = {is_rival = ROOT}
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    			}
+    			preferred_limit = { #preferatus I don't dislike
+    				reverse_opinion = { who = ROOT value = 0}
+    				NOT = {is_rival = ROOT}
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    				event_target:holy_see = { #is preferatus
+    					current_heir = {
+    						character = PREVPREV
+    					}
+    				}
+    			}
+    			preferred_limit = { #I don't dislike him
+    				reverse_opinion = { who = ROOT value = 0}
+    				NOT = {is_rival = ROOT}
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    			}
+    			preferred_limit = { #I don't dislike him that much
+    				reverse_opinion = { who = ROOT value = -25}
+    				NOT = {is_rival = ROOT}
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    			}
+    			preferred_limit = { #not my rival
+    				NOT = {is_rival = ROOT}
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    			}
+    			preferred_limit = { #I can actually vote for someone...
+    				NOT = {has_character_flag = PDP_dont_vote_for_me}
+    			}
+    			change_variable = { which = PDP_votes_for_me value = 1 }
+    		}
+    	}
+    }
+}
+#pope died - cardinals need to vote.
+
+character_event = {
+    id = PDP.120
+	desc = EVTDESCPDP.120
+	hide_window = yes
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+    option = {
+		name = EVTOPT_a_PDP.120
+		set_variable = { which = global_PDP_half_number_votes which = global_PDP_total_votes }
+		multiply_variable = {which = global_PDP_half_number_votes value = 0.5}
+		if = {#any cardinal has a majority / all are flagged as they dont want votes...
+			limit = {
+				OR = {
+					PDP_cardinal = { #one cardinal has a majority
+						is_alive = yes
+						NOT = {check_variable = { which = global_PDP_half_number_votes which = PDP_votes_for_me}}
+					}
+					NOT = {PDP_cardinal = { #all cardinals withdrew / are dead
+						is_alive = yes
+						NOT = {has_character_flag = PDP_dont_vote_for_me}
+					}}
+				}
+			}
+			if = {
+				limit = {
+					PDP_cardinal = {is_alive = yes} #there's still a living cardinal
+				}
+				PDP_cardinal = {#this one is it
+					limit = {is_alive = yes}
+					preferred_limit = {
+						NOT = {check_variable = { which = global_PDP_half_number_votes which = PDP_votes_for_me}} #not (half_total>=votes ) <=> half_total < votes
+					}
+					#this is our pope
+					save_event_target_as = electedPope
+				}
+			}
+			else = {#all cardinals have died: create a new one
+				create_character = {
+					dynasty = random
+					culture = italian
+					religion = catholic
+					age = 50
+					trait = ambitious
+					trait = zealous
+				}
+				new_character = {save_event_target_as = electedPope}
+			}
+			#set flag that someone won.
+			set_character_flag = PDP_election_success
+			character_event = {id = PDP.149 days = 1}
+		}
+		else = {
+			#we need a new election...
+			set_character_flag = PDP_election_no_success
+			if = {#if locked be a little bit faster
+				limit = {has_global_flag = PDP_locked_conclave }
+				character_event = {id = PDP.114 days = 20 random = 20}
+			}
+			else = {
+				character_event = {id = PDP.114 days = 50 random = 60}
+			}
+
+			#remove one Cardinal from being able to get votes:
+			PDP_cardinal = {
+				limit = {
+					is_alive = yes
+					NOT = {has_character_flag = PDP_dont_vote_for_me}
+					ai = yes
+				}
+				preferred_limit = {
+					NOT = {check_variable = { which = PDP_votes_for_me value = 1 }}
+				}
+				preferred_limit = {
+					NOT = {check_variable = { which = PDP_votes_for_me value = 2 }}
+				}
+				preferred_limit = {
+					NOT = {check_variable = { which = PDP_votes_for_me value = 3 }}
+				}
+				preferred_limit = {
+					NOT = {check_variable = { which = PDP_votes_for_me value = 4 }}
+				}
+				preferred_limit = {
+					NOT = {check_variable = { which = PDP_votes_for_me value = 5 }}
+				}
+				#set_character_flag = PDP_dont_vote_for_me
+				save_event_target_as = PDP_widthdrawed_cardinal
+			}
+			random = {
+				chance = 90
+				modifier = {
+					factor = 0.8
+					event_target:PDP_widthdrawed_cardinal = {trait = ambitious}
+				}
+				modifier = {
+					factor = 1.2
+					event_target:PDP_widthdrawed_cardinal = {trait = shy}
+				}
+				modifier = {
+					factor = 1.2
+					event_target:PDP_widthdrawed_cardinal = {trait = content}
+				}
+				modifier = {
+					factor = 0.5
+					event_target:PDP_widthdrawed_cardinal = {check_variable = { which = PDP_votes_for_me value = 3}}
+				}
+				modifier = {
+					factor = 0.5
+					event_target:PDP_widthdrawed_cardinal = {check_variable = { which = PDP_votes_for_me value = 4}}
+				}
+				event_target:PDP_widthdrawed_cardinal = {
+					set_character_flag = PDP_dont_vote_for_me
+				}
+			}
+			if = {#a cardinal withdrew
+				limit = {
+					event_target:PDP_widthdrawed_cardinal = {
+						has_character_flag = PDP_dont_vote_for_me
+					}
+				}
+				any_player = {
+					limit = {
+						trait = PDP_in_conclave
+					}
+					character_event = {id = PDP.124 days = 2}
+				}
+			}
+		}
+
+		#inform all cardinals of election result
+		while = {
+			limit = { #any cardinal not informed
+				PDP_in_conclave = {
+					is_alive = yes
+					NOT = {has_character_flag = PDP_cardinal_informed}
+				}
+			}
+			PDP_in_conclave = {
+				limit = {
+					is_alive = yes
+					NOT = {has_character_flag = PDP_cardinal_informed}
+				}
+				set_character_flag = PDP_cardinal_informed
+				if = {
+					limit = {
+						ROOT = {has_character_flag = PDP_election_success}
+					}
+					if = {
+						limit = {character = event_target:electedPope}
+						character_event = {id = PDP.123 days = 0}
+					}
+					else = {
+						character_event = {id = PDP.121 days = 0}
+					}
+				}
+				else = {
+					character_event = {id = PDP.122 days = 0}
+				}
+			}
+		}
+		while = { #clear flags again
+			limit = { #any cardinal has informed flag
+				PDP_in_conclave = {
+					is_alive = yes
+					has_character_flag = PDP_cardinal_informed
+				}
+			}
+			PDP_in_conclave = {
+				limit = {
+					is_alive = yes
+					has_character_flag = PDP_cardinal_informed
+				}
+				clr_character_flag = PDP_cardinal_informed
+			}
+		}
+	}
+	after = {
+        if = {
+            limit = {
+                has_character_flag = PDP_election_no_success
+            }
+            PDP_in_conclave = { #ai will ask player to vote for it
+                limit = {
+                    ai = yes
+                    has_offmap_currency = { offmap = offmap_PDP_church value = 100 }
+                    PDP_cardinal = { #there is somebody to ask
+                        ai = no
+                        NOT = {has_character_flag = PDP_asked_to_vote_by_@ROOT}
+                        NOT = {has_character_flag = PDP_conclave_promised_vote}
+                    }
+                    OR = { #there is a voting_target
+                        NOT = {has_character_flag = PDP_dont_vote_for_me}
+                        PDP_cardinal = {
+                            ai = no
+                            NOT = {has_character_flag = PDP_dont_vote_for_me}
+                            ROOT = {
+                                OR = {
+                                    opinion = {who = PREV value = 25}
+            						is_friend = PREV
+            						is_lover = PREV
+                                }
+                            }
+                        }
+                    }
+                }
+                preferred_limit = {
+                    check_variable = { which = PDP_votes_for_me value = 4 }
+                }
+                preferred_limit = {
+                    check_variable = { which = PDP_votes_for_me value = 3 }
+                }
+                preferred_limit = {
+                    check_variable = { which = PDP_votes_for_me value = 2 }
+                }
+                preferred_limit = {
+                    check_variable = { which = PDP_votes_for_me value = 1 }
+                }
+                preferred_limit = {
+                    trait = ambitious
+                }
+                preferred_limit = {
+                    NOR = {
+                        trait = content
+                        trait = shy
+                    }
+                }
+                random = {
+                    chance = 25
+                    modifier = {
+                        factor = 1.5
+                        check_variable = { which = PDP_votes_for_me value = 4 }
+                    }
+                    modifier = {
+                        factor = 1.5
+                        check_variable = { which = PDP_votes_for_me value = 3 }
+                    }
+                    character_event = {id = PDP.254 days = 3}
+                }
+            }
+        }
+		clr_character_flag = PDP_election_success
+		clr_character_flag = PDP_election_no_success
+	}
+}
+#pope died - count votes
+
+character_event = {
+    id = PDP.121
+	desc = EVTDESCPDP.121
+	is_triggered_only = yes
+	hide_new = yes
+	picture = GFX_evt_papal_coronation
+    option = {
+		name = EVTOPT_a_PDP.121
+		event_target:electedPope = {}
+	}
+}
+#pope died, election success
+
+character_event = {
+    id = PDP.122
+	desc = EVTDESCPDP.122
+	is_triggered_only = yes
+	hide_new = yes
+	picture = GFX_evt_cardinal_discussion
+    option = {
+		name = EVTOPT_a_PDP.122
+	}
+}
+#pope died, election no success
+
+character_event = {
+    id = PDP.123
+	desc = EVTDESCPDP.123
+	is_triggered_only = yes
+	hide_new = yes
+	picture = GFX_evt_papal_coronation
+    option = {
+		name = EVTOPT_a_PDP.123
+	}
+}
+#pope died, election success - I am the next pope
+
+character_event = {
+    id = PDP.124
+    desc = {
+      trigger = {
+        event_target:PDP_widthdrawed_cardinal = {trait = PDP_in_conclave}
+      }
+      text = EVTDESCPDP.124
+    }
+
+    desc = {
+      trigger = {
+        NOT = {event_target:PDP_widthdrawed_cardinal = {trait = PDP_in_conclave}}
+      }
+      text = EVTDESCPDP.124Absent
+    }
+	is_triggered_only = yes
+	hide_new = yes
+	picture = GFX_evt_cardinal_vatican
+    option = {
+		name = EVTOPT_a_PDP.124
+		event_target:PDP_widthdrawed_cardinal = {show_portrait = yes} #show portrait
+	}
+}
+#cardinal widthdrew
+
+character_event = {
+    id = PDP.125
+	desc = EVTDESCPDP.125
+	is_triggered_only = yes
+	hide_window = yes
+	picture = GFX_evt_pope
+    option = {
+		name = EVTOPT_a_PDP.125
+		character_event = {id = PDP.126 days = 160 random = 40}
+		#distribute events to all cardinals in conclave for chance of stressed (bad health if not allowed to leave), etc.
+		while = {
+			limit = { #any cardinal not informed
+				PDP_in_conclave = {
+					is_alive = yes
+					NOT = {has_character_flag = PDP_conclave_cardinal_informed}
+				}
+			}
+			PDP_in_conclave = {
+				limit = {
+					is_alive = yes
+					NOT = {has_character_flag = PDP_conclave_cardinal_informed}
+				}
+				set_character_flag = PDP_conclave_cardinal_informed
+				character_event = {id = PDP.130 days = 0 random = 7}
+			}
+		}
+		while = { #clear flags again
+			limit = { #any cardinal has informed flag
+				PDP_in_conclave = {
+					is_alive = yes
+					has_character_flag = PDP_conclave_cardinal_informed
+				}
+			}
+			PDP_in_conclave = {
+				limit = {
+					is_alive = yes
+					has_character_flag = PDP_conclave_cardinal_informed
+				}
+				clr_character_flag = PDP_conclave_cardinal_informed
+			}
+		}
+	}
+}
+#conclave long distribute
+
+character_event = {
+    id = PDP.126
+	desc = EVTDESCPDP.126
+	is_triggered_only = yes
+	hide_window = yes
+	picture = GFX_evt_pope
+    option = {
+		name = EVTOPT_a_PDP.126
+		character_event = {id = PDP.127 days = 320 random = 40}
+		#distribute events to all cardinals in conclave for chance of stressed (bad health if not allowed to leave), etc.
+		while = {
+			limit = { #any cardinal not informed
+				PDP_in_conclave = {
+					is_alive = yes
+					NOT = {has_character_flag = PDP_conclave_cardinal_informed}
+				}
+			}
+			PDP_in_conclave = {
+				limit = {
+					is_alive = yes
+					NOT = {has_character_flag = PDP_conclave_cardinal_informed}
+				}
+				set_character_flag = PDP_conclave_cardinal_informed
+				character_event = {id = PDP.131 days = 0 random = 7}
+			}
+		}
+		while = { #clear flags again
+			limit = { #any cardinal has informed flag
+				PDP_in_conclave = {
+					is_alive = yes
+					has_character_flag = PDP_conclave_cardinal_informed
+				}
+			}
+			PDP_in_conclave = {
+				limit = {
+					is_alive = yes
+					has_character_flag = PDP_conclave_cardinal_informed
+				}
+				clr_character_flag = PDP_conclave_cardinal_informed
+			}
+		}
+	}
+}
+#conclave very long distribute
+
+character_event = {
+    id = PDP.127
+	desc = EVTDESCPDP.127
+	is_triggered_only = yes
+	hide_window = yes
+	picture = GFX_evt_pope
+    option = {
+		name = EVTOPT_a_PDP.127
+		if = {
+			limit = {NOT = {has_global_flag = PDP_locked_conclave}}
+			set_global_flag = PDP_locked_conclave #from now on, conclave will be locked, giving harsher modifiers to cardinals...
+			#spread the news:
+			any_player = {
+				limit = {
+					religion = catholic
+					NOT = {trait = PDP_in_conclave}
+				}
+				character_event = {id = PDP.133 days = 0} #news from papal conclave
+			}
+			#distribute events to all cardinals in conclave for chance of stressed (bad health if not allowed to leave), etc.
+			while = {
+				limit = { #any cardinal not informed
+					PDP_in_conclave = {
+						is_alive = yes
+						NOT = {has_character_flag = PDP_conclave_cardinal_informed}
+					}
+				}
+				PDP_in_conclave = {
+					limit = {
+						is_alive = yes
+						NOT = {has_character_flag = PDP_conclave_cardinal_informed}
+					}
+					set_character_flag = PDP_conclave_cardinal_informed
+					character_event = {id = PDP.132 days = 0 random = 7}
+				}
+			}
+			while = { #clear flags again
+				limit = { #any cardinal has informed flag
+					PDP_in_conclave = {
+						is_alive = yes
+						has_character_flag = PDP_conclave_cardinal_informed
+					}
+				}
+				PDP_in_conclave = {
+					limit = {
+						is_alive = yes
+						has_character_flag = PDP_conclave_cardinal_informed
+					}
+					clr_character_flag = PDP_conclave_cardinal_informed
+				}
+			}
+		}
+		else = {
+			while = {
+				limit = { #any cardinal not informed
+					PDP_in_conclave = {
+						is_alive = yes
+						NOT = {has_character_flag = PDP_conclave_cardinal_informed}
+					}
+				}
+				PDP_in_conclave = {
+					limit = {
+						is_alive = yes
+						NOT = {has_character_flag = PDP_conclave_cardinal_informed}
+					}
+					set_character_flag = PDP_conclave_cardinal_informed
+					character_event = {id = PDP.131 days = 0 random = 7}
+				}
+			}
+			while = { #clear flags again
+				limit = { #any cardinal has informed flag
+					PDP_in_conclave = {
+						is_alive = yes
+						has_character_flag = PDP_conclave_cardinal_informed
+					}
+				}
+				PDP_in_conclave = {
+					limit = {
+						is_alive = yes
+						has_character_flag = PDP_conclave_cardinal_informed
+					}
+					clr_character_flag = PDP_conclave_cardinal_informed
+				}
+			}
+		}
+	}
+}
+#conclave too long - will now be locked
+
+
+character_event = {
+    id = PDP.130
+	desc = {
+	  trigger = {
+		NOT = {has_global_flag = PDP_locked_conclave}
+	  }
+	  text = EVTDESCPDP.130
+	}
+	desc = {
+	  trigger = {
+		has_global_flag = PDP_locked_conclave
+	  }
+	  text = EVTDESCPDP.130_locked
+	}
+	is_triggered_only = yes
+	hide_new = yes
+	picture = GFX_evt_cardinal_discussion2
+    option = {
+		name = EVTOPT_a_PDP.130
+		if = {
+			limit = {has_global_flag = PDP_locked_conclave}
+			random_list = {
+			  10 = {
+			  }
+			  10 = {
+				modifier = {
+					factor = 0.5
+					OR = {
+						trait = strong
+						trait = robust
+						trait = sturdy
+					}
+				}
+				health = -0.1
+			  }
+			  10 = {
+				modifier = {
+					factor = 0.5
+					OR = {
+						trait = strong
+						trait = robust
+						trait = sturdy
+					}
+				}
+				modifier = {
+				  factor = 0
+				  NOT = {age = 40}
+				}
+				health = -0.2
+			  }
+			}
+			random = {
+				chance = 7.5
+				modifier = { #ambitious character gets easily depressed of low score
+					factor = 1.5
+					trait = ambitious
+				}
+				modifier = {
+					factor = 0
+					check_variable = {which = PDP_votes_for_me value = 2}
+				}
+				add_trait = depressed
+			}
+			random = {
+				chance = 10
+				modifier = {
+					factor = 0
+					trait = is_fat
+				}
+				add_trait = is_malnourished
+			}
+			random = {
+				chance = 5
+				modifier = {
+					factor = 0
+					NOT = {trait = is_fat}
+				}
+				remove_trait = is_fat
+			}
+		}
+		random = {
+			chance = 5
+			modifier = {
+				factor = 0
+				trait = stressed
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					trait = strong
+					trait = robust
+					trait = sturdy
+					trait = gregarious
+				}
+			}
+			add_trait = stressed
+		}
+	}
+}
+#conclave for few months
+
+character_event = {
+    id = PDP.131
+	desc = {
+	  trigger = {
+		NOT = {has_global_flag = PDP_locked_conclave}
+	  }
+	  text = EVTDESCPDP.131
+	}
+	desc = {
+	  trigger = {
+		has_global_flag = PDP_locked_conclave
+	  }
+	  text = EVTDESCPDP.131_locked
+	}
+	is_triggered_only = yes
+	hide_new = yes
+	picture = GFX_evt_cardinal_discussion2
+    option = {
+		name = EVTOPT_a_PDP.131
+		if = {
+			limit = {has_global_flag = PDP_locked_conclave}
+			random_list = {
+			  10 = {
+			  }
+			  10 = {
+				modifier = {
+					factor = 0.66
+					OR = {
+						trait = strong
+						trait = robust
+						trait = sturdy
+					}
+				}
+				health = -0.2
+			  }
+			  10 = {
+				modifier = {
+					factor = 0.66
+					OR = {
+						trait = strong
+						trait = robust
+						trait = sturdy
+					}
+				}
+				modifier = {
+				  factor = 0
+				  NOT = {age = 40}
+				}
+				health = -0.4
+			  }
+			  15 = {
+				modifier = {
+					factor = 0.66
+					OR = {
+						trait = strong
+						trait = robust
+						trait = sturdy
+					}
+				}
+				modifier = {
+				  factor = 0.2
+				  NOT = {age = 40}
+				}
+				modifier = {
+				  factor = 0
+				  NOT = {had_global_flag = {flag = PDP_conclave_began days = 360}}
+				}
+				health = -1.0
+			  }
+			}
+			random = {
+				chance = 5
+				modifier = { #ambitious character gets easily depressed of low score
+					factor = 1.5
+					trait = ambitious
+				}
+				modifier = {
+					factor = 0
+					check_variable = {which = PDP_votes_for_me value = 2}
+				}
+				add_trait = depressed
+			}
+			random = {
+				chance = 25
+				modifier = {
+					factor = 0
+					trait = is_fat
+				}
+				add_trait = is_malnourished
+			}
+			random = {
+				chance = 15
+				modifier = {
+					factor = 0
+					NOT = {trait = is_fat}
+				}
+				remove_trait = is_fat
+			}
+		}
+		random = {
+			chance = 15
+			modifier = {
+				factor = 0
+				trait = stressed
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					trait = strong
+					trait = robust
+					trait = sturdy
+					trait = gregarious
+				}
+			}
+			add_trait = stressed
+		}
+	}
+}
+#long conclave
+
+character_event = {
+    id = PDP.132
+	desc = {
+	  trigger = {
+		NOT = {has_global_flag = PDP_locked_conclave}
+	  }
+	  text = EVTDESCPDP.132
+	}
+	desc = {
+	  trigger = {
+		has_global_flag = PDP_locked_conclave
+	  }
+	  text = EVTDESCPDP.132_locked
+	}
+	is_triggered_only = yes
+	hide_new = yes
+	picture = GFX_evt_cardinal_discussion2
+    option = {
+		name = EVTOPT_a_PDP.132
+		#limit = {has_global_flag = PDP_locked_conclave}
+		random_list = {
+		  5 = {
+		  }
+		  10 = {
+			modifier = {
+				factor = 0.5
+				OR = {
+					trait = strong
+					trait = robust
+					trait = sturdy
+				}
+			}
+			health = -0.1
+		  }
+		  10 = {
+			modifier = {
+				factor = 0.5
+				OR = {
+					trait = strong
+					trait = robust
+					trait = sturdy
+				}
+			}
+			modifier = {
+			  factor = 0
+			  NOT = {age = 40}
+			}
+			health = -0.2
+		  }
+		}
+		random = {
+			chance = 7.5
+			modifier = { #ambitious character gets easily depressed of low score
+				factor = 1.5
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0
+				check_variable = {which = PDP_votes_for_me value = 2}
+			}
+			add_trait = depressed
+		}
+		random = {
+			chance = 10
+			modifier = {
+				factor = 0
+				trait = is_fat
+			}
+			add_trait = is_malnourished
+		}
+		random = {
+			chance = 5
+			modifier = {
+				factor = 0
+				NOT = {trait = is_fat}
+			}
+			remove_trait = is_fat
+		}
+	}
+}
+#very long conclave
+
+character_event = {
+    id = PDP.133
+	desc = EVTDESCPDP.133
+	is_triggered_only = yes
+	hide_new = yes
+	picture = GFX_evt_cardinal_discussion
+    option = {
+		name = EVTOPT_a_PDP.133
+	}
+}
+#news from conclave - they still have not found a pope
+
+character_event = {
+    id = PDP.148
+	desc = EVTDESCPDP.148
+	is_triggered_only = yes
+	hide_new = yes
+	picture = GFX_evt_cardinal_vatican
+    option = {
+		name = EVTOPT_a_PDP.148
+		piety = 100 #gain some piety as 'reward'
+	}
+}
+#pope died, conclave ended and everyone goes home.
+
+character_event = { #fire once the next pope is stored in "event_target:electedPope". He will then be made pope by this event.
+    id = PDP.149
+	desc = EVTDESCPDP.149
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		#first, conclave ended so remove PDP_in_conclave trait
+		PDP_end_conclave = yes
+		if = {#ai is next pope
+			limit = {
+				event_target:electedPope = {ai = yes}
+			}
+			event_target:electedPope = {
+				abdicate = yes
+			}
+			any_artifact = {
+				transfer_artifact = {from = ROOT to = event_target:electedPope}
+			}
+			event_target:electedPope = {
+				wealth = ROOT
+			}
+			clear_wealth = yes
+			#regnal names workaround
+			k_papal_state = {
+				grant_title_no_opinion = event_target:electedPope
+			}
+			abdicate_to = event_target:electedPope
+			event_target:electedPope = {
+				character_event = {id = PDP.5 days = 1}
+				character_event = {id = PDP.151 days = 1} #remove holy see
+			}
+			#inform everyone
+			any_player = {
+				limit = {
+					religion = catholic
+					rightful_religious_head_scope = {
+						has_landed_title = k_papal_state #no antipope
+					}
+				}
+				character_event = {id = PDP.150 days = 1}
+			}
+		}
+		else = {#player is next pope
+			event_target:electedPope = {
+				#try to find current heir first...
+				#problem: since pope has recently died, the new heir might be somebody else... -> try to save players_heir when old pope dies...
+				if = {#has an heir
+					limit = {current_heir = {always = yes}}
+					current_heir = {save_event_target_as = players_heir}
+				}
+				else = { #create an heir
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = PREV
+						religion = PREV
+						female = no
+						age = 45
+					}
+					new_character = {
+						save_event_target_as = players_heir
+					}
+				}
+				primary_title = {
+					succession = catholic_bishopric #otherwise non dynastic inheritance causes game over
+					save_event_target_as = players_title
+				}
+				abdicate_to = event_target:players_heir #player now plays players_heir
+				wealth = ROOT #inherit old popes money...
+			}
+			clear_wealth = yes
+			set_government_type = playable_theocracy_government
+			any_artifact = {
+				transfer_artifact = {from = ROOT to = event_target:electedPope}
+			}
+			#regnal names workaround
+			k_papal_state = {
+				grant_title_no_opinion = event_target:electedPope
+			}
+			abdicate_to = event_target:electedPope #players former character is now the pope
+			event_target:electedPope = {
+				set_government_type = playable_theocracy_government
+				character_event = {id = PDP.5 days = 1}
+				character_event = {id = PDP.151 days = 1} #remove holy see
+			}
+			#Make the player play the pope (his old character) again
+			event_target:players_title = {
+				holder_scope = {
+					set_player_character = event_target:electedPope
+				}
+			}
+			#inform everyone (except the new pope
+			any_player = {
+				limit = {
+					NOT = {has_landed_title = k_papal_state}
+					religion = catholic
+					rightful_religious_head_scope = {
+						has_landed_title = k_papal_state #no antipope
+					}
+				}
+				character_event = {id = PDP.150 days = 1}
+			}
+		}
+	}
+    option = {
+		name = EVTOPT_a_PDP.149
+	}
+}
+#pope died - conclave ends
+
+character_event = {
+    id = PDP.150
+	desc = EVTDESCPDP.150
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_new = yes
+	picture = GFX_evt_papal_coronation
+	trigger = {
+		religion = catholic
+	}
+    option = {
+		name = EVTOPT_a_PDP.150
+		rightful_religious_head_scope = {}
+	}
+	 option = {
+		name = EVTOPT_b_PDP.150
+		rightful_religious_head_scope = {}
+	}
+}
+#inform catholics: new pope elected
+
+character_event = {
+    id = PDP.151
+	is_triggered_only = yes
+	hide_window = yes
+	picture = GFX_evt_pope
+    option = {
+		deactivate_holy_see = yes
+	}
+}
+#the holy see is not needed anymore...
+
+
+
+
+#indulgence declined
+character_event = {
+    id = PDP.200
+	desc = EVTDESCPDP.200
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_new = yes
+	picture = GFX_evt_pope
+    option = {
+		name = EVTOPT_a_PDP.200
+		rightful_religious_head_scope = {}
+	}
+}
+#indulgence declined
+
+#indulgence policy
+character_event = {
+    id = PDP.201
+	desc = EVTDESCPDP.201
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_new = yes
+	picture = GFX_evt_monk
+    option = {
+		name = EVTOPT_a_PDP.201
+		clr_character_flag = PDP_indulgence_dukes
+		clr_character_flag = PDP_indulgence_kings
+		clr_character_flag = PDP_indulgence_emperors
+	}
+	option = {
+		name = EVTOPT_b_PDP.201
+		set_character_flag = PDP_indulgence_dukes
+		clr_character_flag = PDP_indulgence_kings
+		clr_character_flag = PDP_indulgence_emperors
+
+	}
+	option = {
+		name = EVTOPT_c_PDP.201
+		clr_character_flag = PDP_indulgence_dukes
+		set_character_flag = PDP_indulgence_kings
+		clr_character_flag = PDP_indulgence_emperors
+	}
+	option = {
+		name = EVTOPT_d_PDP.201
+		clr_character_flag = PDP_indulgence_dukes
+		clr_character_flag = PDP_indulgence_kings
+		set_character_flag = PDP_indulgence_emperors
+	}
+}
+#indulgence policy
+
+character_event = {
+    id = PDP.220
+	desc = EVTDESCPDP.220
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_new = yes
+	picture = GFX_evt_emissary
+    option = {#offer him money
+		name = EVTOPT_a_PDP.220
+		event_target:elector = {
+			character_event = {id = PDP.221 days = 3 random = 3}
+		}
+	}
+	option = {#offer titles/artifacts
+		name = EVTOPT_b_PDP.220
+		trigger = {
+			OR = {
+				num_of_count_titles = 2
+				num_of_baron_titles = 1
+			}
+		}
+		event_target:elector = {
+			character_event = {id = PDP.222 days = 3 random = 3}
+		}
+	}
+}
+#bribe i-elector
+
+character_event = {
+    id = PDP.221
+    desc = EVTDESCPDP.221
+    is_triggered_only = yes
+    only_rulers = yes
+    hide_new = yes
+    picture = GFX_evt_emissary
+    option = {#accept
+        name = EVTOPT_a_PDP.221
+        event_target:bishop = {
+            character_event = {id = PDP.223 days = 2 random = 3}
+        }
+        ai_chance = {
+            factor = 75
+            modifier = {
+                factor = 2
+                trait = greedy
+            }
+            modifier = {
+                factor = 1.5
+                trait = slothful
+            }
+            modifier = {
+                factor = 1.1
+                trait = ambitious
+            }
+            modifier = {
+                factor = 1.2
+                trait = deceitful
+            }
+            modifier = {
+                factor = 2
+                dynasty = event_target:bishop
+            }
+            modifier = {
+                factor = 1.5
+                opinion = {who = event_target:bishop value = 0}
+            }
+        }
+    }
+    option = {#decline
+        name = EVTOPT_b_PDP.221
+        event_target:bishop = {
+            character_event = {id = PDP.225 days = 2 random = 3}
+        }
+        ai_chance = {
+            factor = 25
+            modifier = {
+                factor = 2
+                trait = just
+            }
+            modifier = {
+                factor = 2
+                trait = honest
+            }
+            modifier = {
+                factor = 1.2
+                trait = charitable
+            }
+            modifier = {
+                factor = 2
+                NOT = {opinion = {who = event_target:bishop value = -50}}
+            }
+        }
+    }
+}
+#elector gets bribe offer (money)
+
+character_event = {
+    id = PDP.222
+	desc = EVTDESCPDP.222
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_new = yes
+	picture = GFX_evt_emissary
+    option = {#accept
+		name = EVTOPT_a_PDP.222
+		event_target:bishop = {
+			character_event = {id = PDP.224 days = 2 random = 3}
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+			modifier = {
+				factor = 1.5
+				trait = slothful
+			}
+			modifier = {
+				factor = 1.1
+				trait = ambitious
+			}
+			modifier = {
+				factor = 1.2
+				trait = deceitful
+			}
+			modifier = {
+				factor = 2
+				dynasty = event_target:bishop
+			}
+			modifier = {
+				factor = 1.5
+				opinion = {who = event_target:bishop value = 0}
+			}
+		}
+	}
+	option = {#decline
+		name = EVTOPT_b_PDP.222
+		event_target:bishop = {
+			character_event = {id = PDP.225 days = 2 random = 3}
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				trait = just
+			}
+			modifier = {
+				factor = 2
+				trait = honest
+			}
+			modifier = {
+				factor = 1.2
+				trait = charitable
+			}
+			modifier = {
+				factor = 2
+				NOT = {opinion = {who = event_target:bishop value = -50}}
+			}
+		}
+	}
+}
+#elector gets bribe offer (title/artifact)
+
+
+character_event = {
+    id = PDP.223
+	desc = EVTDESCPDP.223
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_new = yes
+	picture = GFX_evt_emissary
+    option = {#pay him money
+		name = EVTOPT_a_PDP.223
+		transfer_scaled_wealth = { to = event_target:elector value = 1.5}
+		set_character_flag =  PDP_ielection_bribed_@event_target:elector
+		custom_tooltip = {text = PDP_bribe_thankfull}
+		event_target:elector = {
+			character_event = {id = PDP.226 days = 3 random = 3}
+		}
+	}
+	option = {#don't do it
+		name = EVTOPT_b_PDP.223
+		custom_tooltip = {text = PDP_no_bribe}
+		event_target:elector = {
+			character_event = {id = PDP.227 days = 3 random = 3}
+		}
+	}
+}
+#decide if to pay money
+
+character_event = {
+    id = PDP.224
+	desc = EVTDESCPDP.224
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_new = yes
+	picture = GFX_evt_emissary
+	immediate = {
+		any_demesne_title = {
+			set_title_flag = PDP_possible_bribe_title
+		}
+		random_demesne_title = {
+			limit = {
+				OR = {
+					tier = count
+					tier = baron
+				}
+				is_capital = no
+			}
+			save_event_target_as = PDP_random_title
+		}
+	}
+    option = {#give him land
+		name = EVTOPT_a_PDP.224
+		if = {
+			limit = {
+				event_target:elector = {
+					any_demesne_title = {
+						has_title_flag = PDP_possible_bribe_title
+					}
+				}
+			}
+			set_character_flag =  PDP_ielection_bribed_much_@event_target:elector
+			event_target:elector = {
+				character_event = {id = PDP.226 days = 3 random = 3}
+			}
+			custom_tooltip = {text = PDP_bribe_thankfull}
+		}
+		else = {
+			event_target:elector = {
+				character_event = {id = PDP.227 days = 3 random = 3}
+			}
+			custom_tooltip = {text = PDP_no_bribe}
+		}
+	}
+	option = {#don't do it
+		name = EVTOPT_b_PDP.224
+		event_target:elector = {
+			character_event = {id = PDP.227 days = 3 random = 3}
+		}
+		custom_tooltip = {text = PDP_no_bribe}
+	}
+	option = {#give him random title
+		name = EVTOPT_c_PDP.224
+		trigger = {
+			event_target:PDP_random_title = {
+				always = yes
+			}
+		}
+		set_character_flag =  PDP_ielection_bribed_much_@event_target:elector
+		event_target:elector = {
+			character_event = {id = PDP.226 days = 3 random = 3}
+		}
+		event_target:PDP_random_title = {
+			grant_title = event_target:elector
+		}
+		custom_tooltip = {text = PDP_bribe_thankfull}
+	}
+	after = {
+		any_demesne_title = {
+			clr_title_flag = PDP_possible_bribe_title
+		}
+		event_target:elector = {
+			any_demesne_title = {
+				clr_title_flag = PDP_possible_bribe_title
+			}
+		}
+	}
+}
+#decide if to give land
+
+character_event = {
+    id = PDP.225
+	desc = EVTDESCPDP.225
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_new = yes
+	picture = GFX_evt_emissary
+    option = {
+		name = Ok
+	}
+}
+#elector refused bribe
+
+character_event = {
+    id = PDP.226
+	desc = EVTDESCPDP.226
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_new = yes
+	picture = GFX_evt_emissary
+    option = {
+		name = Ok
+	}
+}
+#got bribed
+
+character_event = {
+    id = PDP.227
+	desc = EVTDESCPDP.227
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_new = yes
+	picture = GFX_evt_emissary
+    option = {
+		name = Ok
+	}
+}
+#bishop changed his mind - not bribed
+
+
+
+character_event = {
+    id = PDP.250
+	desc = EVTDESCPDP.250
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_new = yes
+    picture = GFX_evt_cardinal_discussion
+    option = {
+		name = EVTOPT_a_PDP.250
+		random = {
+			chance = 75
+			learning = 1
+			if = {
+				limit = {NOT = {trait = cynical}}
+				add_trait = cynical
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_b_PDP.250
+		random = {
+			chance = 75
+			diplomacy = 1
+			if = {
+				limit = {NOT = {trait = zealous}}
+				add_trait = zealous
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_c_PDP.250
+		random = {
+			chance = 75
+			stewardship  = -1
+			learning = 1
+			if = {
+				limit = {NOT = {trait = paranoid}}
+				add_trait = paranoid
+			}
+			if = {
+				limit = {NOT = {trait = lunatic}}
+				random = {
+					chance = 25
+					add_trait = lunatic
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+    id = PDP.254
+    hide_window = yes
+	is_triggered_only = yes
+	only_rulers = yes
+    ai = yes
+    trigger = {
+        has_offmap_currency = { offmap = offmap_PDP_church value = 100 }
+        PDP_cardinal = { #there is somebody to ask
+            ai = no
+            NOT = {has_character_flag = PDP_asked_to_vote_by_@ROOT}
+            NOT = {has_character_flag = PDP_conclave_promised_vote}
+        }
+        OR = { #there is a voting_target
+            NOT = {has_character_flag = PDP_dont_vote_for_me}
+            PDP_cardinal = {
+                ai = no
+                NOT = {has_character_flag = PDP_dont_vote_for_me}
+                ROOT = {
+                    OR = {
+                        opinion = {who = PREV value = 25}
+						is_friend = PREV
+						is_lover = PREV
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = OK
+        ROOT = {
+            save_event_target_as = voting_target
+            save_event_target_as = asking_cardinal
+            add_offmap_currency = { offmap = offmap_PDP_church value = -100 }
+        }
+        PDP_cardinal = {
+            limit = {
+                ai = no
+                NOT = {has_character_flag = PDP_asked_to_vote_by_@ROOT}
+            }
+            save_event_target_as = cardinal
+        }
+        if = { #choose another voting target if necessary
+            limit = {has_character_flag = PDP_dont_vote_for_me}
+            PDP_cardinal = {
+                limit = {
+                    NOT = {character = event_target:cardinal}
+                    NOT = {has_character_flag = PDP_dont_vote_for_me}
+                    ROOT = {
+                        OR = {
+                            opinion = {who = PREV value = 25}
+        					is_friend = PREV
+        					is_lover = PREV
+                        }
+                    }
+                }
+                preferred_limit = {
+                    ROOT = {
+                        OR = {
+                            opinion = {who = PREV value = 95}
+                            is_friend = PREV
+                            is_lover = PREV
+                        }
+                    }
+                }
+                preferred_limit = {ROOT = {opinion = {who = PREV value = 80}}}
+                preferred_limit = {ROOT = {opinion = {who = PREV value = 70}}}
+                preferred_limit = {ROOT = {opinion = {who = PREV value = 50}}}
+                save_event_target_as = voting_target
+            }
+        }
+        event_target:cardinal = {
+            set_character_flag = PDP_asked_to_vote_by_@ROOT
+        	character_event = {id = PDP.256 days = 1} #send letter
+        }
+    }
+}
+#ai decides to ask other cardinal to vote with them
+
+character_event = {
+    id = PDP.255
+	desc = EVTDESCPDP.255
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_new = yes
+	picture = GFX_evt_cardinal_discussion
+    option = {
+		name = EVTOPT_a_PDP.255
+		event_target:cardinal = {
+			character_event = {id = PDP.256 days = 1}
+		}
+	}
+}
+#event cardinal wants to bribe other cardinal to vote for him start
+
+character_event = {
+    id = PDP.256
+	desc = EVTDESCPDP.256
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_new = yes
+	picture = GFX_evt_cardinal_discussion
+    option = {#agree
+        name = EVTOPT_a_PDP.256
+        event_target:cardinal = {
+        	set_character_flag = PDP_conclave_promised_vote
+        }
+        event_target:voting_target = {
+        	set_character_flag = PDP_vote_from_@event_target:cardinal
+        }
+        event_target:asking_cardinal = {
+            character_event = {id = PDP.257 days = 0}
+        }
+        ai_chance = {
+        	factor = 1
+            modifier = { #asked to vote for yourself
+        		factor = 1000
+        		event_target:voting_target = {
+        			character = ROOT
+        		}
+        	}
+        	modifier = {
+        		factor = 2
+        		event_target:cardinal = {
+        			opinion = {who = event_target:asking_cardinal value = 95}
+        			opinion = {who = event_target:voting_target value = 10}
+        		}
+        	}
+            modifier = {
+                factor = 4
+                event_target:cardinal = {
+                    dynasty = event_target:voting_target
+                }
+            }
+            modifier = { #asking cardinal just asks for other dynasty member -> agree
+                factor = 100
+                event_target:cardinal = {
+                    dynasty = event_target:voting_target
+                    dynasty = event_target:asking_cardinal
+                    opinion = {who = event_target:asking_cardinal value = 25}
+        			opinion = {who = event_target:voting_target value = 0}
+                    NOT = {
+                        event_target:voting_target = {
+                            character = event_target:asking_cardinal
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 80
+                event_target:cardinal = {
+                    OR = {
+        				is_friend = event_target:voting_target
+        				is_lover = event_target:voting_target
+        			}
+                }
+            }
+        	modifier = {
+        		factor = 1.5
+        		event_target:cardinal = {
+        			opinion = {who = event_target:asking_cardinal value = 85}
+        			opinion = {who = event_target:voting_target value = 15}
+        		}
+        	}
+        	modifier = {
+        		factor = 80
+        		event_target:cardinal = {
+        			opinion = {who = event_target:asking_cardinal value = 75}
+        			opinion = {who = event_target:voting_target value = 10}
+        			OR = {
+        				is_friend = event_target:asking_cardinal
+        				is_lover = event_target:asking_cardinal
+        			}
+        		}
+        	}
+        }
+    }
+	option = {#ask for bribe
+		name = EVTOPT_b_PDP.256
+		event_target:asking_cardinal = {
+			character_event = {id = PDP.258 days = 0}
+		}
+		ai_chance = {
+			factor = 29
+			modifier = {
+				factor = 2
+				event_target:cardinal = {
+					opinion = {who = event_target:asking_cardinal value = 95}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				event_target:cardinal = {
+					opinion = {who = event_target:asking_cardinal value = 85}
+				}
+			}
+            modifier = {
+                factor = 2
+                event_target:cardinal = {
+                    dynasty = event_target:voting_target
+                }
+            }
+			modifier = {
+				factor = 1.25
+				event_target:cardinal = {
+					opinion = {who = event_target:asking_cardinal value = 50}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				event_target:cardinal = {
+					opinion = {who = event_target:asking_cardinal value = 40}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				event_target:cardinal = {
+					opinion = {who = event_target:asking_cardinal value = 25}
+				}
+			}
+			modifier = {
+				factor = 3
+				event_target:cardinal = {
+					opinion = {who = event_target:asking_cardinal value = 75}
+					OR = {
+						is_friend = event_target:asking_cardinal
+						dynasty = event_target:asking_cardinal
+						is_lover = event_target:asking_cardinal
+					}
+				}
+			}
+		}
+	}
+	option = {#refuse
+		name = EVTOPT_c_PDP.256
+		event_target:asking_cardinal = {
+			character_event = {id = PDP.259 days = 0}
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 1.25
+				event_target:cardinal = {
+					NOT = {opinion = {who = event_target:asking_cardinal value = 10}}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				event_target:cardinal = {
+					NOT = {opinion = {who = event_target:asking_cardinal value = 0}}
+				}
+			}
+			modifier = {
+				factor = 1.75
+				event_target:cardinal = {
+					NOT = {opinion = {who = event_target:asking_cardinal value = -10}}
+				}
+			}
+            modifier = {
+				factor = 1.75
+				event_target:cardinal = {
+					NOT = {opinion = {who = event_target:voting_target value = -10}}
+				}
+			}
+			modifier = {
+				factor = 2
+				event_target:cardinal = {
+					NOT = {opinion = {who = event_target:asking_cardinal value = -25}}
+				}
+			}
+            modifier = {
+				factor = 2
+				event_target:cardinal = {
+					NOT = {opinion = {who = event_target:voting_target value = -25}}
+				}
+			}
+			modifier = {
+				factor = 1000
+				event_target:cardinal = {
+					OR = {
+						NOT = {opinion = {who = event_target:asking_cardinal value = -50}}
+						is_rival = event_target:asking_cardinal
+                        is_rival = event_target:voting_target
+                        NOT = {opinion = {who = event_target:voting_target value = -50}}
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+    id = PDP.257
+	desc = EVTDESCPDP.257
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_new = yes
+	picture = GFX_evt_cardinal_discussion
+    option = {
+		name = EVTOPT_a_PDP.257
+	}
+}
+#cardinal promised to vote for my candidate
+
+character_event = {
+    id = PDP.258
+	desc = EVTDESCPDP.258
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_new = yes
+	picture = GFX_evt_cardinal_discussion
+	immediate = {
+		random_demesne_title = {
+			limit = {
+				OR = {
+					tier = count
+					tier = baron
+				}
+				#is_capital = no
+			}
+			preferred_limit = {
+				tier = baron
+			}
+			save_event_target_as = PDP_random_title
+		}
+	}
+    option = {#pay him
+		name = EVTOPT_a_PDP.258
+		random = {
+			chance = 100
+			custom_tooltip = {text = PDP_bribe_accepted}
+			transfer_scaled_wealth = { to = event_target:cardinal value = 3 min = 200 }
+			event_target:cardinal = {
+				character_event = {id = PDP.260 days = 0}
+				set_character_flag = PDP_conclave_promised_vote
+			}
+			event_target:asking_cardinal = {
+				character_event = {id = PDP.257 days = 1}
+            }
+            event_target:voting_target = {
+				set_character_flag = PDP_vote_from_@event_target:cardinal
+			}
+		}
+        ai_chance = {
+            factor = 100
+        }
+	}
+	option = {#don't pay
+		name = EVTOPT_b_PDP.258
+		custom_tooltip = {text = PDP_no_bribe}
+        ai_chance = {
+            factor = 0
+        }
+	}
+	option = {#i've got land for you
+		trigger = {
+			num_of_extra_landed_titles = 1
+            event_target:voting_target = {character = event_target:asking_cardinal}
+			event_target:PDP_random_title  = {always = yes}
+		}
+		name = EVTOPT_c_PDP.258
+		random = {
+			chance = 100
+			custom_tooltip = {text = PDP_bribe_accepted}
+			event_target:PDP_random_title = {
+				#clr_title_flag = PDP_bribe_title
+				grant_title_no_opinion = event_target:cardinal
+			}
+			event_target:cardinal = {
+				set_character_flag = PDP_conclave_promised_vote
+				character_event = {id = PDP.260 days = 0}
+			}
+			event_target:asking_cardinal = {
+				character_event = {id = PDP.257 days = 1}
+			}
+            event_target:voting_target = {
+				set_character_flag = PDP_vote_from_@event_target:cardinal
+			}
+		}
+        ai_chance = {
+            factor = 0
+        }
+	}
+    option = {#Offer power after election
+		trigger = {
+			NOT = {has_character_flag = PDP_promised_power_to_cardinal}
+            event_target:voting_target = {character = event_target:asking_cardinal}
+		}
+		name = EVTOPT_d_PDP.258
+		random = {
+			chance = 100
+			custom_tooltip = {text = PDP_bribe_accepted}
+            custom_tooltip = {text = PDP_promised_power_tooltip}
+			event_target:cardinal = {
+				set_character_flag = PDP_conclave_promised_vote
+				character_event = {id = PDP.260 days = 0}
+			}
+			event_target:asking_cardinal = {
+				character_event = {id = PDP.257 days = 1}
+                set_character_flag = PDP_promised_power_to_cardinal
+				set_character_flag = PDP_vote_from_@event_target:cardinal
+                character_event = {id = PDP.265 days = 25 random = 10} #check if he became pope, then force to pay his promises.
+			}
+		}
+        ai_chance = {
+            factor = 0
+        }
+	}
+}
+#cardinal asks for bribe in exchange for vote
+
+character_event = {
+    id = PDP.259
+	desc = EVTDESCPDP.259
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_new = yes
+	picture = GFX_evt_cardinal_discussion
+    option = {
+		name = EVTOPT_a_PDP.259
+	}
+}
+#cardinal did not accept to vote for me
+
+character_event = {
+    id = PDP.260
+	desc = EVTDESCPDP.260
+	is_triggered_only = yes
+	only_rulers = yes
+	hide_new = yes
+	picture = GFX_evt_cardinal_discussion
+    option = {
+		name = EVTOPT_a_PDP.260
+	}
+}
+#cardinal informed that bribe is payed
+
+
+character_event = {
+    id = PDP.261
+	hide_window = yes
+	is_triggered_only = yes
+	only_rulers = yes
+    option = {
+		name = Ok
+		event_target:PDP_ruler = {#ruler
+			set_character_flag = pope_wants_our_law_changed
+			character_event = { id = 67001 days = 14 tooltip = EVTTOOLTIP67001 }
+		}
+		ROOT = {#the pope
+			set_character_flag = pope_currently_demanding
+		}
+	}
+}
+#mock investiture event for player pope from targetted decision
+
+character_event = {
+    id = PDP.265
+    hide_window = yes
+    is_triggered_only = yes
+    option = {#became pope -> ask to fulfill promise
+        trigger = {has_landed_title = k_papal_state}
+        character_event = {id = PDP.266 days = 10 random = 5}
+    }
+    option = { #not pope yet
+        trigger = {
+            NOT = {has_landed_title = k_papal_state}
+            has_character_flag = PDP_promised_power_to_cardinal
+        }
+        character_event = {id = PDP.265 days = 25 random = 10}
+    }
+    option = {#did never become pope
+        trigger = {
+            NOT = {has_landed_title = k_papal_state}
+            NOT = {has_character_flag = PDP_promised_power_to_cardinal}
+        }
+        #end of chain
+    }
+}
+#player promised to cardinal - check if already pope
+
+character_event = {
+    id = PDP.266
+    desc = EVTDESCPDP.266
+    picture = GFX_evt_cardinal_discussion
+    is_triggered_only = yes
+    trigger = {
+        event_target:cardinal = {is_alive = yes} #everyone still alive
+        event_target:asking_cardinal = {is_alive = yes}
+    }
+    option = {
+        name = EVTOPT_a_PDP.266 #accept
+        event_target:cardinal = {
+            give_minor_title = title_cardinal_dean
+            character_event = {id = PDP.267 days = 0} #inform that promise was fulfilled
+        }
+    }
+    option = {
+        name = EVTOPT_b_PDP.266 #deny
+        custom_tooltip = {text = PDP_promise_power_broken_tt}
+        add_character_modifier = {name = PDP_broken_power_promise duration = 3650 }
+        add_rival = event_target:cardinal
+        PDP_cardinal = { #other cardinal is angry too (because he liked that one more than you)
+            limit = {
+                NOR = {
+                    is_friend = ROOT
+                    is_lover = ROOT
+                    is_rival = ROOT
+                }
+                OR = {
+                    is_friend = event_target:cardinal
+                    is_lover = event_target:cardinal
+                    likes_better_than = { who = event_target:cardinal than = ROOT}
+                }
+                NOT = {opinion = {who = ROOT value = 40}}
+                opinion = {who = event_target:cardinal value = 0}
+            }
+            preferred_limit = {is_friend = event_target:cardinal}
+            add_rival = ROOT
+        }
+        character_event = {id = PDP.268 days = 0} #inform that promise was broken
+    }
+    option = {
+        name = EVTOPT_c_PDP.266 #cardinal prisoner
+        trigger = {event_target:cardinal = {prisoner = yes}}
+        character_event = {id = PDP.268 days = 0} #inform that promise was broken
+    }
+}
+#promised cardianl dean title
+
+character_event = {
+    id = PDP.267
+    desc = EVTDESCPDP.267
+    picture = GFX_evt_cardinal_discussion
+    is_triggered_only = yes
+    option = {#became pope -> ask to fulfill promise
+        name = EVTOPT_a_PDP.267
+    }
+}
+#promise fulfilled
+
+character_event = {
+    id = PDP.268
+    desc = EVTDESCPDP.268
+    picture = GFX_evt_cardinal_discussion
+    is_triggered_only = yes
+    option = {#became pope -> ask to fulfill promise
+        name = EVTOPT_a_PDP.268
+    }
+}
+#promise not fulfilled
+
+
+character_event = {
+    id = PDP.270
+	desc = EVTDESCPDP.270
+	is_triggered_only = yes
+	only_rulers = yes
+	picture = GFX_evt_papal_coronation
+	immediate = {
+		PDP_cardinal = {#Cardinal who crowns him
+			limit = {
+				is_alive = yes
+				NOT = {has_landed_title = k_papal_state}
+			}
+			preferred_limit = {
+				has_minor_title = title_cardinal_dean
+			}
+			preferred_limit = {
+				higher_tier_than = count
+			}
+			preferred_limit = {
+				higher_tier_than = baron
+			}
+			preferred_limit = {
+				age = 60
+			}
+			preferred_limit = {
+				learning = 18
+			}
+			preferred_limit = {
+				culture = italian
+			}
+			ROOT = {save_persistent_event_target = { name = coronation_priest_per scope = PREV }}
+		}
+	}
+    option = {
+		name = EVTOPT_a_PDP.270
+		set_character_flag = flag_crowned_by_bishop
+		add_trait = crowned_by_bishop
+	}
+}
+#crown the pope
+
+
+character_event = {
+    id = PDP.300
+    desc = EVTDESCPDP.300
+    picture = GFX_evt_cardinal_discussion
+    is_triggered_only = yes
+    option = {#well ok then
+        name = EVTOPT_a_PDP.300
+        piety = -100
+        add_character_modifier = {name = PDP_excommunicated_cardinal duration = 3650 stacking = yes}
+        PDP_cardinal = { #other cardinal is angry too (because he liked that one more than you)
+            limit = {
+                NOR = {
+                    is_friend = ROOT
+                    is_lover = ROOT
+                    is_rival = ROOT
+                }
+                OR = {
+                    is_friend = FROM
+                    is_lover = FROM
+                    likes_better_than = { who = FROM than = ROOT}
+                }
+                NOT = {opinion = {who = ROOT value = 40}}
+                opinion = {who = FROM value = 0}
+            }
+            preferred_limit = {is_friend = FROM}
+            add_rival = ROOT
+        }
+        FROM = {#liege might be angry, since he has less influence in curia now.
+            opinion = {modifier = opinion_angry   who = ROOT} #cardinal himself is kind of angry
+            liege = {
+                if = {
+                    limit = {
+                        NOR = {
+                            character = ROOT
+                            character = FROM
+                            is_friend = ROOT
+                            is_lover = ROOT
+                            is_rival = ROOT
+                        }
+                        OR = {
+                            is_friend = FROM
+                            is_lover = FROM
+                            likes_better_than = { who = FROM than = ROOT}
+                        }
+                        NOT = {opinion = {who = ROOT value = 40}}
+                        opinion = {who = FROM value = 0}
+                    }
+                    opinion = { modifier = PDP_opinion_vassal_cardinal_excommunicated who = ROOT years = 10 }
+                }
+            }
+        }
+        PDP_cardinal = { #other cardinal is angry too (because he liked that one more than you)
+            limit = {
+                NOR = {
+                    is_friend = FROM
+                    is_lover = FROM
+                }
+                opinion = {who = ROOT value = 0}
+                NOT = {opinion = {who = FROM value = -20}}
+            }
+            preferred_limit = {is_rival = FROM}
+            opinion = { modifier = PDP_opinion_rival_cardinal_excommunicated who = ROOT years = 10 }
+        }
+    }
+    option = {#it was a mistake
+        name = EVTOPT_b_PDP.300
+        prestige = -100
+        FROM = {
+            remove_trait = excommunicated
+            give_minor_title = title_cardinal
+            opinion = {modifier = opinion_irritated  who = ROOT}
+        }
+    }
+    option = {#spend church influence
+        name = EVTOPT_c_PDP.300
+        trigger = {
+            has_offmap_currency = { offmap = offmap_PDP_church value = 10000 }
+        }
+        prestige = -100
+        add_offmap_currency = { offmap = offmap_PDP_church value = -10000 }
+        FROM = {
+            opinion = {modifier = opinion_angry who = ROOT}
+        }
+    }
+}
+#player pope excommunicated a cardinal without good reason.
+
+
+
+character_event = {
+    id = PDP.310
+    desc = EVTDESCPDP.310
+    picture = GFX_evt_cardinal_discussion
+    is_triggered_only = no
+    only_rulers = yes
+    religion = catholic
+    has_job_title = yes
+    trigger = {
+        has_minor_title = title_cardinal_dean
+        rightful_religious_head_scope = {
+            wealth = 200
+        }
+    }
+    mean_time_to_happen = {
+    	months = 72
+    	modifier = {#wealthy pope
+    		factor = 2
+    		rightful_religious_head_scope = {
+                wealth = 500
+            }
+    	}
+        modifier = {#rich pope
+    		factor = 2
+    		rightful_religious_head_scope = {
+                wealth = 1000
+            }
+    	}
+        modifier = {#insanely rich pope
+    		factor = 2
+    		rightful_religious_head_scope = {
+                wealth = 10000
+            }
+    	}
+        modifier = {#rich cardianl dean
+    		factor = 0.5
+    		wealth = 500
+    	}
+    }
+    option = {#dont ask for anything
+        name = EVTOPT_a_PDP.310 #no demand
+        piety = 25
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                NOR = {
+                    trait = content
+                    trait = trusting
+                }
+            }
+        }
+    }
+    option = {#ask for small amount
+        name = EVTOPT_b_PDP.310
+        save_event_target_as = cardinal_dean
+        rightful_religious_head_scope = {
+            character_event = {id = PDP.311 days = 1}
+        }
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 0.75
+                NOR = {
+                    trait = humble
+                    trait = content
+                    trait = trusting
+                    trait = imbecile
+                }
+            }
+        }
+    }
+    option = {#ask for large amount
+        name = EVTOPT_c_PDP.310
+        save_event_target_as = cardinal_dean
+        rightful_religious_head_scope = {
+            character_event = {id = PDP.312 days = 3}
+        }
+        ai_chance = {
+            factor = 40
+            modifier = {
+                factor = 2
+                OR = {
+                    trait = proud
+                    trait = greedy
+                    trait = diligent
+                    trait = ambitious
+                }
+            }
+        }
+    }
+}
+#cardinal dean decides if it's time for him to ask for some money...
+
+
+character_event = {
+    id = PDP.311
+    desc = EVTDESCPDP.311
+    picture = GFX_evt_cardinal_discussion
+    is_triggered_only = yes
+    option = {#accept
+        name = EVTOPT_a_PDP.311
+        transfer_scaled_wealth = { to = event_target:cardinal_dean value = 0.25 min = 50 max = 200}
+        event_target:cardinal_dean = {
+            opinion = { modifier = PDP_opinion_paid_curia_service who = ROOT years = 5 }
+        }
+        piety = 5
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 0.25
+                OR = {
+                    trait = greedy
+                    is_rival = event_target:cardinal_dean
+                }
+            }
+        }
+    }
+    option = {#decline
+        name = EVTOPT_b_PDP.311
+        event_target:cardinal_dean = {
+            opinion = { modifier = PDP_opinion_not_paid_curia_service who = ROOT years = 5 }
+        }
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 2
+                is_friend = event_target:cardinal_dean
+            }
+        }
+    }
+    option = {#spend church influence
+        name = EVTOPT_c_PDP.311
+        trigger = {
+            has_offmap_currency = { offmap = offmap_PDP_church value = 500 }
+        }
+        add_offmap_currency = { offmap = offmap_PDP_church value = -500 }
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+#pope- cardinal dean demanded small amount
+
+
+character_event = {
+    id = PDP.312
+    desc = EVTDESCPDP.312
+    picture = GFX_evt_cardinal_discussion
+    is_triggered_only = yes
+    option = {#accept
+        name = EVTOPT_a_PDP.312
+        transfer_scaled_wealth = { to = event_target:cardinal_dean value = 0.5 min = 75 max = 300}
+        event_target:cardinal_dean = {
+            opinion = { modifier = PDP_opinion_paid_curia_service who = ROOT years = 5 }
+            character_event = {id = PDP.313 days = 0}
+        }
+        piety = 5
+        ai_chance = {
+            factor = 40
+            modifier = {
+                factor = 0.25
+                OR = {
+                    trait = greedy
+                    is_rival = event_target:cardinal_dean
+                }
+            }
+        }
+    }
+    option = {#decline
+        name = EVTOPT_b_PDP.312
+        event_target:cardinal_dean = {
+            opinion = { modifier = PDP_opinion_not_paid_curia_service who = ROOT years = 5 }
+            character_event = {id = PDP.314 days = 0}
+        }
+        ai_chance = {
+            factor = 60
+            modifier = {
+                factor = 0.5
+                wealth = 500
+            }
+            modifier = {
+                factor = 2
+                is_friend = event_target:cardinal_dean
+            }
+        }
+    }
+}
+#pope- cardinal dean demanded large amount
+
+
+character_event = {
+    id = PDP.313
+    desc = EVTDESCPDP.313
+    picture = GFX_evt_cardinal_discussion
+    is_triggered_only = yes
+    option = {#accept
+        name = EVTOPT_a_PDP.313
+    }
+}
+#cardinal dean demanded money - pope accepted
+
+character_event = {
+    id = PDP.314
+    desc = EVTDESCPDP.314
+    picture = GFX_evt_cardinal_discussion
+    is_triggered_only = yes
+    option = {#accept
+        name = EVTOPT_a_PDP.314
+    }
+}
+#cardinal dean demanded money - pope declined
+
+
+###same for normal Cardinals
+
+
+
+character_event = {
+    id = PDP.320
+    desc = EVTDESCPDP.320
+    picture = GFX_evt_cardinal_discussion
+    is_triggered_only = no
+    only_rulers = yes
+    religion = catholic
+    has_job_title = yes
+    trigger = {
+		OR = {
+			has_minor_title = title_cardinal
+			has_minor_title = title_PDP_papal_palatinus
+		}
+        NOT = {has_minor_title = title_cardinal_dean}
+        rightful_religious_head_scope = {
+            wealth = 400
+        }
+    }
+    mean_time_to_happen = {
+    	months = 800 #for each individual cardinal -> 8 + palatinus times as likely for pope
+    	modifier = {#wealthy pope
+    		factor = 2
+    		rightful_religious_head_scope = {
+                wealth = 1000
+            }
+    	}
+        modifier = {#rich pope
+    		factor = 2
+    		rightful_religious_head_scope = {
+                wealth = 2000
+            }
+    	}
+        modifier = {#insanely rich pope
+    		factor = 2
+    		rightful_religious_head_scope = {
+                wealth = 10000
+            }
+    	}
+		modifier = {#only palatinus
+    		factor = 0.25
+    		has_minor_title = title_PDP_papal_palatinus
+    	}
+		modifier = {#at war
+    		factor = 1.25
+    		war = yes
+    	}
+		modifier = {#poor cardianl
+    		factor = 1.25
+    		NOT = {wealth = 20}
+    	}
+		modifier = {#broke cardianl
+    		factor = 1.25
+    		NOT = {wealth = -100}
+    	}
+		modifier = {#well off cardianl
+    		factor = 0.8
+    		wealth = 100
+    	}
+        modifier = {#rich cardianl
+    		factor = 0.5
+    		wealth = 500
+    	}
+    }
+    option = {#dont ask for anything
+        name = EVTOPT_a_PDP.320 #no demand
+        piety = 25
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                NOR = {
+                    trait = content
+					trait = humble
+                    trait = trusting
+					has_minor_title = title_PDP_papal_palatinus
+                }
+            }
+        }
+    }
+    option = {#ask for small amount
+        name = EVTOPT_b_PDP.320
+        save_event_target_as = cardinal
+        rightful_religious_head_scope = {
+            character_event = {id = PDP.321 days = 1}
+        }
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 0.75
+                NOR = {
+                    trait = humble
+                    trait = content
+                    trait = trusting
+                    trait = imbecile
+                }
+            }
+        }
+    }
+    option = {#ask for large amount
+        name = EVTOPT_c_PDP.320
+        save_event_target_as = cardinal
+        rightful_religious_head_scope = {
+            character_event = {id = PDP.322 days = 3}
+        }
+        ai_chance = {
+            factor = 40
+			modifier = {
+                factor = 1.5
+                war = yes
+            }
+            modifier = {
+                factor = 2
+                OR = {
+                    trait = proud
+                    trait = greedy
+                    trait = diligent
+                    trait = ambitious
+                }
+            }
+        }
+    }
+}
+#cardinal  decides if it's time for him to ask for some money...
+
+
+character_event = {
+    id = PDP.321
+    desc = EVTDESCPDP.321
+    picture = GFX_evt_cardinal_discussion
+    is_triggered_only = yes
+    option = {#accept
+        name = EVTOPT_a_PDP.321
+        transfer_scaled_wealth = { to = event_target:cardinal value = 0.15 min = 33 max = 200}
+        event_target:cardinal = {
+            opinion = { modifier = PDP_opinion_paid_curia_service who = ROOT years = 4 }
+        }
+        piety = 5
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 0.25
+                OR = {
+                    trait = greedy
+                    is_rival = event_target:cardinal
+                }
+            }
+        }
+    }
+    option = {#decline
+        name = EVTOPT_b_PDP.321
+        event_target:cardinal = {
+            opinion = { modifier = PDP_opinion_not_paid_curia_service who = ROOT years = 4 }
+        }
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 2
+                is_friend = event_target:cardinal
+            }
+        }
+    }
+    option = {#spend church influence
+        name = EVTOPT_c_PDP.321
+        trigger = {
+            has_offmap_currency = { offmap = offmap_PDP_church value = 500 }
+        }
+        add_offmap_currency = { offmap = offmap_PDP_church value = -500 }
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+#pope- cardinal  demanded small amount
+
+
+character_event = {
+    id = PDP.322
+    desc = EVTDESCPDP.322
+    picture = GFX_evt_cardinal_discussion
+    is_triggered_only = yes
+    option = {#accept
+        name = EVTOPT_a_PDP.322
+        transfer_scaled_wealth = { to = event_target:cardinal value = 0.333 min = 66 max = 300}
+        event_target:cardinal = {
+            opinion = { modifier = PDP_opinion_paid_curia_service who = ROOT years = 4 }
+            character_event = {id = PDP.323 days = 0}
+        }
+        piety = 5
+        ai_chance = {
+            factor = 40
+            modifier = {
+                factor = 0.25
+                OR = {
+                    trait = greedy
+                    is_rival = event_target:cardinal
+                }
+            }
+        }
+    }
+    option = {#decline
+        name = EVTOPT_b_PDP.322
+        event_target:cardinal = {
+            opinion = { modifier = PDP_opinion_not_paid_curia_service who = ROOT years = 4 }
+            character_event = {id = PDP.324 days = 0}
+        }
+        ai_chance = {
+            factor = 60
+            modifier = {
+                factor = 0.5
+                wealth = 500
+            }
+            modifier = {
+                factor = 2
+                is_friend = event_target:cardinal
+            }
+        }
+    }
+}
+#pope- cardinal  demanded large amount
+
+
+character_event = {
+    id = PDP.323
+    desc = EVTDESCPDP.323
+    picture = GFX_evt_cardinal_discussion
+    is_triggered_only = yes
+    option = {#accept
+        name = EVTOPT_a_PDP.323
+    }
+}
+#cardinal  demanded money - pope accepted
+
+character_event = {
+    id = PDP.324
+    desc = EVTDESCPDP.324
+    picture = GFX_evt_cardinal_discussion
+    is_triggered_only = yes
+    option = {#accept
+        name = EVTOPT_a_PDP.324
+    }
+}
+#cardinal  demanded money - pope declined
+
+#########
+##IDEAS##
+#########
+#events/decisions for cardinals would be nice
+#more religious titles
+#Actual elections: On Popes death, transfer all holdings to "Holy See" Character (immortal, + auto grants all his stuff to new one on death (in case he's murdered)).
+#Cardinals then meet via event 61/62, each getting the possibility to vote for someone. AI looks for dynasty member first, then friend, then same culture, then good opinion, then anyone
+#Player can cast vote via targetted decision.
+#If someone got more or equal to 66 percent, he's pope.
+#otherwise pick most voted ones and do another election, when tie and only two, pick randomly.
+#societies for theocracies only - possible influencing cardinal appointment.
+#maybe society catholic church, with pope as head, society ranks based on title rank, e.g. 1. pope, 2. cardinals, 3. bishops, 4. priests.
+#offmap power, "The Holy Roman Catholic Church", allows you (indirect) interaction with pope. E.g. Give child to church (may not be heir to anything to avoid exploitation of gavelkind), child will join some bishop of same culture group (if any) and become his ward, will later join church society as priest; Donate money/land; request papal audience, indulgence, lift excommunication by walk of canossa
+#possibility to delegate indulgence request (for everyone or only minor rulers) to avoid spamming...
+#imprisoned bishops/cardinals can ask pope to get them out (only the pope may judge cardinals, etc.)
+#don't allow anyone to be nominated bishops heir, has to "study theology" (for which you've got to pay of course) for like 5 years, result depending on learning stat, then has to be a priest for a few years - can try to nominate someone who hasn't, but less likely and loss of piety. Would make it more difficult to.

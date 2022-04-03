@@ -1600,7 +1600,182 @@ narrative_event = {
 				hidden_tooltip = { add_trait = crowned_by_bishop }
 			}
 		}
+		if = {
+			limit = { 
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = muslim
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_muslim
+					}
+				}
+			}
+			random = { chance = 60
+				add_trait = sympathy_islam
+			}
+		}
 		if = { 
+			limit = { 
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = pagan_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_pagans
+			}
+		}
+		if = { 
+			limit = { 
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = zoroastrian_group
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_zoroastrian
+					}
+				}
+			}
+			random = { chance = 60
+				add_trait = sympathy_zoroastrianism
+			}
+		}
+		if = { 
+			limit = { 
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = jewish_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_judaism
+			}
+		}
+		if = { 
+			limit = { 
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = indian_group
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_indian
+					}
+				}
+			}
+			random = { chance = 60
+				add_trait = sympathy_indian
+			}
+		}
+		if = { 
+			limit = { 
+				trait = zealous
+				religion_group = christian
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_christian
+					}
+				}
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_christendom
+		}
+		if = { 
+			limit = { 
+				trait = zealous
+				religion_group = muslim
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_muslim
+					}
+				}
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_islam
+		}
+		if = { 
+			limit = { 
+				trait = zealous
+				religion_group = pagan_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_pagans
+		}
+		if = { 
+			limit = { 
+				trait = zealous
+				religion_group = zoroastrian_group
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_zoroastrian
+					}
+				}
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_zoroastrianism
+		}
+		if = { 
+			limit = { 
+				trait = zealous
+				religion_group = jewish_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_judaism
+		}
+		if = { 
+			limit = { 
+				trait = zealous
+				religion_group = indian_group
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_indian
+					}
+				}
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_indian
+		}
+		if = { 
+			limit = { 
+				trait = zealous
+				religion_group = event_target:sponsoring_king
+				NOT = { religion = event_target:sponsoring_king }
+				NOT = { has_character_flag = flag_deceitful_baptism }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+		}
+		if = { 
+			limit = { NOT = { has_character_flag = flag_deceitful_baptism } }
+			tooltip = {
+				religion = event_target:sponsoring_king					#Show it only to vassals that are not secretly remaining pagans.
+			}	
+		}
+		hidden_tooltip = { religion = event_target:sponsoring_king }
+
+		if = {
 			limit = { higher_real_tier_than = BARON }
 			custom_tooltip = { text = ALL_PROVINCES_CONVERT_TOOLTIP } 		#Show it only to vassals that are not secretly remaining pagans.
 			hidden_tooltip = { any_demesne_province = { religion = event_target:sponsoring_king } } 
@@ -8198,6 +8373,7 @@ character_event = {
 				hidden_tooltip = { add_trait = baptized_by_pope }
 				clr_character_flag = flag_baptized_by_pope
 				event_target:scoped_pope = {
+					character_event = {id = PDPHF.1 days = 0}
 					show_scope_change = no
 					opinion = { 
 						modifier = opinion_baptized

@@ -1,0 +1,1113 @@
+namespace = PDPJA
+
+character_event = {
+	id = PDPJA.1
+	title = EVTNAME_PDPJA.1
+	desc = EVTDESC_PDPJA.1
+	picture = GFX_evt_heretic
+	border = GFX_event_normal_frame_religion
+
+	min_age = 16
+	capable_only = yes
+	prisoner = no
+	has_job_title = yes
+
+	trigger = {
+		has_job_action = action_global_inquisition
+		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
+        NOT = { has_character_flag = do_not_disturb}
+	}
+
+	mean_time_to_happen = {
+		months = 960
+        modifier = {
+            factor = 0.25
+            offmap_PDP_church = {
+				has_policy
+				 = PDP_church_policy_conversion
+			}
+        }
+        modifier = {
+            factor = 2
+            NOT = {liege = {has_landed_title = k_papal_state}}
+        }
+		modifier = {
+			factor = 0.75
+			liege = {
+				has_artifact = finger_of_st_john
+			}
+		}
+		modifier = {
+			factor = 0.75
+			location = { culture_group = ROOT }
+		}
+		modifier = {
+			factor = 0.75
+			location = { culture = ROOT }
+		}
+
+		job_event_mtth_modifier_learning_score = yes
+		job_event_mtth_modifier_intrigue_score = yes
+		modifier = {
+			factor = 0.66
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.66
+			trait = arbitrary
+		}
+		modifier = {
+			factor = 0.66
+			trait = impaler
+		}
+		modifier = {
+			factor = 0.66
+			trait = cruel
+		}
+		modifier = {
+			factor = 1.5
+			trait = just
+		}
+		modifier = {
+			factor = 1.5
+			trait = kind
+		}
+
+		modifier = {
+			factor = 2.0
+			NOT = { religion_authority = 0.1 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { religion_authority = 0.2 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religion_authority = 0.3 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religion_authority = 0.4 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religion_authority = 0.5 }
+		}
+		modifier = {
+			factor = 0.75
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 0.75
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 0.75
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 0.6
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 0.75
+			liege = {
+				society_member_of = monastic_order_dominican
+				society_rank >= 4
+			}
+		}
+		#Bloodlines
+		modifier = {
+			factor = 0.75
+			liege = {
+				any_owned_bloodline = {
+					has_bloodline_flag = bloodline_better_inquisition
+					bloodline_is_active_for = PREV
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			#If chaplain is also your relative.
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_better_inquisition
+				bloodline_is_active_for = PREV
+			}
+		}
+		modifier = {
+			factor = 0.6
+			NOT = {
+				liege = {
+					any_owned_bloodline = {
+						has_bloodline_flag = inquisitional_bloodline
+						bloodline_is_active_for = PREV
+					}
+				}
+			}
+			liege = {
+		    	any_owned_bloodline = {
+    				has_bloodline_flag = inquisitional_saintly_bloodline
+    				founder = {
+    					religion = ROOT
+    				}
+    			}
+    		}
+		}
+		modifier = {
+			factor = 0.4
+			liege = {
+				any_owned_bloodline = {
+					has_bloodline_flag = inquisitional_bloodline
+					bloodline_is_active_for = PREV
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			location = {
+				owner = {
+                    piety = 0
+                }
+			}
+		}
+		modifier = {
+			factor = 0.75
+			location = {
+				owner = {
+                    NOT = {piety = -500}
+                }
+			}
+		}
+        modifier = {
+			factor = 0.8
+			location = {
+				owner = {
+                    NOT = {learning = 10}
+                }
+			}
+		}
+        modifier = {
+			factor = 0.75
+			location = {
+				owner = {
+                    NOT = {realm_learning = 15}
+                    NOT = {same_realm  = ROOT}
+                }
+			}
+		}
+        modifier = {
+			factor = 0.75
+			location = {
+				owner = {
+                    NOT = {realm_intrigue = 15}
+                    NOT = {same_realm  = ROOT}
+                }
+			}
+		}
+        modifier = {
+			factor = 0.5
+			location = {
+				owner = {
+                    same_realm  = ROOT
+                }
+			}
+		}
+
+	}
+    immediate = {
+		save_event_target_as = inquisitioner
+		liege = {
+			save_event_target_as = client
+		}
+        location = {
+            random_province_character = {
+				limit = {
+					prisoner = no
+					NOT = {character = ROOT}
+					NOT = {character = event_target:client}
+				}
+                preferred_limit = {
+                    is_adult = yes
+                    is_impious_trigger = yes
+                    is_devil_worshiper_trigger = yes
+                    NOT = {trait = excommunicated}
+                    NOT = {has_character_modifier = accused_apostate}
+                }
+                preferred_limit = {
+                    is_adult = yes
+                    is_impious_trigger = yes
+                    is_devil_worshiper_trigger = yes
+                    NOT = {trait = excommunicated}
+                }
+                preferred_limit = {
+                    is_adult = yes
+                    is_impious_trigger = yes
+                    NOT = {trait = excommunicated}
+                    NOT = {has_character_modifier = accused_apostate}
+                }
+                preferred_limit = {
+                    is_adult = yes
+                    is_impious_trigger = yes
+                    NOT = {trait = excommunicated}
+                }
+                preferred_limit = {
+                    is_adult = yes
+                    has_impious_trait_trigger = yes
+                    has_vice_trigger = yes
+                    is_devil_worshiper_trigger = yes
+                    NOT = {trait = excommunicated}
+                    NOT = {has_character_modifier = accused_apostate}
+                }
+                preferred_limit = {
+                    is_adult = yes
+                    has_impious_trait_trigger = yes
+                    has_vice_trigger = yes
+                    is_devil_worshiper_trigger = yes
+                    NOT = {trait = excommunicated}
+                }
+                preferred_limit = {
+                    is_adult = yes
+                    has_impious_trait_trigger = yes
+                    has_vice_trigger = yes
+                    NOT = {trait = excommunicated}
+                }
+                preferred_limit = {
+                    is_adult = yes
+                    OR = {
+                        has_impious_trait_trigger = yes
+                        has_vice_trigger = yes
+                        is_devil_worshiper_trigger = yes
+                    }
+                    NOT = {trait = excommunicated}
+                }
+                preferred_limit = {
+                    age = 10
+                    NOT = {is_pious_trigger	= yes}
+                    NOT = {trait = excommunicated}
+                }
+                preferred_limit = {
+                    age = 10
+                    NOT = {is_pious_trigger	= yes}
+                    NOT = {trait = excommunicated}
+                }
+                preferred_limit = {
+                    age = 10
+                    NOT = {trait = excommunicated}
+                }
+                save_event_target_as = heretic
+            }
+        }
+    }
+	option = {
+		name = EVTOPT_a_PDPJA.1
+		piety = 10
+		liege = {
+			character_event = { id = PDPJA.2 days = 0}
+		}
+        event_target:heretic = {
+            piety = -10
+        }
+        ai_chance = {factor = 1}
+	}
+    option = {
+		name = EVTOPT_b_PDPJA.1
+		piety = -10
+        ai_chance = {factor = 0}
+	}
+}
+
+
+character_event = {
+	id = PDPJA.2
+	desc = EVTDESC_PDPJA.2
+	picture = GFX_evt_heretic
+	border = GFX_event_normal_frame_religion
+
+    is_triggered_only = yes
+
+	option = {
+		name = EVTOPT_a_PDPJA.2
+		piety = 10
+		event_target:heretic = {
+            piety = -25
+            add_character_modifier = {name = accused_apostate years = 5}
+            opinion = {modifier = opinion_branded_heretic who = ROOT years = 10}
+            any_close_relative = {
+				limit = {
+					opinion = {who = PREV value = -10} #don't hate him
+				}
+                opinion = {modifier = opinion_furious who = ROOT years = 10}
+            }
+            spouse = {
+                opinion = {modifier = opinion_furious who = ROOT years = 10}
+            }
+        }
+        ai_chance = {factor = 50}
+	}
+	option = {
+		name = EVTOPT_b_PDPJA.2
+		piety = 10
+		custom_tooltip = {
+			text = EVTTOOLTIP_b_PDPJA.2
+		}
+		event_target:heretic = {
+			character_event = {id = PDPJA.3}
+            piety = -25
+            add_character_modifier = {name = accused_apostate years = 5}
+            opinion = {modifier = opinion_branded_heretic who = ROOT years = 10}
+            any_close_relative = {
+				limit = {
+					opinion = {who = PREV value = -10} #don't hate him
+				}
+                opinion = {modifier = opinion_furious who = ROOT years = 10}
+            }
+            spouse = {
+                opinion = {modifier = opinion_furious who = ROOT years = 10}
+            }
+        }
+	}
+	option = {
+		name = EVTOPT_c_PDPJA.2
+		piety = 10
+		custom_tooltip = {
+			text = EVTTOOLTIP_c_PDPJA.2
+		}
+		event_target:heretic = {
+            piety = -50
+            add_character_modifier = {name = accused_apostate years = 5}
+            opinion = {modifier = opinion_branded_heretic who = ROOT years = 10}
+			opinion = {modifier = opinion_furious who = ROOT years = 10}
+			any_close_relative = {
+				limit = {
+					opinion = {who = PREV value = -10} #don't hate him
+				}
+				opinion = {modifier = opinion_furious who = ROOT years = 10}
+			}
+			spouse = {
+				opinion = {modifier = opinion_furious who = ROOT years = 10}
+			}
+		}
+		random_list = {
+			75 = { #imprisoned
+				event_target:heretic = {
+					imprison = ROOT
+					character_event = {id = PDPJA.20}
+				}
+				is_good_intrigue_character_score = yes
+				modifier = {
+					factor = 0.1
+					event_target:heretic = {
+						trait = in_hiding
+					}
+				}
+				modifier = {
+					factor = 0.2
+					event_target:heretic = {
+						trait = paranoid
+					}
+				}
+				modifier = {
+					factor = 4
+					event_target:heretic = {
+						trait = trusting
+					}
+				}
+				modifier = {
+					factor = 0.5
+					event_target:heretic = {
+						intrigue = 20
+					}
+				}
+				modifier = {
+					factor = 0.5
+					event_target:heretic = {
+						intrigue = 15
+					}
+				}
+				modifier = {
+					factor = 0.2
+					event_target:heretic = {
+						tier = EMPEROR
+					}
+				}
+				modifier = {
+					factor = 0.25
+					event_target:heretic = {
+						is_ruler = yes
+						tier = KING
+					}
+				}
+				modifier = {
+					factor = 0.33
+					event_target:heretic = {
+						is_ruler = yes
+						tier = DUKE
+					}
+				}
+				modifier = {
+					factor = 0.42
+					event_target:heretic = {
+						is_ruler = yes
+						tier = COUNT
+					}
+				}
+				modifier = {
+					factor = 0.5
+					event_target:heretic = {
+						OR = {
+							spouse = {
+								is_ruler = yes
+								higher_tier_than = COUNT
+							}
+							any_close_relative  = {
+								is_ruler = yes
+								higher_tier_than = COUNT
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 0.75
+					event_target:heretic = {
+						OR = {
+							spouse = {
+								is_ruler = yes
+								tier = COUNT
+							}
+							any_close_relative  = {
+								is_ruler = yes
+								tier = COUNT
+							}
+						}
+					}
+				}
+			}
+			25 = { #failure
+				event_target:heretic = {
+					character_event = {id = PDPJA.10 tooltip = EVTTOOLTIP_b_PDPJA.2_2}
+				}
+				character_event = {id = PDPJA.11 days = 1}
+			}
+		}
+	}
+    option = {
+		name = EVTOPT_d_PDPJA.2
+		event_target:heretic = {
+			piety = -5
+		}
+        ai_chance = {factor = 50}
+	}
+}
+
+
+character_event = {
+	id = PDPJA.3
+	desc = EVTDESC_PDPJA.3
+	picture = GFX_evt_accused
+	border = GFX_event_normal_frame_religion
+    is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.3
+		event_target:client = {
+			character_event = {id = PDPJA.4 days = 3} #accepted
+			character_event = {id = PDPJA.22 days = 4} #trial begins
+		}
+	}
+	option = {
+		name = EVTOPT_b_PDPJA.3
+		event_target:client = {
+			character_event = {id = PDPJA.5 days = 3} #refused
+		}
+	}
+}
+#asked to trial
+
+character_event = {
+	id = PDPJA.4
+	picture = GFX_evt_accused
+	desc = EVTDESC_PDPJA.4
+	is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.4
+	}
+}
+
+character_event = {
+	id = PDPJA.5
+	picture = GFX_evt_accused
+	desc = EVTDESC_PDPJA.5
+	is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.5
+	}
+}
+
+character_event = {
+	id = PDPJA.10
+	picture = GFX_evt_bandits
+	desc = EVTDESC_PDPJA.10
+	is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.10
+	}
+}
+character_event = {
+	id = PDPJA.11
+	picture = GFX_evt_bandits
+	desc = EVTDESC_PDPJA.11
+	is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.11
+	}
+}
+
+character_event = {
+	id = PDPJA.20
+	desc = EVTDESC_PDPJA.20
+	picture = {
+		trigger = {
+			PDP_is_theocracy = yes
+		}
+		picture = GFX_evt_bishop_imprisoned
+	}
+	picture = {
+		trigger = {
+			PDP_is_theocracy = no
+		}
+		picture = GFX_evt_bandits
+	}
+	border = GFX_event_normal_frame_religion
+    is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.20
+		event_target:client = {
+			character_event = {id = PDPJA.21 days = 0} #inform captured
+			character_event = {id = PDPJA.22 days = 1} #begin trial
+		}
+	}
+}
+#imprisoned heretic
+
+character_event = {
+	id = PDPJA.21
+	picture = GFX_evt_heretic
+	desc = EVTDESC_PDPJA.21
+	is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.21
+	}
+}
+
+character_event = {
+	id = PDPJA.22
+	desc = EVTDESC_PDPJA.22
+	picture = GFX_evt_heretic
+	border = GFX_event_normal_frame_religion
+    is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.22
+		event_target:client = {
+			character_event = {id = PDPJA.30}
+		}
+	}
+	option = {
+		name = EVTOPT_b_PDPJA.22
+		trigger = {
+			event_target:heretic = {
+				prisoner = yes
+				host = {
+					character = ROOT
+				}
+			}
+			OR = {
+				trait = impaler
+				trait = cruel
+				trait = schemer
+				trait = deceitful
+			}
+		}
+		event_target:heretic = {
+			character_event = {id = PDPJA.23 tooltip = EVTTOOLTIP_b_PDPJA.22}
+		}
+		if = {limit = {has_trait = just}
+	random = {
+		chance = 90
+		remove_trait = just
+	}
+}
+		if = {limit = {NOT = {has_trait = arbitrary}}
+	random = {
+		chance = 75
+		add_trait = arbitrary
+	}
+}
+		if = {limit = {NOT = {has_trait = cruel}}
+	random = {
+		chance = 75
+		add_trait = cruel
+	}
+}
+		random = {
+			chance = 25
+			piety = -100
+			prestige = -100
+		}
+	}
+	option = {
+		name = EVTOPT_a_PDPJA.22
+		trigger = {
+			ai = no
+			event_target:heretic = {ai = no} #there's no loc for it...
+		}
+		prestige = -25
+		piety = -25
+		event_target:heretic = {
+			imprison = no
+		}
+	}
+}
+#trial begins
+
+character_event = {
+	id = PDPJA.23
+	desc = EVTDESC_PDPJA.23
+	picture = GFX_evt_torture_wheel
+	border = GFX_event_normal_frame_religion
+    is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.23
+		set_character_flag = PDP_inquisition_torture_confession
+		event_target:client = {
+			character_event = {id = PDPJA.24}
+		}
+	}
+	option = {
+		name = EVTOPT_b_PDPJA.23
+		add_trait = wounded
+		if = {limit = {NOT = {has_trait = stressed}}
+	random = {
+		chance = 80
+		add_trait = stressed
+	}
+}
+		if = {limit = {NOT = {has_trait = severely_injured}}
+	random = {
+		chance = 25
+		add_trait = severely_injured
+	}
+}
+		if = {limit = {NOT = {has_trait = depressed}}
+	random = {
+		chance = 10
+		add_trait = depressed
+	}
+}
+		if = {limit = {NOT = {has_trait = disfigured}}
+	random = {
+		chance = 1
+		add_trait = disfigured
+	}
+}
+		event_target:client = {
+			character_event = {id = PDPJA.25}
+		}
+	}
+}
+#torture before trial
+
+character_event = {
+	id = PDPJA.24
+	desc = EVTDESC_PDPJA.24
+	picture = GFX_evt_torture_wheel
+	border = GFX_event_normal_frame_religion
+    is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.24
+		event_target:client = {
+			character_event = {id = PDPJA.30}
+		}
+	}
+}
+#torture confessed
+
+character_event = {
+	id = PDPJA.25
+	desc = EVTDESC_PDPJA.25
+	picture = GFX_evt_torture_wheel
+	border = GFX_event_normal_frame_religion
+    is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.25
+		event_target:client = {
+			character_event = {id = PDPJA.30}
+		}
+	}
+}
+#torture not confessed
+
+
+character_event = {
+	id = PDPJA.30
+	desc = EVTDESC_PDPJA.30
+	picture = GFX_evt_witch_court
+	border = GFX_event_normal_frame_religion
+    is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.30
+	}
+	option = {
+		name = EVTOPT_b_PDPJA.30
+		trigger = {
+			event_target:heretic = {
+				OR = {
+					trait = bad_priest_christian
+					trait = homosexual
+					trait = cannibal_trait
+					has_character_modifier = suspected_demon_spawn
+					has_character_modifier = suspected_witch
+					has_character_modifier = known_witch
+					has_character_modifier = suspected_impaler
+				}
+			}
+		}
+		event_target:heretic = {
+			set_character_flag = PDP_inquisition_strong_evidence
+		}
+	}
+	option = {
+		name = EVTOPT_c_PDPJA.30
+		trigger = {
+			event_target:heretic = {
+				OR = {
+					trait = lustful
+					has_character_modifier = incestuous_adulterer
+					has_character_modifier = incestuous_adulteress
+					has_character_modifier = adulterer
+					has_character_modifier = adulteress
+					has_character_modifier = known_sodomite
+					trait = homosexual
+				}
+			}
+		}
+		event_target:heretic = {
+			set_character_flag = PDP_inquisition_strong_evidence
+		}
+	}
+	option = {
+		name = EVTOPT_d_PDPJA.30
+		trigger = {
+			event_target:heretic = {
+				OR = {
+					trait = kinslayer
+					trait = familial_kinslayer
+					trait = dynastic_kinslayer
+					trait = tribal_kinslayer
+					has_character_modifier = known_murderer
+					has_character_modifier = suspected_murder_plot
+					has_character_modifier = suspected_assassin
+				}
+			}
+		}
+		event_target:heretic = {
+			set_character_flag = PDP_inquisition_strong_evidence
+		}
+	}
+	option = {
+		name = EVTOPT_e_PDPJA.30
+		trigger = {
+			event_target:heretic = {trait = envious}
+		}
+		event_target:heretic = {
+			set_character_flag = PDP_inquisition_weak_evidence
+		}
+	}
+	option = {
+		name = EVTOPT_f_PDPJA.30
+		trigger = {
+			event_target:heretic = {trait = greedy}
+		}
+		event_target:heretic = {
+			set_character_flag = PDP_inquisition_weak_evidence
+		}
+	}
+	after = {
+		event_target:heretic = {
+			character_event = {id = PDPJA.31}
+		}
+	}
+}
+#trial begins, accusations made
+
+character_event = {
+	id = PDPJA.31
+	desc = EVTDESC_PDPJA.31
+	picture = GFX_evt_witch_court
+	border = GFX_event_normal_frame_religion
+    is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.31
+		clr_character_flag = PDP_inquisition_torture_confession
+		clr_character_flag = PDP_inquisition_strong_evidence
+		clr_character_flag = PDP_inquisition_weak_evidence
+		set_character_flag = PDP_inquisition_confessed
+		event_target:client = {
+			character_event = {id = PDPJA.32}
+		}
+		ai_chance = {
+			factor = 55
+			modifier = {
+				factor = 2
+				trait = trusting
+			}
+			modifier = {
+				factor = 2
+				trait = imbecile
+			}
+			modifier = {
+				factor = 2
+				trait = slow
+			}
+			modifier = {
+				factor = 0.25
+				trait = genius
+			}
+			modifier = {
+				factor = 0.25
+				trait = quick
+			}
+			modifier = {
+				factor = 0.6
+				trait = stubborn
+			}
+			modifier = {
+				factor = 2
+				trait = depressed
+			}
+			modifier = {
+				factor = 3.14
+				has_character_flag = PDP_inquisition_strong_evidence
+			}
+			modifier = {
+				factor = 1.25
+				has_character_flag = PDP_inquisition_weak_evidence
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_b_PDPJA.31
+		trigger = {
+			NOT = {has_character_flag = PDP_inquisition_torture_confession}
+		}
+		event_target:client = {
+			character_event = {id = PDPJA.33}
+		}
+		ai_chance = {
+			factor = 45
+		}
+	}
+}
+#ask for confession
+
+character_event = {
+	id = PDPJA.32
+	desc = EVTDESC_PDPJA.32
+	picture = GFX_evt_witch_court
+	border = GFX_event_normal_frame_religion
+    is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.32
+		event_target:client = {
+			character_event = {id = PDPJA.37}
+		}
+	}
+}
+#did confess
+character_event = {
+	id = PDPJA.33
+	desc = EVTDESC_PDPJA.33
+	picture = GFX_evt_witch_court
+	border = GFX_event_normal_frame_religion
+    is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.33
+		event_target:client = {
+			character_event = {id = PDPJA.35}
+		}
+	}
+}
+#did not confess
+
+
+character_event = {
+	id = PDPJA.35
+	desc = EVTDESC_PDPJA.35
+	picture = GFX_evt_witch_court
+	border = GFX_event_normal_frame_religion
+    is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.35
+		random_list = {
+			51 = {
+				custom_tooltip = {
+					text = EVTTOOLTIP_guilt_PDPJA.35
+				}
+				event_target:heretic = {
+					character_event = {id = PDPJA.36}
+				}
+				character_event = {id = PDPJA.37}
+				is_good_intrigue_character_score = yes
+				modifier = {
+					factor = 1.5
+					event_target:heretic = {has_character_flag = PDP_inquisition_weak_evidence}
+				}
+				modifier = {
+					factor = 4
+					event_target:heretic = {has_character_flag = PDP_inquisition_strong_evidence}
+				}
+			}
+			49 = {
+				custom_tooltip = {
+					text = EVTTOOLTIP_innocence_PDPJA.35
+				}
+				event_target:heretic = {
+					character_event = {id = PDPJA.38}
+					imprison = no
+				}
+				character_event = {id = PDPJA.39}
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_b_PDPJA.35
+		random_list = {
+			42 = {
+				custom_tooltip = {
+					text = EVTTOOLTIP_guilt_PDPJA.35
+				}
+				event_target:heretic = {
+					character_event = {id = PDPJA.36}
+				}
+				character_event = {id = PDPJA.37}
+				modifier = {
+					factor = 1.41
+					event_target:heretic = {has_character_flag = PDP_inquisition_weak_evidence}
+				}
+				modifier = {
+					factor = 3.14
+					event_target:heretic = {has_character_flag = PDP_inquisition_strong_evidence}
+				}
+			}
+			58 = {
+				custom_tooltip = {
+					text = EVTTOOLTIP_innocence_PDPJA.35
+				}
+				event_target:heretic = {
+					character_event = {id = PDPJA.38}
+					imprison = no
+				}
+				character_event = {id = PDPJA.39}
+				is_good_intrigue_character_score = yes
+			}
+		}
+	}
+}
+#judgement no confession
+
+character_event = {
+	id = PDPJA.36
+	picture = GFX_evt_witch_court
+	desc = EVTDESC_PDPJA.36
+	is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.36
+	}
+}
+
+
+character_event = {
+	id = PDPJA.37
+	desc = EVTDESC_PDPJA.37
+	picture = GFX_evt_witch_court
+	border = GFX_event_normal_frame_religion
+    is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.37
+		event_target:heretic = {
+			character_event = {id = PDPJA.40}
+		}
+	}
+	option = {
+		name = EVTOPT_b_PDPJA.37
+		character_event = {id = PDPJA.42}
+		event_target:heretic = {
+			character_event = {id = PDPJA.41}
+			any_close_relative = {
+				limit = {
+					opinion = {who = PREV value = -10}
+				}
+				opinion = {modifier = opinion_killed_close_kin who = ROOT years = 10}
+			}
+			spouse = {
+				opinion = {modifier = opinion_killed_close_kin who = ROOT years = 10}
+			}
+		}
+
+	}
+}
+#decide punishment
+
+character_event = {
+	id = PDPJA.38
+	picture = GFX_evt_witch_court
+	desc = EVTDESC_PDPJA.38
+	is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.38
+	}
+}
+
+character_event = {
+	id = PDPJA.39
+	picture = GFX_evt_witch_court
+	desc = EVTDESC_PDPJA.39
+	is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.39
+	}
+}
+
+
+character_event = {
+	id = PDPJA.40
+	picture = GFX_evt_witch_court
+	desc = EVTDESC_PDPJA.40
+	is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.40
+	}
+}
+character_event = {
+	id = PDPJA.41
+	picture = GFX_evt_stake
+	desc = EVTDESC_PDPJA.41
+	is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.41
+	}
+}
+
+character_event = {
+	id = PDPJA.42
+	desc = EVTDESC_PDPJA.42
+	picture = GFX_evt_stake
+	border = GFX_event_normal_frame_religion
+    is_triggered_only = yes
+	option = {
+		name = EVTOPT_a_PDPJA.42
+		event_target:heretic = {
+			death = { death_reason = death_execution_burning killer = ROOT }
+		}
+	}
+}

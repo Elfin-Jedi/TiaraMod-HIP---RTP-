@@ -1,0 +1,834 @@
+namespace = PDPVOTE
+
+character_event = {
+	id = PDPVOTE.1
+	is_triggered_only = yes
+	hide_window = yes
+	option = {
+		name = "Ok"
+		any_independent_ruler = {
+			if = {
+				limit = {
+					offmap_church_is_elector = yes
+				}
+				character_event = {id = PDPVOTE.2 days = 1}
+			}
+			any_realm_lord = {
+				limit = {
+					offmap_church_is_elector = yes
+				}
+				character_event = {id = PDPVOTE.2 days = 1}
+			}
+		}
+		ROOT = {#the pope
+			if = {
+				limit = {
+					offmap_church_is_elector = yes
+				}
+				character_event = {id = PDPVOTE.2 days = 1}
+			}
+			any_realm_lord = {
+				limit = {
+					offmap_church_is_elector = yes
+				}
+				character_event = {id = PDPVOTE.2 days = 1}
+			}
+			any_courtier = {
+				limit = {
+					offmap_church_is_elector = yes
+				}
+				character_event = {id = PDPVOTE.2 days = 1}
+			}
+		}
+
+	}
+}
+#start proposal (use targetted decision (or random event for ai) to choose topic)
+#root is pope by convention, call this with offmap_church_start_proposal
+
+character_event = {
+	id = PDPVOTE.2
+	desc = EVTDESC_PDPVOTE.2
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	option = {
+		name = "EVENTOPT_a_PDPVOTE.2"
+		offmap_church_grant_vote = yes
+		#make the ai cast it's vote
+		if = {
+			limit = {
+				ai = yes
+			}
+			character_event = {id = PDPVOTE.3 days = 30 random = 50}
+		}
+	}
+}
+#inform electors that voting has started
+
+character_event = {
+	id = PDPVOTE.3
+	is_triggered_only = yes
+	hide_window = yes
+	option = {
+		name = "Ok"
+		if = {#always vote for own proposal
+			limit = {offmap_church_initiated_voting = yes}
+			offmap_church_vote_for = yes
+		}
+		else = { #not my proposal
+			if = {
+				limit = {
+					k_papal_state = {has_title_flag = offmap_church_topic_status_to_reform}
+				}
+				random_list = {
+					50 = {
+						offmap_church_vote_for = yes
+
+						#offmap_church_proposer_good_relations_score = yes
+						#offmap_church_spend_influence_score = yes
+						modifier = {
+							factor = 2
+							trait = just
+						}
+						modifier = {
+							factor = 1.2
+							trait = temperate
+						}
+						modifier = {
+							factor = 2
+							NOT = {religion_authority = 0.5}
+						}
+						modifier = {
+							factor = 10
+							NOT = {religion_authority = 0.1}
+						}
+						modifier = {
+							factor = 0.2
+							religion_authority = 0.8
+						}
+						modifier = {
+							factor = 1.5
+							OR = {
+								trait = kind
+								trait = humble
+							}
+						}
+					}
+					50 = {
+						offmap_church_vote_contra = yes
+						#offmap_church_proposer_bad_relations_score
+						modifier = {
+							factor = 4
+							trait = bad_priest_christian
+						}
+						modifier = {
+							factor = 2
+							trait = arbitrary
+						}
+						modifier = {
+							factor = 1.5
+							trait = greedy
+						}
+						modifier = {
+							factor = 1.3
+							trait = slothful
+						}
+						modifier = {
+							factor = 2
+							NOT = {wealth = 0}
+						}
+						modifier = {
+							factor = 1.5
+							OR = {
+								trait = lustful
+								trait = hedonist
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					k_papal_state = {has_title_flag = offmap_church_topic_policy_to_scholarship}
+				}
+				random_list = {
+					50 = {
+						offmap_church_vote_for = yes
+						offmap_church_proposer_good_relations_score = yes
+						offmap_church_spend_influence_score = yes
+						modifier = {
+							factor = 2
+							OR = {
+								trait = erudite
+							}
+						}
+						modifier = {
+							factor = 2
+							OR = {
+								learning = 15
+							}
+						}
+						modifier = {
+							factor = 2
+							OR = {
+								trait = scholar
+								trait = theologian
+							}
+						}
+					}
+					50 = {
+						offmap_church_vote_contra = yes
+						offmap_church_proposer_bad_relations_score = yes
+						modifier = {
+							factor = 2
+							trait = slothful
+						}
+						modifier = {
+							factor = 6
+							OR = {
+								trait = imbecile
+								trait = dull
+								trait = slow
+								NOT = {learning = 5}
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					k_papal_state = {has_title_flag = offmap_church_topic_policy_to_warfare}
+				}
+				random_list = {
+					50 = {
+						offmap_church_vote_for = yes
+						offmap_church_proposer_good_relations_score = yes
+						offmap_church_spend_influence_score = yes
+						modifier = {
+							factor = 3
+							OR = {
+								trait = strategist
+								martial = 20
+							}
+						}
+						modifier = {
+							factor = 2.5
+							OR = {
+								martial = 15
+								trait = holy_warrior
+							}
+						}
+						modifier = {
+							factor = 1.5
+							OR = {
+								trait = zealous
+								trait = wroth
+							}
+						}
+					}
+					50 = {
+						offmap_church_vote_contra = yes
+						offmap_church_proposer_bad_relations_score = yes
+						modifier = {
+							factor = 1.5
+							offmap_church_voting_dislikes_proposer = yes
+						}
+						modifier = {
+							factor = 2
+							offmap_church_voting_hates_proposer = yes
+						}
+						modifier = {
+							factor = 2
+							trait = kind
+						}
+						modifier = {
+							factor = 2
+							trait = just
+						}
+						modifier = {
+							factor = 2
+							OR = {
+								trait = weak
+								NOT = {martial = 10}
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					k_papal_state = {has_title_flag = offmap_church_topic_policy_to_charity}
+				}
+				random_list = {
+					50 = {
+						offmap_church_vote_for = yes
+
+						offmap_church_proposer_good_relations_score = yes
+						offmap_church_spend_influence_score = yes
+						modifier = {
+							factor = 3
+							OR = {
+								trait = charitable
+								trait = kind
+							}
+						}
+						modifier = {
+							factor = 1.5
+							OR = {
+								trait = monk
+								trait = humble
+							}
+						}
+					}
+					50 = {
+						offmap_church_vote_contra = yes
+						offmap_church_proposer_bad_relations_score = yes
+						modifier = {
+							factor = 2
+							trait = wroth
+						}
+						modifier = {
+							factor = 2
+							OR = {
+								trait = arbitrary
+								trait = greedy
+							}
+						}
+						modifier = {
+							factor = 2
+							trait = cruel
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					k_papal_state = {has_title_flag = offmap_church_topic_policy_to_monumentality}
+				}
+				random_list = {
+					50 = {
+						offmap_church_vote_for = yes
+						offmap_church_proposer_good_relations_score = yes
+						offmap_church_spend_influence_score = yes
+						modifier = {
+							factor = 3
+							OR = {
+								trait = architect
+								trait = administrator
+							}
+						}
+						modifier = {
+							factor = 1.5
+							OR = {
+								trait = diligent
+								trait = ambitious
+							}
+						}
+						modifier = {
+							factor = 2
+							wealth = 500
+						}
+					}
+					50 = {
+						offmap_church_vote_contra = yes
+						offmap_church_proposer_bad_relations_score = yes
+						modifier = {
+							factor = 2
+							NOT = {wealth = 0}
+						}
+						modifier = {
+							factor = 1.5
+							NOT = {wealth = 100}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					k_papal_state = {has_title_flag = offmap_church_topic_policy_to_conversion}
+				}
+				random_list = {
+					50 = {
+						offmap_church_vote_for = yes
+						offmap_church_proposer_good_relations_score = yes
+						offmap_church_spend_influence_score = yes
+						modifier = {
+							factor = 3
+							OR = {
+								trait = zealous
+								trait = crusader
+							}
+						}
+						modifier = {
+							factor = 1.5
+							OR = {
+								trait = diligent
+								trait = ambitious
+							}
+						}
+					}
+					50 = {
+						offmap_church_vote_contra = yes
+						offmap_church_proposer_bad_relations_score = yes
+						modifier = {
+							factor = 2
+							trait  = slothful
+						}
+						modifier = {
+							factor = 1.5
+							trait = content
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						k_papal_state = {has_title_flag = offmap_church_topic_close_marriage}
+						k_papal_state = {has_title_flag = offmap_church_topic_divine_blood}
+					}
+				}
+				random_list = {
+					10 = {
+						offmap_church_vote_for = yes
+						#offmap_church_proposer_good_relations_score = yes
+						#offmap_church_spend_influence_score = yes
+						modifier = {
+							factor = 20
+							OR = {
+								trait = sympathy_zoroastrianism
+								trait = sympathy_pagans
+							}
+						}
+						modifier = {
+							factor = 5
+							trait = lunatic
+						}
+						modifier = {
+							factor = 20
+							offmap_church_voting_obedient_to_proposer = yes
+						}
+						modifier = {
+							factor = 1.1
+							offmap_church_voting_proposer_spend_influence_low = yes
+						}
+						modifier = {
+							factor = 1.2
+							offmap_church_voting_proposer_spend_influence_medium = yes
+						}
+						modifier = {
+							factor = 3
+							offmap_church_voting_proposer_spend_influence_high = yes
+						}
+						modifier = {
+							factor = 100
+							OR = {
+								any_lover = {#is in love with a close relative
+									is_close_relative = ROOT
+								}
+							}
+						}
+						modifier = {
+							factor = 2
+							trait = bad_priest_christian
+						}
+						modifier = {
+							factor = 2
+							trait = seducer
+						}
+						modifier = {
+							factor = 5
+							trait = inbred
+						}
+						modifier = {
+							factor = 1.5
+							OR = {
+								trait = lustful
+								trait = hedonist
+							}
+						}
+					}
+					90 = {
+						offmap_church_vote_contra = yes
+						offmap_church_proposer_bad_relations_score = yes
+						modifier = {
+							factor = 2
+							trait  = zealous
+						}
+						modifier = {
+							factor = 2
+							trait = celibate
+						}
+						modifier = {
+							factor = 2
+							trait = chaste
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					k_papal_state = {has_title_flag = offmap_church_topic_raiding}
+				}
+				random_list = {
+					75 = {
+						offmap_church_vote_for = yes
+						offmap_church_proposer_good_relations_score = yes
+						offmap_church_spend_influence_score = yes
+						modifier = {
+							factor = 3
+							OR = {
+								trait = strategist
+								martial = 20
+							}
+						}
+						modifier = {
+							factor = 2.5
+							OR = {
+								martial = 15
+								trait = holy_warrior
+							}
+						}
+						modifier = {
+							factor = 2
+							OR = {
+								martial = 25
+								trait = viking
+							}
+						}
+						modifier = {
+							factor = 1.5
+							trait = brave
+						}
+						modifier = {
+							factor = 1.5
+							AND = {
+								trait = zealous
+								trait = wroth
+							}
+						}
+					}
+					25 = {
+						offmap_church_vote_contra = yes
+						offmap_church_proposer_bad_relations_score = yes
+						modifier = {
+							factor = 1.5
+							offmap_church_voting_dislikes_proposer = yes
+						}
+						modifier = {
+							factor = 2
+							offmap_church_voting_hates_proposer = yes
+						}
+						modifier = {
+							factor = 2
+							trait = kind
+						}
+						modifier = {
+							factor = 2
+							trait = just
+						}
+						modifier = {
+							factor = 2
+							OR = {
+								trait = weak
+								NOT = {martial = 10}
+							}
+						}
+					}
+				}
+			}
+			else = {#if the ai does not know the topic, it will default to opinion only
+				random_list = {
+					50 = {
+						offmap_church_vote_for = yes
+						offmap_church_proposer_good_relations_score = yes
+						offmap_church_spend_influence_score = yes
+					}
+					50 = {
+						offmap_church_vote_contra = yes
+						offmap_church_proposer_bad_relations_score = yes
+					}
+				}
+			}
+		}
+	}
+}
+#AI voting
+
+
+
+
+
+##Voting is over
+
+character_event = {
+	id = PDPVOTE.100
+	is_triggered_only = yes
+	hide_window = yes
+	option = {
+		name = "Ok"
+		k_papal_state = {
+			if = {
+				limit = {offmap_church_result_pro = yes}
+				any_player = {
+					limit = {
+						PDP_is_theocracy = yes
+					}
+					character_event = {id = PDPVOTE.101 days = 0} #inform pro
+				}
+			}
+			else = {
+				any_player = {
+					limit = {
+						PDP_is_theocracy = yes
+					}
+					character_event = {id = PDPVOTE.102 days = 0} #inform contra
+				}
+			}
+		}
+		character_event = {id = PDPVOTE.103 days = 1} #clear up
+	}
+}
+#end proposal - evaluation
+
+character_event = {
+	id = PDPVOTE.101
+	desc = EVTDESC_PDPVOTE.101
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	option = {
+		name = "EVENTOPT_a_PDPVOTE.101"
+	}
+}
+#inform electors outcome positive
+
+character_event = {
+	id = PDPVOTE.102
+	desc = EVTDESC_PDPVOTE.102
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	option = {
+		name = "EVENTOPT_a_PDPVOTE.102"
+	}
+}
+#inform electors outcome negative
+
+
+character_event = {
+	id = PDPVOTE.103
+	is_triggered_only = yes
+	hide_window = yes
+	option = {
+		name = "Ok"
+		#evaluate result and enact effects
+		if = {#result is pro
+			limit = {offmap_church_result_pro = yes}
+			if = { #offmap_church_topic_status_to_reform
+				limit = {
+					k_papal_state = {has_title_flag = offmap_church_topic_status_to_reform}
+				}
+				offmap_PDP_church = {
+					set_status = PDP_church_status_reform
+				}
+				k_papal_state = { #make sure that status doesn't get changed by event for a while...
+					clr_title_flag = offmap_church_recent_status_event
+					set_title_flag = offmap_church_recent_status_event
+				}
+			}
+			else_if = {#offmap_church_topic_policy_to_scholarship
+				limit = {
+					k_papal_state = {has_title_flag = offmap_church_topic_policy_to_scholarship}
+				}
+				offmap_PDP_church = {
+					set_policy = PDP_church_policy_scholarship
+				}
+			}
+			else_if = {#
+				limit = {
+					k_papal_state = {has_title_flag = offmap_church_topic_policy_to_warfare}
+				}
+				offmap_PDP_church = {
+					set_policy = PDP_church_policy_warfare
+				}
+			}
+			else_if = {#
+				limit = {
+					k_papal_state = {has_title_flag = offmap_church_topic_policy_to_charity}
+				}
+				offmap_PDP_church = {
+					set_policy = PDP_church_policy_charity
+				}
+			}
+			else_if = {#
+				limit = {
+					k_papal_state = {has_title_flag = offmap_church_topic_policy_to_monumentality}
+				}
+				offmap_PDP_church = {
+					set_policy = PDP_church_policy_monumentality
+				}
+			}
+			else_if = {#
+				limit = {
+					k_papal_state = {has_title_flag = offmap_church_topic_policy_to_conversion}
+				}
+				offmap_PDP_church = {
+					set_policy = PDP_church_policy_conversion
+				}
+			}
+
+			else_if = {#close marriage
+				limit = {
+					k_papal_state = {has_title_flag = offmap_church_topic_close_marriage}
+				}
+				catholic = {
+					set_pc_marriage = yes
+					set_psc_marriage = yes
+					set_bs_marriage = yes
+					set_global_flag = offmap_church_close_marriage_allowed
+				}
+			}
+			else_if = {#divine blood marriage
+				limit = {
+					k_papal_state = {has_title_flag = offmap_church_topic_divine_blood}
+				}
+				catholic = {
+					set_divine_blood  = yes
+					set_max_consorts = 2
+					set_pc_marriage = yes
+					set_psc_marriage = yes
+					set_bs_marriage = yes
+					set_global_flag = offmap_church_divine_blood_allowed
+				}
+			}
+			else_if = {#raiding
+				limit = {
+					k_papal_state = {has_title_flag = offmap_church_topic_raiding}
+				}
+				catholic = {
+					set_allow_looting = yes
+					set_peace_prestige_loss = yes
+					set_seafaring = yes
+					set_global_flag = offmap_church_raiding_allowed
+				}
+			}
+		}
+	}
+	after = { #clean up
+		offmap_church_end_proposal = yes
+	}
+}
+#enact proposal effects
+
+
+character_event = {
+	id = PDPVOTE.120
+	desc = EVTDESC_PDPVOTE.120
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	option = {
+		name = "EVENTOPT_a_PDPVOTE.120"
+		any_character = {
+			limit = {
+				offmap_church_is_elector = yes
+				offmap_church_has_vote_left = no
+			}
+			show_portrait = yes
+			if = {
+				limit = {
+					has_character_flag = offmap_church_i_voted_yes
+				}
+				custom_tooltip = {text = offmap_church_my_vote_yes}
+			}
+			else = {
+				custom_tooltip = {text = offmap_church_my_vote_no}
+			}
+		}
+	}
+}
+#show all votes
+
+
+character_event = {
+	id = PDPVOTE.200
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_landed_title = k_papal_state
+		ai = yes
+		random = 75
+		NOT = {trait = PDP_the_holy_see}
+		offmap_church_this_can_propose_condition = yes
+	}
+	option = {
+		name = "Ok"
+		offmap_church_pay_proposal_currency = yes #pay the price
+		if = {#reform required
+			limit = {
+				NOT = {religion_authority = 0.4}
+				offmap_PDP_church = {
+					has_status = PDP_church_status_corrupt
+				}
+				NOT = {
+					trait = bad_priest_christian
+				}
+			}
+			k_papal_state = {
+				set_title_flag = offmap_church_topic_status_to_reform
+			}
+			offmap_church_this_initiate_proposal = yes
+		}
+		else = {
+			random_list = {
+				10 = {
+					k_papal_state = {
+						set_title_flag = offmap_church_topic_policy_to_scholarship
+					}
+					offmap_church_this_initiate_proposal = yes
+					modifier = {
+						factor = 0
+						offmap_PDP_church = {
+							has_policy = PDP_church_policy_scholarship
+						}
+					}
+				}
+				10 = {
+					k_papal_state = {
+						set_title_flag = offmap_church_topic_policy_to_charity
+					}
+					offmap_church_this_initiate_proposal = yes
+					modifier = {
+						factor = 0
+						offmap_PDP_church = {
+							has_policy = PDP_church_policy_charity
+						}
+					}
+				}
+				10 = {
+					k_papal_state = {
+						set_title_flag = offmap_church_topic_policy_to_warfare
+					}
+					offmap_church_this_initiate_proposal = yes
+					modifier = {
+						factor = 0
+						offmap_PDP_church = {
+							has_policy = PDP_church_policy_warfare
+						}
+					}
+				}
+				10 = {
+					k_papal_state = {
+						set_title_flag = offmap_church_topic_policy_to_monumentality
+					}
+					offmap_church_this_initiate_proposal = yes
+					modifier = {
+						factor = 0
+						offmap_PDP_church = {
+							has_policy = PDP_church_policy_monumentality
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#ai decides to propose something...

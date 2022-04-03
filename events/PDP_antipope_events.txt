@@ -1,0 +1,564 @@
+namespace = PDPAnti
+
+character_event = {
+	id = PDPAnti.1
+	#desc = EVTDESC_PDPAnti.1
+	hide_window = yes
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	trigger = {
+		PDP_is_theocracy = yes
+		has_landed_title = k_papal_state
+	}
+	option = {
+		name = "ok"
+		if = {
+			limit = {
+				k_papal_state = { #antipope exists
+					any_claimant = {religion = catholic}
+				}
+			}
+			k_papal_state = {
+				any_claimant = { #any antipope
+					limit = {
+						religion = catholic
+						NOT = {has_character_flag = PDP_antipope_notified}
+						NOT = {any_demesne_title = {has_title_flag = PDP_antipope_title}}
+					}
+					set_character_flag = PDP_antipope_notified #mark that one, so event does not fire again for same person
+					primary_title = {set_title_flag = PDP_antipope_title}
+					character_event = {id = PDPAnti.2 days = 0}
+				}
+			}
+		}
+	}
+	after = {
+		character_event = {id = PDPAnti.1 days = 1}
+	}
+}
+#maintenance, check for antipope
+
+character_event = {
+	id = PDPAnti.2
+	#desc = EVTDESC_PDPAnti.1
+	hide_window = yes
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	option = {
+		name = "ok"
+		save_event_target_as = antipope
+		k_papal_state = {
+			holder_scope = {save_event_target_as = pope}
+		}
+		top_liege = {
+			save_event_target_as = antipope_top_liege
+			primary_title = {
+				save_event_target_as = top_liege_title
+				set_title_flag = PDP_depose_antipope_now
+			}
+			any_vassal = {
+				limit = {
+					religion = catholic
+					higher_tier_than = BARON
+					NOT = {character = event_target:antipope}
+				}
+				character_event = {id = PDPAnti.3 days = 0}
+			}
+			character_event = {id = PDPAnti.5 days = 2} #needs to be 2 days for some reason
+			any_neighbor_independent_ruler = {
+				limit = {religion = catholic}
+				rightful_religious_head_scope = {has_landed_title = k_papal_state} #loyal to pope
+				character_event = {id = PDPAnti.4 days = 3}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = PDPAnti.3
+	desc = EVTDESC_PDPAnti.3
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	option = {
+		name = EVTOPT_a_PDPAnti.3 #fight for the true pope
+		start_faction = {
+			faction = faction_PDP_depose_antipope
+			title = event_target:top_liege_title
+			can_join_existing = yes
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 2
+				relative_power = { who = event_target:antipope_top_liege power = 1.0 }
+			}
+			modifier = {
+				factor = 2
+				relative_power = { who = event_target:antipope_top_liege power = 2.0 }
+			}
+			modifier = {
+				factor = 2
+				PDP_is_theocracy = yes
+			}
+			modifier = {
+				factor = 3
+				AND = {
+					likes_better_than = { who = event_target:pope than = event_target:antipope}
+					likes_better_than = { who = event_target:pope than = event_target:antipope_top_liege}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					prisoner = yes
+					character = event_target:antipope
+					war_with = event_target:top_liege
+					is_friend = event_target:antipope
+					is_lover = event_target:antipope
+					is_friend = event_target:antipope_top_liege
+					is_lover = event_target:antipope_top_liege
+					is_married = event_target:antipope_top_liege
+					is_allied_with = event_target:antipope_top_liege
+					has_non_aggression_pact_with = event_target:antipope_top_liege
+					AND = {
+						likes_better_than = { who = event_target:antipope than = event_target:pope}
+						likes_better_than = { who = event_target:antipope_top_liege than = event_target:pope}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_b_PDPAnti.3 #loyal to king
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0.8
+				trait = zealous
+			}
+			modifier = {
+				factor = 0.2
+				trait = PDP_cardinal
+			}
+			modifier = {
+				factor = 1.2
+				opinion = { who = event_target:antipope value = 25 }
+			}
+			modifier = {
+				factor = 1.5
+				opinion = { who = event_target:antipope value = 50 }
+			}
+			modifier = {
+				factor = 1.5
+				opinion = { who = event_target:antipope_top_liege value = 50 }
+			}
+			modifier = {
+				factor = 0.1
+				OR = {
+					is_rival = event_target:antipope
+					is_rival = event_target:antipope_top_liege
+					AND = {
+						NOT = {opinion = { who = event_target:antipope_top_liege value = -75 } }
+						NOT = {opinion = { who = event_target:antipope value = -20 } }
+						opinion = { who = event_target:pope value = 0 }
+					}
+					AND = {
+						NOT = {opinion = { who = event_target:antipope value = -75 } }
+						NOT = {opinion = { who = event_target:antipope_top_liege value = -20 } }
+						opinion = { who = event_target:pope value = 0 }
+					}
+					AND = {
+						OR = {
+							is_friend = event_target:pope
+							is_lover = event_target:pope
+							dynasty = event_target:pope
+						}
+						NOR = {
+							dynasty = event_target:antipope
+							dynasty = event_target:antipope_top_liege
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = PDPAnti.5
+	hide_window = yes
+	is_triggered_only = yes
+	option = {
+		name = "ok"
+		event_target:antipope_top_liege = {
+			any_vassal = {
+				limit = {
+					leads_faction = faction_PDP_depose_antipope
+				}
+				war = { target = event_target:antipope_top_liege casus_belli = PDP_depose_antipope faction = faction_PDP_depose_antipope}
+			}
+		}
+		clr_title_flag = PDP_depose_antipope_now
+	}
+}
+
+
+character_event = {
+	id = PDPAnti.4
+	desc = EVTDESC_PDPAnti.4
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	trigger = {
+		any_war = {
+			using_cb = PDP_depose_antipope
+			defender = {character = event_target:antipope_top_liege}
+		}
+	}
+	option = {
+		name = EVTOPT_a_PDPAnti.4 #fight for the true pope
+		any_war = {
+			limit = {
+				using_cb = PDP_depose_antipope
+				defender = {character = event_target:antipope_top_liege}
+			}
+			attacker = {
+				ROOT = {join_attacker_wars = PREV}
+			}
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 3
+				relative_power = { who = event_target:antipope_top_liege power = 1.2 }
+			}
+			modifier = {
+				factor = 2
+				relative_power = { who = event_target:antipope_top_liege power = 2.0 }
+			}
+			modifier = {
+				factor = 2
+				PDP_is_theocracy = yes
+			}
+			modifier = {
+				factor = 3
+				AND = {
+					likes_better_than = { who = event_target:pope than = event_target:antipope}
+					likes_better_than = { who = event_target:pope than = event_target:antipope_top_liege}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					war_with = event_target:top_liege
+					is_friend = event_target:antipope
+					is_lover = event_target:antipope
+					is_friend = event_target:antipope_top_liege
+					is_lover = event_target:antipope_top_liege
+					is_married = event_target:antipope_top_liege
+					is_allied_with = event_target:antipope_top_liege
+					has_non_aggression_pact_with = event_target:antipope_top_liege
+					AND = {
+						likes_better_than = { who = event_target:antipope than = event_target:pope}
+						likes_better_than = { who = event_target:antipope_top_liege than = event_target:pope}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_b_PDPAnti.4 #dont take part
+
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0.8
+				trait = zealous
+			}
+			modifier = {
+				factor = 1.5
+				NOT = {relative_power = { who = event_target:antipope_top_liege power = 1.0 }}
+			}
+			modifier = {
+				factor = 2
+				NOT = {relative_power = { who = event_target:antipope_top_liege power = 0.5 }}
+			}
+			modifier = {
+				factor = 3
+				NOT = {relative_power = { who = event_target:antipope_top_liege power = 0.1 }}
+			}
+			modifier = {
+				factor = 1.2
+				opinion = { who = event_target:antipope value = 25 }
+			}
+			modifier = {
+				factor = 1.5
+				opinion = { who = event_target:antipope value = 50 }
+			}
+			modifier = {
+				factor = 1.5
+				opinion = { who = event_target:antipope_top_liege value = 50 }
+			}
+			modifier = {
+				factor = 0.1
+				OR = {
+					is_rival = event_target:antipope
+					is_rival = event_target:antipope_top_liege
+					AND = {
+						NOT = {opinion = { who = event_target:antipope_top_liege value = -75 } }
+						NOT = {opinion = { who = event_target:antipope value = -20 } }
+						opinion = { who = event_target:pope value = 0 }
+					}
+					AND = {
+						NOT = {opinion = { who = event_target:antipope value = -75 } }
+						NOT = {opinion = { who = event_target:antipope_top_liege value = -20 } }
+						opinion = { who = event_target:pope value = 0 }
+					}
+					AND = {
+						OR = {
+							is_friend = event_target:pope
+							is_lover = event_target:pope
+							dynasty = event_target:pope
+						}
+						NOR = {
+							dynasty = event_target:antipope
+							dynasty = event_target:antipope_top_liege
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#foreign countries must decide
+
+character_event = {
+	id = PDPAnti.200
+	desc = EVTDESC_PDPAnti.200
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	option = {
+		name = "EVTOPT_a_PDPAnti.200"
+	}
+}
+
+character_event = {
+	id = PDPAnti.210
+	desc = EVTDESC_PDPAnti.210
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	option = {
+		name = "EVTOPT_a_PDPAnti.210"
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0.5
+				trait = zealous
+			}
+			modifier = {
+				factor = 0.001
+				any_war = {
+					using_cb = PDP_depose_pope
+					OR = {
+						attacker = {
+							dynasty = ROOT
+						}
+						defender = {
+							dynasty = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPT_b_PDPAnti.210"
+		any_war = {
+			limit = {
+				using_cb = PDP_depose_pope
+			}
+			attacker = {
+				ROOT = {join_attacker_wars = PREV}
+			}
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 2
+				rightful_religious_head_scope = {
+					NOT = {reverse_opinion = {who = ROOT value = 0}}
+				}
+			}
+			modifier = {
+				factor = 3
+				rightful_religious_head_scope = {
+					NOT = {reverse_opinion = {who = ROOT value = -70}}
+				}
+			}
+			modifier = {
+				factor = 0.001
+				any_war = {
+					using_cb = PDP_depose_pope
+					attacker = {
+						is_rival = ROOT
+					}
+				}
+			}
+			modifier = {
+				factor = 0.001
+				any_war = {
+					using_cb = PDP_depose_pope
+					defender = {
+						OR = {
+							is_friend = ROOT
+							dynasty = ROOT
+							is_allied_with = ROOT
+						}
+					}
+				}
+			}
+		}
+
+	}
+	option = {
+		name = "EVTOPT_c_PDPAnti.210"
+		any_war = {
+			limit = {
+				using_cb = PDP_depose_pope
+			}
+			defender = {
+				ROOT = {join_defender_wars = PREV}
+			}
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 2
+				rightful_religious_head_scope = {
+					reverse_opinion = {who = ROOT value = 40}
+				}
+			}
+			modifier = {
+				factor = 3
+				rightful_religious_head_scope = {
+					reverse_opinion = {who = ROOT value = 80}
+				}
+			}
+			modifier = {
+				factor = 0.001
+				any_war = {
+					using_cb = PDP_depose_pope
+					defender = {
+						is_rival = ROOT
+					}
+				}
+			}
+			modifier = {
+				factor = 0.001
+				any_war = {
+					using_cb = PDP_depose_pope
+					attacker = {
+						OR = {
+							is_friend = ROOT
+							dynasty = ROOT
+							is_allied_with = ROOT
+							top_liege = {
+									OR = {
+										is_allied_with = ROOT
+										is_friend = ROOT
+										is_lover = ROOT
+										reverse_opinion = {who = ROOT value = 60}
+									}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#any ruler may join
+
+character_event = {
+	id = PDPAnti.211
+	desc = EVTDESC_PDPAnti.210
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	option = {
+		name = "EVTOPT_a_PDPAnti.210"
+		ai_chance = {
+			factor = 66
+			modifier = {
+				factor = 0.1
+				any_war = {
+					using_cb = PDP_depose_pope
+					OR = {
+						attacker = {
+							dynasty = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPT_b_PDPAnti.210"
+		any_war = {
+			limit = {
+				using_cb = PDP_depose_pope
+			}
+			attacker = {
+				ROOT = {join_attacker_wars = PREV}
+			}
+		}
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 2
+				k_papal_state = {holder_scope = {
+					NOT = {reverse_opinion = {who = ROOT value = 0}}
+				}}
+			}
+			modifier = {
+				factor = 3
+				k_papal_state = {holder_scope = {
+					NOT = {reverse_opinion = {who = ROOT value = -70}}
+				}}
+			}
+			modifier = {
+				factor = 10
+				any_war = {
+					using_cb = PDP_depose_pope
+					attacker = {
+						OR = {
+							is_friend = ROOT
+							is_lover = ROOT
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.001
+				any_war = {
+					using_cb = PDP_depose_pope
+					attacker = {
+						is_rival = ROOT
+					}
+				}
+			}
+			modifier = {
+				factor = 0.001
+				any_war = {
+					using_cb = PDP_depose_pope
+					defender = {
+						OR = {
+							is_friend = ROOT
+							dynasty = ROOT
+							is_allied_with = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#vassal of same liege may join one side only

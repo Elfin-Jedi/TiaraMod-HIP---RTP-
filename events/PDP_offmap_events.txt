@@ -1,0 +1,710 @@
+namespace = PDPOFF
+
+character_event = {
+	id = PDPOFF.1
+	desc = EVTDESC_PDPOFF.1
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	trigger = {
+		PDP_is_theocracy = yes
+		has_offmap_news_enabled = offmap_PDP_church
+	}
+	option = {
+		name = "Ok"
+	}
+}
+#palatinus retired / died - inform all players
+
+character_event = {
+	id = PDPOFF.2
+	desc = {
+	  trigger = {
+	    event_target:bishop = {character = FROM} #we requested it ourselves.
+	  }
+	  text = EVTDESC_PDPOFF.2_self
+	}
+	desc = {
+	  trigger = {
+		NOT = {event_target:bishop = {character = FROM}} #we requested it ourselves.
+	  }
+	  text = EVTDESC_PDPOFF.2
+	}
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	option = {
+		name = "EVENTOPT_a_PDPOFF.2"
+		event_target:palatinus = {
+			if = {
+				limit = {
+					NOT = {liege = { has_landed_title = k_papal_state } }
+				}
+				move_character = ROOT #why does this send him to the western protectorate? Stupid ai...
+			}
+			set_character_flag = PDP_allowed_as_palatinus
+			give_minor_title = title_PDP_papal_palatinus
+			opinion = { modifier = PDP_helped_me_into_office who = event_target:bishop years = 100 }
+			if = {
+				limit = {
+					has_character_flag = PDP_heir_of_@event_target:bishop
+				}
+				clr_character_flag = PDP_heir_of_@event_target:bishop
+			}
+		}
+	}
+	option = {
+		trigger = {
+			ai = no
+			has_offmap_currency = { offmap = offmap_PDP_church value = 1440 }
+			NOT = {event_target:bishop = {character = ROOT}}
+		}
+		name = "EVENTOPT_b_PDPOFF.2"
+		add_offmap_currency = { offmap = offmap_PDP_church value = -1440 }
+	}
+}
+#palatinus hired - inform pope of his employee
+
+
+character_event = {
+	id = PDPOFF.5
+	desc = EVTDESC_PDPOFF.5
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	option = {
+		name = "EVENTOPT_a_PDPOFF.5"
+		event_target:bishop = {
+			transfer_scaled_wealth = { to = ROOT value = 0.25 min = 100 max = 100}
+		}
+	}
+}
+#some bishop decided to send money to the pope himself...
+
+
+
+character_event = {
+	id = PDPOFF.10
+	desc = EVTDESC_PDPOFF.10
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	option = {#accept
+		name = "EVENTOPT_a_PDPOFF.10"
+		event_target:bishop = {
+			set_character_flag = PDP_college_supported_as_cardinal
+			give_minor_title = title_cardinal
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {#decline
+		trigger = {
+			has_offmap_currency = { offmap = offmap_PDP_church value = 3600 }
+		}
+		name = "EVENTOPT_b_PDPOFF.10"
+		add_offmap_currency = { offmap = offmap_PDP_church value = -3600 }
+		prestige = -100
+		event_target:bishop = {
+			character_event = {id = PDPOFF.11}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOR = {#list of things that allow pope to decline
+					is_rival = event_target:bishop
+				}
+			}
+		}
+	}
+}
+#some bishop wants to become cardinal and payed a lot of influence...
+
+character_event = {
+	id = PDPOFF.11
+	desc = EVTDESC_PDPOFF.11
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	option = {#be angry
+		name = "EVENTOPT_a_PDPOFF.11"
+	}
+}
+#pope refused to make me cardinal
+
+
+
+character_event = {
+	id = PDPOFF.20
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {#only trigger for pope
+		has_landed_title = k_papal_state
+	}
+	option = {
+		name = "Ok"
+		if = {#reforms
+			limit = {
+				offmap_PDP_church = {
+					has_status  = PDP_church_status_reform
+				}
+				NOT = {religion_authority = 0.9}
+			}
+			random = {
+				chance = 50
+				religion_authority = {
+					modifier = PDP_reforms
+				}
+				any_player = {#notify players
+					character_event = {id = PDPOFF.21}
+				}
+			}
+		}
+		if = {
+			limit = {
+				offmap_PDP_church = {
+					has_status  = PDP_church_status_corrupt
+				}
+				religion_authority = 0.05
+			}
+			random = {
+				chance = 50
+				if = {
+					limit = {
+						religion_authority = 0.8
+					}
+					religion_authority = {
+						modifier = PDP_major_corruption
+					}
+				}
+				else = {
+					religion_authority = {
+						modifier = PDP_corruption
+					}
+				}
+				any_player = {#notify players
+					character_event = {id = PDPOFF.22}
+				}
+			}
+		}
+	}
+}
+#religion modifiers: reform / corruption
+
+character_event = {
+	id = PDPOFF.21
+	desc = EVTDESC_PDPOFF.21
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	trigger = {
+		PDP_is_theocracy = yes
+		has_offmap_news_enabled = offmap_PDP_church
+	}
+	option = {#be angry
+		name = "EVENTOPT_a_PDPOFF.21"
+	}
+}
+#church reforms
+
+character_event = {
+	id = PDPOFF.22
+	desc = EVTDESC_PDPOFF.22
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	trigger = {
+		PDP_is_theocracy = yes
+		has_offmap_news_enabled = offmap_PDP_church
+	}
+	option = {#be angry
+		name = "EVENTOPT_a_PDPOFF.22"
+	}
+}
+#chruch corruption
+
+
+
+character_event = {
+	id = PDPOFF.30
+	desc = EVTDESC_PDPOFF.30
+	is_triggered_only = yes
+	ai = no
+	picture = GFX_evt_pope
+	option = {#cardinals
+		name = "EVENTOPT_a_PDPOFF.30"
+		custom_tooltip = {text = PDPOFF.30_cardinal_dean}
+		any_character = {
+			limit = {
+				has_minor_title = title_cardinal_dean
+			}
+			#show_portrait = yes
+			custom_tooltip = {text = PDP_show_name_bullet_list}
+		}
+		custom_tooltip = {text = PDPOFF.30_cardinals}
+		any_character = {
+			limit = {
+				religion = catholic
+				has_minor_title = title_cardinal
+			}
+			show_portrait = yes
+			custom_tooltip = {text = PDP_show_name_bullet_list}
+		}
+	}
+	option = {
+		name = "EVENTOPT_a_PDPOFF.30"
+		custom_tooltip = {text = PDPOFF.30_others}
+		any_character = {
+			limit = {
+				religion = catholic
+				OR = {
+					has_minor_title = title_PDP_papal_palatinus
+				}
+			}
+			show_portrait = yes
+			custom_tooltip = {text = PDP_show_name_bullet_list}
+		}
+		custom_tooltip = {text = PDPOFF.30_legates}
+		any_character = {
+			limit = {
+				religion = catholic
+				OR = {
+					has_minor_title = title_papal_legate
+				}
+			}
+			show_portrait = yes
+			custom_tooltip = {text = PDP_show_name_bullet_list}
+		}
+	}
+	option = {
+		name = "EVENTOPT_a_PDPOFF.30"
+		custom_tooltip = {text = PDPOFF.30_electors}
+		any_character = {
+			limit = {
+				religion = catholic
+				offmap_church_is_elector = yes
+			}
+			show_portrait = yes
+			custom_tooltip = {text = PDP_show_name_bullet_list}
+		}
+	}
+}
+#show church officials
+
+
+character_event = {
+	id = PDPOFF.40
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = { #trigger only after 10 years
+		k_papal_state = {
+			OR = {
+				NOT = {has_title_flag = offmap_church_recent_status_event}
+				had_title_flag = {flag = offmap_church_recent_status_event days = 3650}
+			}
+		}
+		ROOT = {
+			has_landed_title = k_papal_state
+		}
+	}
+	option = {
+		name = "Ok"
+		random = {
+			chance = 20 #mtth = 5 years
+			k_papal_state = {
+				clr_title_flag = offmap_church_recent_status_event
+				set_title_flag = offmap_church_recent_status_event
+			}
+			any_player = {
+				character_event = {id = PDPOFF.41 days = 1}
+			}
+			offmap_PDP_church = {
+				random_list = {
+					10 = {
+						set_status = PDP_church_status_stable
+						modifier = {
+							factor = 0
+							has_status = PDP_church_status_stable
+						}
+					}
+					10 = {
+						set_status = PDP_church_status_corrupt
+						modifier = {
+							factor = 0
+							has_status = PDP_church_status_corrupt
+						}
+						modifier = { #was just reforming...
+							factor = 0
+							has_status = PDP_church_status_reform
+						}
+						modifier = { #scandalous
+							factor = 2
+							ROOT= {
+								OR = {
+									trait = bad_priest_christian
+								}
+							}
+						}
+					}
+					10 = {
+						set_status = PDP_church_status_thriving
+						modifier = {
+							factor = 0
+							has_status = PDP_church_status_thriving
+						}
+						modifier = {
+							factor = 0.2
+							ROOT = {
+								NAND = {
+									learning = 10
+									piety = 0
+									NOT = {trait = bad_priest_christian}
+								}
+							}
+						}
+						modifier = {
+							factor = 2
+							ROOT = {
+								learning = 20
+							}
+						}
+					}
+					0 = {
+						set_status = PDP_church_status_reform
+						modifier = {
+							factor = 0
+							has_status = PDP_church_status_reform
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#event to change church status
+#fires with ROOT = Pope, FROM = offmap_PDP_church (on_offmap_yearly_pulse)
+
+character_event = {
+	id = PDPOFF.41
+	desc = EVTDESC_PDPOFF.41
+	is_triggered_only = yes
+	picture = "GFX_evt_pope"
+	trigger= {
+		PDP_is_theocracy = yes
+		has_offmap_news_enabled = offmap_PDP_church
+	}
+	option = {
+		name = "EVENTOPT_a_PDPOFF.41"
+	}
+}
+#notify status changed
+
+character_event = {
+	id = PDPOFF.42
+	desc = EVTDESC_PDPOFF.42
+	is_triggered_only = yes
+	picture = "GFX_evt_pope"
+	trigger= {
+		PDP_is_theocracy = yes
+		has_offmap_news_enabled = offmap_PDP_church
+	}
+	option = {
+		name = "EVENTOPT_a_PDPOFF.42"
+	}
+}
+#notify policy changed
+
+
+character_event = {
+	id = PDPOFF.50
+	desc = EVTDESC_PDPOFF.50
+	is_triggered_only = yes
+	picture = "GFX_evt_monk"
+	immediate = {
+		set_character_flag = offmap_church_writing_paper_flag
+	}
+	option = {#try hard
+		name = "EVENTOPT_a_PDPOFF.50"
+		add_character_modifier = {modifier = offmap_church_writing_paper duration = -1}
+	}
+	option = {#take it easy
+		name = "EVENTOPT_b_PDPOFF.50"
+	}
+	after = {
+		character_event = {id = PDPOFF.51 days = 365 random = 1146}
+	}
+}
+#start writing paper
+
+character_event = {
+	id = PDPOFF.51
+	desc = EVTDESC_PDPOFF.51
+	is_triggered_only = yes
+	picture = "GFX_evt_monk"
+	option = {
+		name = "EVENTOPT_a_PDPOFF.50"
+		clr_character_flag = offmap_church_writing_paper_flag
+		random_list = {
+			60 = {
+				add_artifact = religious_paper_poor
+				modifier = {
+					factor = 2
+					NOT = {learning = 10}
+				}
+				modifier = {
+					factor = 0.8
+					OR = {
+						trait = diligent
+						trait = erudite
+						trait = theologian
+						trait = scholar
+					}
+				}
+			}
+			30 = {
+				add_artifact = religious_paper_medium
+				modifier = {
+					factor = 0.01
+					NOT = {has_character_modifier = offmap_church_writing_paper}
+				}
+				modifier = {
+					factor = 1.2
+					learning = 13
+				}
+				modifier = {
+					factor = 1.2
+					learning = 15
+				}
+				modifier = {
+					factor = 1.5
+					learning = 17
+				}
+			}
+			10 = {
+				add_artifact = religious_paper_good
+				modifier = {
+					factor = 0
+					NOT = {has_character_modifier = offmap_church_writing_paper}
+				}
+				modifier = {
+					factor = 1.2
+					learning = 15
+				}
+				modifier = {
+					factor = 1.5
+					learning = 20
+				}
+				modifier = {
+					factor = 2
+					learning = 25
+				}
+				modifier = {
+					factor = 1.2
+					learning = 30
+				}
+			}
+		}
+
+
+		remove_character_modifier = offmap_church_writing_paper
+	}
+}
+#done writing paper
+
+
+character_event = {
+	id = PDPOFF.70
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		ROOT = {
+			has_landed_title = k_papal_state
+			ai = yes
+			NOT = {trait = PDP_the_holy_see}
+			NOT = {has_assigned_minor_title  = { title = title_cardinal_dean count = 1 }}
+		}
+	}
+	option = {
+		name = "Ok"
+		PDP_cardinal = {
+			preferred_limit = {
+				NOT = {is_rival = ROOT}
+				learning = 18
+				culture = italian
+				age = 40
+			}
+			preferred_limit = {
+				NOT = {is_rival = ROOT}
+				learning = 15
+				culture = italian
+				age = 40
+			}
+			preferred_limit = {
+				NOT = {is_rival = ROOT}
+				learning = 20
+			}
+			preferred_limit = {
+				NOT = {is_rival = ROOT}
+				learning = 15
+			}
+			preferred_limit = {
+				NOT = {is_rival = ROOT}
+			}
+			character_event = {id = PDPOFF.71 days = 0}
+			#give_minor_title = title_cardinal_dean #done by event
+		}
+	}
+}
+#make ai pope assign a cardinal dean
+
+character_event = {
+	id = PDPOFF.71
+	desc = EVTDESC_PDPOFF.71
+	is_triggered_only = yes
+	picture = "GFX_evt_pope"
+	trigger= {
+		PDP_is_theocracy = yes
+		has_offmap_news_enabled = offmap_PDP_church
+	}
+	option = {
+		name = "EVENTOPT_a_PDPOFF.71"
+		give_minor_title = title_cardinal_dean
+	}
+}
+#became cardinal Dean
+
+character_event = {
+	id = PDPOFF.72
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		ROOT = {
+			has_landed_title = k_papal_state
+			ai = yes
+			NOT = {trait = PDP_the_holy_see}
+			NOT = {has_assigned_minor_title  = { title = title_papal_legate count = 3 }}
+			random = 33
+		}
+	}
+	option = {
+		name = "Ok"
+		random_playable_ruler = {
+			limit = {
+				religion = catholic
+				NOT = {
+					trait = excommunicated
+					has_minor_title = title_papal_legate
+				}
+				PDP_is_theocracy = yes
+				independent = no
+				liege = {
+					religion = catholic
+					higher_tier_than = DUKE
+					NOT = {has_landed_title = k_papal_state}
+				}
+				PDP_has_no_antipope = yes
+			}
+			preferred_limit = {
+				NOT = {is_rival = ROOT}
+				learning = 18
+				OR = {
+					liege = {
+						OR = {
+							has_landed_title = e_hre
+							has_landed_title = k_france
+							has_landed_title = k_england
+							has_landed_title = k_italy
+						}
+					}
+				}
+			}
+			preferred_limit = {
+				NOT = {is_rival = ROOT}
+				learning = 15
+			}
+			preferred_limit = {
+				NOT = {is_rival = ROOT}
+				learning = 20
+			}
+			preferred_limit = {
+				NOT = {is_rival = ROOT}
+				learning = 15
+			}
+			preferred_limit = {
+				NOT = {is_rival = ROOT}
+			}
+			character_event = {id = PDPOFF.73 days = 0}
+			#give_minor_title = title_cardinal_dean #done by event
+		}
+	}
+}
+#make ai pope assign a legate
+
+character_event = {
+	id = PDPOFF.73
+	desc = EVTDESC_PDPOFF.73
+	is_triggered_only = yes
+	picture = "GFX_evt_pope"
+	trigger= {
+		PDP_is_theocracy = yes
+		has_offmap_news_enabled = offmap_PDP_church
+	}
+	option = {
+		name = "EVENTOPT_a_PDPOFF.73"
+		give_minor_title = title_papal_legate
+	}
+}
+#became legate
+
+character_event = {
+	id = PDPOFF.80
+	desc = EVTDESC_PDPOFF.80
+	is_triggered_only = yes
+	picture = "GFX_evt_cathedral"
+	trigger= {
+		PDP_is_theocracy = yes
+		religion = catholic
+		rightful_religious_head_scope = {
+			has_landed_title = k_papal_state #not under rule of antipope
+		}
+		offmap_PDP_church = {
+			has_policy = PDP_church_policy_monumentality
+		}
+	}
+	option = {
+		name = "EVENTOPT_a_PDPOFF.80"
+		add_offmap_currency = { offmap = offmap_PDP_church value = 100 }
+	}
+}
+#monumentality - wonder upgrade finished
+
+character_event = {
+	id = PDPOFF.81
+	desc = EVTDESC_PDPOFF.81
+	is_triggered_only = yes
+	picture = "GFX_evt_cathedral"
+	trigger= {
+		PDP_is_theocracy = yes
+		religion = catholic
+		rightful_religious_head_scope = {
+			has_landed_title = k_papal_state #not under rule of antipope
+		}
+		offmap_PDP_church = {
+			has_policy = PDP_church_policy_monumentality
+		}
+	}
+	option = {
+		name = "EVENTOPT_a_PDPOFF.81"
+		add_offmap_currency = { offmap = offmap_PDP_church value = 1000 }
+	}
+}
+#monumentality - wonder stage finished
+
+
+
+
+#set_special_character_title = GENGHIS_KHAN
+
+#show all voters
+#any_character = {
+	#limit = {
+		#conditions
+	#}
+	#show_portrait = yes
+	#custom_tooltip = {text = ???}
+#}

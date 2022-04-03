@@ -1,0 +1,555 @@
+namespace = PDPHF
+
+character_event = {
+	id = PDPHF.1
+	desc = EVTDESCPDPHF.1
+	is_triggered_only = yes
+	trigger = {
+		NOT = {has_character_flag = PDP_no_baptism_events}
+	}
+	picture = GFX_evt_pope
+	option = {
+		event_target:baptizing_child = {prestige = 10}
+		name = EVTOPT_a_PDPHF.1 #great
+		piety = 10
+		prestige = 10
+	}
+	option = {
+		trigger = {
+			ai = no
+			OR = {
+				trait = cruel
+				trait = impaler
+				trait = weak
+				trait = lunatic
+			}
+		}
+		name = EVTOPT_b_PDPHF.1 #oops
+		event_target:baptizing_child = {
+			reverse_opinion = { modifier = opinion_dislike who = ROOT years = 25 }
+			random_list = {
+				30 = {
+				}
+				20 = {
+					add_trait = severely_injured
+					ROOT = {
+						add_character_modifier =  { name = PDP_tragic_baptism duration = 360 }
+					}
+				}
+				40 = {
+					add_trait = wounded
+					ROOT = {
+						add_character_modifier =  { name = PDP_tragic_baptism duration = 180 }
+					}
+				}
+				10 = {
+					death = { death_reason = death_accident  killer = ROOT}
+					ROOT = {
+						add_character_modifier =  { name = PDP_tragic_baptism duration = 720 }
+						character_event = {id = PDPHF.2 days = 0}
+					}
+				}
+			}
+		}
+		piety = -25
+		prestige = -25
+	}
+	option = {
+		trigger = {
+			OR = {
+				trait = greedy
+				NOT = {wealth = 50}
+			}
+		}
+		event_target:baptizing_child = {prestige = 10}
+		name = EVTOPT_c_PDPHF.1 #give me money
+		wealth = 50
+		piety = -10
+		prestige = -10
+	}
+}
+
+character_event = {
+	id = PDPHF.2
+	desc = EVTDESCPDPHF.2
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	option = {
+		show_portrait = event_target:baptizing_child
+		name = EVTOPT_a_PDPHF.2 #bad
+		piety = -10
+		prestige = -10
+	}
+}
+
+character_event = {
+	id = PDPHF.3
+	desc = EVTDESCPDPHF.3
+	is_triggered_only = yes
+	trigger = {
+		has_landed_title = k_papal_state
+	}
+	picture = GFX_evt_pope
+	option = {
+		name = EVTOPT_a_PDPHF.3
+		clr_character_flag = PDP_no_baptism_events
+	}
+	option = {
+		name = EVTOPT_b_PDPHF.3
+		set_character_flag = PDP_no_baptism_events
+	}
+}
+
+character_event = {
+	id = PDPHF.10
+	desc = { #Orgy with Prince-Bishop.
+		text = EVTDESCPDPHF.10
+		trigger = {
+			NOT = {
+				ROOT = {
+					has_landed_title = k_papal_state
+				}
+			}
+		}
+	}
+	desc = { #Orgy with the Pope.
+		text = EVTDESCPDPHF.10_POPE
+		trigger = {
+			ROOT = {
+				has_landed_title = k_papal_state
+			}
+		}
+	}
+	picture = GFX_evt_pope_feast
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPT_a_PDPHF.10
+	}
+}
+character_event = { #priest at orgy
+	id = PDPHF.11
+	desc =  EVTDESCPDPHF.11
+	picture = GFX_evt_pope_feast
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPT_a_PDPHF.11
+	}
+}
+
+character_event = { #priest notified of coronation
+	id = PDPHF.20
+	desc = EVTDESCPDPHF.20
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	option = {
+		name = EVTOPT_a_PDPHF.20
+		piety = 25
+		prestige = 25
+	}
+}
+
+character_event = { #priest notified: king stole crown
+	id = PDPHF.21
+	desc = EVTDESCPDPHF.21
+	is_triggered_only = yes
+	picture = GFX_evt_pope
+	option = {
+		name = EVTOPT_a_PDPHF.21
+		piety = 25
+		prestige = 25
+	}
+}
+
+letter_event = {
+	id = PDPHF.200
+	desc = EVTDESCPDPHF.200
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_religion
+	option = {
+		name = EVTOPT_k_PDPHF.200 #nothing
+		piety = 50
+		FROM = {
+			set_character_flag = flag_crowned_by_pope
+		}
+		ROOT = {
+			save_event_target_as = coronation_priest
+			opinion = {
+				modifier = opinion_supposed_to_crown
+				months = 1
+				who = FROM
+			}
+			reverse_opinion = {
+				modifier = opinion_supposed_to_crown
+				months = 1
+				who = FROM
+			}
+		}
+		FROM = {character_event = { id = HF.20300 }} #don't forget to do the coronation...
+	}
+	option = {
+		name = EVTOPT_a_PDPHF.200 #independence
+		trigger = {
+			vassal_of = FROM
+		}
+		FROM = { letter_event = { id = HF.20211 } } #I want to be independent.
+	}
+	option = {
+		name = EVTOPT_j_PDPHF.200 #holy war for italy
+		trigger = {
+			FROM = { higher_tier_than = KING war = no }
+			FROM = {realm_size = 30}
+			NOT = {
+				completely_controls = d_latium
+				completely_controls = d_spoleto
+				completely_controls = d_ancona
+				completely_controls = d_ferrara
+				completely_controls = d_benevento
+			}
+			any_independent_ruler = {
+				is_within_diplo_range = FROM
+				NOT = {has_truce = FROM}
+				NOT = { is_allied_with = ROOT }
+				OR = {
+					excommunicated_for = ROOT
+					NOT = { religion = ROOT }
+				}
+				OR = {
+					any_demesne_title = {
+						OR = {
+							title = d_latium
+							title = d_spoleto
+							title = d_ancona
+							title = d_ferrara
+							title = d_benevento
+							d_latium = {
+								any_de_jure_vassal_title = { owner = { character = PREVPREVPREVPREV } }
+							}
+							d_spoleto = {
+								any_de_jure_vassal_title = { owner = { character = PREVPREVPREVPREV } }
+							}
+							d_ancona = {
+								any_de_jure_vassal_title = { owner = { character = PREVPREVPREVPREV } }
+							}
+							d_ferrara = {
+								any_de_jure_vassal_title = { owner = { character = PREVPREVPREVPREV } }
+							}
+							d_benevento = {
+								any_de_jure_vassal_title = { owner = { character = PREVPREVPREVPREV } }
+							}
+						}
+					}
+					any_vassal = {
+						any_demesne_title = {
+							OR = {
+								title = d_latium
+								title = d_spoleto
+								title = d_ancona
+								title = d_ferrara
+								title = d_benevento
+								d_latium = {
+									any_de_jure_vassal_title = { owner = { character = PREVPREVPREVPREV } }
+								}
+								d_spoleto = {
+									any_de_jure_vassal_title = { owner = { character = PREVPREVPREVPREV } }
+								}
+								d_ancona = {
+									any_de_jure_vassal_title = { owner = { character = PREVPREVPREVPREV } }
+								}
+								d_ferrara = {
+									any_de_jure_vassal_title = { owner = { character = PREVPREVPREVPREV } }
+								}
+								d_benevento = {
+									any_de_jure_vassal_title = { owner = { character = PREVPREVPREVPREV } }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		FROM = { letter_event = { id = HF.20221 } } #Holy war Italy for me.
+	}
+	option = {
+		name = EVTOPT_c_PDPHF.200 #investiture
+		trigger = {
+			FROM = { primary_title = { has_law = investiture_law_1 } }
+		}
+		FROM = { letter_event = { id = HF.20213 } } #I want you to enact Papal Investiture.
+	}
+	option = {
+		name = EVTOPT_d_PDPHF.200 #excom war
+		trigger = {
+			FROM = { war = no } #Wartime coronation.
+			FROM = {realm_size = 25}
+			any_independent_ruler = {
+				is_within_diplo_range = FROM
+				excommunicated_for = ROOT
+				in_revolt = no
+				NOT = { is_liege_of = FROM }
+				NOT = { is_allied_with = ROOT }
+				NOT = {
+					any_current_enemy = {
+						NOT = { religion_group = ROOT }
+					}
+				}
+			}
+		}
+		FROM = { letter_event = { id = HF.20214 } } #I want you to depose excommunicated ruler.
+	}
+	option = {
+		name = EVTOPT_e_PDPHF.200 #depose antipope
+		trigger = {
+			FROM = { war = no } #Wartime coronation.
+			FROM = {realm_size = 25}
+			any_independent_ruler = {
+				religion = FROM
+				is_within_diplo_range = FROM
+				NOT = { is_allied_with = ROOT }
+				OR = {
+					religion = catholic
+					religion = fraticelli
+				}
+				rightful_religious_head_scope = {
+					is_liege_or_above = PREV
+					OR = {
+						has_claim = k_papal_state
+						has_claim = d_fraticelli
+					}
+				}
+			}
+		}
+		FROM = { letter_event = { id = HF.20215 } } #I want you to depose an antipope.
+
+	}
+	option = {
+		name = EVTOPT_f_PDPHF.200 #italy for me
+		trigger = {
+			NOT = {FROM = { lower_tier_than = EMPEROR }}
+			FROM = {
+				any_demesne_title = {
+					can_be_given_away = yes
+					OR = {
+						title = d_latium
+						title = d_spoleto
+						title = d_ancona
+						title = d_ferrara
+						title = d_benevento
+						title = c_roma
+					}
+				}
+				any_vassal = {
+					any_demesne_title = {
+					OR = {
+						title = d_latium
+						title = d_spoleto
+						title = d_ancona
+						title = d_ferrara
+						title = d_benevento
+						title = c_roma
+						}
+					}
+				}
+			}
+			NOT = {
+				AND = {
+					OR = {
+						any_vassal = { has_landed_title = c_roma }
+						has_landed_title = c_roma
+					}
+					OR = {
+						any_vassal = { has_landed_title = d_latium }
+						has_landed_title = d_latium
+					}
+					OR = {
+						any_vassal = { has_landed_title = d_spoleto }
+						has_landed_title = d_spoleto
+					}
+					OR = {
+						any_vassal = { has_landed_title = d_ancona }
+						has_landed_title = d_ancona
+					}
+					OR = {
+						any_vassal = { has_landed_title = d_ferrara }
+						has_landed_title = d_ferrara
+					}
+					OR = {
+						any_vassal = { has_landed_title = d_benevento }
+						has_landed_title = d_benevento
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOR = {
+					trait = lunatic
+					trait = possessed
+				}
+			}
+			FROM = { letter_event = { id = HF.20216 } } #I want a piece of Italy.
+		}
+		if = {
+			limit = {
+				OR = {
+					trait = lunatic
+					trait = possessed
+				}
+			}
+			FROM = { letter_event = { id = HF.20225 } } #Calls for Donation of Constantine.
+		}
+	}
+	option = {
+		name = EVTOPT_g_PDPHF.200 #orgy
+		trigger = {
+			FROM = { war = no } #Wartime coronation.
+			OR = {
+				 trait = bad_priest_christian
+				 trait = hedonist
+			}
+			NOR = {
+				 trait = celibate
+				 trait = temperate
+				 trait = chaste
+				 trait = humble
+				 trait = shy
+			}
+		}
+		FROM = { letter_event = { id = HF.20235 } } #Wishes to have orgy.
+
+	}
+	option = {
+		name = EVTOPT_h_PDPHF.200 #holy order
+		trigger = {
+			OR = {
+				is_title_active = d_knights_templar
+				is_title_active = d_teutonic_order
+				is_title_active = d_knights_hospitaler
+				is_title_active = d_knights_santiago
+				is_title_active = d_knights_calatrava
+			}
+			FROM = {
+				higher_real_tier_than = KING
+				any_demesne_title = { #Check if you have enough land to give.
+					can_be_given_away = yes
+					tier = duke
+				}
+			}
+		}
+		FROM = { letter_event = { id = HF.20217 } } #Give lands to the Holy Orders.
+	}
+	option = {
+		name = EVTOPT_b_PDPHF.200 #gold
+		FROM = { letter_event = { id = HF.20212 } } #I want gold.
+	}
+	option = {
+		name = EVTOPT_i_PDPHF.200 #give artifact
+		trigger = {
+			piety = 100
+			FROM = {
+				any_artifact = {
+					has_artifact_flag = christian
+					OR = {
+						has_artifact_flag = rare
+						has_artifact_flag = very_rare
+					}
+				}
+			}
+		}
+		FROM = { letter_event = { id = HF.20241 } } #Give artifact?
+		piety = -100
+	}
+}
+
+character_event = {
+	id = PDPHF.400
+	desc = EVTDESCPDPHF.400
+	is_triggered_only = yes
+	picture = GFX_evt_cardinal_discussion
+	immediate = {
+		random_character = {
+			limit = {
+				PDP_possible_cardinal_candidate = yes
+			}
+			preferred_limit = {
+				learning = 25
+				culture = italian
+			}
+			preferred_limit = {
+				learning = 20
+				culture = italian
+			}
+			preferred_limit = {
+				learning = 20
+				culture_group = latin
+			}
+			preferred_limit = {learning = 20}
+			preferred_limit = {learning = 15}
+			preferred_limit = {culture = italian}
+			save_event_target_as = possible_cardinal
+		}
+		if = {
+			limit = {
+				PDP_cardinal = {
+					any_dynasty_member = {
+						PDP_possible_cardinal_candidate = yes
+						learning = 15
+					}
+				}
+			}
+			PDP_cardinal = {
+				limit = {
+					any_dynasty_member = {
+						PDP_possible_cardinal_candidate = yes
+						learning = 15
+					}
+				}
+				random_dynasty_member = {
+					limit = {
+						PDP_possible_cardinal_candidate = yes
+						learning = 15
+						reverse_opinion = {who = PREV value = 0}
+					}
+					save_event_target_as = possible_cardinal_other_relative
+				}
+				save_event_target_as = suggesting_cardinal
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_a_PDPHF.400 #random dude who might be suited
+		#show_portrait = event_target:possible_cardinal
+		event_target:possible_cardinal = {
+			save_event_target_as = bishop
+			clr_character_flag = PDP_college_declined
+		}
+		ROOT = {
+			save_event_target_as = triggered_by
+			set_character_flag = PDP_currently_asking_for_nomination
+			character_event = {id = PDP.67 days = 0}
+		}
+	}
+	option = {
+		trigger = {
+			possible_cardinal_other_relative = {always = yes}
+		}
+		name = EVTOPT_b_PDPHF.400 #random relative who might be suited
+		event_target:possible_cardinal_other_relative = {
+			save_event_target_as = bishop
+			clr_character_flag = PDP_college_declined
+		}
+		ROOT = {
+			save_event_target_as = triggered_by
+			set_character_flag = PDP_currently_asking_for_nomination
+			character_event = {id = PDP.67 days = 0}
+		}
+		#show_portrait = event_target:possible_cardinal_other_relative
+		show_portrait = event_target:suggesting_cardinal
+	}
+	option = {
+		name = EVTOPT_c_PDPHF.400 #my choice
+	}
+}

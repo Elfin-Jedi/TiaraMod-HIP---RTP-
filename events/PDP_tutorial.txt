@@ -1,0 +1,193 @@
+namespace = PDPTUT
+
+character_event = {
+    id = PDPTUT.1
+    title = "Tutorial"
+    desc = EVTDESC_PDPTUT.1
+    only_rulers = yes
+    ai = no
+    picture = GFX_evt_cardinal_vatican
+    is_triggered_only = yes
+    option = {
+        name =  EVTOPT_a_PDPTUT.1
+    }
+    option = {
+        name =  EVTOPT_b_PDPTUT.1
+        long_character_event = {id = PDPTUT.10}
+    }
+    option = {
+        name =  EVTOPT_c_PDPTUT.1
+        long_character_event = {id = PDPTUT.15}
+    }
+    after = {
+        set_global_flag = PDP_tutorial_disabled
+    }
+}
+
+long_character_event = {
+    id = PDPTUT.10
+    desc = EVTDESC_PDPTUT.10
+    only_rulers = yes
+    ai = no
+    picture = GFX_evt_cardinal_vatican
+    is_triggered_only = yes
+    option = {
+        name = "Ok"
+        long_character_event = {id = PDPTUT.11}
+    }
+}
+
+long_character_event = {
+    id = PDPTUT.11
+    desc = EVTDESC_PDPTUT.11
+    only_rulers = yes
+    ai = no
+    picture = GFX_evt_cardinal_vatican
+    is_triggered_only = yes
+    option = {
+        name = "Ok"
+        long_character_event = {id = PDPTUT.12}
+    }
+}
+
+long_character_event = {
+    id = PDPTUT.12
+    desc = EVTDESC_PDPTUT.12
+    only_rulers = yes
+    ai = no
+    picture = GFX_evt_cardinal_vatican
+    is_triggered_only = yes
+    option = {
+        name = "Ok"
+        long_character_event = {id = PDPTUT.13}
+    }
+}
+
+long_character_event = {
+    id = PDPTUT.13
+    desc = EVTDESC_PDPTUT.13
+    only_rulers = yes
+    ai = no
+    picture = GFX_evt_cardinal_vatican
+    is_triggered_only = yes
+    option = {
+        name = "Ok"
+        long_character_event = {id = PDPTUT.131}
+    }
+}
+
+long_character_event = {
+    id = PDPTUT.131
+    desc = EVTDESC_PDPTUT.131
+    only_rulers = yes
+    ai = no
+    picture = GFX_evt_cardinal_vatican
+    is_triggered_only = yes
+    option = {
+        name = "Ok"
+        long_character_event = {id = PDPTUT.132}
+    }
+}
+
+long_character_event = {
+    id = PDPTUT.132
+    desc = EVTDESC_PDPTUT.132
+    only_rulers = yes
+    ai = no
+    picture = GFX_evt_cardinal_vatican
+    is_triggered_only = yes
+    option = {
+        name = "Ok"
+        long_character_event = {id = PDPTUT.14}
+    }
+}
+
+
+long_character_event = {
+    id = PDPTUT.14
+    desc = EVTDESC_PDPTUT.14
+    only_rulers = yes
+    ai = no
+    picture = GFX_evt_cardinal_vatican
+    is_triggered_only = yes
+    option = {
+        name = "Ok"
+        long_character_event = {id = PDPTUT.15}
+    }
+}
+long_character_event = {
+    id = PDPTUT.15
+    desc = EVTDESC_PDPTUT.15
+    only_rulers = yes
+    ai = no
+    picture = GFX_evt_cardinal_vatican
+    is_triggered_only = yes
+    option = {
+        name = "Ok"
+        long_character_event = {id = PDPTUT.16}
+    }
+}
+
+long_character_event = {
+    id = PDPTUT.16
+    desc = EVTDESC_PDPTUT.16
+    only_rulers = yes
+    ai = no
+    picture = GFX_evt_cardinal_vatican
+    is_triggered_only = yes
+    option = {
+        name = "Ok"
+        long_character_event = {id = PDPTUT.17}
+    }
+}
+
+long_character_event = {
+    id = PDPTUT.17
+    desc = EVTDESC_PDPTUT.17
+    only_rulers = yes
+    ai = no
+    picture = GFX_evt_cardinal_vatican
+    is_triggered_only = yes
+    option = {
+        name = "Ok"
+        long_character_event = {id = PDPTUT.18}
+    }
+}
+
+long_character_event = {
+    id = PDPTUT.18
+    desc = EVTDESC_PDPTUT.18
+    only_rulers = yes
+    ai = no
+    picture = GFX_evt_cardinal_vatican
+    is_triggered_only = yes
+    option = {
+        name = "Ok"
+        long_character_event = {id = PDPTUT.181}
+    }
+}
+long_character_event = {
+    id = PDPTUT.181
+    desc = EVTDESC_PDPTUT.181
+    only_rulers = yes
+    ai = no
+    picture = GFX_evt_cardinal_vatican
+    is_triggered_only = yes
+    option = {
+        name = "Ok"
+        long_character_event = {id = PDPTUT.19}
+    }
+}
+
+long_character_event = {
+    id = PDPTUT.19
+    desc = EVTDESC_PDPTUT.19
+    only_rulers = yes
+    ai = no
+    picture = GFX_evt_cardinal_vatican
+    is_triggered_only = yes
+    option = {
+        name = "Ok"
+        #long_character_event = {id = PDPTUT.20}
+    }
+}

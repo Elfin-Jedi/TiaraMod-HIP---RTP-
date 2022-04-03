@@ -1,0 +1,283 @@
+#######################################
+#
+# PDP Schism Events
+#
+# PDPSchism
+#
+#######################################
+
+namespace = PDPSchism
+
+#collect all patriarchs (not byzantion, since you have to "convince" k_orthodox anyway)
+character_event = {
+	id = PDPSchism.1
+	desc = EVTDESCPDPSchism.1
+	picture = GFX_evt_bishop_byzantine
+	religion = catholic
+
+	trigger = {
+		NOT = { has_global_flag = PDP_pat_antioch }
+		PDP_is_theocracy = yes
+		completely_controls = c_antiocheia
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = EVTOPT_a_PDPSchism.1
+		set_global_flag = PDP_pat_antioch
+		piety = 100
+	}
+}
+
+character_event = {
+	id = PDPSchism.2
+	desc = EVTDESCPDPSchism.2
+	picture = GFX_evt_bishop_byzantine
+	religion = catholic
+
+	trigger = {
+		NOT = { has_global_flag = PDP_pat_jerusalem }
+		PDP_is_theocracy = yes
+		completely_controls = c_jerusalem
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = EVTOPT_a_PDPSchism.1
+		set_global_flag = PDP_pat_jerusalem
+		piety = 100
+	}
+}
+
+character_event = {
+	id = PDPSchism.3
+	desc = EVTDESCPDPSchism.3
+	picture = GFX_evt_bishop_byzantine
+	religion = catholic
+
+	trigger = {
+		NOT = { has_global_flag = PDP_pat_alexandria }
+		PDP_is_theocracy = yes
+		completely_controls = c_alexandria
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = EVTOPT_a_PDPSchism.1
+		set_global_flag = PDP_pat_alexandria
+		piety = 100
+	}
+}
+
+character_event = {
+	id = PDPSchism.4
+    hide_window = yes
+	religion = catholic
+
+	trigger = {
+		NOT = { has_global_flag = PDP_pat_rome }
+		PDP_is_theocracy = yes
+		completely_controls = c_roma
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "ok"
+		set_global_flag = PDP_pat_rome
+	}
+}
+
+
+#
+narrative_event = {
+	id = PDPSchism.100
+	title = EVTNAMEPDPSchism.100
+	desc = EVTDESCPDPSchism.100
+
+	picture = GFX_evt_great_schism
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPT_a_PDPSchism.100
+        set_parent_religion = { religion = orthodox parent = catholic }
+        set_parent_religion = { religion = monothelite parent = catholic }
+        set_parent_religion = { religion = iconoclast parent = catholic }
+        set_parent_religion = { religion = paulician parent = catholic }
+
+        set_global_flag = PDP_schism_mended_catholic #to allow further events/decision for this scenario e.g. vote to reform catholicism
+		give_nickname = nick_the_saint
+        prestige = 2000
+        piety = 2000
+        hidden_tooltip = {
+			add_character_modifier = {name = PDP_guaranteed_sainthood duration  = -1}
+		}
+
+		hidden_tooltip = {
+			any_playable_ruler = {
+				limit = {
+					religion_group = christian
+					controls_religion = no
+				}
+				narrative_event = { id = PDPSchism.101 }
+			}
+		}
+	}
+}
+
+
+narrative_event = {
+	id = PDPSchism.101
+	title = EVTNAMEPDPSchism.101
+	desc = EVTDESCPDPSchism.101
+
+	picture = GFX_evt_great_schism
+
+	is_triggered_only = yes
+
+	option = { #switch to catholic
+		name = EVTOPT_a_PDPSchism.101
+        trigger = {
+            OR = {
+                religion = orthodox
+                religion = monothelite
+                religion = iconoclast
+                religion = paulician
+            }
+        }
+        religion = catholic
+        any_courtier = {
+			limit = {
+                OR = {
+                    religion = orthodox
+                    religion = monothelite
+                    religion = iconoclast
+                    religion = paulician
+                }
+				liege = { character = ROOT }
+			}
+			religion = catholic
+		}
+		capital_scope = {
+			religion = catholic
+		}
+        prestige = -50
+        ai_chance = {
+            factor = 66
+            modifier = {
+                factor = 1.2
+                trait = cynical
+            }
+            modifier = {
+                factor = 0.1
+                is_theocracy = yes
+            }
+            modifier = {
+                factor = 2
+                spouse = {
+                    religion = catholic
+                }
+            }
+            modifier = {
+                factor = 2
+                capital_scope = {
+                    religion = catholic
+                }
+            }
+            modifier = {
+                factor = 0.9
+                k_papal_state = {holder_scope = {
+                    NOT = {reverse_opinion = {who = ROOT value = -25}}
+                }}
+            }
+            modifier = {
+                factor = 1.1
+                k_papal_state = {holder_scope = {
+                    reverse_opinion = {who = ROOT value = 25}
+                }}
+            }
+            modifier = {
+                factor = 1.2
+                k_papal_state = {holder_scope = {
+                    reverse_opinion = {who = ROOT value = 50}
+                }}
+            }
+            modifier = {
+                factor = 1.3
+                k_papal_state = {holder_scope = {
+                    reverse_opinion = {who = ROOT value = 75}
+                }}
+            }
+            modifier = {
+                factor = 9
+                k_papal_state = {holder_scope = {
+                    OR = {
+                        is_friend = ROOT
+                        reverse_opinion = {who = ROOT value = 90}
+                    }
+                }}
+            }
+        }
+	}
+    option = { #stay "heretic"
+        trigger = {
+            OR = {
+                religion = orthodox
+                religion = monothelite
+                religion = iconoclast
+                religion = paulician
+            }
+        }
+		name = EVTOPT_b_PDPSchism.101
+        prestige = 25
+        ai_chance = {
+            factor = 33
+            modifier = {
+                factor = 3
+                trait = zealous
+            }
+            modifier = {
+                factor = 9
+                k_orthodox = {holder_scope = {
+                    OR = {
+                        is_friend = ROOT
+                        reverse_opinion = {who = ROOT value = 90}
+                    }
+                }}
+            }
+            modifier = {
+                factor = 0
+                secret_religion = catholic
+            }
+        }
+	}
+    option = { #is already catholic
+        trigger = {religion = catholic}
+        name = EVTOPT_c_PDPSchism.101
+    }
+    option = { #is not catholic
+        trigger = {
+            NOR = {
+                religion = catholic
+                religion = orthodox
+                religion = monothelite
+                religion = iconoclast
+                religion = paulician
+            }
+        }
+        name = EVTOPT_d_PDPSchism.101
+
+    }
+}
