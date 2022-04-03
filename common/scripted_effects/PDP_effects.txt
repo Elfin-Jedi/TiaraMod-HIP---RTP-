@@ -1,0 +1,177 @@
+activate_holy_see = {
+	if = {
+		limit = {
+			NOT = {
+				PDP_the_holy_see = {always = yes}
+			}
+		}
+		create_character = { #create the holy see
+				random_traits = no
+				name = "The Holy See"
+				dynasty = none
+				culture = italian
+				religion = catholic
+				female = no
+				age = 1066
+				attributes = {
+					martial = 15
+					diplomacy = 15
+					stewardship = 15
+					intrigue = 15
+					learning = 15
+				}
+				health = 15
+				fertility = 0.0
+				trait = PDP_the_holy_see
+		}
+	}
+	PDP_the_holy_see = {
+		#set_special_character_title = PDP_SEDE_VACANTE
+	}
+}
+
+deactivate_holy_see = {
+	if = {
+		limit = {
+			PDP_the_holy_see = {always = yes}
+		}
+		PDP_the_holy_see = {
+			save_event_target_as = holy_see
+			remove_trait = PDP_the_holy_see
+			add_trait = PDP_former_the_holy_see
+			death = { death_reason = death_poor_health }
+		}
+		event_target:holy_see = {
+			death = { death_reason = death_poor_health } #does not work for some reason...
+		}
+	}
+}
+
+PDP_end_conclave = {
+	while = { #any cardinal has PDP_in_conclave
+		limit = {
+			PDP_in_conclave = {
+				always = yes
+			}
+		}
+		clr_global_flag = PDP_conclave_began
+		PDP_in_conclave = {
+			PDP_cardinal = {#clear all promised votes
+				limit = {
+					is_alive = yes
+					has_character_flag = PDP_vote_from_@PREV
+				}
+				clr_character_flag = PDP_vote_from_@PREV
+			}
+			remove_trait = PDP_in_conclave
+			clr_character_flag = do_not_disturb
+			clr_character_flag = PDP_promised_power_to_cardinal
+			clr_character_flag = PDP_conclave_promised_vote
+			clr_character_flag = PDP_player_cardinal_can_vote #just in case
+			clr_character_flag = PDP_dont_vote_for_me
+			character_event = {id = PDP.148 days = 0} #inform about end
+		}
+	}
+}
+
+
+offmap_church_make_me_proposal_initiator = {
+	THIS = {
+		k_papal_state = {
+			save_persistent_event_target = { name = offmap_church_voting_initiator scope = PREV }
+		}
+	}
+}
+
+#set flag for topic and save initiator before calling this
+offmap_church_start_proposal = {
+	k_papal_state = {
+		set_title_flag = offmap_church_voting_active
+		set_variable = { which = offmap_church_contra_votes value = 0 }
+		set_variable = { which = offmap_church_pro_votes value = 0 }
+		holder_scope = {
+			character_event = {id = PDPVOTE.1 days = 0} #start voting
+			character_event = {id = PDPVOTE.100 days = 90} #collect results after three months period
+		}
+		any_character = {
+			limit = {
+				religion = catholic
+				#offmap_church_is_elector = yes
+			}
+			clr_character_flag = offmap_church_i_voted_yes
+			clr_character_flag = offmap_church_i_voted_no
+		}
+	}
+}
+
+#ends a proposal after it has been evaluated.
+offmap_church_end_proposal = {
+	k_papal_state = {
+		clr_title_flag = offmap_church_voting_active
+
+		clr_title_flag = offmap_church_recent_voting
+		set_title_flag = offmap_church_recent_voting
+
+
+		persistent_event_target:offmap_church_voting_initiator = {
+			clr_character_flag = offmap_church_voting_proposer_spend_influence_low_flag
+			clr_character_flag = offmap_church_voting_proposer_spend_influence_medium_flag
+			clr_character_flag = offmap_church_voting_proposer_spend_influence_high_flag
+		}
+		clear_persistent_event_target = offmap_church_voting_initiator
+		#save_persistent_event_target = { name = name_of_target scope = event_target:offmap_church_voting_initiator }
+		#persistent_event_target:name_of_target = { }
+
+		#clear all topic flags
+		clr_title_flag = offmap_church_topic_status_to_reform
+		clr_title_flag = offmap_church_topic_policy_to_scholarship
+		clr_title_flag = offmap_church_topic_policy_to_warfare
+		clr_title_flag = offmap_church_topic_policy_to_charity
+		clr_title_flag = offmap_church_topic_policy_to_monumentality
+		clr_title_flag = offmap_church_topic_policy_to_conversion
+		clr_title_flag = offmap_church_topic_close_marriage
+	}
+}
+
+
+offmap_church_grant_vote = {
+	set_character_flag = offmap_church_has_not_voted
+}
+
+offmap_church_vote_for = {
+	if = {
+		limit = {
+			offmap_church_has_vote_left = yes
+		}
+		clr_character_flag = offmap_church_has_not_voted
+		set_character_flag = offmap_church_i_voted_yes
+		k_papal_state = {
+			change_variable =  { which = offmap_church_pro_votes value = 1 }
+		}
+	}
+}
+
+offmap_church_vote_contra = {
+	if = {
+		limit = {
+			offmap_church_has_vote_left = yes
+		}
+		clr_character_flag = offmap_church_has_not_voted
+		set_character_flag = offmap_church_i_voted_no
+		k_papal_state = {
+			change_variable =  { which = offmap_church_contra_votes value = 1 }
+		}
+	}
+}
+
+offmap_church_pay_proposal_currency = {
+	add_offmap_currency = { offmap = offmap_PDP_church value = -4800 }
+}
+
+offmap_church_this_initiate_proposal = {
+	THIS = {
+		offmap_church_make_me_proposal_initiator = yes
+		offmap_church_start_proposal = yes
+		offmap_church_pay_proposal_currency = yes
+	}
+}
