@@ -894,6 +894,7 @@ decisions = {
 
 		potential = {
 			has_dlc = "Reapers"
+			rtp_is_landless = no
 			NOR = {
 				is_tribal = yes
 				is_nomadic = yes
