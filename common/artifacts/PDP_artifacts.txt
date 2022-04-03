@@ -1,0 +1,44 @@
+slots = {
+	religious_writing = 1
+}
+
+#############################
+###### Religious Books ######
+#############################
+
+religious_paper_poor = {
+	quality = 1
+	same_religion_opinion = 1
+	church_opinion = 2
+	active = {
+		PDP_is_theocracy = yes
+	}
+	flags = { about_religion paper created }
+	picture = "GFX_book_health_01"  
+	slot = religious_writing
+}
+religious_paper_medium = {
+	quality = 2
+	learning = 1
+	same_religion_opinion = 2
+	church_opinion = 3
+	active = {
+		PDP_is_theocracy = yes
+	}
+	flags = { about_religion paper created }
+	picture = "GFX_book_honor_root_1"  
+	slot = religious_writing
+}
+religious_paper_good = {
+	quality = 3
+	learning = 2
+	same_religion_opinion = 2
+	church_opinion = 5
+	monthly_character_piety = 0.2
+	active = {
+		PDP_is_theocracy = yes
+	}
+	flags = { about_religion paper created }
+	picture = "GFX_book_learnblank_02"
+	slot = religious_writing
+}
