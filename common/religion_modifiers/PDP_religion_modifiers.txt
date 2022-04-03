@@ -1,0 +1,18 @@
+#########################################################################
+# RELIGIOUS AUTHORITY MODIFIERS - fully scriptable
+##########################################################################
+
+PDP_corruption = {
+	authority = -3
+	years = 15
+}
+
+PDP_major_corruption = {
+	authority = -20
+	years = 15
+}
+
+PDP_reforms = {
+	authority = 3
+	years = 15
+}
