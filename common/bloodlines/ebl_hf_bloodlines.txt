@@ -1,0 +1,2709 @@
+#--------------------------------------------------
+#------------------
+#------ Auto-generated bloodlines
+ebl_hf_bloodline_pic_0 = {
+	picture = GFX_bloodlines_symbol_slavic_arrow
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_0_1 = {
+	picture = GFX_bloodlines_symbol_slavic_arrow
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_1 = {
+	picture = GFX_bloodlines_symbol_romuva_tree
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_1_1 = {
+	picture = GFX_bloodlines_symbol_romuva_tree
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_2 = {
+	picture = GFX_bloodlines_symbol_roman
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_2_1 = {
+	picture = GFX_bloodlines_symbol_roman
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_3 = {
+	picture = GFX_bloodlines_symbol_norse
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_3_1 = {
+	picture = GFX_bloodlines_symbol_norse
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_4 = {
+	picture = GFX_bloodlines_symbol_midgard
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_4_1 = {
+	picture = GFX_bloodlines_symbol_midgard
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_5 = {
+	picture = GFX_bloodlines_symbol_african
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_5_1 = {
+	picture = GFX_bloodlines_symbol_african
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_6 = {
+	picture = GFX_bloodlines_symbol_longship
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_6_1 = {
+	picture = GFX_bloodlines_symbol_longship
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_7 = {
+	picture = GFX_bloodlines_symbol_stoics
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_7_1 = {
+	picture = GFX_bloodlines_symbol_stoics
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_8 = {
+	picture = GFX_bloodlines_symbol_architect
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_8_1 = {
+	picture = GFX_bloodlines_symbol_architect
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_9 = {
+	picture = GFX_bloodlines_symbol_builder
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_9_1 = {
+	picture = GFX_bloodlines_symbol_builder
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_10 = {
+	picture = GFX_bloodlines_symbol_peace_builder
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_10_1 = {
+	picture = GFX_bloodlines_symbol_peace_builder
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_11 = {
+	picture = GFX_bloodlines_symbol_murder_builder
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_11_1 = {
+	picture = GFX_bloodlines_symbol_murder_builder
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_12 = {
+	picture = GFX_bloodlines_symbol_monumental
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_12_1 = {
+	picture = GFX_bloodlines_symbol_monumental
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_13 = {
+	picture = GFX_bloodlines_symbol_castellan
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_13_1 = {
+	picture = GFX_bloodlines_symbol_castellan
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_14 = {
+	picture = GFX_bloodlines_symbol_virgin
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_14_1 = {
+	picture = GFX_bloodlines_symbol_virgin
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_15 = {
+	picture = GFX_bloodlines_symbol_cross_1
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_15_1 = {
+	picture = GFX_bloodlines_symbol_cross_1
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_16 = {
+	picture = GFX_bloodlines_symbol_cross_2
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_16_1 = {
+	picture = GFX_bloodlines_symbol_cross_2
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_17 = {
+	picture = GFX_bloodlines_symbol_cross_wicked
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_17_1 = {
+	picture = GFX_bloodlines_symbol_cross_wicked
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_18 = {
+	picture = GFX_bloodlines_symbol_cross_nestorian
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_18_1 = {
+	picture = GFX_bloodlines_symbol_cross_nestorian
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_19 = {
+	picture = GFX_bloodlines_symbol_cross_orthodox
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_19_1 = {
+	picture = GFX_bloodlines_symbol_cross_orthodox
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_20 = {
+	picture = GFX_bloodlines_symbol_cross_crusader
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_20_1 = {
+	picture = GFX_bloodlines_symbol_cross_crusader
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_21 = {
+	picture = GFX_bloodlines_symbol_cross_crusader_wicked
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_21_1 = {
+	picture = GFX_bloodlines_symbol_cross_crusader_wicked
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_22 = {
+	picture = GFX_bloodlines_symbol_cross_miaphysite
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_22_1 = {
+	picture = GFX_bloodlines_symbol_cross_miaphysite
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_23 = {
+	picture = GFX_bloodlines_symbol_generic_pagan
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_23_1 = {
+	picture = GFX_bloodlines_symbol_generic_pagan
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_24 = {
+	picture = GFX_bloodlines_symbol_hindu
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_24_1 = {
+	picture = GFX_bloodlines_symbol_hindu
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_25 = {
+	picture = GFX_bloodlines_symbol_buddhist
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_25_1 = {
+	picture = GFX_bloodlines_symbol_buddhist
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_26 = {
+	picture = GFX_bloodlines_symbol_bacchant
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_26_1 = {
+	picture = GFX_bloodlines_symbol_bacchant
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_27 = {
+	picture = GFX_bloodlines_symbol_zoroastrian
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_27_1 = {
+	picture = GFX_bloodlines_symbol_zoroastrian
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_28 = {
+	picture = GFX_bloodlines_symbol_zun_sun
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_28_1 = {
+	picture = GFX_bloodlines_symbol_zun_sun
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_29 = {
+	picture = GFX_bloodlines_symbol_taoist
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_29_1 = {
+	picture = GFX_bloodlines_symbol_taoist
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_30 = {
+	picture = GFX_bloodlines_symbol_sunni
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_30_1 = {
+	picture = GFX_bloodlines_symbol_sunni
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_31 = {
+	picture = GFX_bloodlines_symbol_jewish
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_31_1 = {
+	picture = GFX_bloodlines_symbol_jewish
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_32 = {
+	picture = GFX_bloodlines_symbol_finnish_bearpaw
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_32_1 = {
+	picture = GFX_bloodlines_symbol_finnish_bearpaw
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_33 = {
+	picture = GFX_bloodlines_symbol_bull
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_33_1 = {
+	picture = GFX_bloodlines_symbol_bull
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_34 = {
+	picture = GFX_bloodlines_symbol_horse
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_34_1 = {
+	picture = GFX_bloodlines_symbol_horse
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_35 = {
+	picture = GFX_bloodlines_symbol_tengri_eagle
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_35_1 = {
+	picture = GFX_bloodlines_symbol_tengri_eagle
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_36 = {
+	picture = GFX_bloodlines_symbol_norse_wolf
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_36_1 = {
+	picture = GFX_bloodlines_symbol_norse_wolf
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_37 = {
+	picture = GFX_bloodlines_symbol_lion
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_37_1 = {
+	picture = GFX_bloodlines_symbol_lion
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_38 = {
+	picture = GFX_bloodlines_symbol_bucephalus
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_38_1 = {
+	picture = GFX_bloodlines_symbol_bucephalus
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_39 = {
+	picture = GFX_bloodlines_symbol_ashoka_lion
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_39_1 = {
+	picture = GFX_bloodlines_symbol_ashoka_lion
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_40 = {
+	picture = GFX_bloodlines_symbol_bloodthirsty
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_40_1 = {
+	picture = GFX_bloodlines_symbol_bloodthirsty
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_41 = {
+	picture = GFX_bloodlines_symbol_war_child
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_41_1 = {
+	picture = GFX_bloodlines_symbol_war_child
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_42 = {
+	picture = GFX_bloodlines_symbol_war_knight
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_42_1 = {
+	picture = GFX_bloodlines_symbol_war_knight
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_43 = {
+	picture = GFX_bloodlines_symbol_murder_jester
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_43_1 = {
+	picture = GFX_bloodlines_symbol_murder_jester
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_44 = {
+	picture = GFX_bloodlines_symbol_murder_child
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_44_1 = {
+	picture = GFX_bloodlines_symbol_murder_child
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_45 = {
+	picture = GFX_bloodlines_symbol_blessed_child
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_45_1 = {
+	picture = GFX_bloodlines_symbol_blessed_child
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_46 = {
+	picture = GFX_bloodlines_symbol_carolingian
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_46_1 = {
+	picture = GFX_bloodlines_symbol_carolingian
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_47 = {
+	picture = GFX_bloodlines_symbol_fleur_de_lis_gold
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_47_1 = {
+	picture = GFX_bloodlines_symbol_fleur_de_lis_gold
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_48 = {
+	picture = GFX_bloodlines_symbol_fleur_de_lis
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_48_1 = {
+	picture = GFX_bloodlines_symbol_fleur_de_lis
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_49 = {
+	picture = GFX_bloodlines_symbol_bon_candle
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_49_1 = {
+	picture = GFX_bloodlines_symbol_bon_candle
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_50 = {
+	picture = GFX_bloodlines_symbol_generic_hero
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_50_1 = {
+	picture = GFX_bloodlines_symbol_generic_hero
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_51 = {
+	picture = GFX_bloodlines_symbol_teutonic
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_51_1 = {
+	picture = GFX_bloodlines_symbol_teutonic
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_52 = {
+	picture = GFX_bloodlines_symbol_african_waves
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_52_1 = {
+	picture = GFX_bloodlines_symbol_african_waves
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_53 = {
+	picture = GFX_bloodlines_placeholder_symbol
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_53_1 = {
+	picture = GFX_bloodlines_placeholder_symbol
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_54 = {
+	picture = GFX_bloodlines_placeholder_symbol_2
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_54_1 = {
+	picture = GFX_bloodlines_placeholder_symbol_2
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_55 = {
+	picture = GFX_bloodlines_symbol_murder_peace
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_55_1 = {
+	picture = GFX_bloodlines_symbol_murder_peace
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_56 = {
+	picture = GFX_bloodlines_symbol_murder_rose
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_56_1 = {
+	picture = GFX_bloodlines_symbol_murder_rose
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_57 = {
+	picture = GFX_bloodlines_symbol_murder_war
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_57_1 = {
+	picture = GFX_bloodlines_symbol_murder_war
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_58 = {
+	picture = GFX_bloodlines_symbol_peace
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_58_1 = {
+	picture = GFX_bloodlines_symbol_peace
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_59 = {
+	picture = GFX_bloodlines_symbol_war
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_59_1 = {
+	picture = GFX_bloodlines_symbol_war
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_60 = {
+	picture = GFX_bloodlines_symbol_murder
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_60_1 = {
+	picture = GFX_bloodlines_symbol_murder
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_61 = {
+	picture = GFX_bloodlines_symbol_ruthless
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_61_1 = {
+	picture = GFX_bloodlines_symbol_ruthless
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_62 = {
+	picture = GFX_bloodlines_symbol_technology
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_62_1 = {
+	picture = GFX_bloodlines_symbol_technology
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_63 = {
+	picture = GFX_bloodlines_symbol_munificent
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_63_1 = {
+	picture = GFX_bloodlines_symbol_munificent
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_64 = {
+	picture = GFX_bloodlines_symbol_family
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_64_1 = {
+	picture = GFX_bloodlines_symbol_family
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_65 = {
+	picture = GFX_bloodlines_symbol_benevolent
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
+ebl_hf_bloodline_pic_65_1 = {
+	picture = GFX_bloodlines_symbol_benevolent
+
+	# Enable matrilineal override
+	matrilineal_override = yes
+
+	# Text to display on information screen
+	ebl_bloodline_effect_personal_skill = 1
+	ebl_bloodline_effect_piety = 1
+	ebl_bloodline_effect_prestige = 1
+	ebl_bloodline_effect_diplomacy = 1
+	ebl_bloodline_effect_martial = 1
+	ebl_bloodline_effect_stewardship = 1
+	ebl_bloodline_effect_intrigue = 1
+	ebl_bloodline_effect_learning = 1
+
+	flags = { historical_bloodline }
+
+	active = {
+		    ebl_bloodline_is_active_trigger = yes
+	}
+}
