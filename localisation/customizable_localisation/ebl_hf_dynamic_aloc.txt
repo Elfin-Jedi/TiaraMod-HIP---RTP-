@@ -1,0 +1,399 @@
+#--------------------------------------------------
+#------------------
+#------ Auto-generated references for usage in localization
+defined_text = {
+	name = getDiplomacyLevelEffects
+	text = {
+		localisation_key = ebl_regular_1
+		trigger = { FROM = { has_bloodline_flag = ebl_diplomacy_1 } }
+	}
+	text = {
+		localisation_key = ebl_regular_2
+		trigger = { FROM = { has_bloodline_flag = ebl_diplomacy_2 } }
+	}
+	text = {
+		localisation_key = ebl_regular_3
+		trigger = { FROM = { has_bloodline_flag = ebl_diplomacy_3 } }
+	}
+	text = {
+		localisation_key = ebl_regular_4
+		trigger = { FROM = { has_bloodline_flag = ebl_diplomacy_4 } }
+	}
+	text = {
+		localisation_key = ebl_regular_5
+		trigger = { FROM = { has_bloodline_flag = ebl_diplomacy_5 } }
+	}
+	text = {
+		localisation_key = ebl_regular_6
+		trigger = { FROM = { has_bloodline_flag = ebl_diplomacy_6 } }
+	}
+	text = {
+		localisation_key = ebl_regular_7
+		trigger = { FROM = { has_bloodline_flag = ebl_diplomacy_7 } }
+	}
+	text = {
+		localisation_key = ebl_regular_8
+		trigger = { FROM = { has_bloodline_flag = ebl_diplomacy_8 } }
+	}
+	text = {
+		localisation_key = ebl_regular_9
+		trigger = { FROM = { has_bloodline_flag = ebl_diplomacy_9 } }
+	}
+	text = {
+		localisation_key = ebl_regular_10
+		trigger = { FROM = { has_bloodline_flag = ebl_diplomacy_10 } }
+	}
+	fallback_text = {
+		localisation_key = "§M+0§!"
+	}
+}
+defined_text = {
+	name = getMartialLevelEffects
+	text = {
+		localisation_key = ebl_regular_0
+		trigger = { FROM = { has_bloodline_flag = ebl_martial_0 } }
+	}
+	text = {
+		localisation_key = ebl_regular_1
+		trigger = { FROM = { has_bloodline_flag = ebl_martial_1 } }
+	}
+	text = {
+		localisation_key = ebl_regular_2
+		trigger = { FROM = { has_bloodline_flag = ebl_martial_2 } }
+	}
+	text = {
+		localisation_key = ebl_regular_3
+		trigger = { FROM = { has_bloodline_flag = ebl_martial_3 } }
+	}
+	text = {
+		localisation_key = ebl_regular_4
+		trigger = { FROM = { has_bloodline_flag = ebl_martial_4 } }
+	}
+	text = {
+		localisation_key = ebl_regular_5
+		trigger = { FROM = { has_bloodline_flag = ebl_martial_5 } }
+	}
+	text = {
+		localisation_key = ebl_regular_6
+		trigger = { FROM = { has_bloodline_flag = ebl_martial_6 } }
+	}
+	text = {
+		localisation_key = ebl_regular_7
+		trigger = { FROM = { has_bloodline_flag = ebl_martial_7 } }
+	}
+	text = {
+		localisation_key = ebl_regular_8
+		trigger = { FROM = { has_bloodline_flag = ebl_martial_8 } }
+	}
+	text = {
+		localisation_key = ebl_regular_9
+		trigger = { FROM = { has_bloodline_flag = ebl_martial_9 } }
+	}
+	text = {
+		localisation_key = ebl_regular_10
+		trigger = { FROM = { has_bloodline_flag = ebl_martial_10 } }
+	}
+	fallback_text = {
+		localisation_key = "§M+0§!"
+	}
+}
+defined_text = {
+	name = getStewardshipLevelEffects
+	text = {
+		localisation_key = ebl_regular_0
+		trigger = { FROM = { has_bloodline_flag = ebl_stewardship_0 } }
+	}
+	text = {
+		localisation_key = ebl_regular_1
+		trigger = { FROM = { has_bloodline_flag = ebl_stewardship_1 } }
+	}
+	text = {
+		localisation_key = ebl_regular_2
+		trigger = { FROM = { has_bloodline_flag = ebl_stewardship_2 } }
+	}
+	text = {
+		localisation_key = ebl_regular_3
+		trigger = { FROM = { has_bloodline_flag = ebl_stewardship_3 } }
+	}
+	text = {
+		localisation_key = ebl_regular_4
+		trigger = { FROM = { has_bloodline_flag = ebl_stewardship_4 } }
+	}
+	text = {
+		localisation_key = ebl_regular_5
+		trigger = { FROM = { has_bloodline_flag = ebl_stewardship_5 } }
+	}
+	text = {
+		localisation_key = ebl_regular_6
+		trigger = { FROM = { has_bloodline_flag = ebl_stewardship_6 } }
+	}
+	text = {
+		localisation_key = ebl_regular_7
+		trigger = { FROM = { has_bloodline_flag = ebl_stewardship_7 } }
+	}
+	text = {
+		localisation_key = ebl_regular_8
+		trigger = { FROM = { has_bloodline_flag = ebl_stewardship_8 } }
+	}
+	text = {
+		localisation_key = ebl_regular_9
+		trigger = { FROM = { has_bloodline_flag = ebl_stewardship_9 } }
+	}
+	text = {
+		localisation_key = ebl_regular_10
+		trigger = { FROM = { has_bloodline_flag = ebl_stewardship_10 } }
+	}
+	fallback_text = {
+		localisation_key = "§M+0§!"
+	}
+}
+defined_text = {
+	name = getIntrigueLevelEffects
+	text = {
+		localisation_key = ebl_regular_0
+		trigger = { FROM = { has_bloodline_flag = ebl_intrigue_0 } }
+	}
+	text = {
+		localisation_key = ebl_regular_1
+		trigger = { FROM = { has_bloodline_flag = ebl_intrigue_1 } }
+	}
+	text = {
+		localisation_key = ebl_regular_2
+		trigger = { FROM = { has_bloodline_flag = ebl_intrigue_2 } }
+	}
+	text = {
+		localisation_key = ebl_regular_3
+		trigger = { FROM = { has_bloodline_flag = ebl_intrigue_3 } }
+	}
+	text = {
+		localisation_key = ebl_regular_4
+		trigger = { FROM = { has_bloodline_flag = ebl_intrigue_4 } }
+	}
+	text = {
+		localisation_key = ebl_regular_5
+		trigger = { FROM = { has_bloodline_flag = ebl_intrigue_5 } }
+	}
+	text = {
+		localisation_key = ebl_regular_6
+		trigger = { FROM = { has_bloodline_flag = ebl_intrigue_6 } }
+	}
+	text = {
+		localisation_key = ebl_regular_7
+		trigger = { FROM = { has_bloodline_flag = ebl_intrigue_7 } }
+	}
+	text = {
+		localisation_key = ebl_regular_8
+		trigger = { FROM = { has_bloodline_flag = ebl_intrigue_8 } }
+	}
+	text = {
+		localisation_key = ebl_regular_9
+		trigger = { FROM = { has_bloodline_flag = ebl_intrigue_9 } }
+	}
+	text = {
+		localisation_key = ebl_regular_10
+		trigger = { FROM = { has_bloodline_flag = ebl_intrigue_10 } }
+	}
+	fallback_text = {
+		localisation_key = "§M+0§!"
+	}
+}
+defined_text = {
+	name = getLearningLevelEffects
+	text = {
+		localisation_key = ebl_regular_0
+		trigger = { FROM = { has_bloodline_flag = ebl_learning_0 } }
+	}
+	text = {
+		localisation_key = ebl_regular_1
+		trigger = { FROM = { has_bloodline_flag = ebl_learning_1 } }
+	}
+	text = {
+		localisation_key = ebl_regular_2
+		trigger = { FROM = { has_bloodline_flag = ebl_learning_2 } }
+	}
+	text = {
+		localisation_key = ebl_regular_3
+		trigger = { FROM = { has_bloodline_flag = ebl_learning_3 } }
+	}
+	text = {
+		localisation_key = ebl_regular_4
+		trigger = { FROM = { has_bloodline_flag = ebl_learning_4 } }
+	}
+	text = {
+		localisation_key = ebl_regular_5
+		trigger = { FROM = { has_bloodline_flag = ebl_learning_5 } }
+	}
+	text = {
+		localisation_key = ebl_regular_6
+		trigger = { FROM = { has_bloodline_flag = ebl_learning_6 } }
+	}
+	text = {
+		localisation_key = ebl_regular_7
+		trigger = { FROM = { has_bloodline_flag = ebl_learning_7 } }
+	}
+	text = {
+		localisation_key = ebl_regular_8
+		trigger = { FROM = { has_bloodline_flag = ebl_learning_8 } }
+	}
+	text = {
+		localisation_key = ebl_regular_9
+		trigger = { FROM = { has_bloodline_flag = ebl_learning_9 } }
+	}
+	text = {
+		localisation_key = ebl_regular_10
+		trigger = { FROM = { has_bloodline_flag = ebl_learning_10 } }
+	}
+	fallback_text = {
+		localisation_key = "§M+0§!"
+	}
+}
+defined_text = {
+	name = getPersonalSkillLevelEffects
+	text = {
+		localisation_key = ebl_special_personal_skill_0
+		trigger = { FROM = { has_bloodline_flag = ebl_personal_skill_0 } }
+	}
+	text = {
+		localisation_key = ebl_special_personal_skill_1
+		trigger = { FROM = { has_bloodline_flag = ebl_personal_skill_1 } }
+	}
+	text = {
+		localisation_key = ebl_special_personal_skill_2
+		trigger = { FROM = { has_bloodline_flag = ebl_personal_skill_2 } }
+	}
+	text = {
+		localisation_key = ebl_special_personal_skill_3
+		trigger = { FROM = { has_bloodline_flag = ebl_personal_skill_3 } }
+	}
+	text = {
+		localisation_key = ebl_special_personal_skill_4
+		trigger = { FROM = { has_bloodline_flag = ebl_personal_skill_4 } }
+	}
+	text = {
+		localisation_key = ebl_special_personal_skill_5
+		trigger = { FROM = { has_bloodline_flag = ebl_personal_skill_5 } }
+	}
+	text = {
+		localisation_key = ebl_special_personal_skill_6
+		trigger = { FROM = { has_bloodline_flag = ebl_personal_skill_6 } }
+	}
+	text = {
+		localisation_key = ebl_special_personal_skill_7
+		trigger = { FROM = { has_bloodline_flag = ebl_personal_skill_7 } }
+	}
+	text = {
+		localisation_key = ebl_special_personal_skill_8
+		trigger = { FROM = { has_bloodline_flag = ebl_personal_skill_8 } }
+	}
+	text = {
+		localisation_key = ebl_special_personal_skill_9
+		trigger = { FROM = { has_bloodline_flag = ebl_personal_skill_9 } }
+	}
+	text = {
+		localisation_key = ebl_special_personal_skill_10
+		trigger = { FROM = { has_bloodline_flag = ebl_personal_skill_10 } }
+	}
+	fallback_text = {
+		localisation_key = "§M+0§!"
+	}
+}
+defined_text = {
+	name = getPrestigeLevelEffects
+	text = {
+		localisation_key = ebl_special_0
+		trigger = { FROM = { has_bloodline_flag = ebl_prestige_0 } }
+	}
+	text = {
+		localisation_key = ebl_special_1
+		trigger = { FROM = { has_bloodline_flag = ebl_prestige_1 } }
+	}
+	text = {
+		localisation_key = ebl_special_2
+		trigger = { FROM = { has_bloodline_flag = ebl_prestige_2 } }
+	}
+	text = {
+		localisation_key = ebl_special_3
+		trigger = { FROM = { has_bloodline_flag = ebl_prestige_3 } }
+	}
+	text = {
+		localisation_key = ebl_special_4
+		trigger = { FROM = { has_bloodline_flag = ebl_prestige_4 } }
+	}
+	text = {
+		localisation_key = ebl_special_5
+		trigger = { FROM = { has_bloodline_flag = ebl_prestige_5 } }
+	}
+	text = {
+		localisation_key = ebl_special_6
+		trigger = { FROM = { has_bloodline_flag = ebl_prestige_6 } }
+	}
+	text = {
+		localisation_key = ebl_special_7
+		trigger = { FROM = { has_bloodline_flag = ebl_prestige_7 } }
+	}
+	text = {
+		localisation_key = ebl_special_8
+		trigger = { FROM = { has_bloodline_flag = ebl_prestige_8 } }
+	}
+	text = {
+		localisation_key = ebl_special_9
+		trigger = { FROM = { has_bloodline_flag = ebl_prestige_9 } }
+	}
+	text = {
+		localisation_key = ebl_special_10
+		trigger = { FROM = { has_bloodline_flag = ebl_prestige_10 } }
+	}
+	fallback_text = {
+		localisation_key = "§M+0§!"
+	}
+}
+defined_text = {
+	name = getPietyLevelEffects
+	text = {
+		localisation_key = ebl_special_0
+		trigger = { FROM = { has_bloodline_flag = ebl_piety_0 } }
+	}
+	text = {
+		localisation_key = ebl_special_1
+		trigger = { FROM = { has_bloodline_flag = ebl_piety_1 } }
+	}
+	text = {
+		localisation_key = ebl_special_2
+		trigger = { FROM = { has_bloodline_flag = ebl_piety_2 } }
+	}
+	text = {
+		localisation_key = ebl_special_3
+		trigger = { FROM = { has_bloodline_flag = ebl_piety_3 } }
+	}
+	text = {
+		localisation_key = ebl_special_4
+		trigger = { FROM = { has_bloodline_flag = ebl_piety_4 } }
+	}
+	text = {
+		localisation_key = ebl_special_5
+		trigger = { FROM = { has_bloodline_flag = ebl_piety_5 } }
+	}
+	text = {
+		localisation_key = ebl_special_6
+		trigger = { FROM = { has_bloodline_flag = ebl_piety_6 } }
+	}
+	text = {
+		localisation_key = ebl_special_7
+		trigger = { FROM = { has_bloodline_flag = ebl_piety_7 } }
+	}
+	text = {
+		localisation_key = ebl_special_8
+		trigger = { FROM = { has_bloodline_flag = ebl_piety_8 } }
+	}
+	text = {
+		localisation_key = ebl_special_9
+		trigger = { FROM = { has_bloodline_flag = ebl_piety_9 } }
+	}
+	text = {
+		localisation_key = ebl_special_10
+		trigger = { FROM = { has_bloodline_flag = ebl_piety_10 } }
+	}
+	fallback_text = {
+		localisation_key = "§M+0§!"
+	}
+}

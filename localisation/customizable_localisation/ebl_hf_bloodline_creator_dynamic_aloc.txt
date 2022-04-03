@@ -1,0 +1,351 @@
+#--------------------------------------------------
+#------------------
+#------ Auto-generated references for usage in localization
+defined_text = {
+	name = getEblCreatorPicture
+	text = {
+		localisation_key = ebl_bloodline_picture_0
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 0} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_1
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 1} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_2
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 2} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_3
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 3} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_4
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 4} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_5
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 5} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_6
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 6} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_7
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 7} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_8
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 8} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_9
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 9} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_10
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 10} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_11
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 11} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_12
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 12} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_13
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 13} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_14
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 14} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_15
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 15} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_16
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 16} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_17
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 17} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_18
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 18} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_19
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 19} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_20
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 20} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_21
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 21} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_22
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 22} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_23
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 23} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_24
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 24} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_25
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 25} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_26
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 26} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_27
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 27} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_28
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 28} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_29
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 29} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_30
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 30} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_31
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 31} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_32
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 32} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_33
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 33} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_34
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 34} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_35
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 35} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_36
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 36} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_37
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 37} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_38
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 38} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_39
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 39} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_40
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 40} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_41
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 41} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_42
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 42} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_43
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 43} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_44
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 44} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_45
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 45} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_46
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 46} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_47
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 47} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_48
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 48} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_49
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 49} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_50
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 50} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_51
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 51} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_52
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 52} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_53
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 53} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_54
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 54} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_55
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 55} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_56
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 56} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_57
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 57} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_58
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 58} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_59
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 59} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_60
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 60} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_61
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 61} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_62
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 62} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_63
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 63} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_64
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 64} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_picture_65
+		trigger = { check_variable = { which = ebl_generate_bloodline_picture value == 65} }
+	}
+}
+
+defined_text = {
+	name = getEblCreatorInheritance
+	text = {
+		localisation_key = ebl_bloodline_inheritance_0
+		trigger = { check_variable = { which = ebl_generate_bloodline_inheritance value == 0} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_inheritance_1
+		trigger = { check_variable = { which = ebl_generate_bloodline_inheritance value == 1} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_inheritance_2
+		trigger = { check_variable = { which = ebl_generate_bloodline_inheritance value == 2} }
+	}
+}
+
+defined_text = {
+	name = getEblCreatorMatrilinealOverride
+	text = {
+		localisation_key = ebl_bloodline_yes_no_0
+		trigger = { check_variable = { which = ebl_generate_bloodline_matrilineal_override value == 0} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_yes_no_1
+		trigger = { check_variable = { which = ebl_generate_bloodline_matrilineal_override value == 1} }
+	}
+}
+
+defined_text = {
+	name = getEblCreatorAllowBastards
+	text = {
+		localisation_key = ebl_bloodline_yes_no_0
+		trigger = { check_variable = { which = ebl_generate_bloodline_allow_bastards value == 0} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_yes_no_1
+		trigger = { check_variable = { which = ebl_generate_bloodline_allow_bastards value == 1} }
+	}
+}
+
+defined_text = {
+	name = getEblCreatorName
+	text = {
+		localisation_key = ebl_bloodline_name_0
+		trigger = { check_variable = { which = ebl_generate_bloodline_name value == 0} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_name_1
+		trigger = { check_variable = { which = ebl_generate_bloodline_name value == 1} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_name_2
+		trigger = { check_variable = { which = ebl_generate_bloodline_name value == 2} }
+	}
+}
+
+defined_text = {
+	name = getEblCreatorEffects
+	text = {
+		localisation_key = ebl_bloodline_effect_0
+		trigger = { check_variable = { which = ebl_generate_bloodline_effects value == 0} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_effect_1
+		trigger = { check_variable = { which = ebl_generate_bloodline_effects value == 1} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_effect_2
+		trigger = { check_variable = { which = ebl_generate_bloodline_effects value == 2} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_effect_3
+		trigger = { check_variable = { which = ebl_generate_bloodline_effects value == 3} }
+	}
+	text = {
+		localisation_key = ebl_bloodline_effect_4
+		trigger = { check_variable = { which = ebl_generate_bloodline_effects value == 4} }
+	}
+}
+
