@@ -15,10 +15,47 @@ targetted_decisions = {
 				limit = { ROOT = {is_landed = no} }
 				
 				grant_title_no_opinion = c_landless_t
-
+				
+				if = {
+					limit = {
+						dynasty = 19930
+					}
+					set_government_type = rtp_lowborn_g
+					primary_title = {
+						gender_succ = true_cognatic
+						add_law = {
+							law = rtp_lowborn_succ
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+				}
+				else = {
+					set_government_type = rtp_noble_g
+					primary_title = {
+						gender_succ = true_cognatic
+						add_law = {
+							law = rtp_family_election_succ
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+				}
 				FROM = {
 						set_player_character = ROOT
 				}
+			}
+			
+			if = {
+				limit = { 
+					ROOT = {
+						AND = {
+							is_theocracy = yes
+							rtp_is_baron = yes
+						}
+					} 
+				}
+				set_government_type = rtp_baron_theocracy_g
 			}
 			else = {
 				FROM = {
