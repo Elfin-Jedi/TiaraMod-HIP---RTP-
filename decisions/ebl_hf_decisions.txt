@@ -1,0 +1,98 @@
+#--------------------------------------------------
+#------------------
+#------ Bloodline founding decision
+decisions = {
+	create_ebl_hf_bloodline = {	
+		is_high_prio = yes
+		
+		potential = {
+			is_ruler = yes
+			NOT = {
+				any_owned_bloodline = { has_bloodline_flag = is_ebl_bloodline }
+				has_character_flag = ebl_bloodline_founder
+			}
+
+		}
+		allow = {
+            is_adult = yes
+			prisoner = no
+			prestige = 2000
+			#OR = {
+			#	martial = 15
+			#	diplomacy = 15
+			#	intrigue = 15
+			#	learning = 15
+			#	stewardship = 15
+			#}
+  		}	
+		effect = {
+			hidden_tooltip = {							
+				character_event = { id = ebl_hf.1 }
+			}
+			prestige = -2000
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	create_ebl_hf_bloodline_two = {	
+		is_high_prio = yes
+		
+		potential = {
+			is_ruler = yes
+			NOT = { has_character_flag = ebl_bloodline_founder }
+			any_owned_bloodline = { has_bloodline_flag = is_ebl_bloodline }
+		}
+		allow = {
+            is_adult = yes
+			prisoner = no
+			prestige = 3500
+			#OR = {
+			#	martial = 15
+			#	diplomacy = 15
+			#	intrigue = 15
+			#	learning = 15
+			#	stewardship = 15
+			#}
+  		}	
+		effect = {
+			hidden_tooltip = {							
+				character_event = { id = ebl_hf.1 }
+			}
+			prestige = -3500
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	rename_ebl_hf_bloodline = {	
+		is_high_prio = yes
+		
+		potential = {
+			has_character_flag = ebl_bloodline_founder
+		}
+		allow = {
+			always = yes # If we're a founder we've.. Well.. Founded a bloodline we can rename.
+  		}	
+		effect = {
+			any_bloodline = {
+				limit = { Founder = { character = ROOT } }
+				prompt_name = { player = from type = RENAME_CHARACTER_MESSAGE }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
