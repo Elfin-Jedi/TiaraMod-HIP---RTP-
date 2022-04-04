@@ -1,0 +1,303 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_PDP_religious_male_clothes_behind"
+		textureFile = "gfx/characters/religious_male_clothes_behind.dds"
+		noOfFrames = 18
+	}
+
+	spriteType = {
+		name = "GFX_PDP_religious_male_clothes"
+		textureFile = "gfx/characters/religious_male_clothes.dds"
+		noOfFrames = 18
+	}
+
+	spriteType = {
+		name = "GFX_PDP_religious_male_headgear_behind"
+		textureFile = "gfx/characters/religious_male_headgear_behind.dds"
+		noOfFrames = 18
+	}
+
+	spriteType = {
+		name = "GFX_PDP_religious_male_headgear"
+		textureFile = "gfx/characters/religious_male_headgear.dds"
+		noOfFrames = 18
+	}
+	portraitType = {
+		name = "PORTRAIT_PDP_pope_clothing_male"
+		effectFile = "gfx/FX/portrait.lua"
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				portrait_has_trait = PDP_pope
+				portrait_government = playable_theocracy_government
+			}
+		}
+
+		layer = {
+			"GFX_PDP_religious_male_clothes_behind:c0"
+			"GFX_PDP_religious_male_headgear_behind:c1"
+			"GFX_PDP_religious_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_PDP_religious_male_headgear:c5"
+		}
+		allow_property_values = {
+			3 = { 0 = { always = yes } }
+			5 = { 0 = { always = yes } }
+			4 = { 0 = { always = yes } }
+		}
+	}
+
+
+	portraitType = {
+		name = "PORTRAIT_PDP_bishop_clothing_male"
+		effectFile = "gfx/FX/portrait.lua"
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				NOT = {portrait_has_trait = PDP_pope}
+				#NOT = {portrait_has_trait = PDP_cardinal}
+				portrait_has_trait = PDP_playable_theocracy_ruler
+				OR = {
+					portrait_government = playable_theocracy_government
+					portrait_government = playable_non_catholic_theocracy_government
+				}
+			}
+		}
+
+		layer = {
+			"GFX_PDP_religious_male_clothes_behind:c0"
+			"GFX_PDP_religious_male_headgear_behind:c1"
+			"GFX_PDP_religious_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_PDP_religious_male_headgear:c5"
+		}
+
+		allow_property_values = {
+			3 = {
+				1 = {
+					OR = {
+						portrait_religion = catholic
+						portrait_religion = cathar
+						portrait_religion = fraticelli
+						portrait_religion = waldensian
+						portrait_religion = lollard
+					}
+			 	}
+				2 = {
+					OR = {
+						portrait_religion = orthodox
+						portrait_religion = bogomilist
+						portrait_religion = monothelite
+						portrait_religion = iconoclast
+						portrait_religion = paulician
+					}
+				}
+				3 = { #this is wrong, idk which one is which religion... - just make sure that most religions have some clothing at all.
+					OR = {
+						portrait_religion = norse_pagan
+						portrait_religion = norse_pagan_reformed
+						portrait_religion = slavic_pagan
+						portrait_religion = slavic_pagan_reformed
+						portrait_religion = tengri_pagan
+						portrait_religion = tengri_pagan_reformed
+					}
+				}
+				5 = { #this is wrong, idk which one is which religion...
+					OR = {
+						portrait_religion = jewish
+						portrait_religion = zoroastrian
+						portrait_religion = mazdaki
+						portrait_religion = manichean
+						portrait_religion = khurmazta
+						portrait_religion = samaritan
+						portrait_religion = karaite
+					}
+				}
+			}
+			5 = {
+				1 = {
+					OR = {
+						portrait_religion = catholic
+						portrait_religion = cathar
+						portrait_religion = fraticelli
+						portrait_religion = waldensian
+						portrait_religion = lollard
+					}
+			 	}
+				2 = {
+					OR = {
+						portrait_religion = orthodox
+						portrait_religion = bogomilist
+						portrait_religion = monothelite
+						portrait_religion = iconoclast
+						portrait_religion = paulician
+					}
+				}
+				3 = { #this is wrong, idk which one is which religion... - just make sure that most religions have some clothing at all.
+					OR = {
+						portrait_religion = norse_pagan
+						portrait_religion = norse_pagan_reformed
+						portrait_religion = slavic_pagan
+						portrait_religion = slavic_pagan_reformed
+						portrait_religion = tengri_pagan
+						portrait_religion = tengri_pagan_reformed
+					}
+				}
+				5 = { #this is wrong, idk which one is which religion...
+					OR = {
+						portrait_religion = jewish
+						portrait_religion = zoroastrian
+						portrait_religion = mazdaki
+						portrait_religion = manichean
+						portrait_religion = khurmazta
+						portrait_religion = samaritan
+						portrait_religion = karaite
+					}
+				}
+			}
+			4 = { 0 = { always = yes } }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_clothing_archdeacon_headgear"
+		textureFile = "gfx/characters/clothing/archdeacon_headgear.dds"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_clothing_archdeacon_headgear_behind"
+		textureFile = "gfx/characters/clothing/archdeacon_headgear_behind.dds"
+		noOfFrames = 1
+	}
+
+	portraitType = {
+		name = "PORTRAIT_PDP_archdeacon_clothing_male"
+		effectFile = "gfx/FX/portrait.lua"
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				NOT = { #not cardinal himself
+					portrait_has_trait = PDP_cardinal
+				}
+				portrait_has_trait = PDP_archdeacon
+			}
+		}
+
+		layer = {
+			"GFX_PDP_religious_male_clothes_behind:c0"
+			"GFX_clothing_archdeacon_headgear_behind:c1"
+			"GFX_PDP_religious_male_clothes:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_clothing_archdeacon_headgear:c5"
+		}
+
+		allow_property_values = {
+			3 = { 3 = { always = yes } }
+			4 = { 0 = { always = yes } }
+			1 = { 0 = { always = yes } }
+		}
+	}
+
+	#the holy see
+	spriteType = {
+		name = "GFX_the_holy_see"
+		textureFile = "gfx/characters/clothing/holy_see.tga"
+		noOfFrames = 1
+	}
+
+	portraitType = {
+		name = "PORTRAIT_holy_see"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 20000
+				portrait_clothing = yes
+				OR = {
+					portrait_has_trait = PDP_the_holy_see
+					portrait_has_trait = PDP_former_the_holy_see
+				}
+			}
+		}
+
+		layer = {
+			"GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+			"GFX_the_holy_see:c5"
+		}
+
+		allow_property_values = {
+			1 = {0 = {always = yes} }
+			#4 = { 0 = { always = yes } }
+		}
+	}
+
+
+	#Old cardinal clothing created by myself. In case you prefer it to the ones from paradox (why!?), comment this in...
+
+	# spriteType = {
+		# name = "GFX_clothing_cardinal_clothes"
+		# textureFile = "gfx/characters/clothing/cardinal_clothes.dds"
+		# noOfFrames = 1
+	# }
+
+	# spriteType = {
+		# name = "GFX_clothing_cardinal_headgear"
+		# textureFile = "gfx/characters/clothing/cardinal_headgear.dds"
+		# noOfFrames = 1
+	# }
+
+	# spriteType = {
+		# name = "GFX_clothing_cardinal_headgear_behind"
+		# textureFile = "gfx/characters/clothing/cardinal_headgear_behind.dds"
+		# noOfFrames = 1
+	# }
+
+	# portraitType = {
+		# name = "PORTRAIT_clothing_cardinal"
+		#effectFile = "gfx/FX/portrait.lua"
+
+		# weight = {
+			# additive_modifier = {
+				# value = 10000
+				# portrait_age > child
+				# portrait_clothing = yes
+				# portrait_has_trait = PDP_cardinal
+			# }
+		# }
+
+		# layer = {
+			# "GFX_empty:c0"
+			# "GFX_clothing_cardinal_headgear_behind:c1"
+			# "GFX_clothing_cardinal_clothes:c2"
+			# "GFX_empty:c3"
+			# "GFX_empty:c4"
+			# "GFX_clothing_cardinal_headgear:c5"
+		# }
+
+		# allow_property_values = {
+			# 1 = {0 = {always = yes} }
+			# 4 = { 0 = { always = yes } }
+		# }
+	# }
+
+
+
+}
