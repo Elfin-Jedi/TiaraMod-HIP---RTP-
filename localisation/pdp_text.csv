@@ -1,0 +1,502 @@
+EVTDESCPDP.1;[From.GetTitledName] has died. Now it is up to me, [Root.GetBestName], to lead the [Root.GetOnlyDynastyName] family to greatness.;;;;;;;;;;;;;x
+EVTOPTAPDP.1;May [From.GetFirstName] rest in peace.;;;;;;;;;;;;;x
+EVTDESCPDP.2;The succession didn't went well. ;;;;;;;;;;;;;x
+EVTOPTAPDP.2;What a shame.;;;;;;;;;;;;;x
+EVTDESCPDP.110;Pope [From.GetName] has died. Now the Conclave, consisting of the members of the College of Cardinals, will come together in Rome to elect a new Pope.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.110;Let the Holy Spirit guide them.;;;;;;;;;;;;;x
+EVTDESCPDP.148;The Conclave has ended. After weeks of debate and long nights the College of Cardinals with the help of divine inspiration finally made its choice.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.148;The Holy Spirit made his choice..;;;;;;;;;;;;;x
+EVTDESCPDP.150;The Conclave has elected a new Pope. He calls himself Pope [Root.RelHead.GetFirstName].;;;;;;;;;;;;;x
+EVTOPT_a_PDP.150;God bless His Holiness!;;;;;;;;;;;;;x
+EVTOPT_b_PDP.150;That's bad news.;;;;;;;;;;;;;x
+EVTDESCPDP.112;I'm invited to the Conclave to fulfill Gods will as Cardinal and elect a new Pope, a task of great honour and importance.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.112;I will travel to Rome immediately.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.112;Tell the other Cardinals that I cannot attend.;;;;;;;;;;;;;x
+EVTDESCPDP.113;A few days ago, our beloved Pope died. Having spend the last week mourning his death, we now must move onward and find his successor. So, the conclave begins.\n(Before the voting starts, I should speak to the other Cardinals.);;;;;;;;;;;;;x
+EVTOPT_a_PDP.113;May God be with me.;;;;;;;;;;;;;x
+EVTDESCPDP.115;It's time for me to vote. \n (Use the targeted decision 'Vote for' to cast your vote on yourself or another cardinal. Then proceed with the event. \n Keep in mind that the vanilla interface (preferatus) is wrong, you actually choose the pope with this event);;;;;;;;;;;;;x
+EVTOPT_a_PDP.115;I have voted.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.115;I will vote for... myself of course.;;;;;;;;;;;;;x
+EVTOPT_p_PDP.115;I have promised my vote to someone else - I have no choice.;;;;;;;;;;;;;x
+EVTDESCPDP.121;The votes have been counted. [electedPope.GetTitledName] has won the election with a majority and will become the next Pope. He fell on his knees and thanked God.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.121;God bless him.;;;;;;;;;;;;;x
+EVTDESCPDP.122;The votes have been counted, but again, no one has a majority of more than [global_PDP_half_number_votes.GetValue] votes. So we will have to cast our votes again, until we find a worthy successor with the help of the Lord. The election will be soon, although we should leave some time for debates.\nI got merely [Root.PDP_votes_for_me.GetValue] vote(s).;;;;;;;;;;;;;x
+EVTDESCPDP.124;After a long night, [PDP_widthdrawed_cardinal.GetTitledName] decided that only getting [PDP_widthdrawed_cardinal.PDP_votes_for_me.GetValue] votes in the last round of election clearly shows, that he is not meant to become Pope yet. He therefore declared to no longer candidate for the Throne of St. Peter and asked all of us to no longer vote for him.;;;;;;;;;;;;;x
+EVTDESCPDP.124Absent;A letter arrived from [PDP_widthdrawed_cardinal.GetTitledName]. Being absent and not having many supporters in the curia, he doesn't believe that he has a chance. He therefore declared to not candidate for the Throne of St. Peter and asked all of us to no longer vote for him.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.124;So be it.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.122;We will find a majority.;;;;;;;;;;;;;x
+PDP_SEDE_VACANTE;The Holy See;;;;;;;;;;;;;x
+EVTDESCPDP.123;The votes have been counted and I cannot believe it: I have been elected with [Root.PDP_votes_for_me.GetValue] votes. Joyful I thank the Lord, and of course the cardinals that voted for me (and the low-born souls that earned me the money to pay for the votes).;;;;;;;;;;;;;x
+PDP_tooltip_no_dont_vote_for_me_flag;[Root.GetFirstName] wants to be elected.;;;;;;;;;;;;;x
+PDP_tutorial;Theocracy Tutorial;;;;;;;;;;;;;x
+PDP_votes_for_me;Papal Election Votes;;;;;;;;;;;;;x
+PDP_votes_for_me_last_round;Papal Election Votes;;;;;;;;;;;;;x
+PDP_bribe_theocracy_elector;Bribe Elector;;;;;;;;;;;;;x
+PDP_bribe_theocracy_elector_desc;While succession in Theocracies is not dynastic most of the time, a little bit of money makes so many things possible...;;;;;;;;;;;;;x
+PDP_in_conclave;In the Conclave;;;;;;;;;;;;;x
+PDP_same_culture;Same culture;;;;;;;;;;;;;x
+PDP_same_dynasty;Our family must hold together;;;;;;;;;;;;;x
+PDP_learning;You are learned;;;;;;;;;;;;;x
+PDP_withdrew;I already withdrew from the election;;;;;;;;;;;;;x
+PDP_ambitious_cardinal;I want to become Pope myself;;;;;;;;;;;;;x
+PDP_ImPreferatus;I believe I can win the election myself;;;;;;;;;;;;;x
+PDP_like_you;I like you.;;;;;;;;;;;;;x
+PDP_like_fromfrom;I like [FromFrom.GetTitledName].;;;;;;;;;;;;;x
+PDP_in_conclave_desc;A papal conclave is a meeting of the College of Cardinals convened to elect a new Bishop of Rome, also known as the Pope.\nThis character received [Root.PDP_votes_for_me_last_round.GetValue] vote(s) in the last round of election (this number updates when you are prompted to vote in the next round).;;;;;;;;;;;;;x
+PDP_conclave_vote_for;Vote for.;;;;;;;;;;;;;x
+PDP_conclave_vote_for_desc;Vote for [Root.GetTitledName] as the next Pope. If [Root.GetSheHe] gets a majority of the votes, he will become Pope.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.123;Thank God.;;;;;;;;;;;;;x
+EVTDESCPDP.5;The College of Cardinals has elected me as the next Pope. White smoke ascends and I am asked if I accept my canonical election as Supreme Pontiff.\nAs the tradition demands, I must choose a new name for myself - so I shall be called [Root.GetTitledName] henceforth.;;;;;;;;;;;;;x
+EVTOPTAPDP.5;With the help of God, I will lead the Catholic Faith.;;;;;;;;;;;;;x
+EVTDESCPDP.8;I've asked [appointer.GetTitledFirstName] to nominate [potential_heir.GetDynName] as my successor and therefore future [Root.GetTitle] of [Root.PrimaryTitle.GetBaseName]. Having [potential_heir.GetFirstName] as successor, will make it more likely that the [incumbent.GetOnlyDynastyName] dynasty stays in power, even though this is uncommon among theocracies. Will [appointer.GetSheHe] accept such a demand?;;;;;;;;;;;;;x
+EVTOPTAPDP.8;I hope so.;;;;;;;;;;;;;x
+EVTDESCPDP.9;[incumbent.GetTitledFirstName] has asked me to appoint [potential_heir.GetDynName] as [incumbent.GetHerHis] Bishop Coadjutor and thereby his deputy. Will I accept this demand?;;;;;;;;;;;;;x
+EVTOPTAPDP.9;No, I won't.;;;;;;;;;;;;;x
+EVTOPTBPDP.9;An opportunity to fill my treasury?;;;;;;;;;;;;;x
+EVTOPTCPDP.9;Of course I will.;;;;;;;;;;;;;x
+EVTDESCPDP.10;A message arrived from [appointer.GetTitledFirstName]. [appointer.GetSheHeCap] argued that [potential_heir.GetTitledFirstName] is not suitable for the position of [Root.GetTitle] and will therefore not be nominated as Bishop Coadjutor.;;;;;;;;;;;;;x
+EVTOPTAPDP.10;What a pity.;;;;;;;;;;;;;x
+EVTDESCPDP.11;A message arrived from [appointer.GetTitledFirstName]. [appointer.GetSheHeCap] wrote me, that [appointer.GetSheHe] sees my point and agrees that [potential_heir.GetFirstName] is qualified. But [appointer.GetSheHe] also explained, that [appointer.GetHerHis] administration is currently overburdened with other, more urgent tasks. Therefore the administerial effort of such a nomination would come with extraordinary costs that [appointer.GetSheHe] is not willing to pay.;;;;;;;;;;;;;x
+EVTOPTAPDP.11;Of course I will pay [appointer.GetHerHis] expenses myself.;;;;;;;;;;;;;x
+EVTOPTBPDP.11;What a pity.;;;;;;;;;;;;;x
+EVTDESCPDP.12;A message arrived from [appointer.GetTitledFirstName]. [appointer.GetSheHeCap] wrote me, that [appointer.GetSheHe] sees my point and agrees that [potential_heir.GetFirstName] is indeed very qualified for the position. [potential_heir.GetSheHeCap] will therefore be made Bishop Coadjutor.;;;;;;;;;;;;;x
+EVTOPTAPDP.12;Great news.;;;;;;;;;;;;;x
+EVTDESCPDP.13;[incumbent.GetTitledName] accepted to pay me for the nomination.;;;;;;;;;;;;;x
+EVTOPTAPDP.13;Good news.;;;;;;;;;;;;;x
+EVTDESCPDP.14;[incumbent.GetTitledName] refused to pay me for the nomination.;;;;;;;;;;;;;x
+EVTOPTAPDP.14;What a pity.;;;;;;;;;;;;;x
+EVTDESCPDP.78;[Root.RelHead.GetTitledName] has decided to appoint me to the College of Cardinals. From now on until the end of my life, I shall be a member of the Holy College of Cardinals.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.78;Thank God, my dreams came true.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.78;I feel honoured, but I do not believe that I am worthy.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.78_tooltip;[Root.GetTitledName] will never be appointed Cardinal.;;;;;;;;;;;;;x
+EVTDESCPDP.81_declining;I have though over it for a long time, but I finally came to the conclusion: Becoming Pope is not what I desire. I'd rather like to stay here and take care of my homelands, than to go to Rome.;;;;;;;;;;;;;x
+EVTDESCPDP.81_accepting;I don't know why I thought that being Pope is nothing to for me... If God wishes to make me Pope, who am I to say no?.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.81;So be it.;;;;;;;;;;;;;x
+EVTDESCPDP.85;Religion has always been an important part in my life. Now I have decided that I should take one step further and dedicate my life to God. Therefore I asked [Root.RelHead.GetTitledName] to consecrate me and make me Bishop of [Root.PrimaryTitle.GetBaseName].;;;;;;;;;;;;;x
+EVTOPT_a_PDP.85;The Kingdom of God will come.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.85;Wait, this means that I'm not allowed to marry?;;;;;;;;;;;;;x
+PDP_become_theocracy;Become a Theocracy.;;;;;;;;;;;;;x
+opinion_PDP_became_theocracy;Became Bishop.;;;;;;;;;;;;;x
+EVTDESCPDP.80;After the death of [From.GetTitledName], the College of Cardinals came together to appoint his successor. Many of my fellow colleges suggested that I should become Pope. But I didn't feel worthy enough, so I declined. I suggest Cardinal [nextPope.GetDynName] instead.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.80;Long may [nextPope.GetSheHe] live!;;;;;;;;;;;;;x
+PDP_switch_become_pope_wish;Think about declining the Papacy;;;;;;;;;;;;;x
+PDP_switch_become_pope_wish_desc;Decide if I will accept becoming Pope, should I ever be elected.;;;;;;;;;;;;;x
+EVTDESCPDP.50;I've decided to name [archdeacon.GetTitledName] Bishop Coadjutor of the [bishop.PrimaryTitle.GetFullBaseName]. [archdeacon.GetSheHeCap] will serve [bishop.GetTitledName] as deputy and help him administrating his diocese.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.50;God bless [archdeacon.GetHerHim].;;;;;;;;;;;;;x
+EVTDESCPDP.61;Now that I am Pope, I shall hold my first mass in [Root.Capital.GetName]. Everyone will listen carefully what I have to say, since the issues I address today will likely be the most important ones of my reign. So what will I preach?;;;;;;;;;;;;;x
+EVTOPT_a_PDP.61;I believe that everyone should seek to live a more pious life.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.61;God wants us to let the infidels crumble!;;;;;;;;;;;;;x
+EVTOPT_c_PDP.61;Reconciliation and Charity are the main principles of Christianity.;;;;;;;;;;;;;x
+EVTOPT_d_PDP.61;We shall uphold the civil order on earth and respect the law.;;;;;;;;;;;;;x
+EVTDESCPDP.65;[triggered_by.GetTitledName] suggests to honour the services of [bishop.GetTitledName] to the Church and God by making [bishop.GetHerHim] a potential candidate for the next open seat in the College of Cardinals. As a member of the College, I am allowed to vote on this matter.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.65;I agree. [bishop.GetTitledFirstName] is a pious [bishop.GetManWoman].;;;;;;;;;;;;;x
+EVTOPT_b_PDP.65;Actually, I don't believe that [bishop.GetSheHe] is a good choice.;;;;;;;;;;;;;x
+EVTDESCPDP.66;I see your point. [bishop.GetTitledName] is a pious servant of God and would make a great Cardinal. I will support his nomination.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.66;Great.;;;;;;;;;;;;;x
+EVTOPT_a2_PDP.68;Then invite [bishop.GetTitledName] to [Root.Capital.GetName].;;;;;;;;;;;;;x
+EVTDESCPDP.77;Everyone expected me to appoint Cardinals and fill the vacant seats, but I did nothing. Now they mock me, spread rumours about me, believe that I want to abolish the College of Cardinals. Where ever I go, people don't seem to appreciate that I denied the College its Rights.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.77;What have I done?;;;;;;;;;;;;;x
+EVTDESCPDP.76;Today, influential members of the Holy Roman Church indicated that they're not happy with the current state of the College of Cardinals. According to the laws of our faith, given to mankind by God himself, there should always be a College of Cardinals to assist and advice My Holiness. However, the number of Cardinals is currently just [Root.num_cardinals.GetValue], instead of 9. This must change.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.76;I promise to appoint more Cardinals. How about [possible_cardinal.GetTitledFirstName]?;;;;;;;;;;;;;x
+PDP_will_be_made_cardinal;With the backing of the members of the College, I can make [bishop.GetHerHim] Cardinal right now.;;;;;;;;;;;;;x
+EVTDESCPDP.68_accepted;The members of the College of Cardinals have voted. A majority of [Root.PDP_votes_yes.GetValue] members has decided to support my nomination of [bishop.GetTitledName] and accept [bishop.GetHerHim] as a candidate for a seat in the College.;;;;;;;;;;;;;x
+EVTDESCPDP.68_declined;The members of the College of Cardinals have voted. Unfortunately only [Root.PDP_votes_yes.GetValue] of them have voted in favour of [bishop.GetTitledName], so [bishop.GetSheHe] is not accepted by the College.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.68;Good news.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.68;To be honest, they are right.;;;;;;;;;;;;;x
+EVTOPT_c_PDP.68;I am the Pope, therefore I am second only to God himself!;;;;;;;;;;;;;x
+EVTDESCPDP.70;[triggered_by.GetTitledName] suggests to honour the services of [bishop.PrimaryTitle.GetRulerTitle] [bishop.GetFirstName] of [bishop.PrimaryTitle.GetBaseName] to the Church and God by making [bishop.GetHerHim] a Cardinal. As a member of the College, I am allowed to vote on this matter.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.70;I agree. [bishop.GetTitledFirstName] is a pious [bishop.GetManWoman].;;;;;;;;;;;;;x
+EVTOPT_b_PDP.70;Actually, I don't believe that [bishop.GetSheHe] is a good choice.;;;;;;;;;;;;;x
+PDP_chance_that_others_cardinals_accept;Estimated chance for the majority of Cardinals to agree with you.;;;;;;;;;;;;;x
+EVTDESCPDP.71;I wasn't the only one who didn't agree to nominate [bishop.GetTitledName] for such a high position in the Church. The majority of the Cardinals expressed concerns about [bishop.GetHerHis] qualifications. [triggered_by.GetTitledName] was convinced to not appoint [bishop.GetTitledFirstName] as Cardinal.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.71;A good day for the Church.;;;;;;;;;;;;;x
+PDP_not_appointed_any_cardinals;Untrustworthy Pope;;;;;;;;;;;;;x
+PDP_not_appointed_any_cardinals_desc;This Pope tried to abolish the powers of the College of Cardinals. He didn't appoint any new Cardinals, thereby diminishing their numbers and maximising his power and control of the Church. But my deed did not stay unnoticed: Many people have lost their faith in his rule, some even say he's the Devil himself. Turbulent years are lying ahead.;;;;;;;;;;;;;x
+ignored_college_of_cardinals;Ignored College Of Cardinals;;;;;;;;;;;;;x
+ignored_college_of_cardinals_desc;This Pope nominated a Bishop as Cardinal without the consent of the College of Cardinals.;;;;;;;;;;;;;x
+PDP_will_be_allowed_as_cardinal;Will be allowed to become a Cardinal.;;;;;;;;;;;;;x
+PDP_pre_nominate_cardinal;Suggest as Cardinal;;;;;;;;;;;;;x
+PDP_pre_nominate_cardinal_desc;Ask the members of the College of Cardinals, to accept [Root.GetHerHim] as potential Cardinal. They may reject. If they accept, you'll be able to appoint him as Cardinal as soon as there are empty seats in the College.\nFactors for acceptance: Opinion of you and the candidate, learning, age, (not) being of your dynasty.;;;;;;;;;;;;;x
+PDP_tooltip_not_declined_lately;Has not been suggested and rejected as potential Cardinal in the last five years.;;;;;;;;;;;;;x
+PDP_tooltip_already_accepted;Is not already accepted as a potential Cardinal.;;;;;;;;;;;;;x
+PDP_pope_invest_bishop;Invest Bishop;;;;;;;;;;;;;x
+PDP_pope_invest_bishop_desc;Appoint a Successor.;;;;;;;;;;;;;x
+EVTDESCPDP.41;As [Root.PrimaryTitle.GetRulerTitle] I've sworn an oath to not father any children. But everyone suspects that [From.GetFirstName] is my child. Will I acknowledge my sins?;;;;;;;;;;;;;x
+EVTOPT_a_PDP.41;It was just an accident. I didn't want it. It just happened...;;;;;;;;;;;;;x
+EVTOPT_b_PDP.41;I promise by God that I won't let it happen again.;;;;;;;;;;;;;x
+EVTOPT_c_PDP.41;There's only one way to prevent me from sinning ever again...;;;;;;;;;;;;;x
+EVTOPT_d_PDP.41;Tell everyone its the child of my brother...;;;;;;;;;;;;;x
+PDP_vassalize_bishopric;The Bishopric will become a vassal of [Root.GetTitledName].;;;;;;;;;;;;;x
+PDP_county_theocracy_desc;Seize the county. Be aware that it will grant it to the owner of the Bishopric, which doesn't have to be your character. If you aren't a duke, this might make him independent.;;;;;;;;;;;;;x
+CB_NAME_PDP_COUNTY_THEOCRACY;Seize [Title.GetBaseName] for the Church;;;;;;;;;;;;;x
+WAR_NAME_PDP_COUNTY_THEOCRACY;$ORDER$$FIRST_ADJ$-$SECOND_ADJ$ Conquest of $OTHER_TITLE$;;;;;;;;;;;;;x
+CB_NAME_PDP_BISHOPRIC;Seigniory over [Title.GetFullBaseName];;;;;;;;;;;;;x
+PDP_bishopric_desc;Declare a war to vassalize the Bishopric.;;;;;;;;;;;;;x
+WAR_NAME_PDP_BISHOPRIC;$ORDER$$FIRST_ADJ$-$SECOND_ADJ$ Vassalisation of $OTHER_TITLE$;;;;;;;;;;;;;x
+PDP_create_a_dynasty;Found a Dynasty;;;;;;;;;;;;;x
+PDP_allow_cardinals;Enable Cardinal Appointment;;;;;;;;;;;;;x
+PDP_allow_cardinals_desc;This save was started with an old version of the mod. Therefore a necessary global flag is not set yet, which prevents Cardinals from existing. Click this button to set it.;;;;;;;;;;;;;x
+PDP_courtier_or_vassal;Has to be a courtier who does not inherit, or vassal of [From.GetTitledName].;;;;;;;;;;;;;x
+PDP_ask_nominate_successor;Ask to nominate Bishop Coadjutor;;;;;;;;;;;;;x
+PDP_cardinal_petition_for_council;Petition to be on the council;;;;;;;;;;;;;x
+PDP_cardinal_petition_for_council_desc;As a cardinal, I should be Court Chaplain.;;;;;;;;;;;;;x
+PDP_ask_nominate_successor_desc;Ask [Root.GetTitledFirstName] to nominate this character as Bishop Coadjutor. Making someone Bishop Coadjutor greatly increases his chances of being elected as your successor, as he is seen as your co-ruler.;;;;;;;;;;;;;x
+PDP_becomes_heir;[potential_heir.GetFirstName] becomes Bishop Coadjutor.;;;;;;;;;;;;;x
+title_PDP_archdeacon;Bishop Coadjutor;;;;;;;;;;;;;x
+PDP_archdeacon_condition;Has to be appointed by a higher authority;;;;;;;;;;;;;x
+title_PDP_archdeacon_desc;In the Roman Catholic Church, a coadjutor bishop is an immediate collaborator of the diocesan bishop, similar to an auxiliary bishop. However, unlike auxiliary bishops, coadjutors are given the right of succession to the episcopal see. When the diocesan bishop dies, retires, resigns, or is reassigned, the coadjutor has a higher chance of being the next bishop of the local Church (diocese). Until then, the diocesan bishop appoints the coadjutor to act as vicar general. \nYou must convince the character responsible for nominating your Bishop Coadjutor (e.g. religious head) to nominate the character you wish. Being Bishop Coadjutor makes it much more likely to be elected as your successor.;;;;;;;;;;;;;x
+PDP_cardinal;Cardinal;;;;;;;;;;;;;x
+PDP_mark_as_player_heir;Set as preferred dynasty member;;;;;;;;;;;;;x
+PDP_mark_as_player_heir_desc;In case you loose all your titles, but this character stays a theocracy, you will continue to play as him.;;;;;;;;;;;;;x
+PDP_pope_has_to_appoint_cardinals;You are expected to fill the vacant seats of the College of Cardinals within the next year. If you don't do anything, there will be severe consequences.;;;;;;;;;;;;;x
+PDP_nominate_cardinal;Appoint Cardinal;;;;;;;;;;;;;x
+PDP_nominate_cardinal_desc;[Root.GetTitledName] is a pious man and should serve as Cardinal.;;;;;;;;;;;;;x
+PDP_nominate_cardinal_dean;Appoint Cardinal-Dean;;;;;;;;;;;;;x
+PDP_nominate_cardinal_dean_desc;The Dean of the Sacred College of Cardinals is the dean of the College of Cardinals in the Roman Catholic Church. The Dean presides over the College of Cardinals, serving as primus inter pares in the college. The Dean is often, but not necessarily, the longest-serving member of the whole College.;;;;;;;;;;;;;x
+PDP_nominate_cardinal_nephew;Appoint Cardinal-Nephew;;;;;;;;;;;;;x
+PDP_nominate_cardinal_nephew_desc;A Cardinal-nephew was a cardinal elevated by a pope who was that cardinal's relative. The practice of creating cardinal-nephews originated in the Middle Ages, and reached its apex during the 16th and 17th centuries.;;;;;;;;;;;;;x
+PDP_cardinal_desc;This character is a Cardinal.;;;;;;;;;;;;;x
+title_cardinal_nephew_desc;A Cardinal-nephew was a cardinal elevated by a pope who was that cardinal's relative. The practice of creating cardinal-nephews originated in the Middle Ages, and reached its apex during the 16th and 17th centuries.;;;;;;;;;;;;;x
+title_cardinal_nephew;Cardinal-Nephew;Cardinal-Neveu;Kardinalnepot;;;;;;;;;;;x
+title_cardinal_dean;Cardinal Dean;Cardinal Doyen;Kardinaldekan;;;;;;;;;;;x
+title_cardinal_dean_desc;The Dean of the Sacred College of Cardinals is the dean of the College of Cardinals in the Roman Catholic Church. The Dean presides over the College of Cardinals, serving as primus inter pares in the college. The Dean is often, but not necessarily, the longest-serving member of the whole College.;;;;;;;;;;;;;x
+PDP_college_has_supported_as_cardinal_tooltip;Must have been suggested as potential candidate for the College of Cardinals.;;;;;;;;;;;;;x
+PDP_end_antipapacy;End Antipapacy;;;;;;;;;;;;;x
+PDP_end_antipapacy_desc;Force [ROOT.GetTitledName] to stop challenging the authority of the only true Pope.;;;;;;;;;;;;;x
+succ_playable_non_catholic_bishopric;Theocracy Succession;;;;;;;;;;;;;x
+playable_non_catholic_bishopric_succession;Theocracy Succession;;;;;;;;;;;;;x
+succ_playable_non_catholic_bishopric_desc;An elective succession.;;;;;;;;;;;;;x
+playable_non_catholic_bishopric_succession_desc;An elective succession.;;;;;;;;;;;;;x
+playable_non_catholic_theocracy_government;Theocracy;;;;;;;;;;;;;x
+playable_non_catholic_theocracy_government_desc;Playable Theocracy (non catholic).\n The heir to the titles is elected, so make sure that the electors vote for a heir of your dynasty, because otherwise you will loose the titles.;;;;;;;;;;;;;x
+playable_theocracy_government;Theocracy;;;;;;;;;;;;;x
+playable_theocracy_government_desc;Playable Theocracy.\n The heir to the titles is elected, so make sure your liege/the pope (depending on your investure laws) votes for a heir of your dynasty, because otherwise you will loose the titles. If you have other landed dynasty members (preferably theocracies), you will continue as them. \nKeep in mind that the election of Popes has been changed and there will be a sede vacante.\nLike Merchant Republics, Theocracies have their own kind Casus Belli, which allows them to become rightful liege of nearby bishoprics and, if they control the bishopric of a county, to conquer the whole county.\n\nMany more options can be found in the 'Offmap Church' Panel next to the minimap. Note: It will not be accessible, if you are currently under the rule of an Antipope. If you imprison the antipope or his top liege, you can forcefully end the antipapacy.;;;;;;;;;;;;;x
+EVTDESCPDP.30;As Cardinal and member of the College of Cardinals, I have a right to be Court Chaplain of [Root.Liege.GetTitledFirstName]. Therefore I've asked [ROOT.Liege.GetHerHim] to give me a place on [Root.Liege.GetHerHis] council.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.30;Will [Root.Liege.GetSheHe] accept?;;;;;;;;;;;;;x
+EVTDESCPDP.31;My subject [target_cardinal.GetTitledName] claimed that by the right of his position as Cardinal of the Holy Roman Church, he should be my Court Chaplain.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.31;[target_cardinal.GetSheHe] is right.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.31;I don't care what the church says!;;;;;;;;;;;;;x
+EVTDESCPDP.32;[Root.Liege.GetTitledFirstName] has accepted my demand and made me Court Chaplain. ;;;;;;;;;;;;;x
+EVTOPT_a_PDP.32;Good news for the church!;;;;;;;;;;;;;x
+EVTDESCPDP.33;[Root.Liege.GetTitledFirstName] declined my request, stating that [Root.Liege.GetSheHe] doesn't believe I'm qualified enough, Cardinal or not.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.33;What a pity.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.33;I must inform [Root.RelHead.GetTitledFirstName] of this!;;;;;;;;;;;;;x
+EVTDESCPDP.34;A letter arrived from [target_cardinal.GetTitledName]. [target_cardinal.GetSheHeCap] informs me that [target_cardinal.GetHerHis] liege, [target_cardinal.Liege.GetTitledName], does employ an unconsecrated Court Chaplain and refused to instead employ [target_cardinal.GetTitledFirstName]. [target_cardinal.GetSheHeCap] asked me to make [target_cardinal.Liege.GetTitledFirstName] understand [target_cardinal.GetTitledFirstName]s cause.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.34;Of course I will!;;;;;;;;;;;;;x
+EVTOPT_b_PDP.34;[target_cardinal.GetTitledFirstName] can handle this on his own.;;;;;;;;;;;;;x
+EVTDESCPDP.35;A letter arrived from His Holyness [From.GetTitledFirstName]. [From.GetSheHeCap] noticed that I did not employ [target_cardinal.GetTitledFirstName] as Court Chaplain. [From.GetTitledFirstName] asks me to admit my mistake and make [target_cardinal.GetTitledFirstName] my Court Chaplain.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.35;I will.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.35;I don't like him, so he won't be my Court Chaplain, Cardinal or not.;;;;;;;;;;;;;x
+EVTDESCPDP.36;A letter arrived from [From.GetHerHis] Holyness [From.GetTitledFirstName]. [From.GetSheHeCap] wrote that it is not [From.GetHerHis] duty to take care of my personal problems.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.36;What a pity.;;;;;;;;;;;;;x
+EVTDESCPDP.37;[Root.RelHead.GetTitledFirstName] successfully convinced my liege to employ me as [Root.Liege.GetLordSpiritualName].;;;;;;;;;;;;;x
+EVTOPT_a_PDP.37;Good news!;;;;;;;;;;;;;x
+EVTDESCPDP.38;[Root.RelHead.GetTitledFirstName] did not manage to convince my liege to employ me as [Root.Liege.GetLordSpiritualName], as [Root.Liege.GetTitledFirstName] rejected the authority of [Root.RelHead.GetHerHis] Holyness in this matter.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.38;Such a fool!;;;;;;;;;;;;;x
+temple_king_christian;Patriarch;;;;;;;;;;;;;x
+title_PDP_canon;Canon & Member of the Cathedral Chapter;;;;;;;;;;;;;x
+title_PDP_canon_desc;According to Catholic canon law, a cathedral chapter is a college of clerics (chapter) formed to advise a bishop and, in the case of a vacancy of the episcopal see in some countries, to govern the diocese during the vacancy. These chapters are made up of canons.\nThe canons are minor electors in the elective investiture succession system.;;;;;;;;;;;;;x
+PDP_join_holy_order;Introduce Into Order;;;;;;;;;;;;;x
+PDP_join_holy_order_desc;Make [Root.GetTitledName] a member of your Holy Order. He will take his vows.;;;;;;;;;;;;;x
+tooltip_PDP_theocracy_papal_investiture;Papal Investiture;;;;;;;;;;;;;x
+tooltip_PDP_theocracy_free_investiture;Free Investiture;;;;;;;;;;;;;x
+tooltip_PDP_theocracy_rank_is_pope;[From.GetSheHeCap] is the Pope;;;;;;;;;;;;;x
+tooltip_PDP_theocracy_rank_in_church;[From.GetHerHisCap] rank in the church;;;;;;;;;;;;;x
+tooltip_PDP_theocracy_is_archdeacon;[From.GetSheHeCap] is the Bishop Coadjutor;;;;;;;;;;;;;x
+tooltip_PDP_theocracy_is_cardinal;[From.GetSheHeCap] is a Cardinal;;;;;;;;;;;;;x
+tooltip_PDP_theocracy_is_cardinal_dean;[From.GetSheHeCap] is Cardinal-Dean;;;;;;;;;;;;;x
+tooltip_PDP_theocracy_low_learning;[From.GetSheHeCap] is not a learned man;;;;;;;;;;;;;x
+tooltip_PDP_theocracy_high_learning;[From.GetSheHeCap] is a learned man;;;;;;;;;;;;;x
+tooltip_PDP_theocracy_saintly_blood;[From.GetHerHisCap] saintly Blood;;;;;;;;;;;;;x
+tooltip_PDP_theocracy_martial_skill;[From.GetHerHisCap] military qualifications;;;;;;;;;;;;;x
+tooltip_PDP_theocracy_crusader;[From.GetSheHeCap] is a crusader;;;;;;;;;;;;;x
+tooltip_PDP_theocracy_no_celibacy_vow;[From.GetSheHeCap] hasn't taken a vow of celibacy yet;;;;;;;;;;;;;x
+tooltip_PDP_good_fighter;[From.GetSheHeCap] is a good fighter;;;;;;;;;;;;;x
+tooltip_PDP_theocracy_high_diplomacy;[From.GetSheHeCap] is convincing;;;;;;;;;;;;;x
+tooltip_PDP_theocracy_same_dynasty;[From.GetSheHeCap] is yet another [From.GetOnlyDynastyName];;;;;;;;;;;;;x
+tooltip_PDP_theocracy_no_nepotism;I do not tolerate Nepotism;;;;;;;;;;;;;x
+tooltip_PDP_theocracy_bought_vote_favour;Ows a favor;;;;;;;;;;;;;x
+tooltip_PDP_theocracy_bought_vote;Bribed;;;;;;;;;;;;;x
+tooltip_PDP_theocracy_bought_much_vote;The bribe was good;;;;;;;;;;;;;x
+PDP_bribe_thankfull;Will be bribed.;;;;;;;;;;;;;x
+PDP_no_bribe;Will not be bribed.;;;;;;;;;;;;;x
+PDP_bribe_accepted;Will accept my bribe and vote accordingly.;;;;;;;;;;;;;x
+PDP_conclave_ask_to_vote_for;Ask for [Root.GetHerHis] vote.;;;;;;;;;;;;;x
+PDP_conclave_ask_to_vote_for_desc;Ask [Root.GetFirstName] to vote for my favourite candidate in the next rounds of papal elections in the conclave. [Root.GetSheHe] will hear my suggestion.;;;;;;;;;;;;;x
+EVTDESCPDP.255;I will ask [cardinal.GetTitledFirstName] to vote for [voting_target.GetTitledFirstName] as the next Pope in the next rounds of election.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.255;I need his vote.;;;;;;;;;;;;;x
+EVTDESCPDP.256;[asking_cardinal.GetTitledFirstName] asked me to vote for [voting_target.GetTitledFirstName] in the next rounds of election. What will I answer?;;;;;;;;;;;;;x
+EVTOPT_a_PDP.256;He can count on me;;;;;;;;;;;;;x
+EVTOPT_b_PDP.256;And what's in for me?;;;;;;;;;;;;;x
+EVTOPT_c_PDP.256;[voting_target.GetFirstName]? Never!;;;;;;;;;;;;;x
+EVTDESCPDP.257;[cardinal.GetTitledFirstName] told me that, he was already thinking of voting like I suggested.;;;;;;;;;;;;;x
+EVTDESCPDP.258;[cardinal.GetTitledFirstName] reacted well to my proposal. He listened seemingly interested and argued, that my suggestion seems reasonable at least. But then he asked me for a good reason for him trust me. "You know, I like you", [cardinal.GetFirstName] said, "but everything in this world has a price - even the Throne of St. Peter." What can I offer?;;;;;;;;;;;;;x
+EVTOPT_a_PDP.257;Great.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.258;How about some gold?;;;;;;;;;;;;;x
+EVTOPT_b_PDP.258;I can only offer wise words.;;;;;;;;;;;;;x
+EVTOPT_c_PDP.258;Actually, since I will be pope soon, I don't need all of my lands any more, right?;;;;;;;;;;;;;x
+EVTOPT_d_PDP.258;Once I am Pope, I need a trustworthy Dean. How is better suited than you?;;;;;;;;;;;;;x
+PDP_promised_power_tooltip;I promise to make [cardinal.GetTitledFirstName] Dean of the College when I become Pope.\nTo make sure I honour my words, I grant him a handwritten and signed confirmation.;;;;;;;;;;;;;x
+EVTDESCPDP.266;I have promised to make [cardinal.GetTitledFirstName] Dean of the College when I become Pope.\nNow that I finally sit on the Throne of St. Peter, it's time to deliver on my promise. Since I gave [cardinal.GetFirstName] a written confirmation of the deal, breaking my promise could have negative consequences on my reputation.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.266;Of course I will keep my promise!;;;;;;;;;;;;;x
+EVTOPT_b_PDP.266;I didn't promise it - I merely said it that I could possibly make him Dean. And, well I won't.;;;;;;;;;;;;;x
+EVTOPT_c_PDP.266;He's rotting in a dungeon... Who cares?;;;;;;;;;;;;;x
+PDP_promise_power_broken_tt;Break the promise given to [cardinal.GetTitledFirstName].;;;;;;;;;;;;;x
+PDP_broken_power_promise;Broken Promise;;;;;;;;;;;;;x
+PDP_broken_power_promise_desc;Nobody liked what I did there: I promised a title in exchange for a vote in the conclave and then I didn't even keep my word. This has significantly decreased my reputation.;;;;;;;;;;;;;x
+EVTDESCPDP.267;News from [From.GetTitledName]: He has delivered on his promise and made me Dean of the College of Cardinals.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.267;Great!;;;;;;;;;;;;;x
+EVTDESCPDP.268;News from the crooked [From.GetTitledName]: I asked him to deliver on his promise to make me Dean, but [From.GetFirstName] just laughed at me, saying he wouldn't even consider doing so.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.268;That fool!;;;;;;;;;;;;;x
+PDP_opinion_rival_cardinal_excommunicated;Excommunicated Enemy;;;;;;;;;;;;;x
+EVTDESCPDP.300;I recently excommunicated [From.GetTitledName], thereby removing him from [From.GetHerHis] position as a Cardinal. Apparently, not everyone is happy about this. I received many letters requesting [From.GetHerHis] excommunication to be lifted  and him being reinstalled as Cardinal.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.300;My choice is final. ;;;;;;;;;;;;;x
+EVTOPT_b_PDP.300;Actually, I think that I made a spelling mistake, when writing the name...;;;;;;;;;;;;;x
+EVTOPT_c_PDP.300;I've got good reason to do so...;;;;;;;;;;;;;x
+PDP_opinion_vassal_cardinal_excommunicated;Excommunicated Vassal Cardinal;;;;;;;;;;;;;x
+PDP_excommunicated_cardinal;Excommunicated A Cardinal;;;;;;;;;;;;;x
+PDP_excommunicated_cardinal_desc;This Pope excommunicated a member of the College without a good reason, upsetting clerics and faithful Christians.;;;;;;;;;;;;;x
+EVTDESCPDP.259;[cardinal.GetTitledFirstName] informed me that he will not vote for me and instead for a more qualified candidate.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.259;That's bad news.;;;;;;;;;;;;;x
+EVTDESCPDP.260;I got a valuable bribe from [asking_cardinal.GetTitledName]. He's clearly hoping that I will vote for him now...;;;;;;;;;;;;;x
+EVTOPT_a_PDP.260;I will.;;;;;;;;;;;;;x
+EVTDESCPDP.270;[coronation_priest_per.GetTitledName] approaches me with the Tiara. "We supplicate you, Almighty God, effect your customary devotion and pour out on this your servant, [ROOT.GetFirstName], the grace of the Holy Spirit that he who is constituted at the head of our church as the servant of the mystery, you would strengthen with the fullness of virtue.", he says while placing it on my head.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.270;With Gods at my side I will rule over the city and the world.;;;;;;;;;;;;;x
+EVTDESCPDP.220;Maybe a little gift could make sure that [elector.GetTitledName] is more inclined to vote for my candidate in the investiture election...;;;;;;;;;;;;;x
+EVTOPT_a_PDP.220;Offer [elector.GetFirstName] money.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.220;I have some spare land.;;;;;;;;;;;;;x
+EVTDESCPDP.221;[bishop.GetTitledName] offered me a substantial amount of money in exchange for certain favors regarding the choice of [bishop.GetHerHis] successor.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.221;A fine deal.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.221;I cannot accept.;;;;;;;;;;;;;x
+EVTDESCPDP.222;[bishop.GetTitledName] offered me a substantial amount of land in exchange for certain favors regarding the choice of [bishop.GetHerHis] successor.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.222;A fine deal.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.222;I cannot accept.;;;;;;;;;;;;;x
+EVTDESCPDP.223;[elector.GetTitledName] accepted my offer. Now it is up to me to pay [elector.GetHerHim].;;;;;;;;;;;;;x
+EVTOPT_a_PDP.223;Of course I will.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.223;Actually, it's not worth it.;;;;;;;;;;;;;x
+EVTDESCPDP.224;[elector.GetTitledName] told me [elector.GetSheHe] will accept my bribe. Now [elector.GetSheHe] wants me to give [elector.GetHerHim] the land [elector.GetSheHe] deserves.\n(Simply grant one of your landed titles to [elector.GetFirstName], then click the first option);;;;;;;;;;;;;x
+EVTOPT_a_PDP.224;Of course I will.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.224;Actually, it's not worth it.;;;;;;;;;;;;;x
+EVTOPT_c_PDP.224;[elector.GetTitledName] can have this piece of land.;;;;;;;;;;;;;x
+EVTDESCPDP.225;Unfortunately, [elector.GetTitledName] told me [elector.GetSheHe] does not want to accept my offer.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.225;I will have to find another way.;;;;;;;;;;;;;x
+EVTDESCPDP.226;As promised, I received money from [bishop.GetTitledName] in exchange for my vote.;;;;;;;;;;;;;x
+EVTDESCPDP.227;As promised, I received land from [bishop.GetTitledName] in exchange for my vote.;;;;;;;;;;;;;x
+EVTDESCPDP.130;The conclave has now been going on for a few months, but we haven't elected a Pope yet. I start to realise that this might take a while...;;;;;;;;;;;;;x
+EVTDESCPDP.130_locked;Now, we have been locked in the conclave for three months, with most external communications allowed and still we haven't elected a Pope yet. I start to realise that this might take a while and that enduring the conclave will be quite painful. If at least the food were better...;;;;;;;;;;;;;x
+EVTOPT_a_PDP.130;Let's hope for the best.;;;;;;;;;;;;;x
+EVTDESCPDP.131;I was right: The conclave has now been going on for many months, but we haven't elected a Pope yet.;;;;;;;;;;;;;x
+EVTDESCPDP.131_locked;As expected, the conclave makes barely no progress at all: Now, we have been locked in the conclave for more than half a year and still we haven't elected a Pope yet. I noticed that my body became weaker.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.131;Let's hope for the best.;;;;;;;;;;;;;x
+EVTDESCPDP.132;More than a year has passed, since we came together to elect the next pope, and still we haven't done it. The people grew so frustrated with the deadlock that they eventually locked us in our rooms, giving us only bread and water.;;;;;;;;;;;;;x
+EVTDESCPDP.132_locked;More than a year has passed, since we came together to elect the next pope, and still we haven't done it. The people grew so frustrated with the deadlock that they eventually locked us in our rooms, giving us only bread and water.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.132;From now on, we should always do it like this.;;;;;;;;;;;;;x
+EVTDESCPDP.133_locked;More than a year has passed, since the college of cardinals came together in conclave to elect the next pope, and still they haven't done anything. The people of Rome grew so frustrated with the deadlock that they eventually locked them in their rooms, giving them only bread and water. Some high ranked church members argue that they should keep this practise, to prevent similar deadlocks in the future.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.133;Let's hope they elect one eventually.;;;;;;;;;;;;;x
+HFP.23003_desc;[From.GetTitledName] has asked me to lift [From.GetHerHis] excommunication. Of course, before I can grant him absolution, [From.GetSheHe] must prove that his request his honest.;;;;;;;;;;;;;x
+PDP_lift_excommunication_opt_gavelkind;[From.GetSheHeCap] shall split his realm among [From.GetHerHis] children.;;;;;;;;;;;;;x
+PDP_lift_excommunication_opt_son_to_church;One of [From.GetHerHis] children shall devote his life to God.;;;;;;;;;;;;;x
+PDP_lift_excommunication_opt_celibacy;A vow of celibacy would be enough to grant divine absolution.;;;;;;;;;;;;;x
+PDP_lift_excommunication_opt_abdication;If [From.GetSheHe] abdicates [From.GetHerHis] titles, [From.GetHerHis] soul can be saved.;;;;;;;;;;;;;x
+PDP_lift_excommunication_opt_vassalization;God will only be pleased, if [From.GetTitledFirstName] swears fealthy to My Holyness.;;;;;;;;;;;;;x
+PDP_lift_excommunication_opt_italian_land;If the Church gets its rightful lands back, God will forgive.;;;;;;;;;;;;;x
+PDP_lift_excommunication_opt_investiture;If [From.GetTitledFirstName] obeys laws given to our Church, Jesus will forgive.;;;;;;;;;;;;;x
+PDP_lift_excommunication_opt_independence;The Throne of St. Peter must get its rightful independence first.;;;;;;;;;;;;;x
+PDP_lift_excommunication_opt_prestige;[From.GetSheHeCap] must publicly admit his sins and promise to do better. I want [From.GetHerHim] on [From.GetHerHis] knees!;;;;;;;;;;;;;x
+PDP_lift_excommunication_opt_gold;A small donation to the Holy Church might please God.;;;;;;;;;;;;;x
+PDP_lift_excommunication_opt_ai;I'm an AI, I already made my choice.;;;;;;;;;;;;;x
+EVTDESCPDPHF.1;Today, I've come to baptise the little [baptizing_child.GetTitledName] as [baptizing_child.GetHerHis] parents asked me to do. [baptizing_child.GetHerHisCap] whole family is attending, watching me and [baptizing_child.GetFirstName].;;;;;;;;;;;;;x
+EVTOPT_a_PDPHF.1;In the name of the Father and of the Son and of the Holy Spirit.;;;;;;;;;;;;;x
+EVTOPT_b_PDPHF.1;In the name of... - oops!;;;;;;;;;;;;;x
+EVTOPT_c_PDPHF.1;In the name of bla... Where's my money?;;;;;;;;;;;;;x
+EVTDESCPDPHF.400;Since there are currently empty seats in the College of Cardinals, I asked my advisers to come up with potential candidates. They inspect the records of every catholic bishop, looking for an especially learned man. I am eager to see who they suggest.;;;;;;;;;;;;;x
+EVTOPT_a_PDPHF.400;[possible_cardinal.GetTitledName] would be suited.;;;;;;;;;;;;;x
+EVTOPT_b_PDPHF.400;[suggesting_cardinal.GetTitledName] suggests I appoint [possible_cardinal_other_relative.GetTitledName].;;;;;;;;;;;;;x
+EVTOPT_c_PDPHF.400;I can make my own choice.;;;;;;;;;;;;;x
+PDP_suggest_cardinal;Suggest Cardinal.;;;;;;;;;;;;;x
+PDP_suggest_cardinal_desc;Let my advisers look for a suited candidate for the vacant seat in the College of Cardinals. It's only a proposal.;;;;;;;;;;;;;x
+EVTDESCPDPHF.2;Poor little [baptizing_child.GetTitledName] fell on [baptizing_child.GetHerHis] head and was dead seconds later. [baptizing_child.GetHerHisCap] family blames me for [baptizing_child.GetHerHis] poor fortune...;;;;;;;;;;;;;x
+EVTOPT_a_PDPHF.2;[baptizing_child.GetSheHe] is with the Lord now.;;;;;;;;;;;;;x
+PDP_tragic_baptism;Tragic baptism;;;;;;;;;;;;;x
+PDP_tragic_baptism_desc;Something went horribly wrong at the baptism of that young child. And everybody blames [Root.GetTitledName] for it.;;;;;;;;;;;;;x
+EVTDESCPDPHF.20;[coronation_ruler.GetTitledFirstName] kneels before me in the hall of [coronation_ruler.GetHerHis] palace. Despite the countless lords, counts dukes and knights attending, only the very presence of me, the Vicar of Christ himself, gives the ceremony meaning, importance and legitimacy. I bless [coronation_ruler.GetFirstName] and place the crown upon [coronation_ruler.GetHerHis] head, proclaiming [coronation_ruler.GetHerHim] [coronation_ruler.GetTitle].;;;;;;;;;;;;;x
+EVTDESCPDPHF.21;I was baffled when [coronation_ruler.GetTitledFirstName] reached for the Imperial Crown in the middle of the ceremony and snatched away the golden circlet from my hands. Amongst the general amazement of the large crowd of noblemen gathered around us, [coronation_ruler.GetTitledFirstName] announced that from [coronation_ruler.GetHerHis] reign forward the Papacy would hold no longer any power over the Imperial throne, as it was the case for all Roman Emperors of old.;;;;;;;;;;;;;x
+EVTOPT_a_PDPHF.20;God bless [From.GetHerHim].;;;;;;;;;;;;;x
+EVTOPT_a_PDPHF.21;Blasphemy! [From.GetTitledFirstName] will regret this...;;;;;;;;;;;;;x
+EVTDESCPDPHF.200;The time has come for my divine right to rule to be acknowledged by the Holy Church. I belive that only you are fit to crown me. I therefore humbly ask you to honor me by crowning me [From.GetTitle] of [From.PrimaryTitle.GetName]. I hope you will fullfill my wish.;;;;;;;;;;;;;x
+EVTOPT_a_PDPHF.200;Then grant the Holy See independence first.;;;;;;;;;;;;;x
+EVTOPT_c_PDPHF.200;First, you must follow the laws of the Church.;;;;;;;;;;;;;x
+EVTOPT_d_PDPHF.200;Prove yourself by fighting the excommunicated.;;;;;;;;;;;;;x
+EVTOPT_e_PDPHF.200;There's a man who calls himself Pope. I don't like that.;;;;;;;;;;;;;x
+EVTOPT_f_PDPHF.200;You hold lands that belong to the Holy See.;;;;;;;;;;;;;x
+EVTOPT_g_PDPHF.200;How about I get to have some fun and you get your crown?;;;;;;;;;;;;;x
+EVTOPT_h_PDPHF.200;The Holy Orders always need more land...;;;;;;;;;;;;;x
+EVTOPT_b_PDPHF.200;For a little bit of gold, I will do it.;;;;;;;;;;;;;x
+EVTOPT_i_PDPHF.200;I've heard you own a valuable relic, right?;;;;;;;;;;;;;x
+EVTOPT_k_PDPHF.200;Of course I will crown you!;;;;;;;;;;;;;x
+EVTDESCPDPHF.10_POPE;I made good use of [From.GetTitledName]s money: the holy walls of the Vatican have been filled to the brim with wine and whores. Soon after the start of the celebration for my upcoming coronation, the crowd of lechers and drunks invited to the party are already debasing themselves in the most abominable acts imaginable.;;;;;;;;;;;;;x
+EVTDESCPDPHF.10;I made good use of [From.GetTitledName]s money: the holy walls of my church have been filled to the brim with wine and whores. Soon after the start of the celebration for my upcoming coronation, the crowd of lechers and drunks invited to the party are already debasing themselves in the most abominable acts imaginable.;;;;;;;;;;;;;x
+EVTOPT_a_PDPHF.10;Let's have some fun!;;;;;;;;;;;;;x
+EVTDESCPDPHF.11;[Root.GetPapalOrgyIntro] I brush my tongue over [From.GetFirstName]s neck, whispering an incoherent prayer as [From.GetSheHe] beckons me towards the orgy pit...;;;;;;;;;;;;;x
+EVTOPT_a_PDPHF.11;It's good to be a Priest!;;;;;;;;;;;;;x
+EVTOPTB39250;Indulgence cannot be bought with gold.;;;;;;;;;;;;;x
+PDP_RULE_GROUP;Playable Dynastic Theocracy Rules;;;;;;;;;;;;;x
+PDP_difficulty_rule;PDP Difficulty.;;;;;;;;;;x
+PDP_difficulty_rule_tooltip;PDP Difficulty.;;;;;;;;;;x
+PDP_difficulty_normal;Normal;;;;;;;;;;x
+PDP_difficulty_normal_desc;Intended difficulty. Your candidate does not receive bonus score in the investiture elections.;;;;;;;;;;x
+PDP_difficulty_easy;Easy;;;;;;;;;;x
+PDP_difficulty_easy_desc;Slightly easier. You receive a +50 score towards your preferred heir;;;;;;;;;;x
+PDP_difficulty_very_easy;Very Easy;;;;;;;;;;x
+PDP_difficulty_very_easy_desc;Much easier. You receive a +150 score towards your preferred heir. Keep in mind that this does not guarantee the succession in all circumstances.;;;;;;;;;;x
+PDP_difficulty_hard;Hard;;;;;;;;;;x
+PDP_difficulty_hard_desc;Slightly harder. You receive a -50 score towards your preferred heir;;;;;;;;;;x
+PDP_non_dynastic_play_rule;Non Dynastic Play.;;;;;;;;;;x
+PDP_non_dynastic_play_off;Off;;;;;;;;;;x
+PDP_non_dynastic_play_off_desc;Intended mode. You will have to make sure that your dynasty stays in power somewhere.;;;;;;;;;;x
+PDP_non_dynastic_play_on;On;;;;;;;;;;x
+PDP_non_dynastic_play_on_desc;NOT INTENDED! You will play as whoever inherits your title. You will also play the Holy See during Conclave.;;;;;;;;;;x
+PDP_play_as_rule;'Play As' Decision;;;;;;;;;;;;;x
+PDP_play_as_on;On;;;;;;;;;;;;;x
+PDP_play_as_on_desc;Enables a decision you can use to switch character. Useful to play as a Holy Order.;;;;;;;;;;;;;x
+PDP_play_as_off_desc;Disables a decision you can use to switch character. Useful to play as a Holy Order.;;;;;;;;;;;;;x
+PDP_play_as;Play As [Root.GetHerHimCap];;;;;;;;;;;;;x
+PDP_play_as_desc;Play as [Root.GetFirstName]. Disable this interaction via gamerule. If you already started a game, you can disable it by editing the uncompressed savegame.;;;;;;;;;;;;;x
+PDP_spawn_family_on;On;;;;;;;;;;;;;x
+PDP_spawn_family_on_desc;There is a decision to spawn dynasty members, if you have none.;;;;;;;;;;;;;x
+PDP_spawn_family_off;Off;;;;;;;;;;;;;x
+PDP_play_as_off;Off;;;;;;;;;;;;;x
+PDP_spawn_family_off_desc;There is no decision to spawn dynasty members. This will make it much harder to survive.;;;;;;;;;;;;;x
+PDP_spawn_family;Spawn Family;;;;;;;;;;;;;x
+PDP_create_dynasty_members;Spawn Family;;;;;;;;;;;;;x
+PDP_create_dynasty_members_desc;You finally unite with your long lost family.;;;;;;;;;;;;;x
+title_PDP_papal_palatinus;Palatinus of the Catholic Church;;;;;;;;;;;;;x
+title_PDP_papal_palatinus_desc;In the Middle Ages, the judices palatini (papal palace judges) were the highest administrative officers of the pope's household; with the growth of the temporal power of the popes they acquired great importance. ;;;;;;;;;;;;;x
+EVTOPTA39250;[From.GetHerHisCap] request will be granted.;;;;;;;;;;;;;x
+PDP_accept_indulgence;[From.GetTitledName] will soon send us some gold.;;;;;;;;;;;;;x
+PDP_not_accept_indulgence;We will not accept [From.GetHerHis] request.;;;;;;;;;;;;;x
+EVTDESCPDP.200;His Holyness [From.GetTitledName] has denied my request for indulgence.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.200;My poor soul...;;;;;;;;;;;;;x
+PDP_opinion_paid_curia_service;Paid Services to Church;;;;;;;;;;;;;x
+PDP_opinion_not_paid_curia_service;Did not pay me;;;;;;;;;;;;;x
+EVTDESCPDP.310;The papal treasury is full. In my opinion, this is mostly due to my diligent work as cardinal dean. Therefore it would only be fair to ask for a bonus payment, right?;;;;;;;;;;;;;x
+EVTOPT_a_PDP.310;His Holiness has better uses for the gold.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.310;I will ask for a small payment.;;;;;;;;;;;;;x
+EVTOPT_c_PDP.310;I deserve more.;;;;;;;;;;;;;x
+EVTDESCPDP.311;[cardinal_dean.GetTitledFirstName] approached me. He mentioned the good state of the papal treasury and how his diligent work helped the Church. I think he wants a little extra payment;;;;;;;;;;;;;x
+EVTOPT_a_PDP.311;I will pay him.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.311;His wage should be enough.;;;;;;;;;;;;;x
+EVTOPT_c_PDP.311;Convince him that I don't owe him anything.;;;;;;;;;;;;;x
+EVTDESCPDP.312;[cardinal_dean.GetTitledFirstName] approached me and pointed out, that the Church currently sits on a large amount of money. Without his work, explains [cardinal_dean.GetFirstName], this would not be the case. Therefore he should be rewarded for his services.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.312;I will pay him.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.312;His wage should be enough.;;;;;;;;;;;;;x
+EVTDESCPDP.313;His Holiness accepted my demands.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.313;Great.;;;;;;;;;;;;;x
+EVTDESCPDP.314;His Holiness rejected my demands.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.313;But why?.;;;;;;;;;;;;;x
+EVTDESCPDP.320;The papal treasury is full. In my opinion, this is mostly due to my diligent work in service of the Church. Therefore it would only be fair to ask for a bonus payment, right?;;;;;;;;;;;;;x
+EVTOPT_a_PDP.320;His Holiness has better uses for the gold.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.320;I will ask for a small payment.;;;;;;;;;;;;;x
+EVTOPT_c_PDP.320;I deserve more.;;;;;;;;;;;;;x
+EVTDESCPDP.321;[cardinal.GetTitledFirstName] approached me. He mentioned the good state of the papal treasury and how his diligent work helped the Church. I think he wants a little extra payment;;;;;;;;;;;;;x
+EVTOPT_a_PDP.321;I will pay him.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.321;His wage should be enough.;;;;;;;;;;;;;x
+EVTOPT_c_PDP.321;Convince him that I don't owe him anything.;;;;;;;;;;;;;x
+EVTDESCPDP.322;[cardinal.GetTitledFirstName] approached me and pointed out, that the Church currently sits on a large amount of money. Without his work, explains [cardinal_dean.GetFirstName], this would not be the case. Therefore he should be rewarded for his services.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.322;I will pay him.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.322;His wage should be enough.;;;;;;;;;;;;;x
+EVTDESCPDP.323;His Holiness accepted my demands.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.323;Great.;;;;;;;;;;;;;x
+EVTDESCPDP.324;His Holiness rejected my demands.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.323;But why?.;;;;;;;;;;;;;x
+PDP_request_papal_investiture;Request Papal Investiture.;;;;;;;;;;;;;x
+PDP_request_papal_investiture_desc;Only the Pope should have the power to appoint Bishops. The Church can't tolerate that secular rulers proclaim the right of investiture for themselves.;;;;;;;;;;;;;x
+PDP_already_asked_investiture;Did not asked this character to change laws yet.;;;;;;;;;;;;;x
+PDP_decide_indulgence_policy;Indulgence Policy;;;;;;;;;;;;;x
+PDP_decide_indulgence_policy_desc;As I am Pope, many rulers might request indulgence for their sins from me. I must decide if I want to answer all these requests personally.;;;;;;;;;;;;;x
+EVTDESCPDP.201;As His Holyness, I get many requests for indulgence. Since that involves so much tedious paperwork, I thought I could forward requests of lower ranked nobles to my servants and only deal with the most important ones.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.201;No, I shall take care of all of them.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.201;Only the requests of those that are Dukes or higher.;;;;;;;;;;;;;x
+EVTOPT_c_PDP.201;Only the requests of those that are Kings or higher.;;;;;;;;;;;;;x
+EVTOPT_d_PDP.201;I will only deal with the requests of Emperors.;;;;;;;;;;;;;x
+EVTDESCPDP.250;I haven't had much sleep the last nights, constantly thinking about my recent suggestion to make [bishop.GetTitledFirstName] cardinal: Although I, shepherd of all Christians and in virtue of my apostolic authority, should be preserved from the possibility of error by God's guidance, the cardinals disagreed with me. How can God let this happen?;;;;;;;;;;;;;x
+EVTOPT_a_PDP.250;Does this mean that God doesn't guide me?;;;;;;;;;;;;;x
+EVTOPT_b_PDP.250;Maybe I didn't notice his guidance?;;;;;;;;;;;;;x
+EVTOPT_c_PDP.250;The Lord only guides St. Peters Throne. I shall not leave the chair.;;;;;;;;;;;;;x
+playable_bishopric_succession;Elective Investiture;;;;;;;;;;;;;x
+demand_to_join_court;Demand to join court;;;;;;;;;;;;;x
+demand_to_join_court_desc;Allows you to invite your friends and dynasty members to your court.;;;;;;;;;;;;;x
+PDP_enable_all_theocracies;Make AI Theocracies Playable;;;;;;;;;;;;;x
+PDP_enable_all_theocracies_desc;DEBUG DECISION:\nTurns all AI-Theocracies into playable Theocracies.\nUseful if you want to switch character using the console command 'play' or change the character you play in load save screen (in this case you must use this decision before you save your game)\nAs a result of this decision, all AI-Theocracies will lose their church outfits and won't behave like normal theocracies for a short amount of time. Once they look like clergymen again, they aren't playable any more.;;;;;;;;;;;;;x
+PDP_papal_bloodline;Blood of the Holy Father [Root.GetFirstName];;;;;;;;;;;;;x
+PDP_papal_bloodline_desc;[Root.GetTitledName] is quite famous - unfortunately, for having children despite being the Pope and so much for his pious deeds. He has truly been a Holy Father.;;;;;;;;;;;;;x
+PDP_depose_antipope;Depose Antipope;;;;;;;;;;;;;x
+PDP_depose_pope;Depose Pope;;;;;;;;;;;;;x
+PDP_depose_pope_desc;Depose the unlawful Pope and claim the Papacy. (This is the intended way for an antipope to become pope, using the "Claim" CB is bugged) Be warned though: It's likely that your enemies will join the Pope in his fight against you.;;;;;;;;;;;;;x
+PDP_depose_antipope_desc;Depose the antipope and force the unpious ruler to abdicate.;;;;;;;;;;;;;x
+faction_PDP_depose_antipope;Depose Antipope;;;;;;;;;;;;;x
+faction_PDP_depose_antipope_short;Depose Antipope;;;;;;;;;;;;;x
+faction_PDP_depose_antipope_desc;Depose the Antipope.;;;;;;;;;;;;;x
+faction_PDP_depose_antipope_title;Depose Antipope.;;;;;;;;;;;;;x
+EVTDESC_PDPAnti.3;My liege [antipope_top_liege.GetTitledName] has proclaimed [antipope.GetTitledName] to be the one and only Pope, clearly neglecting the authority of the Pope in Rome. A bold move, as it can be expected that not everyone shares his opinions. [pope.GetTitledName] has already proclaimed that God will reward anyone who brings down "this heretic". Who am I loyal to?;;;;;;;;;;;;;x
+EVTOPT_a_PDPAnti.3;My loyalty lies with Rome. I fight for God.;;;;;;;;;;;;;x
+EVTOPT_b_PDPAnti.3;I only owe loyalty to [antipope_top_liege.GetTitledFirstName].;;;;;;;;;;;;;x
+EVTDESC_PDPAnti.4;Scandalous news from [top_liege_title.GetName]: [antipope_top_liege.GetTitledFirstName] has proclaimed [antipope.GetTitledName] to be the one and only Pope, clearly neglecting the authority of the Pope in Rome. A bold move, as it can be expected that not everyone shares his opinions. [pope.GetTitledName] has already proclaimed that God will reward anyone who brings down "this heretic" and a few fellow Christians have accepted his call. What do I do?;;;;;;;;;;;;;x
+EVTOPT_a_PDPAnti.4;My loyalty lies with Rome. I fight for God.;;;;;;;;;;;;;x
+EVTOPT_b_PDPAnti.4;Not my business.;;;;;;;;;;;;;x
+EVTDESC_PDPAnti.200;After a long war, the world has finally acknowledged my rightful and divine claim to the papacy. Now that I rule in Rome, everyone claims to have always, secretly supported my cause. These fools. ;;;;;;;;;;;;;x
+EVTOPT_a_PDPAnti.200;But it's great to be Pope.;;;;;;;;;;;;;x
+EVTDESC_PDPAnti.210;An Antipope has declared war upon the Pope in Rome, claiming to be the only true Pope. With whom will I stand? ;;;;;;;;;;;;;x
+EVTOPT_a_PDPAnti.210;There are more important matters than the Church.;;;;;;;;;;;;;x
+EVTOPT_b_PDPAnti.210;Fight with the Antipope!;;;;;;;;;;;;;x
+EVTOPT_c_PDPAnti.210;Stand up for the Pope in Rome!;;;;;;;;;;;;;x
+CB_NAME_PDP_DEPOSE_ANTIPOPE;Antipapal war against [Title.GetFullBaseName];;;;;;;;;;;;;x
+WAR_NAME_PDP_DEPOSE_ANTIPOPE;$ORDER$$FIRST_ADJ$-$SECOND_ADJ$ War for the Authority of the Papacy;;;;;;;;;;;;;x
+CB_NAME_PDP_DEPOSE_POPE;War for Papacy;;;;;;;;;;;;;x
+WAR_NAME_PDP_DEPOSE_POPE;$ORDER$$FIRST_ADJ$-$SECOND_ADJ$ War for the Papacy;;;;;;;;;;;;;x
+PDP_mend_schism;Mend the Schism;;;;;;;;;;;;;x
+PDP_mend_schism_desc;Mend the Schism and turn the orthodox faith into a catholic heresy.;;;;;;;;;;;;;x
+PDP_control_all_pentarchs;The Catholic Church must control all pentarchies.;;;;;;;;;;;;;x
+EVTDESCPDPSchism.1;With the city back under control, the Patriarchate of Antioch has been properly restored for the Catholic Church. It was originally founded by Saint Peter the Apostle, who is regarded as the first Pope by the Western Catholic Church.;;;;;;;;;;;;;x
+EVTOPT_a_PDPSchism.1;God be praised!;;;;;;;;;;;;;x
+EVTDESCPDPSchism.2;With the city back under control, the Patriarchate of Jerusalem has been properly restored for the Catholic Church. It was originally founded by Saint James the Just, who was made head of the Church in Jerusalem soon after the death of Jesus.;;;;;;;;;;;;;x
+EVTDESCPDPSchism.3;With the city back under control, the Patriarchate of Alexandria has been properly restored for the Catholic Church. It was originally founded by Saint Mark the Evangelist, who became Alexandria's first patriarch.;;;;;;;;;;;;;x
+EVTNAMEPDPSchism.100;The Great Schism is mended...;;;;;;;;;;;;;x
+EVTNAMEPDPSchism.101;The Great Schism is mended...;;;;;;;;;;;;;x
+EVTDESCPDPSchism.100;At last the Great Schism between the Western Catholic Church and the Eastern Orthodox Church has been mended. With the spread of Catholicism and the reclamation of the Christian heartlands, the Orthodox faith now holds little sway over the people of Europe. The Ecumenical Patriarch therefore agreed that putting away the differences and uniting under the Pope is best for Christendom, especially given the current situation of the world. There will be those who still cling to it, but they will be few in number and the Papacy can once more claim universal rule over all of Christendom.;;;;;;;;;;;;;x
+EVTDESCPDPSchism.101;At last the Great Schism between the Western Catholic Church and the Eastern Orthodox Church has been mended. With the spread of Catholicism and the reclamation of the Christian heartlands, the Orthodox faith now holds little sway over the people of Europe. The Ecumenical Patriarch therefore agreed that putting away the differences and uniting under the Pope is best for Christendom, especially given the current situation of the world. There will be those who still cling to it, but they will be few in number and the Papacy can once more claim universal rule over all of Christendom.;;;;;;;;;;;;;x
+EVTOPT_a_PDPSchism.100;The World will remember me as a Saint.;;;;;;;;;;;;;x
+EVTOPT_a_PDPSchism.101;If that's the way the wind is blowing....;;;;;;;;;;;;;x
+EVTOPT_b_PDPSchism.101;I will never give up my faith!.;;;;;;;;;;;;;x
+EVTOPT_c_PDPSchism.101;Good to be a Catholic.;;;;;;;;;;;;;x
+EVTOPT_d_PDPSchism.101;Interesting...;;;;;;;;;;;;;x
+PDP_not_already_converting;Not already converting.;;;;;;;;;;;;;x
+PDP_convert_province_decision;Convert Province;;;;;;;;;;;;;x
+PDP_convert_province_decision_desc;Begin to convert this province to the catholic faith. Enabled due to the current church policy.;;;;;;;;;;;;;x
+EVTDESCPDP.9991_a;The conversion of [FROM.GetName] is not going well. I believe that we need more missionaries, but they have to be paid...;;;;;;;;;;;;;x
+EVTDESCPDP.9991_b;The conversion of [FROM.GetName] is not going well. I believe that we could convince the people by decorating the local church with expensive ornaments.;;;;;;;;;;;;;x
+EVTDESCPDP.9991_c;The conversion of [FROM.GetName] is not going well and I think its due to the local priests starving, since I do not pay them very well. It might be necessary to increase their wage.;;;;;;;;;;;;;x
+EVTDESCPDP.9991_d;The conversion of [FROM.GetName] is not going well. But are there problems that cannot be solved with money?;;;;;;;;;;;;;x
+EVTOPT_a_PDP.9991;Oh, God, it has to be done.;;;;;;;;;;;;;x
+EVTOPT_b_PDP.9991;Let them believe whatever they want.;;;;;;;;;;;;;x
+EVTDESCPDP.9992;Converting [FROM.GetName] has proven to be more difficult than I initially thought. The only people we converted is a bunch of rather militant highway robbers, though I'm not really sure what made them believe in God. Now they offered to help and spread the faith.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.9992;Great idea!;;;;;;;;;;;;;x
+EVTOPT_b_PDP.9992;Let these folks just believe whatever they want.;;;;;;;;;;;;;x
+EVTDESCPDP.9993;The efforts to convert [FROM.GetName] to the catholic faith have not been fruitful. I suspect it's due to the incompetent local priests. Maybe I should take care of the task myself?;;;;;;;;;;;;;x
+EVTOPT_a_PDP.9993;Who else, if not me?;;;;;;;;;;;;;x
+EVTOPT_b_PDP.9993;Let these folks just believe whatever they want.;;;;;;;;;;;;;x
+EVTDESCPDP.99910;Finally, the province of [FROM.GetName] , [Root.GetName] has been converted and its people are now fellow catholics.;;;;;;;;;;;;;x
+EVTOPT_a_PDP.99910;A good day for God.;;;;;;;;;;;;;x
+PDP_currently_converted;Under Conversion;;;;;;;;;;;;;x
+PDP_currently_converted_desc;This province currently gets converted to the Catholic Faith.;;;;;;;;;;;;;x
+PDP_restore_elective_investiture;Fix my Succession Laws;;;;;;;;;;;;;x
+PDP_restore_elective_investiture_desc;DEBUG DECISION:\nSome of my titles do not follow the Elective Investiture Succession. Since I have the Playable Theocracy Government, that should be changed.;;;;;;;;;;;;;x
+job_inquisitor;Inquisitor;;;;;;;;;;;;;x
+desc_job_inquisitor;The Inquisitor is only available to the Pope and - if the Inquisition policy is active - the cardinals. A good Inquisitor should have high intrigue and learning.;;;;;;;;;;;;;x
+job_inquisitor_2;Inquisitor;;;;;;;;;;;;;x
+desc_job_inquisitor_2;This additional Inquisitor is only available to the Pope if the Inquisition policy is active. A good Inquisitor should have high intrigue and learning.;;;;;;;;;;;;;x
+action_global_inquisition;Lead the Inquisition;;;;;;;;;;;;;x
+action_global_inquisition_desc;Send your court chaplain to find heretics in that province and report them to you. \n The Inquisition policy makes this action more likely to be successful. Also, when this policy is active, cardinals are allowed to use this interaction as well. However, they cannot perform it in the lands of the papacy.\n Higher chance of success when your chaplain is good at intrigue.\n The mapmode highlights your own lands (green) as well as provinces under church control (light blue) and those that are owned by the cardinals (white).;;;;;;;;;;;;;x
+TT_landed_dynast_inherited_change;This dynasty used to be the rulers of a theocracy but lost control of it.;;;;;;;;;;;;;x
+succ_playable_catholic_bishopric;Succession: Elective Investiture;;;;;;;;;;;;;x
+succ_playable_catholic_bishopric_desc;If the title has Free Investiture, the lieges vote dominates. Otherwise the Pope has more influence. Making someone Bishop Coadjutor helps him to get more votes. Keep in mind that you can try to bribe your liege and religious head. This will grant bonus score for your candidate. Check out the detailed elector panel to see who is voting for which reasons. Electors that owe you a favour will be more likely to vote for your candidate as well. Another way to get a higher chance for you character is to spend church influence (up to 4 times, increasing cost) in the church interface. \nIn case they are still not voting for your relative, somebody might have to... go to heaven a bit sooner than expected. \nAlso the difficulty (game rule) plays some part (up to +150). You can change it with save game editing, if you need to. \nOnly adult males can be elected.;;;;;;;;;;;;;x

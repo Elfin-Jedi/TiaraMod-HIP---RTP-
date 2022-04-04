@@ -1,0 +1,75 @@
+EVTNAME_PDPJA.1;Heretic Discovered;;;;;;;;;;;;;x
+EVTDESC_PDPJA.1;Doing my work in [Root.Location.GetName], I discovered that [heretic.GetTitledName] does not seem to follow the doctrines of the Catholic Church as closely as [heretic.GetSheHe] should. One might consider [heretic.GetHerHim] to be a heretic!;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.1;I must inform [Root.Liege.GetTitledFirstName] immediately.;;;;;;;;;;;;;x
+EVTOPT_b_PDPJA.1;I should not bother my liege with the forgivable sins of [heretic.GetTitledFirstName].;;;;;;;;;;;;;x
+EVTDESC_PDPJA.2;Doing his work in [inquisitioner.Location.GetName], [inquisitioner.GetTitledFirstName] discovered that [heretic.GetTitledName] does not seem to follow the doctrines of the Catholic Church as closely as [heretic.GetSheHe] should. One might consider [heretic.GetHerHim] to be a heretic!;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.2;[heretic.GetHerHisCap] sins must be exposed. [Root.Religion.GetHighGodName] will punish [heretic.GetHerHim].;;;;;;;;;;;;;x
+EVTOPT_b_PDPJA.2;[heretic.GetTitledFirstName] must justify [heretic.GetHerselfHimself].;;;;;;;;;;;;;x
+EVTTOOLTIP_b_PDPJA.2;[heretic.GetTitledFirstName] will be asked to attend a trial.;;;;;;;;;;;;;x
+EVTOPT_c_PDPJA.2;Justice must be brought to [heretic.GetTitledFirstName]. Bring [heretic.GetHerHim] to me.;;;;;;;;;;;;;x
+EVTTOOLTIP_c_PDPJA.2;Your Inquisitioners will force [heretic.GetTitledFirstName] to come with them and bring [heretic.GetHerHim] to trial. At least, they will try.;;;;;;;;;;;;;x
+EVTTOOLTIP_b_PDPJA.2_2;They fail.;;;;;;;;;;;;;x
+EVTOPT_d_PDPJA.2;[Root.Religion.GetHighGodName] forgives [heretic.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC_PDPJA.3;The Inquisitioners send by [client.GetTitledName] to [heretic.location.GetName] have accused me of heresy. Now, [client.GetSheHe] asked me to attend a trial and justify myself.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.3;I am innocent and have nothing to hide. I will attend.;;;;;;;;;;;;;x
+EVTOPT_b_PDPJA.3;A foolish request.;;;;;;;;;;;;;x
+EVTDESC_PDPJA.4;[heretic.GetTitledName] accepted and is willing to justify himself in a trial.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.4;Very well. It shall take place tomorrow.;;;;;;;;;;;;;x
+EVTDESC_PDPJA.5;[heretic.GetTitledName] informed me that [heretic.GetSheHe] does not believe a trial is necessary. [heretic.GetSheHeCap] said, [heretic.GetHerHis] innocence is obvious.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.5;I think [heretic.GetSheHe] is innocent then.;;;;;;;;;;;;;x
+EVTDESC_PDPJA.10;The Inquisitioners send by [client.GetTitledName] to [heretic.location.GetName] have accused me of heresy. A group of them has attempted to take me captive, but my guards were able to stop them.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.10;These fools.;;;;;;;;;;;;;x
+EVTDESC_PDPJA.11;My Inquisitioners lead by [inquisitioner.GetTitledName] have attempted to capture [heretic.GetTitledFirstName]. Unfortunately, [heretic.GetHerHis] guards were able to stop them.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.11;Is it message from [Root.Religion.GetHighGodName]? [heretic.GetSheHeCap] must be innocent.;;;;;;;;;;;;;x
+EVTDESC_PDPJA.20;The Inquisitioners send by [client.GetTitledName] to [heretic.location.GetName] have accused me of heresy. A group of them ambushed me on the roads of [Root.Location.GetName] and knocked me out. Now I am a prisoner in [client.location.GetName], waiting for [client.GetTitledFirstName] to bring me to trial.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.20;I did not expect the [ROOT.Culture.GetName] Inquisition. Nobody did...;;;;;;;;;;;;;x
+EVTDESC_PDPJA.21;My Inquisitioners lead by [inquisitioner.GetTitledName] have successfully captured [heretic.GetTitledFirstName]. [heretic.GetSheHe] is now imprisoned and waiting for the trial.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.21;The trial will begin tomorrow.;;;;;;;;;;;;;x
+EVTDESC_PDPJA.22;Today, the trial of [heretic.GetTitledNameWithNick] will takes place. [inquisitioner.GetTitledFirstName] has collected all evidence [inquisitioner.GetSheHe] was able to gather. Everything is ready. Shall we begin?;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.22;Yes.;;;;;;;;;;;;;x
+EVTOPT_b_PDPJA.22;Better make sure that [heretic.GetFirstName] knows what he is supposed to say...;;;;;;;;;;;;;x
+EVTTOOLTIP_b_PDPJA.22;Is tortured before the trial begins.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.22;If I think about it - [heretic.GetTitledName] is clearly innocent.;;;;;;;;;;;;;x
+EVTDESC_PDPJA.23;Just a few hours before todays trial, [client.GetTitledFirstName] approached my cell. [Client.GetHerHisCap] men approached me and brought me to another room, deep down in the dungeons: The torture room. [client.GetFirstName] made clear that only a confession could safe me from unbelievable pain.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.23;I will confess.;;;;;;;;;;;;;x
+EVTOPT_b_PDPJA.23;Never!;;;;;;;;;;;;;x
+EVTDESC_PDPJA.24;I did not even need to torture [heretic.GetFirstName]. [heretic.GetSheHECap] agreed to confess immediately.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.24;Good news;;;;;;;;;;;;;x
+EVTDESC_PDPJA.25;Despite intensive torture, [heretic.GetFirstName] stayed strong. [heretic.GetSheHe] spit on my face, saying [heretic.GetSheHe] would never confess.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.25;That fool.;;;;;;;;;;;;;x
+EVTDESC_PDPJA.30;I hereby begin the trial of [heretic.GetTitledNameWithNick], accused of vile heresy. The evidence suggests that [heretic.GetHerHis] sins are numerous and of terrible nature.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.30;The evidence is as I said, eh, very, eh convincing... Do you confess?;;;;;;;;;;;;;x
+EVTOPT_b_PDPJA.30;Everybody knows that [heretic.GetSheHe] has done unholy things and pacted with the devil.;;;;;;;;;;;;;x
+EVTOPT_c_PDPJA.30;In particular, I want to point out [heretic.GetHerHis] sinful sexual life.;;;;;;;;;;;;;x
+EVTOPT_d_PDPJA.30;Everyone knows that [heretic.GetFirstName] is a treacherous murderer.;;;;;;;;;;;;;x
+EVTOPT_e_PDPJA.30;Do not neglect [heretic.GetHerHis] envy. A terrible trait.;;;;;;;;;;;;;x
+EVTOPT_f_PDPJA.30;[heretic.GetHerHisCap] greed is just one sign for [heretic.GetHerHis] pact with the devil.;;;;;;;;;;;;;x
+EVTDESC_PDPJA.31;[client.GetTitledName] has read the long list of accusations against me. I am asked to confess my sins.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.31;Yes, it's true. I pacted with the devil and did all kinds of terrible things.;;;;;;;;;;;;;x
+EVTOPT_b_PDPJA.31;All lies!;;;;;;;;;;;;;x
+EVTDESC_PDPJA.32;[heretic.GetTitledName] confessed [heretic.GetHerHis] pact with the devil and listed all kinds of terrible things [heretic.GetSheHe] did.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.32;Very well. Let us proceed to the judgement.;;;;;;;;;;;;;x
+EVTDESC_PDPJA.33;[heretic.GetTitledName] did not confess. [Heretic.GetSheHeCap] denied everything, calling the whole evicence a hoax.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.33;So we will judge by the evidence.;;;;;;;;;;;;;x
+EVTDESC_PDPJA.35;It is now to me and the other judges to evaluate the evidence and decide if [heretic.GetSheHe] is guilty.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.35;I believe in [heretic.GetHerHis] guilt.;;;;;;;;;;;;;x
+EVTTOOLTIP_guilt_PDPJA.35;The judges decide: Guilty;;;;;;;;;;;;;x
+EVTTOOLTIP_innocence_PDPJA.35;The judges decide: Innocent;;;;;;;;;;;;;x
+EVTOPT_b_PDPJA.35;[heretic.GetSheHe] is clearly innocent.;;;;;;;;;;;;;x
+EVTTOOLTIP_guilt_PDPJA.35;The judges decide: Guilty;;;;;;;;;;;;;x
+EVTTOOLTIP_innocence_PDPJA.35;The judges decide: Innocent;;;;;;;;;;;;;x
+EVTDESC_PDPJA.36;The judges found me to be guilty nonetheless. The punishment will be announced soon.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.36;Bad news.;;;;;;;;;;;;;x
+EVTDESC_PDPJA.37;The judges decided that [heretic.GetTitledName] is indeed guilty. We must now decide the punishment.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.37;[heretic.GetSheHeCap] shall stay imprisoned.;;;;;;;;;;;;;x
+EVTOPT_b_PDPJA.37;[heretic.GetSheHeCap] will burn at the stake!;;;;;;;;;;;;;x
+EVTDESC_PDPJA.38;The judges found me to be innocent. I am free to go.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.38;Good news!;;;;;;;;;;;;;x
+EVTDESC_PDPJA.39;The judges found [heretic.GetTitledFirstName] to be innocent. [heretic.GetSheHeCap] is free to go.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.39;It is God's will.;;;;;;;;;;;;;x
+EVTDESC_PDPJA.40;The judges decided that I shall stay a prisoner of [client.GetTitledName].;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.40;At least I am alive.;;;;;;;;;;;;;x
+EVTDESC_PDPJA.41;The judges decided that I shall stay be burned at the stake.;;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.41;God forgive me!;;;;;;;;;;;;;x
+EVTDESC_PDPJA.42;My men have put together a large pile of wood. They drag [heretic.GetFirstName] to the stake and tie [heretic.GetHerHim]. I announce: 'You, [heretic.GetTitledNameWithNick] have been found guilty of heresy and vile sins. The cleansing flames of this fire will bring you to the judgement of the Lord.';;;;;;;;;;;;;x
+EVTOPT_a_PDPJA.42;Start the fire.;;;;;;;;;;;;;x

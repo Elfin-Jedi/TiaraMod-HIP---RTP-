@@ -1,0 +1,270 @@
+OFFMAP_GRACE_TOOLTIP;This is your current [Root.GetCurrency].;;;;;;;;;;;;;x
+OFFMAP_LIKES_TOOLTIP;Likes $CURRENT|Y$;;;;;;;;;;;;;x
+EMPEROR_LIKES_LABEL;Someone Likes $CURRENT|Y$;;;;;;;;;;;;;x
+OFFMAP_GRACE_TOOLTIP_DESC;[Root.GetCurrency] can be gained and spend in various ways;;;;;;;;;;;;;x
+OFFMAP_LIKES_AND_DISLIKES_DESC;...;;;;;;;;;;;;;x
+OFFMAP_DISLIKES_TOOLTIP;Dislikes $CURRENT|Y$.;;;;;;;;;;;;;x
+OFFMAP_VIEW_BUTTON_INSTANT;$OFFMAP|Y$\nOpen interaction with $OFFMAP_SHORT.;;;;;;;;;;;;;x
+TEST_TOOLTIP_OFFMAP;Some RANDOM Sentence!!!;;;;;;;;;;;;;x
+PDP_labeltest;[ThePope.GetTitledName] Sentence [Root.GetName]!!!;;;;;;;;;;;;;x
+PDP_tooltiptest;[ThePope.GetTitledName] tooltip [Root.GetName]!!;;;;;;;;;;;;;x
+offmap_church_papal_btn;Papal Actions;;;;;;;;;;;;;x
+offmap_church_info_button;Information;;;;;;;;;;;;;x
+offmap_church_papal_btn_desc;Actions only the Pope can use.;;;;;;;;;;;;;x
+offmap_church_vote_topic_initiator;Proposed by [k_papal_state.offmap_church_voting_initiator.GetTitledName].;;;;;;;;;;;;;x
+offmap_church_vote_topic_btn;The [Root.GetName] is currently discussing: [GetOffmapChurchVoteTopic]\n(Proposed by [k_papal_state.offmap_church_voting_initiator.GetTitledName])\n\nWhen enacted, the following effects will be active: \n[GetOffmapChurchVoteTopicEffect]\n\n * Current votes in favour: [k_papal_state.offmap_church_pro_votes.GetValue] \n * Current votes against: [k_papal_state.offmap_church_contra_votes.GetValue];;;;;;;;;;;;;x
+offmap_church_vote_for_btn;Vote Pro;;;;;;;;;;;;;x
+offmap_church_vote_for_btn_desc;Vote in favour the current proposal. (Hover over "Topic" to learn more);;;;;;;;;;;;;x
+offmap_church_vote_against_btn;Vote Contra;;;;;;;;;;;;;x
+offmap_church_vote_against_btn_desc;Vote against of the current proposal. (Hover over "Topic" to learn more);;;;;;;;;;;;;x
+offmap_church_vote_no;Vote Contra;;;;;;;;;;;;;x
+offmap_church_vote_no_desc;Vote against the proposal.;;;;;;;;;;;;;x
+offmap_church_vote_yes;Vote Pro;;;;;;;;;;;;;x
+offmap_church_vote_yes_desc;Vote in favour of the proposal.;;;;;;;;;;;;;x
+offmap_church_contra_votes;Contra Votes;;;;;;;;;;;;;x
+offmap_church_pro_votes;Pro Votes;;;;;;;;;;;;;x
+offmap_church_vote_proposal_btn;Propose a Topic;;;;;;;;;;;;;x
+offmap_church_vote_proposal_btn_desc;If you are in a position which allows you to make proposals, and there is no topic under discussion at the moment and there hasn't been one in the recent past, you may make a proposal, which will be discussed by the highest members of the Catholic Church. If they accept your proposal, it's effects will become active.;;;;;;;;;;;;;x
+offmap_church_vote_deal_btn;Influence Election;;;;;;;;;;;;;x
+offmap_church_vote_deal_btn_desc;Use your Influence to raise the chances that other characters will vote for your proposal.;;;;;;;;;;;;;x
+offmap_church_show_votes;Show votes;;;;;;;;;;;;;x
+offmap_church_show_votes_desc;Show who voted for what.;;;;;;;;;;;;;x
+offmap_church_influence_voting;Influence Electors;;;;;;;;;;;;;x
+offmap_church_influence_voting_desc;By spending some of my Influence, I can attempt to convince the electors to vote for the current proposal.(Only applies to electors that have not voted yet, so use this interaction directly after the proposal has been initiated);;;;;;;;;;;;;x
+offmap_church_influence_succession;Influence Succession;;;;;;;;;;;;;x
+offmap_church_influence_succession_desc;By spending some of my Influence, I can attempt to convince the electors of my Bishopric to vote for my candidate. This gives them some additional reasons (score) to vote for your candidate.;;;;;;;;;;;;;x
+offmap_church_decide_baptism;Set Baptism Policy;;;;;;;;;;;;;x
+offmap_church_decide_baptism_desc;Toggle events that inform you about baptisms.;;;;;;;;;;;;;x
+EVTDESCPDPHF.3;One of my duties as Holy Father is to baptise all those little children of highly noble birth. Although sometimes entertaining, this can also be quite tedious. While I must attend, I could just forget about them immediately.;;;;;;;;;;;;;x
+EVTOPT_a_PDPHF.3;I want to know what I am doing!;;;;;;;;;;;;;x
+EVTOPT_b_PDPHF.3;Who cares about these children?;;;;;;;;;;;;;x
+PDP_influence_voting_not_maxed_out;Not already maxed out;;;;;;;;;;;;;x
+EVTDESC_PDPVOTE.120;Here are the current results of the election:;;;;;;;;;;;;;x
+EVENTOPT_a_PDPVOTE.120;Very interesting...;;;;;;;;;;;;;x
+PDP_offmap_church;Catholic Church;;;;;;;;;;;;;x
+PDP_offmap_church_grace;Church Influence;;;;;;;;;;;;;x
+PDP_offmap_church_grace_desc;\nChurch Influence is gained by donating money to the Church, acting in its interests and sometimes bribery. You can use accumulated Church Influence to get powerful boons and make your way up to the Holy See.;;;;;;;;;;;;;x
+title_PDP_church_holder;Almighty;;;;;;;;;;;;;x
+PDP_offmap_pope_name;The Pope;;;;;;;;;;;;;x
+PDP_helped_me_into_office;Helped me into office;;;;;;;;;;;;;x
+offmap_church_architects;Church Architects;;;;;;;;;;;;;x
+PDP_papal_palatinus_condition;Church officials are appointed via the church interface in exchange for Church Influence.;;;;;;;;;;;;;x
+church_influence_appointed_cardinal_no_consent;Appointed Cardinals without Consent of the College;;;;;;;;;;;;;x
+church_influence_is_pope;Is the Pope;;;;;;;;;;;;;x
+church_influence_same_dynasty;Dynasty Controls Papacy;;;;;;;;;;;;;x
+church_influence_vassal_of_pope;Vassal of Papal States;;;;;;;;;;;;;x
+church_influence_diligent;Diligent;;;;;;;;;;;;;x
+church_influence_ambitious;Ambitious;;;;;;;;;;;;;x
+church_influence_scandalous;Scandalous;;;;;;;;;;;;;x
+church_influence_legate_rank;Legate;;;;;;;;;;;;;x
+church_influence_cardinal_rank;Cardinal;;;;;;;;;;;;;x
+church_influence_cardinal_dean_rank;Cardinal Dean;;;;;;;;;;;;;x
+church_influence_church_rank_b;Bishop;;;;;;;;;;;;;x
+church_influence_church_rank_c;Prince Bishop;;;;;;;;;;;;;x
+church_influence_church_rank_d;Arch-Bishop;;;;;;;;;;;;;x
+church_influence_church_rank_gd;Grand Arch-Bishop;;;;;;;;;;;;;x
+church_influence_church_rank_k;Patriarch;;;;;;;;;;;;;x
+church_influence_church_rank_e;Patriarch;;;;;;;;;;;;;x
+church_influence_low_learning;Learning;;;;;;;;;;;;;x
+church_influence_high_learning;Learning;;;;;;;;;;;;;x
+church_influence_very_high_learning;Learning;;;;;;;;;;;;;x
+church_influence_super_high_learning;Learning;;;;;;;;;;;;;x
+church_influence_in_vatican;In Rome;;;;;;;;;;;;;x
+church_influence_friends_in_vatican;Friends In Rome;;;;;;;;;;;;;x
+church_influence_rival_cardinal_dean;Cardinal Dean is Rival;;;;;;;;;;;;;x
+church_influence_rival_cardinal_few;Slight Opposition (Rivals) in College of Cardinals;;;;;;;;;;;;;x
+church_influence_rival_cardinal_many;Harsh Opposition (Rivals) in College of Cardinals;;;;;;;;;;;;;x
+church_influence_rival_cardinal_majority;Overwhelming Opposition (Rivals) in College of Cardinals;;;;;;;;;;;;;x
+church_influence_no_cardinals;Did not appoint enough Cardinals in the past;;;;;;;;;;;;;x
+church_influence_excommunicated_cardinal;Excommunicated a Cardinal;;;;;;;;;;;;;x
+church_influence_controlled_officials;Controlling Papal Officials;;;;;;;;;;;;;x
+church_influence_war_with_infidels;At war with religious enemies;;;;;;;;;;;;;x
+church_influence_scholarship_trait;Scholar;;;;;;;;;;;;;x
+church_influence_charitable;Charitable;;;;;;;;;;;;;x
+church_influence_virtuous;Virtues;;;;;;;;;;;;;x
+church_influence_reform;Ongoing reforms;;;;;;;;;;;;;x
+church_influence_reform_pope;Ongoing reforms (Pope);;;;;;;;;;;;;x
+church_influence_friend_cardinal_dean;Friendly with Cardinal-Dean;;;;;;;;;;;;;x
+church_influence_friend_cardinal;Friendly with Cardinal;;;;;;;;;;;;;x
+church_influence_thriving;Thriving;;;;;;;;;;;;;x
+church_influence_bad_authority;Low Moral Authority;;;;;;;;;;;;;x
+church_influence_city_guard;Commander of the Guard;;;;;;;;;;;;;x
+church_influence_city_guard_friend;Friend of the Commander of the City Guard;;;;;;;;;;;;;x
+CHURCH_LIKES_LABEL;The Church approves:;;;;;;;;;;;;;x
+CHURCH_DISLIKES_LABEL;The Church dislikes:;;;;;;;;;;;;;x
+PDP_offmap_church_full;Holy Roman Church;;Heilige Römische Kirche;;;;;;;;;;;x
+PDP_church_policy_scholarship;Scholarship;;;;;;;;;;;x
+PDP_church_policy_scholarship_desc;The current policy of the Holy See is to promote scholarship and theological research.;;;;;;;;;;;x
+PDP_church_policy_scholarship_effect_desc;*  Scholastic traits will increase Church Influence;;;;;;;;;;;x
+PDP_church_policy_warfare;Religious Warfare;;;;;;;;;;;x
+PDP_church_policy_warfare_desc;It is believed that only force can convert the infidels to the true faith.;;;;;;;;;;;x
+PDP_church_policy_warfare_effect_desc;*  Being at war with infidels or heretics will increase Church Influence;;;;;;;;;;;x
+PDP_church_policy_charity;Charity;;;;;;;;;;;x
+PDP_church_policy_charity_desc;A good priest should dedicate his live towards helping the poor.;;;;;;;;;;;x
+PDP_church_policy_charity_effect_desc;*  Virtues will increase Church Influence;;;;;;;;;;;x
+PDP_church_policy_monumentality;Monumentality;;;;;;;;;;;x
+PDP_church_policy_monumentality_desc;Huge cathedrals dedicated to our Lord will ensure us his favor.;;;;;;;;;;;x
+PDP_church_policy_monumentality_effect_desc;*  The church is more likely to fund your ambitious building projects.\n*  Building and upgrading Great Works increases Church Influence.;;;;;;;;;;;x
+PDP_church_policy_conversion;The Inquisition;;;;;;;;;;;x
+PDP_church_policy_conversion_desc;We must convince the infidels to give up their old beliefs and enforce the laws of God among the believers.;;;;;;;;;;;x
+PDP_church_policy_conversion_effect_desc;*  The Inquisition is more powerful.\n*  Cardinals have access to the Inquisition (councillor action);;;;;;;;;;;x
+PDP_church_status_stable;Stable;;;;;;;;;;;x
+PDP_church_status_stable_desc;The Church keeps up the Status Quo.;;;;;;;;;;;x
+PDP_church_status_stable_effect_desc;*  Nothing special;;;;;;;;;;;x
+PDP_church_status_corrupt;Corrupt;;;;;;;;;;;x
+PDP_church_status_corrupt_desc;Nowadays, clerics don't even try to hide their corruption. Offices and other positions of power are sold for money on and everyone knows about it.;;;;;;;;;;;x
+PDP_church_status_corrupt_effect_desc;*  Deteriorates Moral Authority \n*  Buying Church Influence is worth more;;;;;;;;;;;x
+PDP_church_status_thriving;Thriving;;;;;;;;;;;x
+PDP_church_status_thriving_desc;The Church is currently prospering.;;;;;;;;;;;x
+PDP_church_status_thriving_effect_desc;*  Everyone gains more Church Influence;;;;;;;;;;;x
+PDP_church_status_reform;Reform;;;;;;;;;;;x
+PDP_church_status_reform_desc;Having realized that the Church needs to change to keep public support and stop the heresies, church officials have instituted several reforms.;;;;;;;;;;;x
+PDP_church_status_reform_effect_desc;*  Everyone gains less Church Influence \n*  Buying Influence costs more money \n*  Positive effects on Moral Authority;;;;;;;;;;;x
+offmap_church_topic_status_to_reform;Change Status to Reform;;;;;;;;;;;x
+offmap_church_propose_status_to_reform;Propose: Status to Reform;;;;;;;;;;;x
+offmap_church_propose_status_to_reform_desc;Propose to change the church status to Reform. You and the other electors will be allowed to vote.;;;;;;;;;;;x
+offmap_church_topic_policy_to_scholarship;Change Policy to Scholarship;;;;;;;;;;;x
+offmap_church_propose_policy_to_scholarship;Propose: Policy to Scholarship;;;;;;;;;;;x
+offmap_church_propose_policy_to_scholarship_desc;Propose to change the church policy to Scholarship. You and the other electors will be allowed to vote.;;;;;;;;;;;x
+offmap_church_topic_policy_to_warfare;Change Policy to Warfare;;;;;;;;;;;x
+offmap_church_propose_policy_to_warfare;Propose: Policy to Warfare;;;;;;;;;;;x
+offmap_church_propose_policy_to_warfare_desc;Propose to change the church policy to Warfare. You and the other electors will be allowed to vote.;;;;;;;;;;;x
+offmap_church_topic_policy_to_charity;Change Policy to Charity;;;;;;;;;;;x
+offmap_church_propose_policy_to_charity;Propose: Policy to Charity;;;;;;;;;;;x
+offmap_church_propose_policy_to_charity_desc;Propose to change the church policy to Charity. You and the other electors will be allowed to vote.;;;;;;;;;;;x
+offmap_church_topic_policy_to_monumentality;Change Policy to Monumentality;;;;;;;;;;;x
+offmap_church_propose_policy_to_monumentality;Propose: Policy to Monumentality;;;;;;;;;;;x
+offmap_church_propose_policy_to_monumentality_desc;Propose to change the church policy to Monumentality. You and the other electors will be allowed to vote.;;;;;;;;;;;x
+offmap_church_topic_policy_to_conversion;Change Policy to Inquisition;;;;;;;;;;;x
+offmap_church_propose_policy_to_conversion;Propose: Policy to Inquisition;;;;;;;;;;;x
+offmap_church_propose_policy_to_conversion_desc;Propose to change the church policy to Inquisition. You and the other electors will be allowed to vote.;;;;;;;;;;;x
+offmap_church_topic_close_marriage;Allow Close Marriage;;;;;;;;;;;x
+offmap_church_propose_close_marriage;Propose: Allow Close Marriage;;;;;;;;;;;x
+offmap_church_propose_close_marriage_desc;Propose to allow close marriage. You and the other electors will be allowed to vote.;;;;;;;;;;;x
+PDP_church_topic_close_marriage_effect_desc;*  The Catholic faith will allow close kin marriage..;;;;;;;;;;;x
+offmap_church_topic_divine_blood;Allow Divine Marriage;;;;;;;;;;;x
+offmap_church_propose_divine_marriage;Propose: Divine Marriage;;;;;;;;;;;x
+offmap_church_propose_divine_marriage_desc;Propose to follow the divine marriage doctrine. You and the other electors will be allowed to vote.;;;;;;;;;;;x
+PDP_church_topic_divine_marriage_effect_desc;*  The Catholic faith will see close marriage as a divine act. Everyone can take up to two concubines.;;;;;;;;;;;x
+offmap_church_topic_raiding;Allow Raiding;;;;;;;;;;;x
+offmap_church_propose_raiding;Propose: Holy Raids;;;;;;;;;;;x
+offmap_church_propose_raiding_desc;Propose to regard raiding of infidels as a pious way of live.;;;;;;;;;;;x
+PDP_church_topic_raiding_effect_desc;*  The Catholic faith will allow raiding. Rulers loose prestige for being at peace too long.;;;;;;;;;;;x
+offmap_church_topic_nothing;Nothing;;;;;;;;;;;x
+offmap_church_topic_effect_nothing;No Effect;;;;;;;;;;;x
+offmap_voting_has_close_marriage;Has instituted close marriage.;;;;;;;;;;;x
+PDP_reforms;Reforms;;;;;;;;;;;x
+PDP_corruption;Corruption;;;;;;;;;;;x
+PDP_major_corruption;Corruption (major);;;;;;;;;;;x
+EVTDESC_PDPOFF.21;The recent reforms in the Church have proven to be successful. The people slowly regain their trust in the Church.;;;;;;;;;;;x
+EVENTOPT_a_PDPOFF.21;Great.;;;;;;;;;;;x
+EVTDESC_PDPOFF.22;Seeing the open corruption in the holy institution of the Catholic Church, many believers have turned away from the clerics, seeking their faith in heresies.;;;;;;;;;;;x
+EVENTOPT_a_PDPOFF.22;Bad news.;;;;;;;;;;;x
+OFFMAP_CHURCH_GIFTS;Earn Influence;;;;;;;;;;;x
+OFFMAP_CHURCH_GIFTS_DESC;There are many ways to contribute to the success of the Holy Roman Church. You help will be appreciated and church officials will get a higher opinion of you and your influence becomes stronger.;;;;;;;;;;;x
+OFFMAP_CHURCH_BOONS;Use Influence;;;;;;;;;;;x
+OFFMAP_CHURCH_BOONS_DESC;You can use your influence to promote your interests in the church.;;;;;;;;;;;x
+OFFMAP_CHURCH_CORRUPTION;Buy Influence;;;;;;;;;;;x
+OFFMAP_CHURCH_CORRUPTION_DESC;Everyone likes money: Just give the right amount of money to the right officials and your church career will do fine. \nThat sounds like corruption, you say? - Well, that's a bit harsh, don't you think so...;;;;;;;;;;;x
+offmap_church_corruption_officials;Buy Supporters;;;;;;;;;;;x
+offmap_church_corruption_officials_desc;By granting money to church officials, you can become more influential.;;;;;;;;;;;x
+offmap_church_send_money;Make Donation;;;;;;;;;;;x
+offmap_church_send_money_desc;By granting money to the Holy See, you can become more influential.;;;;;;;;;;;x
+offmap_church_spend_piety;Impress with Piety;;;;;;;;;;;x
+offmap_church_spend_piety_desc;Tell everyone what a pious life I live. Maybe someone will actually be impressed.;;;;;;;;;;;x
+offmap_church_spend_piety_cd;Recently Impressed with Piety.;;;;;;;;;;;x
+offmap_church_spend_piety_cd_desc;You can use this interaction again on: [Root.offmap_church_spend_piety_timer.GetExpiryDate];;;;;;;;;;;x
+offmap_church_influence_succession_cd;Recently Influenced Succession;;;;;;;;;;;x
+offmap_church_influence_succession_cd_desc;You can use this interaction again on: [Root.offmap_church_influence_succession_timer.GetExpiryDate];;;;;;;;;;;x
+tooltip_PDP_theocracy_church_influence_spend;Church Influence spend;;;;;;;;;;;x
+offmap_church_write_paper;Write Article;;;;;;;;;;;x
+offmap_church_write_paper_desc;Start writing a religious article;;;;;;;;;;;x
+offmap_church_hand_in_paper;Hand in Paper;;;;;;;;;;;x
+offmap_church_hand_in_paper_desc;Hand in the Paper (removing it from your Inventory).;;;;;;;;;;;x
+offmap_church_hand_in_paper_cd;Recently handed in paper.;;;;;;;;;;;x
+offmap_church_hand_in_paper_cd_desc;You can use this interaction again on: [Root.offmap_church_give_paper_timer.GetExpiryDate];;;;;;;;;;;x
+offmap_church_recent_voting_cd;Recent Voting.;;;;;;;;;;;x
+offmap_church_recent_voting_cd_desc;You will be allowed to use this again soon.;;;;;;;;;;;x
+offmap_church_ask_for_cardinal_office;Ask for Seat in College;;;;;;;;;;;x
+offmap_church_influence_to_money;Sell Influence;;;;;;;;;;;x
+offmap_church_influence_to_money_desc;There is always someone who would pay a lot of money for some influence in Church affairs.;;;;;;;;;;;x
+offmap_church_suggest_palatinus;'Suggest' Palatinus;;;;;;;;;;;x
+offmap_church_free_palatinus_condition;There has to be a vacant Papal Palatinus position.;;;;;;;;;;;x
+offmap_church_free_cardinal_condition;There has to be a vacant seat in the College of Cardinals.;;;;;;;;;;;x
+offmap_church_suggest_palatinus_desc;You can use your immense influence in the Church to make sure that the vacant position of Papal Palatinus goes to a 'very capable' person...;;;;;;;;;;;x
+offmap_church_ask_for_cardinal_office_desc;You can use your enormous influence in the Church to strengthen your claim on the empty seat in the college of cardinals. The Pope is not forced to accept, but not accepting will cost him.;;;;;;;;;;;x
+PDP_not_recently;has not used this interaction recently.;;;;;;;;;;;x
+offmap_church_hire_architects;Hire Architects;;;;;;;;;;;x
+offmap_church_hire_architects_desc;Hire Architects to help you building monumental cathedrals.;;;;;;;;;;;x
+offmap_church_hire_architects_cd;Recently hired Architects;;;;;;;;;;;x
+offmap_church_hire_architects_cd_desc;You can use this interaction again on: [Root.offmap_church_hire_architects_timer.GetExpiryDate];;;;;;;;;;;x
+offmap_church_hire_theologian;Ask for Theologian;;;;;;;;;;;x
+offmap_church_hire_theologian_desc;Ask for a learned man from the Vatican. He will not be a valid candidate for the succession in your Bishopric (unless non dynastic play is enabled).;;;;;;;;;;;x
+offmap_church_hire_theologian_cd;Recently hired Theologian!;;;;;;;;;;;x
+offmap_church_hire_theologian_cd_desc;You can use this interaction again on: [Root.offmap_church_hire_theologian_timer.GetExpiryDate];;;;;;;;;;;x
+church_corruption_officials_cd;Recently bought influence;;;;;;;;;;;x
+church_corruption_officials_cd_desc;You can use this interaction again on: [Root.offmap_church_corruption_officials_timer.GetExpiryDate];;;;;;;;;;;x
+church_send_money_cd;Recently sent money;;;;;;;;;;;x
+church_send_money_cd;You can use this interaction again on: [Root.offmap_church_send_money_timer.GetExpiryDate];;;;;;;;;;;x
+church_money_to_influence_cd;Recently sold Influence;;;;;;;;;;;x
+church_money_to_influence_cd;You can use this interaction again on: [Root.offmap_church_influence_to_money_timer.GetExpiryDate];;;;;;;;;;;x
+EVTDESC_PDPOFF.1;We've been informed by the Holy See that [From.GetTitledName] will no longer serve as Papal Palatinus. The administration is now looking for suitable candidates.;;;;;;;;;;;x
+EVTDESC_PDPOFF.2;[bishop.GetTitledName] approaches me. He says he noticed that there's a vacant position in the curia: A Papal Palatinus. 'So we will need to find a suitable candidate, right', [bishop.GetFirstName] says. 'Well, I happen to know the perfect candidate: [palatinus.GetDynName]. Not only do I find him suited, he also has the support of many other officials.';;;;;;;;;;;x
+EVTDESC_PDPOFF.2_self;I nominated [palatinus.GetDynName] as Papal Palatinus.;;;;;;;;;;;x
+EVENTOPT_a_PDPOFF.2;He has my support and shall from know on be Palatinus of the Church.;;;;;;;;;;;x
+EVENTOPT_b_PDPOFF.2;He is not ready yet.;;;;;;;;;;;x
+EVTDESC_PDPOFF.5;[bishop.GetTitledName] has send a delegation carrying coffers full of gold. He sends his best regards, saying he hopes that his gracious gift will be of good use for the Church.;;;;;;;;;;;x
+EVENTOPT_a_PDPOFF.2;May the Lord bless him.;;;;;;;;;;;x
+EVTDESC_PDPOFF.10;Today, [bishop.GetTitledName] showed up at the Apostolic Palace, asking for a short audience. He then began to talk about the empty seat in the College of Cardinals and presented several letters of recommendation from high church officials. He now asks me to make him Cardinal.;;;;;;;;;;;x
+EVENTOPT_a_PDPOFF.10;Of course.;;;;;;;;;;;x
+EVENTOPT_b_PDPOFF.10;I don't believe he is the best suited candidate...;;;;;;;;;;;x
+EVTDESC_PDPOFF.11;[From.GetTitledName] informed me that he will not make me Cardinal.;;;;;;;;;;;x
+EVENTOPT_a_PDPOFF.11;What a shame.;;;;;;;;;;;x
+EVTDESC_PDPVOTE.2;The Holy Roman Church is currently debating an issue of great importance. As an influential member of the Church, you are allowed to vote on this topic.;;;;;;;;;;;x
+EVENTOPT_a_PDPVOTE.2;Great!;;;;;;;;;;;x
+EVTDESC_PDPVOTE.101;The votes have been counted: The majority of the voters have ACCEPTED the proposal. There've been [k_papal_state.offmap_church_pro_votes.GetValue] votes in favor and [k_papal_state.offmap_church_contra_votes.GetValue] against.;;;;;;;;;;;x
+EVENTOPT_a_PDPVOTE.101;Interesting.;;;;;;;;;;;x
+EVTDESC_PDPVOTE.102;The votes have been counted: The majority of the voters have REJECTED the proposal. There've been [k_papal_state.offmap_church_pro_votes.GetValue] votes in favor and [k_papal_state.offmap_church_contra_votes.GetValue] against.;;;;;;;;;;;x
+EVENTOPT_a_PDPVOTE.102;Interesting.;;;;;;;;;;;x
+offmap_church_show_office_holders;Show Offices.;;;;;;;;;;;;;x
+offmap_church_show_office_holders_desc;Show all the Office Holders in the Holy Roman Church.;;;;;;;;;;;;;x
+EVTDESC_PDPOFF.30;These are the officials of the Holy Roman Church:;;;;;;;;;;;x
+EVENTOPT_a_PDPOFF.30;Good to know.;;;;;;;;;;;x
+PDPOFF.30_cardinal_dean;Cardinal Dean:;;;;;;;;;;;x
+PDPOFF.30_cardinals;\nCardinals:;;;;;;;;;;;x
+PDPOFF.30_others;\nOther Officials:;;;;;;;;;;;x
+PDPOFF.30_legates;\nPapal Legates:;;;;;;;;;;;x
+PDPOFF.30_electors;\nElectors (these have a vote in the offmap voting system):;;;;;;;;;;;x
+EVTDESC_PDPOFF.41;Something has changed in the Church. Its status is no longer [offmap_PDP_church.GetPrevStatus], instead it now is [offmap_PDP_church.GetStatus].:;;;;;;;;;;;x
+EVENTOPT_a_PDPOFF.41;Good to know.;;;;;;;;;;;x
+PDP_show_name_bullet_list;is a high ranked member of the Church.;;;;;;;;;;;x
+offmap_church_my_vote_yes;I voted yes.;;;;;;;;;;;x
+offmap_church_my_vote_no;I voted no.;;;;;;;;;;;x
+offmap_church_writing_paper;Writing religious paper;;;;;;;;;;;x
+offmap_church_writing_paper_desc;This character is currently writing religious paper, spending a lot of effort on this.;;;;;;;;;;;x
+religious_writing;Religious Writings;;;;;;;;;;;x
+religious_paper_poor;Poor Theological Article;;;;;;;;;;;x
+religious_paper_poor_desc;An article discussing unimportant questions of Theology on the most basic level.;;;;;;;;;;x
+religious_paper_medium;Theological Article;;;;;;;;;;;x
+religious_paper_medium_desc;An article discussing questions of Theology.;;;;;;;;;;x
+religious_paper_good;Good Theological Article;;;;;;;;;;;x
+religious_paper_good_desc;An article discussing important questions of Theology. Well phrased and a pleasure to read.;;;;;;;;;;x
+EVTDESC_PDPOFF.50;I have decided to write a religious article about theologic questions. When finished, my work will surely impress others.;;;;;;;;;;x
+EVENTOPT_a_PDPOFF.50;I will work hard.;;;;;;;;;;x
+EVENTOPT_b_PDPOFF.50;It won't take much effort.;;;;;;;;;;x
+EVTDESC_PDPOFF.51;My work is finished! After months of work, research and discussions I finally came to the concluding statements of my religious article.;;;;;;;;;;x
+EVENTOPT_a_PDPOFF.51;Finally.;;;;;;;;;;x
+EVTDESC_PDPOFF.71;[From.GetTitledName] deceided to honor me with the title of Cardinal Dean.;;;;;;;;;;x
+EVENTOPT_a_PDPOFF.71;A good decision.;;;;;;;;;;x
+EVTDESC_PDPOFF.73;[From.GetTitledName] deceided to honor me by making me Papal Legate.;;;;;;;;;;x
+EVENTOPT_a_PDPOFF.73;I'm on my way up.;;;;;;;;;;x
+EVTDESC_PDPOFF.80;The recently constructed architectural masterworks have impressed the Church.;;;;;;;;;;x
+EVENTOPT_a_PDPOFF.80;A monument to the Lord.;;;;;;;;;;x
+EVTDESC_PDPOFF.81;The recently constructed architectural masterworks have impressed the Church.;;;;;;;;;;x
+EVENTOPT_a_PDPOFF.81;A monument to the Lord.;;;;;;;;;;x
+title_PDP_city_guard_of_rome;Commander of the Roman City Guard;;;;;;;;;;x
+title_PDP_city_guard_of_rome_desc;Commander of the Roman City Guard, responsible for the safety of the eternal city.;;;;;;;;;;x
+title_papal_legate;Papal Legate;;;;;;;;;;x
+title_papal_legate_desc;A papal legate or Apostolic legate (from the Ancient Roman title legatus) is a personal representative of the pope to foreign nations, or to some part of the Catholic Church. He is empowered on matters of Catholic Faith and for the settlement of ecclesiastical matters.;;;;;;;;;;x
+PDP_nominate_papal_legate;Nominate Papal Legate;;;;;;;;;;x
+PDP_nominate_papal_legate_desc;Make this Bishop the Papal Legate in his realm.;;;;;;;;;;x
