@@ -1,6 +1,7 @@
 Contains:
 
 "Ancient Religions Reborn"
+"Ancient Religions Reborn Playable Theocracy Compatch"
 "Another Traits Mod II"
 "Aztec Dynasty Flags"
 "Bloodline Fix"
@@ -17,7 +18,9 @@ Contains:
 "Cultures+"
 "Easy Heresy" [Religions Added]
 "Enatic Kingdoms"
+"Extended Bloodlines (HF)"
 "Extra Bloodlines 1.4"
+"Feudal & Imperial Theocracies"
 "Friend Mod"
 "HIP - Comprehensive Annals of Five Dynasties"
 "HIP - Forge Unlimited Bloodlines"
@@ -36,15 +39,19 @@ Contains:
 "MTA - New Artifacts"
 "MTA - Specific Punishments"
 "MTA - Vice and Virtue"
-"Muslim Bloodlines"
+"Muslim Bloodlines + Blood of the Prophet"
 "New Kingdoms and Cultures" [Cultures Only]
 "Nicknames+++"
-"Non-Dynastic Inheritance"
 "Normal Retreat"
+"Piety Based Reformation"
+"Playable (Dynastic) Theocracies"
+"Playable Dynastic Theocracies - HIP Compatch"
 "Play As Anyone"
 "Prisoner Marriage"
+"Reformation Reform"
 "Religious Trinity"
 "Rename Anyone"
+"Republic Equality for HIP"
 "Rich Childhood"
 "Rise to Power"
 "Satanism Plus Compatibility"
@@ -54,6 +61,7 @@ Contains:
 "Sons of Vinland" [No Map, mostly just cultures & religions]
 "The Great Trade League"
 "The Orders of Chivalry"
+"The Rise of the New Churches" [Religions Added]
 "The Sufi Schools"
 "Tianxia: Silk Road Expansion" [Cultures & Religions Only]
 "Umbra Spherae-Reborn" [Traits, Cultures & Religions Only]
@@ -64,18 +72,13 @@ Contains:
 "WOWGAG's More Artifacts & Bloodlines" [Contains "Historical and Fantastical Artifacts" & "Mythic Artifacts"]
 
 Next:
-"The Rise of the New Churches"
 "African Religions Overhaul"
---- More Goals:
-"Reformation Reform"
-"Piety Based Reformation"
 "Dido's Legacy - Carthage Expansion"
 "Pharaohs & Consuls 0.5A Public Build"
 "When the World Stopped Making Sense"
 "CleanSlate"
 "CK2Plus"
 "More Ambitions - Find Purpose"
-"Extended Bloodlines (HF)"
 "Expanded Traits"
 "Rolls Max Compatibility Mod"
 "More Cultural Names (for HIP + SWMH)"
