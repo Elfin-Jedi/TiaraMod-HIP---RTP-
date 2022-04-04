@@ -1,0 +1,46 @@
+@beginmacro text_event(macroP_id, macroP_pic, macroP_text):
+character_event = {
+	id = macroP_id
+	picture = macroP_pic
+	desc = <<EVTDESC_macroP_id;macroP_text>>
+	is_triggered_only = yes
+	option = {
+		name = <<EVTOPT_a_macroP_id;"Okay">>
+	}
+}
+@endmacro
+
+@beginmacro text_event_opt(macroP_id, macroP_pic, macroP_text, macroP_opt_text):
+character_event = {
+	id = macroP_id
+	picture = macroP_pic
+	desc = <<EVTDESC_macroP_id;macroP_text>>
+	is_triggered_only = yes
+	option = {
+		name = <<EVTOPT_a_macroP_id;macroP_opt_text>>
+	}
+}
+@endmacro
+
+@beginmacro save_set_character_flag(macroP_flag):
+clr_character_flag = macroP_flag
+set_character_flag = macroP_flag
+@endmacro
+
+@beginmacro remove_trait_chance(macroP_trait, macroP_chance):
+if = {limit = {has_trait = macroP_trait}
+	random = {
+		chance = macroP_chance
+		remove_trait = macroP_trait
+	}
+}
+@endmacro
+
+@beginmacro add_trait_chance(macroP_trait, macroP_chance):
+if = {limit = {NOT = {has_trait = macroP_trait}}
+	random = {
+		chance = macroP_chance
+		add_trait = macroP_trait
+	}
+}
+@endmacro
