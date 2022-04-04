@@ -1,0 +1,37 @@
+objectTypes = {
+
+  EMFXActorType = {
+    name = "muslimgfx_job_inquisitor"
+    actorfile = "gfx\models\Mapindicators\Western_inquisitor.xac"
+
+    idle   = "gfx\models\Mapindicators\Western_inquisitor_idle.xsm"
+    scale = 1.0f
+  }
+
+
+  EMFXActorType = {
+    name = "westerngfx_job_inquisitor"
+    actorfile = "gfx\models\Mapindicators\Western_inquisitor.xac"
+
+    idle   = "gfx\models\Infantry_Sword_and_Shield_Idle.xsm"
+    scale = 1.0f
+  }
+
+
+  EMFXActorType = {
+    name = "muslimgfx_job_inquisitor_2"
+    actorfile = "gfx\models\Mapindicators\Western_inquisitor.xac"
+
+    idle   = "gfx\models\Mapindicators\Western_inquisitor_idle.xsm"
+    scale = 1.0f
+  }
+
+
+  EMFXActorType = {
+    name = "westerngfx_job_inquisitor_2"
+    actorfile = "gfx\models\Mapindicators\Western_inquisitor.xac"
+
+    idle   = "gfx\models\Infantry_Sword_and_Shield_Idle.xsm"
+    scale = 1.0f
+  }
+}

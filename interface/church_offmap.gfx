@@ -1,0 +1,122 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_offmap_bg_church"
+		texturefile = "gfx\\interface\\offmap_screen\\church_background.dds"
+	}
+	spriteType = {
+		name = "GFX_offmap_banner_church"
+		texturefile = "gfx\\interface\\offmap_screen\\church_big_church_banner.dds"
+	}
+	spriteType = {
+		name = "GFX_offmap_top_embellishment_church"
+		texturefile = "gfx\\interface\\offmap_screen\\church_dragons.dds"
+	}
+	spriteType = {
+		name = "GFX_offmap_bottom_embellishment_church"
+		texturefile = "gfx\\interface\\offmap_screen\\church_lionmonsterdragon.dds"
+	}
+	spriteType = {
+		name = "GFX_offmap_ruler_banner_church"
+		texturefile = "gfx\\interface\\offmap_screen\\church_emperor_church_banner.dds"
+	}
+	spriteType = {
+		name = "GFX_offmap_ruler_portrait_border_church"
+		texturefile = "gfx\\interface\\offmap_screen\\church_emperor_portrait_ring.dds"
+	}
+	spriteType = {
+		name = "GFX_offmap_gift_button_church"
+		texturefile = "gfx\\interface\\offmap_screen\\church_give_gift_button.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_offmap_money_button_church"
+		texturefile = "gfx\\interface\\offmap_screen\\church_give_money_button.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_offmap_topic_button_church"
+		texturefile = "gfx\\interface\\offmap_screen\\church_topic_button.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_offmap_boon_button_church"
+		texturefile = "gfx\\interface\\offmap_screen\\church_recieve_gift_button.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_offmap_hostile_button_church"
+		texturefile = "gfx\\interface\\offmap_screen\\church_hostile_action_button.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_offmap_currency_background_church"
+		texturefile = "gfx\\interface\\offmap_screen\\church_grace_church_banner.dds"
+	}
+	spriteType = {
+		name = "GFX_offmap_policy_church"
+		texturefile = "gfx\\interface\\offmap_screen\\church_policy_placeholder.dds"
+		noOfFrames = 9
+	}
+	spriteType = {
+		name = "GFX_offmap_status_church"
+		texturefile = "gfx\\interface\\offmap_screen\\church_status_placeholder.dds"
+		noOfFrames = 9
+	}
+	spriteType = {
+		name = "GFX_offmap_symbol_church"
+		texturefile = "gfx\\interface\\offmap_screen\\church_symbol_frame.dds"
+	}
+	spriteType = {
+		name = "GFX_offmap_church_proposal"
+		texturefile = "gfx\\interface\\offmap_screen\\church_proposal_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_offmap_church_deal"
+		texturefile = "gfx\\interface\\offmap_screen\\church_deal_icon.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_offmap_church_info"
+		texturefile = "gfx\\interface\\offmap_screen\\church_help_button.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_offmap_church_papal"
+		texturefile = "gfx\\interface\\offmap_screen\\church_papal_btn.dds"
+		noOfFrames = 2
+	}
+
+
+	spriteType = {
+		name = "GFX_offmap_church_likes"
+		texturefile = "gfx\\interface\\offmap_screen\\church_like_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_offmap_church_dislikes"
+		texturefile = "gfx\\interface\\offmap_screen\\church_dislike_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_offmap_church_divider"
+		texturefile = "gfx\\interface\\offmap_screen\\church_divider.dds"
+	}
+	spriteType = {
+		name = "GFX_offmap_church_dynasty_frame"
+		texturefile = "gfx\\interface\\offmap_screen\\church_dynasty_frame.dds"
+	}
+	spriteType = {
+		name = "GFX_offmap_church_mapmode_button"
+		texturefile = "gfx\\interface\\offmap_screen\\mapmode_button_church_sphere.dds"
+	}
+	spriteType = {
+		name = "GFX_church_screen_button"
+		texturefile = "gfx\\interface\\offmap_screen\\church_screen_button.dds"
+	}
+	spriteType = {
+		name = "GFX_offmap_church_history_button"
+		texturefile = "gfx\\interface\\offmap_screen\\button_church_history.dds"
+	}
+}

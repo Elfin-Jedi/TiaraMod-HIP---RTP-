@@ -1,0 +1,38 @@
+spriteTypes = {
+	spriteType = {
+        name = "GFX_evt_pope_and_cardinals"
+        texturefile = "gfx\\event_pictures\\pope_and_cardinals.tga"
+    }	
+	spriteType = {
+        name = "GFX_evt_cardinal_discussion"
+        texturefile = "gfx\\event_pictures\\cardinal_discussion.tga"
+    }	
+	spriteType = {
+        name = "GFX_evt_cardinal_discussion2"
+        texturefile = "gfx\\event_pictures\\cardinal_discussion2.tga"
+    }	
+	spriteType = {
+        name = "GFX_evt_cardinal_vatican"
+        texturefile = "gfx\\event_pictures\\cardinal_vatican.tga"
+    }	
+	spriteType = {
+        name = "GFX_evt_papal_coronation"
+        texturefile = "gfx\\event_pictures\\papal_coronation.tga"
+    }	
+	spriteType = {
+		name = "GFX_evt_torture_wheel"
+		texturefile = "gfx\\event_pictures\\wheel.tga"
+    }
+	spriteType = {
+		name = "GFX_evt_stake"
+		texturefile = "gfx\\event_pictures\\stake.tga"
+    }
+	spriteType = {
+        name = "GFX_evt_witch_court"
+        texturefile = "gfx\\event_pictures\\witch_court.tga"
+    }
+	spriteType = {
+        name = "GFX_evt_bishop_imprisoned"
+        texturefile = "gfx\\event_pictures\\bishop_imprisoned.tga"
+    }
+}

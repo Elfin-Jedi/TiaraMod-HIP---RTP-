@@ -1,0 +1,29 @@
+spriteTypes = {
+	spriteType = {
+			name = "GFX_pdp_cardinal_icon"
+			texturefile = "gfx/traits/cardinal_icon.dds"
+			noOfFrames = 1
+			norefcount = yes
+			effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+			name = "GFX_pdp_papal_hat_icon"
+			texturefile = "gfx/traits/papal_hat_icon.dds"
+			noOfFrames = 1
+			norefcount = yes
+			effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_PDP_in_conclave"
+		texturefile = "gfx/traits/conclave-icon.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+
+	spriteType = {
+		name = "GFX_PDP_mend_schism"
+		texturefile = "gfx/interface/decision_icon_mend_schism_catholic.dds"
+	}
+}
