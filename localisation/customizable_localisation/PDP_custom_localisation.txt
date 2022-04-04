@@ -1,0 +1,128 @@
+
+
+defined_text = {
+	name = GetOffmapChurchVoteTopic
+	use_first_valid = yes # Defaults to no
+	text = {
+		trigger = {
+			k_papal_state = {has_title_flag = offmap_church_topic_status_to_reform}
+		}
+		localisation_key = offmap_church_topic_status_to_reform
+	}
+	text = {
+		trigger = {
+			k_papal_state = {has_title_flag = offmap_church_topic_policy_to_scholarship}
+		}
+		localisation_key = offmap_church_topic_policy_to_scholarship
+	}
+    text = {
+        trigger = {
+        	k_papal_state = {has_title_flag = offmap_church_topic_policy_to_warfare}
+        }
+        localisation_key = offmap_church_topic_policy_to_warfare
+	}
+    text = {
+        trigger = {
+        	k_papal_state = {has_title_flag = offmap_church_topic_policy_to_charity}
+        }
+        localisation_key = offmap_church_topic_policy_to_charity
+	}
+    text = {
+        trigger = {
+        	k_papal_state = {has_title_flag = offmap_church_topic_policy_to_monumentality}
+        }
+        localisation_key = offmap_church_topic_policy_to_monumentality
+	}
+    text = {
+        trigger = {
+        	k_papal_state = {has_title_flag = offmap_church_topic_policy_to_conversion}
+        }
+        localisation_key = offmap_church_topic_policy_to_conversion
+	}
+    text = {
+        trigger = {
+            k_papal_state = {has_title_flag = offmap_church_topic_close_marriage}
+        }
+        localisation_key = offmap_church_topic_close_marriage
+    }
+	text = {
+        trigger = {
+            k_papal_state = {has_title_flag = offmap_church_topic_divine_blood}
+        }
+        localisation_key = offmap_church_topic_divine_blood
+    }
+	text = {
+        trigger = {
+            k_papal_state = {has_title_flag = offmap_church_topic_raiding}
+        }
+        localisation_key = offmap_church_topic_raiding
+    }
+    text = {
+        trigger = {always = yes}
+        localisation_key = offmap_church_topic_nothing
+    }
+}
+
+
+defined_text = {
+	name = GetOffmapChurchVoteTopicEffect
+	use_first_valid = yes # Defaults to no
+	text = {
+		trigger = {
+			k_papal_state = {has_title_flag = offmap_church_topic_status_to_reform}
+		}
+		localisation_key = PDP_church_status_reform_effect_desc
+	}
+	text = {
+		trigger = {
+			k_papal_state = {has_title_flag = offmap_church_topic_policy_to_scholarship}
+		}
+		localisation_key = PDP_church_policy_scholarship_effect_desc
+	}
+    text = {
+        trigger = {
+            k_papal_state = {has_title_flag = offmap_church_topic_policy_to_warfare}
+        }
+        localisation_key = PDP_church_policy_warfare_effect_desc
+    }
+    text = {
+        trigger = {
+            k_papal_state = {has_title_flag = offmap_church_topic_policy_to_charity}
+        }
+        localisation_key = PDP_church_policy_charity_effect_desc
+    }
+    text = {
+        trigger = {
+            k_papal_state = {has_title_flag = offmap_church_topic_policy_to_monumentality}
+        }
+        localisation_key = PDP_church_policy_monumentality_effect_desc
+    }
+    text = {
+        trigger = {
+            k_papal_state = {has_title_flag = offmap_church_topic_policy_to_conversion}
+        }
+        localisation_key = PDP_church_policy_conversion_effect_desc
+    }
+    text = {
+        trigger = {
+            k_papal_state = {has_title_flag = offmap_church_topic_close_marriage}
+        }
+        localisation_key = PDP_church_topic_close_marriage_effect_desc
+    }
+	text = {
+        trigger = {
+            k_papal_state = {has_title_flag = offmap_church_topic_divine_blood}
+        }
+        localisation_key = PDP_church_topic_divine_marriage_effect_desc
+    }
+	text = {
+        trigger = {
+            k_papal_state = {has_title_flag = offmap_church_topic_raiding}
+        }
+        localisation_key = PDP_church_topic_raiding_effect_desc
+    }
+    text = {
+        trigger = {always = yes}
+        localisation_key = offmap_church_topic_effect_nothing
+    }
+}
